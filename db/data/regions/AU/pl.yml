@@ -1,0 +1,37 @@
+---
+pl:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Dzielnica
+            optional: Dzielnica (opcjonalnie)
+          errors:
+            blank: Wprowadź dzielnicę
+            too_long: Nazwa lokalizacji podmiejskiej jest zbyt długa (maksymalna liczba
+              znaków to 255)
+            contains_html_tags: Obszar podmiejski nie może zawierać tagów HTML.
+            contains_emojis: Dzielnica nie może zawierać emoji
+            contains_restricted_characters: Pole Dzielnica może zawierać litery, cyfry,
+              znaki lokalne i znaki specjalne
+        province:
+          label:
+            default: Państwo/terytorium
+            optional: Państwo/terytorium (opcjonalnie)
+          errors:
+            blank: Wybierz stan / terytorium
+        zip:
+          label:
+            default: Kod pocztowy
+            optional: Kod pocztowy (opcjonalnie)
+          errors:
+            blank: Wprowadź kod pocztowy
+            invalid_for_country: Wprowadź prawidłowy kod pocztowy dla %{country}
+            invalid_for_country_and_province: Wprowadź prawidłowy kod pocztowy dla
+              %{province}, %{country}
+            too_long: Wartość kodu pocztowego jest zbyt długa
+            contains_html_tags: Kod pocztowy nie może zawierać tagów HTML.
+            contains_emojis: Kod pocztowy nie może zawierać emoji
+            contains_restricted_characters: Pole Kod pocztowy może zawierać litery,
+              cyfry, znaki lokalne i znaki specjalne.

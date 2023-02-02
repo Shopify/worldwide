@@ -1,0 +1,493 @@
+---
+name: Japan
+code: JP
+tax: 0.1
+currency: JPY
+unit_system: metric
+tax_name: CT
+tax_inclusive: true
+group: Asian Countries
+group_name: Asia
+zip_example: 154-0023
+zip_regex: "\\A〒?(\\d{7}|[0-9|０-９]{3}(-|ー)[0-9|０-９]{4})\\z"
+partial_zip_regex: "\\A〒?([0-9|０-９]{0,3})(-|ー?)([0-9|０-９]{0,4})\\z"
+phone_number_prefix: 81
+building_number_required: true
+week_start_day: sunday
+languages:
+  - en
+  - ja
+format:
+  edit: "{country}_{lastName}{firstName}_{company}_{zip}{province}_{city}_{address1}_{address2}_{phone}"
+  show: "{country} 〒{zip}_{province} {city}_{address1}_{address2}_{company}_{lastName} {firstName}様_{phone}"
+emoji: "\U0001F1EF\U0001F1F5"
+zones:
+- name: Hokkaidō
+  name_alternates:
+  - Hokkaido Prefecture
+  - 北海道
+  code: JP-01
+  iso_code: JP-01
+  tax: 0.0
+  priority: 47
+- name: Aomori
+  name_alternates:
+  - Aomori Prefecture
+  - Aomori-ken
+  - 青森県
+  - 青森
+  code: JP-02
+  iso_code: JP-02
+  tax: 0.0
+  priority: 46
+- name: Iwate
+  name_alternates:
+  - Iwate Prefecture
+  - Iwate-ken
+  - 岩手県
+  - 岩手
+  code: JP-03
+  iso_code: JP-03
+  tax: 0.0
+  priority: 45
+- name: Miyagi
+  name_alternates:
+  - Miyagi Prefecture
+  - Miyagi-ken
+  - 宮城県
+  - 宮城
+  code: JP-04
+  iso_code: JP-04
+  tax: 0.0
+  priority: 44
+- name: Akita
+  name_alternates:
+  - Akita Prefecture
+  - Akita-ken
+  - 秋田県
+  - 秋田
+  code: JP-05
+  iso_code: JP-05
+  tax: 0.0
+  priority: 43
+- name: Yamagata
+  name_alternates:
+  - Yamagata Prefecture
+  - Yamagata-ken
+  - 山形県
+  - 山形
+  code: JP-06
+  iso_code: JP-06
+  tax: 0.0
+  priority: 42
+- name: Fukushima
+  name_alternates:
+  - Fukushima Prefecture
+  - Fukushima-ken
+  - 福島県
+  - 福島
+  code: JP-07
+  iso_code: JP-07
+  tax: 0.0
+  priority: 41
+- name: Ibaraki
+  name_alternates:
+  - Ibaraki Prefecture
+  - Ibaraki-ken
+  - 茨城県
+  - 茨城
+  code: JP-08
+  iso_code: JP-08
+  tax: 0.0
+  priority: 40
+- name: Tochigi
+  name_alternates:
+  - Tochigi Prefecture
+  - Tochigi-ken
+  - 栃木県
+  - 栃木
+  code: JP-09
+  iso_code: JP-09
+  tax: 0.0
+  priority: 39
+- name: Gunma
+  name_alternates:
+  - Gunma Prefecture
+  - Gunma-ken
+  - 群馬県
+  - 群馬
+  code: JP-10
+  iso_code: JP-10
+  tax: 0.0
+  priority: 38
+- name: Saitama
+  name_alternates:
+  - Saitama Prefecture
+  - Saitama-ken
+  - 埼玉県
+  - 埼玉
+  code: JP-11
+  iso_code: JP-11
+  tax: 0.0
+  priority: 37
+- name: Chiba
+  name_alternates:
+  - Chiba Prefecture
+  - Chiba-ken
+  - 千葉県
+  - 千葉
+  code: JP-12
+  iso_code: JP-12
+  tax: 0.0
+  priority: 36
+- name: Tōkyō
+  name_alternates:
+  - Tokyo Prefecture
+  - Tōkyō-to
+  - 東京都
+  - 東京
+  code: JP-13
+  iso_code: JP-13
+  tax: 0.0
+  priority: 35
+- name: Kanagawa
+  name_alternates:
+  - Kanagawa Prefecture
+  - Kanagawa-ken
+  - 神奈川県
+  - 神奈川
+  code: JP-14
+  iso_code: JP-14
+  tax: 0.0
+  priority: 34
+- name: Niigata
+  name_alternates:
+  - Niigata Prefecture
+  - Niigata-ken
+  - 新潟県
+  - 新潟
+  code: JP-15
+  iso_code: JP-15
+  tax: 0.0
+  priority: 33
+- name: Toyama
+  name_alternates:
+  - Toyama Prefecture
+  - Toyama-ken
+  - 富山県
+  - 富山
+  code: JP-16
+  iso_code: JP-16
+  tax: 0.0
+  priority: 32
+- name: Ishikawa
+  name_alternates:
+  - Ishikawa Prefecture
+  - Ishikawa-ken
+  - 石川県
+  - 石川
+  code: JP-17
+  iso_code: JP-17
+  tax: 0.0
+  priority: 31
+- name: Fukui
+  name_alternates:
+  - Fukui Prefecture
+  - Fukui-ken
+  - 福井県
+  - 福井
+  code: JP-18
+  iso_code: JP-18
+  tax: 0.0
+  priority: 30
+- name: Yamanashi
+  name_alternates:
+  - Yamanashi Prefecture
+  - Yamanashi-ken
+  - 山梨県
+  - 山梨
+  code: JP-19
+  iso_code: JP-19
+  tax: 0.0
+  priority: 29
+- name: Nagano
+  name_alternates:
+  - Nagano Prefecture
+  - Nagano-ken
+  - 長野県
+  - 長野
+  code: JP-20
+  iso_code: JP-20
+  tax: 0.0
+  priority: 28
+- name: Gifu
+  name_alternates:
+  - Gifu Prefecture
+  - Gifu-ken
+  - 岐阜県
+  - 岐阜
+  code: JP-21
+  iso_code: JP-21
+  tax: 0.0
+  priority: 27
+- name: Shizuoka
+  name_alternates:
+  - Shizuoka Prefecture
+  - Shizuoka-ken
+  - 静岡県
+  - 静岡
+  code: JP-22
+  iso_code: JP-22
+  tax: 0.0
+  priority: 26
+- name: Aichi
+  name_alternates:
+  - Aichi Prefecture
+  - Aichi-ken
+  - 愛知県
+  - 愛知
+  code: JP-23
+  iso_code: JP-23
+  tax: 0.0
+  priority: 25
+- name: Mie
+  name_alternates:
+  - Mie Prefecture
+  - Mie-ken
+  - 三重県
+  - 三重
+  code: JP-24
+  iso_code: JP-24
+  tax: 0.0
+  priority: 24
+- name: Shiga
+  name_alternates:
+  - Shiga Prefecture
+  - Shiga-ken
+  - 滋賀県
+  - 滋賀
+  code: JP-25
+  iso_code: JP-25
+  tax: 0.0
+  priority: 23
+- name: Kyōto
+  name_alternates:
+  - Kyoto Prefecture
+  - Kyōto-fu
+  - 京都府
+  - 京都
+  code: JP-26
+  iso_code: JP-26
+  tax: 0.0
+  priority: 22
+- name: Ōsaka
+  name_alternates:
+  - Osaka Prefecture
+  - Ōsaka-fu
+  - 大阪府
+  - 大阪
+  code: JP-27
+  iso_code: JP-27
+  tax: 0.0
+  priority: 21
+- name: Hyōgo
+  name_alternates:
+  - Hyogo Prefecture
+  - Hyōgo-ken
+  - 兵庫県
+  - 兵庫
+  code: JP-28
+  iso_code: JP-28
+  tax: 0.0
+  priority: 20
+- name: Nara
+  name_alternates:
+  - Nara Prefecture
+  - Nara-ken
+  - 奈良県
+  - 奈良
+  code: JP-29
+  iso_code: JP-29
+  tax: 0.0
+  priority: 19
+- name: Wakayama
+  name_alternates:
+  - Wakayama Prefecture
+  - Wakayama-ken
+  - 和歌山県
+  - 和歌山
+  code: JP-30
+  iso_code: JP-30
+  tax: 0.0
+  priority: 18
+- name: Tottori
+  name_alternates:
+  - Tottori Prefecture
+  - Tottori-ken
+  - 鳥取県
+  - 鳥取
+  code: JP-31
+  iso_code: JP-31
+  tax: 0.0
+  priority: 17
+- name: Shimane
+  name_alternates:
+  - Shimane Prefecture
+  - Shimane-ken
+  - 島根県
+  - 島根
+  code: JP-32
+  iso_code: JP-32
+  tax: 0.0
+  priority: 16
+- name: Okayama
+  name_alternates:
+  - Okayama Prefecture
+  - Okayama-ken
+  - 岡山県
+  - 岡山
+  code: JP-33
+  iso_code: JP-33
+  tax: 0.0
+  priority: 15
+- name: Hiroshima
+  name_alternates:
+  - Hiroshima Prefecture
+  - Hiroshima-ken
+  - 広島県
+  - 広島
+  code: JP-34
+  iso_code: JP-34
+  tax: 0.0
+  priority: 14
+- name: Yamaguchi
+  name_alternates:
+  - Yamaguchi Prefecture
+  - Yamaguchi-ken
+  - 山口県
+  - 山口
+  code: JP-35
+  iso_code: JP-35
+  tax: 0.0
+  priority: 13
+- name: Tokushima
+  name_alternates:
+  - Tokushima Prefecture
+  - Tokushima-ken
+  - 徳島県
+  - 徳島
+  code: JP-36
+  iso_code: JP-36
+  tax: 0.0
+  priority: 12
+- name: Kagawa
+  name_alternates:
+  - Kagawa Prefecture
+  - Kagawa-ken
+  - 香川県
+  - 香川
+  code: JP-37
+  iso_code: JP-37
+  tax: 0.0
+  priority: 11
+- name: Ehime
+  name_alternates:
+  - Ehime Prefecture
+  - Ehime-ken
+  - 愛媛県
+  - 愛媛
+  code: JP-38
+  iso_code: JP-38
+  tax: 0.0
+  priority: 10
+- name: Kōchi
+  name_alternates:
+  - Kochi Prefecture
+  - Kōchi-ken
+  - 高知県
+  - 高知
+  code: JP-39
+  iso_code: JP-39
+  tax: 0.0
+  priority: 9
+- name: Fukuoka
+  name_alternates:
+  - Fukuoka Prefecture
+  - Fukuoka-ken
+  - 福岡県
+  - 福岡
+  code: JP-40
+  iso_code: JP-40
+  tax: 0.0
+  priority: 8
+- name: Saga
+  name_alternates:
+  - Saga Prefecture
+  - Saga-ken
+  - 佐賀県
+  - 佐賀
+  code: JP-41
+  iso_code: JP-41
+  tax: 0.0
+  priority: 7
+- name: Nagasaki
+  name_alternates:
+  - Nagasaki Prefecture
+  - Nagasaki-ken
+  - 長崎県
+  - 長崎
+  code: JP-42
+  iso_code: JP-42
+  tax: 0.0
+  priority: 6
+- name: Kumamoto
+  name_alternates:
+  - Kumamoto Prefecture
+  - Kumamoto-ken
+  - 熊本県
+  - 熊本
+  code: JP-43
+  iso_code: JP-43
+  tax: 0.0
+  priority: 5
+- name: Ōita
+  name_alternates:
+  - Oita Prefecture
+  - Ōita-ken
+  - 大分県
+  - 大分
+  code: JP-44
+  iso_code: JP-44
+  tax: 0.0
+  priority: 4
+- name: Miyazaki
+  name_alternates:
+  - Miyazaki Prefecture
+  - Miyazaki-ken
+  - 宮崎県
+  - 宮崎
+  code: JP-45
+  iso_code: JP-45
+  tax: 0.0
+  priority: 3
+- name: Kagoshima
+  name_alternates:
+  - Kagoshima Prefecture
+  - Kagoshima-ken
+  - 鹿児島県
+  - 鹿児島
+  code: JP-46
+  iso_code: JP-46
+  tax: 0.0
+  priority: 2
+- name: Okinawa
+  name_alternates:
+  - Okinawa Prefecture
+  - Okinawa-ken
+  - 沖縄県
+  - 沖縄
+  code: JP-47
+  iso_code: JP-47
+  tax: 0.0
+  priority: 1
+timezone: Asia/Tokyo

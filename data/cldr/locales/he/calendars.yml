@@ -1,0 +1,381 @@
+---
+he:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E ה-d
+        Ehm: E h:mm a
+        EHm: E H:mm
+        Ehms: E h:mm:ss a
+        EHms: E H:mm:ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d בMMM y G
+        GyMMMEd: E, d בMMM y G
+        h: "‏h a"
+        H: H
+        hm: h:mm a
+        Hm: H:mm
+        hms: h:mm:ss a
+        Hms: H:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d.M
+        MEd: E, d.M
+        MMM: LLL
+        MMMd: d בMMM
+        MMMEd: E, d בMMM
+        MMMMd: d בMMMM
+        MMMMW: שבוע W בMMMM
+        ms: mm:ss
+        "y": "y"
+        yM: M.y
+        yMd: d.M.y
+        yMEd: E, d.M.y
+        yMM: M.y
+        yMMM: MMM y
+        yMMMd: d בMMM y
+        yMMMEd: E, d בMMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: שבוע w בשנת Y
+      days:
+        format:
+          abbreviated:
+            sun: יום א׳
+            mon: יום ב׳
+            tue: יום ג׳
+            wed: יום ד׳
+            thu: יום ה׳
+            fri: יום ו׳
+            sat: שבת
+          narrow:
+            sun: א׳
+            mon: ב׳
+            tue: ג׳
+            wed: ד׳
+            thu: ה׳
+            fri: ו׳
+            sat: ש׳
+          short:
+            sun: א׳
+            mon: ב׳
+            tue: ג׳
+            wed: ד׳
+            thu: ה׳
+            fri: ו׳
+            sat: ש׳
+          wide:
+            sun: יום ראשון
+            mon: יום שני
+            tue: יום שלישי
+            wed: יום רביעי
+            thu: יום חמישי
+            fri: יום שישי
+            sat: יום שבת
+        stand_alone:
+          abbreviated:
+            sun: יום א׳
+            mon: יום ב׳
+            tue: יום ג׳
+            wed: יום ד׳
+            thu: יום ה׳
+            fri: יום ו׳
+            sat: שבת
+          narrow:
+            sun: א׳
+            mon: ב׳
+            tue: ג׳
+            wed: ד׳
+            thu: ה׳
+            fri: ו׳
+            sat: ש׳
+          short:
+            sun: א׳
+            mon: ב׳
+            tue: ג׳
+            wed: ד׳
+            thu: ה׳
+            fri: ו׳
+            sat: ש׳
+          wide:
+            sun: יום ראשון
+            mon: יום שני
+            tue: יום שלישי
+            wed: יום רביעי
+            thu: יום חמישי
+            fri: יום שישי
+            sat: יום שבת
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+        name:
+          0: לפנה״ס
+          1: CE
+        narrow:
+          0: לפני
+          1: אחריי
+      fields:
+        day: יום
+        day_narrow: יום
+        day_of_year: יום בשנה
+        day_of_year_narrow: יום בשנה
+        day_of_year_short: יום בשנה
+        day_period: לפנה״צ/אחה״צ
+        day_period_narrow: AM/PM
+        day_period_short: AM/PM
+        day_short: יום
+        era: תקופה
+        era_narrow: תקופה
+        era_short: תקופה
+        hour: שעה
+        hour_narrow: שע׳
+        hour_short: שעה
+        minute: דקה
+        minute_narrow: דק׳
+        minute_short: דק׳
+        month: חודש
+        month_narrow: חו׳
+        month_short: חו׳
+        quarter: רבעון
+        quarter_narrow: רבע׳
+        quarter_short: רבע׳
+        second: שנייה
+        second_narrow: שנ׳
+        second_short: שנ׳
+        week: שבוע
+        week_narrow: שב׳
+        week_of_month: השבוע בחודש
+        week_of_month_narrow: השבוע בחודש
+        week_of_month_short: השבוע בחודש
+        week_short: שב׳
+        weekday: יום בשבוע
+        weekday_narrow: יום בשבוע
+        weekday_of_month: יום חול בחודש
+        weekday_of_month_narrow: יום בחודש
+        weekday_of_month_short: יום בחודש
+        weekday_short: יום בשבוע
+        year: שנה
+        year_narrow: שנ׳
+        year_short: שנ׳
+        zone: אזור זמן
+        zone_narrow: אזור
+        zone_short: אזור
+      formats:
+        date:
+          full:
+            pattern: EEEE, d בMMMM y
+          long:
+            pattern: d בMMMM y
+          medium:
+            pattern: d בMMM y
+          short:
+            pattern: d.M.y
+        datetime:
+          full:
+            pattern: "{{date}} בשעה {{time}}"
+          long:
+            pattern: "{{date}} בשעה {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: H:mm:ss zzzz
+          long:
+            pattern: H:mm:ss z
+          medium:
+            pattern: H:mm:ss
+          short:
+            pattern: H:mm
+      months:
+        format:
+          abbreviated:
+            1: ינו׳
+            2: פבר׳
+            3: מרץ
+            4: אפר׳
+            5: מאי
+            6: יוני
+            7: יולי
+            8: אוג׳
+            9: ספט׳
+            10: אוק׳
+            11: נוב׳
+            12: דצמ׳
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            8: '8'
+            9: '9'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: ינואר
+            2: פברואר
+            3: מרץ
+            4: אפריל
+            5: מאי
+            6: יוני
+            7: יולי
+            8: אוגוסט
+            9: ספטמבר
+            10: אוקטובר
+            11: נובמבר
+            12: דצמבר
+        stand_alone:
+          abbreviated:
+            1: ינו׳
+            2: פבר׳
+            3: מרץ
+            4: אפר׳
+            5: מאי
+            6: יוני
+            7: יולי
+            8: אוג׳
+            9: ספט׳
+            10: אוק׳
+            11: נוב׳
+            12: דצמ׳
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            8: '8'
+            9: '9'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: ינואר
+            2: פברואר
+            3: מרץ
+            4: אפריל
+            5: מאי
+            6: יוני
+            7: יולי
+            8: אוגוסט
+            9: ספטמבר
+            10: אוקטובר
+            11: נובמבר
+            12: דצמבר
+      periods:
+        format:
+          abbreviated:
+            afternoon1: צהריים
+            afternoon2: אחר הצהריים
+            am: לפנה״צ
+            evening1: ערב
+            midnight: חצות
+            morning1: בוקר
+            night1: לילה
+            night2: לפנות בוקר
+            pm: אחה״צ
+          narrow:
+            afternoon1: בצהריים
+            afternoon2: אחה״צ
+            am: לפנה״צ
+            evening1: בערב
+            midnight: חצות
+            morning1: בבוקר
+            night1: בלילה
+            night2: לפנות בוקר
+            pm: אחה״צ
+          wide:
+            afternoon1: בצהריים
+            afternoon2: אחר הצהריים
+            am: לפנה״צ
+            evening1: בערב
+            midnight: חצות
+            morning1: בבוקר
+            night1: בלילה
+            night2: לפנות בוקר
+            pm: אחה״צ
+        stand_alone:
+          abbreviated:
+            afternoon1: צהריים
+            afternoon2: אחה״צ
+            am: AM
+            evening1: ערב
+            midnight: חצות
+            morning1: בוקר
+            night1: לילה
+            night2: לפנות בוקר
+            pm: PM
+          narrow:
+            afternoon1: צהריים
+            afternoon2: אחה״צ
+            am: לפנה״צ
+            evening1: ערב
+            midnight: חצות
+            morning1: בוקר
+            night1: לילה
+            night2: לפנות בוקר
+            pm: אחה״צ
+          wide:
+            afternoon1: צהריים
+            afternoon2: אחר הצהריים
+            am: AM
+            evening1: ערב
+            midnight: חצות
+            morning1: בוקר
+            night1: לילה
+            night2: לפנות בוקר
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: רבעון 1
+            2: רבעון 2
+            3: רבעון 3
+            4: רבעון 4
+        stand_alone:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: רבעון 1
+            2: רבעון 2
+            3: רבעון 3
+            4: רבעון 4

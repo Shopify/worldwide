@@ -1,0 +1,23 @@
+---
+name: Iceland
+code: IS
+tax: 0.24
+currency: ISK
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+tags:
+- EU-EEA
+group: European Countries
+group_name: Europe
+zip_example: '320'
+zip_regex: "^(IS-?)?[1-9]\\d{2}$"
+phone_number_prefix: 354
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EE\U0001F1F8"
+languages:
+  - is
+timezone: Atlantic/Reykjavik

@@ -1,0 +1,24 @@
+---
+name: South Sudan
+code: SS
+tax: 0.18
+tax_name: VAT
+currency: SSP
+unit_system: metric
+group: African Countries
+group_name: Africa
+# We know very little about South Sudan's postal system.
+# It is possible that some people may still be using old Sudan postcodes for addresses in South Sudan.
+# For that reason, we permit the entry of a postal code, but it is optional.
+zip_regex: "^\\d{5}$"
+zip_example: 81111 # Juba
+zip_requirement: optional
+phone_number_prefix: 211
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{country}_{phone}"
+emoji: 🇸🇸
+languages:
+  - ar
+  - en
+timezone: Africa/Juba

@@ -1,0 +1,23 @@
+---
+sw-KE:
+  calendars:
+    gregorian:
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y G
+          short:
+            pattern: dd/MM/y GGGGG
+        datetime:
+          full:
+            pattern: "{{date}} 'saa' {{time}}"
+          long:
+            pattern: "{{date}} 'saa' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"

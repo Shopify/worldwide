@@ -1,0 +1,19 @@
+---
+tr:
+  worldwide:
+    GB:
+      addresses:
+        zip:
+          label:
+            default: Posta kodu
+            optional: Posta kodu (isteğe bağlı)
+          errors:
+            blank: Posta kodu girin
+            invalid_for_country: Birleşik Krallık için geçerli bir posta kodu girin
+            invalid_for_country_and_province: "%{province}, Birleşik Krallık için
+              geçerli bir posta kodu girin"
+            too_long: Posta kodu değeri çok uzun
+            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
+            contains_emojis: Posta kodu, emoji içeremez
+            contains_restricted_characters: Posta kodunda kısıtlanmış karakterler
+              kullanılamaz

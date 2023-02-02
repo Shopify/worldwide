@@ -1,0 +1,25 @@
+---
+bg-BG:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Щат
+            optional: Щат (незадължително)
+          errors:
+            blank: Изберете щат
+        zip:
+          label:
+            default: PIN код
+            optional: PIN код (незадължително)
+          errors:
+            blank: Въведете PIN код
+            invalid_for_country: Въведете валиден PIN код за %{country}
+            invalid_for_country_and_province: Въведете валиден PIN код за %{province},
+              %{country}
+            too_long: PIN кодът е с твърде голяма дължина
+            contains_html_tags: PIN кодът не може да съдържа HTML етикети.
+            contains_emojis: PIN кодът не може да съдържа емоджита
+            contains_restricted_characters: ПИН кодът не може да съдържа забранени
+              знаци

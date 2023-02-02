@@ -1,0 +1,43 @@
+---
+name: Greenland
+code: GL
+tax: 0.0
+currency: DKK
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+tags:
+- EU-OCT
+group: European Countries
+group_name: Europe
+zip_regex: "^(GL-?)?39\\d{2}$"
+zip_example: '3911'
+phone_number_prefix: 299
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1F1"
+languages:
+  - da
+  - en
+  - kl
+timezones:
+  America/Danmarkshavn:
+  - '3984'
+  America/Godthab:
+  - '390'
+  - '391'
+  - '392'
+  - '393'
+  - '394'
+  - '395'
+  - '396'
+  - '3972'
+  - '399'
+  America/Scoresbysund:
+  - '3980'
+  - '3982'
+  - '3985'
+  America/Thule:
+  - '3970'
+  - '3971'

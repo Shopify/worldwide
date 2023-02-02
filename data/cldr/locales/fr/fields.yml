@@ -1,0 +1,667 @@
+---
+fr:
+  fields:
+    day:
+      display_name: jour
+      relative:
+        -2: avant-hier
+        -1: hier
+        0: aujourd’hui
+        1: demain
+        2: après-demain
+      relative_time:
+        future:
+          many: dans {0} jours
+          one: dans {0} jour
+          other: dans {0} jours
+        past:
+          many: il y a {0} jours
+          one: il y a {0} jour
+          other: il y a {0} jours
+    day_narrow:
+      display_name: j
+      relative:
+        -2: avant-hier
+        -1: hier
+        0: aujourd’hui
+        1: demain
+        2: après-demain
+      relative_time:
+        future:
+          many: "+{0} j"
+          one: "+{0} j"
+          other: "+{0} j"
+        past:
+          many: "-{0} j"
+          one: "-{0} j"
+          other: "-{0} j"
+    day_of_year:
+      display_name: jour (année)
+    day_of_year_narrow:
+      display_name: j (an)
+    day_of_year_short:
+      display_name: j (an)
+    day_short:
+      display_name: j
+      relative:
+        -2: avant-hier
+        -1: hier
+        0: aujourd’hui
+        1: demain
+        2: après-demain
+      relative_time:
+        future:
+          many: dans {0} j
+          one: dans {0} j
+          other: dans {0} j
+        past:
+          many: il y a {0} j
+          one: il y a {0} j
+          other: il y a {0} j
+    dayperiod:
+      display_name: cadran
+    dayperiod_narrow:
+      display_name: cadran
+    dayperiod_short:
+      display_name: cadran
+    era:
+      display_name: ère
+    era_narrow:
+      display_name: ère
+    era_short:
+      display_name: ère
+    fri:
+      relative:
+        -1: vendredi dernier
+        0: ce vendredi
+        1: vendredi prochain
+      relative_time:
+        future:
+          many: dans {0} vendredis
+          one: dans {0} vendredi
+          other: dans {0} vendredis
+        past:
+          many: il y a {0} vendredis
+          one: il y a {0} vendredi
+          other: il y a {0} vendredis
+    fri_narrow:
+      relative:
+        -1: ven. dernier
+        0: ce ven.
+        1: ven. prochain
+      relative_time:
+        future:
+          many: dans {0} ven.
+          one: dans {0} ven.
+          other: dans {0} ven.
+        past:
+          many: il y a {0} ven.
+          one: il y a {0} ven.
+          other: il y a {0} ven.
+    fri_short:
+      relative:
+        -1: ven. dernier
+        0: ce ven.
+        1: ven. prochain
+      relative_time:
+        future:
+          many: dans {0} ven.
+          one: dans {0} ven.
+          other: dans {0} ven.
+        past:
+          many: il y a {0} ven.
+          one: il y a {0} ven.
+          other: il y a {0} ven.
+    hour:
+      display_name: heure
+      relative:
+        0: cette heure-ci
+      relative_time:
+        future:
+          many: dans {0} heures
+          one: dans {0} heure
+          other: dans {0} heures
+        past:
+          many: il y a {0} heures
+          one: il y a {0} heure
+          other: il y a {0} heures
+    hour_narrow:
+      display_name: h
+      relative_time:
+        future:
+          many: "+{0} h"
+          one: "+{0} h"
+          other: "+{0} h"
+        past:
+          many: "-{0} h"
+          one: "-{0} h"
+          other: "-{0} h"
+    hour_short:
+      display_name: h
+      relative_time:
+        future:
+          many: dans {0} h
+          one: dans {0} h
+          other: dans {0} h
+        past:
+          many: il y a {0} h
+          one: il y a {0} h
+          other: il y a {0} h
+    minute:
+      display_name: minute
+      relative:
+        0: cette minute-ci
+      relative_time:
+        future:
+          many: dans {0} minutes
+          one: dans {0} minute
+          other: dans {0} minutes
+        past:
+          many: il y a {0} minutes
+          one: il y a {0} minute
+          other: il y a {0} minutes
+    minute_narrow:
+      display_name: min
+      relative_time:
+        future:
+          many: "+{0} min"
+          one: "+{0} min"
+          other: "+{0} min"
+        past:
+          many: "-{0} min"
+          one: "-{0} min"
+          other: "-{0} min"
+    minute_short:
+      display_name: min
+      relative_time:
+        future:
+          many: dans {0} min
+          one: dans {0} min
+          other: dans {0} min
+        past:
+          many: il y a {0} min
+          one: il y a {0} min
+          other: il y a {0} min
+    mon:
+      relative:
+        -1: lundi dernier
+        0: ce lundi
+        1: lundi prochain
+      relative_time:
+        future:
+          many: dans {0} lundis
+          one: dans {0} lundi
+          other: dans {0} lundis
+        past:
+          many: il y a {0} lundis
+          one: il y a {0} lundi
+          other: il y a {0} lundis
+    mon_narrow:
+      relative:
+        -1: lun. dernier
+        0: ce lun.
+        1: lun. prochain
+      relative_time:
+        future:
+          many: dans {0} lun.
+          one: dans {0} lun.
+          other: dans {0} lun.
+        past:
+          many: il y a {0} lun.
+          one: il y a {0} lun.
+          other: il y a {0} lun.
+    mon_short:
+      relative:
+        -1: lun. dernier
+        0: ce lun.
+        1: lun. prochain
+      relative_time:
+        future:
+          many: dans {0} lun.
+          one: dans {0} lun.
+          other: dans {0} lun.
+        past:
+          many: il y a {0} lun.
+          one: il y a {0} lun.
+          other: il y a {0} lun.
+    month:
+      display_name: mois
+      relative:
+        -1: le mois dernier
+        0: ce mois-ci
+        1: le mois prochain
+      relative_time:
+        future:
+          many: dans {0} mois
+          one: dans {0} mois
+          other: dans {0} mois
+        past:
+          many: il y a {0} mois
+          one: il y a {0} mois
+          other: il y a {0} mois
+    month_narrow:
+      display_name: m.
+      relative:
+        -1: le mois dernier
+        0: ce mois-ci
+        1: le mois prochain
+      relative_time:
+        future:
+          many: "+{0} m."
+          one: "+{0} m."
+          other: "+{0} m."
+        past:
+          many: "-{0} m."
+          one: "-{0} m."
+          other: "-{0} m."
+    month_short:
+      display_name: m.
+      relative:
+        -1: le mois dernier
+        0: ce mois-ci
+        1: le mois prochain
+      relative_time:
+        future:
+          many: dans {0} m.
+          one: dans {0} m.
+          other: dans {0} m.
+        past:
+          many: il y a {0} m.
+          one: il y a {0} m.
+          other: il y a {0} m.
+    quarter:
+      display_name: trimestre
+      relative:
+        -1: le trimestre dernier
+        0: ce trimestre
+        1: le trimestre prochain
+      relative_time:
+        future:
+          many: dans {0} trimestres
+          one: dans {0} trimestre
+          other: dans {0} trimestres
+        past:
+          many: il y a {0} trimestres
+          one: il y a {0} trimestre
+          other: il y a {0} trimestres
+    quarter_narrow:
+      display_name: trim.
+      relative_time:
+        future:
+          many: "+{0} trim."
+          one: "+{0} trim."
+          other: "+{0} trim."
+        past:
+          many: "-{0} trim."
+          one: "-{0} trim."
+          other: "-{0} trim."
+    quarter_short:
+      display_name: trim.
+      relative_time:
+        future:
+          many: dans {0} trim.
+          one: dans {0} trim.
+          other: dans {0} trim.
+        past:
+          many: il y a {0} trim.
+          one: il y a {0} trim.
+          other: il y a {0} trim.
+    sat:
+      relative:
+        -1: samedi dernier
+        0: ce samedi
+        1: samedi prochain
+      relative_time:
+        future:
+          many: dans {0} samedis
+          one: dans {0} samedi
+          other: dans {0} samedis
+        past:
+          many: il y a {0} samedis
+          one: il y a {0} samedi
+          other: il y a {0} samedis
+    sat_narrow:
+      relative:
+        -1: sam. dernier
+        0: ce sam.
+        1: sam. prochain
+      relative_time:
+        future:
+          many: dans {0} sam.
+          one: dans {0} sam.
+          other: dans {0} sam.
+        past:
+          many: il y a {0} sam.
+          one: il y a {0} sam.
+          other: il y a {0} sam.
+    sat_short:
+      relative:
+        -1: sam. dernier
+        0: ce sam.
+        1: sam. prochain
+      relative_time:
+        future:
+          many: dans {0} sam.
+          one: dans {0} sam.
+          other: dans {0} sam.
+        past:
+          many: dans {0} sam.
+          one: dans {0} sam.
+          other: dans {0} sam.
+    second:
+      display_name: seconde
+      relative:
+        0: maintenant
+      relative_time:
+        future:
+          many: dans {0} secondes
+          one: dans {0} seconde
+          other: dans {0} secondes
+        past:
+          many: il y a {0} secondes
+          one: il y a {0} seconde
+          other: il y a {0} secondes
+    second_narrow:
+      display_name: s
+      relative_time:
+        future:
+          many: "+{0} s"
+          one: "+{0} s"
+          other: "+{0} s"
+        past:
+          many: "-{0} s"
+          one: "-{0} s"
+          other: "-{0} s"
+    second_short:
+      display_name: s
+      relative_time:
+        future:
+          many: dans {0} s
+          one: dans {0} s
+          other: dans {0} s
+        past:
+          many: il y a {0} s
+          one: il y a {0} s
+          other: il y a {0} s
+    sun:
+      relative:
+        -1: dimanche dernier
+        0: ce dimanche
+        1: dimanche prochain
+      relative_time:
+        future:
+          many: dans {0} dimanches
+          one: dans {0} dimanche
+          other: dans {0} dimanches
+        past:
+          many: il y a {0} dimanches
+          one: il y a {0} dimanche
+          other: il y a {0} dimanches
+    sun_narrow:
+      relative:
+        -1: dim. dernier
+        0: ce dim.
+        1: dim. prochain
+      relative_time:
+        future:
+          many: dans {0} dim.
+          one: dans {0} dim.
+          other: dans {0} dim.
+        past:
+          many: il y a {0} dim.
+          one: il y a {0} dim.
+          other: il y a {0} dim.
+    sun_short:
+      relative:
+        -1: dim. dernier
+        0: ce dim.
+        1: dim. prochain
+      relative_time:
+        future:
+          many: dans {0} dim.
+          one: dans {0} dim.
+          other: dans {0} dim.
+        past:
+          many: il y a {0} dim.
+          one: il y a {0} dim.
+          other: il y a {0} dim.
+    thu:
+      relative:
+        -1: jeudi dernier
+        0: ce jeudi
+        1: jeudi prochain
+      relative_time:
+        future:
+          many: dans {0} jeudis
+          one: dans {0} jeudi
+          other: dans {0} jeudis
+        past:
+          many: il y a {0} jeudis
+          one: il y a {0} jeudi
+          other: il y a {0} jeudis
+    thu_narrow:
+      relative:
+        -1: jeu. dernier
+        0: ce jeu.
+        1: jeu. prochain
+      relative_time:
+        future:
+          many: dans {0} jeu.
+          one: dans {0} jeu.
+          other: dans {0} jeu.
+        past:
+          many: il y a {0} jeu.
+          one: il y a {0} jeu.
+          other: il y a {0} jeu.
+    thu_short:
+      relative:
+        -1: jeu. dernier
+        0: ce jeu.
+        1: jeu. prochain
+      relative_time:
+        future:
+          many: dans {0} jeu.
+          one: dans {0} jeu.
+          other: dans {0} jeu.
+        past:
+          many: il y a {0} jeu.
+          one: il y a {0} jeu.
+          other: il y a {0} jeu.
+    tue:
+      relative:
+        -1: mardi dernier
+        0: ce mardi
+        1: mardi prochain
+      relative_time:
+        future:
+          many: dans {0} mardis
+          one: dans {0} mardi
+          other: dans {0} mardis
+        past:
+          many: il y a {0} mardis
+          one: il y a {0} mardi
+          other: il y a {0} mardis
+    tue_narrow:
+      relative:
+        -1: mar. dernier
+        0: ce mar.
+        1: mar. prochain
+      relative_time:
+        future:
+          many: dans {0} mar.
+          one: dans {0} mar.
+          other: dans {0} mar.
+        past:
+          many: il y a {0} mar.
+          one: il y a {0} mar.
+          other: il y a {0} mar.
+    tue_short:
+      relative:
+        -1: mar. dernier
+        0: ce mar.
+        1: mar. prochain
+      relative_time:
+        future:
+          many: dans {0} mar.
+          one: dans {0} mar.
+          other: dans {0} mar.
+        past:
+          many: il y a {0} mar.
+          one: il y a {0} mar.
+          other: il y a {0} mar.
+    wed:
+      relative:
+        -1: mercredi dernier
+        0: ce mercredi
+        1: mercredi prochain
+      relative_time:
+        future:
+          many: dans {0} mercredis
+          one: dans {0} mercredi
+          other: dans {0} mercredis
+        past:
+          many: il y a {0} mercredis
+          one: il y a {0} mercredi
+          other: il y a {0} mercredis
+    wed_narrow:
+      relative:
+        -1: mer. dernier
+        0: ce mer.
+        1: mer. prochain
+      relative_time:
+        future:
+          many: dans {0} mer.
+          one: dans {0} mer.
+          other: dans {0} mer.
+        past:
+          many: il y a {0} mer.
+          one: il y a {0} mer.
+          other: il y a {0} mer.
+    wed_short:
+      relative:
+        -1: mer. dernier
+        0: ce mer.
+        1: mer. prochain
+      relative_time:
+        future:
+          many: dans {0} mer.
+          one: dans {0} mer.
+          other: dans {0} mer.
+        past:
+          many: il y a {0} mer.
+          one: il y a {0} mer.
+          other: il y a {0} mer.
+    week:
+      display_name: semaine
+      relative:
+        -1: la semaine dernière
+        0: cette semaine
+        1: la semaine prochaine
+      relative_time:
+        future:
+          many: dans {0} semaines
+          one: dans {0} semaine
+          other: dans {0} semaines
+        past:
+          many: il y a {0} semaines
+          one: il y a {0} semaine
+          other: il y a {0} semaines
+    week_narrow:
+      display_name: sem.
+      relative:
+        -1: la semaine dernière
+        0: cette semaine
+        1: la semaine prochaine
+      relative_time:
+        future:
+          many: "+{0} sem."
+          one: "+{0} sem."
+          other: "+{0} sem."
+        past:
+          many: "-{0} sem."
+          one: "-{0} sem."
+          other: "-{0} sem."
+    week_of_month:
+      display_name: semaine (mois)
+    week_of_month_narrow:
+      display_name: sem. (m.)
+    week_of_month_short:
+      display_name: sem. (m.)
+    week_short:
+      display_name: sem.
+      relative:
+        -1: la semaine dernière
+        0: cette semaine
+        1: la semaine prochaine
+      relative_time:
+        future:
+          many: dans {0} sem.
+          one: dans {0} sem.
+          other: dans {0} sem.
+        past:
+          many: il y a {0} sem.
+          one: il y a {0} sem.
+          other: il y a {0} sem.
+    weekday:
+      display_name: jour de la semaine
+    weekday_narrow:
+      display_name: j (sem.)
+    weekday_of_month:
+      display_name: jour (mois)
+    weekday_of_month_narrow:
+      display_name: jour (mois)
+    weekday_of_month_short:
+      display_name: jour (mois)
+    weekday_short:
+      display_name: j (sem.)
+    year:
+      display_name: année
+      relative:
+        -1: l’année dernière
+        0: cette année
+        1: l’année prochaine
+      relative_time:
+        future:
+          many: dans {0} ans
+          one: dans {0} an
+          other: dans {0} ans
+        past:
+          many: il y a {0} ans
+          one: il y a {0} an
+          other: il y a {0} ans
+    year_narrow:
+      display_name: a
+      relative:
+        -1: l’année dernière
+        0: cette année
+        1: l’année prochaine
+      relative_time:
+        future:
+          many: "+{0} a"
+          one: "+{0} a"
+          other: "+{0} a"
+        past:
+          many: "-{0} a"
+          one: "-{0} a"
+          other: "-{0} a"
+    year_short:
+      display_name: an
+      relative:
+        -1: l’année dernière
+        0: cette année
+        1: l’année prochaine
+      relative_time:
+        future:
+          many: dans {0} a
+          one: dans {0} a
+          other: dans {0} a
+        past:
+          many: il y a {0} a
+          one: il y a {0} a
+          other: il y a {0} a
+    zone:
+      display_name: fuseau horaire
+    zone_narrow:
+      display_name: fuseau horaire
+    zone_short:
+      display_name: fuseau horaire

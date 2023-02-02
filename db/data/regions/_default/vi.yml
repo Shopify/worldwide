@@ -1,0 +1,142 @@
+---
+vi:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Công ty
+            optional: Công ty (không bắt buộc)
+          errors:
+            blank: Nhập tên công ty
+            too_long: Tên công ty quá dài (tối đa 255 ký tự)
+            contains_html_tags: Công ty không được chứa thẻ HTML.
+            contains_emojis: Công ty không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Công ty chỉ được chứa chữ cái, chữ số,
+              ký tự địa phương và ký tự đặc biệt
+        first_name:
+          label:
+            default: Tên
+            optional: Tên (không bắt buộc)
+          errors:
+            blank: Nhập tên
+            too_long: Tên quá dài (tối đa 255 ký tự)
+            contains_html_tags: Tên không được chứa thẻ HTML.
+            contains_emojis: Tên không được chứa biểu tượng cảm xúc
+            contains_url: Tên không được chứa URL.
+            contains_restricted_characters: Tên chỉ được chứa chữ cái, chữ số, ký
+              tự địa phương và ký tự đặc biệt
+        last_name:
+          label:
+            default: Họ
+            optional: Họ (không bắt buộc)
+          errors:
+            blank: Nhập họ
+            too_long: Họ quá dài (tối đa 255 ký tự)
+            contains_html_tags: Họ không được chứa thẻ HTML.
+            contains_emojis: Họ không được chứa biểu tượng cảm xúc
+            contains_url: Họ không được chứa URL.
+            contains_restricted_characters: Họ chỉ được chứa chữ cái, chữ số, ký tự
+              địa phương và ký tự đặc biệt
+        address1:
+          label:
+            default: Địa chỉ
+            optional: Địa chỉ (không bắt buộc)
+          errors:
+            blank: Nhập địa chỉ
+            too_long: Dòng địa chỉ đầu tiên quá dài (tối đa 255 ký tự)
+            contains_html_tags: Address1 không được chứa thẻ HTML.
+            contains_emojis: Địa chỉ 1 không được chứa biểu tượng cảm xúc
+            contains_url: Địa chỉ 1 không được chứa URL.
+            missing_building_number: Thêm số tòa nhà nếu có.
+            street_unknown_for_zip: Nhập tên đường hợp lệ cho %{zip}.
+            building_number_invalid: Không thể định vị số tòa nhà cho %{street}, %{zip}.
+            contains_restricted_characters: Địa chỉ 1 chỉ được chứa chữ cái, chữ số,
+              ký tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Address1 không được có nhiều hơn %{word_count}
+              từ
+        address2:
+          label:
+            default: Căn hộ, tòa, v.v.
+            optional: Căn hộ, tòa, v.v. (không bắt buộc)
+          errors:
+            blank: Nhập căn hộ, tòa, v.v.
+            too_long: Dòng địa chỉ thứ hai quá dài (tối đa 255 ký tự)
+            contains_html_tags: Address2 không được chứa thẻ HTML.
+            contains_emojis: Địa chỉ 2 không được chứa biểu tượng cảm xúc
+            contains_url: Địa chỉ 2 không được chứa URL.
+            missing_building_number: Thêm số tòa nhà nếu có.
+            street_unknown_for_zip: Nhập tên đường hợp lệ cho %{zip}.
+            building_number_invalid: Không thể định vị số tòa nhà cho %{street}, %{zip}.
+            contains_restricted_characters: Địa chỉ 2 chỉ được chứa chữ cái, chữ số,
+              ký tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Address2 không được có nhiều hơn %{word_count}
+              từ
+        city:
+          label:
+            default: Thành phố
+            optional: Thành phố (không bắt buộc)
+          errors:
+            blank: Nhập thành phố
+            too_long: Tên thành phố quá dài (tối đa 255 ký tự)
+            contains_html_tags: Thành phố không được chứa thẻ HTML.
+            contains_emojis: Thành phố không được chứa biểu tượng cảm xúc
+            contains_url: Thành phố không được chứa URL
+            unknown_for_zip: Nhập thành phố hợp lệ cho %{zip}
+            unknown_for_province: Nhập thành phố hợp lệ cho %{province}
+            unknown_for_zip_and_province: Nhập thành phố hợp lệ cho %{zip}, %{province}
+            contains_restricted_characters: Thành phố chỉ được chứa chữ cái, chữ số,
+              ký tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Thành phố không được có nhiều hơn %{word_count}
+              từ
+        country:
+          label:
+            default: Quốc gia/Vùng
+            optional: Quốc gia/Vùng (không bắt buộc)
+          errors:
+            blank: Chọn quốc gia/vùng
+            not_supported: Chúng tôi hiện chưa hỗ trợ quốc gia/khu vực này. Nhập địa
+              chỉ mới và thử lại.
+            invalid: Nhập quốc gia/khu vực hợp lệ
+            invalid_for_zip: Nhập quốc gia/khu vực hợp lệ cho mã bưu chính này
+        phone:
+          label:
+            default: Điện thoại
+            optional: Điện thoại (không bắt buộc)
+          errors:
+            blank: Nhập số điện thoại
+            invalid: Nhập số điện thoại hợp lệ
+            too_long: Số điện thoại quá dài (tối đa 255 ký tự)
+            contains_emojis: Số điện thoại không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Số điện thoại chỉ được chứa chữ cái, chữ
+              số, ký tự địa phương và ký tự đặc biệt
+        province:
+          label:
+            default: Vùng
+            optional: Vùng (không bắt buộc)
+          errors:
+            blank: Chọn vùng
+            invalid_for_country: Nhập khu vực hợp lệ cho %{country}
+            unknown_for_city_and_zip: Nhập khu vực hợp lệ cho %{city}, %{zip}
+            unknown_for_city: Chọn khu vực hợp lệ cho %{city}
+            unknown_for_zip: Chọn khu vực hợp lệ cho %{zip}
+        zip:
+          label:
+            default: Mã bưu chính
+            optional: Mã bưu chính (không bắt buộc)
+          errors:
+            blank: Nhập mã bưu chính
+            blocked_address: Địa điểm này không được hỗ trợ.
+            invalid_for_country: Nhập mã bưu chính hợp lệ cho %{country}
+            invalid_for_country_and_province: Nhập mã bưu chính hợp lệ cho %{province},
+              %{country}
+            invalid: Nhập mã bưu chính hợp lệ
+            too_long: Giá trị mã bưu chính quá dài
+            contains_html_tags: Mã bưu chính không được chứa thẻ HTML.
+            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
+            not_supported: Chúng tôi hiện chưa hỗ trợ quốc gia/khu vực này. Nhập địa
+              chỉ mới và thử lại.
+            unknown_for_province: Nhập mã bưu chính hợp lệ cho %{province}
+            contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
+              số, ký tự địa phương và ký tự đặc biệt
+            invalid_for_province: Nhập mã bưu chính hợp lệ cho %{province}

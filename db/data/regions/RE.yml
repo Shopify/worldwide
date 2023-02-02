@@ -1,0 +1,22 @@
+---
+name: Reunion
+code: RE
+tax: 0.085
+tax_name: TVA
+tax_inclusive: true
+currency: EUR
+unit_system: metric
+tags:
+- EU-OMR
+group: European Countries
+group_name: Europe
+zip_regex: "^(RE-?)?97[478]\\d{2}$"
+zip_example: '97400'
+phone_number_prefix: 262
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F7\U0001F1EA"
+languages:
+  - fr
+timezone: Indian/Reunion

@@ -1,0 +1,122 @@
+---
+sq:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< presje >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: një;
+        - :value: 2
+          :rule: dy;
+        - :value: 3
+          :rule: tre;
+        - :value: 4
+          :rule: katër;
+        - :value: 5
+          :rule: pesë;
+        - :value: 6
+          :rule: gjashtë;
+        - :value: 7
+          :rule: shtatë;
+        - :value: 8
+          :rule: tetë;
+        - :value: 9
+          :rule: nëntë;
+        - :value: 10
+          :rule: dhjetë;
+        - :value: 11
+          :rule: ">%spellout-cardinal-masculine>mbëdhjetë;"
+        - :value: 20
+          :rule: njëzet[ e >>];
+        - :value: 30
+          :rule: tridhjetë[ e >>];
+        - :value: 40
+          :rule: dyzet[ e >>];
+        - :value: 50
+          :rule: "<%spellout-cardinal-feminine<dhjetë[ e >>];"
+        - :value: 100
+          :rule: "<%spellout-cardinal-masculine<qind[ e >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-masculine< mijë[ e >>];"
+        - :value: 1000000
+          :rule: një milion[ e >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-feminine< milionë[ e >>];"
+        - :value: 1000000000
+          :rule: një miliar[ e >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-feminine< miliarë[ e >>];"
+        - :value: 1000000000000
+          :rule: një bilion[ e >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-feminine< bilionë[ e >>];"
+        - :value: 1000000000000000
+          :rule: një biliar[ e >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-feminine< biliarë[ e >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< presje >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: një;
+        - :value: 2
+          :rule: dy;
+        - :value: 3
+          :rule: tri;
+        - :value: 4
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: njëzet[ e >>];
+        - :value: 30
+          :rule: tridhjetë[ e >>];
+        - :value: 40
+          :rule: dyzet[ e >>];
+        - :value: 50
+          :rule: "<%spellout-cardinal-feminine<dhjetë[ e >>];"
+        - :value: 100
+          :rule: "<%spellout-cardinal-masculine<qind[ e >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-masculine< mijë[ e >>];"
+        - :value: 1000000
+          :rule: një milion[ e >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-feminine< milionë[ e >>];"
+        - :value: 1000000000
+          :rule: një miliar[ e >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-feminine< miliarë[ e >>];"
+        - :value: 1000000000000
+          :rule: një bilion[ e >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-feminine< bilionë[ e >>];"
+        - :value: 1000000000000000
+          :rule: një biliar[ e >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-feminine< biliarë[ e >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

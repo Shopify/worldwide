@@ -1,0 +1,30 @@
+---
+de:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Bundesstaat
+            optional: Bundesstaat (optional)
+          errors:
+            blank: Wähle einen Bundesstaat aus
+            invalid_for_country: Gültigen Staat in %{country} angeben
+            unknown_for_city_and_zip: Einen gültigen Staat für %{city}, %{zip} eingeben
+            unknown_for_city: Einen gültigen Staat für %{city} auswählen
+            unknown_for_zip: Einen gültigen Staat für %{zip} auswählen
+        zip:
+          label:
+            default: PLZ
+            optional: PLZ (optional)
+          errors:
+            blank: Gib eine Postleitzahl ein
+            invalid_for_country: Gib eine gültige Postleitzahl für %{country} ein
+            invalid_for_country_and_province: Gib eine gültige Postleitzahl für %{province},
+              %{country} ein
+            too_long: Der Postleitzahl-Wert ist zu lang
+            contains_html_tags: PLZ-Wert darf keine HTML-Tags enthalten.
+            contains_emojis: Die PLZ darf keine Emojis enthalten
+            contains_restricted_characters: Die PLZ darf keine eingeschränkten Zeichen
+              enthalten
+            invalid_for_province: Eine gültige Postleitzahl für %{province} eingeben

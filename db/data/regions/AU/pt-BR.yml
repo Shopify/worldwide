@@ -1,0 +1,36 @@
+---
+pt-BR:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Bairro
+            optional: Bairro (opcional)
+          errors:
+            blank: Insira um bairro
+            too_long: O nome do bairro é longo demais (máximo de 255 caracteres)
+            contains_html_tags: O bairro não pode ter tags HTML
+            contains_emojis: O nome do bairro não pode conter emojis
+            contains_restricted_characters: O bairro pode conter apenas letras, números,
+              caracteres locais e caracteres especiais
+        province:
+          label:
+            default: Estado/território
+            optional: Estado/território (opcional)
+          errors:
+            blank: Selecione um estado/território
+        zip:
+          label:
+            default: Código postal
+            optional: Código postal (opcional)
+          errors:
+            blank: Insira um código postal
+            invalid_for_country: Insira um código postal válido para %{country}
+            invalid_for_country_and_province: Insira um CEP válido para %{province},
+              %{country}
+            too_long: O valor de CEP é longo demais
+            contains_html_tags: O CEP não pode ter tags HTML.
+            contains_emojis: Código postal não pode conter emojis
+            contains_restricted_characters: O CEP pode conter apenas letras, números,
+              caracteres locais e caracteres especiais

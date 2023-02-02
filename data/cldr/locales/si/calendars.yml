@@ -1,0 +1,383 @@
+---
+si:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: d E
+        Ehm: E a h.mm
+        EHm: E HH.mm
+        Ehms: E a h.mm.ss
+        EHms: E HH.mm.ss
+        Gy: G y
+        GyMd: GGGGG y-MM-dd
+        GyMMM: G y MMM
+        GyMMMd: G y MMM d
+        GyMMMEd: G y MMM d, E
+        h: a h
+        H: HH
+        hm: a h.mm
+        Hm: HH.mm
+        hms: a h.mm.ss
+        Hms: HH.mm.ss
+        hmsv: h.mm.ss a v
+        Hmsv: HH.mm.ss v
+        hmv: h.mm a v
+        Hmv: HH.mm v
+        M: L
+        Md: M-d
+        MEd: M-d, E
+        MMM: LLL
+        MMMd: MMM d
+        MMMEd: MMM d E
+        MMMMd: MMMM d
+        MMMMW: MMMM සතිය W
+        ms: mm.ss
+        "y": "y"
+        yM: y-M
+        yMd: y-M-d
+        yMEd: y-M-d, E
+        yMMM: y MMM
+        yMMMd: y MMM d
+        yMMMEd: y MMM d, E
+        yMMMM: y MMMM
+        yQQQ: y QQQ
+        yQQQQ: y QQQQ
+        yw: Y සතිය w
+      days:
+        format:
+          abbreviated:
+            sun: ඉරිදා
+            mon: සඳුදා
+            tue: අඟහ
+            wed: බදාදා
+            thu: බ්‍රහස්
+            fri: සිකු
+            sat: සෙන
+          narrow:
+            sun: ඉ
+            mon: ස
+            tue: අ
+            wed: බ
+            thu: බ්‍ර
+            fri: සි
+            sat: සෙ
+          short:
+            sun: ඉරි
+            mon: සඳු
+            tue: අඟ
+            wed: බදා
+            thu: බ්‍රහ
+            fri: සිකු
+            sat: සෙන
+          wide:
+            sun: ඉරිදා
+            mon: සඳුදා
+            tue: අඟහරුවාදා
+            wed: බදාදා
+            thu: බ්‍රහස්පතින්දා
+            fri: සිකුරාදා
+            sat: සෙනසුරාදා
+        stand_alone:
+          abbreviated:
+            sun: ඉරිදා
+            mon: සඳුදා
+            tue: අඟහ
+            wed: බදාදා
+            thu: බ්‍රහස්
+            fri: සිකු
+            sat: සෙන
+          narrow:
+            sun: ඉ
+            mon: ස
+            tue: අ
+            wed: බ
+            thu: බ්‍ර
+            fri: සි
+            sat: සෙ
+          short:
+            sun: ඉරි
+            mon: සඳු
+            tue: අඟ
+            wed: බදා
+            thu: බ්‍රහ
+            fri: සිකු
+            sat: සෙන
+          wide:
+            sun: ඉරිදා
+            mon: සඳුදා
+            tue: අඟහරුවාදා
+            wed: බදාදා
+            thu: බ්‍රහස්පතින්දා
+            fri: සිකුරාදා
+            sat: සෙනසුරාදා
+      eras:
+        abbr:
+          0: පොපෙ
+          1: පො.යු
+        name:
+          0: පොදු යුගයට පෙර
+          1: පොදු යුගය
+      fields:
+        day: දිනය
+        day_narrow: දිනය
+        day_of_year: වසරේ දිනය
+        day_of_year_narrow: වසරේ දිනය
+        day_of_year_short: වසරේ දිනය
+        day_period: පෙ.ව/ප.ව
+        day_period_narrow: පෙ.ව/ප.ව
+        day_period_short: පෙ.ව/ප.ව
+        day_short: දිනය
+        era: යුගය
+        era_narrow: යුගය
+        era_short: යුගය
+        hour: පැය
+        hour_narrow: පැය
+        hour_short: පැය
+        minute: මිනිත්තුව
+        minute_narrow: මිනි.
+        minute_short: මිනි.
+        month: මාසය
+        month_narrow: මාස.
+        month_short: මාස.
+        quarter: කාර්තුව
+        quarter_narrow: කාර්.
+        quarter_short: කාර්.
+        second: තත්පරය
+        second_narrow: තත්.
+        second_short: තත්.
+        week: සතිය
+        week_narrow: සති.
+        week_of_month: මාසයේ සතිය
+        week_of_month_narrow: මාසයේ සතිය
+        week_of_month_short: මාසයේ සතිය
+        week_short: සති.
+        weekday: සතියේ දිනය
+        weekday_narrow: සතියේ දිනය
+        weekday_of_month: මාසයේ සතියේ දිනය
+        weekday_of_month_narrow: මාසයේ සතියේ දිනය
+        weekday_of_month_short: මාසයේ සතියේ දිනය
+        weekday_short: සතියේ දිනය
+        year: වර්ෂය
+        year_narrow: වර්.
+        year_short: වර්.
+        zone: වේලා කලාපය
+        zone_narrow: කලාපය
+        zone_short: කලාපය
+      formats:
+        date:
+          full:
+            pattern: y MMMM d, EEEE
+          long:
+            pattern: y MMMM d
+          medium:
+            pattern: y MMM d
+          short:
+            pattern: y-MM-dd
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH.mm.ss zzzz
+          long:
+            pattern: HH.mm.ss z
+          medium:
+            pattern: HH.mm.ss
+          short:
+            pattern: HH.mm
+      months:
+        format:
+          abbreviated:
+            1: ජන
+            2: පෙබ
+            3: මාර්තු
+            4: අප්‍රේල්
+            5: මැයි
+            6: ජූනි
+            7: ජූලි
+            8: අගෝ
+            9: සැප්
+            10: ඔක්
+            11: නොවැ
+            12: දෙසැ
+          narrow:
+            1: ජ
+            2: පෙ
+            3: මා
+            4: අ
+            5: මැ
+            6: ජූ
+            7: ජූ
+            8: අ
+            9: සැ
+            10: ඔ
+            11: නෙ
+            12: දෙ
+          wide:
+            1: ජනවාරි
+            2: පෙබරවාරි
+            3: මාර්තු
+            4: අප්‍රේල්
+            5: මැයි
+            6: ජූනි
+            7: ජූලි
+            8: අගෝස්තු
+            9: සැප්තැම්බර්
+            10: ඔක්තෝබර්
+            11: නොවැම්බර්
+            12: දෙසැම්බර්
+        stand_alone:
+          abbreviated:
+            1: ජන
+            2: පෙබ
+            3: මාර්
+            4: අප්‍රේල්
+            5: මැයි
+            6: ජූනි
+            7: ජූලි
+            8: අගෝ
+            9: සැප්
+            10: ඔක්
+            11: නොවැ
+            12: දෙසැ
+          narrow:
+            1: ජ
+            2: පෙ
+            3: මා
+            4: අ
+            5: මැ
+            6: ජූ
+            7: ජූ
+            8: අ
+            9: සැ
+            10: ඔ
+            11: නෙ
+            12: දෙ
+          wide:
+            1: ජනවාරි
+            2: පෙබරවාරි
+            3: මාර්තු
+            4: අප්‍රේල්
+            5: මැයි
+            6: ජූනි
+            7: ජූලි
+            8: අගෝස්තු
+            9: සැප්තැම්බර්
+            10: ඔක්තෝබර්
+            11: නොවැම්බර්
+            12: දෙසැම්බර්
+      periods:
+        format:
+          abbreviated:
+            afternoon1: දවල්
+            am: පෙ.ව.
+            evening1: හවස
+            midnight: මැදියම
+            morning1: පාන්දර
+            morning2: උදේ
+            night1: රෑ
+            night2: මැදියමට පසු
+            noon: මධ්‍යාහ්නය
+            pm: ප.ව.
+          narrow:
+            afternoon1: ද
+            am: පෙ
+            evening1: හ
+            midnight: මැ
+            morning1: පා
+            morning2: උ
+            night1: රෑ
+            night2: මැ
+            noon: ම
+            pm: ප
+          wide:
+            afternoon1: දවල්
+            am: පෙ.ව.
+            evening1: හවස
+            midnight: මැදියම
+            morning1: පාන්දර
+            morning2: උදේ
+            night1: රෑ
+            night2: මැදියමට පසු
+            noon: මධ්‍යාහ්නය
+            pm: ප.ව.
+        stand_alone:
+          abbreviated:
+            afternoon1: දවල්
+            am: පෙ.ව.
+            evening1: හවස
+            midnight: මැදියම
+            morning1: පාන්දර
+            morning2: උදේ
+            night1: රෑ
+            night2: මැදියමට පසු
+            noon: මධ්‍යාහ්නය
+            pm: ප.ව.
+          narrow:
+            afternoon1: දවල්
+            am: පෙ.ව.
+            evening1: හවස
+            midnight: මැදියම
+            morning1: පාන්දර
+            morning2: උදේ
+            night1: රෑ
+            night2: මැදියමට පසු
+            noon: මධ්‍යාහ්නය
+            pm: ප.ව.
+          wide:
+            afternoon1: දවල්
+            am: පෙ.ව.
+            evening1: හවස
+            midnight: මැදියම
+            morning1: පාන්දර
+            morning2: උදේ
+            night1: රෑ
+            night2: මැදියමට පසු
+            noon: මධ්‍යාහ්නය
+            pm: ප.ව.
+      quarters:
+        format:
+          abbreviated:
+            1: කාර්:1
+            2: කාර්:2
+            3: කාර්:3
+            4: කාර්:4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1 වන කාර්තුව
+            2: 2 වන කාර්තුව
+            3: 3 වන කාර්තුව
+            4: 4 වන කාර්තුව
+        stand_alone:
+          abbreviated:
+            1: කාර්:1
+            2: කාර්:2
+            3: කාර්:3
+            4: කාර්:4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1 වන කාර්තුව
+            2: 2 වන කාර්තුව
+            3: 3 වන කාර්තුව
+            4: 4 වන කාර්තුව

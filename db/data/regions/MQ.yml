@@ -1,0 +1,27 @@
+---
+name: Martinique
+code: MQ
+tax: 0.085
+currency: EUR
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+tags:
+- EU-OMR
+zip_example: '97220'
+zip_regex: "\\A(MQ-?)?((972)\\d{2,2})\\Z"
+phone_number_prefix: 596
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+# The only flag with official standing in Martinique is the French flag.
+# The emoji flag sequence MQ renders as the "snake flag", which is resented by some as a symbol
+# of the slave trade.  A new local flag, the Iséité flag, was brought into use in 2019, but 
+# revoked in 2021.  At this point, the safest course of action seems to be to use the French flag.
+# Sources:  https://en.wikipedia.org/wiki/Flag_of_Martinique
+# https://www.rci.fm/martinique/infos/Justice/La-justice-annule-lutilisation-du-drapeau-et-de-lhymne-choisis-en-2019-par-la-CTM#
+emoji: 🇫🇷
+languages:
+  - fr
+timezone: America/Martinique

@@ -1,0 +1,115 @@
+---
+th:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "¤#,##0.00;(¤#,##0.00)"
+              standard: "¤#,##0.00"
+            short:
+              standard:
+                '1000':
+                  other: "¤0K"
+                '10000':
+                  other: "¤00K"
+                '100000':
+                  other: "¤000K"
+                '1000000':
+                  other: "¤0M"
+                '10000000':
+                  other: "¤00M"
+                '100000000':
+                  other: "¤000M"
+                '1000000000':
+                  other: "¤0B"
+                '10000000000':
+                  other: "¤00B"
+                '100000000000':
+                  other: "¤000B"
+                '1000000000000':
+                  other: "¤0T"
+                '10000000000000':
+                  other: "¤00T"
+                '100000000000000':
+                  other: "¤000T"
+          unit:
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  other: 0 พัน
+                '10000':
+                  other: 0 หมื่น
+                '100000':
+                  other: 0 แสน
+                '1000000':
+                  other: 0 ล้าน
+                '10000000':
+                  other: 00 ล้าน
+                '100000000':
+                  other: 000 ล้าน
+                '1000000000':
+                  other: 0 พันล้าน
+                '10000000000':
+                  other: 0 หมื่นล้าน
+                '100000000000':
+                  other: 0 แสนล้าน
+                '1000000000000':
+                  other: 0 ล้านล้าน
+                '10000000000000':
+                  other: 00 ล้านล้าน
+                '100000000000000':
+                  other: 000 ล้านล้าน
+            short:
+              standard:
+                '1000':
+                  other: 0K
+                '10000':
+                  other: 00K
+                '100000':
+                  other: 000K
+                '1000000':
+                  other: 0M
+                '10000000':
+                  other: 00M
+                '100000000':
+                  other: 000M
+                '1000000000':
+                  other: 0B
+                '10000000000':
+                  other: 00B
+                '100000000000':
+                  other: 000B
+                '1000000000000':
+                  other: 0T
+                '10000000000000':
+                  other: 00T
+                '100000000000000':
+                  other: 000T
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"

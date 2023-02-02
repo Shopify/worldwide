@@ -1,0 +1,21 @@
+---
+fr:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: État/territoire
+            optional: État/territoire (facultatif)
+          errors:
+            blank: Sélectionner un État/territoire
+        zip:
+          label:
+            default: Code postal
+            optional: Code postal (facultatif)
+          errors:
+            contains_html_tags: Le code postal ne peut pas contenir de balises HTML.
+            too_long: La valeur du code postal est trop longue.
+            contains_emojis: Le code postal ne peut pas contenir d’emojis
+            contains_restricted_characters: Le code postal ne peut pas contenir de
+              caractères non autorisés

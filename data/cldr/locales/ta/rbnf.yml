@@ -1,0 +1,162 @@
+---
+ta:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: எதிர்ம >>;
+        - :value: x.x
+          :rule: "<< புள்ளி >>;"
+        - :value: 0
+          :rule: பூஜ்யம்;
+        - :value: 1
+          :rule: ஒன்று;
+        - :value: 2
+          :rule: இரண்டு;
+        - :value: 3
+          :rule: மூன்று;
+        - :value: 4
+          :rule: நான்கு;
+        - :value: 5
+          :rule: ஐந்து;
+        - :value: 6
+          :rule: ஆறு;
+        - :value: 7
+          :rule: ஏழு;
+        - :value: 8
+          :rule: எட்டு;
+        - :value: 9
+          :rule: ஒன்பது;
+        - :value: 10
+          :rule: பத்து;
+        - :value: 11
+          :rule: பதினொன்று;
+        - :value: 12
+          :rule: பன்னிரண்டு;
+        - :value: 13
+          :rule: பதின்மூன்று;
+        - :value: 14
+          :rule: பதினான்கு;
+        - :value: 15
+          :rule: பதினைந்து;
+        - :value: 16
+          :rule: பதினாறு;
+        - :value: 17
+          :rule: பதினேழு;
+        - :value: 18
+          :rule: பதினெட்டு;
+        - :value: 19
+          :rule: பத்தொன்பது;
+        - :value: 20
+          :rule: இருபது[ >>];
+        - :value: 30
+          :rule: முப்பது[ >>];
+        - :value: 40
+          :rule: நாற்பது[ >>];
+        - :value: 50
+          :rule: ஐம்பது[ >>];
+        - :value: 60
+          :rule: அறுபது[ >>];
+        - :value: 70
+          :rule: எழுபது[ >>];
+        - :value: 80
+          :rule: எண்பது[ >>];
+        - :value: 90
+          :rule: தொண்ணூறு[ >>];
+        - :value: 100
+          :rule: நூறு[ >>];
+        - :value: 200
+          :rule: இருநூறு[ >>];
+        - :value: 300
+          :rule: முந்நூறு[ >>];
+        - :value: 400
+          :rule: நாநூறூ[ >>];
+        - :value: 500
+          :rule: ஐநூறு[ >>];
+        - :value: 600
+          :rule: அறுநூறு[ >>];
+        - :value: 700
+          :rule: எழுநூறு[ >>];
+        - :value: 800
+          :rule: எண்நூறு[ >>];
+        - :value: 900
+          :rule: தொள்ளாயிரம்[ >>];
+        - :value: 1000
+          :rule: "<< ஆயிரம்[ >>];"
+        - :value: 100000
+          :rule: "<< லட்சம்[ >>];"
+        - :value: 10000000
+          :rule: "<< கோடி[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##,##0=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: எதிர்ம >>;
+        - :value: x.x
+          :rule: "=#,##,##0.#=;"
+        - :value: 0
+          :rule: பூஜ்யம்;
+        - :value: 1
+          :rule: முதலாவது;
+        - :value: 2
+          :rule: இரண்டாவது;
+        - :value: 3
+          :rule: மூன்றாவது;
+        - :value: 4
+          :rule: நான்காவது;
+        - :value: 5
+          :rule: ஐந்தாவது;
+        - :value: 6
+          :rule: ஆறாவது;
+        - :value: 7
+          :rule: ஏழாவது;
+        - :value: 8
+          :rule: எட்டாவது;
+        - :value: 9
+          :rule: ஒன்பதாவது;
+        - :value: 10
+          :rule: பத்தாவது;
+        - :value: 11
+          :rule: பதினொன்றாவது;
+        - :value: 12
+          :rule: பன்னிரண்டாவது;
+        - :value: 13
+          :rule: பதிமூன்றாவது;
+        - :value: 14
+          :rule: பதிநான்காவது;
+        - :value: 15
+          :rule: பதினைந்தாவது;
+        - :value: 16
+          :rule: பதினாறாவது;
+        - :value: 17
+          :rule: பதினேழாவது;
+        - :value: 18
+          :rule: பதினெட்டாவது;
+        - :value: 19
+          :rule: பத்தொன்பதாவது;
+        - :value: 20
+          :rule: இருபதாவது;
+        - :value: 21
+          :rule: "=#,##,##0=ாவது;"
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##,##0=.;"

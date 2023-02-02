@@ -1,0 +1,145 @@
+---
+nl:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Bedrijf
+            optional: Bedrijf (optioneel)
+          errors:
+            blank: Voer een bedrijfsnaam in
+            too_long: Bedrijfsnaam is te lang (het maximum is 255 tekens)
+            contains_html_tags: Bedrijf mag geen HTML-tags bevatten.
+            contains_emojis: Bedrijf mag geen emoji's bevatten
+            contains_restricted_characters: Het veld Bedrijf mag alleen letters, cijfers,
+              lokale tekens en speciale tekens bevatten
+        first_name:
+          label:
+            default: Voornaam
+            optional: Voornaam (optioneel)
+          errors:
+            blank: Voer een voornaam in
+            too_long: Voornaam is te lang (het maximum is 255 tekens)
+            contains_html_tags: Voornaam mag geen HTML-tags bevatten.
+            contains_emojis: Voornaam mag geen emoji's bevatten
+            contains_url: Voornaam mag geen URL bevatten.
+            contains_restricted_characters: Het veld Voornaam mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+        last_name:
+          label:
+            default: Achternaam
+            optional: Achternaam (optioneel)
+          errors:
+            blank: Voer een achternaam in
+            too_long: Achternaam is te lang (het maximum is 255 tekens)
+            contains_html_tags: Achternaam mag geen HTML-tags bevatten.
+            contains_emojis: Achternaam mag geen emoji's bevatten
+            contains_url: Achternaam mag geen URL bevatten.
+            contains_restricted_characters: Het veld Achternaam mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+        address1:
+          label:
+            default: Adres
+            optional: Adres (optioneel)
+          errors:
+            blank: Voer een adres in
+            too_long: De eerste adresregel is te lang (het maximum is 255 tekens)
+            contains_html_tags: Adres1 mag geen HTML-tags bevatten.
+            contains_emojis: Adres1 mag geen emoji's bevatten
+            contains_url: Adres1 mag geen URL's bevatten.
+            missing_building_number: Voeg een gebouwnummer toe als je er een hebt.
+            street_unknown_for_zip: Voer een geldige straatnaam in voor %{zip}.
+            building_number_invalid: Gebouwnummer voor %{street}, %{zip} kan niet
+              worden gevonden.
+            contains_restricted_characters: Het veld Adres1 mag alleen letters, cijfers,
+              lokale tekens en speciale tekens bevatten
+            contains_too_many_words: Adres1 mag niet langer zijn dan %{word_count}
+              woorden
+        address2:
+          label:
+            default: Appartementnr. etc.
+            optional: Appartementnr. etc. (optioneel)
+          errors:
+            blank: Voer een appartement- of suitenummer in, etc.
+            too_long: De tweede adresregel is te lang (het maximum is 255 tekens)
+            contains_html_tags: Adres2 mag geen HTML-tags bevatten.
+            contains_emojis: Adres 2 mag geen emoji's bevatten
+            contains_url: Adres2 mag geen URL's bevatten.
+            missing_building_number: Voeg een gebouwnummer toe als je er een hebt.
+            street_unknown_for_zip: Voer een geldige straatnaam in voor %{zip}.
+            building_number_invalid: Gebouwnummer voor %{street}, %{zip} kan niet
+              worden gevonden.
+            contains_restricted_characters: Het veld Adres2 mag alleen letters, cijfers,
+              lokale tekens en speciale tekens bevatten
+            contains_too_many_words: Adres2 mag niet langer zijn dan %{word_count}
+              woorden
+        city:
+          label:
+            default: Stad
+            optional: Stad (optioneel)
+          errors:
+            blank: Voer een stad in
+            too_long: Plaats is te lang (het maximum is 255 tekens)
+            contains_html_tags: Plaats mag geen HTML-tags bevatten.
+            contains_emojis: Plaats mag geen emoji's bevatten
+            contains_url: Plaats mag geen URL bevatten
+            unknown_for_zip: Voer een geldige stad in voor %{zip}
+            unknown_for_province: Voer een geldige plaats in voor %{province}.
+            unknown_for_zip_and_province: Voer een geldige plaats in voor %{zip},
+              %{province}.
+            contains_restricted_characters: Het veld Plaats mag alleen letters, cijfers,
+              lokale tekens en speciale tekens bevatten
+            contains_too_many_words: Plaats mag niet langer zijn dan %{word_count}
+              woorden
+        country:
+          label:
+            default: Land/regio
+            optional: Land/regio (optioneel)
+          errors:
+            blank: Selecteer een land/regio
+            not_supported: Op dit moment ondersteunen we dit land/deze regio niet.
+              Vul een nieuw adres in en probeer het opnieuw.
+            invalid: Voer een geldig(e) land/regio in
+            invalid_for_zip: Voer een geldig(e) land/regio in voor deze postcode
+        phone:
+          label:
+            default: Telefoonnummer
+            optional: Telefoonnummer (optioneel)
+          errors:
+            blank: Voer een telefoonnummer in
+            invalid: Voer een geldig telefoonnummer in
+            too_long: Het telefoonnummer is te lang (het maximum is 255 tekens)
+            contains_emojis: Telefoonnummer mag geen emoji's bevatten
+            contains_restricted_characters: Het veld Telefoonnummer mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+        province:
+          label:
+            default: Regio
+            optional: Regio (optioneel)
+          errors:
+            blank: Selecteer een regio
+            invalid_for_country: Voer een geldige regio in voor %{country}
+            unknown_for_city_and_zip: Voer een geldige regio in voor %{city}, %{zip}
+            unknown_for_city: Selecteer een geldige regio voor %{city}
+            unknown_for_zip: Selecteer een geldige regio voor %{zip}
+        zip:
+          label:
+            default: Postcode
+            optional: Postcode (optioneel)
+          errors:
+            blank: Voer een postcode in
+            blocked_address: Deze locatie wordt niet ondersteund.
+            invalid_for_country: Voer een geldige postcode in voor %{country}
+            invalid_for_country_and_province: Voer een geldige postcode in voor %{province},
+              %{country}
+            invalid: Vul een geldige postcode in
+            too_long: De waarde van de postcode is te lang
+            contains_html_tags: Postcode mag geen HTML-tags bevatten.
+            contains_emojis: Postcode mag geen emoji's bevatten
+            not_supported: Op dit moment ondersteunen we dit land/deze regio niet.
+              Voer een nieuw adres in en probeer het opnieuw.
+            unknown_for_province: Voer een geldige postcode in voor %{province}
+            contains_restricted_characters: Het veld Postcode mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            invalid_for_province: Voer een geldige postcode in voor %{province}.

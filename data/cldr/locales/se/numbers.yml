@@ -1,0 +1,191 @@
+---
+se:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+          unit:
+            one: "{0} {1}"
+            other: "{0} {1}"
+            two: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  one: 0 duhát
+                  other: 0 duháhat
+                  two: 0 duháhat
+                '10000':
+                  one: 00 duhát
+                  other: 00 duháhat
+                  two: 00 duháhat
+                '100000':
+                  one: 000 duhát
+                  other: 000 duháhat
+                  two: 000 duháhat
+                '1000000':
+                  one: 0 miljona
+                  other: 0 miljonat
+                  two: 0 miljonat
+                '10000000':
+                  one: 00 miljona
+                  other: 00 miljonat
+                  two: 00 miljonat
+                '100000000':
+                  one: 000 miljona
+                  other: 000 miljonat
+                  two: 000 miljonat
+                '1000000000':
+                  one: 0 miljardi
+                  other: 0 miljardit
+                  two: 0 miljardit
+                '10000000000':
+                  one: 00 miljardi
+                  other: 00 miljardit
+                  two: 00 miljardit
+                '100000000000':
+                  one: 000 miljardi
+                  other: 000 miljardit
+                  two: 000 miljardit
+                '1000000000000':
+                  one: 0 biljona
+                  other: 0 biljonat
+                  two: 0 biljonat
+                '10000000000000':
+                  one: 00 biljona
+                  other: 00 biljonat
+                  two: 00 biljonat
+                '100000000000000':
+                  one: 000 biljona
+                  other: 000 biljonat
+                  two: 000 biljonat
+            short:
+              standard:
+                '1000':
+                  one: 0 dt
+                  other: 0 dt
+                  two: 0 dt
+                '10000':
+                  one: 00 dt
+                  other: 00 dt
+                  two: 00 dt
+                '100000':
+                  one: 000 dt
+                  other: 000 dt
+                  two: 000 dt
+                '1000000':
+                  one: 0 mn
+                  other: 0 mn
+                  two: 0 mn
+                '10000000':
+                  one: 00 mn
+                  other: 00 mn
+                  two: 00 mn
+                '100000000':
+                  one: 000 mn
+                  other: 000 mn
+                  two: 000 mn
+                '1000000000':
+                  one: 0 md
+                  other: 0 md
+                  two: 0 md
+                '10000000000':
+                  one: 00 md
+                  other: 00 md
+                  two: 00 md
+                '100000000000':
+                  one: 000 md
+                  other: 000 md
+                  two: 000 md
+                '1000000000000':
+                  one: 0 bn
+                  other: 0 bn
+                  two: 0 bn
+                '10000000000000':
+                  one: 00 bn
+                  other: 00 bn
+                  two: 00 bn
+                '100000000000000':
+                  one: 000 bn
+                  other: 000 bn
+                  two: 000 bn
+        percent:
+          patterns:
+            default:
+              standard: "#,##0 %"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        currency:
+          patterns:
+            short:
+              standard:
+                '1000':
+                  one: 0 dt ¤
+                  other: 0 dt ¤
+                  two: 0 dt ¤
+                '10000':
+                  one: 00 dt ¤
+                  other: 00 dt ¤
+                  two: 00 dt ¤
+                '100000':
+                  one: 000 dt ¤
+                  other: 000 dt ¤
+                  two: 000 dt ¤
+                '1000000':
+                  one: 0 mn ¤
+                  other: 0 mn ¤
+                  two: 0 mn ¤
+                '10000000':
+                  one: 00 mn ¤
+                  other: 00 mn ¤
+                  two: 00 mn ¤
+                '100000000':
+                  one: 000 mn ¤
+                  other: 000 mn ¤
+                  two: 000 mn ¤
+                '1000000000':
+                  one: 0 md ¤
+                  other: 0 md ¤
+                  two: 0 md ¤
+                '10000000000':
+                  one: 00 md ¤
+                  other: 00 md ¤
+                  two: 00 md ¤
+                '100000000000':
+                  one: 000 md ¤
+                  other: 000 md ¤
+                  two: 000 md ¤
+                '1000000000000':
+                  one: 0 bn ¤
+                  other: 0 bn ¤
+                  two: 0 bn ¤
+                '10000000000000':
+                  one: 00 bn ¤
+                  other: 00 bn ¤
+                  two: 00 bn ¤
+                '100000000000000':
+                  one: 000 bn ¤
+                  other: 000 bn ¤
+                  two: 000 bn ¤
+        decimal: ","
+        exponential: "·10^"
+        group: " "
+        infinity: "∞"
+        list: ";"
+        minus_sign: "−"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "·"
+        time_separator: ":"

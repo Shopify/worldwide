@@ -1,0 +1,37 @@
+---
+it:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Zona
+            optional: Zona (facoltativo)
+          errors:
+            blank: Inserisci una zona
+            too_long: Il nome della zona è troppo lungo (la lunghezza massima è di
+              255 caratteri)
+            contains_html_tags: Il sobborgo non può contenere tag HTML.
+            contains_emojis: La zona non può contenere emoji
+            contains_restricted_characters: La zona può contenere solo lettere, numeri,
+              caratteri locali e caratteri speciali
+        province:
+          label:
+            default: Stato/territorio
+            optional: Stato/territorio (facoltativo)
+          errors:
+            blank: Seleziona uno stato/territorio
+        zip:
+          label:
+            default: Codice postale
+            optional: Codice postale (facoltativo)
+          errors:
+            blank: Inserisci un codice postale
+            invalid_for_country: Inserisci un codice postale valido per %{country}
+            invalid_for_country_and_province: Inserisci un codice postale valido per
+              %{province}, %{country}
+            too_long: Il valore del codice postale è troppo lungo
+            contains_html_tags: Il codice postale non può contenere tag HTML.
+            contains_emojis: Il codice postale non può contenere emoji
+            contains_restricted_characters: Il codice postale può contenere solo lettere,
+              numeri, caratteri locali e caratteri speciali

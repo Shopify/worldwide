@@ -1,0 +1,316 @@
+---
+sa:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: B h
+        Bhm: B h:mm
+        Bhms: B h:mm:ss
+        d: d
+        E: ccc
+        EBhm: E B h:mm
+        EBhms: E B h:mm:ss
+        Ed: E d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMMM: MMM G y
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d/M
+        MEd: E, d/M
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        MMMMW: "'week' W 'of' MMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E, d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'week' w 'of' Y"
+      days:
+        format:
+          abbreviated:
+            sun: रवि
+            mon: सोम
+            tue: मंगल
+            wed: बुध
+            thu: गुरु
+            fri: शुक्र
+            sat: शनि
+          narrow:
+            sun: र
+            mon: सो
+            tue: मं
+            wed: बु
+            thu: गु
+            fri: शु
+            sat: श
+          short:
+            sun: Sun
+            mon: Mon
+            tue: Tue
+            wed: Wed
+            thu: Thu
+            fri: Fri
+            sat: Sat
+          wide:
+            sun: रविवासरः
+            mon: सोमवासरः
+            tue: मंगलवासरः
+            wed: बुधवासरः
+            thu: 'गुरुवासर:'
+            fri: शुक्रवासरः
+            sat: शनिवासरः
+        stand_alone:
+          abbreviated:
+            sun: रवि
+            mon: सोम
+            tue: मंगल
+            wed: बुध
+            thu: गुरु
+            fri: शुक्र
+            sat: शनि
+          narrow:
+            sun: र
+            mon: सो
+            tue: मं
+            wed: बु
+            thu: गु
+            fri: शु
+            sat: श
+          short:
+            sun: Sun
+            mon: Mon
+            tue: Tue
+            wed: Wed
+            thu: Thu
+            fri: Fri
+            sat: Sat
+          wide:
+            sun: रविवासरः
+            mon: सोमवासरः
+            tue: मंगलवासरः
+            wed: बुधवासरः
+            thu: 'गुरुवासर:'
+            fri: शुक्रवासरः
+            sat: शनिवासरः
+      eras:
+        abbr:
+          0: इ.स.पू.
+          1: संवत्
+        name:
+          0: BCE
+          1: CE
+      fields:
+        day: 'वासर:'
+        day_narrow: दिनम्
+        day_period: पूर्वाह्न/अपराह्न
+        era: युग
+        hour: होरा
+        hour_narrow: होरा
+        hour_short: होरा
+        minute: निमेष
+        minute_narrow: निमेष
+        minute_short: निमेष
+        month: 'मास:'
+        month_narrow: मास
+        month_short: मास
+        quarter: त्रेमासिक
+        quarter_narrow: त्रेमासिक
+        quarter_short: त्रेमासिक
+        second: क्षण
+        second_narrow: पल
+        second_short: पल
+        week: 'सप्ताह:'
+        week_narrow: सप्ताह
+        week_short: सप्ताह
+        weekday: सप्ताहस्य दिनं
+        year: 'वर्ष:'
+        year_narrow: वर्ष
+        year_short: 'वर्ष:'
+        zone: समय मण्डल
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}} तदा {{time}}"
+          long:
+            pattern: "{{date}} तदा {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      months:
+        format:
+          abbreviated:
+            1: 'जनवरी:'
+            2: 'फरवरी:'
+            3: 'मार्च:'
+            4: 'अप्रैल:'
+            5: मई
+            6: 'जून:'
+            7: 'जुलाई:'
+            8: 'अगस्त:'
+            9: 'सितंबर:'
+            10: 'अक्तूबर:'
+            11: 'नवंबर:'
+            12: 'दिसंबर:'
+          narrow:
+            1: ज
+            2: फ
+            3: मा
+            4: अ
+            5: म
+            6: जू
+            7: जु
+            8: अ
+            9: सि
+            10: अ
+            11: न
+            12: दि
+          wide:
+            1: जनवरीमासः
+            2: फरवरीमासः
+            3: मार्चमासः
+            4: अप्रैलमासः
+            5: मईमासः
+            6: जूनमासः
+            7: जुलाईमासः
+            8: अगस्तमासः
+            9: सितंबरमासः
+            10: अक्तूबरमासः
+            11: नवंबरमासः
+            12: दिसंबरमासः
+        stand_alone:
+          abbreviated:
+            1: 'जनवरी:'
+            2: 'फरवरी:'
+            3: 'मार्च:'
+            4: 'अप्रैल:'
+            5: मई
+            6: 'जून:'
+            7: 'जुलाई:'
+            8: 'अगस्त:'
+            9: 'सितंबर:'
+            10: 'अक्तूबर:'
+            11: 'नवंबर:'
+            12: 'दिसंबर:'
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            8: '8'
+            9: '9'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: जनवरीमासः
+            2: फरवरीमासः
+            3: मार्चमासः
+            4: अप्रैलमासः
+            5: मईमासः
+            6: जूनमासः
+            7: जुलाईमासः
+            8: अगस्तमासः
+            9: सितंबरमासः
+            10: अक्तूबरमासः
+            11: नवंबरमासः
+            12: दिसंबरमासः
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: पूर्वाह्न
+            pm: अपराह्न
+        stand_alone:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: AM
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: त्रैमासिक1
+            2: त्रैमासिक2
+            3: त्रैमासिक3
+            4: त्रैमासिक4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: प्रथम त्रैमासिक
+            2: द्वितीय त्रैमासिक
+            3: तृतीय त्रैमासिक
+            4: चतुर्थ त्रैमासिक
+        stand_alone:
+          abbreviated:
+            1: त्रैमासिक1
+            2: त्रैमासिक2
+            3: त्रैमासिक3
+            4: त्रैमासिक4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: प्रथम त्रैमासिक
+            2: द्वितीय त्रैमासिक
+            3: तृतीय त्रैमासिक
+            4: चतुर्थ त्रैमासिक

@@ -1,0 +1,22 @@
+---
+name: Guernsey
+code: GG
+tax: 0.0
+currency: GBP
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_regex: "^GY([1-9]|10) [0-9][A-Z][A-Z]$"
+partial_zip_regex: "^GY([1-9]|10)$"
+zip_example: GY1 1AA
+phone_number_prefix: 44
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1EC"
+languages:
+  - en
+  - fr
+timezone: Europe/Guernsey

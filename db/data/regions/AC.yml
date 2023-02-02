@@ -1,0 +1,22 @@
+---
+# AC appears to be zero-rated for VAT.  Sources:
+# https://opentoexport.com/questions/exporting-to-ascension-island/
+# https://mr-eurodisco.com/finance/uk-vat-rate/
+tax: 0.0
+name: Ascension Island
+group: African Countries
+group_name: Africa
+code: AC
+unit_system: metric
+currency: SHP
+zip_example: ASCN 1ZZ
+zip_regex: "\\A[Aa][Ss][Cc][Nn]\\s*1[Zz][Zz]\\z"
+phone_number_prefix: 247
+zip_autofill_enabled: true
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}"
+emoji: 🇦🇨
+languages:
+  - en
+timezone: Atlantic/St_Helena

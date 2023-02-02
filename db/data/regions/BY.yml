@@ -1,0 +1,23 @@
+---
+name: Belarus
+code: BY
+tax: 0.2
+currency: BYN
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_regex: "^(BY-?)?2[0-4]\\d{4}$"
+zip_example: '223016'
+zip_requirement: recommended
+phone_number_prefix: 375
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇧🇾
+languages:
+  - be
+  - ru
+timezone: Europe/Minsk

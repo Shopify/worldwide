@@ -1,0 +1,247 @@
+---
+hu:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: mínusz >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: mínusz >>;
+        - :value: x.x
+          :rule: "<< egész >>;"
+        - :value: 0
+          :rule: nulla;
+        - :value: 1
+          :rule: egy;
+        - :value: 2
+          :rule: kettő;
+        - :value: 3
+          :rule: három;
+        - :value: 4
+          :rule: négy;
+        - :value: 5
+          :rule: öt;
+        - :value: 6
+          :rule: hat;
+        - :value: 7
+          :rule: hét;
+        - :value: 8
+          :rule: nyolc;
+        - :value: 9
+          :rule: kilenc;
+        - :value: 10
+          :rule: tíz;
+        - :value: 11
+          :rule: tizen­>>;
+        - :value: 20
+          :rule: húsz;
+        - :value: 21
+          :rule: huszon­>>;
+        - :value: 30
+          :rule: harminc[­>>];
+        - :value: 40
+          :rule: negyven[­>>];
+        - :value: 50
+          :rule: ötven[­>>];
+        - :value: 60
+          :rule: hatvan[­>>];
+        - :value: 70
+          :rule: hetven[­>>];
+        - :value: 80
+          :rule: nyolcvan[­>>];
+        - :value: 90
+          :rule: kilencven[­>>];
+        - :value: 100
+          :rule: száz[­>>];
+        - :value: 200
+          :rule: "<%%spellout-cardinal-initial<­száz[­>>];"
+        - :value: 1000
+          :rule: ezer[­>>];
+        - :value: 2000
+          :rule: "<%%spellout-cardinal-initial<­ezer[­>>];"
+        - :value: 1000000
+          :rule: "<%%spellout-cardinal-initial<­millió[­>>];"
+        - :value: 1000000000
+          :rule: "<%%spellout-cardinal-initial<­milliárd[­>>];"
+        - :value: 1000000000000
+          :rule: "<%%spellout-cardinal-initial<­billió[­>>];"
+        - :value: 1000000000000000
+          :rule: "<%%spellout-cardinal-initial<­billiárd[­>>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-verbose
+        :rules:
+        - :value: "-x"
+          :rule: mínusz >>;
+        - :value: x.x
+          :rule: "<< egész >>;"
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+        - :value: 100
+          :rule: "<<­száz[­>>];"
+        - :value: 1000
+          :rule: "<<­ezer[­>>];"
+        - :value: 1000000
+          :rule: "<<­millió[­>>];"
+        - :value: 1000000000
+          :rule: "<<­milliárd[­>>];"
+        - :value: 1000000000000
+          :rule: "<<­billió[­>>];"
+        - :value: 1000000000000000
+          :rule: "<<­billiárd[­>>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-initial
+        :rules:
+        - :value: 1
+          :rule: egy;
+        - :value: 2
+          :rule: két;
+        - :value: 3
+          :rule: "=%spellout-cardinal=;"
+        :access: private
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: mínusz >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: nulla;
+        - :value: 1
+          :rule: első;
+        - :value: 2
+          :rule: második;
+        - :value: 3
+          :rule: "=%%spellout-ordinal-larger=;"
+      - :type: spellout-ordinal-adik
+        :rules:
+        - :value: 0
+          :rule: adik;
+        - :value: 1
+          :rule: "=%%spellout-ordinal-larger=;"
+        :access: private
+      - :type: spellout-ordinal-odik
+        :rules:
+        - :value: 0
+          :rule: odik;
+        - :value: 1
+          :rule: "=%%spellout-ordinal-larger=;"
+        :access: private
+      - :type: spellout-ordinal-larger
+        :rules:
+        - :value: 0
+          :rule: edik;
+        - :value: 1
+          :rule: egyedik;
+        - :value: 2
+          :rule: kettedik;
+        - :value: 3
+          :rule: harmadik;
+        - :value: 4
+          :rule: negyedik;
+        - :value: 5
+          :rule: ötödik;
+        - :value: 6
+          :rule: hatodik;
+        - :value: 7
+          :rule: hetedik;
+        - :value: 8
+          :rule: nyolcadik;
+        - :value: 9
+          :rule: kilencedik;
+        - :value: 10
+          :rule: tizedik;
+        - :value: 11
+          :rule: tizen>>;
+        - :value: 20
+          :rule: huszadik;
+        - :value: 21
+          :rule: huszon>>;
+        - :value: 30
+          :rule: harminc>%%spellout-ordinal-adik>;
+        - :value: 40
+          :rule: negyven>>;
+        - :value: 50
+          :rule: ötven>>;
+        - :value: 60
+          :rule: hatvan>%%spellout-ordinal-adik>;
+        - :value: 70
+          :rule: hetven>>;
+        - :value: 80
+          :rule: nyolcvan>%%spellout-ordinal-adik>;
+        - :value: 90
+          :rule: kilencven>>;
+        - :value: 100
+          :rule: száz>%%spellout-ordinal-adik>;
+        - :value: 200
+          :rule: "<%%spellout-cardinal-initial<száz>%%spellout-ordinal-adik>;"
+        - :value: 1000
+          :rule: ezr>>;
+        - :value: 1001
+          :rule: ezer­>>;
+        - :value: 2000
+          :rule: "<%%spellout-cardinal-initial<­ezr>>;"
+        - :value: 2001
+          :rule: "<%%spellout-cardinal-initial<­ezer­>>;"
+        - :value: 1000000
+          :rule: "<%%spellout-cardinal-initial<­milliom­>%%spellout-ordinal-odik>;"
+        - :value: 1000000000
+          :rule: "=#,##0=.;"
+        :access: private
+      - :type: spellout-ordinal-verbose
+        :rules:
+        - :value: "-x"
+          :rule: mínusz >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: nulladik;
+        - :value: 1
+          :rule: első;
+        - :value: 2
+          :rule: második;
+        - :value: 3
+          :rule: "=%%spellout-ordinal-verbose-larger=;"
+      - :type: spellout-ordinal-verbose-adik
+        :rules:
+        - :value: 0
+          :rule: adik;
+        - :value: 1
+          :rule: "=%%spellout-ordinal-verbose-larger=;"
+        :access: private
+      - :type: spellout-ordinal-verbose-odik
+        :rules:
+        - :value: 0
+          :rule: odik;
+        - :value: 1
+          :rule: "=%%spellout-ordinal-verbose-larger=;"
+        :access: private
+      - :type: spellout-ordinal-verbose-larger
+        :rules:
+        - :value: 0
+          :rule: "=%%spellout-ordinal-larger=;"
+        - :value: 100
+          :rule: "<%spellout-cardinal-verbose<száz>%%spellout-ordinal-verbose-adik>;"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-verbose<­ezr>>;"
+        - :value: 1001
+          :rule: "<%spellout-cardinal-verbose<­ezer­>>;"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-verbose<­milliom­>%%spellout-ordinal-verbose-odik>;"
+        - :value: 1000000000
+          :rule: "=#,##0=.;"
+        :access: private

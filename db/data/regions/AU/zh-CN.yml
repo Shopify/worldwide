@@ -1,0 +1,33 @@
+---
+zh-CN:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: 郊区
+            optional: 郊区（可选）
+          errors:
+            blank: 输入郊区
+            too_long: 郊区名称过长（最多 255 个字符）
+            contains_html_tags: 郊区不能包含 HTML 标记。
+            contains_emojis: 郊区不能包含表情符号
+            contains_restricted_characters: "“郊区”字段只能包含字母、数字、当地字符和特殊字符"
+        province:
+          label:
+            default: 州/领地
+            optional: 州/领地（可选）
+          errors:
+            blank: 选择州/领地
+        zip:
+          label:
+            default: 邮政编码
+            optional: 邮政编码（可选）
+          errors:
+            blank: 输入邮政编码
+            invalid_for_country: 输入 %{country} 的有效邮政编码
+            invalid_for_country_and_province: 输入 %{country} %{province} 的有效邮政编码
+            too_long: 邮政编码值过长
+            contains_html_tags: 邮政编码不能包含 HTML 标记。
+            contains_emojis: 邮政编码不能包含表情符号
+            contains_restricted_characters: "“邮政编码”字段只能包含字母、数字、当地字符和特殊字符"

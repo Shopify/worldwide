@@ -1,0 +1,335 @@
+---
+to:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: dd MM y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d/M
+        MEd: E d/M
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: d MMMM
+        MMMMEd: E d MMMM
+        MMMMW: "'uike' 'hono' W ʻ'o' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E d/M/y
+        yMM: MM-y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E d MMM y
+        yMMMM: MMMM y
+        yQQQ: y QQQ
+        yQQQQ: y QQQQ
+        yw: "'uike' 'hono' w ʻ'o' Y"
+      days:
+        format:
+          abbreviated:
+            sun: Sāp
+            mon: Mōn
+            tue: Tūs
+            wed: Pul
+            thu: Tuʻa
+            fri: Fal
+            sat: Tok
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: P
+            thu: T
+            fri: F
+            sat: T
+          short:
+            sun: Sāp
+            mon: Mōn
+            tue: Tūs
+            wed: Pul
+            thu: Tuʻa
+            fri: Fal
+            sat: Tok
+          wide:
+            sun: Sāpate
+            mon: Mōnite
+            tue: Tūsite
+            wed: Pulelulu
+            thu: Tuʻapulelulu
+            fri: Falaite
+            sat: Tokonaki
+        stand_alone:
+          abbreviated:
+            sun: Sāp
+            mon: Mōn
+            tue: Tūs
+            wed: Pul
+            thu: Tuʻa
+            fri: Fal
+            sat: Tok
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: P
+            thu: T
+            fri: F
+            sat: T
+          short:
+            sun: Sāp
+            mon: Mōn
+            tue: Tūs
+            wed: Pul
+            thu: Tuʻa
+            fri: Fal
+            sat: Tok
+          wide:
+            sun: Sāpate
+            mon: Mōnite
+            tue: Tūsite
+            wed: Pulelulu
+            thu: Tuʻapulelulu
+            fri: Falaite
+            sat: Tokonaki
+      eras:
+        abbr:
+          0: KM
+          1: TS
+        name:
+          0: KM
+          1: TS
+      fields:
+        day: ʻaho
+        day_narrow: ʻaho
+        day_of_year: ʻaho ʻo e taʻu
+        day_of_year_narrow: ʻaho ʻoe taʻu
+        day_of_year_short: ʻaho ʻoe taʻu
+        day_period: AM/PM
+        day_short: ʻaho
+        era: kuonga
+        era_narrow: kuonga
+        era_short: kuonga
+        hour: houa
+        hour_narrow: houa
+        hour_short: houa
+        minute: miniti
+        minute_narrow: miniti
+        minute_short: miniti
+        month: māhina
+        month_narrow: māhina
+        month_short: māhina
+        quarter: kuata
+        quarter_narrow: kuata
+        quarter_short: kuata
+        second: sekoni
+        second_narrow: sekoni
+        second_short: sekoni
+        week: uike
+        week_narrow: uike
+        week_of_month: uike ʻo e māhina
+        week_of_month_narrow: uk ʻoe mh
+        week_of_month_short: uike ʻoe māhina
+        week_short: uike
+        weekday: ʻaho ʻo e uike
+        weekday_narrow: ʻaho ʻoe uike
+        weekday_of_month: ʻaho ʻo e mahina
+        weekday_of_month_narrow: ʻaho ʻo e mahina
+        weekday_of_month_short: ʻaho ʻo e mahina
+        weekday_short: ʻaho ʻoe uike
+        year: taʻu
+        year_narrow: taʻu
+        year_short: taʻu
+        zone: taimi fakavahe
+        zone_narrow: taimi fakavahe
+        zone_short: taimi fakavahe
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}}, {{time}}"
+          long:
+            pattern: "{{date}}, {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      months:
+        format:
+          abbreviated:
+            1: Sān
+            2: Fēp
+            3: Maʻa
+            4: ʻEpe
+            5: Mē
+            6: Sun
+            7: Siu
+            8: ʻAok
+            9: Sep
+            10: ʻOka
+            11: Nōv
+            12: Tīs
+          narrow:
+            1: S
+            2: F
+            3: M
+            4: E
+            5: M
+            6: S
+            7: S
+            8: A
+            9: S
+            10: O
+            11: N
+            12: T
+          wide:
+            1: Sānuali
+            2: Fēpueli
+            3: Maʻasi
+            4: ʻEpeleli
+            5: Mē
+            6: Sune
+            7: Siulai
+            8: ʻAokosi
+            9: Sepitema
+            10: ʻOkatopa
+            11: Nōvema
+            12: Tīsema
+        stand_alone:
+          abbreviated:
+            1: Sān
+            2: Fēp
+            3: Maʻa
+            4: ʻEpe
+            5: Mē
+            6: Sun
+            7: Siu
+            8: ʻAok
+            9: Sep
+            10: ʻOka
+            11: Nōv
+            12: Tīs
+          narrow:
+            1: S
+            2: F
+            3: M
+            4: E
+            5: M
+            6: S
+            7: S
+            8: A
+            9: S
+            10: O
+            11: N
+            12: T
+          wide:
+            1: Sānuali
+            2: Fēpueli
+            3: Maʻasi
+            4: ʻEpeleli
+            5: Mē
+            6: Sune
+            7: Siulai
+            8: ʻAokosi
+            9: Sepitema
+            10: ʻOkatopa
+            11: Nōvema
+            12: Tīsema
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: hengihengi
+            pm: efiafi
+        stand_alone:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: HH
+            pm: EA
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: kuata ʻuluaki
+            2: kuata ua
+            3: kuata tolu
+            4: kuata fā
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: kuata 1
+            2: kuata 2
+            3: kuata 3
+            4: kuata 4

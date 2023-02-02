@@ -1,0 +1,292 @@
+---
+bs-Cyrl:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        Ed: E, d.
+        Gy: y. G
+        GyMMM: MMM y. G
+        GyMMMd: dd. MMM y. G
+        GyMMMEd: E, dd. MMM y. G
+        Hm: HH:mm
+        Hms: HH:mm:ss
+        M: L
+        Md: dd.MM.
+        MEd: E, dd.MM.
+        MMM: LLL
+        MMMd: dd. MMM
+        MMMEd: E, dd. MMM
+        MMMMd: d. MMMM
+        MMMMW: "'седмица' W 'мјесец' MMMM"
+        ms: mm:ss
+        "y": y.
+        yM: MM.y.
+        yMd: dd.MM.y.
+        yMEd: E, dd.MM.y.
+        yMMM: MMM y.
+        yMMMd: dd. MMM y.
+        yMMMEd: E, dd. MMM y.
+        yMMMM: MMMM y.
+        yQQQ: y QQQ
+        yQQQQ: y QQQQ
+        yw: "'седмица' w 'година' Y"
+      days:
+        format:
+          abbreviated:
+            sun: нед
+            mon: пон
+            tue: уто
+            wed: сри
+            thu: чет
+            fri: пет
+            sat: суб
+          wide:
+            sun: недјеља
+            mon: понедјељак
+            tue: уторак
+            wed: сриједа
+            thu: четвртак
+            fri: петак
+            sat: субота
+        stand_alone:
+          narrow:
+            sun: н
+            mon: п
+            tue: у
+            wed: с
+            thu: ч
+            fri: п
+            sat: с
+          wide:
+            sun: недјеља
+            mon: понедјељак
+            tue: уторак
+            wed: сриједа
+            thu: четвртак
+            fri: петак
+            sat: субота
+      eras:
+        abbr:
+          0: п. н. е.
+          1: н. е.
+        name:
+          0: п.н.е
+          1: н.е.
+        narrow:
+          0: п.н.е.
+          1: н.е.
+      fields:
+        day: дан
+        day_narrow: дан
+        day_of_year: дан у години
+        day_of_year_narrow: дан у год.
+        day_of_year_short: дан у год.
+        day_period: прије подне/послије подне
+        day_period_narrow: прије подне/послије подне
+        day_period_short: прије подне/послије подне
+        day_short: дан
+        era: ера
+        era_narrow: ера
+        era_short: ера
+        hour: сат
+        hour_narrow: сат
+        hour_short: сат
+        minute: минут
+        minute_narrow: мин
+        minute_short: мин.
+        month: мјесец
+        month_narrow: мјес.
+        month_short: мјес.
+        quarter: тромјесечје
+        quarter_narrow: qtr.
+        quarter_short: тромје.
+        second: секунд
+        second_narrow: сек
+        second_short: сек.
+        week: седмица
+        week_narrow: седм.
+        week_of_month: седмица у мјесецу
+        week_of_month_narrow: седм. у мјес.
+        week_of_month_short: седм. у мјесецу
+        week_short: седм.
+        weekday: дан у седмици
+        weekday_narrow: дан у седм.
+        weekday_of_month: радни дан у мјесецу
+        weekday_of_month_narrow: рад. дан у мјес.
+        weekday_of_month_short: рад. дан у мјесецу
+        weekday_short: дан у седм.
+        year: година
+        year_narrow: год.
+        year_short: год
+        zone: зона
+      formats:
+        date:
+          full:
+            pattern: EEEE, dd. MMMM y.
+          long:
+            pattern: dd. MMMM y.
+          medium:
+            pattern: dd.MM.y.
+          short:
+            pattern: d.M.yy.
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: јан
+            2: феб
+            3: мар
+            4: апр
+            5: мај
+            6: јун
+            7: јул
+            8: ауг
+            9: сеп
+            10: окт
+            11: нов
+            12: дец
+          wide:
+            1: јануар
+            2: фебруар
+            3: март
+            4: април
+            5: мај
+            6: јуни
+            7: јули
+            8: аугуст
+            9: септембар
+            10: октобар
+            11: новембар
+            12: децембар
+        stand_alone:
+          abbreviated:
+            1: јан
+            2: феб
+            3: мар
+            4: апр
+            5: мај
+            6: јун
+            7: јул
+            8: ауг
+            9: сеп
+            10: окт
+            11: нов
+            12: дец
+          narrow:
+            1: ј
+            2: ф
+            3: м
+            4: а
+            5: м
+            6: ј
+            7: ј
+            8: а
+            9: с
+            10: о
+            11: н
+            12: д
+          wide:
+            1: јануар
+            2: фебруар
+            3: март
+            4: април
+            5: мај
+            6: јуни
+            7: јули
+            8: аугуст
+            9: септембар
+            10: октобар
+            11: новембар
+            12: децембар
+      periods:
+        format:
+          abbreviated:
+            afternoon1: у подне
+            am: пре подне
+            evening1: увече
+            midnight: поноћ
+            morning1: ујутру
+            night1: ноћу
+            noon: подне
+            pm: поподне
+          narrow:
+            afternoon1: у подне
+            evening1: увече
+            midnight: поноћ
+            morning1: ујутру
+            night1: ноћу
+            noon: подне
+          wide:
+            afternoon1: у подне
+            am: прије подне
+            evening1: увече
+            midnight: поноћ
+            morning1: ујутру
+            night1: ноћу
+            noon: подне
+            pm: послије подне
+        stand_alone:
+          abbreviated:
+            afternoon1: послийеподне
+            evening1: вече
+            midnight: поноћ
+            morning1: јутро
+            night1: ноћ
+            noon: подне
+          narrow:
+            afternoon1: послийеподне
+            evening1: вече
+            midnight: поноћ
+            morning1: јутро
+            night1: ноћ
+            noon: подне
+          wide:
+            afternoon1: послийеподне
+            am: прије подне
+            evening1: вече
+            midnight: поноћ
+            morning1: јутро
+            night1: ноћ
+            noon: подне
+            pm: послије подне
+      quarters:
+        format:
+          abbreviated:
+            1: К1
+            2: К2
+            3: К3
+            4: К4
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+          wide:
+            1: Прво тромесечје
+            2: Друго тромесечје
+            3: Треће тромесечје
+            4: Четврто тромесечје
+        stand_alone:
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'

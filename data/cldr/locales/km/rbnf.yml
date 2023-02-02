@@ -1,0 +1,89 @@
+---
+km:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: lenient-parse
+        :rules:
+        - :value: 0
+          :rule: "&[last primary ignorable ] << ' ' << '​' << '­';"
+        :access: private
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: "-x"
+          :rule: ដក​>>;
+        - :value: x.x
+          :rule: "<<​ចុច​>>>;"
+        - :value: 0
+          :rule: សូន្យ;
+        - :value: 1
+          :rule: មួយ;
+        - :value: 2
+          :rule: ពីរ;
+        - :value: 3
+          :rule: បី;
+        - :value: 4
+          :rule: បួន;
+        - :value: 5
+          :rule: ប្រាំ;
+        - :value: 6
+          :rule: ប្រាំមួយ;
+        - :value: 7
+          :rule: ប្រាំពីរ;
+        - :value: 8
+          :rule: ប្រាំបី;
+        - :value: 9
+          :rule: ប្រាំបួន;
+        - :value: 10
+          :rule: ដប់[​>>];
+        - :value: 20
+          :rule: ម្ភៃ[​>>];
+        - :value: 30
+          :rule: សាមសិប[​>>];
+        - :value: 40
+          :rule: សែសិប[​>>];
+        - :value: 50
+          :rule: ហាសិប[​>>];
+        - :value: 60
+          :rule: ហុកសិប[​>>];
+        - :value: 70
+          :rule: ចិតសិប[​>>];
+        - :value: 80
+          :rule: ប៉ែតសិប[​>>];
+        - :value: 90
+          :rule: កៅសិប[​>>];
+        - :value: 100
+          :rule: "<<​រយ[​>>];"
+        - :value: 1000
+          :rule: "<<​ពាន់[​>>];"
+        - :value: 10000
+          :rule: "<<​ម៉ឺន[​>>];"
+        - :value: 100000
+          :rule: "<<​សែន[​>>];"
+        - :value: 1000000
+          :rule: "<<​លាន[​>>];"
+        - :value: 10000000000
+          :rule: "<<​ពាន់​កោដិ[​>>];"
+        - :value: 1000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: 0
+          :rule: ទី=%spellout-cardinal=;
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: ទី=#,##0=;

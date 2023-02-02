@@ -1,0 +1,21 @@
+---
+name: Afghanistan
+code: AF
+tax: 0.1
+currency: AFN
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_regex: "^([1-3]\\d{3}|4[0-3][0-6]\\d)$"
+zip_example: '1001'
+zip_requirement: optional
+phone_number_prefix: 93
+week_start_day: saturday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E6\U0001F1EB"
+languages:
+  - ps
+timezone: Asia/Kabul

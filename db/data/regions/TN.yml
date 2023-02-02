@@ -1,0 +1,22 @@
+---
+name: Tunisia
+code: TN
+tax: 0.18
+currency: TND
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+zip_example: '1002'
+zip_regex: "^(1[012]|2[012]|3[012]|4[012]|5[01]|6[01]|7[01]|8[01]|9[01])\\d{2}$"
+zip_requirement: recommended
+phone_number_prefix: 216
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F9\U0001F1F3"
+languages:
+  - ar
+  - fr
+timezone: Africa/Tunis

@@ -1,0 +1,141 @@
+---
+th:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: บริษัท
+            optional: บริษัท (ไม่บังคับ)
+          errors:
+            blank: ป้อนชื่อบริษัท
+            too_long: ชื่อบริษัทยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในชื่อบริษัท
+            contains_emojis: ไม่สามารถใส่อีโมจิในชื่อบริษัทได้
+            contains_restricted_characters: บริษัทสามารถประกอบด้วยตัวอักษร ตัวเลข
+              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+        first_name:
+          label:
+            default: ชื่อ
+            optional: ชื่อ (ไม่บังคับ)
+          errors:
+            blank: ป้อนชื่อจริง
+            too_long: ชื่อจริงยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในชื่อจริง
+            contains_emojis: ไม่สามารถใส่อีโมจิในชื่อได้
+            contains_url: ไม่สามารถใส่ URL ในชื่อได้
+            contains_restricted_characters: ชื่อสามารถประกอบด้วยตัวอักษร ตัวเลข อักขระท้องถิ่น
+              และอักขระพิเศษได้เท่านั้น
+        last_name:
+          label:
+            default: นามสกุล
+            optional: นามสกุล (ไม่บังคับ)
+          errors:
+            blank: ป้อนนามสกุล
+            too_long: นามสกุลยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในนามสกุล
+            contains_emojis: ไม่สามารถใส่อีโมจิในนามสกุลได้
+            contains_url: ไม่สามารถใส่ URL ในนามสกุลได้
+            contains_restricted_characters: นามสกุลสามารถประกอบด้วยตัวอักษร ตัวเลข
+              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+        address1:
+          label:
+            default: ที่อยู่
+            optional: ที่อยู่ (ไม่บังคับ)
+          errors:
+            blank: ป้อนที่อยู่
+            too_long: ที่อยู่บรรทัดแรกยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในที่อยู่ 1
+            contains_emojis: ไม่สามารถใส่อีโมจิในที่อยู่ 1 ได้
+            contains_url: ห้ามมี URL ในที่อยู่ 1
+            missing_building_number: เพิ่มหมายเลขอาคาร หากมี
+            street_unknown_for_zip: ป้อนชื่อถนนที่ถูกต้องสำหรับ %{zip}
+            building_number_invalid: ไม่สามารถระบุตำแหน่งหมายเลขอาคารสำหรับ %{street},
+              %{zip} ได้
+            contains_restricted_characters: ที่อยู่1 สามารถประกอบด้วยตัวอักษร ตัวเลข
+              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            contains_too_many_words: ที่อยู่ 1 ต้องไม่เกิน %{word_count} คำ
+        address2:
+          label:
+            default: อพาร์ตเมนต์ ห้องชุด ฯลฯ
+            optional: อพาร์ตเมนต์ ห้องชุด ฯลฯ (ไม่บังคับ)
+          errors:
+            blank: ป้อนชื่ออพาร์ตเมนต์ ห้องชุด ฯลฯ
+            too_long: ที่อยู่บรรทัดที่สองยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในที่อยู่ 2
+            contains_emojis: ไม่สามารถใส่อีโมจิในที่อยู่ 2 ได้
+            contains_url: ห้ามมี URL ในที่อยู่ 2
+            missing_building_number: เพิ่มหมายเลขอาคาร หากมี
+            street_unknown_for_zip: ป้อนชื่อถนนที่ถูกต้องสำหรับ %{zip}
+            building_number_invalid: ไม่สามารถระบุตำแหน่งหมายเลขอาคารสำหรับ %{street},
+              %{zip} ได้
+            contains_restricted_characters: ที่อยู่2 สามารถประกอบด้วยตัวอักษร ตัวเลข
+              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            contains_too_many_words: ที่อยู่ 2 ต้องไม่เกิน %{word_count} คำ
+        city:
+          label:
+            default: เมือง
+            optional: เมือง (ไม่บังคับ)
+          errors:
+            blank: ป้อนชื่อเมือง
+            too_long: เมืองยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในชื่อเมือง
+            contains_emojis: ไม่สามารถใส่อีโมจิในชื่อเมืองได้
+            contains_url: ไม่สามารถใส่ URL ในชื่อเมืองได้
+            unknown_for_zip: ป้อนชื่อเมืองที่ถูกต้องสำหรับ %{zip}
+            unknown_for_province: ป้อนชื่อเมืองที่ถูกต้องสำหรับ %{province}
+            unknown_for_zip_and_province: ป้อนชื่อเมืองที่ถูกต้องสำหรับ %{zip}, %{province}
+            contains_restricted_characters: เมืองสามารถประกอบด้วยตัวอักษร ตัวเลข อักขระท้องถิ่น
+              และอักขระพิเศษได้เท่านั้น
+            contains_too_many_words: เมืองต้องไม่เกิน %{word_count} คำ
+        country:
+          label:
+            default: ประเทศ/ภูมิภาค
+            optional: ประเทศ/ภูมิภาค (ไม่บังคับ)
+          errors:
+            blank: เลือกประเทศ/ภูมิภาค
+            not_supported: ในปัจจุบันเรายังไม่รองรับการทำธุรกิจในประเทศ/ภูมิภาคนี้
+              โปรดป้อนที่อยู่ใหม่แล้วลองอีกครั้ง
+            invalid: ป้อนประเทศ/ภูมิภาคที่ถูกต้อง
+            invalid_for_zip: ป้อนประเทศ/ภูมิภาคที่ถูกต้องสำหรับรหัสไปรษณีย์นี้
+        phone:
+          label:
+            default: โทรศัพท์
+            optional: โทรศัพท์ (ไม่บังคับ)
+          errors:
+            blank: ป้อนหมายเลขโทรศัพท์
+            invalid: ป้อนหมายเลขโทรศัพท์ที่ถูกต้อง
+            too_long: หมายเลขโทรศัพท์ยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_emojis: ไม่สามารถใส่อีโมจิในหมายเลขโทรศัพท์ได้
+            contains_restricted_characters: หมายเลขโทรศัพท์สามารถประกอบด้วยตัวอักษร
+              ตัวเลข อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+        province:
+          label:
+            default: ภูมิภาค
+            optional: ภูมิภาค (ไม่บังคับ)
+          errors:
+            blank: เลือกภูมิภาค
+            invalid_for_country: ป้อนภูมิภาคที่ถูกต้องสำหรับ %{country}
+            unknown_for_city_and_zip: ป้อนชื่อภูมิภาคที่ถูกต้องสำหรับ %{city}, %{zip}
+            unknown_for_city: เลือกชื่อภูมิภาคที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip: เลือกชื่อภูมิภาคที่ถูกต้องสำหรับ %{zip}
+        zip:
+          label:
+            default: รหัสไปรษณีย์
+            optional: รหัสไปรษณีย์ (ไม่บังคับ)
+          errors:
+            blank: ป้อนรหัสไปรษณีย์
+            blocked_address: ไม่รองรับตำแหน่งที่ตั้งนี้
+            invalid_for_country: ป้อนรหัสไปรษณีย์ใน %{country} ให้ถูกต้อง
+            invalid_for_country_and_province: ป้อนรหัสไปรษณีย์ของ %{province} ใน %{country}
+              ให้ถูกต้อง
+            invalid: ป้อนรหัสไปรษณีย์ที่ถูกต้อง
+            too_long: รหัสไปรษณีย์ยาวเกินไป
+            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
+            contains_emojis: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
+            not_supported: ในปัจจุบันเรายังไม่รองรับการทำธุรกิจในประเทศ/ภูมิภาคนี้
+              โปรดป้อนที่อยู่ใหม่แล้วลองอีกครั้ง
+            unknown_for_province: ป้อนรหัสไปรษณีย์ใน %{province} ให้ถูกต้อง
+            contains_restricted_characters: รหัสไปรษณีย์สามารถประกอบด้วยตัวอักษร ตัวเลข
+              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            invalid_for_province: ป้อนรหัสไปรษณีย์ที่ถูกต้องสำหรับ %{province}

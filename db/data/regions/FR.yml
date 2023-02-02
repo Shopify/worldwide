@@ -1,0 +1,28 @@
+---
+name: France
+code: FR
+tax: 0.2
+currency: EUR
+unit_system: metric
+tax_name: TVA
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_example: '34000'
+# Codes starting with 97 and 98 are reserved for départements d'outre-mer (GF, GP, MQ, RE, YT),
+# Monaco (MC), territoires d'outre-mer (TF), and collectivités (BL, NC, MF, PF, PM, WF).
+# We treat all of the above as separate "countries".
+# We will accept any other 5-digit number as a valid postal code for France (FR).
+zip_regex: "^((FR?( |-)?)?([0-8]\\d{4})|([0-9][01234569]\\d{3}))$"
+phone_number_prefix: 33
+building_number_required: true
+week_start_day: monday
+languages:
+  - fr
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EB\U0001F1F7"
+timezone: Europe/Paris

@@ -1,0 +1,27 @@
+---
+name: Belgium
+code: BE
+tax: 0.21
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+zip_example: '4000'
+zip_regex: "^(BE?( |-)?)?[1-9]\\d{3}$"
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+phone_number_prefix: 32
+building_number_required: true
+week_start_day: monday
+languages:
+  - de
+  - en
+  - fr
+  - nl
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1EA"
+timezone: Europe/Brussels

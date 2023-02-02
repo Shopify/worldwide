@@ -1,0 +1,1 @@
+{ :gd => { :i18n => { :plural => { :keys => [:one, :two, :few, :other], :rule => lambda { |n| n = n.respond_to?(:abs) ? n.abs : ((m = n.to_s)[0] == "-" ? m[1,m.length] : m); [1, 11].include?(n.to_f) ? :one : [2, 12].include?(n.to_f) ? :two : (((n.to_f % 1).zero? && ((3..10).include?(n.to_f) || (13..19).include?(n.to_f)))) ? :few : :other } } } } }

@@ -1,0 +1,25 @@
+---
+ms:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Negeri
+            optional: Negeri (opsyenal)
+          errors:
+            blank: Pilih negeri
+        zip:
+          label:
+            default: Kod PIN
+            optional: Kod PIN (opsyenal)
+          errors:
+            blank: Masukkan kod PIN
+            invalid_for_country: Masukkan kod PIN yang sah untuk %{country}
+            invalid_for_country_and_province: Masukkan kod PIN yang sah untuk %{province},
+              %{country}
+            too_long: Nilai kod PIN terlalu panjang
+            contains_html_tags: Kod PIN tidak boleh mengandungi tag HTML.
+            contains_emojis: Kod PIN tidak boleh mengandungi emoji
+            contains_restricted_characters: Kod PIN tidak boleh mengandungi aksara
+              terhad

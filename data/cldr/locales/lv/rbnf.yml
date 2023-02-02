@@ -1,0 +1,161 @@
+---
+lv:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-prefixed
+        :rules:
+        - :value: 0
+          :rule: ERROR;
+        - :value: 1
+          :rule: vien;
+        - :value: 2
+          :rule: div;
+        - :value: 3
+          :rule: trīs;
+        - :value: 4
+          :rule: četr;
+        - :value: 5
+          :rule: piec;
+        - :value: 6
+          :rule: seš;
+        - :value: 7
+          :rule: septiņ;
+        - :value: 8
+          :rule: astoņ;
+        - :value: 9
+          :rule: deviņ;
+        - :value: 10
+          :rule: ERROR;
+        :access: private
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: mīnus >>;
+        - :value: x.x
+          :rule: "<< komats >>;"
+        - :value: 0
+          :rule: nulle;
+        - :value: 1
+          :rule: viens;
+        - :value: 2
+          :rule: divi;
+        - :value: 3
+          :rule: trīs;
+        - :value: 4
+          :rule: četri;
+        - :value: 5
+          :rule: pieci;
+        - :value: 6
+          :rule: seši;
+        - :value: 7
+          :rule: septiņi;
+        - :value: 8
+          :rule: astoņi;
+        - :value: 9
+          :rule: deviņi;
+        - :value: 10
+          :rule: desmit;
+        - :value: 11
+          :rule: ">%%spellout-prefixed>padsmit;"
+        - :value: 20
+          :rule: "<%%spellout-prefixed<desmit[ >>];"
+        - :value: 100
+          :rule: simt[ >>];
+        - :value: 200
+          :rule: "<%%spellout-prefixed<simt[ >>];"
+        - :value: 1000
+          :rule: tūkstoš[ >>];
+        - :value: 2000
+          :rule: "<%%spellout-prefixed<tūkstoš[ >>];"
+        - :value: 10000
+          :rule: "<%spellout-cardinal-masculine< tūkstoši[ >>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: viens miljons[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< miljoni[ >>];"
+        - :value: 1000000000
+          :rule: viens miljards[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miljardi[ >>];"
+        - :value: 1000000000000
+          :rule: viens biljons[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< biljoni[ >>];"
+        - :value: 1000000000000000
+          :rule: viens biljards[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biljardi[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: mīnus >>;
+        - :value: x.x
+          :rule: "<< komats >>;"
+        - :value: 0
+          :rule: nulle;
+        - :value: 1
+          :rule: viena;
+        - :value: 2
+          :rule: divas;
+        - :value: 3
+          :rule: trīs;
+        - :value: 4
+          :rule: četras;
+        - :value: 5
+          :rule: piecas;
+        - :value: 6
+          :rule: sešas;
+        - :value: 7
+          :rule: septiņas;
+        - :value: 8
+          :rule: astoņas;
+        - :value: 9
+          :rule: deviņas;
+        - :value: 10
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: "<%%spellout-prefixed<desmit[ >>];"
+        - :value: 100
+          :rule: simt[ >>];
+        - :value: 200
+          :rule: "<%%spellout-prefixed<simt[ >>];"
+        - :value: 1000
+          :rule: tūkstoš[ >>];
+        - :value: 2000
+          :rule: "<%%spellout-prefixed<tūkstoš[ >>];"
+        - :value: 10000
+          :rule: "<%spellout-cardinal-masculine< tūkstoši[ >>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: viens miljons[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< miljoni[ >>];"
+        - :value: 1000000000
+          :rule: viens miljards[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miljardi[ >>];"
+        - :value: 1000000000000
+          :rule: viens biljons[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< biljoni[ >>];"
+        - :value: 1000000000000000
+          :rule: viens biljards[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biljardi[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

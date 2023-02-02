@@ -1,0 +1,144 @@
+---
+ms:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Syarikat
+            optional: Syarikat (opsyenal)
+          errors:
+            blank: Masukkan nama syarikat
+            too_long: Nama syarikat terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Syarikat tidak boleh mengandungi tag HTML.
+            contains_emojis: Syarikat tidak boleh mengandungi emoji
+            contains_restricted_characters: Syarikat hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+        first_name:
+          label:
+            default: Nama pertama
+            optional: Nama pertama (opsyenal)
+          errors:
+            blank: Masukkan nama pertama
+            too_long: Nama pertama terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Nama pertama tidak boleh mengandungi tag HTML.
+            contains_emojis: Nama pertama tidak boleh mengandungi emoji
+            contains_url: Nama pertama tidak boleh mengandungi URL.
+            contains_restricted_characters: Nama pertama hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+        last_name:
+          label:
+            default: Nama terakhir
+            optional: Nama terakhir (opsyenal)
+          errors:
+            blank: Masukkan nama terakhir
+            too_long: Nama keluarga terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Nama keluarga tidak boleh mengandungi tag HTML.
+            contains_emojis: Nama keluarga tidak boleh mengandungi emoji
+            contains_url: Nama keluarga tidak boleh mengandungi URL.
+            contains_restricted_characters: Nama keluarga hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+        address1:
+          label:
+            default: Alamat
+            optional: Alamat (opsyenal)
+          errors:
+            blank: Masukkan alamat
+            too_long: Baris alamat pertama terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Address1 tidak boleh mengandungi tag HTML.
+            contains_emojis: Address1 tidak boleh mengandungi emoji
+            contains_url: Alamat1 tidak boleh mengandungi URL.
+            missing_building_number: Tambahkan nombor bangunan jika ada.
+            street_unknown_for_zip: Masukkan nama jalan yang sah untuk %{zip}.
+            building_number_invalid: Nombor bangunan tidak dapat ditemukan untuk %{street},
+              %{zip}.
+            contains_restricted_characters: Alamat1 hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            contains_too_many_words: Alamat1 tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+        address2:
+          label:
+            default: Pangsapuri, suite, dsb.
+            optional: Pangsapuri, suite, dsb. (opsyenal)
+          errors:
+            blank: Masukkan apartmen, suite, dll.
+            too_long: Baris alamat kedua terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Address2 tidak boleh mengandungi tag HTML.
+            contains_emojis: Address2 tidak boleh mengandungi emoji
+            contains_url: Alamat2 tidak boleh mengandungi URL.
+            missing_building_number: Tambahkan nombor bangunan jika ada.
+            street_unknown_for_zip: Masukkan nama jalan yang sah untuk %{zip}.
+            building_number_invalid: Nombor bangunan tidak dapat ditemukan untuk %{street},
+              %{zip}.
+            contains_restricted_characters: Alamat2 hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            contains_too_many_words: Alamat2 tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+        city:
+          label:
+            default: Bandar
+            optional: Bandar (opsyenal)
+          errors:
+            blank: Masukkan bandar
+            too_long: Bandar terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Bandar tidak boleh mengandungi tag HTML.
+            contains_emojis: Bandar tidak boleh mengandungi emoji
+            contains_url: Bandar tidak boleh mengandungi URL
+            unknown_for_zip: Masukkan bandar yang sah untuk %{zip}
+            unknown_for_province: Masukkan bandar yang sah untuk %{province}
+            unknown_for_zip_and_province: Masukkan bandar yang sah untuk %{zip}, %{province}
+            contains_restricted_characters: Bandar hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            contains_too_many_words: Bandar tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+        country:
+          label:
+            default: Negara/Wilayah
+            optional: Negara/Wilayah (opsyenal)
+          errors:
+            blank: Pilih negara/rantau
+            not_supported: Kami tidak menyokong negara/rantau ini pada masa ini. Masukkan
+              alamat baharu dan cuba lagi.
+            invalid: Masukkan negara/rantau yang sah
+            invalid_for_zip: Masukkan negara/rantau yang sah untuk poskod ini
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (opsyenal)
+          errors:
+            blank: Masukkan nombor telefon
+            invalid: Masukkan nombor telefon yang sah
+            too_long: Nombor telefon terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Nombor telefon tidak boleh mengandungi emoji
+            contains_restricted_characters: Nombor telefon hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+        province:
+          label:
+            default: Rantau
+            optional: Rantau (opsyenal)
+          errors:
+            blank: Pilih rantau
+            invalid_for_country: Masukkan rantau yang sah untuk %{country}
+            unknown_for_city_and_zip: Masukkan rantau yang sah untuk %{city}, %{zip}
+            unknown_for_city: Pilih rantau yang sah untuk %{city}
+            unknown_for_zip: Masukkan rantau yang sah untuk %{zip}
+        zip:
+          label:
+            default: Poskod
+            optional: Poskod (opsyenal)
+          errors:
+            blank: Masukkan poskod
+            blocked_address: Lokasi ini tidak disokong.
+            invalid_for_country: Masukkan poskod yang sah untuk %{country}
+            invalid_for_country_and_province: Masukkan poskod yang sah untuk %{province},
+              %{country}
+            invalid: Masukkan poskod yang sah
+            too_long: Nilai poskod terlalu panjang
+            contains_html_tags: Poskod tidak boleh mengandungi tag HTML.
+            contains_emojis: Poskod tidak boleh mengandungi emoji
+            not_supported: Kami tidak menyokong negara/rantau ini pada masa ini. Masukkan
+              alamat baharu dan cuba lagi.
+            unknown_for_province: Masukkan poskod yang sah untuk %{province}
+            contains_restricted_characters: Poskod hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            invalid_for_province: Masukkan poskod yang sah untuk %{province}

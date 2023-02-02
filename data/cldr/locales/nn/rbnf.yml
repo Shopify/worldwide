@@ -1,0 +1,127 @@
+---
+nn:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1100
+          :rule: "<< hundre[ og >>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-reale=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: null;
+        - :value: 1
+          :rule: eitt;
+        - :value: 2
+          :rule: "=%spellout-cardinal-reale=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-reale=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-reale=;"
+      - :type: spellout-cardinal-reale
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: null;
+        - :value: 1
+          :rule: éin;
+        - :value: 2
+          :rule: to;
+        - :value: 3
+          :rule: tre;
+        - :value: 4
+          :rule: fire;
+        - :value: 5
+          :rule: fem;
+        - :value: 6
+          :rule: seks;
+        - :value: 7
+          :rule: sju;
+        - :value: 8
+          :rule: åtte;
+        - :value: 9
+          :rule: ni;
+        - :value: 10
+          :rule: ti;
+        - :value: 11
+          :rule: elleve;
+        - :value: 12
+          :rule: tolv;
+        - :value: 13
+          :rule: tretten;
+        - :value: 14
+          :rule: fjorten;
+        - :value: 15
+          :rule: femten;
+        - :value: 16
+          :rule: seksten;
+        - :value: 17
+          :rule: sytten;
+        - :value: 18
+          :rule: atten;
+        - :value: 19
+          :rule: nitten;
+        - :value: 20
+          :rule: tjue[­>>];
+        - :value: 30
+          :rule: tretti[­>>];
+        - :value: 40
+          :rule: førti[­>>];
+        - :value: 50
+          :rule: femti[­>>];
+        - :value: 60
+          :rule: seksti[­>>];
+        - :value: 70
+          :rule: sytti[­>>];
+        - :value: 80
+          :rule: åtti[­>>];
+        - :value: 90
+          :rule: nitti[­>>];
+        - :value: 100
+          :rule: "<%spellout-cardinal-neuter< hundre[ og >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-neuter< tusen[ og >>];"
+        - :value: 1000000
+          :rule: éin million[ >>];
+        - :value: 2000000
+          :rule: "<< millionar[ >>];"
+        - :value: 1000000000
+          :rule: éin milliard[ >>];
+        - :value: 2000000000
+          :rule: "<< milliardar[ >>];"
+        - :value: 1000000000000
+          :rule: éin billion[ >>];
+        - :value: 2000000000000
+          :rule: "<< billionar[ >>];"
+        - :value: 1000000000000000
+          :rule: éin billiard[ >>];
+        - :value: 2000000000000000
+          :rule: "<< biliardar[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

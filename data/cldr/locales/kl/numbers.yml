@@ -1,0 +1,56 @@
+---
+kl:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              standard: "¤#,##0.00;¤-#,##0.00"
+        percent:
+          patterns:
+            default:
+              standard: "#,##0 %"
+      symbols:
+        currency:
+          patterns:
+            short:
+              standard:
+                '1000':
+                  one: "¤0 td"
+                  other: "¤0 td"
+                '10000':
+                  one: "¤00 td"
+                  other: "¤00 td"
+                '100000':
+                  one: "¤000 td"
+                  other: "¤000 td"
+                '1000000':
+                  one: "¤0 mn"
+                  other: "¤0 mn"
+                '10000000':
+                  one: "¤00 mn"
+                  other: "¤00 mn"
+                '100000000':
+                  one: "¤000 mn"
+                  other: "¤000 mn"
+                '1000000000':
+                  one: "¤0 md"
+                  other: "¤0 md"
+                '10000000000':
+                  one: "¤00 md"
+                  other: "¤00 md"
+                '100000000000':
+                  one: "¤000 md"
+                  other: "¤000 md"
+                '1000000000000':
+                  one: "¤0 bn"
+                  other: "¤0 bn"
+                '10000000000000':
+                  one: "¤00 bn"
+                  other: "¤00 bn"
+                '100000000000000':
+                  one: "¤000 bn"
+                  other: "¤000 bn"
+        decimal: ","
+        group: "."

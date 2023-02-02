@@ -1,0 +1,31 @@
+---
+name: Denmark
+code: DK
+tax: 0.25
+currency: DKK
+unit_system: metric
+tax_name: Moms
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+# The only codes in the 0xxx range are a handful of special-handling codes
+# 08xx and 09xx used in and around Copenhagen.
+# 38xx were formerly used for Faroe Islands (FO), and are now deprecated
+# 39xx are used for Greenland (GL)
+zip_regex: "^(DK( |-)?)?(?!38\\d{2}|39\\d{2})((0[89]\\d{2})|([1-9]\\d{3}))$"
+zip_example: '8660'
+phone_number_prefix: 45
+building_number_required: true
+week_start_day: monday
+languages:
+  - da
+  - en
+format:
+  address1: "{street} {building_num}"
+  address1_with_unit: "{street} {building_num}, {unit}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E9\U0001F1F0"
+timezone: Europe/Copenhagen

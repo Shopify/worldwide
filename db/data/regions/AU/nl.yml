@@ -1,0 +1,36 @@
+---
+nl:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Buitenwijk
+            optional: Buitenwijk (optioneel)
+          errors:
+            blank: Voer een buitenwijk in
+            too_long: De wijknaam is te lang (het maximum is 255 tekens)
+            contains_html_tags: Buitenwijk mag geen HTML-tags bevatten.
+            contains_emojis: Voorstad mag geen emoji's bevatten
+            contains_restricted_characters: Het veld Buitenwijk mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+        province:
+          label:
+            default: Staat/territorium
+            optional: Staat/territorium (optioneel)
+          errors:
+            blank: Selecteer een staat/grondgebied
+        zip:
+          label:
+            default: Postcode
+            optional: Postcode (optioneel)
+          errors:
+            blank: Voer een postcode in
+            invalid_for_country: Voer een geldige postcode in voor %{country}
+            invalid_for_country_and_province: Voer een geldige postcode in voor %{province},
+              %{country}
+            too_long: De waarde van de postcode is te lang
+            contains_html_tags: Postcode mag geen HTML-tags bevatten.
+            contains_emojis: Postcode mag geen emoji's bevatten
+            contains_restricted_characters: Het veld Postcode mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten

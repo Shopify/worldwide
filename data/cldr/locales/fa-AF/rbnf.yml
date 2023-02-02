@@ -1,0 +1,98 @@
+---
+fa-AF:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: منفی >>;
+        - :value: x.x
+          :rule: "<< عشاریه >>;"
+        - :value: 0
+          :rule: صفر;
+        - :value: 1
+          :rule: یک;
+        - :value: 2
+          :rule: دو;
+        - :value: 3
+          :rule: سه;
+        - :value: 4
+          :rule: چهار;
+        - :value: 5
+          :rule: پنج;
+        - :value: 6
+          :rule: شش;
+        - :value: 7
+          :rule: هفت;
+        - :value: 8
+          :rule: هشت;
+        - :value: 9
+          :rule: نه;
+        - :value: 10
+          :rule: ده;
+        - :value: 11
+          :rule: یازده;
+        - :value: 12
+          :rule: دوازده;
+        - :value: 13
+          :rule: سیزده;
+        - :value: 14
+          :rule: چهارده;
+        - :value: 15
+          :rule: پانزده;
+        - :value: 16
+          :rule: شانزده;
+        - :value: 17
+          :rule: هفده;
+        - :value: 18
+          :rule: هجده;
+        - :value: 19
+          :rule: نزده;
+        - :value: 20
+          :rule: بیست[ و >>];
+        - :value: 30
+          :rule: سی[ و >>];
+        - :value: 40
+          :rule: چهل[ و >>];
+        - :value: 50
+          :rule: پنجاه[ و >>];
+        - :value: 60
+          :rule: شصت[ و >>];
+        - :value: 70
+          :rule: هفتاد[ و >>];
+        - :value: 80
+          :rule: هشتاد[ و >>];
+        - :value: 90
+          :rule: نود[ و >>];
+        - :value: 100
+          :rule: صد[ و >>];
+        - :value: 200
+          :rule: "<<صد[ و >>];"
+        - :value: 300
+          :rule: "<<‌صد[ و >>];"
+        - :value: 400
+          :rule: "<<صد[ و >>];"
+        - :value: 1000
+          :rule: "<< هزار[ و >>];"
+        - :value: 1000000
+          :rule: "<< میلیون[ و >>];"
+        - :value: 1000000000
+          :rule: "<< میلیارد[ و >>];"
+        - :value: 1000000000000
+          :rule: "<< بیلیون[ و >>];"
+        - :value: 1000000000000000
+          :rule: "<< بیلیارد[ و >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

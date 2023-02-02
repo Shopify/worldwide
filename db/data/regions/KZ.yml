@@ -1,0 +1,46 @@
+---
+name: Kazakhstan
+code: KZ
+tax: 0.12
+currency: KZT
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_example: '040900'
+zip_regex: "^([A-Z]\\d{2}[A-Z]\\d[A-Z]\\d|\\d{6})$"
+zip_requirement: optional
+phone_number_prefix: 7
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}"
+emoji: "\U0001F1F0\U0001F1FF"
+languages:
+  - kk
+  - ru
+timezones:
+  Asia/Almaty:
+  - A
+  - B
+  - C
+  - F
+  - H
+  - M
+  - S
+  - T
+  - X
+  - Y
+  - Z
+  Asia/Aqtau:
+  - R
+  Asia/Aqtobe:
+  - D
+  Asia/Atyrau:
+  - E
+  Asia/Oral:
+  - L
+  Asia/Qostanay:
+  - P
+  Asia/Qyzylorda:
+  - N

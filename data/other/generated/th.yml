@@ -1,0 +1,142 @@
+---
+th:
+  date:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%-d/%-m/%Y"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+      date_time_current_year: "%-d %b %02k:%M"
+      default_long_with_zone: "%Aที่ %-d %B %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      friendly_date_time: "%-d %b %Y %02k:%M"
+      long_with_zone: "%-d %B %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%A %-d %B"
+      short_weekday_with_date: "%a %-d %b"
+      weekday_with_short_date: "%A %-d %b"
+      long_readable_with_time: "%-d %B %Y %02k:%M"
+      long_readable_with_zone: "%A %-d %B %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      date_at_time: "%-d %B %Y %02k:%M"
+      default: "%-d/%-m/%Y"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: วันนี้ในวันที่ %02k:%M
+      yesterday_at_time: เมื่อวานเวลา %02k:%M
+      tomorrow_at_time: พรุ่งนี้เวลา %02k:%M
+      on_weekday_at_time: ใน %A เวลา %02k:%M
+      on_date_time_current_year: ใน %-d %b เวลา %02k:%M
+      on_date: บน %-d %b %Y
+      ago: "%{time} ที่แล้ว"
+      x_hours_ago:
+        other: "%{count} ชั่วโมงที่ผ่านมา"
+      x_minutes_ago:
+        other: "%{count} นาทีที่ผ่านมา"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - อา.
+    - จ.
+    - อ.
+    - พ.
+    - พฤ.
+    - ศ.
+    - ส.
+    abbr_month_names:
+    - ''
+    - ม.ค.
+    - ก.พ.
+    - มี.ค.
+    - เม.ย.
+    - พ.ค.
+    - มิ.ย.
+    - ก.ค.
+    - ส.ค.
+    - ก.ย.
+    - ต.ค.
+    - พ.ย.
+    - ธ.ค.
+    day_names:
+    - วันอาทิตย์
+    - วันจันทร์
+    - วันอังคาร
+    - วันพุธ
+    - วันพฤหัสบดี
+    - วันศุกร์
+    - วันเสาร์
+    month_names:
+    - ''
+    - มกราคม
+    - กุมภาพันธ์
+    - มีนาคม
+    - เมษายน
+    - พฤษภาคม
+    - มิถุนายน
+    - กรกฎาคม
+    - สิงหาคม
+    - กันยายน
+    - ตุลาคม
+    - พฤศจิกายน
+    - ธันวาคม
+    relative_day_names:
+      this_week: สัปดาห์นี้
+      this_month: เดือนนี้
+      day_before_yesterday: เมื่อวานซืน
+      yesterday: เมื่อวาน
+      today: วันนี้
+      tomorrow: พรุ่งนี้
+      day_after_tomorrow: มะรืนนี้
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%-d/%-m/%Y"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%-d %b %02k:%M"
+      default_long_with_zone: "%Aที่ %-d %B %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      friendly_date_time: "%-d %b %Y %02k:%M"
+      long_with_zone: "%-d %B %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%A %-d %B"
+      short_weekday_with_date: "%a %-d %b"
+      weekday_with_short_date: "%A %-d %b"
+      long_readable_with_time: "%-d %B %Y %02k:%M"
+      long_readable_with_zone: "%A %-d %B %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      date_at_time: "%-d %B %Y %02k:%M"
+      default: "%a %-d %b %Y %02k นาฬิกา %M นาที %S วินาที %z"
+      long: "%-d %B %Y %02k:%M"
+      short: "%-d %b %02k:%M"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: วันนี้ในวันที่ %02k:%M
+      yesterday_at_time: เมื่อวานเวลา %02k:%M
+      tomorrow_at_time: พรุ่งนี้เวลา %02k:%M
+      on_weekday_at_time: ใน %A เวลา %02k:%M
+      on_date_time_current_year: ใน %-d %b เวลา %02k:%M
+      on_date: บน %-d %b %Y
+      ago: "%{time} ที่แล้ว"
+      x_hours_ago:
+        other: "%{count} ชั่วโมงที่ผ่านมา"
+      x_minutes_ago:
+        other: "%{count} นาทีที่ผ่านมา"
+      cc_expiry_date: "%m/%Y"
+    am: AM
+    pm: PM
+    just_now: เมื่อสักครู่
+    yesterday: เมื่อวาน

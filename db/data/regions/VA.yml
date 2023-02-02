@@ -1,0 +1,24 @@
+---
+tax: 0.0
+name: Holy See (Vatican City State)
+group: European Countries
+group_name: Europe
+code: VA
+unit_system: metric
+currency: EUR
+zip_example: '00120'
+zip_regex: "^00120$"
+# The ITU has allocated +379 for VA, but that country calling code is not in use.
+# Instead, Vatican City numbers are within the +39 06 range used for Rome.
+# See https://en.wikipedia.org/wiki/Telephone_numbers_in_Vatican_City
+phone_number_prefix: 39
+autofill_city_enabled: true
+zip_autofill_enabled: true
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {country}_{phone}"
+emoji: 🇻🇦
+languages:
+  - it
+  - la
+timezone: Europe/Rome

@@ -1,0 +1,23 @@
+---
+zh-CN:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: 邦
+            optional: 邦（可选）
+          errors:
+            blank: 选择州
+        zip:
+          label:
+            default: PIN 代码
+            optional: PIN 代码（可选）
+          errors:
+            blank: 输入 PIN 代码
+            invalid_for_country: 输入 %{country} 的有效 PIN 代码
+            invalid_for_country_and_province: 输入 %{country} %{province} 的有效 PIN 代码
+            too_long: PIN 代码值过长
+            contains_html_tags: PIN 代码不能包含 HTML 标记。
+            contains_emojis: PIN 代码不能包含表情符号
+            contains_restricted_characters: "“PIN 代码”字段不能包含受限字符"

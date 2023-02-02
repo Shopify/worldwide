@@ -1,0 +1,24 @@
+---
+name: Slovakia
+code: SK
+tax: 0.2
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_example: 010 01
+zip_regex: "^((SK( |-)?)?[089]\\d{2} ?\\d{2})$"
+phone_number_prefix: 421
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F8\U0001F1F0"
+languages:
+  - ru
+  - sk
+timezone: Europe/Prague

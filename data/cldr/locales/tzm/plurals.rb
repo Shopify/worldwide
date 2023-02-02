@@ -1,0 +1,1 @@
+{ :tzm => { :i18n => { :plural => { :keys => [:one, :other], :rule => lambda { |n| n = n.respond_to?(:abs) ? n.abs : ((m = n.to_s)[0] == "-" ? m[1,m.length] : m); (((n.to_f % 1).zero? && (0..1).include?(n.to_f)) || ((n.to_f % 1).zero? && (11..99).include?(n.to_f))) ? :one : :other } } } } }

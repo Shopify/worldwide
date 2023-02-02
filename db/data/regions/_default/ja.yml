@@ -1,0 +1,128 @@
+---
+ja:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: 会社
+            optional: 会社 (任意)
+          errors:
+            blank: 会社名を入力してください
+            too_long: 会社名が長すぎます (最大255文字)
+            contains_html_tags: 会社名にHTMLタグを含めることはできません。
+            contains_emojis: 会社名に絵文字を含めることはできません
+            contains_restricted_characters: 会社には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+        first_name:
+          label:
+            default: 名
+            optional: 名 (任意)
+          errors:
+            blank: 名を入力してください
+            too_long: 名が長すぎます (最大255文字)
+            contains_html_tags: 名にHTMLタグを含めることはできません。
+            contains_emojis: 名に絵文字を含めることはできません
+            contains_url: 名にURLを含めることはできません
+            contains_restricted_characters: 名前には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+        last_name:
+          label:
+            default: 姓
+            optional: 姓 (任意)
+          errors:
+            blank: 姓を入力してください
+            too_long: 姓が長すぎます (最大255文字)
+            contains_html_tags: 姓にHTMLタグを含めることはできません。
+            contains_emojis: 姓に絵文字を含めることはできません
+            contains_url: 姓にURLを含めることはできません
+            contains_restricted_characters: 名字には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+        address1:
+          label:
+            default: 住所
+            optional: 住所 (任意)
+          errors:
+            blank: 住所を入力してください
+            too_long: 住所の1行目が長すぎます (最大255文字)
+            contains_html_tags: 番地にHTMLタグを含めることはできません。
+            contains_emojis: 番地に絵文字を含めることはできません
+            contains_url: 番地にURLを含めることはできません。
+            missing_building_number: 建物番号がある場合は追加してください。
+            street_unknown_for_zip: "%{zip}に有効な通り名を入力してください。"
+            building_number_invalid: "%{street}、%{zip}の建物番号が見つかりませんでした。"
+            contains_restricted_characters: 住所1には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+            contains_too_many_words: 住所1には、%{word_count}語以上を入力できません
+        address2:
+          label:
+            default: 建物名、部屋番号など
+            optional: 建物名、部屋番号など (任意)
+          errors:
+            blank: 建物名、部屋番号などを入力してください
+            too_long: 住所の2行目が長すぎます (最大255文字)
+            contains_html_tags: 住所2にHTMLタグを含めることはできません。
+            contains_emojis: 住所2に絵文字を含めることはできません
+            contains_url: 住所2にURLを含めることはできません。
+            missing_building_number: 建物番号がある場合は追加してください。
+            street_unknown_for_zip: "%{zip}に有効な通り名を入力してください。"
+            building_number_invalid: "%{street}、%{zip}の建物番号が見つかりませんでした。"
+            contains_restricted_characters: 住所2には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+            contains_too_many_words: 住所2には、%{word_count}語以上を入力できません
+        city:
+          label:
+            default: 市区町村
+            optional: 市区町村 (任意)
+          errors:
+            blank: 市区町村を入力してください
+            too_long: 都市名が長すぎます (最大255文字)
+            contains_html_tags: 市区町村にHTMLタグを含めることはできません。
+            contains_emojis: 都市名に絵文字を含めることはできません
+            contains_url: 都市名にURLを含めることはできません
+            unknown_for_zip: "%{zip}に対応する有効な市区町村を入力してください"
+            unknown_for_province: "%{province}の有効な市区町村を入力してください"
+            unknown_for_zip_and_province: "%{zip}、%{province}の有効な市区町村を入力してください"
+            contains_restricted_characters: 市には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+            contains_too_many_words: 市には、%{word_count}語以上を入力できません
+        country:
+          label:
+            default: 国/地域
+            optional: 国/地域 (任意)
+          errors:
+            blank: 国/地域を選択してください
+            not_supported: 現在この国または地域に対応しておりません。新しい住所を入力して、もう一度お試しください。
+            invalid: 有効な国/地域を入力してください
+            invalid_for_zip: この郵便番号の有効な国/地域を入力してください
+        phone:
+          label:
+            default: 電話番号
+            optional: 電話番号 (任意)
+          errors:
+            blank: 電話番号を入力してください
+            invalid: 有効な電話番号を入力してください
+            too_long: 電話番号が長すぎます (最大255文字)
+            contains_emojis: 電話番号に絵文字を含めることはできません
+            contains_restricted_characters: 電話番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+        province:
+          label:
+            default: 地域
+            optional: 地域 (任意)
+          errors:
+            blank: 地域を選択してください
+            invalid_for_country: "%{country}の有効な地域を入力してください"
+            unknown_for_city_and_zip: "%{zip}、%{city}の有効な地域を入力してください"
+            unknown_for_city: "%{city}の有効な地域を選択してください"
+            unknown_for_zip: "%{zip}の有効な地域を選択してください"
+        zip:
+          label:
+            default: 郵便番号
+            optional: 郵便番号 (任意)
+          errors:
+            blank: 郵便番号を入力してください
+            blocked_address: このロケーションはサポートされていません。
+            invalid_for_country: "%{country}の有効な郵便番号を入力してください"
+            invalid_for_country_and_province: "%{country}の%{province}の有効な郵便番号を入力してください"
+            invalid: 有効な郵便番号を入力してください
+            too_long: 郵便番号の値が長すぎます
+            contains_html_tags: 郵便番号にHTMLタグを含めることはできません。
+            contains_emojis: 郵便番号に絵文字を含めることはできません
+            not_supported: 現在この国または地域に対応しておりません。新しい住所を入力して、もう一度お試しください。
+            unknown_for_province: "%{province}の有効な郵便番号を入力してください"
+            contains_restricted_characters: 郵便番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。
+            invalid_for_province: "%{province}の有効な郵便番号を入力してください"

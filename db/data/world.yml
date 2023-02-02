@@ -1,0 +1,382 @@
+---
+# This file defines a hierarchy of regions describing the world.
+# We follow the United Nations standard country or area codes (M49):
+# https://unstats.un.org/unsd/methodology/m49/
+
+'001': # World
+  '002': # Africa
+    '015': # Northern Africa
+      - DZ # Algeria
+      - EG # Egypt
+      - EH # Western Sahara
+      - LY # Libya
+      - MA # Morocco
+      - SD # Sudan
+      - TN # Tunisia
+    '202': # Sub-Saharan Africa
+      '014': # Eastern Africa
+        - IO # British Indian Ocean Territory
+        - BI # Burundi
+        - KM # Comoros
+        - DJ # Djibouti
+        - ER # Eritrea
+        - ET # Ethiopia
+        - TF # French Southern Territories
+        - KE # Kenya
+        - MG # Madagascar
+        - MW # Malawi
+        - MU # Mauritius
+        - YT # Mayotte
+        - MZ # Mozambique
+        - RE # Réunion
+        - RW # Rwanda
+        - SC # Seychelles
+        - SO # Somalia
+        - SS # South Sudan
+        - UG # Uganda
+        - TZ # Tanzania
+        - ZM # Zambia
+        - ZW # Zimbabwe
+      '017': # Middle Africa
+        - AO # Angola
+        - CM # Cameroon
+        - CF # Central African Republic
+        - TD # Chad
+        - CD # Congo-Kinshasa
+        - CG # Congo-Brazzaville
+        - GQ # Equatorial Guinea
+        - GA # Gabon
+        - ST # Sao Tome and Principe
+      '018': # Southern Africa
+        - BW # Botswana
+        - SZ # eSwatini
+        - LS # Lesotho
+        - NA # Namibia
+        - ZA # South Africa
+      '011': # Western Africa
+        - AC # Ascension Island
+        - BJ # Benin
+        - BF # Burkina Faso
+        - CV # Cabo Verde
+        - CI # Côte d'Ivoire
+        - GH # Ghana
+        - GM # Gambia
+        - GN # Guinea
+        - GW # Guinea-Bissau
+        - LR # Liberia
+        - ML # Mali
+        - MR # Mauritania
+        - NE # Niger
+        - NG # Nigeria
+        - SH # Saint Helena
+        - SL # Sierra Leone
+        - SN # Senegal
+        - TA # Tristan da Cunha
+        - TG # Togo
+  '019': # Americas
+    '419': # Latin America and the Caribbean
+      '029': # Caribbean
+        - AI # Anguilla
+        - AG # Antigua and Barbuda
+        - AW # Aruba
+        - BS # Bahamas
+        - BB # Barbados
+        - BQ # Bonaire, Sint Estatius and Saba (a.k.a. Caribbean Netherlands)
+        - VG # British Virgin Islands
+        - KY # Cayman Islands
+        - CU # Cuba
+        - CW # Curaçao
+        - DM # Dominica
+        - DO # Dominican Republic
+        - GD # Grenada
+        - GP # Guadaloupe
+        - HT # Haiti
+        - JM # Jamaica
+        - MQ # Martinique
+        - MS # Montserrat
+        - PR # Puerto Rico
+        - BL # Saint Barthélemy
+        - KN # Saint Kitts and Nevis
+        - LC # Saint Lucia
+        - MF # Saint Martin (French Part)
+        - VC # Saint Vincent and the Grenadines
+        - SX # Sint Maarten (Dutch Part)
+        - TT # Trididad and Tobago
+        - TC # Turks and Caicos
+        - VI # US Virgin Islands
+      '013': # Central America
+        - BZ # Belize
+        - CR # Costa Rica
+        - SV # El Salvador
+        - GT # Guatemala
+        - HN # Honduras
+        - MX # Mexico
+        - NI # Nicaragua
+        - PA # Panama
+      '005': # South America
+        - AR # Argentina
+        - BO # Bolivia
+        - BV # Bouvet Island
+        - BR # Brazil
+        - CL # Chile
+        - CO # Colombia
+        - EC # Ecuador
+        - FK # Falkland Islands (Malvinas)
+        - GF # French Guiana
+        - GY # Guyana
+        - PY # Paraguay
+        - PE # Peru
+        - GS # Georgia and the South Sandwich Islands
+        - SR # Suriname
+        - UY # Uruguay
+        - VE # Venezuela
+    '021': # Northern America (see below for 003 "North America")
+      - BM # Bermuda
+      - CA # Canada
+      - GL # Greenland
+      - PM # Saint Pierre and Miquelon
+      - US # United States of America
+  '142': # Asia
+    '143': # Central Asia
+      - KZ # Kazakhstan
+      - KG # Kyrgyztan
+      - TJ # Tajikistan
+      - TM # Turkmenistan
+      - UZ # Uzbekistan
+    '030': # Eastern Asia
+      - CN # China (People's Republic of China)
+      - HK # Hong Kong SAR China
+      - MO # Macau SAR China
+      - KP # North Korea (Democratic People's Republic of Korea)
+      - KR # South Korea (Republic of Korea)
+      - JP # Japan
+      - MN # Mongolia
+      - TW # Taiwan (Republic of China)
+    '035': # South-Eastern Asia
+      - BN # Brunei
+      - KH # Cambodia
+      - ID # Indonesia
+      - LA # Laos
+      - MY # Malaysia
+      - MM # Myanmar (Burma)
+      - PH # Philippines
+      - SG # Singapore
+      - TH # Thailand
+      - TL # Timor-Leste
+      - VN # Vietnam
+    '034': # Southern Asia
+      - AF # Afghanistan
+      - BD # Bangladesh
+      - BT # Bhutan
+      - IN # India
+      - IR # Iran
+      - MV # Maldives
+      - NP # Nepal
+      - PK # Pakistan
+      - LK # Sri Lanka
+    '145': # Western Asia
+      - AM # Armenia
+      - AZ # Azerbaijan
+      - BH # Bahrain
+      - CY # Cyprus
+      - GE # Georgia
+      - IQ # Iraq
+      - IL # Israel
+      - JO # Jordan
+      - KW # Kuwait
+      - LB # Lebanon
+      - OM # Oman
+      - QA # Qatar
+      - SA # Saudi Arabia
+      - PS # Palestinian Territories
+      - SY # Syria
+      - TR # Türkiye
+      - AE # United Arab Emirates
+      - YE # Yemen
+  '150': # Europe
+    '151': # Eastern Europe
+      - BY # Belarus
+      - BG # Bulgaria
+      - CZ # Czechia
+      - HU # Hungary
+      - PL # Poland
+      - MD # Moldova
+      - RO # Romania
+      - RU # Russia
+      - SK # Slovakia
+      - UA # Ukraine
+    '154': # Northern Europe
+      - AX # Åland Islands
+      - GG # Guernsey
+      - JE # Jersey
+      - CQ # Sark
+      - DK # Denmark
+      - EE # Estonia
+      - FO # Faroe Islands
+      - FI # Finland
+      - IS # Iceland
+      - IE # Ireland
+      - IM # Isle of Man
+      - LV # Latvia
+      - LT # Lithuania
+      - 'NO' # Norway
+      - SJ # Svalbard and Jan Mayen
+      - SE # Sweden
+      - GB # United Kingdom of Great Britain and Northern Ireland
+    '039': # Southern Europe
+      - AL # Albania
+      - AD # Andorra
+      - BA # Bosnia and Herzegovina
+      - HR # Croatia
+      - GI # Gibraltar
+      - GR # Greece
+      - VA # Holy See
+      - IT # Italy
+      - MT # Malta
+      - ME # Montenegro
+      - MK # North Macedonia
+      - PT # Portugal
+      - SM # San Marino
+      - RS # Serbia
+      - SI # Slovenia
+      - ES # Spain
+    '155': # Western Europe
+      - AT # Austria
+      - BE # Belgium
+      - FR # France
+      - DE # Germany
+      - LI # Liechtenstein
+      - LU # Luxembourg
+      - MC # Monaco
+      - NL # Netherlands
+      - CH # Switzerland
+  '009': # Oceania
+    '053': # Australia and New Zealand
+      - AU # Australia
+      - CX # Christmas Island
+      - CC # Cocos (Keeling) Islands
+      - HM # Heard Island and McDonald Islands
+      - NZ # New Zealand
+      - NF # Norfolk Island
+    '054': # Melanesia
+      - FJ # Fiji
+      - NC # New Caledonia
+      - PG # Papua New Guinea
+      - SB # Solomon Islands
+      - VU # Vanuatu
+    '057': # Micronesia
+      - GU # Guam
+      - KI # Kiribati
+      - MH # Marshall Islands
+      - FM # Federated States of Micronesia
+      - NR # Nauru
+      - MP # Northern Mariana Islands
+      - PW # Palau
+      - UM # United States Minor and Outlying Islands
+    '061': # Polynesia
+      - AS # American Samoa
+      - CK # Cook Islands
+      - PF # French Polynesia
+      - NU # Niue
+      - PN # Pitcairn
+      - WS # Samoa
+      - TK # Tokelau
+      - TO # Tonga
+      - TV # Tuvalu
+      - WF # Wallis and Futuna Islands
+# Some bits of hierarchical information don't fit cleanly in the above.
+# For example, the UN has alternate groupings for the Americas.
+# Also, we want to make note of some territories with dual status, like NF
+# Thus, the alternate groupings given below should be understood as an extension of the above.
+alternates:
+  '001': # World
+    '003': # North America
+      - '013' # Central America
+      - '021' # Northern America
+      - '029' # Caribbean
+    AQ: # Antarctica, also known as '010'
+      - TF # French Southern Territories (also filed under 014 Eastern Africa and under FR France)
+  '154': # Northern Europe
+    '830': # Channel Islands
+      - GY # Guernsey
+      - JE # Jersey
+      - CQ # Sark
+  AU: # Australia
+    - CC # Cocos (Keeling) Islands
+    - CX # Christmas Island
+    - HM # Heard Island and MacDonald Islands
+    - NF # Norfolk Island
+  CN: # People's Republic of China
+    - HK # Hong Kong SAR China
+    - MO # Macau SAR China
+  DK: # Denmark
+    - FO # Faroe Islands
+    - GL # Greenland
+  ES: # Spain
+    - EA # Ceuta and Melilla
+    - IC # Canary Islands
+  FI: # Finland
+    - AX # Åland Islands
+  FR: # France
+    - BL # Saint Barthélemy
+    - CP # Clipperton Island
+    - GF # French Guiana
+    - MF # Saint Martin (French part)
+    - MQ # Martinique
+    - NC # New Caledonia
+    - PF # French Polynesia
+    - PM # Saint Pierre and Miquelon
+    - RE # Réunion
+    - TF # French Southern Territories
+    - WF # Wallis and Futuna Islands
+    - YT # Mayotte
+  GB: # United Kingdom of Great Britain and Northern Ireland
+    - AC # Ascension Island
+    - AI # Anguilla
+    - BM # Bermuda
+    - CQ # Sark
+    - DG # Diego Garcia
+    - FK # Falkland Islands
+    - GG # Guernsey
+    - GI # Gibraltar
+    - GS # Georgia and the South Sandwich Islands
+    - IM # Isle of Man
+    - IO # British Indian Ocean Territory
+    - JE # Jersey
+    - MS # Montserrat
+    - PN # Pitcairn
+    - SH # Saint Helena
+    - TA # Tristan da Cunha
+    - TC # Turks and Caicos
+    - VG # British Virgin Islands
+  GG: # Guernsey
+    - CQ # Sark
+  IO: # British Indian Ocean Territory
+    - DG # Diego Garcia
+  NL: # Netherlands
+    - AW # Aruba
+    - BQ # Bonaire, Sint Eustatius and Saba (a.k.a. Caribbean Netherlands)
+    - CW # Curaçao
+    - SX # Sint Maarten (Dutch part)
+  'NO': # Norway
+    - BV # Bouvet Island
+    - SJ # Svalbard and Jan Mayen
+  US: # United States of America
+    - AS # American Samoa
+    - FM # Federated States of Micronesia
+    - GU # Guam
+    - MH # Marshall Islands
+    - MP # Northern Mariana Islands
+    - PW # Palau
+    - PR # Puerto Rico
+    - UM # United States Minor and Outlying Islands
+    - VI # US Virgin Islands
+# Here we explicitly list which regions are "continents".  Note that we consider the Americas to be two continents.
+continents:
+  - '002' # Africa
+  - '003' # North America
+  - '005' # South America
+  - '009' # Oceania
+  - '010' # Antarctica
+  - '142' # Asia
+  - '150' # Europe

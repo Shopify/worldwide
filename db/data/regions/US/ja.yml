@@ -1,0 +1,28 @@
+---
+ja:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: 州
+            optional: 州 (任意)
+          errors:
+            blank: 州を選択してください
+            invalid_for_country: 有効な%{country}の州を入力してください
+            unknown_for_city_and_zip: "%{zip}、%{city}の有効な州を入力してください"
+            unknown_for_city: "%{city}の有効な州を選択してください"
+            unknown_for_zip: "%{zip}の有効な州を選択してください"
+        zip:
+          label:
+            default: 郵便番号
+            optional: 郵便番号 (任意)
+          errors:
+            blank: 郵便番号を入力してください
+            invalid_for_country: "%{country}の有効な郵便番号を入力してください"
+            invalid_for_country_and_province: "%{country}の%{province}の有効な郵便番号を入力してください"
+            too_long: 郵便番号の値が長すぎます
+            contains_html_tags: 郵便番号の値にHTMLタグを含めることはできません。
+            contains_emojis: 郵便番号に絵文字を含めることはできません
+            contains_restricted_characters: 郵便番号には制限されている文字を入力できません
+            invalid_for_province: "%{province}の有効な郵便番号を入力してください"

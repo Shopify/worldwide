@@ -1,0 +1,26 @@
+---
+name: Norway
+code: 'NO'
+tax: 0.25
+currency: NOK
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-EEA
+zip_example: '0025'
+zip_regex: "^(NO?( |-)?)?(?!8099|917\\d)(\\d{4})$"
+phone_number_prefix: 47
+week_start_day: monday
+languages:
+  - en
+  - nb
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F3\U0001F1F4"
+languages:
+  - "no"
+timezone: Europe/Oslo

@@ -1,0 +1,213 @@
+---
+root:
+  fields:
+    day:
+      display_name: Day
+      relative:
+        -1: yesterday
+        0: today
+        1: tomorrow
+      relative_time:
+        future:
+          other: "+{0} d"
+        past:
+          other: "-{0} d"
+    day_narrow: :fields.day_short
+    day_of_year:
+      display_name: Day Of Year
+    day_of_year_narrow: :fields.day_of_year_short
+    day_of_year_short: :fields.day_of_year
+    day_short: :fields.day
+    dayperiod:
+      display_name: Dayperiod
+    dayperiod_narrow: :fields.dayperiod_short
+    dayperiod_short: :fields.dayperiod
+    era:
+      display_name: Era
+    era_narrow: :fields.era_short
+    era_short: :fields.era
+    fri:
+      relative:
+        -1: last Friday
+        0: this Friday
+        1: next Friday
+      relative_time:
+        future:
+          other: "+{0} Fridays"
+        past:
+          other: "-{0} Fridays"
+    fri_narrow: :fields.fri_short
+    fri_short: :fields.fri
+    hour:
+      display_name: Hour
+      relative:
+        0: this hour
+      relative_time:
+        future:
+          other: "+{0} h"
+        past:
+          other: "-{0} h"
+    hour_narrow: :fields.hour_short
+    hour_short: :fields.hour
+    minute:
+      display_name: Minute
+      relative:
+        0: this minute
+      relative_time:
+        future:
+          other: "+{0} min"
+        past:
+          other: "-{0} min"
+    minute_narrow: :fields.minute_short
+    minute_short: :fields.minute
+    mon:
+      relative:
+        -1: last Monday
+        0: this Monday
+        1: next Monday
+      relative_time:
+        future:
+          other: "+{0} Mondays"
+        past:
+          other: "-{0} Mondays"
+    mon_narrow: :fields.mon_short
+    mon_short: :fields.mon
+    month:
+      display_name: Month
+      relative:
+        -1: last month
+        0: this month
+        1: next month
+      relative_time:
+        future:
+          other: "+{0} m"
+        past:
+          other: "-{0} m"
+    month_narrow: :fields.month_short
+    month_short: :fields.month
+    quarter:
+      display_name: Quarter
+      relative:
+        -1: last quarter
+        0: this quarter
+        1: next quarter
+      relative_time:
+        future:
+          other: "+{0} Q"
+        past:
+          other: "-{0} Q"
+    quarter_narrow: :fields.quarter_short
+    quarter_short: :fields.quarter
+    sat:
+      relative:
+        -1: last Saturday
+        0: this Saturday
+        1: next Saturday
+      relative_time:
+        future:
+          other: "+{0} Saturdays"
+        past:
+          other: "-{0} Saturdays"
+    sat_narrow: :fields.sat_short
+    sat_short: :fields.sat
+    second:
+      display_name: Second
+      relative:
+        0: now
+      relative_time:
+        future:
+          other: "+{0} s"
+        past:
+          other: "-{0} s"
+    second_narrow: :fields.second_short
+    second_short: :fields.second
+    sun:
+      relative:
+        -1: last Sunday
+        0: this Sunday
+        1: next Sunday
+      relative_time:
+        future:
+          other: "+{0} Sundays"
+        past:
+          other: "-{0} Sundays"
+    sun_narrow: :fields.sun_short
+    sun_short: :fields.sun
+    thu:
+      relative:
+        -1: last Thursday
+        0: this Thursday
+        1: next Thursday
+      relative_time:
+        future:
+          other: "+{0} Thursdays"
+        past:
+          other: "-{0} Thursdays"
+    thu_narrow: :fields.thu_short
+    thu_short: :fields.thu
+    tue:
+      relative:
+        -1: last Tuesday
+        0: this Tuesday
+        1: next Tuesday
+      relative_time:
+        future:
+          other: "+{0} Tuesdays"
+        past:
+          other: "-{0} Tuesdays"
+    tue_narrow: :fields.tue_short
+    tue_short: :fields.tue
+    wed:
+      relative:
+        -1: last Wednesday
+        0: this Wednesday
+        1: next Wednesday
+      relative_time:
+        future:
+          other: "+{0} Wednesdays"
+        past:
+          other: "-{0} Wednesdays"
+    wed_narrow: :fields.wed_short
+    wed_short: :fields.wed
+    week:
+      display_name: Week
+      relative:
+        -1: last week
+        0: this week
+        1: next week
+      relative_time:
+        future:
+          other: "+{0} w"
+        past:
+          other: "-{0} w"
+    week_narrow: :fields.week_short
+    week_of_month:
+      display_name: Week Of Month
+    week_of_month_narrow: :fields.week_of_month_short
+    week_of_month_short: :fields.week_of_month
+    week_short: :fields.week
+    weekday:
+      display_name: Day of the Week
+    weekday_narrow: :fields.weekday_short
+    weekday_of_month:
+      display_name: Weekday Of Month
+    weekday_of_month_narrow: :fields.weekday_of_month_short
+    weekday_of_month_short: :fields.weekday_of_month
+    weekday_short: :fields.weekday
+    year:
+      display_name: Year
+      relative:
+        -1: last year
+        0: this year
+        1: next year
+      relative_time:
+        future:
+          other: "+{0} y"
+        past:
+          other: "-{0} y"
+    year_narrow: :fields.year_short
+    year_short: :fields.year
+    zone:
+      display_name: Zone
+    zone_narrow: :fields.zone_short
+    zone_short: :fields.zone

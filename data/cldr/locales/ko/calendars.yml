@@ -1,0 +1,386 @@
+---
+ko:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: B h시
+        Bhm: B h:mm
+        Bhms: B h:mm:ss
+        d: d일
+        E: ccc
+        EBhm: "(E) B h:mm"
+        EBhms: "(E) B h:mm:ss"
+        Ed: d일 (E)
+        EEEEd: d일 EEEE
+        Ehm: "(E) a h:mm"
+        EHm: "(E) HH:mm"
+        Ehms: "(E) a h:mm:ss"
+        EHms: "(E) HH:mm:ss"
+        Gy: G y년
+        GyMd: GGGGG y/M/d
+        GyMMM: G y년 MMM
+        GyMMMd: G y년 MMM d일
+        GyMMMEd: G y년 MMM d일 (E)
+        GyMMMEEEEd: G y년 MMM d일 EEEE
+        h: a h시
+        H: H시
+        HHmmss: HH:mm:ss
+        hm: a h:mm
+        Hm: HH:mm
+        hms: a h:mm:ss
+        Hms: H시 m분 s초
+        hmsv: a h:mm:ss v
+        Hmsv: H시 m분 s초 v
+        hmv: a h:mm v
+        Hmv: HH:mm v
+        M: M월
+        Md: M. d.
+        MEd: M. d. (E)
+        MEEEEd: M. d. EEEE
+        MMM: LLL
+        MMMd: MMM d일
+        MMMEd: MMM d일 (E)
+        MMMEEEEd: MMM d일 EEEE
+        MMMMd: MMMM d일
+        MMMMW: MMMM W번째 주
+        mmss: mm:ss
+        ms: mm:ss
+        "y": y년
+        yM: y. M.
+        yMd: y. M. d.
+        yMEd: y. M. d. (E)
+        yMEEEEd: y. M. d. EEEE
+        yMM: y. M.
+        yMMM: y년 MMM
+        yMMMd: y년 MMM d일
+        yMMMEd: y년 MMM d일 (E)
+        yMMMEEEEd: y년 MMM d일 EEEE
+        yMMMM: y년 MMMM
+        yQQQ: y년 QQQ
+        yQQQQ: y년 QQQQ
+        yw: Y년 w번째 주
+      days:
+        format:
+          abbreviated:
+            sun: 일
+            mon: 월
+            tue: 화
+            wed: 수
+            thu: 목
+            fri: 금
+            sat: 토
+          narrow:
+            sun: 일
+            mon: 월
+            tue: 화
+            wed: 수
+            thu: 목
+            fri: 금
+            sat: 토
+          short:
+            sun: 일
+            mon: 월
+            tue: 화
+            wed: 수
+            thu: 목
+            fri: 금
+            sat: 토
+          wide:
+            sun: 일요일
+            mon: 월요일
+            tue: 화요일
+            wed: 수요일
+            thu: 목요일
+            fri: 금요일
+            sat: 토요일
+        stand_alone:
+          abbreviated:
+            sun: 일
+            mon: 월
+            tue: 화
+            wed: 수
+            thu: 목
+            fri: 금
+            sat: 토
+          narrow:
+            sun: 일
+            mon: 월
+            tue: 화
+            wed: 수
+            thu: 목
+            fri: 금
+            sat: 토
+          short:
+            sun: 일
+            mon: 월
+            tue: 화
+            wed: 수
+            thu: 목
+            fri: 금
+            sat: 토
+          wide:
+            sun: 일요일
+            mon: 월요일
+            tue: 화요일
+            wed: 수요일
+            thu: 목요일
+            fri: 금요일
+            sat: 토요일
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+        name:
+          0: BCE
+          1: CE
+      fields:
+        day: 일
+        day_narrow: 일
+        day_of_year: 년의 일
+        day_of_year_narrow: 년의 일
+        day_of_year_short: 년의 일
+        day_period: 오전/오후
+        day_period_narrow: 오전/오후
+        day_period_short: 오전/오후
+        day_short: 일
+        era: 연호
+        era_narrow: 연호
+        era_short: 연호
+        hour: 시
+        hour_narrow: 시
+        hour_short: 시
+        minute: 분
+        minute_narrow: 분
+        minute_short: 분
+        month: 월
+        month_narrow: 월
+        month_short: 월
+        quarter: 분기
+        quarter_narrow: 분기
+        quarter_short: 분기
+        second: 초
+        second_narrow: 초
+        second_short: 초
+        week: 주
+        week_narrow: 주
+        week_of_month: 월의 주
+        week_of_month_narrow: 월의 주
+        week_of_month_short: 월의 주
+        week_short: 주
+        weekday: 요일
+        weekday_narrow: 요일
+        weekday_of_month: 월의 평일
+        weekday_of_month_narrow: 월의 평일
+        weekday_of_month_short: 월의 평일
+        weekday_short: 요일
+        year: 년
+        year_narrow: 년
+        year_short: 년
+        zone: 시간대
+        zone_narrow: 시간대
+        zone_short: 시간대
+      formats:
+        date:
+          full:
+            pattern: y년 M월 d일 EEEE
+          long:
+            pattern: y년 M월 d일
+          medium:
+            pattern: y. M. d.
+          short:
+            pattern: yy. M. d.
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: a h시 m분 s초 zzzz
+          long:
+            pattern: a h시 m분 s초 z
+          medium:
+            pattern: a h:mm:ss
+          short:
+            pattern: a h:mm
+      months:
+        format:
+          abbreviated:
+            1: 1월
+            2: 2월
+            3: 3월
+            4: 4월
+            5: 5월
+            6: 6월
+            7: 7월
+            8: 8월
+            9: 9월
+            10: 10월
+            11: 11월
+            12: 12월
+          narrow:
+            1: 1월
+            2: 2월
+            3: 3월
+            4: 4월
+            5: 5월
+            6: 6월
+            7: 7월
+            8: 8월
+            9: 9월
+            10: 10월
+            11: 11월
+            12: 12월
+          wide:
+            1: 1월
+            2: 2월
+            3: 3월
+            4: 4월
+            5: 5월
+            6: 6월
+            7: 7월
+            8: 8월
+            9: 9월
+            10: 10월
+            11: 11월
+            12: 12월
+        stand_alone:
+          abbreviated:
+            1: 1월
+            2: 2월
+            3: 3월
+            4: 4월
+            5: 5월
+            6: 6월
+            7: 7월
+            8: 8월
+            9: 9월
+            10: 10월
+            11: 11월
+            12: 12월
+          narrow:
+            1: 1월
+            2: 2월
+            3: 3월
+            4: 4월
+            5: 5월
+            6: 6월
+            7: 7월
+            8: 8월
+            9: 9월
+            10: 10월
+            11: 11월
+            12: 12월
+          wide:
+            1: 1월
+            2: 2월
+            3: 3월
+            4: 4월
+            5: 5월
+            6: 6월
+            7: 7월
+            8: 8월
+            9: 9월
+            10: 10월
+            11: 11월
+            12: 12월
+      periods:
+        format:
+          abbreviated:
+            afternoon1: 오후
+            am: AM
+            evening1: 저녁
+            midnight: 자정
+            morning1: 새벽
+            morning2: 오전
+            night1: 밤
+            noon: 정오
+            pm: PM
+          narrow:
+            afternoon1: 오후
+            am: AM
+            evening1: 저녁
+            midnight: 자정
+            morning1: 새벽
+            morning2: 오전
+            night1: 밤
+            noon: 정오
+            pm: PM
+          wide:
+            afternoon1: 오후
+            am: 오전
+            evening1: 저녁
+            midnight: 자정
+            morning1: 새벽
+            morning2: 오전
+            night1: 밤
+            noon: 정오
+            pm: 오후
+        stand_alone:
+          abbreviated:
+            afternoon1: 오후
+            am: AM
+            evening1: 저녁
+            midnight: 자정
+            morning1: 새벽
+            morning2: 오전
+            night1: 밤
+            noon: 정오
+            pm: PM
+          narrow:
+            afternoon1: 오후
+            am: AM
+            evening1: 저녁
+            midnight: 자정
+            morning1: 새벽
+            morning2: 오전
+            night1: 밤
+            noon: 정오
+            pm: PM
+          wide:
+            afternoon1: 오후
+            am: 오전
+            evening1: 저녁
+            midnight: 자정
+            morning1: 새벽
+            morning2: 오전
+            night1: 밤
+            noon: 정오
+            pm: 오후
+      quarters:
+        format:
+          abbreviated:
+            1: 1분기
+            2: 2분기
+            3: 3분기
+            4: 4분기
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 제 1/4분기
+            2: 제 2/4분기
+            3: 제 3/4분기
+            4: 제 4/4분기
+        stand_alone:
+          abbreviated:
+            1: 1분기
+            2: 2분기
+            3: 3분기
+            4: 4분기
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 제 1/4분기
+            2: 제 2/4분기
+            3: 제 3/4분기
+            4: 제 4/4분기

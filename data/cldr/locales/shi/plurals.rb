@@ -1,0 +1,1 @@
+{ :shi => { :i18n => { :plural => { :keys => [:one, :few, :other], :rule => lambda { |n| n = n.respond_to?(:abs) ? n.abs : ((m = n.to_s)[0] == "-" ? m[1,m.length] : m); (n.to_i == 0 || n.to_f == 1) ? :one : ((n.to_f % 1).zero? && (2..10).include?(n.to_f)) ? :few : :other } } } } }

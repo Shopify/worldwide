@@ -1,0 +1,380 @@
+---
+ar:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E، d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: dd-MM-y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E، d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d/‏M
+        MEd: E، d/‏M
+        MMdd: dd‏/MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E، d MMM
+        MMMMd: d MMMM
+        MMMMEd: E، d MMMM
+        MMMMW: الأسبوع W من MMMM
+        ms: mm:ss
+        "y": "y"
+        yM: M‏/y
+        yMd: d‏/M‏/y
+        yMEd: E، d/‏M/‏y
+        yMM: MM‏/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E، d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: الأسبوع w من سنة Y
+      days:
+        format:
+          abbreviated:
+            sun: الأحد
+            mon: الاثنين
+            tue: الثلاثاء
+            wed: الأربعاء
+            thu: الخميس
+            fri: الجمعة
+            sat: السبت
+          narrow:
+            sun: ح
+            mon: ن
+            tue: ث
+            wed: ر
+            thu: خ
+            fri: ج
+            sat: س
+          short:
+            sun: أحد
+            mon: إثنين
+            tue: ثلاثاء
+            wed: أربعاء
+            thu: خميس
+            fri: جمعة
+            sat: سبت
+          wide:
+            sun: الأحد
+            mon: الاثنين
+            tue: الثلاثاء
+            wed: الأربعاء
+            thu: الخميس
+            fri: الجمعة
+            sat: السبت
+        stand_alone:
+          abbreviated:
+            sun: الأحد
+            mon: الاثنين
+            tue: الثلاثاء
+            wed: الأربعاء
+            thu: الخميس
+            fri: الجمعة
+            sat: السبت
+          narrow:
+            sun: ح
+            mon: ن
+            tue: ث
+            wed: ر
+            thu: خ
+            fri: ج
+            sat: س
+          short:
+            sun: أحد
+            mon: إثنين
+            tue: ثلاثاء
+            wed: أربعاء
+            thu: خميس
+            fri: جمعة
+            sat: سبت
+          wide:
+            sun: الأحد
+            mon: الاثنين
+            tue: الثلاثاء
+            wed: الأربعاء
+            thu: الخميس
+            fri: الجمعة
+            sat: السبت
+      eras:
+        abbr:
+          0: ق. م
+          1: ب.م
+        name:
+          0: قبل الحقبة الحالية
+          1: بعد الميلاد
+      fields:
+        day: يوم
+        day_narrow: يوم
+        day_of_year: يوم من السنة
+        day_of_year_narrow: يوم/سنة
+        day_of_year_short: يوم من سنة
+        day_period: ص/م
+        day_period_narrow: ص/م
+        day_period_short: ص/م
+        day_short: يوم
+        era: العصر
+        era_narrow: العصر
+        era_short: العصر
+        hour: الساعات
+        hour_narrow: الساعات
+        hour_short: الساعات
+        minute: الدقائق
+        minute_narrow: الدقائق
+        minute_short: الدقائق
+        month: الشهر
+        month_narrow: الشهر
+        month_short: الشهر
+        quarter: ربع السنة
+        quarter_narrow: ربع السنة
+        quarter_short: ربع السنة
+        second: الثواني
+        second_narrow: الثواني
+        second_short: الثواني
+        week: الأسبوع
+        week_narrow: الأسبوع
+        week_of_month: الأسبوع من الشهر
+        week_of_month_narrow: أسبوع/شهر
+        week_of_month_short: أسبوع من شهر
+        week_short: الأسبوع
+        weekday: اليوم
+        weekday_narrow: اليوم
+        weekday_of_month: يوم عمل من الشهر
+        weekday_of_month_narrow: يوم عمل/شهر
+        weekday_of_month_short: يوم عمل من شهر
+        weekday_short: اليوم
+        year: السنة
+        year_narrow: السنة
+        year_short: السنة
+        zone: التوقيت
+        zone_narrow: توقيت
+        zone_short: توقيت
+      formats:
+        date:
+          full:
+            pattern: EEEE، d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: dd‏/MM‏/y
+          short:
+            pattern: d‏/M‏/y
+        datetime:
+          full:
+            pattern: "{{date}} في {{time}}"
+          long:
+            pattern: "{{date}} في {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      months:
+        format:
+          abbreviated:
+            1: يناير
+            2: فبراير
+            3: مارس
+            4: أبريل
+            5: مايو
+            6: يونيو
+            7: يوليو
+            8: أغسطس
+            9: سبتمبر
+            10: أكتوبر
+            11: نوفمبر
+            12: ديسمبر
+          narrow:
+            1: ي
+            2: ف
+            3: م
+            4: أ
+            5: و
+            6: ن
+            7: ل
+            8: غ
+            9: س
+            10: ك
+            11: ب
+            12: د
+          wide:
+            1: يناير
+            2: فبراير
+            3: مارس
+            4: أبريل
+            5: مايو
+            6: يونيو
+            7: يوليو
+            8: أغسطس
+            9: سبتمبر
+            10: أكتوبر
+            11: نوفمبر
+            12: ديسمبر
+        stand_alone:
+          abbreviated:
+            1: يناير
+            2: فبراير
+            3: مارس
+            4: أبريل
+            5: مايو
+            6: يونيو
+            7: يوليو
+            8: أغسطس
+            9: سبتمبر
+            10: أكتوبر
+            11: نوفمبر
+            12: ديسمبر
+          narrow:
+            1: ي
+            2: ف
+            3: م
+            4: أ
+            5: و
+            6: ن
+            7: ل
+            8: غ
+            9: س
+            10: ك
+            11: ب
+            12: د
+          wide:
+            1: يناير
+            2: فبراير
+            3: مارس
+            4: أبريل
+            5: مايو
+            6: يونيو
+            7: يوليو
+            8: أغسطس
+            9: سبتمبر
+            10: أكتوبر
+            11: نوفمبر
+            12: ديسمبر
+      periods:
+        format:
+          abbreviated:
+            afternoon1: ظهرًا
+            afternoon2: بعد الظهر
+            am: ص
+            evening1: مساءً
+            morning1: فجرًا
+            morning2: ص
+            night1: في المساء
+            night2: ليلاً
+            pm: م
+          narrow:
+            afternoon1: ظهرًا
+            afternoon2: بعد الظهر
+            am: ص
+            evening1: مساءً
+            morning1: فجرًا
+            morning2: صباحًا
+            night1: منتصف الليل
+            night2: ليلاً
+            pm: م
+          wide:
+            afternoon1: ظهرًا
+            afternoon2: بعد الظهر
+            am: ص
+            evening1: مساءً
+            morning1: في الصباح
+            morning2: صباحًا
+            night1: في المساء
+            night2: ليلاً
+            pm: م
+        stand_alone:
+          abbreviated:
+            afternoon1: ظهرًا
+            afternoon2: بعد الظهر
+            am: ص
+            evening1: مساءً
+            morning1: فجرًا
+            morning2: ص
+            night1: منتصف الليل
+            night2: ليلاً
+            pm: م
+          narrow:
+            afternoon1: ظهرًا
+            afternoon2: بعد الظهر
+            am: ص
+            evening1: مساءً
+            morning1: فجرًا
+            morning2: صباحًا
+            night1: منتصف الليل
+            night2: ليلاً
+            pm: م
+          wide:
+            afternoon1: ظهرًا
+            afternoon2: بعد الظهر
+            am: صباحًا
+            evening1: مساءً
+            morning1: فجرًا
+            morning2: صباحًا
+            night1: منتصف الليل
+            night2: ليلاً
+            pm: مساءً
+      quarters:
+        format:
+          abbreviated:
+            1: الربع الأول
+            2: الربع الثاني
+            3: الربع الثالث
+            4: الربع الرابع
+          narrow:
+            1: ١
+            2: ٢
+            3: ٣
+            4: ٤
+          wide:
+            1: الربع الأول
+            2: الربع الثاني
+            3: الربع الثالث
+            4: الربع الرابع
+        stand_alone:
+          abbreviated:
+            1: الربع الأول
+            2: الربع الثاني
+            3: الربع الثالث
+            4: الربع الرابع
+          narrow:
+            1: ١
+            2: ٢
+            3: ٣
+            4: ٤
+          wide:
+            1: الربع الأول
+            2: الربع الثاني
+            3: الربع الثالث
+            4: الربع الرابع

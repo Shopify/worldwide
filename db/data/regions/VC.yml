@@ -1,0 +1,20 @@
+---
+name: St. Vincent
+code: VC
+tax: 0.15
+currency: XCD
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_regex: "^VC0[1234]\\d{2}$"
+zip_example: VC0100
+zip_requirement: optional
+phone_number_prefix: 1
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1FB\U0001F1E8"
+languages:
+  - en
+timezone: America/Puerto_Rico

@@ -1,0 +1,24 @@
+---
+name: Saudi Arabia
+code: SA
+tax: 0.15
+currency: SAR
+unit_system: metric
+tax_name: VAT
+zip_regex: "(?-mix:\\A\\d{5}(-\\d{4})?\\z)"
+zip_requirement: optional
+group: Asian Countries
+group_name: Asia
+zip_example: '11564'
+phone_number_prefix: 966
+week_start_day: saturday
+languages:
+  - ar
+  - en
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1F8\U0001F1E6"
+languages:
+  - ar
+timezone: Asia/Riyadh

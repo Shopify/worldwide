@@ -1,0 +1,374 @@
+---
+bn:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: d E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: GGGGG dd-MM-y
+        GyMMM: MMM y G
+        GyMMMd: d MMM, y G
+        GyMMMEd: E, d MMM, y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d/M
+        MEd: E, d-M
+        MMdd: dd-MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: d MMMM
+        MMMMEd: E d MMMM
+        MMMMW: MMMM এর Wয় সপ্তাহ
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMM: MM-y
+        yMMM: MMM y
+        yMMMd: d MMM, y
+        yMMMEd: E, d MMM, y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: Y এর wতম সপ্তাহ
+      days:
+        format:
+          abbreviated:
+            sun: রবি
+            mon: সোম
+            tue: মঙ্গল
+            wed: বুধ
+            thu: বৃহস্পতি
+            fri: শুক্র
+            sat: শনি
+          narrow:
+            sun: র
+            mon: সো
+            tue: ম
+            wed: বু
+            thu: বৃ
+            fri: শু
+            sat: শ
+          short:
+            sun: রঃ
+            mon: সোঃ
+            tue: মঃ
+            wed: বুঃ
+            thu: বৃঃ
+            fri: শুঃ
+            sat: শনি
+          wide:
+            sun: রবিবার
+            mon: সোমবার
+            tue: মঙ্গলবার
+            wed: বুধবার
+            thu: বৃহস্পতিবার
+            fri: শুক্রবার
+            sat: শনিবার
+        stand_alone:
+          abbreviated:
+            sun: রবি
+            mon: সোম
+            tue: মঙ্গল
+            wed: বুধ
+            thu: বৃহস্পতি
+            fri: শুক্র
+            sat: শনি
+          narrow:
+            sun: র
+            mon: সো
+            tue: ম
+            wed: বু
+            thu: বৃ
+            fri: শু
+            sat: শ
+          short:
+            sun: রঃ
+            mon: সোঃ
+            tue: মঃ
+            wed: বুঃ
+            thu: বৃঃ
+            fri: শুঃ
+            sat: শনি
+          wide:
+            sun: রবিবার
+            mon: সোমবার
+            tue: মঙ্গলবার
+            wed: বুধবার
+            thu: বৃহস্পতিবার
+            fri: শুক্রবার
+            sat: শনিবার
+      eras:
+        abbr:
+          0: খ্রিষ্টপূর্বাব্দ
+          1: খ্রিষ্টাব্দ
+        name:
+          0: খ্রিষ্টপূর্বাব্দ
+          1: খ্রিষ্টাব্দ
+      fields:
+        day: দিন
+        day_narrow: দিন
+        day_of_year: বছরের দিন
+        day_of_year_narrow: বছরের দিন
+        day_of_year_short: বছরের দিন
+        day_period: AM/PM
+        day_period_narrow: AM/PM
+        day_period_short: AM/PM
+        day_short: দিন
+        era: যুগ
+        era_narrow: যুগ
+        era_short: যুগ
+        hour: ঘণ্টা
+        hour_narrow: ঘণ্টা
+        hour_short: ঘণ্টা
+        minute: মিনিট
+        minute_narrow: মিনিট
+        minute_short: মিনিট
+        month: মাস
+        month_narrow: মাস
+        month_short: মাস
+        quarter: ত্রৈমাসিক
+        quarter_narrow: ত্রৈমাসিক
+        quarter_short: ত্রৈমাসিক
+        second: সেকেন্ড
+        second_narrow: সেকেন্ড
+        second_short: সেকেন্ড
+        week: সপ্তাহ
+        week_narrow: সপ্তাহ
+        week_of_month: মাসের সপ্তাহ
+        week_of_month_narrow: মাসের সপ্তাহ
+        week_of_month_short: মাসের সপ্তাহ
+        week_short: সপ্তাহ
+        weekday: সপ্তাহের দিন
+        weekday_narrow: সপ্তাহের দিন
+        weekday_of_month: মাসের কার্য দিবস
+        weekday_of_month_narrow: মাসের কার্য দিবস
+        weekday_of_month_short: মাসের কার্য দিবস
+        weekday_short: সপ্তাহের দিন
+        year: বছর
+        year_narrow: বছর
+        year_short: বছর
+        zone: সময় অঞ্চল
+        zone_narrow: অঞ্চল
+        zone_short: অঞ্চল
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM, y
+          long:
+            pattern: d MMMM, y
+          medium:
+            pattern: d MMM, y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      months:
+        format:
+          abbreviated:
+            1: জানু
+            2: ফেব
+            3: মার্চ
+            4: এপ্রিল
+            5: মে
+            6: জুন
+            7: জুলাই
+            8: আগস্ট
+            9: সেপ্টেম্বর
+            10: অক্টোবর
+            11: নভেম্বর
+            12: ডিসেম্বর
+          narrow:
+            1: জা
+            2: ফে
+            3: মা
+            4: এ
+            5: মে
+            6: জুন
+            7: জু
+            8: আ
+            9: সে
+            10: অ
+            11: ন
+            12: ডি
+          wide:
+            1: জানুয়ারী
+            2: ফেব্রুয়ারী
+            3: মার্চ
+            4: এপ্রিল
+            5: মে
+            6: জুন
+            7: জুলাই
+            8: আগস্ট
+            9: সেপ্টেম্বর
+            10: অক্টোবর
+            11: নভেম্বর
+            12: ডিসেম্বর
+        stand_alone:
+          abbreviated:
+            1: জানুয়ারী
+            2: ফেব্রুয়ারী
+            3: মার্চ
+            4: এপ্রিল
+            5: মে
+            6: জুন
+            7: জুলাই
+            8: আগস্ট
+            9: সেপ্টেম্বর
+            10: অক্টোবর
+            11: নভেম্বর
+            12: ডিসেম্বর
+          narrow:
+            1: জা
+            2: ফে
+            3: মা
+            4: এ
+            5: মে
+            6: জুন
+            7: জু
+            8: আ
+            9: সে
+            10: অ
+            11: ন
+            12: ডি
+          wide:
+            1: জানুয়ারী
+            2: ফেব্রুয়ারী
+            3: মার্চ
+            4: এপ্রিল
+            5: মে
+            6: জুন
+            7: জুলাই
+            8: আগস্ট
+            9: সেপ্টেম্বর
+            10: অক্টোবর
+            11: নভেম্বর
+            12: ডিসেম্বর
+      periods:
+        format:
+          abbreviated:
+            afternoon1: দুপুর
+            afternoon2: বিকাল
+            am: AM
+            evening1: সন্ধ্যা
+            morning1: ভোর
+            morning2: সকাল
+            night1: রাত্রি
+            pm: PM
+          narrow:
+            afternoon1: দুপুর
+            afternoon2: বিকাল
+            am: AM
+            evening1: সন্ধ্যা
+            morning1: ভোর
+            morning2: সকাল
+            night1: রাত্রি
+            pm: PM
+          wide:
+            afternoon1: দুপুর
+            afternoon2: বিকাল
+            am: AM
+            evening1: সন্ধ্যা
+            morning1: ভোর
+            morning2: সকাল
+            night1: রাত্রিতে
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: দুপুর
+            afternoon2: বিকাল
+            am: AM
+            evening1: সন্ধ্যা
+            morning1: ভোর
+            morning2: সকাল
+            night1: রাত্রি
+            pm: PM
+          narrow:
+            afternoon1: দুপুর
+            afternoon2: বিকাল
+            am: AM
+            evening1: সন্ধ্যা
+            morning1: ভোর
+            morning2: সকাল
+            night1: রাত্রি
+            pm: PM
+          wide:
+            afternoon1: দুপুর
+            afternoon2: বিকাল
+            am: AM
+            evening1: সন্ধ্যা
+            morning1: ভোর
+            morning2: সকাল
+            night1: রাত্রি
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: ত্রৈমাসিক
+            2: দ্বিতীয় ত্রৈমাসিক
+            3: তৃতীয় ত্রৈমাসিক
+            4: চতুর্থ ত্রৈমাসিক
+          narrow:
+            1: ১
+            2: ২
+            3: ৩
+            4: ৪
+          wide:
+            1: ত্রৈমাসিক
+            2: দ্বিতীয় ত্রৈমাসিক
+            3: তৃতীয় ত্রৈমাসিক
+            4: চতুর্থ ত্রৈমাসিক
+        stand_alone:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: ১
+            2: ২
+            3: ৩
+            4: ৪
+          wide:
+            1: ত্রৈমাসিক
+            2: দ্বিতীয় ত্রৈমাসিক
+            3: তৃতীয় ত্রৈমাসিক
+            4: চতুর্থ ত্রৈমাসিক

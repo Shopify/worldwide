@@ -1,0 +1,25 @@
+---
+tax: 0.0
+tax_inclusive: true
+name: Saint Barthélemy
+group: Central American Countries
+group_name: Central America
+code: BL
+unit_system: metric
+tags:
+- EU-OCT
+currency: EUR
+zip_example: '97100'
+zip_regex: "^(BL-?)?97133$"
+phone_number_prefix: 590
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+# The official flag of BL is the flag of FR.
+# The BL coat of arms centered on a white field is, however, used on the island as a flag of BL.
+# (source: https://en.wikipedia.org/wiki/Flag_and_coat_of_arms_of_Saint_Barth%C3%A9lemy)
+# That unofficial flag is what you get when using the emoji codepoints BL; we'll go with that here.
+emoji: 🇧🇱
+languages:
+  - fr
+timezone: America/Puerto_Rico

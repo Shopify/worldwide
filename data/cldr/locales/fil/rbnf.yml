@@ -1,0 +1,107 @@
+---
+fil:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: number-times
+        :rules:
+        - :value: 1
+          :rule: isáng;
+        - :value: 2
+          :rule: dalawáng;
+        - :value: 3
+          :rule: tatlóng;
+        - :value: 4
+          :rule: ápat na;
+        - :value: 5
+          :rule: limáng;
+        - :value: 6
+          :rule: anim na;
+        - :value: 7
+          :rule: pitóng;
+        - :value: 8
+          :rule: walóng;
+        - :value: 9
+          :rule: siyám na;
+        - :value: 10
+          :rule: sampûng;
+        - :value: 11
+          :rule: labíng->>;
+        - :value: 20
+          :rule: "<%%number-times< pû[’t >>];"
+        - :value: 100
+          :rule: "<%%number-times< daán[ at >>];"
+        - :value: 1000
+          :rule: "<%%number-times< libó[’t >>];"
+        :access: private
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< tuldok >>;"
+        - :value: 0
+          :rule: walâ;
+        - :value: 1
+          :rule: isá;
+        - :value: 2
+          :rule: dalawá;
+        - :value: 3
+          :rule: tatló;
+        - :value: 4
+          :rule: ápat;
+        - :value: 5
+          :rule: limá;
+        - :value: 6
+          :rule: anim;
+        - :value: 7
+          :rule: pitó;
+        - :value: 8
+          :rule: waló;
+        - :value: 9
+          :rule: siyám;
+        - :value: 10
+          :rule: sampû;
+        - :value: 11
+          :rule: labíng->>;
+        - :value: 20
+          :rule: "<%%number-times< pû[’t >>];"
+        - :value: 100
+          :rule: "<%%number-times< daán[ at >>];"
+        - :value: 1000
+          :rule: "<%%number-times< libó[’t >>];"
+        - :value: 1000000
+          :rule: "<%%number-times< milyón[ at >>];"
+        - :value: 1000000000
+          :rule: "<%%number-times< bilyón[ at >>];"
+        - :value: 1000000000000
+          :rule: "<%%number-times< trilyón[ at >>];"
+        - :value: 1000000000000000
+          :rule: "<%%number-times< katrilyón[ at >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: ika =%spellout-cardinal=;
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: ika=#,##0=;

@@ -1,0 +1,23 @@
+---
+ja:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: 州
+            optional: 州 (任意)
+          errors:
+            blank: 州を選択してください
+        zip:
+          label:
+            default: PINコード
+            optional: PINコード (任意)
+          errors:
+            blank: PINコードを入力してください
+            invalid_for_country: "%{country}の有効なPINコードを入力してください"
+            invalid_for_country_and_province: "%{country}の%{province}の有効なPINコードを入力してください"
+            too_long: PINコードの値が長すぎます
+            contains_html_tags: PINコードにHTMLタグを含めることはできません。
+            contains_emojis: PINコードに絵文字を含めることはできません
+            contains_restricted_characters: PINコードには制限されている文字を入力できません

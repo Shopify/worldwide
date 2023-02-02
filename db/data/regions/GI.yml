@@ -1,0 +1,23 @@
+---
+name: Gibraltar
+code: GI
+tax: 0.0
+currency: GBP
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_example: GX11 1AA
+zip_regex: "^GX11\\s*1AA$"
+phone_number_prefix: 350
+zip_autofill_enabled: true
+autofill_city_enabled: true
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1EE"
+languages:
+  - en
+  - es
+timezone: Europe/Gibraltar

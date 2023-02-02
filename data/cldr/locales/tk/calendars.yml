@@ -1,0 +1,337 @@
+---
+tk:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: d E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMd: GGGGG dd.MM.y
+        GyMMM: G MMM y
+        GyMMMd: G d MMM y
+        GyMMMEd: G d MMM y E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: dd.MM
+        MEd: dd.MM E
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: d MMM E
+        MMMMd: d MMMM
+        MMMMEd: d MMMM E
+        MMMMW: "'hepde' W, MMMM"
+        mmss: mm:ss
+        ms: mm:ss
+        "y": "y"
+        yM: MM.y
+        yMd: dd.MM.y
+        yMEd: dd.MM.y E
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: d MMM y E
+        yMMMM: MMMM y
+        yQQQ: y QQQ
+        yQQQQ: y QQQQ
+        yw: "'hepde' w, Y"
+      days:
+        format:
+          abbreviated:
+            sun: ýek
+            mon: duş
+            tue: siş
+            wed: çar
+            thu: pen
+            fri: ann
+            sat: şen
+          narrow:
+            sun: Ý
+            mon: D
+            tue: S
+            wed: Ç
+            thu: P
+            fri: A
+            sat: Ş
+          short:
+            sun: ýb
+            mon: db
+            tue: sb
+            wed: çb
+            thu: pb
+            fri: an
+            sat: şb
+          wide:
+            sun: ýekşenbe
+            mon: duşenbe
+            tue: sişenbe
+            wed: çarşenbe
+            thu: penşenbe
+            fri: anna
+            sat: şenbe
+        stand_alone:
+          abbreviated:
+            sun: Ýek
+            mon: Duş
+            tue: Siş
+            wed: Çar
+            thu: Pen
+            fri: Ann
+            sat: Şen
+          narrow:
+            sun: Ý
+            mon: D
+            tue: S
+            wed: Ç
+            thu: P
+            fri: A
+            sat: Ş
+          short:
+            sun: Ýb
+            mon: Db
+            tue: Sb
+            wed: Çb
+            thu: Pb
+            fri: An
+            sat: Şb
+          wide:
+            sun: Ýekşenbe
+            mon: Duşenbe
+            tue: Sişenbe
+            wed: Çarşenbe
+            thu: Penşenbe
+            fri: Anna
+            sat: Şenbe
+      eras:
+        abbr:
+          0: b.e.öň
+          1: b.e.
+        name:
+          0: Biziň eramyzdan öň
+          1: Biziň eramyz
+      fields:
+        day: gün
+        day_narrow: gün
+        day_of_year: ýylyň güni
+        day_of_year_narrow: ý. güni
+        day_of_year_short: ý. güni
+        day_period: günortadan öň/günortadan soň
+        day_period_narrow: GÖ/GS
+        day_period_short: GÖ/GS
+        day_short: gün
+        era: era
+        era_narrow: era
+        era_short: era
+        hour: sagat
+        hour_narrow: sag.
+        hour_short: sag.
+        minute: minut
+        minute_narrow: min.
+        minute_short: min.
+        month: aý
+        month_narrow: aý
+        month_short: aý
+        quarter: çärýek
+        quarter_narrow: çär.
+        quarter_short: çär.
+        second: sekunt
+        second_narrow: sek.
+        second_short: sek.
+        week: hepde
+        week_narrow: hep.
+        week_of_month: aýyň hepdesi
+        week_of_month_narrow: hep./aý
+        week_of_month_short: hep./aý
+        week_short: hep.
+        weekday: hepdäniň güni
+        weekday_narrow: hep. güni
+        weekday_of_month: aýda hepdäň güni
+        weekday_of_month_narrow: aýda hep. güni
+        weekday_of_month_short: aýda hep. güni
+        weekday_short: hep. güni
+        year: ýyl
+        year_narrow: ý.
+        year_short: ý.
+        zone: sagat guşaklygy
+        zone_narrow: guşaklyk
+        zone_short: guşaklyk
+      formats:
+        date:
+          full:
+            pattern: d MMMM y EEEE
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd.MM.y
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: ýan
+            2: few
+            3: mart
+            4: apr
+            5: maý
+            6: iýun
+            7: iýul
+            8: awg
+            9: sen
+            10: okt
+            11: noý
+            12: dek
+          narrow:
+            1: Ý
+            2: F
+            3: M
+            4: A
+            5: M
+            6: I
+            7: I
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: ýanwar
+            2: fewral
+            3: mart
+            4: aprel
+            5: maý
+            6: iýun
+            7: iýul
+            8: awgust
+            9: sentýabr
+            10: oktýabr
+            11: noýabr
+            12: dekabr
+        stand_alone:
+          abbreviated:
+            1: Ýan
+            2: Few
+            3: Mar
+            4: Apr
+            5: Maý
+            6: Iýun
+            7: Iýul
+            8: Awg
+            9: Sen
+            10: Okt
+            11: Noý
+            12: Dek
+          narrow:
+            1: Ý
+            2: F
+            3: M
+            4: A
+            5: M
+            6: I
+            7: I
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Ýanwar
+            2: Fewral
+            3: Mart
+            4: Aprel
+            5: Maý
+            6: Iýun
+            7: Iýul
+            8: Awgust
+            9: Sentýabr
+            10: Oktýabr
+            11: Noýabr
+            12: Dekabr
+      periods:
+        format:
+          abbreviated:
+            am: go.öň
+            pm: go.soň
+          narrow:
+            am: öň
+            pm: soň
+          wide:
+            am: günortadan öň
+            pm: günortadan soň
+        stand_alone:
+          abbreviated:
+            am: g.öň
+            pm: g.soň
+          narrow:
+            am: öň
+            pm: soň
+          wide:
+            am: günortadan öň
+            pm: günortadan soň
+      quarters:
+        format:
+          abbreviated:
+            1: 1Ç
+            2: 2Ç
+            3: 3Ç
+            4: 4Ç
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-nji çärýek
+            2: 2-nji çärýek
+            3: 3-nji çärýek
+            4: 4-nji çärýek
+        stand_alone:
+          abbreviated:
+            1: 1Ç
+            2: 2Ç
+            3: 3Ç
+            4: 4Ç
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-nji çärýek
+            2: 2-nji çärýek
+            3: 3-nji çärýek
+            4: 4-nji çärýek

@@ -1,0 +1,24 @@
+---
+name: Bulgaria
+code: BG
+tax: 0.2
+currency: BGN
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_regex: "^(BG-?)?[1-9]\\d{3}$"
+zip_example: '1000'
+phone_number_prefix: 359
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1EC"
+languages:
+  - bg
+  - fr
+timezone: Europe/Sofia

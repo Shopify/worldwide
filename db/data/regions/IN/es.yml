@@ -1,0 +1,29 @@
+---
+es:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank: Selecciona un estado
+        zip:
+          label:
+            default: Número de índice postal
+            optional: Número de índice postal (opcional)
+          errors:
+            blank: Introduce un código de identificación personal
+            invalid_for_country: Introduce un código de identificación personal válido
+              para %{country}
+            invalid_for_country_and_province: Introduce un código de identificación
+              personal válido para %{province}, %{country}
+            too_long: El valor del código de identificación personal es demasiado
+              largo
+            contains_html_tags: El código de identificación personal no puede contener
+              etiquetas HTML.
+            contains_emojis: El código de identificación personal no puede contener
+              emojis
+            contains_restricted_characters: El código de identificación personal no
+              puede tener caracteres restringidos.

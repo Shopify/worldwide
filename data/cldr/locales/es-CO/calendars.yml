@@ -1,0 +1,82 @@
+---
+es-CO:
+  calendars:
+    gregorian:
+      additional_formats:
+        GyMMM: MMM 'de' y G
+        GyMMMEd: E, d MMM 'de' y G
+        H: H
+        Hm: H:mm
+        Hms: H:mm:ss
+        MMMd: d 'de' MMM
+        MMMdd: d 'de' MMM
+        MMMEd: E, d 'de' MMM
+        yMEd: EEE, d/M/y
+        yMMM: MMM 'de' y
+        yMMMd: d 'de' MMM 'de' y
+      days:
+        format:
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: M
+            thu: J
+            fri: V
+            sat: S
+        stand_alone:
+          narrow:
+            sun: d
+            mon: l
+            tue: m
+            wed: m
+            thu: j
+            fri: v
+            sat: s
+      formats:
+        date:
+          medium:
+            pattern: d/MM/y
+          short:
+            pattern: d/MM/yy
+        datetime:
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      months:
+        stand_alone:
+          abbreviated:
+            1: ene.
+            2: feb.
+            3: mar.
+            4: abr.
+            5: may.
+            6: jun.
+            7: jul.
+            8: ago.
+            9: sept.
+            10: oct.
+            11: nov.
+            12: dic.
+      periods:
+        format:
+          abbreviated:
+            evening1: de la tarde
+            morning2: de la mañana
+            night1: de la noche
+            noon: m.
+        stand_alone:
+          abbreviated:
+            noon: m.
+          narrow:
+            noon: m.

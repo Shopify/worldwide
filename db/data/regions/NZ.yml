@@ -1,0 +1,927 @@
+---
+name: New Zealand
+code: NZ
+tax: 0.15
+currency: NZD
+unit_system: metric
+tax_name: GST
+tax_inclusive: true
+group: Oceanian Countries
+group_name: Oceania
+zip_regex: "\\A\\d{4}\\z"
+zip_example: '6001'
+phone_number_prefix: 64
+building_number_required: true
+week_start_day: monday
+format:
+  address1: "{building_num} {street}"
+  address1_with_unit: "{unit}/{building_num} {street}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{province}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1F3\U0001F1FF"
+languages:
+  - en
+  - mi
+zones:
+- name: Auckland
+  code: AUK
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - NTL
+  - WKO
+  zip_prefixes:
+  - '06'
+  - '07'
+  - '08'
+  - '090'
+  - '091'
+  - '092'
+  - '093'
+  - '094'
+  - '095'
+  - '096'
+  - '0972'
+  - '0973'
+  - '0974'
+  - '0977'
+  - '098'
+  - '099'
+  - '1'
+  - '20'
+  - '210'
+  - '211'
+  - '2120'
+  - '2122'
+  - '2123'
+  - '214'
+  - '215'
+  - '216'
+  - '22'
+  - '2340'
+  - '2341'
+  - '2343'
+  - '2344'
+  - '2345'
+  - '25'
+  - '267'
+  - '2681'
+  - '2683'
+  - '2684'
+- name: Bay of Plenty
+  code: BOP
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - GIS
+  - HKB
+  - WKO
+  zip_prefixes:
+  - '301'
+  - '302'
+  - '304'
+  - '306'
+  - '3072'
+  - '3073'
+  - '3074'
+  - '3076'
+  - '3077'
+  - '3079'
+  - '3081'
+  - '309'
+  - '31'
+  - '3473'
+  - '3611'
+  - '3642'
+- name: Canterbury
+  code: CAN
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - MBH
+  - OTA
+  - TAS
+  - WTC
+  zip_prefixes:
+  - '726'
+  - '730'
+  - '731'
+  - '733'
+  - '734'
+  - '736'
+  - '7373'
+  - '7374'
+  - '7379'
+  - '738'
+  - '739'
+  - '74'
+  - '75'
+  - '76'
+  - '77'
+  - '79'
+  - '8011'
+  - '8013'
+  - '8014'
+  - '802'
+  - '804'
+  - '805'
+  - '806'
+  - '808'
+  - '81'
+  - '82'
+  - '84'
+  - '85'
+  - '88'
+  - '897'
+  - '9412'
+  - '9435'
+  - '9445'
+  - '9446'
+  - '9448'
+  - '9498'
+- name: Chatham Islands
+  code: CIT
+  tax: 0.0
+  tax_name: GST
+  zip_prefixes:
+  - '8016'
+  - '8942'
+- name: Gisborne
+  code: GIS
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - BOP
+  - HKB
+  zip_prefixes:
+  - '40'
+- name: Hawke's Bay
+  code: HKB
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - BOP
+  - GIS
+  - MWT
+  - WKO
+  zip_prefixes:
+  - '336'
+  - '41'
+  - '420'
+  - '421'
+  - '424'
+  - '427'
+  - '4281'
+  - '4282'
+  - '4283'
+  - '4284'
+  - '4285'
+  - '4286'
+  - '4288'
+  - '429'
+- name: Manawatu-Wanganui
+  code: MWT
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - HKB
+  - TKI
+  - WGN
+  - WKO
+  zip_prefixes:
+  - '392'
+  - '3946'
+  - '3947'
+  - '3948'
+  - '3980'
+  - '3989'
+  - '399'
+  - '4287'
+  - '44'
+  - '450'
+  - '4540'
+  - '4541'
+  - '4542'
+  - '4543'
+  - '4547'
+  - '4548'
+  - '457'
+  - '4581'
+  - '4582'
+  - '4584'
+  - '4585'
+  - '4586'
+  - '4587'
+  - '462'
+  - '463'
+  - '4646'
+  - '466'
+  - '469'
+  - '47'
+  - '48'
+  - '49'
+  - '5510'
+  - '5540'
+  - '5541'
+  - '557'
+- name: Marlborough
+  code: MBH
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - CAN
+  - NSN
+  - TAS
+  zip_prefixes:
+  - '710'
+  - '7145'
+  - '715'
+  - '7178'
+  - '7192'
+  - '7193'
+  - '7194'
+  - '7195'
+  - '720'
+  - '721'
+  - '722'
+  - '724'
+  - '725'
+  - '727'
+  - '728'
+  - '7371'
+- name: Nelson
+  code: NSN
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - MBH
+  - TAS
+  zip_prefixes:
+  - '701'
+  - '7040'
+  - '7041'
+  - '7042'
+  - '7043'
+  - '7044'
+  - '7045'
+  - '7046'
+  - '7047'
+  - '7071'
+- name: Northland
+  code: NTL
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - AUK
+  zip_prefixes:
+  - '01'
+  - '02'
+  - '03'
+  - '04'
+  - '05'
+  - '0975'
+- name: Otago
+  code: OTA
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - CAN
+  - STL
+  - WTC
+  zip_prefixes:
+  - '90'
+  - '92'
+  - '930'
+  - '931'
+  - '932'
+  - '933'
+  - '934'
+  - '9350'
+  - '9351'
+  - '9352'
+  - '9353'
+  - '9354'
+  - '9355'
+  - '937'
+  - '938'
+  - '939'
+  - '940'
+  - '9410'
+  - '9430'
+  - '9440'
+  - '9441'
+  - '9442'
+  - '9443'
+  - '9444'
+  - '9447'
+  - '9449'
+  - '9458'
+  - '947'
+  - '948'
+  - '9491'
+  - '9492'
+  - '9493'
+  - '9494'
+  - '9495'
+  - '9496'
+  - '95'
+  - '9748'
+  - '9771'
+  - '9775'
+  - '9793'
+- name: Southland
+  code: STL
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - OTA
+  - WTC
+  zip_prefixes:
+  - '9356'
+  - '96'
+  - '971'
+  - '972'
+  - '973'
+  - '9740'
+  - '9741'
+  - '9742'
+  - '9743'
+  - '9744'
+  - '9745'
+  - '9746'
+  - '9747'
+  - '9749'
+  - '975'
+  - '9772'
+  - '9773'
+  - '9774'
+  - '9776'
+  - '9777'
+  - '9778'
+  - '9779'
+  - '978'
+  - '9791'
+  - '9792'
+  - '9794'
+  - '98'
+- name: Taranaki
+  code: TKI
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - MWT
+  - WKO
+  zip_prefixes:
+  - '431'
+  - '432'
+  - '433'
+  - '434'
+  - '4351'
+  - '4352'
+  - '4353'
+  - '436'
+  - '4371'
+  - '4372'
+  - '4373'
+  - '4374'
+  - '4375'
+  - '4377'
+  - '4378'
+  - '4379'
+  - '438'
+  - '439'
+  - '451'
+  - '452'
+  - '4544'
+  - '4545'
+  - '4549'
+  - '4588'
+  - '459'
+  - '461'
+  - '4640'
+  - '4641'
+  - '4642'
+  - '4645'
+  - '467'
+  - '468'
+- name: Tasman
+  code: TAS
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - CAN
+  - MBH
+  - NSN
+  - WTC
+  zip_prefixes:
+  - '700'
+  - '702'
+  - '7048'
+  - '7049'
+  - '705'
+  - '7072'
+  - '7073'
+  - '7077'
+  - '708'
+  - '709'
+  - '711'
+  - '712'
+  - '7142'
+  - '7143'
+  - '7144'
+  - '7146'
+  - '7173'
+  - '7175'
+  - '718'
+  - '7196'
+  - '7197'
+  - '7198'
+- name: Waikato
+  code: WKO
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - AUK
+  - BOP
+  - HKB
+  - MWT
+  - TKI
+  zip_prefixes:
+  - '2121'
+  - '2342'
+  - '24'
+  - '2682'
+  - '2693'
+  - '2694'
+  - '2695'
+  - '2696'
+  - '2697'
+  - '3078'
+  - '3083'
+  - '32'
+  - '330'
+  - '331'
+  - '332'
+  - '333'
+  - '334'
+  - '335'
+  - '337'
+  - '338'
+  - '339'
+  - '340'
+  - '341'
+  - '342'
+  - '343'
+  - '344'
+  - '345'
+  - '3471'
+  - '3472'
+  - '3474'
+  - '3475'
+  - '348'
+  - '349'
+  - '35'
+  - '360'
+  - '3610'
+  - '362'
+  - '3640'
+  - '3641'
+  - '3643'
+  - '3646'
+  - '367'
+  - '368'
+  - '369'
+  - '37'
+  - '38'
+  - '390'
+  - '391'
+  - '3940'
+  - '3941'
+  - '3942'
+  - '3943'
+  - '3944'
+  - '3945'
+  - '3949'
+  - '397'
+  - '3981'
+  - '3982'
+  - '3983'
+  - '3985'
+  - '3986'
+  - '3987'
+  - '3988'
+  - '4350'
+  - '4376'
+- name: Wellington
+  code: WGN
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - MWT
+  zip_prefixes:
+  - '50'
+  - '51'
+  - '52'
+  - '53'
+  - '5512'
+  - '5542'
+  - '5543'
+  - '5544'
+  - '558'
+  - '57'
+  - '58'
+  - '6'
+- name: West Coast
+  code: WTC
+  tax: 0.0
+  tax_name: GST
+  neighboring_zones:
+  - CAN
+  - OTA
+  - STL
+  - TAS
+  zip_prefixes:
+  - '7062'
+  - '78'
+province_optional: true
+zips_crossing_provinces:
+  '0573':
+  - NTL
+  - AUK
+  '0975':
+  - NTL
+  - AUK
+  '2120':
+  - AUK
+  - WKO
+  '2123':
+  - AUK
+  - WKO
+  '2471':
+  - WKO
+  - AUK
+  '2472':
+  - WKO
+  - AUK
+  '2473':
+  - WKO
+  - AUK
+  '2583':
+  - AUK
+  - WKO
+  '2675':
+  - AUK
+  - WKO
+  '2677':
+  - AUK
+  - WKO
+  '2678':
+  - AUK
+  - WKO
+  '2681':
+  - AUK
+  - WKO
+  '2682':
+  - WKO
+  - AUK
+  '2683':
+  - AUK
+  - WKO
+  '3020':
+  - BOP
+  - WKO
+  '3072':
+  - BOP
+  - WKO
+  '3073':
+  - BOP
+  - WKO
+  '3077':
+  - BOP
+  - WKO
+  '3079':
+  - BOP
+  - HKB
+  - GIS
+  '3081':
+  - BOP
+  - HKB
+  - WKO
+  '3170':
+  - BOP
+  - WKO
+  '3171':
+  - BOP
+  - WKO
+  '3178':
+  - BOP
+  - WKO
+  '3199':
+  - BOP
+  - GIS
+  # 3353 is a rural post office in Turangi (WKO)
+  # It seems to handle mail for customers in multiple nearby Regions
+  '3353':
+  - WKO
+  - BOP
+  - HKB
+  - MWT
+  # 3378 is a rural post office in Taupo (WKO)
+  # It seems to handle mail for customers in multiple nearby Regions
+  '3378':
+  - WKO
+  - BOP
+  - HKB
+  '3379':
+  - WKO
+  - BOP
+  - HKB
+  '3381':
+  - WKO
+  - MWT
+  '3382':
+  - WKO
+  - BOP
+  - HKB
+  '3389':
+  - WKO
+  - MWT
+  '3471':
+  - WKO
+  - BOP
+  '3473':
+  - BOP
+  - WKO
+  '3681':
+  - WKO
+  - BOP
+  '3682':
+  - WKO
+  - BOP
+  '3691':
+  - WKO
+  - BOP
+  '3979':
+  - WKO
+  - MWT
+  '3980':
+  - MWT
+  - TKI
+  '3987':
+  - WKO
+  - MWT
+  '3989':
+  - MWT
+  - WKO
+  '3997':
+  - MWT
+  - WKO
+  '4072':
+  - GIS
+  - HKB
+  '4075':
+  - GIS
+  - BOP
+  '4078':
+  - GIS
+  - HKB
+  '4079':
+  - GIS
+  - BOP
+  '4171':
+  - HKB
+  - MWT
+  '4195':
+  - HKB
+  - BOP
+  - GIS
+  '4198':
+  - HKB
+  - GIS
+  '4282':
+  - HKB
+  - MWT
+  '4287':
+  - MWT
+  - HKB
+  '4293':
+  - HKB
+  - MWT
+  '4376':
+  - WKO
+  - TKI
+  - MWT
+  '4392':
+  - TKI
+  - MWT
+  '4395':
+  - TKI
+  - MWT
+  '4396':
+  - TKI
+  - MWT
+  '4397':
+  - TKI
+  - MWT
+  '4549':
+  - TKI
+  - MWT
+  '4578':
+  - MWT
+  - TKI
+  '4587':
+  - MWT
+  - TKI
+  '4792':
+  - MWT
+  - HKB
+  - WKO
+  '4970':
+  - MWT
+  - HKB
+  '4973':
+  - MWT
+  - HKB
+  '4974':
+  - MWT
+  - HKB
+  '4991':
+  - MWT
+  - WGN
+  '4994':
+  - MWT
+  - WGN
+  '4996':
+  - MWT
+  - WGN
+  '5512':
+  - WGN
+  - MWT
+  '5573':
+  - MWT
+  - WGN
+  '5583':
+  - WGN
+  - MWT
+  '5881':
+  - WGN
+  - MWT
+  '5882':
+  - WGN
+  - MWT
+  '5894':
+  - WGN
+  - MWT
+  '7020':
+  - TAS
+  - NSN
+  '7050':
+  - TAS
+  - NSN
+  '7072':
+  - TAS
+  - MBH
+  '7073':
+  - TAS
+  - WTC
+  '7077':
+  - TAS
+  - WTC
+  '7081':
+  - TAS
+  - NSN
+  '7194':
+  - MBH
+  - NSN
+  '7274':
+  - MBH
+  - CAN
+  '7275':
+  - MBH
+  - NSN
+  - TAS
+  '7371':
+  - MBH
+  - CAN
+  '7373':
+  - CAN
+  - TAS
+  '7395':
+  - CAN
+  - MBH
+  '7771':
+  - CAN
+  - WTC
+  '7871':
+  - WTC
+  - CAN
+  '7872':
+  - WTC
+  - CAN
+  '7886':
+  - WTC
+  - STL
+  '7891':
+  - WTC
+  - TAS
+  '7895':
+  - WTC
+  - TAS
+  '9372':
+  - OTA
+  - STL
+  '9382':
+  - OTA
+  - WTC
+  - STL
+  '9383':
+  - OTA
+  - CAN
+  '9386':
+  - OTA
+  - CAN
+  '9396':
+  - OTA
+  - CAN
+  '9412':
+  - CAN
+  - OTA
+  '9491':
+  - OTA
+  - CAN
+  '9494':
+  - OTA
+  - CAN
+  '9496':
+  - OTA
+  - CAN
+  '9583':
+  - OTA
+  - STL
+  '9586':
+  - OTA
+  - STL
+  '9672':
+  - STL
+  - OTA
+  '9679':
+  - STL
+  - OTA
+  '9748':
+  - OTA
+  - STL
+  '9771':
+  - OTA
+  - STL
+  '9772':
+  - STL
+  - OTA
+  '9773':
+  - STL
+  - OTA
+  '9775':
+  - OTA
+  - STL
+  '9778':
+  - STL
+  - OTA
+  '9793':
+  - OTA
+  - STL
+  '9884':
+  - STL
+  - OTA
+  '9892':
+  - STL
+  - OTA
+timezones:
+  Pacific/Auckland:
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8011'
+  - '8013'
+  - '8014'
+  - '802'
+  - '804'
+  - '805'
+  - '806'
+  - '808'
+  - '81'
+  - '82'
+  - '84'
+  - '85'
+  - '86'
+  - '88'
+  - '8941'
+  - '897'
+  - '9'
+  Pacific/Chatham:
+  - '8016'
+  - '8942'
+  - '8944'

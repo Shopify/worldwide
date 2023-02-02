@@ -1,0 +1,252 @@
+---
+sl:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< vejica >>;"
+        - :value: 0
+          :rule: nič;
+        - :value: 1
+          :rule: ena;
+        - :value: 2
+          :rule: dva;
+        - :value: 3
+          :rule: tri;
+        - :value: 4
+          :rule: štiri;
+        - :value: 5
+          :rule: pet;
+        - :value: 6
+          :rule: šest;
+        - :value: 7
+          :rule: sedem;
+        - :value: 8
+          :rule: osem;
+        - :value: 9
+          :rule: devet;
+        - :value: 10
+          :rule: deset;
+        - :value: 11
+          :rule: enajst;
+        - :value: 12
+          :rule: dvanajst;
+        - :value: 13
+          :rule: trinajst;
+        - :value: 14
+          :rule: štrinajst;
+        - :value: 15
+          :rule: petnajst;
+        - :value: 16
+          :rule: šestnajst;
+        - :value: 17
+          :rule: sedemnajst;
+        - :value: 18
+          :rule: asemnajst;
+        - :value: 19
+          :rule: devetnajst;
+        - :value: 20
+          :rule: dvaset[ >>];
+        - :value: 30
+          :rule: "<<deset[ >>];"
+        - :value: 100
+          :rule: sto[ >>];
+        - :value: 200
+          :rule: dvjesto[ >>];
+        - :value: 300
+          :rule: tristo[ >>];
+        - :value: 400
+          :rule: štiristo[ >>];
+        - :value: 500
+          :rule: petsto[ >>];
+        - :value: 600
+          :rule: šesto[ >>];
+        - :value: 700
+          :rule: sedemsto[ >>];
+        - :value: 800
+          :rule: osemsto[ >>];
+        - :value: 900
+          :rule: devetsto[ >>];
+        - :value: 1000
+          :rule: tisuću[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< tisuće[ >>];"
+        - :value: 5000
+          :rule: "<%spellout-cardinal-feminine< tisuću[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< milijun[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milijuny[ >>];"
+        - :value: 5000000
+          :rule: "<%spellout-cardinal-masculine< milijun[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliardy[ >>];"
+        - :value: 5000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijun[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijuny[ >>];"
+        - :value: 5000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijun[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardy[ >>];"
+        - :value: 5000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< vejica >>;"
+        - :value: 0
+          :rule: nič;
+        - :value: 1
+          :rule: ena;
+        - :value: 2
+          :rule: dve;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: dvaset[ >>];
+        - :value: 30
+          :rule: "<<deset[ >>];"
+        - :value: 100
+          :rule: sto[ >>];
+        - :value: 200
+          :rule: dvjesto[ >>];
+        - :value: 300
+          :rule: tristo[ >>];
+        - :value: 400
+          :rule: štiristo[ >>];
+        - :value: 500
+          :rule: petsto[ >>];
+        - :value: 600
+          :rule: šesto[ >>];
+        - :value: 700
+          :rule: sedemsto[ >>];
+        - :value: 800
+          :rule: osemsto[ >>];
+        - :value: 900
+          :rule: devetsto[ >>];
+        - :value: 1000
+          :rule: tisuću[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< tisuće[ >>];"
+        - :value: 5000
+          :rule: "<%spellout-cardinal-feminine< tisuću[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< milijun[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milijuny[ >>];"
+        - :value: 5000000
+          :rule: "<%spellout-cardinal-masculine< milijun[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliardy[ >>];"
+        - :value: 5000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijun[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijuny[ >>];"
+        - :value: 5000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijun[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardy[ >>];"
+        - :value: 5000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< vejica >>;"
+        - :value: 0
+          :rule: nič;
+        - :value: 1
+          :rule: ena;
+        - :value: 2
+          :rule: dvije;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: dvaset[ >>];
+        - :value: 30
+          :rule: "<<deset[ >>];"
+        - :value: 100
+          :rule: sto[ >>];
+        - :value: 200
+          :rule: dvjesto[ >>];
+        - :value: 300
+          :rule: tristo[ >>];
+        - :value: 400
+          :rule: štiristo[ >>];
+        - :value: 500
+          :rule: petsto[ >>];
+        - :value: 600
+          :rule: šesto[ >>];
+        - :value: 700
+          :rule: sedemsto[ >>];
+        - :value: 800
+          :rule: osemsto[ >>];
+        - :value: 900
+          :rule: devetsto[ >>];
+        - :value: 1000
+          :rule: tisuću[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< tisuće[ >>];"
+        - :value: 5000
+          :rule: "<%spellout-cardinal-feminine< tisuću[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< milijun[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milijuny[ >>];"
+        - :value: 5000000
+          :rule: "<%spellout-cardinal-masculine< milijun[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliardy[ >>];"
+        - :value: 5000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijun[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijuny[ >>];"
+        - :value: 5000000000000
+          :rule: "<%spellout-cardinal-masculine< bilijun[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardy[ >>];"
+        - :value: 5000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

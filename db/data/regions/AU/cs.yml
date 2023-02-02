@@ -1,0 +1,36 @@
+---
+cs:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Předměstí
+            optional: Předměstí (volitelné)
+          errors:
+            blank: Zadejte předměstí
+            too_long: Název předměstí je příliš dlouhý (maximum je 255 znaků)
+            contains_html_tags: Předměstí nemůže obsahovat HTML tagy.
+            contains_emojis: Název předměstí nemůže obsahovat emoji
+            contains_restricted_characters: Předměstí může obsahovat pouze písmena,
+              číslice, místní znaky a speciální znaky
+        province:
+          label:
+            default: Stát/teritorium
+            optional: Stát/teritorium (volitelné)
+          errors:
+            blank: Vyberte stát/teritorium
+        zip:
+          label:
+            default: PSČ
+            optional: PSČ (volitelné)
+          errors:
+            blank: Zadejte PSČ
+            invalid_for_country: Zadejte platné PSČ pro zemi %{country}
+            invalid_for_country_and_province: 'Zadejte platné PSČ pro: %{province},
+              %{country}'
+            too_long: Hodnota PSČ je příliš dlouhá
+            contains_html_tags: PSČ nemůže obsahovat HTML tagy.
+            contains_emojis: PSČ nemůže obsahovat emoji
+            contains_restricted_characters: PSČ může obsahovat pouze písmena, číslice,
+              místní znaky a speciální znaky

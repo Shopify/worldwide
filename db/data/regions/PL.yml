@@ -1,0 +1,30 @@
+---
+name: Poland
+code: PL
+tax: 0.23
+currency: PLN
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+# Polish postal codes are normally written with a hyphen after the 2nd digit.
+# EU guidance, however, implies that the hyphen is optional, and a space may be used instead.
+# https://joinup.ec.europa.eu/sites/default/files/document/2012-12/OCS%20Analysis%20-%20Postal%20Codes%20V1%203%200.pdf
+zip_regex: "^(PL-?)?\\d{2}( |-)?\\d{3}$"
+zip_example: 00-950
+tags:
+- EU-member
+group: European Countries
+group_name: Europe
+phone_number_prefix: 48
+building_number_required: true
+week_start_day: monday
+format:
+  address1: "{street} {building_num}"
+  address1_with_unit: "{street} {building_num}/{unit}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F5\U0001F1F1"
+languages:
+  - pl
+  - ru
+timezone: Europe/Warsaw

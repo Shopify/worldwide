@@ -1,0 +1,92 @@
+---
+sw:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: NaN
+          :rule: si nambari;
+        - :value: Inf
+          :rule: usio;
+        - :value: "-x"
+          :rule: kasoro >>;
+        - :value: x.x
+          :rule: "<< nukta >>;"
+        - :value: 0
+          :rule: sifuri;
+        - :value: 1
+          :rule: moja;
+        - :value: 2
+          :rule: mbili;
+        - :value: 3
+          :rule: tatu;
+        - :value: 4
+          :rule: nne;
+        - :value: 5
+          :rule: tano;
+        - :value: 6
+          :rule: sita;
+        - :value: 7
+          :rule: saba;
+        - :value: 8
+          :rule: nane;
+        - :value: 9
+          :rule: tisa;
+        - :value: 10
+          :rule: kumi[ na >>];
+        - :value: 20
+          :rule: ishirini[ na >>];
+        - :value: 30
+          :rule: thelathini[ na >>];
+        - :value: 40
+          :rule: arobaini[ na >>];
+        - :value: 50
+          :rule: hamsini[ na >>];
+        - :value: 60
+          :rule: sitini[ na >>];
+        - :value: 70
+          :rule: sabini[ na >>];
+        - :value: 80
+          :rule: themanini[ na >>];
+        - :value: 90
+          :rule: tisini[ na >>];
+        - :value: 100
+          :rule: mia <<[ na >>];
+        - :value: 1000
+          :rule: elfu <<[, >>];
+        - :value: 1000000
+          :rule: milioni <<[, >>];
+        - :value: 1000000000
+          :rule: bilioni <<[, >>];
+        - :value: 1000000000000
+          :rule: trilioni <<[, >>];
+        - :value: 1000000000000000
+          :rule: kvadrilioni <<[, >>];
+        - :value: 1000000000000000000
+          :rule: "=#,##0.#=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: wa kasoro >%spellout-cardinal>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: wa sifuri;
+        - :value: 1
+          :rule: kwanza;
+        - :value: 2
+          :rule: pili;
+        - :value: 3
+          :rule: wa =%spellout-cardinal=;

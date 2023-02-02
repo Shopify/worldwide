@@ -1,0 +1,25 @@
+---
+name: Kosovo
+code: XK
+# There is no ISO-3166-1 code for Kosovo.  The UN has used UNK for travel documents.
+# There is no ISO-3166-1 numeric code for Kosovo.
+tax: 0.18
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_regex: "^((RKS|XK)-?)?[1-7]\\d{4}$"
+zip_example: 10000
+phone_number_prefix: 383
+week_start_day: monday
+zip_requirement: recommended
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇽🇰
+languages:
+  - bs
+  - tr
+timezone: Europe/Belgrade

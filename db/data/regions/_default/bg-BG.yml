@@ -1,0 +1,146 @@
+---
+bg-BG:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Фирма
+            optional: Фирма (незадължително)
+          errors:
+            blank: Въведете име на фирма
+            too_long: Името на фирмата е с твърде голяма дължина (максимумът е 255
+              знака)
+            contains_html_tags: Името на фирмата не може да съдържа HTML етикети.
+            contains_emojis: "„Компания“ не може да съдържа емоджита"
+            contains_restricted_characters: "„Компания“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+        first_name:
+          label:
+            default: Собствено име
+            optional: Собствено име (незадължително)
+          errors:
+            blank: Въведете собствено име
+            too_long: Собственото име е с твърде голяма дължина (максимумът е 255
+              знака)
+            contains_html_tags: Собственото име не може да съдържа HTML етикети.
+            contains_emojis: "„Собствено име“ не може да съдържа емоджита"
+            contains_url: Собственото име не може да съдържа URL адрес.
+            contains_restricted_characters: "„Собствено име“ може да съдържа само
+              букви, цифри, местни знаци и специални знаци"
+        last_name:
+          label:
+            default: Фамилно име
+            optional: Фамилно име (незадължително)
+          errors:
+            blank: Въведете фамилно име
+            too_long: Фамилното име е с твърде голяма дължина (максимумът е 255 знака)
+            contains_html_tags: Фамилното име не може да съдържа HTML етикети.
+            contains_emojis: "„Фамилно име“ не може да съдържа емоджита"
+            contains_url: Фамилното име не може да съдържа URL адрес.
+            contains_restricted_characters: "„Фамилно име“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+        address1:
+          label:
+            default: Адрес
+            optional: Адрес (незадължително)
+          errors:
+            blank: Въведете адрес
+            too_long: Първият ред от адреса е с твърде голяма дължина (максимумът
+              е 255 знака)
+            contains_html_tags: Адрес1 не може да съдържа HTML етикети.
+            contains_emojis: "„Адрес1“ не може да съдържа емоджита"
+            contains_restricted_characters: "„Адрес1“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+            contains_url: "„Адрес1“ не може да съдържа URL адреси."
+            missing_building_number: Добавете номер на сграда, ако има такъв.
+            street_unknown_for_zip: Въведете валидно име на улица за %{zip}.
+            building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
+            contains_too_many_words: "„Адрес1“ не може да съдържа повече от %{word_count}
+              думи"
+        address2:
+          label:
+            default: Етаж, апартамент и т.н.
+            optional: Етаж, апартамент и т.н. (незадължително)
+          errors:
+            blank: Въведете етаж, апартамент и т.н.
+            too_long: Вторият ред от адреса е с твърде голяма дължина (максимумът
+              е 255 знака)
+            contains_html_tags: Адрес2 не може да съдържа HTML етикети.
+            contains_emojis: "„Адрес2“ не може да съдържа емоджита"
+            contains_restricted_characters: "„Адрес2“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+            contains_url: "„Адрес2“ не може да съдържа URL адреси."
+            missing_building_number: Добавете номер на сграда, ако има такъв.
+            street_unknown_for_zip: Въведете валидно име на улица за %{zip}.
+            building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
+            contains_too_many_words: "„Адрес2“ не може да съдържа повече от %{word_count}
+              думи"
+        city:
+          label:
+            default: Град
+            optional: Град (незадължително)
+          errors:
+            blank: Въведете град
+            too_long: Градът е с твърде голяма дължина (максимумът е 255 знака)
+            contains_html_tags: Името на града не може да съдържа HTML етикети.
+            contains_emojis: "„Град“ не може да съдържа емоджита"
+            contains_restricted_characters: "„Град“ може да съдържа само букви, цифри,
+              местни знаци и специални знаци"
+            contains_url: "„Град“ не може да съдържа URL адрес"
+            unknown_for_zip: Въведете валиден град за %{zip}
+            unknown_for_province: Въведете валиден град за %{province}
+            unknown_for_zip_and_province: Въведете валиден град за %{zip}, %{province}
+            contains_too_many_words: "„Град“ не може да съдържа повече от %{word_count}
+              думи"
+        country:
+          label:
+            default: Държава/регион
+            optional: Държава/регион (незадължително)
+          errors:
+            blank: Изберете държава/регион
+            not_supported: Към момента не поддържаме контакти с тази държава/регион.
+              Въведете нов адрес и опитайте отново.
+            invalid: Въведете валидна държава/регион
+            invalid_for_zip: Въведете валидна държава/регион за този пощенски код
+        phone:
+          label:
+            default: Телефон
+            optional: Телефон (незадължително)
+          errors:
+            blank: Въведете телефонен номер
+            invalid: Въведете валиден телефонен номер
+            too_long: Телефонът е с твърде голяма дължина (максимумът е 255 знака)
+            contains_emojis: Телефонният номер не може да съдържа емоджита
+            contains_restricted_characters: "„Телефонен номер“ може да съдържа само
+              букви, цифри, местни знаци и специални знаци"
+        province:
+          label:
+            default: Регион
+            optional: Регион (незадължително)
+          errors:
+            blank: Изберете регион
+            invalid_for_country: Въведете валиден регион за %{country}
+            unknown_for_city_and_zip: Въведете валиден регион за %{city}, %{zip}
+            unknown_for_city: Изберете валиден регион за %{city}
+            unknown_for_zip: Изберете валиден регион за %{zip}
+        zip:
+          label:
+            default: Пощенски код
+            optional: Пощенски код (незадължително)
+          errors:
+            blank: Въведете пощенски код
+            blocked_address: Това местоположение не се поддържа.
+            invalid_for_country: Въведете валиден пощенски код за %{country}
+            invalid_for_country_and_province: Въведете валиден пощенски код за %{province},
+              %{country}
+            invalid: Въведете валиден пощенски код
+            too_long: Пощенският код е с твърде голяма дължина
+            contains_html_tags: Пощенският код не може да съдържа HTML етикети.
+            contains_emojis: Пощенският код не може да съдържа емоджита
+            contains_restricted_characters: "„Пощенски код“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+            not_supported: Към момента не поддържаме контакти с тази държава/регион.
+              Въведете нов адрес и опитайте отново.
+            unknown_for_province: Въведете валиден пощенски код за %{province}
+            invalid_for_province: Въведете валиден пощенски код за %{province}

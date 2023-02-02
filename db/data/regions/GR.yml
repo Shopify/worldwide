@@ -1,0 +1,24 @@
+---
+name: Greece
+code: GR
+tax: 0.24
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_example: 151 24
+zip_regex: "^((GR( |-)?)?[1-8]\\d{2} ?\\d{2})$"
+phone_number_prefix: 30
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1F7"
+languages:
+  - el
+  - en
+timezone: Europe/Athens

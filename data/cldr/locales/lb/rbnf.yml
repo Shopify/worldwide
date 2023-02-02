@@ -1,0 +1,425 @@
+---
+lb:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: Inf
+          :rule: Éiwegkeet;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 1010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 2000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 2010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 3000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 3010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 4000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 4010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 5000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 5010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 6000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 6010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 7000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 7010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 8000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 8010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 9000
+          :rule: "=%spellout-cardinal-neuter=;"
+        - :value: 9010
+          :rule: "<%spellout-cardinal-masculine<honnert[>%spellout-cardinal-neuter>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-cardinal-neuter=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: Inf
+          :rule: Onendlechkeet;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< Komma >>;"
+        - :value: 0
+          :rule: null;
+        - :value: 1
+          :rule: eent;
+        - :value: 2
+          :rule: zwee;
+        - :value: 3
+          :rule: dräi;
+        - :value: 4
+          :rule: véier;
+        - :value: 5
+          :rule: fënnef;
+        - :value: 6
+          :rule: sechs;
+        - :value: 7
+          :rule: siwen;
+        - :value: 8
+          :rule: aacht;
+        - :value: 9
+          :rule: néng;
+        - :value: 10
+          :rule: zéng;
+        - :value: 11
+          :rule: eelef;
+        - :value: 12
+          :rule: zwielef;
+        - :value: 13
+          :rule: dräizéng;
+        - :value: 14
+          :rule: véierzéng;
+        - :value: 15
+          :rule: fofzéng;
+        - :value: 16
+          :rule: siechzéng;
+        - :value: 17
+          :rule: siwwenzéng;
+        - :value: 18
+          :rule: uechtzéng;
+        - :value: 19
+          :rule: nonzéng;
+        - :value: 20
+          :rule: "[>%spellout-cardinal-neuter>an]zwanzeg;"
+        - :value: 30
+          :rule: "[>%spellout-cardinal-neuter>an]drësseg;"
+        - :value: 40
+          :rule: "[>%spellout-cardinal-neuter>an]véierzeg;"
+        - :value: 50
+          :rule: "[>%spellout-cardinal-neuter>an]fofzeg;"
+        - :value: 60
+          :rule: "[>%spellout-cardinal-neuter>an]siechzeg;"
+        - :value: 70
+          :rule: "[>%spellout-cardinal-neuter>an]siwwenzeg;"
+        - :value: 80
+          :rule: "[>%spellout-cardinal-neuter>an]achtzeg;"
+        - :value: 90
+          :rule: "[>%spellout-cardinal-neuter>an]nonzeg;"
+        - :value: 100
+          :rule: "­honnert­[>>];"
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<­honnert­[>>];"
+        - :value: 1000
+          :rule: "­dausend­[>>];"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine<­dausend­[>>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Millioun}other{Milliounen})$[
+            >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Milliard}other{Milliarden})$[
+            >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billioun}other{Billiounen})$[
+            >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billiard}other{Billiarden})$[
+            >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: Inf
+          :rule: Onendlechkeet;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 0
+          :rule: null;
+        - :value: 1
+          :rule: eng;
+        - :value: 2
+          :rule: zwou;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 100
+          :rule: "­honnert­[>>];"
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<­honnert­[>>];"
+        - :value: 1000
+          :rule: "­dausend­[>>];"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine<­dausend­[>>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Millioun}other{Milliounen})$[
+            >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Milliard}other{Milliarden})$[
+            >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billioun}other{Billiounen})$[
+            >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billiard}other{Billiarden})$[
+            >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: Inf
+          :rule: Onendlechkeet;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 0
+          :rule: null;
+        - :value: 1
+          :rule: een;
+        - :value: 2
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 100
+          :rule: "­honnert­[>>];"
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<­honnert­[>>];"
+        - :value: 1000
+          :rule: "­dausend­[>>];"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine<­dausend­[>>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Millioun}other{Milliounen})$[
+            >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Milliard}other{Milliarden})$[
+            >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billioun}other{Billiounen})$[
+            >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billiard}other{Billiarden})$[
+            >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal-masculine
+        :rules:
+        - :value: Inf
+          :rule: onendlechten;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=#,##0.0=.;"
+        - :value: 0
+          :rule: nullten;
+        - :value: 1
+          :rule: éischten;
+        - :value: 2
+          :rule: zweeten;
+        - :value: 3
+          :rule: drëtten;
+        - :value: 4
+          :rule: véierten;
+        - :value: 5
+          :rule: fënneften;
+        - :value: 6
+          :rule: sechsten;
+        - :value: 7
+          :rule: siwenten;
+        - :value: 8
+          :rule: aachten;
+        - :value: 9
+          :rule: "=%spellout-cardinal-neuter=ten;"
+        - :value: 20
+          :rule: "=%spellout-cardinal-neuter=sten;"
+        - :value: 100
+          :rule: "­honnert­>%%ord-t-masc>;"
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<­honnert­>%%ord-t-masc>;"
+        - :value: 1000
+          :rule: "­dausend­>%%ord-t-masc>;"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine<­dausend­>%%ord-t-masc>;"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Millioun}other{Milliounen})$>%%ord-M-masc>;"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Milliard}other{Milliarden})$>%%ord-M-masc>;"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billioun}other{Billiounen})$>%%ord-M-masc>;"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billiard}other{Billiarden})$>%%ord-M-masc>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=.;"
+      - :type: ord-t-masc
+        :rules:
+        - :value: 0
+          :rule: en;
+        - :value: 1
+          :rule: "=%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: ord-M-masc
+        :rules:
+        - :value: 0
+          :rule: ten;
+        - :value: 1
+          :rule: " =%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: spellout-ordinal-feminine
+        :rules:
+        - :value: Inf
+          :rule: onendlechter;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=#,##0.0=.;"
+        - :value: 0
+          :rule: nullter;
+        - :value: 1
+          :rule: éischter;
+        - :value: 2
+          :rule: zweeter;
+        - :value: 3
+          :rule: drëtter;
+        - :value: 4
+          :rule: véierter;
+        - :value: 5
+          :rule: fënnefter;
+        - :value: 6
+          :rule: sechster;
+        - :value: 7
+          :rule: siwenter;
+        - :value: 8
+          :rule: aachter;
+        - :value: 9
+          :rule: "=%spellout-cardinal-neuter=ter;"
+        - :value: 20
+          :rule: "=%spellout-cardinal-neuter=ster;"
+        - :value: 100
+          :rule: "­honnert­>%%ord-t-fem>;"
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<­honnert­>%%ord-t-fem>;"
+        - :value: 1000
+          :rule: "­dausend­>%%ord-t-fem>;"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine<­dausend­>%%ord-t-fem>;"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Millioun}other{Milliounen})$>%%ord-M-fem>;"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Milliard}other{Milliarden})$>%%ord-M-fem>;"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billioun}other{Billiounen})$>%%ord-M-fem>;"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billiard}other{Billiarden})$>%%ord-M-fem>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=.;"
+      - :type: ord-t-fem
+        :rules:
+        - :value: 0
+          :rule: er;
+        - :value: 1
+          :rule: "=%spellout-ordinal-feminine=;"
+        :access: private
+      - :type: ord-M-fem
+        :rules:
+        - :value: 0
+          :rule: ter;
+        - :value: 1
+          :rule: " =%spellout-ordinal-feminine=;"
+        :access: private
+      - :type: spellout-ordinal-neuter
+        :rules:
+        - :value: Inf
+          :rule: onendlecht;
+        - :value: NaN
+          :rule: net eng Nummer;
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=#,##0.0=.;"
+        - :value: 0
+          :rule: nullt;
+        - :value: 1
+          :rule: éischt;
+        - :value: 2
+          :rule: zweet;
+        - :value: 3
+          :rule: drëtt;
+        - :value: 4
+          :rule: véiert;
+        - :value: 5
+          :rule: fënneft;
+        - :value: 6
+          :rule: sechst;
+        - :value: 7
+          :rule: siwent;
+        - :value: 8
+          :rule: aacht;
+        - :value: 9
+          :rule: "=%spellout-cardinal-neuter=t;"
+        - :value: 20
+          :rule: "=%spellout-cardinal-neuter=st;"
+        - :value: 100
+          :rule: "­honnert­>%%ord-t-neut>;"
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<­honnert­>%%ord-t-neut>;"
+        - :value: 1000
+          :rule: "­dausend­>%%ord-t-neut>;"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine<­dausend­>%%ord-t-neut>;"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Millioun}other{Milliounen})$>%%ord-M-neut>;"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Milliard}other{Milliarden})$>%%ord-M-neut>;"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billioun}other{Billiounen})$>%%ord-M-neut>;"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{Billiard}other{Billiarden})$>%%ord-M-neut>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=.;"
+      - :type: ord-t-neut
+        :rules:
+        - :value: 0
+          :rule: et;
+        - :value: 1
+          :rule: "=%spellout-ordinal-neuter=;"
+        :access: private
+      - :type: ord-M-neut
+        :rules:
+        - :value: 0
+          :rule: t;
+        - :value: 1
+          :rule: " =%spellout-ordinal-neuter=;"
+        :access: private

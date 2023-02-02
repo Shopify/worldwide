@@ -1,0 +1,292 @@
+---
+mg:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: d, E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMMM: G y MMM
+        GyMMMd: G y MMM d
+        GyMMMEd: G y MMM d, E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: M
+        Md: d/M
+        MEd: E d/M
+        MMd: d/MM
+        MMdd: dd/MM
+        MMM: MMM
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: d MMMM
+        MMMMEd: E d MMMM
+        ms: m:ss
+        "y": "y"
+        yM: M/y
+        yMd: y-MM-dd
+        yMEd: E d/M/y
+        yMM: MM/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+      days:
+        format:
+          abbreviated:
+            sun: Alah
+            mon: Alats
+            tue: Tal
+            wed: Alar
+            thu: Alak
+            fri: Zom
+            sat: Asab
+          narrow:
+            sun: A
+            mon: A
+            tue: T
+            wed: A
+            thu: A
+            fri: Z
+            sat: A
+          short:
+            sun: Alah
+            mon: Alats
+            tue: Tal
+            wed: Alar
+            thu: Alak
+            fri: Zom
+            sat: Asab
+          wide:
+            sun: Alahady
+            mon: Alatsinainy
+            tue: Talata
+            wed: Alarobia
+            thu: Alakamisy
+            fri: Zoma
+            sat: Asabotsy
+        stand_alone:
+          abbreviated:
+            sun: Alah
+            mon: Alats
+            tue: Tal
+            wed: Alar
+            thu: Alak
+            fri: Zom
+            sat: Asab
+          narrow:
+            sun: A
+            mon: A
+            tue: T
+            wed: A
+            thu: A
+            fri: Z
+            sat: A
+          short:
+            sun: Alah
+            mon: Alats
+            tue: Tal
+            wed: Alar
+            thu: Alak
+            fri: Zom
+            sat: Asab
+          wide:
+            sun: Alahady
+            mon: Alatsinainy
+            tue: Talata
+            wed: Alarobia
+            thu: Alakamisy
+            fri: Zoma
+            sat: Asabotsy
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+        name:
+          0: BCE
+          1: CE
+      fields:
+        day: Andro
+        day_period: AM/PM
+        era: Era
+        hour: Ora
+        minute: Minitra
+        month: Volana
+        second: Segondra
+        week: Herinandro
+        year: Taona
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: y MMM d
+          short:
+            pattern: y-MM-dd
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mar
+            4: Apr
+            5: Mey
+            6: Jon
+            7: Jol
+            8: Aog
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Janoary
+            2: Febroary
+            3: Martsa
+            4: Aprily
+            5: Mey
+            6: Jona
+            7: Jolay
+            8: Aogositra
+            9: Septambra
+            10: Oktobra
+            11: Novambra
+            12: Desambra
+        stand_alone:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mar
+            4: Apr
+            5: Mey
+            6: Jon
+            7: Jol
+            8: Aog
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Janoary
+            2: Febroary
+            3: Martsa
+            4: Aprily
+            5: Mey
+            6: Jona
+            7: Jolay
+            8: Aogositra
+            9: Septambra
+            10: Oktobra
+            11: Novambra
+            12: Desambra
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          wide:
+            am: AM
+            pm: PM
+        stand_alone:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: AM
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: T1
+            2: T2
+            3: T3
+            4: T4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Telovolana voalohany
+            2: Telovolana faharoa
+            3: Telovolana fahatelo
+            4: Telovolana fahefatra
+        stand_alone:
+          abbreviated:
+            1: T1
+            2: T2
+            3: T3
+            4: T4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Telovolana voalohany
+            2: Telovolana faharoa
+            3: Telovolana fahatelo
+            4: Telovolana fahefatra

@@ -1,0 +1,183 @@
+---
+ml:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "¤#,##0.00;(¤#,##0.00)"
+              standard: "¤#,##0.00"
+            short:
+              standard:
+                '1000':
+                  one: "¤0K"
+                  other: "¤0K"
+                '10000':
+                  one: "¤00K"
+                  other: "¤00K"
+                '100000':
+                  one: "¤000K"
+                  other: "¤000K"
+                '1000000':
+                  one: "¤0M"
+                  other: "¤0M"
+                '10000000':
+                  one: "¤00M"
+                  other: "¤00M"
+                '100000000':
+                  one: "¤000M"
+                  other: "¤000M"
+                '1000000000':
+                  one: "¤0B"
+                  other: "¤0B"
+                '10000000000':
+                  one: "¤00B"
+                  other: "¤00B"
+                '100000000000':
+                  one: "¤000B"
+                  other: "¤000B"
+                '1000000000000':
+                  one: "¤0T"
+                  other: "¤0T"
+                '10000000000000':
+                  one: "¤00T"
+                  other: "¤00T"
+                '100000000000000':
+                  one: "¤000T"
+                  other: "¤000T"
+          unit:
+            one: "{0} {1}"
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##,##0.###"
+            long:
+              standard:
+                '1000':
+                  one: 0 ആയിരം
+                  other: 0 ആയിരം
+                '10000':
+                  one: 00 ആയിരം
+                  other: 00 ആയിരം
+                '100000':
+                  one: 000 ആയിരം
+                  other: 000 ആയിരം
+                '1000000':
+                  one: 0 ദശലക്ഷം
+                  other: 0 ദശലക്ഷം
+                '10000000':
+                  one: 00 ദശലക്ഷം
+                  other: 00 ദശലക്ഷം
+                '100000000':
+                  one: 000 ദശലക്ഷം
+                  other: 000 ദശലക്ഷം
+                '1000000000':
+                  one: 0 ലക്ഷം കോടി
+                  other: 0 ലക്ഷം കോടി
+                '10000000000':
+                  one: 00 ലക്ഷം കോടി
+                  other: 00 ലക്ഷം കോടി
+                '100000000000':
+                  one: 000 ലക്ഷം കോടി
+                  other: 000 ലക്ഷം കോടി
+                '1000000000000':
+                  one: 0 ട്രില്യൺ
+                  other: 0 ട്രില്യൺ
+                '10000000000000':
+                  one: 00 ട്രില്യൺ
+                  other: 00 ട്രില്യൺ
+                '100000000000000':
+                  one: 000 ട്രില്യൺ
+                  other: 000 ട്രില്യൺ
+            short:
+              standard:
+                '1000':
+                  one: 0K
+                  other: 0K
+                '10000':
+                  one: 00K
+                  other: 00K
+                '100000':
+                  one: 000K
+                  other: 000K
+                '1000000':
+                  one: 0M
+                  other: 0M
+                '10000000':
+                  one: 00M
+                  other: 00M
+                '100000000':
+                  one: 000M
+                  other: 000M
+                '1000000000':
+                  one: 0B
+                  other: 0B
+                '10000000000':
+                  one: 00B
+                  other: 00B
+                '100000000000':
+                  one: 000B
+                  other: 000B
+                '1000000000000':
+                  one: 0T
+                  other: 0T
+                '10000000000000':
+                  one: 00T
+                  other: 00T
+                '100000000000000':
+                  one: 000T
+                  other: 000T
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"
+    mlym:
+      formats:
+        currency:
+          patterns:
+            default:
+              standard: "¤#,##0.00"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##,##0.###"
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"

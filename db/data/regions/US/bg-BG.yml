@@ -1,0 +1,30 @@
+---
+bg-BG:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Щат
+            optional: Щат (незадължително)
+          errors:
+            blank: Изберете щат
+            invalid_for_country: Въведете валиден щат в %{country}
+            unknown_for_city_and_zip: Въведете валиден щат за %{city}, %{zip}
+            unknown_for_city: Изберете валиден щат за %{city}
+            unknown_for_zip: Изберете валиден щат за %{zip}
+        zip:
+          label:
+            default: Пощенски код
+            optional: Пощенски код (незадължително)
+          errors:
+            blank: Въведете ZIP код
+            invalid_for_country: Въведете валиден ZIP код за %{country}
+            invalid_for_country_and_province: Въведете валиден ZIP код за %{province},
+              %{country}
+            too_long: ZIP кодът е с твърде голяма дължина
+            contains_html_tags: ZIP кодът не може да съдържа HTML етикети.
+            contains_emojis: Пощенският код не може да съдържа емоджита
+            contains_restricted_characters: ZIP кодът не може да съдържа забранени
+              знаци
+            invalid_for_province: Въведете валиден ZIP код за %{province}

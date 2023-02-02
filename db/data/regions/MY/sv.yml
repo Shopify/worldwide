@@ -1,0 +1,21 @@
+---
+sv:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Stat/territorium
+            optional: Stat/territorium (valfritt)
+          errors:
+            blank: Välj ett land/territorium
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valfritt)
+          errors:
+            too_long: Postnumret är för långt
+            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
+            contains_emojis: Postnumret får inte innehålla emojis
+            contains_restricted_characters: Postnumret får inte innehålla begränsade
+              tecken

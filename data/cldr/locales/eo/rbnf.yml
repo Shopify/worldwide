@@ -1,0 +1,76 @@
+---
+eo:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< komo >>;"
+        - :value: 0
+          :rule: nulo;
+        - :value: 1
+          :rule: unu;
+        - :value: 2
+          :rule: du;
+        - :value: 3
+          :rule: tri;
+        - :value: 4
+          :rule: kvar;
+        - :value: 5
+          :rule: kvin;
+        - :value: 6
+          :rule: ses;
+        - :value: 7
+          :rule: sep;
+        - :value: 8
+          :rule: ok;
+        - :value: 9
+          :rule: naŭ;
+        - :value: 10
+          :rule: dek[ >>];
+        - :value: 20
+          :rule: "<<dek[ >>];"
+        - :value: 100
+          :rule: cent[ >>];
+        - :value: 200
+          :rule: "<<cent[ >>];"
+        - :value: 1000
+          :rule: mil[ >>];
+        - :value: 2000
+          :rule: "<< mil[ >>];"
+        - :value: 1000000
+          :rule: miliono[ >>];
+        - :value: 2000000
+          :rule: "<< milionoj[ >>];"
+        - :value: 1000000000
+          :rule: miliardo[ >>];
+        - :value: 2000000000
+          :rule: "<< miliardoj[ >>];"
+        - :value: 1000000000000
+          :rule: biliono[ >>];
+        - :value: 2000000000000
+          :rule: "<< bilionoj[ >>];"
+        - :value: 1000000000000000
+          :rule: biliardo[ >>];
+        - :value: 2000000000000000
+          :rule: "<< biliardoj[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=a;"

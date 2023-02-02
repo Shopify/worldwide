@@ -1,0 +1,443 @@
+---
+kea:
+  fields:
+    day:
+      display_name: dia
+      relative:
+        -1: onti
+        0: oji
+        1: manhan
+      relative_time:
+        future:
+          other: di li {0} dia
+        past:
+          other: a ten {0} dia
+    day_narrow:
+      display_name: dia
+      relative:
+        -1: onti
+        0: oji
+        1: manhan
+      relative_time:
+        future:
+          other: di li {0} dia
+        past:
+          other: a ten {0} dia
+    day_of_year:
+      display_name: dia di anu
+    day_of_year_narrow:
+      display_name: dia di anu
+    day_of_year_short:
+      display_name: dia di anu
+    day_short:
+      display_name: dia
+      relative:
+        -1: onti
+        0: oji
+        1: manhan
+      relative_time:
+        future:
+          other: di li {0} dia
+        past:
+          other: a ten {0} dia
+    dayperiod:
+      display_name: am/pm
+    era:
+      display_name: era
+    fri:
+      relative:
+        -1: sesta-fera pasadu
+        0: es sesta-fera li
+        1: prósimu sesta-fera
+      relative_time:
+        future:
+          other: di li {0} sesta-fera
+        past:
+          other: a ten {0} sesta-fera
+    fri_narrow:
+      relative:
+        -1: ses. pasadu
+        0: es ses. li
+        1: prósimu ses.
+      relative_time:
+        future:
+          other: di li {0} ses.
+        past:
+          other: a ten {0} ses.
+    fri_short:
+      relative:
+        -1: ses. pasadu
+        0: es ses. li
+        1: prósimu ses.
+      relative_time:
+        future:
+          other: di li {0} ses.
+        past:
+          other: a ten {0} ses.
+    hour:
+      display_name: ora
+      relative:
+        0: es ora li
+      relative_time:
+        future:
+          other: di li {0} ora
+        past:
+          other: a ten {0} ora
+    hour_narrow:
+      display_name: h
+      relative_time:
+        future:
+          other: di li {0} ora
+        past:
+          other: a ten {0} ora
+    hour_short:
+      display_name: ora
+      relative_time:
+        future:
+          other: di li {0} ora
+        past:
+          other: a ten {0} ora
+    minute:
+      display_name: minutu
+      relative:
+        0: es minutu li
+      relative_time:
+        future:
+          other: di li {0} minutu
+        past:
+          other: a ten {0} minutu
+    minute_narrow:
+      display_name: m
+      relative_time:
+        future:
+          other: di li {0} m
+        past:
+          other: a ten {0} m
+    minute_short:
+      display_name: min
+      relative_time:
+        future:
+          other: di li {0} min
+        past:
+          other: a ten {0} min
+    mon:
+      relative:
+        -1: sigunda-fera pasadu
+        0: es sigunda-fera li
+        1: prósimu sigunda-fera
+      relative_time:
+        future:
+          other: di li {0} sigunda-fera
+        past:
+          other: a ten {0} sigunda-fera
+    mon_narrow:
+      relative:
+        -1: sig. pasadu
+        0: es sig. li
+        1: prósimu sig.
+      relative_time:
+        future:
+          other: di li {0} sig.
+        past:
+          other: a ten {0} sig.
+    mon_short:
+      relative:
+        -1: sig. pasadu
+        0: es sig. li
+        1: prósimu sig.
+      relative_time:
+        future:
+          other: di li {0} sig.
+        past:
+          other: a ten {0} sig.
+    month:
+      display_name: mes
+      relative:
+        -1: mes pasadu
+        0: es mes li
+        1: prósimu mes
+      relative_time:
+        future:
+          other: di li {0} mes
+        past:
+          other: a ten {0} mes
+    month_narrow:
+      display_name: mes
+      relative_time:
+        future:
+          other: di li {0} mes
+        past:
+          other: a ten {0} mes
+    month_short:
+      display_name: mes
+      relative_time:
+        future:
+          other: di li {0} mes
+        past:
+          other: a ten {0} mes
+    quarter:
+      display_name: trimestri
+      relative:
+        -1: trimestri pasadu
+        0: es trimestri li
+        1: prósimu trimestri
+      relative_time:
+        future:
+          other: di li {0} trimestri
+        past:
+          other: a ten {0} trimestri
+    quarter_narrow:
+      display_name: trim.
+      relative_time:
+        future:
+          other: di li {0} trim.
+        past:
+          other: a ten {0} trim.
+    quarter_short:
+      display_name: trim.
+      relative_time:
+        future:
+          other: di li {0} trim.
+        past:
+          other: a ten {0} trim.
+    sat:
+      relative:
+        -1: sabadu pasadu
+        0: es sabadu li
+        1: prósimu sabadu
+      relative_time:
+        future:
+          other: di li {0} sabadu
+        past:
+          other: a ten {0} sabadu
+    sat_narrow:
+      relative:
+        -1: sab. pasadu
+        0: es sab. li
+        1: prósimu sab.
+      relative_time:
+        future:
+          other: di li {0} sab.
+        past:
+          other: a ten {0} sab.
+    sat_short:
+      relative:
+        -1: sab. pasadu
+        0: es sab. li
+        1: prósimu sab.
+      relative_time:
+        future:
+          other: di li {0} sab.
+        past:
+          other: a ten {0} sab.
+    second:
+      display_name: sigundu
+      relative:
+        0: agora
+      relative_time:
+        future:
+          other: di li {0} sigundu
+        past:
+          other: a ten {0} sigundu
+    second_narrow:
+      display_name: s
+      relative_time:
+        future:
+          other: di li {0} s
+        past:
+          other: a ten {0} s
+    second_short:
+      display_name: sig
+      relative_time:
+        future:
+          other: di li {0} sig
+        past:
+          other: a ten {0} sig
+    sun:
+      relative:
+        -1: dumingu pasadu
+        0: es dumingu li
+        1: prósimu dumingu
+      relative_time:
+        future:
+          other: di li {0} dumingu
+        past:
+          other: a ten {0} dumingu
+    sun_narrow:
+      relative:
+        -1: dum. pasadu
+        0: es dum. li
+        1: prósimu dum.
+      relative_time:
+        future:
+          other: di li {0} dum.
+        past:
+          other: a ten {0} dum.
+    sun_short:
+      relative:
+        -1: dum. pasadu
+        0: es dum. li
+        1: prósimu dum.
+      relative_time:
+        future:
+          other: di li {0} dum.
+        past:
+          other: a ten {0} dum.
+    thu:
+      relative:
+        -1: kinta-fera pasadu
+        0: es kinta-fera li
+        1: prósimu kinta-fera
+      relative_time:
+        future:
+          other: di li {0} kinta-fera
+        past:
+          other: a ten {0} kinta-fera
+    thu_narrow:
+      relative:
+        -1: kin. pasadu
+        0: es kin. li
+        1: prósimu kin.
+      relative_time:
+        future:
+          other: di li {0} kin.
+        past:
+          other: a ten {0} kin.
+    thu_short:
+      relative:
+        -1: kin. pasadu
+        0: es kin. li
+        1: prósimu kin.
+      relative_time:
+        future:
+          other: di li {0} kin.
+        past:
+          other: a ten {0} kin.
+    tue:
+      relative:
+        -1: tersa-fera pasadu
+        0: es tersa-fera li
+        1: prósimu tersa-fera
+      relative_time:
+        future:
+          other: di li {0} tersa-fera
+        past:
+          other: a ten {0} tersa-fera
+    tue_narrow:
+      relative:
+        -1: ter. pasadu
+        0: es ter. li
+        1: prósimu ter.
+      relative_time:
+        future:
+          other: di li {0} ter.
+        past:
+          other: a ten {0} ter.
+    tue_short:
+      relative:
+        -1: ter. pasadu
+        0: es ter. li
+        1: prósimu ter.
+      relative_time:
+        future:
+          other: di li {0} ter.
+        past:
+          other: a ten {0} ter.
+    wed:
+      relative:
+        -1: kuarta-fera pasadu
+        0: es kuarta-fera li
+        1: prósimu kuarta-fera
+      relative_time:
+        future:
+          other: di li {0} kuarta-fera
+        past:
+          other: a ten {0} kuarta-fera
+    wed_narrow:
+      relative:
+        -1: kua. pasadu
+        0: es kua. li
+        1: prósimu kua.
+      relative_time:
+        future:
+          other: di li {0} kua.
+        past:
+          other: a ten {0} kua.
+    wed_short:
+      relative:
+        -1: kua. pasadu
+        0: es kua. li
+        1: prósimu kua.
+      relative_time:
+        future:
+          other: di li {0} kua.
+        past:
+          other: a ten {0} kua.
+    week:
+      display_name: simana
+      relative:
+        -1: simana pasadu
+        0: es simana li
+        1: prósimu simana
+      relative_time:
+        future:
+          other: di li {0} simana
+        past:
+          other: a ten {0} simana
+    week_narrow:
+      display_name: sim.
+      relative_time:
+        future:
+          other: di li {0} sim.
+        past:
+          other: a ten {0} sim.
+    week_of_month:
+      display_name: simana di mes
+    week_of_month_narrow:
+      display_name: sim. di mes
+    week_of_month_short:
+      display_name: sim. di mes
+    week_short:
+      display_name: sim.
+      relative_time:
+        future:
+          other: di li {0} sim.
+        past:
+          other: a ten {0} sim.
+    weekday:
+      display_name: dia di simana
+    weekday_of_month:
+      display_name: dia di simana di mes
+    weekday_of_month_narrow:
+      display_name: dia di sim. di mes
+    weekday_of_month_short:
+      display_name: dia di sim. di mes
+    weekday_short:
+      display_name: dia di sim.
+    year:
+      display_name: anu
+      relative:
+        -1: anu pasadu
+        0: es anu li
+        1: prósimu anu
+      relative_time:
+        future:
+          other: di li {0} anu
+        past:
+          other: a ten {0} anu
+    year_narrow:
+      display_name: anu
+      relative_time:
+        future:
+          other: di li {0} anu
+        past:
+          other: a ten {0} anu
+    year_short:
+      display_name: anu
+      relative_time:
+        future:
+          other: di li {0} anu
+        past:
+          other: a ten {0} anu
+    zone:
+      display_name: ora lokal

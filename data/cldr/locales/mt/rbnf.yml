@@ -1,0 +1,504 @@
+---
+mt:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: lenient-parse
+        :rules:
+        - :value: 0
+          :rule: "&[last primary ignorable ] << ' ' << ',' << '-' << '­';"
+        :access: private
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%%spellout-cardinal-type-b-masculine=;"
+      - :type: spellout-cardinal-type-b-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< punt >>;"
+        - :value: 0
+          :rule: żero;
+        - :value: 1
+          :rule: wieħed;
+        - :value: 2
+          :rule: tnejn;
+        - :value: 3
+          :rule: tlieta;
+        - :value: 4
+          :rule: erbgħa;
+        - :value: 5
+          :rule: ħamsa;
+        - :value: 6
+          :rule: sitta;
+        - :value: 7
+          :rule: sebgħa;
+        - :value: 8
+          :rule: tmienja;
+        - :value: 9
+          :rule: disgħa;
+        - :value: 10
+          :rule: għaxra;
+        - :value: 11
+          :rule: ħdax;
+        - :value: 12
+          :rule: tnax;
+        - :value: 13
+          :rule: tlettax;
+        - :value: 14
+          :rule: erbatax;
+        - :value: 15
+          :rule: ħmistax;
+        - :value: 16
+          :rule: sittax;
+        - :value: 17
+          :rule: sbatax;
+        - :value: 18
+          :rule: tmintax;
+        - :value: 19
+          :rule: dsatax;
+        - :value: 20
+          :rule: "[>> u ]għoxrin;"
+        - :value: 30
+          :rule: "[>> u ]tletin;"
+        - :value: 40
+          :rule: "[>> u ]erbgħin;"
+        - :value: 50
+          :rule: "[>> u ]ħamsin;"
+        - :value: 60
+          :rule: "[>> u ]sittin;"
+        - :value: 70
+          :rule: "[>> u ]sebgħin;"
+        - :value: 80
+          :rule: "[>> u ]tmenin;"
+        - :value: 90
+          :rule: "[>> u ]disgħin;"
+        - :value: 100
+          :rule: mija[ u >>];
+        - :value: 200
+          :rule: mitejn[ u >>];
+        - :value: 300
+          :rule: "<%spellout-cardinal-masculine< mija[ u >>];"
+        - :value: 1000
+          :rule: elf[>%%and-type-b-masculine>];
+        - :value: 2000
+          :rule: elfejn[>%%and-type-b-masculine>];
+        - :value: 3000
+          :rule: "<%%thousands< elef[>%%and-type-b-masculine>];"
+        - :value: 11000
+          :rule: "<%spellout-cardinal-masculine< elf[>%%and-type-b-masculine>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: miljun[>%%and-type-b-masculine>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< miljuni[>%%and-type-b-masculine>];"
+        - :value: 11000000
+          :rule: "<%spellout-cardinal-masculine< miljun[>%%and-type-b-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000
+          :rule: biljun[>%%and-type-b-masculine>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< biljuni[>%%and-type-b-masculine>];"
+        - :value: 11000000000
+          :rule: "<%spellout-cardinal-masculine< biljun[>%%and-type-b-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000000
+          :rule: triljun[>%%and-type-b-masculine>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< triljuni[>%%and-type-b-masculine>];"
+        - :value: 11000000000000
+          :rule: "<%spellout-cardinal-masculine< triljun[>%%and-type-b-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000
+          :rule: kvadriljun[>%%and-type-b-masculine>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljuni[>%%and-type-b-masculine>];"
+        - :value: 11000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljun[>%%and-type-b-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+        :access: private
+      - :type: and-type-b-masculine
+        :rules:
+        - :value: 0
+          :rule: ";"
+        - :value: 1
+          :rule: " u =%%spellout-cardinal-type-b-masculine=;"
+        :access: private
+      - :type: spellout-cardinal-type-b-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< punt >>;"
+        - :value: 0
+          :rule: żero;
+        - :value: 1
+          :rule: waħda;
+        - :value: 2
+          :rule: tnejn;
+        - :value: 3
+          :rule: tlieta;
+        - :value: 4
+          :rule: erbgħa;
+        - :value: 5
+          :rule: ħamsa;
+        - :value: 6
+          :rule: sitta;
+        - :value: 7
+          :rule: sebgħa;
+        - :value: 8
+          :rule: tmienja;
+        - :value: 9
+          :rule: disgħa;
+        - :value: 10
+          :rule: għaxra;
+        - :value: 11
+          :rule: ħdax;
+        - :value: 12
+          :rule: tnax;
+        - :value: 13
+          :rule: tlettax;
+        - :value: 14
+          :rule: erbatax;
+        - :value: 15
+          :rule: ħmistax;
+        - :value: 16
+          :rule: sittax;
+        - :value: 17
+          :rule: sbatax;
+        - :value: 18
+          :rule: tmintax;
+        - :value: 19
+          :rule: dsatax;
+        - :value: 20
+          :rule: "[>> u ]għoxrin;"
+        - :value: 30
+          :rule: "[>> u ]tletin;"
+        - :value: 40
+          :rule: "[>> u ]erbgħin;"
+        - :value: 50
+          :rule: "[>> u ]ħamsin;"
+        - :value: 60
+          :rule: "[>> u ]sittin;"
+        - :value: 70
+          :rule: "[>> u ]sebgħin;"
+        - :value: 80
+          :rule: "[>> u ]tmenin;"
+        - :value: 90
+          :rule: "[>> u ]disgħin;"
+        - :value: 100
+          :rule: mija[ u >>];
+        - :value: 200
+          :rule: mitejn[ u >>];
+        - :value: 300
+          :rule: "<%spellout-cardinal-masculine< mija[ u >>];"
+        - :value: 1000
+          :rule: elf[>%%and-type-b-feminine>];
+        - :value: 2000
+          :rule: elfejn[>%%and-type-b-feminine>];
+        - :value: 3000
+          :rule: "<%%thousands< elef[>%%and-type-b-feminine>];"
+        - :value: 11000
+          :rule: "<%spellout-cardinal-masculine< elf[>%%and-type-b-feminine>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: miljun[>%%and-type-b-feminine>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< miljuni[>%%and-type-b-feminine>];"
+        - :value: 11000000
+          :rule: "<%spellout-cardinal-masculine< miljun[>%%and-type-b-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000
+          :rule: biljun[>%%and-type-b-feminine>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< biljuni[>%%and-type-b-feminine>];"
+        - :value: 11000000000
+          :rule: "<%spellout-cardinal-masculine< biljun[>%%and-type-b-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000000
+          :rule: triljun[>%%and-type-b-feminine>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< triljuni[>%%and-type-b-feminine>];"
+        - :value: 11000000000000
+          :rule: "<%spellout-cardinal-masculine< triljun[>%%and-type-b-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000
+          :rule: kvadriljun[>%%and-type-b-feminine>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljuni[>%%and-type-b-feminine>];"
+        - :value: 11000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljun[>%%and-type-b-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+        :access: private
+      - :type: and-type-b-feminine
+        :rules:
+        - :value: 0
+          :rule: ";"
+        - :value: 1
+          :rule: " u =%%spellout-cardinal-type-b-feminine=;"
+        :access: private
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< punt >>;"
+        - :value: 0
+          :rule: żero;
+        - :value: 1
+          :rule: wieħed;
+        - :value: 2
+          :rule: żewġ;
+        - :value: 3
+          :rule: tliet;
+        - :value: 4
+          :rule: erbaʼ;
+        - :value: 5
+          :rule: ħames;
+        - :value: 6
+          :rule: sitt;
+        - :value: 7
+          :rule: sebaʼ;
+        - :value: 8
+          :rule: tmien;
+        - :value: 9
+          :rule: disaʼ;
+        - :value: 10
+          :rule: għaxar;
+        - :value: 11
+          :rule: ħdax-il;
+        - :value: 12
+          :rule: tnax-il;
+        - :value: 13
+          :rule: tlettax-il;
+        - :value: 14
+          :rule: erbatax-il;
+        - :value: 15
+          :rule: ħmistax-il;
+        - :value: 16
+          :rule: sittax-il;
+        - :value: 17
+          :rule: sbatax-il;
+        - :value: 18
+          :rule: tmintax-il;
+        - :value: 19
+          :rule: dsatax-il;
+        - :value: 20
+          :rule: "[>%spellout-cardinal-masculine> u ]għoxrin;"
+        - :value: 30
+          :rule: "[>%spellout-cardinal-masculine> u ]tletin;"
+        - :value: 40
+          :rule: "[>%spellout-cardinal-masculine> u ]erbgħin;"
+        - :value: 50
+          :rule: "[>%spellout-cardinal-masculine> u ]ħamsin;"
+        - :value: 60
+          :rule: "[>%spellout-cardinal-masculine> u ]sittin;"
+        - :value: 70
+          :rule: "[>%spellout-cardinal-masculine> u ]sebgħin;"
+        - :value: 80
+          :rule: "[>%spellout-cardinal-masculine> u ]tmenin;"
+        - :value: 90
+          :rule: "[>%spellout-cardinal-masculine> u ]disgħin;"
+        - :value: 100
+          :rule: mitt;
+        - :value: 101
+          :rule: mija u >%spellout-cardinal-masculine>;
+        - :value: 200
+          :rule: mitejn[ u >%spellout-cardinal-masculine>];
+        - :value: 300
+          :rule: "<%spellout-cardinal-masculine< mija[>%%and-type-a-masculine>];"
+        - :value: 1000
+          :rule: elf[>%%and-type-a-masculine>];
+        - :value: 2000
+          :rule: elfejn[>%%and-type-a-masculine>];
+        - :value: 3000
+          :rule: "<%%thousands< elef[>%%and-type-a-masculine>];"
+        - :value: 11000
+          :rule: "<%spellout-cardinal-masculine< elf[>%%and-type-a-masculine>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: miljun[>%%and-type-a-masculine>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< miljuni[>%%and-type-a-masculine>];"
+        - :value: 11000000
+          :rule: "<%spellout-cardinal-masculine< miljun[>%%and-type-a-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000
+          :rule: biljun[>%%and-type-a-masculine>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< biljuni[>%%and-type-a-masculine>];"
+        - :value: 11000000000
+          :rule: "<%spellout-cardinal-masculine< biljun[>%%and-type-a-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000000
+          :rule: triljun[>%%and-type-a-masculine>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< triljuni[>%%and-type-a-masculine>];"
+        - :value: 11000000000000
+          :rule: "<%spellout-cardinal-masculine< triljun[>%%and-type-a-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000
+          :rule: kvadriljun[>%%and-type-a-masculine>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljuni[>%%and-type-a-masculine>];"
+        - :value: 11000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljun[>%%and-type-a-masculine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: and-type-a-masculine
+        :rules:
+        - :value: 0
+          :rule: ";"
+        - :value: 1
+          :rule: " u =%spellout-cardinal-masculine=;"
+        :access: private
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< punt >>;"
+        - :value: 0
+          :rule: żero;
+        - :value: 1
+          :rule: waħda;
+        - :value: 2
+          :rule: żewġ;
+        - :value: 3
+          :rule: tliet;
+        - :value: 4
+          :rule: erbaʼ;
+        - :value: 5
+          :rule: ħames;
+        - :value: 6
+          :rule: sitt;
+        - :value: 7
+          :rule: sebaʼ;
+        - :value: 8
+          :rule: tmien;
+        - :value: 9
+          :rule: disaʼ;
+        - :value: 10
+          :rule: għaxar;
+        - :value: 11
+          :rule: ħdax-il;
+        - :value: 12
+          :rule: tnax-il;
+        - :value: 13
+          :rule: tlettax-il;
+        - :value: 14
+          :rule: erbatax-il;
+        - :value: 15
+          :rule: ħmistax-il;
+        - :value: 16
+          :rule: sittax-il;
+        - :value: 17
+          :rule: sbatax-il;
+        - :value: 18
+          :rule: tmintax-il;
+        - :value: 19
+          :rule: dsatax-il;
+        - :value: 20
+          :rule: "[>%spellout-cardinal-feminine> u ]għoxrin;"
+        - :value: 30
+          :rule: "[>%spellout-cardinal-feminine> u ]tletin;"
+        - :value: 40
+          :rule: "[>%spellout-cardinal-feminine> u ]erbgħin;"
+        - :value: 50
+          :rule: "[>%spellout-cardinal-feminine> u ]ħamsin;"
+        - :value: 60
+          :rule: "[>%spellout-cardinal-feminine> u ]sittin;"
+        - :value: 70
+          :rule: "[>%spellout-cardinal-feminine> u ]sebgħin;"
+        - :value: 80
+          :rule: "[>%spellout-cardinal-feminine> u ]tmenin;"
+        - :value: 90
+          :rule: "[>%spellout-cardinal-feminine> u ]disgħin;"
+        - :value: 100
+          :rule: mitt;
+        - :value: 101
+          :rule: mija u >%spellout-cardinal-feminine>;
+        - :value: 200
+          :rule: mitejn[ u >%spellout-cardinal-feminine>];
+        - :value: 300
+          :rule: "<%spellout-cardinal-masculine< mija[>%%and-type-a-feminine>];"
+        - :value: 1000
+          :rule: elf[>%%and-type-a-feminine>];
+        - :value: 2000
+          :rule: elfejn[>%%and-type-a-feminine>];
+        - :value: 3000
+          :rule: "<%%thousands< elef[>%%and-type-a-feminine>];"
+        - :value: 11000
+          :rule: "<%spellout-cardinal-masculine< elf[>%%and-type-a-feminine>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: miljun[>%%and-type-a-feminine>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< miljuni[>%%and-type-a-feminine>];"
+        - :value: 11000000
+          :rule: "<%spellout-cardinal-masculine< miljun[>%%and-type-a-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000
+          :rule: biljun[>%%and-type-a-feminine>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< biljuni[>%%and-type-a-feminine>];"
+        - :value: 11000000000
+          :rule: "<%spellout-cardinal-masculine< biljun[>%%and-type-a-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000000
+          :rule: triljun[>%%and-type-a-feminine>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< triljuni[>%%and-type-a-feminine>];"
+        - :value: 11000000000000
+          :rule: "<%spellout-cardinal-masculine< triljun[>%%and-type-a-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000
+          :rule: kvadriljun[>%%and-type-a-feminine>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljuni[>%%and-type-a-feminine>];"
+        - :value: 11000000000000000
+          :rule: "<%spellout-cardinal-masculine< kvadriljun[>%%and-type-a-feminine>];"
+          :radix: '1,000'
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: and-type-a-feminine
+        :rules:
+        - :value: 0
+          :rule: ";"
+        - :value: 1
+          :rule: " u =%spellout-cardinal-feminine=;"
+        :access: private
+      - :type: thousands
+        :rules:
+        - :value: 0
+          :rule: ERROR-=0=;
+        - :value: 3
+          :rule: tlitt;
+        - :value: 4
+          :rule: erbat;
+        - :value: 5
+          :rule: ħamest;
+        - :value: 6
+          :rule: sitt;
+        - :value: 7
+          :rule: sebat;
+        - :value: 8
+          :rule: tmint;
+        - :value: 9
+          :rule: disat;
+        - :value: 10
+          :rule: għaxart;
+        :access: private

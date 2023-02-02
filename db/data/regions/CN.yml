@@ -1,0 +1,190 @@
+---
+name: China
+code: CN
+tax: 0.13
+currency: CNY
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: Asian Countries
+group_name: Asia
+zip_regex: "^\\d{6}$"
+zip_example: '266033'
+zip_requirement: required
+phone_number_prefix: 86
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1} {address2} {city}_{zip} {province}_{country}_{phone}"
+emoji: "\U0001F1E8\U0001F1F3"
+localized_data:
+- name: shipping_credential_cn
+  purpose: shipping
+  validators:
+  - "^\\d{17}[a-zA-Z0-9]$"
+  - MachineReadablePassport
+  required: true
+languages:
+  - "zh-CN"
+zones:
+- name: Anhui
+  name_alternates:
+  - 安徽
+  code: AH
+  tax: 0.0
+- name: Beijing
+  name_alternates:
+  - 北京
+  code: BJ
+  tax: 0.0
+- name: Chongqing
+  name_alternates:
+  - 重庆
+  code: CQ
+  tax: 0.0
+- name: Fujian
+  name_alternates:
+  - 福建
+  code: FJ
+  tax: 0.0
+- name: Gansu
+  name_alternates:
+  - 甘肃
+  code: GS
+  tax: 0.0
+- name: Guangdong
+  name_alternates:
+  - 广东
+  code: GD
+  tax: 0.0
+- name: Guangxi
+  name_alternates:
+  - 广西
+  code: GX
+  tax: 0.0
+- name: Guizhou
+  name_alternates:
+  - 贵州
+  code: GZ
+  tax: 0.0
+- name: Hainan
+  name_alternates:
+  - 海南
+  code: HI
+  tax: 0.0
+- name: Hebei
+  name_alternates:
+  - 河北
+  code: HE
+  tax: 0.0
+- name: Heilongjiang
+  name_alternates:
+  - 黑龙江
+  code: HL
+  tax: 0.0
+- name: Henan
+  name_alternates:
+  - 河南
+  code: HA
+  tax: 0.0
+- name: Hubei
+  name_alternates:
+  - 湖北
+  code: HB
+  tax: 0.0
+- name: Hunan
+  name_alternates:
+  - 湖南
+  code: HN
+  tax: 0.0
+- name: Inner Mongolia
+  name_alternates:
+  - 内蒙古
+  - Nei Mongol
+  code: NM
+  tax: 0.0
+- name: Jiangsu
+  name_alternates:
+  - 江苏
+  code: JS
+  tax: 0.0
+- name: Jiangxi
+  name_alternates:
+  - 江西
+  code: JX
+  tax: 0.0
+- name: Jilin
+  name_alternates:
+  - 吉林
+  code: JL
+  tax: 0.0
+- name: Liaoning
+  name_alternates:
+  - 辽宁
+  code: LN
+  tax: 0.0
+- name: Ningxia
+  name_alternates:
+  - 宁夏
+  code: NX
+  tax: 0.0
+- name: Qinghai
+  name_alternates:
+  - 青海
+  code: QH
+  tax: 0.0
+- name: Shaanxi
+  name_alternates:
+  - 陕西
+  code: SN
+  tax: 0.0
+- name: Shandong
+  name_alternates:
+  - 山东
+  code: SD
+  tax: 0.0
+- name: Shanghai
+  name_alternates:
+  - 上海
+  code: SH
+  tax: 0.0
+- name: Shanxi
+  name_alternates:
+  - 山西
+  code: SX
+  tax: 0.0
+- name: Sichuan
+  name_alternates:
+  - 四川
+  code: SC
+  tax: 0.0
+- name: Tianjin
+  name_alternates:
+  - 天津
+  code: TJ
+  tax: 0.0
+- name: Xinjiang
+  name_alternates:
+  - 新疆
+  code: XJ
+  tax: 0.0
+- name: Xizang
+  name_alternates:
+  - 西藏
+  - Tibet
+  code: YZ
+  code_alternates:
+  - XZ
+  iso_code: CN-XZ
+  tax: 0.0
+- name: Yunnan
+  name_alternates:
+  - 云南
+  code: YN
+  tax: 0.0
+- name: Zhejiang
+  name_alternates:
+  - 浙江
+  code: ZJ
+  tax: 0.0
+timezone: Asia/Shanghai

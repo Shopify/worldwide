@@ -1,0 +1,36 @@
+---
+fi:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Kaupunginosa
+            optional: Kaupunginosa (valinnainen)
+          errors:
+            blank: Anna esikaupunkialue
+            too_long: Esikaupungin nimi on liian pitkä (enintään 255 merkkiä)
+            contains_html_tags: Kaupunginosa ei voi sisältää HTML-tunnisteita.
+            contains_emojis: Esikaupunki ei voi sisältää emojeita
+            contains_restricted_characters: Kaupunginosa voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+        province:
+          label:
+            default: Osavaltio/territorio
+            optional: Osavaltio/territorio (valinnainen)
+          errors:
+            blank: Valitse osavaltio/territorio
+        zip:
+          label:
+            default: Postinumero
+            optional: Postinumero (valinnainen)
+          errors:
+            blank: Anna postinumero
+            invalid_for_country: Anna kelvollinen postinumero maassa %{country}
+            invalid_for_country_and_province: Anna kelvollinen postinumero provinssissa
+              %{province}, %{country}
+            too_long: Postinumeron arvo on liian pitkä
+            contains_html_tags: Postinumero ei voi sisältää HTML-tunnisteita.
+            contains_emojis: Postinumero ei voi sisältää emojeita
+            contains_restricted_characters: Postinumero voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä

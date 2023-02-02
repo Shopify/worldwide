@@ -1,0 +1,152 @@
+---
+fo:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤;(#,##0.00 ¤)"
+              standard: "#,##0.00 ¤"
+            short:
+              standard:
+                '1000':
+                  one: 0 tús'.' ¤
+                  other: 0 tús'.' ¤
+                '10000':
+                  one: 00 tús'.' ¤
+                  other: 00 tús'.' ¤
+                '100000':
+                  one: 000 tús'.' ¤
+                  other: 000 tús'.' ¤
+                '1000000':
+                  one: 0 mió'.' ¤
+                  other: 0 mió'.' ¤
+                '10000000':
+                  one: 00 mió'.' ¤
+                  other: 00 mió'.' ¤
+                '100000000':
+                  one: 000 mió'.' ¤
+                  other: 000 mió'.' ¤
+                '1000000000':
+                  one: 0 mia'.' ¤
+                  other: 0 mia'.' ¤
+                '10000000000':
+                  one: 00 mia'.' ¤
+                  other: 00 mia'.' ¤
+                '100000000000':
+                  one: 000 mia'.' ¤
+                  other: 000 mia'.' ¤
+                '1000000000000':
+                  one: 0 bió'.' ¤
+                  other: 0 bió'.' ¤
+                '10000000000000':
+                  one: 00 bió'.' ¤
+                  other: 00 bió'.' ¤
+                '100000000000000':
+                  one: 000 bió'.' ¤
+                  other: 000 bió'.' ¤
+          unit:
+            one: "{0} {1}"
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  one: 0 túsund
+                  other: 0 túsund
+                '10000':
+                  one: 00 túsund
+                  other: 00 túsund
+                '100000':
+                  one: 000 túsund
+                  other: 000 túsund
+                '1000000':
+                  one: 0 millión
+                  other: 0 milliónir
+                '10000000':
+                  one: 00 milliónir
+                  other: 00 milliónir
+                '100000000':
+                  one: 000 milliónir
+                  other: 000 milliónir
+                '1000000000':
+                  one: 0 milliard
+                  other: 0 milliardir
+                '10000000000':
+                  one: 00 milliardir
+                  other: 00 milliardir
+                '100000000000':
+                  one: 000 milliardir
+                  other: 000 milliardir
+                '1000000000000':
+                  one: 0 billión
+                  other: 0 billiónir
+                '10000000000000':
+                  one: 00 billiónir
+                  other: 00 billiónir
+                '100000000000000':
+                  one: 000 billiónir
+                  other: 000 billiónir
+            short:
+              standard:
+                '1000':
+                  one: 0 tús'.'
+                  other: 0 tús'.'
+                '10000':
+                  one: 00 tús'.'
+                  other: 00 tús'.'
+                '100000':
+                  one: 000 tús'.'
+                  other: 000 tús'.'
+                '1000000':
+                  one: 0 mió'.'
+                  other: 0 mió'.'
+                '10000000':
+                  one: 00 mió'.'
+                  other: 00 mió'.'
+                '100000000':
+                  one: 000 mió'.'
+                  other: 000 mió'.'
+                '1000000000':
+                  one: 0 mia'.'
+                  other: 0 mia'.'
+                '10000000000':
+                  one: 00 mia'.'
+                  other: 00 mia'.'
+                '100000000000':
+                  one: 000 mia'.'
+                  other: 000 mia'.'
+                '1000000000000':
+                  one: 0 bió'.'
+                  other: 0 bió'.'
+                '10000000000000':
+                  one: 00 bió'.'
+                  other: 00 bió'.'
+                '100000000000000':
+                  one: 000 bió'.'
+                  other: 000 bió'.'
+        percent:
+          patterns:
+            default:
+              standard: "#,##0 %"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: ","
+        exponential: E
+        group: "."
+        infinity: "∞"
+        list: ";"
+        minus_sign: "−"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"

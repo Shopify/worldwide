@@ -1,0 +1,383 @@
+---
+az:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: B h
+        Bhm: B h:mm
+        Bhms: B h:mm:ss
+        d: d
+        E: ccc
+        EBhm: E B h:mm
+        EBhms: E B h:mm:ss
+        Ed: d E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMd: GGGGG d MMM y
+        GyMMM: G MMM y
+        GyMMMd: G d MMM y
+        GyMMMEd: G d MMM y, E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: dd.MM
+        MEd: dd.MM, E
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: d MMM, E
+        MMMMd: d MMMM
+        MMMMW: MMMM, W 'həftə'
+        ms: mm:ss
+        "y": "y"
+        yM: MM.y
+        yMd: dd.MM.y
+        yMEd: dd.MM.y, E
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: d MMM y, E
+        yMMMM: MMMM y
+        yQQQ: y QQQ
+        yQQQQ: y QQQQ
+        yw: Y, w 'həftə'
+      days:
+        format:
+          abbreviated:
+            sun: B.
+            mon: B.e.
+            tue: Ç.a.
+            wed: Ç.
+            thu: C.a.
+            fri: C.
+            sat: Ş.
+          narrow:
+            sun: '7'
+            mon: '1'
+            tue: '2'
+            wed: '3'
+            thu: '4'
+            fri: '5'
+            sat: '6'
+          short:
+            sun: B.
+            mon: B.E.
+            tue: Ç.A.
+            wed: Ç.
+            thu: C.A.
+            fri: C.
+            sat: Ş.
+          wide:
+            sun: bazar
+            mon: bazar ertəsi
+            tue: çərşənbə axşamı
+            wed: çərşənbə
+            thu: cümə axşamı
+            fri: cümə
+            sat: şənbə
+        stand_alone:
+          abbreviated:
+            sun: B.
+            mon: B.E.
+            tue: Ç.A.
+            wed: Ç.
+            thu: C.A.
+            fri: C.
+            sat: Ş.
+          narrow:
+            sun: '7'
+            mon: '1'
+            tue: '2'
+            wed: '3'
+            thu: '4'
+            fri: '5'
+            sat: '6'
+          short:
+            sun: B.
+            mon: B.E.
+            tue: Ç.A.
+            wed: Ç.
+            thu: C.A.
+            fri: C.
+            sat: Ş.
+          wide:
+            sun: bazar
+            mon: bazar ertəsi
+            tue: çərşənbə axşamı
+            wed: çərşənbə
+            thu: cümə axşamı
+            fri: cümə
+            sat: şənbə
+      eras:
+        abbr:
+          0: b.e.ə.
+          1: b.e.
+        name:
+          0: bizim eradan əvvəl
+          1: bizim era
+      fields:
+        day: Gün
+        day_narrow: Gün
+        day_of_year: ilin günü
+        day_of_year_narrow: ilin günü
+        day_of_year_short: ilin günü
+        day_period: AM/PM
+        day_period_narrow: AM/PM
+        day_period_short: AM/PM
+        day_short: Gün
+        era: Era
+        era_narrow: Era
+        era_short: Era
+        hour: Saat
+        hour_narrow: saat
+        hour_short: saat
+        minute: Dəqiqə
+        minute_narrow: dəq.
+        minute_short: dəq.
+        month: Ay
+        month_narrow: ay
+        month_short: ay
+        quarter: Rüb
+        quarter_narrow: rüb
+        quarter_short: rüb
+        second: Saniyə
+        second_narrow: san.
+        second_short: san.
+        week: Həftə
+        week_narrow: həftə
+        week_of_month: Ayın həftəsi
+        week_of_month_narrow: ay hft.
+        week_of_month_short: ay hft.
+        week_short: həftə
+        weekday: Həftənin Günü
+        weekday_narrow: hft. günü
+        weekday_of_month: ayın həftə günü
+        weekday_of_month_narrow: ay hft. günü
+        weekday_of_month_short: ay hft. günü
+        weekday_short: hft. günü
+        year: İl
+        year_narrow: il
+        year_short: il
+        zone: Saat Qurşağı
+        zone_narrow: qurşaq
+        zone_short: qurşaq
+      formats:
+        date:
+          full:
+            pattern: d MMMM y, EEEE
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: yan
+            2: fev
+            3: mar
+            4: apr
+            5: may
+            6: iyn
+            7: iyl
+            8: avq
+            9: sen
+            10: okt
+            11: noy
+            12: dek
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            8: '8'
+            9: '9'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: yanvar
+            2: fevral
+            3: mart
+            4: aprel
+            5: may
+            6: iyun
+            7: iyul
+            8: avqust
+            9: sentyabr
+            10: oktyabr
+            11: noyabr
+            12: dekabr
+        stand_alone:
+          abbreviated:
+            1: yan
+            2: fev
+            3: mar
+            4: apr
+            5: may
+            6: iyn
+            7: iyl
+            8: avq
+            9: sen
+            10: okt
+            11: noy
+            12: dek
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            8: '8'
+            9: '9'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: yanvar
+            2: fevral
+            3: mart
+            4: aprel
+            5: may
+            6: iyun
+            7: iyul
+            8: avqust
+            9: sentyabr
+            10: oktyabr
+            11: noyabr
+            12: dekabr
+      periods:
+        format:
+          abbreviated:
+            afternoon1: gündüz
+            am: AM
+            evening1: axşamüstü
+            midnight: gecəyarı
+            morning1: sübh
+            morning2: səhər
+            night1: axşam
+            night2: gecə
+            noon: günorta
+            pm: PM
+          narrow:
+            afternoon1: gündüz
+            am: a
+            evening1: axşamüstü
+            midnight: gecəyarı
+            morning1: sübh
+            morning2: səhər
+            night1: axşam
+            night2: gecə
+            noon: g
+            pm: p
+          wide:
+            afternoon1: gündüz
+            am: AM
+            evening1: axşamüstü
+            midnight: gecəyarı
+            morning1: sübh
+            morning2: səhər
+            night1: axşam
+            night2: gecə
+            noon: günorta
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: gündüz
+            am: AM
+            evening1: axşamüstü
+            midnight: gecəyarı
+            morning1: sübh
+            morning2: səhər
+            night1: axşam
+            night2: gecə
+            noon: günorta
+            pm: PM
+          narrow:
+            afternoon1: gündüz
+            am: AM
+            evening1: axşamüstü
+            midnight: gecəyarı
+            morning1: sübh
+            morning2: səhər
+            night1: axşam
+            night2: gecə
+            noon: günorta
+            pm: PM
+          wide:
+            afternoon1: gündüz
+            am: AM
+            evening1: axşamüstü
+            midnight: gecəyarı
+            morning1: sübh
+            morning2: səhər
+            night1: axşam
+            night2: gecə
+            noon: günorta
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: 1-ci kv.
+            2: 2-ci kv.
+            3: 3-cü kv.
+            4: 4-cü kv.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-ci kvartal
+            2: 2-ci kvartal
+            3: 3-cü kvartal
+            4: 4-cü kvartal
+        stand_alone:
+          abbreviated:
+            1: 1-ci kv.
+            2: 2-ci kv.
+            3: 3-cü kv.
+            4: 4-cü kv.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-ci kvartal
+            2: 2-ci kvartal
+            3: 3-cü kvartal
+            4: 4-cü kvartal

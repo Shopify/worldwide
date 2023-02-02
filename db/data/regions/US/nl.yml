@@ -1,0 +1,29 @@
+---
+nl:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Staat
+            optional: Staat (optioneel)
+          errors:
+            blank: Selecteer een staat
+            invalid_for_country: Voer een geldige staat van %{country} in
+            unknown_for_city_and_zip: Voer een geldige staat in voor %{city}, %{zip}.
+            unknown_for_city: Selecteer een geldige staat voor %{city}.
+            unknown_for_zip: Selecteer een geldige staat voor %{zip}.
+        zip:
+          label:
+            default: Postcode
+            optional: Postcode (optioneel)
+          errors:
+            blank: Voer een postcode in
+            invalid_for_country: Voer een geldige postcode in voor %{country}
+            invalid_for_country_and_province: Voer een geldige postcode in voor %{province},
+              %{country}
+            too_long: De waarde van de postcode is te lang
+            contains_html_tags: De postcode mag geen HTML-tags bevatten.
+            contains_emojis: De postcode mag geen emoji's bevatten
+            contains_restricted_characters: De postcode mag geen verboden tekens bevatten
+            invalid_for_province: Voer een geldige ZIP-code in voor %{province}.

@@ -1,0 +1,22 @@
+---
+name: Ukraine
+code: UA
+tax: 0.2
+currency: UAH
+unit_system: metric
+tax_name: PDV
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_example: '15432'
+zip_regex: "\\A\\d{5}\\z"
+phone_number_prefix: 380
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}"
+emoji: "\U0001F1FA\U0001F1E6"
+languages:
+  - ru
+  - uk
+timezone: Europe/Kyiv

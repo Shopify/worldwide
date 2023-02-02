@@ -1,0 +1,337 @@
+---
+br:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: MM
+        Md: dd/MM
+        MEd: E dd/MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: d MMMM
+        MMMMW: "'sizhun' W 'miz' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: MM/y
+        yMd: dd/MM/y
+        yMEd: E dd/MM/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'sizhun' w Y"
+      days:
+        format:
+          abbreviated:
+            sun: Sul
+            mon: Lun
+            tue: Meu.
+            wed: Mer.
+            thu: Yaou
+            fri: Gwe.
+            sat: Sad.
+          narrow:
+            sun: Su
+            mon: L
+            tue: Mz
+            wed: Mc
+            thu: Y
+            fri: G
+            sat: Sa
+          short:
+            sun: Sul
+            mon: Lun
+            tue: Meu.
+            wed: Mer.
+            thu: Yaou
+            fri: Gwe.
+            sat: Sad.
+          wide:
+            sun: Sul
+            mon: Lun
+            tue: Meurzh
+            wed: Mercʼher
+            thu: Yaou
+            fri: Gwener
+            sat: Sadorn
+        stand_alone:
+          abbreviated:
+            sun: Sul
+            mon: Lun
+            tue: Meu.
+            wed: Mer.
+            thu: Yaou
+            fri: Gwe.
+            sat: Sad.
+          narrow:
+            sun: Su
+            mon: L
+            tue: Mz
+            wed: Mc
+            thu: Y
+            fri: G
+            sat: Sa
+          short:
+            sun: Sul
+            mon: Lun
+            tue: Meu.
+            wed: Mer.
+            thu: Yaou
+            fri: Gwe.
+            sat: Sad.
+          wide:
+            sun: Sul
+            mon: Lun
+            tue: Meurzh
+            wed: Mercʼher
+            thu: Yaou
+            fri: Gwener
+            sat: Sadorn
+      eras:
+        abbr:
+          0: AAK
+          1: AK
+        name:
+          0: a-raok an amzervezh kristen
+          1: an amzervezh kristen
+        narrow:
+          0: AAK
+          1: AK
+      fields:
+        day: deiz
+        day_narrow: d.
+        day_of_year: deiz ar bloaz
+        day_of_year_narrow: d. ar b.
+        day_of_year_short: d. ar bl.
+        day_period: AM/GM
+        day_period_narrow: AM/GM
+        day_period_short: AM/GM
+        day_short: d.
+        era: amzervezh
+        era_narrow: amzerv.
+        era_short: amzerv.
+        hour: eur
+        hour_narrow: e
+        hour_short: e
+        minute: munut
+        minute_narrow: min
+        minute_short: min
+        month: miz
+        month_narrow: m.
+        month_short: miz
+        quarter: trimiziad
+        quarter_narrow: t.
+        quarter_short: trim.
+        second: eilenn
+        second_narrow: s
+        second_short: s
+        week: sizhun
+        week_narrow: sizh.
+        week_of_month: sizhun ar miz
+        week_of_month_narrow: sizh. ar m.
+        week_of_month_short: sizh. ar miz
+        week_short: sizh.
+        weekday: deiz ar sizhun
+        weekday_narrow: d. ar sizh.
+        weekday_of_month: deiz ar miz
+        weekday_of_month_narrow: d. ar m.
+        weekday_of_month_short: d. ar miz
+        weekday_short: d. ar sizh.
+        year: bloaz
+        year_narrow: b.
+        year_short: bl.
+        zone: takad eur
+        zone_narrow: takad
+        zone_short: takad
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/y
+        datetime:
+          full:
+            pattern: "{{date}} 'da' {{time}}"
+          long:
+            pattern: "{{date}} 'da' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Gen.
+            2: Cʼhwe.
+            3: Meur.
+            4: Ebr.
+            5: Mae
+            6: Mezh.
+            7: Goue.
+            8: Eost
+            9: Gwen.
+            10: Here
+            11: Du
+            12: Kzu.
+          narrow:
+            1: '01'
+            2: '02'
+            3: '03'
+            4: '04'
+            5: '05'
+            6: '06'
+            7: '07'
+            8: '08'
+            9: '09'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: Genver
+            2: Cʼhwevrer
+            3: Meurzh
+            4: Ebrel
+            5: Mae
+            6: Mezheven
+            7: Gouere
+            8: Eost
+            9: Gwengolo
+            10: Here
+            11: Du
+            12: Kerzu
+        stand_alone:
+          abbreviated:
+            1: Gen.
+            2: Cʼhwe.
+            3: Meur.
+            4: Ebr.
+            5: Mae
+            6: Mezh.
+            7: Goue.
+            8: Eost
+            9: Gwen.
+            10: Here
+            11: Du
+            12: Kzu.
+          narrow:
+            1: '01'
+            2: '02'
+            3: '03'
+            4: '04'
+            5: '05'
+            6: '06'
+            7: '07'
+            8: '08'
+            9: '09'
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: Genver
+            2: Cʼhwevrer
+            3: Meurzh
+            4: Ebrel
+            5: Mae
+            6: Mezheven
+            7: Gouere
+            8: Eost
+            9: Gwengolo
+            10: Here
+            11: Du
+            12: Kerzu
+      periods:
+        format:
+          abbreviated:
+            am: A.M.
+            pm: G.M.
+          narrow:
+            am: am
+            pm: gm
+          wide:
+            am: A.M.
+            pm: G.M.
+        stand_alone:
+          abbreviated:
+            am: A.M.
+            pm: G.M.
+          narrow:
+            am: A.M.
+            pm: G.M.
+          wide:
+            am: A.M.
+            pm: G.M.
+      quarters:
+        format:
+          abbreviated:
+            1: 1añ trim.
+            2: 2l trim.
+            3: 3e trim.
+            4: 4e trim.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1añ trimiziad
+            2: 2l trimiziad
+            3: 3e trimiziad
+            4: 4e trimiziad
+        stand_alone:
+          abbreviated:
+            1: 1añ trim.
+            2: 2l trim.
+            3: 3e trim.
+            4: 4e trim.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1añ trimiziad
+            2: 2l trimiziad
+            3: 3e trimiziad
+            4: 4e trimiziad

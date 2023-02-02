@@ -1,0 +1,22 @@
+---
+name: Uzbekistan
+code: UZ
+tax: 0.2
+currency: UZS
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_example: '702100'
+zip_regex: "^(100|11[0-2]|12[01]|13[01]|14[01]|15[01]|16[01]|17[01]|18[01]|19[01]|20[01]|21[01]|22[01]|23[01])\\d{3}$"
+zip_requirement: optional
+phone_number_prefix: 998
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}"
+emoji: "\U0001F1FA\U0001F1FF"
+languages:
+  - ru
+  - uz
+timezone: Asia/Samarkand

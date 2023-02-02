@@ -1,0 +1,38 @@
+---
+hu:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Település
+            optional: Település (nem kötelező megadni)
+          errors:
+            blank: Írd be az előváros nevét
+            too_long: Túl hosszú az előváros neve (legfeljebb 255 karakter hosszú
+              lehet).
+            contains_html_tags: A településrész neve nem tartalmazhat HTML-címkéket.
+            contains_emojis: A településrész neve nem tartalmazhat emodzsikat.
+            contains_restricted_characters: A településrész csak betűket, számokat,
+              helyi karaktereket és különleges karaktereket tartalmazhat
+        province:
+          label:
+            default: Állam vagy terület
+            optional: Állam vagy terület (nem kötelező megadni)
+          errors:
+            blank: Válassz államot vagy területet
+        zip:
+          label:
+            default: Irányítószám
+            optional: Irányítószám (nem kötelező megadni)
+          errors:
+            blank: Írd be az irányítószámot
+            invalid_for_country: 'Érvénytelen irányítószámot írtál be ehhez az országhoz:
+              %{country}'
+            invalid_for_country_and_province: 'Érvénytelen irányítószámot írtál be
+              ehhez a zónához és országhoz: %{province}, %{country}'
+            too_long: Túl hosszú az irányítószám.
+            contains_html_tags: Az irányítószám nem tartalmazhat HTML-címkéket.
+            contains_emojis: Az irányítószám nem tartalmazhat emojikat
+            contains_restricted_characters: Az irányítószám csak betűket, számokat,
+              helyi karaktereket és különleges karaktereket tartalmazhat

@@ -1,0 +1,24 @@
+---
+name: Latvia
+code: LV
+tax: 0.21
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_example: LV-1073
+phone_number_prefix: 371
+zip_regex: "^(LV-?)?\\d{4}$"
+building_number_required: true
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1F1\U0001F1FB"
+languages:
+  - lv
+timezone: Europe/Riga

@@ -1,0 +1,89 @@
+---
+name: Panama
+code: PA
+tax: 0.05
+currency: USD
+unit_system: metric
+tax_name: ITBMS
+group: Central American Countries
+group_name: Central America
+zip_regex: "^\\d{4}$"
+zip_example: "0801"
+zip_requirement: optional
+phone_number_prefix: 507
+week_start_day: sunday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}"
+  # Note that there ought to be a comma after zip if it's non-blank.
+  # https://github.com/Shopify/address/issues/725
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}"
+emoji: "\U0001F1F5\U0001F1E6"
+languages:
+  - es
+zones:
+- name: Bocas del Toro
+  code: PA-1
+  iso_code: PA-1
+  tax: 0.05
+  tax_name: ITBMS
+- name: Chiriquí
+  code: PA-4
+  iso_code: PA-4
+  tax: 0.05
+  tax_name: ITBMS
+- name: Coclé
+  code: PA-2
+  iso_code: PA-2
+  tax: 0.05
+  tax_name: ITBMS
+- name: Colón
+  code: PA-3
+  iso_code: PA-3
+  tax: 0.05
+  tax_name: ITBMS
+- name: Darién
+  code: PA-5
+  iso_code: PA-5
+  tax: 0.05
+  tax_name: ITBMS
+- name: Emberá
+  code: PA-EM
+  iso_code: PA-EM
+  tax: 0.05
+  tax_name: ITBMS
+- name: Herrera
+  code: PA-6
+  iso_code: PA-6
+  tax: 0.05
+  tax_name: ITBMS
+- name: Kuna Yala
+  code: PA-KY
+  iso_code: PA-KY
+  tax: 0.05
+  tax_name: ITBMS
+- name: Los Santos
+  code: PA-7
+  iso_code: PA-7
+  tax: 0.05
+  tax_name: ITBMS
+- name: Ngöbe-Buglé
+  code: PA-NB
+  iso_code: PA-NB
+  tax: 0.05
+  tax_name: ITBMS
+- name: Panamá
+  code: PA-8
+  iso_code: PA-8
+  tax: 0.05
+  tax_name: ITBMS
+- name: Panamá Oeste
+  code: PA-10
+  iso_code: PA-10
+  tax: 0.05
+  tax_name: ITBMS
+- name: Veraguas
+  code: PA-9
+  iso_code: PA-9
+  tax: 0.05
+  tax_name: ITBMS
+timezone: America/Panama

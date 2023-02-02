@@ -1,0 +1,20 @@
+---
+en:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: State/territory
+            optional: State/territory (optional)
+          errors:
+            blank: Select a state/territory
+        zip:
+          label:
+            default: Postcode
+            optional: Postcode (optional)
+          errors:
+            too_long: The postcode value is too long
+            contains_emojis: The postcode cannot contain emojis
+            contains_restricted_characters: The postcode cannot have restricted characters
+            contains_html_tags: The postcode cannot contain HTML tags.

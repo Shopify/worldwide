@@ -1,0 +1,377 @@
+---
+da:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h.mm B
+        Bhms: h.mm.ss B
+        d: d.
+        E: ccc
+        EBhm: E h.mm B
+        EBhms: E h.mm.ss B
+        Ed: E 'den' d.
+        Ehm: E h.mm a
+        EHm: E HH.mm
+        Ehms: E h.mm.ss a
+        EHms: E HH.mm.ss
+        Gy: y G
+        GyMd: d.M.y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d. MMM y G
+        GyMMMEd: E d. MMM y G
+        h: h a
+        H: HH
+        hm: h.mm a
+        Hm: HH.mm
+        hms: h.mm.ss a
+        Hms: HH.mm.ss
+        hmsv: h.mm.ss a v
+        Hmsv: HH.mm.ss v
+        hmv: h.mm a v
+        Hmv: HH.mm v
+        M: M
+        Md: d.M
+        MEd: E d.M
+        MMdd: dd.MM
+        MMM: MMM
+        MMMd: d. MMM
+        MMMEd: E d. MMM
+        MMMMd: d. MMMM
+        MMMMEd: E d. MMMM
+        MMMMW: W. 'uge' 'i' MMMM
+        ms: mm.ss
+        "y": "y"
+        yM: M.y
+        yMd: d.M.y
+        yMEd: E d.M.y
+        yMM: MM.y
+        yMMM: MMM y
+        yMMMd: d. MMM y
+        yMMMEd: E d. MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'uge' w 'i' Y"
+      days:
+        format:
+          abbreviated:
+            sun: søn.
+            mon: man.
+            tue: tir.
+            wed: ons.
+            thu: tor.
+            fri: fre.
+            sat: lør.
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: O
+            thu: T
+            fri: F
+            sat: L
+          short:
+            sun: sø
+            mon: ma
+            tue: ti
+            wed: 'on'
+            thu: to
+            fri: fr
+            sat: lø
+          wide:
+            sun: søndag
+            mon: mandag
+            tue: tirsdag
+            wed: onsdag
+            thu: torsdag
+            fri: fredag
+            sat: lørdag
+        stand_alone:
+          abbreviated:
+            sun: søn
+            mon: man
+            tue: tir
+            wed: ons
+            thu: tor
+            fri: fre
+            sat: lør
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: O
+            thu: T
+            fri: F
+            sat: L
+          short:
+            sun: sø
+            mon: ma
+            tue: ti
+            wed: 'on'
+            thu: to
+            fri: fr
+            sat: lø
+          wide:
+            sun: søndag
+            mon: mandag
+            tue: tirsdag
+            wed: onsdag
+            thu: torsdag
+            fri: fredag
+            sat: lørdag
+      eras:
+        abbr:
+          0: f.v.t.
+          1: v.t.
+        name:
+          0: før vesterlandsk tidsregning
+          1: vesterlandsk tidsregning
+        narrow:
+          0: fvt
+          1: vt
+      fields:
+        day: dag
+        day_narrow: dag
+        day_of_year: dag i året
+        day_of_year_narrow: dag i året
+        day_of_year_short: dag i året
+        day_period: AM/PM
+        day_period_narrow: AM/PM
+        day_period_short: AM/PM
+        day_short: dag
+        era: æra
+        era_narrow: æra
+        era_short: æra
+        hour: time
+        hour_narrow: t.
+        hour_short: t.
+        minute: minut
+        minute_narrow: min.
+        minute_short: min.
+        month: måned
+        month_narrow: md.
+        month_short: md.
+        quarter: kvartal
+        quarter_narrow: kvt.
+        quarter_short: kvt.
+        second: sekund
+        second_narrow: s
+        second_short: sek.
+        week: uge
+        week_narrow: uge
+        week_of_month: uge i måneden
+        week_of_month_narrow: uge i md.
+        week_of_month_short: uge i md.
+        week_short: uge
+        weekday: ugedag
+        weekday_narrow: ugedag
+        weekday_of_month: ugedag i måneden
+        weekday_of_month_narrow: ugedag i md.
+        weekday_of_month_short: ugedag i md.
+        weekday_short: ugedag
+        year: år
+        year_narrow: år
+        year_short: år
+        zone: tidszone
+        zone_narrow: zone
+        zone_short: zone
+      formats:
+        date:
+          full:
+            pattern: EEEE 'den' d. MMMM y
+          long:
+            pattern: d. MMMM y
+          medium:
+            pattern: d. MMM y
+          short:
+            pattern: dd.MM.y
+        datetime:
+          full:
+            pattern: "{{date}} 'kl'. {{time}}"
+          long:
+            pattern: "{{date}} 'kl'. {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH.mm.ss zzzz
+          long:
+            pattern: HH.mm.ss z
+          medium:
+            pattern: HH.mm.ss
+          short:
+            pattern: HH.mm
+      months:
+        format:
+          abbreviated:
+            1: jan.
+            2: feb.
+            3: mar.
+            4: apr.
+            5: maj
+            6: jun.
+            7: jul.
+            8: aug.
+            9: sep.
+            10: okt.
+            11: nov.
+            12: dec.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: januar
+            2: februar
+            3: marts
+            4: april
+            5: maj
+            6: juni
+            7: juli
+            8: august
+            9: september
+            10: oktober
+            11: november
+            12: december
+        stand_alone:
+          abbreviated:
+            1: jan.
+            2: feb.
+            3: mar.
+            4: apr.
+            5: maj
+            6: jun.
+            7: jul.
+            8: aug.
+            9: sep.
+            10: okt.
+            11: nov.
+            12: dec.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: januar
+            2: februar
+            3: marts
+            4: april
+            5: maj
+            6: juni
+            7: juli
+            8: august
+            9: september
+            10: oktober
+            11: november
+            12: december
+      periods:
+        format:
+          abbreviated:
+            afternoon1: om eftermiddagen
+            am: AM
+            evening1: om aftenen
+            midnight: midnat
+            morning1: om morgenen
+            morning2: om formiddagen
+            night1: om natten
+            pm: PM
+          narrow:
+            afternoon1: om eftermiddagen
+            am: a
+            evening1: om aftenen
+            midnight: midnat
+            morning1: om morgenen
+            morning2: om formiddagen
+            night1: om natten
+            pm: p
+          wide:
+            afternoon1: om eftermiddagen
+            am: AM
+            evening1: om aftenen
+            midnight: midnat
+            morning1: om morgenen
+            morning2: om formiddagen
+            night1: om natten
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: eftermiddag
+            am: AM
+            evening1: aften
+            midnight: midnat
+            morning1: morgen
+            morning2: formiddag
+            night1: nat
+            pm: PM
+          narrow:
+            afternoon1: eftermiddag
+            am: AM
+            evening1: aften
+            midnight: midnat
+            morning1: morgen
+            morning2: formiddag
+            night1: nat
+            pm: PM
+          wide:
+            afternoon1: eftermiddag
+            am: AM
+            evening1: aften
+            midnight: midnat
+            morning1: morgen
+            morning2: formiddag
+            night1: nat
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: 1. kvt.
+            2: 2. kvt.
+            3: 3. kvt.
+            4: 4. kvt.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. kvartal
+            2: 2. kvartal
+            3: 3. kvartal
+            4: 4. kvartal
+        stand_alone:
+          abbreviated:
+            1: 1. kvt.
+            2: 2. kvt.
+            3: 3. kvt.
+            4: 4. kvt.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. kvartal
+            2: 2. kvartal
+            3: 3. kvartal
+            4: 4. kvartal

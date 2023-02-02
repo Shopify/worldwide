@@ -1,0 +1,375 @@
+---
+is:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E d.
+        Ehm: E, h:mm a
+        EHm: E, HH:mm
+        Ehms: E, h:mm:ss a
+        EHms: E, HH:mm:ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d. MMM y G
+        GyMMMEd: E, d. MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: v – HH:mm:ss
+        hmv: h:mm a v
+        Hmv: v – HH:mm
+        M: L
+        Md: d.M.
+        MEd: E, d.M.
+        MMM: LLL
+        MMMd: d. MMM
+        MMMEd: E, d. MMM
+        MMMMd: d. MMMM
+        MMMMEd: E, d. MMMM
+        MMMMW: "'viku' W 'í' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M. y
+        yMd: d.M.y
+        yMEd: E, d.M.y
+        yMMM: MMM y
+        yMMMd: d. MMM y
+        yMMMEd: E, d. MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'viku' w 'af' Y"
+      days:
+        format:
+          abbreviated:
+            sun: sun.
+            mon: mán.
+            tue: þri.
+            wed: mið.
+            thu: fim.
+            fri: fös.
+            sat: lau.
+          narrow:
+            sun: S
+            mon: M
+            tue: Þ
+            wed: M
+            thu: F
+            fri: F
+            sat: L
+          short:
+            sun: su.
+            mon: má.
+            tue: þr.
+            wed: mi.
+            thu: fi.
+            fri: fö.
+            sat: la.
+          wide:
+            sun: sunnudagur
+            mon: mánudagur
+            tue: þriðjudagur
+            wed: miðvikudagur
+            thu: fimmtudagur
+            fri: föstudagur
+            sat: laugardagur
+        stand_alone:
+          abbreviated:
+            sun: sun.
+            mon: mán.
+            tue: þri.
+            wed: mið.
+            thu: fim.
+            fri: fös.
+            sat: lau.
+          narrow:
+            sun: S
+            mon: M
+            tue: Þ
+            wed: M
+            thu: F
+            fri: F
+            sat: L
+          short:
+            sun: su.
+            mon: má.
+            tue: þr.
+            wed: mi.
+            thu: fi.
+            fri: fö.
+            sat: la.
+          wide:
+            sun: sunnudagur
+            mon: mánudagur
+            tue: þriðjudagur
+            wed: miðvikudagur
+            thu: fimmtudagur
+            fri: föstudagur
+            sat: laugardagur
+      eras:
+        abbr:
+          0: f.l.t.
+          1: l.t.
+        name:
+          0: fyrir kristið tímatal
+          1: kristið tímatal
+        narrow:
+          0: f.v.t.
+          1: v.t.
+      fields:
+        day: dagur
+        day_narrow: dagur
+        day_of_year: dagur í ári
+        day_of_year_narrow: dagur í ári
+        day_of_year_short: dagur í ári
+        day_period: f.h./e.h.
+        day_period_narrow: f.h./e.h.
+        day_period_short: f.h./e.h.
+        day_short: dagur
+        era: tímabil
+        era_narrow: tímabil
+        era_short: tímabil
+        hour: klukkustund
+        hour_narrow: klst.
+        hour_short: klst.
+        minute: mínúta
+        minute_narrow: mín.
+        minute_short: mín.
+        month: mánuður
+        month_narrow: mán.
+        month_short: mán.
+        quarter: ársfjórðungur
+        quarter_narrow: ársfj.
+        quarter_short: ársfjórð.
+        second: sekúnda
+        second_narrow: sek.
+        second_short: sek.
+        week: vika
+        week_narrow: v.
+        week_of_month: vika í mánuði
+        week_of_month_narrow: vika í mánuði
+        week_of_month_short: vika í mánuði
+        week_short: vika
+        weekday: vikudagur
+        weekday_narrow: vikud.
+        weekday_of_month: vikudagur í mánuði
+        weekday_of_month_narrow: vikud. í mán.
+        weekday_of_month_short: vikud. í mán.
+        weekday_short: vikud.
+        year: ár
+        year_narrow: ár
+        year_short: ár
+        zone: tímabelti
+        zone_narrow: tímab.
+        zone_short: tímab.
+      formats:
+        date:
+          full:
+            pattern: EEEE, d. MMMM y
+          long:
+            pattern: d. MMMM y
+          medium:
+            pattern: d. MMM y
+          short:
+            pattern: d.M.y
+        datetime:
+          full:
+            pattern: "{{date}} 'kl'. {{time}}"
+          long:
+            pattern: "{{date}} 'kl'. {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: jan.
+            2: feb.
+            3: mar.
+            4: apr.
+            5: maí
+            6: jún.
+            7: júl.
+            8: ágú.
+            9: sep.
+            10: okt.
+            11: nóv.
+            12: des.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: Á
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: janúar
+            2: febrúar
+            3: mars
+            4: apríl
+            5: maí
+            6: júní
+            7: júlí
+            8: ágúst
+            9: september
+            10: október
+            11: nóvember
+            12: desember
+        stand_alone:
+          abbreviated:
+            1: jan.
+            2: feb.
+            3: mar.
+            4: apr.
+            5: maí
+            6: jún.
+            7: júl.
+            8: ágú.
+            9: sep.
+            10: okt.
+            11: nóv.
+            12: des.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: Á
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: janúar
+            2: febrúar
+            3: mars
+            4: apríl
+            5: maí
+            6: júní
+            7: júlí
+            8: ágúst
+            9: september
+            10: október
+            11: nóvember
+            12: desember
+      periods:
+        format:
+          abbreviated:
+            afternoon1: síðdegis
+            am: f.h.
+            evening1: að kvöldi
+            midnight: miðnætti
+            morning1: að morgni
+            night1: að nóttu
+            noon: hádegi
+            pm: e.h.
+          narrow:
+            afternoon1: sd.
+            am: f.
+            evening1: kv.
+            midnight: mn.
+            morning1: mrg.
+            night1: n.
+            noon: h.
+            pm: e.
+          wide:
+            afternoon1: síðdegis
+            am: f.h.
+            evening1: að kvöldi
+            midnight: miðnætti
+            morning1: að morgni
+            night1: að nóttu
+            noon: hádegi
+            pm: e.h.
+        stand_alone:
+          abbreviated:
+            afternoon1: síðdegis
+            am: f.h.
+            evening1: kvöld
+            midnight: miðnætti
+            morning1: morgunn
+            night1: nótt
+            noon: hádegi
+            pm: e.h.
+          narrow:
+            afternoon1: sd.
+            am: f.h.
+            evening1: kv.
+            midnight: mn.
+            morning1: mrg.
+            night1: n.
+            noon: hd.
+            pm: e.h.
+          wide:
+            afternoon1: eftir hádegi
+            am: f.h.
+            evening1: kvöld
+            midnight: miðnætti
+            morning1: morgunn
+            night1: nótt
+            noon: hádegi
+            pm: e.h.
+      quarters:
+        format:
+          abbreviated:
+            1: F1
+            2: F2
+            3: F3
+            4: F4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. fjórðungur
+            2: 2. fjórðungur
+            3: 3. fjórðungur
+            4: 4. fjórðungur
+        stand_alone:
+          abbreviated:
+            1: F1
+            2: F2
+            3: F3
+            4: F4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. fjórðungur
+            2: 2. fjórðungur
+            3: 3. fjórðungur
+            4: 4. fjórðungur

@@ -1,0 +1,371 @@
+---
+kk:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: B h
+        Bhm: B h:mm
+        Bhms: B h:mm:ss
+        d: d
+        E: ccc
+        EBhm: E, B h:mm
+        EBhms: E, B h:mm:ss
+        Ed: d, E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y 'ж'.
+        GyMd: dd-MM-GGGGG y
+        GyMMM: G y 'ж'. MMM
+        GyMMMd: G y 'ж'. d MMM
+        GyMMMEd: G y 'ж'. d MMM, E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: dd.MM
+        MEd: dd.MM, E
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: d MMM, E
+        MMMMd: d MMMM
+        MMMMW: MMMM 'айының' W-'аптасы'
+        ms: mm:ss
+        "y": "y"
+        yM: MM.y
+        yMd: dd.MM.y
+        yMEd: dd.MM.y, E
+        yMMM: y 'ж'. MMM
+        yMMMd: y 'ж'. d MMM
+        yMMMEd: y 'ж'. d MMM, E
+        yMMMM: y 'ж'. MMMM
+        yQQQ: y 'ж'. QQQ
+        yQQQQ: y 'ж'. QQQQ
+        yw: Y 'жылдың' w-'аптасы'
+      days:
+        format:
+          abbreviated:
+            sun: жс
+            mon: дс
+            tue: сс
+            wed: ср
+            thu: бс
+            fri: жм
+            sat: сб
+          narrow:
+            sun: Ж
+            mon: Д
+            tue: С
+            wed: С
+            thu: Б
+            fri: Ж
+            sat: С
+          short:
+            sun: жс
+            mon: дс
+            tue: сс
+            wed: ср
+            thu: бс
+            fri: жм
+            sat: сб
+          wide:
+            sun: жексенбі
+            mon: дүйсенбі
+            tue: сейсенбі
+            wed: сәрсенбі
+            thu: бейсенбі
+            fri: жұма
+            sat: сенбі
+        stand_alone:
+          abbreviated:
+            sun: жс
+            mon: дс
+            tue: сс
+            wed: ср
+            thu: бс
+            fri: жм
+            sat: сб
+          narrow:
+            sun: Ж
+            mon: Д
+            tue: С
+            wed: С
+            thu: Б
+            fri: Ж
+            sat: С
+          short:
+            sun: жс
+            mon: дс
+            tue: сс
+            wed: ср
+            thu: бс
+            fri: жм
+            sat: сб
+          wide:
+            sun: жексенбі
+            mon: дүйсенбі
+            tue: сейсенбі
+            wed: сәрсенбі
+            thu: бейсенбі
+            fri: жұма
+            sat: сенбі
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+        name:
+          0: біздің заманымызға дейін
+          1: Біздің заманымыз
+      fields:
+        day: күн
+        day_narrow: күн
+        day_of_year: жылдағы күн
+        day_of_year_narrow: жылдағы күн
+        day_of_year_short: жылдағы күн
+        day_period: АМ/РМ
+        day_period_narrow: АМ/РМ
+        day_period_short: АМ/РМ
+        day_short: күн
+        era: дәуір
+        era_narrow: дәуір
+        era_short: дәуір
+        hour: сағат
+        hour_narrow: сағ
+        hour_short: сағ
+        minute: минут
+        minute_narrow: мин
+        minute_short: мин
+        month: ай
+        month_narrow: ай
+        month_short: ай
+        quarter: ширек
+        quarter_narrow: ш.
+        quarter_short: ш.
+        second: секунд
+        second_narrow: с
+        second_short: с
+        week: апта
+        week_narrow: ап.
+        week_of_month: айдағы апта
+        week_of_month_narrow: айдағы апта
+        week_of_month_short: айдағы апта
+        week_short: ап.
+        weekday: апта күні
+        weekday_narrow: апта күні
+        weekday_of_month: айдағы апта күні
+        weekday_of_month_narrow: айдағы ап. күні
+        weekday_of_month_short: айдағы ап. күні
+        weekday_short: апта күні
+        year: жыл
+        year_narrow: ж.
+        year_short: ж.
+        zone: уақыт белдеуі
+        zone_narrow: уақ. белдеуі
+        zone_short: уақ. белдеуі
+      formats:
+        date:
+          full:
+            pattern: y 'ж'. d MMMM, EEEE
+          long:
+            pattern: y 'ж'. d MMMM
+          medium:
+            pattern: y 'ж'. dd MMM
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}}, {{time}}"
+          long:
+            pattern: "{{date}}, {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: қаң.
+            2: ақп.
+            3: нау.
+            4: сәу.
+            5: мам.
+            6: мау.
+            7: шіл.
+            8: там.
+            9: қыр.
+            10: қаз.
+            11: қар.
+            12: жел.
+          narrow:
+            1: Қ
+            2: А
+            3: Н
+            4: С
+            5: М
+            6: М
+            7: Ш
+            8: Т
+            9: Қ
+            10: Қ
+            11: Қ
+            12: Ж
+          wide:
+            1: қаңтар
+            2: ақпан
+            3: наурыз
+            4: сәуір
+            5: мамыр
+            6: маусым
+            7: шілде
+            8: тамыз
+            9: қыркүйек
+            10: қазан
+            11: қараша
+            12: желтоқсан
+        stand_alone:
+          abbreviated:
+            1: қаң.
+            2: ақп.
+            3: нау.
+            4: сәу.
+            5: мам.
+            6: мау.
+            7: шіл.
+            8: там.
+            9: қыр.
+            10: қаз.
+            11: қар.
+            12: жел.
+          narrow:
+            1: Қ
+            2: А
+            3: Н
+            4: С
+            5: М
+            6: М
+            7: Ш
+            8: Т
+            9: Қ
+            10: Қ
+            11: Қ
+            12: Ж
+          wide:
+            1: Қаңтар
+            2: Ақпан
+            3: Наурыз
+            4: Сәуір
+            5: Мамыр
+            6: Маусым
+            7: Шілде
+            8: Тамыз
+            9: Қыркүйек
+            10: Қазан
+            11: Қараша
+            12: Желтоқсан
+      periods:
+        format:
+          abbreviated:
+            afternoon1: түстен кейінгі
+            am: AM
+            evening1: кешкі
+            midnight: түн жарымы
+            morning1: таңғы
+            night1: түнгі
+            noon: түскі
+            pm: PM
+          narrow:
+            afternoon1: түстен кейінгі
+            am: AM
+            evening1: кешкі
+            midnight: түнгі
+            morning1: таңғы
+            night1: түнгі
+            noon: түскі
+            pm: PM
+          wide:
+            afternoon1: түстен кейінгі
+            am: AM
+            evening1: кешкі
+            midnight: түн жарымы
+            morning1: таңғы
+            night1: түнгі
+            noon: түскі
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: түстен кейін
+            am: AM
+            evening1: кеш
+            midnight: түн жарымы
+            morning1: таң
+            night1: түн
+            noon: талтүс
+            pm: PM
+          narrow:
+            afternoon1: түстен кейін
+            am: AM
+            evening1: кеш
+            midnight: түн жарымы
+            morning1: таң
+            night1: түн
+            noon: талтүс
+            pm: PM
+          wide:
+            afternoon1: түстен кейін
+            am: AM
+            evening1: кеш
+            midnight: түн жарымы
+            morning1: таң
+            night1: түн
+            noon: талтүс
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: І тқс.
+            2: ІІ тқс.
+            3: ІІІ тқс.
+            4: IV тқс.
+          narrow:
+            1: I
+            2: II
+            3: III
+            4: IV
+          wide:
+            1: І тоқсан
+            2: ІІ тоқсан
+            3: ІІІ тоқсан
+            4: IV тоқсан
+        stand_alone:
+          abbreviated:
+            1: І тқс.
+            2: ІІ тқс.
+            3: ІІІ тқс.
+            4: IV тқс.
+          narrow:
+            1: I
+            2: II
+            3: III
+            4: IV
+          wide:
+            1: І тоқсан
+            2: ІІ тоқсан
+            3: ІІІ тоқсан
+            4: IV тоқсан

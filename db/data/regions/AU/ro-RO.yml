@@ -1,0 +1,37 @@
+---
+ro-RO:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Suburbie
+            optional: Suburbie (opțional)
+          errors:
+            blank: Introdu o suburbie
+            too_long: Denumirea suburbiei este prea lungă (lungimea maximă este de
+              255 caractere)
+            contains_html_tags: Denumirea suburbiei nu poate conține etichete HTML.
+            contains_emojis: Numele suburbiei nu poate conține emoji-uri
+            contains_restricted_characters: Numele suburbiei poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+        province:
+          label:
+            default: Stat/teritoriu
+            optional: Stat/teritoriu (opțional)
+          errors:
+            blank: Selectează un stat/un teritoriu
+        zip:
+          label:
+            default: Cod poștal
+            optional: Cod poștal (opțional)
+          errors:
+            blank: Introdu un cod poștal
+            invalid_for_country: Introdu un cod poștal valid pentru %{country}
+            invalid_for_country_and_province: Introdu un cod poștal valid pentru %{province},
+              %{country}
+            too_long: Valoarea pentru codul poștal este prea lungă
+            contains_html_tags: Codul poștal nu poate conține etichete HTML.
+            contains_emojis: Codul poștal nu poate conține emoji-uri
+            contains_restricted_characters: Codul poștal poate conține numai litere,
+              cifre, caractere locale și caractere speciale

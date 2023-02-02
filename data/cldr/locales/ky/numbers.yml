@@ -1,0 +1,151 @@
+---
+ky:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+            short:
+              standard:
+                '1000':
+                  one: 0 миң ¤
+                  other: 0 миң ¤
+                '10000':
+                  one: 00 миң ¤
+                  other: 00 миң ¤
+                '100000':
+                  one: 000 миң ¤
+                  other: 000 миң ¤
+                '1000000':
+                  one: 0 млн ¤
+                  other: 0 млн ¤
+                '10000000':
+                  one: 00 млн ¤
+                  other: 00 млн ¤
+                '100000000':
+                  one: 000 млн ¤
+                  other: 000 млн ¤
+                '1000000000':
+                  one: 0 млд ¤
+                  other: 0 млд ¤
+                '10000000000':
+                  one: 00 млд ¤
+                  other: 00 млд ¤
+                '100000000000':
+                  one: 000 млд ¤
+                  other: 000 млд ¤
+                '1000000000000':
+                  one: 0 трлн ¤
+                  other: 0 трлн ¤
+                '10000000000000':
+                  one: 00 трлн ¤
+                  other: 00 трлн ¤
+                '100000000000000':
+                  one: 000 трлн ¤
+                  other: 000 трлн ¤
+          unit:
+            one: "{0} {1}"
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  one: 0 миң
+                  other: 0 миң
+                '10000':
+                  one: 00 миң
+                  other: 00 миң
+                '100000':
+                  one: 000 миң
+                  other: 000 миң
+                '1000000':
+                  one: 0 миллион
+                  other: 0 миллион
+                '10000000':
+                  one: 00 миллион
+                  other: 00 миллион
+                '100000000':
+                  one: 000 миллион
+                  other: 000 миллион
+                '1000000000':
+                  one: 0 миллиард
+                  other: 0 миллиард
+                '10000000000':
+                  one: 00 миллиард
+                  other: 00 миллиард
+                '100000000000':
+                  one: 000 миллиард
+                  other: 000 миллиард
+                '1000000000000':
+                  one: 0 триллион
+                  other: 0 триллион
+                '10000000000000':
+                  one: 00 триллион
+                  other: 00 триллион
+                '100000000000000':
+                  one: 000 триллион
+                  other: 000 триллион
+            short:
+              standard:
+                '1000':
+                  one: 0 миң
+                  other: 0 миң
+                '10000':
+                  one: 00 миң
+                  other: 00 миң
+                '100000':
+                  one: 000 миң
+                  other: 000 миң
+                '1000000':
+                  one: 0 млн
+                  other: 0 млн
+                '10000000':
+                  one: 00 млн
+                  other: 00 млн
+                '100000000':
+                  one: 000 млн
+                  other: 000 млн
+                '1000000000':
+                  one: 0 млд
+                  other: 0 млд
+                '10000000000':
+                  one: 00 млд
+                  other: 00 млд
+                '100000000000':
+                  one: 000 млд
+                  other: 000 млд
+                '1000000000000':
+                  one: 0 трлн
+                  other: 0 трлн
+                '10000000000000':
+                  one: 00 трлн
+                  other: 00 трлн
+                '100000000000000':
+                  one: 000 трлн
+                  other: 000 трлн
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: ","
+        exponential: E
+        group: " "
+        infinity: "∞"
+        minus_sign: "-"
+        nan: сан эмес
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"

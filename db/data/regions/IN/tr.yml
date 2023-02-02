@@ -1,0 +1,24 @@
+---
+tr:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Eyalet
+            optional: Eyalet (isteğe bağlı)
+          errors:
+            blank: Eyalet seçin
+        zip:
+          label:
+            default: PIN kodu
+            optional: PIN kodu (isteğe bağlı)
+          errors:
+            blank: PIN kodu girin
+            invalid_for_country: "%{country} için geçerli bir PIN kodu girin"
+            invalid_for_country_and_province: "%{province}, %{country} için geçerli
+              bir PIN kodu girin"
+            too_long: PIN kodu değeri çok uzun
+            contains_html_tags: PIN kodu, HTML etiketleri içeremez.
+            contains_emojis: PIN kodu emoji içeremez
+            contains_restricted_characters: PIN kodunda kısıtlanmış karakterler kullanılamaz

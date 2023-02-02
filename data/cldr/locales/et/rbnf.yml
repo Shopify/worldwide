@@ -1,0 +1,77 @@
+---
+et:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: miinus >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1100
+          :rule: "<< sada[ >>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: miinus >>;
+        - :value: x.x
+          :rule: "<< koma >>;"
+        - :value: 0
+          :rule: null;
+        - :value: 1
+          :rule: üks;
+        - :value: 2
+          :rule: kaks;
+        - :value: 3
+          :rule: kolm;
+        - :value: 4
+          :rule: neli;
+        - :value: 5
+          :rule: viis;
+        - :value: 6
+          :rule: kuus;
+        - :value: 7
+          :rule: seitse;
+        - :value: 8
+          :rule: kaheksa;
+        - :value: 9
+          :rule: üheksa;
+        - :value: 10
+          :rule: kümme;
+        - :value: 11
+          :rule: ">>teist;"
+        - :value: 20
+          :rule: "<<kümmend[ >>];"
+        - :value: 100
+          :rule: "<<sada[ >>];"
+        - :value: 1000
+          :rule: "<< tuhat[ >>];"
+        - :value: 1000000
+          :rule: "<< miljon[ >>];"
+        - :value: 2000000
+          :rule: "<< miljonit[ >>];"
+        - :value: 1000000000
+          :rule: "<< miljard[ >>];"
+        - :value: 2000000000
+          :rule: "<< miljardit[ >>];"
+        - :value: 1000000000000
+          :rule: "<< biljon[ >>];"
+        - :value: 2000000000000
+          :rule: "<< biljonit[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< biljard[ >>];"
+        - :value: 2000000000000000
+          :rule: "<< biljardit[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

@@ -1,0 +1,144 @@
+---
+brx:
+  date:
+    formats:
+      abbr_date: "%b %-d, %Y"
+      basic_date: "%Y-%02m-%02d"
+      date: "%B %-d, %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%B %-d"
+      time_only: "%P नि %-l:%M"
+      weekday: "%A"
+      year: "%Y"
+      long: "%B %-d, %Y"
+      short: "%-d-%b"
+      date_time_current_year: "%-d-%b, %P नि %-l:%M"
+      default_long_with_zone: "%Y %B %-d, %A, %P %-l:%M %z"
+      friendly_date_time: "%b %-d, %Y, %P नि %-l:%M"
+      long_with_zone: "%B %-d, %Y नि %P %-l:%M %z याव"
+      weekday_at_time: "%A नि %P नि %-l:%M याव"
+      weekday_with_time: "%A, %P नि %-l:%M"
+      weekday_with_date: "%A, %B %-d"
+      short_weekday_with_date: "%a, %b %-d"
+      weekday_with_short_date: "%A, %b %-d"
+      long_readable_with_time: "%B %-d, %Y नि %P नि %-l:%M याव"
+      long_readable_with_zone: "%A, %B %-d, %Y नि %P %-l:%M %z याव"
+      date_at_time: "%B %-d, %Y नि %P नि %-l:%M याव"
+      default: "%Y-%02m-%02d"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%P नि %-l:%M दिनै"
+      yesterday_at_time: "%P नि %-l:%M मैया"
+      tomorrow_at_time: "%P नि %-l:%M गाबोन"
+      on_weekday_at_time: "%P नि %-l:%M %A"
+      on_date_time_current_year: "%P नि %-l:%M %-d-%b"
+      on_date: "%b %-d, %Y"
+      ago: "%{time} ago"
+      cc_expiry_date: "%m/%Y"
+      x_hours_ago:
+        other: "-%{count} h"
+        one: "-%{count} h"
+      x_minutes_ago:
+        other: "-%{count} min"
+        one: "-%{count} min"
+    abbr_day_names:
+    - रबि
+    - सम
+    - मंगल
+    - बुध
+    - बिस्थि
+    - सुखुर
+    - सुनि
+    abbr_month_names:
+    - ''
+    - जान
+    - फेब
+    - मार्च
+    - एप्रि
+    - मे
+    - जुन
+    - जुल
+    - आग
+    - सेप
+    - अक्ट’
+    - नवे
+    - डिसे
+    day_names:
+    - रबिबार
+    - समबार
+    - मंगलबार
+    - बुधबार
+    - बिस्थिबार
+    - सुखुरबार
+    - सुनिबार
+    month_names:
+    - ''
+    - जानुवारी
+    - फेब्रूवारी
+    - मार्च
+    - एप्रिल
+    - मे
+    - जुन
+    - जुलाई
+    - आगष्ट
+    - सेप्थेम्बर
+    - अक्ट’बर
+    - नवेम्बर
+    - डिसेम्बर
+    order:
+    - :year
+    - :month
+    - :day
+    relative_day_names:
+      this_week: बे सप्थाह
+      this_month: बे दान
+      yesterday: मैया
+      today: दिनै
+      tomorrow: गाबोन
+  time:
+    formats:
+      abbr_date: "%b %-d, %Y"
+      basic_date: "%Y-%02m-%02d"
+      date: "%B %-d, %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%B %-d"
+      time_only: "%P नि %-l:%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%-d-%b, %P नि %-l:%M"
+      default_long_with_zone: "%Y %B %-d, %A, %P %-l:%M %z"
+      friendly_date_time: "%b %-d, %Y, %P नि %-l:%M"
+      long_with_zone: "%B %-d, %Y नि %P %-l:%M %z याव"
+      weekday_at_time: "%A नि %P नि %-l:%M याव"
+      weekday_with_time: "%A, %P नि %-l:%M"
+      weekday_with_date: "%A, %B %-d"
+      short_weekday_with_date: "%a, %b %-d"
+      weekday_with_short_date: "%A, %b %-d"
+      long_readable_with_time: "%B %-d, %Y नि %P नि %-l:%M याव"
+      long_readable_with_zone: "%A, %B %-d, %Y नि %P %-l:%M %z याव"
+      date_at_time: "%B %-d, %Y नि %P नि %-l:%M याव"
+      default: "%a, %b %-d, %Y, %P %-l:%M %z"
+      long: "%B %-d, %Y, %P नि %-l:%M"
+      short: "%-d-%b, %P नि %-l:%M"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%P नि %-l:%M दिनै"
+      yesterday_at_time: "%P नि %-l:%M मैया"
+      tomorrow_at_time: "%P नि %-l:%M गाबोन"
+      on_weekday_at_time: "%P नि %-l:%M %A"
+      on_date_time_current_year: "%P नि %-l:%M %-d-%b"
+      on_date: "%b %-d, %Y"
+      ago: "%{time} ago"
+      cc_expiry_date: "%m/%Y"
+      x_hours_ago:
+        other: "-%{count} h"
+        one: "-%{count} h"
+      x_minutes_ago:
+        other: "-%{count} min"
+        one: "-%{count} min"
+    am: am
+    pm: pm
+    just_now: now
+    yesterday: मैया

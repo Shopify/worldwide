@@ -1,0 +1,153 @@
+---
+az:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+            short:
+              standard:
+                '1000':
+                  one: 0K ¤
+                  other: 0K ¤
+                '10000':
+                  one: 00K ¤
+                  other: 00K ¤
+                '100000':
+                  one: 000K ¤
+                  other: 000K ¤
+                '1000000':
+                  one: 0M ¤
+                  other: 0M ¤
+                '10000000':
+                  one: 00M ¤
+                  other: 00M ¤
+                '100000000':
+                  one: 000M ¤
+                  other: 000M ¤
+                '1000000000':
+                  one: 0G ¤
+                  other: 0G ¤
+                '10000000000':
+                  one: 00G ¤
+                  other: 00G ¤
+                '100000000000':
+                  one: 000G ¤
+                  other: 000G ¤
+                '1000000000000':
+                  one: 0T ¤
+                  other: 0T ¤
+                '10000000000000':
+                  one: 00T ¤
+                  other: 00T ¤
+                '100000000000000':
+                  one: 000T ¤
+                  other: 000T ¤
+          unit:
+            one: "{0} {1}"
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  one: 0 min
+                  other: 0 min
+                '10000':
+                  one: 00 min
+                  other: 00 min
+                '100000':
+                  one: 000 min
+                  other: 000 min
+                '1000000':
+                  one: 0 milyon
+                  other: 0 milyon
+                '10000000':
+                  one: 00 milyon
+                  other: 00 milyon
+                '100000000':
+                  one: 000 milyon
+                  other: 000 milyon
+                '1000000000':
+                  one: 0 milyard
+                  other: 0 milyard
+                '10000000000':
+                  one: 00 milyard
+                  other: 00 milyard
+                '100000000000':
+                  one: 000 milyard
+                  other: 000 milyard
+                '1000000000000':
+                  one: 0 trilyon
+                  other: 0 trilyon
+                '10000000000000':
+                  one: 00 trilyon
+                  other: 00 trilyon
+                '100000000000000':
+                  one: 000 trilyon
+                  other: 000 trilyon
+            short:
+              standard:
+                '1000':
+                  one: 0K
+                  other: 0K
+                '10000':
+                  one: 00K
+                  other: 00K
+                '100000':
+                  one: 000K
+                  other: 000K
+                '1000000':
+                  one: 0 mln
+                  other: 0 mln
+                '10000000':
+                  one: 00 mln
+                  other: 00 mln
+                '100000000':
+                  one: 000 mln
+                  other: 000 mln
+                '1000000000':
+                  one: 0 mlrd
+                  other: 0 mlrd
+                '10000000000':
+                  one: 00 mlrd
+                  other: 00 mlrd
+                '100000000000':
+                  one: 000 mlrd
+                  other: 000 mlrd
+                '1000000000000':
+                  one: 0 trln
+                  other: 0 trln
+                '10000000000000':
+                  one: 00 trln
+                  other: 00 trln
+                '100000000000000':
+                  one: 000 trln
+                  other: 000 trln
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        approximately_sign: "~"
+        decimal: ","
+        exponential: E
+        group: "."
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"

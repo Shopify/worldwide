@@ -1,0 +1,20 @@
+---
+name: Trinidad and Tobago
+code: TT
+tax: 0.125
+currency: TTD
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_regex: "^\\d{6}$"
+zip_example: '120110'
+zip_requirement: optional
+phone_number_prefix: 1
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1F9\U0001F1F9"
+languages:
+  - en
+timezone: America/Puerto_Rico

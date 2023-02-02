@@ -1,0 +1,31 @@
+---
+id:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Negara bagian
+            optional: Negara bagian (opsional)
+          errors:
+            blank: Pilih negara bagian
+            invalid_for_country: Masukkan negara %{country} yang valid
+            unknown_for_city_and_zip: Masukkan negara bagian yang valid untuk %{city},
+              %{zip}
+            unknown_for_city: Pilih negara bagian yang valid untuk %{city}
+            unknown_for_zip: Pilih negara bagian yang valid untuk %{zip}
+        zip:
+          label:
+            default: Kode ZIP
+            optional: Kode ZIP (opsional)
+          errors:
+            blank: Masukkan kode ZIP
+            invalid_for_country: Masukkan kode ZIP %{country} yang valid
+            invalid_for_country_and_province: Masukkan kode ZIP yang valid untuk %{province},
+              %{country}
+            too_long: Nilai kode pos terlalu panjang
+            contains_html_tags: Nilai kode ZIP tidak bisa berisi tag HTML.
+            contains_emojis: Kode ZIP tidak boleh berisi emoji
+            contains_restricted_characters: Kode Zip ini tidak boleh memuat karakter
+              yang dilarang
+            invalid_for_province: Masukkan kode ZIP yang valid untuk %{province}

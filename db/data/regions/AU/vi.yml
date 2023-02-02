@@ -1,0 +1,36 @@
+---
+vi:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Ngoại ô
+            optional: Ngoại ô (không bắt buộc)
+          errors:
+            blank: Nhập vùng ngoại ô
+            too_long: Tên vùng ngoại ô quá dài (tối đa 255 ký tự)
+            contains_html_tags: Vùng ngoại ô không được chứa thẻ HTML.
+            contains_emojis: Ngoại ô không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Vùng ngoại ô chỉ được chứa chữ cái, chữ
+              số, ký tự địa phương và ký tự đặc biệt
+        province:
+          label:
+            default: Tiểu bang/Vùng lãnh thổ
+            optional: Tiểu bang/Vùng lãnh thổ (không bắt buộc)
+          errors:
+            blank: Chọn tiểu bang/vùng lãnh thổ
+        zip:
+          label:
+            default: Mã bưu chính
+            optional: Mã bưu chính (không bắt buộc)
+          errors:
+            blank: Nhập mã bưu chính
+            invalid_for_country: Nhập mã bưu chính hợp lệ cho %{country}
+            invalid_for_country_and_province: Nhập mã bưu chính hợp lệ cho %{province},
+              %{country}
+            too_long: Giá trị mã bưu chính quá dài
+            contains_html_tags: Mã bưu điện không được chứa thẻ HTML.
+            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
+              số, ký tự địa phương và ký tự đặc biệt

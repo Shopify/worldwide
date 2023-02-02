@@ -1,0 +1,142 @@
+---
+tr:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Şirket
+            optional: Şirket (isteğe bağlı)
+          errors:
+            blank: Şirket adı girin
+            too_long: Şirket adı çok uzun (maksimum 255 karakter olmalı)
+            contains_html_tags: Şirket, HTML etiketleri içeremez.
+            contains_emojis: Şirket emoji içeremez
+            contains_restricted_characters: Şirket adı yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+        first_name:
+          label:
+            default: Ad
+            optional: Ad (isteğe bağlı)
+          errors:
+            blank: Ad girin
+            too_long: Ad çok uzun (maksimum 255 karakter olmalı)
+            contains_html_tags: Ad, HTML etiketleri içeremez.
+            contains_emojis: Ad emoji içeremez
+            contains_url: Ad URL içeremez.
+            contains_restricted_characters: Ad yalnızca harfler, sayılar, yerel karakterler
+              ve özel karakterler içerebilir
+        last_name:
+          label:
+            default: Soyadı
+            optional: Soyadı (isteğe bağlı)
+          errors:
+            blank: Soyadı girin
+            too_long: Soyadı çok uzun (maksimum 255 karakter olmalı)
+            contains_html_tags: Soyadı, HTML etiketleri içeremez.
+            contains_emojis: Soyadı emoji içeremez
+            contains_url: Soyadı URL içeremez.
+            contains_restricted_characters: Soyadı yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+        address1:
+          label:
+            default: Adres
+            optional: Adres (isteğe bağlı)
+          errors:
+            blank: Adres girin
+            too_long: İlk adres satırı çok uzun (maksimum 255 karakter olmalı)
+            contains_html_tags: Adres 1, HTML etiketleri içeremez.
+            contains_emojis: Adres emoji içeremez
+            contains_url: Adres 1 URL içeremez.
+            missing_building_number: Varsa bina numaranızı ekleyin.
+            street_unknown_for_zip: "%{zip} için geçerli bir sokak adı girin."
+            building_number_invalid: "%{street} %{zip} için girilen bina numarasıyla
+              eşleşen kayıt bulunamadı."
+            contains_restricted_characters: Adres1 yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: 1. adres en fazla %{word_count} kelime içerebilir
+        address2:
+          label:
+            default: Apartman, daire vb.
+            optional: Apartman, daire vb. (isteğe bağlı)
+          errors:
+            blank: Apartman, daire vb. girin
+            too_long: İkinci adres satırı çok uzun (maksimum 255 karakter olmalı)
+            contains_html_tags: Adres 2, HTML etiketleri içeremez.
+            contains_emojis: Adres emoji içeremez
+            contains_url: Adres 2 URL içeremez.
+            missing_building_number: Varsa bina numaranızı ekleyin.
+            street_unknown_for_zip: "%{zip} için geçerli bir sokak adı girin."
+            building_number_invalid: "%{street} %{zip} için girilen bina numarasıyla
+              eşleşen kayıt bulunamadı."
+            contains_restricted_characters: Adres2 yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: 2. adres en fazla %{word_count} kelime içerebilir
+        city:
+          label:
+            default: Şehir
+            optional: Şehir (isteğe bağlı)
+          errors:
+            blank: Şehir girin
+            too_long: Şehir çok uzun (maksimum 255 karakter)
+            contains_html_tags: Şehir, HTML etiketleri içeremez.
+            contains_emojis: Şehir emoji içeremez
+            contains_url: Şehir URL içeremez
+            unknown_for_zip: "%{zip} için geçerli bir şehir girin"
+            unknown_for_province: "%{province} için geçerli bir şehir girin"
+            unknown_for_zip_and_province: "%{zip}, %{province} için geçerli bir şehir
+              girin"
+            contains_restricted_characters: Şehir adı yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: Şehir en fazla %{word_count} kelime içerebilir
+        country:
+          label:
+            default: Ülke/Bölge
+            optional: Ülke/Bölge (isteğe bağlı)
+          errors:
+            blank: Ülke/bölge seçin
+            not_supported: Şu anda bu ülkeyi/bölgeyi desteklemiyoruz. Yeni bir adres
+              girip tekrar deneyin.
+            invalid: Geçerli bir ülke/bölge girin
+            invalid_for_zip: Bu posta kodu için geçerli bir ülke/bölge girin
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (isteğe bağlı)
+          errors:
+            blank: Bir telefon numarası girin
+            invalid: Geçerli bir telefon numarası girin
+            too_long: Telefon numarası çok uzun (maksimum 255 karakter)
+            contains_emojis: Telefon numarası emoji içeremez
+            contains_restricted_characters: Telefon numarası yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+        province:
+          label:
+            default: Bölge
+            optional: Bölge (isteğe bağlı)
+          errors:
+            blank: Bölge seçin
+            invalid_for_country: "%{country} için geçerli bir bölge girin."
+            unknown_for_city_and_zip: "%{city}, %{zip} için geçerli bir bölge girin"
+            unknown_for_city: "%{city} için geçerli bir bölge seçin"
+            unknown_for_zip: "%{zip} için geçerli bir bölge seçin"
+        zip:
+          label:
+            default: Posta kodu
+            optional: Posta kodu (isteğe bağlı)
+          errors:
+            blank: Posta kodu girin
+            blocked_address: Bu konum desteklenmiyor.
+            invalid_for_country: "%{country} için geçerli bir posta kodu girin"
+            invalid_for_country_and_province: "%{province}, %{country} için geçerli
+              bir posta kodu girin"
+            invalid: Geçerli bir posta kodu girin
+            too_long: Posta kodu değeri çok uzun
+            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
+            contains_emojis: Posta kodu emoji içeremez
+            not_supported: Şu anda bu ülkeyi/bölgeyi desteklemiyoruz. Yeni bir adres
+              girip tekrar deneyin.
+            unknown_for_province: "%{province} için geçerli bir posta kodu girin"
+            contains_restricted_characters: Posta kodu yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+            invalid_for_province: "%{province} için geçerli bir posta kodu girin"

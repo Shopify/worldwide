@@ -1,0 +1,30 @@
+---
+tr:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Eyalet
+            optional: Eyalet (isteğe bağlı)
+          errors:
+            blank: Eyalet seçin
+            invalid_for_country: Geçerli bir %{country} eyaleti girin
+            unknown_for_city_and_zip: "%{city}, %{zip} için geçerli bir eyalet girin"
+            unknown_for_city: "%{city} için geçerli bir eyalet seçin"
+            unknown_for_zip: "%{zip} için geçerli bir eyalet seçin"
+        zip:
+          label:
+            default: Posta kodu
+            optional: Posta kodu (isteğe bağlı)
+          errors:
+            blank: Posta kodu girin
+            invalid_for_country: Geçerli bir %{country} posta kodu girin
+            invalid_for_country_and_province: "%{province}, %{country} için geçerli
+              bir posta kodu girin"
+            too_long: Posta kodu değeri çok uzun
+            contains_html_tags: ZIP kodu değeri, HTML etiketleri içeremez.
+            contains_emojis: Posta kodu, emoji içeremez
+            contains_restricted_characters: Posta kodunda kısıtlanmış karakterler
+              kullanılamaz
+            invalid_for_province: "%{province} için geçerli bir posta kodu girin"

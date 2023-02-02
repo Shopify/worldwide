@@ -1,0 +1,36 @@
+---
+tr:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Banliyö
+            optional: Banliyö (isteğe bağlı)
+          errors:
+            blank: Mahalle girin
+            too_long: Mahalle adı çok uzun (maksimum 255 karakter olmalı)
+            contains_html_tags: Banliyö, HTML etiketleri içeremez.
+            contains_emojis: Mahalle emoji içeremez
+            contains_restricted_characters: Banliyö adı yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+        province:
+          label:
+            default: Eyalet/bölge
+            optional: Eyalet/bölge (isteğe bağlı)
+          errors:
+            blank: Eyalet/bölge seçin
+        zip:
+          label:
+            default: Posta kodu
+            optional: Posta kodu (isteğe bağlı)
+          errors:
+            blank: Posta kodu girin
+            invalid_for_country: "%{country} için geçerli bir posta kodu girin"
+            invalid_for_country_and_province: "%{province}, %{country} için geçerli
+              bir posta kodu girin"
+            too_long: Posta kodu değeri çok uzun
+            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
+            contains_emojis: Posta kodu, emoji içeremez
+            contains_restricted_characters: Posta kodu yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir

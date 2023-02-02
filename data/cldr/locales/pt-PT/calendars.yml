@@ -1,0 +1,142 @@
+---
+pt-PT:
+  calendars:
+    gregorian:
+      additional_formats:
+        Md: dd/MM
+        MMMd: d/MM
+        MMMEd: E, d/MM
+        MMMMEd: ccc, d 'de' MMMM
+        MMMMW: W.'ª' 'semana' 'de' MMMM
+        yMMM: MM/y
+        yMMMd: d/MM/y
+        yMMMEd: E, d/MM/y
+        yMMMEEEEd: EEEE, d/MM/y
+        yMMMMEd: ccc, d 'de' MMMM 'de' y
+        yQQQ: QQQQ 'de' y
+        yw: w.'ª' 'semana' 'de' Y
+      days:
+        format:
+          abbreviated:
+            sun: domingo
+            mon: segunda
+            tue: terça
+            wed: quarta
+            thu: quinta
+            fri: sexta
+            sat: sábado
+          narrow:
+            sun: D
+            mon: S
+            tue: T
+            wed: Q
+            thu: Q
+            fri: S
+            sat: S
+          short:
+            sun: dom.
+            mon: seg.
+            tue: ter.
+            wed: qua.
+            thu: qui.
+            fri: sex.
+            sat: sáb.
+        stand_alone:
+          abbreviated:
+            sun: domingo
+            mon: segunda
+            tue: terça
+            wed: quarta
+            thu: quinta
+            fri: sexta
+            sat: sábado
+          narrow:
+            sun: D
+            mon: S
+            tue: T
+            wed: Q
+            thu: Q
+            fri: S
+            sat: S
+      eras:
+        abbr:
+          0: a.E.C.
+          1: E.C.
+      fields:
+        day_period: am/pm
+        day_period_narrow: am/pm
+        day_period_short: am/pm
+        minute_narrow: min
+        minute_short: min
+        second_narrow: s
+        second_short: s
+        zone_narrow: fuso horário
+        zone_short: fuso horário
+      formats:
+        date:
+          full:
+            pattern: EEEE, d 'de' MMMM 'de' y
+          long:
+            pattern: d 'de' MMMM 'de' y
+          medium:
+            pattern: dd/MM/y
+          short:
+            pattern: dd/MM/yy
+        datetime:
+          full:
+            pattern: "{{date}} 'às' {{time}}"
+          long:
+            pattern: "{{date}} 'às' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      periods:
+        format:
+          abbreviated:
+            am: a.m.
+            pm: p.m.
+          narrow:
+            afternoon1: tarde
+            am: a.m.
+            evening1: noite
+            midnight: meia-noite
+            morning1: manhã
+            night1: madrugada
+            noon: meio-dia
+            pm: p.m.
+          wide:
+            am: da manhã
+            pm: da tarde
+        stand_alone:
+          abbreviated:
+            am: a.m.
+            pm: p.m.
+          narrow:
+            am: a.m.
+            pm: p.m.
+          wide:
+            am: manhã
+            pm: tarde
+      quarters:
+        format:
+          wide:
+            1: 1.º trimestre
+            2: 2.º trimestre
+            3: 3.º trimestre
+            4: 4.º trimestre
+        stand_alone:
+          wide:
+            1: 1.º trimestre
+            2: 2.º trimestre
+            3: 3.º trimestre
+            4: 4.º trimestre

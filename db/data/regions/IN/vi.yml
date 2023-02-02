@@ -1,0 +1,24 @@
+---
+vi:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Tiểu bang
+            optional: Tiểu bang (không bắt buộc)
+          errors:
+            blank: Chọn tiểu bang
+        zip:
+          label:
+            default: Mã PIN
+            optional: Mã PIN (không bắt buộc)
+          errors:
+            blank: Nhập mã PIN
+            invalid_for_country: Nhập mã PIN hợp lệ cho %{country}
+            invalid_for_country_and_province: Nhập mã PIN hợp lệ cho %{province},
+              %{country}
+            too_long: Giá trị mã PIN quá dài
+            contains_html_tags: Mã PIN không được chứa thẻ HTML.
+            contains_emojis: Mã PIN không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Mã PIN không được chứa ký tự bị hạn chế

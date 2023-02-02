@@ -1,0 +1,206 @@
+---
+mgo:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+      days:
+        format:
+          abbreviated:
+            sun: Aneg 1
+            mon: Aneg 2
+            tue: Aneg 3
+            wed: Aneg 4
+            thu: Aneg 5
+            fri: Aneg 6
+            sat: Aneg 7
+          narrow:
+            sun: A1
+            mon: A2
+            tue: A3
+            wed: A4
+            thu: A5
+            fri: A6
+            sat: A7
+          short:
+            sun: '1'
+            mon: '2'
+            tue: '3'
+            wed: '4'
+            thu: '5'
+            fri: '6'
+            sat: '7'
+          wide:
+            sun: Aneg 1
+            mon: Aneg 2
+            tue: Aneg 3
+            wed: Aneg 4
+            thu: Aneg 5
+            fri: Aneg 6
+            sat: Aneg 7
+        stand_alone:
+          abbreviated:
+            sun: Aneg 1
+            mon: Aneg 2
+            tue: Aneg 3
+            wed: Aneg 4
+            thu: Aneg 5
+            fri: Aneg 6
+            sat: Aneg 7
+          narrow:
+            sun: A1
+            mon: A2
+            tue: A3
+            wed: A4
+            thu: A5
+            fri: A6
+            sat: A7
+          short:
+            sun: '1'
+            mon: '2'
+            tue: '3'
+            wed: '4'
+            thu: '5'
+            fri: '6'
+            sat: '7'
+          wide:
+            sun: Aneg 1
+            mon: Aneg 2
+            tue: Aneg 3
+            wed: Aneg 4
+            thu: Aneg 5
+            fri: Aneg 6
+            sat: Aneg 7
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+      fields:
+        day: anəg
+        day_period: Dayperiod
+        era: Era
+        hour: Hour
+        minute: Minute
+        month: iməg
+        second: Second
+        week: nkap
+        weekday: anəg agu nkap
+        year: fituʼ
+        zone: Zone
+      formats:
+        date:
+          full:
+            pattern: EEEE, y MMMM dd
+          long:
+            pattern: y MMMM d
+          medium:
+            pattern: y MMM d
+          short:
+            pattern: y-MM-dd
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: mbegtug
+            2: imeg àbùbì
+            3: imeg mbəŋchubi
+            4: iməg ngwə̀t
+            5: iməg fog
+            6: iməg ichiibɔd
+            7: iməg àdùmbə̀ŋ
+            8: iməg ichika
+            9: iməg kud
+            10: iməg tèsiʼe
+            11: iməg zò
+            12: iməg krizmed
+          narrow:
+            1: M1
+            2: A2
+            3: M3
+            4: N4
+            5: F5
+            6: I6
+            7: A7
+            8: I8
+            9: K9
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: iməg mbegtug
+            2: imeg àbùbì
+            3: imeg mbəŋchubi
+            4: iməg ngwə̀t
+            5: iməg fog
+            6: iməg ichiibɔd
+            7: iməg àdùmbə̀ŋ
+            8: iməg ichika
+            9: iməg kud
+            10: iməg tèsiʼe
+            11: iməg zò
+            12: iməg krizmed
+        stand_alone:
+          abbreviated:
+            1: mbegtug
+            2: imeg àbùbì
+            3: imeg mbəŋchubi
+            4: iməg ngwə̀t
+            5: iməg fog
+            6: iməg ichiibɔd
+            7: iməg àdùmbə̀ŋ
+            8: iməg ichika
+            9: iməg kud
+            10: iməg tèsiʼe
+            11: iməg zò
+            12: iməg krizmed
+          narrow:
+            1: M1
+            2: A2
+            3: M3
+            4: N4
+            5: F5
+            6: I6
+            7: A7
+            8: I8
+            9: K9
+            10: '10'
+            11: '11'
+            12: '12'
+          wide:
+            1: iməg mbegtug
+            2: imeg àbùbì
+            3: imeg mbəŋchubi
+            4: iməg ngwə̀t
+            5: iməg fog
+            6: iməg ichiibɔd
+            7: iməg àdùmbə̀ŋ
+            8: iməg ichika
+            9: iməg kud
+            10: iməg tèsiʼe
+            11: iməg zò
+            12: iməg krizmed
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          wide:
+            am: AM
+            pm: PM

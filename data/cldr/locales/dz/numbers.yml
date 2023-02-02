@@ -1,0 +1,100 @@
+---
+dz:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              standard: "¤#,##,##0.00"
+          unit:
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##,##0.###"
+            long:
+              standard:
+                '1000':
+                  other: སྟོང་ཕྲག 0
+                '10000':
+                  other: ཁྲི་ཕྲག 0
+                '100000':
+                  other: འབུམ་ཕྲག 0
+                '1000000':
+                  other: ས་ཡ་ 0
+                '10000000':
+                  other: བྱེ་བ་ 0
+                '100000000':
+                  other: དུང་ཕྱུར་ 0
+                '1000000000':
+                  other: དུང་ཕྱུར་ 00
+                '10000000000':
+                  other: དུང་ཕྱུར་བརྒྱ་ 0
+                '100000000000':
+                  other: དུང་ཕྱུར་སྟོང 0
+                '1000000000000':
+                  other: དུང་ཕྱུར་ཁྲི་ 0
+                '10000000000000':
+                  other: དུང་ཕྱུར་འབུམ་ 0
+                '100000000000000':
+                  other: དུང་ཕྱུར་ས་ཡ་ 0
+        percent:
+          patterns:
+            default:
+              standard: "#,##,##0 %"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        currency:
+          patterns:
+            short:
+              standard:
+                '1000':
+                  other: "¤0K"
+                '10000':
+                  other: "¤00K"
+                '100000':
+                  other: "¤000K"
+                '1000000':
+                  other: "¤0M"
+                '10000000':
+                  other: "¤00M"
+                '100000000':
+                  other: "¤000M"
+                '1000000000':
+                  other: "¤0G"
+                '10000000000':
+                  other: "¤00G"
+                '100000000000':
+                  other: "¤000G"
+                '1000000000000':
+                  other: "¤0T"
+                '10000000000000':
+                  other: "¤00T"
+                '100000000000000':
+                  other: "¤000T"
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+    tibt:
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: གྲངས་མེད
+        list: ";"
+        minus_sign: "-"
+        nan: ཨང་མད
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"

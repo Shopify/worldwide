@@ -1,0 +1,374 @@
+---
+uk:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E, d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: dd-MM-y GGGGG
+        GyMMM: LLL y 'р'. G
+        GyMMMd: d MMM y 'р'. G
+        GyMMMEd: E, d MMM y 'р'. G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: LL
+        Md: dd.MM
+        MEd: E, dd.MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        MMMMEd: E, d MMMM
+        MMMMW: W-'й' 'тиж'. MMMM
+        ms: mm:ss
+        "y": "y"
+        yM: MM.y
+        yMd: dd.MM.y
+        yMEd: E, dd.MM.y
+        yMMM: LLL y 'р'.
+        yMMMd: d MMM y 'р'.
+        yMMMEd: E, d MMM y 'р'.
+        yMMMM: LLLL y 'р'.
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y 'р'.
+        yw: w-'й' 'тиж'. Y 'р'.
+      days:
+        format:
+          abbreviated:
+            sun: нд
+            mon: пн
+            tue: вт
+            wed: ср
+            thu: чт
+            fri: пт
+            sat: сб
+          narrow:
+            sun: Н
+            mon: П
+            tue: В
+            wed: С
+            thu: Ч
+            fri: П
+            sat: С
+          short:
+            sun: нд
+            mon: пн
+            tue: вт
+            wed: ср
+            thu: чт
+            fri: пт
+            sat: сб
+          wide:
+            sun: неділя
+            mon: понеділок
+            tue: вівторок
+            wed: середа
+            thu: четвер
+            fri: пʼятниця
+            sat: субота
+        stand_alone:
+          abbreviated:
+            sun: нд
+            mon: пн
+            tue: вт
+            wed: ср
+            thu: чт
+            fri: пт
+            sat: сб
+          narrow:
+            sun: Н
+            mon: П
+            tue: В
+            wed: С
+            thu: Ч
+            fri: П
+            sat: С
+          short:
+            sun: нд
+            mon: пн
+            tue: вт
+            wed: ср
+            thu: чт
+            fri: пт
+            sat: сб
+          wide:
+            sun: неділя
+            mon: понеділок
+            tue: вівторок
+            wed: середа
+            thu: четвер
+            fri: пʼятниця
+            sat: субота
+      eras:
+        abbr:
+          0: до н. е.
+          1: н. е.
+        name:
+          0: до нової ери
+          1: нової ери
+        narrow:
+          0: до н.е.
+          1: н.е.
+      fields:
+        day: день
+        day_narrow: д
+        day_of_year: день року
+        day_of_year_narrow: день року
+        day_of_year_short: д. року
+        day_period: дп/пп
+        day_period_narrow: дп/пп
+        day_period_short: дп/пп
+        day_short: д.
+        era: ера
+        era_narrow: е
+        era_short: е.
+        hour: година
+        hour_narrow: год
+        hour_short: год.
+        minute: хвилина
+        minute_narrow: хв
+        minute_short: хв.
+        month: місяць
+        month_narrow: м
+        month_short: міс.
+        quarter: квартал
+        quarter_narrow: кв
+        quarter_short: кв.
+        second: секунда
+        second_narrow: с
+        second_short: с
+        week: тиждень
+        week_narrow: т
+        week_of_month: тиждень місяця
+        week_of_month_narrow: тиж. міс.
+        week_of_month_short: тиж. місяця
+        week_short: тиж.
+        weekday: день тижня
+        weekday_narrow: д тижня
+        weekday_of_month: день місяця
+        weekday_of_month_narrow: д місяця
+        weekday_of_month_short: д. місяця
+        weekday_short: д. тижня
+        year: рік
+        year_narrow: р
+        year_short: р.
+        zone: часовий пояс
+        zone_narrow: час. п.
+        zone_short: час. пояс
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y 'р'.
+          long:
+            pattern: d MMMM y 'р'.
+          medium:
+            pattern: d MMM y 'р'.
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}} 'о' {{time}}"
+          long:
+            pattern: "{{date}} 'о' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: січ.
+            2: лют.
+            3: бер.
+            4: квіт.
+            5: трав.
+            6: черв.
+            7: лип.
+            8: серп.
+            9: вер.
+            10: жовт.
+            11: лист.
+            12: груд.
+          narrow:
+            1: с
+            2: л
+            3: б
+            4: к
+            5: т
+            6: ч
+            7: л
+            8: с
+            9: в
+            10: ж
+            11: л
+            12: г
+          wide:
+            1: січня
+            2: лютого
+            3: березня
+            4: квітня
+            5: травня
+            6: червня
+            7: липня
+            8: серпня
+            9: вересня
+            10: жовтня
+            11: листопада
+            12: грудня
+        stand_alone:
+          abbreviated:
+            1: січ
+            2: лют
+            3: бер
+            4: кві
+            5: тра
+            6: чер
+            7: лип
+            8: сер
+            9: вер
+            10: жов
+            11: лис
+            12: гру
+          narrow:
+            1: С
+            2: Л
+            3: Б
+            4: К
+            5: Т
+            6: Ч
+            7: Л
+            8: С
+            9: В
+            10: Ж
+            11: Л
+            12: Г
+          wide:
+            1: січень
+            2: лютий
+            3: березень
+            4: квітень
+            5: травень
+            6: червень
+            7: липень
+            8: серпень
+            9: вересень
+            10: жовтень
+            11: листопад
+            12: грудень
+      periods:
+        format:
+          abbreviated:
+            afternoon1: дня
+            am: дп
+            evening1: вечора
+            midnight: опівночі
+            morning1: ранку
+            night1: ночі
+            noon: пополудні
+            pm: пп
+          narrow:
+            afternoon1: дня
+            am: дп
+            evening1: вечора
+            midnight: північ
+            morning1: ранку
+            night1: ночі
+            noon: п
+            pm: пп
+          wide:
+            afternoon1: дня
+            am: дп
+            evening1: вечора
+            midnight: опівночі
+            morning1: ранку
+            night1: ночі
+            noon: пополудні
+            pm: пп
+        stand_alone:
+          abbreviated:
+            afternoon1: день
+            am: дп
+            evening1: вечір
+            midnight: північ
+            morning1: ранок
+            night1: ніч
+            noon: полудень
+            pm: пп
+          narrow:
+            afternoon1: день
+            am: дп
+            evening1: вечір
+            midnight: північ
+            morning1: ранок
+            night1: ніч
+            noon: полудень
+            pm: пп
+          wide:
+            afternoon1: день
+            am: дп
+            evening1: вечір
+            morning1: ранок
+            night1: ніч
+            noon: полудень
+            pm: пп
+      quarters:
+        format:
+          abbreviated:
+            1: 1-й кв.
+            2: 2-й кв.
+            3: 3-й кв.
+            4: 4-й кв.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-й квартал
+            2: 2-й квартал
+            3: 3-й квартал
+            4: 4-й квартал
+        stand_alone:
+          abbreviated:
+            1: 1-й кв.
+            2: 2-й кв.
+            3: 3-й кв.
+            4: 4-й кв.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-й квартал
+            2: 2-й квартал
+            3: 3-й квартал
+            4: 4-й квартал

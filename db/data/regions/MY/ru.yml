@@ -1,0 +1,21 @@
+---
+ru:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Штат/территория
+            optional: Штат/территория (необязательно)
+          errors:
+            blank: Выберите штат/территорию
+        zip:
+          label:
+            default: Почтовый индекс
+            optional: Почтовый индекс (необязательно)
+          errors:
+            too_long: Почтовый индекс слишком длинный
+            contains_html_tags: Индекс не может содержать HTML-теги.
+            contains_emojis: Индекс не может содержать емодзи
+            contains_restricted_characters: Поле «Почтовый индекс» не может содержать
+              недопустимые символы

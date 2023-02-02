@@ -1,0 +1,30 @@
+---
+name: Caribbean Netherlands
+code: BQ
+tax: 0.08
+currency: USD
+unit_system: metric
+tax_name: ABB
+tags:
+# https://www.eeas.europa.eu/eeas/overseas-countries-and-territories_en#15713
+- EU-OCT
+group: South American Countries
+group_name: South America
+name_alternates:
+- Bonaire, Sint Eustatius and Saba
+- Bonaire, Sint Eustatius, and Saba
+- BES Islands
+- Bonaire
+- Sint Eustatius
+- Saba
+phone_number_prefix: 599
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{country}_{phone}"
+# The official flag for BQ is the flag for NL.
+# There is a flag emoji for BQ, but it usually renders as the flag for BQ-BO, which risks offending
+# BQ-SA and BQ-SE.  So let's stay official and use the flag for NL.
+emoji: 🇳🇱
+languages:
+  - nl
+timezone: America/Puerto_Rico

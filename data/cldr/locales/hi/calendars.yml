@@ -1,0 +1,369 @@
+---
+hi:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: B h
+        Bhm: B h:mm
+        Bhms: B h:mm:ss
+        d: d
+        E: ccc
+        EBhm: E B h:mm
+        EBhms: E B h:mm:ss
+        Ed: E d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: GGGGG d/M/y
+        GyMMM: MMM G y
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d/M
+        MEd: E, d/M
+        MMdd: dd/MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        MMMMEd: E, d MMMM
+        MMMMW: MMMM का सप्ताह W
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMM: MM/y
+        yMMdd: dd/MM/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E, d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: Y का सप्ताह w
+      days:
+        format:
+          abbreviated:
+            sun: रवि
+            mon: सोम
+            tue: मंगल
+            wed: बुध
+            thu: गुरु
+            fri: शुक्र
+            sat: शनि
+          narrow:
+            sun: र
+            mon: सो
+            tue: मं
+            wed: बु
+            thu: गु
+            fri: शु
+            sat: श
+          short:
+            sun: र
+            mon: सो
+            tue: मं
+            wed: बु
+            thu: गु
+            fri: शु
+            sat: श
+          wide:
+            sun: रविवार
+            mon: सोमवार
+            tue: मंगलवार
+            wed: बुधवार
+            thu: गुरुवार
+            fri: शुक्रवार
+            sat: शनिवार
+        stand_alone:
+          abbreviated:
+            sun: रवि
+            mon: सोम
+            tue: मंगल
+            wed: बुध
+            thu: गुरु
+            fri: शुक्र
+            sat: शनि
+          narrow:
+            sun: र
+            mon: सो
+            tue: मं
+            wed: बु
+            thu: गु
+            fri: शु
+            sat: श
+          short:
+            sun: र
+            mon: सो
+            tue: मं
+            wed: बु
+            thu: गु
+            fri: शु
+            sat: श
+          wide:
+            sun: रविवार
+            mon: सोमवार
+            tue: मंगलवार
+            wed: बुधवार
+            thu: गुरुवार
+            fri: शुक्रवार
+            sat: शनिवार
+      eras:
+        abbr:
+          0: ईसवी पूर्व
+          1: ईसवी
+        name:
+          0: ईसवी पूर्व
+          1: ईसवी
+      fields:
+        day: दिन
+        day_narrow: दिन
+        day_of_year: वर्ष का दिन
+        day_of_year_narrow: वर्ष का दिन
+        day_of_year_short: वर्ष का दिन
+        day_period: पूर्वाह्न/अपराह्न
+        day_period_narrow: पू/अ
+        day_period_short: पू/अ
+        day_short: दिन
+        era: युग
+        era_narrow: युग
+        era_short: युग
+        hour: घंटा
+        hour_narrow: घं॰
+        hour_short: घं॰
+        minute: मिनट
+        minute_narrow: मि॰
+        minute_short: मि॰
+        month: माह
+        month_narrow: माह
+        month_short: माह
+        quarter: तिमाही
+        quarter_narrow: तिमाही
+        quarter_short: तिमाही
+        second: सेकंड
+        second_narrow: से॰
+        second_short: से॰
+        week: सप्ताह
+        week_narrow: सप्ताह
+        week_of_month: माह का सप्ताह
+        week_of_month_narrow: माह का सप्ताह
+        week_of_month_short: माह का सप्ताह
+        week_short: सप्ताह
+        weekday: सप्ताह का दिन
+        weekday_narrow: सप्ताह का दिन
+        weekday_of_month: माह के कार्यदिवस
+        weekday_of_month_narrow: माह के कार्यदिवस
+        weekday_of_month_short: माह के कार्यदिवस
+        weekday_short: सप्ताह का दिन
+        year: वर्ष
+        year_narrow: वर्ष
+        year_short: वर्ष
+        zone: समय क्षेत्र
+        zone_narrow: क्षेत्र
+        zone_short: क्षेत्र
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}} को {{time}}"
+          long:
+            pattern: "{{date}} को {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      months:
+        format:
+          abbreviated:
+            1: जन॰
+            2: फ़र॰
+            3: मार्च
+            4: अप्रैल
+            5: मई
+            6: जून
+            7: जुल॰
+            8: अग॰
+            9: सित॰
+            10: अक्तू॰
+            11: नव॰
+            12: दिस॰
+          narrow:
+            1: ज
+            2: फ़
+            3: मा
+            4: अ
+            5: म
+            6: जू
+            7: जु
+            8: अ
+            9: सि
+            10: अ
+            11: न
+            12: दि
+          wide:
+            1: जनवरी
+            2: फ़रवरी
+            3: मार्च
+            4: अप्रैल
+            5: मई
+            6: जून
+            7: जुलाई
+            8: अगस्त
+            9: सितंबर
+            10: अक्तूबर
+            11: नवंबर
+            12: दिसंबर
+        stand_alone:
+          abbreviated:
+            1: जन॰
+            2: फ़र॰
+            3: मार्च
+            4: अप्रैल
+            5: मई
+            6: जून
+            7: जुल॰
+            8: अग॰
+            9: सित॰
+            10: अक्तू॰
+            11: नव॰
+            12: दिस॰
+          narrow:
+            1: ज
+            2: फ़
+            3: मा
+            4: अ
+            5: म
+            6: जू
+            7: जु
+            8: अ
+            9: सि
+            10: अ
+            11: न
+            12: दि
+          wide:
+            1: जनवरी
+            2: फ़रवरी
+            3: मार्च
+            4: अप्रैल
+            5: मई
+            6: जून
+            7: जुलाई
+            8: अगस्त
+            9: सितंबर
+            10: अक्तूबर
+            11: नवंबर
+            12: दिसंबर
+      periods:
+        format:
+          abbreviated:
+            afternoon1: दोपहर
+            am: am
+            evening1: शाम
+            midnight: मध्यरात्रि
+            morning1: सुबह
+            night1: रात
+            pm: pm
+          narrow:
+            afternoon1: दोपहर
+            am: am
+            evening1: शाम
+            midnight: मध्यरात्रि
+            morning1: सुबह
+            night1: रात
+            pm: pm
+          wide:
+            afternoon1: दोपहर
+            am: am
+            evening1: शाम
+            midnight: मध्यरात्रि
+            morning1: सुबह
+            night1: रात
+            pm: pm
+        stand_alone:
+          abbreviated:
+            afternoon1: दोपहर
+            am: am
+            evening1: शाम
+            midnight: मध्यरात्रि
+            morning1: सुबह
+            night1: रात
+            pm: pm
+          narrow:
+            afternoon1: दोपहर
+            am: am
+            evening1: शाम
+            midnight: आधी रात
+            morning1: सुबह
+            night1: रात
+            pm: pm
+          wide:
+            afternoon1: दोपहर
+            am: am
+            evening1: शाम
+            midnight: मध्यरात्रि
+            morning1: सुबह
+            night1: रात
+            pm: pm
+      quarters:
+        format:
+          abbreviated:
+            1: ति1
+            2: ति2
+            3: ति3
+            4: ति4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: पहली तिमाही
+            2: दूसरी तिमाही
+            3: तीसरी तिमाही
+            4: चौथी तिमाही
+        stand_alone:
+          abbreviated:
+            1: ति1
+            2: ति2
+            3: ति3
+            4: ति4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: पहली तिमाही
+            2: दूसरी तिमाही
+            3: तीसरी तिमाही
+            4: चौथी तिमाही

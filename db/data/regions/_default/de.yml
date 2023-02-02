@@ -1,0 +1,145 @@
+---
+de:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Firma
+            optional: Firma (optional)
+          errors:
+            blank: Gib einen Unternehmensnamen ein
+            too_long: Unternehmensname ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Unternehmen darf keine HTML-Tags enthalten.
+            contains_emojis: Unternehmen darf keine Emojis enthalten
+            contains_restricted_characters: '"Unternehmen" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+        first_name:
+          label:
+            default: Vorname
+            optional: Vorname (optional)
+          errors:
+            blank: Gib einen Vornamen ein
+            too_long: Vorname ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Vorname darf keine HTML-Tags enthalten.
+            contains_emojis: Vorname darf keine Emojis enthalten
+            contains_restricted_characters: '"Vorname" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+            contains_url: Vorname darf keine URL enthalten.
+        last_name:
+          label:
+            default: Nachname
+            optional: Nachname (optional)
+          errors:
+            blank: Gib einen Nachnamen ein
+            too_long: Nachname ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Nachname darf keine HTML-Tags enthalten.
+            contains_emojis: Nachname darf keine Emojis enthalten
+            contains_restricted_characters: '"Nachname" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+            contains_url: Nachname darf keine URL enthalten.
+        address1:
+          label:
+            default: Adresse
+            optional: Adresse (optional)
+          errors:
+            blank: Gib eine Adresse ein
+            too_long: Erste Adresszeile ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Adresse 1 darf keine HTML-Tags enthalten.
+            contains_emojis: Adresse 1 darf keine Emojis enthalten
+            contains_restricted_characters: '"Adresse 1" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+            contains_url: Adresse 1 darf keine URLs enthalten.
+            missing_building_number: Falls verfügbar, füge eine Hausnummer hinzu.
+            street_unknown_for_zip: Gib einen gültigen Straßennamen für %{zip} ein.
+            building_number_invalid: Die Hausnummer für %{street}, %{zip}, konnte
+              nicht gefunden werden.
+            contains_too_many_words: Adresse1 darf nicht mehr als %{word_count} Wörter
+              enthalten
+        address2:
+          label:
+            default: Wohnung, Zimmer usw.
+            optional: Wohnung, Zimmer usw. (optional)
+          errors:
+            blank: Gib eine Wohnung, ein Zimmer usw. ein
+            too_long: Zweite Adresszeile ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Adresse 2 darf keine HTML-Tags enthalten.
+            contains_emojis: Adresse 2 darf keine Emojis enthalten
+            contains_restricted_characters: '"Adresse 2" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+            contains_url: Adresse 2 darf keine URLs enthalten.
+            missing_building_number: Falls verfügbar, füge eine Hausnummer hinzu.
+            street_unknown_for_zip: Gib einen gültigen Straßennamen für %{zip} ein.
+            building_number_invalid: Die Hausnummer für %{street}, %{zip}, konnte
+              nicht gefunden werden.
+            contains_too_many_words: Adresse2 darf nicht mehr als %{word_count} Wörter
+              enthalten
+        city:
+          label:
+            default: Stadt
+            optional: Stadt (optional)
+          errors:
+            blank: Gib eine Stadt ein
+            too_long: Stadt ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Stadt darf keine HTML-Tags enthalten.
+            contains_emojis: Stadt darf keine Emojis enthalten
+            contains_restricted_characters: '"Ort" darf nur Buchstaben, Zahlen, Zeichen
+              der lokalen Sprache und Sonderzeichen enthalten'
+            contains_url: Stadt darf keine URL enthalten
+            unknown_for_zip: Eine gültige Stadt für %{zip} eingeben
+            unknown_for_province: Eine gültige Stadt für %{province} eingeben
+            unknown_for_zip_and_province: Eine gültige Stadt für %{zip}, %{province}
+              eingeben
+            contains_too_many_words: Stadt darf nicht mehr als %{word_count} Wörter
+              enthalten
+        country:
+          label:
+            default: Land/Region
+            optional: Land/Region (optional)
+          errors:
+            blank: Wähle ein Land/eine Region aus
+            not_supported: Wir unterstützen dieses Land / diese Region derzeit nicht.
+              Gib eine neue Adresse ein und versuche es erneut.
+            invalid: Gültiges Land/Region eingeben
+            invalid_for_zip: Gültiges Land/gültige Region für diese Postleitzahl eingeben
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (optional)
+          errors:
+            blank: Gib eine Telefonnummer ein
+            invalid: Gib eine gültige Telefonnummer ein
+            too_long: Telefonnummer ist zu lang (maximal 255 Zeichen)
+            contains_emojis: Telefonnummer darf keine Emojis enthalten
+            contains_restricted_characters: '"Telefonnummer" darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+        province:
+          label:
+            default: Region
+            optional: Region (optional)
+          errors:
+            blank: Wähle eine Region aus
+            invalid_for_country: Gültige Region für %{country} eingeben
+            unknown_for_city_and_zip: Eine gültige Region für %{city}, %{zip} eingeben
+            unknown_for_city: Eine gültige Region für %{city} auswählen
+            unknown_for_zip: Eine gültige Region für %{zip} auswählen
+        zip:
+          label:
+            default: Postleitzahl
+            optional: Postleitzahl (optional)
+          errors:
+            blank: Gib eine Postleitzahl ein
+            blocked_address: Dieser Standort wird nicht unterstützt.
+            invalid_for_country: Gib eine gültige Postleitzahl für %{country} ein
+            invalid_for_country_and_province: Gib eine gültige Postleitzahl für %{province},
+              %{country} ein
+            invalid: Gib eine gültige Postleitzahl ein
+            too_long: Der Postleitzahl-Wert ist zu lang
+            contains_html_tags: Postleitzahl darf keine HTML-Tags enthalten.
+            contains_emojis: Postleitzahl darf keine Emojis enthalten
+            contains_restricted_characters: '"Postleitzahl" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+            not_supported: Wir unterstützen dieses Land/diese Region derzeit nicht.
+              Gib eine neue Adresse ein und versuche es erneut.
+            unknown_for_province: Eine gültige Postleitzahl für %{province} eingeben
+            invalid_for_province: Eine gültige Postleitzahl für %{province} eingeben

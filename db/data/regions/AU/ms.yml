@@ -1,0 +1,36 @@
+---
+ms:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Subbandar
+            optional: Subbandar (opsyenal)
+          errors:
+            blank: Masukkan pinggir bandar
+            too_long: Nama subbandar terlalu panjang (maksimum ialah 255 aksara)
+            contains_html_tags: Subbandar tidak boleh mengandungi tag HTML.
+            contains_emojis: Subbandar tidak boleh mengandungi emoji
+            contains_restricted_characters: Subbandar hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+        province:
+          label:
+            default: Negeri/wilayah
+            optional: Negeri/wilayah (opsyenal)
+          errors:
+            blank: Pilih negeri/jajahan
+        zip:
+          label:
+            default: Poskod
+            optional: Poskod (opsyenal)
+          errors:
+            blank: Masukkan poskod
+            invalid_for_country: Masukkan poskod yang sah untuk %{country}
+            invalid_for_country_and_province: Masukkan poskod yang sah untuk %{province},
+              %{country}
+            too_long: Nilai poskod terlalu panjang
+            contains_html_tags: Poskod tidak boleh mengandungi tag HTML.
+            contains_emojis: Poskod tidak boleh mengandungi emoji
+            contains_restricted_characters: Poskod hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas

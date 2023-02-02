@@ -1,0 +1,33 @@
+---
+ja:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: サバーブ
+            optional: サバーブ (任意)
+          errors:
+            blank: サバーブを入力してください
+            too_long: サバーブ名が長すぎます (最大255文字)
+            contains_html_tags: サバーブにHTMLタグを含めることはできません。
+            contains_emojis: サバーブに絵文字を含めることはできません
+            contains_restricted_characters: サバーブには、文字、数字、地域の文字、特殊文字のみを含めることができます。
+        province:
+          label:
+            default: 州/地域
+            optional: 州/地域 (任意)
+          errors:
+            blank: 州/準州を選択してください
+        zip:
+          label:
+            default: 郵便番号
+            optional: 郵便番号 (任意)
+          errors:
+            blank: 郵便番号を入力してください
+            invalid_for_country: "%{country}の有効な郵便番号を入力してください"
+            invalid_for_country_and_province: "%{country}の%{province}の有効な郵便番号を入力してください"
+            too_long: 郵便番号の値が長すぎます
+            contains_html_tags: 郵便番号にHTMLタグを含めることはできません。
+            contains_emojis: 郵便番号に絵文字を含めることはできません
+            contains_restricted_characters: 郵便番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。

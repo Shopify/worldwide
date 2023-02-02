@@ -1,0 +1,21 @@
+---
+name: Saint Lucia
+code: LC
+tax: 0.15
+currency: XCD
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_example: "LC05  201"
+zip_regex: "^LC\\d{2}  \\d{3}$"
+zip_requirement: optional
+phone_number_prefix: 1
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F1\U0001F1E8"
+languages:
+  - en
+  - fr
+timezone: America/Puerto_Rico

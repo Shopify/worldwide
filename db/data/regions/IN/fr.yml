@@ -1,0 +1,25 @@
+---
+fr:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: État
+            optional: État (facultatif)
+          errors:
+            blank: Sélectionner un État
+        zip:
+          label:
+            default: Code postal PIN
+            optional: Code postal PIN (facultatif)
+          errors:
+            blank: Saisir un code confidentiel
+            invalid_for_country: Saisir un code confidentiel valide pour %{country}
+            invalid_for_country_and_province: Saisir un code confidentiel valide pour
+              %{province}, %{country}
+            contains_html_tags: Le code PIN ne peut pas contenir de balises HTML.
+            too_long: La valeur du code PIN est trop longue.
+            contains_emojis: Le code PIN ne peut pas contenir d’emojis
+            contains_restricted_characters: Le code PIN ne peut pas contenir de caractères
+              non autorisés

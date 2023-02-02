@@ -1,0 +1,168 @@
+---
+ro:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< virgulă >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: unu;
+        - :value: 2
+          :rule: doi;
+        - :value: 3
+          :rule: trei;
+        - :value: 4
+          :rule: patru;
+        - :value: 5
+          :rule: cinci;
+        - :value: 6
+          :rule: şase;
+        - :value: 7
+          :rule: şapte;
+        - :value: 8
+          :rule: opt;
+        - :value: 9
+          :rule: nouă;
+        - :value: 10
+          :rule: zece;
+        - :value: 11
+          :rule: unsprezece;
+        - :value: 12
+          :rule: ">>sprezece;"
+        - :value: 20
+          :rule: "<%spellout-cardinal-feminine<zeci[ şi >>];"
+        - :value: 100
+          :rule: una sută[ >>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-feminine< sute[ >>];"
+        - :value: 1000
+          :rule: una mie[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< mii[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< milion[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-neuter< milioane[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< miliard[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-neuter< miliarde[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< bilion[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-neuter< bilioane[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< biliard[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-neuter< biliarde[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< virgulă >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: una;
+        - :value: 2
+          :rule: două;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 12
+          :rule: ">>sprezece;"
+        - :value: 20
+          :rule: "<%spellout-cardinal-feminine<zeci[ şi >>];"
+        - :value: 100
+          :rule: una sută[ >>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-feminine< sute[ >>];"
+        - :value: 1000
+          :rule: una mie[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< mii[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< milion[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-neuter< milioane[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< miliard[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-neuter< miliarde[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< bilion[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-neuter< bilioane[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< biliard[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-neuter< biliarde[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< virgulă >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: unu;
+        - :value: 2
+          :rule: "=%spellout-cardinal-feminine=;"
+        - :value: 20
+          :rule: "<%spellout-cardinal-feminine<zeci[ şi >>];"
+        - :value: 100
+          :rule: una sută[ >>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-feminine< sute[ >>];"
+        - :value: 1000
+          :rule: una mie[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< mii[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< milion[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-neuter< milioane[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< miliard[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-neuter< miliarde[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< bilion[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-neuter< bilioane[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< biliard[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-neuter< biliarde[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0=a;"

@@ -1,0 +1,111 @@
+---
+ak:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: kaw >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 10
+          :rule: "<< >>>;"
+        - :value: 100
+          :rule: "<< >>>;"
+        - :value: 1000
+          :rule: "<< >>>;"
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: kaw >>;
+        - :value: x.x
+          :rule: "<< pɔw >>;"
+        - :value: 0
+          :rule: hwee;
+        - :value: 1
+          :rule: koro;
+        - :value: 2
+          :rule: abien;
+        - :value: 3
+          :rule: abiasa;
+        - :value: 4
+          :rule: anan;
+        - :value: 5
+          :rule: anum;
+        - :value: 6
+          :rule: asia;
+        - :value: 7
+          :rule: asuon;
+        - :value: 8
+          :rule: awɔtwe;
+        - :value: 9
+          :rule: akron;
+        - :value: 10
+          :rule: du[->%%spellout-cardinal-tens>];
+        - :value: 20
+          :rule: aduonu[->%%spellout-cardinal-tens>];
+        - :value: 30
+          :rule: aduasa[->%%spellout-cardinal-tens>];
+        - :value: 40
+          :rule: adu<<[->%%spellout-cardinal-tens>];
+        - :value: 100
+          :rule: "­ɔha[-na-­>>];"
+        - :value: 200
+          :rule: aha-<<[-na->>];
+        - :value: 1000
+          :rule: apem[-na->>];
+        - :value: 2000
+          :rule: mpem-<<[-na->>];
+        - :value: 100000
+          :rule: mpem-ɔha[-na->>];
+        - :value: 200000
+          :rule: mpem-aha-<<[-na->>];
+        - :value: 1000000
+          :rule: ɔpepepem-<<[-na->>];
+        - :value: 2000000
+          :rule: mpepepem-<<[-na->>];
+        - :value: 1000000000
+          :rule: ɔpepepepem-<<[-na->>];
+        - :value: 2000000000
+          :rule: mpepepepem-<<[-na->>];
+        - :value: 1000000000000
+          :rule: ɔpepepepepem-<<[-na->>];
+        - :value: 2000000000000
+          :rule: mpepepepepem-<<[-na->>];
+        - :value: 1000000000000000
+          :rule: ɔpepepepepepem-<<[-na->>];
+        - :value: 2000000000000000
+          :rule: mpepepepepepem-<<[-na->>];
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-tens
+        :rules:
+        - :value: 0
+          :rule: ";"
+        - :value: 1
+          :rule: biako;
+        - :value: 2
+          :rule: "=%spellout-cardinal=;"
+        :access: private
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: kaw >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: a-ɛ-tɔ-so-hwee;
+        - :value: 1
+          :rule: a-ɛ-di-kane;
+        - :value: 2
+          :rule: a-ɛ-tɔ-so-=%spellout-cardinal=;

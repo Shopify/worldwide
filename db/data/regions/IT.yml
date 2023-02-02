@@ -1,0 +1,1549 @@
+---
+name: Italy
+code: IT
+tax: 0.22
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_regex: "^(IT?-?)?\\d{5}$"
+zip_example: '00144'
+phone_number_prefix: 39
+building_number_required: true
+week_start_day: monday
+languages:
+  - it
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city} {province}_{country}_{phone}"
+emoji: "\U0001F1EE\U0001F1F9"
+localized_data:
+- name: tax_credential_it
+  purpose: tax
+  validators:
+  - "^[A-Za-z]{6}[0-9]{2}[A-Za-z]{1}[0-9]{2}[A-Za-z]{1}[0-9]{3}[A-Za-z]{1}$"
+  required: false
+- name: tax_email_it
+  purpose: tax
+  validators:
+  - "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+  required: false
+zones:
+- name: Agrigento
+  code: AG
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CL
+  - PA
+  - TP
+  zip_prefixes:
+  - '92'
+- name: Alessandria
+  code: AL
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AT
+  - GE
+  - PC
+  - PV
+  - SV
+  - TO
+  - VC
+  zip_prefixes:
+  - '15'
+- name: Ancona
+  code: AN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - MC
+  - PG
+  - PU
+  zip_prefixes:
+  - '60'
+# Aosta is the only "regione" of Italy that is not subdivided into "province"
+# ISO used to have the code IT-AO that technically denoted the province of Aosta (which was dissoled in 1945),
+# but which we were using to refer to the region of Aosta.  On 2019-11-22, ISO deleted IT-AO from the standard.
+# ISO 3166-2:IT still has IT-23 for the region of Aosta.
+- name: Aosta
+  code: AO
+  code_alternates:
+  - '23'
+  iso_code: 'IT-23'
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BI
+  - TO
+  - VC
+  zip_prefixes:
+  - '11'
+- name: Arezzo
+  code: AR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - FC
+  - FI
+  - PG
+  - PU
+  - RN
+  - SI
+  zip_prefixes:
+  - '52'
+- name: Ascoli Piceno
+  code: AP
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - FM
+  - PG
+  - MC
+  - RI
+  - TE
+  zip_prefixes:
+  - '630'
+  - '631'
+- name: Asti
+  code: AT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - CN
+  - SV
+  - TO
+  zip_prefixes:
+  - '14'
+- name: Avellino
+  code: AV
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BN
+  - FG
+  - NA
+  - PZ
+  - SA
+  zip_prefixes:
+  - '83'
+- name: Bari
+  code: BA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BR
+  - BT
+  - MT
+  - PZ
+  - TA
+  zip_prefixes:
+  - '70'
+- name: Barletta-Andria-Trani
+  code: BT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BA
+  - FG
+  - PZ
+  zip_prefixes:
+  - '76'
+- name: Belluno
+  code: BL
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BZ
+  - PN
+  - TN
+  - TV
+  - UD
+  - VI
+  zip_prefixes:
+  - '32'
+- name: Benevento
+  code: BN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AV
+  - CB
+  - CE
+  - FG
+  - NA
+  zip_prefixes:
+  - '82'
+- name: Bergamo
+  code: BG
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BS
+  - CR
+  - LC
+  - MB
+  - MI
+  - SO
+  zip_prefixes:
+  - '24'
+- name: Biella
+  code: BI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AO
+  - TO
+  - VC
+  zip_prefixes:
+  - '138'
+  - '139'
+- name: Bologna
+  code: BO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - FE
+  - FI
+  - MO
+  - PO
+  - PT
+  - RA
+  zip_prefixes:
+  - '40'
+- name: Bolzano
+  code: BZ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BL
+  - SO
+  - TN
+  zip_prefixes:
+  - '39'
+- name: Brescia
+  code: BS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BG
+  - CR
+  - MN
+  - SO
+  - TN
+  - VR
+  zip_prefixes:
+  - '25'
+- name: Brindisi
+  code: BR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BA
+  - LE
+  - TA
+  zip_prefixes:
+  - '72'
+- name: Cagliari
+  code: CA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CI
+  - NU
+  - OG
+  - OR
+  - VS
+  zip_prefixes:
+  - '08033'
+  - '08035'
+  - '09012'
+  - '09018'
+  - '09019'
+  - '09023'
+  - '09024'
+  - '09026'
+  - '09028'
+  - '09032'
+  - '09033'
+  - '09034'
+  - '09040' # Armungia, Balao, Barrali, Burcei, Castiadas, Donori, Furtei, Gesico, Goni, Guamaggire, ... now SU
+  - '09041'
+  - '09042'
+  - '09043'
+  - '09044'
+  - '09045'
+  - '09047'
+  - '09048'
+  - '09049'
+  - '0905' # 09050 (Pula, Villa San Pietro)
+  - '09060' # Settimo San Pietro
+  - '09061' # Orroli, now in SU
+  - '09062' # Sadali, now in SU
+  - '09063' # Serri, now in SU
+  - '09065' # Seulo, now in SU
+  - '09066' # Villanova Tulo, now in SU
+  - '09067' # Elmas
+  - '09068' # Uta
+  - '09069' # Maracalagonis
+  - '0910'
+  - '0912'
+  - '0913'
+- name: Caltanissetta
+  code: CL
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AG
+  - CT
+  - EN
+  - PA
+  - RG
+  zip_prefixes:
+  - '93'
+- name: Campobasso
+  code: CB
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BN
+  - CE
+  - CH
+  - FG
+  - IS
+  zip_prefixes:
+  - '8601'
+  - '8602'
+  - '8603'
+  - '8604'
+  - '8610'
+# IT-CI was deleted (absorbed by IT-SD) on 2019-04-09; IT-SD renamed to IT-SU in 2020
+- name: Carbonia-Iglesias
+  code: CI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CA
+  - VS
+  zip_prefixes:
+  - '09010' # Buggerru, now SU
+  - '09011' # Calasetta, now SU
+  - '09013' # Carbonia, now SU
+  - '09014' # Carloforte, now SU
+  - '09015' # Domusnovas, now SU
+  - '09016' # Iglesias, now SU
+  - '09017' # Sant'Antioco, now SU
+- name: Caserta
+  code: CE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BN
+  - CB
+  - FR
+  - IS
+  - LT
+  - NA
+  zip_prefixes:
+  - '81'
+- name: Catania
+  code: CT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CL
+  - EN
+  - ME
+  - RG
+  - SR
+  zip_prefixes:
+  - '95'
+- name: Catanzaro
+  code: CZ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CS
+  - KR
+  - RC
+  - VV
+  zip_prefixes:
+  - '880'
+  - '881'
+- name: Chieti
+  code: CH
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AQ
+  - CB
+  - IS
+  - PE
+  zip_prefixes:
+  - '66'
+- name: Como
+  code: CO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - LC
+  - MB
+  - SO
+  - VA
+  zip_prefixes:
+  - '22'
+- name: Cosenza
+  code: CS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CZ
+  - KR
+  - MT
+  - PZ
+  zip_prefixes:
+  - '87'
+- name: Cremona
+  code: CR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BG
+  - BS
+  - LO
+  - MI
+  - MN
+  - PC
+  - PR
+  zip_prefixes:
+  - '260'
+  - '261'
+- name: Crotone
+  code: KR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CS
+  - CZ
+  zip_prefixes:
+  - '888'
+  - '889'
+- name: Cuneo
+  code: CN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AT
+  - IM
+  - TO
+  - SV
+  zip_prefixes:
+  - '12'
+- name: Enna
+  code: EN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CL
+  - CT
+  - ME
+  - PA
+  zip_prefixes:
+  - '94'
+- name: Fermo
+  code: FM
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AP
+  - MC
+  zip_prefixes:
+  - '638'
+  - '639'
+- name: Ferrara
+  code: FE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - RO
+  - MN
+  - MO
+  - BO
+  - RA
+  zip_prefixes:
+  - '44'
+- name: Firenze
+  code: FI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AR
+  - BO
+  - FC
+  - LU
+  - PI
+  - PO
+  - PT
+  - RA
+  - SI
+  zip_prefixes:
+  - '50'
+- name: Foggia
+  code: FG
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AV
+  - BN
+  - BT
+  - CB
+  - PZ
+  zip_prefixes:
+  - '71'
+- name: Forlì-Cesena
+  code: FC
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AR
+  - FI
+  - RA
+  - RN
+  zip_prefixes:
+  - '470'
+  - '471' # Forli
+  - '475' # Cesena
+- name: Frosinone
+  code: FR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AQ
+  - CE
+  - IS
+  - LT
+  - RM
+  zip_prefixes:
+  - '03'
+- name: Genova
+  code: GE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - PC
+  - PR
+  - SP
+  - SV
+  zip_prefixes:
+  - '16'
+- name: Gorizia
+  code: GO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - TS
+  - UD
+  zip_prefixes:
+  - '3407'
+  - '3417'
+- name: Grosseto
+  code: GR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - LI
+  - PI
+  - SI
+  - VT
+  zip_prefixes:
+  - '58'
+- name: Imperia
+  code: IM
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CN
+  - SV
+  zip_prefixes:
+  - '18'
+- name: Isernia
+  code: IS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AQ
+  - CB
+  - CE
+  - CH
+  - FR
+  zip_prefixes:
+  - '8607'
+  - '8608'
+  - '8609'
+  - '8617'
+- name: L'Aquila
+  code: AQ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CH
+  - FR
+  - IS
+  - RI
+  - RM
+  - PE
+  - TE
+  zip_prefixes:
+  - '67'
+- name: La Spezia
+  code: SP
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - GE
+  - MS
+  - PR
+  zip_prefixes:
+  - '19'
+- name: Latina
+  code: LT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CE
+  - FR
+  - RM
+  zip_prefixes:
+  - '04'
+- name: Lecce
+  code: LE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BR
+  - TA
+  zip_prefixes:
+  - '73'
+- name: Lecco
+  code: LC
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BG
+  - CO
+  - MB
+  - SO
+  zip_prefixes:
+  - '238'
+  - '239'
+- name: Livorno
+  code: LI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - GR
+  - PI
+  zip_prefixes:
+  - '57'
+- name: Lodi
+  code: LO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CR
+  - MI
+  - PC
+  - PV
+  zip_prefixes:
+  - '268'
+  - '269'
+- name: Lucca
+  code: LU
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - FI
+  - MO
+  - MS
+  - PI
+  - PT
+  - RE
+  zip_prefixes:
+  - '55'
+- name: Macerata
+  code: MC
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AN
+  - AP
+  - FM
+  - PG
+  zip_prefixes:
+  - '62'
+- name: Mantova
+  code: MN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CR
+  - PR
+  - RE
+  - MO
+  - FE
+  - RO
+  - VR
+  - BS
+  zip_prefixes:
+  - '46'
+- name: Massa-Carrara
+  code: MS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - LU
+  - PR
+  - RE
+  - SP
+  zip_prefixes:
+  - '54'
+- name: Matera
+  code: MT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BA
+  - CS
+  - PZ
+  - TA
+  zip_prefixes:
+  - '75'
+# IT-VS was deleted on 2019-04-09, and absorbed into IT-SD, which was renamed IT-SU in 2020
+- name: Medio Campidano
+  code: VS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CA
+  - CI
+  - OR
+  zip_prefixes:
+  - '09020' # Collinas, Genuri, Gesturi, Las Plassas, Pauli Arbarei, Pimentel, Samatzai, Siddi, Turri, ... now SU
+  - '09021' # Barumini, now SU
+  - '09022' # Lumunatrona, now SU
+  - '09025' # Sanluri, now SU
+  - '09027' # Serrenti, now SU
+  - '09029' # Setzu, Tuili, now SU
+  - '09030' # Guspini, now SU
+  - '09031' # Arbus, now SU
+  - '09035' # Gonnosfandiga, now SU
+  - '09036' # Guspini, now SU
+  - '09037' # San Gavino Monreale, now SU
+  - '09038' # Serramanna, now SU
+  - '09039' # Villacidro, now SU
+- name: Messina
+  code: ME
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - EN
+  - CT
+  - PA
+  zip_prefixes:
+  - '98'
+- name: Milano
+  code: MI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BG
+  - CR
+  - LO
+  - MB
+  - 'NO'
+  - PV
+  - VA
+  zip_prefixes:
+  - '200'
+  - '201'
+- name: Modena
+  code: MO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BO
+  - FE
+  - LU
+  - MN
+  - PT
+  - RE
+  zip_prefixes:
+  - '41'
+- name: Monza e Brianza
+  code: MB
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BG
+  - CO
+  - LC
+  - MI
+  - VA
+  zip_prefixes:
+  - '208'
+  - '209'
+- name: Napoli
+  code: NA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AV
+  - BN
+  - CE
+  - SA
+  zip_prefixes:
+  - '80'
+- name: Novara
+  code: 'NO'
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - MI
+  - PV
+  - VA
+  - VB
+  - VC
+  zip_prefixes:
+  - '280'
+  - '281'
+- name: Nuoro
+  code: NU
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CA
+  - OG
+  - OR
+  - OT
+  - SS
+  zip_prefixes:
+  - '08011'
+  - '08012'
+  - '08015'
+  - '08016'
+  - '08017'
+  - '08018'
+  - '0802'
+  - '08030'
+  - '08031'
+  - '08032'
+  - '08036'
+  - '08037'
+  - '08038'
+  - '08039'
+  - '0804'
+  - '081'
+# IT-OG was deleted on 2019-09-04 and absorbed into IT-NU, except for 09064 Seui which is now in IT-SU
+# We still need to add support for IT-SU.  In the mean time, we allocate the code 09064 to its former province.
+- name: Ogliastra
+  code: OG
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CA
+  - NU
+  zip_prefixes:
+  - '09064'
+- name: Olbia-Tempio
+  code: OT
+  deprecated: true
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - NU
+  - SS
+- name: Oristano
+  code: OR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CA
+  - NU
+  - SS
+  - VS
+  zip_prefixes:
+  - '08010'
+  - '08013'
+  - '08019'
+  - '0907'
+  - '0908'
+  - '0909'
+  - '0917'
+- name: Padova
+  code: PD
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - RO
+  - TV
+  - VE
+  - VI
+  - VR
+  zip_prefixes:
+  - '35'
+- name: Palermo
+  code: PA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AG
+  - CL
+  - EN
+  - ME
+  - TP
+  zip_prefixes:
+  - '90'
+- name: Parma
+  code: PR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CR
+  - GE
+  - MN
+  - MS
+  - PC
+  - RE
+  - SP
+  zip_prefixes:
+  - '43'
+- name: Pavia
+  code: PV
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - LO
+  - MI
+  - 'NO'
+  - PC
+  - VC
+  zip_prefixes:
+  - '27'
+- name: Perugia
+  code: PG
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AN
+  - AP
+  - AR
+  - MC
+  - PU
+  - RI
+  - SI
+  - TR
+  zip_prefixes:
+  - '06'
+- name: Pesaro e Urbino
+  code: PU
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AN
+  - AR
+  - PG
+  - RN
+  zip_prefixes:
+  - '61'
+- name: Pescara
+  code: PE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AQ
+  - CH
+  - TE
+  zip_prefixes:
+  - '65'
+- name: Piacenza
+  code: PC
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - CR
+  - GE
+  - LO
+  - PR
+  - PV
+  zip_prefixes:
+  - '29'
+- name: Pisa
+  code: PI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - FI
+  - GR
+  - LI
+  - LU
+  - SI
+  zip_prefixes:
+  - '56'
+- name: Pistoia
+  code: PT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BO
+  - FI
+  - LU
+  - MO
+  - PO
+  zip_prefixes:
+  - '51'
+- name: Pordenone
+  code: PN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BL
+  - TV
+  - UD
+  - VE
+  zip_prefixes:
+  - '3307'
+  - '3308'
+  - '3309'
+  - '3317'
+- name: Potenza
+  code: PZ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AV
+  - BA
+  - BT
+  - CS
+  - FG
+  - MT
+  - SA
+  zip_prefixes:
+  - '85'
+- name: Prato
+  code: PO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BO
+  - FI
+  - PT
+  zip_prefixes:
+  - '59'
+- name: Ragusa
+  code: RG
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CL
+  - CT
+  - SR
+  zip_prefixes:
+  - '97'
+- name: Ravenna
+  code: RA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BO
+  - FC
+  - FE
+  - FI
+  zip_prefixes:
+  - '48'
+- name: Reggio Calabria
+  name_alternates:
+  - Calabria
+  code: RC
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CZ
+  - VV
+  zip_prefixes:
+  - '890'
+  - '891'
+- name: Reggio Emilia
+  code: RE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - LU
+  - MN
+  - MO
+  - MS
+  - PR
+  zip_prefixes:
+  - '42'
+- name: Rieti
+  code: RI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AP
+  - AQ
+  - PG
+  - RM
+  - TE
+  - TR
+  - VT
+  zip_prefixes:
+  - '02'
+- name: Rimini
+  code: RN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AR
+  - FC
+  - PU
+  zip_prefixes:
+  - '478'
+  - '479'
+- name: Roma
+  code: RM
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AQ
+  - FR
+  - LT
+  - RI
+  - VT
+  # RM includes all postcodes starting with 000 and 001, except for 00120 which is the Vatican
+  zip_prefixes:
+  - '000'
+  - '0010'
+  - '0011'
+  - '00121'
+  - '00122'
+  - '00123'
+  - '00124'
+  - '00125'
+  - '00126'
+  - '00127'
+  - '00128'
+  - '00129'
+  - '0013'
+  - '0014'
+  - '0015'
+  - '0016'
+  - '0017'
+  - '0018'
+  - '0019'
+- name: Rovigo
+  code: RO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - FE
+  - MN
+  - PD
+  - VE
+  - VR
+  zip_prefixes:
+  - '45'
+- name: Salerno
+  code: SA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AV
+  - NA
+  - PZ
+  zip_prefixes:
+  - '84'
+- name: Sassari
+  code: SS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - NU
+  - OR
+  - OT
+  zip_prefixes:
+  - '07'
+  # According to geonames.org, 08020 is in SS.
+  # Wikipedia claims it's in OT, which was dissolved recently.
+  # poste.it says that it's in NU.
+  # We consider poste.it to be the definitive source, so it's in NU, not here.
+- name: Savona
+  code: SV
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - AT
+  - CN
+  - GE
+  - IM
+  zip_prefixes:
+  - '17'
+- name: Siena
+  code: SI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AR
+  - FI
+  - GR
+  - PG
+  - PI
+  - TR
+  - VT
+  zip_prefixes:
+  - '53'
+- name: Siracusa
+  code: SR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CT
+  - RG
+  zip_prefixes:
+  - '96'
+- name: Sondrio
+  code: SO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CO
+  - BG
+  - BS
+  - BZ
+  - LC
+  - TN
+  zip_prefixes:
+  - '230'
+  - '231'
+- name: Taranto
+  code: TA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BA
+  - BR
+  - LE
+  - MT
+  zip_prefixes:
+  - '74'
+- name: Teramo
+  code: TE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AP
+  - AQ
+  - PE
+  - RI
+  zip_prefixes:
+  - '64'
+- name: Terni
+  code: TR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - PG
+  - RI
+  - SI
+  - VT
+  zip_prefixes:
+  - '05'
+- name: Torino
+  code: TO
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - AO
+  - AT
+  - BI
+  - CN
+  - VC
+  zip_prefixes:
+  - '10'
+- name: Trapani
+  code: TP
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AG
+  - PA
+  zip_prefixes:
+  - '91'
+- name: Trento
+  code: TN
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BL
+  - BS
+  - BZ
+  - SO
+  - VI
+  - VR
+  zip_prefixes:
+  - '38'
+- name: Treviso
+  code: TV
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BL
+  - PD
+  - PN
+  - VE
+  - VI
+  zip_prefixes:
+  - '31'
+- name: Trieste
+  code: TS
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - GO
+  zip_prefixes:
+  - '3401'
+  - '3410'
+  - '3412'
+  - '3413'
+  - '3414'
+  - '3415'
+- name: Udine
+  code: UD
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BL
+  - GO
+  - PN
+  - VE
+  zip_prefixes:
+  - '3301'
+  - '3302'
+  - '3303'
+  - '3304'
+  - '3305'
+  - '3306'
+  - '3310'
+- name: Varese
+  code: VA
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CO
+  - MB
+  - MI
+  - 'NO'
+  - VB
+  zip_prefixes:
+  - '21'
+- name: Venezia
+  code: VE
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - PD
+  - PN
+  - RO
+  - TV
+  - UD
+  zip_prefixes:
+  - '30'
+- name: Verbano-Cusio-Ossola
+  code: VB
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - 'NO'
+  - VA
+  - VC
+  zip_prefixes:
+  - '288'
+  - '289'
+- name: Vercelli
+  code: VC
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AL
+  - AO
+  - BI
+  - 'NO'
+  - PV
+  - TO
+  - VB
+  zip_prefixes:
+  - '130'
+  - '131'
+- name: Verona
+  code: VR
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BS
+  - MN
+  - PD
+  - RO
+  - TN
+  - VI
+  zip_prefixes:
+  - '37'
+- name: Vibo Valentia
+  code: VV
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CZ
+  - RC
+  zip_prefixes:
+  - '898'
+  - '899'
+- name: Vicenza
+  code: VI
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - BL
+  - PD
+  - TN
+  - TV
+  - VR
+  zip_prefixes:
+  - '36'
+- name: Viterbo
+  code: VT
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - GR
+  - RI
+  - RM
+  - SI
+  - TR
+  zip_prefixes:
+  - '01'
+zips_crossing_provinces:
+  '08010':
+  - OR
+  - NU
+  - OG
+  # Now solidly in NU, but used to be split between multiple provinces before the creation of SU
+  '08020':
+  - NU
+  - OT
+  - SS
+  # Now solidly NU, but used to be split between multiple provinces before the creation of SU
+  '08030':
+  - NU
+  - CA
+  - OG
+  - OR
+  - VS
+  # Lotzorai NU: This used to be in Ogliastra before the creation of SU
+  '08040':
+  - NU
+  - OG
+  '08042':
+  - NU
+  - OG
+  '08044':
+  - NU
+  - OG
+  # Used to be in OG before the creation of SU
+  '08045':
+  - NU
+  - OG
+  '08046':
+  - NU
+  - OG
+  # Tertenia NU: This used to be in OG before the creation of SU
+  '08047':
+  - NU
+  - OG
+  # Tortoli NU: This used to be in Ogliastra before the creation of SU
+  '08048':
+  - NU
+  - OG
+  '08049':
+  - NU
+  - OG
+  # Uta CA, Buggeru CI: These are now both in SU, so we should remove this once SU is supported
+  '09010':
+  - CI
+  - CA
+  '09013':
+  - CI
+  - CA
+  - VS
+  '09016':
+  - CI
+  - CA
+  - VS
+  '09017':
+  - CI
+  - CA
+  # Gesturi VS, Usana CA: Now in SU
+  '09020':
+  - VS
+  - CA
+  '09025':
+  - VS
+  - CA
+  '09027':
+  - VS
+  - CA
+  - CI
+  # Samassi CA, Guspini VS: These are now both in SU, so we should remove this once SU is supported
+  '09030':
+  - VS
+  - CA
+  '09031':
+  - VS
+  - CA
+  '09035':
+  - VS
+  - CA
+  '09036':
+  - VS
+  - CA
+  '09037':
+  - VS
+  - CA
+  '09038':
+  - VS
+  - CA
+  # Villacidro CA, now in SU
+  '09039':
+  - VS
+  - CA
+  '09040':
+  - CA
+  - VS
+  # Bagnasco CN, and Massimino SV
+  '12071':
+  - CN
+  - SV
+  # Briga Alta CN, Mendatica IM and Montegrosso Pian Latte IM
+  '18025':
+  - IM
+  - CN
+timezone: Europe/Rome

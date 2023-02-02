@@ -1,0 +1,339 @@
+---
+ee:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: "'ga' h 'le' B 'me'"
+        Bhm: "'ga' h 'aɖabaƒoƒo' mm 'le' B 'me'"
+        Bhms: h:mm:ss 'le' B 'me'
+        d: d
+        E: ccc
+        EBhm: "'ga' h:mm 'le' E B 'me'"
+        EBhms: "'ga' h:mm:ss 'le' E B 'me'"
+        Ed: E d
+        Ehm: E a 'ga' h:mm
+        EHm: E 'ga' HH:mm
+        Ehms: E a 'ga' h:mm:ss
+        EHms: E 'ga' HH:mm:ss
+        Gy: y G
+        GyMMM: MMM y G
+        GyMMMd: MMM d 'lia', y G
+        GyMMMEd: E, MMM d 'lia' y G
+        h: a 'ga' h
+        H: HH
+        hm: a 'ga' h:mm
+        Hm: HH:mm
+        hms: a 'ga' h:mm:ss
+        Hms: HH:mm:ss
+        hmsv: a 'ga' h:mm:ss 'le' v
+        Hmsv: "'ga' HH:mm:ss 'le' v"
+        hmv: a 'ga' h:mm 'le' v
+        Hmv: "'ga' HH:mm 'le' v"
+        M: L
+        Md: M/d
+        MEd: E, M/d
+        MMM: LLL
+        MMMd: MMM d 'lia'
+        MMMEd: E, MMM d 'lia'
+        MMMMd: MMMM d 'lia'
+        MMMMEd: E, MMMM d 'lia'
+        MMMMW: MMMM 'ƒe' 'kɔsiɖa' W 'lia'
+        ms: "'aɖabaƒoƒo' mm:ss"
+        "y": "y"
+        yM: M/y
+        yMd: M/d/y
+        yMEd: E, M/d/y
+        yMMM: MMM y
+        yMMMd: MMM d 'lia', y
+        yMMMEd: E, MMM d, y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'kɔsiɖa' w 'lia' 'le' 'ƒe' Y 'me'"
+      days:
+        format:
+          abbreviated:
+            sun: kɔs
+            mon: dzo
+            tue: bla
+            wed: kuɖ
+            thu: yaw
+            fri: fiɖ
+            sat: mem
+          narrow:
+            sun: k
+            mon: d
+            tue: b
+            wed: k
+            thu: "y"
+            fri: f
+            sat: m
+          short:
+            sun: kɔs
+            mon: dzo
+            tue: bla
+            wed: kuɖ
+            thu: yaw
+            fri: fiɖ
+            sat: mem
+          wide:
+            sun: kɔsiɖa
+            mon: dzoɖa
+            tue: blaɖa
+            wed: kuɖa
+            thu: yawoɖa
+            fri: fiɖa
+            sat: memleɖa
+        stand_alone:
+          abbreviated:
+            sun: kɔs
+            mon: dzo
+            tue: bla
+            wed: kuɖ
+            thu: yaw
+            fri: fiɖ
+            sat: mem
+          narrow:
+            sun: k
+            mon: d
+            tue: b
+            wed: k
+            thu: "y"
+            fri: f
+            sat: m
+          short:
+            sun: kɔs
+            mon: dzo
+            tue: bla
+            wed: kuɖ
+            thu: yaw
+            fri: fiɖ
+            sat: mem
+          wide:
+            sun: kɔsiɖa
+            mon: dzoɖa
+            tue: blaɖa
+            wed: kuɖa
+            thu: yawoɖa
+            fri: fiɖa
+            sat: memleɖa
+      eras:
+        abbr:
+          0: Bŋ
+          1: Eŋ
+        name:
+          0: Bŋ
+          1: Yesu ŋɔli
+      fields:
+        day: ŋkeke
+        day_period: ŋkekea me
+        era: ŋɔli
+        hour: gaƒoƒo
+        minute: aɖabaƒoƒo
+        month: ɣleti
+        month_narrow: ɣleti
+        month_short: ɣleti
+        quarter: kɔta
+        quarter_narrow: kɔta
+        quarter_short: kɔta
+        second: sekend
+        week: kɔsiɖa ɖeka
+        weekday: kɔsiɖa me ŋkeke
+        year: ƒe
+        year_narrow: ƒe
+        year_short: ƒe
+        zone: nutomegaƒoƒo
+      formats:
+        date:
+          full:
+            pattern: EEEE, MMMM d 'lia' y
+          long:
+            pattern: MMMM d 'lia' y
+          medium:
+            pattern: MMM d 'lia', y
+          short:
+            pattern: M/d/yy
+        datetime:
+          full:
+            pattern: "{{time}} {{date}}"
+          long:
+            pattern: "{{time}} {{date}}"
+          medium:
+            pattern: "{{time}} {{date}}"
+          short:
+            pattern: "{{time}} {{date}}"
+        time:
+          full:
+            pattern: a 'ga' h:mm:ss zzzz
+          long:
+            pattern: a 'ga' h:mm:ss z
+          medium:
+            pattern: a 'ga' h:mm:ss
+          short:
+            pattern: a 'ga' h:mm
+      months:
+        format:
+          abbreviated:
+            1: dzv
+            2: dzd
+            3: ted
+            4: afɔ
+            5: dam
+            6: mas
+            7: sia
+            8: dea
+            9: any
+            10: kel
+            11: ade
+            12: dzm
+          narrow:
+            1: d
+            2: d
+            3: t
+            4: a
+            5: d
+            6: m
+            7: s
+            8: d
+            9: a
+            10: k
+            11: a
+            12: d
+          wide:
+            1: dzove
+            2: dzodze
+            3: tedoxe
+            4: afɔfĩe
+            5: dama
+            6: masa
+            7: siamlɔm
+            8: deasiamime
+            9: anyɔnyɔ
+            10: kele
+            11: adeɛmekpɔxe
+            12: dzome
+        stand_alone:
+          abbreviated:
+            1: dzv
+            2: dzd
+            3: ted
+            4: afɔ
+            5: dam
+            6: mas
+            7: sia
+            8: dea
+            9: any
+            10: kel
+            11: ade
+            12: dzm
+          narrow:
+            1: d
+            2: d
+            3: t
+            4: a
+            5: d
+            6: m
+            7: s
+            8: d
+            9: a
+            10: k
+            11: a
+            12: d
+          wide:
+            1: dzove
+            2: dzodze
+            3: tedoxe
+            4: afɔfĩe
+            5: dama
+            6: masa
+            7: siamlɔm
+            8: deasiamime
+            9: anyɔnyɔ
+            10: kele
+            11: adeɛmekpɔxe
+            12: dzome
+      periods:
+        format:
+          abbreviated:
+            afternoon1: ŋdɔ
+            afternoon2: ɣetrɔ
+            am: ŋdi
+            evening1: fiẽ
+            morning1: fɔŋli
+            morning2: ŋdi
+            night1: zã
+            pm: ɣetrɔ
+          narrow:
+            afternoon1: ŋdɔ
+            afternoon2: ɣetrɔ
+            am: ŋ
+            evening1: fiẽ
+            morning1: fɔŋli
+            morning2: ŋdi
+            night1: zã
+            pm: ɣ
+          wide:
+            afternoon1: ŋdɔ
+            afternoon2: ɣetrɔ
+            am: ŋdi
+            evening1: fiẽ
+            morning1: fɔŋli
+            morning2: ŋdi
+            night1: zã
+            pm: ɣetrɔ
+        stand_alone:
+          abbreviated:
+            afternoon1: ŋdɔ
+            afternoon2: ɣetrɔ
+            am: ŋdi
+            evening1: fiẽ
+            morning1: fɔŋli
+            morning2: ŋdi
+            night1: zã
+            pm: ɣetrɔ
+          narrow:
+            afternoon1: ŋdɔ
+            afternoon2: ɣetrɔ
+            am: ŋ
+            evening1: fiẽ
+            morning1: fɔŋli
+            morning2: ŋdi
+            night1: zã
+            pm: ɣ
+          wide:
+            afternoon1: ŋdɔ
+            afternoon2: ɣetrɔ
+            am: ŋdi
+            evening1: fiẽ
+            morning1: fɔŋli
+            morning2: ŋdi
+            night1: zã
+            pm: ɣetrɔ
+      quarters:
+        format:
+          abbreviated:
+            1: k1
+            2: k2
+            3: k3
+            4: k4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: kɔta gbãtɔ
+            2: kɔta evelia
+            3: kɔta etɔ̃lia
+            4: kɔta enelia
+        stand_alone:
+          abbreviated:
+            1: k1
+            2: k2
+            3: k3
+            4: k4
+          wide:
+            1: kɔta gbãtɔ
+            2: kɔta evelia
+            3: kɔta etɔ̃lia
+            4: kɔta enelia

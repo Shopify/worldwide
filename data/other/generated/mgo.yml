@@ -1,0 +1,145 @@
+---
+mgo:
+  date:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%Y-%02m-%02d"
+      date: "%Y %B %-d"
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%B %-d"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      long: "%Y %B %-d"
+      short: "%b %-d"
+      date_time_current_year: "%b %-d %02k:%M"
+      default_long_with_zone: "%A, %Y %B %02d %02k:%M %z"
+      friendly_date_time: "%Y %b %-d %02k:%M"
+      long_with_zone: "%Y %B %-d %02k:%M %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%B %-d, %A"
+      short_weekday_with_date: "%b %-d, %a"
+      weekday_with_short_date: "%b %-d, %A"
+      long_readable_with_time: "%Y %B %-d %02k:%M"
+      long_readable_with_zone: "%Y %B %-d, %A %02k:%M %z"
+      date_at_time: "%Y %B %-d %02k:%M"
+      default: "%Y-%02m-%02d"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%B %{ordinalized_day}"
+      today_at_time: "%02k:%M tèchɔ̀ŋ"
+      yesterday_at_time: "%02k:%M ikwiri"
+      tomorrow_at_time: "%02k:%M isu"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %b %-d"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "-%{count} h"
+        other: "-%{count} h"
+      x_minutes_ago:
+        one: "-%{count} min"
+        other: "-%{count} min"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - Aneg 1
+    - Aneg 2
+    - Aneg 3
+    - Aneg 4
+    - Aneg 5
+    - Aneg 6
+    - Aneg 7
+    abbr_month_names:
+    - ''
+    - mbegtug
+    - imeg àbùbì
+    - imeg mbəŋchubi
+    - iməg ngwə̀t
+    - iməg fog
+    - iməg ichiibɔd
+    - iməg àdùmbə̀ŋ
+    - iməg ichika
+    - iməg kud
+    - iməg tèsiʼe
+    - iməg zò
+    - iməg krizmed
+    day_names:
+    - Aneg 1
+    - Aneg 2
+    - Aneg 3
+    - Aneg 4
+    - Aneg 5
+    - Aneg 6
+    - Aneg 7
+    month_names:
+    - ''
+    - iməg mbegtug
+    - imeg àbùbì
+    - imeg mbəŋchubi
+    - iməg ngwə̀t
+    - iməg fog
+    - iməg ichiibɔd
+    - iməg àdùmbə̀ŋ
+    - iməg ichika
+    - iməg kud
+    - iməg tèsiʼe
+    - iməg zò
+    - iməg krizmed
+    relative_day_names:
+      this_week: this week
+      this_month: this month
+      yesterday: ikwiri
+      today: tèchɔ̀ŋ
+      tomorrow: isu
+      day_after_tomorrow: isu ywi
+    order:
+    - :year
+    - :month
+    - :day
+  time:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%Y-%02m-%02d"
+      date: "%Y %B %-d"
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%B %-d"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%b %-d %02k:%M"
+      default_long_with_zone: "%A, %Y %B %02d %02k:%M %z"
+      friendly_date_time: "%Y %b %-d %02k:%M"
+      long_with_zone: "%Y %B %-d %02k:%M %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%B %-d, %A"
+      short_weekday_with_date: "%b %-d, %a"
+      weekday_with_short_date: "%b %-d, %A"
+      long_readable_with_time: "%Y %B %-d %02k:%M"
+      long_readable_with_zone: "%Y %B %-d, %A %02k:%M %z"
+      date_at_time: "%Y %B %-d %02k:%M"
+      default: "%Y %b %-d, %a %02k:%M %z"
+      long: "%Y %B %-d %02k:%M"
+      short: "%b %-d %02k:%M"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%B %{ordinalized_day}"
+      today_at_time: "%02k:%M tèchɔ̀ŋ"
+      yesterday_at_time: "%02k:%M ikwiri"
+      tomorrow_at_time: "%02k:%M isu"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %b %-d"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "-%{count} h"
+        other: "-%{count} h"
+      x_minutes_ago:
+        one: "-%{count} min"
+        other: "-%{count} min"
+      cc_expiry_date: "%m/%Y"
+    am: am
+    pm: pm
+    just_now: now
+    yesterday: ikwiri

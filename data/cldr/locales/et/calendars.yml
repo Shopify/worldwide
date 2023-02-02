@@ -1,0 +1,376 @@
+---
+et:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E, d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: d.MM.y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d. MMM y G
+        GyMMMEd: E, d. MMMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: M
+        Md: d.M
+        MEd: E, d.M
+        MMM: MMMM
+        MMMd: d. MMM
+        MMMEd: E, d. MMM
+        MMMMd: d. MMMM
+        MMMMEd: E, d. MMMM
+        MMMMW: MMMM (W. 'nädal')
+        mmss: mm:ss
+        ms: mm:ss
+        "y": "y"
+        yM: M.y
+        yMd: d.M.y
+        yMEd: E, d.M.y
+        yMMM: MMM y
+        yMMMd: d. MMM y
+        yMMMEd: E, d. MMMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: w. 'nädal' (Y)
+      days:
+        format:
+          abbreviated:
+            sun: P
+            mon: E
+            tue: T
+            wed: K
+            thu: N
+            fri: R
+            sat: L
+          narrow:
+            sun: P
+            mon: E
+            tue: T
+            wed: K
+            thu: N
+            fri: R
+            sat: L
+          short:
+            sun: P
+            mon: E
+            tue: T
+            wed: K
+            thu: N
+            fri: R
+            sat: L
+          wide:
+            sun: Pühapäev
+            mon: Esmaspäev
+            tue: Teisipäev
+            wed: Kolmapäev
+            thu: Neljapäev
+            fri: Reede
+            sat: Laupäev
+        stand_alone:
+          abbreviated:
+            sun: P
+            mon: E
+            tue: T
+            wed: K
+            thu: N
+            fri: R
+            sat: L
+          narrow:
+            sun: P
+            mon: E
+            tue: T
+            wed: K
+            thu: N
+            fri: R
+            sat: L
+          short:
+            sun: P
+            mon: E
+            tue: T
+            wed: K
+            thu: N
+            fri: R
+            sat: L
+          wide:
+            sun: Pühapäev
+            mon: Esmaspäev
+            tue: Teisipäev
+            wed: Kolmapäev
+            thu: Neljapäev
+            fri: Reede
+            sat: Laupäev
+      eras:
+        abbr:
+          0: e.m.a
+          1: m.a.j
+        name:
+          0: enne meie ajaarvamist
+          1: meie ajaarvamise järgi
+        narrow:
+          0: e.m.a
+          1: m.a.j
+      fields:
+        day: päev
+        day_narrow: p
+        day_of_year: aasta päev
+        day_of_year_narrow: aasta p
+        day_of_year_short: aasta p
+        day_period: enne/pärast lõunat
+        day_period_narrow: enne/pärast lõunat
+        day_period_short: enne/pärast lõunat
+        day_short: p
+        era: ajastu
+        era_narrow: ajastu
+        era_short: ajastu
+        hour: tund
+        hour_narrow: t
+        hour_short: t
+        minute: minut
+        minute_narrow: min
+        minute_short: min
+        month: kuu
+        month_narrow: k
+        month_short: k
+        quarter: kvartal
+        quarter_narrow: kv
+        quarter_short: kv
+        second: sekund
+        second_narrow: s
+        second_short: sek
+        week: nädal
+        week_narrow: näd
+        week_of_month: kuu nädal
+        week_of_month_narrow: kuu näd
+        week_of_month_short: kuu näd
+        week_short: näd
+        weekday: nädalapäev
+        weekday_narrow: nädalap.
+        weekday_of_month: kuu nädalapäev
+        weekday_of_month_narrow: kuu nädalap.
+        weekday_of_month_short: kuu nädalap.
+        weekday_short: nädalap.
+        year: aasta
+        year_narrow: a
+        year_short: a
+        zone: ajavöönd
+        zone_narrow: vöönd
+        zone_short: vöönd
+      formats:
+        date:
+          full:
+            pattern: EEEE, d. MMMM y
+          long:
+            pattern: d. MMMM y
+          medium:
+            pattern: d. MMM y
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: jaan
+            2: veebr
+            3: märts
+            4: apr
+            5: mai
+            6: juuni
+            7: juuli
+            8: aug
+            9: sept
+            10: okt
+            11: nov
+            12: dets
+          narrow:
+            1: J
+            2: V
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: jaanuar
+            2: veebruar
+            3: märts
+            4: aprill
+            5: mai
+            6: juuni
+            7: juuli
+            8: august
+            9: september
+            10: oktoober
+            11: november
+            12: detsember
+        stand_alone:
+          abbreviated:
+            1: jaan
+            2: veebr
+            3: märts
+            4: apr
+            5: mai
+            6: juuni
+            7: juuli
+            8: aug
+            9: sept
+            10: okt
+            11: nov
+            12: dets
+          narrow:
+            1: J
+            2: V
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: jaanuar
+            2: veebruar
+            3: märts
+            4: aprill
+            5: mai
+            6: juuni
+            7: juuli
+            8: august
+            9: september
+            10: oktoober
+            11: november
+            12: detsember
+      periods:
+        format:
+          abbreviated:
+            afternoon1: pärastlõunal
+            am: AM
+            evening1: õhtul
+            midnight: keskööl
+            morning1: hommikul
+            night1: öösel
+            noon: keskpäeval
+            pm: PM
+          narrow:
+            afternoon1: pärastlõunal
+            am: AM
+            evening1: õhtul
+            midnight: keskööl
+            morning1: hommikul
+            night1: öösel
+            noon: keskpäeval
+            pm: PM
+          wide:
+            afternoon1: pärastlõunal
+            am: AM
+            evening1: õhtul
+            midnight: keskööl
+            morning1: hommikul
+            night1: öösel
+            noon: keskpäeval
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: pärastlõuna
+            am: AM
+            evening1: õhtu
+            midnight: kesköö
+            morning1: hommik
+            night1: öö
+            noon: keskpäev
+            pm: PM
+          narrow:
+            afternoon1: pärastlõuna
+            am: AM
+            evening1: õhtu
+            midnight: kesköö
+            morning1: hommik
+            night1: öö
+            noon: keskpäev
+            pm: PM
+          wide:
+            afternoon1: pärastlõuna
+            am: AM
+            evening1: õhtu
+            midnight: kesköö
+            morning1: hommik
+            night1: öö
+            noon: keskpäev
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. kvartal
+            2: 2. kvartal
+            3: 3. kvartal
+            4: 4. kvartal
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+          wide:
+            1: 1. kvartal
+            2: 2. kvartal
+            3: 3. kvartal
+            4: 4. kvartal

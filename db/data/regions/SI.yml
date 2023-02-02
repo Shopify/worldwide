@@ -1,0 +1,24 @@
+---
+name: Slovenia
+code: SI
+tax: 0.22
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_regex: "^((SI|SLO)-?)?[12345689]\\d{3}$"
+zip_example: '4000'
+phone_number_prefix: 386
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F8\U0001F1EE"
+languages:
+  - hu
+  - it
+  - sl
+timezone: Europe/Belgrade

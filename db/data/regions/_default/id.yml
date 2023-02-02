@@ -1,0 +1,144 @@
+---
+id:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Perusahaan
+            optional: Perusahaan (opsional)
+          errors:
+            blank: Masukkan nama perusahaan
+            too_long: Nama perusahaan terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Nama perusahaan tidak bisa berisi tag HTML.
+            contains_emojis: Perusahaan tidak boleh berisi emoji
+            contains_restricted_characters: Nama Perusahaan hanya boleh terdiri dari
+              huruf, angka, karakter lokal, dan karakter khusus
+        first_name:
+          label:
+            default: Nama depan
+            optional: Nama depan (opsional)
+          errors:
+            blank: Masukkan nama depan
+            too_long: Nama depan terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Nama depan tidak bisa berisi tag HTML.
+            contains_emojis: Nama depan tidak boleh berisi emoji
+            contains_url: Nama depan tidak boleh berisi URL.
+            contains_restricted_characters: Nama depan hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+        last_name:
+          label:
+            default: Nama belakang
+            optional: Nama belakang (opsional)
+          errors:
+            blank: Masukkan nama belakang
+            too_long: Nama belakang terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Nama belakang tidak bisa berisi tag HTML.
+            contains_emojis: Nama belakang tidak boleh berisi emoji
+            contains_url: Nama belakang tidak boleh berisi URL.
+            contains_restricted_characters: Nama belakang hanya boleh terdiri dari
+              huruf, angka, karakter lokal, dan karakter khusus
+        address1:
+          label:
+            default: Alamat
+            optional: Alamat (opsional)
+          errors:
+            blank: Masukkan alamat
+            too_long: Baris alamat pertama terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Alamat1 tidak bisa berisi tag HTML.
+            contains_emojis: Alamat1 tidak boleh berisi emoji
+            contains_url: Alamat1 tidak boleh berisi URL.
+            missing_building_number: Tambahkan nomor gedung jika ada.
+            street_unknown_for_zip: Masukkan nama jalan yang valid untuk %{zip}.
+            building_number_invalid: Nomor gedung tidak dapat ditemukan untuk %{street},
+              %{zip}.
+            contains_restricted_characters: Alamat1 hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Alamat1 tidak boleh memuat lebih dari %{word_count}
+              kata
+        address2:
+          label:
+            default: Apartemen, suite, dsb.
+            optional: Apartemen, suite, dsb. (opsional)
+          errors:
+            blank: Masukkan apartemen, suite, dsb.
+            too_long: Baris alamat kedua terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Alamat2 tidak bisa berisi tag HTML.
+            contains_emojis: Alamat2 tidak boleh berisi emoji
+            contains_url: Alamat2 tidak boleh berisi URL.
+            missing_building_number: Tambahkan nomor gedung jika ada.
+            street_unknown_for_zip: Masukkan nama jalan yang valid untuk %{zip}.
+            building_number_invalid: Nomor gedung tidak dapat ditemukan untuk %{street},
+              %{zip}.
+            contains_restricted_characters: Alamat2 hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Alamat2 tidak boleh memuat lebih dari %{word_count}
+              kata
+        city:
+          label:
+            default: Kota
+            optional: Kota (opsional)
+          errors:
+            blank: Masukkan kota
+            too_long: Nama kota terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Nama kota tidak bisa berisi tag HTML.
+            contains_emojis: Kota tidak boleh berisi emoji
+            contains_url: Kota tidak boleh berisi URL
+            unknown_for_zip: Masukkan kota yang valid untuk %{zip}
+            unknown_for_province: Masukkan kota yang valid untuk %{province}
+            unknown_for_zip_and_province: Masukkan kota yang valid untuk %{zip}, %{province}
+            contains_restricted_characters: Nama Kota hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Nama Kota tidak boleh memuat lebih dari %{word_count}
+              kata
+        country:
+          label:
+            default: Negara/Wilayah
+            optional: Negara/Wilayah (opsional)
+          errors:
+            blank: Pilih negara/daerah
+            not_supported: Saat ini layanan kami belum tersedia di negara/daerah ini.
+              Masukkan alamat baru, kemudian coba lagi.
+            invalid: Masukkan negara/wilayah yang valid
+            invalid_for_zip: Masukkan negara/wilayah yang valid untuk kode pos ini
+        phone:
+          label:
+            default: Telepon
+            optional: Telepon (opsional)
+          errors:
+            blank: Masukkan nomor telepon
+            invalid: Masukkan nomor telepon yang valid
+            too_long: Nomor telepon terlalu panjang (maksimum berisi 255 karakter)
+            contains_emojis: Nomor telepon tidak boleh berisi emoji
+            contains_restricted_characters: Nomor telepon hanya boleh terdiri dari
+              huruf, angka, karakter lokal, dan karakter khusus
+        province:
+          label:
+            default: Wilayah
+            optional: Wilayah (opsional)
+          errors:
+            blank: Pilih wilayah
+            invalid_for_country: Masukkan wilayah yang valid untuk %{country}
+            unknown_for_city_and_zip: Masukkan wilayah yang valid untuk %{city}, %{zip}
+            unknown_for_city: Pilih wilayah yang valid untuk %{city}
+            unknown_for_zip: Pilih wilayah yang valid untuk %{zip}
+        zip:
+          label:
+            default: Kode pos
+            optional: Kode pos (opsional)
+          errors:
+            blank: Masukkan kode pos
+            blocked_address: Lokasi ini tidak didukung.
+            invalid_for_country: Masukkan kode pos yang valid untuk %{country}
+            invalid_for_country_and_province: Masukkan kode pos yang valid untuk %{province},
+              %{country}
+            invalid: Masukkan kode pos yang valid
+            too_long: Nilai kode pos terlalu panjang
+            contains_html_tags: Kode pos tidak bisa berisi tag HTML.
+            contains_emojis: Kode pos tidak boleh berisi emoji
+            not_supported: Saat ini layanan kami belum tersedia di negara/daerah ini.
+              Masukkan alamat baru, kemudian coba lagi.
+            unknown_for_province: Masukkan kode pos yang valid untuk %{province}
+            contains_restricted_characters: Kode pos hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+            invalid_for_province: Masukkan kode pos yang valid untuk %{province}

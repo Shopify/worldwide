@@ -1,0 +1,29 @@
+---
+# Somalia has introduced  a VAT at 5%.  Sources:
+# https://import-export.societegenerale.fr/en/country/somalia/presentation-taxation
+# https://twitter.com/DalsanFM/status/958724905855606785/photo/1
+tax: 0.05
+tax_name: VAT
+name: Somalia
+group: African Countries
+group_name: Africa
+code: SO
+unit_system: metric
+currency: SOS
+zip_example: 'JH  09010'
+# Postal codes have been defined in Somalia, but they aren't used.
+# If we were to validate, the following regex would be appropriate.
+# But we don't see users entering valid postal codes in Somalia so,
+# at least for now, we won't be validating postal codes there.
+# zip_regex:  "^(AD|BK|BN|BR|BY|GG|GD|HR|JD|JH|MD|NG|SG|SD|SH|SL|TG|WG) ? ?\\d{5}$"
+phone_number_prefix: 252
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: 🇸🇴
+languages:
+  - ar
+  - en
+  - it
+  - so
+timezone: Africa/Nairobi

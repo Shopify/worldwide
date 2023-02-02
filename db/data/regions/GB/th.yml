@@ -1,0 +1,17 @@
+---
+th:
+  worldwide:
+    GB:
+      addresses:
+        zip:
+          label:
+            default: รหัสไปรษณีย์
+            optional: รหัสไปรษณีย์ (ไม่จำเป็น)
+          errors:
+            blank: ป้อนรหัสไปรษณีย์
+            invalid_for_country: ป้อนรหัสไปรษณีย์ในสหราชอาณาจักรให้ถูกต้อง
+            invalid_for_country_and_province: ป้อนรหัสไปรษณีย์ของ %{province} ในสหราชอาณาจักรให้ถูกต้อง
+            too_long: รหัสไปรษณีย์ยาวเกินไป
+            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
+            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสไปรษณีย์ได้
+            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัสไปรษณีย์ได้

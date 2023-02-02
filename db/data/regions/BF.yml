@@ -1,0 +1,20 @@
+---
+name: Burkina Faso
+code: BF
+tax: 0.0
+currency: XOF
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+zip_regex: "^[1-9]\\d{4}$"
+zip_example: 10010
+zip_requirement: optional
+phone_number_prefix: 226
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇧🇫
+languages:
+  - fr
+timezone: Africa/Abidjan

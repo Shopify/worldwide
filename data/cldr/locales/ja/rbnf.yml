@@ -1,0 +1,151 @@
+---
+ja:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year-latn
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=0=;"
+        - :value: 1
+          :rule: 元;
+        - :value: 2
+          :rule: "=0=;"
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1
+          :rule: 元;
+        - :value: 2
+          :rule: "=%spellout-numbering=;"
+        - :value: 1000
+          :rule: "=%%spellout-numbering-year-digits=;"
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering-year-digits
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 10
+          :rule: "<<>>>;"
+        - :value: 100
+          :rule: "<<>>>;"
+        - :value: 1000
+          :rule: "<<>>>;"
+        :access: private
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal-financial
+        :rules:
+        - :value: "-x"
+          :rule: マイナス>>;
+        - :value: x.x
+          :rule: "<<点>>>;"
+        - :value: 0
+          :rule: 零;
+        - :value: 1
+          :rule: 壱;
+        - :value: 2
+          :rule: 弐;
+        - :value: 3
+          :rule: 参;
+        - :value: 4
+          :rule: 四;
+        - :value: 5
+          :rule: 伍;
+        - :value: 6
+          :rule: 六;
+        - :value: 7
+          :rule: 七;
+        - :value: 8
+          :rule: 八;
+        - :value: 9
+          :rule: 九;
+        - :value: 10
+          :rule: 拾[>>];
+        - :value: 20
+          :rule: "<<拾[>>];"
+        - :value: 100
+          :rule: "<<百[>>];"
+        - :value: 1000
+          :rule: "<<千[>>];"
+        - :value: 10000
+          :rule: "<<萬[>>];"
+        - :value: 100000000
+          :rule: "<<億[>>];"
+        - :value: 1000000000000
+          :rule: "<<兆[>>];"
+        - :value: 10000000000000000
+          :rule: "<<京[>>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: マイナス>>;
+        - :value: x.x
+          :rule: "<<・>>>;"
+        - :value: 0
+          :rule: 〇;
+        - :value: 1
+          :rule: 一;
+        - :value: 2
+          :rule: 二;
+        - :value: 3
+          :rule: 三;
+        - :value: 4
+          :rule: 四;
+        - :value: 5
+          :rule: 五;
+        - :value: 6
+          :rule: 六;
+        - :value: 7
+          :rule: 七;
+        - :value: 8
+          :rule: 八;
+        - :value: 9
+          :rule: 九;
+        - :value: 10
+          :rule: 十[>>];
+        - :value: 20
+          :rule: "<<十[>>];"
+        - :value: 100
+          :rule: 百[>>];
+        - :value: 200
+          :rule: "<<百[>>];"
+        - :value: 1000
+          :rule: 千[>>];
+        - :value: 2000
+          :rule: "<<千[>>];"
+        - :value: 10000
+          :rule: "<<万[>>];"
+        - :value: 100000000
+          :rule: "<<億[>>];"
+        - :value: 1000000000000
+          :rule: "<<兆[>>];"
+        - :value: 10000000000000000
+          :rule: "<<京[>>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: 第=%spellout-numbering=;
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: 第−>#,##0>;
+        - :value: 0
+          :rule: 第=#,##0=;

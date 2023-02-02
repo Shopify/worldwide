@@ -1,0 +1,146 @@
+---
+as:
+  date:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%02d-%02m-%Y"
+      date: "%-d %B, %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%P %-l.%M"
+      weekday: "%A"
+      year: "%Y"
+      long: "%-d %B, %Y"
+      short: "%-d %b"
+      date_time_current_year: "%-d %b %P %-l.%M"
+      default_long_with_zone: "%A, %-d %B, %Y %P %-l.%M.%S %z"
+      friendly_date_time: "%-d %b %Y %P %-l.%M"
+      long_with_zone: "%-d %B, %Y %P %-l.%M.%S %z"
+      weekday_at_time: "%A %P %-l.%M"
+      weekday_with_time: "%A %P %-l.%M"
+      weekday_with_date: "%A, %-d %B"
+      short_weekday_with_date: "%a, %-d %b"
+      weekday_with_short_date: "%A, %-d %b"
+      long_readable_with_time: "%-d %B %Y %P %-l.%M"
+      long_readable_with_zone: "%A, %-d %B %Y %P %-l.%M.%S %z"
+      date_at_time: "%-d %B %Y %P %-l.%M"
+      default: "%02d-%02m-%Y"
+      billing: "%02d-%02m-%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%P %-l.%M আজি"
+      yesterday_at_time: "%P %-l.%M কালি"
+      tomorrow_at_time: "%P %-l.%M কাইলৈ"
+      on_weekday_at_time: "%P %-l.%M %A"
+      on_date_time_current_year: "%P %-l.%M %-d %b"
+      on_date: "%-d %b %Y"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "%{count} ঘণ্টা পূৰ্বে"
+        other: "%{count} ঘণ্টা পূৰ্বে"
+      x_minutes_ago:
+        one: "%{count} মিনিট পূৰ্বে"
+        other: "%{count} মিনিট পূৰ্বে"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - দেও
+    - সোম
+    - মঙ্গল
+    - বুধ
+    - বৃহ
+    - শুক্ৰ
+    - শনি
+    abbr_month_names:
+    - ''
+    - জানু
+    - ফেব্ৰু
+    - মাৰ্চ
+    - এপ্ৰিল
+    - মে’
+    - জুন
+    - জুলাই
+    - আগ
+    - ছেপ্তে
+    - অক্টো
+    - নৱে
+    - ডিচে
+    day_names:
+    - দেওবাৰ
+    - সোমবাৰ
+    - মঙ্গলবাৰ
+    - বুধবাৰ
+    - বৃহস্পতিবাৰ
+    - শুক্ৰবাৰ
+    - শনিবাৰ
+    month_names:
+    - ''
+    - জানুৱাৰী
+    - ফেব্ৰুৱাৰী
+    - মাৰ্চ
+    - এপ্ৰিল
+    - মে’
+    - জুন
+    - জুলাই
+    - আগষ্ট
+    - ছেপ্তেম্বৰ
+    - অক্টোবৰ
+    - নৱেম্বৰ
+    - ডিচেম্বৰ
+    relative_day_names:
+      this_week: এই সপ্তাহ
+      this_month: এই মাহ
+      day_before_yesterday: পৰহি
+      yesterday: কালি
+      today: আজি
+      tomorrow: কাইলৈ
+      day_after_tomorrow: পৰহিলৈ
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%02d-%02m-%Y"
+      date: "%-d %B, %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%P %-l.%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%-d %b %P %-l.%M"
+      default_long_with_zone: "%A, %-d %B, %Y %P %-l.%M.%S %z"
+      friendly_date_time: "%-d %b %Y %P %-l.%M"
+      long_with_zone: "%-d %B, %Y %P %-l.%M.%S %z"
+      weekday_at_time: "%A %P %-l.%M"
+      weekday_with_time: "%A %P %-l.%M"
+      weekday_with_date: "%A, %-d %B"
+      short_weekday_with_date: "%a, %-d %b"
+      weekday_with_short_date: "%A, %-d %b"
+      long_readable_with_time: "%-d %B %Y %P %-l.%M"
+      long_readable_with_zone: "%A, %-d %B %Y %P %-l.%M.%S %z"
+      date_at_time: "%-d %B %Y %P %-l.%M"
+      default: "%a, %-d %b %Y %P %-l.%M.%S %z"
+      long: "%-d %B %Y %P %-l.%M"
+      short: "%-d %b %P %-l.%M"
+      billing: "%02d-%02m-%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%P %-l.%M আজি"
+      yesterday_at_time: "%P %-l.%M কালি"
+      tomorrow_at_time: "%P %-l.%M কাইলৈ"
+      on_weekday_at_time: "%P %-l.%M %A"
+      on_date_time_current_year: "%P %-l.%M %-d %b"
+      on_date: "%-d %b %Y"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "%{count} ঘণ্টা পূৰ্বে"
+        other: "%{count} ঘণ্টা পূৰ্বে"
+      x_minutes_ago:
+        one: "%{count} মিনিট পূৰ্বে"
+        other: "%{count} মিনিট পূৰ্বে"
+      cc_expiry_date: "%m/%Y"
+    am: am
+    pm: pm
+    just_now: এতিয়া
+    yesterday: কালি

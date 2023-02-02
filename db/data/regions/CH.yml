@@ -1,0 +1,28 @@
+---
+name: Switzerland
+code: CH
+tax: 0.077
+currency: CHF
+unit_system: metric
+tax_name: MwSt
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-EEA-participant
+zip_example: '2544'
+zip_regex: "^((CH( |-)?)?(([1-8]\\d{3})|(9[012356789]\\d{2})|(94[01234567]\\d)))$"
+phone_number_prefix: 41
+building_number_required: true
+week_start_day: monday
+languages:
+  - de
+  - en
+  - fr
+  - it
+  - rm
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E8\U0001F1ED"
+timezone: Europe/Zurich

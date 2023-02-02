@@ -1,0 +1,81 @@
+---
+qu:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal-with
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=-ni-yuq;"
+        - :value: 3
+          :rule: "=%spellout-cardinal=-yuq;"
+        - :value: 7
+          :rule: "=%spellout-cardinal=-ni-yuq;"
+        :access: private
+      - :type: spellout-cardinal
+        :rules:
+        - :value: NaN
+          :rule: mana yupay;
+        - :value: Inf
+          :rule: mana usay;
+        - :value: "-x"
+          :rule: minusu >>;
+        - :value: x.x
+          :rule: "<< comma >>;"
+        - :value: 0
+          :rule: chusaq;
+        - :value: 1
+          :rule: huk;
+        - :value: 2
+          :rule: iskay;
+        - :value: 3
+          :rule: kinsa;
+        - :value: 4
+          :rule: tawa;
+        - :value: 5
+          :rule: phisqa;
+        - :value: 6
+          :rule: suqta;
+        - :value: 7
+          :rule: qanchis;
+        - :value: 8
+          :rule: pusaq;
+        - :value: 9
+          :rule: isqun;
+        - :value: 10
+          :rule: chunka[ >%%spellout-cardinal-with>];
+        - :value: 20
+          :rule: "<< chunka[ >%%spellout-cardinal-with>];"
+        - :value: 100
+          :rule: "<< pachak[ >>];"
+        - :value: 1000
+          :rule: "<< waranqa[ >>];"
+        - :value: 1000000
+          :rule: "<< hunu[ >>];"
+        - :value: 1000000000
+          :rule: "<< lluna[ >>];"
+        - :value: 1000000000000
+          :rule: "<< trilionu[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< kvadrilionu[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0.#=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: minusu >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-cardinal=-ñiqin;"

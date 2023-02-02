@@ -1,0 +1,20 @@
+---
+name: Barbados
+code: BB
+tax: 0.175
+currency: BBD
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_example: BB2306
+zip_regex: "^(BB-?)?\\d{5,5}$"
+zip_requirement: optional
+phone_number_prefix: 1
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1E7"
+languages:
+  - en
+timezone: America/Barbados

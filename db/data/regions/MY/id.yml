@@ -1,0 +1,21 @@
+---
+id:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Negara bagian/wilayah
+            optional: Negara bagian/wilayah (opsional)
+          errors:
+            blank: Pilih negara bagian/wilayah
+        zip:
+          label:
+            default: Kode pos
+            optional: Kode pos (opsional)
+          errors:
+            too_long: Nilai kode pos terlalu panjang
+            contains_html_tags: Kode pos tidak bisa berisi tag HTML.
+            contains_emojis: Kode pos tidak boleh berisi emoji
+            contains_restricted_characters: Kode Pos ini tidak boleh memuat karakter
+              yang dilarang

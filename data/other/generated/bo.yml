@@ -1,0 +1,142 @@
+---
+bo:
+  date:
+    formats:
+      abbr_date: "%Y ལོའི་%bཚེས་%-d"
+      basic_date: "%Y-%02m-%02d"
+      date: སྤྱི་ལོ་%Y %Bའི་ཚེས་%-d
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%Bའི་ཚེས་%-d"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      long: སྤྱི་ལོ་%Y %Bའི་ཚེས་%-d
+      short: "%bཚེས་%-d"
+      date_time_current_year: "%bཚེས་%-d %02k:%M"
+      default_long_with_zone: "%Y %Bའི་ཚེས་%-d, %A %02k:%M %z"
+      friendly_date_time: "%Y ལོའི་%bཚེས་%-d %02k:%M"
+      long_with_zone: སྤྱི་ལོ་%Y %Bའི་ཚེས་%-d %02k:%M %z
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%Bཚེས་%-d, %A"
+      short_weekday_with_date: "%bཚེས་%-d, %a"
+      weekday_with_short_date: "%bཚེས་%-d, %A"
+      long_readable_with_time: "%Y ལོའི་%Bཚེས་%-d %02k:%M"
+      long_readable_with_zone: "%Y %B %-d, %A %02k:%M %z"
+      date_at_time: "%Y ལོའི་%Bཚེས་%-d %02k:%M"
+      default: "%Y-%02m-%02d"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%B%{ordinalized_day}"
+      today_at_time: "%02k:%M དེ་རིང་"
+      yesterday_at_time: "%02k:%M ཁས་ས་"
+      tomorrow_at_time: "%02k:%M སང་ཉིན་"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %bཚེས་%-d"
+      on_date: "%Y ལོའི་%bཚེས་%-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        other: "-%{count} h"
+      x_minutes_ago:
+        other: "-%{count} min"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - ཉི་མ་
+    - ཟླ་བ་
+    - མིག་དམར་
+    - ལྷག་པ་
+    - ཕུར་བུ་
+    - པ་སངས་
+    - སྤེན་པ་
+    abbr_month_names:
+    - ''
+    - ཟླ་༡
+    - ཟླ་༢
+    - ཟླ་༣
+    - ཟླ་༤
+    - ཟླ་༥
+    - ཟླ་༦
+    - ཟླ་༧
+    - ཟླ་༨
+    - ཟླ་༩
+    - ཟླ་༡༠
+    - ཟླ་༡༡
+    - ཟླ་༡༢
+    day_names:
+    - གཟའ་ཉི་མ་
+    - གཟའ་ཟླ་བ་
+    - གཟའ་མིག་དམར་
+    - གཟའ་ལྷག་པ་
+    - གཟའ་ཕུར་བུ་
+    - གཟའ་པ་སངས་
+    - གཟའ་སྤེན་པ་
+    month_names:
+    - ''
+    - ཟླ་བ་དང་པོ་
+    - ཟླ་བ་གཉིས་པ་
+    - ཟླ་བ་གསུམ་པ་
+    - ཟླ་བ་བཞི་པ་
+    - ཟླ་བ་ལྔ་པ་
+    - ཟླ་བ་དྲུག་པ་
+    - ཟླ་བ་བདུན་པ་
+    - ཟླ་བ་བརྒྱད་པ་
+    - ཟླ་བ་དགུ་པ་
+    - ཟླ་བ་བཅུ་པ་
+    - ཟླ་བ་བཅུ་གཅིག་པ་
+    - ཟླ་བ་བཅུ་གཉིས་པ་
+    relative_day_names:
+      this_week: this week
+      this_month: this month
+      day_before_yesterday: ཁས་ཉིན་
+      yesterday: ཁས་ས་
+      today: དེ་རིང་
+      tomorrow: སང་ཉིན་
+      day_after_tomorrow: གནངས་ཉིན་
+    order:
+    - :year
+    - :month
+    - :day
+  time:
+    formats:
+      abbr_date: "%Y ལོའི་%bཚེས་%-d"
+      basic_date: "%Y-%02m-%02d"
+      date: སྤྱི་ལོ་%Y %Bའི་ཚེས་%-d
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%Bའི་ཚེས་%-d"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%bཚེས་%-d %02k:%M"
+      default_long_with_zone: "%Y %Bའི་ཚེས་%-d, %A %02k:%M %z"
+      friendly_date_time: "%Y ལོའི་%bཚེས་%-d %02k:%M"
+      long_with_zone: སྤྱི་ལོ་%Y %Bའི་ཚེས་%-d %02k:%M %z
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%Bཚེས་%-d, %A"
+      short_weekday_with_date: "%bཚེས་%-d, %a"
+      weekday_with_short_date: "%bཚེས་%-d, %A"
+      long_readable_with_time: "%Y ལོའི་%Bཚེས་%-d %02k:%M"
+      long_readable_with_zone: "%Y %B %-d, %A %02k:%M %z"
+      date_at_time: "%Y ལོའི་%Bཚེས་%-d %02k:%M"
+      default: "%Y %b %-d, %a %02k:%M %z"
+      long: "%Y ལོའི་%Bཚེས་%-d %02k:%M"
+      short: "%bཚེས་%-d %02k:%M"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%B%{ordinalized_day}"
+      today_at_time: "%02k:%M དེ་རིང་"
+      yesterday_at_time: "%02k:%M ཁས་ས་"
+      tomorrow_at_time: "%02k:%M སང་ཉིན་"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %bཚེས་%-d"
+      on_date: "%Y ལོའི་%bཚེས་%-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        other: "-%{count} h"
+      x_minutes_ago:
+        other: "-%{count} min"
+      cc_expiry_date: "%m/%Y"
+    am: am
+    pm: pm
+    just_now: now
+    yesterday: ཁས་ས་

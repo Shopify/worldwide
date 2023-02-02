@@ -1,0 +1,142 @@
+---
+nb:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Bedrift
+            optional: Bedrift (valgfritt)
+          errors:
+            blank: Angi et bedriftsnavn
+            too_long: Firmanavnet er for langt (maksimalt 255 tegn)
+            contains_html_tags: Bedrift kan ikke inneholde HTML-tagger.
+            contains_emojis: Bedrift kan ikke inneholde emojier
+            contains_restricted_characters: Bedrift kan kun inneholde bokstaver, tall,
+              lokale tegn og spesialtegn
+        first_name:
+          label:
+            default: Fornavn
+            optional: Fornavn (valgfritt)
+          errors:
+            blank: Angi et fornavn
+            too_long: Fornavnet er for langt (maksimalt 255 tegn)
+            contains_html_tags: Fornavnet kan ikke inneholde HTML-tagger.
+            contains_emojis: Fornavn kan ikke inneholde emojier
+            contains_url: Fornavn kan ikke inneholde en URL-adresse.
+            contains_restricted_characters: Fornavn kan kun inneholde bokstaver, tall,
+              lokale tegn og spesialtegn
+        last_name:
+          label:
+            default: Etternavn
+            optional: Etternavn (valgfritt)
+          errors:
+            blank: Angi et etternavn
+            too_long: Etternavnet er for langt (maksimalt 255 tegn)
+            contains_html_tags: Etternavnet kan ikke inneholde HTML-tagger.
+            contains_emojis: Etternavn kan ikke inneholde emojier
+            contains_url: Etternavn kan ikke inneholde en URL-adresse.
+            contains_restricted_characters: Etternavn kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+        address1:
+          label:
+            default: Adresse
+            optional: Adresse (valgfritt)
+          errors:
+            blank: Angi en adresse
+            too_long: Den første adresselinjen er for lang (maksimalt 255 tegn)
+            contains_html_tags: Adresse1 kan ikke inneholde HTML-tagger.
+            contains_emojis: Adresse1 kan ikke inneholde emojier
+            contains_url: Adresse1 kan ikke inneholde URL-adresser.
+            missing_building_number: Legg til et bygningsnummer hvis du har et.
+            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
+            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
+            contains_restricted_characters: Adresse1 kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+            contains_too_many_words: Adresse1 kan ikke inneholde mer enn %{word_count}
+              ord
+        address2:
+          label:
+            default: Leilighet, etasje osv.
+            optional: Leilighet, etasje osv. (valgfritt)
+          errors:
+            blank: Angi en leilighet, suite, osv.
+            too_long: Den andre adresselinjen er for lang (maksimalt 255 tegn)
+            contains_html_tags: Adresse2 kan ikke inneholde HTML-tagger.
+            contains_emojis: Adresse2 kan ikke inneholde emojier
+            contains_url: Adresse2 kan ikke inneholde URL-adresser.
+            missing_building_number: Legg til et bygningsnummer hvis du har et.
+            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
+            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
+            contains_restricted_characters: Adresse2 kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+            contains_too_many_words: Adresse2 kan ikke inneholde mer enn %{word_count}
+              ord
+        city:
+          label:
+            default: By
+            optional: By (valgfritt)
+          errors:
+            blank: Angi en by
+            too_long: Poststed er for langt (maksimalt 255 tegn)
+            contains_html_tags: Poststed kan ikke inneholde HTML-tagger.
+            contains_emojis: Poststed kan ikke inneholde emojier
+            contains_url: Poststed kan ikke inneholde en URL-adresse
+            unknown_for_zip: Skriv inn et gyldig poststed for %{zip}
+            unknown_for_province: Skriv inn et gyldig poststed for %{province}
+            unknown_for_zip_and_province: Skriv inn et gyldig poststed for %{zip},
+              %{province}
+            contains_restricted_characters: By kan kun inneholde bokstaver, tall,
+              lokale tegn og spesialtegn
+            contains_too_many_words: By kan ikke inneholde mer enn %{word_count} ord
+        country:
+          label:
+            default: Land/region
+            optional: Land/region (valgfritt)
+          errors:
+            blank: Velg et land/område
+            not_supported: Vi støtter ikke dette landet/regionen for øyeblikket. Angi
+              en ny adresse og prøv på nytt.
+            invalid: Skriv inn et gyldig land/område
+            invalid_for_zip: Skriv inn et gyldig land / område for dette postnummeret
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (valgfritt)
+          errors:
+            blank: Angi et telefonnummer
+            invalid: Angi et gyldig telefonnummer
+            too_long: Telefonnummer er for langt (maksimalt 255 tegn)
+            contains_emojis: Telefonnummer kan ikke inneholde emojier
+            contains_restricted_characters: Telefonnummer kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+        province:
+          label:
+            default: Region
+            optional: Region (valgfritt)
+          errors:
+            blank: Velg et område
+            invalid_for_country: Skriv inn et gyldig område i %{country}
+            unknown_for_city_and_zip: Angi et gyldig område for %{city}, %{zip}
+            unknown_for_city: Velg et gyldig område for %{city}
+            unknown_for_zip: Velg et gyldig område for %{zip}
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valgfritt)
+          errors:
+            blank: Angi et postnummer
+            blocked_address: Denne lokalisasjonen støttes ikke.
+            invalid_for_country: Angi et gyldig postnummer for %{country}
+            invalid_for_country_and_province: Angi et gyldig postnummer for %{province},
+              %{country}
+            invalid: Angi et gyldig postnummer
+            too_long: Verdien for postnummer er for lang
+            contains_html_tags: Postnummeret kan ikke inneholde HTML-tagger.
+            contains_emojis: Postnummer kan ikke inneholde emojier
+            not_supported: Vi støtter ikke dette landet/regionen for øyeblikket. Angi
+              en ny adresse og prøv på nytt.
+            unknown_for_province: Angi et gyldig postnummer for %{province}
+            contains_restricted_characters: Postnummer kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+            invalid_for_province: Skriv inn et gyldig postnummer for %{province}

@@ -1,0 +1,36 @@
+---
+da:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Forstad
+            optional: Forstad (valgfrit)
+          errors:
+            blank: Indtast en forstad
+            too_long: Navnet på forstaden er for langt (højst 255 tegn)
+            contains_html_tags: Forstad må ikke indeholde HTML-tags.
+            contains_emojis: Forstad må ikke indeholde emojis
+            contains_restricted_characters: Forstad må kun indeholde bogstaver, tegn,
+              lokale tegn og specialtegn
+        province:
+          label:
+            default: Stat/territorium
+            optional: Stat/territorium (valgfrit)
+          errors:
+            blank: Vælg stat/territorium
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valgfrit)
+          errors:
+            blank: Angiv et postnummer
+            invalid_for_country: Angiv et gyldigt postnummer for %{country}
+            invalid_for_country_and_province: Angiv et gyldigt postnummer for %{province},
+              %{country}
+            too_long: Postnummerværdien er for lang
+            contains_html_tags: Postnummer må ikke indeholde HTML-tags.
+            contains_emojis: Postnummer må ikke indeholde emojis
+            contains_restricted_characters: Postnummer må kun indeholde bogstaver,
+              tegn, lokale tegn og specialtegn

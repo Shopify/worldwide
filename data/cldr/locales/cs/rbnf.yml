@@ -1,0 +1,246 @@
+---
+cs:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< čárka >>;"
+        - :value: 0
+          :rule: nula;
+        - :value: 1
+          :rule: jeden;
+        - :value: 2
+          :rule: dva;
+        - :value: 3
+          :rule: tři;
+        - :value: 4
+          :rule: čtyři;
+        - :value: 5
+          :rule: pět;
+        - :value: 6
+          :rule: šest;
+        - :value: 7
+          :rule: sedm;
+        - :value: 8
+          :rule: osm;
+        - :value: 9
+          :rule: devět;
+        - :value: 10
+          :rule: deset;
+        - :value: 11
+          :rule: jedenáct;
+        - :value: 12
+          :rule: dvanáct;
+        - :value: 13
+          :rule: třináct;
+        - :value: 14
+          :rule: čtrnáct;
+        - :value: 15
+          :rule: patnáct;
+        - :value: 16
+          :rule: šestnáct;
+        - :value: 17
+          :rule: sedmnáct;
+        - :value: 18
+          :rule: osmnáct;
+        - :value: 19
+          :rule: devatenáct;
+        - :value: 20
+          :rule: "<%spellout-cardinal-masculine<cet[ >>];"
+        - :value: 50
+          :rule: padesát[ >>];
+        - :value: 60
+          :rule: šedesát[ >>];
+        - :value: 70
+          :rule: sedmdesát[ >>];
+        - :value: 80
+          :rule: osmdesát[ >>];
+        - :value: 90
+          :rule: devadesát[ >>];
+        - :value: 100
+          :rule: sto[ >>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-feminine< stě[ >>];"
+        - :value: 300
+          :rule: "<%spellout-cardinal-feminine< sta[ >>];"
+        - :value: 500
+          :rule: "<%spellout-cardinal-feminine< set[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-feminine< tisíc[ >>];"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< tisíce[ >>];"
+        - :value: 5000
+          :rule: "<%spellout-cardinal-feminine< tisíc[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< milión[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milióny[ >>];"
+        - :value: 5000000
+          :rule: "<%spellout-cardinal-masculine< miliónů[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliardy[ >>];"
+        - :value: 5000000000
+          :rule: "<%spellout-cardinal-masculine< miliardů[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< bilión[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilióny[ >>];"
+        - :value: 5000000000000
+          :rule: "<%spellout-cardinal-masculine< biliónů[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardy[ >>];"
+        - :value: 5000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardů[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< čárka >>;"
+        - :value: 0
+          :rule: nula;
+        - :value: 1
+          :rule: jedno;
+        - :value: 2
+          :rule: dvě;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: "<%spellout-cardinal-masculine<cet[ >>];"
+        - :value: 50
+          :rule: padesát[ >>];
+        - :value: 60
+          :rule: šedesát[ >>];
+        - :value: 70
+          :rule: sedmdesát[ >>];
+        - :value: 80
+          :rule: osmdesát[ >>];
+        - :value: 90
+          :rule: devadesát[ >>];
+        - :value: 100
+          :rule: sto[ >>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-feminine< stě[ >>];"
+        - :value: 300
+          :rule: "<%spellout-cardinal-feminine< sta[ >>];"
+        - :value: 500
+          :rule: "<%spellout-cardinal-feminine< set[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-feminine< tisíc[ >>];"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< tisíce[ >>];"
+        - :value: 5000
+          :rule: "<%spellout-cardinal-feminine< tisíc[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< milión[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milióny[ >>];"
+        - :value: 5000000
+          :rule: "<%spellout-cardinal-masculine< miliónů[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliardy[ >>];"
+        - :value: 5000000000
+          :rule: "<%spellout-cardinal-masculine< miliardů[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< bilión[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilióny[ >>];"
+        - :value: 5000000000000
+          :rule: "<%spellout-cardinal-masculine< biliónů[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardy[ >>];"
+        - :value: 5000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardů[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< čárka >>;"
+        - :value: 0
+          :rule: nula;
+        - :value: 1
+          :rule: jedna;
+        - :value: 2
+          :rule: dvě;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: "<%spellout-cardinal-masculine<cet[ >>];"
+        - :value: 50
+          :rule: padesát[ >>];
+        - :value: 60
+          :rule: šedesát[ >>];
+        - :value: 70
+          :rule: sedmdesát[ >>];
+        - :value: 80
+          :rule: osmdesát[ >>];
+        - :value: 90
+          :rule: devadesát[ >>];
+        - :value: 100
+          :rule: sto[ >>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-feminine< stě[ >>];"
+        - :value: 300
+          :rule: "<%spellout-cardinal-feminine< sta[ >>];"
+        - :value: 500
+          :rule: "<%spellout-cardinal-feminine< set[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-feminine< tisíc[ >>];"
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< tisíce[ >>];"
+        - :value: 5000
+          :rule: "<%spellout-cardinal-feminine< tisíc[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< milión[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milióny[ >>];"
+        - :value: 5000000
+          :rule: "<%spellout-cardinal-masculine< miliónů[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< miliarda[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliardy[ >>];"
+        - :value: 5000000000
+          :rule: "<%spellout-cardinal-masculine< miliardů[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< bilión[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilióny[ >>];"
+        - :value: 5000000000000
+          :rule: "<%spellout-cardinal-masculine< biliónů[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliarda[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardy[ >>];"
+        - :value: 5000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliardů[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

@@ -1,0 +1,71 @@
+---
+name: South Africa
+code: ZA
+tax: 0.15
+currency: ZAR
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+# Codes in the range 9000-9299 were formerly used for South West Africa (country code: NA), and are now unassigned
+zip_regex: "^(?!9[012]\\d{2})(\\d{4})$"
+zip_example: '0083'
+phone_number_prefix: 27
+building_number_required: true
+week_start_day: sunday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{province}_{zip}_{country}_{phone}"
+emoji: "\U0001F1FF\U0001F1E6"
+languages:
+  - af
+  - en
+  - nr
+  - ss
+  - st
+  - xh
+  - zu
+zones:
+- name: Eastern Cape
+  code: EC
+  tax: 0.0
+  tax_name: VAT
+- name: Free State
+  code: FS
+  tax: 0.0
+  tax_name: VAT
+- name: Gauteng
+  code: GP
+  code_alternates:
+  - GT
+  iso_code: ZA-GP
+  tax: 0.0
+  tax_name: VAT
+- name: KwaZulu-Natal
+  code: NL
+  code_alternates:
+  - KZN
+  iso_code: ZA-KZN
+  tax: 0.0
+  tax_name: VAT
+- name: Limpopo
+  code: LP
+  tax: 0.0
+  tax_name: VAT
+- name: Mpumalanga
+  code: MP
+  tax: 0.0
+  tax_name: VAT
+- name: North West
+  code: NW
+  tax: 0.0
+  tax_name: VAT
+- name: Northern Cape
+  code: NC
+  tax: 0.0
+  tax_name: VAT
+- name: Western Cape
+  code: WC
+  tax: 0.0
+  tax_name: VAT
+timezone: Africa/Johannesburg

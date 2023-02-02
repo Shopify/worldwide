@@ -1,0 +1,420 @@
+---
+ga:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: lenient-parse
+        :rules:
+        - :value: 0
+          :rule: "& ' ' , ',' ;"
+        :access: private
+      - :type: 2d-year
+        :rules:
+        - :value: 0
+          :rule: agus =%spellout-numbering=;
+        - :value: 10
+          :rule: "=%%spellout-numbering-no-a=;"
+        :access: private
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: míneas >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1000
+          :rule: "<%%spellout-numbering-no-a< >%%2d-year>;"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering-no-a
+        :rules:
+        - :value: 0
+          :rule: náid;
+        - :value: 1
+          :rule: aon;
+        - :value: 2
+          :rule: dó;
+        - :value: 3
+          :rule: trí;
+        - :value: 4
+          :rule: ceathair;
+        - :value: 5
+          :rule: cúig;
+        - :value: 6
+          :rule: sé;
+        - :value: 7
+          :rule: seacht;
+        - :value: 8
+          :rule: ocht;
+        - :value: 9
+          :rule: naoi;
+        - :value: 10
+          :rule: deich;
+        - :value: 11
+          :rule: ">> déag;"
+        - :value: 12
+          :rule: ">> dhéag;"
+        - :value: 13
+          :rule: ">> déag;"
+        - :value: 20
+          :rule: "=%spellout-numbering=;"
+        :access: private
+      - :type: spellout-numbering
+        :rules:
+        - :value: "-x"
+          :rule: míneas >>;
+        - :value: x.x
+          :rule: "<< pointe >>;"
+        - :value: 0
+          :rule: a náid;
+        - :value: 1
+          :rule: a haon;
+        - :value: 2
+          :rule: a dó;
+        - :value: 3
+          :rule: a trí;
+        - :value: 4
+          :rule: a ceathair;
+        - :value: 5
+          :rule: a cúig;
+        - :value: 6
+          :rule: a sé;
+        - :value: 7
+          :rule: a seacht;
+        - :value: 8
+          :rule: a hocht;
+        - :value: 9
+          :rule: a naoi;
+        - :value: 10
+          :rule: a deich;
+        - :value: 11
+          :rule: ">> déag;"
+        - :value: 12
+          :rule: ">> dhéag;"
+        - :value: 13
+          :rule: ">> déag;"
+        - :value: 20
+          :rule: fiche[ >>];
+        - :value: 30
+          :rule: tríocha[ >>];
+        - :value: 40
+          :rule: daichead[ >>];
+        - :value: 50
+          :rule: caoga[ >>];
+        - :value: 60
+          :rule: seasca[ >>];
+        - :value: 70
+          :rule: seachtó[ >>];
+        - :value: 80
+          :rule: ochtó[ >>];
+        - :value: 90
+          :rule: nócha[ >>];
+        - :value: 100
+          :rule: "<%%hundreds<[>%%is-number>];"
+        - :value: 1000
+          :rule: "<%%thousands<[, >%spellout-numbering>];"
+        - :value: 1000000
+          :rule: "<%%millions<[, >%spellout-numbering>];"
+        - :value: 1000000000
+          :rule: "<%%billions<[, >%spellout-numbering>];"
+        - :value: 1000000000000
+          :rule: "<%%trillions<[, >%spellout-numbering>];"
+        - :value: 1000000000000000
+          :rule: "<%%quadrillions<[, >%spellout-numbering>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: is-number
+        :rules:
+        - :value: 0
+          :rule: " is =%spellout-numbering=;"
+        - :value: 1
+          :rule: " =%spellout-numbering=;"
+        :access: private
+      - :type: is-numberp
+        :rules:
+        - :value: 0
+          :rule: " is =%%numberp=;"
+        - :value: 1
+          :rule: " =%%numberp=;"
+        :access: private
+      - :type: numberp
+        :rules:
+        - :value: 0
+          :rule: "=%%spellout-cardinal-prefixpart=;"
+        - :value: 12
+          :rule: dó dhéag;
+        - :value: 13
+          :rule: "=%%spellout-cardinal-prefixpart= déag;"
+        - :value: 20
+          :rule: "=%%spellout-cardinal-prefixpart=;"
+        :access: private
+      - :type: spellout-cardinal
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-cardinal-prefixpart
+        :rules:
+        - :value: 0
+          :rule: náid;
+        - :value: 1
+          :rule: aon;
+        - :value: 2
+          :rule: dhá;
+        - :value: 3
+          :rule: trí;
+        - :value: 4
+          :rule: ceithre;
+        - :value: 5
+          :rule: cúig;
+        - :value: 6
+          :rule: sé;
+        - :value: 7
+          :rule: seacht;
+        - :value: 8
+          :rule: ocht;
+        - :value: 9
+          :rule: naoi;
+        - :value: 10
+          :rule: deich;
+        - :value: 11
+          :rule: ">>;"
+        - :value: 20
+          :rule: fiche[ is >>];
+        - :value: 30
+          :rule: tríocha[ is >>];
+        - :value: 40
+          :rule: daichead[ is >>];
+        - :value: 50
+          :rule: caoga[ is >>];
+        - :value: 60
+          :rule: seasca[ is >>];
+        - :value: 70
+          :rule: seachtó[ is >>];
+        - :value: 80
+          :rule: ochtó[ is >>];
+        - :value: 90
+          :rule: nócha[ is >>];
+        - :value: 100
+          :rule: "<%%hundreds<[>%%is-numberp>];"
+        - :value: 1000
+          :rule: "<%%thousands<[, >%%numberp>];"
+        - :value: 1000000
+          :rule: "<%%millions<[, >%%numberp>];"
+        - :value: 1000000000
+          :rule: "<%%billions<[, >%%numberp>];"
+        - :value: 1000000000000
+          :rule: "<%%trillions<[, >%%numberp>];"
+        - :value: 1000000000000000
+          :rule: "<%%quadrillions<[, >%%numberp>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+        :access: private
+      - :type: is
+        :rules:
+        - :value: 0
+          :rule: " is;"
+        - :value: 1
+          :rule: ";"
+        - :value: 10
+          :rule: ">>;"
+        :access: private
+      - :type: hundreds
+        :rules:
+        - :value: 1
+          :rule: céad;
+        - :value: 2
+          :rule: dhá chéad;
+        - :value: 3
+          :rule: trí chéad;
+        - :value: 4
+          :rule: ceithre chéad;
+        - :value: 5
+          :rule: cúig chéad;
+        - :value: 6
+          :rule: sé chéad;
+        - :value: 7
+          :rule: seacht gcéad;
+        - :value: 8
+          :rule: ocht gcéad;
+        - :value: 9
+          :rule: naoi gcéad;
+        :access: private
+      - :type: thousands
+        :rules:
+        - :value: 1
+          :rule: míle;
+        - :value: 2
+          :rule: "=%%spellout-cardinal-prefixpart= =%%thousandp=;"
+        - :value: 100
+          :rule: "<%%hundreds<>%%is-thousands>;"
+        :access: private
+      - :type: thousandp
+        :rules:
+        - :value: 2
+          :rule: "=%%thousand=;"
+        - :value: 11
+          :rule: "=%%thousand= dhéag;"
+        - :value: 20
+          :rule: "=%%thousand=;"
+        :access: private
+      - :type: thousand
+        :rules:
+        - :value: 0
+          :rule: míle;
+        - :value: 1
+          :rule: mhíle;
+        - :value: 7
+          :rule: míle;
+        - :value: 11
+          :rule: ">>;"
+        :access: private
+      - :type: is-thousands
+        :rules:
+        - :value: 0
+          :rule: " =%%thousand=;"
+        - :value: 1
+          :rule: " is =%%spellout-cardinal-prefixpart= =%%thousand=;"
+        - :value: 11
+          :rule: " is =%%thousands=;"
+        - :value: 20
+          :rule: "=%%is= =%%thousands=;"
+        :access: private
+      - :type: millions
+        :rules:
+        - :value: 1
+          :rule: milliún;
+        - :value: 2
+          :rule: "=%%spellout-cardinal-prefixpart= =%%millionsp=;"
+        - :value: 100
+          :rule: "<%%hundreds<>%%is-millions>;"
+        :access: private
+      - :type: millionsp
+        :rules:
+        - :value: 2
+          :rule: "=%%million=;"
+        - :value: 11
+          :rule: "=%%million= déag;"
+        - :value: 20
+          :rule: "=%%million=;"
+        :access: private
+      - :type: million
+        :rules:
+        - :value: 0
+          :rule: milliún;
+        - :value: 1
+          :rule: mhilliún;
+        - :value: 7
+          :rule: milliún;
+        - :value: 11
+          :rule: ">>;"
+        :access: private
+      - :type: is-millions
+        :rules:
+        - :value: 0
+          :rule: " =%%million=;"
+        - :value: 1
+          :rule: " is =%%spellout-cardinal-prefixpart= =%%million=;"
+        - :value: 11
+          :rule: " is =%%millions=;"
+        - :value: 20
+          :rule: "=%%is= =%%millions=;"
+        :access: private
+      - :type: billions
+        :rules:
+        - :value: 1
+          :rule: billiún;
+        - :value: 2
+          :rule: "=%%spellout-cardinal-prefixpart= billiún;"
+        - :value: 11
+          :rule: "=%%spellout-cardinal-prefixpart= billiún déag;"
+        - :value: 20
+          :rule: "=%%spellout-cardinal-prefixpart= billiún;"
+        - :value: 100
+          :rule: "<%%hundreds<>%%is-billions>;"
+        :access: private
+      - :type: is-billions
+        :rules:
+        - :value: 0
+          :rule: " billiún;"
+        - :value: 1
+          :rule: " is =%%spellout-cardinal-prefixpart= billiún;"
+        - :value: 11
+          :rule: " is =%%billions=;"
+        - :value: 20
+          :rule: "=%%is= =%%billions=;"
+        :access: private
+      - :type: trillions
+        :rules:
+        - :value: 1
+          :rule: thrilliún;
+        - :value: 2
+          :rule: "=%%spellout-cardinal-prefixpart= =%%trillionsp=;"
+        - :value: 100
+          :rule: "<%%hundreds<>%%is-trillions>;"
+        :access: private
+      - :type: trillionsp
+        :rules:
+        - :value: 2
+          :rule: "=%%trillion=;"
+        - :value: 11
+          :rule: "=%%trillion= déag;"
+        - :value: 20
+          :rule: "=%%trillion=;"
+        :access: private
+      - :type: trillion
+        :rules:
+        - :value: 0
+          :rule: dtrilliún;
+        - :value: 1
+          :rule: thrilliún;
+        - :value: 7
+          :rule: dtrilliún;
+        - :value: 11
+          :rule: ">>;"
+        :access: private
+      - :type: is-trillions
+        :rules:
+        - :value: 0
+          :rule: " =%%trillion=;"
+        - :value: 1
+          :rule: " is =%%spellout-cardinal-prefixpart= =%%trillion=;"
+        - :value: 11
+          :rule: " is =%%trillions=;"
+        - :value: 20
+          :rule: "=%%is= =%%trillions=;"
+        :access: private
+      - :type: quadrillions
+        :rules:
+        - :value: 1
+          :rule: quadrilliún;
+        - :value: 2
+          :rule: "=%%spellout-cardinal-prefixpart= quadrilliún;"
+        - :value: 11
+          :rule: "=%%spellout-cardinal-prefixpart= quadrilliún déag;"
+        - :value: 20
+          :rule: "=%%spellout-cardinal-prefixpart= quadrilliún;"
+        - :value: 100
+          :rule: "<%%hundreds<>%%is-quadrillions>;"
+        :access: private
+      - :type: is-quadrillions
+        :rules:
+        - :value: 0
+          :rule: " quadrilliún;"
+        - :value: 1
+          :rule: " is =%%spellout-cardinal-prefixpart= quadrilliún;"
+        - :value: 11
+          :rule: " is =%%quadrillions=;"
+        - :value: 20
+          :rule: "=%%is= =%%quadrillions=;"
+        :access: private
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0=ú;"

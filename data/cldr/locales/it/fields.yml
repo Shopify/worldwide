@@ -1,0 +1,675 @@
+---
+it:
+  fields:
+    day:
+      display_name: giorno
+      relative:
+        -2: l’altro ieri
+        -1: ieri
+        0: oggi
+        1: domani
+        2: dopodomani
+      relative_time:
+        future:
+          many: tra {0} giorni
+          one: tra {0} giorno
+          other: tra {0} giorni
+        past:
+          many: "{0} giorni fa"
+          one: "{0} giorno fa"
+          other: "{0} giorni fa"
+    day_narrow:
+      display_name: g.
+      relative:
+        -2: l’altro ieri
+        -1: ieri
+        0: oggi
+        1: domani
+        2: dopodomani
+      relative_time:
+        future:
+          many: tra {0} gg
+          one: tra {0} g
+          other: tra {0} gg
+        past:
+          many: "{0} gg fa"
+          one: "{0} g fa"
+          other: "{0} gg fa"
+    day_of_year:
+      display_name: giorno dell’anno
+    day_of_year_narrow:
+      display_name: giorno anno
+    day_of_year_short:
+      display_name: giorno anno
+    day_short:
+      display_name: g.
+      relative:
+        -2: l’altro ieri
+        -1: ieri
+        0: oggi
+        1: domani
+        2: dopodomani
+      relative_time:
+        future:
+          many: tra {0} gg
+          one: tra {0} g
+          other: tra {0} gg
+        past:
+          many: "{0} gg fa"
+          one: "{0} g fa"
+          other: "{0} gg fa"
+    dayperiod:
+      display_name: AM/PM
+    dayperiod_narrow:
+      display_name: AM/PM
+    dayperiod_short:
+      display_name: AM/PM
+    era:
+      display_name: era
+    era_narrow:
+      display_name: era
+    era_short:
+      display_name: era
+    fri:
+      relative:
+        -1: venerdì scorso
+        0: questo venerdì
+        1: venerdì prossimo
+      relative_time:
+        future:
+          many: tra {0} venerdì
+          one: tra {0} venerdì
+          other: tra {0} venerdì
+        past:
+          many: "{0} venerdì fa"
+          one: "{0} venerdì fa"
+          other: "{0} venerdì fa"
+    fri_narrow:
+      relative:
+        -1: ven. scorso
+        0: questo ven.
+        1: ven. prossimo
+      relative_time:
+        future:
+          many: tra {0} ven.
+          one: tra {0} ven.
+          other: tra {0} ven.
+        past:
+          many: "{0} ven. fa"
+          one: "{0} ven. fa"
+          other: "{0} ven. fa"
+    fri_short:
+      relative:
+        -1: ven. scorso
+        0: questo ven.
+        1: ven. prossimo
+      relative_time:
+        future:
+          many: tra {0} ven.
+          one: tra {0} ven.
+          other: tra {0} ven.
+        past:
+          many: "{0} ven. fa"
+          one: "{0} ven. fa"
+          other: "{0} ven. fa"
+    hour:
+      display_name: ora
+      relative:
+        0: quest’ora
+      relative_time:
+        future:
+          many: tra {0} ore
+          one: tra {0} ora
+          other: tra {0} ore
+        past:
+          many: "{0} ore fa"
+          one: "{0} ora fa"
+          other: "{0} ore fa"
+    hour_narrow:
+      display_name: h
+      relative_time:
+        future:
+          many: tra {0} h
+          one: tra {0} h
+          other: tra {0} h
+        past:
+          many: "{0} h fa"
+          one: "{0} h fa"
+          other: "{0} h fa"
+    hour_short:
+      display_name: h
+      relative_time:
+        future:
+          many: tra {0} h
+          one: tra {0} h
+          other: tra {0} h
+        past:
+          many: "{0} h fa"
+          one: "{0} h fa"
+          other: "{0} h fa"
+    minute:
+      display_name: minuto
+      relative:
+        0: questo minuto
+      relative_time:
+        future:
+          many: tra {0} minuti
+          one: tra {0} minuto
+          other: tra {0} minuti
+        past:
+          many: "{0} minuti fa"
+          one: "{0} minuto fa"
+          other: "{0} minuti fa"
+    minute_narrow:
+      display_name: min
+      relative_time:
+        future:
+          many: tra {0} min
+          one: tra {0} min
+          other: tra {0} min
+        past:
+          many: "{0} min fa"
+          one: "{0} min fa"
+          other: "{0} min fa"
+    minute_short:
+      display_name: min
+      relative_time:
+        future:
+          many: tra {0} min
+          one: tra {0} min
+          other: tra {0} min
+        past:
+          many: "{0} min fa"
+          one: "{0} min fa"
+          other: "{0} min fa"
+    mon:
+      relative:
+        -1: lunedì scorso
+        0: questo lunedì
+        1: lunedì prossimo
+      relative_time:
+        future:
+          many: tra {0} lunedì
+          one: tra {0} lunedì
+          other: tra {0} lunedì
+        past:
+          many: "{0} lunedì fa"
+          one: "{0} lunedì fa"
+          other: "{0} lunedì fa"
+    mon_narrow:
+      relative:
+        -1: lun. scorso
+        0: questo lun.
+        1: lun. prossimo
+      relative_time:
+        future:
+          many: tra {0} lun.
+          one: tra {0} lun.
+          other: tra {0} lun.
+        past:
+          many: "{0} lun. fa"
+          one: "{0} lun. fa"
+          other: "{0} lun. fa"
+    mon_short:
+      relative:
+        -1: lun. scorso
+        0: questo lun.
+        1: lun. prossimo
+      relative_time:
+        future:
+          many: tra {0} lun.
+          one: tra {0} lun.
+          other: tra {0} lun.
+        past:
+          many: "{0} lun. fa"
+          one: "{0} lun. fa"
+          other: "{0} lun. fa"
+    month:
+      display_name: mese
+      relative:
+        -1: mese scorso
+        0: questo mese
+        1: mese prossimo
+      relative_time:
+        future:
+          many: tra {0} mesi
+          one: tra {0} mese
+          other: tra {0} mesi
+        past:
+          many: "{0} mesi fa"
+          one: "{0} mese fa"
+          other: "{0} mesi fa"
+    month_narrow:
+      display_name: mese
+      relative:
+        -1: mese scorso
+        0: questo mese
+        1: mese prossimo
+      relative_time:
+        future:
+          many: tra {0} mesi
+          one: tra {0} mese
+          other: tra {0} mesi
+        past:
+          many: "{0} mesi fa"
+          one: "{0} mese fa"
+          other: "{0} mesi fa"
+    month_short:
+      display_name: mese
+      relative:
+        -1: mese scorso
+        0: questo mese
+        1: mese prossimo
+      relative_time:
+        future:
+          many: tra {0} mesi
+          one: tra {0} mese
+          other: tra {0} mesi
+        past:
+          many: "{0} mesi fa"
+          one: "{0} mese fa"
+          other: "{0} mesi fa"
+    quarter:
+      display_name: trimestre
+      relative:
+        -1: trimestre scorso
+        0: questo trimestre
+        1: trimestre prossimo
+      relative_time:
+        future:
+          many: tra {0} trimestri
+          one: tra {0} trimestre
+          other: tra {0} trimestri
+        past:
+          many: "{0} trimestri fa"
+          one: "{0} trimestre fa"
+          other: "{0} trimestri fa"
+    quarter_narrow:
+      display_name: trim.
+      relative:
+        -1: trim. scorso
+        0: questo trim.
+        1: trim. prossimo
+      relative_time:
+        future:
+          many: tra {0} trim.
+          one: tra {0} trim.
+          other: tra {0} trim.
+        past:
+          many: "{0} trim. fa"
+          one: "{0} trim. fa"
+          other: "{0} trim. fa"
+    quarter_short:
+      display_name: trim.
+      relative:
+        -1: trim. scorso
+        0: questo trim.
+        1: trim. prossimo
+      relative_time:
+        future:
+          many: tra {0} trim.
+          one: tra {0} trim.
+          other: tra {0} trim.
+        past:
+          many: "{0} trim. fa"
+          one: "{0} trim. fa"
+          other: "{0} trim. fa"
+    sat:
+      relative:
+        -1: sabato scorso
+        0: questo sabato
+        1: sabato prossimo
+      relative_time:
+        future:
+          many: tra {0} sabati
+          one: tra {0} sabato
+          other: tra {0} sabati
+        past:
+          many: "{0} sabati fa"
+          one: "{0} sabato fa"
+          other: "{0} sabati fa"
+    sat_narrow:
+      relative:
+        -1: sab. scorso
+        0: questo sab.
+        1: sab. prossimo
+      relative_time:
+        future:
+          many: tra {0} sab.
+          one: tra {0} sab.
+          other: tra {0} sab.
+        past:
+          many: "{0} sab. fa"
+          one: "{0} sab. fa"
+          other: "{0} sab. fa"
+    sat_short:
+      relative:
+        -1: sab. scorso
+        0: questo sab.
+        1: sab. prossimo
+      relative_time:
+        future:
+          many: tra {0} sab.
+          one: tra {0} sab.
+          other: tra {0} sab.
+        past:
+          many: "{0} sab. fa"
+          one: "{0} sab. fa"
+          other: "{0} sab. fa"
+    second:
+      display_name: secondo
+      relative:
+        0: ora
+      relative_time:
+        future:
+          many: tra {0} secondi
+          one: tra {0} secondo
+          other: tra {0} secondi
+        past:
+          many: "{0} secondi fa"
+          one: "{0} secondo fa"
+          other: "{0} secondi fa"
+    second_narrow:
+      display_name: s
+      relative_time:
+        future:
+          many: tra {0} s
+          one: tra {0} s
+          other: tra {0} s
+        past:
+          many: "{0} s fa"
+          one: "{0} s fa"
+          other: "{0} s fa"
+    second_short:
+      display_name: s
+      relative_time:
+        future:
+          many: tra {0} sec.
+          one: tra {0} sec.
+          other: tra {0} sec.
+        past:
+          many: "{0} sec. fa"
+          one: "{0} sec. fa"
+          other: "{0} sec. fa"
+    sun:
+      relative:
+        -1: domenica scorsa
+        0: questa domenica
+        1: domenica prossima
+      relative_time:
+        future:
+          many: tra {0} domeniche
+          one: tra {0} domenica
+          other: tra {0} domeniche
+        past:
+          many: "{0} domeniche fa"
+          one: "{0} domenica fa"
+          other: "{0} domeniche fa"
+    sun_narrow:
+      relative:
+        -1: dom. scorsa
+        0: questa dom.
+        1: dom. prossima
+      relative_time:
+        future:
+          many: tra {0} dom.
+          one: tra {0} dom.
+          other: tra {0} dom.
+        past:
+          many: "{0} dom. fa"
+          one: "{0} dom. fa"
+          other: "{0} dom. fa"
+    sun_short:
+      relative:
+        -1: dom. scorsa
+        0: questa dom.
+        1: dom. prossima
+      relative_time:
+        future:
+          many: tra {0} dom.
+          one: tra {0} dom.
+          other: tra {0} dom.
+        past:
+          many: "{0} dom. fa"
+          one: "{0} dom. fa"
+          other: "{0} dom. fa"
+    thu:
+      relative:
+        -1: giovedì scorso
+        0: questo giovedì
+        1: giovedì prossimo
+      relative_time:
+        future:
+          many: tra {0} giovedì
+          one: tra {0} giovedì
+          other: tra {0} giovedì
+        past:
+          many: "{0} giovedì fa"
+          one: "{0} giovedì fa"
+          other: "{0} giovedì fa"
+    thu_narrow:
+      relative:
+        -1: gio. scorso
+        0: questo gio.
+        1: gio. prossimo
+      relative_time:
+        future:
+          many: tra {0} gio.
+          one: tra {0} gio.
+          other: tra {0} gio.
+        past:
+          many: "{0} gio. fa"
+          one: "{0} gio. fa"
+          other: "{0} gio. fa"
+    thu_short:
+      relative:
+        -1: gio. scorso
+        0: questo gio.
+        1: gio. prossimo
+      relative_time:
+        future:
+          many: tra {0} gio.
+          one: tra {0} gio.
+          other: tra {0} gio.
+        past:
+          many: "{0} gio. fa"
+          one: "{0} gio. fa"
+          other: "{0} gio. fa"
+    tue:
+      relative:
+        -1: martedì scorso
+        0: questo martedì
+        1: martedì prossimo
+      relative_time:
+        future:
+          many: tra {0} martedì
+          one: tra {0} martedì
+          other: tra {0} martedì
+        past:
+          many: "{0} martedì fa"
+          one: "{0} martedì fa"
+          other: "{0} martedì fa"
+    tue_narrow:
+      relative:
+        -1: mar. scorso
+        0: questo mar.
+        1: mar. prossimo
+      relative_time:
+        future:
+          many: tra {0} mar.
+          one: tra {0} mar.
+          other: tra {0} mar.
+        past:
+          many: "{0} mar. fa"
+          one: "{0} mar. fa"
+          other: "{0} mar. fa"
+    tue_short:
+      relative:
+        -1: mar. scorso
+        0: questo mar.
+        1: mar. prossimo
+      relative_time:
+        future:
+          many: tra {0} mar.
+          one: tra {0} mar.
+          other: tra {0} mar.
+        past:
+          many: "{0} mar. fa"
+          one: "{0} mar. fa"
+          other: "{0} mar. fa"
+    wed:
+      relative:
+        -1: mercoledì scorso
+        0: questo mercoledì
+        1: mercoledì prossimo
+      relative_time:
+        future:
+          many: tra {0} mercoledì
+          one: tra {0} mercoledì
+          other: tra {0} mercoledì
+        past:
+          many: "{0} mercoledì fa"
+          one: "{0} mercoledì fa"
+          other: "{0} mercoledì fa"
+    wed_narrow:
+      relative:
+        -1: mer. scorso
+        0: questo mer.
+        1: mer. prossimo
+      relative_time:
+        future:
+          many: tra {0} mer.
+          one: tra {0} mer.
+          other: tra {0} mer.
+        past:
+          many: "{0} mer. fa"
+          one: "{0} mer. fa"
+          other: "{0} mer. fa"
+    wed_short:
+      relative:
+        -1: mer. scorso
+        0: questo mer.
+        1: mer. prossimo
+      relative_time:
+        future:
+          many: tra {0} mer.
+          one: tra {0} mer.
+          other: tra {0} mer.
+        past:
+          many: "{0} mer. fa"
+          one: "{0} mer. fa"
+          other: "{0} mer. fa"
+    week:
+      display_name: settimana
+      relative:
+        -1: settimana scorsa
+        0: questa settimana
+        1: settimana prossima
+      relative_time:
+        future:
+          many: tra {0} settimane
+          one: tra {0} settimana
+          other: tra {0} settimane
+        past:
+          many: "{0} settimane fa"
+          one: "{0} settimana fa"
+          other: "{0} settimane fa"
+    week_narrow:
+      display_name: sett.
+      relative:
+        -1: sett. scorsa
+        0: questa sett.
+        1: sett. prossima
+      relative_time:
+        future:
+          many: tra {0} sett.
+          one: tra {0} sett.
+          other: tra {0} sett.
+        past:
+          many: "{0} sett. fa"
+          one: "{0} sett. fa"
+          other: "{0} sett. fa"
+    week_of_month:
+      display_name: settimana del mese
+    week_of_month_narrow:
+      display_name: sett. mese
+    week_of_month_short:
+      display_name: sett. mese
+    week_short:
+      display_name: sett.
+      relative:
+        -1: sett. scorsa
+        0: questa sett.
+        1: sett. prossima
+      relative_time:
+        future:
+          many: tra {0} sett.
+          one: tra {0} sett.
+          other: tra {0} sett.
+        past:
+          many: "{0} sett. fa"
+          one: "{0} sett. fa"
+          other: "{0} sett. fa"
+    weekday:
+      display_name: giorno della settimana
+    weekday_narrow:
+      display_name: giorno sett.
+    weekday_of_month:
+      display_name: giorno del mese
+    weekday_of_month_narrow:
+      display_name: giorno mese
+    weekday_of_month_short:
+      display_name: giorno mese
+    weekday_short:
+      display_name: giorno settimana
+    year:
+      display_name: anno
+      relative:
+        -1: anno scorso
+        0: quest’anno
+        1: anno prossimo
+      relative_time:
+        future:
+          many: tra {0} anni
+          one: tra {0} anno
+          other: tra {0} anni
+        past:
+          many: "{0} anni fa"
+          one: "{0} anno fa"
+          other: "{0} anni fa"
+    year_narrow:
+      display_name: anno
+      relative:
+        -1: anno scorso
+        0: quest’anno
+        1: anno prossimo
+      relative_time:
+        future:
+          many: tra {0} anni
+          one: tra {0} anno
+          other: tra {0} anni
+        past:
+          many: "{0} anni fa"
+          one: "{0} anno fa"
+          other: "{0} anni fa"
+    year_short:
+      display_name: anno
+      relative:
+        -1: anno scorso
+        0: quest’anno
+        1: anno prossimo
+      relative_time:
+        future:
+          many: tra {0} anni
+          one: tra {0} anno
+          other: tra {0} anni
+        past:
+          many: "{0} anni fa"
+          one: "{0} anno fa"
+          other: "{0} anni fa"
+    zone:
+      display_name: fuso orario
+    zone_narrow:
+      display_name: fuso
+    zone_short:
+      display_name: fuso

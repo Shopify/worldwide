@@ -1,0 +1,144 @@
+---
+da:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Firma
+            optional: Firma (valgfrit)
+          errors:
+            blank: Indtast firmanavn
+            too_long: Firmanavnet er for langt (højst 255 tegn)
+            contains_html_tags: Firma må ikke indeholde HTML-tags.
+            contains_emojis: Firma må ikke indeholde emojis
+            contains_restricted_characters: Firma må kun indeholde bogstaver, tegn,
+              lokale tegn og specialtegn
+        first_name:
+          label:
+            default: Fornavn
+            optional: Fornavn (valgfrit)
+          errors:
+            blank: Indtast fornavn
+            too_long: Fornavnet er for langt (højst 255 tegn)
+            contains_html_tags: Fornavn må ikke indeholde HTML-tags.
+            contains_emojis: Fornavn må ikke indeholde emojis
+            contains_restricted_characters: Fornavn må kun indeholde bogstaver, tegn,
+              lokale tegn og specialtegn
+            contains_url: Fornavn må ikke indeholde en webadresse.
+        last_name:
+          label:
+            default: Efternavn
+            optional: Efternavn (valgfrit)
+          errors:
+            blank: Indtast efternavn
+            too_long: Efternavnet er for langt (højst 255 tegn)
+            contains_html_tags: Efternavn må ikke indeholde HTML-tags.
+            contains_emojis: Efternavn må ikke indeholde emojis
+            contains_restricted_characters: Efternavn må kun indeholde bogstaver,
+              tegn, lokale tegn og specialtegn
+            contains_url: Efternavn må ikke indeholde en webadresse.
+        address1:
+          label:
+            default: Adresse
+            optional: Adresse (valgfrit)
+          errors:
+            blank: Indtast adresse
+            too_long: Den første adresselinje er for lang (højst 255 tegn)
+            contains_html_tags: Adresse 1 må ikke indeholde HTML-tags.
+            contains_emojis: Adresse1 må ikke indeholde emojis
+            contains_restricted_characters: Adresse1 må kun indeholde bogstaver, tegn,
+              lokale tegn og specialtegn
+            contains_url: Adresse1 må ikke indeholde webadresser.
+            missing_building_number: Tilføj et bygningsnummer, hvis du har et.
+            street_unknown_for_zip: Angiv et gyldigt gadenavn for %{zip}.
+            building_number_invalid: Bygningsnummeret kunne ikke findes for %{street},
+              %{zip}.
+            contains_too_many_words: Adresse1 må ikke indeholde flere end %{word_count}
+              ord
+        address2:
+          label:
+            default: Lejlighed, etage osv.
+            optional: Lejlighed, etage osv. (valgfrit)
+          errors:
+            blank: Angiv en lejlighed, et værelsesnummer osv.
+            too_long: Den anden adresselinje er for lang (højst 255 tegn)
+            contains_html_tags: Adresse 2 må ikke indeholde HTML-tags.
+            contains_emojis: Adresse2 må ikke indeholde emojis
+            contains_restricted_characters: Adresse2 må kun indeholde bogstaver, tegn,
+              lokale tegn og specialtegn
+            contains_url: Adresse2 må ikke indeholde webadresser.
+            missing_building_number: Tilføj et bygningsnummer, hvis du har et.
+            street_unknown_for_zip: Angiv et gyldigt gadenavn for %{zip}.
+            building_number_invalid: Bygningsnummeret kunne ikke findes for %{street},
+              %{zip}.
+            contains_too_many_words: Adresse2 må ikke indeholde flere end %{word_count}
+              ord
+        city:
+          label:
+            default: By
+            optional: By (valgfrit)
+          errors:
+            blank: Angiv en by
+            too_long: Bynavnet er for langt (højst 255 tegn)
+            contains_html_tags: Byen må ikke indeholde HTML-tags.
+            contains_emojis: By må ikke indeholde emojis
+            contains_restricted_characters: By må kun indeholde bogstaver, tegn, lokale
+              tegn og specialtegn
+            contains_url: Bynavnet må ikke indeholde en webadresse
+            unknown_for_zip: Angiv et gyldigt bynavn for %{zip}
+            unknown_for_province: Angiv en gyldig by for %{province}
+            unknown_for_zip_and_province: Angiv en gyldig by for %{zip}, %{province}
+            contains_too_many_words: Byen må ikke indeholde flere end %{word_count}
+              ord
+        country:
+          label:
+            default: Land/område
+            optional: Land/område (valgfrit)
+          errors:
+            blank: Vælg en lande-/områdekode
+            not_supported: Vi understøtter ikke dette land/område på nuværende tidspunkt.
+              Angiv en ny adresse, og prøv igen.
+            invalid: Angiv et gyldigt land/område
+            invalid_for_zip: Angiv et gyldigt land/område for dette postnummer
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (valgfri)
+          errors:
+            blank: Angiv et telefonnummer
+            invalid: Indtast et gyldigt telefonnummer
+            too_long: Telefonnummeret er for langt (højst 255 tegn)
+            contains_emojis: Telefonnummer må ikke indeholde emojis
+            contains_restricted_characters: Telefonnummer må kun indeholde bogstaver,
+              tegn, lokale tegn og specialtegn
+        province:
+          label:
+            default: Område
+            optional: Område (valgfrit)
+          errors:
+            blank: Vælg et område
+            invalid_for_country: Angiv et gyldigt område for %{country}
+            unknown_for_city_and_zip: Angiv et gyldigt område for %{city}, %{zip}
+            unknown_for_city: Vælg et gyldigt område for %{city}
+            unknown_for_zip: Vælg et gyldigt område for %{zip}
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valgfrit)
+          errors:
+            blank: Angiv et postnummer
+            blocked_address: Denne lokation understøttes ikke.
+            invalid_for_country: Angiv et gyldigt postnummer for %{country}
+            invalid_for_country_and_province: Angiv et gyldigt postnummer for %{province},
+              %{country}
+            invalid: Angiv et gyldigt postnummer
+            too_long: Postnummerværdien er for lang
+            contains_html_tags: Postnummeret må ikke indeholde HTML-tags.
+            contains_emojis: Postnummer må ikke indeholde emojis
+            contains_restricted_characters: Postnummer må kun indeholde bogstaver,
+              tegn, lokale tegn og specialtegn
+            not_supported: Vi understøtter ikke dette land/område på nuværende tidspunkt.
+              Angiv en ny adresse, og prøv igen.
+            unknown_for_province: Angiv et gyldigt postnummer for %{province}
+            invalid_for_province: Angiv et gyldigt postnummer for %{province}

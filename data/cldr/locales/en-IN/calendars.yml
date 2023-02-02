@@ -1,0 +1,42 @@
+---
+en-IN:
+  calendars:
+    gregorian:
+      additional_formats:
+        Ehm: E, h:mm a
+        EHm: E, HH:mm
+        Ehms: E, h:mm:ss a
+        EHms: E, HH:mm:ss
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMMMEd: E, d MMM, y
+      fields:
+        day_period: AM/PM
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM, y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: dd-MMM-y
+          short:
+            pattern: dd/MM/yy
+        datetime:
+          full:
+            pattern: "{{date}} 'at' {{time}}"
+          long:
+            pattern: "{{date}} 'at' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a

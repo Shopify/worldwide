@@ -1,0 +1,137 @@
+---
+kl:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: numbertimes
+        :rules:
+        - :value: 1
+          :rule: ataaseq;
+        - :value: 2
+          :rule: marlunnik;
+        - :value: 3
+          :rule: pingasunik;
+        - :value: 4
+          :rule: sisamanik;
+        - :value: 5
+          :rule: tallimanik;
+        - :value: 6
+          :rule: arfinilinnik;
+        - :value: 7
+          :rule: arfineq-marlunnik;
+        - :value: 8
+          :rule: arfineq-pingasunik;
+        - :value: 9
+          :rule: arfineq-sisamanik;
+        - :value: 10
+          :rule: qulinik;
+        - :value: 11
+          :rule: aqqanilinik;
+        - :value: 12
+          :rule: aqqaneq-marlunnik;
+        - :value: 13
+          :rule: aqqaneq-pingasunik;
+        - :value: 14
+          :rule: aqqaneq-sisamanik;
+        - :value: 15
+          :rule: aqqaneq-tallimanik;
+        - :value: 16
+          :rule: arfersanilinnik;
+        - :value: 17
+          :rule: arfersaneq-marlunnik;
+        - :value: 18
+          :rule: arfersaneq-pingasunik;
+        - :value: 19
+          :rule: arfersaneq-sisamanik;
+        - :value: 20
+          :rule: "<%%numbertimes< qulillit[ >>];"
+        - :value: 100
+          :rule: uutritit[ >>];
+        - :value: 200
+          :rule: "<%%numbertimes< uutritillit[ >>];"
+        :access: private
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: nuulu;
+        - :value: 1
+          :rule: ataaseq;
+        - :value: 2
+          :rule: marluk;
+        - :value: 3
+          :rule: pingasut;
+        - :value: 4
+          :rule: sisamat;
+        - :value: 5
+          :rule: tallimat;
+        - :value: 6
+          :rule: arfinillit;
+        - :value: 7
+          :rule: arfineq-marluk;
+        - :value: 8
+          :rule: arfineq-pingasut;
+        - :value: 9
+          :rule: arfineq-sisamat;
+        - :value: 10
+          :rule: qulit;
+        - :value: 11
+          :rule: aqqanilit;
+        - :value: 12
+          :rule: aqqaneq-marluk;
+        - :value: 13
+          :rule: aqqaneq-pingasut;
+        - :value: 14
+          :rule: aqqaneq-sisamat;
+        - :value: 15
+          :rule: aqqaneq-tallimat;
+        - :value: 16
+          :rule: arfersanillit;
+        - :value: 17
+          :rule: arfersaneq-marluk;
+        - :value: 18
+          :rule: arfersaneq-pingasut;
+        - :value: 19
+          :rule: arfersaneq-sisamat;
+        - :value: 20
+          :rule: "<%%numbertimes< qulillit[ >>];"
+        - :value: 100
+          :rule: uutritit[ >>];
+        - :value: 200
+          :rule: "<%%numbertimes< uutritillit[ >>];"
+        - :value: 1000
+          :rule: tuusintit[ >>];
+        - :value: 2000
+          :rule: "<%%numbertimes< tuusintillit[ >>];"
+        - :value: 1000000
+          :rule: millionit[ >>];
+        - :value: 2000000
+          :rule: "<%%numbertimes< millionillit[ >>];"
+        - :value: 1000000000
+          :rule: milliardit[ >>];
+        - :value: 2000000000
+          :rule: "<%%numbertimes< milliardillit[ >>];"
+        - :value: 1000000000000
+          :rule: billionit[ >>];
+        - :value: 2000000000000
+          :rule: "<%%numbertimes< billioniillit[ >>];"
+        - :value: 1000000000000000
+          :rule: billiardit[ >>];
+        - :value: 2000000000000000
+          :rule: "<%%numbertimes< billiardillit[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

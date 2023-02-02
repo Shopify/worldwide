@@ -1,0 +1,75 @@
+---
+su:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: mineus >>;
+        - :value: x.x
+          :rule: "<< titik >>;"
+        - :value: 0
+          :rule: nol;
+        - :value: 1
+          :rule: hiji;
+        - :value: 2
+          :rule: dua;
+        - :value: 3
+          :rule: tilu;
+        - :value: 4
+          :rule: opat;
+        - :value: 5
+          :rule: lima;
+        - :value: 6
+          :rule: genep;
+        - :value: 7
+          :rule: tujuh;
+        - :value: 8
+          :rule: dalapan;
+        - :value: 9
+          :rule: salapan;
+        - :value: 10
+          :rule: sapuluh;
+        - :value: 11
+          :rule: sabelas;
+        - :value: 12
+          :rule: ">> belas;"
+        - :value: 20
+          :rule: "<< puluh[ >>];"
+        - :value: 100
+          :rule: "<%%spellout-cardinal-large<ratus[ >>];"
+        - :value: 1000
+          :rule: "<%%spellout-cardinal-large<rebu[ >>];"
+        - :value: 1000000
+          :rule: "<%%spellout-cardinal-large<juta[ >>];"
+        - :value: 1000000000
+          :rule: "<%%spellout-cardinal-large<miliar[ >>];"
+        - :value: 1000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-large
+        :rules:
+        - :value: 1
+          :rule: sa;
+        - :value: 2
+          :rule: "=%spellout-cardinal= ;"
+        :access: private
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: mineus >>;
+        - :value: x.x
+          :rule: "=#,##0.0=;"
+        - :value: 0
+          :rule: ka=%spellout-cardinal=;

@@ -1,0 +1,22 @@
+---
+name: Sudan
+tax: 0.17
+tax_name: VAT
+group: African Countries
+group_name: Africa
+code: SD
+zip_example: '13311'
+# The ranges U+0660 - U+0669 and U+06F0 - U+06F9 are Eastern-Arabic digits
+zip_regex: "^[1-6\u0661-\u0666\u06f1-\u06f6][0-9\u0660-\u0669\u06f0-\u06f9]{4}$"
+zip_requirement: optional
+unit_system: metric
+phone_number_prefix: 249
+currency: SDG
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip}_{city}_{country}_{phone}"
+emoji: "\U0001F1F8\U0001F1E9"
+languages:
+  - ar
+  - en
+timezone: Africa/Khartoum

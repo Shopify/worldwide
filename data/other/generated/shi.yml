@@ -1,0 +1,148 @@
+---
+shi:
+  date:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%Y-%02m-%02d"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+      date_time_current_year: "%-d %b %02k:%M"
+      default_long_with_zone: "%A %-d %B %Y %02k:%M %z"
+      friendly_date_time: "%Y %b %-d %02k:%M"
+      long_with_zone: "%-d %B %Y %02k:%M %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%A %-d %B"
+      short_weekday_with_date: "%a %-d %b"
+      weekday_with_short_date: "%A %-d %b"
+      long_readable_with_time: "%Y %B %-d %02k:%M"
+      long_readable_with_zone: "%A %-d %B %Y %02k:%M %z"
+      date_at_time: "%Y %B %-d %02k:%M"
+      default: "%Y-%02m-%02d"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%02k:%M ⴰⵙⵙⴰ"
+      yesterday_at_time: "%02k:%M ⵉⴹⵍⵍⵉ"
+      tomorrow_at_time: "%02k:%M ⴰⵙⴽⴽⴰ"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %-d %b"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      cc_expiry_date: "%m/%Y"
+      x_hours_ago:
+        other: "-%{count} h"
+        few: "-%{count} h"
+        one: "-%{count} h"
+      x_minutes_ago:
+        other: "-%{count} min"
+        few: "-%{count} min"
+        one: "-%{count} min"
+    abbr_day_names:
+    - ⴰⵙⴰ
+    - ⴰⵢⵏ
+    - ⴰⵙⵉ
+    - ⴰⴽⵕ
+    - ⴰⴽⵡ
+    - ⴰⵙⵉⵎ
+    - ⴰⵙⵉⴹ
+    abbr_month_names:
+    - ''
+    - ⵉⵏⵏ
+    - ⴱⵕⴰ
+    - ⵎⴰⵕ
+    - ⵉⴱⵔ
+    - ⵎⴰⵢ
+    - ⵢⵓⵏ
+    - ⵢⵓⵍ
+    - ⵖⵓⵛ
+    - ⵛⵓⵜ
+    - ⴽⵜⵓ
+    - ⵏⵓⵡ
+    - ⴷⵓⵊ
+    day_names:
+    - ⴰⵙⴰⵎⴰⵙ
+    - ⴰⵢⵏⴰⵙ
+    - ⴰⵙⵉⵏⴰⵙ
+    - ⴰⴽⵕⴰⵙ
+    - ⴰⴽⵡⴰⵙ
+    - ⵙⵉⵎⵡⴰⵙ
+    - ⴰⵙⵉⴹⵢⴰⵙ
+    month_names:
+    - ''
+    - ⵉⵏⵏⴰⵢⵔ
+    - ⴱⵕⴰⵢⵕ
+    - ⵎⴰⵕⵚ
+    - ⵉⴱⵔⵉⵔ
+    - ⵎⴰⵢⵢⵓ
+    - ⵢⵓⵏⵢⵓ
+    - ⵢⵓⵍⵢⵓⵣ
+    - ⵖⵓⵛⵜ
+    - ⵛⵓⵜⴰⵏⴱⵉⵔ
+    - ⴽⵜⵓⴱⵔ
+    - ⵏⵓⵡⴰⵏⴱⵉⵔ
+    - ⴷⵓⵊⴰⵏⴱⵉⵔ
+    order:
+    - :year
+    - :month
+    - :day
+    relative_day_names:
+      this_week: this week
+      this_month: this month
+      yesterday: ⵉⴹⵍⵍⵉ
+      today: ⴰⵙⵙⴰ
+      tomorrow: ⴰⵙⴽⴽⴰ
+  time:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%Y-%02m-%02d"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%-d %b %02k:%M"
+      default_long_with_zone: "%A %-d %B %Y %02k:%M %z"
+      friendly_date_time: "%Y %b %-d %02k:%M"
+      long_with_zone: "%-d %B %Y %02k:%M %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%A %-d %B"
+      short_weekday_with_date: "%a %-d %b"
+      weekday_with_short_date: "%A %-d %b"
+      long_readable_with_time: "%Y %B %-d %02k:%M"
+      long_readable_with_zone: "%A %-d %B %Y %02k:%M %z"
+      date_at_time: "%Y %B %-d %02k:%M"
+      default: "%a %-d %b %Y %02k:%M %z"
+      long: "%Y %B %-d %02k:%M"
+      short: "%-d %b %02k:%M"
+      billing: "%Y-%02m-%02d"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%02k:%M ⴰⵙⵙⴰ"
+      yesterday_at_time: "%02k:%M ⵉⴹⵍⵍⵉ"
+      tomorrow_at_time: "%02k:%M ⴰⵙⴽⴽⴰ"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %-d %b"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      cc_expiry_date: "%m/%Y"
+      x_hours_ago:
+        other: "-%{count} h"
+        few: "-%{count} h"
+        one: "-%{count} h"
+      x_minutes_ago:
+        other: "-%{count} min"
+        few: "-%{count} min"
+        one: "-%{count} min"
+    am: am
+    pm: pm
+    just_now: now
+    yesterday: ⵉⴹⵍⵍⵉ

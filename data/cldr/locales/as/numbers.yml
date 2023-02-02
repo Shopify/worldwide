@@ -1,0 +1,179 @@
+---
+as:
+  numbers:
+    beng:
+      formats:
+        currency:
+          patterns:
+            default:
+              standard: "¤ #,##,##0.00"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##,##0.###"
+        percent:
+          patterns:
+            default:
+              standard: "#,##,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "¤ #,##,##0.00"
+              standard: "¤ #,##,##0.00"
+            short:
+              standard:
+                '1000':
+                  one: "¤ 0 হাজাৰ"
+                  other: "¤ 0 হাজাৰ"
+                '10000':
+                  one: "¤ 00 হাজাৰ"
+                  other: "¤ 00 হাজাৰ"
+                '100000':
+                  one: "¤ 000 লাখ"
+                  other: "¤ 000 লাখ"
+                '1000000':
+                  one: "¤ 0 নিযুত"
+                  other: "¤ 0 নিযুত"
+                '10000000':
+                  one: "¤ 00 নিযুত"
+                  other: "¤ 00 নিযুত"
+                '100000000':
+                  one: "¤ 000 নিযুত"
+                  other: "¤ 000 নিযুত"
+                '1000000000':
+                  one: "¤ 0 শত কোটি"
+                  other: "¤ 0 শত কোটি"
+                '10000000000':
+                  one: "¤ 00 শত কোটি"
+                  other: "¤ 00 শত কোটি"
+                '100000000000':
+                  one: "¤ 000 শত কোটি"
+                  other: "¤ 000 শত কোটি"
+                '1000000000000':
+                  one: "¤ 0 শত পৰাৰ্দ্ধ"
+                  other: "¤ 0 শত পৰাৰ্দ্ধ"
+                '10000000000000':
+                  one: "¤ 00 শত পৰাৰ্দ্ধ"
+                  other: "¤ 00 শত পৰাৰ্দ্ধ"
+                '100000000000000':
+                  one: "¤ 000 শত পৰাৰ্দ্ধ"
+                  other: "¤ 000 শত পৰাৰ্দ্ধ"
+          unit:
+            one: "{0} {1}"
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##,##0.###"
+            long:
+              standard:
+                '1000':
+                  one: 0 হাজাৰ
+                  other: 0 হাজাৰ
+                '10000':
+                  one: 00 হাজাৰ
+                  other: 00 হাজাৰ
+                '100000':
+                  one: 0 লাখ
+                  other: 0 লাখ
+                '1000000':
+                  one: 0 নিযুত
+                  other: 0 নিযুত
+                '10000000':
+                  one: 00 নিযুত
+                  other: 00 নিযুত
+                '100000000':
+                  one: 000 নিযুত
+                  other: 000 নিযুত
+                '1000000000':
+                  one: 0 শত কোটি
+                  other: 0 শত কোটি
+                '10000000000':
+                  one: 00 শত কোটি
+                  other: 00 শত কোটি
+                '100000000000':
+                  one: 000 শত কোটি
+                  other: 000 শত কোটি
+                '1000000000000':
+                  one: 0 শত পৰাৰ্দ্ধ
+                  other: 0 শত পৰাৰ্দ্ধ
+                '10000000000000':
+                  one: 00 শত পৰাৰ্দ্ধ
+                  other: 00 শত পৰাৰ্দ্ধ
+                '100000000000000':
+                  one: 000 শত পৰাৰ্দ্ধ
+                  other: 000 শত পৰাৰ্দ্ধ
+            short:
+              standard:
+                '1000':
+                  one: 0 হাজাৰ
+                  other: 0 হাজাৰ
+                '10000':
+                  one: 00 হাজাৰ
+                  other: 00 হাজাৰ
+                '100000':
+                  one: 0 লাখ
+                  other: 0 লাখ
+                '1000000':
+                  one: 0 নিযুত
+                  other: 0 নিযুত
+                '10000000':
+                  one: 00 নিযুত
+                  other: 00 নিযুত
+                '100000000':
+                  one: 000 নিঃ
+                  other: 000 নিঃ
+                '1000000000':
+                  one: 0 শঃ কোঃ
+                  other: 0 শঃ কোঃ
+                '10000000000':
+                  one: 00 শঃ কোঃ
+                  other: 00 শঃ কোঃ
+                '100000000000':
+                  one: 000 শঃ কঃ
+                  other: 000 শঃ কঃ
+                '1000000000000':
+                  one: 0 শঃ পঃ
+                  other: 0 শঃ পঃ
+                '10000000000000':
+                  one: 00 শঃ পঃ
+                  other: 00 শঃ পঃ
+                '100000000000000':
+                  one: 000 শঃ পঃ
+                  other: 000 শঃ পঃ
+        percent:
+          patterns:
+            default:
+              standard: "#,##,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"

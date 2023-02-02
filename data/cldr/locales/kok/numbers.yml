@@ -1,0 +1,137 @@
+---
+kok:
+  numbers:
+    deva:
+      formats:
+        currency:
+          patterns:
+            default:
+              standard: "¤#,##0.00"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        group: ","
+        minus_sign: "-"
+        percent_sign: "%"
+        plus_sign: "+"
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "¤#,##0.00;(¤#,##0.00)"
+              standard: "¤ #,##0.00"
+            short:
+              standard:
+                '1000':
+                  other: "¤0K"
+                '10000':
+                  other: "¤00K"
+                '100000':
+                  other: "¤000K"
+                '1000000':
+                  other: "¤0M"
+                '10000000':
+                  other: "¤00M"
+                '100000000':
+                  other: "¤000M"
+                '1000000000':
+                  other: "¤0B"
+                '10000000000':
+                  other: "¤00B"
+                '100000000000':
+                  other: "¤000B"
+                '1000000000000':
+                  other: "¤0T"
+                '10000000000000':
+                  other: "¤00T"
+                '100000000000000':
+                  other: "¤000T"
+          unit:
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  other: 0 हजार
+                '10000':
+                  other: 00 हजार
+                '100000':
+                  other: 000 हजार
+                '1000000':
+                  other: 0 दशलक्ष
+                '10000000':
+                  other: 00 दशलक्ष
+                '100000000':
+                  other: 000 दशलक्ष
+                '1000000000':
+                  other: 0 अब्ज
+                '10000000000':
+                  other: 00 अब्ज
+                '100000000000':
+                  other: 000 अब्ज
+                '1000000000000':
+                  other: 0 ट्रिलियन
+                '10000000000000':
+                  other: 00 ट्रिलियन
+                '100000000000000':
+                  other: 000 ट्रिलियन
+            short:
+              standard:
+                '1000':
+                  other: 0K
+                '10000':
+                  other: 00K
+                '100000':
+                  other: 000K
+                '1000000':
+                  other: 0M
+                '10000000':
+                  other: 00M
+                '100000000':
+                  other: 000M
+                '1000000000':
+                  other: 0B
+                '10000000000':
+                  other: 00B
+                '100000000000':
+                  other: 000B
+                '1000000000000':
+                  other: 0T
+                '10000000000000':
+                  other: 00T
+                '100000000000000':
+                  other: 000T
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"

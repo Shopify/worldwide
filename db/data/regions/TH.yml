@@ -1,0 +1,565 @@
+---
+name: Thailand
+code: TH
+tax: 0.07
+currency: THB
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_regex: "^[1-9]\\d{4}(-?\\d{4})?$"
+zip_example: '10150'
+phone_number_prefix: 66
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{province} {zip}_{country}_{phone}"
+emoji: "\U0001F1F9\U0001F1ED"
+languages:
+  - th
+zones:
+- name: Amnat Charoen
+  code: TH-37
+  iso_code: TH-37
+  tax: 0.0
+  zip_prefixes:
+  - '37'
+- name: Ang Thong
+  code: TH-15
+  iso_code: TH-15
+  tax: 0.0
+  zip_prefixes:
+  - '14'
+- name: Bangkok
+  name_alternates:
+  - Krung Thep Maha Nakhon
+  code: TH-10
+  iso_code: TH-10
+  tax: 0.0
+  zip_prefixes:
+  - '1010'
+  - '1011'
+  - '1012'
+  - '1014'
+  - '1015'
+  - '1016'
+  - '1017'
+  - '1020'
+  - '1021'
+  - '1022'
+  - '1023'
+  - '1024'
+  - '1025'
+  - '1026'
+  - '103'
+  - '104'
+  - '1050'
+  - '1051'
+  - '1052'
+  - '1053'
+  - '106'
+  - '107'
+  - '108'
+  - '109'
+- name: Bueng Kan
+  code: TH-38
+  iso_code: TH-38
+  tax: 0.0
+  zip_prefixes:
+  - '38'
+- name: Buriram
+  name_alternates:
+  - Buri Ram
+  code: TH-31
+  iso_code: TH-31
+  tax: 0.0
+  zip_prefixes:
+  - '31'
+- name: Chachoengsao
+  code: TH-24
+  iso_code: TH-24
+  tax: 0.0
+  zip_prefixes:
+  - '24'
+- name: Chai Nat
+  code: TH-18
+  iso_code: TH-18
+  tax: 0.0
+  zip_prefixes:
+  - '17'
+- name: Chaiyaphum
+  code: TH-36
+  iso_code: TH-36
+  tax: 0.0
+  zip_prefixes:
+  - '36'
+- name: Chanthaburi
+  code: TH-22
+  iso_code: TH-22
+  tax: 0.0
+  zip_prefixes:
+  - '22'
+- name: Chiang Mai
+  code: TH-50
+  iso_code: TH-50
+  tax: 0.0
+  zip_prefixes:
+  - '50'
+- name: Chiang Rai
+  code: TH-57
+  iso_code: TH-57
+  tax: 0.0
+  zip_prefixes:
+  - '57'
+- name: Chon Buri
+  code: TH-20
+  iso_code: TH-20
+  tax: 0.0
+  neighboring_zones:
+  - TH-S
+  - TH-21
+  - TH-22
+  - TH-24
+  zip_prefixes:
+  - '200'
+  - '2010'
+  - '2011'
+  - '2012'
+  - '2013'
+  - '2014'
+  # We list 20150 under Pattaya, although it also crosses into Chon Buri
+  - '20151'
+  - '20152'
+  - '20153'
+  - '20154'
+  - '20155'
+  - '20156'
+  - '20157'
+  - '20158'
+  - '20159'
+  - '2016'
+  - '2017'
+  - '2018'
+  - '2019'
+  - '202'
+  - '203'
+  - '204'
+  - '205'
+  - '206'
+  - '207'
+  - '208'
+  - '209'
+- name: Chumphon
+  code: TH-86
+  iso_code: TH-86
+  tax: 0.0
+  zip_prefixes:
+  - '86'
+- name: Kalasin
+  code: TH-46
+  iso_code: TH-46
+  tax: 0.0
+  zip_prefixes:
+  - '46'
+- name: Kamphaeng Phet
+  code: TH-62
+  iso_code: TH-62
+  tax: 0.0
+  zip_prefixes:
+  - '62'
+- name: Kanchanaburi
+  code: TH-71
+  iso_code: TH-71
+  tax: 0.0
+  zip_prefixes:
+  - '71'
+- name: Khon Kaen
+  code: TH-40
+  iso_code: TH-40
+  tax: 0.0
+  zip_prefixes:
+  - '40'
+- name: Krabi
+  code: TH-81
+  iso_code: TH-81
+  tax: 0.0
+  zip_prefixes:
+  - '81'
+- name: Lampang
+  code: TH-52
+  iso_code: TH-52
+  tax: 0.0
+  zip_prefixes:
+  - '52'
+- name: Lamphun
+  code: TH-51
+  iso_code: TH-51
+  tax: 0.0
+  zip_prefixes:
+  - '51'
+- name: Loei
+  code: TH-42
+  iso_code: TH-42
+  tax: 0.0
+  zip_prefixes:
+  - '42'
+- name: Lopburi
+  name_alternates:
+  - Lop Buri
+  code: TH-16
+  iso_code: TH-16
+  tax: 0.0
+  zip_prefixes:
+  - '15'
+- name: Mae Hong Son
+  code: TH-58
+  iso_code: TH-58
+  tax: 0.0
+  zip_prefixes:
+  - '58'
+- name: Maha Sarakham
+  code: TH-44
+  iso_code: TH-44
+  tax: 0.0
+  zip_prefixes:
+  - '44'
+- name: Mukdahan
+  code: TH-49
+  iso_code: TH-49
+  tax: 0.0
+  zip_prefixes:
+  - '49'
+- name: Nakhon Nayok
+  code: TH-26
+  iso_code: TH-26
+  tax: 0.0
+  zip_prefixes:
+  - '26'
+- name: Nakhon Pathom
+  code: TH-73
+  iso_code: TH-73
+  tax: 0.0
+  zip_prefixes:
+  - '73'
+- name: Nakhon Phanom
+  code: TH-48
+  iso_code: TH-48
+  tax: 0.0
+  zip_prefixes:
+  - '48'
+- name: Nakhon Ratchasima
+  code: TH-30
+  iso_code: TH-30
+  tax: 0.0
+  zip_prefixes:
+  - '30'
+- name: Nakhon Sawan
+  code: TH-60
+  iso_code: TH-60
+  tax: 0.0
+  zip_prefixes:
+  - '60'
+- name: Nakhon Si Thammarat
+  code: TH-80
+  iso_code: TH-80
+  tax: 0.0
+  zip_prefixes:
+  - '80'
+- name: Nan
+  code: TH-55
+  iso_code: TH-55
+  tax: 0.0
+  zip_prefixes:
+  - '55'
+- name: Narathiwat
+  code: TH-96
+  iso_code: TH-96
+  tax: 0.0
+  zip_prefixes:
+  - '96'
+- name: Nong Bua Lam Phu
+  code: TH-39
+  iso_code: TH-39
+  tax: 0.0
+  zip_prefixes:
+  - '39'
+- name: Nong Khai
+  code: TH-43
+  iso_code: TH-43
+  tax: 0.0
+  zip_prefixes:
+  - '43'
+- name: Nonthaburi
+  code: TH-12
+  iso_code: TH-12
+  tax: 0.0
+  zip_prefixes:
+  - '11'
+- name: Pathum Thani
+  code: TH-13
+  iso_code: TH-13
+  tax: 0.0
+  zip_prefixes:
+  - '12'
+- name: Pattani
+  code: TH-94
+  iso_code: TH-94
+  tax: 0.0
+  zip_prefixes:
+  - '94'
+- name: Pattaya
+  code: TH-S
+  iso_code: TH-S
+  tax: 0.0
+  zip_prefixes:
+  - '20150'
+  neighboring_zones:
+  - TH-20 # Chon Buri
+- name: Phangnga
+  code: TH-82
+  iso_code: TH-82
+  tax: 0.0
+  zip_prefixes:
+  - '82'
+- name: Phatthalung
+  code: TH-93
+  iso_code: TH-93
+  tax: 0.0
+  zip_prefixes:
+  - '93'
+- name: Phayao
+  code: TH-56
+  iso_code: TH-56
+  tax: 0.0
+  zip_prefixes:
+  - '56'
+- name: Phetchabun
+  code: TH-67
+  iso_code: TH-67
+  tax: 0.0
+  zip_prefixes:
+  - '67'
+- name: Phetchaburi
+  code: TH-76
+  iso_code: TH-76
+  tax: 0.0
+  zip_prefixes:
+  - '76'
+- name: Phichit
+  code: TH-66
+  iso_code: TH-66
+  tax: 0.0
+  zip_prefixes:
+  - '66'
+- name: Phitsanulok
+  code: TH-65
+  iso_code: TH-65
+  tax: 0.0
+  zip_prefixes:
+  - '65'
+- name: Phra Nakhon Si Ayutthaya
+  code: TH-14
+  iso_code: TH-14
+  tax: 0.0
+  zip_prefixes:
+  - '13'
+- name: Phrae
+  code: TH-54
+  iso_code: TH-54
+  tax: 0.0
+  zip_prefixes:
+  - '54'
+- name: Phuket
+  code: TH-83
+  iso_code: TH-83
+  tax: 0.0
+  zip_prefixes:
+  - '83'
+- name: Prachin Buri
+  code: TH-25
+  iso_code: TH-25
+  tax: 0.0
+  zip_prefixes:
+  - '25'
+- name: Prachuap Khiri Khan
+  code: TH-77
+  iso_code: TH-77
+  tax: 0.0
+  zip_prefixes:
+  - '77'
+- name: Ranong
+  code: TH-85
+  iso_code: TH-85
+  tax: 0.0
+  zip_prefixes:
+  - '85'
+- name: Ratchaburi
+  code: TH-70
+  iso_code: TH-70
+  tax: 0.0
+  zip_prefixes:
+  - '70'
+- name: Rayong
+  code: TH-21
+  iso_code: TH-21
+  tax: 0.0
+  zip_prefixes:
+  - '21'
+- name: Roi Et
+  code: TH-45
+  iso_code: TH-45
+  tax: 0.0
+  zip_prefixes:
+  - '45'
+- name: Sa Kaeo
+  code: TH-27
+  iso_code: TH-27
+  tax: 0.0
+  zip_prefixes:
+  - '27'
+- name: Sakon Nakhon
+  code: TH-47
+  iso_code: TH-47
+  tax: 0.0
+  zip_prefixes:
+  - '47'
+- name: Samut Prakan
+  code: TH-11
+  iso_code: TH-11
+  tax: 0.0
+  zip_prefixes:
+  - '1013'
+  - '1027'
+  - '1028'
+  - '1029'
+  - '1054'
+  - '1055'
+  - '1056'
+  - '1057'
+- name: Samut Sakhon
+  code: TH-74
+  iso_code: TH-74
+  tax: 0.0
+  zip_prefixes:
+  - '74'
+- name: Samut Songkhram
+  code: TH-75
+  iso_code: TH-75
+  tax: 0.0
+  zip_prefixes:
+  - '75'
+- name: Saraburi
+  code: TH-19
+  iso_code: TH-19
+  tax: 0.0
+  zip_prefixes:
+  - '18'
+- name: Satun
+  code: TH-91
+  iso_code: TH-91
+  tax: 0.0
+  zip_prefixes:
+  - '91'
+- name: Sing Buri
+  code: TH-17
+  iso_code: TH-17
+  tax: 0.0
+  zip_prefixes:
+  - '16'
+- name: Sisaket
+  name_alternates:
+  - Si Sa Ket
+  code: TH-33
+  iso_code: TH-33
+  tax: 0.0
+  zip_prefixes:
+  - '33'
+- name: Songkhla
+  code: TH-90
+  iso_code: TH-90
+  tax: 0.0
+  zip_prefixes:
+  - '90'
+- name: Sukhothai
+  code: TH-64
+  iso_code: TH-64
+  tax: 0.0
+  zip_prefixes:
+  - '64'
+- name: Suphan Buri
+  code: TH-72
+  iso_code: TH-72
+  tax: 0.0
+  zip_prefixes:
+  - '72'
+- name: Surat Thani
+  code: TH-84
+  iso_code: TH-84
+  tax: 0.0
+  zip_prefixes:
+  - '84'
+- name: Surin
+  code: TH-32
+  iso_code: TH-32
+  tax: 0.0
+  zip_prefixes:
+  - '32'
+- name: Tak
+  code: TH-63
+  iso_code: TH-63
+  tax: 0.0
+  zip_prefixes:
+  - '63'
+- name: Trang
+  code: TH-92
+  iso_code: TH-92
+  tax: 0.0
+  zip_prefixes:
+  - '92'
+- name: Trat
+  code: TH-23
+  iso_code: TH-23
+  tax: 0.0
+  zip_prefixes:
+  - '23'
+- name: Ubon Ratchathani
+  code: TH-34
+  iso_code: TH-34
+  tax: 0.0
+  zip_prefixes:
+  - '34'
+- name: Udon Thani
+  code: TH-41
+  iso_code: TH-41
+  tax: 0.0
+  zip_prefixes:
+  - '41'
+- name: Uthai Thani
+  code: TH-61
+  iso_code: TH-61
+  tax: 0.0
+  zip_prefixes:
+  - '61'
+- name: Uttaradit
+  code: TH-53
+  iso_code: TH-53
+  tax: 0.0
+  zip_prefixes:
+  - '53'
+- name: Yala
+  code: TH-95
+  iso_code: TH-95
+  tax: 0.0
+  zip_prefixes:
+  - '95'
+- name: Yasothon
+  code: TH-35
+  iso_code: TH-35
+  tax: 0.0
+  zip_prefixes:
+  - '35'
+zips_crossing_provinces:
+  '20150':
+    - TH-S # Pattaya City
+    - TH-20 # Chon Buri
+timezone: Asia/Bangkok

@@ -1,0 +1,28 @@
+---
+# The VAT is 10%.
+# Businesses with a turnover below DJF 10M (~USD 56K) may be exempted.
+# Businesses with a turnover between DJF 10M and DJF 20M have a rate of 7%.
+# Source:  https://oxfordbusinessgroup.com/overview/transition-time-comprehensive-guide-country%E2%80%99s-tax-laws
+tax: 0.1
+tax_name: TVA
+name: Djibouti
+group: African Countries
+group_name: Africa
+code: DJ
+unit_system: metric
+phone_number_prefix: 253
+currency: DJF
+# Djibouti seems never to have implemented postal codes.  It appears that the post office has
+# opted, instead, to standardize on using What3words to aid in sorting and delivery.
+# Sources:  https://www.grcdi.nl/gsb/djibouti.html
+#           https://www.laposte.dj/?pg=What3Words
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{country}_{phone}"
+emoji: 🇩🇯
+languages:
+  - aa
+  - ar
+  - fr
+  - so
+timezone: Africa/Nairobi

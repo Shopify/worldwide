@@ -1,0 +1,24 @@
+---
+name: Hungary
+code: HU
+tax: 0.27
+currency: HUF
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+zip_regex: "^(HU?-?)?[1-9]\\d{3}$"
+zip_example: '1037'
+group: European Countries
+group_name: Europe
+phone_number_prefix: 36
+building_number_required: true
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{zip}{city}_{address1}_{address2}_{phone}"
+  show: "{firstName} {lastName}_{company}_{zip} {city}_{address1}_{address2}_{country}_{phone}"
+tags:
+- EU-member
+emoji: "\U0001F1ED\U0001F1FA"
+languages:
+  - hu
+timezone: Europe/Budapest

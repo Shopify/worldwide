@@ -1,0 +1,1104 @@
+---
+name: Canada
+code: CA
+tax: 0.05
+currency: CAD
+unit_system: metric
+tax_name: GST
+zip_regex: "\\A[A-Za-z]\\d[A-Za-z]\\s*\\d[A-Za-z]\\d\\z"
+partial_zip_regex: "^[A-Z][0-9][A-Z]$"
+group: North American Countries
+group_name: North America
+zip_example: K1P 1J1
+phone_number_prefix: 1
+building_number_required: true
+week_start_day: sunday
+format:
+  address1: "{building_num} {street}"
+  address1_with_unit: "{unit}-{building_num} {street}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {province} {zip}_{country}_{phone}"
+emoji: "\U0001F1E8\U0001F1E6"
+languages:
+  - en
+  - fr
+use_zone_code_as_short_name: true
+zones:
+- tax: 0.0
+  name: Alberta
+  tax_name: PST
+  code: AB
+  zip_prefixes:
+  - T
+  neighboring_zones:
+  - BC
+  - SK
+  - NT
+- tax: 0.07
+  name: British Columbia
+  tax_name: PST
+  code: BC
+  zip_prefixes:
+  - V
+  neighboring_zones:
+  - AB
+  - YT
+  - NT
+- tax: 0.07
+  tax_name: RST
+  name: Manitoba
+  code: MB
+  zip_prefixes:
+  - R
+  neighboring_zones:
+  - 'ON'
+  - NU
+  - SK
+- tax: 0.15
+  tax_name: HST
+  tax_type: harmonized
+  name: New Brunswick
+  code: NB
+  zip_prefixes:
+  - E
+  neighboring_zones:
+  - NS
+  - QC
+- tax: 0.15
+  tax_name: HST
+  tax_type: harmonized
+  name: Newfoundland and Labrador
+  name_alternates:
+  - Newfoundland
+  code: NL
+  code_alternates:
+  - NF
+  zip_prefixes:
+  - A
+  neighboring_zones:
+  - QC
+- tax: 0.0
+  tax_name:
+  name: Northwest Territories
+  code: NT
+  neighboring_zones:
+  - AB
+  - BC
+  - NU
+  - SK
+  - YT
+  zip_prefixes:
+  - X0E
+  - X0G
+  - X1A
+- tax: 0.15
+  tax_name: HST
+  tax_type: harmonized
+  name: Nova Scotia
+  code: NS
+  zip_prefixes:
+  - B
+  neighboring_zones:
+  - NB
+- tax: 0.0
+  tax_name:
+  name: Nunavut
+  code: NU
+  neighboring_zones:
+  - MB
+  - NT
+  zip_prefixes:
+  - X0A
+  - X0B
+  - X0C
+- tax: 0.13
+  tax_name: HST
+  tax_type: harmonized
+  name: Ontario
+  code: 'ON'
+  zip_prefixes:
+  - K0
+  - K1A 0A
+  - K1A 0B
+  - K1A 0C0
+  - K1A 0C1
+  - K1A 0C2
+  - K1A 0C3
+  - K1A 0C4
+  - K1A 0C5
+  - K1A 0C6
+  - K1A 0C7
+  - K1A 0C8
+  # K1A 0C9 (Canadian Intellectual Property Office, Gatineau)
+  - K1A 0E
+  - K1A 0G1
+  - K1A 0G2
+  # K1A 0G3 (2-200 Prom Du Portage, Gatineau)
+  # K1A 0G4 (200 Prom Du Portage, Gatineau)
+  - K1A 0G5
+  - K1A 0G6
+  - K1A 0G7
+  - K1A 0G8
+  - K1A 0G9
+  - K1A 0H0
+  - K1A 0H1
+  - K1A 0H2
+  # K1A 0H3 (1-10 Wellington Street, Gatineau)
+  # K1A 0H4 (10 Wellington Street, Gatineau)
+  - K1A 0H5
+  - K1A 0H6
+  - K1A 0H7
+  - K1A 0H8
+  - K1A 0H9
+  - K1A 0J0
+  - K1A 0J1
+  # K1A 0J2 (164 rue de l'hotel-de-ville, Gatineau)
+  - K1A 0J3
+  - K1A 0J4
+  - K1A 0J5
+  - K1A 0J6
+  - K1A 0J7
+  - K1A 0J8
+  # K1A 0J9 (140 promenade du Portage, Gatineau)
+  - K1A 0K
+  - K1A 0L
+  - K1A 0M0
+  - K1A 0M1
+  - K1A 0M2
+  # K1A 0M3 (140 promenade du portage, Gatineau)
+  - K1A 0M4
+  # K1A 0M5 (7th floor 15 rue Eddy, Gatineau)
+  # K1A 0M6 (30 rue Victoria, Gatineau)
+  # K1A 0M7 (rue Eddy, Gatineau)
+  # K1A 0M8 (100 rue Laurier, Gatineau)
+  - K1A 0M9
+  - K1A 0N0
+  - K1A 0N1
+  # K1A 0N2 (promenade du portage, Gatineau)
+  - K1A 0N3
+  - K1A 0N4
+  - K1A 0N5
+  - K1A 0N6
+  - K1A 0N7
+  - K1A 0N8
+  # K1A 0N9 (1900-15 rue Eddy, Gatineau)
+  - K1A 0P
+  - K1A 0R
+  - K1A 0S0
+  - K1A 0S1
+  - K1A 0S2
+  - K1A 0S3
+  - K1A 0S4
+  # K1A 0S5 (rue Laurier, Gatineau)
+  - K1A 0S6
+  - K1A 0S7
+  - K1A 0S8
+  - K1A 0S9
+  - K1A 0T
+  - K1A 0V
+  - K1A 0W
+  - K1A 0X
+  - K1A 0Y
+  - K1A 0Z
+  - K1A 1A
+  - K1A 1B
+  - K1A 1C0
+  - K1A 1C1
+  - K1A 1C2
+  - K1A 1C3
+  - K1A 1C4
+  - K1A 1C5
+  - K1A 1C6
+  - K1A 1C7
+  - K1A 1C8
+  # K1A 1C9 (rue Laurier, Gatineau)
+  - K1A 1E
+  - K1A 1G1
+  # K1A 1G2 unallocated
+  # K1A 1G3 unallocated
+  - K1A 1G4
+  - K1A 1G5
+  # K1A 1G6 (rue Laurier, Gatineau)
+  - K1A 1G7
+  # K1A 1G8 unallocated
+  - K1A 1G9
+  - K1A 1H0
+  - K1A 1H1
+  - K1A 1H2
+  # K1A 1H3 (rue Victoria, Gatineau)
+  - K1A 1H4
+  - K1A 1H5
+  - K1A 1H6
+  - K1A 1H7
+  - K1A 1H8
+  - K1A 1H9
+  - K1A 1J
+  - K1A 1K0
+  - K1A 1K1
+  - K1A 1K2
+  - K1A 1K3
+  - K1A 1K4
+  # K1A 1K5 (rue Eddy, Gatineau)
+  - K1A 1K6
+  - K1A 1K7
+  # K1A 1K8 (453-200 promenade du portage)
+  - K1A 1K9
+  - K1A 1L0
+  - K1A 1L1
+  # K1A 1L2 (3-200 promenade du portage)
+  - K1A 1L3
+  # K1A 1L4 (1600-1100 boulevard Maloney Ouest)
+  - K1A 1L5
+  - K1A 1L6
+  - K1A 1L7
+  - K1A 1L8
+  - K1A 1L9
+  - K1A 1M
+  - K1A 1N
+  - K1A 1P
+  - K1A 1R
+  - K1A 1S
+  - K1A 1T
+  - K1A 1V
+  - K1A 1X
+  - K1A 1Y
+  - K1A 1Z
+  - K1A 2
+  - K1A 3
+  - K1A 4
+  - K1A 5
+  - K1A 6
+  - K1A 7
+  - K1A 8
+  - K1A 9
+  - K1B
+  - K1C
+  - K1E
+  - K1G
+  - K1H
+  - K1J
+  - K1K
+  - K1L
+  - K1M
+  - K1N
+  - K1P
+  - K1R
+  - K1S
+  - K1T
+  - K1V
+  - K1W
+  - K1X
+  - K1Y
+  - K1Z
+  - K2
+  - K3
+  - K4
+  - K5
+  - K6
+  - K7
+  - K8
+  - K9
+  - L
+  - M
+  - N
+  - P
+  neighboring_zones:
+  - QC
+  - MB
+- tax: 0.15
+  tax_name: HST
+  tax_type: harmonized
+  name: Prince Edward Island
+  code: PE
+  zip_prefixes:
+  - C
+- tax: 0.09975
+  tax_name: QST
+  name: Quebec
+  name_alternates:
+  - Québec
+  code: QC
+  code_alternates:
+  - PQ
+  zip_prefixes:
+  - G
+  - H
+  - J
+  # K1A 0C9 (Canadian Intellectual Property Office, Gatineau)
+  - K1A 0C9
+  # K1A 0G3 (2-200 Prom Du Portage, Gatineau)
+  - K1A 0G3
+  # K1A 0G4 (200 Prom Du Portage, Gatineau)
+  - K1A 0G4
+  # K1A 0H3 (1-10 Wellington Street, Gatineau)
+  - K1A 0H3
+  # K1A 0H4 (10 Wellington Street, Gatineau)
+  - K1A 0H4
+  # K1A 0J2 (164 rue de l'hotel-de-ville, Gatineau)
+  - K1A 0J2
+  # K1A 0J9 (140 promenade du portage, Gatineau)
+  - K1A 0J9
+  # K1A 0M3 (140 promenade du portage, Gatineau)
+  - K1A 0M3
+  # K1A 0M5 (7th floor 15 rue Eddy, Gatineau)
+  - K1A 0M5
+  # K1A 0M6 (30 rue Victoria, Gatineau)
+  - K1A 0M6
+  # K1A 0M7 (rue Eddy, Gatineau)
+  - K1A 0M7
+  # K1A 0M8 (100 rue Laurier, Gatineau)
+  - K1A 0M8
+  # K1A 0N2 (promenade du portage, Gatineau)
+  - K1A 0N2
+  # K1A 0N9 (1900-15 rue Eddy, Gatineau)
+  - K1A 0N9
+  # K1A 0S5 (rue Laurier, Gatineau)
+  - K1A 0S5
+  # K1A 1C9 (rue Laurier, Gatineau)
+  - K1A 1C9
+  # K1A 1G6 (11 rue Laurier, Gatineau)
+  - K1A 1G6
+  # K1A 1H3 (rue Victoria, Gatineau)
+  - K1A 1H3
+  # K1A 1K5 (rue Eddy, Gatineau)
+  - K1A 1K5
+  # K1A 1K8 (453-200 promenade du portage)
+  - K1A 1K8
+  # K1A 1L2 (3-200 promenade du portage)
+  - K1A 1L2
+  # K1A 1L4 (1600-1100 boulevard Maloney Ouest)
+  - K1A 1L4
+  neighboring_zones:
+  - 'ON'
+  - NB
+  - NL
+- tax: 0.06
+  tax_name: PST
+  name: Saskatchewan
+  code: SK
+  zip_prefixes:
+  - S
+  neighboring_zones:
+  - AB
+  - MB
+  - NT
+- tax: 0.0
+  tax_name:
+  name: Yukon
+  code: YT
+  neighboring_zones:
+  - BC
+  - NT
+  zip_prefixes:
+  - Y
+timezones:
+  America/Atikokan:
+  - P0T 0B3
+  - P0T 1C0
+  - P0V 0A6
+  - P0V 2H
+  - P0V 3A
+  - X0C 0A2
+  - X0C 0C
+  America/Blanc-Sablon:
+  - G0G 0A1
+  - G0G 0A2
+  - G0G 0A3
+  - G0G 0A5
+  - G0G 0A6
+  - G0G 0A9
+  - G0G 0B3
+  - G0G 0B4
+  - G0G 0B5
+  - G0G 0B7
+  - G0G 0B8
+  - G0G 0C4
+  - G0G 0C5
+  - G0G 0C7
+  - G0G 0C8
+  - G0G 1A
+  - G0G 1C
+  - G0G 1G
+  - G0G 1M
+  - G0G 1N
+  - G0G 1R
+  - G0G 1S
+  - G0G 1T
+  - G0G 1W
+  - G0G 2C
+  - G0G 2E
+  - G0G 2G
+  - G0G 2P
+  - G0G 2R
+  - G0G 2W
+  America/Edmonton:
+  - S0M 0A4
+  - S0M 0A8
+  - S0M 0B1
+  - S0M 0B3
+  - S0M 0E4
+  - S0M 0G1
+  - S0M 0G2
+  - S0M 1H
+  - S0M 1K
+  - S0M 1M
+  - S0M 1P
+  - S0M 1R
+  - S0M 2C
+  - S0M 2J
+  - S0M 3A
+  - S9V
+  - T
+  - V0A
+  - V0B 0A2
+  - V0B 0A3
+  - V0B 0A5
+  - V0B 0A7
+  - V0B 0A8
+  - V0B 0B3
+  - V0B 0B5
+  - V0B 0B6
+  - V0B 0B7
+  - V0B 0C2
+  - V0B 1A1
+  - V0B 1A3
+  - V0B 1B
+  - V0B 1H
+  - V0B 1L
+  - V0B 1M
+  - V0B 1N
+  - V0B 1R
+  - V0B 1T0
+  - V0B 1T1
+  - V0B 1T2
+  - V0B 1T3
+  - V0B 1T4
+  - V0B 1T5
+  - V0B 1T7
+  - V0B 2A
+  - V0B 2E
+  - V0B 2G
+  - V0B 2H
+  - V0B 2J
+  - V0B 2K
+  - V0B 2L
+  - V0E 2L
+  - V1A
+  - V1C
+  - X0B
+  - X0E
+  - X0G
+  - X1
+  America/Halifax:
+  - A0K 0B5
+  - A0K 0H9
+  - A0K 1N
+  - A0K 1V
+  - A0P
+  - A0R
+  - A2V
+  - B
+  - C
+  - E
+  - G0C 0E9
+  - G0C 2R
+  - G4T
+  America/Regina:
+  - S0A
+  - S0C
+  - S0E
+  - S0G
+  - S0H
+  - S0J
+  - S0K
+  - S0L
+  - S0M 0A0
+  - S0M 0A1
+  - S0M 0A2
+  - S0M 0A3
+  - S0M 0A5
+  - S0M 0A6
+  - S0M 0A7
+  - S0M 0A9
+  - S0M 0B0
+  - S0M 0B2
+  - S0M 0B4
+  - S0M 0B5
+  - S0M 0B6
+  - S0M 0B7
+  - S0M 0B8
+  - S0M 0B9
+  - S0M 0C
+  - S0M 0E0
+  - S0M 0E1
+  - S0M 0E2
+  - S0M 0E3
+  - S0M 0E5
+  - S0M 0E6
+  - S0M 0E7
+  - S0M 0E8
+  - S0M 0E9
+  - S0M 0G0
+  - S0M 0G3
+  - S0M 0G4
+  - S0M 0G5
+  - S0M 0G6
+  - S0M 0G7
+  - S0M 0G8
+  - S0M 0G9
+  - S0M 0H
+  - S0M 0J
+  - S0M 0K
+  - S0M 0L
+  - S0M 0M
+  - S0M 0N
+  - S0M 0P
+  - S0M 0R
+  - S0M 0S
+  - S0M 0T
+  - S0M 0V
+  - S0M 0W
+  - S0M 0X
+  - S0M 0Y
+  - S0M 0Z
+  - S0M 1A
+  - S0M 1B
+  - S0M 1C
+  - S0M 1G
+  - S0M 1J
+  - S0M 1L
+  - S0M 1N
+  - S0M 1S
+  - S0M 1T
+  - S0M 1W
+  - S0M 1X
+  - S0M 1Y
+  - S0M 2A
+  - S0M 2E
+  - S0M 2G
+  - S0M 2H
+  - S0M 2K
+  - S0M 2L
+  - S0M 2M
+  - S0M 2P
+  - S0M 2R
+  - S0M 2S
+  - S0M 2T
+  - S0M 2V
+  - S0M 2W
+  - S0M 2Y
+  - S0M 2Z
+  - S0M 3B
+  - S0M 3C
+  - S0M 3E
+  - S0M 3G
+  - S0M 3H
+  - S0N
+  - S0P 0A3
+  - S0P 0C
+  - S0P 0E
+  - S0P 0G
+  - S0P 0H
+  - S0P 0J
+  - S2
+  - S3
+  - S4
+  - S6
+  - S7
+  - S9A
+  - S9H
+  - S9X
+  America/St_Johns:
+  - A0A
+  - A0B
+  - A0C
+  - A0E
+  - A0G
+  - A0H
+  - A0J
+  - A0K 0A
+  - A0K 0B1
+  - A0K 0B2
+  - A0K 0B3
+  - A0K 0B4
+  - A0K 0B6
+  - A0K 0B7
+  - A0K 0B8
+  - A0K 0B9
+  - A0K 0C
+  - A0K 0E
+  - A0K 0G
+  - A0K 0H1
+  - A0K 0H2
+  - A0K 0H3
+  - A0K 0H4
+  - A0K 0H5
+  - A0K 0H6
+  - A0K 0H7
+  - A0K 0H8
+  - A0K 0J
+  - A0K 0K
+  - A0K 1A
+  - A0K 1B
+  - A0K 1C
+  - A0K 1H
+  - A0K 1J
+  - A0K 1K
+  - A0K 1L
+  - A0K 1M
+  - A0K 1P
+  - A0K 1R
+  - A0K 1S
+  - A0K 1T
+  - A0K 1W
+  - A0K 1X
+  - A0K 1Y
+  - A0K 1Z
+  - A0K 2
+  - A0K 3
+  - A0K 4
+  - A0K 5
+  - A0L
+  - A0M
+  - A0N
+  - A1
+  - A2A
+  - A2B
+  - A2H
+  - A2N
+  - A5
+  - A8
+  America/Toronto:
+  - G0A
+  - G0C 0A
+  - G0C 0B
+  - G0C 0C
+  - G0C 0E1
+  - G0C 0E2
+  - G0C 0E3
+  - G0C 0E4
+  - G0C 0E5
+  - G0C 0E6
+  - G0C 0E7
+  - G0C 0E8
+  - G0C 0G
+  - G0C 1
+  - G0C 2A
+  - G0C 2B
+  - G0C 2E
+  - G0C 2G
+  - G0C 2H
+  - G0C 2J
+  - G0C 2K
+  - G0C 2L
+  - G0C 2M
+  - G0C 2N
+  - G0C 2S
+  - G0C 2V
+  - G0C 2W
+  - G0C 2X
+  - G0C 2Y
+  - G0C 2Z
+  - G0C 3
+  - G0E
+  - G0G 0A4
+  - G0G 0A7
+  - G0G 0A8
+  - G0G 0B1
+  - G0G 0B2
+  - G0G 0B6
+  - G0G 0B9
+  - G0G 0C1
+  - G0G 0C2
+  - G0G 0C3
+  - G0G 0C6
+  - G0G 0C9
+  - G0G 0E
+  - G0G 1B
+  - G0G 1E
+  - G0G 1H
+  - G0G 1J
+  - G0G 1L
+  - G0G 1P
+  - G0G 1V
+  - G0G 1X
+  - G0G 1Z
+  - G0G 2B
+  - G0G 2L
+  - G0G 2N
+  - G0G 2T
+  - G0G 2V
+  - G0G 2Y
+  - G0G 2Z
+  - G0H
+  - G0J
+  - G0K
+  - G0L
+  - G0M
+  - G0N
+  - G0P
+  - G0R
+  - G0S
+  - G0T
+  - G0V
+  - G0W
+  - G0X
+  - G0Y
+  - G0Z
+  - G1
+  - G2
+  - G3
+  - G4A
+  - G4R
+  - G4S
+  - G4V
+  - G4W
+  - G4X
+  - G4Z
+  - G5
+  - G6
+  - G7
+  - G8
+  - G9
+  - H
+  - J
+  - K
+  - L
+  - M
+  - N
+  - P0A
+  - P0B
+  - P0C
+  - P0E
+  - P0G
+  - P0H
+  - P0J
+  - P0K
+  - P0L
+  - P0M
+  - P0N
+  - P0P
+  - P0R
+  - P0S
+  - P0T 0A1
+  - P0T 0A2
+  - P0T 0A3
+  - P0T 0A4
+  - P0T 0A6
+  - P0T 0A7
+  - P0T 0A8
+  - P0T 0A9
+  - P0T 0B1
+  - P0T 0B2
+  - P0T 0B4
+  - P0T 0B5
+  - P0T 0B6
+  - P0T 0B7
+  - P0T 0B8
+  - P0T 0B9
+  - P0T 0C
+  - P0T 1A
+  - P0T 1B
+  - P0T 1C1
+  - P0T 1G
+  - P0T 1J
+  - P0T 1K
+  - P0T 1L
+  - P0T 1M
+  - P0T 1N
+  - P0T 1P
+  - P0T 1R
+  - P0T 1V
+  - P0T 1W
+  - P0T 1X
+  - P0T 1Y
+  - P0T 1Z
+  - P0T 2A
+  - P0T 2B
+  - P0T 2C
+  - P0T 2E
+  - P0T 2G
+  - P0T 2H
+  - P0T 2J
+  - P0T 2K
+  - P0T 2M
+  - P0T 2N
+  - P0T 2P
+  - P0T 2R
+  - P0T 2S
+  - P0T 2T
+  - P0T 2V
+  - P0T 2W
+  - P0T 2Y
+  - P0T 3
+  - P0V 0B5
+  - P0V 0B8
+  - P0V 0E
+  - P0V 1G
+  - P0V 1M
+  - P0V 1W
+  - P0V 3C
+  - P1
+  - P2
+  - P3
+  - P4
+  - P5
+  - P6
+  - P7
+  - X0A 0A1
+  - X0A 0A3
+  - X0A 0A4
+  - X0A 0A5
+  - X0A 0A6
+  - X0A 0A7
+  - X0A 0A8
+  - X0A 0A9
+  - X0A 0B0
+  - X0A 0B1
+  - X0A 0B2
+  - X0A 0B4
+  - X0A 0C
+  - X0A 0E
+  - X0A 0G
+  - X0A 0H
+  - X0A 0J
+  - X0A 0K
+  - X0A 0L
+  - X0A 0N
+  - X0A 0R
+  - X0A 0S
+  - X0A 0W
+  - X0A 1
+  America/Vancouver:
+  - V0B 0C1
+  - V0B 1K
+  - V0B 1T6
+  - V0B 2C
+  - V0C 0A8
+  - V0C 1E
+  - V0C 1L
+  - V0C 1W
+  - V0C 2Z
+  - V0E 0
+  - V0E 1
+  - V0E 2A
+  - V0E 2C
+  - V0E 2E
+  - V0E 2G
+  - V0E 2H
+  - V0E 2J
+  - V0E 2K
+  - V0E 2M
+  - V0E 2N
+  - V0E 2P
+  - V0E 2R
+  - V0E 2S
+  - V0E 2V
+  - V0E 2W
+  - V0E 2X
+  - V0E 2Z
+  - V0E 3
+  - V0E 5
+  - V0G
+  - V0H
+  - V0J 0
+  - V0J 1
+  - V0J 2A
+  - V0J 2B
+  - V0J 2C
+  - V0J 2E
+  - V0J 2G
+  - V0J 2H
+  - V0J 2J
+  - V0J 2K
+  - V0J 2N
+  - V0J 2P
+  - V0J 2T
+  - V0J 2W
+  - V0J 2X
+  - V0J 2Y
+  - V0J 2Z
+  - V0J 3
+  - V0J 4
+  - V0K
+  - V0L
+  - V0M
+  - V0N
+  - V0P
+  - V0R
+  - V0S
+  - V0T
+  - V0V
+  - V0W
+  - V0X
+  - V1B
+  - V1E
+  - V1H
+  - V1K
+  - V1L
+  - V1M
+  - V1N
+  - V1P
+  - V1R
+  - V1S
+  - V1T
+  - V1V
+  - V1W
+  - V1X
+  - V1Y
+  - V1Z
+  - V2
+  - V3
+  - V4
+  - V5
+  - V6
+  - V7
+  - V8
+  - V9
+  America/Whitehorse:
+  - V0B 0A1
+  - V0B 0A4
+  - V0B 0A6
+  - V0B 0A9
+  - V0B 0B1
+  - V0B 0B2
+  - V0B 0B4
+  - V0B 0B8
+  - V0B 0B9
+  - V0B 1A0
+  - V0B 1A2
+  - V0B 1A4
+  - V0B 1C
+  - V0B 1E
+  - V0B 1G
+  - V0B 1S
+  - V0B 1V
+  - V0B 1W
+  - V0B 1X
+  - V0B 2B
+  - V0B 2N
+  - V0B 2P
+  - V0B 3
+  - V0C 0A1
+  - V0C 0A2
+  - V0C 0A3
+  - V0C 0A4
+  - V0C 0A5
+  - V0C 0A6
+  - V0C 0A7
+  - V0C 0A9
+  - V0C 0B
+  - V0C 0C
+  - V0C 1B
+  - V0C 1C
+  - V0C 1G
+  - V0C 1H
+  - V0C 1J
+  - V0C 1K
+  - V0C 1N
+  - V0C 1R
+  - V0C 1S
+  - V0C 1T
+  - V0C 1V
+  - V0C 1X
+  - V0C 1Y
+  - V0C 1Z
+  - V0C 2A
+  - V0C 2B
+  - V0C 2C
+  - V0C 2E
+  - V0C 2G
+  - V0C 2H
+  - V0C 2J
+  - V0C 2K
+  - V0C 2L
+  - V0C 2N
+  - V0C 2R
+  - V0C 2S
+  - V0C 2T
+  - V0C 2V
+  - V0C 2W
+  - V0C 2X
+  - V0J 2S
+  - V1G
+  - V1J
+  - Y
+  America/Winnipeg:
+  - P0T 0A5
+  - P0T 1T
+  - P0T 2L
+  - P0V 0A1
+  - P0V 0A2
+  - P0V 0A3
+  - P0V 0A4
+  - P0V 0A5
+  - P0V 0A7
+  - P0V 0A8
+  - P0V 0A9
+  - P0V 0B1
+  - P0V 0B2
+  - P0V 0B3
+  - P0V 0B4
+  - P0V 0B6
+  - P0V 0B7
+  - P0V 0B9
+  - P0V 0C
+  - P0V 1B
+  - P0V 1C
+  - P0V 1E
+  - P0V 1J
+  - P0V 1L
+  - P0V 1N
+  - P0V 1P
+  - P0V 1S
+  - P0V 1T
+  - P0V 1V
+  - P0V 1X
+  - P0V 1Y
+  - P0V 1Z
+  - P0V 2A
+  - P0V 2B
+  - P0V 2C
+  - P0V 2E
+  - P0V 2G
+  - P0V 2J
+  - P0V 2K
+  - P0V 2L
+  - P0V 2M
+  - P0V 2P
+  - P0V 2S
+  - P0V 2V
+  - P0V 2W
+  - P0V 2X
+  - P0V 2Y
+  - P0V 2Z
+  - P0V 3B
+  - P0V 3E
+  - P0V 3G
+  - P0V 3H
+  - P0W
+  - P0X
+  - P0Y
+  - P8
+  - P9
+  - R
+  - S0P 0A0
+  - S0P 0A1
+  - S0P 0A2
+  - S0P 0B
+  - X0A 0A0
+  - X0A 0A2
+  - X0A 0B3
+  - X0A 0V
+  - X0C 0A0
+  - X0C 0A1
+  - X0C 0A3
+  - X0C 0A4
+  - X0C 0A5
+  - X0C 0A6
+  - X0C 0A7
+  - X0C 0B
+  - X0C 0E
+  - X0C 0G
+  - X0C 0H
+  - X0C 0J

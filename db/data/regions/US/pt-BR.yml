@@ -1,0 +1,29 @@
+---
+pt-BR:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank: Selecione um estado
+            invalid_for_country: Insira um estado válido para %{country}
+            unknown_for_city_and_zip: Insira um estado válido para %{city}, %{zip}
+            unknown_for_city: Selecione um estado válido para %{city}
+            unknown_for_zip: Selecione um estado válido para %{zip}
+        zip:
+          label:
+            default: CEP
+            optional: CEP (opcional)
+          errors:
+            blank: Insira um CEP
+            invalid_for_country: Insira um CEP válido para %{country}
+            invalid_for_country_and_province: Insira um CEP válido para %{province},
+              %{country}
+            too_long: O valor de CEP é longo demais
+            contains_html_tags: O valor do CEP não pode ter tags HTML.
+            contains_emojis: CEP não pode conter emojis
+            contains_restricted_characters: O CEP não pode ter caracteres restritos
+            invalid_for_province: Insira um CEP válido para %{province}

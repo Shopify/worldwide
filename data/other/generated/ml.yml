@@ -1,0 +1,146 @@
+---
+ml:
+  date:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%-d/%-m/%Y"
+      date: "%Y, %B %-d"
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%B %-d"
+      time_only: "%-l:%M %P"
+      weekday: "%A"
+      year: "%Y"
+      long: "%Y, %B %-d"
+      short: "%b %-d"
+      date_time_current_year: "%b %-d %-l:%M %P"
+      default_long_with_zone: "%Y, %B %-d, %A %-l:%M %P %z"
+      friendly_date_time: "%Y %b %-d %-l:%M %P"
+      long_with_zone: "%Y, %B %-d %-l:%M %P %z"
+      weekday_at_time: "%A %-l:%M %P"
+      weekday_with_time: "%A %-l:%M %P"
+      weekday_with_date: "%B %-d, %A"
+      short_weekday_with_date: "%b %-d, %a"
+      weekday_with_short_date: "%b %-d, %A"
+      long_readable_with_time: "%Y %B %-d %-l:%M %P"
+      long_readable_with_zone: "%Y %B %-d, %A %-l:%M %P %z"
+      date_at_time: "%Y %B %-d %-l:%M %P"
+      default: "%-d/%-m/%Y"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%B %{ordinalized_day}"
+      today_at_time: "%-l:%M %P ഇന്ന്"
+      yesterday_at_time: "%-l:%M %P ഇന്നലെ"
+      tomorrow_at_time: "%-l:%M %P നാളെ"
+      on_weekday_at_time: "%-l:%M %P %A"
+      on_date_time_current_year: "%-l:%M %P %b %-d"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "%{count} മണിക്കൂർ മുമ്പ്"
+        other: "%{count} മണിക്കൂർ മുമ്പ്"
+      x_minutes_ago:
+        one: "%{count} മിനിറ്റ് മുമ്പ്"
+        other: "%{count} മിനിറ്റ് മുമ്പ്"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - ഞായർ
+    - തിങ്കൾ
+    - ചൊവ്വ
+    - ബുധൻ
+    - വ്യാഴം
+    - വെള്ളി
+    - ശനി
+    abbr_month_names:
+    - ''
+    - ജനു
+    - ഫെബ്രു
+    - മാർ
+    - ഏപ്രി
+    - മേയ്
+    - ജൂൺ
+    - ജൂലൈ
+    - ഓഗ
+    - സെപ്റ്റം
+    - ഒക്ടോ
+    - നവം
+    - ഡിസം
+    day_names:
+    - ഞായറാഴ്‌ച
+    - തിങ്കളാഴ്‌ച
+    - ചൊവ്വാഴ്ച
+    - ബുധനാഴ്‌ച
+    - വ്യാഴാഴ്‌ച
+    - വെള്ളിയാഴ്‌ച
+    - ശനിയാഴ്‌ച
+    month_names:
+    - ''
+    - ജനുവരി
+    - ഫെബ്രുവരി
+    - മാർച്ച്
+    - ഏപ്രിൽ
+    - മേയ്
+    - ജൂൺ
+    - ജൂലൈ
+    - ഓഗസ്റ്റ്
+    - സെപ്റ്റംബർ
+    - ഒക്‌ടോബർ
+    - നവംബർ
+    - ഡിസംബർ
+    relative_day_names:
+      this_week: ഈ ആഴ്ച
+      this_month: ഈ മാസം
+      day_before_yesterday: മിനിഞ്ഞാന്ന്
+      yesterday: ഇന്നലെ
+      today: ഇന്ന്
+      tomorrow: നാളെ
+      day_after_tomorrow: മറ്റന്നാൾ
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%-d/%-m/%Y"
+      date: "%Y, %B %-d"
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%B %-d"
+      time_only: "%-l:%M %P"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%b %-d %-l:%M %P"
+      default_long_with_zone: "%Y, %B %-d, %A %-l:%M %P %z"
+      friendly_date_time: "%Y %b %-d %-l:%M %P"
+      long_with_zone: "%Y, %B %-d %-l:%M %P %z"
+      weekday_at_time: "%A %-l:%M %P"
+      weekday_with_time: "%A %-l:%M %P"
+      weekday_with_date: "%B %-d, %A"
+      short_weekday_with_date: "%b %-d, %a"
+      weekday_with_short_date: "%b %-d, %A"
+      long_readable_with_time: "%Y %B %-d %-l:%M %P"
+      long_readable_with_zone: "%Y %B %-d, %A %-l:%M %P %z"
+      date_at_time: "%Y %B %-d %-l:%M %P"
+      default: "%Y %b %-d, %a %-l:%M %P %z"
+      long: "%Y %B %-d %-l:%M %P"
+      short: "%b %-d %-l:%M %P"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%B %{ordinalized_day}"
+      today_at_time: "%-l:%M %P ഇന്ന്"
+      yesterday_at_time: "%-l:%M %P ഇന്നലെ"
+      tomorrow_at_time: "%-l:%M %P നാളെ"
+      on_weekday_at_time: "%-l:%M %P %A"
+      on_date_time_current_year: "%-l:%M %P %b %-d"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "%{count} മണിക്കൂർ മുമ്പ്"
+        other: "%{count} മണിക്കൂർ മുമ്പ്"
+      x_minutes_ago:
+        one: "%{count} മിനിറ്റ് മുമ്പ്"
+        other: "%{count} മിനിറ്റ് മുമ്പ്"
+      cc_expiry_date: "%m/%Y"
+    am: am
+    pm: pm
+    just_now: ഇപ്പോൾ
+    yesterday: ഇന്നലെ

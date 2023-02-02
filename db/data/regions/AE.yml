@@ -1,0 +1,82 @@
+---
+name: United Arab Emirates
+code: AE
+tax: 0.05
+currency: AED
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+phone_number_prefix: 971
+building_number_required: true
+week_start_day: saturday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {province}_{country}_{phone}"
+emoji: "\U0001F1E6\U0001F1EA"
+languages:
+  - ar
+  - en
+zones:
+- name: Abu Dhabi
+  code: AZ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - DU
+  - SH
+- name: Ajman
+  code: AJ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - DU
+  - FU
+  - RK
+  - SH
+- name: Dubai
+  code: DU
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AJ
+  - AZ
+  - RK
+  - SH
+- name: Fujairah
+  code: FU
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AJ
+  - RK
+  - SH
+- name: Ras al-Khaimah
+  code: RK
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AJ
+  - DU
+  - FU
+  - SH
+  - UQ
+- name: Sharjah
+  code: SH
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - AJ
+  - AZ
+  - DU
+  - FU
+  - RK
+  - UQ
+- name: Umm al-Quwain
+  code: UQ
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - RK
+  - SH
+timezone: Asia/Dubai

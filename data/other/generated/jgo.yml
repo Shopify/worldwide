@@ -1,0 +1,144 @@
+---
+jgo:
+  date:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%-m.%-d.%Y"
+      date: "%Y %B %-d"
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%B %-d"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      long: "%Y %B %-d"
+      short: "%b %-d"
+      date_time_current_year: "%b %-d %02k:%M"
+      default_long_with_zone: "%A, %Y %B %02d %02k:%M %z"
+      friendly_date_time: "%Y %b %-d %02k:%M"
+      long_with_zone: "%Y %B %-d %02k:%M %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%B %-d, %A"
+      short_weekday_with_date: "%b %-d, %a"
+      weekday_with_short_date: "%b %-d, %A"
+      long_readable_with_time: "%Y %B %-d %02k:%M"
+      long_readable_with_zone: "%Y %B %-d, %A %02k:%M %z"
+      date_at_time: "%Y %B %-d %02k:%M"
+      default: "%-m.%-d.%Y"
+      billing: "%-m.%-d.%Y"
+      yearless_ordinal: "%B %{ordinalized_day}"
+      today_at_time: "%02k:%M lɔꞋɔ"
+      yesterday_at_time: "%02k:%M yesterday"
+      tomorrow_at_time: "%02k:%M tomorrow"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %b %-d"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: ɛ́ gɛ mɔ́ %{count} háwa
+        other: ɛ́ gɛ mɔ́ %{count} háwa
+      x_minutes_ago:
+        one: ɛ́ gɛ́ mɔ́ minút %{count}
+        other: ɛ́ gɛ́ mɔ́ minút %{count}
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - Sɔ́ndi
+    - Mɔ́ndi
+    - Ápta Mɔ́ndi
+    - Wɛ́nɛsɛdɛ
+    - Tɔ́sɛdɛ
+    - Fɛlâyɛdɛ
+    - Sásidɛ
+    abbr_month_names:
+    - ''
+    - Nduŋmbi Saŋ
+    - Pɛsaŋ Pɛ́pá
+    - Pɛsaŋ Pɛ́tát
+    - Pɛsaŋ Pɛ́nɛ́kwa
+    - Pɛsaŋ Pataa
+    - Pɛsaŋ Pɛ́nɛ́ntúkú
+    - Pɛsaŋ Saambá
+    - Pɛsaŋ Pɛ́nɛ́fɔm
+    - Pɛsaŋ Pɛ́nɛ́pfúꞋú
+    - Pɛsaŋ Nɛgɛ́m
+    - Pɛsaŋ Ntsɔ̌pmɔ́
+    - Pɛsaŋ Ntsɔ̌ppá
+    day_names:
+    - Sɔ́ndi
+    - Mɔ́ndi
+    - Ápta Mɔ́ndi
+    - Wɛ́nɛsɛdɛ
+    - Tɔ́sɛdɛ
+    - Fɛlâyɛdɛ
+    - Sásidɛ
+    month_names:
+    - ''
+    - Nduŋmbi Saŋ
+    - Pɛsaŋ Pɛ́pá
+    - Pɛsaŋ Pɛ́tát
+    - Pɛsaŋ Pɛ́nɛ́kwa
+    - Pɛsaŋ Pataa
+    - Pɛsaŋ Pɛ́nɛ́ntúkú
+    - Pɛsaŋ Saambá
+    - Pɛsaŋ Pɛ́nɛ́fɔm
+    - Pɛsaŋ Pɛ́nɛ́pfúꞋú
+    - Pɛsaŋ Nɛgɛ́m
+    - Pɛsaŋ Ntsɔ̌pmɔ́
+    - Pɛsaŋ Ntsɔ̌ppá
+    relative_day_names:
+      this_week: this week
+      this_month: this month
+      yesterday: yesterday
+      today: lɔꞋɔ
+      tomorrow: tomorrow
+    order:
+    - :month
+    - :day
+    - :year
+  time:
+    formats:
+      abbr_date: "%Y %b %-d"
+      basic_date: "%-m.%-d.%Y"
+      date: "%Y %B %-d"
+      day_only: "%-d"
+      month_year: "%Y %B"
+      month_day: "%B %-d"
+      time_only: "%02k:%M"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%b %-d %02k:%M"
+      default_long_with_zone: "%A, %Y %B %02d %02k:%M %z"
+      friendly_date_time: "%Y %b %-d %02k:%M"
+      long_with_zone: "%Y %B %-d %02k:%M %z"
+      weekday_at_time: "%A %02k:%M"
+      weekday_with_time: "%A %02k:%M"
+      weekday_with_date: "%B %-d, %A"
+      short_weekday_with_date: "%b %-d, %a"
+      weekday_with_short_date: "%b %-d, %A"
+      long_readable_with_time: "%Y %B %-d %02k:%M"
+      long_readable_with_zone: "%Y %B %-d, %A %02k:%M %z"
+      date_at_time: "%Y %B %-d %02k:%M"
+      default: "%Y %b %-d, %a %02k:%M %z"
+      long: "%Y %B %-d %02k:%M"
+      short: "%b %-d %02k:%M"
+      billing: "%-m.%-d.%Y"
+      yearless_ordinal: "%B %{ordinalized_day}"
+      today_at_time: "%02k:%M lɔꞋɔ"
+      yesterday_at_time: "%02k:%M yesterday"
+      tomorrow_at_time: "%02k:%M tomorrow"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %b %-d"
+      on_date: "%Y %b %-d"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: ɛ́ gɛ mɔ́ %{count} háwa
+        other: ɛ́ gɛ mɔ́ %{count} háwa
+      x_minutes_ago:
+        one: ɛ́ gɛ́ mɔ́ minút %{count}
+        other: ɛ́ gɛ́ mɔ́ minút %{count}
+      cc_expiry_date: "%m/%Y"
+    am: am
+    pm: pm
+    just_now: now
+    yesterday: yesterday

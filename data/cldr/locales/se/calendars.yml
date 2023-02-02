@@ -1,0 +1,293 @@
+---
+se:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: d, E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMMM: G y MMM
+        GyMMMd: G y MMM d
+        GyMMMEd: G y MMM d, E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: MM-dd
+        MEd: MM-dd, E
+        MMM: LLL
+        MMMd: MMM d
+        MMMEd: MMM d, E
+        MMMMd: MMMM d
+        ms: mm:ss
+        "y": "y"
+        yM: y-MM
+        yMd: y-MM-dd
+        yMEd: y-MM-dd, E
+        yMMM: y MMM
+        yMMMd: y MMM d
+        yMMMEd: y MMM d, E
+        yMMMM: y MMMM
+        yQQQ: y QQQ
+        yQQQQ: y QQQQ
+      days:
+        format:
+          abbreviated:
+            sun: sotn
+            mon: vuos
+            tue: maŋ
+            wed: gask
+            thu: duor
+            fri: bear
+            sat: láv
+          narrow:
+            sun: S
+            mon: V
+            tue: M
+            wed: G
+            thu: D
+            fri: B
+            sat: L
+          short:
+            sun: sotn
+            mon: vuos
+            tue: maŋ
+            wed: gask
+            thu: duor
+            fri: bear
+            sat: láv
+          wide:
+            sun: sotnabeaivi
+            mon: vuossárga
+            tue: maŋŋebárga
+            wed: gaskavahkku
+            thu: duorasdat
+            fri: bearjadat
+            sat: lávvardat
+        stand_alone:
+          abbreviated:
+            sun: sotn
+            mon: vuos
+            tue: maŋ
+            wed: gask
+            thu: duor
+            fri: bear
+            sat: láv
+          narrow:
+            sun: S
+            mon: V
+            tue: M
+            wed: G
+            thu: D
+            fri: B
+            sat: L
+          short:
+            sun: sotn
+            mon: vuos
+            tue: maŋ
+            wed: gask
+            thu: duor
+            fri: bear
+            sat: láv
+          wide:
+            sun: sotnabeaivi
+            mon: vuossárga
+            tue: maŋŋebárga
+            wed: gaskavahkku
+            thu: duorasdat
+            fri: bearjadat
+            sat: lávvardat
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+        name:
+          0: BCE
+          1: CE
+      fields:
+        day: beaivi
+        day_period: beaivi ráidodássi
+        era: éra
+        hour: diibmu
+        minute: minuhtta
+        month: mánnu
+        second: sekunda
+        week: váhkku
+        weekday: váhkkubeaivi
+        year: jáhki
+        zone: áigeavádat
+      formats:
+        date:
+          full:
+            pattern: y MMMM d, EEEE
+          long:
+            pattern: y MMMM d
+          medium:
+            pattern: y MMM d
+          short:
+            pattern: y-MM-dd
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: ođđj
+            2: guov
+            3: njuk
+            4: cuo
+            5: mies
+            6: geas
+            7: suoi
+            8: borg
+            9: čakč
+            10: golg
+            11: skáb
+            12: juov
+          narrow:
+            1: O
+            2: G
+            3: N
+            4: C
+            5: M
+            6: G
+            7: S
+            8: B
+            9: Č
+            10: G
+            11: S
+            12: J
+          wide:
+            1: ođđajagemánnu
+            2: guovvamánnu
+            3: njukčamánnu
+            4: cuoŋománnu
+            5: miessemánnu
+            6: geassemánnu
+            7: suoidnemánnu
+            8: borgemánnu
+            9: čakčamánnu
+            10: golggotmánnu
+            11: skábmamánnu
+            12: juovlamánnu
+        stand_alone:
+          abbreviated:
+            1: ođđj
+            2: guov
+            3: njuk
+            4: cuo
+            5: mies
+            6: geas
+            7: suoi
+            8: borg
+            9: čakč
+            10: golg
+            11: skáb
+            12: juov
+          narrow:
+            1: O
+            2: G
+            3: N
+            4: C
+            5: M
+            6: G
+            7: S
+            8: B
+            9: Č
+            10: G
+            11: S
+            12: J
+          wide:
+            1: ođđajagemánnu
+            2: guovvamánnu
+            3: njukčamánnu
+            4: cuoŋománnu
+            5: miessemánnu
+            6: geassemánnu
+            7: suoidnemánnu
+            8: borgemánnu
+            9: čakčamánnu
+            10: golggotmánnu
+            11: skábmamánnu
+            12: juovlamánnu
+      periods:
+        format:
+          abbreviated:
+            am: i.b.
+            pm: e.b.
+          narrow:
+            am: i.b.
+            pm: e.b.
+          wide:
+            am: iđitbeaivet
+            pm: eahketbeaivet
+        stand_alone:
+          abbreviated:
+            am: i.b.
+            pm: e.b.
+          narrow:
+            am: i.b.
+            pm: e.b.
+          wide:
+            am: iđitbeaivi
+            pm: eahketbeaivi
+      quarters:
+        format:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+        stand_alone:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4

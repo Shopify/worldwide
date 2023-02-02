@@ -1,0 +1,103 @@
+---
+chr:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: "-x"
+          :rule: ꭺꮳꮄꮝꮧ >>;
+        - :value: x.x
+          :rule: "<< ꭺꮝꮣᏹ >>;"
+        - :value: Inf
+          :rule: ꭲꭺꭿꮣ ꭸꮢ;
+        - :value: NaN
+          :rule: ꭷꮒꭹꮣ ꮧꮞꮝꮧ;
+        - :value: 0
+          :rule: ꮭ ꭺꮝꮧ;
+        - :value: 1
+          :rule: ꮠꮼ;
+        - :value: 2
+          :rule: ꮤꮅ;
+        - :value: 3
+          :rule: ꮶꭲ;
+        - :value: 4
+          :rule: ꮕꭹ;
+        - :value: 5
+          :rule: ꭿꮝꭹ;
+        - :value: 6
+          :rule: ꮡꮣꮅ;
+        - :value: 7
+          :rule: ꭶꮅꮙꭹ;
+        - :value: 8
+          :rule: ꮷꮑꮃ;
+        - :value: 9
+          :rule: ꮠꮑꮃ;
+        - :value: 10
+          :rule: ꮝꭺꭿ;
+        - :value: 11
+          :rule: ꮜꮪ;
+        - :value: 12
+          :rule: ꮤꮅꮪ;
+        - :value: 13
+          :rule: ꮶꭶꮪ;
+        - :value: 14
+          :rule: ꮒꭶꮪ;
+        - :value: 15
+          :rule: ꭿꮝꭶꮪ;
+        - :value: 16
+          :rule: ꮣꮃꮪ;
+        - :value: 17
+          :rule: ꭶꮅꮖꮪ;
+        - :value: 18
+          :rule: ꮑꮃꮪ;
+        - :value: 19
+          :rule: ꮠꮑꮃꮪ;
+        - :value: 20
+          :rule: ꮤꮅꮝꭺ>%%spellout-tens>;
+        - :value: 30
+          :rule: ꮶꭲꮝꭺ>%%spellout-tens>;
+        - :value: 40
+          :rule: ꮕꭹꮝꭺ>%%spellout-tens>;
+        - :value: 50
+          :rule: ꭿꮝꭹꮝꭺ>%%spellout-tens>;
+        - :value: 60
+          :rule: ꮡꮣꮅꮝꭺ>%%spellout-tens>;
+        - :value: 70
+          :rule: ꭶꮅꮖꮝꭺ>%%spellout-tens>;
+        - :value: 80
+          :rule: ꮷꮑꮃꮝꭺ>%%spellout-tens>;
+        - :value: 90
+          :rule: ꮠꮑꮃꮝꭺ>%%spellout-tens>;
+        - :value: 100
+          :rule: "<< ꮝꭺꭿꮵꮖ[ >>];"
+        - :value: 1000
+          :rule: "<< ꭲꮿꭶᏼꮅ[ >>];"
+        - :value: 1000000
+          :rule: "<< ꭲᏻꮖꮧꮕꮣ[ >>];"
+        - :value: 1000000000
+          :rule: "<< ꭲꮿꮤꮃꮧꮕꮫ[ >>];"
+        - :value: 1000000000000
+          :rule: "<< ꭲꮿꮶꭰꮧꮕꮫ[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< ꭲꮿꮕꭶꮧꮕꮫ[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-tens
+        :rules:
+        - :value: 0
+          :rule: ꭿ;
+        - :value: 1
+          :rule: " =%spellout-numbering=;"
+        :access: private

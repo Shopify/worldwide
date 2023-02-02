@@ -1,0 +1,29 @@
+---
+it:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Stato
+            optional: Stato (facoltativo)
+          errors:
+            blank: Seleziona uno stato
+            invalid_for_country: Inserisci uno stato valido per gli %{country}
+            unknown_for_city_and_zip: Inserisci uno stato valido per %{city}, %{zip}
+            unknown_for_city: Seleziona uno stato valido per %{city}
+            unknown_for_zip: Seleziona uno stato valido per %{zip}
+        zip:
+          label:
+            default: CAP
+            optional: CAP (facoltativo)
+          errors:
+            blank: Inserisci un CAP
+            invalid_for_country: Inserisci un CAP valido per %{country}
+            invalid_for_country_and_province: Inserisci un CAP valido per %{province},
+              %{country}
+            too_long: Il valore del codice postale è troppo lungo
+            contains_html_tags: Il CAP non può contenere tag HTML.
+            contains_emojis: Il CAP non può contenere emoji
+            contains_restricted_characters: Il CAP non può contenere caratteri vietati
+            invalid_for_province: Inserisci un CAP valido per %{province}

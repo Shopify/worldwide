@@ -1,0 +1,24 @@
+---
+hi:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: राज्य
+            optional: राज्य (वैकल्पिक)
+          errors:
+            blank: एक राज्य चुनें
+        zip:
+          label:
+            default: पिन कोड
+            optional: पिन कोड (वैकल्पिक)
+          errors:
+            blank: एक पिन कोड दर्ज करें
+            invalid_for_country: "%{country} के लिए एक मान्य पिन कोड दर्ज करें"
+            invalid_for_country_and_province: "%{province}, %{country} के लिए एक मान्य
+              पिन कोड दर्ज करें"
+            too_long: पिन कोड का मान बहुत लंबा है
+            contains_html_tags: पिन कोड के फ़ील्ड में HTML टैग नहीं हो सकते.
+            contains_emojis: पिन कोड में इमोजी नहीं हो सकते
+            contains_restricted_characters: पिन कोड में कैरेक्टर सीमित नहीं हो सकते

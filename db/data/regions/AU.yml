@@ -1,0 +1,198 @@
+---
+name: Australia
+code: AU
+tax: 0.1
+currency: AUD
+unit_system: metric
+tax_name: GST
+tax_inclusive: true
+group: Oceanian Countries
+group_name: Oceania
+# Some codes in the AU namespace are not in AU:
+#  - 2899 NF Norfolk Island
+#  - 6798 CX Christmas Island
+#  - 6799 CC Cocos (Keeling) Islands
+zip_regex: "^(?!2899|679[89])(\\d{4})$"
+zip_example: '2060'
+phone_number_prefix: 61
+building_number_required: true
+week_start_day: monday
+format:
+  address1: "{building_num} {street}"
+  address1_with_unit: "{unit}/{building_num} {street}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {province} {zip}_{country}_{phone}"
+emoji: "\U0001F1E6\U0001F1FA"
+languages:
+  - en
+use_zone_code_as_short_name: true
+zones:
+- tax: 0.0
+  name: Australian Capital Territory
+  tax_name: VAT
+  code: ACT
+  neighboring_zones:
+  - NSW
+  zip_prefixes:
+  - '02'
+  - '260'
+  - '2610'
+  - '2612'
+  - '2614'
+  - '2615'
+  - '2616'
+  - '2617'
+  - '29'
+- tax: 0.0
+  name: New South Wales
+  tax_name: VAT
+  code: NSW
+  neighboring_zones:
+  - ACT
+  - QLD
+  - VIC
+  zip_prefixes:
+  - '1'
+  - '20'
+  - '21'
+  - '22'
+  - '23'
+  - '24'
+  - '25'
+  - '2611'
+  - '2618'
+  - '2619'
+  - '262'
+  - '263'
+  - '264'
+  - '265'
+  - '266'
+  - '267'
+  - '268'
+  - '27'
+  - '28'
+- tax: 0.0
+  name: Northern Territory
+  tax_name: VAT
+  code: NT
+  neighboring_zones:
+  - QLD
+  - SA
+  - WA
+  zip_prefixes:
+  - '08'
+  - '09'
+- tax: 0.0
+  name: Queensland
+  tax_name: VAT
+  code: QLD
+  neighboring_zones:
+  - NT
+  - NSW
+  zip_prefixes:
+  - '4'
+  - '9'
+- tax: 0.0
+  name: South Australia
+  tax_name: VAT
+  code: SA
+  neighboring_zones:
+  - NT
+  - WA
+  zip_prefixes:
+  - '5'
+- tax: 0.0
+  name: Tasmania
+  tax_name: VAT
+  code: TAS
+  zip_prefixes:
+  - '7'
+- tax: 0.0
+  name: Victoria
+  tax_name: VAT
+  code: VIC
+  neighboring_zones:
+  - NSW
+  zip_prefixes:
+  - '3'
+  - '8'
+- tax: 0.0
+  name: Western Australia
+  tax_name: VAT
+  code: WA
+  neighboring_zones:
+  - NT
+  - SA
+  zip_prefixes:
+  - '6'
+zips_crossing_provinces:
+  '0872':
+  - NT
+  - SA
+  - WA
+  '2611':
+  - NSW
+  - ACT
+  '2618':
+  - NSW
+  - ACT
+  '2620':
+  - NSW
+  - ACT
+  '2406':
+  - NSW
+  - QLD
+  '2540':
+  - NSW
+  - ACT
+  '3644':
+  - VIC
+  - NSW
+  # 3691:  Allan's Flat VIC and Lake Hume Village NSW
+  '3691':
+  - VIC
+  - NSW
+  # 3707:  Biggara VIC and Bringenbrong NSW
+  '3707':
+  - VIC
+  - NSW
+  # 4377:  Glen Niven QLD and Maryland NSW (not to be confused with the other Maryland NSW, which is 2287)
+  '4377':
+  - QLD
+  - NSW
+  # 4380:  Mingoola QLD and Mingoola NSW
+  '4380':
+  - QLD
+  - NSW
+  '4383':
+  - QLD
+  - NSW
+  # 4385:  Beebo QLD and Camp Creek NSW
+  '4385':
+  - QLD
+  - NSW
+  '4825':
+  - QLD
+  - NT
+timezones:
+  # This intentionally glosses over some anomalies that we cannot distinguish by postcode:
+  # - Broken Hill (a small part of 2880) uses Australia/Darwin, not Australia/Sydney
+  # - Eucla, Cocklebiddy, Madura, and Mundrabilla (a tiny part of 6443) unofficially use UTC+08:45, without DST
+  # - Border Village (a tiny part of 5690) unofficially uses UTC+08:45, without DST
+  Australia/Adelaide:
+  - '5'
+  Australia/Brisbane:
+  - '4'
+  - '9'
+  Australia/Darwin:
+  - '08'
+  - '09'
+  Australia/Perth:
+  - '6'
+  Australia/Sydney:
+  - '02'
+  - '1'
+  - '2'
+  - '3'
+  - '7'
+  - '8'

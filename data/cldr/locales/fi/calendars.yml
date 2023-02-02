@@ -1,0 +1,387 @@
+---
+fi:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h.mm B
+        Bhms: h.mm.ss B
+        d: d
+        E: ccc
+        EBhm: E h.mm B
+        EBhms: E h.mm.ss B
+        Ed: E d.
+        Ehm: E h.mm a
+        EHm: E H.mm
+        Ehms: E h.mm.ss a
+        EHms: E H.mm.ss
+        Gy: y G
+        GyMd: M.d.y G
+        GyMMM: LLL y G
+        GyMMMd: d. MMM y G
+        GyMMMEd: E d. MMM y G
+        GyMMMMd: d. MMMM y G
+        GyMMMMEd: E d. MMMM y G
+        h: h a
+        H: H
+        hm: h.mm a
+        Hm: H.mm
+        hms: h.mm.ss a
+        Hms: H.mm.ss
+        hmsv: h.mm.ss a v
+        Hmsv: H.mm.ss v
+        hmv: h.mm a v
+        Hmv: H.mm v
+        M: L
+        Md: d.M.
+        MEd: E d.M.
+        MMM: LLL
+        MMMd: d. MMM
+        MMMEd: ccc d. MMM
+        MMMMd: d. MMMM
+        MMMMEd: ccc d. MMMM
+        MMMMW: LLLL'n' W. 'viikko'
+        ms: m.ss
+        "y": "y"
+        yM: L.y
+        yMd: d.M.y
+        yMEd: E d.M.y
+        yMM: M.y
+        yMMM: LLL y
+        yMMMd: d. MMM y
+        yMMMEd: E d. MMM y
+        yMMMM: LLLL y
+        yMMMMccccd: cccc d. MMMM y
+        yMMMMd: d. MMMM y
+        yMMMMEd: E d. MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'vuoden' Y 'viikko' w"
+      days:
+        format:
+          abbreviated:
+            sun: su
+            mon: ma
+            tue: ti
+            wed: ke
+            thu: to
+            fri: pe
+            sat: la
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: K
+            thu: T
+            fri: P
+            sat: L
+          short:
+            sun: su
+            mon: ma
+            tue: ti
+            wed: ke
+            thu: to
+            fri: pe
+            sat: la
+          wide:
+            sun: sunnuntaina
+            mon: maanantaina
+            tue: tiistaina
+            wed: keskiviikkona
+            thu: torstaina
+            fri: perjantaina
+            sat: lauantaina
+        stand_alone:
+          abbreviated:
+            sun: su
+            mon: ma
+            tue: ti
+            wed: ke
+            thu: to
+            fri: pe
+            sat: la
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: K
+            thu: T
+            fri: P
+            sat: L
+          short:
+            sun: su
+            mon: ma
+            tue: ti
+            wed: ke
+            thu: to
+            fri: pe
+            sat: la
+          wide:
+            sun: sunnuntai
+            mon: maanantai
+            tue: tiistai
+            wed: keskiviikko
+            thu: torstai
+            fri: perjantai
+            sat: lauantai
+      eras:
+        abbr:
+          0: eaa.
+          1: jaa.
+        name:
+          0: ennen ajanlaskun alkua
+          1: jälkeen ajanlaskun alun
+        narrow:
+          0: eaa
+          1: jaa
+      fields:
+        day: päivä
+        day_narrow: pv
+        day_of_year: vuodenpäivä
+        day_of_year_narrow: vuodenpv
+        day_of_year_short: vuodenpv
+        day_period: vuorokaudenaika
+        day_period_narrow: vuorokaudenaika
+        day_period_short: vuorokaudenaika
+        day_short: pv
+        era: aikakausi
+        era_narrow: aikakausi
+        era_short: aikakausi
+        hour: tunti
+        hour_narrow: t
+        hour_short: t
+        minute: minuutti
+        minute_narrow: min
+        minute_short: min
+        month: kuukausi
+        month_narrow: kk
+        month_short: kk
+        quarter: neljännesvuosi
+        quarter_narrow: nelj.
+        quarter_short: neljännes
+        second: sekunti
+        second_narrow: s
+        second_short: s
+        week: viikko
+        week_narrow: vk
+        week_of_month: kuukauden viikko
+        week_of_month_narrow: kuukauden vk
+        week_of_month_short: kuukauden vk
+        week_short: vk
+        weekday: viikonpäivä
+        weekday_narrow: viikonpäivä
+        weekday_of_month: kuukauden viikonpäivä
+        weekday_of_month_narrow: kuukauden vk päivä
+        weekday_of_month_short: kuukauden vk päivä
+        weekday_short: viikonpäivä
+        year: vuosi
+        year_narrow: v
+        year_short: v
+        zone: aikavyöhyke
+        zone_narrow: aikavyöhyke
+        zone_short: aikavyöhyke
+      formats:
+        date:
+          full:
+            pattern: cccc d. MMMM y
+          long:
+            pattern: d. MMMM y
+          medium:
+            pattern: d.M.y
+          short:
+            pattern: d.M.y
+        datetime:
+          full:
+            pattern: "{{date}} 'klo' {{time}}"
+          long:
+            pattern: "{{date}} 'klo' {{time}}"
+          medium:
+            pattern: "{{date}} 'klo' {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: H.mm.ss zzzz
+          long:
+            pattern: H.mm.ss z
+          medium:
+            pattern: H.mm.ss
+          short:
+            pattern: H.mm
+      months:
+        format:
+          abbreviated:
+            1: tammik.
+            2: helmik.
+            3: maalisk.
+            4: huhtik.
+            5: toukok.
+            6: kesäk.
+            7: heinäk.
+            8: elok.
+            9: syysk.
+            10: lokak.
+            11: marrask.
+            12: jouluk.
+          narrow:
+            1: T
+            2: H
+            3: M
+            4: H
+            5: T
+            6: K
+            7: H
+            8: E
+            9: S
+            10: L
+            11: M
+            12: J
+          wide:
+            1: tammikuuta
+            2: helmikuuta
+            3: maaliskuuta
+            4: huhtikuuta
+            5: toukokuuta
+            6: kesäkuuta
+            7: heinäkuuta
+            8: elokuuta
+            9: syyskuuta
+            10: lokakuuta
+            11: marraskuuta
+            12: joulukuuta
+        stand_alone:
+          abbreviated:
+            1: tammi
+            2: helmi
+            3: maalis
+            4: huhti
+            5: touko
+            6: kesä
+            7: heinä
+            8: elo
+            9: syys
+            10: loka
+            11: marras
+            12: joulu
+          narrow:
+            1: T
+            2: H
+            3: M
+            4: H
+            5: T
+            6: K
+            7: H
+            8: E
+            9: S
+            10: L
+            11: M
+            12: J
+          wide:
+            1: tammikuu
+            2: helmikuu
+            3: maaliskuu
+            4: huhtikuu
+            5: toukokuu
+            6: kesäkuu
+            7: heinäkuu
+            8: elokuu
+            9: syyskuu
+            10: lokakuu
+            11: marraskuu
+            12: joulukuu
+      periods:
+        format:
+          abbreviated:
+            afternoon1: iltap.
+            am: ap.
+            evening1: illalla
+            midnight: keskiyöllä
+            morning1: aamulla
+            morning2: aamup.
+            night1: yöllä
+            noon: keskip.
+            pm: ip.
+          narrow:
+            afternoon1: ip.
+            am: ap.
+            evening1: illalla
+            midnight: ky.
+            morning1: aamulla
+            morning2: ap.
+            night1: yöllä
+            noon: kp.
+            pm: ip.
+          wide:
+            afternoon1: iltapäivällä
+            am: ap.
+            evening1: illalla
+            midnight: keskiyöllä
+            morning1: aamulla
+            morning2: aamupäivällä
+            night1: yöllä
+            noon: keskipäivällä
+            pm: ip.
+        stand_alone:
+          abbreviated:
+            afternoon1: iltap.
+            am: ap.
+            evening1: ilta
+            midnight: keskiyö
+            morning1: aamu
+            morning2: aamup.
+            night1: yö
+            noon: keskip.
+            pm: ip.
+          narrow:
+            afternoon1: ip.
+            am: ap.
+            evening1: ilta
+            midnight: ky.
+            morning1: aamu
+            morning2: ap.
+            night1: yö
+            noon: kp.
+            pm: ip.
+          wide:
+            afternoon1: iltapäivä
+            am: ap.
+            evening1: ilta
+            midnight: keskiyö
+            morning1: aamu
+            morning2: aamupäivä
+            night1: yö
+            noon: keskipäivä
+            pm: ip.
+      quarters:
+        format:
+          abbreviated:
+            1: 1. nelj.
+            2: 2. nelj.
+            3: 3. nelj.
+            4: 4. nelj.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. neljännes
+            2: 2. neljännes
+            3: 3. neljännes
+            4: 4. neljännes
+        stand_alone:
+          abbreviated:
+            1: 1. nelj.
+            2: 2. nelj.
+            3: 3. nelj.
+            4: 4. nelj.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. neljännes
+            2: 2. neljännes
+            3: 3. neljännes
+            4: 4. neljännes

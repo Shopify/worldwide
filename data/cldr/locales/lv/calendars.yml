@@ -1,0 +1,376 @@
+---
+lv:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E, h:mm B
+        EBhms: E, h:mm:ss B
+        Ed: E, d.
+        Ehm: E, h:mm a
+        EHm: E, HH:mm
+        Ehms: E, h:mm:ss a
+        EHms: E, HH:mm:ss
+        Gy: G y. 'g'.
+        GyMd: GGGGG dd-MM-y
+        GyMMM: G y. 'g'. MMM
+        GyMMMd: G y. 'g'. d. MMM
+        GyMMMEd: E, G y. 'g'. d. MMM
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: dd.MM.
+        MEd: E, dd.MM.
+        MMM: LLL
+        MMMd: d. MMM
+        MMMEd: E, d. MMM
+        MMMMd: d. MMMM
+        MMMMEd: E, d. MMMM
+        MMMMW: MMMM, W. 'nedēļa'
+        mmss: mm:ss
+        ms: mm:ss
+        "y": y. 'g'.
+        yM: MM.y.
+        yMd: d.MM.y.
+        yMEd: E, d.M.y.
+        yMMM: y. 'g'. MMM
+        yMMMd: y. 'g'. d. MMM
+        yMMMEd: E, y. 'g'. d. MMM
+        yMMMM: y. 'g'. MMMM
+        yQQQ: y. 'g'. QQQ
+        yQQQQ: y. 'g'. QQQQ
+        yw: Y. 'g'. w. 'nedēļa'
+      days:
+        format:
+          abbreviated:
+            sun: svētd.
+            mon: pirmd.
+            tue: otrd.
+            wed: trešd.
+            thu: ceturtd.
+            fri: piektd.
+            sat: sestd.
+          narrow:
+            sun: S
+            mon: P
+            tue: O
+            wed: T
+            thu: C
+            fri: P
+            sat: S
+          short:
+            sun: Sv
+            mon: Pr
+            tue: Ot
+            wed: Tr
+            thu: Ce
+            fri: Pk
+            sat: Se
+          wide:
+            sun: svētdiena
+            mon: pirmdiena
+            tue: otrdiena
+            wed: trešdiena
+            thu: ceturtdiena
+            fri: piektdiena
+            sat: sestdiena
+        stand_alone:
+          abbreviated:
+            sun: Svētd.
+            mon: Pirmd.
+            tue: Otrd.
+            wed: Trešd.
+            thu: Ceturtd.
+            fri: Piektd.
+            sat: Sestd.
+          narrow:
+            sun: S
+            mon: P
+            tue: O
+            wed: T
+            thu: C
+            fri: P
+            sat: S
+          short:
+            sun: Sv
+            mon: Pr
+            tue: Ot
+            wed: Tr
+            thu: Ce
+            fri: Pk
+            sat: Se
+          wide:
+            sun: Svētdiena
+            mon: Pirmdiena
+            tue: Otrdiena
+            wed: Trešdiena
+            thu: Ceturtdiena
+            fri: Piektdiena
+            sat: Sestdiena
+      eras:
+        abbr:
+          0: p.m.ē.
+          1: m.ē.
+        name:
+          0: pirms mūsu ēras
+          1: mūsu ērā
+        narrow:
+          0: p.m.ē.
+          1: m.ē.
+      fields:
+        day: diena
+        day_narrow: d.
+        day_of_year: gada diena
+        day_of_year_narrow: gada diena
+        day_of_year_short: gada diena
+        day_period: priekšpusdienā/pēcpusdienā
+        day_period_narrow: priekšpusd./pēcpusd.
+        day_period_short: priekšpusd./pēcpusd.
+        day_short: d.
+        era: ēra
+        era_narrow: ēra
+        era_short: ēra
+        hour: stundas
+        hour_narrow: h
+        hour_short: st.
+        minute: minūtes
+        minute_narrow: min
+        minute_short: min
+        month: mēnesis
+        month_narrow: mēn.
+        month_short: mēn.
+        quarter: ceturksnis
+        quarter_narrow: cet.
+        quarter_short: cet.
+        second: sekundes
+        second_narrow: s
+        second_short: sek.
+        week: nedēļa
+        week_narrow: ned.
+        week_of_month: mēneša nedēļa
+        week_of_month_narrow: mēneša ned.
+        week_of_month_short: mēneša ned.
+        week_short: ned.
+        weekday: nedēļas diena
+        weekday_narrow: nedēļas diena
+        weekday_of_month: mēneša nedēļas diena
+        weekday_of_month_narrow: mēneša ned. diena
+        weekday_of_month_short: mēneša ned. diena
+        weekday_short: nedēļas diena
+        year: gads
+        year_narrow: g.
+        year_short: g.
+        zone: laika josla
+        zone_narrow: laika josla
+        zone_short: laika josla
+      formats:
+        date:
+          full:
+            pattern: EEEE, y. 'gada' d. MMMM
+          long:
+            pattern: y. 'gada' d. MMMM
+          medium:
+            pattern: y. 'gada' d. MMM
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: janv.
+            2: febr.
+            3: marts
+            4: apr.
+            5: maijs
+            6: jūn.
+            7: jūl.
+            8: aug.
+            9: sept.
+            10: okt.
+            11: nov.
+            12: dec.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: janvāris
+            2: februāris
+            3: marts
+            4: aprīlis
+            5: maijs
+            6: jūnijs
+            7: jūlijs
+            8: augusts
+            9: septembris
+            10: oktobris
+            11: novembris
+            12: decembris
+        stand_alone:
+          abbreviated:
+            1: janv.
+            2: febr.
+            3: marts
+            4: apr.
+            5: maijs
+            6: jūn.
+            7: jūl.
+            8: aug.
+            9: sept.
+            10: okt.
+            11: nov.
+            12: dec.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: janvāris
+            2: februāris
+            3: marts
+            4: aprīlis
+            5: maijs
+            6: jūnijs
+            7: jūlijs
+            8: augusts
+            9: septembris
+            10: oktobris
+            11: novembris
+            12: decembris
+      periods:
+        format:
+          abbreviated:
+            afternoon1: pēcpusd.
+            am: priekšp.
+            evening1: vakarā
+            midnight: pusnaktī
+            morning1: no rīta
+            night1: naktī
+            noon: pusd.
+            pm: pēcp.
+          narrow:
+            afternoon1: pēcpusd.
+            am: priekšp.
+            evening1: vakarā
+            midnight: pusnaktī
+            morning1: no rīta
+            night1: naktī
+            noon: pusd.
+            pm: pēcp.
+          wide:
+            afternoon1: pēcpusdienā
+            am: priekšpusdienā
+            evening1: vakarā
+            midnight: pusnaktī
+            morning1: no rīta
+            night1: naktī
+            noon: pusdienlaikā
+            pm: pēcpusdienā
+        stand_alone:
+          abbreviated:
+            afternoon1: pēcpusd.
+            am: priekšp.
+            evening1: vakars
+            midnight: pusnakts
+            morning1: rīts
+            night1: nakts
+            noon: pusd.
+            pm: pēcpusd.
+          narrow:
+            afternoon1: pēcpusd.
+            am: priekšp.
+            evening1: vakars
+            midnight: pusnakts
+            morning1: rīts
+            night1: nakts
+            noon: pusd.
+            pm: pēcpusd.
+          wide:
+            afternoon1: pēcpusdiena
+            am: priekšpusdiena
+            evening1: vakars
+            midnight: pusnakts
+            morning1: rīts
+            night1: nakts
+            noon: pusdienlaiks
+            pm: pēcpusdiena
+      quarters:
+        format:
+          abbreviated:
+            1: 1. cet.
+            2: 2. cet.
+            3: 3. cet.
+            4: 4. cet.
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+          wide:
+            1: 1. ceturksnis
+            2: 2. ceturksnis
+            3: 3. ceturksnis
+            4: 4. ceturksnis
+        stand_alone:
+          abbreviated:
+            1: 1. cet.
+            2: 2. cet.
+            3: 3. cet.
+            4: 4. cet.
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+          wide:
+            1: 1. ceturksnis
+            2: 2. ceturksnis
+            3: 3. ceturksnis
+            4: 4. ceturksnis

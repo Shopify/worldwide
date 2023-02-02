@@ -1,0 +1,33 @@
+---
+zh-TW:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: 郊區
+            optional: 郊區 (選填)
+          errors:
+            blank: 輸入區域
+            too_long: 郊區名稱過長 (最多 255 個字元)
+            contains_html_tags: 郊區不得包含 HTML 標記。
+            contains_emojis: "「區域」不得包含表情符號"
+            contains_restricted_characters: 郊區僅可包含字母、數字、當地字元和特殊字元
+        province:
+          label:
+            default: 州/領地
+            optional: 州/領地 (選填)
+          errors:
+            blank: 選擇一個州/領地
+        zip:
+          label:
+            default: 郵遞區號
+            optional: 郵遞區號 (選填)
+          errors:
+            blank: 輸入郵遞區號
+            invalid_for_country: 輸入有效的 %{country} 郵遞區號
+            invalid_for_country_and_province: 輸入 %{country} %{province} 的有效郵遞區號
+            too_long: 郵遞區號過長
+            contains_html_tags: 郵遞區號不得包含 HTML 標記。
+            contains_emojis: 郵遞區號不得包含表情符號
+            contains_restricted_characters: 郵遞區號僅可包含字母、數字、當地字元和特殊字元

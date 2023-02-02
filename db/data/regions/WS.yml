@@ -1,0 +1,21 @@
+---
+name: Samoa
+code: WS
+tax: 0.15
+currency: WST
+unit_system: metric
+tax_name: VAT
+group: Oceanian Countries
+group_name: Oceania
+zip_example: "WS1434"
+zip_regex: "^WS(1[1-4]\\d{2}|2[1-6]\\d{2})$"
+zip_requirement: optional
+phone_number_prefix: 685
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1FC\U0001F1F8"
+languages:
+  - en
+  - sm
+timezone: Pacific/Apia

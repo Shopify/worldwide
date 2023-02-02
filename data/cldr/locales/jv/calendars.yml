@@ -1,0 +1,321 @@
+---
+jv:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: E, d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: dd/MM
+        MEd: E dd/MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        MMMMW: "'pekan' W 'ing' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: MM-y
+        yMd: dd-MM-y
+        yMEd: E, dd-MM-y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E, d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'pekan' w 'ing' Y"
+      days:
+        format:
+          abbreviated:
+            sun: Ahad
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          narrow:
+            sun: A
+            mon: S
+            tue: S
+            wed: R
+            thu: K
+            fri: J
+            sat: S
+          short:
+            sun: Ahad
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          wide:
+            sun: Ahad
+            mon: Senin
+            tue: Selasa
+            wed: Rabu
+            thu: Kamis
+            fri: Jumat
+            sat: Sabtu
+        stand_alone:
+          abbreviated:
+            sun: Ahad
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          narrow:
+            sun: A
+            mon: S
+            tue: S
+            wed: R
+            thu: K
+            fri: J
+            sat: S
+          short:
+            sun: Ahad
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          wide:
+            sun: Ahad
+            mon: Senin
+            tue: Selasa
+            wed: Rabu
+            thu: Kamis
+            fri: Jumat
+            sat: Sabtu
+      eras:
+        abbr:
+          0: SEU
+          1: EU
+        name:
+          0: Sakdurunge Era Umum
+          1: Era Umum
+      fields:
+        day: dino
+        day_narrow: dino
+        day_of_year: dina jroning taun
+        day_of_year_narrow: dina jroning taun
+        day_of_year_short: dina jroning taun
+        day_period: isuk/wengi
+        day_short: dino
+        era: era
+        hour: jam
+        hour_narrow: jam
+        hour_short: jam
+        minute: menit
+        minute_narrow: menit
+        minute_short: menit
+        month: sasi
+        month_narrow: sasi
+        month_short: sasi
+        quarter: triwulan
+        quarter_narrow: triwulan
+        quarter_short: triwulan
+        second: detik
+        second_narrow: detik
+        second_short: detik
+        week: pekan
+        week_narrow: pekan
+        week_of_month: pekan jroning sesasi
+        week_of_month_narrow: pekan jroning sasi
+        week_of_month_short: pekan jroning sasi
+        week_short: pekan
+        weekday: dino sepekan
+        weekday_of_month: dina jroning sasi
+        weekday_of_month_narrow: dino jroning sasi
+        year: taun
+        year_narrow: taun
+        year_short: taun
+        zone: zona wektu
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd-MM-y
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mar
+            4: Apr
+            5: Mei
+            6: Jun
+            7: Jul
+            8: Agt
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januari
+            2: Februari
+            3: Maret
+            4: April
+            5: Mei
+            6: Juni
+            7: Juli
+            8: Agustus
+            9: September
+            10: Oktober
+            11: November
+            12: Desember
+        stand_alone:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mar
+            4: Apr
+            5: Mei
+            6: Jun
+            7: Jul
+            8: Agt
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januari
+            2: Februari
+            3: Maret
+            4: April
+            5: Mei
+            6: Juni
+            7: Juli
+            8: Agustus
+            9: September
+            10: Oktober
+            11: November
+            12: Desember
+      periods:
+        format:
+          abbreviated:
+            am: Isuk
+            pm: Wengi
+          narrow:
+            am: Isuk
+            pm: Wengi
+          wide:
+            am: Isuk
+            pm: Wengi
+        stand_alone:
+          abbreviated:
+            am: Isuk
+            pm: Wengi
+          narrow:
+            am: Isuk
+            pm: Wengi
+          wide:
+            am: Isuk
+            pm: Wengi
+      quarters:
+        format:
+          abbreviated:
+            1: TW1
+            2: TW2
+            3: TW3
+            4: TW4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: triwulan kaping pisan
+            2: triwulan kaping loro
+            3: triwulan kaping telu
+            4: triwulan kaping papat
+        stand_alone:
+          abbreviated:
+            1: TW1
+            2: TW2
+            3: TW3
+            4: TW4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: triwulan kaping pisan
+            2: triwulan kaping loro
+            3: triwulan kaping telu
+            4: triwulan kaping papat

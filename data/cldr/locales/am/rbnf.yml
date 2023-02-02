@@ -1,0 +1,89 @@
+---
+am:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: ቅንስናሽ >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1100
+          :rule: "<< መቶ[ >>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: ቅንስናሽ >>;
+        - :value: x.x
+          :rule: "<< ነጥብ >>;"
+        - :value: 0
+          :rule: ባዶ;
+        - :value: 1
+          :rule: አንድ;
+        - :value: 2
+          :rule: ሁለት;
+        - :value: 3
+          :rule: ሦስት;
+        - :value: 4
+          :rule: አራት;
+        - :value: 5
+          :rule: አምስት;
+        - :value: 6
+          :rule: ስድስት;
+        - :value: 7
+          :rule: ሰባት;
+        - :value: 8
+          :rule: ስምንት;
+        - :value: 9
+          :rule: ዘጠኝ;
+        - :value: 10
+          :rule: አስር[ >>];
+        - :value: 20
+          :rule: "<< አስር[ >>];"
+        - :value: 100
+          :rule: መቶ[ >>];
+        - :value: 200
+          :rule: "<< መቶ[ >>];"
+        - :value: 1000
+          :rule: ሺ[ >>];
+        - :value: 2000
+          :rule: "<< ሺ[ >>];"
+        - :value: 1000000
+          :rule: ሚሊዮን[ >>];
+        - :value: 2000000
+          :rule: "<< ሚሊዮን[ >>];"
+        - :value: 1000000000
+          :rule: "<< ቢሊዮን[ >>];"
+        - :value: 1000000000000
+          :rule: "<< ቲሪሊዮን[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< ቈዲሪሊዮን[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: ቅንስናሽ >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=ኛ;"
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0=ኛ;"

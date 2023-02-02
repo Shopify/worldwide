@@ -1,0 +1,59 @@
+# frozen_string_literal: true
+
+module Worldwide
+  module Cldr
+    class Fallbacks < Hash
+      def initialize
+        super
+        @all_ancestors_computed = false
+        @map = {}
+      end
+
+      def [](locale)
+        locale = locale.to_sym
+        super || store(locale, ancestry(locale))
+      end
+
+      def descendants(locale)
+        compute_all_ancestors
+        self.select { |_loc, loc_ancestors| loc_ancestors.include?(locale.to_sym) }.keys
+      end
+
+      def defined_parent_locales
+        @defined_parent_locales ||= cldr_defined_parents.values.uniq
+      end
+
+      private
+
+      def cldr_defined_parents
+        @cldr_defined_parents ||= YAML.load_file(File.join(Worldwide::Paths::CLDR_ROOT, "parent_locales.yml")).to_h { |k, v| [k.to_sym, v.to_sym] }
+      end
+
+      def ancestry(locale)
+        ancestors = [locale]
+        loop do
+          if cldr_defined_parents[ancestors.last]
+            ancestors << cldr_defined_parents[ancestors.last]
+          elsif I18n::Locale::Tag.tag(ancestors.last).parents.count > 0
+            ancestors << I18n::Locale::Tag.tag(ancestors.last).parents.first.to_sym
+          else
+            break
+          end
+        end
+        ancestors << :root unless ancestors.last == :root
+        ancestors
+      end
+
+      # Walk through all known locales, calculating their ancestry, and caching the results
+      def compute_all_ancestors
+        return if @all_ancestors_computed
+
+        Worldwide::Locales.known.each do |locale|
+          self[locale]
+        end
+
+        @all_ancestors_computed = true
+      end
+    end
+  end
+end

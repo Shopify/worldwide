@@ -1,0 +1,102 @@
+# frozen_string_literal: true
+
+require "test_helper"
+
+module Worldwide
+  class RegionValidationTest < ActiveSupport::TestCase
+    test "validity of valid zips in countries where we don't have province-specific zip prefixes" do
+      [
+        [:BR, :BA, "41150-100"],
+        [:ID, :KS, "70114"],
+      ].each do |country_code, province_code, zip|
+        assert_equal(
+          true,
+          Worldwide.region(code: country_code).valid_zip?(zip),
+          "Expected zip #{zip.inspect} to be valid for country #{country_code}",
+        )
+        assert_equal(
+          true,
+          Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip),
+          "Expected zip #{zip.inspect} to be valid for province #{country_code}-#{province_code}",
+        )
+      end
+    end
+
+    test "validity of regex-invalid zips in countries where we don't have province-specify zip prefixes" do
+      [
+        [:BR, :BA, "411500-100"],
+        [:BR, :BA, "4115-100"],
+        [:ID, :KS, "701144"],
+        [:ID, :KS, "7011"],
+      ].each do |country_code, province_code, zip|
+        assert_equal(
+          false,
+          Worldwide.region(code: country_code).valid_zip?(zip),
+          "Expected zip #{zip.inspect} NOT to be valid for country #{country_code}.",
+        )
+        assert_equal(
+          false,
+          Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip),
+          "Expected zip #{zip.inspect} NOT to be valid for province #{country_code}-#{province_code}.",
+        )
+      end
+    end
+
+    test "validity of valid zips in countries where we do have province-specific zip prefixes" do
+      [
+        [:CA, :NL, "A1A 1A1"],
+        [:CA, :ON, "K1A 1A1"],
+        [:CA, :ON, "M5W 1E6"],
+        [:CA, :MB, "R2N 2X6"],
+        [:CA, :BC, "V6B 4A2"],
+        [:CA, :NU, "X0A 0H0"],
+        [:CA, :NT, "X1A 1N5"],
+        [:GB, :ENG, "SW1A 1AA"],
+        [:GB, :SCT, "EH99 1SP"],
+        [:GB, :WLS, "CF10 5HB"],
+        [:GB, :NIR, "BT3 9EP"],
+        [:US, :MA, "02128"],
+        [:US, :NY, "10018"],
+        [:US, :CA, "90210"],
+      ].each do |country_code, province_code, zip|
+        assert_equal true, Worldwide.region(code: country_code).valid_zip?(zip)
+        assert_equal true, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
+      end
+    end
+
+    test "validity of regex-invalid zips in countries where we do have province-specific zip prefixes" do
+      [
+        [:CA, :NL, "Q1Q 1A1"],
+        [:CA, :ON, "Z1Z 1Z1"],
+        [:CA, :BC, "90210"],
+        [:GB, :ENG, "ZZ1 0ZZ"],
+        [:GB, :SCT, "QQ1 1QQ"],
+        [:US, :MA, "2128"],
+        [:US, :NY, "100018"],
+        [:US, :CA, "902210"],
+      ].each do |country_code, province_code, zip|
+        assert_equal false, Worldwide.region(code: country_code).valid_zip?(zip)
+        assert_equal false, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
+      end
+    end
+
+    test "validity of regex-valid but wrong-zone zips where we have prefixes" do
+      [
+        [:CA, :ON, "A1A 1A1"],
+        [:CA, :NL, "K1A 1A1"],
+        [:CA, :BC, "R2N 2X6"],
+        [:CA, :NT, "X0A 0H0"],
+        [:GB, :SCT, "SW1A 1AA"],
+        [:GB, :ENG, "EH99 1SP"],
+        [:GB, :NIR, "CF10 5HB"],
+        [:GB, :WLS, "BT3 9EP"],
+        [:US, :NH, "02128"],
+        [:US, :MA, "10018"],
+        [:US, :OR, "90210"],
+      ].each do |country_code, province_code, zip|
+        assert_equal true, Worldwide.region(code: country_code).valid_zip?(zip)
+        assert_equal false, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
+      end
+    end
+  end
+end

@@ -1,0 +1,332 @@
+---
+ga:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E d
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: dd/MM/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: LL
+        Md: dd/MM
+        MEd: E dd/MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: d MMMM
+        MMMMW: "'seachtain' 'a' W 'i' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: MM/y
+        yMd: dd/MM/y
+        yMEd: E dd/MM/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'seachtain' 'a' w 'in' Y"
+      days:
+        format:
+          abbreviated:
+            sun: Domh
+            mon: Luan
+            tue: Máirt
+            wed: Céad
+            thu: Déar
+            fri: Aoine
+            sat: Sath
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: C
+            thu: D
+            fri: A
+            sat: S
+          short:
+            sun: Do
+            mon: Lu
+            tue: Má
+            wed: Cé
+            thu: Dé
+            fri: Ao
+            sat: Sa
+          wide:
+            sun: Dé Domhnaigh
+            mon: Dé Luain
+            tue: Dé Máirt
+            wed: Dé Céadaoin
+            thu: Déardaoin
+            fri: Dé hAoine
+            sat: Dé Sathairn
+        stand_alone:
+          abbreviated:
+            sun: Domh
+            mon: Luan
+            tue: Máirt
+            wed: Céad
+            thu: Déar
+            fri: Aoine
+            sat: Sath
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: C
+            thu: D
+            fri: A
+            sat: S
+          short:
+            sun: Do
+            mon: Lu
+            tue: Má
+            wed: Cé
+            thu: Dé
+            fri: Ao
+            sat: Sa
+          wide:
+            sun: Dé Domhnaigh
+            mon: Dé Luain
+            tue: Dé Máirt
+            wed: Dé Céadaoin
+            thu: Déardaoin
+            fri: Dé hAoine
+            sat: Dé Sathairn
+      eras:
+        abbr:
+          0: RCR
+          1: CR
+        name:
+          0: Roimh Chomh-Ré
+          1: Comh-Ré
+        narrow:
+          0: RCR
+          1: CR
+      fields:
+        day: Lá
+        day_narrow: Lá
+        day_of_year: Lá den bhliain
+        day_of_year_narrow: lá den bhl.
+        day_of_year_short: lá den bhl.
+        day_period: a.m./p.m.
+        day_period_narrow: a.m./p.m.
+        day_period_short: a.m./p.m.
+        day_short: Lá
+        era: ré
+        era_narrow: ré
+        era_short: ré
+        hour: Uair
+        hour_narrow: u
+        hour_short: uair
+        minute: Nóiméad
+        minute_narrow: "n"
+        minute_short: nóim.
+        month: mí
+        month_narrow: mí
+        month_short: mí
+        quarter: ráithe
+        quarter_narrow: ráithe
+        quarter_short: ráithe
+        second: Soicind
+        second_narrow: s
+        second_short: soic.
+        week: seachtain
+        week_narrow: scht.
+        week_of_month: Seachtain den mhí
+        week_of_month_narrow: 7n den mhí
+        week_of_month_short: 7n den mhí
+        week_short: scht.
+        weekday: Lá na seachtaine
+        weekday_narrow: lá den t7n
+        weekday_of_month: Lá oibre den mhí
+        weekday_of_month_narrow: lá oib. den mhí
+        weekday_of_month_short: lá oib. den mhí
+        weekday_short: lá den t7n
+        year: bliain
+        year_narrow: bl.
+        year_short: bl.
+        zone: Crios Ama
+        zone_narrow: crios
+        zone_short: crios
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/y
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Ean
+            2: Feabh
+            3: Márta
+            4: Aib
+            5: Beal
+            6: Meith
+            7: Iúil
+            8: Lún
+            9: MFómh
+            10: DFómh
+            11: Samh
+            12: Noll
+          narrow:
+            1: E
+            2: F
+            3: M
+            4: A
+            5: B
+            6: M
+            7: I
+            8: L
+            9: M
+            10: D
+            11: S
+            12: N
+          wide:
+            1: Eanáir
+            2: Feabhra
+            3: Márta
+            4: Aibreán
+            5: Bealtaine
+            6: Meitheamh
+            7: Iúil
+            8: Lúnasa
+            9: Meán Fómhair
+            10: Deireadh Fómhair
+            11: Samhain
+            12: Nollaig
+        stand_alone:
+          abbreviated:
+            1: Ean
+            2: Feabh
+            3: Márta
+            4: Aib
+            5: Beal
+            6: Meith
+            7: Iúil
+            8: Lún
+            9: MFómh
+            10: DFómh
+            11: Samh
+            12: Noll
+          narrow:
+            1: E
+            2: F
+            3: M
+            4: A
+            5: B
+            6: M
+            7: I
+            8: L
+            9: M
+            10: D
+            11: S
+            12: N
+          wide:
+            1: Eanáir
+            2: Feabhra
+            3: Márta
+            4: Aibreán
+            5: Bealtaine
+            6: Meitheamh
+            7: Iúil
+            8: Lúnasa
+            9: Meán Fómhair
+            10: Deireadh Fómhair
+            11: Samhain
+            12: Nollaig
+      periods:
+        format:
+          abbreviated:
+            am: r.n.
+            pm: i.n.
+          wide:
+            am: r.n.
+            pm: i.n.
+        stand_alone:
+          narrow:
+            am: r.n.
+            pm: i.n.
+          wide:
+            am: r.n.
+            pm: i.n.
+      quarters:
+        format:
+          abbreviated:
+            1: R1
+            2: R2
+            3: R3
+            4: R4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1ú ráithe
+            2: 2ú ráithe
+            3: 3ú ráithe
+            4: 4ú ráithe
+        stand_alone:
+          abbreviated:
+            1: R1
+            2: R2
+            3: R3
+            4: R4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1ú ráithe
+            2: 2ú ráithe
+            3: 3ú ráithe
+            4: 4ú ráithe

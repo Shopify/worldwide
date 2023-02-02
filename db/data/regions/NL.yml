@@ -1,0 +1,27 @@
+---
+name: Netherlands
+code: NL
+tax: 0.21
+currency: EUR
+unit_system: metric
+tax_name: Btw
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_regex: "(?-mix:\\A[1-9][0-9]{3} ?[A-Z]{2}\\z)"
+partial_zip_regex: "^\\d{4}$"
+zip_example: 1065 AM
+phone_number_prefix: 31
+building_number_required: true
+building_number_may_be_in_address2: true
+week_start_day: monday
+languages:
+  - en
+  - nl
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F3\U0001F1F1"
+timezone: Europe/Amsterdam

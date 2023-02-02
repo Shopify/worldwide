@@ -1,0 +1,29 @@
+---
+th:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: รัฐ
+            optional: รัฐ (ไม่บังคับ)
+          errors:
+            blank: เลือกรัฐ
+            invalid_for_country: ป้อนรัฐ %{country} ที่ถูกต้อง
+            unknown_for_city_and_zip: ป้อนชื่อรัฐที่ถูกต้องสำหรับ %{city}, %{zip}
+            unknown_for_city: เลือกรัฐที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip: เลือกรัฐที่ถูกต้องสำหรับ %{zip}
+        zip:
+          label:
+            default: รหัสไปรษณีย์
+            optional: รหัสไปรษณีย์ (ไม่บังคับ)
+          errors:
+            blank: ป้อนรหัส ZIP
+            invalid_for_country: ป้อนรหัส ZIP ใน %{country} ให้ถูกต้อง
+            invalid_for_country_and_province: ป้อนรหัส ZIP ของ %{province} ใน %{country}
+              ให้ถูกต้อง
+            too_long: รหัส ZIP ยาวเกินไป
+            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
+            contains_emojis: ไม่สามารถใส่อิโมจิในรหัส ZIP
+            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัส ZIP ได้
+            invalid_for_province: ป้อนรหัส ZIP ที่ถูกต้องสำหรับ %{province}

@@ -1,0 +1,36 @@
+---
+id:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Pinggiran kota
+            optional: Pinggiran kota (opsional)
+          errors:
+            blank: Masukkan pinggiran kota
+            too_long: Nama pinggiran kota terlalu panjang (maksimum berisi 255 karakter)
+            contains_html_tags: Nama pinggiran kota tidak bisa berisi tag HTML.
+            contains_emojis: Pinggiran kota tidak boleh berisi emoji
+            contains_restricted_characters: Nama Daerah Pinggiran hanya boleh terdiri
+              dari huruf, angka, karakter lokal, dan karakter khusus
+        province:
+          label:
+            default: Negara bagian/wilayah
+            optional: Negara bagian/wilayah (opsional)
+          errors:
+            blank: Pilih negara bagian/wilayah
+        zip:
+          label:
+            default: Kode pos
+            optional: Kode pos (opsional)
+          errors:
+            blank: Masukkan kode pos
+            invalid_for_country: Masukkan kode pos yang valid untuk %{country}
+            invalid_for_country_and_province: Masukkan kode pos yang valid untuk %{province},
+              %{country}
+            too_long: Nilai kode pos terlalu panjang
+            contains_html_tags: Kode pos tidak bisa berisi tag HTML.
+            contains_emojis: Kode pos tidak boleh berisi emoji
+            contains_restricted_characters: Kode Pos hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus

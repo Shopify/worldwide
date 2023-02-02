@@ -1,0 +1,23 @@
+---
+zh-TW:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: 邦
+            optional: 邦 (選填)
+          errors:
+            blank: 選擇一個州
+        zip:
+          label:
+            default: PIN 碼
+            optional: PIN 碼 (選填)
+          errors:
+            blank: 輸入 PIN 碼
+            invalid_for_country: 輸入有效的 %{country} PIN 碼
+            invalid_for_country_and_province: 輸入 %{country} %{province} 的有效 PIN 碼
+            too_long: 郵遞區號過長
+            contains_html_tags: 郵遞區號不得包含 HTML 標記。
+            contains_emojis: "「郵遞區號」不得包含表情符號"
+            contains_restricted_characters: PIN 碼不可包含限制的字元

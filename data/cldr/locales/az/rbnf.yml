@@ -1,0 +1,180 @@
+---
+az:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: əksi >>;
+        - :value: x.x
+          :rule: "<< tam >>;"
+        - :value: 0
+          :rule: sıfır;
+        - :value: 1
+          :rule: bir;
+        - :value: 2
+          :rule: iki;
+        - :value: 3
+          :rule: üç;
+        - :value: 4
+          :rule: dörd;
+        - :value: 5
+          :rule: beş;
+        - :value: 6
+          :rule: altı;
+        - :value: 7
+          :rule: yeddi;
+        - :value: 8
+          :rule: səkkiz;
+        - :value: 9
+          :rule: doqquz;
+        - :value: 10
+          :rule: on[ >>];
+        - :value: 20
+          :rule: iyirmi[ >>];
+        - :value: 30
+          :rule: otuz[ >>];
+        - :value: 40
+          :rule: qırx[ >>];
+        - :value: 50
+          :rule: əlli[ >>];
+        - :value: 60
+          :rule: atmış[ >>];
+        - :value: 70
+          :rule: yetmiş[ >>];
+        - :value: 80
+          :rule: səqsən[ >>];
+        - :value: 90
+          :rule: doxsan[ >>];
+        - :value: 100
+          :rule: "<< yüz[ >>];"
+        - :value: 1000
+          :rule: "<< min[ >>];"
+        - :value: 1000000
+          :rule: "<< milyon[ >>];"
+        - :value: 1000000000
+          :rule: "<< milyard[ >>];"
+        - :value: 1000000000000
+          :rule: "<< trilyon[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< katrilyon[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: inci
+        :rules:
+        - :value: 0
+          :rule: inci;
+        - :value: 1
+          :rule: " =%spellout-ordinal=;"
+        :access: private
+      - :type: nci
+        :rules:
+        - :value: 0
+          :rule: nci;
+        - :value: 1
+          :rule: " =%spellout-ordinal=;"
+        :access: private
+      - :type: inci2
+        :rules:
+        - :value: 0
+          :rule: ıncı;
+        - :value: 1
+          :rule: " =%spellout-ordinal=;"
+        :access: private
+      - :type: uncu2
+        :rules:
+        - :value: 0
+          :rule: üncü;
+        - :value: 1
+          :rule: " =%spellout-ordinal=;"
+        :access: private
+      - :type: uncu
+        :rules:
+        - :value: 0
+          :rule: uncu;
+        - :value: 1
+          :rule: " =%spellout-ordinal=;"
+        :access: private
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: əksi >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: sıfırıncı;
+        - :value: 1
+          :rule: birinci;
+        - :value: 2
+          :rule: ikinci;
+        - :value: 3
+          :rule: üçüncü;
+        - :value: 4
+          :rule: dördüncü;
+        - :value: 5
+          :rule: beşinci;
+        - :value: 6
+          :rule: altıncı;
+        - :value: 7
+          :rule: yeddinci;
+        - :value: 8
+          :rule: səkkizinci;
+        - :value: 9
+          :rule: doqquzuncu;
+        - :value: 10
+          :rule: on>%%uncu>;
+        - :value: 20
+          :rule: iyirmi>%%nci>;
+        - :value: 30
+          :rule: otuz>%%uncu>;
+        - :value: 40
+          :rule: qırx>%%inci2>;
+        - :value: 50
+          :rule: əlli>%%nci>;
+        - :value: 60
+          :rule: altmış>%%inci2>;
+        - :value: 70
+          :rule: yetmiş>%%inci2>;
+        - :value: 80
+          :rule: səqsən>%%inci2>;
+        - :value: 90
+          :rule: doxsan>%%inci2>;
+        - :value: 100
+          :rule: "<%spellout-numbering< yüz>%%uncu2>;"
+        - :value: 1000
+          :rule: "<%spellout-numbering< bin>%%inci>;"
+        - :value: 1000000
+          :rule: "<%spellout-numbering< milyon>%%uncu>;"
+        - :value: 1000000000
+          :rule: "<%spellout-numbering< milyar>%%inci2>;"
+        - :value: 1000000000000
+          :rule: "<%spellout-numbering< trilyon>%%uncu>;"
+        - :value: 1000000000000000
+          :rule: "<%spellout-numbering< katrilyon>%%uncu>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0='inci;"
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal-indicator
+        :rules:
+        - :value: 0
+          :rule: "'inci;"
+        :access: private
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0==%%digits-ordinal-indicator=;"

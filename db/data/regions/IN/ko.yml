@@ -1,0 +1,24 @@
+---
+ko:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: 주
+            optional: 주(선택 사항)
+          errors:
+            blank: 시 선택
+        zip:
+          label:
+            default: PIN 코드
+            optional: PIN 코드(선택 사항)
+          errors:
+            blank: PIN 코드 입력
+            invalid_for_country: "%{country}의 유효한 PIN 코드 입력"
+            invalid_for_country_and_province: "%{country}, %{province}의 유효한 PIN 코드를
+              입력하십시오."
+            too_long: PIN 코드 값이 너무 깁니다.
+            contains_html_tags: PIN 코드에 HTML 태그를 포함할 수 없습니다.
+            contains_emojis: PIN 코드에 이모티콘을 포함할 수 없음
+            contains_restricted_characters: PIN 코드에는 제한 문자가 포함될 수 없습니다

@@ -1,0 +1,1 @@
+{ :mt => { :i18n => { :plural => { :keys => [:one, :few, :many, :other], :rule => lambda { |n| n = n.respond_to?(:abs) ? n.abs : ((m = n.to_s)[0] == "-" ? m[1,m.length] : m); n.to_f == 1 ? :one : (n.to_f == 0 || (((n.to_f % 100) % 1).zero? && (2..10).include?(n.to_f % 100))) ? :few : (((n.to_f % 100) % 1).zero? && (11..19).include?(n.to_f % 100)) ? :many : :other } } } } }

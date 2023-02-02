@@ -1,0 +1,23 @@
+---
+name: Aland Islands
+code: AX
+tax: 0.0
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-special
+currency: EUR
+zip_regex: "^(AX-?)?22\\d{3}$"
+zip_example: '22150'
+phone_number_prefix: 358
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇦🇽
+languages:
+  - fi
+  - sv
+timezone: Europe/Mariehamn

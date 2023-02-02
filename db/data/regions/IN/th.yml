@@ -1,0 +1,24 @@
+---
+th:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: รัฐ
+            optional: รัฐ (ไม่จำเป็น)
+          errors:
+            blank: เลือกรัฐ
+        zip:
+          label:
+            default: รหัสพิน
+            optional: รหัสพิน (ไม่จำเป็น)
+          errors:
+            blank: ป้อนรหัส PIN
+            invalid_for_country: ป้อนรหัส PIN ใน %{country} ให้ถูกต้อง
+            invalid_for_country_and_province: ป้อนรหัส PIN ของ %{province} ใน %{country}
+              ให้ถูกต้อง
+            too_long: รหัส PIN ยาวเกินไป
+            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสพิน
+            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสพินได้
+            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัสพินได้

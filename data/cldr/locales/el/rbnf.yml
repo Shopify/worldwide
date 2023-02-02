@@ -1,0 +1,590 @@
+---
+el:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-neuter=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: μείον >>;
+        - :value: x.x
+          :rule: "<< κόμμα >>;"
+        - :value: 0
+          :rule: μηδέν;
+        - :value: 1
+          :rule: ένας;
+        - :value: 2
+          :rule: δύο;
+        - :value: 3
+          :rule: τρεις;
+        - :value: 4
+          :rule: τέσσερις;
+        - :value: 5
+          :rule: πέντε;
+        - :value: 6
+          :rule: έξι;
+        - :value: 7
+          :rule: επτά;
+        - :value: 8
+          :rule: οκτώ;
+        - :value: 9
+          :rule: εννέα;
+        - :value: 10
+          :rule: δέκα;
+        - :value: 11
+          :rule: έντεκα;
+        - :value: 12
+          :rule: δώδεκα;
+        - :value: 13
+          :rule: δεκα­>>;
+        - :value: 20
+          :rule: είκοσι[ >>];
+        - :value: 30
+          :rule: τριάντα[ >>];
+        - :value: 40
+          :rule: σαράντα[ >>];
+        - :value: 50
+          :rule: πενήντα[ >>];
+        - :value: 60
+          :rule: εξήντα[ >>];
+        - :value: 70
+          :rule: εβδομήντα[ >>];
+        - :value: 80
+          :rule: ογδόντα[ >>];
+        - :value: 90
+          :rule: εννενήντα[ >>];
+        - :value: 100
+          :rule: εκατό[ν >>];
+        - :value: 200
+          :rule: διακόσιοι[ >>];
+        - :value: 300
+          :rule: τριακόσιοι[ >>];
+        - :value: 400
+          :rule: τετρακόσιοι[ >>];
+        - :value: 500
+          :rule: πεντακόσιοι[ >>];
+        - :value: 600
+          :rule: εξακόσιοι[ >>];
+        - :value: 700
+          :rule: επτακόσιοι[ >>];
+        - :value: 800
+          :rule: οκτακόσιοι[ >>];
+        - :value: 900
+          :rule: εννιακόσιοι[ >>];
+        - :value: 1000
+          :rule: χίλιοι[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< χίλιάδες[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμύριο[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμύρια[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμύριο[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμύρια[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμύριο[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμύρια[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμύριο[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμύρια[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: μείον >>;
+        - :value: x.x
+          :rule: "<< κόμμα >>;"
+        - :value: 0
+          :rule: μηδέν;
+        - :value: 1
+          :rule: μία;
+        - :value: 2
+          :rule: δύο;
+        - :value: 3
+          :rule: τρεις;
+        - :value: 4
+          :rule: τέσσερις;
+        - :value: 5
+          :rule: πέντε;
+        - :value: 6
+          :rule: έξι;
+        - :value: 7
+          :rule: επτά;
+        - :value: 8
+          :rule: οκτώ;
+        - :value: 9
+          :rule: εννέα;
+        - :value: 10
+          :rule: δέκα;
+        - :value: 11
+          :rule: έντεκα;
+        - :value: 12
+          :rule: δώδεκα;
+        - :value: 13
+          :rule: δεκα­>>;
+        - :value: 20
+          :rule: είκοσι[ >>];
+        - :value: 30
+          :rule: τριάντα[ >>];
+        - :value: 40
+          :rule: σαράντα[ >>];
+        - :value: 50
+          :rule: πενήντα[ >>];
+        - :value: 60
+          :rule: εξήντα[ >>];
+        - :value: 70
+          :rule: εβδομήντα[ >>];
+        - :value: 80
+          :rule: ογδόντα[ >>];
+        - :value: 90
+          :rule: εννενήντα[ >>];
+        - :value: 100
+          :rule: εκατό[ν >>];
+        - :value: 200
+          :rule: διακόσιες[ >>];
+        - :value: 300
+          :rule: τριακόσιες[ >>];
+        - :value: 400
+          :rule: τετρακόσιες[ >>];
+        - :value: 500
+          :rule: πεντακόσιες[ >>];
+        - :value: 600
+          :rule: εξακόσιες[ >>];
+        - :value: 700
+          :rule: επτακόσιες[ >>];
+        - :value: 800
+          :rule: οκτακόσιες[ >>];
+        - :value: 900
+          :rule: εννιακόσιες[ >>];
+        - :value: 1000
+          :rule: χίλιες[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< χίλιάδες[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμύριο[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμύρια[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμύριο[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμύρια[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμύριο[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμύρια[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμύριο[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμύρια[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: μείον >>;
+        - :value: x.x
+          :rule: "<< κόμμα >>;"
+        - :value: 0
+          :rule: μηδέν;
+        - :value: 1
+          :rule: ένα;
+        - :value: 2
+          :rule: δύο;
+        - :value: 3
+          :rule: τρία;
+        - :value: 4
+          :rule: τέσσερα;
+        - :value: 5
+          :rule: πέντε;
+        - :value: 6
+          :rule: έξι;
+        - :value: 7
+          :rule: επτά;
+        - :value: 8
+          :rule: οκτώ;
+        - :value: 9
+          :rule: εννέα;
+        - :value: 10
+          :rule: δέκα;
+        - :value: 11
+          :rule: έντεκα;
+        - :value: 12
+          :rule: δώδεκα;
+        - :value: 13
+          :rule: δεκα­>>;
+        - :value: 20
+          :rule: είκοσι[ >>];
+        - :value: 30
+          :rule: τριάντα[ >>];
+        - :value: 40
+          :rule: σαράντα[ >>];
+        - :value: 50
+          :rule: πενήντα[ >>];
+        - :value: 60
+          :rule: εξήντα[ >>];
+        - :value: 70
+          :rule: εβδομήντα[ >>];
+        - :value: 80
+          :rule: ογδόντα[ >>];
+        - :value: 90
+          :rule: εννενήντα[ >>];
+        - :value: 100
+          :rule: εκατό[ν >>];
+        - :value: 200
+          :rule: διακόσια[ >>];
+        - :value: 300
+          :rule: τριακόσια[ >>];
+        - :value: 400
+          :rule: τετρακόσια[ >>];
+        - :value: 500
+          :rule: πεντακόσια[ >>];
+        - :value: 600
+          :rule: εξακόσια[ >>];
+        - :value: 700
+          :rule: επτακόσια[ >>];
+        - :value: 800
+          :rule: οκτακόσια[ >>];
+        - :value: 900
+          :rule: εννιακόσια[ >>];
+        - :value: 1000
+          :rule: χίλια[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-feminine< χίλιάδες[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμύριο[ >>];"
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμύρια[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμύριο[ >>];"
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμύρια[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμύριο[ >>];"
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμύρια[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμύριο[ >>];"
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμύρια[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: μείον >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: μηδενικός;
+        - :value: 1
+          :rule: πρώτος;
+        - :value: 2
+          :rule: δεύτερος;
+        - :value: 3
+          :rule: τρίτος;
+        - :value: 4
+          :rule: τέταρτος;
+        - :value: 5
+          :rule: πέμπτος;
+        - :value: 6
+          :rule: έκτος;
+        - :value: 7
+          :rule: έβδομος;
+        - :value: 8
+          :rule: όγδοος;
+        - :value: 9
+          :rule: ένατος;
+        - :value: 10
+          :rule: δέκατος;
+        - :value: 11
+          :rule: ενδέκατος;
+        - :value: 12
+          :rule: δωδέκατος;
+        - :value: 13
+          :rule: δέκατος[ >>];
+        - :value: 20
+          :rule: εικοστός[ >>];
+        - :value: 30
+          :rule: τριακοστός[ >>];
+        - :value: 40
+          :rule: τεσσαρακοστός[ >>];
+        - :value: 50
+          :rule: πεντηκοστός[ >>];
+        - :value: 60
+          :rule: εξηκοστός[ >>];
+        - :value: 70
+          :rule: εβδομηκοστός[ >>];
+        - :value: 80
+          :rule: ογδοηκοστός[ >>];
+        - :value: 90
+          :rule: εννενηκοστός[ >>];
+        - :value: 100
+          :rule: εκατοστός[ >>];
+        - :value: 200
+          :rule: διακοσιοστός[ >>];
+        - :value: 300
+          :rule: τριακοσιοστός[ >>];
+        - :value: 400
+          :rule: τετρακοσιοστός[ >>];
+        - :value: 500
+          :rule: πεντακοσιοστός[ >>];
+        - :value: 600
+          :rule: εξακοσιοστός[ >>];
+        - :value: 700
+          :rule: επτακοσιοστός[ >>];
+        - :value: 800
+          :rule: οκτακοσιοστός[ >>];
+        - :value: 900
+          :rule: εννεακοσιοστός[ >>];
+        - :value: 1000
+          :rule: χιλιοστός[ >>];
+        - :value: 2000
+          :rule: δισχιλιοστός[ >>];
+        - :value: 3000
+          :rule: τρισχιλιοστός[ >>];
+        - :value: 4000
+          :rule: τετράκις χιλιοστός[ >>];
+        - :value: 5000
+          :rule: πεντάκις χιλιοστός[ >>];
+        - :value: 6000
+          :rule: εξάκις χιλιοστός[ >>];
+        - :value: 7000
+          :rule: επτάκις χιλιοστός[ >>];
+        - :value: 8000
+          :rule: οκτάκις χιλιοστός[ >>];
+        - :value: 9000
+          :rule: εννεάκις χιλιοστός[ >>];
+        - :value: 10000
+          :rule: δεκάκις χιλιοστός[ >>];
+          :radix: 1000
+        - :value: 11000
+          :rule: "<%spellout-cardinal-neuter< χιλιοστός[ >>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμυριοστός [ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμυριοστός[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμυριοστός[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμυριοστός[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=.;"
+      - :type: spellout-ordinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: μείον >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: μηδενική;
+        - :value: 1
+          :rule: πρώτη;
+        - :value: 2
+          :rule: δεύτερη;
+        - :value: 3
+          :rule: τρίτη;
+        - :value: 4
+          :rule: τέταρτη;
+        - :value: 5
+          :rule: πέμπτη;
+        - :value: 6
+          :rule: έκτη;
+        - :value: 7
+          :rule: έβδομη;
+        - :value: 8
+          :rule: όγδοη;
+        - :value: 9
+          :rule: ένατη;
+        - :value: 10
+          :rule: δέκατη;
+        - :value: 11
+          :rule: ενδέκατη;
+        - :value: 12
+          :rule: δωδέκατη;
+        - :value: 13
+          :rule: δέκατη[ >>];
+        - :value: 20
+          :rule: εικοστή[ >>];
+        - :value: 30
+          :rule: τριακοστή[ >>];
+        - :value: 40
+          :rule: τεσσαρακοστή[ >>];
+        - :value: 50
+          :rule: πεντηκοστή[ >>];
+        - :value: 60
+          :rule: εξηκοστή[ >>];
+        - :value: 70
+          :rule: εβδομηκοστή[ >>];
+        - :value: 80
+          :rule: ογδοηκοστή[ >>];
+        - :value: 90
+          :rule: εννενηκοστή[ >>];
+        - :value: 100
+          :rule: εκατοστή[ >>];
+        - :value: 200
+          :rule: διακοσιοστή[ >>];
+        - :value: 300
+          :rule: τριακοσιοστή[ >>];
+        - :value: 400
+          :rule: τρετρακοσιοστή[ >>];
+        - :value: 500
+          :rule: πεντακοσιοστή[ >>];
+        - :value: 600
+          :rule: εξακοσιοστή[ >>];
+        - :value: 700
+          :rule: επτακοσιοστή[ >>];
+        - :value: 800
+          :rule: οκτακοσιοστή[ >>];
+        - :value: 900
+          :rule: εννεακοσιοστή[ >>];
+        - :value: 1000
+          :rule: χιλιοστή[ >>];
+        - :value: 2000
+          :rule: δισχιλιοστή[ >>];
+        - :value: 3000
+          :rule: τρισχιλιοστή[ >>];
+        - :value: 4000
+          :rule: τετράκις χιλιοστή[ >>];
+        - :value: 5000
+          :rule: πεντάκις χιλιοστή[ >>];
+        - :value: 6000
+          :rule: εξάκις χιλιοστή[ >>];
+        - :value: 7000
+          :rule: επτάκις χιλιοστή[ >>];
+        - :value: 8000
+          :rule: οκτάκις χιλιοστή[ >>];
+        - :value: 9000
+          :rule: εννεάκις χιλιοστή[ >>];
+        - :value: 10000
+          :rule: δεκάκις χιλιοστή[ >>];
+          :radix: 1000
+        - :value: 11000
+          :rule: "<%spellout-cardinal-neuter< χιλιοστή[ >>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμυριοστή [ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμυριοστή[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμυριοστή[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμυριοστή[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=.;"
+      - :type: spellout-ordinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: μείον >>;
+        - :value: 0
+          :rule: μηδενικό;
+        - :value: 1
+          :rule: πρώτο;
+        - :value: 2
+          :rule: δεύτερο;
+        - :value: 3
+          :rule: τρίτο;
+        - :value: 4
+          :rule: τέταρτο;
+        - :value: 5
+          :rule: πέμπτο;
+        - :value: 6
+          :rule: έκτο;
+        - :value: 7
+          :rule: έβδομο;
+        - :value: 8
+          :rule: όγδο;
+        - :value: 9
+          :rule: ένατο;
+        - :value: 10
+          :rule: δέκατο;
+        - :value: 11
+          :rule: ενδέκατο;
+        - :value: 12
+          :rule: δωδέκατο;
+        - :value: 13
+          :rule: δέκατο[ >>];
+        - :value: 20
+          :rule: εικοστό[ >>];
+        - :value: 30
+          :rule: τριακοστό[ >>];
+        - :value: 40
+          :rule: τεσσαρακοστό[ >>];
+        - :value: 50
+          :rule: πεντηκοστό[ >>];
+        - :value: 60
+          :rule: εξηκοστό[ >>];
+        - :value: 70
+          :rule: εβδομηκοστό[ >>];
+        - :value: 80
+          :rule: ογδοηκοστό[ >>];
+        - :value: 90
+          :rule: εννενηκοστό[ >>];
+        - :value: 100
+          :rule: εκατοστό[ >>];
+        - :value: 200
+          :rule: διακοσιοστό[ >>];
+        - :value: 300
+          :rule: τριακοσιοστό[ >>];
+        - :value: 400
+          :rule: τετρακοσιοστό[ >>];
+        - :value: 500
+          :rule: πεντακοσιοστό[ >>];
+        - :value: 600
+          :rule: εξακοσιοστός[ >>];
+        - :value: 700
+          :rule: επτακοσιοστό[ >>];
+        - :value: 800
+          :rule: οκτακοσιοστό[ >>];
+        - :value: 900
+          :rule: εννεακοσιοστό[ >>];
+        - :value: 1000
+          :rule: χιλιοστό[ >>];
+        - :value: 2000
+          :rule: δισχιλιοστό[ >>];
+        - :value: 3000
+          :rule: τρισχιλιοστό[ >>];
+        - :value: 4000
+          :rule: τετράκις χιλιοστό[ >>];
+        - :value: 5000
+          :rule: πεντάκις χιλιοστό[ >>];
+        - :value: 6000
+          :rule: εξάκις χιλιοστό[ >>];
+        - :value: 7000
+          :rule: επτάκις χιλιοστό[ >>];
+        - :value: 8000
+          :rule: οκτάκις χιλιοστό[ >>];
+        - :value: 9000
+          :rule: εννεάκις χιλιοστό[ >>];
+        - :value: 10000
+          :rule: δεκάκις χιλιοστό[ >>];
+          :radix: 1000
+        - :value: 11000
+          :rule: "<%spellout-cardinal-neuter< χιλιοστό[ >>];"
+          :radix: 1000
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-neuter< εκατομμυριοστό [ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-neuter< δισεκατομμυριοστό[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-neuter< τρισεκατομμυριοστό[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-neuter< τετράκις εκατομμυριοστό[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=.;"

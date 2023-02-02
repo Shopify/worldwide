@@ -1,0 +1,243 @@
+---
+uk:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: мінус >>;
+        - :value: x.x
+          :rule: "<< кома >>;"
+        - :value: 0
+          :rule: нуль;
+        - :value: 1
+          :rule: один;
+        - :value: 2
+          :rule: два;
+        - :value: 3
+          :rule: три;
+        - :value: 4
+          :rule: чотири;
+        - :value: 5
+          :rule: пʼять;
+        - :value: 6
+          :rule: шість;
+        - :value: 7
+          :rule: сім;
+        - :value: 8
+          :rule: вісім;
+        - :value: 9
+          :rule: девʼять;
+        - :value: 10
+          :rule: десять;
+        - :value: 11
+          :rule: одинадцять;
+        - :value: 12
+          :rule: дванадцять;
+        - :value: 13
+          :rule: тринадцять;
+        - :value: 14
+          :rule: чотирнадцять;
+        - :value: 15
+          :rule: пʼятнадцять;
+        - :value: 16
+          :rule: шістнадцять;
+        - :value: 17
+          :rule: сімнадцять;
+        - :value: 18
+          :rule: вісімнадцять;
+        - :value: 19
+          :rule: девʼятнадцять;
+        - :value: 20
+          :rule: двадцять[ >>];
+        - :value: 30
+          :rule: тридцять[ >>];
+        - :value: 40
+          :rule: сорок[ >>];
+        - :value: 50
+          :rule: пʼятдесят[ >>];
+        - :value: 60
+          :rule: шістдесят[ >>];
+        - :value: 70
+          :rule: сімдесят[ >>];
+        - :value: 80
+          :rule: вісімдесят[ >>];
+        - :value: 90
+          :rule: девʼяносто[ >>];
+        - :value: 100
+          :rule: сто[ >>];
+        - :value: 200
+          :rule: двісті[ >>];
+        - :value: 300
+          :rule: триста[ >>];
+        - :value: 400
+          :rule: чотириста[ >>];
+        - :value: 500
+          :rule: пʼятсот[ >>];
+        - :value: 600
+          :rule: шістсот[ >>];
+        - :value: 700
+          :rule: сімсот[ >>];
+        - :value: 800
+          :rule: вісімсот[ >>];
+        - :value: 900
+          :rule: девʼятсот[ >>];
+        - :value: 1000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{тисяча}few{тисячі}other{тисяч})$[
+            >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{мільйон}few{мільйони}other{мільйонів})$[
+            >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{мільярд}few{мільярди}other{мільярдів})$[
+            >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{більйон}few{більйони}other{більйонів})$[
+            >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{більярд}few{більярди}other{більярдів})$[
+            >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: мінус >>;
+        - :value: x.x
+          :rule: "<< кома >>;"
+        - :value: 0
+          :rule: нуль;
+        - :value: 1
+          :rule: одне;
+        - :value: 2
+          :rule: два;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: двадцять[ >>];
+        - :value: 30
+          :rule: тридцять[ >>];
+        - :value: 40
+          :rule: сорок[ >>];
+        - :value: 50
+          :rule: пʼятдесят[ >>];
+        - :value: 60
+          :rule: шістдесят[ >>];
+        - :value: 70
+          :rule: сімдесят[ >>];
+        - :value: 80
+          :rule: вісімдесят[ >>];
+        - :value: 90
+          :rule: девʼяносто[ >>];
+        - :value: 100
+          :rule: сто[ >>];
+        - :value: 200
+          :rule: двісті[ >>];
+        - :value: 300
+          :rule: триста[ >>];
+        - :value: 400
+          :rule: чотириста[ >>];
+        - :value: 500
+          :rule: пʼятсот[ >>];
+        - :value: 600
+          :rule: шістсот[ >>];
+        - :value: 700
+          :rule: сімсот[ >>];
+        - :value: 800
+          :rule: вісімсот[ >>];
+        - :value: 900
+          :rule: девʼятсот[ >>];
+        - :value: 1000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{тисяча}few{тисячі}other{тисяч})$[
+            >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{мільйон}few{мільйони}other{мільйонів})$[
+            >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{мільярд}few{мільярди}other{мільярдів})$[
+            >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{більйон}few{більйони}other{більйонів})$[
+            >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{більярд}few{більярди}other{більярдів})$[
+            >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: мінус >>;
+        - :value: x.x
+          :rule: "<< кома >>;"
+        - :value: 0
+          :rule: нуль;
+        - :value: 1
+          :rule: одна;
+        - :value: 2
+          :rule: дві;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: двадцять[ >>];
+        - :value: 30
+          :rule: тридцять[ >>];
+        - :value: 40
+          :rule: сорок[ >>];
+        - :value: 50
+          :rule: пʼятдесят[ >>];
+        - :value: 60
+          :rule: шістдесят[ >>];
+        - :value: 70
+          :rule: сімдесят[ >>];
+        - :value: 80
+          :rule: вісімдесят[ >>];
+        - :value: 90
+          :rule: девʼяносто[ >>];
+        - :value: 100
+          :rule: сто[ >>];
+        - :value: 200
+          :rule: двісті[ >>];
+        - :value: 300
+          :rule: триста[ >>];
+        - :value: 400
+          :rule: чотириста[ >>];
+        - :value: 500
+          :rule: пʼятсот[ >>];
+        - :value: 600
+          :rule: шістсот[ >>];
+        - :value: 700
+          :rule: сімсот[ >>];
+        - :value: 800
+          :rule: вісімсот[ >>];
+        - :value: 900
+          :rule: девʼятсот[ >>];
+        - :value: 1000
+          :rule: "<%spellout-cardinal-feminine< $(cardinal,one{тисяча}few{тисячі}other{тисяч})$[
+            >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{мільйон}few{мільйони}other{мільйонів})$[
+            >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{мільярд}few{мільярди}other{мільярдів})$[
+            >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{більйон}few{більйони}other{більйонів})$[
+            >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine< $(cardinal,one{більярд}few{більярди}other{більярдів})$[
+            >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

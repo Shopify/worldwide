@@ -1,0 +1,30 @@
+---
+hi:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: राज्य
+            optional: राज्य (वैकल्पिक)
+          errors:
+            blank: एक राज्य चुनें
+            invalid_for_country: "%{country} का मान्य राज्य दर्ज करें"
+            unknown_for_city_and_zip: "%{city}, %{zip} के लिए एक मान्य राज्य का नाम
+              डालें"
+            unknown_for_city: "%{city} के लिए एक मान्य राज्य चुनें"
+            unknown_for_zip: "%{zip} के लिए एक मान्य राज्य चुनें"
+        zip:
+          label:
+            default: पिन कोड
+            optional: पिन कोड (वैकल्पिक)
+          errors:
+            blank: पिन कोड दर्ज करें
+            invalid_for_country: एक मान्य %{country} पिन कोड दर्ज करें
+            invalid_for_country_and_province: "%{province}, %{country} के लिए एक मान्य
+              पिन कोड दर्ज करें"
+            too_long: पिन कोड का मान बहुत लंबा है
+            contains_html_tags: पिन के फ़ील्ड में HTML टैग नहीं हो सकते.
+            contains_emojis: ZIP कोड फ़ील्ड में इमोजी नहीं हो सकते
+            contains_restricted_characters: ज़िप कोड में कैरेक्टर सीमित नहीं हो सकते
+            invalid_for_province: "%{province} के लिए एक मान्य पिन कोड डालें"

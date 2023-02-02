@@ -1,0 +1,98 @@
+---
+my:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: အနုတ်>>;
+        - :value: x.x
+          :rule: "<<ဒသမ>>;"
+        - :value: 0
+          :rule: သုည;
+        - :value: 1
+          :rule: တစ်;
+        - :value: 2
+          :rule: နှစ်;
+        - :value: 3
+          :rule: သုံး;
+        - :value: 4
+          :rule: လေး;
+        - :value: 5
+          :rule: ငါး;
+        - :value: 6
+          :rule: ခြောက်;
+        - :value: 7
+          :rule: ခုနှစ်;
+        - :value: 8
+          :rule: ရှစ်;
+        - :value: 9
+          :rule: ကိုး;
+        - :value: 10
+          :rule: ဆယ်;
+        - :value: 11
+          :rule: ဆယ့်[>>];
+        - :value: 20
+          :rule: "<<ဆယ်[>>];"
+        - :value: 100
+          :rule: "<<ရာ;"
+        - :value: 101
+          :rule: "<<ရာ့[>>];"
+        - :value: 1000
+          :rule: "<<ထောင်;"
+        - :value: 1001
+          :rule: "<<ထောင့်[>>];"
+        - :value: 10000
+          :rule: "<<သောင်း[>>];"
+        - :value: 100000
+          :rule: "<<သိန်း[>>];"
+        - :value: 1000000
+          :rule: "<<သန်း[>>];"
+        - :value: 10000000
+          :rule: "<<ကုဋေ[>>];"
+        - :value: 100000000000000
+          :rule: "<<ကောဋိ[>>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: အနုတ်>>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+        - :value: 1
+          :rule: ပထမ;
+        - :value: 2
+          :rule: ဒုတိယ;
+        - :value: 3
+          :rule: တတိယ;
+        - :value: 4
+          :rule: စတုတ္ထ;
+        - :value: 5
+          :rule: ပဉ္စမ;
+        - :value: 6
+          :rule: ဆဋ္ဌမ;
+        - :value: 7
+          :rule: သတ္တမ;
+        - :value: 8
+          :rule: အဋ္ဌမ;
+        - :value: 9
+          :rule: နဝမ;
+        - :value: 10
+          :rule: ဒသမ;
+        - :value: 11
+          :rule: "=%spellout-cardinal=;"

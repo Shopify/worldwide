@@ -1,0 +1,84 @@
+---
+id:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: negatif >>;
+        - :value: x.x
+          :rule: "<< titik >>;"
+        - :value: 0
+          :rule: kosong;
+        - :value: 1
+          :rule: satu;
+        - :value: 2
+          :rule: dua;
+        - :value: 3
+          :rule: tiga;
+        - :value: 4
+          :rule: empat;
+        - :value: 5
+          :rule: lima;
+        - :value: 6
+          :rule: enam;
+        - :value: 7
+          :rule: tujuh;
+        - :value: 8
+          :rule: delapan;
+        - :value: 9
+          :rule: sembilan;
+        - :value: 10
+          :rule: sepuluh;
+        - :value: 11
+          :rule: sebelas;
+        - :value: 12
+          :rule: ">> belas;"
+        - :value: 20
+          :rule: "<< puluh[ >>];"
+        - :value: 100
+          :rule: seratus[ >>];
+        - :value: 200
+          :rule: "<< ratus[ >>];"
+        - :value: 1000
+          :rule: seribu[ >>];
+        - :value: 2000
+          :rule: "<< ribu[ >>];"
+        - :value: 1000000
+          :rule: "<< juta[ >>];"
+        - :value: 1000000000
+          :rule: "<< miliar[ >>];"
+        - :value: 1000000000000
+          :rule: "<< triliun[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< kuadriliun[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0.#=;"
+      - :type: spellout-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: negatif >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: ke=%spellout-cardinal=;
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal
+        :rules:
+        - :value: "-x"
+          :rule: "−ke->#,##0>;"
+        - :value: 0
+          :rule: ke-=#,##0=;

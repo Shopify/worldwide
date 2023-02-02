@@ -1,0 +1,3289 @@
+---
+name: United States
+code: US
+tax: 0.0
+currency: USD
+unit_system: imperial
+tax_name: Federal Tax
+group: North American Countries
+group_name: North America
+zip_label: Zip code
+zip_regex: "(?-mix:\\A\\d{5}(-\\d{4})?\\z)|(?i-mx:\\AFPO\\s*A[A-Z]\\s*\\d{5}-\\d{4}\\z)"
+zip_example: '90210'
+phone_number_prefix: 1
+building_number_required: true
+week_start_day: sunday
+format:
+  address1: "{building_num} {street}"
+  address1_with_unit: "{building_num} {street} # {unit}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {province} {zip}_{country}_{phone}"
+emoji: "\U0001F1FA\U0001F1F8"
+languages:
+  - en
+  - es
+use_zone_code_as_short_name: true
+zones:
+- tax: 0.04
+  name: Alabama
+  example_city: Huntsville
+  example_city_zip: '35801'
+  tax_name: State Tax
+  code: AL
+  zip_prefixes:
+  - '350'
+  - '351'
+  - '352'
+  - '354'
+  - '355'
+  - '356'
+  - '357'
+  - '358'
+  - '359'
+  - '360'
+  - '361'
+  - '362'
+  - '363'
+  - '364'
+  - '365'
+  - '366'
+  - '367'
+  - '368'
+  - '369'
+  neighboring_zones:
+  - FL
+  - GA
+  - MS
+  - TN
+- tax: 0.0
+  name: Alaska
+  example_city: Anchorage
+  example_city_zip: '99503'
+  tax_name: State Tax
+  code: AK
+  zip_prefixes:
+  - '995'
+  - '996'
+  - '997'
+  - '998'
+  - '999'
+- tax: 0.0
+  name: American Samoa
+  example_city: Tafuna
+  example_city_zip: '96799'
+  tax_name: State Tax
+  code: AS
+  iso_code: AS
+  zip_prefixes:
+  - '96799'
+- tax: 0.056
+  name: Arizona
+  example_city: Phoenix
+  example_city_zip: '85032'
+  tax_name: State Tax
+  code: AZ
+  zip_prefixes:
+  - '850'
+  - '851'
+  - '852'
+  - '853'
+  - '855'
+  - '856'
+  - '857'
+  - '859'
+  - '860'
+  - '863'
+  - '864'
+  - '865'
+  neighboring_zones:
+  - CA
+  - CO
+  - NV
+  - NM
+  - UT
+- tax: 0.065
+  name: Arkansas
+  example_city: Little Rock
+  example_city_zip: '72201'
+  tax_name: State Tax
+  code: AR
+  zip_prefixes:
+  - '716'
+  - '717'
+  - '718'
+  - '719'
+  - '720'
+  - '721'
+  - '722'
+  - '723'
+  - '724'
+  - '725'
+  - '726'
+  - '727'
+  - '728'
+  - '729'
+  neighboring_zones:
+  - LA
+  - MS
+  - MO
+  - OK
+  - TN
+  - TX
+- tax: 0.06
+  name: California
+  example_city: Los Angeles
+  example_city_zip: '90011'
+  tax_name: State Tax
+  code: CA
+  zip_prefixes:
+  - '900'
+  - '901'
+  - '902'
+  - '903'
+  - '904'
+  - '905'
+  - '906'
+  - '907'
+  - '908'
+  - '910'
+  - '911'
+  - '912'
+  - '913'
+  - '914'
+  - '915'
+  - '916'
+  - '917'
+  - '918'
+  - '919'
+  - '920'
+  - '921'
+  - '922'
+  - '923'
+  - '924'
+  - '925'
+  - '926'
+  - '927'
+  - '928'
+  - '930'
+  - '931'
+  - '932'
+  - '933'
+  - '934'
+  - '935'
+  - '936'
+  - '937'
+  - '938'
+  - '939'
+  - '940'
+  - '941'
+  - '942'
+  - '943'
+  - '944'
+  - '945'
+  - '946'
+  - '947'
+  - '948'
+  - '949'
+  - '950'
+  - '951'
+  - '952'
+  - '953'
+  - '954'
+  - '955'
+  - '956'
+  - '957'
+  - '958'
+  - '959'
+  - '960'
+  - '961'
+  neighboring_zones:
+  - AZ
+  - NV
+  - OR
+- tax: 0.029
+  name: Colorado
+  example_city: Denver
+  example_city_zip: '80219'
+  tax_name: State Tax
+  code: CO
+  zip_prefixes:
+  - '800'
+  - '801'
+  - '802'
+  - '803'
+  - '804'
+  - '805'
+  - '806'
+  - '807'
+  - '808'
+  - '809'
+  - '810'
+  - '811'
+  - '812'
+  - '813'
+  - '814'
+  - '815'
+  - '816'
+  neighboring_zones:
+  - AZ
+  - KS
+  - NE
+  - NM
+  - OK
+  - UT
+  - WY
+- tax: 0.0635
+  name: Connecticut
+  example_city: Bridgeport
+  example_city_zip: '06606'
+  tax_name: State Tax
+  code: CT
+  zip_prefixes:
+  - '060'
+  - '061'
+  - '062'
+  - '0630'
+  - '0631'
+  - '0632'
+  - '0633'
+  - '0634'
+  - '0635'
+  - '0636'
+  - '0637'
+  - '0638'
+  # 06390 Fisher's Island, NY
+  - '06391'
+  - '06392'
+  - '06393'
+  - '06394'
+  - '06395'
+  - '06396'
+  - '06397'
+  - '06398'
+  - '06399'
+  - '064'
+  - '065'
+  - '066'
+  - '067'
+  - '068'
+  - '069'
+  neighboring_zones:
+  - MA
+  - NY
+  - RI
+- tax: 0.0
+  name: Delaware
+  example_city: Wilmington
+  example_city_zip: '19805'
+  tax_name: State Tax
+  code: DE
+  zip_prefixes:
+  - '197'
+  - '198'
+  - '199'
+  neighboring_zones:
+  - MD
+  - NJ
+  - PA
+- tax: 0.0575
+  name: District of Columbia
+  example_city: Washington
+  example_city_zip: '20011'
+  tax_name: State Tax
+  code: DC
+  zip_prefixes:
+  - '200'
+  - '202'
+  - '203'
+  - '204'
+  - '205'
+  neighboring_zones:
+  - MD
+  - VA
+- tax: 0.0
+  name: Federated States of Micronesia
+  example_city: Pohnpei
+  example_city_zip: '96941'
+  tax_name: State Tax
+  code: FM
+  iso_code: FM
+  zip_prefixes:
+  # Pohnpei
+  - '96941'
+  # Chuuk
+  - '96942'
+  # Yap
+  - '96943'
+  # Kosrae
+  - '96944'
+- tax: 0.06
+  name: Florida
+  example_city: Jacksonville
+  example_city_zip: '32210'
+  tax_name: State Tax
+  code: FL
+  zip_prefixes:
+  - '320'
+  - '321'
+  - '322'
+  - '323'
+  - '324'
+  - '325'
+  - '326'
+  - '327'
+  - '328'
+  - '329'
+  - '330'
+  - '331'
+  - '332'
+  - '333'
+  - '334'
+  - '335'
+  - '336'
+  - '337'
+  - '338'
+  - '339'
+  - '341'
+  - '342'
+  - '344'
+  - '346'
+  - '347'
+  - '349'
+  neighboring_zones:
+  - AL
+  - GA
+- tax: 0.04
+  name: Georgia
+  example_city: Atlanta
+  example_city_zip: '30318'
+  tax_name: State Tax
+  code: GA
+  zip_prefixes:
+  - '300'
+  - '301'
+  - '302'
+  - '303'
+  - '304'
+  - '305'
+  - '306'
+  - '307'
+  - '308'
+  - '309'
+  - '310'
+  - '311'
+  - '312'
+  - '313'
+  - '314'
+  - '315'
+  - '316'
+  - '317'
+  - '318'
+  - '319'
+  - '398'
+  - '399'
+  neighboring_zones:
+  - AL
+  - FL
+  - SC
+  - TN
+  - NC
+- tax: 0.0
+  name: Guam
+  example_city: Dededo
+  example_city_zip: '96929'
+  tax_name: State Tax
+  code: GU
+  iso_code: GU
+  zip_prefixes:
+  - '9691'
+  - '9692'
+  - '96931'
+  - '96932'
+- tax: 0.04
+  name: Hawaii
+  example_city: Honolulu
+  example_city_zip: '96813'
+  tax_name: State Tax
+  code: HI
+  zip_prefixes:
+  - '9670'
+  - '9671'
+  - '9672'
+  - '9673'
+  - '9674'
+  - '9675'
+  - '9676'
+  - '9677'
+  - '9678'
+  - '96790'
+  - '96791'
+  - '96792'
+  - '96793'
+  - '96794'
+  - '96795'
+  - '96796'
+  - '96797'
+  - '968'
+- tax: 0.06
+  name: Idaho
+  example_city: Boise
+  example_city_zip: '83709'
+  tax_name: State Tax
+  code: ID
+  zip_prefixes:
+  - '832'
+  - '833'
+  - '8340'
+  - '83410'
+  - '83411'
+  - '83412'
+  - '83413'
+  # 83414 Alta, WY
+  - '83415'
+  - '83416'
+  - '83417'
+  - '83418'
+  - '83419'
+  - '8342'
+  - '8343'
+  - '8344'
+  - '8345'
+  - '8346'
+  - '8347'
+  - '8348'
+  - '8349'
+  - '835'
+  - '836'
+  - '837'
+  - '838'
+  neighboring_zones:
+  - MT
+  - NV
+  - OR
+  - UT
+  - WA
+  - WY
+- tax: 0.0625
+  name: Illinois
+  example_city: Chicago
+  example_city_zip: '60629'
+  tax_name: State Tax
+  code: IL
+  zip_prefixes:
+  - '600'
+  - '601'
+  - '602'
+  - '603'
+  - '604'
+  - '605'
+  - '606'
+  - '607'
+  - '608'
+  - '609'
+  - '610'
+  - '611'
+  - '612'
+  - '613'
+  - '614'
+  - '615'
+  - '616'
+  - '617'
+  - '618'
+  - '619'
+  - '620'
+  - '622'
+  - '623'
+  - '624'
+  - '625'
+  - '626'
+  - '627'
+  - '628'
+  - '629'
+  neighboring_zones:
+  - IN
+  - IA
+  - MI
+  - KY
+  - MO
+  - WI
+- tax: 0.07
+  name: Indiana
+  example_city: Indianapolis
+  example_city_zip: '46227'
+  tax_name: State Tax
+  code: IN
+  zip_prefixes:
+  - '460'
+  - '461'
+  - '462'
+  - '463'
+  - '464'
+  - '465'
+  - '466'
+  - '467'
+  - '468'
+  - '469'
+  - '470'
+  - '471'
+  - '472'
+  - '473'
+  - '474'
+  - '475'
+  - '476'
+  - '477'
+  - '478'
+  - '479'
+  neighboring_zones:
+  - IL
+  - KY
+  - MI
+  - OH
+- tax: 0.06
+  name: Iowa
+  example_city: Des Moines
+  example_city_zip: '50315'
+  tax_name: State Tax
+  code: IA
+  zip_prefixes:
+  - '500'
+  - '501'
+  - '502'
+  - '503'
+  - '504'
+  - '505'
+  - '506'
+  - '507'
+  - '508'
+  - '509'
+  - '510'
+  - '511'
+  - '512'
+  - '513'
+  - '514'
+  - '515'
+  - '516'
+  - '520'
+  - '521'
+  - '522'
+  - '523'
+  - '524'
+  - '525'
+  - '526'
+  - '527'
+  - '528'
+  neighboring_zones:
+  - IL
+  - MN
+  - MO
+  - NE
+  - SD
+  - WI
+- tax: 0.065
+  name: Kansas
+  example_city: Wichita
+  example_city_zip: '67212'
+  tax_name: State Tax
+  code: KS
+  zip_prefixes:
+  - '660'
+  - '661'
+  - '662'
+  - '664'
+  - '665'
+  - '666'
+  - '667'
+  - '668'
+  - '669'
+  - '670'
+  - '671'
+  - '672'
+  - '673'
+  - '674'
+  - '675'
+  - '676'
+  - '677'
+  - '678'
+  - '679'
+  neighboring_zones:
+  - CO
+  - MO
+  - NE
+  - OK
+- tax: 0.06
+  name: Kentucky
+  example_city: Louisville
+  example_city_zip: '40202'
+  tax_name: State Tax
+  code: KY
+  zip_prefixes:
+  - '400'
+  - '401'
+  - '402'
+  - '403'
+  - '404'
+  - '405'
+  - '406'
+  - '407'
+  - '408'
+  - '409'
+  - '410'
+  - '411'
+  - '412'
+  - '413'
+  - '414'
+  - '415'
+  - '416'
+  - '417'
+  - '418'
+  - '420'
+  - '421'
+  - '422'
+  - '423'
+  - '424'
+  - '425'
+  - '426'
+  - '427'
+  neighboring_zones:
+  - IL
+  - IN
+  - MO
+  - OH
+  - TN
+  - VA
+  - WV
+- tax: 0.04
+  name: Louisiana
+  example_city: New Orleans
+  example_city_zip: '70119'
+  tax_name: State Tax
+  code: LA
+  zip_prefixes:
+  - '700'
+  - '701'
+  - '703'
+  - '704'
+  - '705'
+  - '706'
+  - '707'
+  - '708'
+  - '710'
+  - '711'
+  - '712'
+  - '713'
+  - '714'
+  neighboring_zones:
+  - AR
+  - MS
+  - TX
+- tax: 0.055
+  name: Maine
+  example_city: Portland
+  example_city_zip: '04103'
+  tax_name: State Tax
+  code: ME
+  zip_prefixes:
+  - '039'
+  - '040'
+  - '041'
+  - '042'
+  - '043'
+  - '044'
+  - '045'
+  - '046'
+  - '047'
+  - '048'
+  - '049'
+  neighboring_zones:
+  - NH
+- tax: 0.0
+  name: Marshall Islands
+  example_city: Majuro
+  example_city_zip: '96960'
+  tax_name: State Tax
+  code: MH
+  iso_code: MH
+  zip_prefixes:
+  # Majuro
+  - '96960'
+  # Ebeye
+  - '96970'
+- tax: 0.06
+  name: Maryland
+  example_city: Baltimore
+  example_city_zip: '21215'
+  tax_name: State Tax
+  code: MD
+  zip_prefixes:
+  - '206'
+  - '207'
+  - '208'
+  - '209'
+  - '210'
+  - '211'
+  - '212'
+  - '214'
+  - '215'
+  - '216'
+  - '217'
+  - '218'
+  - '219'
+  neighboring_zones:
+  - DC
+  - DE
+  - PA
+  - VA
+  - WV
+- tax: 0.0625
+  name: Massachusetts
+  example_city: Boston
+  example_city_zip: '02115'
+  tax_name: State Tax
+  code: MA
+  zip_prefixes:
+  - '010'
+  - '011'
+  - '012'
+  - '013'
+  - '014'
+  - '015'
+  - '016'
+  - '017'
+  - '018'
+  - '019'
+  - '020'
+  - '021'
+  - '022'
+  - '023'
+  - '024'
+  - '025'
+  - '026'
+  - '027'
+  - '055'
+  neighboring_zones:
+  - CT
+  - NH
+  - RI
+  - NY
+  - VT
+- tax: 0.06
+  name: Michigan
+  example_city: Detroit
+  example_city_zip: '48228'
+  tax_name: State Tax
+  code: MI
+  zip_prefixes:
+  - '480'
+  - '481'
+  - '482'
+  - '483'
+  - '484'
+  - '485'
+  - '486'
+  - '487'
+  - '488'
+  - '489'
+  - '490'
+  - '491'
+  - '492'
+  - '493'
+  - '494'
+  - '495'
+  - '496'
+  - '497'
+  - '498'
+  - '499'
+  neighboring_zones:
+  - IL
+  - IN
+  - MN
+  - OH
+  - WI
+- tax: 0.06875
+  name: Minnesota
+  example_city: Minneapolis
+  example_city_zip: '55407'
+  tax_name: State Tax
+  code: MN
+  zip_prefixes:
+  - '550'
+  - '551'
+  - '553'
+  - '554'
+  - '555'
+  - '556'
+  - '557'
+  - '558'
+  - '559'
+  - '560'
+  - '561'
+  - '562'
+  - '563'
+  - '564'
+  - '565'
+  - '566'
+  - '567'
+  neighboring_zones:
+  - IA
+  - MI
+  - ND
+  - SD
+  - WI
+- tax: 0.07
+  name: Mississippi
+  example_city: Jackson
+  example_city_zip: '39212'
+  tax_name: State Tax
+  code: MS
+  zip_prefixes:
+  - '386'
+  - '387'
+  - '388'
+  - '389'
+  - '390'
+  - '391'
+  - '392'
+  - '393'
+  - '394'
+  - '395'
+  - '396'
+  - '397'
+  neighboring_zones:
+  - AL
+  - AR
+  - LA
+  - TN
+- tax: 0.04225
+  name: Missouri
+  example_city: Kansas City
+  example_city_zip: '64114'
+  tax_name: State Tax
+  code: MO
+  zip_prefixes:
+  - '630'
+  - '631'
+  - '633'
+  - '634'
+  - '635'
+  - '636'
+  - '637'
+  - '638'
+  - '639'
+  - '640'
+  - '641'
+  - '644'
+  - '645'
+  - '646'
+  - '647'
+  - '648'
+  - '649'
+  - '650'
+  - '651'
+  - '652'
+  - '653'
+  - '654'
+  - '655'
+  - '656'
+  - '657'
+  - '658'
+  neighboring_zones:
+  - AR
+  - IL
+  - IA
+  - KS
+  - KY
+  - NE
+  - OK
+  - TN
+- tax: 0.0
+  name: Montana
+  example_city: Billings
+  example_city_zip: '59102'
+  tax_name: State Tax
+  code: MT
+  zip_prefixes:
+  - '590'
+  - '591'
+  - '592'
+  - '593'
+  - '594'
+  - '595'
+  - '596'
+  - '597'
+  - '598'
+  - '599'
+  neighboring_zones:
+  - ND
+  - SD
+  - ID
+  - WY
+- tax: 0.055
+  name: Nebraska
+  example_city: Omaha
+  example_city_zip: '68104'
+  tax_name: State Tax
+  code: NE
+  zip_prefixes:
+  - '680'
+  - '681'
+  - '683'
+  - '684'
+  - '685'
+  - '686'
+  - '687'
+  - '688'
+  - '689'
+  - '690'
+  - '691'
+  - '692'
+  - '693'
+  neighboring_zones:
+  - CO
+  - IA
+  - KS
+  - MO
+  - SD
+  - WY
+- tax: 0.0685
+  name: Nevada
+  example_city: Las Vegas
+  example_city_zip: '89108'
+  tax_name: State Tax
+  code: NV
+  zip_prefixes:
+  - '889'
+  - '890'
+  - '891'
+  - '893'
+  - '894'
+  - '895'
+  - '897'
+  - '898'
+  neighboring_zones:
+  - AZ
+  - CA
+  - ID
+  - OR
+  - UT
+- tax: 0.0
+  name: New Hampshire
+  example_city: Manchester
+  example_city_zip: '03103'
+  tax_name: State Tax
+  code: NH
+  zip_prefixes:
+  - '030'
+  - '031'
+  - '032'
+  - '033'
+  - '034'
+  - '035'
+  - '036'
+  - '037'
+  - '038'
+  neighboring_zones:
+  - ME
+  - MA
+  - VT
+- tax: 0.07
+  name: New Jersey
+  example_city: Newark
+  example_city_zip: '07104'
+  tax_name: State Tax
+  code: NJ
+  zip_prefixes:
+  - '070'
+  - '071'
+  - '072'
+  - '073'
+  - '074'
+  - '075'
+  - '076'
+  - '077'
+  - '078'
+  - '079'
+  - '080'
+  - '081'
+  - '082'
+  - '083'
+  - '084'
+  - '085'
+  - '086'
+  - '087'
+  - '088'
+  - '089'
+  neighboring_zones:
+  - DE
+  - NY
+  - PA
+- tax: 0.05
+  name: New Mexico
+  example_city: Albuquerque
+  example_city_zip: '87121'
+  tax_name: GRT
+  code: NM
+  zip_prefixes:
+  - '870'
+  - '871'
+  - '873'
+  - '874'
+  - '875'
+  - '876'
+  - '877'
+  - '878'
+  - '879'
+  - '880'
+  - '881'
+  - '882'
+  - '883'
+  - '884'
+  neighboring_zones:
+  - AZ
+  - CO
+  - OK
+  - TX
+  - UT
+- tax: 0.04
+  name: New York
+  example_city: New York City
+  example_city_zip: '10025'
+  tax_name: State Tax
+  code: NY
+  zip_prefixes:
+  - '005'
+  - '06390'
+  - '100'
+  - '101'
+  - '102'
+  - '103'
+  - '104'
+  - '105'
+  - '106'
+  - '107'
+  - '108'
+  - '109'
+  - '110'
+  - '111'
+  - '112'
+  - '113'
+  - '114'
+  - '115'
+  - '116'
+  - '117'
+  - '118'
+  - '119'
+  - '120'
+  - '121'
+  - '122'
+  - '123'
+  - '124'
+  - '125'
+  - '126'
+  - '127'
+  - '128'
+  - '129'
+  - '130'
+  - '131'
+  - '132'
+  - '133'
+  - '134'
+  - '135'
+  - '136'
+  - '137'
+  - '138'
+  - '139'
+  - '140'
+  - '141'
+  - '142'
+  - '143'
+  - '144'
+  - '145'
+  - '146'
+  - '147'
+  - '148'
+  - '149'
+  neighboring_zones:
+  - CT
+  - MA
+  - NJ
+  - VT
+  - PA
+- tax: 0.0475
+  name: North Carolina
+  example_city: Charlotte
+  example_city_zip: '28269'
+  tax_name: State Tax
+  code: NC
+  zip_prefixes:
+  - '270'
+  - '271'
+  - '272'
+  - '273'
+  - '274'
+  - '275'
+  - '276'
+  - '277'
+  - '278'
+  - '279'
+  - '280'
+  - '281'
+  - '282'
+  - '283'
+  - '284'
+  - '285'
+  - '286'
+  - '287'
+  - '288'
+  - '289'
+  neighboring_zones:
+  - GA
+  - SC
+  - TN
+  - VA
+- tax: 0.05
+  name: North Dakota
+  example_city: Fargo
+  example_city_zip: '58103'
+  tax_name: State Tax
+  code: ND
+  zip_prefixes:
+  - '580'
+  - '581'
+  - '582'
+  - '583'
+  - '584'
+  - '585'
+  - '586'
+  - '587'
+  - '588'
+  neighboring_zones:
+  - MN
+  - MT
+  - SD
+- tax: 0.0
+  name: Northern Mariana Islands
+  example_city: Saipan
+  example_city_zip: '96950'
+  tax_name: State Tax
+  code: MP
+  iso_code: MP
+  zip_prefixes:
+  # Valid postal codes in MP are 96950, 96951, 96952
+  - '9695'
+- tax: 0.0575
+  name: Ohio
+  example_city: Columbus
+  example_city_zip: '43229'
+  tax_name: State Tax
+  code: OH
+  zip_prefixes:
+  - '430'
+  - '431'
+  - '432'
+  - '433'
+  - '434'
+  - '435'
+  - '436'
+  - '437'
+  - '438'
+  - '439'
+  - '440'
+  - '441'
+  - '442'
+  - '443'
+  - '444'
+  - '445'
+  - '446'
+  - '447'
+  - '448'
+  - '449'
+  - '450'
+  - '451'
+  - '452'
+  - '453'
+  - '454'
+  - '455'
+  - '456'
+  - '457'
+  - '458'
+  - '459'
+  neighboring_zones:
+  - IN
+  - KY
+  - MI
+  - PA
+  - WV
+- tax: 0.045
+  name: Oklahoma
+  example_city: Oklahoma
+  example_city_zip: '73119'
+  tax_name: State Tax
+  code: OK
+  zip_prefixes:
+  - '730'
+  - '731'
+  - '734'
+  - '735'
+  - '736'
+  - '737'
+  - '738'
+  - '7390'
+  - '7391'
+  - '7392'
+  - '7393'
+  - '7394'
+  - '7395'
+  # 73960: Texhoma, TX
+  - '73961'
+  - '73962'
+  - '73963'
+  - '73964'
+  - '73965'
+  - '73966'
+  - '73967'
+  - '73968'
+  - '73969'
+  - '740'
+  - '741'
+  - '743'
+  - '744'
+  - '745'
+  - '746'
+  - '747'
+  - '748'
+  - '749'
+  neighboring_zones:
+  - AR
+  - CO
+  - KS
+  - MO
+  - NM
+  - TX
+- tax: 0.0
+  name: Oregon
+  example_city: Portland
+  example_city_zip: '97206'
+  tax_name: State Tax
+  code: OR
+  zip_prefixes:
+  - '970'
+  - '971'
+  - '972'
+  - '973'
+  - '974'
+  - '975'
+  - '976'
+  - '977'
+  - '978'
+  - '979'
+  neighboring_zones:
+  - CA
+  - ID
+  - NV
+  - WA
+- tax: 0.0
+  name: Palau
+  example_city: Ngerulmud
+  example_city_zip: '96939'
+  tax_name: State Tax
+  code: PW
+  iso_code: PW
+  zip_prefixes:
+  - '96939'
+  - '96940'
+- tax: 0.06
+  name: Pennsylvania
+  example_city: Philadelphia
+  example_city_zip: '19120'
+  tax_name: State Tax
+  code: PA
+  zip_prefixes:
+  - '150'
+  - '151'
+  - '152'
+  - '153'
+  - '154'
+  - '155'
+  - '156'
+  - '157'
+  - '158'
+  - '159'
+  - '160'
+  - '161'
+  - '162'
+  - '163'
+  - '164'
+  - '165'
+  - '166'
+  - '167'
+  - '168'
+  - '169'
+  - '170'
+  - '171'
+  - '172'
+  - '173'
+  - '174'
+  - '175'
+  - '176'
+  - '177'
+  - '178'
+  - '179'
+  - '180'
+  - '181'
+  - '182'
+  - '183'
+  - '184'
+  - '185'
+  - '186'
+  - '187'
+  - '188'
+  - '189'
+  - '190'
+  - '191'
+  - '192'
+  - '193'
+  - '194'
+  - '195'
+  - '196'
+  neighboring_zones:
+  - DE
+  - MD
+  - NY
+  - WV
+  - NJ
+  - OH
+- tax: 0.105
+  name: Puerto Rico
+  example_city: Ponce
+  example_city_zip: '00717'
+  tax_name: State Tax
+  code: PR
+  iso_code: PR
+  zip_prefixes:
+  - '006'
+  - '007'
+  - '009'
+- tax: 0.07
+  name: Rhode Island
+  example_city: Providence
+  example_city_zip: '02909'
+  tax_name: State Tax
+  code: RI
+  zip_prefixes:
+  - '028'
+  - '029'
+  neighboring_zones:
+  - CT
+  - MA
+- tax: 0.05
+  name: South Carolina
+  example_city: Charleston
+  example_city_zip: '29407'
+  tax_name: State Tax
+  code: SC
+  zip_prefixes:
+  - '290'
+  - '291'
+  - '292'
+  - '293'
+  - '294'
+  - '295'
+  - '296'
+  - '297'
+  - '298'
+  - '299'
+  neighboring_zones:
+  - GA
+  - NC
+- tax: 0.04
+  name: South Dakota
+  example_city: Sioux Falls
+  example_city_zip: '57106'
+  tax_name: State Tax
+  code: SD
+  zip_prefixes:
+  - '570'
+  - '571'
+  - '572'
+  - '573'
+  - '574'
+  - '575'
+  - '576'
+  - '577'
+  neighboring_zones:
+  - IA
+  - MN
+  - MT
+  - NE
+  - ND
+  - WY
+- tax: 0.07
+  name: Tennessee
+  example_city: Nashville
+  example_city_zip: '37211'
+  tax_name: State Tax
+  code: TN
+  zip_prefixes:
+  - '370'
+  - '371'
+  - '372'
+  - '373'
+  - '374'
+  - '375'
+  - '376'
+  - '377'
+  - '378'
+  - '379'
+  - '380'
+  - '381'
+  - '382'
+  - '383'
+  - '384'
+  - '385'
+  neighboring_zones:
+  - AL
+  - AR
+  - GA
+  - KY
+  - MS
+  - MO
+  - NC
+  - VA
+- tax: 0.0625
+  name: Texas
+  example_city: Houston
+  example_city_zip: '77036'
+  tax_name: State Tax
+  code: TX
+  zip_prefixes:
+  # Internal Revenue Service, Austin TX
+  - '733'
+  # Texhoma TX has a handful of addresses using 73960, as well as some using 73949
+  # However, most of 73949 is in Texhoma OK, so we list it under OK.
+  - '73960'
+  - '750'
+  - '751'
+  - '752'
+  - '753'
+  - '754'
+  - '755'
+  - '756'
+  - '757'
+  - '758'
+  - '759'
+  - '760'
+  - '761'
+  - '762'
+  - '763'
+  - '764'
+  - '765'
+  - '766'
+  - '767'
+  - '768'
+  - '769'
+  - '770'
+  - '772'
+  - '773'
+  - '774'
+  - '775'
+  - '776'
+  - '777'
+  - '778'
+  - '779'
+  - '780'
+  - '781'
+  - '782'
+  - '783'
+  - '784'
+  - '785'
+  - '786'
+  - '787'
+  - '788'
+  - '789'
+  - '790'
+  - '791'
+  - '792'
+  - '793'
+  - '794'
+  - '795'
+  - '796'
+  - '797'
+  - '798'
+  - '799'
+  - '885'
+  neighboring_zones:
+  - AR
+  - LA
+  - NM
+  - OK
+- tax: 0.047
+  name: Utah
+  example_city: Salt Lake City
+  example_city_zip: '84116'
+  tax_name: State Tax
+  code: UT
+  zip_prefixes:
+  - '840'
+  - '841'
+  - '842'
+  - '843'
+  - '844'
+  - '845'
+  - '846'
+  - '847'
+  neighboring_zones:
+  - AZ
+  - CO
+  - ID
+  - NV
+  - NM
+  - WY
+- tax: 0.06
+  name: Vermont
+  example_city: Burlington
+  example_city_zip: '05401'
+  tax_name: State Tax
+  code: VT
+  zip_prefixes:
+  - '050'
+  - '051'
+  - '052'
+  - '053'
+  - '054'
+  - '056'
+  - '057'
+  - '058'
+  - '059'
+  neighboring_zones:
+  - MA
+  - NY
+  - NH
+- tax: 0.053
+  name: Virginia
+  example_city: Virginia Beach
+  example_city_zip: '23464'
+  tax_name: State Tax
+  code: VA
+  zip_prefixes:
+  - '201'
+  - '220'
+  - '221'
+  - '222'
+  - '223'
+  - '224'
+  - '225'
+  - '226'
+  - '227'
+  - '228'
+  - '229'
+  - '230'
+  - '231'
+  - '232'
+  - '233'
+  - '234'
+  - '235'
+  - '236'
+  - '237'
+  - '238'
+  - '239'
+  - '240'
+  - '241'
+  - '242'
+  - '243'
+  - '244'
+  - '245'
+  - '246'
+  neighboring_zones:
+  - DC
+  - KY
+  - MD
+  - NC
+  - TN
+  - WV
+- tax: 0.065
+  name: Washington
+  example_city: Seattle
+  example_city_zip: '98115'
+  tax_name: State Tax
+  code: WA
+  zip_prefixes:
+  - '980'
+  - '981'
+  - '982'
+  - '983'
+  - '984'
+  - '985'
+  - '986'
+  - '988'
+  - '989'
+  - '990'
+  - '991'
+  - '992'
+  - '993'
+  - '994'
+  neighboring_zones:
+  - ID
+  - OR
+- tax: 0.06
+  name: West Virginia
+  example_city: Charleston
+  example_city_zip: '25314'
+  tax_name: State Tax
+  code: WV
+  zip_prefixes:
+  - '247'
+  - '248'
+  - '249'
+  - '250'
+  - '251'
+  - '252'
+  - '253'
+  - '254'
+  - '255'
+  - '256'
+  - '257'
+  - '258'
+  - '259'
+  - '260'
+  - '261'
+  - '262'
+  - '263'
+  - '264'
+  - '265'
+  - '266'
+  - '267'
+  - '268'
+  neighboring_zones:
+  - KY
+  - MD
+  - OH
+  - PA
+  - VA
+- tax: 0.05
+  name: Wisconsin
+  example_city: Milwaukee
+  example_city_zip: '53215'
+  tax_name: State Tax
+  code: WI
+  zip_prefixes:
+  - '530'
+  - '531'
+  - '532'
+  - '534'
+  - '535'
+  - '537'
+  - '538'
+  - '539'
+  - '540'
+  - '541'
+  - '542'
+  - '543'
+  - '544'
+  - '545'
+  - '546'
+  - '547'
+  - '548'
+  - '549'
+  neighboring_zones:
+  - IL
+  - IA
+  - MI
+  - MN
+- tax: 0.04
+  name: Wyoming
+  example_city: Cheyenne
+  example_city_zip: '82001'
+  tax_name: State Tax
+  code: WY
+  zip_prefixes:
+  - '820'
+  - '821'
+  - '822'
+  - '823'
+  - '824'
+  - '825'
+  - '826'
+  - '827'
+  - '828'
+  - '829'
+  - '830'
+  - '831'
+  # Alta, WY; SCF in Idaho Falls, ID
+  - '83414'
+  neighboring_zones:
+  - CO
+  - ID
+  - MT
+  - NE
+  - SD
+  - UT
+- tax: 0.0
+  name: Virgin Islands
+  example_city: Charlotte Amalie
+  example_city_zip: '00802'
+  tax_name: State Tax
+  code: VI
+  iso_code: VI
+  zip_prefixes:
+  - '008'
+- tax: 0.0
+  name: Armed Forces Americas
+  example_city: APO
+  example_city_zip: '34042'
+  tax_name: State Tax
+  code: AA
+  priority: -1
+  zip_prefixes:
+  - '340'
+- tax: 0.0
+  name: Armed Forces Europe
+  example_city: APO
+  example_city_zip: '09214'
+  tax_name: State Tax
+  code: AE
+  priority: -1
+  zip_prefixes:
+  - '09'
+- tax: 0.0
+  name: Armed Forces Pacific
+  example_city: APO
+  example_city_zip: '96284'
+  tax_name: State Tax
+  code: AP
+  priority: -1
+  zip_prefixes:
+  - '962'
+  - '963'
+  - '964'
+  - '965'
+  - '966'
+zips_crossing_provinces:
+  # 03579 Errol NH/ME
+  '03579':
+  - NH
+  - ME
+  # 03813 Center Conway NH/ME
+  '03813':
+  - NH
+  - ME
+  # 10506 Bedford NY includes some addresses on Banksville Ave that are on the CT side of the street
+  '10506':
+  - NY
+  - CT
+  # 10509 Brewster NY includes some streets that cross into CT
+  '10509':
+  - NY
+  - CT
+  # Lukes Wood Road, New Canaan CT 10590 (Yes, both 10509 and 10590 cross the CT/NY border).
+  '10590':
+  - NY
+  - CT
+  # 10925 Greenwood Lake NY includes a handful of addresses that are in NJ, e.g. 6 Lakeshore Road
+  '10925':
+  - NY
+  - NJ
+  # USPS puts some streets in 10964 in NJ, but I think these are errors, and the whole zip is actually in NY
+  # 250 Old Tappan Road, Tappan NY 10983 straddles the NJ border
+  '10983':
+  - NY
+  - NJ
+  # 19973 Seaford DE extends into MD
+  '19973':
+  - DE
+  - MD
+  # 20135 Mount Weather VA extends into WV
+  '20135':
+  - VA
+  - WV
+  # 20588 is physically in MD but serves federal government offices so gets a "DC" ZIP code
+  '20588':
+  - DC
+  - MD
+  # 20598 is physically in VA but serves federal government offices so getsa "DC" ZIP code
+  '20598':
+  - DC
+  - VA
+  # USPS puts part of Pennsylvania Ave, Chester WV 26034 in PA, but that seems to be an error.
+  # Central Ave, McCaysville GA extends into TN
+  '30555':
+  - GA
+  - TN
+  # Salem Lane, Murphy NC 30559
+  '30559':
+  - GA
+  - NC
+  # Uchee Creek Road, Fort Mitchell AL 31905
+  '31905':
+  - GA
+  - AL
+  # USPS has two roads in 35447 listed in MS, but the ranges from this zip seem only to apply to buildings in AL
+  # County Road 89 / Poplar Springs Road, Bryant AL/GA 35958
+  '35958':
+  - AL
+  - GA
+  # Kate Freeman Road, Five Points AL 36855
+  '36855':
+  - AL
+  - GA
+  # Florida Line Road, Quincy FL 39819
+  '39819':
+  - GA
+  - FL
+  # Fork Ridge Road, Middlesboro KY/TN 40965
+  '40965':
+  - KY
+  - TN
+  # Lakeview Terrace, Albany KY/TN 42602
+  '42602':
+  - KY
+  - TN
+  # 42223 Fort Campbell straddles the KY/TN border
+  '42223':
+  - KY
+  - TN
+  # 45275 Cincinnati OH (CVG) airport has an OH PO Box but is physically in KY
+  '45275':
+  - OH
+  - KY
+  # IRS for Cincinnati OH, located on W 4th Street, Covington KY
+  '45999':
+  - OH
+  - KY
+  # Akron SD/IA 51001
+  '51001':
+  - IA
+  - SD
+  # Hawarden SD/IA 51023
+  '51023':
+  - IA
+  - SD
+  # Mondamin IA/NE 51557
+  '51557':
+  - IA
+  - NE
+  # Land O'Lakes WI/MI 54540
+  '54540':
+  - WI
+  - MI
+  # Lake Hendricks Drive, Astoria SD 56136
+  '56136':
+  - MN
+  - SD
+  # Jaspon MN/SD 56144
+  '56144':
+  - MN
+  - SD
+  # Hatfield MN/SD 56164
+  '56164':
+  - MN
+  - SD
+  # Browns Valley MN/SD 56219
+  '56219':
+  - MN
+  - SD
+  # 187th Street, just across the MN/SD border in SD, is not labeled on Google Maps but is between 188th and 186th
+  '56220':
+  - MN
+  - SD
+  # 48590 US Highway 212, Revillo SD 56257
+  '56257':
+  - MN
+  - SD
+  # 100th Street, Brandon IA 57005 runs along the SD/IA border
+  '57005':
+  - SD
+  - IA
+  # Elkton SD / Lake Benton MN
+  '57026':
+  - SD
+  - MN
+  # Garretson SD / Jasper MN
+  '57030':
+  - SD
+  - MN
+  # Hudson SD/MN 57034
+  '57034':
+  - SD
+  - IA
+  # Valley Springs SD / Manley MN 57068
+  '57068':
+  - SD
+  - MN
+  # 102nd Street, Roshold SD 57260 runs along the ND border
+  '57260':
+  - SD
+  - ND
+  # 100th Street, Veblen SD 57270 runs along the ND border
+  '57270':
+  - SD
+  - ND
+  # 100th Street, Britton SD 57430 runs along the ND border
+  '57430':
+  - SD
+  - ND
+  # 100th Street, Eureka SD 57437 runs along the ND border
+  '57437':
+  - SD
+  - ND
+  # 102nd Street, Frederick SD 57441 runs along the ND border
+  '57441':
+  - SD
+  - ND
+  # 100th Street, Hecla SD 57446 runs along the ND border
+  '57446':
+  - SD
+  - ND
+  # Long Lake, SD/ND
+  '57457':
+  - SD
+  - ND
+  # 304 Street, Burke SD 57523 runs along the NE border
+  '57523':
+  - SD
+  - NE
+  # 446th Avenue, Mills NE has its mail routed via Iona SD 57533
+  '57533':
+  - SD
+  - NE
+  # Herreid SD/ND 57632
+  '57632':
+  - SD
+  - ND
+  # Thunder Hawk SD/ND 57638
+  '57638':
+  - SD
+  - ND
+  # McIntosh SD/ND 57641
+  '57641':
+  - SD
+  - ND
+  # McLaughlin SD/ND 57642
+  '57642':
+  - SD
+  - ND
+  # Morristown SD/ND 57645
+  '57645':
+  - SD
+  - ND
+  # Pollock SD/ND 57648
+  '57648':
+  - SD
+  - ND
+  # Watauga SD/ND 57660
+  '57660':
+  - SD
+  - ND
+  # 57717 is located around the point where WY, SD and MT meet, and has portions in all three states.
+  '57717':
+  - SD
+  - MT
+  - WY
+  # Camp Crook SD/MT 57724
+  '57724':
+  - SD
+  - MT
+  # Edgemont Rd extends across the border into NE, but is only accessible via SD, so uses the SD zip
+  '57735':
+  - SD
+  - NE
+  # Near Fairmount ND, there are some roads in MN that share its ZIP
+  '58030':
+  - ND
+  - MN
+  # Havana ND/SD 58043
+  '58043':
+  - ND
+  - SD
+  # Geneseo, ND/SD 58053
+  '58053':
+  - ND
+  - SD
+  # Drayton ND/MN 58225
+  '58225':
+  - ND
+  - MN
+  # Ashley ND/SD 58413
+  '58413':
+  - ND
+  - SD
+  # State Line Road, Monango ND 58436 runs along the ND/SD border
+  '58436':
+  - ND
+  - SD
+  # State Line Road, Forbes ND 58439 runs along the ND/SD border
+  '58439':
+  - ND
+  - SD
+  # Selfridge ND/SD 58568
+  '58568':
+  - ND
+  - SD
+  # Beach ND/MT 58621
+  '58621':
+  - ND
+  - MT
+  # Bowman ND/SD 58623
+  '58623':
+  - ND
+  - SD
+  # Hettinger ND/SD 58639
+  '58639':
+  - ND
+  - SD
+  # Reeder ND/SD 58649
+  '58649':
+  - ND
+  - SD
+  # Gascoyne ND/SD 58653
+  '58653':
+  - ND
+  - SD
+  # County Road 354, Sidney MT shares ZIP 58838 with Cartwright ND
+  '58838':
+  - ND
+  - MT
+  # Brush Mountain Road, Dagmar MT shares ZIP 58845 with Grenora ND
+  '58845':
+  - ND
+  - MT
+  # Road 1 BF, Powell WY shares ZIP 59008 with Belfry MT
+  '59008':
+  - MT
+  - WY
+  # Fairview MT/ND 59221
+  '59221':
+  - MT
+  - ND
+  # Sidney MT / Cartwright ND 59270
+  '59270':
+  - MT
+  - ND
+  # 59275 (Westby MT) includes Daneville and Elkhorn in ND
+  '59275':
+  - MT
+  - ND
+  # 59311 (Alzada MT) includes a small section of N Alzada Road in WY
+  '59311':
+  - MT
+  - WY
+  # Biddle MT/WY 59314
+  '59314':
+  - MT
+  - WY
+  # Lolo MT/ID 59847
+  '59847':
+  - MT
+  - ID
+  # Bald Eagle Point Road, Omaha AR 65739 is only accessible via Ridgedale MO 65739 thus shares its ZIP
+  '65739':
+  - MO
+  - AR
+  # Pine Cove Lane, Theodosia AR 65761 shares ZIP with Theodosia MO
+  '65761':
+  - MO
+  - AR
+  # State Line Road runs along the NE/KS border in Oketo KS 66518
+  '66518':
+  - KS
+  - NE
+  # Mahaska KS/NE 66955
+  '66955':
+  - KS
+  - NE
+  # Road A, Almena KS 67622 runs along the NE/KS border
+  '67622':
+  - KS
+  - NE
+  # County Road A, Byron NE 68325 runs along the NE/KS border
+  '68325':
+  - NE
+  - KS
+  # Chester NE/KS 68327
+  '68327':
+  - NE
+  - KS
+  # Nebraska State Line Road, Pawnee City NE 68420 runs along the NE/KS border
+  '68420':
+  - NE
+  - KS
+  # State Line Road, Wymore NE 68466 runs along the NE/KS border
+  '68466':
+  - NE
+  - KS
+  # HC 56 (Highway Contract 56), Bristow NE 68719 services neighbouring SD
+  '68719':
+  - NE
+  - SD
+  # 304 Street, Spencer NE 68777 runs along the NE/SD border
+  '68777':
+  - NE
+  - SD
+  # County Road A, Hardy NE 68943 runs along the NE/KS border
+  '68943':
+  - NE
+  - KS
+  # Superior NE/KS 68978
+  '68978':
+  - NE
+  - KS
+  # Part of 1500th Road Oberlin KS uses the Danbury NE 69026 ZIP
+  '69026':
+  - NE
+  - KS
+  # Road EE, Atwood, KS runs along the KS/NE border and uses the ZIP for Trenton NE 69044
+  '69044':
+  - NE
+  - KS
+  # County Road 2, Bushnell NE 69128 runs along the NE/CO border
+  '69128':
+  - NE
+  - CO
+  # HC (Highway Contract) 54, Kimball NE 69145 extends into CO
+  '69145':
+  - NE
+  - CO
+  # County Road 61, Julesburg, CO 69168
+  '69168':
+  - NE
+  - CO
+  # Valentine NE/SD 69201
+  '69201':
+  - NE
+  - SD
+  # Crookston NE/SD 69212
+  '69212':
+  - NE
+  - SD
+  # Kilgore NE/SD 69216
+  '69216':
+  - NE
+  - SD
+  # Slim Butte Road, Chadron NE 69337 extends north across the state line into SD
+  '69337':
+  - NE
+  - SD
+  # HC (Highway Contract) 64 in ZIP 69343 extends north of the SD/NE border into SD
+  '69343':
+  - NE
+  - SD
+  # A small section of Woodrow Sones Road, Franklinton LA 70438, runs along the MS/LA border
+  # (Aside:  Google Maps has this as "Woodrow Songs Road", but I believe that USPS is correct.)
+  '70438':
+  - LA
+  - MS
+  # State Line Road, Kentwood LA 70444 runs along the LA/MS border
+  '70444':
+  - LA
+  - MS
+  # Capps City Road, Rodessa LA 71069 runs along the LA/AR border
+  '71069':
+  - LA
+  - AR
+  # West Stateline Road, Lillie LA 71256 runs along the LA/AR border
+  '71256':
+  - LA
+  - AR
+  # A handful of addresses on Boundary Road, Spearsville LA 71277 are in AR
+  '71277':
+  - LA
+  - AR
+  # USPS lists 300 through 598 Polk County Rd 233, Cove, AR 71937 as being in OK.
+  # Google Maps shows Polk County Rd ending at the the OK/AR border, but OpenStreetMap shows that the
+  # name also designates what Google Maps calls Ferry Rd, which turns at 90 degrees and runs along the
+  # border.  If OpenStreetMap is correct, then there are some portions of Polk County Rd 233 that
+  # run along the border and have some addresses in OK.
+  '71937':
+  - AR
+  - OK
+  # RR 2 and HC7 in Mena AR 71953 cross the border into OK
+  '71953':
+  - AR
+  - OK
+  # Frenchman's Bayou AR 72338 in in a spot on the Mississippi river whose course has altered over the years,
+  # and the AR/TN border follows the historical route that the river used to take.  Thus, the locality straddles
+  # the AR/TN border.
+  '72338':
+  - AR
+  - TN
+  # RR 1, Wilson AR 72395 extends into TN
+  '72395':
+  - AR
+  - TN
+  # Horshoe Bend Road, Lead Hill MO/AR 72643
+  '72643':
+  - AR
+  - MO
+  # The AR/MO border runs straight at Diamond City AR 72644, but the river along the border
+  # curves in and out of the two states.  Mail delivery is organized according to the river banks, not
+  # the state line.
+  '72644':
+  - AR
+  - MO
+  # Glass Plant Road, Fort Smith AR 74902
+  '74902':
+  - OK
+  - AR
+  # Rustic Lane, Canutillo NM 79835
+  '79835':
+  - TX
+  - NM
+  # McNutt Road, Sunland Park NM 79922
+  '79922':
+  - TX
+  - NM
+  # Borderland Road, El Paso NM 79932
+  '79932':
+  - TX
+  - NM
+  # Nebraska Road 2, near Julesburg CO 80737, runs along the NE/CO border
+  '80737':
+  - CO
+  - NE
+  # Trinchera Pass Road, Folsom NM 81081
+  '81081':
+  - CO
+  - NM
+  # Ignacio CO/NM 81137
+  '81137':
+  - CO
+  - NM
+  # Jelm WY/CO 82063
+  '82063':
+  - WY
+  - CO
+  # Ground Squirrell Road, Livermore CO 82070
+  '82070':
+  - WY
+  - CO
+  # Pine Bluffs WY/NE 82082 also County Road 99, Grover CO
+  '82082':
+  - WY
+  - CO
+  - NE
+  # Newcastle WY/SD 82701
+  '82701':
+  - WY
+  - SD
+  # Bear River WY/UT 82930
+  '82930':
+  - WY
+  - UT
+  # Raymond, WY 83114; also Center Lane, Geneva ID
+  '83114':
+  - WY
+  - ID
+  # Freedom WY/ID 83120
+  '83120':
+  - WY
+  - ID
+  # Elba ID/UT 83342
+  '83342':
+  - ID
+  - UT
+  # Priest River, ID 83856
+  '83856':
+  - ID
+  - WA
+  # RR 1, Duncan AZ 85534 extends into NM
+  '85534':
+  - AZ
+  - NM
+  # Tonalea AZ/UT 86044
+  '86044':
+  - AZ
+  - UT
+  # State Line Road, Hobbs NM 88240 runs along the NM/TX border
+  '88240':
+  - NM
+  - TX
+  # 88888 is for letters to Santa in "DC", but we don't make provisions for shippnig to it
+  # McDermitt NV/OR 89421
+  '89421':
+  - NV
+  - OR
+  # State Line Road, Tulelake CA 96134 runs along the OR/CA border
+  '96134':
+  - CA
+  - OR
+  # New Pine Creek CA/OR 97635
+  '97635':
+  - OR
+  - CA
+  # Jordan Valley OR/ID 97910
+  '97910':
+  - OR
+  - ID
+  # Stateline Road, Newman Lake WA 99025 runs along the WA/ID border
+  '99025':
+  - WA
+  - ID
+  # Farmington WA/ID 99128
+  '99128':
+  - WA
+  - ID
+  # Walla Walla WA/OR 99362
+  '99362':
+  - WA
+  - OR
+timezones:
+  America/Adak:
+  - '99546'
+  - '99547'
+  - '99591'
+  - '99638'
+  - '99660'
+  - '99685'
+  - '99692'
+  America/Anchorage:
+  - '9950'
+  - '9951'
+  - '9952'
+  - '9953'
+  - '99540'
+  - '99545'
+  - '99548'
+  - '99549'
+  - '9955'
+  - '9956'
+  - '9957'
+  - '9958'
+  - '99590'
+  - '99599'
+  - '9960'
+  - '9961'
+  - '9962'
+  - '99630'
+  - '99631'
+  - '99632'
+  - '99633'
+  - '99634'
+  - '99635'
+  - '99636'
+  - '99637'
+  - '99639'
+  - '9964'
+  - '9965'
+  - '99661'
+  - '99662'
+  - '99663'
+  - '99664'
+  - '99665'
+  - '99666'
+  - '99667'
+  - '99668'
+  - '99669'
+  - '9967'
+  - '99680'
+  - '99681'
+  - '99682'
+  - '99683'
+  - '99684'
+  - '99686'
+  - '99687'
+  - '99688'
+  - '99689'
+  - '99690'
+  - '99691'
+  - '99693'
+  - '99694'
+  - '99695'
+  - '99697'
+  - '997'
+  - '998'
+  - '999'
+  America/Chicago:
+  - '3240'
+  - '3241'
+  - '3242'
+  - '3243'
+  - '3244'
+  - '32452'
+  - '32455'
+  - '32459'
+  - '32460'
+  - '32461'
+  - '32462'
+  - '32463'
+  - '32464'
+  - '32466'
+  - '325'
+  - '35'
+  - '36'
+  - '370'
+  - '371'
+  - '372'
+  - '37301'
+  - '37305'
+  - '37306'
+  - '37313'
+  - '37318'
+  - '37324'
+  - '37327'
+  - '37328'
+  - '37330'
+  - '37334'
+  - '37335'
+  - '37339'
+  - '37340'
+  - '37342'
+  - '37345'
+  - '37347'
+  - '37348'
+  - '37349'
+  - '37352'
+  - '37355'
+  - '37356'
+  - '37357'
+  - '37359'
+  - '37360'
+  - '37365'
+  - '37366'
+  - '37367'
+  - '37374'
+  - '37375'
+  - '37376'
+  - '37378'
+  - '37380'
+  - '37382'
+  - '37383'
+  - '37387'
+  - '37388'
+  - '37389'
+  - '37394'
+  - '37396'
+  - '37397'
+  - '37398'
+  - '375'
+  - '37723'
+  - '38'
+  - '390'
+  - '391'
+  - '392'
+  - '393'
+  - '394'
+  - '395'
+  - '396'
+  - '397'
+  - '40111'
+  - '40115'
+  - '40119'
+  - '40140'
+  - '40143'
+  - '40144'
+  - '40145'
+  - '40146'
+  - '40152'
+  - '40153'
+  - '40170'
+  - '40171'
+  - '40178'
+  - '420'
+  - '421'
+  - '422'
+  - '423'
+  - '424'
+  - '4252'
+  - '42602'
+  - '4262'
+  - '42642'
+  - '42713'
+  - '42715'
+  - '42717'
+  - '42720'
+  - '42721'
+  - '42722'
+  - '42726'
+  - '42728'
+  - '42729'
+  - '42741'
+  - '42742'
+  - '42743'
+  - '42746'
+  - '42749'
+  - '42753'
+  - '42754'
+  - '42755'
+  - '42759'
+  - '42762'
+  - '42765'
+  - '42782'
+  - '463'
+  - '464'
+  - '46531'
+  - '46532'
+  - '46534'
+  - '46968'
+  - '47514'
+  - '47515'
+  - '47520'
+  - '47523'
+  - '47525'
+  - '47531'
+  - '47536'
+  - '47537'
+  - '47550'
+  - '47551'
+  - '47552'
+  - '47556'
+  - '47574'
+  - '47576'
+  - '47577'
+  - '47579'
+  - '47586'
+  - '47588'
+  - '476'
+  - '477'
+  - '47922'
+  - '47943'
+  - '47948'
+  - '47951'
+  - '47963'
+  - '47964'
+  - '47977'
+  - '47978'
+  - '49801'
+  - '49802'
+  - '49812'
+  - '49815'
+  - '49821'
+  - '49831'
+  - '49834'
+  - '49845'
+  - '49847'
+  - '49848'
+  - '49852'
+  - '49858'
+  - '49863'
+  - '49870'
+  - '49873'
+  - '49874'
+  - '49876'
+  - '49877'
+  - '49881'
+  - '49886'
+  - '49887'
+  - '49892'
+  - '49893'
+  - '49896'
+  - '49902'
+  - '49903'
+  - '49911'
+  - '49915'
+  - '49920'
+  - '49927'
+  - '49935'
+  - '49938'
+  - '49959'
+  - '49964'
+  - '49968'
+  - '49969'
+  - '50'
+  - '51'
+  - '52'
+  - '53'
+  - '54'
+  - '55'
+  - '560'
+  - '561'
+  - '562'
+  - '563'
+  - '564'
+  - '565'
+  - '566'
+  - '567'
+  - '570'
+  - '571'
+  - '572'
+  - '573'
+  - '574'
+  - '5750'
+  - '57520'
+  - '57522'
+  - '57523'
+  - '57528'
+  - '57529'
+  - '5753'
+  - '57540'
+  - '57541'
+  - '57544'
+  - '57548'
+  - '57555'
+  - '57559'
+  - '57560'
+  - '57562'
+  - '57563'
+  - '57564'
+  - '57566'
+  - '57568'
+  - '57569'
+  - '57570'
+  - '57571'
+  - '57572'
+  - '57576'
+  - '57579'
+  - '5758'
+  - '5760'
+  - '57631'
+  - '57632'
+  - '57646'
+  - '57648'
+  - '580'
+  - '581'
+  - '582'
+  - '583'
+  - '584'
+  - '5850'
+  - '58520'
+  - '58521'
+  - '58523'
+  - '58524'
+  - '58528'
+  - '58530'
+  - '58531'
+  - '58532'
+  - '58535'
+  - '58538'
+  - '5854'
+  - '5855'
+  - '58560'
+  - '58561'
+  - '58563'
+  - '58565'
+  - '58566'
+  - '58568'
+  - '5857'
+  - '5858'
+  - '58631'
+  - '58634'
+  - '587'
+  - '588'
+  - '60'
+  - '61'
+  - '62'
+  - '63'
+  - '64'
+  - '65'
+  - '66'
+  - '67'
+  - '68'
+  - '6900'
+  - '69020'
+  - '69022'
+  - '69024'
+  - '69025'
+  - '69026'
+  - '69028'
+  - '69029'
+  - '69032'
+  - '69034'
+  - '69036'
+  - '69038'
+  - '69039'
+  - '69040'
+  - '69042'
+  - '69043'
+  - '69044'
+  - '69046'
+  - '6910'
+  - '69120'
+  - '69123'
+  - '69130'
+  - '69132'
+  - '69138'
+  - '69142'
+  - '69143'
+  - '69151'
+  - '69157'
+  - '69161'
+  - '69163'
+  - '69165'
+  - '69166'
+  - '69167'
+  - '6917'
+  - '69210'
+  - '69214'
+  - '69217'
+  - '70'
+  - '71'
+  - '72'
+  - '73'
+  - '74'
+  - '75'
+  - '76'
+  - '77'
+  - '78'
+  - '790'
+  - '791'
+  - '792'
+  - '793'
+  - '794'
+  - '795'
+  - '796'
+  - '797'
+  - '79830'
+  - '79831'
+  - '79832'
+  - '79834'
+  - '79842'
+  - '79843'
+  - '79845'
+  - '79846'
+  - '79848'
+  - '79852'
+  - '79854'
+  - '79855'
+  America/Denver:
+  - '57521'
+  - '57543'
+  - '57547'
+  - '57551'
+  - '57552'
+  - '57553'
+  - '57567'
+  - '57574'
+  - '57577'
+  - '5762'
+  - '57630'
+  - '57633'
+  - '57634'
+  - '57636'
+  - '57638'
+  - '57639'
+  - '57640'
+  - '57641'
+  - '57642'
+  - '57644'
+  - '57645'
+  - '57649'
+  - '5765'
+  - '5766'
+  - '577'
+  - '58529'
+  - '58533'
+  - '58562'
+  - '58564'
+  - '58569'
+  - '5860'
+  - '5862'
+  - '58630'
+  - '58632'
+  - '58636'
+  - '58638'
+  - '58639'
+  - '5864'
+  - '5865'
+  - '59'
+  - '69021'
+  - '69023'
+  - '69027'
+  - '69030'
+  - '69033'
+  - '69037'
+  - '69041'
+  - '69045'
+  - '69121'
+  - '69122'
+  - '69125'
+  - '69127'
+  - '69128'
+  - '69129'
+  - '69131'
+  - '69133'
+  - '69134'
+  - '69135'
+  - '69140'
+  - '69141'
+  - '69144'
+  - '69145'
+  - '69146'
+  - '69147'
+  - '69148'
+  - '69149'
+  - '69150'
+  - '69152'
+  - '69153'
+  - '69154'
+  - '69155'
+  - '69156'
+  - '69160'
+  - '69162'
+  - '69168'
+  - '69169'
+  - '6920'
+  - '69211'
+  - '69212'
+  - '69216'
+  - '69218'
+  - '69219'
+  - '6922'
+  - '693'
+  - '7982'
+  - '79835'
+  - '79836'
+  - '79837'
+  - '79838'
+  - '79839'
+  - '79847'
+  - '79849'
+  - '79851'
+  - '79853'
+  - '799'
+  - '80'
+  - '81'
+  - '82'
+  - '830'
+  - '831'
+  - '832'
+  - '833'
+  - '834'
+  - '8360'
+  - '8361'
+  - '8362'
+  - '8363'
+  - '8364'
+  - '8365'
+  - '8366'
+  - '83670'
+  - '83672'
+  - '83676'
+  - '83677'
+  - '8368'
+  - '837'
+  - '84'
+  - '87'
+  - '880'
+  - '881'
+  - '882'
+  - '883'
+  - '884'
+  - '885'
+  - '97901'
+  - '97902'
+  - '97903'
+  - '97906'
+  - '97908'
+  - '97909'
+  - '9791'
+  - '9792'
+  America/Los_Angeles:
+  - '835'
+  - '83671'
+  - '838'
+  - '889'
+  - '89'
+  - '90'
+  - '91'
+  - '92'
+  - '93'
+  - '94'
+  - '95'
+  - '960'
+  - '961'
+  - '970'
+  - '971'
+  - '972'
+  - '973'
+  - '974'
+  - '975'
+  - '976'
+  - '977'
+  - '978'
+  - '97904'
+  - '97905'
+  - '97907'
+  - '98'
+  - '990'
+  - '991'
+  - '992'
+  - '993'
+  - '994'
+  America/New_York:
+  - '005'
+  - '01'
+  - '02'
+  - '03'
+  - '04'
+  - '05'
+  - '06'
+  - '07'
+  - '08'
+  - '09'
+  - '1'
+  - '2'
+  - '30'
+  - '31'
+  - '320'
+  - '321'
+  - '322'
+  - '323'
+  - '32456'
+  - '32457'
+  - '32465'
+  - '326'
+  - '327'
+  - '328'
+  - '329'
+  - '33'
+  - '34'
+  - '37302'
+  - '37303'
+  - '37304'
+  - '37307'
+  - '37308'
+  - '37309'
+  - '37310'
+  - '37311'
+  - '37312'
+  - '37314'
+  - '37315'
+  - '37316'
+  - '37317'
+  - '37320'
+  - '37321'
+  - '37322'
+  - '37323'
+  - '37325'
+  - '37326'
+  - '37329'
+  - '37331'
+  - '37332'
+  - '37333'
+  - '37336'
+  - '37337'
+  - '37338'
+  - '37341'
+  - '37343'
+  - '37350'
+  - '37351'
+  - '37353'
+  - '37354'
+  - '37361'
+  - '37362'
+  - '37363'
+  - '37364'
+  - '37369'
+  - '37370'
+  - '37371'
+  - '37373'
+  - '37377'
+  - '37379'
+  - '37381'
+  - '37384'
+  - '37385'
+  - '37391'
+  - '374'
+  - '376'
+  - '3770'
+  - '3771'
+  - '37721'
+  - '37722'
+  - '37724'
+  - '37725'
+  - '37726'
+  - '37727'
+  - '37729'
+  - '3773'
+  - '3774'
+  - '3775'
+  - '3776'
+  - '3777'
+  - '378'
+  - '379'
+  - '398'
+  - '399'
+  - '400'
+  - '4010'
+  - '40110'
+  - '40117'
+  - '40118'
+  - '4012'
+  - '40142'
+  - '40150'
+  - '40155'
+  - '40157'
+  - '40159'
+  - '4016'
+  - '40175'
+  - '40176'
+  - '40177'
+  - '402'
+  - '403'
+  - '404'
+  - '405'
+  - '406'
+  - '407'
+  - '408'
+  - '409'
+  - '41'
+  - '4250'
+  - '4251'
+  - '4253'
+  - '4254'
+  - '4255'
+  - '4256'
+  - '42603'
+  - '4263'
+  - '42647'
+  - '42649'
+  - '4265'
+  - '4270'
+  - '42712'
+  - '42716'
+  - '42718'
+  - '42719'
+  - '42724'
+  - '4273'
+  - '42740'
+  - '42748'
+  - '42757'
+  - '42758'
+  - '42764'
+  - '4277'
+  - '42784'
+  - '42788'
+  - '43'
+  - '44'
+  - '45'
+  - '460'
+  - '461'
+  - '462'
+  - '4650'
+  - '4651'
+  - '4652'
+  - '46530'
+  - '46536'
+  - '46537'
+  - '46538'
+  - '46539'
+  - '4654'
+  - '4655'
+  - '4656'
+  - '4657'
+  - '4658'
+  - '4659'
+  - '466'
+  - '467'
+  - '468'
+  - '4690'
+  - '4691'
+  - '4692'
+  - '4693'
+  - '4694'
+  - '4695'
+  - '46960'
+  - '46961'
+  - '46962'
+  - '46965'
+  - '46967'
+  - '4697'
+  - '4698'
+  - '4699'
+  - '470'
+  - '471'
+  - '472'
+  - '473'
+  - '474'
+  - '4750'
+  - '47512'
+  - '47513'
+  - '47516'
+  - '47519'
+  - '47521'
+  - '47522'
+  - '47524'
+  - '47527'
+  - '47528'
+  - '47529'
+  - '47532'
+  - '47535'
+  - '4754'
+  - '47553'
+  - '47557'
+  - '47558'
+  - '4756'
+  - '47573'
+  - '47575'
+  - '47578'
+  - '47580'
+  - '47581'
+  - '47584'
+  - '47585'
+  - '4759'
+  - '478'
+  - '4790'
+  - '4791'
+  - '47920'
+  - '47921'
+  - '47923'
+  - '47924'
+  - '47925'
+  - '47926'
+  - '47928'
+  - '47929'
+  - '4793'
+  - '47940'
+  - '47941'
+  - '47942'
+  - '47944'
+  - '47946'
+  - '47949'
+  - '47950'
+  - '47952'
+  - '47954'
+  - '47955'
+  - '47957'
+  - '47958'
+  - '47959'
+  - '47960'
+  - '47962'
+  - '47965'
+  - '47966'
+  - '47967'
+  - '47968'
+  - '47969'
+  - '47970'
+  - '47971'
+  - '47974'
+  - '47975'
+  - '4798'
+  - '4799'
+  - '48'
+  - '490'
+  - '491'
+  - '492'
+  - '493'
+  - '494'
+  - '495'
+  - '496'
+  - '497'
+  - '49805'
+  - '49806'
+  - '49807'
+  - '49808'
+  - '49814'
+  - '49816'
+  - '49817'
+  - '49818'
+  - '49819'
+  - '49820'
+  - '49822'
+  - '49825'
+  - '49826'
+  - '49827'
+  - '49829'
+  - '49833'
+  - '49835'
+  - '49836'
+  - '49837'
+  - '49838'
+  - '49839'
+  - '49840'
+  - '49841'
+  - '49849'
+  - '49853'
+  - '49854'
+  - '49855'
+  - '49861'
+  - '49862'
+  - '49864'
+  - '49865'
+  - '49866'
+  - '49868'
+  - '49871'
+  - '49872'
+  - '49878'
+  - '49879'
+  - '49880'
+  - '49883'
+  - '49884'
+  - '49885'
+  - '49891'
+  - '49894'
+  - '49895'
+  - '49901'
+  - '49905'
+  - '49908'
+  - '49910'
+  - '49912'
+  - '49913'
+  - '49916'
+  - '49917'
+  - '49918'
+  - '49919'
+  - '49921'
+  - '49922'
+  - '49925'
+  - '49929'
+  - '49930'
+  - '49931'
+  - '49934'
+  - '4994'
+  - '49950'
+  - '49952'
+  - '49953'
+  - '49955'
+  - '49958'
+  - '49960'
+  - '49961'
+  - '49962'
+  - '49963'
+  - '49965'
+  - '49967'
+  - '4997'
+  - '569'
+  - '888'
+  - '962'
+  - '963'
+  - '964'
+  - '965'
+  - '966'
+  America/Phoenix:
+  - '85'
+  - '86'
+  America/Puerto_Rico:
+  - '006'
+  - '007'
+  - '009'
+  America/St_Thomas:
+  - '008'
+  Pacific/Guadalcanal:
+  - '96941'
+  Pacific/Guam:
+  - '9691'
+  - '9692'
+  - '9693'
+  Pacific/Honolulu:
+  - '9670'
+  - '9671'
+  - '9672'
+  - '9673'
+  - '9674'
+  - '9675'
+  - '9676'
+  - '9677'
+  - '9678'
+  - '96790'
+  - '96791'
+  - '96792'
+  - '96793'
+  - '96794'
+  - '96795'
+  - '96796'
+  - '96797'
+  - '968'
+  Pacific/Kosrae:
+  - '96944'
+  Pacific/Kwajalein:
+  - '96970'
+  Pacific/Pago_Pago:
+  - '96799'
+  Pacific/Palau:
+  - '96939'
+  - '96940'
+  Pacific/Port_Moresby:
+  - '96942'
+  - '96943'
+  Pacific/Tarawa:
+  - '96950'
+  - '96951'
+  - '96952'
+  - '96960'

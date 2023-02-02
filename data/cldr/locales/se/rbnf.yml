@@ -1,0 +1,69 @@
+---
+se:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: eret >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1100
+          :rule: "<<­čuođi[­>>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: "-x"
+          :rule: eret >>;
+        - :value: x.x
+          :rule: "<< pilkku >>;"
+        - :value: 0
+          :rule: nolla;
+        - :value: 1
+          :rule: okta;
+        - :value: 2
+          :rule: guokte;
+        - :value: 3
+          :rule: golbma;
+        - :value: 4
+          :rule: njeallje;
+        - :value: 5
+          :rule: vihtta;
+        - :value: 6
+          :rule: guhtta;
+        - :value: 7
+          :rule: čieža;
+        - :value: 8
+          :rule: gávcci;
+        - :value: 9
+          :rule: ovcci;
+        - :value: 10
+          :rule: logi;
+        - :value: 11
+          :rule: ">>­nuppe­lohkái;"
+        - :value: 20
+          :rule: "<<­logi[­>>];"
+        - :value: 100
+          :rule: "<<­čuođi[­>>];"
+        - :value: 1000
+          :rule: "<<­duhát[ >>];"
+        - :value: 1000000
+          :rule: "<< miljon[ >>];"
+        - :value: 1000000000
+          :rule: "<< miljard[ >>];"
+        - :value: 1000000000000
+          :rule: "<< biljon[ >>];"
+        - :value: 1000000000000000
+          :rule: "<< biljard[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

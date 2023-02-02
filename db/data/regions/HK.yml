@@ -1,0 +1,42 @@
+---
+name: Hong Kong
+code: HK
+tax: 0.0
+currency: HKD
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+phone_number_prefix: 852
+building_number_required: true
+week_start_day: sunday
+languages:
+  - en
+  - zh-HK
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{province} {country}_{phone}"
+emoji: "\U0001F1ED\U0001F1F0"
+zones:
+- name: Hong Kong Island
+  code: HK
+  iso_code: HK-HK
+  tax: 0.0
+  name_alternates:
+  - Hong Kong Province
+  - Hong Kong
+  - 香港
+  - 香港島
+- name: Kowloon
+  code: KL
+  iso_code: HK-KL
+  tax: 0.0
+  name_alternates:
+  - 九龍
+- name: New Territories
+  code: NT
+  iso_code: HK-NT
+  tax: 0.0
+  name_alternates:
+  - 新界
+timezone: Asia/Hong_Kong

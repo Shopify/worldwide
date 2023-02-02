@@ -1,0 +1,29 @@
+---
+en:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: State
+            optional: State (optional)
+          errors:
+            blank: Select a state
+            invalid_for_country: Enter a valid %{country} state
+            unknown_for_city_and_zip: Enter a valid state for %{city}, %{zip}
+            unknown_for_city: Select a valid state for %{city}
+            unknown_for_zip: Select a valid state for %{zip}
+        zip:
+          label:
+            default: ZIP code
+            optional: ZIP code (optional)
+          errors:
+            blank: Enter a ZIP code
+            invalid_for_country: Enter a valid %{country} ZIP code
+            invalid_for_province: Enter a valid ZIP code for %{province}
+            invalid_for_country_and_province: Enter a valid ZIP code for %{province},
+              %{country}
+            too_long: The ZIP code value is too long
+            contains_emojis: The ZIP code cannot contain emojis
+            contains_restricted_characters: The ZIP code cannot have restricted characters
+            contains_html_tags: The ZIP code value cannot contain HTML tags.

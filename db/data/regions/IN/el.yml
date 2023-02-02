@@ -1,0 +1,25 @@
+---
+el:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Πολιτεία
+            optional: Πολιτεία (προαιρετικά)
+          errors:
+            blank: Επιλέξτε νομό
+        zip:
+          label:
+            default: Κωδικός PIN
+            optional: Κωδικός PIN (προαιρετικά)
+          errors:
+            blank: Εισαγάγετε κωδικό PIN
+            invalid_for_country: Εισαγάγετε έγκυρο κωδικό PIN για %{country}
+            invalid_for_country_and_province: Εισαγάγετε έγκυρο κωδικό PIN για %{province},
+              %{country}
+            too_long: Η τιμή του κωδικού PIN είναι πολύ μεγάλη
+            contains_html_tags: Ο κωδικός PIN δεν μπορεί να περιέχει ετικέτες HTML.
+            contains_emojis: Ο κωδικός PIN δεν μπορεί να περιέχει emoji
+            contains_restricted_characters: Το πεδίο "Κωδικός PIN" δεν μπορεί να περιέχει
+              απαγορευμένους χαρακτήρες

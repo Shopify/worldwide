@@ -1,0 +1,376 @@
+---
+es:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E d
+        Ehm: E, h:mm a
+        EHm: E, H:mm
+        Ehms: E, h:mm:ss a
+        EHms: E, H:mm:ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        GyMMMM: MMMM 'de' y G
+        GyMMMMd: d 'de' MMMM 'de' y G
+        GyMMMMEd: E, d 'de' MMMM 'de' y G
+        h: h a
+        H: H
+        hm: h:mm a
+        Hm: H:mm
+        hms: h:mm:ss a
+        Hms: H:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: H:mm:ss v
+        hmsvvvv: h:mm:ss a (vvvv)
+        Hmsvvvv: H:mm:ss (vvvv)
+        hmv: h:mm a v
+        Hmv: H:mm v
+        M: L
+        Md: d/M
+        MEd: E, d/M
+        MMd: d/M
+        MMdd: d/M
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d 'de' MMMM
+        MMMMEd: E, d 'de' MMMM
+        MMMMW: "'semana' W 'de' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: EEE, d/M/y
+        yMM: M/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: EEE, d MMM y
+        yMMMM: MMMM 'de' y
+        yMMMMd: d 'de' MMMM 'de' y
+        yMMMMEd: EEE, d 'de' MMMM 'de' y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ 'de' y
+        yw: "'semana' w 'de' Y"
+      days:
+        format:
+          abbreviated:
+            sun: dom
+            mon: lun
+            tue: mar
+            wed: mié
+            thu: jue
+            fri: vie
+            sat: sáb
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: X
+            thu: J
+            fri: V
+            sat: S
+          short:
+            sun: DO
+            mon: LU
+            tue: MA
+            wed: MI
+            thu: JU
+            fri: VI
+            sat: SA
+          wide:
+            sun: domingo
+            mon: lunes
+            tue: martes
+            wed: miércoles
+            thu: jueves
+            fri: viernes
+            sat: sábado
+        stand_alone:
+          abbreviated:
+            sun: dom
+            mon: lun
+            tue: mar
+            wed: mié
+            thu: jue
+            fri: vie
+            sat: sáb
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: X
+            thu: J
+            fri: V
+            sat: S
+          short:
+            sun: DO
+            mon: LU
+            tue: MA
+            wed: MI
+            thu: JU
+            fri: VI
+            sat: SA
+          wide:
+            sun: domingo
+            mon: lunes
+            tue: martes
+            wed: miércoles
+            thu: jueves
+            fri: viernes
+            sat: sábado
+      eras:
+        abbr:
+          0: a. e. c.
+          1: e. c.
+        name:
+          0: antes de la era común
+          1: era común
+      fields:
+        day: día
+        day_narrow: d
+        day_of_year: día del año
+        day_of_year_narrow: día del a
+        day_of_year_short: día del a
+        day_period: a. m./p. m.
+        day_period_narrow: a. m./p. m.
+        day_period_short: a. m./p. m.
+        day_short: d
+        era: era
+        era_narrow: era
+        era_short: era
+        hour: hora
+        hour_narrow: h
+        hour_short: h
+        minute: minuto
+        minute_narrow: min
+        minute_short: min
+        month: mes
+        month_narrow: m
+        month_short: m
+        quarter: trimestre
+        quarter_narrow: trim.
+        quarter_short: trim.
+        second: segundo
+        second_narrow: s
+        second_short: s
+        week: semana
+        week_narrow: sem.
+        week_of_month: semana del mes
+        week_of_month_narrow: sem. de mes
+        week_of_month_short: sem. de mes
+        week_short: sem.
+        weekday: día de la semana
+        weekday_narrow: día de sem.
+        weekday_of_month: día de la semana del mes
+        weekday_of_month_narrow: día de sem. de mes
+        weekday_of_month_short: día de sem. de mes
+        weekday_short: día de sem.
+        year: año
+        year_narrow: a
+        year_short: a
+        zone: zona horaria
+        zone_narrow: zona
+        zone_short: zona
+      formats:
+        date:
+          full:
+            pattern: EEEE, d 'de' MMMM 'de' y
+          long:
+            pattern: d 'de' MMMM 'de' y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}}, {{time}}"
+          long:
+            pattern: "{{date}}, {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: H:mm:ss (zzzz)
+          long:
+            pattern: H:mm:ss z
+          medium:
+            pattern: H:mm:ss
+          short:
+            pattern: H:mm
+      months:
+        format:
+          abbreviated:
+            1: ene
+            2: feb
+            3: mar
+            4: abr
+            5: may
+            6: jun
+            7: jul
+            8: ago
+            9: sept
+            10: oct
+            11: nov
+            12: dic
+          narrow:
+            1: E
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: enero
+            2: febrero
+            3: marzo
+            4: abril
+            5: mayo
+            6: junio
+            7: julio
+            8: agosto
+            9: septiembre
+            10: octubre
+            11: noviembre
+            12: diciembre
+        stand_alone:
+          abbreviated:
+            1: ene
+            2: feb
+            3: mar
+            4: abr
+            5: may
+            6: jun
+            7: jul
+            8: ago
+            9: sept
+            10: oct
+            11: nov
+            12: dic
+          narrow:
+            1: E
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: enero
+            2: febrero
+            3: marzo
+            4: abril
+            5: mayo
+            6: junio
+            7: julio
+            8: agosto
+            9: septiembre
+            10: octubre
+            11: noviembre
+            12: diciembre
+      periods:
+        format:
+          abbreviated:
+            am: a. m.
+            evening1: de la tarde
+            morning1: de la madrugada
+            morning2: de la mañana
+            night1: de la noche
+            noon: del mediodía
+            pm: p. m.
+          narrow:
+            am: a. m.
+            evening1: de la tarde
+            morning1: de la madrugada
+            morning2: de la mañana
+            night1: de la noche
+            noon: del mediodía
+            pm: p. m.
+          wide:
+            am: a. m.
+            evening1: de la tarde
+            morning1: de la madrugada
+            morning2: de la mañana
+            night1: de la noche
+            noon: del mediodía
+            pm: p. m.
+        stand_alone:
+          abbreviated:
+            am: a. m.
+            evening1: tarde
+            morning1: madrugada
+            morning2: mañana
+            night1: noche
+            noon: mediodía
+            pm: p. m.
+          narrow:
+            am: a. m.
+            evening1: tarde
+            morning1: madrugada
+            morning2: mañana
+            night1: noche
+            noon: mediodía
+            pm: p. m.
+          wide:
+            am: a. m.
+            evening1: tarde
+            morning1: madrugada
+            morning2: mañana
+            night1: noche
+            noon: mediodía
+            pm: p. m.
+      quarters:
+        format:
+          abbreviated:
+            1: T1
+            2: T2
+            3: T3
+            4: T4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1.er trimestre
+            2: 2.º trimestre
+            3: 3.er trimestre
+            4: 4.º trimestre
+        stand_alone:
+          abbreviated:
+            1: T1
+            2: T2
+            3: T3
+            4: T4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1.er trimestre
+            2: 2.º trimestre
+            3: 3.er trimestre
+            4: 4.º trimestre

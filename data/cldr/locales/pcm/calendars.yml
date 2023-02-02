@@ -1,0 +1,334 @@
+---
+pcm:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: d E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMMM: G y MMM
+        GyMMMd: G y MMM d
+        GyMMMEd: G y MMM d, E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d /M
+        MEd: E, d/M
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        MMMMW: "'Wik' W 'fọ' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E, d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'Wiik' w 'fọ' Y"
+      days:
+        format:
+          abbreviated:
+            sun: Sọ́n
+            mon: Mọ́n
+            tue: Tiú
+            wed: Wẹ́n
+            thu: Tọ́z
+            fri: Fraí
+            sat: Sát
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: Sọ́n
+            mon: Mọ́n
+            tue: Tiú
+            wed: Wẹ́n
+            thu: Tọ́z
+            fri: Fraí
+            sat: Sát
+          wide:
+            sun: Sọ́ndè
+            mon: Mọ́ndè
+            tue: Tiúzdè
+            wed: Wẹ́nẹ́zdè
+            thu: Tọ́zdè
+            fri: Fraídè
+            sat: Sátọdè
+        stand_alone:
+          abbreviated:
+            sun: Sọ́n
+            mon: Mọ́n
+            tue: Tiú
+            wed: Wẹ́n
+            thu: Tọ́z
+            fri: Fraí
+            sat: Sát
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: Sọ́n
+            mon: Mọ́n
+            tue: Tiú
+            wed: Wẹ́n
+            thu: Tọ́z
+            fri: Fraí
+            sat: Sát
+          wide:
+            sun: Sọ́ndè
+            mon: Mọ́ndè
+            tue: Tiúzdè
+            wed: Wẹ́nẹ́zdè
+            thu: Tọ́zdè
+            fri: Fraídè
+            sat: Sátọdè
+      eras:
+        abbr:
+          0: BJT
+          1: JT
+        name:
+          0: Bifọ́ Jẹ́nárál Taim
+          1: Jẹ́nárál Taim
+      fields:
+        day: Dè
+        day_narrow: Dè
+        day_of_year: Dè fọ yiẹ
+        day_of_year_narrow: Dè fọ yiẹ
+        day_of_year_short: Dè fọ yiẹ
+        day_period: fọ mọ́nin fọ áftanun fọ ívnin fọ nait
+        day_period_narrow: fọ mọ́nin/fọ áftanun, fọ ívnin, fọ nait
+        day_period_short: fọ mọ́nin/fọ áftanun, fọ ívnin, fọ nait
+        day_short: Dè
+        era: Taim
+        era_narrow: Taim
+        era_short: Taim
+        hour: Awa
+        hour_narrow: Awa
+        hour_short: Awa
+        minute: Mínit
+        minute_narrow: Mínit
+        minute_short: Mínit
+        month: Mọnt
+        month_narrow: Mọnt
+        month_short: Mọnt
+        quarter: Kwọ́ta
+        quarter_narrow: Kwọ́ta
+        quarter_short: Kwọ́ta
+        second: Sẹ́kọn
+        second_narrow: Sẹ́kọn
+        second_short: Sẹ́kọn
+        week: Wik
+        week_narrow: Wik
+        week_of_month: Wik fọ mọnt
+        week_of_month_narrow: Wik fọ mọnt
+        week_of_month_short: Wik fọ mọnt
+        week_short: Wik
+        weekday: Dè fọ wik
+        weekday_narrow: Dè fọ wik
+        weekday_of_month: Dè fọ mọnt
+        weekday_of_month_narrow: Dè fọ mọnt
+        weekday_of_month_short: Dè fọ mọnt
+        weekday_short: Dè fọ wik
+        year: Yiẹ
+        year_narrow: Yiẹ
+        year_short: Yiẹ
+        zone: Taím Zon
+        zone_narrow: Taím Zon
+        zone_short: Taím Zon
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/y
+        datetime:
+          full:
+            pattern: "{{date}} 'fọ' {{time}}"
+          long:
+            pattern: "{{date}} 'fọ' {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: H:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Jén
+            2: Fẹ́b
+            3: Mach
+            4: Épr
+            5: Mee
+            6: Jun
+            7: Jul
+            8: Ọgọ
+            9: Sẹp
+            10: Ọkt
+            11: Nọv
+            12: Dis
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Jénúári
+            2: Fẹ́búári
+            3: Mach
+            4: Éprel
+            5: Mee
+            6: Jun
+            7: Julai
+            8: Ọgọst
+            9: Sẹptẹ́mba
+            10: Ọktóba
+            11: Nọvẹ́mba
+            12: Disẹ́mba
+        stand_alone:
+          abbreviated:
+            1: Jén
+            2: Fẹ́b
+            3: Mach
+            4: Épr
+            5: Mee
+            6: Jun
+            7: Jul
+            8: Ọ́gọ
+            9: Sẹp
+            10: Ọkt
+            11: Nọv
+            12: Dis
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Jénúári
+            2: Fẹ́búári
+            3: Mach
+            4: Éprel
+            5: Mee
+            6: Jun
+            7: Julai
+            8: Ọgọst
+            9: Sẹptẹ́mba
+            10: Ọktóba
+            11: Nọvẹ́mba
+            12: Disẹ́mba
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: Fọ mọ́nin
+            pm: Fọ ívnin
+        stand_alone:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: Fọ mọ́nin
+            pm: Fọ ívnin
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Fẹ́st Kwọ́ta
+            2: Sẹ́kọ́n Kwọ́ta
+            3: Tọ́d Kwọ́ta
+            4: Fọ́t Kwọ́ta
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Fẹ́st Kwọ́ta
+            2: Sẹ́kọ́n Kwọ́ta
+            3: Tọ́d Kwọ́ta
+            4: Fọ́t Kwọ́ta

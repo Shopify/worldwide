@@ -1,0 +1,563 @@
+---
+ast:
+  fields:
+    day:
+      display_name: día
+      relative:
+        -2: antayeri
+        -1: ayeri
+        0: güei
+        1: mañana
+        2: pasao mañana
+      relative_time:
+        future:
+          one: en {0} día
+          other: en {0} díes
+        past:
+          one: hai {0} día
+          other: hai {0} díes
+    day_narrow:
+      display_name: día
+      relative:
+        -2: antay.
+        -1: ayeri
+        0: güei
+        1: mañ.
+        2: p. mañ.
+      relative_time:
+        future:
+          one: en {0} d.
+          other: en {0} d.
+        past:
+          one: hai {0} d.
+          other: hai {0} d.
+    day_short:
+      display_name: día
+      relative:
+        -2: antayeri
+        -1: ayeri
+        0: güei
+        1: mañana
+        2: pasao mañana
+      relative_time:
+        future:
+          one: en {0} día
+          other: en {0} díes
+        past:
+          one: hai {0} día
+          other: hai {0} díes
+    dayperiod:
+      display_name: periodu del día
+    era:
+      display_name: era
+    fri:
+      relative:
+        -1: el vienres pasáu
+        0: esti vienres
+        1: el vienres viniente
+      relative_time:
+        future:
+          one: dientro de {0} vienres
+          other: dientro de {0} vienres
+        past:
+          one: hai {0} vienres
+          other: hai {0} vienres
+    fri_narrow:
+      relative:
+        -1: vie. pas.
+        0: esti vie.
+        1: vie. vin.
+      relative_time:
+        future:
+          one: dientro de {0} vienres
+          other: dientro de {0} vienres
+        past:
+          one: hai {0} vienres
+          other: hai {0} vienres
+    fri_short:
+      relative:
+        -1: vie. pasáu
+        0: esti vie.
+        1: vie. viniente
+      relative_time:
+        future:
+          one: dientro de {0} vienres
+          other: dientro de {0} vienres
+        past:
+          one: hai {0} vienres
+          other: hai {0} vienres
+    hour:
+      display_name: hora
+      relative:
+        0: esta hora
+      relative_time:
+        future:
+          one: en {0} hora
+          other: en {0} hores
+        past:
+          one: hai {0} hora
+          other: hai {0} hores
+    hour_narrow:
+      display_name: h.
+      relative:
+        0: esta h.
+      relative_time:
+        future:
+          one: en {0} h.
+          other: en {0} h.
+        past:
+          one: hai {0} h.
+          other: hai {0} h.
+    hour_short:
+      display_name: h.
+      relative:
+        0: esta hora
+      relative_time:
+        future:
+          one: en {0} h.
+          other: en {0} h.
+        past:
+          one: hai {0} h.
+          other: hai {0} h.
+    minute:
+      display_name: minutu
+      relative:
+        0: esti minutu
+      relative_time:
+        future:
+          one: en {0} minutu
+          other: en {0} minutos
+        past:
+          one: hai {0} minutu
+          other: hai {0} minutos
+    minute_narrow:
+      display_name: m.
+      relative:
+        0: esti min.
+      relative_time:
+        future:
+          one: en {0} min.
+          other: en {0} min.
+        past:
+          one: hai {0} min.
+          other: hai {0} min.
+    minute_short:
+      display_name: min.
+      relative:
+        0: esti min.
+      relative_time:
+        future:
+          one: en {0} min.
+          other: en {0} min.
+        past:
+          one: hai {0} min.
+          other: hai {0} min.
+    mon:
+      relative:
+        -1: el llunes pasáu
+        0: esti llunes
+        1: el llunes viniente
+      relative_time:
+        future:
+          one: dientro de {0} llunes
+          other: dientro de {0} llunes
+        past:
+          one: hai {0} llunes
+          other: hai {0} llunes
+    mon_narrow:
+      relative:
+        -1: llu. pas.
+        0: esti llu.
+        1: llu. vin.
+      relative_time:
+        future:
+          one: dientro de {0} llunes
+          other: dientro de {0} llunes
+        past:
+          one: hai {0} llunes
+          other: hai {0} llunes
+    mon_short:
+      relative:
+        -1: llun. pasáu
+        0: esti llun.
+        1: llun. viniente
+      relative_time:
+        future:
+          one: dientro de {0} llunes
+          other: dientro de {0} llunes
+        past:
+          one: hai {0} llunes
+          other: hai {0} llunes
+    month:
+      display_name: mes
+      relative:
+        -1: el mes pasáu
+        0: esti mes
+        1: el mes viniente
+      relative_time:
+        future:
+          one: en {0} mes
+          other: en {0} meses
+        past:
+          one: hai {0} mes
+          other: hai {0} meses
+    month_narrow:
+      display_name: mes
+      relative:
+        -1: mes pas.
+        0: esti mes
+        1: mes vin.
+      relative_time:
+        future:
+          one: en {0} m.
+          other: en {0} m.
+        past:
+          one: hai {0} m.
+          other: hai {0} m.
+    month_short:
+      display_name: mes
+      relative:
+        -1: mes pas.
+        0: esti mes
+        1: mes vin.
+      relative_time:
+        future:
+          one: en {0} mes
+          other: en {0} meses
+        past:
+          one: hai {0} mes
+          other: hai {0} meses
+    quarter:
+      display_name: trimestre
+      relative:
+        -1: trimestre anterior
+        0: esti trimestre
+        1: trimestre viniente
+      relative_time:
+        future:
+          one: en {0} trimestre
+          other: en {0} trimestres
+        past:
+          one: hai {0} trimestre
+          other: hai {0} trimestres
+    quarter_narrow:
+      display_name: tri.
+      relative:
+        -1: trim. ant.
+        0: esti trim.
+        1: trim. vin.
+      relative_time:
+        future:
+          one: en {0} tr.
+          other: en {0} tr.
+        past:
+          one: hai {0} tr.
+          other: hai {0} tr.
+    quarter_short:
+      display_name: tri.
+      relative:
+        -1: trim. ant.
+        0: esti trim.
+        1: trim. vin.
+      relative_time:
+        future:
+          one: en {0} trim.
+          other: en {0} trim.
+        past:
+          one: hai {0} trim.
+          other: hai {0} trim.
+    sat:
+      relative:
+        -1: el sábadu pasáu
+        0: esti sábadu
+        1: el sábadu viniente
+      relative_time:
+        future:
+          one: dientro de {0} sábadu
+          other: dientro de {0} sábados
+        past:
+          one: hai {0} sábadu
+          other: hai {0} sábados
+    sat_narrow:
+      relative:
+        -1: sáb. pas.
+        0: esti sáb.
+        1: sáb. vin.
+      relative_time:
+        future:
+          one: dientro de {0} sábadu
+          other: dientro de {0} sábados
+        past:
+          one: hai {0} sábadu
+          other: hai {0} sábados
+    sat_short:
+      relative:
+        -1: sáb. pasáu
+        0: esti sáb.
+        1: sáb. viniente
+      relative_time:
+        future:
+          one: dientro de {0} sábadu
+          other: dientro de {0} sábados
+        past:
+          one: hai {0} sábadu
+          other: hai {0} sábados
+    second:
+      display_name: segundu
+      relative:
+        0: agora
+      relative_time:
+        future:
+          one: en {0} segundu
+          other: en {0} segundos
+        past:
+          one: hai {0} segundu
+          other: hai {0} segundos
+    second_narrow:
+      display_name: s.
+      relative:
+        0: agora
+      relative_time:
+        future:
+          one: en {0} s.
+          other: en {0} s.
+        past:
+          one: hai {0} s.
+          other: hai {0} s.
+    second_short:
+      display_name: s.
+      relative:
+        0: agora
+      relative_time:
+        future:
+          one: en {0} seg.
+          other: en {0} seg.
+        past:
+          one: hai {0} seg.
+          other: hai {0} seg.
+    sun:
+      relative:
+        -1: el domingu pasáu
+        0: esti domingu
+        1: el domingu viniente
+      relative_time:
+        future:
+          one: dientro de {0} domingu
+          other: dientro de {0} domingos
+        past:
+          one: hai {0} domingu
+          other: hai {0} domingos
+    sun_narrow:
+      relative:
+        -1: dom. pas.
+        0: esti dom.
+        1: dom. vin.
+      relative_time:
+        future:
+          one: dientro de {0} domingu
+          other: dientro de {0} domingos
+        past:
+          one: hai {0} domingu
+          other: hai {0} domingos
+    sun_short:
+      relative:
+        -1: dom. pasáu
+        0: esti dom.
+        1: dom. viniente
+      relative_time:
+        future:
+          one: dientro de {0} domingu
+          other: dientro de {0} domingos
+        past:
+          one: hai {0} domingu
+          other: hai {0} domingos
+    thu:
+      relative:
+        -1: el xueves pasáu
+        0: esti xueves
+        1: el xueves viniente
+      relative_time:
+        future:
+          one: dientro de {0} xueves
+          other: dientro de {0} xueves
+        past:
+          one: hai {0} xueves
+          other: hai {0} xueves
+    thu_narrow:
+      relative:
+        -1: xue. pas.
+        0: esti xue.
+        1: xue. vin.
+      relative_time:
+        future:
+          one: dientro de {0} xueves
+          other: dientro de {0} xueves
+        past:
+          one: hai {0} xueves
+          other: hai {0} xueves
+    thu_short:
+      relative:
+        -1: xue. pasáu
+        0: esti xue.
+        1: xue. viniente
+      relative_time:
+        future:
+          one: dientro de {0} xueves
+          other: dientro de {0} xueves
+        past:
+          one: hai {0} xueves
+          other: hai {0} xueves
+    tue:
+      relative:
+        -1: el martes pasáu
+        0: esti martes
+        1: el martes viniente
+      relative_time:
+        future:
+          one: dientro de {0} martes
+          other: dientro de {0} martes
+        past:
+          one: hai {0} martes
+          other: hai {0} martes
+    tue_narrow:
+      relative:
+        -1: mar. pas.
+        0: esti mar.
+        1: mar. vin.
+      relative_time:
+        future:
+          one: dientro de {0} martes
+          other: dientro de {0} martes
+        past:
+          one: hai {0} martes
+          other: hai {0} martes
+    tue_short:
+      relative:
+        -1: mar. pasáu
+        0: esti mar.
+        1: mar. viniente
+      relative_time:
+        future:
+          one: dientro de {0} martes
+          other: dientro de {0} martes
+        past:
+          one: hai {0} martes
+          other: hai {0} martes
+    wed:
+      relative:
+        -1: el miércoles pasáu
+        0: esti miércoles
+        1: el miércoles viniente
+      relative_time:
+        future:
+          one: dientro de {0} miércoles
+          other: dientro de {0} miércoles
+        past:
+          one: hai {0} miércoles
+          other: hai {0} miércoles
+    wed_narrow:
+      relative:
+        -1: mié. pas.
+        0: esti mié.
+        1: mié. vin.
+      relative_time:
+        future:
+          one: dientro de {0} miércoles
+          other: dientro de {0} miércoles
+        past:
+          one: hai {0} miércoles
+          other: hai {0} miércoles
+    wed_short:
+      relative:
+        -1: mié. pasáu
+        0: esti mié.
+        1: mié. viniente
+      relative_time:
+        future:
+          one: dientro de {0} miércoles
+          other: dientro de {0} miércoles
+        past:
+          one: hai {0} miércoles
+          other: hai {0} miércoles
+    week:
+      display_name: selmana
+      relative:
+        -1: la selmana pasada
+        0: esta selmana
+        1: la selmana viniente
+      relative_time:
+        future:
+          one: en {0} selmana
+          other: en {0} selmanes
+        past:
+          one: hai {0} selmana
+          other: hai {0} selmanes
+    week_narrow:
+      display_name: sel.
+      relative:
+        -1: selm. pas.
+        0: esta selm.
+        1: selm. vin.
+      relative_time:
+        future:
+          one: en {0} se.
+          other: en {0} se.
+        past:
+          one: hai {0} se.
+          other: hai {0} se.
+    week_short:
+      display_name: sel.
+      relative:
+        -1: selm. pasada
+        0: esta selm.
+        1: selm. viniente
+      relative_time:
+        future:
+          one: en {0} selm.
+          other: en {0} selm.
+        past:
+          one: hai {0} selm.
+          other: hai {0} selm.
+    weekday:
+      display_name: día de la selmana
+    year:
+      display_name: añu
+      relative:
+        -1: l’añu pasáu
+        0: esti añu
+        1: l’añu viniente
+      relative_time:
+        future:
+          one: en {0} añu
+          other: en {0} años
+        past:
+          one: hai {0} añu
+          other: hai {0} años
+    year_narrow:
+      display_name: añu
+      relative:
+        -1: añu pas.
+        0: esti añu
+        1: añu vin.
+      relative_time:
+        future:
+          one: en {0} a.
+          other: en {0} a.
+        past:
+          one: hai {0} a.
+          other: hai {0} a.
+    year_short:
+      display_name: añu
+      relative:
+        -1: l’añu pas.
+        0: esti añu
+        1: l’añu vin.
+      relative_time:
+        future:
+          one: en {0} añu
+          other: en {0} años
+        past:
+          one: hai {0} añu
+          other: hai {0} años
+    zone:
+      display_name: estaya horaria

@@ -1,0 +1,23 @@
+---
+name: Morocco
+code: MA
+tax: 0.2
+currency: MAD
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: African Countries
+group_name: Africa
+zip_regex: "^[1-9]\\d{4}$"
+zip_example: '53000'
+zip_requirement: optional
+phone_number_prefix: 212
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F2\U0001F1E6"
+languages:
+  - ar
+  - fr
+timezone: Africa/Casablanca

@@ -1,0 +1,57 @@
+---
+yrl-CO:
+  calendars:
+    gregorian:
+      fields:
+        day_period: a. m./p. m.
+        day_period_narrow: a. m./p. m.
+        day_period_short: a. m./p. m.
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/y
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: h:mm:ss a zzzz
+          long:
+            pattern: h:mm:ss a z
+          medium:
+            pattern: h:mm:ss a
+          short:
+            pattern: h:mm a
+      periods:
+        format:
+          abbreviated:
+            am: a. m.
+            pm: p. m.
+          narrow:
+            am: a. m.
+            pm: p. m.
+          wide:
+            am: a. m.
+            pm: p. m.
+        stand_alone:
+          abbreviated:
+            am: a. m.
+            pm: p. m.
+          narrow:
+            am: a. m.
+            pm: p. m.
+          wide:
+            am: a. m.
+            pm: p. m.

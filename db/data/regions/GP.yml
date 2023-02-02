@@ -1,0 +1,22 @@
+---
+name: Guadeloupe
+code: GP
+tax: 0.085
+currency: EUR
+unit_system: metric
+tax_name: TVA
+tax_inclusive: true
+tags:
+- EU-OMR
+group: European Countries
+group_name: Europe
+zip_example: '97100'
+zip_regex: "^(GP-?)?(?!97133|97150)(971\\d{2})$"
+phone_number_prefix: 590
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1F5"
+languages:
+  - fr
+timezone: America/Guadeloupe

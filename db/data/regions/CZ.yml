@@ -1,0 +1,26 @@
+---
+name: Czech Republic
+code: CZ
+tax: 0.21
+currency: CZK
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+name_alternates:
+- Czechia
+tags:
+- EU-member
+zip_example: 100 00
+zip_regex: "^((CZ( |-)?)?[1-7]\\d{2} ?\\d{2})$"
+phone_number_prefix: 420
+building_number_required: true
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E8\U0001F1FF"
+languages:
+  - cs
+timezone: Europe/Prague

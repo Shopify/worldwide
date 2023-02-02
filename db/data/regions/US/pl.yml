@@ -1,0 +1,30 @@
+---
+pl:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Stan
+            optional: Stan (opcjonalnie)
+          errors:
+            blank: Wybierz stan
+            invalid_for_country: Wprowadź prawidłowy stan %{country}
+            unknown_for_city_and_zip: Wprowadź prawidłowy stan dla %{city}, %{zip}
+            unknown_for_city: Wybierz prawidłowy stan dla %{city}
+            unknown_for_zip: Wybierz prawidłowy stan dla %{zip}
+        zip:
+          label:
+            default: Kod pocztowy
+            optional: Kod pocztowy (opcjonalnie)
+          errors:
+            blank: Wprowadź kod pocztowy
+            invalid_for_country: Wprowadź prawidłowy kod pocztowy %{country}
+            invalid_for_country_and_province: Wprowadź prawidłowy kod pocztowy dla
+              %{province}, %{country}
+            too_long: Wartość kodu pocztowego jest zbyt długa
+            contains_html_tags: Kod pocztowy nie może zawierać tagów HTML.
+            contains_emojis: Kod pocztowy nie może zawierać emoji
+            contains_restricted_characters: Pole Kod pocztowy nie może zawierać znaków
+              objętych ograniczeniami
+            invalid_for_province: Wpisz prawidłowy kod pocztowy dla %{province}

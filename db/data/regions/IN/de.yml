@@ -1,0 +1,25 @@
+---
+de:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Bundesstaat
+            optional: Bundesstaat (optional)
+          errors:
+            blank: Wähle einen Bundesstaat aus
+        zip:
+          label:
+            default: PIN-Code
+            optional: PIN-Code (optional)
+          errors:
+            blank: Gib eine Postleitzahl ein
+            invalid_for_country: Gib eine gültige Postleitzahl für %{country} ein
+            invalid_for_country_and_province: Gib einen gültigen PIN-Code für %{province},
+              %{country} ein
+            too_long: Der PIN-Code-Wert ist zu lang
+            contains_html_tags: PIN-Code darf keine HTML-Tags enthalten.
+            contains_emojis: Der PIN-Code darf keine Emojis enthalten
+            contains_restricted_characters: Der PIN-Code darf keine eingeschränkten
+              Zeichen enthalten

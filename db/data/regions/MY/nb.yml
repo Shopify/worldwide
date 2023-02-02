@@ -1,0 +1,21 @@
+---
+nb:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Stat/territorium
+            optional: Stat/territorium (valgfritt)
+          errors:
+            blank: Velg stat/territorium
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valgfritt)
+          errors:
+            too_long: Verdien for postnummer er for lang
+            contains_html_tags: Postnummer kan ikke inneholde HTML-tagger.
+            contains_emojis: Postnummeret kan ikke inneholde emojier
+            contains_restricted_characters: Postnummer kan ikke inneholde begrensede
+              tegn

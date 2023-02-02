@@ -1,0 +1,25 @@
+---
+name: North Macedonia
+code: MK
+tax: 0.18
+currency: MKD
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+name_alternates:
+- Macedonia
+- Macedonia, Republic Of
+zip_regex: "^(N?MK-?)?[1267]\\d{3}$"
+zip_example: '1314'
+phone_number_prefix: 389
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F2\U0001F1F0"
+languages:
+  - al
+  - mk
+timezone: Europe/Belgrade

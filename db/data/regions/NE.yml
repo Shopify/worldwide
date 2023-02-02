@@ -1,0 +1,20 @@
+---
+name: Niger
+code: NE
+tax: 0.0
+currency: XOF
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+zip_example: '8001'
+zip_regex: "^[1-8]0[01][0-9]$"
+zip_requirement: optional
+phone_number_prefix: 227
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇳🇪
+languages:
+  - fr
+timezone: Africa/Lagos

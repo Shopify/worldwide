@@ -1,0 +1,89 @@
+---
+es-MX:
+  calendars:
+    gregorian:
+      additional_formats:
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        GyMMMd: d MMM y G
+        Hmsvvvv: HH:mm:ss (vvvv)
+        MMd: d/MM
+        MMdd: dd/MM
+        MMMEd: E d 'de' MMM
+        yMEd: E, d/M/y
+        yMM: MM/y
+        yMMMEd: EEE, d 'de' MMM 'de' y
+        yQQQ: QQQ y
+      days:
+        format:
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: M
+            thu: J
+            fri: V
+            sat: S
+      fields:
+        day_of_year_narrow: día del a
+        day_of_year_short: día del a
+        day_period_narrow: a. m./p. m.
+        day_period_short: a. m./p. m.
+        week_of_month_narrow: sem. de m
+        week_of_month_short: sem. de m
+      formats:
+        date:
+          full:
+            pattern: EEEE, d 'de' MMMM 'de' y
+          long:
+            pattern: d 'de' MMMM 'de' y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/yy
+        datetime:
+          full:
+            pattern: "{{date}}, {{time}}"
+          long:
+            pattern: "{{date}}, {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      periods:
+        format:
+          narrow:
+            evening1: de la tarde
+            morning1: de la madrugada
+            morning2: mañana
+            night1: de la noche
+            noon: del mediodía
+      quarters:
+        format:
+          wide:
+            1: 1.er trimestre
+            2: 2.º trimestre
+            3: 3.er trimestre
+            4: 4.º trimestre
+        stand_alone:
+          narrow:
+            1: 1T
+            2: 2T
+            3: 3T
+            4: 4T
+          wide:
+            1: 1.er trimestre
+            2: 2.º trimestre
+            3: 3.er trimestre
+            4: 4.º trimestre

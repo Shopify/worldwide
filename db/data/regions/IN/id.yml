@@ -1,0 +1,25 @@
+---
+id:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Negara bagian
+            optional: Negara bagian (opsional)
+          errors:
+            blank: Pilih negara bagian
+        zip:
+          label:
+            default: Kode PIN
+            optional: Kode PIN (opsional)
+          errors:
+            blank: Masukkan kode PIN
+            invalid_for_country: Masukkan kode PIN yang valid untuk %{country}
+            invalid_for_country_and_province: Masukkan kode PIN yang valid untuk %{province},
+              %{country}
+            too_long: Nilai kode PIN terlalu panjang
+            contains_html_tags: Kode PIN tidak bisa berisi tag HTML.
+            contains_emojis: Kode PIN tidak boleh berisi emoji
+            contains_restricted_characters: Kode PIN tidak boleh memuat karakter yang
+              dilarang

@@ -1,0 +1,22 @@
+---
+tax: 0.0
+name: Tristan da Cunha
+group: African Countries
+group_name: Africa
+code: TA
+unit_system: metric
+# Unlike AC and SH, TA has officially adopted the GBP and not SHP.
+# Source: https://en.wikipedia.org/wiki/Saint_Helena_pound
+currency: GBP
+zip_example: TDCU 1ZZ
+zip_regex: "\\A[Tt][Dd][Cc][Uu]\\s*1[Zz][Zz]\\z"
+phone_number_prefix: 2908
+zip_autofill_enabled: true
+autofill_city_enabled: true
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip}_{country}_{phone}"
+emoji: 🇹🇦
+languages:
+  - en
+timezone: Africa/Abidjan

@@ -1,0 +1,19 @@
+---
+vi:
+  worldwide:
+    GB:
+      addresses:
+        zip:
+          label:
+            default: Mã bưu chính
+            optional: Mã bưu chính (không bắt buộc)
+          errors:
+            blank: Nhập mã bưu chính
+            invalid_for_country: Nhập mã bưu chính hợp lệ cho Vương quốc Anh
+            invalid_for_country_and_province: Nhập mã bưu chính hợp lệ cho %{province},
+              Vương quốc Anh
+            too_long: Giá trị mã bưu chính quá dài
+            contains_html_tags: Mã bưu điện không được chứa thẻ HTML.
+            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Mã bưu chính không được chứa ký tự bị
+              hạn chế

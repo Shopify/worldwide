@@ -1,0 +1,401 @@
+---
+name: United Kingdom
+code: GB
+tax: 0.2
+currency: GBP
+unit_system: imperial
+tax_name: VAT
+tax_inclusive: true
+hide_provinces_from_addresses: true
+ignore_zones: true
+group: European Countries
+group_name: Europe
+zip_label: Postcode
+zip_regex: "\\A[A-Za-z]{1,2}[\\d]{1,2}(?:[A-Za-z])?\\s?[\\d][A-Za-z]{2}\\z|\\ABFPO\\s\\d{1,3}\\z"
+partial_zip_regex: "^[A-Z]{1,2}[0-9]{1,2}[A-Z]?$"
+zip_example: SE22 8DL
+phone_number_prefix: 44
+building_number_required: true
+week_start_day: monday
+omit_components: true
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1E7"
+languages:
+  - cy
+  - en
+zones:
+- name: British Forces
+  code: BFP
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - BF
+- name: England
+  code: ENG
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - AL
+  - B1
+  - B2
+  - B3
+  - B4
+  - B5
+  - B6
+  - B7
+  - B8
+  - B9
+  - BA
+  - BB
+  - BD
+  - BH
+  - BL
+  - BN
+  - BR
+  - BS
+  - CA
+  - CB
+  - CH1
+  - CH2
+  - CH3
+  - CH4
+  - CH60
+  - CH61
+  - CH62
+  - CH63
+  - CH64
+  - CH65
+  - CH66
+  - CH67
+  - CH68
+  - CH69
+  - CH88 # CH88 3AN, Charterhall Drive, CHESTER
+  - CH9
+  - CM
+  - CO
+  - CR
+  - CT
+  - CV
+  - CW
+  - DA
+  - DE
+  - DH
+  - DL
+  - DN
+  - DT
+  - DY
+  - E1
+  - E2
+  - E3
+  - E4
+  - E5
+  - E6
+  - E7
+  - E8
+  - E9
+  - EC
+  - EN
+  - EX
+  - FY
+  - GL
+  - GU
+  - HA
+  - HD
+  - HG
+  - HP
+  - HR1
+  - HR2
+  - HR4
+  - HR6
+  - HR7
+  - HR8
+  - HR9
+  - HU
+  - HX
+  - IG
+  - IP
+  - KT
+  - L1
+  - L2
+  - L3
+  - L4
+  - L5
+  - L6
+  - L7
+  - L8
+  - L9
+  - LA
+  - LE
+  - LN
+  - LS
+  - LU
+  - M1
+  - M2
+  - M3
+  - M4
+  - M5
+  - M6
+  - M7
+  - M8
+  - M9
+  - ME
+  - MK
+  - N1
+  - N2
+  - N3
+  - N4
+  - N5
+  - N6
+  - N7
+  - N8
+  - N9
+  - NE
+  - NG
+  - NN
+  - NR
+  - NW
+  - OL
+  - OX
+  - PE
+  - PL
+  - PO
+  - PR
+  - R
+  - S1
+  - S2
+  - S3
+  - S4
+  - S5
+  - S6
+  - S7
+  - S8
+  - S9
+  - SE
+  - SG
+  - SK
+  - SL
+  - SM
+  - SN
+  - SO
+  - SP
+  - SR
+  - SS
+  - ST
+  - SW
+  - 'SY1 '
+  - SY11
+  - SY12
+  - SY13
+  - SY14
+  - 'SY2 '
+  - SY26
+  - SY27
+  - SY28
+  - SY29
+  - SY3
+  - SY4
+  - SY5
+  - SY6
+  - SY7
+  - SY8
+  - SY9
+  - TA
+  - TD12
+  - TD15
+  - TF
+  - TN
+  - TQ
+  - TR
+  - TS
+  - TW
+  - UB
+  - W
+  - YO
+  neighboring_zones:
+  - SCT
+  - WLS
+- name: Northern Ireland
+  code: NIR
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - BT
+- name: Scotland
+  code: SCT
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - AB
+  - DD
+  - DG
+  - EH
+  - FK
+  - G1
+  - G2
+  - G3
+  - G4
+  - G5
+  - G6
+  - G7
+  - G8
+  - G9
+  - HS
+  - IV
+  - KA
+  - KW
+  - KY
+  - ML
+  - PA
+  - PH
+  - 'TD1 '
+  - TD10
+  - TD11
+  - TD13
+  - TD14
+  - TD2
+  - TD3
+  - TD4
+  - TD5
+  - TD6
+  - TD7
+  - TD8
+  - TD9
+  - ZE
+  neighboring_zones:
+  - ENG
+- name: Wales
+  code: WLS
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - CF
+  - CH5
+  - 'CH6 '
+  - CH7
+  - 'CH8 '
+  - HR3
+  - HR5
+  - LD
+  - LL
+  - NP
+  - SA
+  - SY10
+  - SY15
+  - SY16
+  - SY17
+  - SY18
+  - SY19
+  - SY20
+  - SY21
+  - SY22
+  - SY23
+  - SY24
+  - SY25
+  neighboring_zones:
+  - ENG
+# We are actually abusing this feature here.
+# Our list of prefixes for GB is an approximation that we know gets it wrong some
+# of the time.  We do this intentionally to save space, because the complete prefix
+# table would be thousands of entries and cause problems with code that can't handle
+# lists that long.  But, we want to allow the code in the correct zone, despite the
+# fact that our prefix puts it in the wrong one.
+zips_crossing_provinces:
+  "CH1 6B":
+    - ENG
+    - WLS
+  "CH1 6DD":
+    - ENG
+    - WLS
+  "CH1 6EB":
+    - ENG
+    - WLS
+  "CH1 6Q":
+    - ENG
+    - WLS
+  "CH4 0":
+    - ENG
+    - WLS
+  "CH4 8":
+    - ENG
+    - WLS
+  "CH4 9":
+    - ENG
+    - WLS
+  "CH70 8":
+    - WLS
+    - ENG
+  "DG16 5H":
+    - SCT
+    - ENG
+  "DG16 5JA":
+    - SCT
+    - ENG
+  "HR3 5":
+    - WLS
+    - ENG
+  "HR3 6":
+    - WLS
+    - ENG
+  "HR5 3":
+    - WLS
+    - ENG
+  "LD7 1":
+    - WLS
+    - ENG
+  "LD8 2":
+    - WLS
+    - ENG
+  "LL14 5":
+    - WLS
+    - ENG
+  "NP16 7":
+    - WLS
+    - ENG
+  "NP25 3":
+    - WLS
+    - ENG
+  "NP25 4":
+    - WLS
+    - ENG
+  "NP25 5":
+    - WLS
+    - ENG
+  "SY10 1":
+    - WLS
+    - ENG
+  "SY10 7":
+    - WLS
+    - ENG
+  "SY10 8":
+    - WLS
+    - ENG
+  "SY10 9":
+    - WLS
+    - ENG
+  "SY13 2":
+    - ENG
+    - WLS
+  "SY13 3":
+    - ENG
+    - WLS
+  "SY14 7":
+    - ENG
+    - WLS
+  "SY15 6":
+    - WLS
+    - ENG
+  "SY21 8":
+    - WLS
+    - ENG
+  "SY5 9":
+    - ENG
+    - WLS
+  "TD12 4":
+    - ENG
+    - SCT
+  "TD15 1":
+    - ENG
+    - SCT
+timezone: Europe/London

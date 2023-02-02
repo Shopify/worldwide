@@ -1,0 +1,23 @@
+---
+tax: 0.0
+name: French Southern Territories
+group: Other Countries
+group_name: Other
+code: TF
+tags:
+- EU-OCT
+# There are military, research, and support staff in TF, but no permanently settled inhabitants.
+# https://en.wikipedia.org/wiki/French_Southern_and_Antarctic_Lands
+inhabited: false
+unit_system: metric
+phone_number_prefix: 262
+zip_regex: "^984\\d{2}$"
+zip_requirement: recommended
+currency: EUR
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇹🇫
+languages:
+  - fr
+timezone: Indian/Maldives

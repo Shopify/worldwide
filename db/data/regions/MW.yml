@@ -1,0 +1,25 @@
+---
+name: Malawi
+code: MW
+tax: 0.165
+currency: MWK
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+# References for postal code permitted range:
+#   https://macra.mw/malawi-post-codes/
+#   https://www.grcdi.nl/gsb/malawi.html
+zip_regex: "^[1-3]\\d{5}$"
+zip_example: 207201
+zip_requirement: optional
+phone_number_prefix: 265
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1F2\U0001F1FC"
+languages:
+  - en
+  - ny
+  - to
+timezone: Africa/Maputo

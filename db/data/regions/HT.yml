@@ -1,0 +1,20 @@
+---
+name: Haiti
+code: HT
+tax: 0.1
+currency: HTG
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_example: 'HT6120'
+zip_regex: "^(HT ?)?(1[1-7]|2[1-4]|3[1-3]|4[1-5]|5[1-4]|6[1-5]|7[1-5]|8[1-5]|9[1-3])\\d{2}$"
+zip_requirement: optional
+phone_number_prefix: 509
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1ED\U0001F1F9"
+languages:
+  - fr
+timezone: America/Port-au-Prince

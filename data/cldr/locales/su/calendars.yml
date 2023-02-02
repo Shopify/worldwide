@@ -1,0 +1,247 @@
+---
+su:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bhm: h.mm B
+        Bhms: h.mm.ss B
+        EBhm: E h.mm B
+        EBhms: E h.mm.ss B
+        Ed: E d
+        Ehm: E h.mm a
+        EHm: E HH.mm
+        Ehms: E h.mm.ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        h: h a
+        hm: h.mm a
+        Hm: HH.mm
+        hms: h.mm.ss a
+        Hms: HH.mm.ss
+        hmsv: h.mm.ss a v
+        Hmsv: HH.mm.ss v
+        hmv: h.mm a v
+        Hmv: HH.mm v
+        M: L
+        Md: d/M
+        MEd: E, d/M
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        ms: mm.ss
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMMM: MMM y
+        yMMMd: d MMM, y
+        yMMMEd: E, d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+      days:
+        format:
+          abbreviated:
+            sun: Mng
+            mon: Sen
+            tue: Sal
+            wed: Reb
+            thu: Kem
+            fri: Jum
+            sat: Sap
+          narrow:
+            sun: M
+            mon: S
+            tue: S
+            wed: R
+            thu: K
+            fri: J
+            sat: S
+          wide:
+            sun: Minggu
+            mon: Senén
+            tue: Salasa
+            wed: Rebo
+            thu: Kemis
+            fri: Jumaah
+            sat: Saptu
+        stand_alone:
+          abbreviated:
+            sun: Mng
+            mon: Sen
+            tue: Sal
+            wed: Reb
+            thu: Kem
+            fri: Jum
+            sat: Sap
+          narrow:
+            sun: M
+            mon: S
+            tue: S
+            wed: R
+            thu: K
+            fri: J
+            sat: S
+          wide:
+            sun: Minggu
+            mon: Senén
+            tue: Salasa
+            wed: Rebo
+            thu: Kemis
+            fri: Jumaah
+            sat: Saptu
+      eras:
+        abbr:
+          0: SM
+          1: M
+      fields:
+        day: dinten
+        day_narrow: dinten
+        day_period: AM/PM
+        day_short: dinten
+        era: éra
+        hour: jam
+        hour_narrow: j.
+        hour_short: j.
+        minute: menit
+        minute_narrow: mnt.
+        minute_short: mnt.
+        month: sasih
+        month_narrow: sa.
+        month_short: sa.
+        quarter: triwulan
+        quarter_narrow: tri.
+        quarter_short: tri.
+        second: detik
+        second_narrow: dtk.
+        second_short: dtk.
+        week: minggu
+        week_narrow: mgg.
+        week_short: mgg.
+        weekday: dinten dina saminggu
+        year: taun
+        year_narrow: tn.
+        year_short: tn.
+        zone: zona waktu
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}} 'jam' {{time}}"
+          long:
+            pattern: "{{date}} 'jam' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: H.mm.ss zzzz
+          long:
+            pattern: H.mm.ss z
+          medium:
+            pattern: H.mm.ss
+          short:
+            pattern: H.mm
+      months:
+        format:
+          abbreviated:
+            1: Jan
+            2: Péb
+            3: Mar
+            4: Apr
+            5: Méi
+            6: Jun
+            7: Jul
+            8: Ags
+            9: Sép
+            10: Okt
+            11: Nop
+            12: Dés
+          narrow:
+            1: J
+            2: P
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januari
+            2: Pébruari
+            3: Maret
+            4: April
+            5: Méi
+            6: Juni
+            7: Juli
+            8: Agustus
+            9: Séptémber
+            10: Oktober
+            11: Nopémber
+            12: Désémber
+        stand_alone:
+          narrow:
+            1: J
+            2: P
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januari
+            2: Pébruari
+            3: Maret
+            4: April
+            5: Méi
+            6: Juni
+            7: Juli
+            8: Agustus
+            9: Séptémber
+            10: Oktober
+            11: Nopémber
+            12: Désémber
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          wide:
+            1: kuartal ka-1
+            2: kuartal ka-2
+            3: kuartal ka-3
+            4: kuartal ka-4
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          wide:
+            1: kuartal ka-1
+            2: kuartal ka-2
+            3: kuartal ka-3
+            4: kuartal-ka 4

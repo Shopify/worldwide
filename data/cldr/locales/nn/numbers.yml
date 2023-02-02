@@ -1,0 +1,43 @@
+---
+nn:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+        decimal:
+          patterns:
+            long:
+              standard:
+                '1000000':
+                  one: 0 million
+                  other: 0 millionar
+                '10000000':
+                  one: 00 million
+                  other: 00 millionar
+                '100000000':
+                  one: 000 million
+                  other: 000 millionar
+                '1000000000':
+                  one: 0 milliard
+                  other: 0 milliardar
+                '10000000000':
+                  one: 00 milliard
+                  other: 00 milliardar
+                '100000000000':
+                  one: 000 milliard
+                  other: 000 milliardar
+                '1000000000000':
+                  one: 0 billion
+                  other: 0 billionar
+                '10000000000000':
+                  one: 00 billion
+                  other: 00 billionar
+                '100000000000000':
+                  one: 000 billion
+                  other: 000 billionar
+      symbols:
+        approximately_sign: "≈"

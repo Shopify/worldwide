@@ -1,0 +1,148 @@
+---
+pt-PT:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Empresa
+            optional: Empresa (opcional)
+          errors:
+            blank: Introduza um nome de empresa
+            too_long: O nome da empresa é demasiado longo (o máximo são 255 caracteres)
+            contains_html_tags: A empresa não pode conter etiquetas HTML.
+            contains_emojis: A empresa não pode conter emojis
+            contains_restricted_characters: O campo "Empresa" só pode conter letras,
+              números, caracteres locais e caracteres especiais
+        first_name:
+          label:
+            default: Nome próprio
+            optional: Nome próprio (opcional)
+          errors:
+            blank: Introduza um nome próprio
+            too_long: O nome próprio é demasiado longo (o máximo são 255 caracteres)
+            contains_html_tags: O nome próprio não pode conter etiquetas HTML.
+            contains_emojis: O nome próprio não pode conter emojis
+            contains_url: O nome próprio não pode conter um URL.
+            contains_restricted_characters: O campo "Primeiro nome" só pode conter
+              letras, números, caracteres locais e caracteres especiais
+        last_name:
+          label:
+            default: Apelido
+            optional: Apelido (opcional)
+          errors:
+            blank: Introduza um apelido
+            too_long: O apelido é demasiado longo (o máximo são 255 caracteres)
+            contains_html_tags: O apelido não pode conter etiquetas HTML.
+            contains_emojis: O apelido não pode conter emojis
+            contains_url: O apelido não pode conter um URL.
+            contains_restricted_characters: O campo "Último nome" só pode conter letras,
+              números, caracteres locais e caracteres especiais
+        address1:
+          label:
+            default: Endereço
+            optional: Endereço (opcional)
+          errors:
+            blank: Introduza um endereço
+            too_long: A primeira linha do endereço é demasiado longa (o máximo são
+              255 caracteres)
+            contains_html_tags: O Endereço1 não pode conter etiquetas HTML.
+            contains_emojis: O endereço 1 não pode conter emojis
+            contains_url: O endereço 1 não pode conter URL.
+            missing_building_number: Adicione um número de edifício, caso exista.
+            street_unknown_for_zip: Introduza um nome de rua válido para %{zip}.
+            building_number_invalid: Não foi possível localizar o número de edifício
+              para %{street}, %{zip}.
+            contains_restricted_characters: O campo "Endereço1" só pode conter letras,
+              números, caracteres locais e caracteres especiais
+            contains_too_many_words: O endereço1 não pode ter mais do que %{word_count}
+              palavras
+        address2:
+          label:
+            default: Apartamento, fração, etc.
+            optional: Apartamento, fração, etc. (opcional)
+          errors:
+            blank: Introduza um apartamento, fração, etc.
+            too_long: A segunda linha do endereço é demasiado longa (o máximo são
+              255 caracteres)
+            contains_html_tags: O Endereço2 não pode conter etiquetas HTML.
+            contains_emojis: O endereço 2 não pode conter emojis
+            contains_url: O endereço 2 não pode conter URL.
+            missing_building_number: Adicione um número de edifício, caso exista.
+            street_unknown_for_zip: Introduza um nome de rua válido para %{zip}.
+            building_number_invalid: Não foi possível localizar o número de edifício
+              para %{street}, %{zip}.
+            contains_restricted_characters: O campo "Endereço2" só pode conter letras,
+              números, caracteres locais e caracteres especiais
+            contains_too_many_words: O endereço2 não pode ter mais do que %{word_count}
+              palavras
+        city:
+          label:
+            default: Cidade
+            optional: Cidade (opcional)
+          errors:
+            blank: Introduza uma cidade
+            too_long: A localidade é demasiado longa (o máximo são 255 caracteres)
+            contains_html_tags: A localidade não pode conter etiquetas HTML.
+            contains_emojis: A cidade não pode conter emojis
+            contains_url: A cidade não pode conter um URL
+            unknown_for_zip: Introduza uma cidade válida para %{zip}
+            unknown_for_province: Introduza uma cidade válida para %{province}
+            unknown_for_zip_and_province: Introduza uma cidade válida para %{zip},
+              %{province}
+            contains_restricted_characters: O campo "Cidade" só pode conter letras,
+              números, caracteres locais e caracteres especiais
+            contains_too_many_words: A cidade não pode ter mais do que %{word_count}
+              palavras
+        country:
+          label:
+            default: País/região
+            optional: País/região (opcional)
+          errors:
+            blank: Selecione um país/região
+            not_supported: Atualmente, não estamos presentes neste país/região. Introduza
+              um novo endereço e tente novamente.
+            invalid: Introduzir uma região ou um país válido
+            invalid_for_zip: Introduzir uma região ou um país válido para este código
+              postal
+        phone:
+          label:
+            default: Telefone
+            optional: Telefone (opcional)
+          errors:
+            blank: Introduza um número de telefone
+            invalid: Introduza um número de telefone válido
+            too_long: O telefone é muito longo (máximo de 255 carateres)
+            contains_emojis: O número de telefone não pode conter emojis
+            contains_restricted_characters: O campo "Número de telefone" só pode conter
+              letras, números, caracteres locais e caracteres especiais
+        province:
+          label:
+            default: Região
+            optional: Região (opcional)
+          errors:
+            blank: Selecione uma região
+            invalid_for_country: Introduzir uma região válida para %{country}
+            unknown_for_city_and_zip: Introduza uma região válida para %{city}, %{zip}
+            unknown_for_city: Selecione uma região válida para %{city}
+            unknown_for_zip: Selecione uma região válida para %{zip}
+        zip:
+          label:
+            default: Código postal
+            optional: Código postal (opcional)
+          errors:
+            blank: Introduza um código postal
+            blocked_address: Este local não é suportado.
+            invalid_for_country: Introduza um código postal válido para %{country}
+            invalid_for_country_and_province: Introduza um código postal válido para
+              %{province}, %{country}
+            invalid: Introduza um código postal válido
+            too_long: Este valor é demasiado longo
+            contains_html_tags: O código postal não pode conter etiquetas HTML.
+            contains_emojis: O código postal não pode conter emojis
+            not_supported: Atualmente, não estamos presentes neste país/região. Introduza
+              um novo endereço e tente novamente.
+            unknown_for_province: Introduza um código postal válido para %{province}
+            contains_restricted_characters: O campo "Código postal" só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            invalid_for_province: 'Introduza um código postal válido para: %{province}'

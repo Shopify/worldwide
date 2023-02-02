@@ -1,0 +1,338 @@
+---
+ne:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: ऋणात्मक >>;
+        - :value: x.x
+          :rule: "=#,##,##0.#=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1000
+          :rule: "<< सय[ >>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: "-x"
+          :rule: ऋणात्मक >>;
+        - :value: x.x
+          :rule: "<< दशमलव >>;"
+        - :value: Inf
+          :rule: अनन्त;
+        - :value: 0
+          :rule: शुन्य;
+        - :value: 1
+          :rule: एक;
+        - :value: 2
+          :rule: दुई;
+        - :value: 3
+          :rule: तिन;
+        - :value: 4
+          :rule: चार;
+        - :value: 5
+          :rule: पाँच;
+        - :value: 6
+          :rule: छ;
+        - :value: 7
+          :rule: सात;
+        - :value: 8
+          :rule: आठ;
+        - :value: 9
+          :rule: नौ;
+        - :value: 10
+          :rule: दस;
+        - :value: 11
+          :rule: एघार;
+        - :value: 12
+          :rule: बाह्र;
+        - :value: 13
+          :rule: तेह्र;
+        - :value: 14
+          :rule: चौध;
+        - :value: 15
+          :rule: पन्ध्र;
+        - :value: 16
+          :rule: सोह्र;
+        - :value: 17
+          :rule: सत्र;
+        - :value: 18
+          :rule: अठार;
+        - :value: 19
+          :rule: उन्नाइस;
+        - :value: 20
+          :rule: बिस;
+        - :value: 21
+          :rule: एक्काइस;
+        - :value: 22
+          :rule: बाइस;
+        - :value: 23
+          :rule: तेइस;
+        - :value: 24
+          :rule: चौबिस;
+        - :value: 25
+          :rule: पच्चिस;
+        - :value: 26
+          :rule: छब्बिस;
+        - :value: 27
+          :rule: सत्ताइस;
+        - :value: 28
+          :rule: अट्ठाइस;
+        - :value: 29
+          :rule: उनन्तिस;
+        - :value: 30
+          :rule: तिस;
+        - :value: 31
+          :rule: एकतिस;
+        - :value: 32
+          :rule: बत्तिस;
+        - :value: 33
+          :rule: तेत्तिस;
+        - :value: 34
+          :rule: चौँतिस;
+        - :value: 35
+          :rule: पैँतिस;
+        - :value: 36
+          :rule: छत्तिस;
+        - :value: 37
+          :rule: सैँतिस;
+        - :value: 38
+          :rule: अठतिस;
+        - :value: 39
+          :rule: उनन्चालिस;
+        - :value: 40
+          :rule: चालिस;
+        - :value: 41
+          :rule: एकचालिस;
+        - :value: 42
+          :rule: बयालिस;
+        - :value: 43
+          :rule: त्रिचालिस;
+        - :value: 44
+          :rule: चवालिस;
+        - :value: 45
+          :rule: पैँतालिस;
+        - :value: 46
+          :rule: छयालिस;
+        - :value: 47
+          :rule: सतचालिस;
+        - :value: 48
+          :rule: अठचालिस;
+        - :value: 49
+          :rule: उनन्चास;
+        - :value: 50
+          :rule: पचास;
+        - :value: 51
+          :rule: एकाउन्न;
+        - :value: 52
+          :rule: बाउन्न;
+        - :value: 53
+          :rule: त्रिपन्न;
+        - :value: 54
+          :rule: चवन्न;
+        - :value: 55
+          :rule: पचपन्न;
+        - :value: 56
+          :rule: छपन्न;
+        - :value: 57
+          :rule: सन्ताउन्न;
+        - :value: 58
+          :rule: अन्ठाउन्न;
+        - :value: 59
+          :rule: उनन्साठी;
+        - :value: 60
+          :rule: साठी;
+        - :value: 61
+          :rule: एकसट्ठी;
+        - :value: 62
+          :rule: बयसट्ठी;
+        - :value: 63
+          :rule: त्रिसट्ठी;
+        - :value: 64
+          :rule: चौसट्ठी;
+        - :value: 65
+          :rule: पैँसट्ठी;
+        - :value: 66
+          :rule: छयसट्ठी;
+        - :value: 67
+          :rule: सतसट्ठी;
+        - :value: 68
+          :rule: अठसट्ठी;
+        - :value: 69
+          :rule: उनन्सत्तरी;
+        - :value: 70
+          :rule: सत्तरी;
+        - :value: 71
+          :rule: एकहत्तर;
+        - :value: 72
+          :rule: बहत्तर;
+        - :value: 73
+          :rule: त्रिहत्तर;
+        - :value: 74
+          :rule: चौहत्तर;
+        - :value: 75
+          :rule: पचहत्तर;
+        - :value: 76
+          :rule: छयहत्तर;
+        - :value: 77
+          :rule: सतहत्तर;
+        - :value: 78
+          :rule: अठहत्तर;
+        - :value: 79
+          :rule: उनासी;
+        - :value: 80
+          :rule: असी;
+        - :value: 81
+          :rule: एकासी;
+        - :value: 82
+          :rule: बयासी;
+        - :value: 83
+          :rule: त्रियासी;
+        - :value: 84
+          :rule: चौरासी;
+        - :value: 85
+          :rule: पचासी;
+        - :value: 86
+          :rule: छयासी;
+        - :value: 87
+          :rule: सतासी;
+        - :value: 88
+          :rule: अठासी;
+        - :value: 89
+          :rule: उनान्नब्बे;
+        - :value: 90
+          :rule: नब्बे;
+        - :value: 91
+          :rule: एकानब्बे;
+        - :value: 92
+          :rule: बयानब्बे;
+        - :value: 93
+          :rule: त्रियानब्बे;
+        - :value: 94
+          :rule: चौरानब्बे;
+        - :value: 95
+          :rule: पन्चानब्बे;
+        - :value: 96
+          :rule: छयानब्बे;
+        - :value: 97
+          :rule: सन्तानब्बे;
+        - :value: 98
+          :rule: अन्ठानब्बे;
+        - :value: 99
+          :rule: उनान्सय;
+        - :value: 100
+          :rule: "<< सय[ >>];"
+        - :value: 1000
+          :rule: "<< हजार[ >>];"
+        - :value: 100000
+          :rule: "<< लाख[ >>];"
+        - :value: 10000000
+          :rule: "<< करोड[ >>];"
+        - :value: 1000000000
+          :rule: "<< अरब[ >>];"
+        - :value: 100000000000
+          :rule: "<< खरब[ >>];"
+        - :value: 10000000000000
+          :rule: "<< शंख[ >>];"
+        - :value: 1000000000000000
+          :rule: "=#,##,##0=;"
+      - :type: spellout-cardinal
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: consonant-suffix
+        :rules:
+        - :value: 0
+          :rule: ौँ;
+        - :value: 1
+          :rule: " =%spellout-numbering=ौँ;"
+        - :value: 2
+          :rule: " दुयौँ;"
+        - :value: 3
+          :rule: " =%spellout-numbering=ौँ;"
+        - :value: 5
+          :rule: " =%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: spellout-ordinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: ऋणात्मक >>;
+        - :value: x.x
+          :rule: "=#,##,##0.#=;"
+        - :value: 0
+          :rule: शुन्यौँ;
+        - :value: 1
+          :rule: पहिलो;
+        - :value: 2
+          :rule: दोस्रो;
+        - :value: 3
+          :rule: तेस्रो;
+        - :value: 4
+          :rule: चौथो;
+        - :value: 5
+          :rule: पाँचौँ;
+        - :value: 6
+          :rule: छैटौँ;
+        - :value: 7
+          :rule: सातौँ;
+        - :value: 8
+          :rule: आठौँ;
+        - :value: 9
+          :rule: नवौँ;
+        - :value: 10
+          :rule: दशौँ;
+        - :value: 11
+          :rule: एघारौँ;
+        - :value: 12
+          :rule: बाह्रौँ;
+        - :value: 13
+          :rule: "=%spellout-numbering=ौँ;"
+        - :value: 60
+          :rule: "=%spellout-numbering=औँ;"
+        - :value: 71
+          :rule: "=%spellout-numbering=ौँ;"
+        - :value: 80
+          :rule: "=%spellout-numbering=औँ;"
+        - :value: 99
+          :rule: "=%spellout-numbering=ौँ;"
+        - :value: 100
+          :rule: "<%spellout-numbering< सय>%%consonant-suffix>;"
+        - :value: 1000
+          :rule: "<%spellout-numbering< हजार>%%consonant-suffix>;"
+        - :value: 100000
+          :rule: "<%spellout-numbering< लाख>%%consonant-suffix>;"
+        - :value: 10000000
+          :rule: "<%spellout-numbering< करोड>%%consonant-suffix>;"
+        - :value: 1000000000
+          :rule: "<%spellout-numbering< अरब>%%consonant-suffix>;"
+        - :value: 100000000000
+          :rule: "<%spellout-numbering< खरब>%%consonant-suffix>;"
+        - :value: 10000000000000
+          :rule: "<%spellout-numbering< शंख>%%consonant-suffix>;"
+        - :value: 1000000000000000
+          :rule: "=#,##,##0=.;"
+      - :type: spellout-ordinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: ऋणात्मक >>;
+        - :value: x.x
+          :rule: "=#,##,##0.#=;"
+        - :value: 0
+          :rule: शुन्यौँ;
+        - :value: 1
+          :rule: पहिली;
+        - :value: 2
+          :rule: दोस्री;
+        - :value: 3
+          :rule: तेस्री;
+        - :value: 4
+          :rule: चौथी;
+        - :value: 5
+          :rule: पाँचवी;
+        - :value: 6
+          :rule: "=%spellout-ordinal-masculine=;"

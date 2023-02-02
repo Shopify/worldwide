@@ -1,0 +1,508 @@
+---
+ca:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering-cents
+        :rules:
+        - :value: 0
+          :rule: s;
+        - :value: 1
+          :rule: " =%spellout-cardinal-masculine=;"
+        :access: private
+      - :type: spellout-numbering
+        :rules:
+        - :value: "-x"
+          :rule: menys >>;
+        - :value: x.x
+          :rule: "<< coma >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: u;
+        - :value: 2
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: vint[-i->>];
+        - :value: 30
+          :rule: trenta[->>];
+        - :value: 40
+          :rule: quaranta[->>];
+        - :value: 50
+          :rule: cinquanta[->>];
+        - :value: 60
+          :rule: seixanta[->>];
+        - :value: 70
+          :rule: setanta[->>];
+        - :value: 80
+          :rule: vuitanta[->>];
+        - :value: 90
+          :rule: noranta[->>];
+        - :value: 100
+          :rule: cent[->>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<-cent>%%spellout-numbering-cents>;"
+        - :value: 1000
+          :rule: mil[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine< mil[ >>];"
+        - :value: 1000000
+          :rule: un milió[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milions[ >>];"
+        - :value: 1000000000
+          :rule: un miliard[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliards[ >>];"
+        - :value: 1000000000000
+          :rule: un bilió[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilions[ >>];"
+        - :value: 1000000000000000
+          :rule: un biliard[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliards[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-masculine-cents
+        :rules:
+        - :value: 0
+          :rule: s;
+        - :value: 1
+          :rule: " =%spellout-cardinal-masculine=;"
+        :access: private
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: menys >>;
+        - :value: x.x
+          :rule: "<< coma >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: un;
+        - :value: 2
+          :rule: dos;
+        - :value: 3
+          :rule: tres;
+        - :value: 4
+          :rule: quatre;
+        - :value: 5
+          :rule: cinc;
+        - :value: 6
+          :rule: sis;
+        - :value: 7
+          :rule: set;
+        - :value: 8
+          :rule: vuit;
+        - :value: 9
+          :rule: nou;
+        - :value: 10
+          :rule: deu;
+        - :value: 11
+          :rule: onze;
+        - :value: 12
+          :rule: dotze;
+        - :value: 13
+          :rule: tretze;
+        - :value: 14
+          :rule: catorze;
+        - :value: 15
+          :rule: quinze;
+        - :value: 16
+          :rule: setze;
+        - :value: 17
+          :rule: disset;
+        - :value: 18
+          :rule: divuit;
+        - :value: 19
+          :rule: dinou;
+        - :value: 20
+          :rule: vint[-i->>];
+        - :value: 30
+          :rule: trenta[->>];
+        - :value: 40
+          :rule: quaranta[->>];
+        - :value: 50
+          :rule: cinquanta[->>];
+        - :value: 60
+          :rule: seixanta[->>];
+        - :value: 70
+          :rule: setanta[->>];
+        - :value: 80
+          :rule: vuitanta[->>];
+        - :value: 90
+          :rule: noranta[->>];
+        - :value: 100
+          :rule: cent[->>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<-cent>%%spellout-cardinal-masculine-cents>;"
+        - :value: 1000
+          :rule: mil[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine< mil[ >>];"
+        - :value: 1000000
+          :rule: un milió[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milions[ >>];"
+        - :value: 1000000000
+          :rule: un miliard[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliards[ >>];"
+        - :value: 1000000000000
+          :rule: un bilió[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilions[ >>];"
+        - :value: 1000000000000000
+          :rule: un biliard[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliards[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine-cents
+        :rules:
+        - :value: 0
+          :rule: s;
+        - :value: 1
+          :rule: " =%spellout-cardinal-feminine=;"
+        :access: private
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: menys >>;
+        - :value: x.x
+          :rule: "<< coma >>;"
+        - :value: 0
+          :rule: zero;
+        - :value: 1
+          :rule: una;
+        - :value: 2
+          :rule: dues;
+        - :value: 3
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: vint[-i->>];
+        - :value: 30
+          :rule: trenta[->>];
+        - :value: 40
+          :rule: quaranta[->>];
+        - :value: 50
+          :rule: cinquanta[->>];
+        - :value: 60
+          :rule: seixanta[->>];
+        - :value: 70
+          :rule: setanta[->>];
+        - :value: 80
+          :rule: vuitanta[->>];
+        - :value: 90
+          :rule: noranta[->>];
+        - :value: 100
+          :rule: cent[->>];
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<-cent>%%spellout-cardinal-feminine-cents>;"
+        - :value: 1000
+          :rule: mil[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine< mil[ >>];"
+        - :value: 1000000
+          :rule: un milió[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milions[ >>];"
+        - :value: 1000000000
+          :rule: un miliard[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliards[ >>];"
+        - :value: 1000000000000
+          :rule: un bilió[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilions[ >>];"
+        - :value: 1000000000000000
+          :rule: un biliard[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliards[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal-masculine-cont
+        :rules:
+        - :value: 0
+          :rule: è;
+        - :value: 1
+          :rule: " =%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: spellout-ordinal-masculine-conts
+        :rules:
+        - :value: 0
+          :rule: è;
+        - :value: 1
+          :rule: s =%spellout-ordinal-masculine=;
+        :access: private
+      - :type: spellout-ordinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: menys >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: zeroè;
+        - :value: 1
+          :rule: primer;
+        - :value: 2
+          :rule: segon;
+        - :value: 3
+          :rule: tercer;
+        - :value: 4
+          :rule: quart;
+        - :value: 5
+          :rule: cinquè;
+        - :value: 6
+          :rule: sisè;
+        - :value: 7
+          :rule: setè;
+        - :value: 8
+          :rule: vuitè;
+        - :value: 9
+          :rule: novè;
+        - :value: 10
+          :rule: desè;
+        - :value: 11
+          :rule: onzè;
+        - :value: 12
+          :rule: dotzè;
+        - :value: 13
+          :rule: tretzè;
+        - :value: 14
+          :rule: catorzè;
+        - :value: 15
+          :rule: quinzè;
+        - :value: 16
+          :rule: setzè;
+        - :value: 17
+          :rule: dissetè;
+        - :value: 18
+          :rule: divuitè;
+        - :value: 19
+          :rule: dinovè;
+        - :value: 20
+          :rule: vintè;
+        - :value: 21
+          :rule: vint-i->>;
+        - :value: 30
+          :rule: trentè;
+        - :value: 31
+          :rule: trenta->>;
+        - :value: 40
+          :rule: quarantè;
+        - :value: 41
+          :rule: quaranta->>;
+        - :value: 50
+          :rule: cinquantè;
+        - :value: 51
+          :rule: cinquanta->>;
+        - :value: 60
+          :rule: seixantè;
+        - :value: 61
+          :rule: seixanta->>;
+        - :value: 70
+          :rule: setantè;
+        - :value: 71
+          :rule: setanta->>;
+        - :value: 80
+          :rule: vuitantè;
+        - :value: 81
+          :rule: vuitanta->>;
+        - :value: 90
+          :rule: norantè;
+        - :value: 91
+          :rule: noranta->>;
+        - :value: 100
+          :rule: centè;
+        - :value: 101
+          :rule: cent->>;
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<-cent>%%spellout-ordinal-masculine-cont>;"
+        - :value: 1000
+          :rule: mil>%%spellout-ordinal-masculine-cont>;
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine< mil>%%spellout-ordinal-masculine-cont>;"
+        - :value: 1000000
+          :rule: un milion>%%spellout-ordinal-masculine-cont>;
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milion>%%spellout-ordinal-masculine-conts>;"
+        - :value: 1000000000
+          :rule: un miliard>%%spellout-ordinal-masculine-cont>;
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliard>%%spellout-ordinal-masculine-conts>;"
+        - :value: 1000000000000
+          :rule: un bilion>%%spellout-ordinal-masculine-cont>;
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilion>%%spellout-ordinal-masculine-conts>;"
+        - :value: 1000000000000000
+          :rule: un biliard>%%spellout-ordinal-masculine-cont>;
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliard>%%spellout-ordinal-masculine-conts>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=è;"
+      - :type: spellout-ordinal-feminine-cont
+        :rules:
+        - :value: 0
+          :rule: ena;
+        - :value: 1
+          :rule: " =%spellout-ordinal-feminine=;"
+        :access: private
+      - :type: spellout-ordinal-feminine-conts
+        :rules:
+        - :value: 0
+          :rule: ena;
+        - :value: 1
+          :rule: s =%spellout-ordinal-feminine=;
+        :access: private
+      - :type: spellout-ordinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: menys >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: zerona;
+        - :value: 1
+          :rule: primera;
+        - :value: 2
+          :rule: segona;
+        - :value: 3
+          :rule: tercera;
+        - :value: 4
+          :rule: quarta;
+        - :value: 5
+          :rule: cinquena;
+        - :value: 6
+          :rule: sisena;
+        - :value: 7
+          :rule: setena;
+        - :value: 8
+          :rule: vuitena;
+        - :value: 9
+          :rule: novena;
+        - :value: 10
+          :rule: desena;
+        - :value: 11
+          :rule: onzena;
+        - :value: 12
+          :rule: dotzena;
+        - :value: 13
+          :rule: tretzena;
+        - :value: 14
+          :rule: catorzena;
+        - :value: 15
+          :rule: quinzena;
+        - :value: 16
+          :rule: setzena;
+        - :value: 17
+          :rule: dissetena;
+        - :value: 18
+          :rule: divuitena;
+        - :value: 19
+          :rule: dinovena;
+        - :value: 20
+          :rule: vintena;
+        - :value: 21
+          :rule: vint-i->>;
+        - :value: 30
+          :rule: trentena;
+        - :value: 31
+          :rule: trenta->>;
+        - :value: 40
+          :rule: quarantena;
+        - :value: 41
+          :rule: quaranta->>;
+        - :value: 50
+          :rule: cinquantena;
+        - :value: 51
+          :rule: cinquanta->>;
+        - :value: 60
+          :rule: seixantena;
+        - :value: 61
+          :rule: seixanta->>;
+        - :value: 70
+          :rule: setantena;
+        - :value: 71
+          :rule: setanta->>;
+        - :value: 80
+          :rule: vuitantena;
+        - :value: 81
+          :rule: vuitanta->>;
+        - :value: 90
+          :rule: norantena;
+        - :value: 91
+          :rule: noranta->>;
+        - :value: 100
+          :rule: centena;
+        - :value: 101
+          :rule: cent->>;
+        - :value: 200
+          :rule: "<%spellout-cardinal-masculine<-cent>%%spellout-ordinal-feminine-cont>;"
+        - :value: 1000
+          :rule: mil>%%spellout-ordinal-feminine-cont>;
+        - :value: 2000
+          :rule: "<%spellout-cardinal-masculine< mil>%%spellout-ordinal-feminine-cont>;"
+        - :value: 1000000
+          :rule: un milion>%%spellout-ordinal-feminine-cont>;
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-masculine< milion>%%spellout-ordinal-feminine-conts>;"
+        - :value: 1000000000
+          :rule: un miliard>%%spellout-ordinal-feminine-cont>;
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-masculine< miliard>%%spellout-ordinal-feminine-conts>;"
+        - :value: 1000000000000
+          :rule: un bilion>%%spellout-ordinal-feminine-cont>;
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-masculine< bilion>%%spellout-ordinal-feminine-conts>;"
+        - :value: 1000000000000000
+          :rule: un biliard>%%spellout-ordinal-feminine-cont>;
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-masculine< biliard>%%spellout-ordinal-feminine-conts>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=ena;"
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal-indicator-m
+        :rules:
+        - :value: 0
+          :rule: è;
+        - :value: 1
+          :rule: r;
+        - :value: 2
+          :rule: n;
+        - :value: 3
+          :rule: r;
+        - :value: 4
+          :rule: t;
+        - :value: 5
+          :rule: è;
+        - :value: 20
+          :rule: ">>;"
+        - :value: 100
+          :rule: ">>;"
+        :access: private
+      - :type: digits-ordinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0==%%digits-ordinal-indicator-m=;"
+      - :type: digits-ordinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0=a;"
+      - :type: digits-ordinal
+        :rules:
+        - :value: 0
+          :rule: "=%digits-ordinal-masculine=;"

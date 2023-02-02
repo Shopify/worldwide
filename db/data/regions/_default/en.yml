@@ -1,0 +1,143 @@
+---
+en:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Company
+            optional: Company (optional)
+          errors:
+            blank: Enter a company name
+            too_long: Company name is too long (maximum is 255 characters)
+            contains_emojis: Company cannot contain emojis
+            contains_restricted_characters: Company can only contain letters, numbers,
+              local characters, and special characters
+            contains_html_tags: Company cannot contain HTML tags.
+        first_name:
+          label:
+            default: First name
+            optional: First name (optional)
+          errors:
+            blank: Enter a first name
+            too_long: First name is too long (maximum is 255 characters)
+            contains_emojis: First name cannot contain emojis
+            contains_restricted_characters: First name can only contain letters, numbers,
+              local characters, and special characters
+            contains_html_tags: First name cannot contain HTML tags.
+            contains_url: First name cannot contain a URL.
+        last_name:
+          label:
+            default: Last name
+            optional: Last name (optional)
+          errors:
+            blank: Enter a last name
+            too_long: Last name is too long (maximum is 255 characters)
+            contains_emojis: Last name cannot contain emojis
+            contains_restricted_characters: Last name can only contain letters, numbers,
+              local characters, and special characters
+            contains_html_tags: Last name cannot contain HTML tags.
+            contains_url: Last name cannot contain a URL.
+        address1:
+          label:
+            default: Address
+            optional: Address (optional)
+          errors:
+            blank: Enter an address
+            too_long: The first address line is too long (maximum is 255 characters)
+            contains_emojis: Address1 cannot contain emojis
+            contains_restricted_characters: Address1 can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Address1 cannot have more than %{word_count}
+              words
+            contains_html_tags: Address1 cannot contain HTML tags.
+            contains_url: Address1 cannot contain URLs.
+            missing_building_number: Add a building number if you have one.
+            street_unknown_for_zip: Enter a valid street name for %{zip}.
+            building_number_invalid: Building number couldn't be located for %{street},
+              %{zip}.
+        address2:
+          label:
+            default: Apartment, suite, etc.
+            optional: Apartment, suite, etc. (optional)
+          errors:
+            blank: Enter an apartment, suite, etc.
+            too_long: The second address line is too long (maximum is 255 characters)
+            contains_emojis: Address2 cannot contain emojis
+            contains_restricted_characters: Address2 can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Address2 cannot have more than %{word_count}
+              words
+            contains_html_tags: Address2 cannot contain HTML tags.
+            contains_url: Address2 cannot contain URLs.
+            missing_building_number: Add a building number if you have one.
+            street_unknown_for_zip: Enter a valid street name for %{zip}.
+            building_number_invalid: Building number couldn't be located for %{street},
+              %{zip}.
+        city:
+          label:
+            default: City
+            optional: City (optional)
+          errors:
+            blank: Enter a city
+            too_long: City is too long (maximum is 255 characters)
+            contains_emojis: City cannot contain emojis
+            contains_restricted_characters: City can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: City cannot have more than %{word_count} words
+            contains_html_tags: City cannot contain HTML tags.
+            contains_url: City cannot contain a URL
+            unknown_for_zip: Enter a valid city for %{zip}
+            unknown_for_province: Enter a valid city for %{province}
+            unknown_for_zip_and_province: Enter a valid city for %{zip}, %{province}
+        province:
+          label:
+            default: Region
+            optional: Region (optional)
+          errors:
+            blank: Select a region
+            invalid_for_country: Enter a valid region for %{country}
+            unknown_for_city_and_zip: Enter a valid region for %{city}, %{zip}
+            unknown_for_city: Select a valid region for %{city}
+            unknown_for_zip: Select a valid region for %{zip}
+        country:
+          label:
+            default: Country/region
+            optional: Country/region (optional)
+          errors:
+            blank: Select a country/region
+            not_supported: We don't currently support this country/region. Enter a
+              new address and try again.
+            invalid: Enter a valid country/region
+            invalid_for_zip: Enter a valid country/region for this postal code
+        zip:
+          label:
+            default: Postal code
+            optional: Postal code (optional)
+          errors:
+            blank: Enter a postal code
+            blocked_address: This location isn't supported.
+            invalid: Enter a valid postal code
+            invalid_for_country: Enter a valid postal code for %{country}
+            invalid_for_province: Enter a valid postal code for %{province}
+            invalid_for_country_and_province: Enter a valid postal code for %{province},
+              %{country}
+            too_long: The postal code value is too long
+            contains_emojis: Postal code cannot contain emojis
+            contains_restricted_characters: Postal code can only contain letters,
+              numbers, local characters, and special characters
+            not_supported: We don't currently support this country/region. Enter a
+              new address and try again.
+            contains_html_tags: Postal code cannot contain HTML tags.
+            unknown_for_province: Enter a valid postal code for %{province}
+        phone:
+          label:
+            default: Phone
+            optional: Phone (optional)
+          errors:
+            blank: Enter a phone number
+            invalid: Enter a valid phone number
+            too_long: Phone is too long (maximum is 255 characters)
+            contains_emojis: Phone number cannot contain emojis
+            contains_restricted_characters: Phone number can only contain letters,
+              numbers, local characters, and special characters

@@ -1,0 +1,36 @@
+---
+sv:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Förort
+            optional: Förort (valfritt)
+          errors:
+            blank: Ange en förort
+            too_long: Områdesnamnet är för långt (max 255 tecken)
+            contains_html_tags: Område får inte innehålla HTML-taggar.
+            contains_emojis: Område får inte innehålla emojis
+            contains_restricted_characters: Förort får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+        province:
+          label:
+            default: Stat/territorium
+            optional: Stat/territorium (valfritt)
+          errors:
+            blank: Välj ett land/territorium
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valfritt)
+          errors:
+            blank: Ange ett postnummer
+            invalid_for_country: Ange ett giltigt postnummer för %{country}
+            invalid_for_country_and_province: Ange ett giltigt postnummer för %{province},
+              %{country}
+            too_long: Postnumret är för långt
+            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
+            contains_emojis: Postnummer får inte innehålla emojis
+            contains_restricted_characters: Postnummer får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken

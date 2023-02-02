@@ -1,0 +1,537 @@
+---
+as:
+  fields:
+    day:
+      display_name: দিন
+      relative:
+        -2: পৰহি
+        -1: কালি
+        0: আজি
+        1: কাইলৈ
+        2: পৰহিলৈ
+      relative_time:
+        future:
+          one: "{0} দিনত"
+          other: "{0} দিনত"
+        past:
+          one: "{0} দিন পূৰ্বে"
+          other: "{0} দিন পূৰ্বে"
+    day_narrow:
+      display_name: দিন
+      relative_time:
+        future:
+          one: "{0} দিনত"
+          other: "{0} দিনত"
+        past:
+          one: "{0} দিন পূৰ্বে"
+          other: "{0} দিন পূৰ্বে"
+    day_of_year:
+      display_name: বছৰৰ দিন
+    day_of_year_narrow:
+      display_name: বছৰৰ দিন
+    day_of_year_short:
+      display_name: বছৰৰ দিন
+    day_short:
+      display_name: দিন
+      relative_time:
+        future:
+          one: "{0} দিনত"
+          other: "{0} দিনত"
+        past:
+          one: "{0} দিন পূৰ্বে"
+          other: "{0} দিন পূৰ্বে"
+    dayperiod:
+      display_name: পূৰ্বাহ্ন/অপৰাহ্ন
+    dayperiod_narrow:
+      display_name: পূৰ্বাহ্ন/অপৰাহ্ন
+    dayperiod_short:
+      display_name: পূৰ্বাহ্ন/অপৰাহ্ন
+    era:
+      display_name: যুগ
+    era_narrow:
+      display_name: যুগ
+    era_short:
+      display_name: যুগ
+    fri:
+      relative:
+        -1: যোৱা শুক্ৰবাৰ
+        0: এই শুক্ৰবাৰ
+        1: অহা শুক্ৰবাৰ
+      relative_time:
+        future:
+          one: "{0} শুক্ৰবাৰে"
+          other: "{0} শুক্ৰবাৰে"
+        past:
+          one: "{0} শুক্ৰবাৰৰ পূৰ্বে"
+          other: "{0} শুক্ৰবাৰৰ পূৰ্বে"
+    fri_narrow:
+      relative:
+        -1: যোৱা শুক্ৰ
+        0: এই শুক্ৰ
+        1: অহা শুক্ৰ
+      relative_time:
+        future:
+          one: "{0} শুকুৰে"
+          other: "{0} শুকুৰে"
+        past:
+          one: "{0} শুক্ৰৰ পূৰ্বে"
+          other: "{0} শুক্ৰৰ পূৰ্বে"
+    fri_short:
+      relative:
+        -1: যোৱা শুক্ৰ
+        0: এই শুক্ৰ
+        1: অহা শুক্ৰ
+      relative_time:
+        future:
+          one: "{0} শুকুৰে"
+          other: "{0} শুকুৰে"
+        past:
+          one: "{0} শুক্ৰৰ পূৰ্বে"
+          other: "{0} শুক্ৰৰ পূৰ্বে"
+    hour:
+      display_name: ঘণ্টা
+      relative:
+        0: এইটো ঘণ্টাত
+      relative_time:
+        future:
+          one: "{0} ঘণ্টাত"
+          other: "{0} ঘণ্টাত"
+        past:
+          one: "{0} ঘণ্টা পূৰ্বে"
+          other: "{0} ঘণ্টা পূৰ্বে"
+    hour_narrow:
+      display_name: ঘণ্টা
+      relative_time:
+        future:
+          one: "{0} ঘণ্টাত"
+          other: "{0} ঘণ্টাত"
+        past:
+          one: "{0} ঘণ্টা পূৰ্বে"
+          other: "{0} ঘণ্টা পূৰ্বে"
+    hour_short:
+      display_name: ঘণ্টা
+      relative_time:
+        future:
+          one: "{0} ঘণ্টাত"
+          other: "{0} ঘণ্টাত"
+        past:
+          one: "{0} ঘণ্টা পূৰ্বে"
+          other: "{0} ঘণ্টা পূৰ্বে"
+    minute:
+      display_name: মিনিট
+      relative:
+        0: এইটো মিনিটত
+      relative_time:
+        future:
+          one: "{0} মিনিটত"
+          other: "{0} মিনিটত"
+        past:
+          one: "{0} মিনিট পূৰ্বে"
+          other: "{0} মিনিট পূৰ্বে"
+    minute_narrow:
+      display_name: মিনিট
+      relative_time:
+        future:
+          one: "{0} মিনিটত"
+          other: "{0} মিনিটত"
+        past:
+          one: "{0} মিনিট পূৰ্বে"
+          other: "{0} মিনিট পূৰ্বে"
+    minute_short:
+      display_name: মিনিট
+      relative_time:
+        future:
+          one: "{0} মিনিটত"
+          other: "{0} মিনিটত"
+        past:
+          one: "{0} মিনিট পূৰ্বে"
+          other: "{0} মিনিট পূৰ্বে"
+    mon:
+      relative:
+        -1: যোৱা সোমবাৰ
+        0: এই সোমবাৰ
+        1: অহা সোমবাৰ
+      relative_time:
+        future:
+          one: "{0} সোমবাৰে"
+          other: "{0} সোমবাৰে"
+        past:
+          one: "{0} সোমবাৰৰ পূৰ্বে"
+          other: "{0} সোমবাৰৰ পূৰ্বে"
+    mon_narrow:
+      relative:
+        -1: যোৱা সোম
+        0: এই সোম
+        1: অহা সোম
+      relative_time:
+        future:
+          one: "{0} সোমে"
+          other: "{0} সোমে"
+        past:
+          one: "{0} সোমৰ পূৰ্বে"
+          other: "{0} সোমৰ পূৰ্বে"
+    mon_short:
+      relative:
+        -1: যোৱা সোমবাৰ
+        0: এই সোমবাৰ
+        1: অহা সোমবাৰ
+      relative_time:
+        future:
+          one: "{0} সোমবাৰে"
+          other: "{0} সোমবাৰে"
+        past:
+          one: "{0} সোমবাৰৰ পূৰ্বে"
+          other: "{0} সোমবাৰৰ পূৰ্বে"
+    month:
+      display_name: মাহ
+      relative:
+        -1: যোৱা মাহ
+        0: এই মাহ
+        1: অহা মাহ
+      relative_time:
+        future:
+          one: "{0} মাহত"
+          other: "{0} মাহত"
+        past:
+          one: "{0} মাহ পূৰ্বে"
+          other: "{0} মাহ পূৰ্বে"
+    month_narrow:
+      display_name: মাহ
+      relative:
+        -1: যোৱা মা.
+        0: এই মা.
+        1: অহা মাহ
+      relative_time:
+        future:
+          one: "{0} মাহত"
+          other: "{0} মাহত"
+        past:
+          one: "{0} মাহ পূৰ্বে"
+          other: "{0} মাহ পূৰ্বে"
+    month_short:
+      display_name: মাহ
+      relative_time:
+        future:
+          one: "{0} মাহত"
+          other: "{0} মাহত"
+        past:
+          one: "{0} মাহ পূৰ্বে"
+          other: "{0} মাহ পূৰ্বে"
+    quarter:
+      display_name: তিনি মাহ
+      relative:
+        -1: যোৱা তিনি মাহ
+        0: এই তিনি মাহ
+        1: অহা তিনি মাহ
+      relative_time:
+        future:
+          one: "{0} তিনি মাহত"
+          other: "{0} তিনি মাহত"
+        past:
+          one: "{0} তিনি মাহ পূৰ্বে"
+          other: "{0} তিনি মাহ পূৰ্বে"
+    quarter_narrow:
+      display_name: তিনি মাহ
+      relative_time:
+        future:
+          one: "{0} তিনি মাহত"
+          other: "{0} তিনি মাহত"
+        past:
+          one: "{0} তিনি মাহ পূৰ্বে"
+          other: "{0} তিনি মাহ পূৰ্বে"
+    quarter_short:
+      display_name: তিনি মাহ
+      relative_time:
+        future:
+          one: "{0} তিনি মাহত"
+          other: "{0} তিনি মাহত"
+        past:
+          one: "{0} তিনি মাহ পূৰ্বে"
+          other: "{0} তিনি মাহ পূৰ্বে"
+    sat:
+      relative:
+        -1: যোৱা শনিবাৰ
+        0: এই শনিবাৰ
+        1: অহা শনিবাৰ
+      relative_time:
+        future:
+          one: "{0} শনিবাৰে"
+          other: "{0} শনিবাৰে"
+        past:
+          one: "{0} শনিবাৰৰ পূৰ্বে"
+          other: "{0} শনিবাৰৰ পূৰ্বে"
+    sat_narrow:
+      relative:
+        -1: যোৱা শনি
+        0: এই শনি
+        1: অহা শনি
+      relative_time:
+        future:
+          one: "{0} শনিয়ে"
+          other: "{0} শনিয়ে"
+        past:
+          one: "{0} শনিৰ পূৰ্বে"
+          other: "{0} শনিৰ পূৰ্বে"
+    sat_short:
+      relative:
+        -1: যোৱা শনি
+        0: এই শনি
+        1: অহা শনি
+      relative_time:
+        future:
+          one: "{0} শনিয়ে"
+          other: "{0} শনিয়ে"
+        past:
+          one: "{0} শনিৰ পূৰ্বে"
+          other: "{0} শনিৰ পূৰ্বে"
+    second:
+      display_name: ছেকেণ্ড
+      relative:
+        0: এতিয়া
+      relative_time:
+        future:
+          one: "{0} ছেকেণ্ডত"
+          other: "{0} ছেকেণ্ডত"
+        past:
+          one: "{0} ছেকেণ্ড পূৰ্বে"
+          other: "{0} ছেকেণ্ড পূৰ্বে"
+    second_narrow:
+      display_name: ছেকেণ্ড
+      relative_time:
+        future:
+          one: "{0} ছেকেণ্ডত"
+          other: "{0} ছেকেণ্ডত"
+        past:
+          one: "{0} ছেকেণ্ড পূৰ্বে"
+          other: "{0} ছেকেণ্ড পূৰ্বে"
+    second_short:
+      display_name: ছেকেণ্ড
+      relative_time:
+        future:
+          one: "{0} ছেকেণ্ডত"
+          other: "{0} ছেকেণ্ডত"
+        past:
+          one: "{0} ছেকেণ্ড পূৰ্বে"
+          other: "{0} ছেকেণ্ড পূৰ্বে"
+    sun:
+      relative:
+        -1: যোৱা দেওবাৰ
+        0: এই দেওবাৰ
+        1: অহা দেওবাৰ
+      relative_time:
+        future:
+          one: "{0} দেওবাৰে"
+          other: "{0} দেওবাৰে"
+        past:
+          one: "{0} দেওবাৰৰ পূৰ্বে"
+          other: "{0} দেওবাৰৰ পূৰ্বে"
+    sun_narrow:
+      relative:
+        -1: যোৱা দেওবাৰ
+        0: এই দেওবাৰ
+        1: অহা দেওবাৰ
+      relative_time:
+        future:
+          one: "{0} দেওবাৰে"
+          other: "{0} দেওবাৰে"
+        past:
+          one: "{0} দেওবাৰৰ পূৰ্বে"
+          other: "{0} দেওবাৰৰ পূৰ্বে"
+    sun_short:
+      relative:
+        -1: যোৱা দেওবাৰ
+        0: এই দেওবাৰ
+        1: অহা দেওবাৰ
+      relative_time:
+        future:
+          one: "{0} দেওবাৰে"
+          other: "{0} দেওবাৰে"
+        past:
+          one: "{0} দেওবাৰৰ পূৰ্বে"
+          other: "{0} দেওবাৰৰ পূৰ্বে"
+    thu:
+      relative:
+        -1: যোৱা বৃহস্পতিবাৰ
+        0: এই বৃহস্পতিবাৰ
+        1: অহা বৃহস্পতিবাৰ
+      relative_time:
+        future:
+          one: "{0} বৃহস্পতিবাৰে"
+          other: "{0} বৃহস্পতিবাৰে"
+        past:
+          one: "{0} বৃহস্পতিবাৰৰ পূৰ্বে"
+          other: "{0} বৃহস্পতিবাৰৰ পূৰ্বে"
+    thu_narrow:
+      relative:
+        -1: যোৱা বৃহস্পতি
+        0: এই বৃহস্পতি
+        1: অহা বৃহস্পতি
+      relative_time:
+        future:
+          one: "{0} বৃহস্পতিয়ে"
+          other: "{0} বৃহস্পতিয়ে"
+        past:
+          one: "{0} বৃহস্পতিৰ পূৰ্বে"
+          other: "{0} বৃহস্পতিৰ পূৰ্বে"
+    thu_short:
+      relative:
+        -1: যোৱা বৃহস্পতি
+        0: এই বৃহস্পতি
+        1: অহা বৃহস্পতি
+      relative_time:
+        future:
+          one: "{0} বৃহস্পতিয়ে"
+          other: "{0} বৃহস্পতিয়ে"
+        past:
+          one: "{0} বৃহস্পতিৰ পূৰ্বে"
+          other: "{0} বৃহস্পতিৰ পূৰ্বে"
+    tue:
+      relative:
+        -1: যোৱা মঙ্গলবাৰ
+        0: এই মঙ্গলবাৰ
+        1: অহা মঙ্গলবাৰ
+      relative_time:
+        future:
+          one: "{0} মঙ্গলবাৰে"
+          other: "{0} মঙ্গলবাৰে"
+        past:
+          one: "{0} মঙ্গলবাৰৰ পূৰ্বে"
+          other: "{0} মঙ্গলবাৰৰ পূৰ্বে"
+    tue_short:
+      relative:
+        -1: যোৱা মঙ্গল
+        0: এই মঙ্গল
+        1: অহা মঙ্গল
+      relative_time:
+        future:
+          one: "{0} মঙ্গলে"
+          other: "{0} মঙ্গলে"
+        past:
+          one: "{0} মঙ্গলৰ পূৰ্বে"
+          other: "{0} মঙ্গলৰ পূৰ্বে"
+    wed:
+      relative:
+        -1: যোৱা বুধবাৰ
+        0: এই বুধবাৰ
+        1: অহা বুধবাৰ
+      relative_time:
+        future:
+          one: "{0} বুধবাৰে"
+          other: "{0} বুধবাৰে"
+        past:
+          one: "{0} বুধবাৰৰ পূৰ্বে"
+          other: "{0} বুধবাৰৰ পূৰ্বে"
+    wed_narrow:
+      relative:
+        -1: যোৱা বুধ
+        0: এই বুধ
+        1: অহা বুধ
+      relative_time:
+        future:
+          one: "{0} বুধে"
+          other: "{0} বুধে"
+        past:
+          one: "{0} বুধৰ পূৰ্বে"
+          other: "{0} বুধৰ পূৰ্বে"
+    wed_short:
+      relative:
+        -1: যোৱা বুধ
+        0: এই বুধ
+        1: অহা বুধ
+      relative_time:
+        future:
+          one: "{0} বুধে"
+          other: "{0} বুধে"
+        past:
+          one: "{0} বুধৰ পূৰ্বে"
+          other: "{0} বুধৰ পূৰ্বে"
+    week:
+      display_name: সপ্তাহ
+      relative:
+        -1: যোৱা সপ্তাহ
+        0: এই সপ্তাহ
+        1: অহা সপ্তাহ
+      relative_time:
+        future:
+          one: "{0} সপ্তাহত"
+          other: "{0} সপ্তাহত"
+        past:
+          one: "{0} সপ্তাহ পূৰ্বে"
+          other: "{0} সপ্তাহ পূৰ্বে"
+    week_narrow:
+      display_name: সপ্তাহ
+      relative_time:
+        future:
+          one: "{0} সপ্তাহত"
+          other: "{0} সপ্তাহত"
+        past:
+          one: "{0} সপ্তাহ পূৰ্বে"
+          other: "{0} সপ্তাহ পূৰ্বে"
+    week_of_month:
+      display_name: মাহৰ সপ্তাহ
+    week_of_month_narrow:
+      display_name: মাহৰ সপ্তাহ
+    week_of_month_short:
+      display_name: মাহৰ সপ্তাহ
+    week_short:
+      display_name: সপ্তাহ
+      relative_time:
+        future:
+          one: "{0} সপ্তাহত"
+          other: "{0} সপ্তাহত"
+        past:
+          one: "{0} সপ্তাহ পূৰ্বে"
+          other: "{0} সপ্তাহ পূৰ্বে"
+    weekday:
+      display_name: সপ্তাহৰ দিন
+    weekday_narrow:
+      display_name: সপ্তাহৰ দিন
+    weekday_of_month:
+      display_name: মাহৰ সপ্তাহৰ দিন
+    weekday_of_month_narrow:
+      display_name: মাহৰ সপ্তাহৰ দিন
+    weekday_of_month_short:
+      display_name: মাহৰ সপ্তাহৰ দিন
+    weekday_short:
+      display_name: সপ্তাহৰ দিন
+    year:
+      display_name: বছৰ
+      relative:
+        -1: যোৱা বছৰ
+        0: এই বছৰ
+        1: অহা বছৰ
+      relative_time:
+        future:
+          one: "{0} বছৰত"
+          other: "{0} বছৰত"
+        past:
+          one: "{0} বছৰৰ পূৰ্বে"
+          other: "{0} বছৰৰ পূৰ্বে"
+    year_narrow:
+      display_name: বছৰ
+      relative_time:
+        future:
+          one: "{0} বছৰত"
+          other: "{0} বছৰত"
+        past:
+          one: "{0} বছৰৰ পূৰ্বে"
+          other: "{0} বছৰৰ পূৰ্বে"
+    year_short:
+      display_name: বছৰ
+      relative:
+        -1: যোৱা বছৰ
+        0: এই বছৰ
+        1: অহা বছৰ
+      relative_time:
+        future:
+          one: "{0} বছৰত"
+          other: "{0} বছৰত"
+        past:
+          one: "{0} বছৰৰ পূৰ্বে"
+          other: "{0} বছৰৰ পূৰ্বে"
+    zone:
+      display_name: সময় ক্ষেত্ৰ
+    zone_narrow:
+      display_name: ক্ষেত্ৰ
+    zone_short:
+      display_name: ক্ষেত্ৰ

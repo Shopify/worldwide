@@ -1,0 +1,39 @@
+# all the style related cops comes from https://github.com/Shopify/ruby-style-guide
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+require:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 3.0
+  Exclude:
+    - "data/**/*"
+  NewCops: enable
+
+Layout/LineLength:
+  Enabled: false
+
+# The problem with assert(foo) is that it'll pass if foo is 1.
+# But there are times when we want to be sure that foo is true, not just truthy.
+# So, let's allow `assert_equal true, foo` without complaints.
+Minitest/AssertTruthy:
+  Enabled: false
+
+Minitest/MultipleAssertions:
+  Enabled: false
+
+# The problem with refute(foo) is that it'll pass if foo is nil.
+# But there are times when we want to be sure that foo is false, not just falsy.
+# So, let's allow `assert_equal false, foo` without complaints.
+Minitest/RefuteFalse:
+  Enabled: false
+
+Lint/Debugger:
+  Exclude:
+    - "bin/console"
+
+Gemspec/DevelopmentDependencies:
+  Enabled: true

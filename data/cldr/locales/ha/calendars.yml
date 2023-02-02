@@ -1,0 +1,300 @@
+---
+ha:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        Ed: E, d
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        M: L
+        Md: M/d
+        MEd: E, M/d
+        MMM: LLL
+        MMMd: MMM d
+        MMMEd: E, MMM d
+        MMMMd: MMMM d
+        MMMMEd: E, MMMM d
+        MMMMW: "'satin' W 'cikin' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M/y
+        yMd: y-MM-dd
+        yMEd: E, M/d/y
+        yMMM: MMM y
+        yMMMd: d MMM, y
+        yMMMEd: y MMM d, E
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'sati' w 'cikin' Y"
+      days:
+        format:
+          abbreviated:
+            sun: Lah
+            mon: Lit
+            tue: Tal
+            wed: Lar
+            thu: Alh
+            fri: Jum
+            sat: Asa
+          narrow:
+            sun: L
+            mon: L
+            tue: T
+            wed: L
+            thu: A
+            fri: J
+            sat: A
+          short:
+            sun: Lh
+            mon: Li
+            tue: Ta
+            wed: Lr
+            thu: Al
+            fri: Ju
+            sat: As
+          wide:
+            sun: Lahadi
+            mon: Litinin
+            tue: Talata
+            wed: Laraba
+            thu: Alhamis
+            fri: Jummaʼa
+            sat: Asabar
+        stand_alone:
+          abbreviated:
+            sun: Lah
+            mon: Lit
+            tue: Tal
+            wed: Lar
+            thu: Alh
+            fri: Jum
+            sat: Asa
+          narrow:
+            sun: L
+            mon: L
+            tue: T
+            wed: L
+            thu: A
+            fri: J
+            sat: A
+          short:
+            sun: Lh
+            mon: Li
+            tue: Ta
+            wed: Lr
+            thu: Al
+            fri: Ju
+            sat: As
+          wide:
+            sun: Lahadi
+            mon: Litinin
+            tue: Talata
+            wed: Laraba
+            thu: Alhamis
+            fri: Jummaʼa
+            sat: Asabar
+      eras:
+        abbr:
+          0: K.H.Y
+          1: B.H.Y
+        name:
+          0: Kafin haihuwar annab
+          1: Sanannen Zamani
+      fields:
+        day: kwana
+        day_narrow: kwana
+        day_of_year: Kwanan Shekara
+        day_of_year_narrow: Kwanan Shekara
+        day_of_year_short: Kwanan Shekara
+        day_period: SF/YM
+        day_short: kwana
+        era: zamani
+        hour: awa
+        hour_narrow: awa
+        hour_short: awa
+        minute: minti
+        minute_narrow: minti
+        minute_short: minti
+        month: wata
+        month_narrow: wata
+        month_short: wata
+        quarter: kwata
+        quarter_narrow: kwata
+        quarter_short: kwata
+        second: daƙiƙa
+        week: mako
+        week_narrow: mako
+        week_of_month: Makon Wata
+        week_short: mako
+        weekday: ranar mako
+        weekday_of_month: Ranar Aikin Wata
+        weekday_of_month_narrow: Ranar Aikin Wata
+        weekday_of_month_short: Ranar Aikin Wata
+        year: shekara
+        year_narrow: shekara
+        year_short: shekara
+        zone: Lokacin yanki
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM, y
+          long:
+            pattern: d MMMM, y
+          medium:
+            pattern: d MMM, y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} 'da' {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Jan
+            2: Fab
+            3: Mar
+            4: Afi
+            5: May
+            6: Yun
+            7: Yul
+            8: Agu
+            9: Sat
+            10: Okt
+            11: Nuw
+            12: Dis
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: Y
+            7: Y
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Janairu
+            2: Faburairu
+            3: Maris
+            4: Afirilu
+            5: Mayu
+            6: Yuni
+            7: Yuli
+            8: Agusta
+            9: Satumba
+            10: Oktoba
+            11: Nuwamba
+            12: Disamba
+        stand_alone:
+          abbreviated:
+            1: Jan
+            2: Fab
+            3: Mar
+            4: Afi
+            5: May
+            6: Yun
+            7: Yul
+            8: Agu
+            9: Sat
+            10: Okt
+            11: Nuw
+            12: Dis
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: Y
+            7: Y
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Janairu
+            2: Faburairu
+            3: Maris
+            4: Afirilu
+            5: Mayu
+            6: Yuni
+            7: Yuli
+            8: Agusta
+            9: Satumba
+            10: Oktoba
+            11: Nuwamba
+            12: Disamba
+      periods:
+        format:
+          abbreviated:
+            am: SF
+            pm: YM
+          wide:
+            am: Safiya
+            pm: Yamma
+        stand_alone:
+          abbreviated:
+            am: SF
+            pm: YM
+          narrow:
+            am: SF
+            pm: YM
+          wide:
+            am: SF
+            pm: YM
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Kwata na ɗaya
+            2: Kwata na biyu
+            3: Kwata na uku
+            4: Kwata na huɗu
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Kwata na ɗaya
+            2: Kwata na biyu
+            3: Kwata na uku
+            4: Kwata na huɗu

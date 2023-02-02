@@ -1,0 +1,21 @@
+---
+tr:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Eyalet/bölge
+            optional: Eyalet/bölge (isteğe bağlı)
+          errors:
+            blank: Eyalet/bölge seçin
+        zip:
+          label:
+            default: Posta kodu
+            optional: Posta kodu (isteğe bağlı)
+          errors:
+            too_long: Posta kodu değeri çok uzun
+            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
+            contains_emojis: Posta kodu, emoji içeremez
+            contains_restricted_characters: Posta kodunda kısıtlanmış karakterler
+              kullanılamaz

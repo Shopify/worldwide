@@ -1,0 +1,25 @@
+---
+nb:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Stat
+            optional: Stat (valgfritt)
+          errors:
+            blank: Velg en stat
+        zip:
+          label:
+            default: PIN-kode
+            optional: PIN-kode (valgfritt)
+          errors:
+            blank: Angi en PIN-kode
+            invalid_for_country: Angi en gyldig PIN-kode for %{country}
+            invalid_for_country_and_province: Angi en gyldig PIN-kode for %{province},
+              %{country}
+            too_long: Verdien for PIN-kode er for lang
+            contains_html_tags: PIN-kode kan ikke inneholde HTML-tagger.
+            contains_emojis: PIN-kode kan ikke inneholde emojier
+            contains_restricted_characters: PIN-koder kan ikke inneholde begrensede
+              tegn

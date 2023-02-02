@@ -1,0 +1,24 @@
+---
+name: Ethiopia
+code: ET
+tax: 0.15
+currency: ETB
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+zip_example: '1000'
+zip_regex: "^([1-6]\\d|7[0-2])\\d{2}$"
+zip_requirement: optional
+phone_number_prefix: 251
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EA\U0001F1F9"
+languages:
+  - aa
+  - am
+  - om
+  - so
+  - ti
+timezone: Africa/Nairobi

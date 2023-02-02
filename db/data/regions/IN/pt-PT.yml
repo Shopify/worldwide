@@ -1,0 +1,24 @@
+---
+pt-PT:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank: Selecione um estado
+        zip:
+          label:
+            default: Código PIN
+            optional: Código PIN (opcional)
+          errors:
+            blank: Introduza um código PIN
+            invalid_for_country: Introduza um código PIN válido para %{country}
+            invalid_for_country_and_province: Introduza um código PIN válido para
+              %{province}, %{country}
+            too_long: O valor do código PIN é demasiado longo
+            contains_html_tags: O código PIN não pode conter etiquetas HTML.
+            contains_emojis: O código PIN não pode conter emojis
+            contains_restricted_characters: O código PIN não pode ter carateres restritos

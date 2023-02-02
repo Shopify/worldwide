@@ -1,0 +1,24 @@
+---
+name: Malta
+code: MT
+tax: 0.18
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+phone_number_prefix: 356
+zip_regex: "^(MT?-?)?[ABĊCDEFĠGHĦIJKLMNOPQRSTUVWXYŻZ]{2,3}( ?\\d{2,4})?$"
+zip_requirement: recommended
+tags:
+- EU-member
+zip_example: NXR 01
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1F2\U0001F1F9"
+languages:
+  - en
+  - mt
+timezone: Europe/Malta

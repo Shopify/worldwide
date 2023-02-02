@@ -1,0 +1,247 @@
+---
+name: Brazil
+code: BR
+tax: 0.17
+currency: BRL
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: South American Countries
+group_name: South America
+zip_regex: "^\\d{5}(-?\\d{3})?$"
+zip_example: '22290175'
+partial_zip_regex: "^\\d{0,5}(-?\\d{0,3})?$"
+phone_number_prefix: 55
+building_number_required: true
+week_start_day: sunday
+languages:
+  - pt-BR
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{zip}_{address1}_{address2}_{city}{province}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city} {province}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1F7"
+localized_data:
+- name: tax_credential_br
+  purpose: tax
+  validators:
+  - Cpf
+  - Cnpj
+  - MachineReadablePassport
+  required: true
+- name: shipping_credential_br
+  purpose: shipping
+  validators:
+  - Cpf
+  - Cnpj
+  - MachineReadablePassport
+  required: true
+  equivalent_to: tax_credential_br
+zones:
+- tax: 0.0
+  name: Acre
+  tax_name: ICMS
+  code: AC
+- tax: 0.0
+  name: Alagoas
+  tax_name: ICMS
+  code: AL
+- tax: 0.0
+  name: Amapá
+  tax_name: ICMS
+  code: AP
+- tax: 0.0
+  name: Amazonas
+  tax_name: ICMS
+  code: AM
+- tax: 0.0
+  name: Bahia
+  tax_name: ICMS
+  code: BA
+- tax: 0.0
+  name: Ceará
+  tax_name: ICMS
+  code: CE
+- tax: 0.0
+  name: Distrito Federal
+  tax_name: ICMS
+  code: DF
+- tax: 0.0
+  name: Espírito Santo
+  tax_name: ICMS
+  code: ES
+- tax: 0.0
+  name: Goiás
+  tax_name: ICMS
+  code: GO
+- tax: 0.0
+  name: Maranhão
+  tax_name: ICMS
+  code: MA
+- tax: 0.0
+  name: Mato Grosso
+  tax_name: ICMS
+  code: MT
+- tax: 0.0
+  name: Mato Grosso do Sul
+  tax_name: ICMS
+  code: MS
+- tax: 0.0
+  name: Minas Gerais
+  tax_name: ICMS
+  code: MG
+- tax: 0.0
+  name: Pará
+  tax_name: ICMS
+  code: PA
+- tax: 0.0
+  name: Paraíba
+  tax_name: ICMS
+  code: PB
+- tax: 0.0
+  name: Paraná
+  tax_name: ICMS
+  code: PR
+- tax: 0.0
+  name: Pernambuco
+  tax_name: ICMS
+  code: PE
+- tax: 0.0
+  name: Piauí
+  tax_name: ICMS
+  code: PI
+- tax: 0.0
+  name: Rio de Janeiro
+  tax_name: ICMS
+  code: RJ
+- tax: 0.0
+  name: Rio Grande do Norte
+  tax_name: ICMS
+  code: RN
+- tax: 0.0
+  name: Rio Grande do Sul
+  tax_name: ICMS
+  code: RS
+- tax: 0.0
+  name: Rondônia
+  tax_name: ICMS
+  code: RO
+- tax: 0.0
+  name: Roraima
+  tax_name: ICMS
+  code: RR
+- tax: 0.0
+  name: Santa Catarina
+  tax_name: ICMS
+  code: SC
+- tax: 0.0
+  name: São Paulo
+  tax_name: ICMS
+  code: SP
+- tax: 0.0
+  name: Sergipe
+  tax_name: ICMS
+  code: SE
+- tax: 0.0
+  name: Tocantins
+  tax_name: ICMS
+  code: TO
+timezones:
+  America/Araguaina:
+  - '77'
+  America/Bahia:
+  - '40'
+  - '41'
+  - '42'
+  - '43'
+  - '44'
+  - '45'
+  - '46'
+  - '47'
+  - '48'
+  America/Belem:
+  - '66'
+  - '67'
+  - '68'
+  America/Boa_Vista:
+  - '693'
+  America/Campo_Grande:
+  - '79'
+  America/Cuiaba:
+  - '78'
+  America/Fortaleza:
+  - '58'
+  - '59'
+  - '60'
+  - '61'
+  - '620'
+  - '621'
+  - '622'
+  - '6230'
+  - '6231'
+  - '6232'
+  - '6233'
+  - '6234'
+  - '62350'
+  - 62352-9
+  - '62354'
+  - '62356'
+  - '6236'
+  - '6237'
+  - '6238'
+  - '6239'
+  - '624'
+  - '625'
+  - '626'
+  - '627'
+  - '628'
+  - '629'
+  - '63'
+  - '64'
+  - '65'
+  America/Maceio:
+  - '49'
+  - '57'
+  America/Manaus:
+  - '690'
+  - '691'
+  - '692'
+  - '694'
+  - '695'
+  - '696'
+  - '697'
+  - '698'
+  America/Porto_Velho:
+  - '768'
+  - '769'
+  America/Recife:
+  - '50'
+  - '51'
+  - '52'
+  - '53'
+  - '54'
+  - '55'
+  - '56'
+  - 62352-0
+  America/Rio_Branco:
+  - '699'
+  America/Sao_Paulo:
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '70'
+  - '71'
+  - '72'
+  - '73'
+  - '74'
+  - '75'
+  - '760'
+  - '761'
+  - '762'
+  - '763'
+  - '764'
+  - '765'
+  - '766'
+  - '767'
+  - '8'
+  - '9'

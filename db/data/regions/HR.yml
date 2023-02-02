@@ -1,0 +1,23 @@
+---
+name: Croatia
+code: HR
+tax: 0.25
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+zip_example: '10000'
+zip_regex: "^((HR( |-)?)?[1-5]\\d ?\\d{3})$"
+phone_number_prefix: 385
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1ED\U0001F1F7"
+languages:
+  - hr
+timezone: Europe/Belgrade

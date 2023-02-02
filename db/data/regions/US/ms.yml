@@ -1,0 +1,30 @@
+---
+ms:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Negeri
+            optional: Negeri (opsyenal)
+          errors:
+            blank: Pilih negeri
+            invalid_for_country: Masukkan negeri %{country} yang sah
+            unknown_for_city_and_zip: Masukkan negeri yang sah untuk %{city}, %{zip}
+            unknown_for_city: Pilih negeri yang sah untuk %{city}
+            unknown_for_zip: Pilih negeri yang sah untuk %{zip}
+        zip:
+          label:
+            default: Kod ZIP
+            optional: Kod ZIP (opsyenal)
+          errors:
+            blank: Masukkan kod ZIP
+            invalid_for_country: Masukkan kod ZIP %{country} yang sah
+            invalid_for_country_and_province: Masukkan kod ZIP yang sah untuk %{province},
+              %{country}
+            too_long: Nilai kod ZIP terlalu panjang
+            contains_html_tags: Kod ZIP tidak boleh mengandungi tag HTML.
+            contains_emojis: Kod ZIP tidak boleh mengandungi emoji
+            contains_restricted_characters: Kod ZIP tidak boleh mengandungi aksara
+              terhad
+            invalid_for_province: Masukkan kod ZIP yang sah untuk %{province}

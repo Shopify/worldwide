@@ -1,0 +1,219 @@
+---
+is:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: mínus >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1100
+          :rule: "<< hundrað[ og >>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: mínus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: núll;
+        - :value: 1
+          :rule: einn;
+        - :value: 2
+          :rule: tveir;
+        - :value: 3
+          :rule: þrír;
+        - :value: 4
+          :rule: fjórir;
+        - :value: 5
+          :rule: fimm;
+        - :value: 6
+          :rule: sex;
+        - :value: 7
+          :rule: sjó;
+        - :value: 8
+          :rule: átta;
+        - :value: 9
+          :rule: níu;
+        - :value: 10
+          :rule: tíu;
+        - :value: 11
+          :rule: ellefu;
+        - :value: 12
+          :rule: tólf;
+        - :value: 13
+          :rule: þrettán;
+        - :value: 14
+          :rule: fjórtán;
+        - :value: 15
+          :rule: fimmtán;
+        - :value: 16
+          :rule: sextán;
+        - :value: 17
+          :rule: sautján;
+        - :value: 18
+          :rule: átján;
+        - :value: 19
+          :rule: nítján;
+        - :value: 20
+          :rule: tuttugu[ og >>];
+        - :value: 30
+          :rule: þrjátíu[ og >>];
+        - :value: 40
+          :rule: fjörutíu[ og >>];
+        - :value: 50
+          :rule: fimmtíu[ og >>];
+        - :value: 60
+          :rule: sextíu[ og >>];
+        - :value: 70
+          :rule: sjötíu[ og >>];
+        - :value: 80
+          :rule: áttatíu[ og >>];
+        - :value: 90
+          :rule: níutíu[ og >>];
+        - :value: 100
+          :rule: "<%spellout-cardinal-neuter<­hundrað[ og >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-neuter< þúsund[ og >>];"
+        - :value: 1000000
+          :rule: ein millión[ og >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-feminine< milliónur[ og >>];"
+        - :value: 1000000000
+          :rule: ein milliarð[ og >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-feminine< milliarður[ og >>];"
+        - :value: 1000000000000
+          :rule: ein billión[ og >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-feminine< billiónur[ og >>];"
+        - :value: 1000000000000000
+          :rule: ein billiarð[ og >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-feminine< billiarður[ og >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: mínus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: núll;
+        - :value: 1
+          :rule: eitt;
+        - :value: 2
+          :rule: tvö;
+        - :value: 3
+          :rule: þrjú;
+        - :value: 4
+          :rule: fjögur;
+        - :value: 5
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: tuttugu[ og >>];
+        - :value: 30
+          :rule: þrjátíu[ og >>];
+        - :value: 40
+          :rule: fjörutíu[ og >>];
+        - :value: 50
+          :rule: fimmtíu[ og >>];
+        - :value: 60
+          :rule: sextíu[ og >>];
+        - :value: 70
+          :rule: sjötíu[ og >>];
+        - :value: 80
+          :rule: áttatíu[ og >>];
+        - :value: 90
+          :rule: níutíu[ og >>];
+        - :value: 100
+          :rule: "<%spellout-cardinal-neuter<­hundrað[ og >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-neuter< þúsund[ og >>];"
+        - :value: 1000000
+          :rule: ein millión[ og >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-feminine< milliónur[ og >>];"
+        - :value: 1000000000
+          :rule: ein milliarð[ og >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-feminine< milliarður[ og >>];"
+        - :value: 1000000000000
+          :rule: ein billión[ og >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-feminine< billiónur[ og >>];"
+        - :value: 1000000000000000
+          :rule: ein billiarð[ og >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-feminine< billiarður[ og >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: mínus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: núll;
+        - :value: 1
+          :rule: ein;
+        - :value: 2
+          :rule: tvær;
+        - :value: 3
+          :rule: þrjár;
+        - :value: 4
+          :rule: fjórar;
+        - :value: 5
+          :rule: "=%spellout-cardinal-masculine=;"
+        - :value: 20
+          :rule: tuttugu[ og >>];
+        - :value: 30
+          :rule: þrjátíu[ og >>];
+        - :value: 40
+          :rule: fjörutíu[ og >>];
+        - :value: 50
+          :rule: fimmtíu[ og >>];
+        - :value: 60
+          :rule: sextíu[ og >>];
+        - :value: 70
+          :rule: sjötíu[ og >>];
+        - :value: 80
+          :rule: áttatíu[ og >>];
+        - :value: 90
+          :rule: níutíu[ og >>];
+        - :value: 100
+          :rule: "<%spellout-cardinal-neuter<­hundrað[ og >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-neuter< þúsund[ og >>];"
+        - :value: 1000000
+          :rule: ein millión[ og >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-feminine< milliónur[ og >>];"
+        - :value: 1000000000
+          :rule: ein milliarð[ og >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-feminine< milliarður[ og >>];"
+        - :value: 1000000000000
+          :rule: ein billión[ og >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-feminine< billiónur[ og >>];"
+        - :value: 1000000000000000
+          :rule: ein billiarð[ og >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-feminine< billiarður[ og >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0.#=;"

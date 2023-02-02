@@ -1,0 +1,29 @@
+---
+vi:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Tiểu bang
+            optional: Tiểu bang (không bắt buộc)
+          errors:
+            blank: Chọn tiểu bang
+            invalid_for_country: Nhập tiểu bang %{country} hợp lệ
+            unknown_for_city_and_zip: Nhập tiểu bang hợp lệ cho %{city}, %{zip}
+            unknown_for_city: Chọn tiểu bang hợp lệ cho %{city}
+            unknown_for_zip: Chọn tiểu bang hợp lệ cho %{zip}
+        zip:
+          label:
+            default: Mã ZIP
+            optional: Mã ZIP (không bắt buộc)
+          errors:
+            blank: Nhập mã ZIP
+            invalid_for_country: Nhập mã ZIP %{country} hợp lệ
+            invalid_for_country_and_province: Nhập mã ZIP hợp lệ cho %{province},
+              %{country}
+            too_long: Giá trị mã ZIP quá dài
+            contains_html_tags: Giá trị mã ZIP không được chứa thẻ HTML.
+            contains_emojis: Mã ZIP không được chứa biểu tượng cảm xúc
+            contains_restricted_characters: Mã ZIP không được chứa ký tự bị hạn chế
+            invalid_for_province: Nhập mã ZIP hợp lệ cho %{province}

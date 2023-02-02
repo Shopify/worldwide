@@ -1,0 +1,283 @@
+---
+smn:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: E d.
+        Ehm: E h.mm a
+        EHm: E H.mm
+        Ehms: E h.mm.ss a
+        EHms: E H.mm.ss
+        Gy: y G
+        GyMMM: LLL y G
+        GyMMMd: MMM d. y G
+        GyMMMEd: E, MMM d. y G
+        h: h a
+        H: H
+        hm: h.mm a
+        Hm: H.mm
+        hms: h.mm.ss a
+        Hms: H.mm.ss
+        hmsv: h.mm.ss a v
+        Hmsv: H.mm.ss v
+        hmv: h.mm a v
+        Hmv: H.mm v
+        M: L
+        Md: d.M.
+        MEd: E d.M.
+        MMM: LLL
+        MMMd: MMM d.
+        MMMEd: E, MMM d.
+        MMMMd: MMMM d.
+        MMMMW: "'okko' W, MMMM"
+        ms: m.ss.
+        "y": "y"
+        yM: L.y
+        yMd: d.M.y
+        yMEd: E d.M.y
+        yMMM: LLL y
+        yMMMd: MMM d. y
+        yMMMEd: ccc, MMM d. y
+        yMMMM: LLLL y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'okko' w, Y"
+      days:
+        format:
+          abbreviated:
+            sun: pas
+            mon: vuo
+            tue: maj
+            wed: kos
+            thu: tuo
+            fri: vás
+            sat: láv
+          narrow:
+            sun: p
+            mon: V
+            tue: M
+            wed: K
+            thu: T
+            fri: V
+            sat: L
+          short:
+            sun: pa
+            mon: vu
+            tue: ma
+            wed: ko
+            thu: tu
+            fri: vá
+            sat: lá
+          wide:
+            sun: pasepeeivi
+            mon: vuossaargâ
+            tue: majebaargâ
+            wed: koskoho
+            thu: tuorâstuv
+            fri: vástuppeeivi
+            sat: lávurduv
+        stand_alone:
+          abbreviated:
+            sun: pas
+            mon: vuo
+            tue: maj
+            wed: kos
+            thu: tuo
+            fri: vás
+            sat: láv
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: pa
+            mon: vu
+            tue: ma
+            wed: ko
+            thu: tu
+            fri: vá
+            sat: lá
+          wide:
+            sun: pasepeivi
+            mon: vuossargâ
+            tue: majebargâ
+            wed: koskokko
+            thu: tuorâstâh
+            fri: vástuppeivi
+            sat: lávurdâh
+      eras:
+        abbr:
+          0: oää.
+          1: mää.
+        name:
+          0: Ovdil ääigirekinistem älgim
+          1: maŋa ääigirekinistem älgim
+      formats:
+        date:
+          full:
+            pattern: cccc, MMMM d. y
+          long:
+            pattern: MMMM d. y
+          medium:
+            pattern: MMM d. y
+          short:
+            pattern: d.M.y
+        datetime:
+          full:
+            pattern: "{{date}} 'tme' {{time}}"
+          long:
+            pattern: "{{date}} 'tme' {{time}}"
+          medium:
+            pattern: "{{date}} 'tme' {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: H.mm.ss zzzz
+          long:
+            pattern: H.mm.ss z
+          medium:
+            pattern: H.mm.ss
+          short:
+            pattern: H.mm
+      months:
+        format:
+          abbreviated:
+            1: uđiv
+            2: kuovâ
+            3: njuhčâ
+            4: cuáŋui
+            5: vyesi
+            6: kesi
+            7: syeini
+            8: porge
+            9: čohčâ
+            10: roovvâd
+            11: skammâ
+            12: juovlâ
+          narrow:
+            1: U
+            2: K
+            3: NJ
+            4: C
+            5: V
+            6: K
+            7: S
+            8: P
+            9: Č
+            10: R
+            11: S
+            12: J
+          wide:
+            1: uđđâivemáánu
+            2: kuovâmáánu
+            3: njuhčâmáánu
+            4: cuáŋuimáánu
+            5: vyesimáánu
+            6: kesimáánu
+            7: syeinimáánu
+            8: porgemáánu
+            9: čohčâmáánu
+            10: roovvâdmáánu
+            11: skammâmáánu
+            12: juovlâmáánu
+        stand_alone:
+          abbreviated:
+            1: uđiv
+            2: kuovâ
+            3: njuhčâ
+            4: cuáŋui
+            5: vyesi
+            6: kesi
+            7: syeini
+            8: porge
+            9: čohčâ
+            10: roovvâd
+            11: skammâ
+            12: juovlâ
+          narrow:
+            1: U
+            2: K
+            3: NJ
+            4: C
+            5: V
+            6: K
+            7: S
+            8: P
+            9: Č
+            10: R
+            11: S
+            12: J
+          wide:
+            1: uđđâivemáánu
+            2: kuovâmáánu
+            3: njuhčâmáánu
+            4: cuáŋuimáánu
+            5: vyesimáánu
+            6: kesimáánu
+            7: syeinimáánu
+            8: porgemáánu
+            9: čohčâmáánu
+            10: roovvâdmáánu
+            11: skammâmáánu
+            12: juovlâmáánu
+      periods:
+        format:
+          abbreviated:
+            am: ip.
+            pm: ep.
+          narrow:
+            am: ip.
+            pm: ep.
+          wide:
+            am: ip.
+            pm: ep.
+        stand_alone:
+          abbreviated:
+            am: ip.
+            pm: ep.
+          narrow:
+            am: ip.
+            pm: ep.
+          wide:
+            am: ip.
+            pm: ep.
+      quarters:
+        format:
+          abbreviated:
+            1: 1. niälj.
+            2: 2. niälj.
+            3: 3. niälj.
+            4: 4. niälj.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. niäljádâs
+            2: 2. niäljádâs
+            3: 3. niäljádâs
+            4: 4. niäljádâs
+        stand_alone:
+          abbreviated:
+            1: 1. niälj.
+            2: 2. niälj.
+            3: 3. niälj.
+            4: 4. niälj.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. niäljádâs
+            2: 2. niäljádâs
+            3: 3. niäljádâs
+            4: 4. niäljádâs

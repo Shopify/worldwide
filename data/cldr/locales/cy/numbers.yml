@@ -1,0 +1,317 @@
+---
+cy:
+  numbers:
+    arab:
+      symbols:
+        infinity: "∞"
+        minus_sign: "؜-"
+        nan: NaN
+        per_mille: "؉"
+        percent_sign: "٪؜"
+        plus_sign: "؜+"
+        time_separator: ":"
+    arabext:
+      symbols:
+        infinity: "∞"
+        minus_sign: "‎-‎"
+        nan: NaN
+        per_mille: "؉"
+        percent_sign: "٪"
+        plus_sign: "‎+‎"
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "¤#,##0.00;(¤#,##0.00)"
+              standard: "¤#,##0.00"
+            short:
+              standard:
+                '1000':
+                  few: "¤0K"
+                  many: "¤0K"
+                  one: "¤0K"
+                  other: "¤0K"
+                  two: "¤0K"
+                  zero: "¤0K"
+                '10000':
+                  few: "¤00K"
+                  many: "¤00K"
+                  one: "¤00K"
+                  other: "¤00K"
+                  two: "¤00K"
+                  zero: "¤00K"
+                '100000':
+                  few: "¤000K"
+                  many: "¤000K"
+                  one: "¤000K"
+                  other: "¤000K"
+                  two: "¤000K"
+                  zero: "¤000K"
+                '1000000':
+                  few: "¤0M"
+                  many: "¤0M"
+                  one: "¤0M"
+                  other: "¤0M"
+                  two: "¤0M"
+                  zero: "¤0M"
+                '10000000':
+                  few: "¤00M"
+                  many: "¤00M"
+                  one: "¤00M"
+                  other: "¤00M"
+                  two: "¤00M"
+                  zero: "¤00M"
+                '100000000':
+                  few: "¤000M"
+                  many: "¤000M"
+                  one: "¤000M"
+                  other: "¤000M"
+                  two: "¤000M"
+                  zero: "¤000M"
+                '1000000000':
+                  few: "¤0B"
+                  many: "¤0B"
+                  one: "¤0B"
+                  other: "¤0B"
+                  two: "¤0B"
+                  zero: "¤0B"
+                '10000000000':
+                  few: "¤00B"
+                  many: "¤00B"
+                  one: "¤00B"
+                  other: "¤00B"
+                  two: "¤00B"
+                  zero: "¤00B"
+                '100000000000':
+                  few: "¤000B"
+                  many: "¤000B"
+                  one: "¤000B"
+                  other: "¤000B"
+                  two: "¤000B"
+                  zero: "¤000B"
+                '1000000000000':
+                  few: "¤0T"
+                  many: "¤0T"
+                  one: "¤0T"
+                  other: "¤0T"
+                  two: "¤0T"
+                  zero: "¤0T"
+                '10000000000000':
+                  few: "¤00T"
+                  many: "¤00T"
+                  one: "¤00T"
+                  other: "¤00T"
+                  two: "¤00T"
+                  zero: "¤00T"
+                '100000000000000':
+                  few: "¤000T"
+                  many: "¤000T"
+                  one: "¤000T"
+                  other: "¤000T"
+                  two: "¤000T"
+                  zero: "¤000T"
+          unit:
+            few: "{0} {1}"
+            many: "{0} {1}"
+            one: "{0} {1}"
+            other: "{0} {1}"
+            two: "{0} {1}"
+            zero: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  few: 0K
+                  many: 0K
+                  one: 0 mil
+                  other: 0 mil
+                  two: 0K
+                  zero: 0 mil
+                '10000':
+                  few: 00K
+                  many: 00K
+                  one: 00 mil
+                  other: 00 mil
+                  two: 00K
+                  zero: 00K
+                '100000':
+                  few: 000K
+                  many: 000K
+                  one: 000 mil
+                  other: 000 mil
+                  two: 000K
+                  zero: 000K
+                '1000000':
+                  few: 0M
+                  many: 0M
+                  one: 0 miliwn
+                  other: 0 miliwn
+                  two: 0M
+                  zero: 0M
+                '10000000':
+                  few: 00M
+                  many: 00M
+                  one: 00 miliwn
+                  other: 00 miliwn
+                  two: 00M
+                  zero: 00M
+                '100000000':
+                  few: 000M
+                  many: 000M
+                  one: 000 miliwn
+                  other: 000 miliwn
+                  two: 000M
+                  zero: 000M
+                '1000000000':
+                  few: 0B
+                  many: 0B
+                  one: 0 biliwn
+                  other: 0 biliwn
+                  two: 0B
+                  zero: 0B
+                '10000000000':
+                  few: 00B
+                  many: 00B
+                  one: 00 biliwn
+                  other: 00 biliwn
+                  two: 00B
+                  zero: 00B
+                '100000000000':
+                  few: 000B
+                  many: 000B
+                  one: 000 biliwn
+                  other: 000 biliwn
+                  two: 000B
+                  zero: 000B
+                '1000000000000':
+                  few: 0T
+                  many: 0T
+                  one: 0 triliwn
+                  other: 0 triliwn
+                  two: 0T
+                  zero: 0T
+                '10000000000000':
+                  few: 00T
+                  many: 00T
+                  one: 00 triliwn
+                  other: 00 triliwn
+                  two: 00T
+                  zero: 00T
+                '100000000000000':
+                  few: 000T
+                  many: 000T
+                  one: 000T
+                  other: 000 triliwn
+                  two: 000T
+                  zero: 000T
+            short:
+              standard:
+                '1000':
+                  few: 0K
+                  many: 0K
+                  one: 0K
+                  other: 0K
+                  two: 0K
+                  zero: 0K
+                '10000':
+                  few: 00K
+                  many: 00K
+                  one: 00K
+                  other: 00K
+                  two: 00K
+                  zero: 00K
+                '100000':
+                  few: 000K
+                  many: 000K
+                  one: 000K
+                  other: 000K
+                  two: 000K
+                  zero: 000K
+                '1000000':
+                  few: 0M
+                  many: 0M
+                  one: 0M
+                  other: 0M
+                  two: 0M
+                  zero: 0M
+                '10000000':
+                  few: 00M
+                  many: 00M
+                  one: 00M
+                  other: 00M
+                  two: 00M
+                  zero: 00M
+                '100000000':
+                  few: 000M
+                  many: 000M
+                  one: 000M
+                  other: 000M
+                  two: 000M
+                  zero: 000M
+                '1000000000':
+                  few: 0B
+                  many: 0B
+                  one: 0B
+                  other: 0B
+                  two: 0B
+                  zero: 0B
+                '10000000000':
+                  few: 00B
+                  many: 00B
+                  one: 00B
+                  other: 00B
+                  two: 00B
+                  zero: 00B
+                '100000000000':
+                  few: 000B
+                  many: 000B
+                  one: 000B
+                  other: 000B
+                  two: 000B
+                  zero: 000B
+                '1000000000000':
+                  few: 0T
+                  many: 0T
+                  one: 0T
+                  other: 0T
+                  two: 0T
+                  zero: 0T
+                '10000000000000':
+                  few: 00T
+                  many: 00T
+                  one: 00T
+                  other: 00T
+                  two: 00T
+                  zero: 00T
+                '100000000000000':
+                  few: 000T
+                  many: 000T
+                  one: 000T
+                  other: 000T
+                  two: 000T
+                  zero: 000T
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: "."
+        exponential: E
+        group: ","
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"

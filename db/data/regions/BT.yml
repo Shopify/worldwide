@@ -1,0 +1,20 @@
+---
+name: Bhutan
+code: BT
+tax: 0.2
+currency: BTN
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_example: '11001'
+zip_regex: "^(1[1-6]|2[1-2]|3[1-6]|4[1-8])\\d{3}$"
+zip_requirement: optional
+phone_number_prefix: 975
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1F9"
+languages:
+  - dz
+timezone: Asia/Thimphu

@@ -1,0 +1,24 @@
+---
+# Exports are exempted from VAT, but domestic sales must collect it.  Exemption threshold GNF 500M (~51K USD)
+# Sources:  https://www.healyconsultants.com/guinea-company-registration/accounting-legal/
+#           https://www.crowe.com/sc/-/media/Crowe/Firms/Middle-East-and-Africa/sc/CroweHorwathSC/PDF-and-Brochures/Africa-VAT-guide-2018-19.pdf?la=en-US&modified=20181018171111&hash=E177B90934BEA258C1CEA99353552173AE197F47
+tax: 0.18
+tax_name: TVA
+name: Guinea
+group: African Countries
+group_name: Africa
+code: GN
+unit_system: metric
+currency: GNF
+zip_example: '011'
+phone_number_prefix: 224
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: 🇬🇳
+languages:
+  - ar
+  - en
+  - ff
+  - fr
+timezone: Africa/Abidjan

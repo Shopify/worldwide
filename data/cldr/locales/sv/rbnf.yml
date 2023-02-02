@@ -1,0 +1,447 @@
+---
+sv:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: lenient-parse
+        :rules:
+        - :value: 0
+          :rule: "&[last primary ignorable ] << ' ' << ',' << '-' << '­';"
+        :access: private
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+        - :value: 1100
+          :rule: "<<­hundra[­>>];"
+          :radix: 100
+        - :value: 10000
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: noll;
+        - :value: 1
+          :rule: ett;
+        - :value: 2
+          :rule: två;
+        - :value: 3
+          :rule: tre;
+        - :value: 4
+          :rule: fyra;
+        - :value: 5
+          :rule: fem;
+        - :value: 6
+          :rule: sex;
+        - :value: 7
+          :rule: sju;
+        - :value: 8
+          :rule: åtta;
+        - :value: 9
+          :rule: nio;
+        - :value: 10
+          :rule: tio;
+        - :value: 11
+          :rule: elva;
+        - :value: 12
+          :rule: tolv;
+        - :value: 13
+          :rule: tretton;
+        - :value: 14
+          :rule: fjorton;
+        - :value: 15
+          :rule: femton;
+        - :value: 16
+          :rule: sexton;
+        - :value: 17
+          :rule: sjutton;
+        - :value: 18
+          :rule: arton;
+        - :value: 19
+          :rule: nitton;
+        - :value: 20
+          :rule: tjugo[­>>];
+        - :value: 30
+          :rule: trettio[­>>];
+        - :value: 40
+          :rule: fyrtio[­>>];
+        - :value: 50
+          :rule: femtio[­>>];
+        - :value: 60
+          :rule: sextio[­>>];
+        - :value: 70
+          :rule: sjuttio[­>>];
+        - :value: 80
+          :rule: åttio[­>>];
+        - :value: 90
+          :rule: nittio[­>>];
+        - :value: 100
+          :rule: "<%spellout-numbering<­hundra[­>>];"
+        - :value: 1000
+          :rule: "<%%spellout-numbering-t<­tusen[ >>];"
+        - :value: 1000000
+          :rule: en miljon[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-reale< miljoner[ >>];"
+        - :value: 1000000000
+          :rule: en miljard[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-reale< miljarder[ >>];"
+        - :value: 1000000000000
+          :rule: en biljon[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-reale< biljoner[ >>];"
+        - :value: 1000000000000000
+          :rule: en biljard[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-reale< biljarder[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-numbering-t
+        :rules:
+        - :value: 1
+          :rule: et;
+        - :value: 2
+          :rule: två;
+        - :value: 3
+          :rule: tre;
+        - :value: 4
+          :rule: fyra;
+        - :value: 5
+          :rule: fem;
+        - :value: 6
+          :rule: sex;
+        - :value: 7
+          :rule: sju;
+        - :value: 8
+          :rule: åtta;
+        - :value: 9
+          :rule: nio;
+        - :value: 10
+          :rule: tio;
+        - :value: 11
+          :rule: elva;
+        - :value: 12
+          :rule: tolv;
+        - :value: 13
+          :rule: tretton;
+        - :value: 14
+          :rule: fjorton;
+        - :value: 15
+          :rule: femton;
+        - :value: 16
+          :rule: sexton;
+        - :value: 17
+          :rule: sjutton;
+        - :value: 18
+          :rule: arton;
+        - :value: 19
+          :rule: nitton;
+        - :value: 20
+          :rule: tjugo[­>>];
+        - :value: 30
+          :rule: trettio[­>>];
+        - :value: 40
+          :rule: fyrtio[­>>];
+        - :value: 50
+          :rule: femtio[­>>];
+        - :value: 60
+          :rule: sextio[­>>];
+        - :value: 70
+          :rule: sjuttio[­>>];
+        - :value: 80
+          :rule: åttio[­>>];
+        - :value: 90
+          :rule: nittio[­>>];
+        - :value: 100
+          :rule: "<%spellout-numbering<­hundra[­>>];"
+        - :value: 1000
+          :rule: ERROR;
+        :access: private
+      - :type: spellout-cardinal-neuter
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-reale=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-reale=;"
+      - :type: spellout-cardinal-reale
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "<< komma >>;"
+        - :value: 0
+          :rule: noll;
+        - :value: 1
+          :rule: en;
+        - :value: 2
+          :rule: "=%spellout-numbering=;"
+        - :value: 20
+          :rule: tjugo[­>>];
+        - :value: 30
+          :rule: trettio[­>>];
+        - :value: 40
+          :rule: fyrtio[­>>];
+        - :value: 50
+          :rule: femtio[­>>];
+        - :value: 60
+          :rule: sextio[­>>];
+        - :value: 70
+          :rule: sjuttio[­>>];
+        - :value: 80
+          :rule: åttio[­>>];
+        - :value: 90
+          :rule: nittio[­>>];
+        - :value: 100
+          :rule: "<%spellout-cardinal-neuter<­hundra[­>>];"
+        - :value: 1000
+          :rule: ettusen[ >>];
+        - :value: 2000
+          :rule: "<%spellout-cardinal-reale<­tusen[ >>];"
+        - :value: 1000000
+          :rule: en miljon[ >>];
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-reale< miljoner[ >>];"
+        - :value: 1000000000
+          :rule: en miljard[ >>];
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-reale< miljarder[ >>];"
+        - :value: 1000000000000
+          :rule: en biljon[ >>];
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-reale< biljoner[ >>];"
+        - :value: 1000000000000000
+          :rule: en biljard[ >>];
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-reale< biljarder[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-ordinal-neuter
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: nollte;
+        - :value: 1
+          :rule: första;
+        - :value: 2
+          :rule: andra;
+        - :value: 3
+          :rule: "=%spellout-ordinal-masculine=;"
+        - :value: 20
+          :rule: tjugo>%%ord-fem-nde>;
+        - :value: 30
+          :rule: trettio>%%ord-fem-nde>;
+        - :value: 40
+          :rule: fyrtio>%%ord-fem-nde>;
+        - :value: 50
+          :rule: femtio>%%ord-fem-nde>;
+        - :value: 60
+          :rule: sextio>%%ord-fem-nde>;
+        - :value: 70
+          :rule: sjuttio>%%ord-fem-nde>;
+        - :value: 80
+          :rule: åttio>%%ord-fem-nde>;
+        - :value: 90
+          :rule: nittio>%%ord-fem-nde>;
+        - :value: 100
+          :rule: "<%spellout-numbering<­hundra>%%ord-fem-de>;"
+        - :value: 1000
+          :rule: "<%%spellout-numbering-t<­tusen>%%ord-fem-de>;"
+        - :value: 1000000
+          :rule: en miljon>%%ord-fem-te>;
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-reale< miljon>%%ord-fem-teer>;"
+        - :value: 1000000000
+          :rule: en miljard>%%ord-fem-te>;
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-reale< miljard>%%ord-fem-teer>;"
+        - :value: 1000000000000
+          :rule: en biljon>%%ord-fem-te>;
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-reale< biljon>%%ord-fem-teer>;"
+        - :value: 1000000000000000
+          :rule: en biljard>%%ord-fem-te>;
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-reale< biljard>%%ord-fem-teer>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=':e;"
+      - :type: ord-fem-nde
+        :rules:
+        - :value: 0
+          :rule: nde;
+        - :value: 1
+          :rule: "­=%spellout-ordinal-feminine=;"
+        :access: private
+      - :type: ord-fem-de
+        :rules:
+        - :value: 0
+          :rule: de;
+        - :value: 1
+          :rule: " =%spellout-ordinal-feminine=;"
+        :access: private
+      - :type: ord-fem-te
+        :rules:
+        - :value: 0
+          :rule: te;
+        - :value: 1
+          :rule: " =%spellout-ordinal-feminine=;"
+        :access: private
+      - :type: ord-fem-teer
+        :rules:
+        - :value: 0
+          :rule: te;
+        - :value: 1
+          :rule: er =%spellout-ordinal-feminine=;
+        :access: private
+      - :type: spellout-ordinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minus >>;
+        - :value: x.x
+          :rule: "=#,##0.#=;"
+        - :value: 0
+          :rule: nollte;
+        - :value: 1
+          :rule: förste;
+        - :value: 2
+          :rule: andre;
+        - :value: 3
+          :rule: tredje;
+        - :value: 4
+          :rule: fjärde;
+        - :value: 5
+          :rule: femte;
+        - :value: 6
+          :rule: sjätte;
+        - :value: 7
+          :rule: sjunde;
+        - :value: 8
+          :rule: åttonde;
+        - :value: 9
+          :rule: nionde;
+        - :value: 10
+          :rule: tionde;
+        - :value: 11
+          :rule: elfte;
+        - :value: 12
+          :rule: tolfte;
+        - :value: 13
+          :rule: "=%spellout-cardinal-neuter=de;"
+        - :value: 20
+          :rule: tjugo>%%ord-masc-nde>;
+        - :value: 30
+          :rule: trettio>%%ord-masc-nde>;
+        - :value: 40
+          :rule: fyrtio>%%ord-masc-nde>;
+        - :value: 50
+          :rule: femtio>%%ord-masc-nde>;
+        - :value: 60
+          :rule: sextio>%%ord-masc-nde>;
+        - :value: 70
+          :rule: sjuttio>%%ord-masc-nde>;
+        - :value: 80
+          :rule: åttio>%%ord-masc-nde>;
+        - :value: 90
+          :rule: nittio>%%ord-masc-nde>;
+        - :value: 100
+          :rule: "<%spellout-numbering<­hundra>%%ord-masc-de>;"
+        - :value: 1000
+          :rule: "<%%spellout-numbering-t<­tusen>%%ord-masc-de>;"
+        - :value: 1000000
+          :rule: en miljon>%%ord-masc-te>;
+        - :value: 2000000
+          :rule: "<%spellout-cardinal-reale< miljon>%%ord-masc-teer>;"
+        - :value: 1000000000
+          :rule: en miljard>%%ord-masc-te>;
+        - :value: 2000000000
+          :rule: "<%spellout-cardinal-reale< miljard>%%ord-masc-teer>;"
+        - :value: 1000000000000
+          :rule: en biljon>%%ord-masc-te>;
+        - :value: 2000000000000
+          :rule: "<%spellout-cardinal-reale< biljon>%%ord-masc-teer>;"
+        - :value: 1000000000000000
+          :rule: en biljard>%%ord-masc-te>;
+        - :value: 2000000000000000
+          :rule: "<%spellout-cardinal-reale< biljard>%%ord-masc-teer>;"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=':e;"
+      - :type: ord-masc-nde
+        :rules:
+        - :value: 0
+          :rule: nde;
+        - :value: 1
+          :rule: "­=%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: ord-masc-de
+        :rules:
+        - :value: 0
+          :rule: de;
+        - :value: 1
+          :rule: " =%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: ord-masc-te
+        :rules:
+        - :value: 0
+          :rule: te;
+        - :value: 1
+          :rule: " =%spellout-ordinal-masculine=;"
+        :access: private
+      - :type: ord-masc-teer
+        :rules:
+        - :value: 0
+          :rule: te;
+        - :value: 1
+          :rule: er =%spellout-ordinal-masculine=;
+        :access: private
+      - :type: spellout-ordinal-feminine
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-ordinal-neuter=;"
+      - :type: spellout-ordinal-reale
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-ordinal-neuter=;"
+    - :type: OrdinalRules
+      :ruleset:
+      - :type: digits-ordinal-neuter
+        :rules:
+        - :value: 0
+          :rule: "=%digits-ordinal-feminine=;"
+      - :type: digits-ordinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0=:e;"
+      - :type: digits-ordinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: "−>>;"
+        - :value: 0
+          :rule: "=#,##0=$(ordinal,one{:a}other{:e})$;"
+      - :type: digits-ordinal-reale
+        :rules:
+        - :value: 0
+          :rule: "=%digits-ordinal-feminine=;"
+      - :type: digits-ordinal
+        :rules:
+        - :value: 0
+          :rule: "=%digits-ordinal-feminine=;"

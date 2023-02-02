@@ -1,0 +1,23 @@
+---
+name: Ghana
+code: GH
+tax: 0.125
+currency: GHS
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+zip_regex: "^((A[23467A-Z])|(B[23A-Z])|(C[A-X])|(E[23A-Z])|(G[A-Z])|(N[2345A-Z])|(U[ABGKLNOPRSTUW])|(X[DJKLNOSTWXY])|(V[A-Z])|(W[A-Z]))(-?\\d{3}\\d?\\d?(-?\\d{4})?)?$"
+zip_example: GA-120-9182
+zip_requirement: optional
+phone_number_prefix: 233
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1EC\U0001F1ED"
+languages:
+  - ee
+  - en
+  - fat
+  - tw
+timezone: Africa/Abidjan

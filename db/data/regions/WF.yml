@@ -1,0 +1,22 @@
+---
+# There is no VAT (French: TVA) in Wallis and Futuna.
+# Source:  https://vosfactures.fr/article/les-differents-taux-de-tva-applicables
+tax: 0.0
+name: Wallis And Futuna
+group: Oceanian Countries
+group_name: Oceania
+code: WF
+unit_system: metric
+tags:
+- EU-OCT
+currency: XPF
+zip_example: '98600'
+phone_number_prefix: 681
+zip_regex: "^986\\d{2}$"
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇼🇫
+languages:
+  - fr
+timezone: Pacific/Wallis

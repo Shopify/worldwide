@@ -1,0 +1,174 @@
+---
+name: South Korea
+code: KR
+tax: 0.1
+currency: KRW
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_regex: "(\\A\\d{5}\\z|\\A\\d{3}-\\d{3}\\z)"
+zip_example: '01600'
+phone_number_prefix: 82
+week_start_day: sunday
+localized_data:
+- name: shipping_credential_kr
+  purpose: shipping
+  validators:
+  - "^[Pp]\\d{12}$"
+  - MachineReadablePassport
+  required: true
+format:
+  edit: "{country}_{company}_{lastName}{firstName}_{zip}_{province}{city}_{address1}_{address2}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}"
+emoji: "\U0001F1F0\U0001F1F7"
+languages:
+  - ko
+zones:
+- name: Busan
+  code: KR-26
+  iso_code: KR-26
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '46'
+  - '47'
+  - '48'
+  - '49'
+- name: Chungbuk
+  code: KR-43
+  iso_code: KR-43
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '27'
+  - '28'
+  - '29'
+- name: Chungnam
+  code: KR-44
+  iso_code: KR-44
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '31'
+  - '32'
+  - '33'
+- name: Daegu
+  code: KR-27
+  iso_code: KR-27
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '41'
+  - '42'
+  - '43'
+- name: Daejeon
+  code: KR-30
+  iso_code: KR-30
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '34'
+  - '35'
+- name: Gangwon
+  code: KR-42
+  iso_code: KR-42
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '24'
+  - '25'
+  - '26'
+- name: Gwangju
+  code: KR-29
+  iso_code: KR-29
+  tax: 0.0
+  tax_name: '0.0'
+  zip_prefixes:
+  - '61'
+  - '62'
+- name: Gyeongbuk
+  code: KR-47
+  iso_code: KR-47
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '36'
+  - '37'
+  - '38'
+  - '39'
+  - '40'
+- name: Gyeonggi
+  code: KR-41
+  iso_code: KR-41
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '1'
+- name: Gyeongnam
+  code: KR-48
+  iso_code: KR-48
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '50'
+  - '51'
+  - '52'
+  - '53'
+- name: Incheon
+  code: KR-28
+  iso_code: KR-28
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '21'
+  - '22'
+  - '23'
+- name: Jeju
+  code: KR-49
+  iso_code: KR-49
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '63'
+- name: Jeonbuk
+  code: KR-45
+  iso_code: KR-45
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '54'
+  - '55'
+  - '56'
+- name: Jeonnam
+  code: KR-46
+  iso_code: KR-46
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '57'
+  - '58'
+  - '59'
+- name: Sejong
+  code: KR-50
+  iso_code: KR-50
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '30'
+- name: Seoul
+  code: KR-11
+  iso_code: KR-11
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '0'
+- name: Ulsan
+  code: KR-31
+  iso_code: KR-31
+  tax: 0.0
+  tax_name: VAT
+  zip_prefixes:
+  - '44'
+  - '45'
+timezone: Asia/Seoul

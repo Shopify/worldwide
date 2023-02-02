@@ -1,0 +1,20 @@
+---
+root:
+  lists:
+    default:
+      '2': "{0}, {1}"
+      end: "{0}, {1}"
+      middle: "{0}, {1}"
+      start: "{0}, {1}"
+    or:
+      '2': "{0} or {1}"
+      end: "{0}, or {1}"
+      middle: "{0}, {1}"
+      start: "{0}, {1}"
+    or_narrow: :lists.or_short
+    or_short: :lists.or
+    standard_narrow: :lists.standard_short
+    standard_short: :lists.default
+    unit: :lists.unit_short
+    unit_narrow: :lists.unit_short
+    unit_short: :lists.default

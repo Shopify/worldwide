@@ -1,0 +1,243 @@
+---
+os:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        M: L
+        Md: dd.MM
+        MEd: E, dd.MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: ccc, d MMM
+        ms: mm:ss
+        "y": "y"
+        yM: MM.y
+        yMEd: E, dd.MM.y
+        yMMM: LLL y
+        yMMMEd: E, d MMM y
+        yQQQ: y-'ӕм' 'азы' QQQ
+        yQQQQ: y-'ӕм' 'азы' QQQQ
+      days:
+        format:
+          abbreviated:
+            sun: хцб
+            mon: крс
+            tue: дцг
+            wed: ӕрт
+            thu: цпр
+            fri: мрб
+            sat: сбт
+          narrow:
+            sun: Х
+            mon: К
+            tue: Д
+            wed: Ӕ
+            thu: Ц
+            fri: М
+            sat: С
+          wide:
+            sun: хуыцаубон
+            mon: къуырисӕр
+            tue: дыццӕг
+            wed: ӕртыццӕг
+            thu: цыппӕрӕм
+            fri: майрӕмбон
+            sat: сабат
+        stand_alone:
+          abbreviated:
+            sun: Хцб
+            mon: Крс
+            tue: Дцг
+            wed: Ӕрт
+            thu: Цпр
+            fri: Мрб
+            sat: Сбт
+          narrow:
+            sun: Х
+            mon: К
+            tue: Д
+            wed: Ӕ
+            thu: Ц
+            fri: М
+            sat: С
+          wide:
+            sun: Хуыцаубон
+            mon: Къуырисӕр
+            tue: Дыццӕг
+            wed: Ӕртыццӕг
+            thu: Цыппӕрӕм
+            fri: Майрӕмбон
+            sat: Сабат
+      eras:
+        abbr:
+          0: н.д.а.
+          1: н.д.
+      fields:
+        day: Бон
+        day_period: Боны период
+        era: Дуг
+        hour: Сахат
+        minute: Минут
+        month: Мӕй
+        second: Секунд
+        week: Къуыри
+        weekday: Къуырийы бон
+        year: Аз
+        zone: Рӕстӕджы зонӕ
+      formats:
+        date:
+          full:
+            pattern: EEEE, d MMMM, y 'аз'
+          long:
+            pattern: d MMMM, y 'аз'
+          medium:
+            pattern: dd MMM y 'аз'
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}}, {{time}}"
+          long:
+            pattern: "{{date}}, {{time}}"
+          medium:
+            pattern: "{{date}}, {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: янв.
+            2: фев.
+            3: мар.
+            4: апр.
+            5: майы
+            6: июны
+            7: июлы
+            8: авг.
+            9: сен.
+            10: окт.
+            11: ноя.
+            12: дек.
+          narrow:
+            1: Я
+            2: Ф
+            3: М
+            4: А
+            5: М
+            6: И
+            7: И
+            8: А
+            9: С
+            10: О
+            11: Н
+            12: Д
+          wide:
+            1: январы
+            2: февралы
+            3: мартъийы
+            4: апрелы
+            5: майы
+            6: июны
+            7: июлы
+            8: августы
+            9: сентябры
+            10: октябры
+            11: ноябры
+            12: декабры
+        stand_alone:
+          abbreviated:
+            1: Янв.
+            2: Февр.
+            3: Март.
+            4: Апр.
+            5: Май
+            6: Июнь
+            7: Июль
+            8: Авг.
+            9: Сент.
+            10: Окт.
+            11: Нояб.
+            12: Дек.
+          narrow:
+            1: Я
+            2: Ф
+            3: М
+            4: А
+            5: М
+            6: И
+            7: И
+            8: А
+            9: С
+            10: О
+            11: Н
+            12: Д
+          wide:
+            1: Январь
+            2: Февраль
+            3: Мартъи
+            4: Апрель
+            5: Май
+            6: Июнь
+            7: Июль
+            8: Август
+            9: Сентябрь
+            10: Октябрь
+            11: Ноябрь
+            12: Декабрь
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          wide:
+            am: ӕмбисбоны размӕ
+            pm: ӕмбисбоны фӕстӕ
+      quarters:
+        format:
+          abbreviated:
+            1: 1-аг кв.
+            2: 2-аг кв.
+            3: 3-аг кв.
+            4: 4-ӕм кв.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-аг квартал
+            2: 2-аг квартал
+            3: 3-аг квартал
+            4: 4-ӕм квартал
+        stand_alone:
+          abbreviated:
+            1: 1-аг кв.
+            2: 2-аг кв.
+            3: 3-аг кв.
+            4: 4-ӕм кв.
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1-аг квартал
+            2: 2-аг квартал
+            3: 3-аг квартал
+            4: 4-ӕм квартал

@@ -1,0 +1,25 @@
+---
+name: Finland
+code: FI
+tax: 0.24
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+tags:
+- EU-member
+# Codes in the range 22xxx are reserved for the Åland Islands, country code AX
+zip_regex: "^(FI-?)?(?!22\\d{3})(\\d{5})$"
+zip_example: '00550'
+phone_number_prefix: 358
+building_number_required: true
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1EB\U0001F1EE"
+languages:
+  - fi
+timezone: Europe/Helsinki

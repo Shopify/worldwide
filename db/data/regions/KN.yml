@@ -1,0 +1,20 @@
+---
+name: Saint Kitts And Nevis
+code: KN
+tax: 0.17
+currency: XCD
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_regex: "^(KN)?(01(0[1-9]|1[01])|0[23689]0[123]|040[123]|0501|0700|1[012]0[12])$"
+zip_example: "KN0101"
+zip_requirement: optional
+phone_number_prefix: 1
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇰🇳
+languages:
+  - en
+timezone: America/Puerto_Rico

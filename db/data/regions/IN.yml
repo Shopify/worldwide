@@ -1,0 +1,788 @@
+---
+name: India
+code: IN
+tax: 0.09
+currency: INR
+unit_system: metric
+tax_name: CGST
+tax_inclusive: true
+group: Asian Countries
+group_name: Asia
+zip_regex: "\\A\\d{6}\\z"
+zip_example: '110034'
+phone_number_prefix: 91
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city} {province}_{country}_{phone}"
+emoji: "\U0001F1EE\U0001F1F3"
+languages:
+  - as
+  - bn
+  - en
+  - gu
+  - hi
+  - kn
+  - ml
+  - mr
+  - ne
+  - or
+  - pa
+  - sa
+  - sd
+  - ta
+  - te
+  - ur
+zones:
+- name: Andaman and Nicobar Islands
+  name_alternates:
+  - Andaman and Nicobar
+  code: AN
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '744'
+- name: Andhra Pradesh
+  code: AP
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - PY
+  zip_prefixes:
+  - '51'
+  - '52'
+  - '53'
+- name: Arunachal Pradesh
+  code: AR
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '790'
+  - '791'
+  - '792'
+- name: Assam
+  code: AS
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - ML
+  zip_prefixes:
+  - '78'
+- name: Bihar
+  code: BR
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - JH
+  - UP
+  zip_prefixes:
+  - '80'
+  - '811'
+  - '812'
+  - '8131'
+  - '813201'
+  - '813202'
+  - '813203'
+  - '813204'
+  - '813205'
+  - '813206'
+  - '813207'
+  - '813209'
+  - '81321'
+  - '81322'
+  - '814131'
+  - '821'
+  - '823'
+  - '824'
+  - '84'
+  - '85'
+- name: Chandigarh
+  code: CH
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - PB
+  zip_prefixes:
+  - '16000'
+  - '16001'
+  - '16002'
+  - '16003'
+  - '16004'
+  - '160050'
+  - '160051'
+  - '160052'
+  - '160054'
+  - '160055'
+  - '160057'
+  - '160059'
+  - '160060'
+  - '160061'
+  - '160062'
+  - '160063'
+  - '160101'
+  - '160102'
+- name: Chhattisgarh
+  name_alternates:
+  - Chattisgarh
+  - CT
+  code: CG
+  code_alternates:
+  - CT
+  iso_code: IN-CT
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '49'
+  # Dadra and Nagar Haveli was merged with Daman and Diu in 2020, and uses the new ISO code DH for the combined zone.
+  # But, we need to upgrade our version of CLDR before shopify-i18n will recognize DH.
+  # TODO:  import new CLDR in shopify-i18n, merge DD and DN into new zone DH
+- name: Dadra and Nagar Haveli
+  code: DN
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - GJ
+  - DD
+  zip_prefixes:
+  - '36254'
+  - '36257'
+  - '39621'
+  - '396230'
+  - '39624'
+- name: Daman and Diu
+  code: DD
+  code_alternates:
+  - DH
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '36252' # Diu
+  - '39622' # Daman
+  neighboring_zones:
+  - DN
+- name: Delhi
+  code: DL
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - HR
+  - UP
+  zip_prefixes:
+  - '11'
+- name: Goa
+  code: GA
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '403'
+- name: Gujarat
+  code: GJ
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - DN
+  zip_prefixes:
+  - '360'
+  - '361'
+  - '3620'
+  - '3621'
+  - '3622'
+  - '3623'
+  - '36251'
+  - '36253'
+  - '36255'
+  - '36256'
+  - '3626'
+  - '3627'
+  - '363'
+  - '364'
+  - '365'
+  - '37'
+  - '38'
+  - '390'
+  - '391'
+  - '392'
+  - '393'
+  - '394'
+  - '395'
+  - '3960'
+  - '3961'
+  - '396235'
+  - '3963'
+  - '3964'
+  - '3965'
+- name: Haryana
+  code: HR
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - DL
+  - HP
+  - PB
+  - RJ
+  zip_prefixes:
+  - '12'
+  - '13'
+- name: Himachal Pradesh
+  code: HP
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '17'
+- name: Jammu and Kashmir
+  code: JK
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '18'
+  - '190'
+  - '191'
+  - '192'
+  - '193'
+- name: Jharkhand
+  code: JH
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - BR
+  zip_prefixes:
+  - '813208'
+  - '81410'
+  - '81411'
+  - '81412'
+  - '814133'
+  - '81414'
+  - '81415'
+  - '81416'
+  - '815'
+  - '816'
+  - '822'
+  - '825'
+  - '826'
+  - '827'
+  - '828'
+  - '829'
+  - '83'
+- name: Karnataka
+  code: KA
+  tax: 0.09
+  tax_name: SGST
+  zip_prefixes:
+  - '56'
+  - '57'
+  - '58'
+  - '59'
+- name: Kerala
+  code: KL
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - PY
+  zip_prefixes:
+  - '670'
+  - '671'
+  - '6730'
+  - '6731'
+  - '67330'
+  - '673311'
+  - '673312'
+  - '673313'
+  - '673314'
+  - '673315'
+  - '673316'
+  - '673317'
+  - '67332'
+  - '6735'
+  - '6736'
+  - '676'
+  - '678'
+  - '679'
+  - '680'
+  - '6820'
+  - '6823'
+  - '68250'
+  - '68251'
+  - '683'
+  - '685'
+  - '686'
+  - '688'
+  - '689'
+  - '69'
+- name: Ladakh
+  code: LA
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '194'
+- name: Lakshadweep
+  code: LD
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '68255'
+- name: Madhya Pradesh
+  code: MP
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '45'
+  - '46'
+  - '47'
+  - '48'
+- name: Maharashtra
+  code: MH
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '400'
+  - '401'
+  - '402'
+  - '41'
+  - '42'
+  - '43'
+  - '44'
+- name: Manipur
+  code: MN
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '795'
+- name: Meghalaya
+  code: ML
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - AS
+  zip_prefixes:
+  - '793'
+  - '794'
+- name: Mizoram
+  code: MZ
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '796'
+- name: Nagaland
+  code: NL
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '797'
+  - '798'
+- name: Odisha
+  name_alternates:
+  - OD
+  - Orissa
+  code: OR
+  code_alternates:
+  - OD
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '75'
+  - '76'
+  - '77'
+- name: Puducherry
+  code: PY
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - AP
+  - KL
+  - TN
+  zip_prefixes:
+  - '605001'
+  - '605002'
+  - '605003'
+  - '605004'
+  - '605005'
+  - '605006'
+  - '605008'
+  - '605009'
+  - '60501'
+  - '605102'
+  - '605106'
+  - '607402'
+  - '609601'
+  - '609602'
+  - '609603'
+  - '609605'
+  - '609606'
+  - '609607'
+  - '609609'
+  - '673310'
+- name: Punjab
+  code: PB
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - CH
+  zip_prefixes:
+  - '14'
+  - '15'
+  - '160053'
+  - '160058'
+  - '160064'
+  - '160065'
+  - '160066'
+  - '160067'
+  - '160068'
+  - '160069'
+  - '16007'
+  - '160103'
+  - '160104'
+- name: Rajasthan
+  code: RJ
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '30'
+  - '31'
+  - '32'
+  - '33'
+  - '34'
+- name: Sikkim
+  code: SK
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '737'
+- name: Tamil Nadu
+  code: TN
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - PY
+  zip_prefixes:
+  - '600'
+  - '601'
+  - '602'
+  - '603'
+  - '604'
+  - '605007'
+  - '605101'
+  - '605103'
+  - '605104'
+  - '605105'
+  - '605107'
+  - '605108'
+  - '605109'
+  - '60511'
+  - '6052'
+  - '6053'
+  - '6054'
+  - '6055'
+  - '6056'
+  - '6057'
+  - '6058'
+  - '606'
+  - '6070'
+  - '6071'
+  - '6072'
+  - '6073'
+  - '607401'
+  - '607403'
+  - '6078'
+  - '608'
+  - '6090'
+  - '6091'
+  - '6092'
+  - '6093'
+  - '6094'
+  - '6095'
+  - '609604'
+  - '609608'
+  - '6097'
+  - '6098'
+  - '61'
+  - '62'
+  - '63'
+  - '64'
+- name: Telangana
+  code: TS
+  code_alternates:
+  - TG
+  iso_code: IN-TG
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - AP
+  zip_prefixes:
+  - '50'
+- name: Tripura
+  code: TR
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '799'
+- name: Uttar Pradesh
+  code: UP
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - BR
+  - CG
+  - DL
+  - JH
+  - MP
+  - RJ
+  - UK
+  zip_prefixes:
+  - '20'
+  - '21'
+  - '22'
+  - '23'
+  - '241'
+  - '242'
+  - '243'
+  - '2440'
+  - '2441'
+  - '2442'
+  - '2443'
+  - '2444'
+  - '2445'
+  - '2446'
+  - '24470'
+  - '2449'
+  - '245'
+  - '2467'
+  - '2470'
+  - '2471'
+  - '2472'
+  - '2473'
+  - '2474'
+  - '2475'
+  - '247669'
+  - '2477'
+  - '25'
+  - '261'
+  - '2620'
+  - '2621'
+  - '2622'
+  - '262302'
+  - '262305'
+  - '262406'
+  - '262407'
+  - '2627'
+  - '2628'
+  - '2629'
+  - '27'
+  - '28'
+  - '90005'
+- name: Uttarakhand
+  code: UK
+  code_alternates:
+  - UT
+  iso_code: IN-UT
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  neighboring_zones:
+  - UP
+  zip_prefixes:
+  - '24471'
+  - '24472'
+  - '2460'
+  - '2461'
+  - '2462'
+  - '2464'
+  - '24765'
+  - '247661'
+  - '247662'
+  - '247663'
+  - '247664'
+  - '247665'
+  - '247666'
+  - '247667'
+  - '247668'
+  - '24767'
+  - '248'
+  - '249'
+  - '262308'
+  - '262309'
+  - '26231'
+  - '262401'
+  - '262402'
+  - '262405'
+  - '2625'
+  - '263'
+- name: West Bengal
+  code: WB
+  tax: 0.18
+  tax_type: harmonized
+  tax_name: IGST
+  zip_prefixes:
+  - '70'
+  - '71'
+  - '72'
+  - '731'
+  - '732'
+  - '733'
+  - '734'
+  - '735'
+  - '736'
+  - '741'
+  - '742'
+  - '743'
+  - '90009'
+zips_crossing_provinces:
+  '160003':
+  - CH
+  - PB
+  '160014':
+  - CH
+  - PB
+  '160055':
+  - CH
+  - PB
+  '160057':
+  - CH
+  - PB
+  '160059':
+  - CH
+  - PB
+  '160060':
+  - CH
+  - PB
+  '160062':
+  - CH
+  - PB
+  '110025':
+  - DL
+  - UP
+  '244923':
+  - UP
+  - UK
+  '244924':
+  - UP
+  - UK
+  '246763':
+  - UP
+  - UK
+  '247662':
+  - UK
+  - UP
+  '396193':
+  - GJ
+  - DN
+  '396210':
+  - DN
+  - DD
+  - GJ
+  '396215':
+  - DN
+  - DD
+  - GJ
+  '396230':
+  - DN
+  - GJ
+  '396235':
+  - GJ
+  - DN
+  '396240':
+  - DN
+  - GJ
+  '533464':
+  - AP
+  - PY
+  '605007':
+  - TN
+  - PY
+  '605014':
+  - PY
+  - TN
+  '605102':
+  - PY
+  - TN
+  '605105':
+  - TN
+  - PY
+  '605106':
+  - PY
+  - TN
+  '605107':
+  - TN
+  - PY
+  '605110':
+  - TN
+  - PY
+  '605111':
+  - TN
+  - PY
+  '605501':
+  - TN
+  - PY
+  '605502':
+  - TN
+  - PY
+  '607402':
+  - PY
+  - TN
+  '607403':
+  - TN
+  - PY
+  '609601':
+  - PY
+  - TN
+  '609603':
+  - PY
+  - TN
+  '609604':
+  - TN
+  - PY
+  '781029':
+  - AS
+  - ML
+  '781131':
+  - AS
+  - ML
+  '782410':
+  - AS
+  - ML
+  '783123':
+  - AS
+  - ML
+  '783134':
+  - AS
+  - ML
+  '802131':
+  - BR
+  - UP
+  '813206':
+  - BR
+  - JH
+timezone: Asia/Kolkata

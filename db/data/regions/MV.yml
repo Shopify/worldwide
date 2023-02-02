@@ -1,0 +1,21 @@
+---
+name: Maldives
+code: MV
+tax: 0.06
+currency: MVR
+unit_system: metric
+tax_name: GST
+group: Asian Countries
+group_name: Asia
+zip_example: '20026'
+zip_regex: "^([0-1]\\d{4}|2[0-3]\\d{3})$"
+zip_requirement: optional
+phone_number_prefix: 960
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1F2\U0001F1FB"
+languages:
+  - dv
+  - en
+timezone: Indian/Maldives

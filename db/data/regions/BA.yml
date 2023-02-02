@@ -1,0 +1,22 @@
+---
+name: Bosnia And Herzegovina
+code: BA
+tax: 0.17
+currency: BAM
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_regex: "^((BA|BIH)-?)?(7\\d{4}|(80|88|89)\\d{3})$"
+zip_example: '71000'
+phone_number_prefix: 387
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1E6"
+languages:
+  - bs
+  - hr
+  - sr
+timezone: Europe/Belgrade

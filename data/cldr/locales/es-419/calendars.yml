@@ -1,0 +1,88 @@
+---
+es-419:
+  calendars:
+    gregorian:
+      additional_formats:
+        EHm: E, HH:mm
+        EHms: E, HH:mm:ss
+        GyMMMd: d 'de' MMM 'de' y G
+        H: HH
+        Hm: HH:mm
+        Hms: HH:mm:ss
+        Hmsv: HH:mm:ss v
+        Hmsvvvv: HH:mm:ss vvvv
+        Hmv: HH:mm v
+        MMMdd: dd-MMM
+        yMEd: E d/M/y
+        yMMMEd: E, d MMM y
+        yQQQ: QQQ 'de' y
+      days:
+        format:
+          narrow:
+            sun: d
+            mon: l
+            tue: m
+            wed: m
+            thu: j
+            fri: v
+            sat: s
+        stand_alone:
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: M
+            thu: J
+            fri: V
+            sat: S
+      fields:
+        day_of_year_narrow: día del año
+        day_of_year_short: día del año
+        day_period_narrow: a.m./p.m.
+        day_period_short: a.m./p.m.
+        week_of_month_narrow: sem. del mes
+        week_of_month_short: sem. del mes
+        weekday_of_month: día hábil del mes
+        weekday_of_month_narrow: día hábil del mes
+        weekday_of_month_short: día hábil del mes
+      formats:
+        date:
+          full:
+            pattern: EEEE, d 'de' MMMM 'de' y
+          long:
+            pattern: d 'de' MMMM 'de' y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: d/M/yy
+        datetime:
+          full:
+            pattern: "{{date}}, {{time}}"
+          long:
+            pattern: "{{date}}, {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}}, {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      quarters:
+        format:
+          wide:
+            1: 1.º trimestre
+            2: 2.º trimestre
+            3: 3.º trimestre
+            4: 4.º trimestre
+        stand_alone:
+          wide:
+            1: 1.º trimestre
+            2: 2.º trimestre
+            3: 3.º trimestre
+            4: 4.º trimestre

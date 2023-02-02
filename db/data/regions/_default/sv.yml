@@ -1,0 +1,144 @@
+---
+sv:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Företag
+            optional: Företag (valfritt)
+          errors:
+            blank: Ange ett företagsnamn
+            too_long: Företagsnamnet är för långt (max 255 tecken)
+            contains_html_tags: Företag får inte innehålla HTML-taggar.
+            contains_emojis: Företag får inte innehålla emojis
+            contains_restricted_characters: Företag får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+        first_name:
+          label:
+            default: Förnamn
+            optional: Förnamn (valfritt)
+          errors:
+            blank: Ange ett förnamn
+            too_long: Förnamnet är för långt (max 255 tecken)
+            contains_html_tags: Förnamn får inte innehålla HTML-taggar.
+            contains_emojis: Förnamn får inte innehålla emojis
+            contains_url: Förnamn får inte innehålla en URL.
+            contains_restricted_characters: Förnamn får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+        last_name:
+          label:
+            default: Efternamn
+            optional: Efternamn (valfritt)
+          errors:
+            blank: Ange ett efternamn
+            too_long: Efternamnet är för långt (max 255 tecken)
+            contains_html_tags: Efternamn får inte innehålla HTML-taggar.
+            contains_emojis: Efternamn får inte innehålla emojis
+            contains_url: Efternamn får inte innehålla en URL.
+            contains_restricted_characters: Efternamn får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+        address1:
+          label:
+            default: Adress
+            optional: Adress (valfritt)
+          errors:
+            blank: Ange en adress
+            too_long: Den första adressraden är för lång (max 255 tecken)
+            contains_html_tags: Adress 1 får inte innehålla HTML-taggar.
+            contains_emojis: Adress 1 får inte innehålla emojis
+            contains_url: Adress1 får inte innehålla URL:er.
+            missing_building_number: Lägg till ett husnummer om du har ett.
+            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
+            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
+              %{zip}.
+            contains_restricted_characters: Adress1 får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            contains_too_many_words: Adress1 får inte innehålla fler än %{word_count}
+              ord
+        address2:
+          label:
+            default: Lägenhetsnummer, våning etc.
+            optional: Lägenhetsnummer, våning etc. (valfritt)
+          errors:
+            blank: Ange lägenhet, trappa etc.
+            too_long: Den andra adressraden är för lång (max 255 tecken)
+            contains_html_tags: Adress 2 får inte innehålla HTML-taggar.
+            contains_emojis: Adress 2 får inte innehålla emojis
+            contains_url: Adress2 får inte innehålla URL:er.
+            missing_building_number: Lägg till ett husnummer om du har ett.
+            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
+            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
+              %{zip}.
+            contains_restricted_characters: Adress2 får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            contains_too_many_words: Adress2 får inte innehålla fler än %{word_count}
+              ord
+        city:
+          label:
+            default: Stad
+            optional: Stad (valfritt)
+          errors:
+            blank: Ange en stad
+            too_long: Stadsnamnet är för långt (max 255 tecken)
+            contains_html_tags: Stad får inte innehålla HTML-taggar.
+            contains_emojis: Stad får inte innehålla emojis
+            contains_url: Stad får inte innehålla en URL
+            unknown_for_zip: Ange en giltig stad för %{zip}
+            unknown_for_province: Ange en giltig stad för %{province}
+            unknown_for_zip_and_province: Ange en giltig stad för %{zip}, %{province}
+            contains_restricted_characters: Stad får endast innehålla bokstäver, siffror,
+              lokala tecken och specialtecken
+            contains_too_many_words: Stad får inte innehålla fler än %{word_count}
+              ord
+        country:
+          label:
+            default: Land/Region
+            optional: Land/Region (valfritt)
+          errors:
+            blank: Välj ett land/en region
+            not_supported: Vi stöder för närvarande inte landet/regionen. Ange en
+              ny adress och försök igen.
+            invalid: Ange ett giltigt land/en giltig region
+            invalid_for_zip: Ange ett giltigt land/en giltig region för det här postnumret
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (valfritt)
+          errors:
+            blank: Ange ett telefonnummer
+            invalid: Ange ett giltigt telefonnummer
+            too_long: Telefonnumret är för långt (max 255 tecken)
+            contains_emojis: Telefonnummer får inte innehålla emojis
+            contains_restricted_characters: Telefonnummer får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+        province:
+          label:
+            default: Region
+            optional: Region (valfritt)
+          errors:
+            blank: Välj region
+            invalid_for_country: Ange en giltig region för %{country}
+            unknown_for_city_and_zip: Ange en giltig region för %{city}, %{zip}
+            unknown_for_city: Ange en giltig region för %{city}
+            unknown_for_zip: Ange en giltig region för %{zip}
+        zip:
+          label:
+            default: Postnummer
+            optional: Postnummer (valfritt)
+          errors:
+            blank: Ange ett postnummer
+            blocked_address: Platsen stöds inte.
+            invalid_for_country: Ange ett giltigt postnummer för %{country}
+            invalid_for_country_and_province: Ange ett giltigt postnummer för %{province},
+              %{country}
+            invalid: Ange giltigt postnummer
+            too_long: Postnumret är för långt
+            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
+            contains_emojis: Postnummer får inte innehålla emojis
+            not_supported: Vi stöder för närvarande inte landet/regionen. Ange en
+              ny adress och försök igen.
+            unknown_for_province: Ange ett giltigt postnummer för %{province}
+            contains_restricted_characters: Postnummer får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            invalid_for_province: Ange ett giltigt postnummer för %{province}

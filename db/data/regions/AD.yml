@@ -1,0 +1,23 @@
+---
+name: Andorra
+code: AD
+tax: 0.0
+currency: EUR
+unit_system: metric
+tax_name: VAT
+tax_inclusive: true
+group: European Countries
+group_name: Europe
+zip_regex: "^(AD-?)?[1-7]\\d{2}$"
+zip_example: AD100
+phone_number_prefix: 376
+week_start_day: monday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: "\U0001F1E6\U0001F1E9"
+languages:
+  - ca
+  - es
+  - fr
+timezone: Europe/Andorra

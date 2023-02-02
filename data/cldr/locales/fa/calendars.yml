@@ -1,0 +1,378 @@
+---
+fa:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E d
+        Ehm: E h:mm a
+        EHm: E H:mm
+        Ehms: E h:mm:ss a
+        EHms: E H:mm:ss
+        Gy: y G
+        GyMd: y/M/d GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E d MMM y G
+        h: h a
+        H: H
+        HHmmZ: HH:mm (Z)
+        hm: h:mm a
+        Hm: H:mm
+        hms: h:mm:ss a
+        Hms: H:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: H:mm:ss v
+        hmv: h:mm a v
+        Hmv: H:mm v
+        M: L
+        Md: M/d
+        MEd: E M/d
+        MMM: LLL
+        MMMd: d LLL
+        MMMEd: E d LLL
+        MMMMd: d LLLL
+        MMMMEd: E d LLLL
+        MMMMW: هفتهٔ Wم LLLL
+        mmss: mm:ss
+        ms: m:ss
+        "y": "y"
+        yM: y/M
+        yMd: y/M/d
+        yMEd: E y/M/d
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E d MMM y
+        yMMMM: MMMM y
+        yMMMMEEEEd: EEEE d MMMM y
+        yQQQ: QQQQ y
+        yQQQQ: QQQQ y
+        yw: هفتهٔ wم Y
+      days:
+        format:
+          abbreviated:
+            sun: یکشنبه
+            mon: دوشنبه
+            tue: سه‌شنبه
+            wed: چهارشنبه
+            thu: پنجشنبه
+            fri: جمعه
+            sat: شنبه
+          narrow:
+            sun: ی
+            mon: د
+            tue: س
+            wed: چ
+            thu: پ
+            fri: ج
+            sat: ش
+          short:
+            sun: ۱ش
+            mon: ۲ش
+            tue: ۳ش
+            wed: ۴ش
+            thu: ۵ش
+            fri: ج
+            sat: ش
+          wide:
+            sun: یکشنبه
+            mon: دوشنبه
+            tue: سه‌شنبه
+            wed: چهارشنبه
+            thu: پنجشنبه
+            fri: جمعه
+            sat: شنبه
+        stand_alone:
+          abbreviated:
+            sun: یکشنبه
+            mon: دوشنبه
+            tue: سه‌شنبه
+            wed: چهارشنبه
+            thu: پنجشنبه
+            fri: جمعه
+            sat: شنبه
+          narrow:
+            sun: ی
+            mon: د
+            tue: س
+            wed: چ
+            thu: پ
+            fri: ج
+            sat: ش
+          short:
+            sun: ۱ش
+            mon: ۲ش
+            tue: ۳ش
+            wed: ۴ش
+            thu: ۵ش
+            fri: ج
+            sat: ش
+          wide:
+            sun: یکشنبه
+            mon: دوشنبه
+            tue: سه‌شنبه
+            wed: چهارشنبه
+            thu: پنجشنبه
+            fri: جمعه
+            sat: شنبه
+      eras:
+        abbr:
+          0: ق.د.م
+          1: د.م.
+        name:
+          0: قبل از دوران مشترک
+          1: دوران مشترک
+        narrow:
+          0: ق.د.م
+          1: د.م.
+      fields:
+        day: روز
+        day_narrow: روز
+        day_of_year: روز سال
+        day_of_year_narrow: روز سال
+        day_of_year_short: روز سال
+        day_period: ق.ظ/ب.ظ
+        day_period_narrow: ق.ظ/ب.ظ
+        day_period_short: ق.ظ/ب.ظ
+        day_short: روز
+        era: دوره
+        era_narrow: دوره
+        era_short: دوره
+        hour: ساعت
+        hour_narrow: ساعت
+        hour_short: ساعت
+        minute: دقیقه
+        minute_narrow: دقیقه
+        minute_short: دقیقه
+        month: ماه
+        month_narrow: ماه
+        month_short: ماه
+        quarter: سه‌ماهه
+        quarter_narrow: سه‌ماهه
+        quarter_short: سه‌ماهه
+        second: ثانیه
+        second_narrow: ثانیه
+        second_short: ثانیه
+        week: هفته
+        week_narrow: هفته
+        week_of_month: هفتهٔ ماه
+        week_of_month_narrow: هفتهٔ ماه
+        week_of_month_short: هفتهٔ ماه
+        week_short: هفته
+        weekday: روز هفته
+        weekday_narrow: روز هفته
+        weekday_of_month: روز کاری ماه
+        weekday_of_month_narrow: روز کاری ماه
+        weekday_of_month_short: روز کاری ماه
+        weekday_short: روز هفته
+        year: سال
+        year_narrow: سال
+        year_short: سال
+        zone: منطقهٔ زمانی
+        zone_narrow: منطقهٔ زمانی
+        zone_short: منطقهٔ زمانی
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: y/M/d
+        datetime:
+          full:
+            pattern: "{{date}}، ساعت {{time}}"
+          long:
+            pattern: "{{date}}، ساعت {{time}}"
+          medium:
+            pattern: "{{date}}،‏ {{time}}"
+          short:
+            pattern: "{{date}}،‏ {{time}}"
+        time:
+          full:
+            pattern: H:mm:ss (zzzz)
+          long:
+            pattern: H:mm:ss (z)
+          medium:
+            pattern: H:mm:ss
+          short:
+            pattern: H:mm
+      months:
+        format:
+          abbreviated:
+            1: ژانویه
+            2: فوریه
+            3: مارس
+            4: آوریل
+            5: مه
+            6: ژوئن
+            7: ژوئیه
+            8: اوت
+            9: سپتامبر
+            10: اکتبر
+            11: نوامبر
+            12: دسامبر
+          narrow:
+            1: ژ
+            2: ف
+            3: م
+            4: آ
+            5: م
+            6: ژ
+            7: ژ
+            8: ا
+            9: س
+            10: ا
+            11: ن
+            12: د
+          wide:
+            1: ژانویهٔ
+            2: فوریهٔ
+            3: مارس
+            4: آوریل
+            5: مهٔ
+            6: ژوئن
+            7: ژوئیهٔ
+            8: اوت
+            9: سپتامبر
+            10: اکتبر
+            11: نوامبر
+            12: دسامبر
+        stand_alone:
+          abbreviated:
+            1: ژانویه
+            2: فوریه
+            3: مارس
+            4: آوریل
+            5: مه
+            6: ژوئن
+            7: ژوئیه
+            8: اوت
+            9: سپتامبر
+            10: اکتبر
+            11: نوامبر
+            12: دسامبر
+          narrow:
+            1: ژ
+            2: ف
+            3: م
+            4: آ
+            5: م
+            6: ژ
+            7: ژ
+            8: ا
+            9: س
+            10: ا
+            11: ن
+            12: د
+          wide:
+            1: ژانویه
+            2: فوریه
+            3: مارس
+            4: آوریل
+            5: مه
+            6: ژوئن
+            7: ژوئیه
+            8: اوت
+            9: سپتامبر
+            10: اکتبر
+            11: نوامبر
+            12: دسامبر
+      periods:
+        format:
+          abbreviated:
+            afternoon1: ظهر
+            afternoon2: عصر
+            am: ق.ظ.
+            morning1: بامداد
+            morning2: صبح
+            night1: شب
+            night2: نیمه‌شب
+            pm: ب.ظ.
+          narrow:
+            afternoon1: ظ
+            afternoon2: ع
+            am: ق
+            morning1: ب
+            morning2: ص
+            night1: ش
+            night2: ن
+            pm: ب
+          wide:
+            afternoon1: بعدازظهر
+            afternoon2: عصر
+            am: قبل‌ازظهر
+            morning1: بامداد
+            morning2: صبح
+            night1: شب
+            night2: نیمه‌شب
+            pm: بعدازظهر
+        stand_alone:
+          abbreviated:
+            afternoon1: ظهر
+            afternoon2: عصر
+            am: ق.ظ.
+            morning1: بامداد
+            morning2: صبح
+            night1: شب
+            night2: نیمه‌شب
+            pm: ب.ظ.
+          narrow:
+            afternoon1: ظ
+            afternoon2: ع
+            am: ق
+            morning1: ب
+            morning2: ص
+            night1: ش
+            night2: ن
+            pm: ب
+          wide:
+            afternoon1: ظهر
+            afternoon2: عصر
+            am: قبل‌ازظهر
+            morning1: بامداد
+            morning2: صبح
+            night1: شب
+            night2: نیمه‌شب
+            pm: بعدازظهر
+      quarters:
+        format:
+          abbreviated:
+            1: س‌م۱
+            2: س‌م۲
+            3: س‌م۳
+            4: س‌م۴
+          narrow:
+            1: ۱
+            2: ۲
+            3: ۳
+            4: ۴
+          wide:
+            1: سه‌ماههٔ اول
+            2: سه‌ماههٔ دوم
+            3: سه‌ماههٔ سوم
+            4: سه‌ماههٔ چهارم
+        stand_alone:
+          abbreviated:
+            1: س‌م۱
+            2: س‌م۲
+            3: س‌م۳
+            4: س‌م۴
+          narrow:
+            1: ۱
+            2: ۲
+            3: ۳
+            4: ۴
+          wide:
+            1: سه‌ماههٔ اول
+            2: سه‌ماههٔ دوم
+            3: سه‌ماههٔ سوم
+            4: سه‌ماههٔ چهارم

@@ -1,0 +1,146 @@
+---
+hi:
+  date:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%-d/%-m/%Y"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%-l:%M %P"
+      weekday: "%A"
+      year: "%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+      date_time_current_year: "%-d %b, %-l:%M %P"
+      default_long_with_zone: "%A, %-d %B %Y, %-l:%M %P %z"
+      friendly_date_time: "%-d %b %Y, %-l:%M %P"
+      long_with_zone: "%-d %B %Y को %-l:%M %P %z"
+      weekday_at_time: "%A को %-l:%M %P"
+      weekday_with_time: "%A, %-l:%M %P"
+      weekday_with_date: "%A, %-d %B"
+      short_weekday_with_date: "%a, %-d %b"
+      weekday_with_short_date: "%A, %-d %b"
+      long_readable_with_time: "%-d %B %Y को %-l:%M %P"
+      long_readable_with_zone: "%A, %-d %B %Y को %-l:%M %P %z"
+      date_at_time: "%-d %B %Y को %-l:%M %P"
+      default: "%-d/%-m/%Y"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: आज %-l:%M %P बजे
+      yesterday_at_time: कल %-l:%M %P पर
+      tomorrow_at_time: "%-l:%M %P कल"
+      on_weekday_at_time: "%A को %-l:%M %P बजे"
+      on_date_time_current_year: "%-d %b, %-l:%M %P पर"
+      on_date: "%-d %b %Y पर"
+      ago: "%{time} पहले"
+      x_hours_ago:
+        one: "%{count} घंटे पहले"
+        other: "%{count} घंटे पहले"
+      x_minutes_ago:
+        one: "%{count} मिनट पहले"
+        other: "%{count} मिनट पहले"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - रवि
+    - सोम
+    - मंगल
+    - बुध
+    - गुरु
+    - शुक्र
+    - शनि
+    abbr_month_names:
+    - ''
+    - जन॰
+    - फ़र॰
+    - मार्च
+    - अप्रैल
+    - मई
+    - जून
+    - जुल॰
+    - अग॰
+    - सित॰
+    - अक्तू॰
+    - नव॰
+    - दिस॰
+    day_names:
+    - रविवार
+    - सोमवार
+    - मंगलवार
+    - बुधवार
+    - गुरुवार
+    - शुक्रवार
+    - शनिवार
+    month_names:
+    - ''
+    - जनवरी
+    - फ़रवरी
+    - मार्च
+    - अप्रैल
+    - मई
+    - जून
+    - जुलाई
+    - अगस्त
+    - सितंबर
+    - अक्तूबर
+    - नवंबर
+    - दिसंबर
+    relative_day_names:
+      this_week: इस सप्ताह
+      this_month: इस महीने
+      day_before_yesterday: परसों
+      yesterday: कल
+      today: आज
+      tomorrow: कल
+      day_after_tomorrow: परसों
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%-d/%-m/%Y"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%-d %B"
+      time_only: "%-l:%M %P"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%-d %b, %-l:%M %P"
+      default_long_with_zone: "%A, %-d %B %Y, %-l:%M %P %z"
+      friendly_date_time: "%-d %b %Y, %-l:%M %P"
+      long_with_zone: "%-d %B %Y को %-l:%M %P %z"
+      weekday_at_time: "%A को %-l:%M %P"
+      weekday_with_time: "%A, %-l:%M %P"
+      weekday_with_date: "%A, %-d %B"
+      short_weekday_with_date: "%a, %-d %b"
+      weekday_with_short_date: "%A, %-d %b"
+      long_readable_with_time: "%-d %B %Y को %-l:%M %P"
+      long_readable_with_zone: "%A, %-d %B %Y को %-l:%M %P %z"
+      date_at_time: "%-d %B %Y को %-l:%M %P"
+      default: "%a, %-d %b %Y, %-l:%M %P %z"
+      long: "%-d %B %Y, %-l:%M %P"
+      short: "%-d %b, %-l:%M %P"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: आज %-l:%M %P बजे
+      yesterday_at_time: कल %-l:%M %P पर
+      tomorrow_at_time: "%-l:%M %P कल"
+      on_weekday_at_time: "%A को %-l:%M %P बजे"
+      on_date_time_current_year: "%-d %b, %-l:%M %P पर"
+      on_date: "%-d %b %Y पर"
+      ago: "%{time} पहले"
+      x_hours_ago:
+        one: "%{count} घंटे पहले"
+        other: "%{count} घंटे पहले"
+      x_minutes_ago:
+        one: "%{count} मिनट पहले"
+        other: "%{count} मिनट पहले"
+      cc_expiry_date: "%m/%Y"
+    am: पूर्वाह्न
+    pm: अपराह्न
+    just_now: अभी-अभी
+    yesterday: कल

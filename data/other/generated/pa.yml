@@ -1,0 +1,144 @@
+---
+pa:
+  date:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%-d/%-m/%Y"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%B %-d"
+      time_only: "%-l:%M %P"
+      weekday: "%A"
+      year: "%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+      date_time_current_year: "%-d %b, %-l:%M %P"
+      default_long_with_zone: "%A, %-d %B %Y, %-l:%M %P %z"
+      friendly_date_time: "%-d %b %Y, %-l:%M %P"
+      long_with_zone: "%-d %B %Y %-l:%M %P %z"
+      weekday_at_time: "%A %-l:%M %P"
+      weekday_with_time: "%A, %-l:%M %P"
+      weekday_with_date: "%A, %-d %B"
+      short_weekday_with_date: "%a, %-d %b"
+      weekday_with_short_date: "%A, %-d %b"
+      long_readable_with_time: "%-d %B %Y %-l:%M %P"
+      long_readable_with_zone: "%A, %-d %B %Y %-l:%M %P %z"
+      date_at_time: "%-d %B %Y %-l:%M %P"
+      default: "%-d/%-m/%Y"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%-l:%M %P ਅੱਜ"
+      yesterday_at_time: "%-l:%M %P ਬੀਤਿਆ ਕੱਲ੍ਹ"
+      tomorrow_at_time: "%-l:%M %P ਭਲਕੇ"
+      on_weekday_at_time: "%-l:%M %P %A"
+      on_date_time_current_year: "%-l:%M %P %-d %b"
+      on_date: "%-d %b %Y"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "%{count} ਘੰਟਾ ਪਹਿਲਾਂ"
+        other: "%{count} ਘੰਟੇ ਪਹਿਲਾਂ"
+      x_minutes_ago:
+        one: "%{count} ਮਿੰਟ ਪਹਿਲਾਂ"
+        other: "%{count} ਮਿੰਟ ਪਹਿਲਾਂ"
+      cc_expiry_date: "%m/%Y"
+    abbr_day_names:
+    - ਐਤ
+    - ਸੋਮ
+    - ਮੰਗਲ
+    - ਬੁੱਧ
+    - ਵੀਰ
+    - ਸ਼ੁੱਕਰ
+    - ਸ਼ਨਿੱਚਰ
+    abbr_month_names:
+    - ''
+    - ਜਨ
+    - ਫ਼ਰ
+    - ਮਾਰਚ
+    - ਅਪ੍ਰੈ
+    - ਮਈ
+    - ਜੂਨ
+    - ਜੁਲਾ
+    - ਅਗ
+    - ਸਤੰ
+    - ਅਕਤੂ
+    - ਨਵੰ
+    - ਦਸੰ
+    day_names:
+    - ਐਤਵਾਰ
+    - ਸੋਮਵਾਰ
+    - ਮੰਗਲਵਾਰ
+    - ਬੁੱਧਵਾਰ
+    - ਵੀਰਵਾਰ
+    - ਸ਼ੁੱਕਰਵਾਰ
+    - ਸ਼ਨਿੱਚਰਵਾਰ
+    month_names:
+    - ''
+    - ਜਨਵਰੀ
+    - ਫ਼ਰਵਰੀ
+    - ਮਾਰਚ
+    - ਅਪ੍ਰੈਲ
+    - ਮਈ
+    - ਜੂਨ
+    - ਜੁਲਾਈ
+    - ਅਗਸਤ
+    - ਸਤੰਬਰ
+    - ਅਕਤੂਬਰ
+    - ਨਵੰਬਰ
+    - ਦਸੰਬਰ
+    relative_day_names:
+      this_week: ਇਹ ਹਫ਼ਤਾ
+      this_month: ਇਹ ਮਹੀਨਾ
+      yesterday: ਬੀਤਿਆ ਕੱਲ੍ਹ
+      today: ਅੱਜ
+      tomorrow: ਭਲਕੇ
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    formats:
+      abbr_date: "%-d %b %Y"
+      basic_date: "%-d/%-m/%Y"
+      date: "%-d %B %Y"
+      day_only: "%-d"
+      month_year: "%B %Y"
+      month_day: "%B %-d"
+      time_only: "%-l:%M %P"
+      weekday: "%A"
+      year: "%Y"
+      date_time_current_year: "%-d %b, %-l:%M %P"
+      default_long_with_zone: "%A, %-d %B %Y, %-l:%M %P %z"
+      friendly_date_time: "%-d %b %Y, %-l:%M %P"
+      long_with_zone: "%-d %B %Y %-l:%M %P %z"
+      weekday_at_time: "%A %-l:%M %P"
+      weekday_with_time: "%A, %-l:%M %P"
+      weekday_with_date: "%A, %-d %B"
+      short_weekday_with_date: "%a, %-d %b"
+      weekday_with_short_date: "%A, %-d %b"
+      long_readable_with_time: "%-d %B %Y %-l:%M %P"
+      long_readable_with_zone: "%A, %-d %B %Y %-l:%M %P %z"
+      date_at_time: "%-d %B %Y %-l:%M %P"
+      default: "%a, %-d %b %Y, %-l:%M %P %z"
+      long: "%-d %B %Y, %-l:%M %P"
+      short: "%-d %b, %-l:%M %P"
+      billing: "%-d/%-m/%Y"
+      yearless_ordinal: "%{ordinalized_day} %B"
+      today_at_time: "%-l:%M %P ਅੱਜ"
+      yesterday_at_time: "%-l:%M %P ਬੀਤਿਆ ਕੱਲ੍ਹ"
+      tomorrow_at_time: "%-l:%M %P ਭਲਕੇ"
+      on_weekday_at_time: "%-l:%M %P %A"
+      on_date_time_current_year: "%-l:%M %P %-d %b"
+      on_date: "%-d %b %Y"
+      ago: "%{time} ago"
+      x_hours_ago:
+        one: "%{count} ਘੰਟਾ ਪਹਿਲਾਂ"
+        other: "%{count} ਘੰਟੇ ਪਹਿਲਾਂ"
+      x_minutes_ago:
+        one: "%{count} ਮਿੰਟ ਪਹਿਲਾਂ"
+        other: "%{count} ਮਿੰਟ ਪਹਿਲਾਂ"
+      cc_expiry_date: "%m/%Y"
+    am: am
+    pm: pm
+    just_now: ਹੁਣ
+    yesterday: ਬੀਤਿਆ ਕੱਲ੍ਹ

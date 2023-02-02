@@ -1,0 +1,454 @@
+---
+nn:
+  fields:
+    day:
+      relative:
+        -2: i førgår
+        -1: i går
+        0: i dag
+        1: i morgon
+        2: i overmorgon
+      relative_time:
+        past:
+          one: for {0} døgn sidan
+          other: for {0} døgn sidan
+    day_narrow:
+      relative:
+        -1: i går
+        0: i dag
+        1: i morgon
+      relative_time:
+        past:
+          one: "–{0} d."
+          other: "–{0} d."
+    day_short:
+      relative:
+        -1: i går
+        0: i dag
+        1: i morgon
+      relative_time:
+        past:
+          one: for {0} d. sidan
+          other: for {0} d. sidan
+    fri:
+      relative:
+        -1: førre fredag
+        0: fredag
+        1: neste fredag
+      relative_time:
+        future:
+          one: om {0} fredag
+          other: om {0} fredagar
+        past:
+          one: for {0} fredag sidan
+          other: for {0} fredagar sidan
+    fri_narrow:
+      relative:
+        -1: førre fr.
+        0: fr.
+        1: neste fr.
+      relative_time:
+        past:
+          one: for {0} fr. sidan
+          other: for {0} fr. sidan
+    fri_short:
+      relative:
+        -1: førre fre.
+        0: fre.
+        1: neste fre.
+      relative_time:
+        past:
+          one: for {0} fre. sidan
+          other: for {0} fre. sidan
+    hour:
+      relative_time:
+        future:
+          one: om {0} time
+          other: om {0} timar
+        past:
+          one: for {0} time sidan
+          other: for {0} timar sidan
+    hour_narrow:
+      relative_time:
+        past:
+          one: "–{0} t"
+          other: "–{0} t"
+    hour_short:
+      relative_time:
+        past:
+          one: for {0} t sidan
+          other: for {0} t sidan
+    minute:
+      relative_time:
+        future:
+          one: om {0} minutt
+          other: om {0} minutt
+        past:
+          one: for {0} minutt sidan
+          other: for {0} minutt sidan
+    minute_narrow:
+      relative_time:
+        past:
+          one: "–{0} min"
+          other: "–{0} min"
+    minute_short:
+      relative_time:
+        past:
+          one: for {0} min sidan
+          other: for {0} min sidan
+    mon:
+      relative:
+        -1: førre måndag
+        0: måndag
+        1: neste måndag
+      relative_time:
+        future:
+          one: om {0} måndag
+          other: om {0} måndagar
+        past:
+          one: for {0} måndag sidan
+          other: for {0} måndagar sidan
+    mon_narrow:
+      relative:
+        -1: førre mån.
+        0: mån.
+        1: neste mån.
+      relative_time:
+        future:
+          one: om {0} må.
+          other: om {0} må.
+        past:
+          one: for {0} må. sidan
+          other: for {0} må. sidan
+    mon_short:
+      relative:
+        -1: førre mån.
+        0: mån.
+        1: neste mån.
+      relative_time:
+        future:
+          one: om {0} mån.
+          other: om {0} mån.
+        past:
+          one: for {0} mån. sidan
+          other: for {0} mån. sidan
+    month:
+      display_name: månad
+      relative:
+        -1: førre månad
+        0: denne månaden
+        1: neste månad
+      relative_time:
+        future:
+          one: om {0} månad
+          other: om {0} månadar
+        past:
+          one: for {0} månad sidan
+          other: for {0} månadar sidan
+    month_narrow:
+      relative:
+        -1: førre md.
+        0: denne md.
+        1: neste md.
+      relative_time:
+        past:
+          one: "–{0} md."
+          other: "–{0} md."
+    month_short:
+      display_name: md.
+      relative:
+        -1: førre md.
+        0: denne md.
+        1: neste md.
+      relative_time:
+        past:
+          one: for {0} md. sidan
+          other: for {0} md. sidan
+    quarter:
+      relative:
+        -1: førre kvartal
+        0: dette kvartalet
+        1: neste kvartal
+      relative_time:
+        future:
+          one: om {0} kvartal
+          other: om {0} kvartal
+        past:
+          one: for {0} kvartal sidan
+          other: for {0} kvartal sidan
+    quarter_narrow:
+      relative_time:
+        past:
+          one: "–{0} kv."
+          other: "–{0} kv."
+    quarter_short:
+      relative_time:
+        past:
+          one: for {0} kv. sidan
+          other: for {0} kv. sidan
+    sat:
+      relative:
+        -1: førre laurdag
+        0: laurdag
+        1: neste laurdag
+      relative_time:
+        future:
+          one: om {0} laurdag
+          other: om {0} laurdagar
+        past:
+          one: for {0} laurdag sidan
+          other: for {0} laurdagar sidan
+    sat_narrow:
+      relative:
+        -1: førre la.
+        0: la.
+        1: neste la.
+      relative_time:
+        future:
+          one: om {0} la.
+          other: om {0} la.
+        past:
+          one: for {0} la. sidan
+          other: for {0} la. sidan
+    sat_short:
+      relative:
+        -1: førre lau.
+        0: lau.
+        1: neste lau.
+      relative_time:
+        future:
+          one: om {0} lau.
+          other: om {0} lau.
+        past:
+          one: for {0} lau. sidan
+          other: for {0} lau. sidan
+    second:
+      relative:
+        0: 'no'
+      relative_time:
+        future:
+          one: om {0} sekund
+          other: om {0} sekund
+        past:
+          one: for {0} sekund sidan
+          other: for {0} sekund sidan
+    second_narrow:
+      relative_time:
+        past:
+          one: "–{0} s"
+          other: "–{0} s"
+    second_short:
+      relative_time:
+        future:
+          one: om {0} sek
+          other: om {0} sek
+        past:
+          one: for {0} sek sidan
+          other: for {0} sek sidan
+    sun:
+      relative:
+        -1: førre sundag
+        0: sundag
+        1: neste sundag
+      relative_time:
+        future:
+          one: om {0} sundag
+          other: om {0} sundagar
+        past:
+          one: for {0} sundag sidan
+          other: for {0} sundagar sidan
+    sun_narrow:
+      relative:
+        -1: førre su.
+        0: su.
+        1: neste su.
+      relative_time:
+        future:
+          one: om {0} su.
+          other: om {0} su.
+        past:
+          one: for {0} su. sidan
+          other: for {0} su. sidan
+    sun_short:
+      relative:
+        -1: førre sun.
+        0: sun.
+        1: neste sun.
+      relative_time:
+        future:
+          one: om {0} sun.
+          other: om {0} sun.
+        past:
+          one: for {0} sun. sidan
+          other: for {0} sun. sidan
+    thu:
+      relative:
+        -1: førre torsdag
+        0: torsdag
+        1: neste torsdag
+      relative_time:
+        future:
+          one: om {0} torsdag
+          other: om {0} torsdagar
+        past:
+          one: for {0} torsdag sidan
+          other: for {0} torsdagar sidan
+    thu_narrow:
+      relative:
+        -1: førre to.
+        0: to.
+        1: neste to.
+      relative_time:
+        past:
+          one: for {0} to. sidan
+          other: for {0} to. sidan
+    thu_short:
+      relative:
+        -1: førre tor.
+        0: tor.
+        1: neste tor.
+      relative_time:
+        past:
+          one: for {0} tor. sidan
+          other: for {0} tor. sidan
+    tue:
+      relative:
+        -1: førre tysdag
+        0: tysdag
+        1: neste tysdag
+      relative_time:
+        future:
+          one: om {0} tysdag
+          other: om {0} tysdagar
+        past:
+          one: for {0} tysdag sidan
+          other: for {0} tysdagar sidan
+    tue_narrow:
+      relative:
+        -1: førre ty.
+        0: ty.
+        1: neste ty.
+      relative_time:
+        future:
+          one: om {0} ty.
+          other: om {0} ty.
+        past:
+          one: for {0} ty. sidan
+          other: for {0} ty. sidan
+    tue_short:
+      relative:
+        -1: førre tys.
+        0: tys.
+        1: neste tys.
+      relative_time:
+        future:
+          one: om {0} tys.
+          other: om {0} tys.
+        past:
+          one: for {0} tys. sidan
+          other: for {0} tys. sidan
+    wed:
+      relative:
+        -1: førre onsdag
+        0: onsdag
+        1: neste onsdag
+      relative_time:
+        future:
+          one: om {0} onsdag
+          other: om {0} onsdagar
+        past:
+          one: for {0} onsdag sidan
+          other: for {0} onsdagar sidan
+    wed_narrow:
+      relative:
+        -1: førre on.
+        0: on.
+        1: neste on.
+      relative_time:
+        past:
+          one: for {0} on. sidan
+          other: for {0} on. sidan
+    wed_short:
+      relative:
+        -1: førre ons.
+        0: ons.
+        1: neste ons.
+      relative_time:
+        past:
+          one: for {0} ons. sidan
+          other: for {0} ons. sidan
+    week:
+      display_name: veke
+      relative:
+        -1: førre veke
+        0: denne veka
+        1: neste veke
+      relative_time:
+        future:
+          one: om {0} veke
+          other: om {0} veker
+        past:
+          one: for {0} veke sidan
+          other: for {0} veker sidan
+    week_narrow:
+      display_name: v.
+      relative:
+        -1: førre veke
+        0: denne veka
+        1: neste veke
+      relative_time:
+        future:
+          one: "+{0} v."
+          other: "+{0} v."
+        past:
+          one: "–{0} v."
+          other: "–{0} v."
+    week_of_month:
+      display_name: veke i månaden
+    week_of_month_narrow:
+      display_name: veke i md.
+    week_of_month_short:
+      display_name: veke i md.
+    week_short:
+      display_name: veke
+      relative:
+        -1: førre veke
+        0: denne veka
+        1: neste veke
+      relative_time:
+        future:
+          one: om {0} v.
+          other: om {0} v.
+        past:
+          one: for {0} v. sidan
+          other: for {0} v. sidan
+    weekday:
+      display_name: vekedag
+    weekday_narrow:
+      display_name: veked.
+    weekday_of_month:
+      display_name: vekedag i månaden
+    weekday_of_month_narrow:
+      display_name: veked. i md.
+    weekday_of_month_short:
+      display_name: veked. i md.
+    weekday_short:
+      display_name: vekedag
+    year:
+      relative_time:
+        past:
+          one: for {0} år sidan
+          other: for {0} år sidan
+    year_narrow:
+      relative_time:
+        future:
+          one: om {0} år
+          other: om {0} år
+        past:
+          one: for {0} år sidan
+          other: for {0} år sidan
+    year_short:
+      relative_time:
+        past:
+          one: for {0} år sidan
+          other: for {0} år sidan

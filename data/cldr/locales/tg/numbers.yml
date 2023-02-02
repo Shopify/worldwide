@@ -1,0 +1,113 @@
+---
+tg:
+  numbers:
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+            short:
+              standard:
+                '1000':
+                  other: 0 ҳзр'.' ¤
+                '10000':
+                  other: 00 ҳзр'.' ¤
+                '100000':
+                  other: 000 ҳзр'.' ¤
+                '1000000':
+                  other: 0 млн'.' ¤
+                '10000000':
+                  other: 00 млн'.' ¤
+                '100000000':
+                  other: 000 млн'.' ¤
+                '1000000000':
+                  other: 0 млрд'.' ¤
+                '10000000000':
+                  other: 00 млрд'.' ¤
+                '100000000000':
+                  other: 000 млрд'.' ¤
+                '1000000000000':
+                  other: 0 трлн'.' ¤
+                '10000000000000':
+                  other: 00 трлн'.' ¤
+                '100000000000000':
+                  other: 000 трлн'.' ¤
+          unit:
+            other: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  other: 0 ҳазор
+                '10000':
+                  other: 00 ҳазор
+                '100000':
+                  other: 000 ҳазор
+                '1000000':
+                  other: 0 миллион
+                '10000000':
+                  other: 00 миллион
+                '100000000':
+                  other: 000 миллион
+                '1000000000':
+                  other: 0 миллиард
+                '10000000000':
+                  other: 00 миллиард
+                '100000000000':
+                  other: 000 миллиард
+                '1000000000000':
+                  other: 0 триллион
+                '10000000000000':
+                  other: 00 триллион
+                '100000000000000':
+                  other: 000 триллион
+            short:
+              standard:
+                '1000':
+                  other: 0 ҳзр'.'
+                '10000':
+                  other: 00 ҳзр'.'
+                '100000':
+                  other: 000 ҳзр'.'
+                '1000000':
+                  other: 0 млн'.'
+                '10000000':
+                  other: 00 млн'.'
+                '100000000':
+                  other: 000 млн'.'
+                '1000000000':
+                  other: 0 млрд'.'
+                '10000000000':
+                  other: 00 млрд'.'
+                '100000000000':
+                  other: 000 млрд'.'
+                '1000000000000':
+                  other: 0 трлн'.'
+                '10000000000000':
+                  other: 00 трлн'.'
+                '100000000000000':
+                  other: 000 трлн'.'
+        percent:
+          patterns:
+            default:
+              standard: "#,##0%"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        decimal: ","
+        exponential: E
+        group: " "
+        infinity: "∞"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"

@@ -1,0 +1,22 @@
+---
+name: Bahrain
+code: BH
+tax: 0.0
+currency: BHD
+unit_system: metric
+tax_name: VAT
+group: Asian Countries
+group_name: Asia
+zip_example: '317'
+zip_regex: "^(0?[1-9]\\d{2}|1[0-2]\\d{2})$"
+zip_requirement: optional
+phone_number_prefix: 973
+week_start_day: saturday
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1ED"
+languages:
+  - ar
+  - en
+timezone: Asia/Qatar

@@ -1,0 +1,24 @@
+---
+# The standard VAT rate is 18%.
+# Exemption threshold is TJS500K (~ USD80K).
+# Sources:  https://www.avalara.com/vatlive/en/vat-news/tajikistan-simplifies-vat-rates.html
+#           https://www2.deloitte.com/content/dam/Deloitte/kz/Documents/tajikistan/Tax%20and%20Investment%20Guide_TJ_2016.pdf
+tax: 0.18
+tax_name: VAT
+name: Tajikistan
+group: Asian Countries
+group_name: Asia
+code: TJ
+unit_system: metric
+currency: TJS
+zip_example: '735450'
+zip_requirement: recommended
+phone_number_prefix: 992
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+emoji: 🇹🇯
+languages:
+  - ru
+  - tg
+timezone: Asia/Dushanbe

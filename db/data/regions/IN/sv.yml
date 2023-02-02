@@ -1,0 +1,25 @@
+---
+sv:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Delstat
+            optional: Delstat (valfritt)
+          errors:
+            blank: Välj stat
+        zip:
+          label:
+            default: PIN-kod
+            optional: PIN-kod (valfritt)
+          errors:
+            blank: Ange en PIN-kod
+            invalid_for_country: Ange en giltig PIN-kod för %{country}
+            invalid_for_country_and_province: Ange en giltig PIN-kod för %{province},
+              %{country}
+            too_long: PIN-koden är för lång
+            contains_html_tags: PIN-kod får inte innehålla HTML-taggar.
+            contains_emojis: PIN-kod får inte innehålla emojis
+            contains_restricted_characters: PIN-koden får inte innehålla begränsade
+              tecken

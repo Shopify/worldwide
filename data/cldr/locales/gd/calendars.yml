@@ -1,0 +1,340 @@
+---
+gd:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: hB
+        Bhm: h:mmB
+        Bhms: h:mm:ssB
+        d: d
+        E: ccc
+        EBhm: E h:mmB
+        EBhms: E h:mm:ssB
+        Ed: E, d
+        Ehm: E h:mma
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: LLL y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        h: ha
+        H: HH
+        hm: h:mma
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mma v
+        Hmv: HH:mm v
+        M: L
+        Md: d/M
+        MEd: E, d/M
+        MMdd: dd/MM
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d'mh' MMMM
+        MMMMW: "'seachdain' W MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: L/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMM: LL/y
+        yMMM: LLL Y
+        yMMMd: d MMM y
+        yMMMEd: E, d MMM y
+        yMMMM: LLLL y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'seachdain' w 'dhe' Y"
+      days:
+        format:
+          abbreviated:
+            sun: DiD
+            mon: DiL
+            tue: DiM
+            wed: DiC
+            thu: Dia
+            fri: Dih
+            sat: DiS
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: C
+            thu: A
+            fri: H
+            sat: S
+          short:
+            sun: Dò
+            mon: Lu
+            tue: Mà
+            wed: Ci
+            thu: Da
+            fri: hA
+            sat: Sa
+          wide:
+            sun: DiDòmhnaich
+            mon: DiLuain
+            tue: DiMàirt
+            wed: DiCiadain
+            thu: DiarDaoin
+            fri: DihAoine
+            sat: DiSathairne
+        stand_alone:
+          abbreviated:
+            sun: DiD
+            mon: DiL
+            tue: DiM
+            wed: DiC
+            thu: Dia
+            fri: Dih
+            sat: DiS
+          narrow:
+            sun: D
+            mon: L
+            tue: M
+            wed: C
+            thu: A
+            fri: H
+            sat: S
+          short:
+            sun: Dò
+            mon: Lu
+            tue: Mà
+            wed: Ci
+            thu: Da
+            fri: hA
+            sat: Sa
+          wide:
+            sun: DiDòmhnaich
+            mon: DiLuain
+            tue: DiMàirt
+            wed: DiCiadain
+            thu: DiarDaoin
+            fri: DihAoine
+            sat: DiSathairne
+      eras:
+        abbr:
+          0: RC
+          1: AD
+        name:
+          0: Ro Chrìosta
+          1: An dèidh Chrìosta
+        narrow:
+          0: R
+          1: A
+      fields:
+        day: latha
+        day_narrow: là
+        day_of_year: là dhen bhliadhna
+        day_of_year_narrow: là bl.
+        day_of_year_short: là blia.
+        day_period: m/f
+        day_period_narrow: m/f
+        day_period_short: m/f
+        day_short: là
+        era: linn
+        era_narrow: li.
+        era_short: linn
+        hour: uair a thìde
+        hour_narrow: u
+        hour_short: uair
+        minute: mionaid
+        minute_narrow: m
+        minute_short: mion.
+        month: mìos
+        month_narrow: mì.
+        month_short: mìos
+        quarter: cairteal
+        quarter_narrow: c.
+        quarter_short: cairt.
+        second: diog
+        second_narrow: d
+        second_short: diog
+        week: seachdain
+        week_narrow: sn.
+        week_of_month: seachdain dhen mhìos
+        week_of_month_narrow: seachd. mìos
+        week_of_month_short: seachd. mìos
+        week_short: seachd.
+        weekday: latha na seachdaine
+        weekday_narrow: là sn.
+        weekday_of_month: là na seachdaine dhen mhìos
+        weekday_of_month_narrow: là sn. mìos
+        weekday_of_month_short: là seachd. mìos
+        weekday_short: là seachd.
+        year: bliadhna
+        year_narrow: bl.
+        year_short: blia.
+        zone: roinn-tìde
+        zone_narrow: roinn
+        zone_short: roinn
+      formats:
+        date:
+          full:
+            pattern: EEEE, d'mh' MMMM y
+          long:
+            pattern: d'mh' MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/y
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Faoi
+            2: Gearr
+            3: Màrt
+            4: Gibl
+            5: Cèit
+            6: Ògmh
+            7: Iuch
+            8: Lùna
+            9: Sult
+            10: Dàmh
+            11: Samh
+            12: Dùbh
+          narrow:
+            1: F
+            2: G
+            3: M
+            4: G
+            5: C
+            6: Ò
+            7: I
+            8: L
+            9: S
+            10: D
+            11: S
+            12: D
+          wide:
+            1: dhen Fhaoilleach
+            2: dhen Ghearran
+            3: dhen Mhàrt
+            4: dhen Ghiblean
+            5: dhen Chèitean
+            6: dhen Ògmhios
+            7: dhen Iuchar
+            8: dhen Lùnastal
+            9: dhen t-Sultain
+            10: dhen Dàmhair
+            11: dhen t-Samhain
+            12: dhen Dùbhlachd
+        stand_alone:
+          abbreviated:
+            1: Faoi
+            2: Gearr
+            3: Màrt
+            4: Gibl
+            5: Cèit
+            6: Ògmh
+            7: Iuch
+            8: Lùna
+            9: Sult
+            10: Dàmh
+            11: Samh
+            12: Dùbh
+          narrow:
+            1: F
+            2: G
+            3: M
+            4: G
+            5: C
+            6: Ò
+            7: I
+            8: L
+            9: S
+            10: D
+            11: S
+            12: D
+          wide:
+            1: Am Faoilleach
+            2: An Gearran
+            3: Am Màrt
+            4: An Giblean
+            5: An Cèitean
+            6: An t-Ògmhios
+            7: An t-Iuchar
+            8: An Lùnastal
+            9: An t-Sultain
+            10: An Dàmhair
+            11: An t-Samhain
+            12: An Dùbhlachd
+      periods:
+        format:
+          abbreviated:
+            am: m
+            pm: f
+          narrow:
+            am: m
+            pm: f
+          wide:
+            am: m
+            pm: f
+        stand_alone:
+          abbreviated:
+            am: m
+            pm: f
+          narrow:
+            am: m
+            pm: f
+          wide:
+            am: m
+            pm: f
+      quarters:
+        format:
+          abbreviated:
+            1: C1
+            2: C2
+            3: C3
+            4: C4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1d chairteal
+            2: 2na cairteal
+            3: 3s cairteal
+            4: 4mh cairteal
+        stand_alone:
+          abbreviated:
+            1: C1
+            2: C2
+            3: C3
+            4: C4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1d chairteal
+            2: 2na cairteal
+            3: 3s cairteal
+            4: 4mh cairteal

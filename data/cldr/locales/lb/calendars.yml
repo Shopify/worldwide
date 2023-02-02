@@ -1,0 +1,296 @@
+---
+lb:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: E, d.
+        Ehm: E, h:mm a
+        EHm: E, HH:mm
+        Ehms: E, h:mm:ss a
+        EHms: E, HH:mm:ss
+        Gy: y G
+        GyMMM: MMM y G
+        GyMMMd: d. MMM y G
+        GyMMMEd: E, d. MMM y G
+        h: h a
+        H: HH 'Auer'
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        M: L
+        Md: d.M.
+        MEd: E, d.M.
+        MMM: LLL
+        MMMd: d. MMM
+        MMMEd: E, d. MMM
+        MMMMd: d. MMMM
+        ms: mm:ss
+        "y": "y"
+        yM: M.y
+        yMd: d.M.y
+        yMEd: E, d.M.y
+        yMMM: MMM y
+        yMMMd: d. MMM y
+        yMMMEd: E, d. MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+      days:
+        format:
+          abbreviated:
+            sun: Son.
+            mon: Méi.
+            tue: Dën.
+            wed: Mët.
+            thu: Don.
+            fri: Fre.
+            sat: Sam.
+          narrow:
+            sun: S
+            mon: M
+            tue: D
+            wed: M
+            thu: D
+            fri: F
+            sat: S
+          short:
+            sun: So.
+            mon: Mé.
+            tue: Dë.
+            wed: Më.
+            thu: Do.
+            fri: Fr.
+            sat: Sa.
+          wide:
+            sun: Sonndeg
+            mon: Méindeg
+            tue: Dënschdeg
+            wed: Mëttwoch
+            thu: Donneschdeg
+            fri: Freideg
+            sat: Samschdeg
+        stand_alone:
+          abbreviated:
+            sun: Son
+            mon: Méi
+            tue: Dën
+            wed: Mët
+            thu: Don
+            fri: Fre
+            sat: Sam
+          narrow:
+            sun: S
+            mon: M
+            tue: D
+            wed: M
+            thu: D
+            fri: F
+            sat: S
+          short:
+            sun: So.
+            mon: Mé.
+            tue: Dë.
+            wed: Më.
+            thu: Do.
+            fri: Fr.
+            sat: Sa.
+          wide:
+            sun: Sonndeg
+            mon: Méindeg
+            tue: Dënschdeg
+            wed: Mëttwoch
+            thu: Donneschdeg
+            fri: Freideg
+            sat: Samschdeg
+      eras:
+        abbr:
+          0: v. e. Z.
+          1: n. e. Z.
+        name:
+          0: v. Chr.
+          1: n. Chr.
+      fields:
+        day: Dag
+        day_narrow: D.
+        day_period: Dageshallschent
+        day_short: D.
+        era: Epoch
+        hour: Stonn
+        hour_narrow: St.
+        hour_short: St.
+        minute: Minutt
+        minute_narrow: Min.
+        minute_short: Min.
+        month: Mount
+        month_narrow: M.
+        month_short: M.
+        quarter: Quartal
+        quarter_narrow: Q.
+        quarter_short: Q.
+        second: Sekonn
+        second_narrow: Sek.
+        second_short: Sek.
+        week: Woch
+        week_narrow: W.
+        week_short: W.
+        weekday: Wochendag
+        year: Joer
+        year_narrow: J.
+        year_short: J.
+        zone: Zäitzon
+      formats:
+        date:
+          full:
+            pattern: EEEE, d. MMMM y
+          long:
+            pattern: d. MMMM y
+          medium:
+            pattern: d. MMM y
+          short:
+            pattern: dd.MM.yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Jan.
+            2: Feb.
+            3: Mäe.
+            4: Abr.
+            5: Mee
+            6: Juni
+            7: Juli
+            8: Aug.
+            9: Sep.
+            10: Okt.
+            11: Nov.
+            12: Dez.
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januar
+            2: Februar
+            3: Mäerz
+            4: Abrëll
+            5: Mee
+            6: Juni
+            7: Juli
+            8: August
+            9: September
+            10: Oktober
+            11: November
+            12: Dezember
+        stand_alone:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mäe
+            4: Abr
+            5: Mee
+            6: Jun
+            7: Jul
+            8: Aug
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Dez
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januar
+            2: Februar
+            3: Mäerz
+            4: Abrëll
+            5: Mee
+            6: Juni
+            7: Juli
+            8: August
+            9: September
+            10: Oktober
+            11: November
+            12: Dezember
+      periods:
+        format:
+          abbreviated:
+            am: moies
+            pm: nomëttes
+          narrow:
+            am: mo.
+            pm: nomë.
+          wide:
+            am: moies
+            pm: nomëttes
+      quarters:
+        format:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. Quartal
+            2: 2. Quartal
+            3: 3. Quartal
+            4: 4. Quartal
+        stand_alone:
+          abbreviated:
+            1: Q1
+            2: Q2
+            3: Q3
+            4: Q4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1. Quartal
+            2: 2. Quartal
+            3: 3. Quartal
+            4: 4. Quartal

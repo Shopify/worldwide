@@ -1,0 +1,20 @@
+---
+th:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: รัฐ/เขตแดน
+            optional: รัฐ/เขตแดน (ไม่บังคับ)
+          errors:
+            blank: เลือกรัฐ/เขตแดน
+        zip:
+          label:
+            default: รหัสไปรษณีย์
+            optional: รหัสไปรษณีย์ (ไม่บังคับ)
+          errors:
+            too_long: รหัสไปรษณีย์ยาวเกินไป
+            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
+            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสไปรษณีย์
+            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัสไปรษณีย์ได้

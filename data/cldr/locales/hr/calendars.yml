@@ -1,0 +1,377 @@
+---
+hr:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h:mm B
+        Bhms: h:mm:ss B
+        d: d.
+        E: ccc
+        EBhm: E h:mm B
+        EBhms: E h:mm:ss B
+        Ed: E, d.
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: y. G
+        GyMd: d. M. y. GGGGG
+        GyMMM: LLL y. G
+        GyMMMd: d. MMM y. G
+        GyMMMEd: E, d. MMM y. G
+        h: h a
+        H: HH
+        hm: hh:mm a
+        Hm: HH:mm
+        hms: hh:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L.
+        Md: dd. MM.
+        MEd: E, dd. MM.
+        MMdd: dd. MM.
+        MMM: LLL
+        MMMd: d. MMM
+        MMMEd: E, d. MMM
+        MMMMd: d. MMMM
+        MMMMEd: E, d. MMMM
+        MMMMW: W. 'tjedan' MMMM
+        ms: mm:ss
+        "y": y.
+        yM: MM. y.
+        yMd: dd. MM. y.
+        yMEd: E, dd. MM. y.
+        yMM: MM. y.
+        yMMM: LLL y.
+        yMMMd: d. MMM y.
+        yMMMEd: E, d. MMM y.
+        yMMMM: LLLL y.
+        yQQQ: QQQ y.
+        yQQQQ: QQQQ y.
+        yw: w. 'tjedan' 'u' Y.
+      days:
+        format:
+          abbreviated:
+            sun: ned
+            mon: pon
+            tue: uto
+            wed: sri
+            thu: čet
+            fri: pet
+            sat: sub
+          narrow:
+            sun: N
+            mon: P
+            tue: U
+            wed: S
+            thu: Č
+            fri: P
+            sat: S
+          short:
+            sun: ned
+            mon: pon
+            tue: uto
+            wed: sri
+            thu: čet
+            fri: pet
+            sat: sub
+          wide:
+            sun: nedjelja
+            mon: ponedjeljak
+            tue: utorak
+            wed: srijeda
+            thu: četvrtak
+            fri: petak
+            sat: subota
+        stand_alone:
+          abbreviated:
+            sun: ned
+            mon: pon
+            tue: uto
+            wed: sri
+            thu: čet
+            fri: pet
+            sat: sub
+          narrow:
+            sun: "n"
+            mon: p
+            tue: u
+            wed: s
+            thu: č
+            fri: p
+            sat: s
+          short:
+            sun: ned
+            mon: pon
+            tue: uto
+            wed: sri
+            thu: čet
+            fri: pet
+            sat: sub
+          wide:
+            sun: nedjelja
+            mon: ponedjeljak
+            tue: utorak
+            wed: srijeda
+            thu: četvrtak
+            fri: petak
+            sat: subota
+      eras:
+        abbr:
+          0: pr. n. e.
+          1: n. e.
+        name:
+          0: prije nove ere
+          1: nove ere
+        narrow:
+          0: pr.n.e.
+          1: AD
+      fields:
+        day: dan
+        day_narrow: d.
+        day_of_year: dan u godini
+        day_of_year_narrow: dan u g.
+        day_of_year_short: dan u god.
+        day_period: AM/PM
+        day_period_narrow: AM/PM
+        day_period_short: AM/PM
+        day_short: d.
+        era: era
+        era_narrow: era
+        era_short: era
+        hour: sat
+        hour_narrow: h
+        hour_short: h
+        minute: minuta
+        minute_narrow: min
+        minute_short: min
+        month: mjesec
+        month_narrow: m.
+        month_short: mj.
+        quarter: kvartal
+        quarter_narrow: kv.
+        quarter_short: kv.
+        second: sekunda
+        second_narrow: s
+        second_short: s
+        week: tjedan
+        week_narrow: tj.
+        week_of_month: tjedan u mjesecu
+        week_of_month_narrow: tj. u mjesecu
+        week_of_month_short: tj. u mj.
+        week_short: tj.
+        weekday: dan u tjednu
+        weekday_narrow: dan u tj.
+        weekday_of_month: radni dan u mjesecu
+        weekday_of_month_narrow: r. dan u mj.
+        weekday_of_month_short: radni dan u mj.
+        weekday_short: dan u tjed.
+        year: godina
+        year_narrow: g.
+        year_short: g.
+        zone: vremenska zona
+        zone_narrow: zona
+        zone_short: zona
+      formats:
+        date:
+          full:
+            pattern: EEEE, d. MMMM y.
+          long:
+            pattern: d. MMMM y.
+          medium:
+            pattern: d. MMM y.
+          short:
+            pattern: dd. MM. y.
+        datetime:
+          full:
+            pattern: "{{date}} 'u' {{time}}"
+          long:
+            pattern: "{{date}} 'u' {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss (zzzz)
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: sij
+            2: velj
+            3: ožu
+            4: tra
+            5: svi
+            6: lip
+            7: srp
+            8: kol
+            9: ruj
+            10: lis
+            11: stu
+            12: pro
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+            5: '5.'
+            6: '6.'
+            7: '7.'
+            8: '8.'
+            9: '9.'
+            10: '10.'
+            11: '11.'
+            12: '12.'
+          wide:
+            1: siječnja
+            2: veljače
+            3: ožujka
+            4: travnja
+            5: svibnja
+            6: lipnja
+            7: srpnja
+            8: kolovoza
+            9: rujna
+            10: listopada
+            11: studenoga
+            12: prosinca
+        stand_alone:
+          abbreviated:
+            1: sij
+            2: velj
+            3: ožu
+            4: tra
+            5: svi
+            6: lip
+            7: srp
+            8: kol
+            9: ruj
+            10: lis
+            11: stu
+            12: pro
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+            5: '5.'
+            6: '6.'
+            7: '7.'
+            8: '8.'
+            9: '9.'
+            10: '10.'
+            11: '11.'
+            12: '12.'
+          wide:
+            1: siječanj
+            2: veljača
+            3: ožujak
+            4: travanj
+            5: svibanj
+            6: lipanj
+            7: srpanj
+            8: kolovoz
+            9: rujan
+            10: listopad
+            11: studeni
+            12: prosinac
+      periods:
+        format:
+          abbreviated:
+            afternoon1: popodne
+            am: AM
+            evening1: navečer
+            midnight: ponoć
+            morning1: ujutro
+            night1: noću
+            noon: podne
+            pm: PM
+          narrow:
+            afternoon1: popodne
+            am: AM
+            evening1: navečer
+            midnight: ponoć
+            morning1: ujutro
+            night1: noću
+            noon: podne
+            pm: PM
+          wide:
+            afternoon1: poslije podne
+            am: AM
+            evening1: navečer
+            midnight: ponoć
+            morning1: ujutro
+            night1: noću
+            noon: podne
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: popodne
+            am: AM
+            evening1: navečer
+            midnight: ponoć
+            morning1: ujutro
+            night1: noću
+            noon: podne
+            pm: PM
+          narrow:
+            afternoon1: popodne
+            am: AM
+            evening1: navečer
+            midnight: ponoć
+            morning1: ujutro
+            night1: noću
+            noon: podne
+            pm: PM
+          wide:
+            afternoon1: popodne
+            am: AM
+            evening1: navečer
+            midnight: ponoć
+            morning1: ujutro
+            night1: noću
+            noon: podne
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: 1kv
+            2: 2kv
+            3: 3kv
+            4: 4kv
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+          wide:
+            1: 1. kvartal
+            2: 2. kvartal
+            3: 3. kvartal
+            4: 4. kvartal
+        stand_alone:
+          abbreviated:
+            1: 1. kv.
+            2: 2. kv.
+            3: 3. kv.
+            4: 4. kv.
+          narrow:
+            1: '1.'
+            2: '2.'
+            3: '3.'
+            4: '4.'
+          wide:
+            1: 1. kvartal
+            2: 2. kvartal
+            3: 3. kvartal
+            4: 4. kvartal

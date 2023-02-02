@@ -1,0 +1,20 @@
+---
+name: Congo, The Democratic Republic Of The
+code: CD
+tax: 0.16
+currency: CDF
+unit_system: metric
+tax_name: VAT
+group: African Countries
+group_name: Africa
+phone_number_prefix: 243
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{country}_{phone}"
+emoji: 🇨🇩
+languages:
+  - fr
+  - sw
+# The DRC uses two time zones (Africa/Kinshasa, UTC+1) and (Africa/Lubumbashi, UTC+2).
+# But the DRC does not use postal codes, so we cannot determine the time zone based on the postal code.
+# For now, we don't encode timezone information for DRC for this reason.

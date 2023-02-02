@@ -1,0 +1,31 @@
+---
+el:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Πολιτεία
+            optional: Πολιτεία (προαιρετικά)
+          errors:
+            blank: Επιλέξτε νομό
+            invalid_for_country: Εισαγάγετε μια έγκυρη πολιτεία %{country}
+            unknown_for_city_and_zip: Εισαγάγετε έγκυρο νομό για %{city}, %{zip}
+            unknown_for_city: Επιλέξτε έγκυρο νομό για %{city}
+            unknown_for_zip: Επιλέξτε έγκυρο νομό για %{zip}
+        zip:
+          label:
+            default: Ταχυδρομικός κωδικός
+            optional: Ταχυδρομικός κωδικός (προαιρετικά)
+          errors:
+            blank: Εισαγάγετε ταχυδρομικό κώδικα
+            invalid_for_country: Εισαγάγετε έναν έγκυρο ταχυδρομικό κώδικα για %{country}
+            invalid_for_country_and_province: Εισαγάγετε έναν έγκυρο ταχυδρομικό κώδικα
+              για %{province}, %{country}
+            too_long: Η τιμή του ταχυδρομικού κώδικα είναι πολύ μεγάλη
+            contains_html_tags: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει ετικέτες
+              HTML.
+            contains_emojis: Ο ταχυδρομικός κωδικός δεν μπορεί να περιέχει emoji
+            contains_restricted_characters: Το πεδίο "Ταχυδρομικός κώδικας" δεν μπορεί
+              να περιέχει απαγορευμένους χαρακτήρες
+            invalid_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κωδικό για %{province}

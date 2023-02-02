@@ -1,0 +1,15 @@
+---
+th:
+  worldwide:
+    HK:
+      addresses:
+        city:
+          label:
+            default: เขต
+            optional: เขต (ไม่บังคับ)
+          errors:
+            blank: ป้อนเขต
+            too_long: ชื่อเขตยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_html_tags: ห้ามมีแท็ก HTML ในเขต
+            contains_emojis: ไม่สามารถใส่อิโมจิในเขต
+            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในเขตได้

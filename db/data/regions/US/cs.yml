@@ -1,0 +1,29 @@
+---
+cs:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Stát
+            optional: Stát (volitelné)
+          errors:
+            blank: Vyberte stát
+            invalid_for_country: Zadejte platný stát země %{country}
+            unknown_for_city_and_zip: 'Zadejte platný stát pro: %{city}, %{zip}'
+            unknown_for_city: 'Vyberte platný stát pro: %{city}'
+            unknown_for_zip: 'Vyberte platný stát pro: %{zip}'
+        zip:
+          label:
+            default: PSČ
+            optional: PSČ (volitelné)
+          errors:
+            blank: Zadejte PSČ
+            invalid_for_country: Zadejte platné PSČ pro zemi %{country}
+            invalid_for_country_and_province: 'Zadejte platné PSČ pro: %{province},
+              %{country}'
+            too_long: Hodnota PSČ je příliš dlouhá
+            contains_html_tags: PSČ nemůže obsahovat HTML tagy.
+            contains_emojis: PSČ nemůže obsahovat emoji
+            contains_restricted_characters: PSČ nesmí obsahovat zakázané znaky
+            invalid_for_province: 'Zadejte platné PSČ pro: %{province}.'

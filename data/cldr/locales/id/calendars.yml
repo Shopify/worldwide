@@ -1,0 +1,375 @@
+---
+id:
+  calendars:
+    gregorian:
+      additional_formats:
+        Bh: h B
+        Bhm: h.mm B
+        Bhms: h.mm.ss B
+        d: d
+        E: ccc
+        EBhm: E h.mm B
+        EBhms: E h.mm.ss B
+        Ed: E, d
+        Ehm: E h.mm a
+        EHm: E HH.mm
+        Ehms: E h.mm.ss a
+        EHms: E HH.mm.ss
+        Gy: y G
+        GyMd: d/M/y GGGGG
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E, d MMM y G
+        h: h a
+        H: HH
+        hm: h.mm a
+        Hm: HH.mm
+        hms: h.mm.ss a
+        Hms: HH.mm.ss
+        hmsv: h.mm.ss. a v
+        Hmsv: HH.mm.ss v
+        hmv: h.mm a v
+        Hmv: HH.mm v
+        M: L
+        Md: d/M
+        MEd: E, d/M
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E, d MMM
+        MMMMd: d MMMM
+        MMMMEd: E, d MMMM
+        MMMMW: "'minggu' 'ke'-W MMMM"
+        ms: mm.ss
+        "y": "y"
+        yM: M/y
+        yMd: d/M/y
+        yMEd: E, d/M/y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E, d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'minggu' 'ke'-w Y"
+      days:
+        format:
+          abbreviated:
+            sun: Min
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          narrow:
+            sun: M
+            mon: S
+            tue: S
+            wed: R
+            thu: K
+            fri: J
+            sat: S
+          short:
+            sun: Min
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          wide:
+            sun: Minggu
+            mon: Senin
+            tue: Selasa
+            wed: Rabu
+            thu: Kamis
+            fri: Jumat
+            sat: Sabtu
+        stand_alone:
+          abbreviated:
+            sun: Min
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          narrow:
+            sun: M
+            mon: S
+            tue: S
+            wed: R
+            thu: K
+            fri: J
+            sat: S
+          short:
+            sun: Min
+            mon: Sen
+            tue: Sel
+            wed: Rab
+            thu: Kam
+            fri: Jum
+            sat: Sab
+          wide:
+            sun: Minggu
+            mon: Senin
+            tue: Selasa
+            wed: Rabu
+            thu: Kamis
+            fri: Jumat
+            sat: Sabtu
+      eras:
+        abbr:
+          0: SEU
+          1: EU
+        name:
+          0: Sebelum Era Umum
+          1: Era Umum
+        narrow:
+          0: SM
+          1: M
+      fields:
+        day: hari
+        day_narrow: h
+        day_of_year: hari dalam setahun
+        day_of_year_narrow: hari dlm 1 thn
+        day_of_year_short: hari dlm setahun
+        day_period: AM/PM
+        day_period_narrow: AM/PM
+        day_period_short: AM/PM
+        day_short: hr
+        era: era
+        era_narrow: era
+        era_short: era
+        hour: jam
+        hour_narrow: j
+        hour_short: jam
+        minute: menit
+        minute_narrow: m
+        minute_short: mnt.
+        month: bulan
+        month_narrow: bln.
+        month_short: bln.
+        quarter: kuartal
+        quarter_narrow: krtl.
+        quarter_short: krtl.
+        second: detik
+        second_narrow: d
+        second_short: dtk.
+        week: minggu
+        week_narrow: mgg.
+        week_of_month: minggu
+        week_of_month_narrow: mgg.
+        week_of_month_short: mgg.
+        week_short: mgg.
+        weekday: hari dalam seminggu
+        weekday_narrow: hari dlm seminggu
+        weekday_of_month: hari kerja
+        weekday_of_month_narrow: hr kerja
+        weekday_of_month_short: hr kerja
+        weekday_short: hari dlm seminggu
+        year: tahun
+        year_narrow: thn.
+        year_short: thn.
+        zone: zona waktu
+        zone_narrow: zona wkt
+        zone_short: zona wkt
+      formats:
+        date:
+          full:
+            pattern: EEEE, dd MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd/MM/yy
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH.mm.ss zzzz
+          long:
+            pattern: HH.mm.ss z
+          medium:
+            pattern: HH.mm.ss
+          short:
+            pattern: HH.mm
+      months:
+        format:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mar
+            4: Apr
+            5: Mei
+            6: Jun
+            7: Jul
+            8: Agu
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januari
+            2: Februari
+            3: Maret
+            4: April
+            5: Mei
+            6: Juni
+            7: Juli
+            8: Agustus
+            9: September
+            10: Oktober
+            11: November
+            12: Desember
+        stand_alone:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mar
+            4: Apr
+            5: Mei
+            6: Jun
+            7: Jul
+            8: Agu
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Januari
+            2: Februari
+            3: Maret
+            4: April
+            5: Mei
+            6: Juni
+            7: Juli
+            8: Agustus
+            9: September
+            10: Oktober
+            11: November
+            12: Desember
+      periods:
+        format:
+          abbreviated:
+            afternoon1: siang
+            am: AM
+            evening1: sore
+            midnight: tengah malam
+            morning1: pagi
+            night1: malam
+            noon: tengah hari
+            pm: PM
+          narrow:
+            afternoon1: siang
+            am: AM
+            evening1: sore
+            midnight: tengah malam
+            morning1: pagi
+            night1: malam
+            noon: tengah hari
+            pm: PM
+          wide:
+            afternoon1: siang
+            am: AM
+            evening1: sore
+            midnight: tengah malam
+            morning1: pagi
+            night1: malam
+            noon: tengah hari
+            pm: PM
+        stand_alone:
+          abbreviated:
+            afternoon1: siang
+            am: AM
+            evening1: sore
+            midnight: tengah malam
+            morning1: pagi
+            night1: malam
+            noon: tengah hari
+            pm: PM
+          narrow:
+            afternoon1: siang
+            am: AM
+            evening1: sore
+            midnight: tengah malam
+            morning1: pagi
+            night1: malam
+            noon: tengah hari
+            pm: PM
+          wide:
+            afternoon1: siang
+            am: AM
+            evening1: sore
+            midnight: tengah malam
+            morning1: pagi
+            night1: malam
+            noon: tengah hari
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Kuartal ke-1
+            2: Kuartal ke-2
+            3: Kuartal ke-3
+            4: Kuartal ke-4
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: Kuartal ke-1
+            2: Kuartal ke-2
+            3: Kuartal ke-3
+            4: Kuartal ke-4

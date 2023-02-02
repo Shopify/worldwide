@@ -1,0 +1,19 @@
+---
+name: Bermuda
+code: BM
+tax: 0.0
+currency: USD
+unit_system: metric
+tax_name: VAT
+group: Central American Countries
+group_name: Central America
+zip_regex: "^(CR|DD|DV|FL|GE|HM|HS|MA|PG|SB|SN|WK) ?([0-9]{2}|[A-Z]{2})$"
+zip_example: FL 07
+phone_number_prefix: 1
+format:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
+emoji: "\U0001F1E7\U0001F1F2"
+languages:
+  - en
+timezone: Atlantic/Bermuda

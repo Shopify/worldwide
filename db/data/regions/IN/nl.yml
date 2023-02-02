@@ -1,0 +1,25 @@
+---
+nl:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Staat
+            optional: Staat (optioneel)
+          errors:
+            blank: Selecteer een staat
+        zip:
+          label:
+            default: Pincode
+            optional: Pincode (optioneel)
+          errors:
+            blank: Voer een pincode in
+            invalid_for_country: Voer een geldige pincode in voor %{country}
+            invalid_for_country_and_province: Voer een geldige pincode in voor %{province},
+              %{country}
+            too_long: De waarde van de pincode is te lang
+            contains_html_tags: De pincode mag geen HTML-tags bevatten.
+            contains_emojis: De pincode mag geen emoji's bevatten
+            contains_restricted_characters: Het veld Pincode mag geen verboden tekens
+              bevatten

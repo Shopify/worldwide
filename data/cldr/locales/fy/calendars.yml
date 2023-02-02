@@ -1,0 +1,298 @@
+---
+fy:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: d, E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMMM: MMM y G
+        GyMMMd: d MMM y G
+        GyMMMEd: E d MMM y G
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: L
+        Md: d-M
+        MEd: E d-M
+        MMM: LLL
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: d MMMM
+        MMMMW: "'wike' W 'fan' MMMM"
+        ms: mm:ss
+        "y": "y"
+        yM: M-y
+        yMd: d-M-y
+        yMEd: E d-M-y
+        yMMM: MMM y
+        yMMMd: d MMM y
+        yMMMEd: E d MMM y
+        yMMMM: MMMM y
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+        yw: "'wike' w 'fan' Y"
+      days:
+        format:
+          abbreviated:
+            sun: si
+            mon: mo
+            tue: ti
+            wed: wo
+            thu: to
+            fri: fr
+            sat: so
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: si
+            mon: mo
+            tue: ti
+            wed: wo
+            thu: to
+            fri: fr
+            sat: so
+          wide:
+            sun: snein
+            mon: moandei
+            tue: tiisdei
+            wed: woansdei
+            thu: tongersdei
+            fri: freed
+            sat: sneon
+        stand_alone:
+          abbreviated:
+            sun: si
+            mon: mo
+            tue: ti
+            wed: wo
+            thu: to
+            fri: fr
+            sat: so
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: si
+            mon: mo
+            tue: ti
+            wed: wo
+            thu: to
+            fri: fr
+            sat: so
+          wide:
+            sun: snein
+            mon: moandei
+            tue: tiisdei
+            wed: woansdei
+            thu: tongersdei
+            fri: freed
+            sat: sneon
+      eras:
+        abbr:
+          0: f.g.j.
+          1: g.j.
+        name:
+          0: foar gewoane jiertelling
+          1: gewoane jiertelling
+        narrow:
+          0: fgj
+          1: gj
+      fields:
+        day: dei
+        day_period: AM/PM
+        era: Tiidsrin
+        hour: oere
+        minute: Minút
+        month: Moanne
+        second: Sekonde
+        week: Wike
+        weekday: dei van de wike
+        year: Jier
+        zone: Zone
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM y
+          short:
+            pattern: dd-MM-yy
+        datetime:
+          full:
+            pattern: "{{date}} 'om' {{time}}"
+          long:
+            pattern: "{{date}} 'om' {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mrt
+            4: Apr
+            5: Mai
+            6: Jun
+            7: Jul
+            8: Aug
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Jannewaris
+            2: Febrewaris
+            3: Maart
+            4: April
+            5: Maaie
+            6: Juny
+            7: July
+            8: Augustus
+            9: Septimber
+            10: Oktober
+            11: Novimber
+            12: Desimber
+        stand_alone:
+          abbreviated:
+            1: Jan
+            2: Feb
+            3: Mrt
+            4: Apr
+            5: Mai
+            6: Jun
+            7: Jul
+            8: Aug
+            9: Sep
+            10: Okt
+            11: Nov
+            12: Des
+          narrow:
+            1: J
+            2: F
+            3: M
+            4: A
+            5: M
+            6: J
+            7: J
+            8: A
+            9: S
+            10: O
+            11: N
+            12: D
+          wide:
+            1: Jannewaris
+            2: Febrewaris
+            3: Maart
+            4: April
+            5: Maaie
+            6: Juny
+            7: July
+            8: Augustus
+            9: Septimber
+            10: Oktober
+            11: Novimber
+            12: Desimber
+      periods:
+        format:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: AM
+            pm: PM
+        stand_alone:
+          abbreviated:
+            am: AM
+            pm: PM
+          narrow:
+            am: AM
+            pm: PM
+          wide:
+            am: AM
+            pm: PM
+      quarters:
+        format:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1e fearnsjier
+            2: 2e fearnsjier
+            3: 3e fearnsjier
+            4: 4e fearnsjier
+        stand_alone:
+          abbreviated:
+            1: K1
+            2: K2
+            3: K3
+            4: K4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: 1e fearnsjier
+            2: 2e fearnsjier
+            3: 3e fearnsjier
+            4: 4e fearnsjier

@@ -1,0 +1,15 @@
+---
+en:
+  names:
+    # The culturally appropriate casual way to refer to someone's name
+    # Say, for example, your customer has the given name "Ken" and surname "Tanaka".
+    # In English, you'd want to say something like "Hello, Ken," but in Japanese
+    # that would be considered overly familiar (to the point that it would cause offence),
+    # so the appropriate greeting would be "Hello, Tanaka-sama."
+    # This key is the culturally-appropriate equivalent of "Ken".
+    greeting: "%{given}"
+    # This is both the given and surnames, arranging them in the culturally-appropriate order.
+    # Say, for example, your customer has the given name "Ken" and surname "Tanaka".
+    # In Japanese, this would be "TanakaKen-sama" (note there is no space),
+    # but in English it would be "Ken Tanaka".
+    full: "%{given} %{surname}"

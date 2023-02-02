@@ -1,0 +1,21 @@
+---
+fi:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Osavaltio/territorio
+            optional: Osavaltio/territorio (valinnainen)
+          errors:
+            blank: Valitse osavaltio/territorio
+        zip:
+          label:
+            default: Postinumero
+            optional: Postinumero (valinnainen)
+          errors:
+            too_long: Postinumeron arvo on liian pitkä
+            contains_html_tags: Postikoodi ei voi sisältää HTML-tunnisteita.
+            contains_emojis: Postikoodi ei voi sisältää emojeita
+            contains_restricted_characters: Postinumero ei voi sisältää kiellettyjä
+              merkkejä

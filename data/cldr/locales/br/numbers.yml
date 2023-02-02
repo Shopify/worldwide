@@ -1,0 +1,423 @@
+---
+br:
+  numbers:
+    arab:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+        percent:
+          patterns:
+            default:
+              standard: "#,##0 %"
+      symbols:
+        approximately_sign: "~"
+        decimal: "٫"
+        exponential: اس
+        group: "٬"
+        infinity: "∞"
+        list: "؛"
+        minus_sign: "؜-"
+        nan: NaN
+        per_mille: "؉"
+        percent_sign: "٪؜"
+        plus_sign: "؜+"
+        superscripting_exponent: "×"
+        time_separator: ":"
+    arabext:
+      symbols:
+        decimal: "٫"
+        exponential: "×۱۰^"
+        group: "٬"
+        infinity: "∞"
+        list: "؛"
+        minus_sign: "‎-‎"
+        nan: NaN
+        per_mille: "؉"
+        percent_sign: "٪"
+        plus_sign: "‎+‎"
+        superscripting_exponent: "×"
+        time_separator: "٫"
+    bali:
+      symbols:
+        time_separator: ":"
+    beng:
+      symbols:
+        time_separator: ":"
+    brah:
+      symbols:
+        time_separator: ":"
+    cakm:
+      symbols:
+        time_separator: ":"
+    cham:
+      symbols:
+        time_separator: ":"
+    deva:
+      symbols:
+        time_separator: ":"
+    fullwide:
+      symbols:
+        time_separator: ":"
+    gonm:
+      symbols:
+        time_separator: ":"
+    gujr:
+      symbols:
+        time_separator: ":"
+    guru:
+      symbols:
+        time_separator: ":"
+    hanidec:
+      symbols:
+        time_separator: ":"
+    java:
+      symbols:
+        time_separator: ":"
+    kali:
+      symbols:
+        time_separator: ":"
+    khmr:
+      symbols:
+        time_separator: ":"
+    knda:
+      symbols:
+        time_separator: ":"
+    lana:
+      symbols:
+        time_separator: ":"
+    lanatham:
+      symbols:
+        time_separator: ":"
+    laoo:
+      symbols:
+        time_separator: ":"
+    latn:
+      formats:
+        currency:
+          patterns:
+            default:
+              accounting: "#,##0.00 ¤"
+              standard: "#,##0.00 ¤"
+            short:
+              standard:
+                '1000':
+                  few: 0 k¤
+                  many: 0 k¤
+                  one: 0 k¤
+                  other: 0 k¤
+                  two: 0 k¤
+                '10000':
+                  few: 00 k¤
+                  many: 00 k¤
+                  one: 00 k¤
+                  other: 00 k¤
+                  two: 00 k¤
+                '100000':
+                  few: 000 k¤
+                  many: 000 k¤
+                  one: 000 k¤
+                  other: 000 k¤
+                  two: 000 k¤
+                '1000000':
+                  few: 0 M¤
+                  many: 0 M¤
+                  one: 0 M¤
+                  other: 0 M¤
+                  two: 0 M¤
+                '10000000':
+                  few: 00 M¤
+                  many: 00 M¤
+                  one: 00 M¤
+                  other: 00 M¤
+                  two: 00 M¤
+                '100000000':
+                  few: 000 M¤
+                  many: 000 M¤
+                  one: 000 M¤
+                  other: 000 M¤
+                  two: 000 M¤
+                '1000000000':
+                  few: 0 G¤
+                  many: 0 G¤
+                  one: 0 G¤
+                  other: 0 G¤
+                  two: 0 G¤
+                '10000000000':
+                  few: 00 G¤
+                  many: 00 G¤
+                  one: 00 G¤
+                  other: 00 G¤
+                  two: 00 G¤
+                '100000000000':
+                  few: 000 G¤
+                  many: 000 G¤
+                  one: 000 G¤
+                  other: 000 G¤
+                  two: 000 G¤
+                '1000000000000':
+                  few: 0 T¤
+                  many: 0 T¤
+                  one: 0 T¤
+                  other: 0 T¤
+                  two: 0 T¤
+                '10000000000000':
+                  few: 00 T¤
+                  many: 00 T¤
+                  one: 00 T¤
+                  other: 00 T¤
+                  two: 00 T¤
+                '100000000000000':
+                  few: 000 T¤
+                  many: 000 T¤
+                  one: 000 T¤
+                  other: 000 T¤
+                  two: 000 T¤
+          unit:
+            few: "{0} {1}"
+            many: "{0} {1}"
+            one: "{0} {1}"
+            other: "{0} {1}"
+            two: "{0} {1}"
+        decimal:
+          patterns:
+            default:
+              standard: "#,##0.###"
+            long:
+              standard:
+                '1000':
+                  few: 0 miliad
+                  many: 0 a viliadoù
+                  one: 0 miliad
+                  other: 0 miliad
+                  two: 0 viliad
+                '10000':
+                  few: 00 miliad
+                  many: 00 a viliadoù
+                  one: 00 miliad
+                  other: 00 miliad
+                  two: 00 viliad
+                '100000':
+                  few: 000 miliad
+                  many: 000 a viliadoù
+                  one: 000 miliad
+                  other: 000 miliad
+                  two: 000 viliad
+                '1000000':
+                  few: 0 milion
+                  many: 0 a v/milionoù
+                  one: 0 milion
+                  other: 0 milion
+                  two: 0 v/milion
+                '10000000':
+                  few: 00 milion
+                  many: 00 a v/milionoù
+                  one: 00 milion
+                  other: 00 milion
+                  two: 00 v/milion
+                '100000000':
+                  few: 000 milion
+                  many: 000 a v/milionoù
+                  one: 000 milion
+                  other: 000 milion
+                  two: 000 v/milion
+                '1000000000':
+                  few: 0 miliard
+                  many: 0 a viliardoù
+                  one: 0 miliard
+                  other: 0 miliard
+                  two: 0 viliard
+                '10000000000':
+                  few: 00 miliard
+                  many: 00 a viliardoù
+                  one: 00 miliard
+                  other: 00 miliard
+                  two: 00 viliard
+                '100000000000':
+                  few: 000 miliard
+                  many: 000 a viliardoù
+                  one: 000 miliard
+                  other: 000 miliard
+                  two: 000 viliard
+                '1000000000000':
+                  few: 0 bilion
+                  many: 0 a v/bilionoù
+                  one: 0 bilion
+                  other: 0 bilion
+                  two: 0 v/bilion
+                '10000000000000':
+                  few: 00 bilion
+                  many: 00 a v/bilionoù
+                  one: 00 bilion
+                  other: 00 bilion
+                  two: 00 v/bilion
+                '100000000000000':
+                  few: 000 bilion
+                  many: 000 a v/bilionoù
+                  one: 000 bilion
+                  other: 000 bilion
+                  two: 000 v/bilion
+            short:
+              standard:
+                '1000':
+                  few: 0k
+                  many: 0k
+                  one: 0k
+                  other: 0k
+                  two: 0k
+                '10000':
+                  few: 00k
+                  many: 00k
+                  one: 00k
+                  other: 00k
+                  two: 00k
+                '100000':
+                  few: 000k
+                  many: 000k
+                  one: 000k
+                  other: 000k
+                  two: 000k
+                '1000000':
+                  few: 0M
+                  many: 0M
+                  one: 0M
+                  other: 0M
+                  two: 0M
+                '10000000':
+                  few: 00M
+                  many: 00M
+                  one: 00M
+                  other: 00M
+                  two: 00M
+                '100000000':
+                  few: 000M
+                  many: 000M
+                  one: 000M
+                  other: 000M
+                  two: 000M
+                '1000000000':
+                  few: 0G
+                  many: 0G
+                  one: 0G
+                  other: 0G
+                  two: 0G
+                '10000000000':
+                  few: 00G
+                  many: 00G
+                  one: 00G
+                  other: 00G
+                  two: 00G
+                '100000000000':
+                  few: 000G
+                  many: 000G
+                  one: 000G
+                  other: 000G
+                  two: 000G
+                '1000000000000':
+                  few: 0T
+                  many: 0T
+                  one: 0T
+                  other: 0T
+                  two: 0T
+                '10000000000000':
+                  few: 00T
+                  many: 00T
+                  one: 00T
+                  other: 00T
+                  two: 00T
+                '100000000000000':
+                  few: 000T
+                  many: 000T
+                  one: 000T
+                  other: 000T
+                  two: 000T
+        percent:
+          patterns:
+            default:
+              standard: "#,##0 %"
+        scientific:
+          patterns:
+            default:
+              standard: "#E0"
+      symbols:
+        approximately_sign: "~"
+        decimal: ","
+        exponential: E
+        group: " "
+        infinity: "∞"
+        list: ";"
+        minus_sign: "-"
+        nan: NaN
+        per_mille: "‰"
+        percent_sign: "%"
+        plus_sign: "+"
+        superscripting_exponent: "×"
+        time_separator: ":"
+    lepc:
+      symbols:
+        time_separator: ":"
+    limb:
+      symbols:
+        time_separator: ":"
+    mlym:
+      symbols:
+        time_separator: ":"
+    mong:
+      symbols:
+        time_separator: ":"
+    mtei:
+      symbols:
+        time_separator: ":"
+    mymr:
+      symbols:
+        time_separator: ":"
+    mymrshan:
+      symbols:
+        time_separator: ":"
+    nkoo:
+      symbols:
+        time_separator: ":"
+    olck:
+      symbols:
+        time_separator: ":"
+    orya:
+      symbols:
+        time_separator: ":"
+    osma:
+      symbols:
+        time_separator: ":"
+    saur:
+      symbols:
+        time_separator: ":"
+    shrd:
+      symbols:
+        time_separator: ":"
+    sora:
+      symbols:
+        time_separator: ":"
+    sund:
+      symbols:
+        time_separator: ":"
+    takr:
+      symbols:
+        time_separator: ":"
+    talu:
+      symbols:
+        time_separator: ":"
+    tamldec:
+      symbols:
+        time_separator: ":"
+    telu:
+      symbols:
+        time_separator: ":"
+    thai:
+      symbols:
+        time_separator: ":"
+    tibt:
+      symbols:
+        time_separator: ":"
+    vaii:
+      symbols:
+        time_separator: ":"

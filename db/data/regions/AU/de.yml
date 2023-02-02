@@ -1,0 +1,36 @@
+---
+de:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Vorort
+            optional: Vorort (optional)
+          errors:
+            blank: Gib einen Stadtteil ein
+            too_long: Der Vorortname ist zu lang (maximal 255 Zeichen)
+            contains_html_tags: Vorort darf keine HTML-Tags enthalten.
+            contains_emojis: Vorort darf keine Emojis enthalten
+            contains_restricted_characters: '"Stadtteil" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+        province:
+          label:
+            default: Staat/Territorium
+            optional: Staat/Territorium (optional)
+          errors:
+            blank: Wähle einen Staat/ein Territorium aus
+        zip:
+          label:
+            default: Postleitzahl
+            optional: Postleitzahl (optional)
+          errors:
+            blank: Gib eine Postleitzahl ein
+            invalid_for_country: Gib eine gültige Postleitzahl für %{country} ein
+            invalid_for_country_and_province: Gib eine gültige Postleitzahl für %{province},
+              %{country} ein
+            too_long: Der Postleitzahl-Wert ist zu lang
+            contains_html_tags: Postleitzahl darf keine HTML-Tags enthalten.
+            contains_emojis: Postleitzahl darf keine Emojis enthalten
+            contains_restricted_characters: '"Postleitzahl" darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten'

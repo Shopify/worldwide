@@ -1,0 +1,200 @@
+---
+cy:
+  rbnf:
+    grouping:
+    - :type: SpelloutRules
+      :ruleset:
+      - :type: spellout-numbering-year
+        :rules:
+        - :value: x.x
+          :rule: "=0.0=;"
+        - :value: 0
+          :rule: "=%spellout-numbering=;"
+      - :type: spellout-numbering
+        :rules:
+        - :value: 0
+          :rule: "=%spellout-cardinal-masculine=;"
+      - :type: spellout-cardinal-masculine
+        :rules:
+        - :value: "-x"
+          :rule: minws >>;
+        - :value: x.x
+          :rule: "<< pwynt >>;"
+        - :value: 0
+          :rule: dim;
+        - :value: 1
+          :rule: un;
+        - :value: 2
+          :rule: dau;
+        - :value: 3
+          :rule: tri;
+        - :value: 4
+          :rule: pedwar;
+        - :value: 5
+          :rule: pump;
+        - :value: 6
+          :rule: chwech;
+        - :value: 7
+          :rule: saith;
+        - :value: 8
+          :rule: wyth;
+        - :value: 9
+          :rule: naw;
+        - :value: 10
+          :rule: un deg[ >>];
+        - :value: 20
+          :rule: dau ddeg[ >>];
+        - :value: 30
+          :rule: "<%spellout-cardinal-masculine-before-consonant< deg[ >>];"
+        - :value: 100
+          :rule: "<%spellout-cardinal-masculine-before-consonant< cant[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< mil[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< miliwn[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< biliwn[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< triliwn[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< kwadriliwn[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-masculine-before-consonant
+        :rules:
+        - :value: "-x"
+          :rule: minws >>;
+        - :value: x.x
+          :rule: "<< pwynt >>;"
+        - :value: 0
+          :rule: dim;
+        - :value: 1
+          :rule: un;
+        - :value: 2
+          :rule: dau;
+        - :value: 3
+          :rule: tri;
+        - :value: 4
+          :rule: pedwar;
+        - :value: 5
+          :rule: pum;
+        - :value: 6
+          :rule: chwe;
+        - :value: 7
+          :rule: saith;
+        - :value: 8
+          :rule: wyth;
+        - :value: 9
+          :rule: naw;
+        - :value: 10
+          :rule: un deg[ >>];
+        - :value: 20
+          :rule: dau ddeg[ >>];
+        - :value: 30
+          :rule: "<%spellout-cardinal-masculine-before-consonant< deg[ >>];"
+        - :value: 100
+          :rule: "<%spellout-cardinal-masculine-before-consonant< cant[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< mil[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< miliwn[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< biliwn[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< triliwn[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< kwadriliwn[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine
+        :rules:
+        - :value: "-x"
+          :rule: minws >>;
+        - :value: x.x
+          :rule: "<< pwynt >>;"
+        - :value: 0
+          :rule: dim;
+        - :value: 1
+          :rule: un;
+        - :value: 2
+          :rule: dwy;
+        - :value: 3
+          :rule: tair;
+        - :value: 4
+          :rule: pedair;
+        - :value: 5
+          :rule: pump;
+        - :value: 6
+          :rule: chwech;
+        - :value: 7
+          :rule: saith;
+        - :value: 8
+          :rule: wyth;
+        - :value: 9
+          :rule: naw;
+        - :value: 10
+          :rule: un deg[ >>];
+        - :value: 20
+          :rule: dau ddeg[ >>];
+        - :value: 30
+          :rule: "<%spellout-cardinal-masculine-before-consonant< deg[ >>];"
+        - :value: 100
+          :rule: "<%spellout-cardinal-masculine-before-consonant< cant[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< mil[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< miliwn[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< biliwn[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< triliwn[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< kwadriliwn[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"
+      - :type: spellout-cardinal-feminine-before-consonant
+        :rules:
+        - :value: "-x"
+          :rule: minws >>;
+        - :value: x.x
+          :rule: "<< pwynt >>;"
+        - :value: 0
+          :rule: dim;
+        - :value: 1
+          :rule: un;
+        - :value: 2
+          :rule: dwy;
+        - :value: 3
+          :rule: tair;
+        - :value: 4
+          :rule: pedair;
+        - :value: 5
+          :rule: pum;
+        - :value: 6
+          :rule: chwe;
+        - :value: 7
+          :rule: saith;
+        - :value: 8
+          :rule: wyth;
+        - :value: 9
+          :rule: naw;
+        - :value: 10
+          :rule: un deg[ >>];
+        - :value: 20
+          :rule: dau ddeg[ >>];
+        - :value: 30
+          :rule: "<%spellout-cardinal-masculine-before-consonant< deg[ >>];"
+        - :value: 100
+          :rule: "<%spellout-cardinal-masculine-before-consonant< cant[ >>];"
+        - :value: 1000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< mil[ >>];"
+        - :value: 1000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< miliwn[ >>];"
+        - :value: 1000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< biliwn[ >>];"
+        - :value: 1000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< triliwn[ >>];"
+        - :value: 1000000000000000
+          :rule: "<%spellout-cardinal-masculine-before-consonant< kwadriliwn[ >>];"
+        - :value: 1000000000000000000
+          :rule: "=#,##0=;"

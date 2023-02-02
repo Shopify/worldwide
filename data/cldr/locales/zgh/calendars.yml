@@ -1,0 +1,293 @@
+---
+zgh:
+  calendars:
+    gregorian:
+      additional_formats:
+        d: d
+        E: ccc
+        Ed: d, E
+        Ehm: E h:mm a
+        EHm: E HH:mm
+        Ehms: E h:mm:ss a
+        EHms: E HH:mm:ss
+        Gy: G y
+        GyMMM: G y MMM
+        GyMMMd: G y MMM d
+        GyMMMEd: G y MMM d, E
+        h: h a
+        H: HH
+        hm: h:mm a
+        Hm: HH:mm
+        hms: h:mm:ss a
+        Hms: HH:mm:ss
+        hmsv: h:mm:ss a v
+        Hmsv: HH:mm:ss v
+        hmv: h:mm a v
+        Hmv: HH:mm v
+        M: M
+        Md: d/M
+        MEd: MM-dd, E
+        MMM: MMM
+        MMMd: d MMM
+        MMMEd: E d MMM
+        MMMMd: MMMM d
+        ms: m:ss
+        "y": "y"
+        yM: M/y
+        yMd: y-MM-dd
+        yMEd: E d/M/y
+        yMMM: MMM y
+        yMMMd: y MMM d
+        yMMMEd: E d MMM y
+        yMMMM: y MMMM
+        yQQQ: QQQ y
+        yQQQQ: QQQQ y
+      days:
+        format:
+          abbreviated:
+            sun: ⴰⵙⴰ
+            mon: ⴰⵢⵏ
+            tue: ⴰⵙⵉ
+            wed: ⴰⴽⵕ
+            thu: ⴰⴽⵡ
+            fri: ⴰⵙⵉⵎ
+            sat: ⴰⵙⵉⴹ
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: ⴰⵙⴰ
+            mon: ⴰⵢⵏ
+            tue: ⴰⵙⵉ
+            wed: ⴰⴽⵕ
+            thu: ⴰⴽⵡ
+            fri: ⴰⵙⵉⵎ
+            sat: ⴰⵙⵉⴹ
+          wide:
+            sun: ⴰⵙⴰⵎⴰⵙ
+            mon: ⴰⵢⵏⴰⵙ
+            tue: ⴰⵙⵉⵏⴰⵙ
+            wed: ⴰⴽⵕⴰⵙ
+            thu: ⴰⴽⵡⴰⵙ
+            fri: ⴰⵙⵉⵎⵡⴰⵙ
+            sat: ⴰⵙⵉⴹⵢⴰⵙ
+        stand_alone:
+          abbreviated:
+            sun: ⴰⵙⴰ
+            mon: ⴰⵢⵏ
+            tue: ⴰⵙⵉ
+            wed: ⴰⴽⵕ
+            thu: ⴰⴽⵡ
+            fri: ⴰⵙⵉⵎ
+            sat: ⴰⵙⵉⴹ
+          narrow:
+            sun: S
+            mon: M
+            tue: T
+            wed: W
+            thu: T
+            fri: F
+            sat: S
+          short:
+            sun: ⴰⵙⴰ
+            mon: ⴰⵢⵏ
+            tue: ⴰⵙⵉ
+            wed: ⴰⴽⵕ
+            thu: ⴰⴽⵡ
+            fri: ⴰⵙⵉⵎ
+            sat: ⴰⵙⵉⴹ
+          wide:
+            sun: ⴰⵙⴰⵎⴰⵙ
+            mon: ⴰⵢⵏⴰⵙ
+            tue: ⴰⵙⵉⵏⴰⵙ
+            wed: ⴰⴽⵕⴰⵙ
+            thu: ⴰⴽⵡⴰⵙ
+            fri: ⴰⵙⵉⵎⵡⴰⵙ
+            sat: ⴰⵙⵉⴹⵢⴰⵙ
+      eras:
+        abbr:
+          0: BCE
+          1: CE
+        name:
+          0: BCE
+          1: CE
+      fields:
+        day: ⴰⵙⵙ
+        day_period: 'ⵜⵉⵣⵉ ⴳ ⵡⴰⵙⵙ: ⵜⵉⴼⴰⵡⵜ/ⵜⴰⴷⴳⴳⵯⴰⵜ'
+        era: ⵜⴰⵙⵓⵜ
+        hour: ⵜⴰⵙⵔⴰⴳⵜ
+        minute: ⵜⵓⵙⴷⵉⴷⵜ
+        month: ⴰⵢⵢⵓⵔ
+        second: ⵜⴰⵙⵉⵏⵜ
+        week: ⵉⵎⴰⵍⴰⵙⵙ
+        weekday: ⴰⵙⵙ ⴳ ⵉⵎⴰⵍⴰⵙⵙ
+        year: ⴰⵙⴳⴳⵯⴰⵙ
+        zone: ⴰⴽⵓⴷ ⵏ ⵓⴳⵎⵎⴰⴹ
+      formats:
+        date:
+          full:
+            pattern: EEEE d MMMM y
+          long:
+            pattern: d MMMM y
+          medium:
+            pattern: d MMM, y
+          short:
+            pattern: d/M/y
+        datetime:
+          full:
+            pattern: "{{date}} {{time}}"
+          long:
+            pattern: "{{date}} {{time}}"
+          medium:
+            pattern: "{{date}} {{time}}"
+          short:
+            pattern: "{{date}} {{time}}"
+        time:
+          full:
+            pattern: HH:mm:ss zzzz
+          long:
+            pattern: HH:mm:ss z
+          medium:
+            pattern: HH:mm:ss
+          short:
+            pattern: HH:mm
+      months:
+        format:
+          abbreviated:
+            1: ⵉⵏⵏ
+            2: ⴱⵕⴰ
+            3: ⵎⴰⵕ
+            4: ⵉⴱⵔ
+            5: ⵎⴰⵢ
+            6: ⵢⵓⵏ
+            7: ⵢⵓⵍ
+            8: ⵖⵓⵛ
+            9: ⵛⵓⵜ
+            10: ⴽⵜⵓ
+            11: ⵏⵓⵡ
+            12: ⴷⵓⵊ
+          narrow:
+            1: ⵉ
+            2: ⴱ
+            3: ⵎ
+            4: ⵉ
+            5: ⵎ
+            6: ⵢ
+            7: ⵢ
+            8: ⵖ
+            9: ⵛ
+            10: ⴽ
+            11: ⵏ
+            12: ⴷ
+          wide:
+            1: ⵉⵏⵏⴰⵢⵔ
+            2: ⴱⵕⴰⵢⵕ
+            3: ⵎⴰⵕⵚ
+            4: ⵉⴱⵔⵉⵔ
+            5: ⵎⴰⵢⵢⵓ
+            6: ⵢⵓⵏⵢⵓ
+            7: ⵢⵓⵍⵢⵓⵣ
+            8: ⵖⵓⵛⵜ
+            9: ⵛⵓⵜⴰⵏⴱⵉⵔ
+            10: ⴽⵜⵓⴱⵔ
+            11: ⵏⵓⵡⴰⵏⴱⵉⵔ
+            12: ⴷⵓⵊⴰⵏⴱⵉⵔ
+        stand_alone:
+          abbreviated:
+            1: ⵉⵏⵏ
+            2: ⴱⵕⴰ
+            3: ⵎⴰⵕ
+            4: ⵉⴱⵔ
+            5: ⵎⴰⵢ
+            6: ⵢⵓⵏ
+            7: ⵢⵓⵍ
+            8: ⵖⵓⵛ
+            9: ⵛⵓⵜ
+            10: ⴽⵜⵓ
+            11: ⵏⵓⵡ
+            12: ⴷⵓⵊ
+          narrow:
+            1: ⵉ
+            2: ⴱ
+            3: ⵎ
+            4: ⵉ
+            5: ⵎ
+            6: ⵢ
+            7: ⵢ
+            8: ⵖ
+            9: ⵛ
+            10: ⴽ
+            11: ⵏ
+            12: ⴷ
+          wide:
+            1: ⵉⵏⵏⴰⵢⵔ
+            2: ⴱⵕⴰⵢⵕ
+            3: ⵎⴰⵕⵚ
+            4: ⵉⴱⵔⵉⵔ
+            5: ⵎⴰⵢⵢⵓ
+            6: ⵢⵓⵏⵢⵓ
+            7: ⵢⵓⵍⵢⵓⵣ
+            8: ⵖⵓⵛⵜ
+            9: ⵛⵓⵜⴰⵏⴱⵉⵔ
+            10: ⴽⵜⵓⴱⵔ
+            11: ⵏⵓⵡⴰⵏⴱⵉⵔ
+            12: ⴷⵓⵊⴰⵏⴱⵉⵔ
+      periods:
+        format:
+          abbreviated:
+            am: ⵜⵉⴼⴰⵡⵜ
+            pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+          narrow:
+            am: ⵜⵉⴼⴰⵡⵜ
+            pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+          wide:
+            am: ⵜⵉⴼⴰⵡⵜ
+            pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+        stand_alone:
+          abbreviated:
+            am: ⵜⵉⴼⴰⵡⵜ
+            pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+          narrow:
+            am: ⵜⵉⴼⴰⵡⵜ
+            pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+          wide:
+            am: ⵜⵉⴼⴰⵡⵜ
+            pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+      quarters:
+        format:
+          abbreviated:
+            1: ⴰⴽ 1
+            2: ⴰⴽ 2
+            3: ⴰⴽ 3
+            4: ⴰⴽ 4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: ⴰⴽⵕⴰⴹⵢⵓⵔ 1
+            2: ⴰⴽⵕⴰⴹⵢⵓⵔ 2
+            3: ⴰⴽⵕⴰⴹⵢⵓⵔ 3
+            4: ⴰⴽⵕⴰⴹⵢⵓⵔ 4
+        stand_alone:
+          abbreviated:
+            1: ⴰⴽ 1
+            2: ⴰⴽ 2
+            3: ⴰⴽ 3
+            4: ⴰⴽ 4
+          narrow:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+          wide:
+            1: ⴰⴽⵕⴰⴹⵢⵓⵔ 1
+            2: ⴰⴽⵕⴰⴹⵢⵓⵔ 2
+            3: ⴰⴽⵕⴰⴹⵢⵓⵔ 3
+            4: ⴰⴽⵕⴰⴹⵢⵓⵔ 4
