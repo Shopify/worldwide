@@ -371,7 +371,7 @@ module Worldwide
     # is the given postal code value valid for this region?
     def valid_zip?(zip)
       normalized = Zip.normalize(
-        country_code: province? ? parent.iso_code : iso_code,
+        country_code: province? && parent.iso_code ? parent.iso_code : iso_code,
         zip: zip,
       )
       valid_normalized_zip?(normalized)
