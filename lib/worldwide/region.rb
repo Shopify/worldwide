@@ -243,6 +243,11 @@ module Worldwide
       zip_example if @zip_autofill_enabled
     end
 
+    # Does this region require cities to be specified?
+    def city_required?
+      field(key: :city).autofill(locale: :en).nil?
+    end
+
     # Is this Region a continent?
     def continent?
       @continent

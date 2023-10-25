@@ -206,5 +206,18 @@ module Worldwide
         assert_nil Worldwide.region(code: country_code).autofill_zip
       end
     end
+
+    test "city_required? returns values as expected" do
+      city_not_required_countries = [:gi, :gs, :pn, :sg, :ta, :va]
+      city_required_countries = [:ca, :us, :gb]
+
+      city_not_required_countries.each do |country_code|
+        refute_predicate Worldwide.region(code: country_code), :city_required?
+      end
+
+      city_required_countries.each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :city_required?
+      end
+    end
   end
 end
