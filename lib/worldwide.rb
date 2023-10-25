@@ -84,6 +84,10 @@ module Worldwide
       Punctuation
     end
 
+    def region_by_cldr_code(**kwargs)
+      Regions.region_by_cldr_code(**kwargs)
+    end
+
     def region(**kwargs)
       Regions.region(**kwargs)
     end

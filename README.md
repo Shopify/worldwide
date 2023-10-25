@@ -176,6 +176,17 @@ $ Worldwide.region(code: "076")
 $ Worldwide.region(name: "Brazil")
 => Worldwide::Region <code: 'BR', name: 'Brazil', ... >
 
+# Get Worldwide::Region object based on an internal code used by Unicode CLDR
+# Note that you can't pass such a code directly as a `code:` argument, because the result
+# would be ambiguous:  `are` might be `ARE` (three-letter code for the United Arab Emirates)
+# or `AR-E` (province of Entre Ríos in Argentina).
+$ Worldwide.region(cldr: "caon")
+=> Worldwide::Region <iso_code: 'CA-ON', full_name: 'Ontario', ...>
+$ Worldwide.region(code: "are")
+=> Worldwide::Region <iso_code: 'AE', full_name: "United Arab Emirates', ...>
+$ Worldwide.region(cldr: "are")
+=> Worldwide::Region <iso_code: 'AR-E', full_name: 'Entre Ríos', ...>
+
 # Get array of Region objects for country code passed in (with attributes in the current locale)
 $ Worldwide.region(code: "CA").zones
 => [ Worldwide::Region <code: 'caab', name: 'Alberta', ... >, Worldwide::Region <code: 'cabc', name: 'British Columbia', ... >]

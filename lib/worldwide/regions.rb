@@ -12,7 +12,7 @@ module Worldwide
 
     class << self
       extend Forwardable
-      def_delegators :instance, :all, :region
+      def_delegators :instance, :all, :region_by_cldr_code, :region
     end
 
     def initialize
@@ -23,12 +23,18 @@ module Worldwide
       @regions
     end
 
-    def region(code: nil, name: nil)
-      unless code.nil? ^ name.nil?
-        raise ArgumentError, "Must specify exactly one of code: or name:."
+    def region(cldr: nil, code: nil, name: nil)
+      unless exactly_one_present?(cldr, code, name)
+        raise ArgumentError, "Must specify exactly one of cldr:, code: or name:. (code: is preferred)"
       end
 
-      result = if code
+      result = if cldr
+        search_code = cldr.to_s.upcase
+
+        @regions.find do |r|
+          r.cldr_code.upcase == search_code
+        end
+      elsif code
         search_code = code.to_s.upcase
 
         @regions.find do |r|
@@ -42,9 +48,17 @@ module Worldwide
         end
       end
 
-      result || @regions.find do |r|
-        r.iso_code == "ZZ" # Unknown region
-      end
+      result || Worldwide.unknown_region
+    end
+
+    private
+
+    def exactly_one_present?(first, second, third)
+      a = Util.present?(first)
+      b = Util.present?(second)
+      c = Util.present?(third)
+
+      (a ^ b ^ c) && !(a && b && c)
     end
   end
 end

@@ -173,6 +173,7 @@ module Worldwide
     test "when CLDR has no name available, full_name falls back to legacy_name" do
       dummy = Worldwide::Region.new(
         legacy_name: "Legacy name",
+        cldr_code: "x@",
         iso_code: "X@", # does not exist
       )
 
