@@ -7,14 +7,16 @@ require "worldwide/version"
 Gem::Specification.new do |spec|
   spec.name          = "worldwide"
   spec.version       = Worldwide::VERSION
-  spec.authors       = ["Christian Jaekl", "Michael Overmeyer"]
-  spec.email         = ["christian.jaekl@shopify.com"]
+  spec.author        = "Shopify"
+  spec.email         = "developers@shopify.com"
 
   spec.summary       = "Internationalization and localization APIs"
   spec.description   = "APIs to support i18n and l10n of Ruby code"
   spec.homepage      = "https://github.com/Shopify/worldwide"
 
-  spec.files         = %x(git ls-files -z).split("\x0").reject do |f|
+  spec.metadata["allowed_push_host"] = "https://rubygems.org/"
+
+  spec.files = %x(git ls-files -z).split("\x0").reject do |f|
     f.match(%r{^(rake|test|spec|features)/})
   end
   spec.bindir        = "exe"
@@ -23,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 3.0.0"
 
-  spec.add_dependency("activesupport", ">= 5.0")
-  spec.add_dependency("i18n", ">= 1.12")
-  spec.add_dependency("phonelib")
+  spec.add_dependency("activesupport", "~> 7.0")
+  spec.add_dependency("i18n", "~> 1.12.0")
+  spec.add_dependency("phonelib", "~> 0.8")
 end
