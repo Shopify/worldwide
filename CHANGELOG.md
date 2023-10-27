@@ -28,6 +28,8 @@ Nil.
 
 ---
 
+- Fix issue with deploy to rubygems.org failing
+
 [0.1.0] - 2023-10-27
 
 - Initial release of Worldwide
