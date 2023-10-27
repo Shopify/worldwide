@@ -15,11 +15,6 @@ module Worldwide
     end
 
     test "Can look up a province by iso_code" do
-      # Note that lookup of a province (subdivision) without the hyphen is not allowed,
-      # because this would be potentially ambiguous.  For example:
-      # `ARE` is the alpha-3 code for the United Arab Emirates, but
-      # `AR-E` is the code for Entre Rios, Argentina.
-
       ["CA-ON", :"CA-ON", "ca-on", :"ca-on"].each do |code|
         ontario = Worldwide.region(code: code)
         context = "Constructed using code #{code.inspect}"
@@ -28,6 +23,40 @@ module Worldwide
         assert_equal "Ontario", ontario.legacy_name, context
         assert_equal "Ontario", ontario.full_name(locale: "en-US"), context
         assert_equal "オンタリオ州", ontario.full_name(locale: "ja"), context
+      end
+    end
+
+    test "Can look up a region by cldr_code" do
+      [
+        ["ca", 13, "Canada", "Alberta"],
+        [:ca, 13, "Canada", "Alberta"],
+        ["are", 0, "Entre Ríos", nil],
+        [:are, 0, "Entre Ríos", nil],
+      ].each do |code, zones_count, name, zone_name|
+        region = Worldwide.region(cldr: code)
+
+        assert_equal name, region.legacy_name
+        assert_equal zones_count, region.zones.count
+        assert_equal zone_name, region.zones.first&.legacy_name
+      end
+    end
+
+    test "Can look up a province by cldr_code" do
+      [
+        ["caon", "Ontario", "オンタリオ州"],
+        [:caon, "Ontario", "オンタリオ州"],
+        ["jp14", "Kanagawa", "神奈川県"],
+        [:jp14, "Kanagawa", "神奈川県"],
+        ["are", "Entre Ríos", "エントレ・リオス州"],
+        [:are, "Entre Ríos", "エントレ・リオス州"],
+      ].each do |code, name, japanese_name|
+        region = Worldwide.region(cldr: code)
+        context = "Constructed using code #{code.inspect}"
+
+        assert_not_nil region, context
+        assert_equal name, region.legacy_name, context
+        assert_equal name, region.full_name(locale: "en-US"), context
+        assert_equal japanese_name, region.full_name(locale: "ja"), context
       end
     end
 

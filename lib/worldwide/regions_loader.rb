@@ -34,9 +34,10 @@ module Worldwide
       current_region = find_region(code: code)
       if current_region.nil?
         current_region = if /^[0-9]+$/.match?(code)
-          Region.new(numeric_three: code, continent: continent?(code))
+          Region.new(cldr_code: cldr_code(numeric_three: code), numeric_three: code, continent: continent?(code))
         else
           Region.new(
+            cldr_code: cldr_code(iso_code: code, numeric_three: country_codes.dig(code, "numeric")),
             iso_code: code,
             alpha_three: country_codes.dig(code, "alpha3"),
             numeric_three: country_codes.dig(code, "numeric"),
@@ -86,12 +87,25 @@ module Worldwide
       region.zip_prefixes = zone["zip_prefixes"] || []
     end
 
+    # When looking up names in the CLDR data files, we need to use CLDR's naming convention.
+    # ISO code CA is CLDR code ca
+    # ISO code CA-ON is CLDR code caon
+    def cldr_code(iso_code: nil, numeric_three: nil)
+      result = (iso_code || numeric_three).to_s
+      if 2 == result.length
+        result.upcase
+      else
+        result.downcase.delete("-")
+      end
+    end
+
     def construct_eu
       eu = Region.new(
         alpha_three: "EUE", # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
         continent: false,
         country: false,
         deprecated: false,
+        cldr_code: cldr_code(iso_code: "EU"),
         iso_code: "EU",
         legacy_code: "EU",
         legacy_name: "European Union",
@@ -124,6 +138,7 @@ module Worldwide
         continent: false,
         country: false,
         deprecated: true,
+        cldr_code: cldr_code(iso_code: "ZZ"),
         iso_code: "ZZ",
         legacy_code: "ZZ",
         legacy_name: "Unknown",
@@ -144,7 +159,7 @@ module Worldwide
 
     def find_region(code:)
       adjusted_code = code.to_s.upcase
-      @regions.find { |r| r.iso_code == adjusted_code || r.numeric_three == adjusted_code || r.alpha_three == adjusted_code }
+      @regions.find { |r| r.cldr_code.upcase == adjusted_code || r.iso_code == adjusted_code || r.numeric_three == adjusted_code || r.alpha_three == adjusted_code }
     end
 
     def continent?(code)
@@ -162,6 +177,7 @@ module Worldwide
         continent: false,
         country: true,
         deprecated: spec["deprecated"] || false,
+        cldr_code: cldr_code(iso_code: code, numeric_three: country_codes.dig(code, "numeric")),
         iso_code: code,
         legacy_code: code,
         legacy_name: spec["name"],
@@ -197,15 +213,18 @@ module Worldwide
         zone["code"]
       end
 
+      numeric_three = zone["numeric_three"] || country_codes.dig(iso_code, "numeric")
+
       subregion = Region.new(
         alpha_three: zone["alpha_three"] || country_codes.dig(iso_code, "alpha3"),
         continent: false,
         country: false,
         deprecated: zone["deprecated"] || false,
+        cldr_code: cldr_code(iso_code: iso_code, numeric_three: numeric_three),
         iso_code: iso_code,
         legacy_code: zone["code"],
         legacy_name: zone["name"],
-        numeric_three: zone["numeric_three"] || country_codes.dig(iso_code, "numeric"),
+        numeric_three: numeric_three,
         province: true,
         short_name: short_name,
         tax_name: zone["tax_name"],

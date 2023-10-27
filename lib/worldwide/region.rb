@@ -19,6 +19,7 @@ module Worldwide
       :example_city,
       :flag,
       :format,
+      :cldr_code,
       :iso_code,
       :languages,
       :neighbours,
@@ -68,6 +69,9 @@ module Worldwide
     # show them as part of a formatted address.  If the province is missing, we will auto-infer it
     # based on the zip (note that this auto-inference may be wrong for some addresses near a border).
     attr_accessor :hide_provinces_from_addresses
+
+    # The CLDR code for this region.
+    attr_reader :cldr_code
 
     # The ISO-3166-2 code for this region (e.g. "CA", "CA-ON")
     # or, if there is no alpha-2 code defined for this region, a numeric code (e.g. "001").
@@ -172,6 +176,7 @@ module Worldwide
       continent: false,
       country: false,
       deprecated: false,
+      cldr_code: nil,
       iso_code: nil,
       legacy_code: nil,
       legacy_name: nil,
@@ -190,6 +195,7 @@ module Worldwide
       @continent = continent
       @country = country
       @deprecated = deprecated
+      @cldr_code = cldr_code
       @iso_code = iso_code&.to_s&.upcase
       @legacy_code = legacy_code
       @legacy_name = legacy_name
@@ -365,18 +371,6 @@ module Worldwide
     end
 
     private
-
-    # When looking up names in the CLDR data files, we need to use CLDR's naming convention.
-    # ISO code CA is CLDR code ca
-    # ISO code CA-ON is CLDR code caon
-    def cldr_code
-      result = (iso_code || numeric_three).to_s
-      if 2 == result.length
-        result.upcase
-      else
-        result.downcase.delete("-")
-      end
-    end
 
     def cross_border_zip_includes_province?(zip:, province_code:)
       return false unless country?
