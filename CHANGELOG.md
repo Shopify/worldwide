@@ -24,7 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-Nil.
+- Add Region#group and Region#group_name [#15](https://github.com/Shopify/worldwide/pull/15)
 
 ---
 
