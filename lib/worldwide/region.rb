@@ -19,6 +19,8 @@ module Worldwide
       :example_city,
       :flag,
       :format,
+      :group,
+      :group_name,
       :cldr_code,
       :iso_code,
       :languages,
@@ -64,6 +66,14 @@ module Worldwide
     #   - edit: the fields to present on an address input form
     #   - show: how to arrange the fields when formatting an address for display
     attr_accessor :format
+
+    # The string that results from appending " Countries" to the adjectival form of the {group_name}
+    # @example
+    #   CountryDb.country(code: "CA").group == "North American Countries"
+    attr_accessor :group
+
+    # The continent that this region is part of.
+    attr_accessor :group_name
 
     # If this flag is set, then we support provinces "under the hood" for this country, but we do not
     # show them as part of a formatted address.  If the province is missing, we will auto-infer it
@@ -210,6 +220,8 @@ module Worldwide
       @currency = nil
       @flag = nil
       @format = {}
+      @group = nil
+      @group_name = nil
       @languages = []
       @neighbours = []
       @partial_zip_regex = nil
