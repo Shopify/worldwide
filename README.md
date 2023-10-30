@@ -99,7 +99,7 @@ Worldwide exposes the notion of a "region", or political subdivision.  This can 
 
 Note that, when exposing geographic information to users, you should be careful what you refer
 to as a "country".  For backward compatibility with historical APIs, we use the term "country"
-to refer to what CLDR refers to as a "territory", and what we describe in our user interfarce as
+to refer to what CLDR refers to as a "territory", and what we describe in our user interface as
 a "country / region".  Examples of such entities include Canada, the United States, and Russia,
 but also territories with a "dual" status such as Guernsey, Hong Kong, and Martinique.
 
