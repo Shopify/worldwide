@@ -75,7 +75,7 @@ module Worldwide
         [:US, :MA, "2128"],
         [:US, :NY, "100018"],
         [:US, :CA, "902210"],
-        [:US, :PR, "000901"],
+        [:US, :PR, "006000"],
       ].each do |country_code, province_code, zip|
         assert_equal false, Worldwide.region(code: country_code).valid_zip?(zip)
         assert_equal false, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
