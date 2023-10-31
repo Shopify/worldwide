@@ -301,7 +301,7 @@ module Worldwide
 
     # Does this region have postal codes?
     def has_zip?
-      format["show"]&.include?("{zip}")
+      !!format["show"]&.include?("{zip}")
     end
 
     # Is this Region considered a "province" (political subdivision of a "country")?

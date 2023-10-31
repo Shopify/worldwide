@@ -11,6 +11,7 @@ module Worldwide
       assert_equal false, region.continent?
       assert_equal false, region.country?
       assert_equal false, region.deprecated?
+      assert_equal false, region.has_zip?
       assert_equal "ZZ", region.iso_code
       assert_nil region.legacy_code
       assert_nil region.legacy_name
