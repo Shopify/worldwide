@@ -104,6 +104,14 @@ module Worldwide
       end
     end
 
+    test "Region uses parent from alternates" do
+      pr = Worldwide.region(code: "PR")
+
+      assert_equal "Puerto Rico", pr.legacy_name
+      assert_equal "PR", pr.legacy_code
+      assert_equal "US", pr.parent.iso_code
+    end
+
     test "Look up with both code and name raises" do
       assert_raises ArgumentError do
         Worldwide.region(code: "CA", name: "Canada")
