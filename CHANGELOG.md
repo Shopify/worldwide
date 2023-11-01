@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Ensure Region#has_zip? returns a boolean for all regions [#17](https://github.com/Shopify/worldwide/pull/17)
 - Zip normalization bugfix when parent isocode is not set [#6](https://github.com/Shopify/worldwide/pull/6)
 - Update region parent when alternates are defined [#18](https://github.com/Shopify/worldwide/pull/18)
+- Add partial matching for Region#valid_zip? [#19](https://github.com/Shopify/worldwide/pull/19)
 
 ---
 

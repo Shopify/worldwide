@@ -4,6 +4,13 @@ require "test_helper"
 
 module Worldwide
   class RegionValidationTest < ActiveSupport::TestCase
+    setup do
+      @mappings = Dir.glob("test/lib/zips/*").map do |file|
+        country = File.basename(file, ".*")
+        [country, YAML.safe_load_file(file)]
+      end.to_h
+    end
+
     test "validity of valid zips in countries where we don't have province-specific zip prefixes" do
       [
         [:BR, :BA, "41150-100"],
@@ -99,6 +106,45 @@ module Worldwide
       ].each do |country_code, province_code, zip|
         assert_equal true, Worldwide.region(code: country_code).valid_zip?(zip)
         assert_equal false, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
+      end
+    end
+
+    test "#valid_zip? with valid partial postal codes" do
+      [
+        [:CA, "T1Y"],
+        [:CA, "V5T"],
+        [:CA, "R3B"],
+        [:CA, "X0E"],
+        [:GB, "BF1"],
+        [:GB, "sw1"],
+        [:GB, "BT30"],
+        [:GB, "AB99"],
+        [:GB, "Cf3"],
+        [:IE, "D12"],
+        [:IE, "D13"],
+        [:IE, "D6W"],
+        [:IE, "F93"],
+        [:IE, "H14"],
+      ].each do |country, zip|
+        assert Worldwide.region(code: country).valid_zip?(zip, partial_match: true), "Partial zip #{zip} should be valid for #{country}"
+      end
+    end
+
+    test "#valid_zip? with invalid partial zip" do
+      [
+        [:CA, "A"],
+        [:CA, ""],
+        [:GB, "s"],
+        [:GB, ""],
+        [:GB, "K1A"],
+        [:IE, "D1"],
+        [:IE, "s"],
+        [:IE, "V95 K"],
+        [:US, "123"],
+        [:US, "150225"],
+        [:US, "ab123"],
+      ].each do |country, zip|
+        refute Worldwide.region(code: country).valid_zip?(zip, partial_match: true), "Partial zip #{zip} should be invalid for #{country}"
       end
     end
   end
