@@ -24,6 +24,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+Nil.
+
+---
+
+[0.3.0] - 2023-11-03
 - Add code alternates for Japan [#23](https://github.com/Shopify/worldwide/pull/23)
 - Add code alternates for Puerto Rico [#24](https://github.com/Shopify/worldwide/pull/24)
 - Record multiple parents per region [#27](https://github.com/Shopify/worldwide/pull/27)
@@ -32,7 +37,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   [#29](https://github.com/Shopify/worldwide/pull/29)
 - Handle ISO_CODE only zones lookup [#26](https://github.com/Shopify/worldwide/pull/26)
 
----
 
 [0.2.0] - 2023-11-01
 
