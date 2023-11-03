@@ -260,7 +260,7 @@ module Worldwide
     def associated_country
       return self if country?
 
-      parents.find(&:country?)
+      parent_country
     end
 
     # The value with which to autofill the zip, if this region has zip autofill active;
@@ -392,6 +392,21 @@ module Worldwide
 
     private
 
+    def answers_to_cldr_code(search_code)
+      return false if Util.blank?(search_code) || Util.blank?(cldr_code)
+      return true if search_code.casecmp(cldr_code).zero?
+
+      pc = parent_country
+      "#{pc&.cldr_code&.downcase}#{cldr_code.downcase}" == search_code.downcase
+    end
+
+    def answers_to_iso_code(search_code)
+      return true if search_code == iso_code
+
+      pc = parent_country
+      "#{pc&.iso_code}-#{iso_code}" == search_code
+    end
+
     def cross_border_zip_includes_province?(zip:, province_code:)
       return false unless country?
 
@@ -414,6 +429,10 @@ module Worldwide
 
     def inspected_fields
       INSPECTION_FIELDS.map { |field_name| "@#{field_name}=#{send(field_name).inspect}" }.join(", ")
+    end
+
+    def parent_country
+      parents.find(&:country?)
     end
 
     # Checks whether the given value is acceptable according to the regular expression defined for the country.

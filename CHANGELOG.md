@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add code alternates for Japan [#23](https://github.com/Shopify/worldwide/pull/23)
 - Add code alternates for Puerto Rico [#24](https://github.com/Shopify/worldwide/pull/24)
 - Record multiple parents per region [#27](https://github.com/Shopify/worldwide/pull/27)
+- Lookup by parent-child ISO and CLDR codes for dual-status territories
+  [#29](https://github.com/Shopify/worldwide/pull/29)
 
 ---
 

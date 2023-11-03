@@ -32,13 +32,13 @@ module Worldwide
         search_code = cldr.to_s.upcase
 
         @regions.find do |r|
-          r.cldr_code.upcase == search_code
+          r.send(:answers_to_cldr_code, search_code)
         end
       elsif code
         search_code = code.to_s.upcase
 
         @regions.find do |r|
-          r.iso_code == search_code || r.alpha_three == search_code || r.numeric_three == search_code
+          r.send(:answers_to_iso_code, search_code) || r.alpha_three == search_code || r.numeric_three == search_code
         end
       else # search by name
         search_name = name.upcase
