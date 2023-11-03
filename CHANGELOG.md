@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add region.building_number_may_be_in_address2 [#28](https://github.com/Shopify/worldwide/pull/28)
 - Lookup by parent-child ISO and CLDR codes for dual-status territories
   [#29](https://github.com/Shopify/worldwide/pull/29)
+- Handle ISO_CODE only zones lookup [#26](https://github.com/Shopify/worldwide/pull/26)
 
 ---
 
