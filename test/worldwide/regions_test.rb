@@ -151,5 +151,23 @@ module Worldwide
         end
       end
     end
+
+    test "Can look up associated territory using its parent-child ISO code" do
+      pr = Worldwide.region(code: "PR")
+      uspr = Worldwide.region(code: "US-PR")
+
+      assert_not_nil pr
+      assert_equal "PR", pr.iso_code
+      assert_equal pr, uspr
+    end
+
+    test "Can look up associated territory using its parent-child CLDR code" do
+      pr = Worldwide.region(cldr: "PR")
+      uspr = Worldwide.region(cldr: "uspr")
+
+      assert_not_nil pr
+      assert_equal "PR", pr.iso_code
+      assert_equal pr, uspr
+    end
   end
 end
