@@ -113,6 +113,21 @@ module Worldwide
       assert_equal "CA-BC", zone.iso_code
     end
 
+    test "can look up zones that go by iso_code" do
+      [
+        ["MX", "AGU", "MXAGU", "MX-AGU", "Aguascalientes"],
+        ["JP", "01", "JP01", "JP-01", "Hokkaidō"],
+        ["KR", "26", "KR26", "KR-26", "Busan"],
+        ["PE", "AMA", "PEAMA", "PE-AMA", "Amazonas"],
+      ].each do |country_code, zone_code, cldr_code, iso_code, expected_name|
+        country = Worldwide.region(code: country_code)
+
+        assert_equal expected_name, country.zone(code: zone_code).legacy_name
+        assert_equal expected_name, country.zone(code: cldr_code).legacy_name
+        assert_equal expected_name, country.zone(code: iso_code).legacy_name
+      end
+    end
+
     test "look up with both code and name raises" do
       ca = Worldwide.region(code: "CA")
 

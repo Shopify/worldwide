@@ -341,7 +341,8 @@ module Worldwide
 
         zones.find do |region|
           [search_code, alt_search_code].any? do |candidate|
-            candidate == region.alpha_three ||
+            candidate == subdivision_code(region.iso_code) ||
+              candidate == region.alpha_three ||
               candidate == region.iso_code ||
               candidate == region.legacy_code ||
               candidate == region.numeric_three ||
@@ -472,6 +473,13 @@ module Worldwide
           prefix.start_with?(stripped) || stripped.start_with?(prefix)
         end
       end&.first
+    end
+
+    def subdivision_code(iso_code)
+      return iso_code if iso_code.nil? || iso_code.length < 3
+
+      country_code, subdivision_code = iso_code.split("-")
+      return subdivision_code if country_code.casecmp(associated_country.iso_code).zero?
     end
 
     def valid_normalized_zip?(normalized, province_code: nil, partial_match: false)
