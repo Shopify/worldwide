@@ -47,6 +47,10 @@ module Worldwide
     # If we require a building number in an address, then this will be true.
     attr_accessor :building_number_required
 
+    # In some countries, an address may have the building number in address2.
+    # If we are allowed to have a building number in address2, then this will be true.
+    attr_accessor :building_number_may_be_in_address2
+
     # Alternate codes which may be used to designate this region
     attr_accessor :code_alternates
 
@@ -219,6 +223,7 @@ module Worldwide
       @use_zone_code_as_short_name = use_zone_code_as_short_name
 
       @building_number_required = false
+      @building_number_may_be_in_address2 = false
       @currency = nil
       @flag = nil
       @format = {}

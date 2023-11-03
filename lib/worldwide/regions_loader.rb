@@ -59,6 +59,7 @@ module Worldwide
 
     def apply_territory_attributes(region, spec)
       region.building_number_required = spec["building_number_required"] || true
+      region.building_number_may_be_in_address2 = spec["building_number_may_be_in_address2"] || false
       currency_code = spec["currency"]
       region.currency = Worldwide.currency(code: currency_code) unless currency_code.nil?
       region.flag = spec["emoji"]
