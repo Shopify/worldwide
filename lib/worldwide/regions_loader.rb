@@ -46,9 +46,7 @@ module Worldwide
         @regions << current_region
       end
 
-      if parent.present? && current_region.parent != parent
-        current_region.parent = parent
-      end
+      current_region.parents << parent if Util.present?(parent)
       parent&.add_zone(current_region)
       return current_region if children.nil?
 

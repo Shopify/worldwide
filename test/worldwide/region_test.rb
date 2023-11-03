@@ -76,7 +76,7 @@ module Worldwide
 
       region.add_zone(zone)
 
-      assert_equal region, zone.parent
+      assert_includes zone.parents, region
       assert_equal [zone], region.zones
       assert_equal zone, region.zone(code: "XB")
     end
@@ -219,6 +219,19 @@ module Worldwide
 
       city_required_countries.each do |country_code|
         assert_predicate Worldwide.region(code: country_code), :city_required?
+      end
+    end
+
+    test "associated_country returns the expected country" do
+      {
+        ca: "CA",
+        gb: "GB",
+        ic: "ES",
+        pr: "US",
+        sh: "SH",
+        us: "US",
+      }.each do |region_code, expected_country|
+        assert_equal expected_country, Worldwide.region(code: region_code).associated_country.iso_code
       end
     end
   end

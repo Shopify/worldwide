@@ -34,7 +34,9 @@ module Worldwide
       :zip_requirement,
     ]
 
-    attr_accessor :parent
+    # A region may have more than one parent.
+    # For example, Puerto Rico (PR/US-PR) is associated with both the US and the Caribbean (029)
+    attr_accessor :parents
 
     # ISO-3166 three-letter code for this region, if there is one.
     # Otherwise, nil.
@@ -236,7 +238,7 @@ module Worldwide
       @zip_prefixes = []
       @zip_regex = nil
 
-      @parent = nil
+      @parents = [].to_set
       @zones = []
     end
 
@@ -249,11 +251,17 @@ module Worldwide
     def add_zone(region)
       return if @zones.include?(region)
 
-      region.parent = self
+      region.parents << self
       @zones.append(region)
     end
 
     # Attributes
+
+    def associated_country
+      return self if country?
+
+      parents.find(&:country?)
+    end
 
     # The value with which to autofill the zip, if this region has zip autofill active;
     # otherwise, nil.
@@ -371,7 +379,7 @@ module Worldwide
     # is the given postal code value valid for this region?
     def valid_zip?(zip, partial_match: false)
       normalized = Zip.normalize(
-        country_code: province? && parent.iso_code ? parent.iso_code : iso_code,
+        country_code: province? && associated_country.iso_code ? associated_country.iso_code : iso_code,
         zip: zip,
       )
       valid_normalized_zip?(normalized, partial_match: partial_match)
@@ -412,7 +420,9 @@ module Worldwide
     # @param value [String] for the postal code
     # @return [Boolean]
     def passes_country_zip_regexp?(value:, partial_match: false)
-      return parent.send(:passes_country_zip_regexp?, value: value, partial_match: partial_match) if province?
+      if province?
+        return associated_country.send(:passes_country_zip_regexp?, value: value, partial_match: partial_match)
+      end
 
       return false if partial_match && partial_zip_regex.nil?
 
@@ -449,7 +459,7 @@ module Worldwide
       if country?
         country = self
       elsif province?
-        country = parent
+        country = associated_country
         province_code ||= legacy_code
       end
 
