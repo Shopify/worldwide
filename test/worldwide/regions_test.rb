@@ -109,7 +109,7 @@ module Worldwide
 
       assert_equal "Puerto Rico", pr.legacy_name
       assert_equal "PR", pr.legacy_code
-      assert_equal "US", pr.parent.iso_code
+      assert_equal "US", pr.associated_country.iso_code
     end
 
     test "Look up with both code and name raises" do
@@ -135,6 +135,21 @@ module Worldwide
     test "Looking up a region that does not exist returns the unknown region ZZ" do
       assert_equal "ZZ", Worldwide.region(code: "bogus-does-not-exist").iso_code
       assert_equal "ZZ", Worldwide.region(code: "CA").zone(code: "bogus-does-not-exist").iso_code
+    end
+
+    test "Multi-parent regions have all expected parents recorded" do
+      {
+        bq: ["029", "NL"],
+        ca: ["021"],
+        gb: ["154"],
+        hk: ["030", "CN"],
+        pr: ["029", "US"],
+        sh: ["011", "GB"],
+      }.each do |region_code, expected_parents|
+        expected_parents.each do |parent_code|
+          assert_includes Worldwide.region(code: region_code).parents, Worldwide.region(code: parent_code)
+        end
+      end
     end
   end
 end
