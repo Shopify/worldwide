@@ -24,7 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-Nil.
+- Add region.autofill_city_enabled [#31](https://github.com/Shopify/worldwide/pull/31)
 
 ---
 

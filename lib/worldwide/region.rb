@@ -42,6 +42,10 @@ module Worldwide
     # Otherwise, nil.
     attr_reader :alpha_three
 
+    # Some countries have only a single city (i.e Singapore, Vatican City), so the city value can be autofilled.
+    # Where this is the case, this will be true.
+    attr_accessor :autofill_city_enabled
+
     # In some countries, every address must have a building number.
     # In others (e.g., GB), some addresses rely on just a building name, not a number.
     # If we require a building number in an address, then this will be true.
@@ -222,6 +226,7 @@ module Worldwide
       @tax_rate = tax_rate
       @use_zone_code_as_short_name = use_zone_code_as_short_name
 
+      @autofill_city_enabled = false
       @building_number_required = false
       @building_number_may_be_in_address2 = false
       @currency = nil

@@ -58,6 +58,7 @@ module Worldwide
     end
 
     def apply_territory_attributes(region, spec)
+      region.autofill_city_enabled = spec["autofill_city_enabled"] || false
       region.building_number_required = spec["building_number_required"] || true
       region.building_number_may_be_in_address2 = spec["building_number_may_be_in_address2"] || false
       currency_code = spec["currency"]
