@@ -82,10 +82,12 @@ module Worldwide
       region.zip_requirement = spec["zip_requirement"]
       region.zip_regex = spec["zip_regex"]
       region.zips_crossing_provinces = spec["zips_crossing_provinces"]
+      region.name_alternates = spec["name_alternates"] || []
     end
 
     def apply_zone_attributes(region, zone)
       region.code_alternates = zone["code_alternates"] || []
+      region.name_alternates = zone["name_alternates"] || []
       region.example_city = zone["example_city"]
       region.neighbours = zone["neighboring_zones"]
       region.zip_prefixes = zone["zip_prefixes"] || []
