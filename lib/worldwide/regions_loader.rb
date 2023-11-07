@@ -9,6 +9,9 @@ module Worldwide
     WORLD_CODE = "001" # UN code for the whole world
 
     def load_regions
+      @regions_by_cldr_code = {}
+      @regions_by_iso_code = {}
+
       # Load country/region definitions out of the db/data/regions/??.yml files
       @regions = Dir["#{Worldwide::Paths::REGIONS_ROOT}/*.yml"].map do |filename|
         load_territory(filename)
@@ -25,10 +28,38 @@ module Worldwide
 
       construct_unknown
 
-      @regions.freeze
+      @regions.each do |region|
+        construct_lookup_info(region)
+      end
+
+      [@regions.freeze, @regions_by_cldr_code, @regions_by_iso_code]
     end
 
     private
+
+    def construct_lookup_info(region)
+      pc = region.send(:parent_country)
+
+      # Remember CLDR code(s) for later use during lookup
+
+      search_code = region.cldr_code.to_s.upcase
+      @regions_by_cldr_code[search_code] = region if Util.present?(search_code)
+
+      @regions_by_cldr_code["#{pc.cldr_code.upcase}#{search_code}"] = region if Util.present?(pc&.cldr_code)
+
+      # Remember ISO 3166 code(s) for later use during lookup
+
+      iso_code = region.iso_code
+      @regions_by_iso_code[iso_code] = region if Util.present?(iso_code)
+
+      @regions_by_iso_code["#{pc.iso_code}-#{iso_code}"] = region if Util.present?(pc)
+
+      alpha_three = region.alpha_three
+      @regions_by_iso_code[alpha_three] = region if Util.present?(alpha_three)
+
+      numeric_three = region.numeric_three
+      @regions_by_iso_code[numeric_three] = region if Util.present?(numeric_three)
+    end
 
     def apply_hierarchy(parent:, code:, children:)
       current_region = find_region(code: code)
