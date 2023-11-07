@@ -46,8 +46,12 @@ module Worldwide
         @regions << current_region
       end
 
-      current_region.parents << parent if Util.present?(parent)
+      if Util.present?(parent)
+        current_region.parents << parent
+        current_region.parent_country = parent if parent.country?
+      end
       parent&.add_zone(current_region)
+
       return current_region if children.nil?
 
       children.each do |child_code, grandchildren|

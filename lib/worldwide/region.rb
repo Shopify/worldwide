@@ -38,6 +38,9 @@ module Worldwide
     # For example, Puerto Rico (PR/US-PR) is associated with both the US and the Caribbean (029)
     attr_accessor :parents
 
+    # The parent country of this region.
+    attr_accessor :parent_country
+
     # ISO-3166 three-letter code for this region, if there is one.
     # Otherwise, nil.
     attr_reader :alpha_three
@@ -248,6 +251,7 @@ module Worldwide
       @zip_regex = nil
 
       @parents = [].to_set
+      @parent_country = nil
       @zones = []
     end
 
@@ -439,10 +443,6 @@ module Worldwide
 
     def inspected_fields
       INSPECTION_FIELDS.map { |field_name| "@#{field_name}=#{send(field_name).inspect}" }.join(", ")
-    end
-
-    def parent_country
-      parents.find(&:country?)
     end
 
     # Checks whether the given value is acceptable according to the regular expression defined for the country.
