@@ -110,6 +110,10 @@ module Worldwide
     # This name is the name that was traditionally returned by "country_db".
     attr_reader :legacy_name
 
+    # Other names that may be used to refer to this region.
+    # E.g., "Czech Republic" is also known as "Czechia".
+    attr_accessor :name_alternates
+
     # iso_code values of regions (subdivisions) within the same country that border this region.
     # E.g., for CA-ON, the neighbouring zones are CA-MB, CA-NU and CA-QC.
     attr_accessor :neighbours

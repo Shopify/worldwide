@@ -249,5 +249,26 @@ module Worldwide
         assert_equal expected_country, Worldwide.region(code: region_code).associated_country.iso_code
       end
     end
+
+    test "name alternates are returned as expected" do
+      {
+        cz: ["Czechia"],
+        sz: ["Swaziland"],
+        us: ["United States of America"],
+        ca: [],
+      }.each do |region_code, expected_alternates|
+        assert_equal expected_alternates, Worldwide.region(code: region_code).name_alternates
+      end
+    end
+
+    test "name alternates are returned as expected on zones" do
+      [
+        [:th, "TH-10", ["Krung Thep Maha Nakhon"]],
+        [:jp, "JP-01", ["Hokkaido Prefecture", "北海道"]],
+        [:ca, "ON", []],
+      ].each do |region_code, zone_code, expected_alternates|
+        assert_equal expected_alternates, Worldwide.region(code: region_code).zone(code: zone_code).name_alternates
+      end
+    end
   end
 end
