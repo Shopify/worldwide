@@ -442,7 +442,7 @@ module Worldwide
     end
 
     def parent_country
-      parents.find(&:country?)
+      @parent_country ||= parents.find(&:country?)
     end
 
     # Checks whether the given value is acceptable according to the regular expression defined for the country.
