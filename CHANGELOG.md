@@ -24,11 +24,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+Nil.
+
+---
+
+[0.4.0] - 2023-11-08
 - Add region name alternates [#32](https://github.com/Shopify/worldwide/pull/32)
 - Cache `Region#parent_name` [#33](https://github.com/Shopify/worldwide/pull/33)
 - Use hash tables to look up regions by code [#36](https://github.com/Shopify/worldwide/pull/36)
-
----
 
 [0.3.0] - 2023-11-03
 - Add code alternates for Japan [#23](https://github.com/Shopify/worldwide/pull/23)
