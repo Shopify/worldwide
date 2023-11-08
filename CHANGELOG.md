@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add region name alternates [#32](https://github.com/Shopify/worldwide/pull/32)
 - Cache `Region#parent_name` [#33](https://github.com/Shopify/worldwide/pull/33)
+- Use hash tables to look up regions by code [#36](https://github.com/Shopify/worldwide/pull/36)
 
 ---
 

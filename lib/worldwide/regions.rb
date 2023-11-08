@@ -16,7 +16,7 @@ module Worldwide
     end
 
     def initialize
-      @regions = RegionsLoader.new.load_regions
+      @regions, @regions_by_cldr_code, @regions_by_iso_code = RegionsLoader.new.load_regions
     end
 
     def all
@@ -29,17 +29,9 @@ module Worldwide
       end
 
       result = if cldr
-        search_code = cldr.to_s.upcase
-
-        @regions.find do |r|
-          r.send(:answers_to_cldr_code, search_code)
-        end
+        @regions_by_cldr_code[cldr.to_s.upcase]
       elsif code
-        search_code = code.to_s.upcase
-
-        @regions.find do |r|
-          r.send(:answers_to_iso_code, search_code) || r.alpha_three == search_code || r.numeric_three == search_code
-        end
+        @regions_by_iso_code[code.to_s.upcase]
       else # search by name
         search_name = name.upcase
 
