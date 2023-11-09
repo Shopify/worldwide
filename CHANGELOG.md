@@ -25,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add support for deprecated timezone Australia/Canberra [#35](https://github.com/Shopify/worldwide/pull/35)
+- Add alternate codes for territories [#39](https://github.com/Shopify/worldwide/pull/39)
 
 ---
 

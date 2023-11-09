@@ -92,6 +92,7 @@ module Worldwide
       region.building_number_required = spec["building_number_required"] || true
       region.building_number_may_be_in_address2 = spec["building_number_may_be_in_address2"] || false
       currency_code = spec["currency"]
+      region.code_alternates = spec["code_alternates"] || []
       region.currency = Worldwide.currency(code: currency_code) unless currency_code.nil?
       region.flag = spec["emoji"]
       region.format = spec["format"]
