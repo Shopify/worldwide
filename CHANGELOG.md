@@ -1,10 +1,13 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## How do I make a good changelog?
+
 ### Guiding Principles
+
 - Changelogs are for humans, not machines.
 - There should be an entry for every single version.
 - The same types of changes should be grouped.
@@ -24,17 +27,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add zone name alternates for Italy [#42](https://github.com/Shopify/worldwide/pull/35)
 - Add support for deprecated timezone Australia/Canberra [#35](https://github.com/Shopify/worldwide/pull/35)
 - Add alternate codes for territories [#39](https://github.com/Shopify/worldwide/pull/39)
 - Allow building numbers on address2 field for Austrian addresses [#40](https://github.com/Shopify/worldwide/pull/40)
+
 ---
 
 [0.4.0] - 2023-11-08
+
 - Add region name alternates [#32](https://github.com/Shopify/worldwide/pull/32)
 - Cache `Region#parent_name` [#33](https://github.com/Shopify/worldwide/pull/33)
 - Use hash tables to look up regions by code [#36](https://github.com/Shopify/worldwide/pull/36)
 
 [0.3.0] - 2023-11-03
+
 - Add code alternates for Japan [#23](https://github.com/Shopify/worldwide/pull/23)
 - Add code alternates for Puerto Rico [#24](https://github.com/Shopify/worldwide/pull/24)
 - Record multiple parents per region [#27](https://github.com/Shopify/worldwide/pull/27)
@@ -42,7 +49,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Lookup by parent-child ISO and CLDR codes for dual-status territories
   [#29](https://github.com/Shopify/worldwide/pull/29)
 - Handle ISO_CODE only zones lookup [#26](https://github.com/Shopify/worldwide/pull/26)
-
 
 [0.2.0] - 2023-11-01
 
