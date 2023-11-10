@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add support for deprecated timezone Australia/Canberra [#35](https://github.com/Shopify/worldwide/pull/35)
 - Add alternate codes for territories [#39](https://github.com/Shopify/worldwide/pull/39)
-
+- Allow building numbers on address2 field for Austrian addresses [#40](https://github.com/Shopify/worldwide/pull/40)
 ---
 
 [0.4.0] - 2023-11-08
