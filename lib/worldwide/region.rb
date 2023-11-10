@@ -272,6 +272,17 @@ module Worldwide
       parent_country
     end
 
+    def associated_continent
+      return self if continent?
+
+      parents.each do |parent|
+        candidate = parent.associated_continent
+        return candidate unless candidate.nil?
+      end
+
+      nil
+    end
+
     # The value with which to autofill the zip, if this region has zip autofill active;
     # otherwise, nil.
     def autofill_zip
