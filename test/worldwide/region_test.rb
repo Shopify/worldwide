@@ -136,6 +136,19 @@ module Worldwide
       end
     end
 
+    test "zone lookup for territories using alternate code formats" do
+      [
+        ["US", "PR", "USPR", "US-PR", "Puerto Rico"],
+        ["FR", "BL", "FRBL", "FR-BL", "Saint Barthélemy"],
+      ].each do |country_code, zone_code, cldr_code, iso_code, expected_name|
+        country = Worldwide.region(code: country_code)
+
+        assert_equal expected_name, country.zone(code: zone_code).legacy_name
+        assert_equal expected_name, country.zone(code: cldr_code).legacy_name
+        assert_equal expected_name, country.zone(code: iso_code).legacy_name
+      end
+    end
+
     test "can look up a zone by alternate code" do
       assert_equal "CA-QC", Worldwide.region(code: "CA").zone(code: "PQ").iso_code
       assert_equal "MX-CMX", Worldwide.region(code: "MX").zone(code: "CDMX").iso_code
