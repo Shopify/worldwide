@@ -263,6 +263,31 @@ module Worldwide
       end
     end
 
+    test "associated_continent returns the expected continent" do
+      [
+        # Canada
+        [:ca, "North America"],
+        # Ontario is a province of Canada, which is in North America
+        ["CA-ON", "North America"],
+        # Tokyo is a province of Japan, which is in Asia
+        ["JP-13", "Asia"],
+        # North America itself
+        ["003", "North America"],
+        # Puerto Rico is a territory of the US, which is in North America too
+        ["US-PR", "North America"],
+        # Bermuda is a territory of the UK, which is in Europe, but it lies in North America
+        ["GB-BM", "North America"],
+        # French Polynesia is a territory of France, which is in Europe, but it lies in Oceania
+        ["FR-PF", "Oceania"],
+      ].each do |region_code, expected_continent|
+        assert_equal expected_continent, Worldwide.region(code: region_code).associated_continent.full_name
+      end
+    end
+
+    test "associated_continent for world region returns nil" do
+      assert_nil Worldwide.region(code: "001").associated_continent
+    end
+
     test "name alternates are returned as expected" do
       {
         cz: ["Czechia"],
