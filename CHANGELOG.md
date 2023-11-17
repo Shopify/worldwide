@@ -28,10 +28,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add support for `Region#associated_continent` to return the containing continent of the region [#43](https://github.com/Shopify/worldwide/pull/43)
+- Add more postal code prefixes for KR [#44](https://github.com/Shopify/worldwide/pull/44)
 
 ---
 
 [0.4.1] - 2023-11-10
+
 - Add support for deprecated timezone Australia/Canberra [#35](https://github.com/Shopify/worldwide/pull/35)
 - Add alternate codes for territories [#39](https://github.com/Shopify/worldwide/pull/39)
 - Allow building numbers on address2 field for Austrian addresses [#40](https://github.com/Shopify/worldwide/pull/40)
