@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add support for `Region#associated_continent` to return the containing continent of the region [#43](https://github.com/Shopify/worldwide/pull/43)
 - Add more postal code prefixes for KR [#44](https://github.com/Shopify/worldwide/pull/44)
+- Add name alternates for the zones of South Korea [#45](https://github.com/Shopify/worldwide/pull/45)
 
 ---
 
