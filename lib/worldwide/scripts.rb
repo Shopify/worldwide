@@ -10,10 +10,12 @@ module Worldwide
         discovered_scripts = []
 
         script_regexes = {
-          "Latn": "[A-Za-z\uFF21-\uFF3A\uFF41-\uFF5A]",
+          "Arabic": "\\p{Arabic}",
+          "Latn": "\\p{Latin}",
           "Han": "\\p{Han}",
-          "Katakana": "\\p{Katakana}",
+          "Hangul": "\\p{Hangul}",
           "Hiragana": "\\p{Hiragana}",
+          "Katakana": "\\p{Katakana}",
         }
 
         script_regexes.each do |script, regex|
