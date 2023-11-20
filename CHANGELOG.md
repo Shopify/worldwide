@@ -27,12 +27,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- nil
+
+---
+
+[0.5.0] - 2023-11-20
+
 - Add support for `Region#associated_continent` to return the containing continent of the region [#43](https://github.com/Shopify/worldwide/pull/43)
 - Add more postal code prefixes for KR [#44](https://github.com/Shopify/worldwide/pull/44)
 - Add name alternates for the zones of South Korea [#45](https://github.com/Shopify/worldwide/pull/45)
 - Add support for Hangul and Arabic script detection, update Latn regexp [#46](https://github.com/Shopify/worldwide/pull/46)
-
----
 
 [0.4.1] - 2023-11-10
 
