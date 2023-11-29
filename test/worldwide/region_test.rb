@@ -308,5 +308,17 @@ module Worldwide
         assert_equal expected_alternates, Worldwide.region(code: region_code).zone(code: zone_code).name_alternates
       end
     end
+
+    test "building_number_requrired returns values as expected" do
+      [
+        [:ca, true],
+        [:in, false],
+        [:pk, false],
+        [:de, true],
+        [:us, true],
+      ].each do |region_code, expected_value|
+        assert_equal expected_value, Worldwide.region(code: region_code).building_number_required
+      end
+    end
   end
 end
