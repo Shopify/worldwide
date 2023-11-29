@@ -27,9 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Fix for building_number_required to default to false [#48]
+- nil
 
 ---
+
+[0.5.1] - 2023-11-29
+
+- Fix for building_number_required to default to false [#48]
 
 [0.5.0] - 2023-11-20
 
