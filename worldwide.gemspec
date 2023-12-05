@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = "developers@shopify.com"
 
   spec.summary       = "Internationalization and localization APIs"
-  spec.description   = "APIs for I18n, I10n, and mailing address operations in Ruby."
+  spec.description   = "The worldwide gem internationalizes and localizes Ruby code, enhancing user experience globally. It also aids in inputting, validating, and formatting mailing addresses."
   spec.homepage      = "https://github.com/Shopify/worldwide"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org/"
