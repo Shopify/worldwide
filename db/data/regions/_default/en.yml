@@ -56,6 +56,8 @@ en:
             street_unknown_for_zip: Enter a valid street name for %{zip}.
             building_number_invalid: Building number couldn't be located for %{street},
               %{zip}.
+          warnings:
+            contains_too_many_words: Address line 1 is recommended to have less than %{word_count} words
         address2:
           label:
             default: Apartment, suite, etc.
@@ -74,6 +76,8 @@ en:
             street_unknown_for_zip: Enter a valid street name for %{zip}.
             building_number_invalid: Building number couldn't be located for %{street},
               %{zip}.
+          warnings:
+            contains_too_many_words: Address line 2 is recommended to have less than %{word_count} words
         city:
           label:
             default: City
@@ -141,3 +145,6 @@ en:
             contains_emojis: Phone number cannot contain emojis
             contains_restricted_characters: Phone number can only contain letters,
               numbers, local characters, and special characters
+        address:
+          errors:
+            may_not_exist: Address not found or does not exist

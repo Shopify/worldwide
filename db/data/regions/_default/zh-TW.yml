@@ -50,6 +50,8 @@ zh-TW:
             building_number_invalid: 在 %{zip}，%{street} 找不到此建築物號碼。
             contains_restricted_characters: 地址 1 僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 地址 1 不得超過 %{word_count} 個字
+          warnings:
+            contains_too_many_words: 地址第 1 行建議少於 %{word_count} 字
         address2:
           label:
             default: 公寓、套房等
@@ -65,6 +67,8 @@ zh-TW:
             building_number_invalid: 在 %{zip}，%{street} 找不到此建築物號碼。
             contains_restricted_characters: 地址 2 僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 地址 2 不得超過 %{word_count} 個字
+          warnings:
+            contains_too_many_words: 地址第 2 行建議少於 %{word_count} 字
         city:
           label:
             default: 市
@@ -126,3 +130,6 @@ zh-TW:
             unknown_for_province: 請輸入%{province}的有效郵遞區號
             contains_restricted_characters: 郵遞區號僅可包含字母、數字、當地字元和特殊字元
             invalid_for_province: 請輸入%{province}的有效郵遞區號
+        address:
+          errors:
+            may_not_exist: 找不到地址或地址不存在

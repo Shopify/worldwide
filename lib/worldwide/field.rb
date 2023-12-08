@@ -17,6 +17,7 @@ module Worldwide
       :zip,
       :country,
       :phone,
+      :address,
     ]
 
     def initialize(country_code:, field_key:)
@@ -38,6 +39,10 @@ module Worldwide
 
     def error(locale: I18n.locale, code:, options: {})
       lookup("errors.#{code}", locale: locale, options: options)
+    end
+
+    def warning(locale: I18n.locale, code:, options: {})
+      lookup("warnings.#{code}", locale: locale, options: options)
     end
 
     private

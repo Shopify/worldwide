@@ -57,6 +57,9 @@ pl:
               znaki lokalne i znaki specjalne.
             contains_too_many_words: Adres 1 może zawierać maksymalnie do %{word_count}
               słów
+          warnings:
+            contains_too_many_words: Zaleca się, aby linia adresu 1 zawierała
+              mniej niż %{word_count} słów
         address2:
           label:
             default: Mieszkanie, apartament itp.
@@ -76,6 +79,9 @@ pl:
               znaki lokalne i znaki specjalne.
             contains_too_many_words: Adres 2 może zawierać maksymalnie do %{word_count}
               słów
+          warnings:
+            contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała
+              mniej niż %{word_count} słów
         city:
           label:
             default: Miasto
@@ -146,3 +152,6 @@ pl:
             contains_restricted_characters: Pole Kod pocztowy może zawierać litery,
               cyfry, znaki lokalne i znaki specjalne.
             invalid_for_province: Wprowadź prawidłowy kod pocztowy dla %{province}
+        address:
+          errors:
+            may_not_exist: Nie znaleziono adresu lub adres nie istnieje

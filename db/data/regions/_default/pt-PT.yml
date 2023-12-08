@@ -57,6 +57,9 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O endereço1 não pode ter mais do que %{word_count}
               palavras
+          warnings:
+            contains_too_many_words: Recomenda-se que a linha de endereço
+              1 tenha menos de %{word_count} palavras
         address2:
           label:
             default: Apartamento, fração, etc.
@@ -76,6 +79,9 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O endereço2 não pode ter mais do que %{word_count}
               palavras
+          warnings:
+            contains_too_many_words: Recomenda-se que a linha de endereço
+              2 tenha menos de %{word_count} palavras
         city:
           label:
             default: Cidade
@@ -146,3 +152,6 @@ pt-PT:
             contains_restricted_characters: O campo "Código postal" só pode conter
               letras, números, caracteres locais e caracteres especiais
             invalid_for_province: 'Introduza um código postal válido para: %{province}'
+        address:
+          errors:
+            may_not_exist: Endereço não encontrado ou não existe

@@ -56,6 +56,9 @@ sv:
               siffror, lokala tecken och specialtecken
             contains_too_many_words: Adress1 får inte innehålla fler än %{word_count}
               ord
+          warnings:
+            contains_too_many_words: Vi rekommenderar att adressrad 1
+              består av färre än %{word_count} ord
         address2:
           label:
             default: Lägenhetsnummer, våning etc.
@@ -74,6 +77,9 @@ sv:
               siffror, lokala tecken och specialtecken
             contains_too_many_words: Adress2 får inte innehålla fler än %{word_count}
               ord
+          warnings:
+            contains_too_many_words: Vi rekommenderar att adressrad 2
+              består av färre än %{word_count} ord
         city:
           label:
             default: Stad
@@ -142,3 +148,6 @@ sv:
             contains_restricted_characters: Postnummer får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
             invalid_for_province: Ange ett giltigt postnummer för %{province}
+        address:
+          errors:
+            address_may_not_exist: Adressen hittades inte eller finns inte

@@ -58,6 +58,9 @@ it:
               numeri, caratteri locali e caratteri speciali
             contains_too_many_words: L'indirizzo 1 non può superare %{word_count}
               parole
+          warnings:
+            contains_too_many_words: La riga 1 dell'indirizzo deve contenere
+              meno di %{word_count} parole
         address2:
           label:
             default: Interno, scala, ecc.
@@ -77,6 +80,9 @@ it:
               numeri, caratteri locali e caratteri speciali
             contains_too_many_words: L'indirizzo 2 non può superare %{word_count}
               parole
+          warnings:
+            contains_too_many_words: La riga 2 dell'indirizzo deve contenere
+              meno di %{word_count} parole
         city:
           label:
             default: Città
@@ -148,3 +154,6 @@ it:
             contains_restricted_characters: Il codice di avviamento postale può contenere
               solo lettere, numeri, caratteri locali e caratteri speciali
             invalid_for_province: Inserisci un codice postale valido per %{province}
+        address:
+          errors:
+            may_not_exist: Indirizzo non trovato o non esistente

@@ -55,6 +55,27 @@ module Worldwide
       assert_nil Worldwide.region(code: "CA").field(key: :first_name).error(code: :bogus_code_does_not_exist)
     end
 
+    test "warning accepts parameters" do
+      [
+        [:en, "Address line 1 is recommended to have less than 15 words"],
+        [:fr, "Il est conseillé que la ligne d’adresse 1 ait moins de 15 mots"],
+        [:ja, "住所1は15文字未満が推奨されています"],
+      ].each do |locale, expected|
+        I18n.with_locale(locale) do
+          actual = Worldwide.region(code: "CA").field(key: :address1).warning(
+            code: :contains_too_many_words,
+            options: { word_count: 15 },
+          )
+
+          assert_equal expected, actual
+        end
+      end
+    end
+
+    test "warning with an invalid code returns nil" do
+      assert_nil Worldwide.region(code: "CA").field(key: :first_name).warning(code: :bogus_code_does_not_exist)
+    end
+
     test "selected labels meet expectations" do
       [
         [:en, :ca, :zip, "Postal code"],

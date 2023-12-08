@@ -59,6 +59,9 @@ el:
               στην οδό %{street}, %{zip}.
             contains_too_many_words: Το πεδίο "Διεύθυνση1" δεν μπορεί να περιέχει
               πάνω από %{word_count} λέξεις
+          warnings:
+            contains_too_many_words: Το πεδίο "Διεύθυνση 1" συνιστάται
+              να έχει λιγότερες από %{word_count} λέξεις
         address2:
           label:
             default: Διαμέρισμα, σουίτα, κ.λπ.
@@ -79,6 +82,9 @@ el:
               στην οδό %{street}, %{zip}.
             contains_too_many_words: Το πεδίο "Διεύθυνση2" δεν μπορεί να περιέχει
               πάνω από %{word_count} λέξεις
+          warnings:
+            contains_too_many_words: Το πεδίο "Διεύθυνση 2" συνιστάται
+              να έχει λιγότερες από %{word_count} λέξεις
         city:
           label:
             default: Πόλη
@@ -149,3 +155,6 @@ el:
               Εισαγάγετε νέα διεύθυνση και δοκιμάστε ξανά.
             unknown_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{province}
             invalid_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{province}
+        address:
+          errors:
+            may_not_exist: Η διεύθυνση δεν βρέθηκε ή δεν υπάρχει

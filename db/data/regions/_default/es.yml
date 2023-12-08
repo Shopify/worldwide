@@ -59,6 +59,9 @@ es:
               para %{street}, %{zip}.
             contains_too_many_words: La Dirección 1 no puede tener más de %{word_count}
               palabras
+          warnings:
+            contains_too_many_words: Se recomienda que la línea 1 de
+              la dirección tenga menos de %{word_count} palabras.
         address2:
           label:
             default: Apartamento, local, etc.
@@ -79,6 +82,9 @@ es:
               para %{street}, %{zip}.
             contains_too_many_words: La Dirección 2 no puede tener más de %{word_count}
               palabras
+          warnings:
+            contains_too_many_words: Se recomienda que la línea 2 de
+              la dirección tenga menos de %{word_count} palabras.
         city:
           label:
             default: Ciudad
@@ -149,3 +155,6 @@ es:
               nueva dirección e intenta de nuevo.
             unknown_for_province: Introduce un código postal válido para %{province}
             invalid_for_province: Introduce un código postal válido para %{province}.
+        address:
+          errors:
+            may_not_exist: La dirección no se encontró o no existe.

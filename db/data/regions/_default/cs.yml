@@ -56,6 +56,9 @@ cs:
               %{zip}.'
             contains_too_many_words: 'Adresa 1 nemůže obsahovat více než tento počet
               slov: %{word_count}'
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby 1. řádek adresy
+              měl méně než tento počet slov: %{word_count}'
         address2:
           label:
             default: Byt, apartmá atd.
@@ -74,6 +77,9 @@ cs:
               %{zip}.'
             contains_too_many_words: 'Adresa 2 nemůže obsahovat více než tento počet
               slov: %{word_count}'
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby 2. řádek adresy
+              měl méně než tento počet slov: %{word_count}'
         city:
           label:
             default: Město
@@ -142,3 +148,6 @@ cs:
               adresu a zkuste to znovu.
             unknown_for_province: 'Zadejte platné PSČ pro: %{province}'
             invalid_for_province: 'Zadejte platné PSČ pro: %{province}.'
+        address:
+          errors:
+            may_not_exist: Adresa nebyla nalezena nebo neexistuje.

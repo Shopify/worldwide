@@ -56,6 +56,9 @@ hi:
             contains_restricted_characters: पता 1 में सिर्फ अक्षर, संख्याएं, स्थानीय
               वर्ण और विशेष वर्ण हो सकते हैं
             contains_too_many_words: पता1 में %{word_count} से अधिक शब्द नहीं हो सकते
+          warnings:
+            contains_too_many_words: एड्रेस लाइन 1 में %{word_count}
+              शब्दों से कम शब्द लिखने का सुझाव दिया जाता है
         address2:
           label:
             default: अपार्टमेंट, सुइट, आदि.
@@ -74,6 +77,9 @@ hi:
             contains_restricted_characters: पता 2 में सिर्फ अक्षर, संख्याएं, स्थानीय
               वर्ण और विशेष वर्ण हो सकते हैं
             contains_too_many_words: पता2 में %{word_count} से अधिक शब्द नहीं हो सकते
+          warnings:
+            contains_too_many_words: एड्रेस लाइन 2 में %{word_count}
+              शब्दों से कम शब्द लिखने का सुझाव दिया जाता है
         city:
           label:
             default: शहर
@@ -143,3 +149,6 @@ hi:
             contains_restricted_characters: पोस्टल कोड में सिर्फ अक्षर, संख्याएं,
               स्थानीय वर्ण और विशेष वर्ण हो सकते हैं
             invalid_for_province: "%{province} के लिए एक मान्य डाक कोड डालें"
+        address:
+          errors:
+            may_not_exist: पता नहीं मिला या यहां मौजूद नहीं है

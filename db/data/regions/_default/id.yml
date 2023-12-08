@@ -56,6 +56,9 @@ id:
               angka, karakter lokal, dan karakter khusus
             contains_too_many_words: Alamat1 tidak boleh memuat lebih dari %{word_count}
               kata
+          warnings:
+            contains_too_many_words: Alamat baris 1 sebaiknya diisi tidak
+              lebih dari %{word_count} kata
         address2:
           label:
             default: Apartemen, suite, dsb.
@@ -74,6 +77,9 @@ id:
               angka, karakter lokal, dan karakter khusus
             contains_too_many_words: Alamat2 tidak boleh memuat lebih dari %{word_count}
               kata
+          warnings:
+            contains_too_many_words: Alamat baris 2 sebaiknya diisi tidak
+              lebih dari %{word_count} kata
         city:
           label:
             default: Kota
@@ -142,3 +148,6 @@ id:
             contains_restricted_characters: Kode pos hanya boleh terdiri dari huruf,
               angka, karakter lokal, dan karakter khusus
             invalid_for_province: Masukkan kode pos yang valid untuk %{province}
+        address:
+          errors:
+            may_not_exist: Alamat tidak ditemukan atau tidak ada

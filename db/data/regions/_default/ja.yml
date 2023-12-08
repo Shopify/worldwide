@@ -50,6 +50,8 @@ ja:
             building_number_invalid: "%{street}、%{zip}の建物番号が見つかりませんでした。"
             contains_restricted_characters: 住所1には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 住所1には、%{word_count}語以上を入力できません
+          warnings:
+            contains_too_many_words: 住所1は%{word_count}文字未満が推奨されています
         address2:
           label:
             default: 建物名、部屋番号など
@@ -65,6 +67,8 @@ ja:
             building_number_invalid: "%{street}、%{zip}の建物番号が見つかりませんでした。"
             contains_restricted_characters: 住所2には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 住所2には、%{word_count}語以上を入力できません
+          warnings:
+            contains_too_many_words: 住所2は%{word_count}文字未満が推奨されています
         city:
           label:
             default: 市区町村
@@ -126,3 +130,6 @@ ja:
             unknown_for_province: "%{province}の有効な郵便番号を入力してください"
             contains_restricted_characters: 郵便番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             invalid_for_province: "%{province}の有効な郵便番号を入力してください"
+        address:
+          errors:
+            may_not_exist: 住所が見つからない、または存在しません

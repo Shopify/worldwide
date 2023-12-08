@@ -58,6 +58,9 @@ fr:
               pour %{street}, %{zip}.
             contains_too_many_words: Le champ Adresse 1 ne doit pas comporter plus
               de %{word_count} mots
+          warnings:
+            contains_too_many_words: Il est conseillé que la ligne d’adresse 1
+              ait moins de %{word_count} mots
         address2:
           label:
             default: Appartement, suite, etc.
@@ -77,6 +80,9 @@ fr:
               pour %{street}, %{zip}.
             contains_too_many_words: Le champ Adresse 2 ne doit pas comporter plus
               de %{word_count} mots
+          warnings:
+            contains_too_many_words: Il est conseillé que la ligne d’adresse 2
+              ait moins de %{word_count} mots
         city:
           label:
             default: Ville
@@ -146,3 +152,6 @@ fr:
               le moment. Saisissez une nouvelle adresse et réessayez.
             unknown_for_province: Saisissez un code postal valide pour %{province}
             invalid_for_province: Saisissez un code postal valide pour %{province}
+        address:
+          errors:
+            may_not_exist: L’adresse est introuvable ou inexistante

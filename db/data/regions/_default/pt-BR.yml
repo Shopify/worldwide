@@ -56,6 +56,9 @@ pt-BR:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O Endereço1 não pode ter mais de %{word_count}
               palavras
+          warnings:
+            contains_too_many_words: É recomendável que a linha de endereço
+              1 tenha menos de %{word_count} palavras
         address2:
           label:
             default: Apartamento, bloco etc.
@@ -74,6 +77,9 @@ pt-BR:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O Endereço2 não pode ter mais de %{word_count}
               palavras
+          warnings:
+            contains_too_many_words: É recomendável que a linha de endereço
+              2 tenha menos de %{word_count} palavras
         city:
           label:
             default: Cidade
@@ -141,3 +147,6 @@ pt-BR:
             contains_restricted_characters: O CEP pode conter apenas letras, números,
               caracteres locais e caracteres especiais
             invalid_for_province: Insira um CEP válido para %{province}
+        address:
+          errors:
+            may_not_exist: O endereço não foi encontrado ou não existe
