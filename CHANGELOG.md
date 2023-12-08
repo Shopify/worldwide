@@ -27,10 +27,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Add localized concern messages for address1 + 2 warnings and address may not exist message [#54](https://github.com/Shopify/worldwide/pull/54)
-- Change gem description [#51](https://github.com/Shopify/worldwide/pull/51)
+- nil
 
 ---
+
+[0.6.0] - 2023-12-08
+
+- Add localized concern messages for address1 + 2 warnings and address may not exist message [#54](https://github.com/Shopify/worldwide/pull/54)
+- Change gem description [#51](https://github.com/Shopify/worldwide/pull/51)
 
 [0.5.1] - 2023-11-29
 
