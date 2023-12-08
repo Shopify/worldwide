@@ -55,6 +55,9 @@ tr:
             contains_restricted_characters: Adres1 yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 1. adres en fazla %{word_count} kelime içerebilir
+          warnings:
+            contains_too_many_words: Adres satırı 1'de %{word_count}
+              adetten az kelime olması önerilir
         address2:
           label:
             default: Apartman, daire vb.
@@ -72,6 +75,9 @@ tr:
             contains_restricted_characters: Adres2 yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 2. adres en fazla %{word_count} kelime içerebilir
+          warnings:
+            contains_too_many_words: Adres satırı 2'de %{word_count}
+              adetten az kelime olması önerilir
         city:
           label:
             default: Şehir
@@ -140,3 +146,6 @@ tr:
             contains_restricted_characters: Posta kodu yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
             invalid_for_province: "%{province} için geçerli bir posta kodu girin"
+        address:
+          errors:
+            may_not_exist: Adres bulunamadı veya mevcut değil

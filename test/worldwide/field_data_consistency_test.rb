@@ -19,7 +19,7 @@ module Worldwide
     private
 
     def sanity_check_file(file_name)
-      permitted_keys = ["autofill", "label", "label_optional", "errors"]
+      permitted_keys = ["autofill", "label", "label_optional", "errors", "warnings"]
 
       locale = file_name.split("/").last.split(".").first
       country_code = file_name.split("/")[-2]

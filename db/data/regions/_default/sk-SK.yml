@@ -56,6 +56,9 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 1 nemôže mať viac ako tento počet slov:
               (%{word_count})'
+          warnings:
+            contains_too_many_words: 'Riadok adresy 1 by nemal mať viac
+              ako tento počet slov: %{word_count}'
         address2:
           label:
             default: Apartmán, byt atď.
@@ -74,6 +77,9 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 2 nemôže mať viac ako tento počet slov:
               (%{word_count})'
+          warnings:
+            contains_too_many_words: 'Riadok adresy 2 by nemal mať viac
+              ako tento počet slov: %{word_count}'
         city:
           label:
             default: Mesto
@@ -144,3 +150,6 @@ sk-SK:
               len písmená, číslice, miestne znaky a špeciálne znaky
             invalid_for_province: Zadajte platné poštové smerovacie číslo pre provinciu
               %{province}
+        address:
+          errors:
+            may_not_exist: Adresa nebola nájdená alebo neexistuje

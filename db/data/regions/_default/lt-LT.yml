@@ -59,6 +59,9 @@ lt-LT:
               vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Adreso (1) negali sudaryti daugiau nei %{word_count}
               žodžiai (-ių)
+          warnings:
+            contains_too_many_words: Patartina, kad 1 adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių)
         address2:
           label:
             default: Butas, apartamentai ar kt.
@@ -79,6 +82,9 @@ lt-LT:
               vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Adreso (2) negali sudaryti daugiau nei %{word_count}
               žodžiai (-ių)
+          warnings:
+            contains_too_many_words: Patartina, kad 2 adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių)
         city:
           label:
             default: Miestas
@@ -149,3 +155,6 @@ lt-LT:
             contains_restricted_characters: Pašto kodą gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
             invalid_for_province: Įveskite teisingą %{province} pašto kodą
+        address:
+          errors:
+            may_not_exist: Adresas nerastas arba neegzistuoja

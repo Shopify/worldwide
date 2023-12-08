@@ -59,6 +59,9 @@ ro-RO:
               caractere locale și caractere speciale
             contains_too_many_words: Câmpul Adresă 1 nu poate conține mai mult de
               %{word_count} cuvinte
+          warnings:
+            contains_too_many_words: Se recomandă ca în câmpul Linie
+              1 adresă să nu introduci mai mult de %{word_count} cuvinte
         address2:
           label:
             default: Apartament, cameră etc.
@@ -78,6 +81,9 @@ ro-RO:
               caractere locale și caractere speciale
             contains_too_many_words: Câmpul Adresă 2 nu poate conține mai mult de
               %{word_count} cuvinte
+          warnings:
+            contains_too_many_words: Se recomandă ca în câmpul Linie
+              2 adresă să nu introduci mai mult de %{word_count} cuvinte
         city:
           label:
             default: Localitate
@@ -148,3 +154,6 @@ ro-RO:
             contains_restricted_characters: Codul poștal poate conține numai litere,
               cifre, caractere locale și caractere speciale
             invalid_for_province: Introdu un cod poștal valid pentru %{province}
+        address:
+          errors:
+            may_not_exist: Adresa nu a fost găsită sau nu există

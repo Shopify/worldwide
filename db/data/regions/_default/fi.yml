@@ -56,6 +56,9 @@ fi:
               %{zip}.
             contains_too_many_words: Osoite 1 -kentässä voi olla enintään %{word_count}
               sanaa
+          warnings:
+            contains_too_many_words: Osoiterivin 1 pituudeksi suositellaan
+              alle %{word_count} sanaa
         address2:
           label:
             default: Huoneisto jne.
@@ -74,6 +77,9 @@ fi:
               %{zip}.
             contains_too_many_words: Osoite 2 -kentässä voi olla enintään %{word_count}
               sanaa
+          warnings:
+            contains_too_many_words: Osoiterivin 2 pituudeksi suositellaan
+              alle %{word_count} sanaa
         city:
           label:
             default: Kaupunki
@@ -143,3 +149,6 @@ fi:
               ja yritä uudelleen.
             unknown_for_province: Anna kelvollinen postinumero maassa %{province}
             invalid_for_province: Anna kelvollinen postinumero alueelle %{province}
+        address:
+          errors:
+            may_not_exist: Osoitetta ei löydy tai sitä ei ole

@@ -56,6 +56,9 @@ de:
               nicht gefunden werden.
             contains_too_many_words: Adresse1 darf nicht mehr als %{word_count} Wörter
               enthalten
+          warnings:
+            contains_too_many_words: Adresszeile 1 sollte weniger als
+              %{word_count} Wörter haben
         address2:
           label:
             default: Wohnung, Zimmer usw.
@@ -74,6 +77,9 @@ de:
               nicht gefunden werden.
             contains_too_many_words: Adresse2 darf nicht mehr als %{word_count} Wörter
               enthalten
+          warnings:
+            contains_too_many_words: Adresszeile 2 sollte weniger als
+              %{word_count} Wörter haben
         city:
           label:
             default: Stadt
@@ -143,3 +149,6 @@ de:
               Gib eine neue Adresse ein und versuche es erneut.
             unknown_for_province: Eine gültige Postleitzahl für %{province} eingeben
             invalid_for_province: Eine gültige Postleitzahl für %{province} eingeben
+        address:
+          errors:
+            may_not_exist: Adresse nicht gefunden oder existiert nicht

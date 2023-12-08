@@ -57,6 +57,9 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             contains_too_many_words: A cím 1. sora legfeljebb %{word_count} szóból
               állhat
+          warnings:
+            contains_too_many_words: A cím 1. sorának javasolt hossza
+              kevesebb mint %{word_count} szó
         address2:
           label:
             default: Épület, emelet, ajtó stb.
@@ -77,6 +80,9 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             contains_too_many_words: A cím 2. sora legfeljebb %{word_count} szóból
               állhat
+          warnings:
+            contains_too_many_words: A cím 2. sorának javasolt hossza
+              kevesebb mint %{word_count} szó
         city:
           label:
             default: Település
@@ -151,3 +157,6 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             invalid_for_province: 'Olyan irányítószámot írj be, amely itt található:
               %{province}'
+        address:
+          errors:
+            may_not_exist: A cím nem található, vagy nem létezik

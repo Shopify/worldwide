@@ -56,6 +56,9 @@ ms:
               nombor, aksara tempatan dan aksara khas
             contains_too_many_words: Alamat1 tidak boleh mengandungi lebih daripada
               %{word_count} perkataan
+          warnings:
+            contains_too_many_words: Baris alamat 1 disyorkan untuk mengandungi
+              kurang daripada %{word_count} perkataan
         address2:
           label:
             default: Pangsapuri, suite, dsb.
@@ -74,6 +77,9 @@ ms:
               nombor, aksara tempatan dan aksara khas
             contains_too_many_words: Alamat2 tidak boleh mengandungi lebih daripada
               %{word_count} perkataan
+          warnings:
+            contains_too_many_words: Baris alamat 2 disyorkan untuk mengandungi
+              kurang daripada %{word_count} perkataan
         city:
           label:
             default: Bandar
@@ -142,3 +148,6 @@ ms:
             contains_restricted_characters: Poskod hanya boleh mengandungi huruf,
               nombor, aksara tempatan dan aksara khas
             invalid_for_province: Masukkan poskod yang sah untuk %{province}
+        address:
+          errors:
+            may_not_exist: Alamat tidak ditemui atau tidak wujud

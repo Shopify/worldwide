@@ -55,6 +55,9 @@ vi:
               ký tự địa phương và ký tự đặc biệt
             contains_too_many_words: Address1 không được có nhiều hơn %{word_count}
               từ
+          warnings:
+            contains_too_many_words: Dòng địa chỉ 1 nên có tối đa %{word_count}
+              từ
         address2:
           label:
             default: Căn hộ, tòa, v.v.
@@ -71,6 +74,9 @@ vi:
             contains_restricted_characters: Địa chỉ 2 chỉ được chứa chữ cái, chữ số,
               ký tự địa phương và ký tự đặc biệt
             contains_too_many_words: Address2 không được có nhiều hơn %{word_count}
+              từ
+          warnings:
+            contains_too_many_words: Dòng địa chỉ 2 nên có tối đa %{word_count}
               từ
         city:
           label:
@@ -140,3 +146,6 @@ vi:
             contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
               số, ký tự địa phương và ký tự đặc biệt
             invalid_for_province: Nhập mã bưu chính hợp lệ cho %{province}
+        address:
+          errors:
+            may_not_exist: Không tìm thấy địa chỉ hoặc địa chỉ không tồn tại

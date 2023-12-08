@@ -58,6 +58,9 @@ sl-SI:
               lokalne znake in posebne znake
             contains_too_many_words: Naslov1 ne sme vsebovati več kot %{word_count}
               besed
+          warnings:
+            contains_too_many_words: Naslov 1 naj ne vsebuje več kot
+              %{word_count} besed
         address2:
           label:
             default: Stanovanje, apartma itn.
@@ -78,6 +81,9 @@ sl-SI:
               lokalne znake in posebne znake
             contains_too_many_words: Naslov2 ne sme vsebovati več kot %{word_count}
               besed
+          warnings:
+            contains_too_many_words: Naslov 2 naj ne vsebuje več kot
+              %{word_count} besed
         city:
           label:
             default: Kraj
@@ -149,3 +155,6 @@ sl-SI:
               številke, lokalne znake in posebne znake
             invalid_for_province: Vnesite veljavno poštno številko za zvezno državo
               %{province}
+        address:
+          errors:
+            may_not_exist: Naslova ni mogoče najti ali ne obstaja

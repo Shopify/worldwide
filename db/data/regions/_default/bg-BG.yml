@@ -58,6 +58,9 @@ bg-BG:
             building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
             contains_too_many_words: "„Адрес1“ не може да съдържа повече от %{word_count}
               думи"
+          warnings:
+            contains_too_many_words: Препоръчително е редът за адрес
+              1 да не съдържа повече от %{word_count} думи
         address2:
           label:
             default: Етаж, апартамент и т.н.
@@ -76,6 +79,9 @@ bg-BG:
             building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
             contains_too_many_words: "„Адрес2“ не може да съдържа повече от %{word_count}
               думи"
+          warnings:
+            contains_too_many_words: Препоръчително е редът за адрес
+              2 да не съдържа повече от %{word_count} думи
         city:
           label:
             default: Град
@@ -144,3 +150,6 @@ bg-BG:
               Въведете нов адрес и опитайте отново.
             unknown_for_province: Въведете валиден пощенски код за %{province}
             invalid_for_province: Въведете валиден пощенски код за %{province}
+        address:
+          errors:
+            may_not_exist: Адресът не е открит или не съществува

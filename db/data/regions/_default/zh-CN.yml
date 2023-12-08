@@ -50,6 +50,8 @@ zh-CN:
             building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
             contains_restricted_characters: "“地址 1”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“地址 1”字段不能超过 %{word_count} 个单词"
+          warnings:
+            contains_too_many_words: 建议地址行 1 少于 %{word_count} 个字词
         address2:
           label:
             default: 公寓、房间号等
@@ -65,6 +67,8 @@ zh-CN:
             building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
             contains_restricted_characters: "“地址 2”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“地址 2”字段不能超过 %{word_count} 个单词"
+          warnings:
+            contains_too_many_words: 建议地址行 2 少于 %{word_count} 个字词
         city:
           label:
             default: 城市
@@ -126,3 +130,6 @@ zh-CN:
             unknown_for_province: 输入 %{province} 的有效邮政编码
             contains_restricted_characters: "“邮政编码”字段只能包含字母、数字、当地字符和特殊字符"
             invalid_for_province: 请输入 %{province} 对应的有效邮政编码
+        address:
+          errors:
+            may_not_exist: 找不到地址或地址不存在

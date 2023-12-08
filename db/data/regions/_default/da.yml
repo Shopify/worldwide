@@ -56,6 +56,9 @@ da:
               %{zip}.
             contains_too_many_words: Adresse1 må ikke indeholde flere end %{word_count}
               ord
+          warnings:
+            contains_too_many_words: Det anbefales, at adresselinje 1
+              har færre end %{word_count} ord
         address2:
           label:
             default: Lejlighed, etage osv.
@@ -74,6 +77,9 @@ da:
               %{zip}.
             contains_too_many_words: Adresse2 må ikke indeholde flere end %{word_count}
               ord
+          warnings:
+            contains_too_many_words: Det anbefales, at adresselinje 2
+              har færre end %{word_count} ord
         city:
           label:
             default: By
@@ -142,3 +148,6 @@ da:
               Angiv en ny adresse, og prøv igen.
             unknown_for_province: Angiv et gyldigt postnummer for %{province}
             invalid_for_province: Angiv et gyldigt postnummer for %{province}
+        address:
+          errors:
+            may_not_exist: Adressen blev ikke fundet eller findes ikke.
