@@ -444,7 +444,7 @@ module Worldwide
     # Returns true if this country has zones defined, and has postal code prefix data for the zones
     def has_zip_prefixes?
       @zones&.any? do |zone|
-        zone.zip_prefixes.present?
+        Util.present?(zone.zip_prefixes)
       end
     end
 
@@ -471,7 +471,7 @@ module Worldwide
 
       adjusted_value = partial_match ? value.strip : value
 
-      Regexp.new(regex_prefix).match(adjusted_value).present?
+      Util.present?(Regexp.new(regex_prefix).match(adjusted_value))
     end
 
     # Search a list of zip prefixes (by province or timezone) to find the element that corresponds to the zip

@@ -50,7 +50,7 @@ module Worldwide
     # @param min_confidence [Integer] The minimum confidence level (between 0-100) that is accepted from a suggestion (optional)
     # @return [Region] which is a "country" if we have a suggestion, or `nil` if we do not.
     def find_country(country_code: nil, zip:, min_confidence: 0)
-      return nil unless zip.present?
+      return nil unless Util.present?(zip)
 
       country = Worldwide.region(code: country_code) unless country_code.nil?
       return country if country&.valid_zip?(zip)
@@ -68,8 +68,8 @@ module Worldwide
       # We'll see if we have only a single suggestion and, if so, return it.
       # In cases where there's more than one possible match, we'll return nil.
       suggestions = find_country_using_zip_alone(adjusted_zip)
-      suggestion = suggestions.first[0] unless suggestions.blank?
-      confidence = suggestions.first[1] unless suggestions.blank?
+      suggestion = suggestions.first[0] unless Util.blank?(suggestions)
+      confidence = suggestions.first[1] unless Util.blank?(suggestions)
 
       return suggestion if suggestions.length == 1 && confidence && confidence >= min_confidence
 
@@ -90,7 +90,7 @@ module Worldwide
 
       if allow_autofill
         autofill = country.autofill_zip
-        return autofill if autofill.present?
+        return autofill if Util.present?(autofill)
       end
 
       return nil if zip.nil?
@@ -163,7 +163,7 @@ module Worldwide
     end
 
     def strip_optional_country_prefix(country_code:, zip:)
-      return zip if zip.blank?
+      return zip if Util.blank?(zip)
 
       unless OPTIONAL_PREFIX_COUNTRIES.include?(country_code&.to_sym)
         return zip
@@ -604,7 +604,7 @@ module Worldwide
         return zip
       end
 
-      return zip if zip.blank?
+      return zip if Util.blank?(zip)
 
       autocorrected_zips = []
       input = zip
@@ -727,7 +727,7 @@ module Worldwide
     end
 
     def normalize_for_bd(zip:)
-      return zip if zip.blank?
+      return zip if Util.blank?(zip)
 
       m = zip.match(/^(GPO:?|DHAKA)(\d{4})$/)
       if m.nil?
@@ -834,10 +834,10 @@ module Worldwide
       return zip if zip.nil?
 
       m = zip.match(/^0?0?0?0?([1-9])0?0?$/)
-      return "00#{m[1]}00" if m.present?
+      return "00#{m[1]}00" if Util.present?(m)
 
       m = zip.match(/^0?0?1([1-9])0?0?$/)
-      return "01#{m[1]}00" if m.present?
+      return "01#{m[1]}00" if Util.present?(m)
 
       if zip.match?(/^[1-9][0-9]00$/)
         "#{zip}0"
