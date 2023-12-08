@@ -373,9 +373,10 @@ module Worldwide
         search_name = name.upcase
 
         zones.find do |region|
-          search_name == region.legacy_name.upcase ||
-            search_name == region.full_name.upcase ||
-            search_name == I18n.with_locale(:en) { region.full_name.upcase }
+          search_name == region.legacy_name&.upcase ||
+            region.name_alternates&.any? { |a| search_name == a.upcase } ||
+            search_name == region.full_name&.upcase ||
+            search_name == I18n.with_locale(:en) { region.full_name&.upcase }
         end
       else # Worldwide::Util.present?(zip)
         zone_by_normalized_zip(Zip.normalize(country_code: iso_code, zip: zip))
