@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- nil
+- Allow building number in address2 for DK [#53](https://github.com/Shopify/worldwide/pull/53)
 
 ---
 
