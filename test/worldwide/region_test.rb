@@ -99,6 +99,12 @@ module Worldwide
       end
     end
 
+    test "can look up a zone by its alternate names" do
+      ["Baleares", "Illes Balears", "Islas Baleares"].each do |name|
+        assert_equal "ES-PM", Worldwide.region(code: "ES").zone(name: name).iso_code
+      end
+    end
+
     test "can look up a zone by CLDR code" do
       zone = Worldwide.region(code: "MY").zone(code: "my14")
 
