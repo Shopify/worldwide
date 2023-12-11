@@ -27,9 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Change HM, TF and GS `group_name` to respective continents based on M49. [#60](https://github.com/Shopify/worldwide/pull/60)
+- nil
 
 ---
+
+[0.6.3] - 2023-12-11
+
+- Change HM, TF and GS `group_name` to respective continents based on M49. [#60](https://github.com/Shopify/worldwide/pull/60)
 
 [0.6.2] - 2023-12-11
 
