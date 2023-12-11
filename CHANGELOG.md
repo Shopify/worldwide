@@ -27,11 +27,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- nil
+
+---
+
+[0.6.1] - 2023-12-11
+
 - Allow building number in address2 for DK [#53](https://github.com/Shopify/worldwide/pull/53)
 - Avoid .present? and .blank? so we don't require Rails [#57](https://github.com/Shopify/worldwide/pull/57)
 - (bugfix) Zone lookup by name [#58](https://github.com/Shopify/worldwid/pull/58)
-
----
 
 [0.6.0] - 2023-12-08
 
