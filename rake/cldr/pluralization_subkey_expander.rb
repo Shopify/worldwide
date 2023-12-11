@@ -53,7 +53,7 @@ class PluralizationSubkeyExpander
       # pluralization keywords collide with the cardinal pluralization keywords.
       required_keys_for_locale = Worldwide::Plurals.keys(locale).map(&:to_s)
       !ordinal_pluralization_context?(parent) &&
-        (required_keys_for_locale & children.keys).present?
+        Util.present?(required_keys_for_locale & children.keys)
     end
 
     def ordinal_pluralization_context?(parent)
@@ -63,7 +63,7 @@ class PluralizationSubkeyExpander
     def expand_pluralization_children!(parent, children, locale)
       required_keys_for_locale = Worldwide::Plurals.keys(locale).map(&:to_s)
       missing_keys = (required_keys_for_locale - children.keys).sort
-      if missing_keys.present?
+      if Util.present?(missing_keys)
         missing_keys.each do |missing_key|
           new_value = value_from_parent_locale(locale, parent + [missing_key]) ||
             value_from_siblings(locale, missing_key, children)

@@ -38,7 +38,7 @@ module Worldwide
         assert_equal name, region.legacy_name
         assert_equal zones_count, region.zones.count
 
-        if zone_name.present?
+        if Util.present?(zone_name)
           assert_equal zone_name, region.zones.first&.legacy_name
         else
           assert_nil region.zones.first&.legacy_name
