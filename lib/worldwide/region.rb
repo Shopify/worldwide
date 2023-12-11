@@ -249,6 +249,7 @@ module Worldwide
 
       @parents = [].to_set
       @zones = []
+      @zones_by_code = {}
     end
 
     def inspect
@@ -262,6 +263,7 @@ module Worldwide
 
       region.parents << self
       @zones.append(region)
+      add_zone_to_hash(region)
     end
 
     # Attributes
@@ -320,6 +322,7 @@ module Worldwide
     # A user-facing name in the currently-active locale's language.
     def full_name(locale: I18n.locale)
       lookup_code = cldr_code
+
       if /^[0-9]+$/.match?(lookup_code) || lookup_code.length < 3
         Worldwide::Cldr.t("territories.#{lookup_code}", locale: locale, default: legacy_name)
       else
@@ -358,17 +361,14 @@ module Worldwide
       if Worldwide::Util.present?(code)
         search_code = code.to_s.upcase
         alt_search_code = "#{search_code[0..1]}-#{search_code[2..-1]}"
+        zone = nil
 
-        zones.find do |region|
-          [search_code, alt_search_code].any? do |candidate|
-            candidate == subdivision_code(region.iso_code) ||
-              candidate == region.alpha_three ||
-              candidate == region.iso_code ||
-              candidate == region.legacy_code ||
-              candidate == region.numeric_three ||
-              region&.code_alternates&.any?(candidate)
-          end
+        [search_code, alt_search_code].each do |candidate|
+          zone = @zones_by_code[candidate]
+          break if zone
         end
+
+        return zone unless zone.nil?
       elsif Worldwide::Util.present?(name)
         search_name = name.upcase
 
@@ -413,6 +413,17 @@ module Worldwide
     end
 
     private
+
+    def add_zone_to_hash(zone)
+      @zones_by_code[subdivision_code(zone.iso_code)] = zone if Util.present?(subdivision_code(zone.iso_code))
+      @zones_by_code[zone.alpha_three] = zone if Util.present?(zone.alpha_three)
+      @zones_by_code[zone.iso_code] = zone if Util.present?(zone.iso_code)
+      @zones_by_code[zone.legacy_code] = zone if Util.present?(zone.legacy_code)
+      @zones_by_code[zone.numeric_three] = zone if Util.present?(zone.numeric_three)
+      zone.code_alternates&.each do |code|
+        @zones_by_code[code] = zone
+      end
+    end
 
     def answers_to_cldr_code(search_code)
       return false if Util.blank?(search_code) || Util.blank?(cldr_code)

@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- nil
+- Zone lookup by Hash [#61](https://github.com/Shopify/worldwide/pull/61)
 
 ---
 
