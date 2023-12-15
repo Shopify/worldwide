@@ -5,17 +5,17 @@ es:
       addresses:
         province:
           label:
-            default: Estado/territorio
-            optional: Estado/territorio (opcional)
+            default: Estado o territorio
+            optional: Estado o territorio (opcional)
           errors:
-            blank: Selecciona un estado/territorio
+            blank: Selecciona un estado o territorio.
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            too_long: El valor del código postal es demasiado largo
+            too_long: El valor del código postal es demasiado largo.
             contains_html_tags: El código postal no puede contener etiquetas HTML.
-            contains_emojis: El código postal no puede contener emojis
+            contains_emojis: El código postal no puede contener emojis.
             contains_restricted_characters: El código postal no puede tener caracteres
               restringidos.
