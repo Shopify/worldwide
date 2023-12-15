@@ -8,9 +8,10 @@ hr-HR:
             default: Savezna država
             optional: Savezna država (neobavezno)
           errors:
-            blank: Odaberi državu
+            blank: Odaberite državu
             invalid_for_country: Unesite valjanu saveznu državu za %{country}
-            unknown_for_city_and_zip: Unesite valjanu državu za %{city}, %{zip}
+            unknown_for_city_and_zip: Unesite valjanu saveznu državu za grad %{city},
+              %{zip}
             unknown_for_city: Odaberite valjanu državu za %{city}
             unknown_for_zip: Odaberite valjanu državu za %{zip}
         zip:
@@ -18,10 +19,10 @@ hr-HR:
             default: Poštanski broj
             optional: Poštanski broj (nije obavezno)
           errors:
-            blank: Unesi poštanski broj
-            invalid_for_country: Unesi valjan poštanski broj za državu %{country}
-            invalid_for_country_and_province: Unesite valjani poštanski broj za %{province},
-              %{country}
+            blank: Unesite poštanski broj
+            invalid_for_country: Unesite valjani poštanski broj za državu %{country}
+            invalid_for_country_and_province: Unesite valjani poštanski broj za grad
+              %{province}, %{country}
             too_long: Poštanski broj je predugačak
             contains_html_tags: Vrijednost poštanskog broja ne smije sadržavati HTML
               oznake.
