@@ -11,14 +11,14 @@ fi:
             blank: Valitse osavaltio
         zip:
           label:
-            default: Postinumero
-            optional: Postinumero (valinnainen)
+            default: PIN-koodi
+            optional: PIN-koodi (valinnainen)
           errors:
             blank: Anna PIN-koodi
             invalid_for_country: Anna kelvollinen PIN-koodi maassa %{country}
             invalid_for_country_and_province: Anna kelvollinen PIN-koodi provinssissa
               %{province}, %{country}
-            too_long: Intian PIN-postinumeron arvo on liian pitkä
+            too_long: Intian PIN-koodin arvo on liian pitkä
             contains_html_tags: PIN-koodi ei voi sisältää HTML-tunnisteita.
             contains_emojis: PIN-koodi ei voi sisältää emojeita
             contains_restricted_characters: PIN-koodi ei voi sisältää kiellettyjä
