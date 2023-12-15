@@ -64,8 +64,8 @@ ro-RO:
             contains_too_many_words: Câmpul Adresă 1 nu poate conține mai mult de
               %{word_count} cuvinte
           warnings:
-            contains_too_many_words: Se recomandă ca în câmpul Linie
-              1 adresă să nu introduci mai mult de %{word_count} cuvinte
+            contains_too_many_words: Se recomandă ca în câmpul Linie 1 adresă să nu
+              introduci mai mult de %{word_count} cuvinte
         address2:
           label:
             default: Apartament, cameră etc.
@@ -87,8 +87,8 @@ ro-RO:
             contains_too_many_words: Câmpul Adresă 2 nu poate conține mai mult de
               %{word_count} cuvinte
           warnings:
-            contains_too_many_words: Se recomandă ca în câmpul Linie
-              2 adresă să nu introduci mai mult de %{word_count} cuvinte
+            contains_too_many_words: Se recomandă ca în câmpul Linie 2 adresă să nu
+              introduci mai mult de %{word_count} cuvinte
         city:
           label:
             default: Localitate
@@ -100,9 +100,10 @@ ro-RO:
             contains_html_tags: Numele orașului nu poate conține etichete HTML.
             contains_emojis: Numele orașului nu poate conține emoji-uri
             contains_url: Orașul nu poate conține adrese URL
-            unknown_for_zip: Introdu un oraș valid pentru %{zip}
-            unknown_for_province: Introdu un oraș valid pentru %{province}
-            unknown_for_zip_and_province: Introdu un oraș valid pentru %{zip}, %{province}
+            unknown_for_zip: Introdu un nume de oraș valid pentru %{zip}
+            unknown_for_province: Introdu un nume de oraș valid pentru %{province}
+            unknown_for_zip_and_province: Introdu un nume de oraș valid pentru %{zip},
+              %{province}
             contains_mathematical_symbols: Numele orașului nu poate conține simboluri matematice
             contains_restricted_characters: Numele orașului poate conține numai litere,
               cifre, caractere locale și caractere speciale
@@ -110,7 +111,7 @@ ro-RO:
               cuvinte
         country:
           label:
-            default: Țară/Regiune
+            default: Țară/regiune
             optional: Țară/Regiune (opțional)
           errors:
             blank: Selectează o țară/regiune
