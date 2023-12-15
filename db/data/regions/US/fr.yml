@@ -9,23 +9,23 @@ fr:
             optional: État (facultatif)
           errors:
             blank: Sélectionner un État
-            invalid_for_country: 'Saisissez un état valide pour : %{country}'
-            unknown_for_city_and_zip: Saisissez un État valide pour %{city}, %{zip}
-            unknown_for_city: Saisissez un État valide pour %{city}
-            unknown_for_zip: Saisissez un État valide pour %{zip}
+            invalid_for_country: Saisir un État valide pour %{country}
+            unknown_for_city_and_zip: Saisir un État valide pour %{city}, %{zip}
+            unknown_for_city: Saisir un État valide pour %{city}
+            unknown_for_zip: Saisir un État valide pour %{zip}
         zip:
           label:
             default: Code postal
             optional: Code postal (facultatif)
           errors:
             blank: Saisir un code postal
-            invalid_for_country: Saisir un code postal %{country} valide
+            invalid_for_country: Saisir un code postal valide pour %{country}
             invalid_for_country_and_province: Saisir un code postal valide pour %{province},
               %{country}
             contains_html_tags: La valeur du code postal ne peut pas contenir de balises
               HTML.
-            too_long: La valeur du code postal est trop longue.
+            too_long: La valeur du code ZIP est trop longue.
             contains_emojis: Le code postal ne peut pas contenir d’emojis
             contains_restricted_characters: Le code postal ne peut pas contenir de
               caractères non autorisés
-            invalid_for_province: Saisissez un code postal valide pour %{province}
+            invalid_for_province: Saisir un code postal valide pour %{province}
