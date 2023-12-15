@@ -8,23 +8,23 @@ es:
             default: Estado
             optional: Estado (opcional)
           errors:
-            blank: Selecciona un estado
-            invalid_for_country: Ingresa un estado válido para %{country}
-            unknown_for_city_and_zip: Introduce un estado válido para %{city}, %{zip}
-            unknown_for_city: Selecciona un estado válido para %{city}
-            unknown_for_zip: Selecciona un estado válido para %{zip}
+            blank: Selecciona un estado.
+            invalid_for_country: Introduce un estado válido para %{country}
+            unknown_for_city_and_zip: Introduce un estado válido para %{city}, %{zip}.
+            unknown_for_city: Selecciona un estado válido para %{city}.
+            unknown_for_zip: Selecciona un estado válido para %{zip}.
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blank: Introduce un código postal (ZIP)
-            invalid_for_country: Introduce un código postal válido de %{country}
+            blank: Introduce un código postal (ZIP).
+            invalid_for_country: Introduce un código postal válido de %{country}.
             invalid_for_country_and_province: Introduce un código postal válido para
-              %{province}, %{country}
-            too_long: El valor del código postal es demasiado largo
+              %{province}, %{country}.
+            too_long: El valor del código postal es demasiado largo.
             contains_html_tags: El código postal no puede contener etiquetas HTML.
-            contains_emojis: El código postal no puede contener emojis
+            contains_emojis: El código postal no puede contener emojis.
             contains_restricted_characters: El código postal no puede tener caracteres
               restringidos.
             invalid_for_province: Introduce un código postal válido para %{province}.
