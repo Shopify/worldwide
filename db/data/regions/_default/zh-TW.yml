@@ -10,8 +10,8 @@ zh-TW:
           errors:
             blank: 輸入公司名稱
             too_long: 公司名稱過長 (最多 255 個字元)
-            contains_html_tags: 公司不得包含 HTML 標記。
-            contains_emojis: "「公司」不得包含表情符號"
+            contains_html_tags: 公司不得包含 HTML 標籤。
+            contains_emojis: 公司不得包含表情符號
             contains_mathematical_symbols: "「公司」不得包含數學符號"
             contains_restricted_characters: 公司僅可包含字母、數字、當地字元和特殊字元
         first_name:
@@ -21,9 +21,9 @@ zh-TW:
           errors:
             blank: 輸入名字
             too_long: 名字過長 (最多 255 個字元)
-            contains_html_tags: 名字不得包含 HTML 標記。
-            contains_emojis: "「名字」不得包含表情符號"
-            contains_url: "「名字」不得包含網址。"
+            contains_html_tags: 名字不得包含 HTML 標籤。
+            contains_emojis: 名字不得包含表情符號
+            contains_url: 名字不得包含網址。
             contains_mathematical_symbols: "「名字」不得包含數學符號"
             contains_restricted_characters: 名字僅可包含字母、數字、當地字元和特殊字元
         last_name:
@@ -33,9 +33,9 @@ zh-TW:
           errors:
             blank: 輸入姓氏
             too_long: 姓氏過長 (最多 255 個字元)
-            contains_html_tags: 姓氏不得包含 HTML 標記。
-            contains_emojis: "「姓氏」不得包含表情符號"
-            contains_url: "「姓氏」不得包含網址。"
+            contains_html_tags: 姓氏不得包含 HTML 標籤。
+            contains_emojis: 姓氏不得包含表情符號
+            contains_url: 姓氏不得包含網址。
             contains_mathematical_symbols: "「姓氏」不得包含數學符號"
             contains_restricted_characters: 姓氏僅可包含字母、數字、當地字元和特殊字元
         address1:
@@ -45,15 +45,15 @@ zh-TW:
           errors:
             blank: 輸入地址
             too_long: 第一行地址過長 (最多 255 個字元)
-            contains_html_tags: 地址 (第 1 行) 不得包含 HTML 標記。
+            contains_html_tags: "「地址 (第 1 行)」不得包含 HTML 標籤。"
             contains_emojis: "「地址 (第 1 行)」不得包含表情符號"
             contains_url: "「地址 (第 1 行)」不得包含網址。"
             missing_building_number: 如果您有建築物號碼，請新增建築物號碼。
-            street_unknown_for_zip: 為 %{zip} 輸入有效的街道名稱。
+            street_unknown_for_zip: 請輸入 %{zip} 的有效街道名稱。
             building_number_invalid: 在 %{zip}，%{street} 找不到此建築物號碼。
             contains_mathematical_symbols: "「地址 (第 1 行)」不得包含數學符號"
-            contains_restricted_characters: 地址 1 僅可包含字母、數字、當地字元和特殊字元
-            contains_too_many_words: 地址 1 不得超過 %{word_count} 個字
+            contains_restricted_characters: "「地址 (第 1 行)」僅可包含字母、數字、當地字元和特殊字元"
+            contains_too_many_words: "「地址 (第 1 行)」不得超過 %{word_count} 個字"
           warnings:
             contains_too_many_words: 地址第 1 行建議少於 %{word_count} 字
         address2:
@@ -61,32 +61,32 @@ zh-TW:
             default: 公寓、套房等
             optional: 公寓、套房等 (選填)
           errors:
-            blank: 輸入公寓、套房等。
+            blank: 輸入公寓、套房等
             too_long: 第二行地址過長 (最多 255 個字元)
-            contains_html_tags: 地址 (第 2 行) 不得包含 HTML 標記。
+            contains_html_tags: "「地址 (第 2 行)」不得包含 HTML 標籤。"
             contains_emojis: "「地址 (第 2 行)」不得包含表情符號"
             contains_url: "「地址 (第 2 行)」不得包含網址。"
             missing_building_number: 如果您有建築物號碼，請新增建築物號碼。
-            street_unknown_for_zip: 為 %{zip} 輸入有效的街道名稱。
+            street_unknown_for_zip: 請輸入 %{zip} 的有效街道名稱。
             building_number_invalid: 在 %{zip}，%{street} 找不到此建築物號碼。
             contains_mathematical_symbols: "「地址 (第 2 行)」不得包含數學符號"
-            contains_restricted_characters: 地址 2 僅可包含字母、數字、當地字元和特殊字元
-            contains_too_many_words: 地址 2 不得超過 %{word_count} 個字
+            contains_restricted_characters: "「地址 (第 2 行)」僅可包含字母、數字、當地字元和特殊字元"
+            contains_too_many_words: "「地址 (第 2 行)」不得超過 %{word_count} 個字"
           warnings:
             contains_too_many_words: 地址第 2 行建議少於 %{word_count} 字
         city:
           label:
-            default: 市
-            optional: 市 (選填)
+            default: 城市
+            optional: 城市 (選填)
           errors:
             blank: 輸入城市
             too_long: 城市過長 (最多 255 個字元)
-            contains_html_tags: 城市不得包含 HTML 標記。
-            contains_emojis: "「城市」不得包含表情符號"
+            contains_html_tags: 城市不得包含 HTML 標籤。
+            contains_emojis: 城市不得包含表情符號
             contains_url: 城市不得包含網址
-            unknown_for_zip: 為 %{zip} 輸入有效的城市
-            unknown_for_province: 輸入%{province}的有效城市
-            unknown_for_zip_and_province: 輸入 %{zip} %{province}的有效城市
+            unknown_for_zip: 請輸入 %{zip} 的有效城市
+            unknown_for_province: 請輸入 %{province} 的有效城市
+            unknown_for_zip_and_province: 請輸入 %{zip} %{province}的有效城市
             contains_mathematical_symbols: "「城市」不得包含數學符號"
             contains_restricted_characters: 城市僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 城市不得超過 %{word_count} 個字
@@ -95,7 +95,7 @@ zh-TW:
             default: 國家/地區
             optional: 國家/地區 (選填)
           errors:
-            blank: 選擇一個國家/地區
+            blank: 選取國家/地區
             not_supported: 我們目前不支援此國家/地區。請輸入新的地址，然後再試一次。
             invalid: 請輸入有效的國家/地區
             invalid_for_zip: 請輸入與此郵遞區號相符的有效國家/地區
@@ -105,22 +105,22 @@ zh-TW:
             optional: 電話 (選填)
           errors:
             blank: 輸入電話號碼
-            invalid: 輸入有效的電話號碼
+            invalid: 請輸入有效的電話號碼
             too_long: 電話號碼過長 (最多 255 個字元)
-            contains_emojis: "「電話號碼」不得包含表情符號"
+            contains_emojis: 電話號碼不得包含表情符號
             contains_mathematical_symbols: "「電話號碼」不得包含數學符號"
             contains_restricted_characters: 電話號碼僅可包含字母、數字、當地字元和特殊字元
         province:
           label:
-            default: 區域
-            optional: 區域 (選填)
+            default: 地區
+            optional: 地區 (選填)
           errors:
-            blank: 選擇一個地區
+            blank: 選取地區
             invalid: 請輸入有效的地區
             invalid_for_country: 請輸入%{country}的有效地區
-            unknown_for_city_and_zip: 請輸入%{zip}%{city}的有效地區
+            unknown_for_city_and_zip: 請輸入 %{zip} %{city}的有效地區
             unknown_for_city: 請選取%{city}的有效地區
-            unknown_for_zip: 請選取 %{zip} 的有效地區
+            unknown_for_zip: 請選取%{zip}的有效地區
         zip:
           label:
             default: 郵遞區號
@@ -128,12 +128,12 @@ zh-TW:
           errors:
             blank: 輸入郵遞區號
             blocked_address: 不支援此地點。
-            invalid_for_country: 輸入有效的 %{country} 郵遞區號
-            invalid_for_country_and_province: 輸入 %{country} %{province} 的有效郵遞區號
-            invalid: 輸入有效的郵遞區號
-            too_long: 郵遞區號過長
+            invalid_for_country: 請輸入%{country}的有效郵遞區號
+            invalid_for_country_and_province: 請輸入%{country}%{province}的有效郵遞區號
+            invalid: 請輸入有效的郵遞區號
+            too_long: 郵遞區號值過長
             contains_html_tags: 郵遞區號不得包含 HTML 標籤。
-            contains_emojis: "「郵遞區號」不得包含表情符號"
+            contains_emojis: 郵遞區號不得包含表情符號
             not_supported: 我們目前不支援此國家/地區。請輸入新的地址，然後再試一次。
             unknown_for_province: 請輸入%{province}的有效郵遞區號
             contains_mathematical_symbols: "「郵遞區號」不得包含數學符號"
