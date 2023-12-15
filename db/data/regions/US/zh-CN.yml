@@ -6,23 +6,23 @@ zh-CN:
         province:
           label:
             default: 州
-            optional: 州（可选）
+            optional: 州（选填）
           errors:
             blank: 选择州
             invalid_for_country: 输入有效的 %{country} 州
-            unknown_for_city_and_zip: 请输入 %{city}（%{zip}）对应的有效州
-            unknown_for_city: 请选择 %{city} 对应的有效州
-            unknown_for_zip: 请选择 %{zip} 对应的有效州
+            unknown_for_city_and_zip: 输入 %{city} (%{zip} 对应的有效州
+            unknown_for_city: 选择 %{city} 对应的有效州
+            unknown_for_zip: 选择 %{zip} 对应的有效州
         zip:
           label:
             default: 邮政编码
-            optional: 邮政编码（可选）
+            optional: 邮政编码（选填）
           errors:
             blank: 输入邮政编码
-            invalid_for_country: 输入有效的 %{country} 邮编
-            invalid_for_country_and_province: 输入 %{country} %{province} 的有效邮政编码
+            invalid_for_country: 输入有效的 %{country} 邮政编码
+            invalid_for_country_and_province: 输入 %{country} %{province} 对应的有效邮政编码
             too_long: 邮政编码值过长
             contains_html_tags: 邮政编码值不能包含 HTML 标记。
             contains_emojis: 邮政编码不能包含表情符号
-            contains_restricted_characters: "“邮政编码”字段不能包含受限字符"
-            invalid_for_province: 请输入 %{province} 对应的有效邮政编码
+            contains_restricted_characters: 邮政编码不能包含受限字符
+            invalid_for_province: 输入 %{province} 对应的有效邮政编码
