@@ -36,7 +36,7 @@ fi:
             blank: Anna sukunimi
             too_long: Sukunimi on liian pitkä (enintään 255 merkkiä)
             contains_html_tags: Sukunimi ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Suku nimi ei voi sisältää emojeita
+            contains_emojis: Sukunimi ei voi sisältää emojeita
             contains_mathematical_symbols: Sukunimi ei voi sisältää matemaattisia
               symboleja
             contains_restricted_characters: Sukunimi voi sisältää vain kirjaimia,
@@ -59,7 +59,7 @@ fi:
             street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi.
             building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
               %{zip}.
-            contains_too_many_words: Osoite 1 -kentässä voi olla enintään %{word_count}
+            contains_too_many_words: Osoite1 -kentässä voi olla enintään %{word_count}
               sanaa
           warnings:
             contains_too_many_words: Osoiterivin 1 pituudeksi suositellaan alle %{word_count}
@@ -81,30 +81,30 @@ fi:
             street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi.
             building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
               %{zip}.
-            contains_too_many_words: Osoite 2 -kentässä voi olla enintään %{word_count}
+            contains_too_many_words: Osoite2-kentässä voi olla enintään %{word_count}
               sanaa
           warnings:
             contains_too_many_words: Osoiterivin 2 pituudeksi suositellaan alle %{word_count}
               sanaa
         city:
           label:
-            default: Kaupunki
-            optional: Kaupunki (valinnainen)
+            default: Paikkakunta
+            optional: Paikkakunta (valinnainen)
           errors:
-            blank: Anna kaupunki
-            too_long: Kaupungin nimi on liian pitkä (enintään 255 merkkiä)
+            blank: Anna paikkakunta
+            too_long: Paikkakunta on liian pitkä (enintään 255 merkkiä)
             contains_html_tags: Paikkakunta ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Kaupunki ei voi sisältää emojeita
+            contains_emojis: Paikkakunta ei voi sisältää emojeita
             contains_mathematical_symbols: Postitoimipaikka ei voi sisältää matemaattisia
               symboleja
-            contains_restricted_characters: Kaupunki voi sisältää vain kirjaimia,
+            contains_restricted_characters: Paikkakunta voi sisältää vain kirjaimia,
               numeroita, paikallisia merkkejä ja erikoismerkkejä
             contains_url: Paikkakunnan nimi ei voi sisältää URL-osoitetta
-            unknown_for_zip: Anna kelvollinen paikkakunta postinumerolle %{zip}
-            unknown_for_province: Anna kelvollinen paikkakunta postinumerolle %{province}
-            unknown_for_zip_and_province: Anna kelvollinen paikkakunta kohteelle %{zip},
+            unknown_for_zip: Anna kelvollinen paikkakunta alueella %{zip}
+            unknown_for_province: Anna kelvollinen paikkakunta alueella %{province}
+            unknown_for_zip_and_province: Anna kelvollinen paikkakunta alueella %{zip},
               %{province}
-            contains_too_many_words: Postitoimipaikka-kentässä voi olla enintään %{word_count}
+            contains_too_many_words: Paikkakunnassa voi olla enintään %{word_count}
               sanaa
         country:
           label:
@@ -136,10 +136,10 @@ fi:
           errors:
             blank: Valitse alue
             invalid: Anna kelvollinen alue
-            invalid_for_country: Anna kelvollinen alue maalle %{country}
-            unknown_for_city_and_zip: Anna kelvollinen alue kohteelle %{city}, %{zip}
-            unknown_for_city: Valitse kelvollinen alue kohteelle %{city}
-            unknown_for_zip: Valitse kelvollinen alue kohteelle %{zip}
+            invalid_for_country: Anna kelvollinen alue paikassa %{country}
+            unknown_for_city_and_zip: Anna kelvollinen alue paikassa %{city}, %{zip}
+            unknown_for_city: Valitse kelvollinen alue alueella %{city}
+            unknown_for_zip: Valitse kelvollinen alue alueella %{zip}
         zip:
           label:
             default: Postinumero
@@ -147,7 +147,7 @@ fi:
           errors:
             blank: Anna postinumero
             blocked_address: Tätä sijaintia ei tueta.
-            invalid_for_country: Anna kelvollinen postinumero maassa %{country}
+            invalid_for_country: Anna kelvollinen postinumero alueelle %{country}
             invalid_for_country_and_province: Anna kelvollinen postinumero provinssissa
               %{province}, %{country}
             invalid: Anna kelvollinen postinumero
@@ -160,7 +160,7 @@ fi:
               numeroita, paikallisia merkkejä ja erikoismerkkejä
             not_supported: Emme tällä hetkellä tue tätä maata/aluetta. Anna uusi osoite
               ja yritä uudelleen.
-            unknown_for_province: Anna kelvollinen postinumero maassa %{province}
+            unknown_for_province: Anna kelvollinen postinumero alueelle %{province}
             invalid_for_province: Anna kelvollinen postinumero alueelle %{province}
         address:
           errors:
