@@ -8,7 +8,7 @@ hr-HR:
             default: Tvrtka
             optional: Tvrtka (nije obavezno)
           errors:
-            blank: Unesi naziv tvrtke
+            blank: Unesite naziv tvrtke
             too_long: Naziv tvrtke je predugačak (najveći dopušteni broj znakova je
               255)
             contains_html_tags: Tvrtka ne smije sadržavati HTML oznake.
@@ -21,7 +21,7 @@ hr-HR:
             default: Ime
             optional: Ime (nije obavezno)
           errors:
-            blank: Unesi ime
+            blank: Unesite ime
             too_long: Ime je predugačko (najveći dopušteni broj znakova je 255)
             contains_html_tags: Ime ne smije sadržavati HTML oznake.
             contains_emojis: Ime ne smije sadržavati emotikone
@@ -34,7 +34,7 @@ hr-HR:
             default: Prezime
             optional: Prezime (nije obavezno)
           errors:
-            blank: Unesi prezime
+            blank: Unesite prezime
             too_long: Prezime je predugačko (najveći dopušteni broj znakova je 255)
             contains_html_tags: Prezime ne smije sadržavati HTML oznake.
             contains_emojis: Prezime ne smije sadržavati emotikone
@@ -47,10 +47,10 @@ hr-HR:
             default: Adresa
             optional: Adresa (nije obavezno)
           errors:
-            blank: Unesi adresu
+            blank: Unesite adresu
             too_long: Prvi redak adrese je predugačak (najveći dopušteni broj znakova
               je 255)
-            contains_html_tags: Adresa1 ne smije sadržavati HTML oznake.
+            contains_html_tags: Adresa 1 ne smije sadržavati HTML oznake.
             contains_emojis: Adresa 1 ne smije sadržavati emotikone
             contains_url: Adresa 1 ne smije sadržavati URL-ove.
             missing_building_number: Unesite kućni broj ako postoji.
@@ -60,20 +60,20 @@ hr-HR:
             contains_mathematical_symbols: Adresa 1 ne smije sadržavati matematičke simbole
             contains_restricted_characters: Adresa 1 smije sadržavati samo slova,
               brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: Adresa1 ne smije sadržavati više od %{word_count}
+            contains_too_many_words: Adresa 1 ne smije sadržavati više od %{word_count}
               riječi
           warnings:
-            contains_too_many_words: Preporučamo da redak adrese 1 sadrži
-              manje od %{word_count} riječ/i
+            contains_too_many_words: Preporučujemo da redak adrese 1 sadrži manje
+              od %{word_count} riječ/i
         address2:
           label:
-            default: Stan, apartman itd.
-            optional: Stan, apartman itd. (neobavezno)
+            default: Broj stana, apartmana itd.
+            optional: Broj stana, apartmana itd. (nije obavezno)
           errors:
-            blank: Unesi broj stana, apartmana itd.
+            blank: Unesite broj stana, apartmana itd.
             too_long: Drugi redak adrese je predugačak (najveći dopušteni broj znakova
               je 255)
-            contains_html_tags: Adresa2 ne smije sadržavati HTML oznake.
+            contains_html_tags: Adresa 2 ne smije sadržavati HTML oznake.
             contains_emojis: Adresa 2 ne smije sadržavati emotikone
             contains_url: Adresa 2 ne smije sadržavati URL-ove.
             missing_building_number: Unesite kućni broj ako postoji.
@@ -83,29 +83,29 @@ hr-HR:
             contains_mathematical_symbols: Adresa 2 ne smije sadržavati matematičke simbole
             contains_restricted_characters: Adresa 2 smije sadržavati samo slova,
               brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: Adresa2 ne smije sadržavati više od %{word_count}
+            contains_too_many_words: Adresa 2 ne smije sadržavati više od %{word_count}
               riječi
           warnings:
-            contains_too_many_words: Preporučamo da redak adrese 2 sadrži
-              manje od %{word_count} riječ/i
+            contains_too_many_words: Preporučujemo da redak adrese 2 sadrži manje
+              od %{word_count} riječ/i
         city:
           label:
             default: Grad
             optional: Grad (nije obavezno)
           errors:
-            blank: Unesi grad
-            too_long: Naziv grada je predugačak (najveći dopušteni broj znakova je
-              255)
-            contains_html_tags: Grad ne smije sadržavati HTML oznake.
-            contains_emojis: Ime grada ne smije sadržati emotikone
-            contains_url: Naziv grada ne smije sadržavati URL
-            unknown_for_zip: Unesite valjani grad za %{zip}
-            unknown_for_province: Unesite valjani grad za %{province}
-            unknown_for_zip_and_province: Unesite valjani grad za %{zip}, %{province}
+            blank: Unesite grad
+            too_long: Ime grada je predugačko (najveći dopušteni broj znakova je 255)
+            contains_html_tags: Ime grada ne smije sadržavati HTML oznake.
+            contains_emojis: Ime grada ne smije sadržavati emotikone
+            contains_url: Ime grada ne smije sadržavati URL
+            unknown_for_zip: Unesite valjani grad za provinciju %{zip}
+            unknown_for_province: Unesite valjani grad za provinciju %{province}
+            unknown_for_zip_and_province: Unesite valjani grad za provinciju %{zip},
+              %{province}
             contains_mathematical_symbols: Naziv grada ne smije sadržavati matematičke simbole
-            contains_restricted_characters: Naziv grada smije sadržavati samo slova,
+            contains_restricted_characters: Ime grada smije sadržavati samo slova,
               brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: Grad ne smije sadržavati više od %{word_count}
+            contains_too_many_words: Ime grada ne smije sadržavati više od %{word_count}
               riječi
         country:
           label:
@@ -135,12 +135,12 @@ hr-HR:
             default: Regija
             optional: Regija (nije obavezno)
           errors:
-            blank: Odaberi regiju
+            blank: Odaberite regiju
             invalid: Unesite valjanu regiju
             invalid_for_country: Unesite valjanu regiju za %{country}
             unknown_for_city_and_zip: Unesite valjanu regiju za %{city}, %{zip}
-            unknown_for_city: Unesite valjanu regiju za %{city}
-            unknown_for_zip: Unesite valjanu regiju za %{zip}
+            unknown_for_city: Odaberite valjanu regiju za %{city}
+            unknown_for_zip: Odaberite valjanu regiju za %{zip}
         zip:
           label:
             default: Poštanski broj
@@ -148,7 +148,7 @@ hr-HR:
           errors:
             blank: Unesi poštanski broj
             blocked_address: Ta lokacija nije podržana.
-            invalid_for_country: Unesi valjan poštanski broj za državu %{country}
+            invalid_for_country: Unesite valjani poštanski broj za %{country}
             invalid_for_country_and_province: Unesite valjani poštanski broj za %{province},
               %{country}
             invalid: Unesite valjani poštanski broj

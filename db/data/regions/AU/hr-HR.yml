@@ -6,12 +6,12 @@ hr-HR:
         city:
           label:
             default: Naselje
-            optional: Naselje (neobavezno)
+            optional: Naselje (nije obavezno)
           errors:
-            blank: Unesi predgrađe
-            too_long: Naziv predgrađa je predugačak (najveći dopušteni broj znakova
+            blank: Unesite naselje
+            too_long: Ime predgrađa je predugačak (najveći dopušteni broj znakova
               je 255)
-            contains_html_tags: Predgrađe ne smije sadržavati HTML oznake.
+            contains_html_tags: Ime predgrađa ne smije sadržavati HTML oznake.
             contains_emojis: Ime predgrađa ne smije sadržavati emotikone
             contains_restricted_characters: Naziv predgrađa smije sadržavati samo
               slova, brojeve, lokalne znakove i posebne znakove
@@ -23,11 +23,11 @@ hr-HR:
             blank: Odaberi državu/teritorij
         zip:
           label:
-            default: Poštanski broj
+            default: Poštanski kod
             optional: Poštanski broj (neobavezno)
           errors:
-            blank: Unesi poštanski broj
-            invalid_for_country: Unesi valjan poštanski broj za državu %{country}
+            blank: Unesite poštanski broj
+            invalid_for_country: Unesite valjani poštanski broj za državu %{country}
             invalid_for_country_and_province: Unesite valjani poštanski broj za %{province},
               %{country}
             too_long: Poštanski broj je predugačak
