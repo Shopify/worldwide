@@ -5,14 +5,14 @@ sv:
       addresses:
         city:
           label:
-            default: Förort
-            optional: Förort (valfritt)
+            default: Område
+            optional: Område (valfritt)
           errors:
-            blank: Ange en förort
-            too_long: Områdesnamnet är för långt (max 255 tecken)
+            blank: Ange ett område
+            too_long: Områdesnamnet är för långt (max. 255 tecken)
             contains_html_tags: Område får inte innehålla HTML-taggar.
             contains_emojis: Område får inte innehålla emojis
-            contains_restricted_characters: Förort får endast innehålla bokstäver,
+            contains_restricted_characters: Område får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
         province:
           label:
