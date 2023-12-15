@@ -9,19 +9,19 @@ pt-PT:
             optional: Estado (opcional)
           errors:
             blank: Selecione um estado
-            invalid_for_country: Introduzir um estado válido para %{country}
-            unknown_for_city_and_zip: Introduza um estado válido para %{city}, %{zip}
+            invalid_for_country: Introduza um estado válido para %{country}
+            unknown_for_city_and_zip: 'Introduza um estado válido para: %{city}, %{zip}'
             unknown_for_city: Selecione um estado válido para %{city}
             unknown_for_zip: Selecione um estado válido para %{zip}
         zip:
           label:
-            default: CP
+            default: Código postal
             optional: CP (opcional)
           errors:
             blank: Introduza um CP
             invalid_for_country: Introduza um CP válido para %{country}
-            invalid_for_country_and_province: Introduza um CP válido para %{province},
-              %{country}
+            invalid_for_country_and_province: 'Introduza um CP válido para: %{province},
+              %{country}'
             too_long: O valor do CP é demasiado longo
             contains_html_tags: O valor CP não pode conter etiquetas HTML.
             contains_emojis: O CP não pode conter emojis
