@@ -59,10 +59,10 @@ sk-SK:
             contains_restricted_characters: Adresa 1 môže obsahovať len písmená, číslice,
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 1 nemôže mať viac ako tento počet slov:
-              (%{word_count})'
+              %{word_count}'
           warnings:
-            contains_too_many_words: 'Riadok adresy 1 by nemal mať viac
-              ako tento počet slov: %{word_count}'
+            contains_too_many_words: 'Riadok adresy 1 by nemal mať viac ako tento
+              počet slov: %{word_count}'
         address2:
           label:
             default: Apartmán, byt atď.
@@ -81,10 +81,10 @@ sk-SK:
             contains_restricted_characters: Adresa 2 môže obsahovať len písmená, číslice,
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 2 nemôže mať viac ako tento počet slov:
-              (%{word_count})'
+              %{word_count}'
           warnings:
-            contains_too_many_words: 'Riadok adresy 2 by nemal mať viac
-              ako tento počet slov: %{word_count}'
+            contains_too_many_words: 'Riadok adresy 2 by nemal mať viac ako tento
+              počet slov: %{word_count}'
         city:
           label:
             default: Mesto
@@ -96,19 +96,19 @@ sk-SK:
             contains_emojis: Mesto nemôže obsahovať emotikony
             contains_url: Mesto nemôže obsahovať URL adresu
             unknown_for_zip: Zadajte platné mesto pre PSČ %{zip}
-            unknown_for_province: Zadajte platné mesto pre provinciu %{province}
+            unknown_for_province: Zadajte platné mesto pre PSČ %{province}
             unknown_for_zip_and_province: Zadajte platné mesto pre PSČ %{zip}, %{province}
             contains_mathematical_symbols: Mesto nemôže obsahovať matematické značky
             contains_restricted_characters: Mesto môže obsahovať len písmená, číslice,
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Mesto nemôže mať viac ako tento počet slov:
-              (%{word_count})'
+              %{word_count}'
         country:
           label:
             default: Krajina/oblasť
             optional: Krajina/oblasť (voliteľné)
           errors:
-            blank: Vybrať krajinu/oblasť
+            blank: Vyberte krajinu/oblasť
             not_supported: Túto krajinu/oblasť v súčasnosti nepodporujeme. Zadajte
               novú adresu a skúste to znova.
             invalid: Zadajte platnú krajinu/oblasť
@@ -147,7 +147,7 @@ sk-SK:
             invalid_for_country: 'Zadajte platné poštové smerovacie číslo pre: %{country}'
             invalid_for_country_and_province: 'Zadajte platné poštové smerovacie číslo
               pre: %{province}, %{country}'
-            invalid: Zadajte platné PSČ
+            invalid: Zadajte platné poštové smerovacie číslo
             too_long: Hodnota poštového smerovacieho čísla je príliš dlhá
             contains_html_tags: Poštové smerovacie číslo nemôže obsahovať HTML značky.
             contains_emojis: Poštové smerovacie číslo nemôže obsahovať emotikony
@@ -157,8 +157,7 @@ sk-SK:
             contains_mathematical_symbols: Poštové smerovacie číslo nemôže obsahovať matematické značky
             contains_restricted_characters: Poštové smerovacie číslo môže obsahovať
               len písmená, číslice, miestne znaky a špeciálne znaky
-            invalid_for_province: Zadajte platné poštové smerovacie číslo pre provinciu
-              %{province}
+            invalid_for_province: 'Zadajte platné poštové smerovacie číslo pre: %{province}'
         address:
           errors:
             may_not_exist: Adresa nebola nájdená alebo neexistuje
