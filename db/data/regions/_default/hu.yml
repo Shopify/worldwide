@@ -5,8 +5,8 @@ hu:
       addresses:
         company:
           label:
-            default: Cégnév
-            optional: Cégnév (nem kötelező megadni)
+            default: Vállalat
+            optional: Cégnév (nem kötelező beírni)
           errors:
             blank: Írd be a cégnevet
             too_long: Túl hosszú a cég neve (legfeljebb 255 karakter hosszú lehet).
@@ -18,7 +18,7 @@ hu:
         first_name:
           label:
             default: Utónév
-            optional: Utónév (nem kötelező megadni)
+            optional: Utónév (nem kötelező beírni)
           errors:
             blank: Írd be az utónevet
             too_long: Túl hosszú az utónév (legfeljebb 255 karakter hosszú lehet).
@@ -62,12 +62,12 @@ hu:
             contains_too_many_words: A cím 1. sora legfeljebb %{word_count} szóból
               állhat
           warnings:
-            contains_too_many_words: A cím 1. sorának javasolt hossza
-              kevesebb mint %{word_count} szó
+            contains_too_many_words: A cím 1. sorának javasolt hossza kevesebb mint
+              %{word_count} szó
         address2:
           label:
-            default: Épület, emelet, ajtó stb.
-            optional: Épület, emelet, ajtó stb. (nem kötelező megadni)
+            default: Lakás, lakosztály, stb.
+            optional: Épület, emelet, ajtó stb. (nem kötelező beírni)
           errors:
             blank: Írd be az épület, emelet, ajtó stb. jelölését
             too_long: Túl hosszú a cím második sora (legfeljebb 255 karakter hosszú
@@ -86,8 +86,8 @@ hu:
             contains_too_many_words: A cím 2. sora legfeljebb %{word_count} szóból
               állhat
           warnings:
-            contains_too_many_words: A cím 2. sorának javasolt hossza
-              kevesebb mint %{word_count} szó
+            contains_too_many_words: A cím 2. sorának javasolt hossza kevesebb mint
+              %{word_count} szó
         city:
           label:
             default: Település
@@ -99,7 +99,7 @@ hu:
             contains_html_tags: A településnév nem tartalmazhat HTML-címkéket.
             contains_emojis: A településnév nem tartalmazhat emodzsikat.
             contains_url: A településnév nem tartalmazhat URL-címet
-            unknown_for_zip: Írj be az irányítószámnak (%{zip}) megfelelő településnevet
+            unknown_for_zip: 'Olyan településnevet írj be, amely itt található: %{zip}'
             unknown_for_province: 'Olyan településnevet írj be, amely itt található:
               %{province}'
             unknown_for_zip_and_province: 'Olyan településnevet írj be, amely itt
@@ -121,10 +121,10 @@ hu:
         phone:
           label:
             default: Telefonszám
-            optional: Telefonszám (nem kötelező megadni)
+            optional: Telefonszám (nem kötelező beírni)
           errors:
             blank: Adj meg egy telefonszámot
-            invalid: Érvénytelen telefonszámot írtál be
+            invalid: Írj be egy érvényes telefonszámot
             too_long: Túl hosszú telefonszám (legfeljebb 255 karakter hosszú lehet)
             contains_emojis: A telefonszám nem tartalmazhat emodzsikat.
             contains_mathematical_symbols: A telefonszám nem tartalmazhat matematikai szimbólumokat
@@ -141,7 +141,7 @@ hu:
             unknown_for_city_and_zip: Add meg a településnek (%{city}, %{zip}) megfelelő
               régiót
             unknown_for_city: 'Ennek megfelelő régiót válassz: %{city}'
-            unknown_for_zip: Válaszd ki az irányítószámnak (%{zip}) megfelelő régiót
+            unknown_for_zip: 'Ennek megfelelő régiót válassz: %{zip}'
         zip:
           label:
             default: Irányítószám
@@ -150,17 +150,18 @@ hu:
             blank: Írd be az irányítószámot
             blocked_address: Erre a címre nem szállítunk, és nem is adható meg szállítási
               címként.
-            invalid_for_country: 'Érvénytelen irányítószámot írtál be ehhez az országhoz:
+            invalid_for_country: 'Olyan irányítószámot írj be, amely itt található:
               %{country}'
-            invalid_for_country_and_province: 'Érvénytelen irányítószámot írtál be
-              ehhez a zónához és országhoz: %{province}, %{country}'
+            invalid_for_country_and_province: Add meg a településnek (%{province},
+              %{country}) megfelelő irányítószámot
             invalid: Érvénytelen a beírt irányítószám.
             too_long: Túl hosszú az irányítószám.
             contains_html_tags: Az irányítószám nem tartalmazhat HTML-címkéket.
             contains_emojis: Az irányítószám nem tartalmazhat emodzsikat.
             not_supported: Ebben az országban vagy régióban egyelőre nem veheted igénybe
               szolgáltatásainkat. Írj be egy másik címet, és próbálkozz újra.
-            unknown_for_province: Add meg a tartománynak (%{province}) megfelelő irányítószámot
+            unknown_for_province: 'Olyan irányítószámot írj be, amely itt található:
+              %{province}'
             contains_mathematical_symbols: Az irányítószám nem tartalmazhat matematikai szimbólumokat
             contains_restricted_characters: Az irányítószám csak betűket, számokat,
               helyi karaktereket és különleges karaktereket tartalmazhat
