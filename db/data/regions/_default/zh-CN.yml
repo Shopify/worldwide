@@ -6,26 +6,36 @@ zh-CN:
         company:
           label:
             default: 公司
-            optional: 公司（可选）
+            optional: 公司（选填）
           errors:
             blank: 输入公司名称
             too_long: 公司名过长（最多 255 个字符）
+<<<<<<< HEAD
             contains_html_tags: 公司不能包含 HTML 标记。
             contains_emojis: 公司不能包含表情符号
             contains_mathematical_symbols: 公司不能包含数学符号
             contains_restricted_characters: "“公司”字段只能包含字母、数字、当地字符和特殊字符"
+=======
+            contains_html_tags: "“公司”字段不能包含 HTML 标记。"
+            contains_emojis: "“公司”字段不能包含表情符号"
+            contains_restricted_characters: 公司只能包含字母、数字、当地字符和特殊字符
+>>>>>>> 266904e (Update 24 translation files)
         first_name:
           label:
             default: 名字
-            optional: 名字（可选）
+            optional: 名字（选填）
           errors:
             blank: 输入名字
             too_long: 名字过长（最多 255 个字符）
             contains_html_tags: 名字不能包含 HTML 标记。
             contains_emojis: 名字不能包含表情符号
             contains_url: 名字不能包含 URL。
+<<<<<<< HEAD
             contains_mathematical_symbols: 名字不能包含数学符号
             contains_restricted_characters: "“名字”字段只能包含字母、数字、当地字符和特殊字符"
+=======
+            contains_restricted_characters: 名字只能包含字母、数字、当地字符和特殊字符
+>>>>>>> 266904e (Update 24 translation files)
         last_name:
           label:
             default: 姓氏
@@ -36,109 +46,142 @@ zh-CN:
             contains_html_tags: 姓氏不能包含 HTML 标记。
             contains_emojis: 姓氏不能包含表情符号
             contains_url: 姓氏不能包含 URL。
+<<<<<<< HEAD
             contains_mathematical_symbols: 姓氏不能包含数学符号
             contains_restricted_characters: "“姓氏”字段只能包含字母、数字、当地字符和特殊字符"
+=======
+            contains_restricted_characters: 姓氏只能包含字母、数字、当地字符和特殊字符
+>>>>>>> 266904e (Update 24 translation files)
         address1:
           label:
             default: 地址
-            optional: 地址（可选）
+            optional: 地址（选填）
           errors:
             blank: 输入地址
             too_long: 第一个地址行过长（最多 255 个字符）
             contains_html_tags: 地址 1 不能包含 HTML 标记。
             contains_emojis: 地址 1 不能包含表情符号
             contains_url: 地址 1 不能包含 URL
-            missing_building_number: 请添加大楼编号（如果有）。
-            street_unknown_for_zip: 请输入 %{zip} 对应的有效街道名称。
+            missing_building_number: 添加大楼编号（如果有）。
+            street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称。
             building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
+<<<<<<< HEAD
             contains_mathematical_symbols: 地址 1 不能包含数学符号
             contains_restricted_characters: "“地址 1”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“地址 1”字段不能超过 %{word_count} 个单词"
+=======
+            contains_restricted_characters: 地址 1 只能包含字母、数字、当地字符和特殊字符
+            contains_too_many_words: 地址 1 不能超过 %{word_count} 个字词
+>>>>>>> 266904e (Update 24 translation files)
           warnings:
             contains_too_many_words: 建议地址行 1 少于 %{word_count} 个字词
         address2:
           label:
-            default: 公寓、房间号等
-            optional: 公寓、房间号等（可选）
+            default: 公寓、房间号等。
+            optional: 公寓、房间号等（选填）
           errors:
-            blank: 输入公寓、房间号等
+            blank: 输入公寓、房间号等。
             too_long: 第二个地址行过长（最多 255 个字符）
             contains_html_tags: 地址 2 不能包含 HTML 标记。
             contains_emojis: 地址 2 不能包含表情符号
-            contains_url: 地址 2 不能包含 URL
-            missing_building_number: 请添加大楼编号（如果有）。
-            street_unknown_for_zip: 请输入 %{zip} 对应的有效街道名称。
+            contains_url: 地址 2 不能包含 URL。
+            missing_building_number: 添加大楼编号（如果有）。
+            street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称。
             building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
+<<<<<<< HEAD
             contains_mathematical_symbols: 地址 2 不能包含数学符号
             contains_restricted_characters: "“地址 2”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“地址 2”字段不能超过 %{word_count} 个单词"
+=======
+            contains_restricted_characters: 地址 2 只能包含字母、数字、当地字符和特殊字符
+            contains_too_many_words: 地址 2 不能超过 %{word_count} 个字词
+>>>>>>> 266904e (Update 24 translation files)
           warnings:
             contains_too_many_words: 建议地址行 2 少于 %{word_count} 个字词
         city:
           label:
             default: 城市
-            optional: 城市（可选）
+            optional: 城市（选填）
           errors:
             blank: 输入城市
             too_long: 城市名过长（最多 255 个字符）
             contains_html_tags: 城市不能包含 HTML 标记。
             contains_emojis: 城市不能包含表情符号
             contains_url: 城市不能包含 URL
+<<<<<<< HEAD
             unknown_for_zip: 请输入 %{zip} 对应的有效城市
             unknown_for_province: 请输入 %{province} 对应的有效城市
             unknown_for_zip_and_province: 请输入 %{zip}，%{province} 对应的有效城市
             contains_mathematical_symbols: 城市不能包含数学符号
             contains_restricted_characters: "“城市”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“城市”字段不能超过 %{word_count} 个单词"
+=======
+            unknown_for_zip: 输入 %{zip} 对应的有效城市
+            unknown_for_province: 输入 %{province} 对应的有效城市
+            unknown_for_zip_and_province: 输入 %{province} (%{zip}) 对应的有效城市
+            contains_restricted_characters: 城市只能包含字母、数字、当地字符和特殊字符
+            contains_too_many_words: 城市不能超过 %{word_count} 个字词
+>>>>>>> 266904e (Update 24 translation files)
         country:
           label:
             default: 国家/地区
-            optional: 国家/地区（可选）
+            optional: 国家/地区（选填）
           errors:
             blank: 选择国家/地区
-            not_supported: 我们当前不向此国家/地区发货。输入一个新的邮寄地址并重试。
+            not_supported: 我们当前不支持此国家/地区。请输入新地址并重试。
             invalid: 输入有效国家/地区
             invalid_for_zip: 输入此邮政编码对应的有效国家/地区
         phone:
           label:
-            default: 电话
-            optional: 电话（可选）
+            default: 电话号码
+            optional: 电话号码（选填）
           errors:
             blank: 输入电话号码
             invalid: 输入有效的电话号码
             too_long: 电话号码过长（最多包含 255 个字符）
             contains_emojis: 电话号码不能包含表情符号
+<<<<<<< HEAD
             contains_mathematical_symbols: 电话号码不能包含数学符号
             contains_restricted_characters: "“电话号码”字段只能包含字母、数字、当地字符和特殊字符"
+=======
+            contains_restricted_characters: 电话号码只能包含字母、数字、当地字符和特殊字符
+>>>>>>> 266904e (Update 24 translation files)
         province:
           label:
-            default: 区域
-            optional: 区域（可选）
+            default: 地区
+            optional: 地区（选填）
           errors:
             blank: 选择地区
             invalid: 输入有效的地区
             invalid_for_country: 输入 %{country} 的有效地区
-            unknown_for_city_and_zip: 输入 %{zip} %{city} 对应的有效城市
-            unknown_for_city: 选择 %{city} 对应的有效区域
-            unknown_for_zip: 选择 %{zip} 对应的有效区域
+            unknown_for_city_and_zip: 输入 %{city} (%{zip}) 对应的有效地区
+            unknown_for_city: 选择 %{city} 对应的有效地区
+            unknown_for_zip: 选择 %{zip} 对应的有效地区
         zip:
           label:
             default: 邮政编码
-            optional: 邮政编码（可选）
+            optional: 邮政编码（选填）
           errors:
             blank: 输入邮政编码
             blocked_address: 不支持此地点。
-            invalid_for_country: 输入 %{country} 的有效邮政编码
-            invalid_for_country_and_province: 输入 %{country} %{province} 的有效邮政编码
+            invalid_for_country: 输入 %{country} 对应的有效邮政编码
+            invalid_for_country_and_province: 输入 %{country} %{province} 对应的有效邮政编码
             invalid: 输入有效的邮政编码
             too_long: 邮政编码值过长
             contains_html_tags: 邮政编码不能包含 HTML 标记。
             contains_emojis: 邮政编码不能包含表情符号
+<<<<<<< HEAD
             not_supported: 我们当前不支持此国家/地区发货。请输入新地址并重试。
             unknown_for_province: 输入 %{province} 的有效邮政编码
             contains_mathematical_symbols: 邮政编码不能包含数学符号
             contains_restricted_characters: "“邮政编码”字段只能包含字母、数字、当地字符和特殊字符"
             invalid_for_province: 请输入 %{province} 对应的有效邮政编码
+=======
+            not_supported: 我们当前不支持此国家/地区。请输入新地址并重试。
+            unknown_for_province: 输入 %{province} 对应的有效邮政编码
+            contains_restricted_characters: 邮政编码只能包含字母、数字、当地字符和特殊字符
+            invalid_for_province: 输入 %{province} 对应的有效邮政编码
+>>>>>>> 266904e (Update 24 translation files)
         address:
           errors:
             may_not_exist: 找不到地址或地址不存在
