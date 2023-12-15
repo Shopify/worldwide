@@ -5,14 +5,14 @@ ja:
       addresses:
         province:
           label:
-            default: 州
+            default: 州/都道府県
             optional: 州 (任意)
           errors:
             blank: 州を選択してください
-            invalid_for_country: 有効な%{country}の州を入力してください
-            unknown_for_city_and_zip: "%{zip}、%{city}の有効な州を入力してください"
+            invalid_for_country: "%{country}の有効な州を入力してください"
+            unknown_for_city_and_zip: "%{city} (%{zip}) の有効な州を入力してください"
             unknown_for_city: "%{city}の有効な州を選択してください"
-            unknown_for_zip: "%{zip}の有効な州を選択してください"
+            unknown_for_zip: "%{zip}に対応する有効な州を選択してください"
         zip:
           label:
             default: 郵便番号
