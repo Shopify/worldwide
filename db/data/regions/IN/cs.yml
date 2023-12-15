@@ -8,21 +8,21 @@ cs:
             default: Stát
             optional: Stát (volitelné)
           errors:
-            blank: Vyberte stát
+            blank: Vyberte stát.
         zip:
           label:
-            default: PIN kód
-            optional: PIN kód (volitelné)
+            default: PIN kód (poštovní indexové číslo)
+            optional: PIN kód (poštovní indexové číslo, volitelné)
           errors:
-            blank: Zadejte PIN kód (tj. poštovní indexové číslo)
-            invalid_for_country: Zadejte platný PIN kód (tj. poštovní indexové číslo)
-              pro zemi %{country}
-            invalid_for_country_and_province: 'Zadejte platný PIN kód pro: %{province},
-              %{country}'
+            blank: Zadejte PIN kód (poštovní indexové číslo).
+            invalid_for_country: 'Zadejte platný PIN kód (poštovní indexové číslo)
+              pro zemi: %{country}.'
+            invalid_for_country_and_province: 'Zadejte platný PIN kód (poštovní indexové
+              číslo) pro: %{province}, %{country}.'
             too_long: Hodnota PIN kódu (tj. poštovního indexového čísla) je příliš
-              dlouhá
-            contains_html_tags: PIN kód (tj. poštovní indexové číslo) nemůže obsahovat
+              dlouhá.
+            contains_html_tags: PIN kód (poštovní indexové číslo) nemůže obsahovat
               HTML tagy.
-            contains_emojis: PIN kód (poštovní indexové číslo) nemůže obsahovat emoji
+            contains_emojis: PIN kód (poštovní indexové číslo) nemůže obsahovat emoji.
             contains_restricted_characters: PIN kód (poštovní indexové číslo) nesmí
-              obsahovat zakázané znaky
+              obsahovat zakázané znaky.
