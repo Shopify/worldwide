@@ -5,20 +5,20 @@ ru:
       addresses:
         city:
           label:
-            default: Район
-            optional: Район (необязательно)
+            default: Пригород
+            optional: Пригород (необязательно)
           errors:
-            blank: Укажите район
+            blank: Укажите пригород
             too_long: Название пригорода слишком длинное (должно содержать не больше
               255 символов)
-            contains_html_tags: Название района не может содержать HTML-теги.
-            contains_emojis: Район не может содержать емодзи
-            contains_restricted_characters: Поле «Район» может содержать только буквы,
-              цифры, а также местные и специальные символы
+            contains_html_tags: Название пригорода не может содержать HTML-теги.
+            contains_emojis: Пригород не может содержать емодзи
+            contains_restricted_characters: Поле «Пригород» может содержать только
+              буквы, цифры, а также местные и специальные символы
         province:
           label:
-            default: Государство/территория
-            optional: Государство/территория (необязательно)
+            default: Штат/территория
+            optional: Штат/территория (необязательно)
           errors:
             blank: Выберите штат/территорию
         zip:
@@ -26,11 +26,11 @@ ru:
             default: Почтовый индекс
             optional: Почтовый индекс (необязательно)
           errors:
-            blank: Укажите почтовый индекс
+            blank: Введите индекс
             invalid_for_country: Укажите действительный почтовый индекс для страны
-              %{country}
+              (%{country})
             invalid_for_country_and_province: Укажите действительный почтовый индекс
-              для региона %{province} (%{country})
+              для региона (%{province}, %{country})
             too_long: Почтовый индекс слишком длинный
             contains_html_tags: Индекс не может содержать HTML-теги.
             contains_emojis: Индекс не может содержать емодзи
