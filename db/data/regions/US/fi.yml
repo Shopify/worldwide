@@ -9,11 +9,11 @@ fi:
             optional: Osavaltio (valinnainen)
           errors:
             blank: Valitse osavaltio
-            invalid_for_country: Anna kelvollinen osavaltio maalle %{country}
-            unknown_for_city_and_zip: Anna kelvollinen osavaltio kohteelle %{city},
+            invalid_for_country: Anna kelvollinen osavaltio maassa %{country}
+            unknown_for_city_and_zip: Anna kelvollinen osavaltio paikassa %{city},
               %{zip}
-            unknown_for_city: Valitse kelvollinen osavaltio kohteelle %{city}
-            unknown_for_zip: Valitse kelvollinen osavaltio kohteelle %{zip}
+            unknown_for_city: Valitse kelvollinen osavaltio paikassa %{city}
+            unknown_for_zip: Valitse kelvollinen osavaltio paikassa %{zip}
         zip:
           label:
             default: Postinumero
@@ -21,11 +21,11 @@ fi:
           errors:
             blank: Anna postinumero
             invalid_for_country: Anna kelvollinen postinumero maassa %{country}
-            invalid_for_country_and_province: Anna kelvollinen postinumero provinssissa
+            invalid_for_country_and_province: Anna kelvollinen postinumero paikassa
               %{province}, %{country}
             too_long: Postinumeron arvo on liian pitkä
-            contains_html_tags: Postikoodi ei voi sisältää HTML-tunnisteita.
+            contains_html_tags: Postinumero ei voi sisältää HTML-tunnisteita.
             contains_emojis: Postinumero ei voi sisältää emojeita
             contains_restricted_characters: Postinumero ei voi sisältää kiellettyjä
               merkkejä
-            invalid_for_province: Anna kelvollinen postinumero alueelle %{province}
+            invalid_for_province: Anna kelvollinen postinumero paikassa %{province}
