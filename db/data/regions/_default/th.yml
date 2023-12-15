@@ -8,7 +8,7 @@ th:
             default: บริษัท
             optional: บริษัท (ไม่บังคับ)
           errors:
-            blank: ป้อนชื่อบริษัท
+            blank: ใส่ชื่อบริษัท
             too_long: ชื่อบริษัทยาวเกินไป (สูงสุดคือ 255 อักขระ)
             contains_html_tags: ห้ามมีแท็ก HTML ในชื่อบริษัท
             contains_emojis: ไม่สามารถใส่อีโมจิในชื่อบริษัทได้
@@ -20,7 +20,7 @@ th:
             default: ชื่อ
             optional: ชื่อ (ไม่บังคับ)
           errors:
-            blank: ป้อนชื่อจริง
+            blank: ป้อนชื่อ
             too_long: ชื่อจริงยาวเกินไป (สูงสุดคือ 255 อักขระ)
             contains_html_tags: ห้ามมีแท็ก HTML ในชื่อจริง
             contains_emojis: ไม่สามารถใส่อีโมจิในชื่อได้
@@ -60,14 +60,14 @@ th:
               อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
             contains_too_many_words: ที่อยู่ 1 ต้องไม่เกิน %{word_count} คำ
           warnings:
-            contains_too_many_words: ที่อยู่บรรทัดที่ 1 ไม่ควรมีความยาวเกิน
-              %{word_count} คำ
+            contains_too_many_words: ที่อยู่บรรทัดที่ 1 ไม่ควรมีความยาวเกิน %{word_count}
+              คำ
         address2:
           label:
-            default: อพาร์ตเมนต์ ห้องชุด ฯลฯ
-            optional: อพาร์ตเมนต์ ห้องชุด ฯลฯ (ไม่บังคับ)
+            default: อะพาร์ตเมนต์ ห้องชุด เป็นต้น
+            optional: อะพาร์ตเมนต์ ห้องชุด เป็นต้น (ไม่จำเป็น)
           errors:
-            blank: ป้อนชื่ออพาร์ตเมนต์ ห้องชุด ฯลฯ
+            blank: ป้อนอะพาร์ตเมนต์ ห้องชุด เป็นต้น
             too_long: ที่อยู่บรรทัดที่สองยาวเกินไป (สูงสุดคือ 255 อักขระ)
             contains_html_tags: ห้ามมีแท็ก HTML ในที่อยู่ 2
             contains_emojis: ไม่สามารถใส่อีโมจิในที่อยู่ 2 ได้
@@ -81,14 +81,14 @@ th:
               อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
             contains_too_many_words: ที่อยู่ 2 ต้องไม่เกิน %{word_count} คำ
           warnings:
-            contains_too_many_words: ที่อยู่บรรทัดที่ 2 ไม่ควรมีความยาวเกิน
-              %{word_count} คำ
+            contains_too_many_words: ที่อยู่บรรทัดที่ 2 ไม่ควรมีความยาวเกิน %{word_count}
+              คำ
         city:
           label:
             default: เมือง
             optional: เมือง (ไม่บังคับ)
           errors:
-            blank: ป้อนชื่อเมือง
+            blank: ป้อนเมือง
             too_long: เมืองยาวเกินไป (สูงสุดคือ 255 อักขระ)
             contains_html_tags: ห้ามมีแท็ก HTML ในชื่อเมือง
             contains_emojis: ไม่สามารถใส่อีโมจิในชื่อเมืองได้
@@ -113,7 +113,7 @@ th:
         phone:
           label:
             default: โทรศัพท์
-            optional: โทรศัพท์ (ไม่บังคับ)
+            optional: โทรศัพท์ (ไม่จำเป็น)
           errors:
             blank: ป้อนหมายเลขโทรศัพท์
             invalid: ป้อนหมายเลขโทรศัพท์ที่ถูกต้อง
@@ -140,7 +140,7 @@ th:
           errors:
             blank: ป้อนรหัสไปรษณีย์
             blocked_address: ไม่รองรับตำแหน่งที่ตั้งนี้
-            invalid_for_country: ป้อนรหัสไปรษณีย์ใน %{country} ให้ถูกต้อง
+            invalid_for_country: ป้อนรหัสไปรษณีย์ที่ถูกต้องสำหรับ %{country}
             invalid_for_country_and_province: ป้อนรหัสไปรษณีย์ของ %{province} ใน %{country}
               ให้ถูกต้อง
             invalid: ป้อนรหัสไปรษณีย์ที่ถูกต้อง
@@ -149,7 +149,7 @@ th:
             contains_emojis: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
             not_supported: ในปัจจุบันเรายังไม่รองรับการทำธุรกิจในประเทศ/ภูมิภาคนี้
               โปรดป้อนที่อยู่ใหม่แล้วลองอีกครั้ง
-            unknown_for_province: ป้อนรหัสไปรษณีย์ใน %{province} ให้ถูกต้อง
+            unknown_for_province: ป้อนรหัสไปรษณีย์ที่ถูกต้องสำหรับ %{province}
             contains_mathematical_symbols: ห้ามใช้สัญลักษณ์ทางคณิตศาสตร์ในช่อง “รหัสไปรษณีย์”
             contains_restricted_characters: รหัสไปรษณีย์สามารถประกอบด้วยตัวอักษร ตัวเลข
               อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
