@@ -5,18 +5,18 @@ pt-PT:
       addresses:
         city:
           label:
-            default: Subúrbio
-            optional: Subúrbio (opcional)
+            default: Bairro
+            optional: Bairro (opcional)
           errors:
-            blank: Introduza um subúrbio
+            blank: Introduza um bairro
             too_long: O apelido é demasiado longo (o máximo são 255 caracteres)
-            contains_html_tags: O subúrbio não pode conter etiquetas HTML.
+            contains_html_tags: O bairro não pode ter tags HTML.
             contains_emojis: O bairro não pode conter emojis
             contains_restricted_characters: O campo "Bairro" só pode conter letras,
               números, caracteres locais e caracteres especiais
         province:
           label:
-            default: Estado/território
+            default: Estado/Território
             optional: Estado/território (opcional)
           errors:
             blank: Selecione um estado/território
@@ -25,12 +25,12 @@ pt-PT:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blank: Introduza um código postal
+            blank: Introduza um cód. postal
             invalid_for_country: Introduza um código postal válido para %{country}
             invalid_for_country_and_province: Introduza um código postal válido para
               %{province}, %{country}
             too_long: O valor do código postal é demasiado longo
             contains_html_tags: O código postal não pode conter etiquetas HTML.
-            contains_emojis: Código postal não pode conter emojis
+            contains_emojis: O código postal não pode conter emojis
             contains_restricted_characters: O campo "Código postal" só pode conter
               letras, números, caracteres locais e caracteres especiais
