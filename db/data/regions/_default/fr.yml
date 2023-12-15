@@ -8,10 +8,10 @@ fr:
             default: Entreprise
             optional: Entreprise (facultatif)
           errors:
-            blank: Saisir un nom d'entreprise
-            contains_html_tags: L'entreprise ne peut pas contenir de balises HTML.
+            blank: Saisir un nom d’entreprise
+            contains_html_tags: L’entreprise ne peut pas contenir de balises HTML.
             too_long: Le nom de l’entreprise est trop long (le maximum est de 255 caractères)
-            contains_emojis: L'entreprise ne peut pas contenir d'emojis
+            contains_emojis: L’entreprise ne peut pas contenir d’emojis
             contains_mathematical_symbols: L’entreprise ne peut pas contenir de symboles
               mathématiques
             contains_restricted_characters: L’entreprise ne peut contenir que des
@@ -29,37 +29,37 @@ fr:
               mathématiques
             contains_restricted_characters: Le prénom ne peut contenir que des lettres,
               des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le prénom ne peut pas contenir d'URL.
+            contains_url: Le prénom ne peut pas contenir d’URL.
         last_name:
           label:
             default: Nom
             optional: Nom (facultatif)
           errors:
             blank: Saisir un nom
-            contains_html_tags: Le nom de famille ne peut pas contenir de balises
-              HTML.
-            too_long: Le nom de famille est trop long (le maximum est de 255 caractères)
+            contains_html_tags: Le nom ne peut pas contenir de balises HTML.
+            too_long: Le nom est trop long (le maximum est de 255 caractères)
             contains_emojis: Le nom ne peut pas contenir d’emojis
             contains_mathematical_symbols: Le nom ne peut pas contenir de symboles
               mathématiques
             contains_restricted_characters: Le nom ne peut contenir que des lettres,
               des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le nom ne peut pas contenir d'URL.
+            contains_url: Le nom ne peut pas contenir d’URL.
         address1:
           label:
             default: Adresse
             optional: Adresse (facultatif)
           errors:
             blank: Saisir une adresse
-            contains_html_tags: L'adresse1 ne peut pas contenir de balises HTML.
+            contains_html_tags: Le champ Adresse 1 ne peut pas contenir de balises
+              HTML.
             too_long: La première ligne d’adresse est trop longue (le maximum est
               de 255 caractères)
-            contains_emojis: Le champ d'adresse 1 ne peut pas contenir d’emojis
+            contains_emojis: Le champ Adresse 1 ne peut pas contenir d’emojis
             contains_mathematical_symbols: Le champ d’adresse 1 ne peut pas contenir
               de symboles mathématiques
             contains_restricted_characters: Le champ Adresse 1 ne peut contenir que
               des lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le champ d’adresse 1 ne peut pas contenir d’URL.
+            contains_url: Le champ Adresse 1 ne peut pas contenir d’URL.
             missing_building_number: Ajoutez un numéro de bâtiment, le cas échéant.
             street_unknown_for_zip: Saisissez un nom de rue valide pour %{zip}.
             building_number_invalid: Impossible de localiser le numéro de bâtiment
@@ -67,23 +67,24 @@ fr:
             contains_too_many_words: Le champ Adresse 1 ne doit pas comporter plus
               de %{word_count} mots
           warnings:
-            contains_too_many_words: Il est conseillé que la ligne d’adresse 1 ait
+            contains_too_many_words: Il est conseillé que le champ Adresse 1 comporte
               moins de %{word_count} mots
         address2:
           label:
             default: Appartement, suite, etc.
             optional: Appartement, suite, etc. (facultatif)
           errors:
-            blank: Saisir un numéro d'appartement, de suite, etc.
-            contains_html_tags: L'adresse2 ne peut pas contenir de balises HTML.
+            blank: Saisir un appartement, suite, etc.
+            contains_html_tags: Le champ Adresse2 ne peut pas contenir de balises
+              HTML.
             too_long: La deuxième ligne d’adresse est trop longue (le maximum est
               de 255 caractères)
-            contains_emojis: Le champ d'adresse 2 ne peut pas contenir d’emojis
+            contains_emojis: Le champ Adresse 2 ne peut pas contenir d’emojis
             contains_mathematical_symbols: Le champ d’adresse 2 ne peut pas contenir
               de symboles mathématiques
             contains_restricted_characters: Le champ Adresse 2 ne peut contenir que
               des lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le champ d’adresse 2 ne peut pas contenir d’URL.
+            contains_url: Le champ Adresse 2 ne peut pas contenir d’URL.
             missing_building_number: Ajoutez un numéro de bâtiment, le cas échéant.
             street_unknown_for_zip: Saisissez un nom de rue valide pour %{zip}.
             building_number_invalid: Impossible de localiser le numéro de bâtiment
@@ -91,7 +92,7 @@ fr:
             contains_too_many_words: Le champ Adresse 2 ne doit pas comporter plus
               de %{word_count} mots
           warnings:
-            contains_too_many_words: Il est conseillé que la ligne d’adresse 2 ait
+            contains_too_many_words: Il est conseillé que le champ Adresse 2 comporte
               moins de %{word_count} mots
         city:
           label:
@@ -107,25 +108,24 @@ fr:
             contains_restricted_characters: La ville ne peut contenir que des lettres,
               des chiffres, des caractères locaux et des caractères spéciaux
             contains_url: La ville ne peut pas contenir d’URL
-            unknown_for_zip: Saisissez une ville valide pour %{zip}
-            unknown_for_province: Saisissez une ville valide pour %{province}
-            unknown_for_zip_and_province: Saisissez une ville valide pour %{zip},
-              %{province}
+            unknown_for_zip: Saisir une ville valide pour %{zip}
+            unknown_for_province: Saisir une ville valide pour %{province}
+            unknown_for_zip_and_province: Saisir une ville valide pour %{zip}, %{province}
             contains_too_many_words: La ville ne doit pas comporter plus de %{word_count} mots
         country:
           label:
             default: Pays/région
             optional: Pays/région (facultatif)
           errors:
-            blank: Sélectionner un pays/une région
-            not_supported: Nous ne prenons pas en charge ce pays/cette région pour
-              le moment. Saisissez une nouvelle adresse et réessayez.
-            invalid: Saisissez une région/un pays valide
-            invalid_for_zip: Saisissez une région/un pays valide pour ce code postal
+            blank: Sélectionner un pays/région
+            not_supported: Nous ne prenons pas en charge ce pays/région pour le moment.
+              Saisissez une nouvelle adresse et réessayez.
+            invalid: Saisir un pays/région valide
+            invalid_for_zip: Saisir un pays/région valide pour ce code postal
         phone:
           label:
             default: Téléphone
-            optional: Téléphone (facultatif)
+            optional: Téléphone (optionnel)
           errors:
             blank: Saisir un numéro de téléphone
             invalid: Saisir un numéro de téléphone valide
@@ -143,21 +143,21 @@ fr:
           errors:
             blank: Sélectionner une région
             invalid: Saisir une région valide
-            invalid_for_country: 'Saisissez une région valide pour : %{country}'
-            unknown_for_city_and_zip: Saisissez une région valide pour %{city}, %{zip}
-            unknown_for_city: Saisissez une région valide pour %{city}
-            unknown_for_zip: Saisissez une région valide pour %{zip}
+            invalid_for_country: Saisir une région valide pour %{country}
+            unknown_for_city_and_zip: Saisir une région valide pour %{city}, %{zip}
+            unknown_for_city: Saisir une région valide pour %{city}
+            unknown_for_zip: Saisir une région valide pour %{zip}
         zip:
           label:
             default: Code postal
             optional: Code postal (facultatif)
           errors:
             blank: Saisir un code postal
-            blocked_address: Cet emplacement n'est pas pris en charge.
+            blocked_address: Cet emplacement n’est pas pris en charge.
             invalid_for_country: Saisir un code postal valide pour %{country}
             invalid_for_country_and_province: Saisir un code postal valide pour %{province},
               %{country}
-            invalid: Saisissez un code postal valide.
+            invalid: Saisir un code postal valide
             contains_html_tags: Le code postal ne peut pas contenir de balises HTML.
             too_long: La valeur du code postal est trop longue.
             contains_emojis: Le code postal ne peut pas contenir d’emojis
@@ -165,10 +165,10 @@ fr:
               symboles mathématiques
             contains_restricted_characters: Le code postal ne peut contenir que des
               lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            not_supported: Nous ne prenons pas en charge ce pays/cette région pour
-              le moment. Saisissez une nouvelle adresse et réessayez.
-            unknown_for_province: Saisissez un code postal valide pour %{province}
-            invalid_for_province: Saisissez un code postal valide pour %{province}
+            not_supported: Nous ne prenons pas en charge ce pays/région pour le moment.
+              Saisissez une nouvelle adresse et réessayez.
+            unknown_for_province: Saisir un code postal valide pour %{province}
+            invalid_for_province: Saisir un code postal valide pour %{province}
         address:
           errors:
             may_not_exist: L’adresse est introuvable ou inexistante
