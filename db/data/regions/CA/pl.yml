@@ -5,10 +5,11 @@ pl:
       addresses:
         province:
           label:
-            default: Prowincja
-            optional: Prowincja (opcjonalnie)
+            default: Województwo/prowincja
+            optional: Województwo/prowincja (opcjonalnie)
           errors:
-            blank: Wybierz województwo
-            unknown_for_city_and_zip: Wprowadź prawidłową prowincję dla %{city}, %{zip}
-            unknown_for_city: Wybierz prawidłową prowincję dla %{city}
-            unknown_for_zip: Wybierz prawidłową prowincję dla %{zip}
+            blank: Wybierz województwo/prowincję
+            unknown_for_city_and_zip: Wprowadź prawidłowe województwo dla %{city},
+              %{zip}
+            unknown_for_city: Wybierz prawidłowe województwo dla %{city}
+            unknown_for_zip: Wybierz prawidłowe województwo dla %{zip}
