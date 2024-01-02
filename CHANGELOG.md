@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- nil
+- Update Singapore GST in preparation for January 1 2024 increase [#68](https://github.com/Shopify/worldwide/pull/68)
 
 ---
 
