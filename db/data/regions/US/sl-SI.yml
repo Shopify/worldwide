@@ -10,22 +10,23 @@ sl-SI:
           errors:
             blank: Izberite zvezno državo
             invalid_for_country: Vnesite veljavno zvezno državo za %{country}
-            unknown_for_city_and_zip: Vnesite veljavno zvezno državo za %{city}, %{zip}
-            unknown_for_city: Izberite veljavno zvezno državo za %{city}
-            unknown_for_zip: Izberite veljavno zvezno državo za %{zip}
+            unknown_for_city_and_zip: Vnesite veljavno zvezno državo za kraj %{city},
+              %{zip}
+            unknown_for_city: Izberite veljavno zvezno državo za kraj %{city}
+            unknown_for_zip: Izberite veljavno zvezno državo za poštno številko %{zip}
         zip:
           label:
             default: Poštna številka
             optional: Poštna številka (izbirno)
           errors:
             blank: Vnesite poštno številko
-            invalid_for_country: Vnesite veljavno poštno številko za državo %{country}
+            invalid_for_country: Vnesite veljavno poštno številko za zvezno državo
+              %{country}
             invalid_for_country_and_province: Vnesite veljavno poštno številko za
-              območje %{province}, %{country}
+              provinco %{province}, %{country}
             too_long: Poštna številka je predolga
             contains_html_tags: Poštna številka ne sme vsebovati oznak HTML.
             contains_emojis: Poštna številka ne sme vsebovati čustvenih simbolov
             contains_restricted_characters: Poštna številka ne sme vsebovati prepovedanih
               znakov
-            invalid_for_province: Vnesite veljavno poštno številko za zvezno državo
-              %{province}
+            invalid_for_province: Vnesite veljavno poštno številko za provinco %{province}
