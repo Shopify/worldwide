@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/Shopify/worldwide"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org/"
+  spec.metadata["changelog_uri"] = "https://github.com/Shopify/worldwide/blob/main/CHANGELOG.md"
 
   spec.files = %x(git ls-files -z).split("\x0").reject do |f|
     f.match(%r{^(rake|test|spec|features)/})
