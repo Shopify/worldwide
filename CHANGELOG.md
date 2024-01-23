@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Allow building numbers on address2 field for Polish addresses [#71](https://github.com/Shopify/worldwide/pull/71)
+
 ---
 
 [0.6.4] - 2024-01-22
