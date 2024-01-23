@@ -27,9 +27,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Update Singapore GST in preparation for January 1 2024 increase [#68](https://github.com/Shopify/worldwide/pull/68)
-
 ---
+
+[0.6.4] - 2024-01-22
+
+- Allow building number in address2 for BE [#70](https://github.com/Shopify/worldwide/pull/70)
+- Update Singapore GST in preparation for January 1 2024 increase [#68](https://github.com/Shopify/worldwide/pull/68)
 
 [0.6.3] - 2023-12-11
 
