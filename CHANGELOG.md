@@ -27,9 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Allow building numbers on address2 field for Portugal addresses [#73](https://github.com/Shopify/worldwide/pull/73)
+nil.
 
 ---
+
+[0.6.6] - 2024-01-25
+
+- Allow building numbers on address2 field for Portugal addresses [#73](https://github.com/Shopify/worldwide/pull/73)
 
 [0.6.5] - 2024-01-24
 
