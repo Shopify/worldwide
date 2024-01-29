@@ -130,7 +130,7 @@ module Worldwide
         end
       end
 
-      assert_includes(exc.message, "translation missing")
+      assert_includes(exc.message.downcase, "translation missing")
     ensure
       I18n.enforce_available_locales = true
     end
