@@ -242,7 +242,7 @@ module Worldwide
     # https://www.unicode.org/reports/tr35/tr35-numbers.html#Compact_Number_Formats
     # > N is divided by the type, after removing the number of zeros in the pattern, less 1.
     def compact_format_scale_factor(matched_type, style:)
-      compact_number_format = Worldwide::Cldr.t("#{COMPACT_DECIMAL_BASE_KEY}.#{style}.standard.#{matched_type}", count: 1, locale: locale)
+      compact_number_format = Worldwide::Cldr.t("#{COMPACT_DECIMAL_BASE_KEY}.#{style}.standard.#{matched_type}", count: 5, locale: locale)
 
       return 1 if compact_number_format == DEFAULT_COMPACT_PATTERN
 
