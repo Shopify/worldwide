@@ -530,6 +530,26 @@ module Worldwide
             [:MO, "ম্যাকাও এসএআর চীনা চীনা (ম্যাকাও এসএআর চীনা) চীনা (ঐতিহ্যবাহী, ম্যাকাও এসএআর চীনা) অঞ্চল: ম্যাকাও এসএআর চীন", "ম্যাকাও এসএআর চীনা"],
           ])
 
+          patch_territories(:da, [
+            # "De tidligere Nederlandske Antiller" means "the former Netherlands Antilles", which is country code AN
+            [:BQ, "De tidligere Nederlandske Antiller", "Caribisk Nederlandene"],
+            # (North and South) Holland are two of the many provinces in NL; the whole country is the Netherlands
+            [:NL, "Holland", "Holland (Nederlandene)"],
+            # This name is technically correct, but overly long
+            [:TF, "De Franske Besiddelser i Det Sydlige Indiske Ocean og Antarktis", "Franske sydlige territorier"],
+          ])
+
+          patch_territories(:de, [
+            # This name is correct, but overly long
+            [:TF, "Französische Süd- und Antarktisgebiete", "Französische Südgebiete"],
+          ])
+
+          patch_territories(:en, [
+            # The U.N. now uses Türkiye for the country formerly recognized as Turkey:
+            # https://turkiye.un.org/en/184798-turkeys-name-changed-t%C3%BCrkiye
+            [:TR, "Turkey", "Türkiye"],
+          ])
+
           # CLDR changed the name to Latin characters
           patch_territories(:mr, [
             [:CI, "Côte d’Ivoire", "आयव्हरी कोस्ट"],
