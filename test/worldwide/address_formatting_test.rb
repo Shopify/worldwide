@@ -733,7 +733,7 @@ module Worldwide
         zip: "999077", # this code is assigned by China Post for all of HK; it's not recognized by HK Post
       }
 
-      expected = "中国香港特别行政区九龙马里兰法院"
+      expected = "香港特别行政区九龙马里兰法院"
       I18n.with_locale(:"zh-CN") do
         actual = Worldwide.address(**address).single_line
 

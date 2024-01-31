@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Prefer "SAR" over "SAR China" in Chinese-language names for regions `HK` and `MO`. [#79](https://github.com/Shopify/worldwide/pull/79).
 - Add Worldwide::Field.valid_key? method. [#80](https://github.com/Shopify/worldwide/pull/80)
 
 ---
