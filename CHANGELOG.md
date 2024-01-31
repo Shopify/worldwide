@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Patch in a name for CQ (Sark). [#84](https://github.com/Shopify/worldwide/pull/84)
 - Patch data related to region 830 (Channel Islands). [#85](https://github.com/Shopify/worldwide/pull/85)
+- Patch name of SZ (eSwatini) in Italian. [#86](https://github.com/Shopify/worldwide/pull/86)
 
 [0.7.0] - 2024-01-31
 

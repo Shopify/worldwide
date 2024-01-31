@@ -563,6 +563,11 @@ module Worldwide
             [:CQ, nil, "Sercq"],
           ])
 
+          patch_territories(:it, [
+            # Swaziland changed its name to eSwatini in 2018
+            [:SZ, "Swaziland", "eSwatini"],
+          ])
+
           # CLDR changed the name to Latin characters
           patch_territories(:mr, [
             [:CI, "Côte d’Ivoire", "आयव्हरी कोस्ट"],
