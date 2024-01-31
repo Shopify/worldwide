@@ -29,7 +29,7 @@ module Worldwide
       end
     end
 
-    test "autofills city as expected" do
+    test "autofills city as expected when there is a country_code" do
       [
         [:en, :sg, "Singapore"],
         [:fr, :sg, "Singapour"],
@@ -44,6 +44,12 @@ module Worldwide
           "Expected #{expected} for country #{country_code} using locale #{locale}",
         )
       end
+    end
+
+    test "autofill returns nil when there is no country code" do
+      value = Worldwide::Field.new(country_code: nil, field_key: :city).autofill
+
+      assert_nil value
     end
 
     test "autofill returns nil when none applicable" do
@@ -76,18 +82,32 @@ module Worldwide
       end
     end
 
+    test "error returns expected value when there is no country code" do
+      [
+        [:en, :us, "Enter a valid postal code"],
+        [:fr, nil, "Saisissez un code postal valide."],
+      ].each do |locale, country_code, expected|
+        I18n.with_locale(locale) do
+          actual = Worldwide::Field.new(country_code: country_code, field_key: :zip).error(code: :invalid)
+
+          assert_equal expected, actual
+        end
+      end
+    end
+
     test "error with an invalid error code returns nil" do
       assert_nil Worldwide.region(code: "CA").field(key: :first_name).error(code: :bogus_code_does_not_exist)
     end
 
     test "warning accepts parameters" do
       [
-        [:en, "Address line 1 is recommended to have less than 15 words"],
-        [:fr, "Il est conseillé que la ligne d’adresse 1 ait moins de 15 mots"],
-        [:ja, "住所1は15文字未満が推奨されています"],
-      ].each do |locale, expected|
+        [:en, :ca, "Address line 1 is recommended to have less than 15 words"],
+        [:fr, nil, "Il est conseillé que la ligne d’adresse 1 ait moins de 15 mots"],
+        [:fr, :fr, "Il est conseillé que la ligne d’adresse 1 ait moins de 15 mots"],
+        [:ja, :ja, "住所1は15文字未満が推奨されています"],
+      ].each do |locale, country_code, expected|
         I18n.with_locale(locale) do
-          actual = Worldwide.region(code: "CA").field(key: :address1).warning(
+          actual = Worldwide::Field.new(country_code: country_code, field_key: :address1).warning(
             code: :contains_too_many_words,
             options: { word_count: 15 },
           )
@@ -135,20 +155,36 @@ module Worldwide
       assert_equal(expected, actual)
     end
 
-    test "label_marked_optional for selected fields, countries, and locales" do
+    test "label returns expected value when there is no country code" do
       [
+        [:en, :ca, :address1, "Address"],
+        [:fr, nil, :city, "Ville"],
+      ].each do |locale, country_code, field, expected|
+        I18n.with_locale(locale) do
+          actual = Worldwide::Field.new(country_code: country_code, field_key: field).label
+
+          assert_equal expected, actual
+        end
+      end
+    end
+
+    test "label_marked_optional returns expected value for selected fields, countries, and locales" do
+      [
+        [:de, :at, :address2, "Zusätzliche Adressangaben (optional)"],
+        [:en, nil, :city, "City (optional)"],
         [:de, :at, :address2, "Zusätzliche Adressangaben (optional)"],
         [:en, :au, :city, "Suburb (optional)"],
         [:en, :il, :zip, "Postal code (optional)"],
         [:es, :pa, :zip, "Código postal (opcional)"],
         [:es, :sv, :province, "Departamento (opcional)"],
+        [:es, nil, :province, "Región (opcional)"],
         [:fr, :ht, :zip, "Code postal (facultatif)"],
         [:ja, :jp, :city, "市区町村 (任意)"],
-      ].each do |locale, country_code, field_key, expected|
+      ].each do |locale, country_code, field, expected|
         I18n.with_locale(locale) do
-          actual = Worldwide.region(code: country_code).field(key: field_key).label_marked_optional
+          actual = Worldwide::Field.new(country_code: country_code, field_key: field).label_marked_optional
 
-          assert_equal expected, actual, "Country #{country_code} field #{field_key}"
+          assert_equal expected, actual
         end
       end
     end

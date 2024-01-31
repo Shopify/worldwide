@@ -26,8 +26,8 @@ module Worldwide
       end
     end
 
-    def initialize(country_code:, field_key:)
-      @country_code = country_code.upcase.to_sym
+    def initialize(country_code: nil, field_key:)
+      @country_code = country_code&.upcase&.to_sym
       @field_key = field_key.downcase.to_sym
     end
 
@@ -65,8 +65,12 @@ module Worldwide
 
     def lookup(key_suffix, locale:, options: {})
       I18n.with_locale(locale) do
-        I18n.t("#{base_key(@country_code)}.#{key_suffix}", default: nil, **options) ||
+        if @country_code.nil?
           default_lookup(key_suffix, options: options)
+        else
+          I18n.t("#{base_key(@country_code)}.#{key_suffix}", default: nil, **options) ||
+            default_lookup(key_suffix, options: options)
+        end
       end
     end
   end
