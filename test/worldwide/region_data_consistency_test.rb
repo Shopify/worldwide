@@ -143,6 +143,15 @@ module Worldwide
       end
     end
 
+    test "CQ has a name" do
+      I18n.with_locale(:en) do
+        assert_equal "Sark", Worldwide.region(code: "CQ").full_name
+      end
+      I18n.with_locale(:fr) do
+        assert_equal "Sercq", Worldwide.region(code: "CQ").full_name
+      end
+    end
+
     test "TR uses the new English name Türkiye" do
       I18n.with_locale(:en) do
         assert_equal "Türkiye", Worldwide.region(code: "TR").full_name
