@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-nil.
+- Support address field lookup when there is no country code. [#82](https://github.com/Shopify/worldwide/pull/82)
 
 ---
 
