@@ -545,6 +545,9 @@ module Worldwide
           ])
 
           patch_territories(:en, [
+            # UN M49 uses 830 for "Channel Islands", but ISO 3166-1 does not, so CLDR is missing this code
+            # https://en.wikipedia.org/wiki/UN_M49#cite_note-7
+            [:"830", nil, "Channel Islands"],
             # CLDR added Sark in version 44.  We need to backport this until we upgrade to that version.
             [:CQ, nil, "Sark"],
             # The U.N. now uses Türkiye for the country formerly recognized as Turkey:
@@ -553,6 +556,9 @@ module Worldwide
           ])
 
           patch_territories(:fr, [
+            # UN M49 uses 830 for "Channel Islands", but ISO 3166-1 does not, so CLDR is missing this code
+            # https://en.wikipedia.org/wiki/UN_M49#cite_note-7
+            [:"830", nil, "Îles Anglo-Normandes"],
             # CLDR added Sark in version 44.  We need to backport this until we upgrade to that version.
             [:CQ, nil, "Sercq"],
           ])
