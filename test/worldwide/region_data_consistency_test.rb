@@ -142,5 +142,11 @@ module Worldwide
         end
       end
     end
+
+    test "TR uses the new English name Türkiye" do
+      I18n.with_locale(:en) do
+        assert_equal "Türkiye", Worldwide.region(code: "TR").full_name
+      end
+    end
   end
 end
