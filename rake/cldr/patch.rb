@@ -555,6 +555,12 @@ module Worldwide
             [:CI, "Côte d’Ivoire", "आयव्हरी कोस्ट"],
           ])
 
+          # Prefer the phrasing "Hong Kong SAR" and "Macau SAR"
+          patch_territories(:zh, [
+            [:HK, "中国香港特别行政区", "香港特别行政区"],
+            [:MO, "中国澳门特别行政区", "澳门特别行政区"],
+          ])
+
           # Should use capitalized letters for territories in UI list context, by default.
           # https://github.com/Shopify/shopify-i18n/issues/1551
           patch_file(:root, "context_transforms.yml", [:context_transforms, :territory, :ui_list_or_menu], nil, "titlecase_first_word", allow_file_creation: true)
