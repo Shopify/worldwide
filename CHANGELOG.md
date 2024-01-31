@@ -27,9 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Patch some territory names (BQ, NL, TF, TR) [#77](https://github.com/Shopify/worldwide/pull/77)
+nil.
 
 ---
+
+[0.6.7] - 2024-01-30
+
+- Patch some territory names (BQ, NL, TF, TR) [#77](https://github.com/Shopify/worldwide/pull/77)
 
 [0.6.6] - 2024-01-25
 
