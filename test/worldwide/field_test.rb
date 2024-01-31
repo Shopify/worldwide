@@ -4,6 +4,31 @@ require "test_helper"
 
 module Worldwide
   class FieldTest < ActiveSupport::TestCase
+    test "valid_key? returns the correct value as expected" do
+      [
+        [:first_name, true],
+        [:last_name, true],
+        [:company, true],
+        [:address1, true],
+        [:address2, true],
+        [:city, true],
+        [:province, true],
+        [:zip, true],
+        [:country, true],
+        [:phone, true],
+        [:address, true],
+        ["address", true],
+        [:some_symbol, false],
+        ["some_string", false],
+      ].each do |field, expected|
+        assert_equal(
+          expected,
+          Worldwide::Field.valid_key?(field),
+          "Expected #{expected} for field #{field}",
+        )
+      end
+    end
+
     test "autofills city as expected" do
       [
         [:en, :sg, "Singapore"],

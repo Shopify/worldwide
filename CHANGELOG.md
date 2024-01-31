@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-nil.
+- Add Worldwide::Field.valid_key? method. [#80](https://github.com/Shopify/worldwide/pull/80)
 
 ---
 

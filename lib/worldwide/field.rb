@@ -20,6 +20,12 @@ module Worldwide
       :address,
     ]
 
+    class << self
+      def valid_key?(key)
+        VALID_KEYS.include?(key.to_sym)
+      end
+    end
+
     def initialize(country_code:, field_key:)
       @country_code = country_code.upcase.to_sym
       @field_key = field_key.downcase.to_sym
