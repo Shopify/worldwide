@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Nil.
+- Patch in a name for CQ (Sark). [#84](https://github.com/Shopify/worldwide/pull/84)
 
 [0.7.0] - 2024-01-31
 

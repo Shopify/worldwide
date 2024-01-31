@@ -545,9 +545,16 @@ module Worldwide
           ])
 
           patch_territories(:en, [
+            # CLDR added Sark in version 44.  We need to backport this until we upgrade to that version.
+            [:CQ, nil, "Sark"],
             # The U.N. now uses Türkiye for the country formerly recognized as Turkey:
             # https://turkiye.un.org/en/184798-turkeys-name-changed-t%C3%BCrkiye
             [:TR, "Turkey", "Türkiye"],
+          ])
+
+          patch_territories(:fr, [
+            # CLDR added Sark in version 44.  We need to backport this until we upgrade to that version.
+            [:CQ, nil, "Sercq"],
           ])
 
           # CLDR changed the name to Latin characters
