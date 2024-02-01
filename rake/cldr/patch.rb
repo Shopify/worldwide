@@ -555,6 +555,12 @@ module Worldwide
             [:TR, "Turkey", "Türkiye"],
           ])
 
+          patch_territories(:fi, [
+            # GB is the ISO code for the United Kingdom of Great Britain _and_ Northern Ireland
+            # (Northern Ireland is part of the United Kingdom, but not part of Great Britain).
+            [:GB, "Iso-Britannia", "Yhdistynyt kuningaskunta"],
+          ])
+
           patch_territories(:fr, [
             # UN M49 uses 830 for "Channel Islands", but ISO 3166-1 does not, so CLDR is missing this code
             # https://en.wikipedia.org/wiki/UN_M49#cite_note-7

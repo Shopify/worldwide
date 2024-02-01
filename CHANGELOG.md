@@ -31,6 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Patch data related to region 830 (Channel Islands). [#85](https://github.com/Shopify/worldwide/pull/85)
 - Patch name of SZ (eSwatini) in Italian. [#86](https://github.com/Shopify/worldwide/pull/86)
 - Patch names of HK and MO in zh-TW and zh-Hant. [#87](https://github.com/Shopify/worldwide/pull/87)
+- Patch name of GB (United Kingdom) in Suomi. [#88](https://github.com/Shopify/worldwide/pull/88)
 
 [0.7.0] - 2024-01-31
 
