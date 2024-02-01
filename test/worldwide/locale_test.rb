@@ -59,7 +59,7 @@ module Worldwide
 
     test 'name returns "Traditional Chinese in Hong Kong SAR" for `zh-Hant-HK`' do
       I18n.with_locale(:"zh-Hant-HK") do
-        assert_equal "繁體中文 (中國香港特別行政區)", Locale.new("zh-Hant-HK").name
+        assert_equal "繁體中文 (香港特別行政區)", Locale.new("zh-Hant-HK").name
       end
 
       # When there is a fallback to English
@@ -68,7 +68,7 @@ module Worldwide
         I18n.fallbacks = I18n::Locale::Fallbacks.new([:en])
 
         I18n.with_locale(:"zh-Hant-HK") do
-          assert_equal("繁體中文 (中國香港特別行政區)", Locale.new("zh-Hant-HK").name)
+          assert_equal("繁體中文 (香港特別行政區)", Locale.new("zh-Hant-HK").name)
         end
       ensure
         I18n.fallbacks = original_fallbacks
