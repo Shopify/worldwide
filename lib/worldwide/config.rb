@@ -19,7 +19,7 @@ module Worldwide
     ].freeze
 
     class << self
-      def configure_i18n(i18n_config: nil, additional_components: [])
+      def configure_i18n(i18n_config: nil, additional_components: [], expand_locales: true)
         i18n_config ||= I18n.config
 
         I18n::Backend::Simple.include(
@@ -40,7 +40,9 @@ module Worldwide
         set_unless_explicitly_set(i18n_config, :default_locale, :en)
         set_unless_explicitly_set(i18n_config, :exception_handler, exception_handler)
 
-        i18n_config.available_locales = expanded_locales_from_configuration(i18n_config)
+        if expand_locales
+          i18n_config.available_locales = expanded_locales_from_configuration(i18n_config)
+        end
 
         add_cldr_data(i18n_config, additional_components: additional_components)
         add_other_data(i18n_config)

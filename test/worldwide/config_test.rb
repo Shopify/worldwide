@@ -61,6 +61,15 @@ module Worldwide
       end
     end
 
+    test "#configure_i18n does not expand locales when expand_locales: false is passed" do
+      config = Worldwide::RubyI18nConfig.new
+      config.available_locales = [:en, :fr]
+
+      Worldwide::Config.configure_i18n(i18n_config: config, expand_locales: false)
+
+      assert_equal [:en, :fr], config.available_locales
+    end
+
     test "#configure consults parent_locales.yml when determining derivatives of locales" do
       config = Worldwide::RubyI18nConfig.new
       config.available_locales = [:"en-001"]
