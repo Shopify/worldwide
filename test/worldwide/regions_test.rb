@@ -104,6 +104,30 @@ module Worldwide
       end
     end
 
+    test "Can look up a region by an alternate name" do
+      legacy_name = "Caribbean Netherlands"
+      alternate_names = [
+        "Bonaire, Sint Eustatius and Saba",
+        "Bonaire, Sint Eustatius, and Saba",
+        "BES Islands",
+        "Bonaire",
+        "Sint Eustatius",
+        "Saba",
+      ]
+      locales = ["de", "en", "fr", "ja"]
+
+      locales.each do |locale|
+        I18n.with_locale(locale) do
+          alternate_names.each do |alt_name|
+            region = Worldwide.region(name: alt_name)
+
+            assert_equal "BQ", region.iso_code
+            assert_equal legacy_name, region.legacy_name
+          end
+        end
+      end
+    end
+
     test "Region uses parent from alternates" do
       pr = Worldwide.region(code: "PR")
 
