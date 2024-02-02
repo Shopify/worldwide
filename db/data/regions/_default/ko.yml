@@ -12,6 +12,7 @@ ko:
             too_long: 회사명이 너무 깁니다(최대 255자).
             contains_html_tags: 회사에 HTML 태그를 포함할 수 없습니다.
             contains_emojis: 회사에 이모티콘을 포함할 수 없음
+            contains_mathematical_symbols: 회사에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 회사에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
         first_name:
           label:
@@ -23,6 +24,7 @@ ko:
             contains_html_tags: 이름에 HTML 태그를 포함할 수 없습니다.
             contains_emojis: 이름에 이모티콘을 포함할 수 없음
             contains_url: 이름에 URL을 포함할 수 없습니다.
+            contains_mathematical_symbols: 이름에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 이름에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
         last_name:
           label:
@@ -34,6 +36,7 @@ ko:
             contains_html_tags: 성에 HTML 태그를 포함할 수 없습니다.
             contains_emojis: 성에 이모티콘을 포함할 수 없음
             contains_url: 성에 URL을 포함할 수 없습니다.
+            contains_mathematical_symbols: 성에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 성에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
         address1:
           label:
@@ -48,6 +51,7 @@ ko:
             missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하십시오.
             street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하십시오."
             building_number_invalid: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다."
+            contains_mathematical_symbols: 주소 1에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 주소1에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
             contains_too_many_words: 주소 1은 %{word_count}단어 이하여야 합니다
           warnings:
@@ -66,6 +70,7 @@ ko:
             missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하십시오.
             street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하십시오."
             building_number_invalid: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다."
+            contains_mathematical_symbols: 주소 2에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 주소2에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
             contains_too_many_words: 주소 2는 %{word_count}단어 이하여야 합니다
           warnings:
@@ -84,6 +89,7 @@ ko:
             unknown_for_zip: "%{zip}에 대해 올바른 구/군/시를 입력하십시오"
             unknown_for_province: "%{province}에 대해 올바른 구/군/시를 입력하십시오"
             unknown_for_zip_and_province: "%{zip}, %{province}에 대해 올바른 구/군/시를 입력하십시오"
+            contains_mathematical_symbols: 구/군/시에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 시에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
             contains_too_many_words: 시는 %{word_count}단어 이하여야 합니다
         country:
@@ -104,6 +110,7 @@ ko:
             invalid: 유효한 전화번호를 입력하십시오.
             too_long: 전화번호가 너무 깁니다(최대 255자).
             contains_emojis: 전화번호에 이모티콘을 포함할 수 없음
+            contains_mathematical_symbols: 전화 번호에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 전화번호에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
         province:
           label:
@@ -131,6 +138,7 @@ ko:
             contains_emojis: 우편 번호에 이모티콘을 포함할 수 없음
             not_supported: 현재 이 국가/지역을 지원하지 않습니다. 새 주소를 입력하고 다시 시도하십시오.
             unknown_for_province: "%{province}에 대해 올바른 우편 번호를 입력하십시오"
+            contains_mathematical_symbols: 우편 번호에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 우편 번호에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
             invalid_for_province: "%{province}의 유효한 우편 번호 입력"
         address:
