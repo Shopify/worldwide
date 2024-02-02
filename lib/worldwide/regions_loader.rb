@@ -59,6 +59,12 @@ module Worldwide
 
       numeric_three = region.numeric_three
       @regions_by_iso_code[numeric_three] = region if Util.present?(numeric_three)
+
+      if Util.present?(region.code_alternates) && !region.province?
+        region.code_alternates.each do |alternate_code|
+          @regions_by_iso_code[alternate_code] = region
+        end
+      end
     end
 
     def apply_hierarchy(parent:, code:, children:)
@@ -153,6 +159,7 @@ module Worldwide
         tax_name: nil,
         tax_rate: nil,
       )
+      eu.code_alternates = ["QUU"]
 
       member_tags = ["EU-member", "EU-OMR", "EU-OCT", "EU-special"]
       member_tags.each do |tag|

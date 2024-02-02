@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-Nil.
+- Allow lookup of EU region using alternate code QUU. [#94](http://github.com/Shopify/worldwide/pull/94)
 
 ---
 
