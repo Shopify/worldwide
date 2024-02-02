@@ -131,6 +131,12 @@ module Worldwide
       end
     end
 
+    test "EU region can be looked using any of codes EU, EUE, QUU" do
+      ["EU", "EUE", "QUU"].each do |code|
+        assert_equal "EU", Worldwide.region(code: code).iso_code
+      end
+    end
+
     test "country shows provices if it has them, unless hide_provinces_from_addresses is set" do
       Regions.all.select(&:country?).each do |country|
         shows_provinces = country.format["show"].include?("{province}")
