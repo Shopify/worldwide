@@ -12,6 +12,7 @@ tr:
             too_long: Şirket adı çok uzun (maksimum 255 karakter olmalı)
             contains_html_tags: Şirket, HTML etiketleri içeremez.
             contains_emojis: Şirket emoji içeremez
+            contains_mathematical_symbols: Şirket, matematiksel semboller içeremez
             contains_restricted_characters: Şirket adı yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
         first_name:
@@ -24,6 +25,7 @@ tr:
             contains_html_tags: Ad, HTML etiketleri içeremez.
             contains_emojis: Ad emoji içeremez
             contains_url: Ad URL içeremez.
+            contains_mathematical_symbols: Ad, matematiksel semboller içeremez
             contains_restricted_characters: Ad yalnızca harfler, sayılar, yerel karakterler
               ve özel karakterler içerebilir
         last_name:
@@ -36,6 +38,7 @@ tr:
             contains_html_tags: Soyadı, HTML etiketleri içeremez.
             contains_emojis: Soyadı emoji içeremez
             contains_url: Soyadı URL içeremez.
+            contains_mathematical_symbols: Soyadı, matematiksel semboller içeremez
             contains_restricted_characters: Soyadı yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
         address1:
@@ -52,6 +55,7 @@ tr:
             street_unknown_for_zip: "%{zip} için geçerli bir sokak adı girin."
             building_number_invalid: "%{street} %{zip} için girilen bina numarasıyla
               eşleşen kayıt bulunamadı."
+            contains_mathematical_symbols: Adres 1, matematiksel semboller içeremez
             contains_restricted_characters: Adres1 yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 1. adres en fazla %{word_count} kelime içerebilir
@@ -72,6 +76,7 @@ tr:
             street_unknown_for_zip: "%{zip} için geçerli bir sokak adı girin."
             building_number_invalid: "%{street} %{zip} için girilen bina numarasıyla
               eşleşen kayıt bulunamadı."
+            contains_mathematical_symbols: Adres 2, matematiksel semboller içeremez
             contains_restricted_characters: Adres2 yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 2. adres en fazla %{word_count} kelime içerebilir
@@ -92,6 +97,7 @@ tr:
             unknown_for_province: "%{province} için geçerli bir şehir girin"
             unknown_for_zip_and_province: "%{zip}, %{province} için geçerli bir şehir
               girin"
+            contains_mathematical_symbols: Şehir, matematiksel semboller içeremez
             contains_restricted_characters: Şehir adı yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: Şehir en fazla %{word_count} kelime içerebilir
@@ -114,6 +120,7 @@ tr:
             invalid: Geçerli bir telefon numarası girin
             too_long: Telefon numarası çok uzun (maksimum 255 karakter)
             contains_emojis: Telefon numarası emoji içeremez
+            contains_mathematical_symbols: Telefon numarası, matematiksel semboller içeremez
             contains_restricted_characters: Telefon numarası yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
         province:
@@ -143,6 +150,7 @@ tr:
             not_supported: Şu anda bu ülkeyi/bölgeyi desteklemiyoruz. Yeni bir adres
               girip tekrar deneyin.
             unknown_for_province: "%{province} için geçerli bir posta kodu girin"
+            contains_mathematical_symbols: Posta kodu, matematiksel semboller içeremez
             contains_restricted_characters: Posta kodu yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
             invalid_for_province: "%{province} için geçerli bir posta kodu girin"

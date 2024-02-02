@@ -12,6 +12,7 @@ ja:
             too_long: 会社名が長すぎます (最大255文字)
             contains_html_tags: 会社名にHTMLタグを含めることはできません。
             contains_emojis: 会社名に絵文字を含めることはできません
+            contains_mathematical_symbols: 会社名に数学記号を含めることはできません
             contains_restricted_characters: 会社には、文字、数字、地域の文字、特殊文字のみを含めることができます。
         first_name:
           label:
@@ -23,6 +24,7 @@ ja:
             contains_html_tags: 名にHTMLタグを含めることはできません。
             contains_emojis: 名に絵文字を含めることはできません
             contains_url: 名にURLを含めることはできません
+            contains_mathematical_symbols: 名に数学記号を含めることはできません
             contains_restricted_characters: 名前には、文字、数字、地域の文字、特殊文字のみを含めることができます。
         last_name:
           label:
@@ -34,6 +36,7 @@ ja:
             contains_html_tags: 姓にHTMLタグを含めることはできません。
             contains_emojis: 姓に絵文字を含めることはできません
             contains_url: 姓にURLを含めることはできません
+            contains_mathematical_symbols: 姓に数学記号を含めることはできません
             contains_restricted_characters: 名字には、文字、数字、地域の文字、特殊文字のみを含めることができます。
         address1:
           label:
@@ -48,6 +51,7 @@ ja:
             missing_building_number: 建物番号がある場合は追加してください。
             street_unknown_for_zip: "%{zip}に有効な通り名を入力してください。"
             building_number_invalid: "%{street}、%{zip}の建物番号が見つかりませんでした。"
+            contains_mathematical_symbols: 住所1に数学記号を含めることはできません
             contains_restricted_characters: 住所1には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 住所1には、%{word_count}語以上を入力できません
           warnings:
@@ -65,6 +69,7 @@ ja:
             missing_building_number: 建物番号がある場合は追加してください。
             street_unknown_for_zip: "%{zip}に有効な通り名を入力してください。"
             building_number_invalid: "%{street}、%{zip}の建物番号が見つかりませんでした。"
+            contains_mathematical_symbols: 住所2に数学記号を含めることはできません
             contains_restricted_characters: 住所2には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 住所2には、%{word_count}語以上を入力できません
           warnings:
@@ -82,6 +87,7 @@ ja:
             unknown_for_zip: "%{zip}に対応する有効な市区町村を入力してください"
             unknown_for_province: "%{province}の有効な市区町村を入力してください"
             unknown_for_zip_and_province: "%{zip}、%{province}の有効な市区町村を入力してください"
+            contains_mathematical_symbols: 市区町村に数学記号を含めることはできません
             contains_restricted_characters: 市には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 市には、%{word_count}語以上を入力できません
         country:
@@ -102,6 +108,7 @@ ja:
             invalid: 有効な電話番号を入力してください
             too_long: 電話番号が長すぎます (最大255文字)
             contains_emojis: 電話番号に絵文字を含めることはできません
+            contains_mathematical_symbols: 電話番号に数学記号を含めることはできません
             contains_restricted_characters: 電話番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。
         province:
           label:
@@ -128,6 +135,7 @@ ja:
             contains_emojis: 郵便番号に絵文字を含めることはできません
             not_supported: 現在この国または地域に対応しておりません。新しい住所を入力して、もう一度お試しください。
             unknown_for_province: "%{province}の有効な郵便番号を入力してください"
+            contains_mathematical_symbols: 郵便番号に数学記号を含めることはできません
             contains_restricted_characters: 郵便番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             invalid_for_province: "%{province}の有効な郵便番号を入力してください"
         address:

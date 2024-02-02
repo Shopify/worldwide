@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add translations for address fields with mathematical symbols errors. [#92](https://github.com/Shopify/worldwide/pull/92)
+- Enable lookup of Region by alternate name. [#93](https://github.com/Shopify/worldwide/93)
 - Allow lookup of EU region using alternate code QUU. [#94](http://github.com/Shopify/worldwide/pull/94)
 
 ---
