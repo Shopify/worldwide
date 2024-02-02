@@ -36,7 +36,8 @@ module Worldwide
         search_name = name.upcase
 
         @regions.find do |r|
-          r.legacy_name&.upcase == search_name || r.full_name&.upcase == search_name
+          r.legacy_name&.upcase == search_name || r.full_name&.upcase == search_name ||
+            r.name_alternates.map(&:upcase).include?(search_name)
         end
       end
 
