@@ -74,8 +74,8 @@ I18n.enforce_available_locales = false
 
 Here the list of the features we currently support:
 
-- [🌏  Regions](#--regions)
-- [📫  AddressFormatter](#--addressformatter)
+- [🌏  Regions](#--regions-countries--territories--subdivisions--states--provinces--prefectures--etc)
+- [📫  Addresses](#--addresses)
 - [🗓  / ⌚  Date and Time formats](#-----date-and-time-formats)
 - [📅  Calendar Information](#--calendar-information)
 - [🕰  Localized Timezone](#--localized-timezone)
