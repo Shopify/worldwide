@@ -12,6 +12,7 @@ zh-TW:
             too_long: 公司名稱過長 (最多 255 個字元)
             contains_html_tags: 公司不得包含 HTML 標記。
             contains_emojis: "「公司」不得包含表情符號"
+            contains_mathematical_symbols: "「公司」不得包含數學符號"
             contains_restricted_characters: 公司僅可包含字母、數字、當地字元和特殊字元
         first_name:
           label:
@@ -23,6 +24,7 @@ zh-TW:
             contains_html_tags: 名字不得包含 HTML 標記。
             contains_emojis: "「名字」不得包含表情符號"
             contains_url: "「名字」不得包含網址。"
+            contains_mathematical_symbols: "「名字」不得包含數學符號"
             contains_restricted_characters: 名字僅可包含字母、數字、當地字元和特殊字元
         last_name:
           label:
@@ -34,6 +36,7 @@ zh-TW:
             contains_html_tags: 姓氏不得包含 HTML 標記。
             contains_emojis: "「姓氏」不得包含表情符號"
             contains_url: "「姓氏」不得包含網址。"
+            contains_mathematical_symbols: "「姓氏」不得包含數學符號"
             contains_restricted_characters: 姓氏僅可包含字母、數字、當地字元和特殊字元
         address1:
           label:
@@ -48,6 +51,7 @@ zh-TW:
             missing_building_number: 如果您有建築物號碼，請新增建築物號碼。
             street_unknown_for_zip: 為 %{zip} 輸入有效的街道名稱。
             building_number_invalid: 在 %{zip}，%{street} 找不到此建築物號碼。
+            contains_mathematical_symbols: "「地址 (第 1 行)」不得包含數學符號"
             contains_restricted_characters: 地址 1 僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 地址 1 不得超過 %{word_count} 個字
           warnings:
@@ -65,6 +69,7 @@ zh-TW:
             missing_building_number: 如果您有建築物號碼，請新增建築物號碼。
             street_unknown_for_zip: 為 %{zip} 輸入有效的街道名稱。
             building_number_invalid: 在 %{zip}，%{street} 找不到此建築物號碼。
+            contains_mathematical_symbols: "「地址 (第 2 行)」不得包含數學符號"
             contains_restricted_characters: 地址 2 僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 地址 2 不得超過 %{word_count} 個字
           warnings:
@@ -82,6 +87,7 @@ zh-TW:
             unknown_for_zip: 為 %{zip} 輸入有效的城市
             unknown_for_province: 輸入%{province}的有效城市
             unknown_for_zip_and_province: 輸入 %{zip} %{province}的有效城市
+            contains_mathematical_symbols: "「城市」不得包含數學符號"
             contains_restricted_characters: 城市僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 城市不得超過 %{word_count} 個字
         country:
@@ -102,6 +108,7 @@ zh-TW:
             invalid: 輸入有效的電話號碼
             too_long: 電話號碼過長 (最多 255 個字元)
             contains_emojis: "「電話號碼」不得包含表情符號"
+            contains_mathematical_symbols: "「電話號碼」不得包含數學符號"
             contains_restricted_characters: 電話號碼僅可包含字母、數字、當地字元和特殊字元
         province:
           label:
@@ -128,6 +135,7 @@ zh-TW:
             contains_emojis: "「郵遞區號」不得包含表情符號"
             not_supported: 我們目前不支援此國家/地區。請輸入新的地址，然後再試一次。
             unknown_for_province: 請輸入%{province}的有效郵遞區號
+            contains_mathematical_symbols: "「郵遞區號」不得包含數學符號"
             contains_restricted_characters: 郵遞區號僅可包含字母、數字、當地字元和特殊字元
             invalid_for_province: 請輸入%{province}的有效郵遞區號
         address:
