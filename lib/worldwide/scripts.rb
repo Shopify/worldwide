@@ -5,17 +5,18 @@ module Worldwide
     class << self
       # Based off of the text provided, method will return the scripts identified
       def identify(text:)
-        return [] if text.blank?
+        return [] if Util.blank?(text)
 
         discovered_scripts = []
 
         script_regexes = {
           "Arabic": "\\p{Arabic}",
-          "Latn": "\\p{Latin}",
           "Han": "\\p{Han}",
           "Hangul": "\\p{Hangul}",
           "Hiragana": "\\p{Hiragana}",
           "Katakana": "\\p{Katakana}",
+          "Latn": "\\p{Latin}",
+          "Thai": "\\p{Thai}",
         }
 
         script_regexes.each do |script, regex|
