@@ -13,7 +13,8 @@ it:
               di 255 caratteri)
             contains_html_tags: L'azienda non può contenere tag HTML.
             contains_emojis: L'azienda non può contenere emoji
-            contains_mathematical_symbols: L'azienda non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Azienda non può contenere simboli
+              matematici
             contains_restricted_characters: L'azienda può contenere solo lettere,
               numeri, caratteri locali e caratteri speciali
         first_name:
@@ -26,7 +27,8 @@ it:
             contains_html_tags: Il nome non può contenere tag HTML.
             contains_emojis: Il nome non può contenere emoji
             contains_url: Il nome non può contenere un URL.
-            contains_mathematical_symbols: Il nome non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Nome non può contenere simboli
+              matematici
             contains_restricted_characters: Il nome può contenere solo lettere, numeri,
               caratteri locali e caratteri speciali
         last_name:
@@ -39,7 +41,8 @@ it:
             contains_html_tags: Il cognome non può contenere tag HTML.
             contains_emojis: Il cognome non può contenere emoji
             contains_url: Il cognome non può contenere un URL.
-            contains_mathematical_symbols: Il cognome non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Cognome non può contenere simboli
+              matematici
             contains_restricted_characters: Il cognome può contenere solo lettere,
               numeri, caratteri locali e caratteri speciali
         address1:
@@ -57,14 +60,15 @@ it:
             street_unknown_for_zip: Inserisci un nome della via valido per %{zip}.
             building_number_invalid: Impossibile localizzare il numero civico per
               %{street}, %{zip}.
-            contains_mathematical_symbols: L'indirizzo 1 non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Indirizzo 1 non può contenere
+              simboli matematici
             contains_restricted_characters: L'indirizzo 1 può contenere solo lettere,
               numeri, caratteri locali e caratteri speciali
             contains_too_many_words: L'indirizzo 1 non può superare %{word_count}
               parole
           warnings:
-            contains_too_many_words: La riga 1 dell'indirizzo deve contenere
-              meno di %{word_count} parole
+            contains_too_many_words: La riga 1 dell'indirizzo deve contenere meno
+              di %{word_count} parole
         address2:
           label:
             default: Interno, scala, ecc.
@@ -80,14 +84,15 @@ it:
             street_unknown_for_zip: Inserisci un nome della via valido per %{zip}.
             building_number_invalid: Impossibile localizzare il numero civico per
               %{street}, %{zip}.
-            contains_mathematical_symbols: L'indirizzo 2 non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Indirizzo 2 non può contenere
+              simboli matematici
             contains_restricted_characters: L'indirizzo 2 può contenere solo lettere,
               numeri, caratteri locali e caratteri speciali
             contains_too_many_words: L'indirizzo 2 non può superare %{word_count}
               parole
           warnings:
-            contains_too_many_words: La riga 2 dell'indirizzo deve contenere
-              meno di %{word_count} parole
+            contains_too_many_words: La riga 2 dell'indirizzo deve contenere meno
+              di %{word_count} parole
         city:
           label:
             default: Città
@@ -102,7 +107,8 @@ it:
             unknown_for_zip: Inserisci una città valida per %{zip}
             unknown_for_province: Inserisci una città valida per %{province}
             unknown_for_zip_and_province: Inserisci una città valida per %{zip}, %{province}
-            contains_mathematical_symbols: La città non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Città non può contenere simboli
+              matematici
             contains_restricted_characters: La città può contenere solo lettere, numeri,
               caratteri locali e caratteri speciali
             contains_too_many_words: La città non può superare %{word_count} parole
@@ -126,7 +132,8 @@ it:
             invalid: Inserisci un numero di telefono valido
             too_long: Numero di telefono troppo lungo (lunghezza massima 255 caratteri)
             contains_emojis: Il numero di telefono non può contenere emoji
-            contains_mathematical_symbols: Il numero di telefono non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Telefono non può contenere simboli
+              matematici
             contains_restricted_characters: Il numero di telefono può contenere solo
               lettere, numeri, caratteri locali e caratteri speciali
         province:
@@ -159,7 +166,8 @@ it:
             not_supported: Attualmente non supportiamo questo paese/questa area geografica.
               Inserisci un nuovo indirizzo e riprova.
             unknown_for_province: Inserisci un codice postale valido per %{province}
-            contains_mathematical_symbols: Il codice di avviamento postale non può contenere simboli matematici
+            contains_mathematical_symbols: Il campo Codice postale non può contenere
+              simboli matematici
             contains_restricted_characters: Il codice di avviamento postale può contenere
               solo lettere, numeri, caratteri locali e caratteri speciali
             invalid_for_province: Inserisci un codice postale valido per %{province}
