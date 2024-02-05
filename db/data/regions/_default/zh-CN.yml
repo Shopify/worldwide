@@ -10,16 +10,10 @@ zh-CN:
           errors:
             blank: 输入公司名称
             too_long: 公司名过长（最多 255 个字符）
-<<<<<<< HEAD
-            contains_html_tags: 公司不能包含 HTML 标记。
-            contains_emojis: 公司不能包含表情符号
-            contains_mathematical_symbols: 公司不能包含数学符号
-            contains_restricted_characters: "“公司”字段只能包含字母、数字、当地字符和特殊字符"
-=======
             contains_html_tags: "“公司”字段不能包含 HTML 标记。"
             contains_emojis: "“公司”字段不能包含表情符号"
+            contains_mathematical_symbols: 公司不能包含数学符号
             contains_restricted_characters: 公司只能包含字母、数字、当地字符和特殊字符
->>>>>>> 266904e (Update 24 translation files)
         first_name:
           label:
             default: 名字
@@ -31,9 +25,13 @@ zh-CN:
             contains_emojis: 名字不能包含表情符号
             contains_url: 名字不能包含 URL。
 <<<<<<< HEAD
+<<<<<<< HEAD
             contains_mathematical_symbols: 名字不能包含数学符号
             contains_restricted_characters: "“名字”字段只能包含字母、数字、当地字符和特殊字符"
 =======
+=======
+            contains_mathematical_symbols: 名字不能包含数学符号
+>>>>>>> d6883b2 (Update 21 translation files)
             contains_restricted_characters: 名字只能包含字母、数字、当地字符和特殊字符
 >>>>>>> 266904e (Update 24 translation files)
         last_name:
@@ -47,9 +45,13 @@ zh-CN:
             contains_emojis: 姓氏不能包含表情符号
             contains_url: 姓氏不能包含 URL。
 <<<<<<< HEAD
+<<<<<<< HEAD
             contains_mathematical_symbols: 姓氏不能包含数学符号
             contains_restricted_characters: "“姓氏”字段只能包含字母、数字、当地字符和特殊字符"
 =======
+=======
+            contains_mathematical_symbols: 姓氏不能包含数学符号
+>>>>>>> d6883b2 (Update 21 translation files)
             contains_restricted_characters: 姓氏只能包含字母、数字、当地字符和特殊字符
 >>>>>>> 266904e (Update 24 translation files)
         address1:
@@ -65,14 +67,9 @@ zh-CN:
             missing_building_number: 添加大楼编号（如果有）。
             street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称。
             building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
-<<<<<<< HEAD
             contains_mathematical_symbols: 地址 1 不能包含数学符号
-            contains_restricted_characters: "“地址 1”字段只能包含字母、数字、当地字符和特殊字符"
-            contains_too_many_words: "“地址 1”字段不能超过 %{word_count} 个单词"
-=======
             contains_restricted_characters: 地址 1 只能包含字母、数字、当地字符和特殊字符
             contains_too_many_words: 地址 1 不能超过 %{word_count} 个字词
->>>>>>> 266904e (Update 24 translation files)
           warnings:
             contains_too_many_words: 建议地址行 1 少于 %{word_count} 个字词
         address2:
@@ -88,14 +85,9 @@ zh-CN:
             missing_building_number: 添加大楼编号（如果有）。
             street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称。
             building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
-<<<<<<< HEAD
             contains_mathematical_symbols: 地址 2 不能包含数学符号
-            contains_restricted_characters: "“地址 2”字段只能包含字母、数字、当地字符和特殊字符"
-            contains_too_many_words: "“地址 2”字段不能超过 %{word_count} 个单词"
-=======
             contains_restricted_characters: 地址 2 只能包含字母、数字、当地字符和特殊字符
             contains_too_many_words: 地址 2 不能超过 %{word_count} 个字词
->>>>>>> 266904e (Update 24 translation files)
           warnings:
             contains_too_many_words: 建议地址行 2 少于 %{word_count} 个字词
         city:
@@ -108,20 +100,12 @@ zh-CN:
             contains_html_tags: 城市不能包含 HTML 标记。
             contains_emojis: 城市不能包含表情符号
             contains_url: 城市不能包含 URL
-<<<<<<< HEAD
-            unknown_for_zip: 请输入 %{zip} 对应的有效城市
-            unknown_for_province: 请输入 %{province} 对应的有效城市
-            unknown_for_zip_and_province: 请输入 %{zip}，%{province} 对应的有效城市
-            contains_mathematical_symbols: 城市不能包含数学符号
-            contains_restricted_characters: "“城市”字段只能包含字母、数字、当地字符和特殊字符"
-            contains_too_many_words: "“城市”字段不能超过 %{word_count} 个单词"
-=======
             unknown_for_zip: 输入 %{zip} 对应的有效城市
             unknown_for_province: 输入 %{province} 对应的有效城市
             unknown_for_zip_and_province: 输入 %{province} (%{zip}) 对应的有效城市
+            contains_mathematical_symbols: 城市不能包含数学符号
             contains_restricted_characters: 城市只能包含字母、数字、当地字符和特殊字符
             contains_too_many_words: 城市不能超过 %{word_count} 个字词
->>>>>>> 266904e (Update 24 translation files)
         country:
           label:
             default: 国家/地区
@@ -140,12 +124,8 @@ zh-CN:
             invalid: 输入有效的电话号码
             too_long: 电话号码过长（最多包含 255 个字符）
             contains_emojis: 电话号码不能包含表情符号
-<<<<<<< HEAD
             contains_mathematical_symbols: 电话号码不能包含数学符号
-            contains_restricted_characters: "“电话号码”字段只能包含字母、数字、当地字符和特殊字符"
-=======
             contains_restricted_characters: 电话号码只能包含字母、数字、当地字符和特殊字符
->>>>>>> 266904e (Update 24 translation files)
         province:
           label:
             default: 地区
@@ -170,18 +150,11 @@ zh-CN:
             too_long: 邮政编码值过长
             contains_html_tags: 邮政编码不能包含 HTML 标记。
             contains_emojis: 邮政编码不能包含表情符号
-<<<<<<< HEAD
-            not_supported: 我们当前不支持此国家/地区发货。请输入新地址并重试。
-            unknown_for_province: 输入 %{province} 的有效邮政编码
-            contains_mathematical_symbols: 邮政编码不能包含数学符号
-            contains_restricted_characters: "“邮政编码”字段只能包含字母、数字、当地字符和特殊字符"
-            invalid_for_province: 请输入 %{province} 对应的有效邮政编码
-=======
             not_supported: 我们当前不支持此国家/地区。请输入新地址并重试。
             unknown_for_province: 输入 %{province} 对应的有效邮政编码
+            contains_mathematical_symbols: 邮政编码不能包含数学符号
             contains_restricted_characters: 邮政编码只能包含字母、数字、当地字符和特殊字符
             invalid_for_province: 输入 %{province} 对应的有效邮政编码
->>>>>>> 266904e (Update 24 translation files)
         address:
           errors:
             may_not_exist: 找不到地址或地址不存在
