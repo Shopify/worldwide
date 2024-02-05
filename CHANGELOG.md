@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add Thai to the list of scripts identified by `Worldwide::Scripts.identify`. [#96](https://github.com/Shopify/worldwide/pull/96)
+- Add translations for address fields with invalid province errors. [#97](https://github.com/Shopify/worldwide/pull/97)
 
 ---
 
