@@ -12,7 +12,7 @@ tr:
             too_long: Şirket adı çok uzun (maksimum 255 karakter olmalı)
             contains_html_tags: Şirket, HTML etiketleri içeremez.
             contains_emojis: Şirket emoji içeremez
-            contains_mathematical_symbols: Şirket, matematiksel semboller içeremez
+            contains_mathematical_symbols: Şirket adı, matematiksel semboller içeremez
             contains_restricted_characters: Şirket adı yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
         first_name:
@@ -60,8 +60,8 @@ tr:
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 1. adres en fazla %{word_count} kelime içerebilir
           warnings:
-            contains_too_many_words: Adres satırı 1'de %{word_count}
-              adetten az kelime olması önerilir
+            contains_too_many_words: Adres satırı 1'de %{word_count} adetten az kelime
+              olması önerilir
         address2:
           label:
             default: Apartman, daire vb.
@@ -81,8 +81,8 @@ tr:
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 2. adres en fazla %{word_count} kelime içerebilir
           warnings:
-            contains_too_many_words: Adres satırı 2'de %{word_count}
-              adetten az kelime olması önerilir
+            contains_too_many_words: Adres satırı 2'de %{word_count} adetten az kelime
+              olması önerilir
         city:
           label:
             default: Şehir
@@ -120,7 +120,8 @@ tr:
             invalid: Geçerli bir telefon numarası girin
             too_long: Telefon numarası çok uzun (maksimum 255 karakter)
             contains_emojis: Telefon numarası emoji içeremez
-            contains_mathematical_symbols: Telefon numarası, matematiksel semboller içeremez
+            contains_mathematical_symbols: Telefon numarası, matematiksel semboller
+              içeremez
             contains_restricted_characters: Telefon numarası yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
         province:
