@@ -12,7 +12,8 @@ cs:
             too_long: Název společnosti je příliš dlouhý (maximum je 255 znaků)
             contains_html_tags: Společnost nemůže obsahovat HTML tagy.
             contains_emojis: Název společnosti nemůže obsahovat emoji
-            contains_mathematical_symbols: Název společnosti nemůže obsahovat matematické symboly.
+            contains_mathematical_symbols: Název společnosti nemůže obsahovat matematické
+              symboly.
             contains_restricted_characters: Společnost může obsahovat pouze písmena,
               číslice, místní znaky a speciální znaky
         first_name:
@@ -61,8 +62,8 @@ cs:
             contains_too_many_words: 'Adresa 1 nemůže obsahovat více než tento počet
               slov: %{word_count}'
           warnings:
-            contains_too_many_words: 'Doporučuje se, aby 1. řádek adresy
-              měl méně než tento počet slov: %{word_count}'
+            contains_too_many_words: 'Doporučuje se, aby 1. řádek adresy měl méně
+              než tento počet slov: %{word_count}'
         address2:
           label:
             default: Byt, apartmá atd.
@@ -83,8 +84,8 @@ cs:
             contains_too_many_words: 'Adresa 2 nemůže obsahovat více než tento počet
               slov: %{word_count}'
           warnings:
-            contains_too_many_words: 'Doporučuje se, aby 2. řádek adresy
-              měl méně než tento počet slov: %{word_count}'
+            contains_too_many_words: 'Doporučuje se, aby 2. řádek adresy měl méně
+              než tento počet slov: %{word_count}'
         city:
           label:
             default: Město
@@ -122,7 +123,8 @@ cs:
             invalid: Zadejte platné telefonní číslo
             too_long: Telefonní číslo je příliš dlouhé (maximálně 255 znaků)
             contains_emojis: Telefonní číslo nemůže obsahovat emoji
-            contains_mathematical_symbols: Telefonní číslo nemůže obsahovat matematické symboly.
+            contains_mathematical_symbols: Telefonní číslo nemůže obsahovat matematické
+              symboly.
             contains_restricted_characters: Telefonní číslo může obsahovat pouze písmena,
               číslice, místní znaky a speciální znaky
         province:
@@ -131,7 +133,7 @@ cs:
             optional: Oblast (volitelné)
           errors:
             blank: Vyberte oblast
-            invalid: Zadejte platnou oblast
+            invalid: Zadejte platnou oblast.
             invalid_for_country: Zadejte platnou oblast pro zemi %{country}
             unknown_for_city_and_zip: 'Zadejte platnou oblast pro: %{city}, %{zip}'
             unknown_for_city: 'Vyberte platnou oblast pro: %{city}'
