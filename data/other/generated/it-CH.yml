@@ -35,15 +35,15 @@ it-CH:
       on_date_time_current_year: "%-d %b, %02k:%M"
       on_date: "%-d %b %Y"
       ago: "%{time} fa"
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: "%{count} ore fa"
         one: "%{count} ora fa"
         other: "%{count} ore fa"
-        many: "%{count} ore fa"
       x_minutes_ago:
+        many: "%{count} minuti fa"
         one: "%{count} minuto fa"
         other: "%{count} minuti fa"
-        many: "%{count} minuti fa"
+      cc_expiry_date: "%m/%Y"
     abbr_day_names:
     - dom
     - lun
@@ -88,10 +88,6 @@ it-CH:
     - ottobre
     - novembre
     - dicembre
-    order:
-    - :day
-    - :month
-    - :year
     relative_day_names:
       this_week: questa settimana
       this_month: Questo mese
@@ -100,6 +96,10 @@ it-CH:
       today: oggi
       tomorrow: domani
       day_after_tomorrow: dopodomani
+    order:
+    - :day
+    - :month
+    - :year
   time:
     formats:
       abbr_date: "%-d %b %Y"
@@ -135,15 +135,15 @@ it-CH:
       on_date_time_current_year: "%-d %b, %02k:%M"
       on_date: "%-d %b %Y"
       ago: "%{time} fa"
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: "%{count} ore fa"
         one: "%{count} ora fa"
         other: "%{count} ore fa"
-        many: "%{count} ore fa"
       x_minutes_ago:
+        many: "%{count} minuti fa"
         one: "%{count} minuto fa"
         other: "%{count} minuti fa"
-        many: "%{count} minuti fa"
+      cc_expiry_date: "%m/%Y"
     am: am
     pm: pm
     just_now: Proprio adesso

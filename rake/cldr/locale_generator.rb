@@ -34,7 +34,7 @@ module Worldwide
         # So instead, we just sort the files again.
         sort_cldr_files
 
-        Worldwide::Locales.each do |locale|
+        Worldwide::Locales.map(&:to_s).each do |locale|
           puts "Generating date/time formats for locale '#{locale}'..."
           generate_locale(locale)
         end
@@ -927,13 +927,11 @@ module Worldwide
       end
 
       def generate_plural_keys_lookup
-        puts "Generating pluralization key constants..."
-
-        cardinal_results = Worldwide::Locales.send(:cldr_locales).sort.to_h do |locale|
+        cardinal_results = Worldwide::Locales.send(:cldr_locales).map(&:to_s).sort.to_h do |locale|
           [locale, pluralization_keys(locale, type: "cardinal")]
         end
 
-        ordinal_results = Worldwide::Locales.send(:cldr_locales).sort.to_h do |locale|
+        ordinal_results = Worldwide::Locales.send(:cldr_locales).map(&:to_s).sort.to_h do |locale|
           [locale, pluralization_keys(locale, type: "ordinal")]
         end
 
@@ -1000,7 +998,7 @@ module Worldwide
         puts("Expanding to cover missing plural keys in output")
         Dir.glob(File.join(["data", "other", "generated", "*.yml"])).each do |filepath|
           locale = File.basename(filepath).sub(/\.yml$/, "").to_sym
-          PluralizationSubkeyExpander.expand_file(filepath, locale, output_filename: filepath)
+          PluralizationSubkeyExpander.expand_file(filepath, locale.to_s, output_filename: filepath)
         end
       end
 

@@ -35,15 +35,15 @@ es-SV:
       on_date_time_current_year: el %-d %b, a las %02k:%M
       on_date: el %-d %b %Y
       ago: hace %{time}
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: hace %{count} horas
         one: hace %{count} hora
         other: hace %{count} horas
-        many: hace %{count} horas
       x_minutes_ago:
+        many: hace %{count} minutos
         one: hace %{count} minuto
         other: hace %{count} minutos
-        many: hace %{count} minutos
+      cc_expiry_date: "%m/%Y"
     abbr_day_names:
     - dom
     - lun
@@ -88,14 +88,14 @@ es-SV:
     - octubre
     - noviembre
     - diciembre
-    order:
-    - :day
-    - :month
-    - :year
     relative_day_names:
       this_week: esta semana
       this_month: Este mes
       day_before_yesterday: antier
+    order:
+    - :day
+    - :month
+    - :year
   time:
     formats:
       abbr_date: "%-d %b %Y"
@@ -131,15 +131,15 @@ es-SV:
       on_date_time_current_year: el %-d %b, a las %02k:%M
       on_date: el %-d %b %Y
       ago: hace %{time}
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: hace %{count} horas
         one: hace %{count} hora
         other: hace %{count} horas
-        many: hace %{count} horas
       x_minutes_ago:
+        many: hace %{count} minutos
         one: hace %{count} minuto
         other: hace %{count} minutos
-        many: hace %{count} minutos
+      cc_expiry_date: "%m/%Y"
     am: a.m.
     pm: p.m.
     just_now: Ahora

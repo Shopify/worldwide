@@ -35,15 +35,15 @@ pt-BR:
       on_date_time_current_year: em %-d de %b, %02k:%M
       on_date: em %-d de %b de %Y
       ago: "%{time} atrás"
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: há %{count} horas
         one: há %{count} hora
         other: há %{count} horas
-        many: há %{count} horas
       x_minutes_ago:
+        many: há %{count} minutos
         one: há %{count} minuto
         other: há %{count} minutos
-        many: há %{count} minutos
+      cc_expiry_date: "%m/%Y"
     abbr_day_names:
     - dom.
     - seg.
@@ -88,10 +88,6 @@ pt-BR:
     - outubro
     - novembro
     - dezembro
-    order:
-    - :day
-    - :month
-    - :year
     relative_day_names:
       this_week: esta semana
       this_month: Este mês
@@ -100,6 +96,10 @@ pt-BR:
       today: hoje
       tomorrow: amanhã
       day_after_tomorrow: depois de amanhã
+    order:
+    - :day
+    - :month
+    - :year
   time:
     formats:
       abbr_date: "%-d de %b de %Y"
@@ -135,15 +135,15 @@ pt-BR:
       on_date_time_current_year: em %-d de %b, %02k:%M
       on_date: em %-d de %b de %Y
       ago: "%{time} atrás"
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: há %{count} horas
         one: há %{count} hora
         other: há %{count} horas
-        many: há %{count} horas
       x_minutes_ago:
+        many: há %{count} minutos
         one: há %{count} minuto
         other: há %{count} minutos
-        many: há %{count} minutos
+      cc_expiry_date: "%m/%Y"
     am: am
     pm: pm
     just_now: Agora mesmo
