@@ -290,7 +290,7 @@ module Worldwide
           pseudo: {
             weekday_long: "EEEE",
             time_long: cldr_pseudo_long_time_no_seconds,
-            time_long_gmt_offset: cldr_pseudo_long_time_gmt_offset,
+            time_long_utc_offset: cldr_pseudo_long_time_utc_offset,
           },
         }
       end
@@ -304,8 +304,8 @@ module Worldwide
       end
 
       # We want a time that includes hour, minute, and the GMT time offset in a radable format, but not seconds.
-      def cldr_pseudo_long_time_gmt_offset
-        Worldwide::Cldr.t("calendars.gregorian.formats.time.long.pattern").sub(":mm:ss", ":mm").sub("z", "'(GMT'xxx')'")
+      def cldr_pseudo_long_time_utc_offset
+        Worldwide::Cldr.t("calendars.gregorian.formats.time.long.pattern").sub(":mm:ss", ":mm").sub("z", "'(UTC'xxx')'")
       end
 
       # CLDR does not define "date-time" format strings by themselves.
@@ -635,7 +635,7 @@ module Worldwide
           strftime_dotted["#{shopify_section}.formats.long_readable_with_zone".to_sym] = strftime_format
         end
 
-        # long_readable_with_gmt_zone_offset:
+        # long_readable_with_utc_zone_offset:
         #  Use datetime: merge of yMMMEd with time.formats.short.pattern.
         #  Then, replace the MMM ('%b') with MMMM ('%B')
         #  Also, if the format uses EEE (as is true, e.g, for `es`), replace it with EEEE.
@@ -644,13 +644,13 @@ module Worldwide
           [
             "calendars.gregorian.formats.datetime.long.pattern",
             "calendars.gregorian.additional_formats.yMMMd",
-            "pseudo.time_long_gmt_offset",
+            "pseudo.time_long_utc_offset",
           ],
         ) do |cldr_format|
           cldr_format.sub(/(?<!M)M{3}(?!M)/, "MMMM").sub(/(?<!E)E{3}(?!E)/, "EEEE")
         end
         ["date", "time"].each do |shopify_section|
-          strftime_dotted["#{shopify_section}.formats.long_readable_with_gmt_zone_offset".to_sym] = strftime_format
+          strftime_dotted["#{shopify_section}.formats.long_readable_with_utc_zone_offset".to_sym] = strftime_format
         end
 
         # date_at_time:
@@ -890,7 +890,7 @@ module Worldwide
           :long,
           :long_readable_with_time,
           :long_readable_with_zone,
-          :long_readable_with_gmt_zone_offset,
+          :long_readable_with_utc_zone_offset,
           :long_with_zone,
           :month_year,
           :month_day,
