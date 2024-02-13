@@ -34,7 +34,7 @@ module Worldwide
         # So instead, we just sort the files again.
         sort_cldr_files
 
-        Worldwide::Locales.each do |locale|
+        Worldwide::Locales.map(&:to_s).each do |locale|
           puts "Generating date/time formats for locale '#{locale}'..."
           generate_locale(locale)
         end
@@ -185,6 +185,7 @@ module Worldwide
         "v": "%z",  # Time zone offset (e.g., -0500)
         "y": "%Y",  # Year, all digits (e.g. 2019)
         "z": "%z",  # Time zone offset (e.g., -0500)
+        "xxx": "%:z", # Time zone offset with colon (e.g., -05:00)
       }
 
       DATETIME_FORMAT_MAP = {
@@ -289,6 +290,7 @@ module Worldwide
           pseudo: {
             weekday_long: "EEEE",
             time_long: cldr_pseudo_long_time_no_seconds,
+            time_long_utc_offset: cldr_pseudo_long_time_utc_offset,
           },
         }
       end
@@ -299,6 +301,11 @@ module Worldwide
       # So, we start with that, and discard the ':ss' portion.
       def cldr_pseudo_long_time_no_seconds
         Worldwide::Cldr.t("calendars.gregorian.formats.time.long.pattern").sub(":mm:ss", ":mm")
+      end
+
+      # We want a time that includes hour, minute, and the GMT time offset in a radable format, but not seconds.
+      def cldr_pseudo_long_time_utc_offset
+        Worldwide::Cldr.t("calendars.gregorian.formats.time.long.pattern").sub(":mm:ss", ":mm").sub("z", "'UTC'xxx")
       end
 
       # CLDR does not define "date-time" format strings by themselves.
@@ -628,6 +635,24 @@ module Worldwide
           strftime_dotted["#{shopify_section}.formats.long_readable_with_zone".to_sym] = strftime_format
         end
 
+        # long_readable_with_utc_zone_offset:
+        #  Use datetime: merge of yMMMEd with time.formats.short.pattern.
+        #  Then, replace the MMM ('%b') with MMMM ('%B')
+        #  Also, if the format uses EEE (as is true, e.g, for `es`), replace it with EEEE.
+        #  Then append the gmt timezone offset.
+        strftime_format = compound_datetime_format(
+          [
+            "calendars.gregorian.formats.datetime.long.pattern",
+            "calendars.gregorian.additional_formats.yMMMd",
+            "pseudo.time_long_utc_offset",
+          ],
+        ) do |cldr_format|
+          cldr_format.sub(/(?<!M)M{3}(?!M)/, "MMMM").sub(/(?<!E)E{3}(?!E)/, "EEEE")
+        end
+        ["date", "time"].each do |shopify_section|
+          strftime_dotted["#{shopify_section}.formats.long_readable_with_utc_zone_offset".to_sym] = strftime_format
+        end
+
         # date_at_time:
         #   Use datetime: merge of yMMMd with time.formats.short.pattern.
         #   Then, replace MMM with MMMM to get the unabbreviated month name.
@@ -865,6 +890,7 @@ module Worldwide
           :long,
           :long_readable_with_time,
           :long_readable_with_zone,
+          :long_readable_with_utc_zone_offset,
           :long_with_zone,
           :month_year,
           :month_day,
@@ -927,13 +953,11 @@ module Worldwide
       end
 
       def generate_plural_keys_lookup
-        puts "Generating pluralization key constants..."
-
-        cardinal_results = Worldwide::Locales.send(:cldr_locales).sort.to_h do |locale|
+        cardinal_results = Worldwide::Locales.send(:cldr_locales).map(&:to_s).sort.to_h do |locale|
           [locale, pluralization_keys(locale, type: "cardinal")]
         end
 
-        ordinal_results = Worldwide::Locales.send(:cldr_locales).sort.to_h do |locale|
+        ordinal_results = Worldwide::Locales.send(:cldr_locales).map(&:to_s).sort.to_h do |locale|
           [locale, pluralization_keys(locale, type: "ordinal")]
         end
 
@@ -1000,7 +1024,7 @@ module Worldwide
         puts("Expanding to cover missing plural keys in output")
         Dir.glob(File.join(["data", "other", "generated", "*.yml"])).each do |filepath|
           locale = File.basename(filepath).sub(/\.yml$/, "").to_sym
-          PluralizationSubkeyExpander.expand_file(filepath, locale, output_filename: filepath)
+          PluralizationSubkeyExpander.expand_file(filepath, locale.to_s, output_filename: filepath)
         end
       end
 

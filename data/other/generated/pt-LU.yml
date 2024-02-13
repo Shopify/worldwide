@@ -24,6 +24,7 @@ pt-LU:
       weekday_with_short_date: "%A, %-d/%02m"
       long_readable_with_time: "%-d/%02m/%Y às %02k:%M"
       long_readable_with_zone: "%A, %-d/%02m/%Y às %02k:%M %z"
+      long_readable_with_utc_zone_offset: "%-d/%02m/%Y às %02k:%M UTC%:z"
       date_at_time: "%-d/%02m/%Y às %02k:%M"
       default: "%02d/%02m/%Y"
       billing: "%02d/%02m/%Y"
@@ -35,15 +36,15 @@ pt-LU:
       on_date_time_current_year: em %-d/%02m, à(s) %02k:%M
       on_date: em %-d/%02m/%Y
       ago: Há %{time}
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: há %{count} horas
         one: há %{count} hora
         other: há %{count} horas
-        many: há %{count} horas
       x_minutes_ago:
+        many: há %{count} minutos
         one: há %{count} minuto
         other: há %{count} minutos
-        many: há %{count} minutos
+      cc_expiry_date: "%m/%Y"
     abbr_day_names:
     - domingo
     - segunda
@@ -88,10 +89,6 @@ pt-LU:
     - outubro
     - novembro
     - dezembro
-    order:
-    - :day
-    - :month
-    - :year
     relative_day_names:
       this_week: esta semana
       this_month: este mês
@@ -100,6 +97,10 @@ pt-LU:
       today: hoje
       tomorrow: amanhã
       day_after_tomorrow: depois de amanhã
+    order:
+    - :day
+    - :month
+    - :year
   time:
     formats:
       abbr_date: "%-d/%02m/%Y"
@@ -122,6 +123,7 @@ pt-LU:
       weekday_with_short_date: "%A, %-d/%02m"
       long_readable_with_time: "%-d/%02m/%Y às %02k:%M"
       long_readable_with_zone: "%A, %-d/%02m/%Y às %02k:%M %z"
+      long_readable_with_utc_zone_offset: "%-d/%02m/%Y às %02k:%M UTC%:z"
       date_at_time: "%-d/%02m/%Y às %02k:%M"
       default: "%a, %-d/%02m/%Y, %02k:%M %z"
       long: "%-d/%02m/%Y, %02k:%M"
@@ -135,15 +137,15 @@ pt-LU:
       on_date_time_current_year: em %-d/%02m, à(s) %02k:%M
       on_date: em %-d/%02m/%Y
       ago: Há %{time}
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: há %{count} horas
         one: há %{count} hora
         other: há %{count} horas
-        many: há %{count} horas
       x_minutes_ago:
+        many: há %{count} minutos
         one: há %{count} minuto
         other: há %{count} minutos
-        many: há %{count} minutos
+      cc_expiry_date: "%m/%Y"
     am: da manhã
     pm: da tarde
     just_now: Agora mesmo

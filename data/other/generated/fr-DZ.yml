@@ -24,6 +24,7 @@ fr-DZ:
       weekday_with_short_date: "%A %-d %b"
       long_readable_with_time: "%-d %B %Y à %-l:%M %P"
       long_readable_with_zone: "%A %-d %B %Y à %-l:%M %P %z"
+      long_readable_with_utc_zone_offset: "%-d %B %Y à %-l:%M %P UTC%:z"
       date_at_time: "%-d %B %Y à %-l:%M %P"
       default: "%02d/%02m/%Y"
       billing: "%02d/%02m/%Y"
@@ -35,15 +36,15 @@ fr-DZ:
       on_date_time_current_year: le %-d %b à %-l:%M %P
       on_date: le %-d %b %Y
       ago: Il y a %{time}
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: il y a %{count} heures
         one: il y a %{count} heure
         other: il y a %{count} heures
-        many: il y a %{count} heures
       x_minutes_ago:
+        many: il y a %{count} minutes
         one: il y a %{count} minute
         other: il y a %{count} minutes
-        many: il y a %{count} minutes
+      cc_expiry_date: "%m/%Y"
     abbr_day_names:
     - dim.
     - lun.
@@ -88,10 +89,6 @@ fr-DZ:
     - octobre
     - novembre
     - décembre
-    order:
-    - :day
-    - :month
-    - :year
     relative_day_names:
       this_week: cette semaine
       this_month: Ce mois-ci
@@ -100,6 +97,10 @@ fr-DZ:
       today: aujourd’hui
       tomorrow: demain
       day_after_tomorrow: après-demain
+    order:
+    - :day
+    - :month
+    - :year
   time:
     formats:
       abbr_date: "%-d %b %Y"
@@ -122,6 +123,7 @@ fr-DZ:
       weekday_with_short_date: "%A %-d %b"
       long_readable_with_time: "%-d %B %Y à %-l:%M %P"
       long_readable_with_zone: "%A %-d %B %Y à %-l:%M %P %z"
+      long_readable_with_utc_zone_offset: "%-d %B %Y à %-l:%M %P UTC%:z"
       date_at_time: "%-d %B %Y à %-l:%M %P"
       default: "%a %-d %b %Y %-l:%M %P %z"
       long: "%-d %B %Y, %-l:%M %P"
@@ -135,15 +137,15 @@ fr-DZ:
       on_date_time_current_year: le %-d %b à %-l:%M %P
       on_date: le %-d %b %Y
       ago: Il y a %{time}
-      cc_expiry_date: "%m/%Y"
       x_hours_ago:
+        many: il y a %{count} heures
         one: il y a %{count} heure
         other: il y a %{count} heures
-        many: il y a %{count} heures
       x_minutes_ago:
+        many: il y a %{count} minutes
         one: il y a %{count} minute
         other: il y a %{count} minutes
-        many: il y a %{count} minutes
+      cc_expiry_date: "%m/%Y"
     am: am
     pm: pm
     just_now: Il y a un instant
