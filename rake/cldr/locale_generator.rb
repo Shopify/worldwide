@@ -305,7 +305,7 @@ module Worldwide
 
       # We want a time that includes hour, minute, and the GMT time offset in a radable format, but not seconds.
       def cldr_pseudo_long_time_utc_offset
-        Worldwide::Cldr.t("calendars.gregorian.formats.time.long.pattern").sub(":mm:ss", ":mm").sub("z", "'(UTC'xxx')'")
+        Worldwide::Cldr.t("calendars.gregorian.formats.time.long.pattern").sub(":mm:ss", ":mm").sub("z", "'UTC'xxx")
       end
 
       # CLDR does not define "date-time" format strings by themselves.
