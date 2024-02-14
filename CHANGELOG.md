@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Nil.
+- Singapore, building number may be in address2 [#108](https://github.com/Shopify/worldwide/pull/108)
 
 ---
 
