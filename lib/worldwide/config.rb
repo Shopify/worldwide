@@ -22,6 +22,8 @@ module Worldwide
       def configure_i18n(i18n_config: nil, additional_components: [])
         i18n_config ||= I18n.config
 
+        I18n.load_path += Dir.glob(File.dirname(__FILE__) + "db/data/regions/*/*.yml")
+
         I18n::Backend::Simple.include(
           I18n::Backend::Fallbacks,
           I18n::Backend::Pluralization,
