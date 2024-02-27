@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Nil.
+- Return early if country_code is nil Zip::Normalize [#110](https://github.com/Shopify/worldwide/pull/110)
 
 ---
 
