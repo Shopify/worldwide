@@ -60,6 +60,7 @@ en:
             street_unknown_for_zip: Enter a valid street name for %{zip}.
             building_number_invalid: Building number couldn't be located for %{street},
               %{zip}.
+            unknown_for_address: Street may be incorrect.
           warnings:
             contains_too_many_words: Address line 1 is recommended to have less than %{word_count} words
         address2:
@@ -81,6 +82,8 @@ en:
             street_unknown_for_zip: Enter a valid street name for %{zip}.
             building_number_invalid: Building number couldn't be located for %{street},
               %{zip}.
+            unknown_for_address: Street may be incorrect.
+
           warnings:
             contains_too_many_words: Address line 2 is recommended to have less than %{word_count} words
         city:
@@ -100,6 +103,7 @@ en:
             unknown_for_zip: Enter a valid city for %{zip}
             unknown_for_province: Enter a valid city for %{province}
             unknown_for_zip_and_province: Enter a valid city for %{zip}, %{province}
+            unknown_for_address: City may be incorrect.
         province:
           label:
             default: Region
@@ -111,6 +115,7 @@ en:
             unknown_for_city_and_zip: Enter a valid region for %{city}, %{zip}
             unknown_for_city: Select a valid region for %{city}
             unknown_for_zip: Select a valid region for %{zip}
+            unknown_for_address: Region may be incorrect.
         country:
           label:
             default: Country/region
@@ -142,6 +147,8 @@ en:
               new address and try again.
             contains_html_tags: Postal code cannot contain HTML tags.
             unknown_for_province: Enter a valid postal code for %{province}
+            unknown_for_street_and_city: Postal code may be incorrect for %{street}, %{city}
+            unknown_for_address: Postal code my be incorrect.
         phone:
           label:
             default: Phone
