@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Nil.
+- Add localized concern messages when field is unknown for address [#109](https://github.com/Shopify/worldwide/pull/109)
 
 ---
 
