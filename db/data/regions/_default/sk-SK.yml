@@ -12,7 +12,8 @@ sk-SK:
             too_long: Názov spoločnosti je príliš dlhý (maximálne 255 znakov)
             contains_html_tags: Spoločnosť nemôže obsahovať HTML značky.
             contains_emojis: Spoločnosť nemôže obsahovať emotikony
-            contains_mathematical_symbols: Spoločnosť nemôže obsahovať matematické značky
+            contains_mathematical_symbols: Spoločnosť nemôže obsahovať matematické
+              značky
             contains_restricted_characters: Spoločnosť môže obsahovať len písmená,
               číslice, miestne znaky a špeciálne znaky
         first_name:
@@ -38,7 +39,8 @@ sk-SK:
             contains_html_tags: Priezvisko nemôže obsahovať HTML značky.
             contains_emojis: Priezvisko nemôže obsahovať emotikony
             contains_url: Priezvisko nemôže obsahovať URL adresu.
-            contains_mathematical_symbols: Priezvisko nemôže obsahovať matematické značky
+            contains_mathematical_symbols: Priezvisko nemôže obsahovať matematické
+              značky
             contains_restricted_characters: Priezvisko môže obsahovať len písmená,
               číslice, miestne znaky a špeciálne znaky
         address1:
@@ -60,9 +62,10 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 1 nemôže mať viac ako tento počet slov:
               (%{word_count})'
+            unknown_for_address: Ulica môže byť nesprávna.
           warnings:
-            contains_too_many_words: 'Riadok adresy 1 by nemal mať viac
-              ako tento počet slov: %{word_count}'
+            contains_too_many_words: 'Riadok adresy 1 by nemal mať viac ako tento
+              počet slov: %{word_count}'
         address2:
           label:
             default: Apartmán, byt atď.
@@ -82,9 +85,10 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 2 nemôže mať viac ako tento počet slov:
               (%{word_count})'
+            unknown_for_address: Ulica môže byť nesprávna.
           warnings:
-            contains_too_many_words: 'Riadok adresy 2 by nemal mať viac
-              ako tento počet slov: %{word_count}'
+            contains_too_many_words: 'Riadok adresy 2 by nemal mať viac ako tento
+              počet slov: %{word_count}'
         city:
           label:
             default: Mesto
@@ -103,6 +107,7 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Mesto nemôže mať viac ako tento počet slov:
               (%{word_count})'
+            unknown_for_address: Mesto môže byť nesprávne.
         country:
           label:
             default: Krajina/oblasť
@@ -123,7 +128,8 @@ sk-SK:
             invalid: Zadajte platné telefónne číslo
             too_long: Telefón je príliš dlhý (maximálne 255 znakov)
             contains_emojis: Telefónne číslo nemôže obsahovať emotikony
-            contains_mathematical_symbols: Telefónne číslo nemôže obsahovať matematické značky
+            contains_mathematical_symbols: Telefónne číslo nemôže obsahovať matematické
+              značky
             contains_restricted_characters: Telefónne číslo môže obsahovať len písmená,
               číslice, miestne znaky a špeciálne znaky
         province:
@@ -132,11 +138,12 @@ sk-SK:
             optional: Oblasť (voliteľné)
           errors:
             blank: Vyberte oblasť
-            invalid:  Zadajte platnú oblasť
+            invalid: Zadajte platnú oblasť
             invalid_for_country: Zadajte platnú oblasť pre krajinu %{country}
             unknown_for_city_and_zip: 'Zadajte platnú oblasť pre: %{city}, %{zip}'
             unknown_for_city: 'Vyberte platnú oblasť pre: %{city}'
             unknown_for_zip: 'Vyberte platnú oblasť pre: %{zip}'
+            unknown_for_address: Oblasť môže byť nesprávna.
         zip:
           label:
             default: Poštové smerovacie číslo
@@ -154,11 +161,15 @@ sk-SK:
             not_supported: Túto krajinu/oblasť v súčasnosti nepodporujeme. Zadajte
               novú adresu a skúste to znova.
             unknown_for_province: 'Zadajte platné poštové smerovacie číslo pre: %{province}'
-            contains_mathematical_symbols: Poštové smerovacie číslo nemôže obsahovať matematické značky
+            contains_mathematical_symbols: Poštové smerovacie číslo nemôže obsahovať
+              matematické značky
             contains_restricted_characters: Poštové smerovacie číslo môže obsahovať
               len písmená, číslice, miestne znaky a špeciálne znaky
             invalid_for_province: Zadajte platné poštové smerovacie číslo pre provinciu
               %{province}
+            unknown_for_street_and_city: PSČ pre ulicu %{street}, mesto %{city} môže
+              byť nesprávne.
+            unknown_for_address: PSČ môže byť nesprávne.
         address:
           errors:
             may_not_exist: Adresa nebola nájdená alebo neexistuje

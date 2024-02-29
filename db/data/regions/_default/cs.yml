@@ -61,6 +61,7 @@ cs:
               %{zip}.'
             contains_too_many_words: 'Adresa 1 nemůže obsahovat více než tento počet
               slov: %{word_count}'
+            unknown_for_address: Ulice může být nesprávná.
           warnings:
             contains_too_many_words: 'Doporučuje se, aby 1. řádek adresy měl méně
               než tento počet slov: %{word_count}'
@@ -83,6 +84,7 @@ cs:
               %{zip}.'
             contains_too_many_words: 'Adresa 2 nemůže obsahovat více než tento počet
               slov: %{word_count}'
+            unknown_for_address: Ulice může být nesprávná.
           warnings:
             contains_too_many_words: 'Doporučuje se, aby 2. řádek adresy měl méně
               než tento počet slov: %{word_count}'
@@ -104,6 +106,7 @@ cs:
             unknown_for_zip_and_province: 'Zadejte platné město pro: %{zip}, %{province}'
             contains_too_many_words: 'Město nemůže obsahovat více než tento počet
               slov: %{word_count}'
+            unknown_for_address: Město může být nesprávné.
         country:
           label:
             default: Země/oblast
@@ -138,6 +141,7 @@ cs:
             unknown_for_city_and_zip: 'Zadejte platnou oblast pro: %{city}, %{zip}'
             unknown_for_city: 'Vyberte platnou oblast pro: %{city}'
             unknown_for_zip: 'Vyberte platnou oblast pro: %{zip}'
+            unknown_for_address: Oblast může být nesprávná.
         zip:
           label:
             default: PSČ
@@ -159,6 +163,9 @@ cs:
               adresu a zkuste to znovu.
             unknown_for_province: 'Zadejte platné PSČ pro: %{province}'
             invalid_for_province: 'Zadejte platné PSČ pro: %{province}.'
+            unknown_for_street_and_city: PSČ může být pro ulici %{street} a město
+              %{city} nesprávné.
+            unknown_for_address: PSČ může být nesprávné.
         address:
           errors:
             may_not_exist: Adresa nebyla nalezena nebo neexistuje.

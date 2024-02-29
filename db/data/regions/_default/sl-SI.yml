@@ -12,7 +12,8 @@ sl-SI:
             too_long: Ime podjetja je predolgo (največje dovoljeno št. znakov je 255)
             contains_html_tags: Podjetje ne sme vsebovati oznak HTML.
             contains_emojis: Podjetje ne sme vsebovati čustvenih simbolov
-            contains_mathematical_symbols: Podjetje ne sme vsebovati matematičnih simbolov
+            contains_mathematical_symbols: Podjetje ne sme vsebovati matematičnih
+              simbolov
             contains_restricted_characters: Ime podjetja lahko vsebuje le črke, številke,
               lokalne znake in posebne znake
         first_name:
@@ -57,14 +58,16 @@ sl-SI:
               %{zip}.
             building_number_invalid: Hišne številke ni bilo mogoče najti za ulico
               %{street}, %{zip}.
-            contains_mathematical_symbols: Naslov 1 ne sme vsebovati matematičnih simbolov
+            contains_mathematical_symbols: Naslov 1 ne sme vsebovati matematičnih
+              simbolov
             contains_restricted_characters: Naslov1 lahko vsebuje le črke, številke,
               lokalne znake in posebne znake
             contains_too_many_words: Naslov1 ne sme vsebovati več kot %{word_count}
               besed
+            unknown_for_address: Ulica morda ni pravilna.
           warnings:
-            contains_too_many_words: Naslov 1 naj ne vsebuje več kot
-              %{word_count} besed
+            contains_too_many_words: Naslov 1 naj ne vsebuje več kot %{word_count}
+              besed
         address2:
           label:
             default: Stanovanje, apartma itn.
@@ -81,14 +84,16 @@ sl-SI:
               %{zip}.
             building_number_invalid: Hišne številke ni bilo mogoče najti za ulico
               %{street}, %{zip}.
-            contains_mathematical_symbols: Naslov 2 ne sme vsebovati matematičnih simbolov
+            contains_mathematical_symbols: Naslov 2 ne sme vsebovati matematičnih
+              simbolov
             contains_restricted_characters: Naslov2 lahko vsebuje le črke, številke,
               lokalne znake in posebne znake
             contains_too_many_words: Naslov2 ne sme vsebovati več kot %{word_count}
               besed
+            unknown_for_address: Ulica morda ni pravilna.
           warnings:
-            contains_too_many_words: Naslov 2 naj ne vsebuje več kot
-              %{word_count} besed
+            contains_too_many_words: Naslov 2 naj ne vsebuje več kot %{word_count}
+              besed
         city:
           label:
             default: Kraj
@@ -108,6 +113,7 @@ sl-SI:
               lokalne znake in posebne znake
             contains_too_many_words: Mesto ne sme vsebovati več kot %{word_count}
               besed
+            unknown_for_address: Kraj morda ni pravilen.
         country:
           label:
             default: Država/regija
@@ -128,7 +134,8 @@ sl-SI:
             too_long: Telefonska številka je predolga (največje dovoljeno št. znakov
               je 255)
             contains_emojis: Telefonska številka ne sme vsebovati čustvenih simbolov
-            contains_mathematical_symbols: Telefonska številka ne sme vsebovati matematičnih simbolov
+            contains_mathematical_symbols: Telefonska številka ne sme vsebovati matematičnih
+              simbolov
             contains_restricted_characters: Telefonska številka lahko vsebuje le črke,
               številke, lokalne znake in posebne znake
         province:
@@ -142,6 +149,7 @@ sl-SI:
             unknown_for_city_and_zip: Vnesite veljavno regijo za mesto %{city}, %{zip}
             unknown_for_city: Izberite veljavno regijo za mesto %{city}
             unknown_for_zip: Izberite veljavno regijo za poštno številko %{zip}
+            unknown_for_address: Regija morda ni pravilna.
         zip:
           label:
             default: Poštna številka
@@ -159,11 +167,15 @@ sl-SI:
             not_supported: Ta država/regija trenutno ni podprta. Vnesite nov naslov
               in poskusite znova.
             unknown_for_province: Vnesite veljavno poštno številko za provinco %{province}
-            contains_mathematical_symbols: Poštna številka ne sme vsebovati matematičnih simbolov
+            contains_mathematical_symbols: Poštna številka ne sme vsebovati matematičnih
+              simbolov
             contains_restricted_characters: Poštna številka lahko vsebuje le črke,
               številke, lokalne znake in posebne znake
             invalid_for_province: Vnesite veljavno poštno številko za zvezno državo
               %{province}
+            unknown_for_street_and_city: Poštna številka morda ni pravilna za %{street},
+              %{city}
+            unknown_for_address: Poštna številka morda ni pravilna.
         address:
           errors:
             may_not_exist: Naslova ni mogoče najti ali ne obstaja

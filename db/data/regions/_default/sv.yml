@@ -64,6 +64,7 @@ sv:
               siffror, lokala tecken och specialtecken
             contains_too_many_words: Adress1 får inte innehålla fler än %{word_count}
               ord
+            unknown_for_address: Gatan kan vara felaktig.
           warnings:
             contains_too_many_words: Vi rekommenderar att adressrad 1 består av färre
               än %{word_count} ord
@@ -87,6 +88,7 @@ sv:
               siffror, lokala tecken och specialtecken
             contains_too_many_words: Adress2 får inte innehålla fler än %{word_count}
               ord
+            unknown_for_address: Gatan kan vara felaktig.
           warnings:
             contains_too_many_words: Vi rekommenderar att adressrad 2 består av färre
               än %{word_count} ord
@@ -108,6 +110,7 @@ sv:
               lokala tecken och specialtecken
             contains_too_many_words: Stad får inte innehålla fler än %{word_count}
               ord
+            unknown_for_address: Staden kan vara felaktig.
         country:
           label:
             default: Land/Region
@@ -142,6 +145,7 @@ sv:
             unknown_for_city_and_zip: Ange en giltig region för %{city}, %{zip}
             unknown_for_city: Ange en giltig region för %{city}
             unknown_for_zip: Ange en giltig region för %{zip}
+            unknown_for_address: Regionen kan vara felaktig.
         zip:
           label:
             default: Postnummer
@@ -164,6 +168,9 @@ sv:
             contains_restricted_characters: Postnummer får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
             invalid_for_province: Ange ett giltigt postnummer för %{province}
+            unknown_for_street_and_city: Postnumret kan vara felaktigt för %{street},
+              %{city}
+            unknown_for_address: Postnumret kan vara felaktigt.
         address:
           errors:
             address_may_not_exist: Adressen hittades inte eller finns inte

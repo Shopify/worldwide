@@ -60,6 +60,7 @@ vi:
               ký tự địa phương và ký tự đặc biệt
             contains_too_many_words: Address1 không được có nhiều hơn %{word_count}
               từ
+            unknown_for_address: Đường phố có thể không chính xác.
           warnings:
             contains_too_many_words: Dòng địa chỉ 1 nên có tối đa %{word_count} từ
         address2:
@@ -81,6 +82,7 @@ vi:
               ký tự địa phương và ký tự đặc biệt
             contains_too_many_words: Address2 không được có nhiều hơn %{word_count}
               từ
+            unknown_for_address: Đường phố có thể không chính xác.
           warnings:
             contains_too_many_words: Dòng địa chỉ 2 nên có tối đa %{word_count} từ
         city:
@@ -102,6 +104,7 @@ vi:
               ký tự địa phương và ký tự đặc biệt
             contains_too_many_words: Thành phố không được có nhiều hơn %{word_count}
               từ
+            unknown_for_address: Thành phố có thể không chính xác.
         country:
           label:
             default: Quốc gia/Vùng
@@ -136,6 +139,7 @@ vi:
             unknown_for_city_and_zip: Nhập khu vực hợp lệ cho %{city}, %{zip}
             unknown_for_city: Chọn khu vực hợp lệ cho %{city}
             unknown_for_zip: Chọn khu vực hợp lệ cho %{zip}
+            unknown_for_address: Khu vực có thể không chính xác.
         zip:
           label:
             default: Mã bưu chính
@@ -158,6 +162,9 @@ vi:
             contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
               số, ký tự địa phương và ký tự đặc biệt
             invalid_for_province: Nhập mã bưu chính hợp lệ cho %{province}
+            unknown_for_street_and_city: Mã bưu chính có thể không chính xác đối với
+              %{street}, %{city}
+            unknown_for_address: Mã bưu chính có thể không chính xác.
         address:
           errors:
             may_not_exist: Không tìm thấy địa chỉ hoặc địa chỉ không tồn tại

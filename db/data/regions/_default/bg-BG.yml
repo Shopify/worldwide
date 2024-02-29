@@ -13,7 +13,8 @@ bg-BG:
               знака)
             contains_html_tags: Името на фирмата не може да съдържа HTML етикети.
             contains_emojis: "„Компания“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Компания“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Компания“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Компания“ може да съдържа само букви,
               цифри, местни знаци и специални знаци"
         first_name:
@@ -27,7 +28,8 @@ bg-BG:
             contains_html_tags: Собственото име не може да съдържа HTML етикети.
             contains_emojis: "„Собствено име“ не може да съдържа емоджита"
             contains_url: Собственото име не може да съдържа URL адрес.
-            contains_mathematical_symbols: "„Собствено име“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Собствено име“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Собствено име“ може да съдържа само
               букви, цифри, местни знаци и специални знаци"
         last_name:
@@ -40,7 +42,8 @@ bg-BG:
             contains_html_tags: Фамилното име не може да съдържа HTML етикети.
             contains_emojis: "„Фамилно име“ не може да съдържа емоджита"
             contains_url: Фамилното име не може да съдържа URL адрес.
-            contains_mathematical_symbols: "„Фамилно име“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Фамилно име“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Фамилно име“ може да съдържа само букви,
               цифри, местни знаци и специални знаци"
         address1:
@@ -53,7 +56,8 @@ bg-BG:
               е 255 знака)
             contains_html_tags: Адрес1 не може да съдържа HTML етикети.
             contains_emojis: "„Адрес1“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Адрес1“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Адрес1“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Адрес1“ може да съдържа само букви,
               цифри, местни знаци и специални знаци"
             contains_url: "„Адрес1“ не може да съдържа URL адреси."
@@ -62,9 +66,10 @@ bg-BG:
             building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
             contains_too_many_words: "„Адрес1“ не може да съдържа повече от %{word_count}
               думи"
+            unknown_for_address: Възможно е улицата да е неправилна.
           warnings:
-            contains_too_many_words: Препоръчително е редът за адрес
-              1 да не съдържа повече от %{word_count} думи
+            contains_too_many_words: Препоръчително е редът за адрес 1 да не съдържа
+              повече от %{word_count} думи
         address2:
           label:
             default: Етаж, апартамент и т.н.
@@ -75,7 +80,8 @@ bg-BG:
               е 255 знака)
             contains_html_tags: Адрес2 не може да съдържа HTML етикети.
             contains_emojis: "„Адрес2“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Адрес2“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Адрес2“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Адрес2“ може да съдържа само букви,
               цифри, местни знаци и специални знаци"
             contains_url: "„Адрес2“ не може да съдържа URL адреси."
@@ -84,9 +90,10 @@ bg-BG:
             building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
             contains_too_many_words: "„Адрес2“ не може да съдържа повече от %{word_count}
               думи"
+            unknown_for_address: Възможно е улицата да е неправилна.
           warnings:
-            contains_too_many_words: Препоръчително е редът за адрес
-              2 да не съдържа повече от %{word_count} думи
+            contains_too_many_words: Препоръчително е редът за адрес 2 да не съдържа
+              повече от %{word_count} думи
         city:
           label:
             default: Град
@@ -96,7 +103,8 @@ bg-BG:
             too_long: Градът е с твърде голяма дължина (максимумът е 255 знака)
             contains_html_tags: Името на града не може да съдържа HTML етикети.
             contains_emojis: "„Град“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Град“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Град“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Град“ може да съдържа само букви, цифри,
               местни знаци и специални знаци"
             contains_url: "„Град“ не може да съдържа URL адрес"
@@ -105,6 +113,7 @@ bg-BG:
             unknown_for_zip_and_province: Въведете валиден град за %{zip}, %{province}
             contains_too_many_words: "„Град“ не може да съдържа повече от %{word_count}
               думи"
+            unknown_for_address: Възможно е градът да е неправилен.
         country:
           label:
             default: Държава/регион
@@ -124,7 +133,8 @@ bg-BG:
             invalid: Въведете валиден телефонен номер
             too_long: Телефонът е с твърде голяма дължина (максимумът е 255 знака)
             contains_emojis: Телефонният номер не може да съдържа емоджита
-            contains_mathematical_symbols: "„Телефонен номер“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Телефонен номер“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Телефонен номер“ може да съдържа само
               букви, цифри, местни знаци и специални знаци"
         province:
@@ -138,6 +148,7 @@ bg-BG:
             unknown_for_city_and_zip: Въведете валиден регион за %{city}, %{zip}
             unknown_for_city: Изберете валиден регион за %{city}
             unknown_for_zip: Изберете валиден регион за %{zip}
+            unknown_for_address: Възможно е регионът да е неправилен.
         zip:
           label:
             default: Пощенски код
@@ -152,13 +163,17 @@ bg-BG:
             too_long: Пощенският код е с твърде голяма дължина
             contains_html_tags: Пощенският код не може да съдържа HTML етикети.
             contains_emojis: Пощенският код не може да съдържа емоджита
-            contains_mathematical_symbols: "„Пощенски код“ не може да съдържа математически символи"
+            contains_mathematical_symbols: "„Пощенски код“ не може да съдържа математически
+              символи"
             contains_restricted_characters: "„Пощенски код“ може да съдържа само букви,
               цифри, местни знаци и специални знаци"
             not_supported: Към момента не поддържаме контакти с тази държава/регион.
               Въведете нов адрес и опитайте отново.
             unknown_for_province: Въведете валиден пощенски код за %{province}
             invalid_for_province: Въведете валиден пощенски код за %{province}
+            unknown_for_street_and_city: Възможно е пощенският код за %{street}, %{city}
+              да е неправилен
+            unknown_for_address: Възможно е пощенският код да е неправилен.
         address:
           errors:
             may_not_exist: Адресът не е открит или не съществува

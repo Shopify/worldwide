@@ -13,7 +13,8 @@ lt-LT:
               255 simboliai)
             contains_html_tags: Įmonės pavadinime negali būti naudojamos HTML žymės.
             contains_emojis: Įmonės pavadinime negali būti naudojami „emoji“
-            contains_mathematical_symbols: Įmonės pavadinime negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Įmonės pavadinime negali būti naudojami
+              matematiniai simboliai
             contains_restricted_characters: Įmonės pavadinimą gali sudaryti tik raidės,
               skaičiai, vietiniai simboliai ir specialieji simboliai
         first_name:
@@ -26,7 +27,8 @@ lt-LT:
             contains_html_tags: Varde negali būti naudojamos HTML žymės.
             contains_emojis: Varde negali būti naudojami „emoji“
             contains_url: Varde negali būti naudojamas URL adresas.
-            contains_mathematical_symbols: Varde negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Varde negali būti naudojami matematiniai
+              simboliai
             contains_restricted_characters: Vardą gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
         last_name:
@@ -39,7 +41,8 @@ lt-LT:
             contains_html_tags: Pavardėje negali būti naudojamos HTML žymės.
             contains_emojis: Pavardėje negali būti naudojami „emoji“
             contains_url: Pavardėje negali būti naudojamas URL adresas.
-            contains_mathematical_symbols: Pavardėje negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Pavardėje negali būti naudojami matematiniai
+              simboliai
             contains_restricted_characters: Pavardę gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
         address1:
@@ -58,14 +61,16 @@ lt-LT:
               kodą %{zip}.
             building_number_invalid: Nerastas pastato numeris, atitinkantis %{street},
               %{zip}.
-            contains_mathematical_symbols: Adrese (1) negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Adrese (1) negali būti naudojami matematiniai
+              simboliai
             contains_restricted_characters: 1 adresą gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Adreso (1) negali sudaryti daugiau nei %{word_count}
               žodžiai (-ių)
+            unknown_for_address: Gatvė gali būti neteisinga.
           warnings:
-            contains_too_many_words: Patartina, kad 1 adreso eilutę sudarytų
-              mažiau nei %{word_count} žodžiai (-ių)
+            contains_too_many_words: Patartina, kad 1 adreso eilutę sudarytų mažiau
+              nei %{word_count} žodžiai (-ių)
         address2:
           label:
             default: Butas, apartamentai ar kt.
@@ -82,14 +87,16 @@ lt-LT:
               kodą %{zip}.
             building_number_invalid: Nerastas pastato numeris, atitinkantis %{street},
               %{zip}.
-            contains_mathematical_symbols: Adrese (2) negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Adrese (2) negali būti naudojami matematiniai
+              simboliai
             contains_restricted_characters: 2 adresą gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Adreso (2) negali sudaryti daugiau nei %{word_count}
               žodžiai (-ių)
+            unknown_for_address: Gatvė gali būti neteisinga.
           warnings:
-            contains_too_many_words: Patartina, kad 2 adreso eilutę sudarytų
-              mažiau nei %{word_count} žodžiai (-ių)
+            contains_too_many_words: Patartina, kad 2 adreso eilutę sudarytų mažiau
+              nei %{word_count} žodžiai (-ių)
         city:
           label:
             default: Miestas
@@ -104,11 +111,13 @@ lt-LT:
             unknown_for_zip: Įveskite teisingą pašto kodo %{zip} miestą
             unknown_for_province: Įveskite teisingą %{province} miestą
             unknown_for_zip_and_province: Įveskite teisingą %{zip}, %{province} miestą
-            contains_mathematical_symbols: Miesto pavadinime negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Miesto pavadinime negali būti naudojami
+              matematiniai simboliai
             contains_restricted_characters: Miesto pavadinimą gali sudaryti tik raidės,
               skaičiai, vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Miesto pavadinimo negali sudaryti daugiau nei
               %{word_count} žodžiai (-ių)
+            unknown_for_address: Miestas gali būti neteisingas.
         country:
           label:
             default: Šalis / regionas
@@ -129,7 +138,8 @@ lt-LT:
             too_long: Telefono numeris yra per ilgas (turi sudaryti ne daugiau kaip
               255 simboliai)
             contains_emojis: Telefono numeryje negali būti naudojami „emoji“
-            contains_mathematical_symbols: Telefono numeryje negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Telefono numeryje negali būti naudojami
+              matematiniai simboliai
             contains_restricted_characters: Telefono numerį gali sudaryti tik raidės,
               skaičiai, vietiniai simboliai ir specialieji simboliai
         province:
@@ -143,6 +153,7 @@ lt-LT:
             unknown_for_city_and_zip: Įveskite tinkamą %{city}, %{zip}, regioną
             unknown_for_city: Pasirinkite tinkamą %{city} regioną
             unknown_for_zip: Pasirinkite tinkamą %{zip} regioną
+            unknown_for_address: Regionas gali būti neteisingas.
         zip:
           label:
             default: Pašto kodas
@@ -160,10 +171,14 @@ lt-LT:
             not_supported: Šiuo metu nedirbame su šia šalimi / šiuo regionu. Įveskite
               naują adresą ir bandykite dar kartą.
             unknown_for_province: Įveskite tinkamą %{province} pašto kodą
-            contains_mathematical_symbols: Pašto kode negali būti naudojami matematiniai simboliai
+            contains_mathematical_symbols: Pašto kode negali būti naudojami matematiniai
+              simboliai
             contains_restricted_characters: Pašto kodą gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
             invalid_for_province: Įveskite teisingą %{province} pašto kodą
+            unknown_for_street_and_city: Adreso %{street}, %{city}, pašto kodas gali
+              būti neteisingas.
+            unknown_for_address: Pašto kodas gali būti neteisingas.
         address:
           errors:
             may_not_exist: Adresas nerastas arba neegzistuoja
