@@ -13,7 +13,8 @@ ru:
               255 символов)
             contains_html_tags: Название компании не может содержать HTML-теги.
             contains_emojis: Название компании не может содержать емодзи
-            contains_mathematical_symbols: Название компании не может содержать математические символы
+            contains_mathematical_symbols: Название компании не может содержать математические
+              символы
             contains_restricted_characters: Поле «Компания» может содержать только
               буквы, цифры, а также местные и специальные символы
         first_name:
@@ -39,7 +40,8 @@ ru:
             contains_html_tags: Фамилия не может содержать HTML-теги.
             contains_emojis: Фамилия не может содержать емодзи
             contains_url: Фамилия не может содержать URL-адрес.
-            contains_mathematical_symbols: Фамилия не может содержать математические символы
+            contains_mathematical_symbols: Фамилия не может содержать математические
+              символы
             contains_restricted_characters: Поле «Фамилия» может содержать только
               буквы, цифры, а также местные и специальные символы
         address1:
@@ -57,13 +59,15 @@ ru:
             street_unknown_for_zip: Укажите действительное название улицы для %{zip}.
             building_number_invalid: 'Не удалось найти номер дома по этому адресу:
               %{street}, %{zip}.'
-            contains_mathematical_symbols: Адрес не может содержать математические символы
+            contains_mathematical_symbols: Адрес не может содержать математические
+              символы
             contains_restricted_characters: Поле «Адресная строка 1» может содержать
               только буквы, цифры, а также местные и специальные символы
             contains_too_many_words: Адресная строка 1 не может превышать %{word_count} сл.
+            unknown_for_address: Название улицы может быть указано неправильно.
           warnings:
-            contains_too_many_words: Рекомендуем указывать в адресной
-              строке 1 не более %{word_count} сл.
+            contains_too_many_words: Рекомендуем указывать в адресной строке 1 не
+              более %{word_count} сл.
         address2:
           label:
             default: Квартира, апартаменты и т. д.
@@ -79,13 +83,15 @@ ru:
             street_unknown_for_zip: Укажите действительное название улицы для %{zip}.
             building_number_invalid: 'Не удалось найти номер дома по этому адресу:
               %{street}, %{zip}.'
-            contains_mathematical_symbols: Адрес не может содержать математические символы
+            contains_mathematical_symbols: Адрес не может содержать математические
+              символы
             contains_restricted_characters: Поле «Адресная строка 2» может содержать
               только буквы, цифры, а также местные и специальные символы
             contains_too_many_words: Адресная строка 2 не может превышать %{word_count} сл.
+            unknown_for_address: Название улицы может быть указано неправильно.
           warnings:
-            contains_too_many_words: Рекомендуем указывать в адресной
-              строке 2 не более %{word_count} сл.
+            contains_too_many_words: Рекомендуем указывать в адресной строке 2 не
+              более %{word_count} сл.
         city:
           label:
             default: Город
@@ -100,10 +106,12 @@ ru:
             unknown_for_zip: Введите название города для %{zip}
             unknown_for_province: Укажите название города для %{province}
             unknown_for_zip_and_province: Укажите название города для %{zip}, %{province}
-            contains_mathematical_symbols: Название города не может содержать математические символы
+            contains_mathematical_symbols: Название города не может содержать математические
+              символы
             contains_restricted_characters: Поле «Город» может содержать только буквы,
               цифры, а также местные и специальные символы
             contains_too_many_words: Название города не может превышать %{word_count} сл.
+            unknown_for_address: Название города может быть указано неправильно.
         country:
           label:
             default: Страна/регион
@@ -124,7 +132,8 @@ ru:
             invalid: Укажите действительный номер телефона
             too_long: Номер телефона слишком длинный (должен содержать не больше 255 символов)
             contains_emojis: Номер телефона не может содержать емодзи
-            contains_mathematical_symbols: Номер телефона не может содержать математические символы
+            contains_mathematical_symbols: Номер телефона не может содержать математические
+              символы
             contains_restricted_characters: Поле «Номер телефона» может содержать
               только буквы, цифры, а также местные и специальные символы
         province:
@@ -139,6 +148,7 @@ ru:
               %{city}, %{zip}
             unknown_for_city: Выберите действительное название региона для %{city}
             unknown_for_zip: Выберите действительное название региона для %{zip}
+            unknown_for_address: Название региона может быть указано неправильно.
         zip:
           label:
             default: Почтовый индекс
@@ -159,10 +169,14 @@ ru:
               регион. Введите другой адрес доставки и повторите попытку.
             unknown_for_province: Укажите действительный почтовый индекс для страны
               %{province}
-            contains_mathematical_symbols: Почтовый индекс не может содержать математические символы
+            contains_mathematical_symbols: Почтовый индекс не может содержать математические
+              символы
             contains_restricted_characters: Поле «Почтовый индекс» может содержать
               только буквы, цифры, а также местные и специальные символы
             invalid_for_province: Укажите действительный почтовый индекс для %{province}
+            unknown_for_street_and_city: Почтовый индекс может быть указан неправильно
+              для %{street}, %{city}.
+            unknown_for_address: Почтовый индекс может быть указан неправильно.
         address:
           errors:
             may_not_exist: Адрес не найден или его не существует

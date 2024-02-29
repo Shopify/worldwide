@@ -25,7 +25,8 @@ pt-PT:
             contains_html_tags: O nome próprio não pode conter etiquetas HTML.
             contains_emojis: O nome próprio não pode conter emojis
             contains_url: O nome próprio não pode conter um URL.
-            contains_mathematical_symbols: O nome próprio não pode conter símbolos matemáticos
+            contains_mathematical_symbols: O nome próprio não pode conter símbolos
+              matemáticos
             contains_restricted_characters: O campo "Primeiro nome" só pode conter
               letras, números, caracteres locais e caracteres especiais
         last_name:
@@ -61,9 +62,10 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O endereço1 não pode ter mais do que %{word_count}
               palavras
+            unknown_for_address: A rua pode estar incorreta.
           warnings:
-            contains_too_many_words: Recomenda-se que a linha de endereço
-              1 tenha menos de %{word_count} palavras
+            contains_too_many_words: Recomenda-se que a linha de endereço 1 tenha
+              menos de %{word_count} palavras
         address2:
           label:
             default: Apartamento, fração, etc.
@@ -84,9 +86,10 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O endereço2 não pode ter mais do que %{word_count}
               palavras
+            unknown_for_address: A rua pode estar incorreta.
           warnings:
-            contains_too_many_words: Recomenda-se que a linha de endereço
-              2 tenha menos de %{word_count} palavras
+            contains_too_many_words: Recomenda-se que a linha de endereço 2 tenha
+              menos de %{word_count} palavras
         city:
           label:
             default: Cidade
@@ -106,6 +109,7 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: A cidade não pode ter mais do que %{word_count}
               palavras
+            unknown_for_address: A cidade pode estar incorreta.
         country:
           label:
             default: País/região
@@ -126,7 +130,8 @@ pt-PT:
             invalid: Introduza um número de telefone válido
             too_long: O telefone é muito longo (máximo de 255 carateres)
             contains_emojis: O número de telefone não pode conter emojis
-            contains_mathematical_symbols: O número de telefone não pode conter símbolos matemáticos
+            contains_mathematical_symbols: O número de telefone não pode conter símbolos
+              matemáticos
             contains_restricted_characters: O campo "Número de telefone" só pode conter
               letras, números, caracteres locais e caracteres especiais
         province:
@@ -140,6 +145,7 @@ pt-PT:
             unknown_for_city_and_zip: Introduza uma região válida para %{city}, %{zip}
             unknown_for_city: Selecione uma região válida para %{city}
             unknown_for_zip: Selecione uma região válida para %{zip}
+            unknown_for_address: A região pode estar incorreta.
         zip:
           label:
             default: Código postal
@@ -157,10 +163,14 @@ pt-PT:
             not_supported: Atualmente, não estamos presentes neste país/região. Introduza
               um novo endereço e tente novamente.
             unknown_for_province: Introduza um código postal válido para %{province}
-            contains_mathematical_symbols: O código postal não pode conter símbolos matemáticos
+            contains_mathematical_symbols: O código postal não pode conter símbolos
+              matemáticos
             contains_restricted_characters: O campo "Código postal" só pode conter
               letras, números, caracteres locais e caracteres especiais
             invalid_for_province: 'Introduza um código postal válido para: %{province}'
+            unknown_for_street_and_city: O código postal pode estar incorreto para
+              %{street}, %{city}
+            unknown_for_address: O código postal pode estar incorreto.
         address:
           errors:
             may_not_exist: Endereço não encontrado ou não existe

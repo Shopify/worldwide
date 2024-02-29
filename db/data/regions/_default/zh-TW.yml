@@ -54,6 +54,7 @@ zh-TW:
             contains_mathematical_symbols: "「地址 (第 1 行)」不得包含數學符號"
             contains_restricted_characters: 地址 1 僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 地址 1 不得超過 %{word_count} 個字
+            unknown_for_address: 街道可能並不正確。
           warnings:
             contains_too_many_words: 地址第 1 行建議少於 %{word_count} 字
         address2:
@@ -72,6 +73,7 @@ zh-TW:
             contains_mathematical_symbols: "「地址 (第 2 行)」不得包含數學符號"
             contains_restricted_characters: 地址 2 僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 地址 2 不得超過 %{word_count} 個字
+            unknown_for_address: 街道可能並不正確。
           warnings:
             contains_too_many_words: 地址第 2 行建議少於 %{word_count} 字
         city:
@@ -90,6 +92,7 @@ zh-TW:
             contains_mathematical_symbols: "「城市」不得包含數學符號"
             contains_restricted_characters: 城市僅可包含字母、數字、當地字元和特殊字元
             contains_too_many_words: 城市不得超過 %{word_count} 個字
+            unknown_for_address: 城市可能並不正確。
         country:
           label:
             default: 國家/地區
@@ -121,6 +124,7 @@ zh-TW:
             unknown_for_city_and_zip: 請輸入%{zip}%{city}的有效地區
             unknown_for_city: 請選取%{city}的有效地區
             unknown_for_zip: 請選取 %{zip} 的有效地區
+            unknown_for_address: 地區可能並不正確。
         zip:
           label:
             default: 郵遞區號
@@ -139,6 +143,8 @@ zh-TW:
             contains_mathematical_symbols: "「郵遞區號」不得包含數學符號"
             contains_restricted_characters: 郵遞區號僅可包含字母、數字、當地字元和特殊字元
             invalid_for_province: 請輸入%{province}的有效郵遞區號
+            unknown_for_street_and_city: "%{city}，%{street} 的郵遞區號可能並不正確"
+            unknown_for_address: 郵遞區號可能並不正確。
         address:
           errors:
             may_not_exist: 找不到地址或地址不存在
