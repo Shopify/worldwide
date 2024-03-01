@@ -9,99 +9,99 @@ hi:
             optional: कंपनी (वैकल्पिक)
           errors:
             blank: कंपनी का नाम दर्ज करें
-            too_long: कंपनी का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: कंपनी की फ़ील्ड में HTML टैग नहीं हो सकते.
+            too_long: कंपनी का नाम बहुत लंबा है (अधिकतम कैरेक्टर 255 है)
+            contains_html_tags: कंपनी में HTML टैग नहीं हो सकते.
             contains_emojis: कंपनी के नाम में इमोजी नहीं हो सकते
             contains_mathematical_symbols: कंपनी में गणितीय चिह्न नहीं हो सकते
             contains_restricted_characters: कंपनी में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+              वर्ण और स्पेशल कैरेक्टर हो सकते हैं
         first_name:
           label:
-            default: पहला नाम
+            default: नाम
             optional: पहला नाम (वैकल्पिक)
           errors:
             blank: नाम दर्ज करें
-            too_long: पहला नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: प्रथम नाम के फ़ील्ड में HTML टैग नहीं हो सकते.
+            too_long: पहला नाम बहुत लंबा है (अधिकतम कैरेक्टर 255 है)
+            contains_html_tags: प्रथम नाम में HTML टैग नहीं हो सकते.
             contains_emojis: पहले नाम में इमोजी नहीं हो सकते
             contains_mathematical_symbols: पहले नाम में गणितीय चिह्न नहीं हो सकते
             contains_restricted_characters: प्रथम नाम में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+              वर्ण और स्पेशल कैरेक्टर हो सकते हैं
             contains_url: पहले नाम में URL नहीं हो सकते.
         last_name:
           label:
-            default: अंतिम नाम
+            default: उपनाम
             optional: अंतिम नाम (वैकल्पिक)
           errors:
             blank: उपनाम दर्ज करें
-            too_long: आख़िरी नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: अंतिम नाम के फ़ील्ड में HTML टैग नहीं हो सकते.
+            too_long: आख़िरी नाम बहुत लंबा है (अधिकतम कैरेक्टर 255 है)
+            contains_html_tags: अंतिम नाम में HTML टैग नहीं हो सकते.
             contains_emojis: आख़िरी नाम में इमोजी नहीं हो सकते
             contains_url: आख़िरी नाम में URL नहीं हो सकते.
             contains_mathematical_symbols: आख़िरी नाम में गणितीय चिह्न नहीं हो सकते
             contains_restricted_characters: उपनाम में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+              वर्ण और स्पेशल कैरेक्टर हो सकते हैं
         address1:
           label:
             default: पता
             optional: पता (वैकल्पिक)
           errors:
             blank: पता दर्ज करें
-            too_long: पहली पंक्ति का पता बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते
-              हैं)
-            contains_html_tags: पता1 के फ़ील्ड में HTML टैग नहीं हो सकते.
+            too_long: पते की पहली पंक्ति बहुत लंबी है (अधिकतम कैरेक्टर 255 है)
+            contains_html_tags: पते की पहली पंक्ति में HTML टैग नहीं हो सकते.
             contains_emojis: पते की पहली पंक्ति में इमोजी नहीं हो सकते
-            contains_url: पता1 में URL नहीं हो सकते.
+            contains_url: पते की पहली पंक्ति में URL नहीं हो सकते.
             missing_building_number: अगर आपके पास कोई बिल्डिंग नंबर हो, तो जोड़ें.
-            street_unknown_for_zip: "%{zip} के लिए गली का एक वैध नाम डालें."
+            street_unknown_for_zip: "%{zip} के लिए स्ट्रीट का एक मान्य नाम दर्ज करें."
             building_number_invalid: "%{zip}, %{street} के लिए बिल्डिंग नंबर नहीं
               मिल सका."
             contains_mathematical_symbols: पता1 में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: पता 1 में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
-            contains_too_many_words: पता1 में %{word_count} से अधिक शब्द नहीं हो सकते
+            contains_restricted_characters: पते की पहली पंक्ति में सिर्फ अक्षर, संख्याएं,
+              स्थानीय वर्ण और स्पेशल कैरेक्टर हो सकते हैं
+            contains_too_many_words: पते की पहली पंक्ति में %{word_count} से अधिक
+              शब्द नहीं हो सकते
           warnings:
-            contains_too_many_words: एड्रेस लाइन 1 में %{word_count}
-              शब्दों से कम शब्द लिखने का सुझाव दिया जाता है
+            contains_too_many_words: पते की पहली पंक्ति में %{word_count} शब्दों से
+              कम शब्द लिखने का सुझाव दिया जाता है
         address2:
           label:
             default: अपार्टमेंट, सुइट, आदि.
             optional: अपार्टमेंट, सुइट, आदि. (वैकल्पिक)
           errors:
             blank: अपार्टमेंट, सुइट, आदि दर्ज करें.
-            too_long: दूसरी पंक्ति का पता बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते
-              हैं)
-            contains_html_tags: पता2 के फ़ील्ड में HTML टैग नहीं हो सकते.
+            too_long: पते की दूसरी पंक्ति बहुत लंबी है (अधिकतम कैरेक्टर 255 है)
+            contains_html_tags: पते की दूसरी पंक्ति में HTML टैग नहीं हो सकते.
             contains_emojis: पते की दूसरी पंक्ति में इमोजी नहीं हो सकते
-            contains_url: पता2 में URL नहीं हो सकते.
+            contains_url: पते की दूसरी पंक्ति में URL नहीं हो सकते.
             missing_building_number: अगर आपके पास कोई बिल्डिंग नंबर हो, तो जोड़ें.
-            street_unknown_for_zip: "%{zip} के लिए गली का एक वैध नाम डालें."
+            street_unknown_for_zip: "%{zip} के लिए स्ट्रीट का एक मान्य नाम दर्ज करें."
             building_number_invalid: "%{zip}, %{street} के लिए बिल्डिंग नंबर नहीं
               मिल सका."
             contains_mathematical_symbols: पता2 में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: पता 2 में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
-            contains_too_many_words: पता2 में %{word_count} से अधिक शब्द नहीं हो सकते
+            contains_restricted_characters: पते की दूसरी पंक्ति में सिर्फ अक्षर, संख्याएं,
+              स्थानीय वर्ण और स्पेशल कैरेक्टर हो सकते हैं
+            contains_too_many_words: पते की दूसरी पंक्ति में %{word_count} से अधिक
+              शब्द नहीं हो सकते
           warnings:
-            contains_too_many_words: एड्रेस लाइन 2 में %{word_count}
-              शब्दों से कम शब्द लिखने का सुझाव दिया जाता है
+            contains_too_many_words: पते की दूसरी पंक्ति में %{word_count} शब्दों
+              से कम शब्द लिखने का सुझाव दिया जाता है
         city:
           label:
             default: शहर
             optional: शहर (वैकल्पिक)
           errors:
             blank: शहर दर्ज करें
-            too_long: शहर का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: शहर के फ़ील्ड में HTML टैग नहीं हो सकते.
+            too_long: शहर का नाम बहुत लंबा है (अधिकतम कैरेक्टर 255 है)
+            contains_html_tags: शहर में HTML टैग नहीं हो सकते.
             contains_emojis: शहर के नाम में इमोजी नहीं हो सकते
             contains_url: शहर के नाम में URL नहीं हो सकता
-            unknown_for_zip: "%{zip} के लिए किसी मान्य शहर का नाम दर्ज करें"
-            unknown_for_province: "%{province} के लिए किसी मान्य शहर का नाम दर्ज करें"
-            unknown_for_zip_and_province: "%{province}, %{zip} के लिए किसी मान्य शहर
+            unknown_for_zip: "%{zip} के लिए एक मान्य शहर का नाम दर्ज करें"
+            unknown_for_province: "%{province} के लिए एक मान्य शहर का नाम दर्ज करें"
+            unknown_for_zip_and_province: "%{province}, %{zip} के लिए एक मान्य शहर
               का नाम दर्ज करें"
             contains_mathematical_symbols: शहर में गणितीय चिह्न नहीं हो सकते
             contains_restricted_characters: शहर में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+              वर्ण और स्पेशल कैरेक्टर हो सकते हैं
             contains_too_many_words: शहर में %{word_count} से अधिक शब्द नहीं हो सकते
         country:
           label:
@@ -109,7 +109,7 @@ hi:
             optional: देश/क्षेत्र (वैकल्पिक)
           errors:
             blank: देश/क्षेत्र चुनें
-            not_supported: हम फ़िलहाल इस देश/क्षेत्र में व्यवसाय नहीं करते हैं. नया
+            not_supported: हम फ़िलहाल इस देश/प्रांत में व्यवसाय नहीं करते हैं. नया
               पता दर्ज़ करें और फिर से कोशिश करें.
             invalid: एक मान्य देश/क्षेत्र दर्ज करें
             invalid_for_zip: इस पोस्टल कोड के लिए एक मान्य देश/क्षेत्र दर्ज करें
@@ -118,13 +118,13 @@ hi:
             default: फ़ोन
             optional: फ़ोन (वैकल्पिक)
           errors:
-            blank: एक फ़ोन नंबर डालें
-            invalid: एक मान्य फ़ोन नंबर डालें
+            blank: एक फ़ोन नंबर दर्ज करें
+            invalid: एक मान्य फ़ोन नंबर दर्ज करें
             too_long: फ़ोन नंबर में अंक ज़्यादा हैं (अधिकतम कैरेक्टर 255 है)
             contains_emojis: फ़ोन नंबर में इमोजी नहीं हो सकते
             contains_mathematical_symbols: फ़ोन नंबर में गणितीय चिह्न नहीं हो सकते
             contains_restricted_characters: फ़ोन नंबर में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+              वर्ण और स्पेशल कैरेक्टर हो सकते हैं
         province:
           label:
             default: क्षेत्र
@@ -156,8 +156,8 @@ hi:
             unknown_for_province: "%{province} के लिए एक मान्य डाक कोड दर्ज करें"
             contains_mathematical_symbols: डाक कोड में गणितीय चिह्न नहीं हो सकते
             contains_restricted_characters: पोस्टल कोड में सिर्फ अक्षर, संख्याएं,
-              स्थानीय वर्ण और विशेष वर्ण हो सकते हैं
-            invalid_for_province: "%{province} के लिए एक मान्य डाक कोड डालें"
+              स्थानीय वर्ण और स्पेशल कैरेक्टर हो सकते हैं
+            invalid_for_province: "%{province} के लिए एक मान्य डाक कोड दर्ज करें"
         address:
           errors:
             may_not_exist: पता नहीं मिला या यहां मौजूद नहीं है

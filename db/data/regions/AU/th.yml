@@ -6,7 +6,7 @@ th:
         city:
           label:
             default: เขตชานเมือง
-            optional: เขตชานเมือง (ไม่จำเป็น)
+            optional: เขตชานเมือง (ไม่บังคับ)
           errors:
             blank: ป้อนเขตชานเมือง
             too_long: ชื่อเขตชานเมืองยาวเกินไป (สูงสุดคือ 255 อักขระ)
@@ -17,13 +17,13 @@ th:
         province:
           label:
             default: รัฐ/เขตแดน
-            optional: รัฐ/เขตแดน (ไม่จำเป็น)
+            optional: รัฐ/เขตแดน (ไม่บังคับ)
           errors:
             blank: เลือกรัฐ/เขตแดน
         zip:
           label:
             default: รหัสไปรษณีย์
-            optional: รหัสไปรษณีย์ (ไม่จำเป็น)
+            optional: รหัสไปรษณีย์ (ไม่บังคับ)
           errors:
             blank: ป้อนรหัสไปรษณีย์
             invalid_for_country: ป้อนรหัสไปรษณีย์ใน %{country} ให้ถูกต้อง
@@ -31,6 +31,6 @@ th:
               ให้ถูกต้อง
             too_long: รหัสไปรษณีย์ยาวเกินไป
             contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
-            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสไปรษณีย์
+            contains_emojis: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
             contains_restricted_characters: รหัสไปรษณีย์สามารถประกอบด้วยตัวอักษร ตัวเลข
               อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น

@@ -5,12 +5,12 @@ sv:
       addresses:
         province:
           label:
-            default: Delstat
-            optional: Delstat (valfritt)
+            default: Stat
+            optional: Stat (valfritt)
           errors:
             blank: Välj stat
             invalid_for_country: Ange en giltig stat i %{country}
-            unknown_for_city_and_zip: Ange en giltig delstat för %{city}, %{zip}
+            unknown_for_city_and_zip: Ange en giltig stat för %{city}, %{zip}
             unknown_for_city: Välj en giltig stat för %{city}
             unknown_for_zip: Välj en giltig stat för %{zip}
         zip:
@@ -18,8 +18,8 @@ sv:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            blank: Ange en postnummer
-            invalid_for_country: Ange giltigt postnummer i %{country}
+            blank: Ange ett postnummer
+            invalid_for_country: Ange ett giltigt postnummer i %{country}
             invalid_for_country_and_province: Ange ett giltigt postnummer för %{province},
               %{country}
             too_long: Postnumret är för långt

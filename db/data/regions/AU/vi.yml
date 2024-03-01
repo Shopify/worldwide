@@ -16,21 +16,21 @@ vi:
               số, ký tự địa phương và ký tự đặc biệt
         province:
           label:
-            default: Tiểu bang/Vùng lãnh thổ
+            default: Tiểu bang/vùng lãnh thổ
             optional: Tiểu bang/Vùng lãnh thổ (không bắt buộc)
           errors:
             blank: Chọn tiểu bang/vùng lãnh thổ
         zip:
           label:
-            default: Mã bưu chính
-            optional: Mã bưu chính (không bắt buộc)
+            default: Mã bưu điện
+            optional: mã bưu chính (không bắt buộc)
           errors:
-            blank: Nhập mã bưu chính
+            blank: Nhập Mã bưu chính
             invalid_for_country: Nhập mã bưu chính hợp lệ cho %{country}
             invalid_for_country_and_province: Nhập mã bưu chính hợp lệ cho %{province},
               %{country}
             too_long: Giá trị mã bưu chính quá dài
-            contains_html_tags: Mã bưu điện không được chứa thẻ HTML.
+            contains_html_tags: mã bưu chính không được chứa thẻ HTML.
             contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
             contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
               số, ký tự địa phương và ký tự đặc biệt

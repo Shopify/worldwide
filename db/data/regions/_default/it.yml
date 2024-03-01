@@ -8,7 +8,7 @@ it:
             default: Azienda
             optional: Azienda (facoltativo)
           errors:
-            blank: Inserisci nome dell'azienda
+            blank: Inserisci il nome dell'azienda
             too_long: Il nome dell'azienda è troppo lungo (la lunghezza massima è
               di 255 caratteri)
             contains_html_tags: L'azienda non può contenere tag HTML.
@@ -22,7 +22,7 @@ it:
             default: Nome
             optional: Nome (facoltativo)
           errors:
-            blank: Inserisci nome
+            blank: Inserisci il nome
             too_long: Il nome è troppo lungo (la lunghezza massima è di 255 caratteri)
             contains_html_tags: Il nome non può contenere tag HTML.
             contains_emojis: Il nome non può contenere emoji
@@ -36,7 +36,7 @@ it:
             default: Cognome
             optional: Cognome (facoltativo)
           errors:
-            blank: Inserisci cognome
+            blank: Inserisci il cognome
             too_long: Il cognome è troppo lungo (la lunghezza massima è di 255 caratteri)
             contains_html_tags: Il cognome non può contenere tag HTML.
             contains_emojis: Il cognome non può contenere emoji
@@ -50,7 +50,7 @@ it:
             default: Indirizzo
             optional: Indirizzo (facoltativo)
           errors:
-            blank: Inserisci un indirizzo
+            blank: Inserisci l'indirizzo
             too_long: La prima riga dell'indirizzo è troppo lunga (la lunghezza massima
               è di 255 caratteri)
             contains_html_tags: Il campo 1 dell'indirizzo non può contenere tag HTML.
@@ -71,15 +71,15 @@ it:
               di %{word_count} parole
         address2:
           label:
-            default: Interno, scala, ecc.
-            optional: Interno, scala, ecc. (facoltativo)
+            default: Appartamento, scala, ecc.
+            optional: Appartamento, scala, ecc. (opzionale)
           errors:
             blank: Inserisci scala, interno, ecc.
             too_long: La seconda riga dell'indirizzo è troppo lunga (la lunghezza
               massima è di 255 caratteri)
             contains_html_tags: Il campo 2 dell'indirizzo non può contenere tag HTML.
             contains_emojis: Il campo 2 dell'indirizzo non può contenere emoji
-            contains_url: La riga 2 dell'indirizzo non può contenere URL.
+            contains_url: Il campo 2 dell'indirizzo non può contenere URL.
             missing_building_number: Aggiungi un numero civico, se esistente.
             street_unknown_for_zip: Inserisci un nome della via valido per %{zip}.
             building_number_invalid: Impossibile localizzare il numero civico per
@@ -95,10 +95,10 @@ it:
               di %{word_count} parole
         city:
           label:
-            default: Città
+            default: Comune
             optional: Città (facoltativo)
           errors:
-            blank: Inserisci una città
+            blank: Inserisci la città
             too_long: Il nome della città è troppo lungo (la lunghezza massima è di
               255 caratteri)
             contains_html_tags: La città non può contenere tag HTML.
@@ -114,8 +114,8 @@ it:
             contains_too_many_words: La città non può superare %{word_count} parole
         country:
           label:
-            default: Paese/Regione
-            optional: Paese/Regione (facoltativo)
+            default: Paese/area geografica
+            optional: Paese/area geografica (facoltativo)
           errors:
             blank: Seleziona un paese/area geografica
             not_supported: Attualmente non supportiamo questo paese/questa area geografica.
@@ -125,8 +125,8 @@ it:
               codice postale
         phone:
           label:
-            default: Numero di telefono
-            optional: Numero di telefono (facoltativo)
+            default: Telefono
+            optional: Telefono (facoltativo)
           errors:
             blank: Inserisci un numero di telefono
             invalid: Inserisci un numero di telefono valido
@@ -155,7 +155,7 @@ it:
             optional: CAP (facoltativo)
           errors:
             blank: Inserisci un codice postale
-            blocked_address: Questa posizione non è supportata.
+            blocked_address: Questa sede non è supportata.
             invalid_for_country: Inserisci un codice postale valido per %{country}
             invalid_for_country_and_province: Inserisci un codice postale valido per
               %{province}, %{country}

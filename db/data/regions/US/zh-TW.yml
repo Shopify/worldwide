@@ -8,21 +8,21 @@ zh-TW:
             default: 州
             optional: 州 (選填)
           errors:
-            blank: 選擇一個州
-            invalid_for_country: 請輸入有效的%{country}州別
-            unknown_for_city_and_zip: 輸入 %{zip} %{city}的有效州別
-            unknown_for_city: 選取%{city}的有效州別
-            unknown_for_zip: 選取%{zip}的有效州別
+            blank: 選取一個州
+            invalid_for_country: 請輸入%{country}的有效州別
+            unknown_for_city_and_zip: 請輸入 %{zip} %{city}的有效州別
+            unknown_for_city: 選取 %{city} 的有效州別
+            unknown_for_zip: 選取 %{zip} 的有效州別
         zip:
           label:
             default: 郵遞區號
             optional: 郵遞區號 (選填)
           errors:
             blank: 輸入郵遞區號
-            invalid_for_country: 輸入有效的%{country}郵遞區號
-            invalid_for_country_and_province: 輸入 %{country} %{province} 的有效郵遞區號
-            too_long: 郵遞區號過長
-            contains_html_tags: 郵遞區號不得包含 HTML 標記。
+            invalid_for_country: 請輸入%{country}的有效郵遞區號
+            invalid_for_country_and_province: 請輸入%{country}%{province}的有效郵遞區號
+            too_long: 郵遞區號值過長
+            contains_html_tags: 郵遞區號不得包含 HTML 標籤。
             contains_emojis: 郵遞區號不得包含表情符號
-            contains_restricted_characters: 郵遞區號不可包含限制的字元
+            contains_restricted_characters: 郵遞區號不得包含限制的字元
             invalid_for_province: 請輸入%{province}的有效郵遞區號

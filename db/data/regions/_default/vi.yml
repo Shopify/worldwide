@@ -48,7 +48,7 @@ vi:
           errors:
             blank: Nhập địa chỉ
             too_long: Dòng địa chỉ đầu tiên quá dài (tối đa 255 ký tự)
-            contains_html_tags: Address1 không được chứa thẻ HTML.
+            contains_html_tags: Địa chỉ 1 không được chứa thẻ HTML.
             contains_emojis: Địa chỉ 1 không được chứa biểu tượng cảm xúc
             contains_url: Địa chỉ 1 không được chứa URL.
             missing_building_number: Thêm số tòa nhà nếu có.
@@ -58,18 +58,18 @@ vi:
               toán học
             contains_restricted_characters: Địa chỉ 1 chỉ được chứa chữ cái, chữ số,
               ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Address1 không được có nhiều hơn %{word_count}
+            contains_too_many_words: Địa chỉ 1 không được có nhiều hơn %{word_count}
               từ
           warnings:
             contains_too_many_words: Dòng địa chỉ 1 nên có tối đa %{word_count} từ
         address2:
           label:
-            default: Căn hộ, tòa, v.v.
-            optional: Căn hộ, tòa, v.v. (không bắt buộc)
+            default: Căn hộ, dãy, v.v.
+            optional: Căn hộ, phòng, v.v. (không bắt buộc)
           errors:
             blank: Nhập căn hộ, tòa, v.v.
             too_long: Dòng địa chỉ thứ hai quá dài (tối đa 255 ký tự)
-            contains_html_tags: Address2 không được chứa thẻ HTML.
+            contains_html_tags: Địa chỉ 2 không được chứa thẻ HTML.
             contains_emojis: Địa chỉ 2 không được chứa biểu tượng cảm xúc
             contains_url: Địa chỉ 2 không được chứa URL.
             missing_building_number: Thêm số tòa nhà nếu có.
@@ -79,7 +79,7 @@ vi:
               toán học
             contains_restricted_characters: Địa chỉ 2 chỉ được chứa chữ cái, chữ số,
               ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Address2 không được có nhiều hơn %{word_count}
+            contains_too_many_words: Địa chỉ 2 không được có nhiều hơn %{word_count}
               từ
           warnings:
             contains_too_many_words: Dòng địa chỉ 2 nên có tối đa %{word_count} từ
@@ -104,10 +104,10 @@ vi:
               từ
         country:
           label:
-            default: Quốc gia/Vùng
+            default: Quốc gia/khu vực
             optional: Quốc gia/Vùng (không bắt buộc)
           errors:
-            blank: Chọn quốc gia/vùng
+            blank: Chọn quốc gia/khu vực
             not_supported: Chúng tôi hiện chưa hỗ trợ quốc gia/khu vực này. Nhập địa
               chỉ mới và thử lại.
             invalid: Nhập quốc gia/khu vực hợp lệ
@@ -127,10 +127,10 @@ vi:
               số, ký tự địa phương và ký tự đặc biệt
         province:
           label:
-            default: Vùng
+            default: Khu vực
             optional: Vùng (không bắt buộc)
           errors:
-            blank: Chọn vùng
+            blank: Chọn khu vực
             invalid: Nhập khu vực hợp lệ
             invalid_for_country: Nhập khu vực hợp lệ cho %{country}
             unknown_for_city_and_zip: Nhập khu vực hợp lệ cho %{city}, %{zip}
