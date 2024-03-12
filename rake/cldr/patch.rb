@@ -588,10 +588,6 @@ module Worldwide
             [:HK, "中國香港特別行政區", "香港特別行政區"],
             [:MO, "中國澳門特別行政區", "澳門特別行政區"],
           ])
-          patch_territories(:"zh-TW", [
-            [:HK, "中國香港特別行政區", "香港特別行政區"],
-            [:MO, "中國澳門特別行政區", "澳門特別行政區"],
-          ])
 
           # Should use capitalized letters for territories in UI list context, by default.
           # https://github.com/Shopify/shopify-i18n/issues/1551
