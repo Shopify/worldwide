@@ -61,6 +61,7 @@ fi:
               %{zip}.
             contains_too_many_words: Osoite 1 -kentässä voi olla enintään %{word_count}
               sanaa
+            unknown_for_address: Katu voi olla väärä.
           warnings:
             contains_too_many_words: Osoiterivin 1 pituudeksi suositellaan alle %{word_count}
               sanaa
@@ -83,6 +84,7 @@ fi:
               %{zip}.
             contains_too_many_words: Osoite 2 -kentässä voi olla enintään %{word_count}
               sanaa
+            unknown_for_address: Katu voi olla väärä.
           warnings:
             contains_too_many_words: Osoiterivin 2 pituudeksi suositellaan alle %{word_count}
               sanaa
@@ -106,6 +108,7 @@ fi:
               %{province}
             contains_too_many_words: Postitoimipaikka-kentässä voi olla enintään %{word_count}
               sanaa
+            unknown_for_address: Kaupunki voi olla väärä.
         country:
           label:
             default: Maa/alue
@@ -140,6 +143,7 @@ fi:
             unknown_for_city_and_zip: Anna kelvollinen alue kohteelle %{city}, %{zip}
             unknown_for_city: Valitse kelvollinen alue kohteelle %{city}
             unknown_for_zip: Valitse kelvollinen alue kohteelle %{zip}
+            unknown_for_address: Alue voi olla väärä.
         zip:
           label:
             default: Postinumero
@@ -162,6 +166,9 @@ fi:
               ja yritä uudelleen.
             unknown_for_province: Anna kelvollinen postinumero maassa %{province}
             invalid_for_province: Anna kelvollinen postinumero alueelle %{province}
+            unknown_for_street_and_city: 'Postikoodi voi olla väärä seuraaville osoitteen
+              osille: %{street}, %{city}'
+            unknown_for_address: Postikoodi voi olla väärä.
         address:
           errors:
             may_not_exist: Osoitetta ei löydy tai sitä ei ole

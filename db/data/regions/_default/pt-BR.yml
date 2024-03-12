@@ -12,7 +12,8 @@ pt-BR:
             too_long: O nome da empresa é longo demais (máximo de 255 caracteres)
             contains_html_tags: A empresa não pode ter tags HTML.
             contains_emojis: O nome da empresa não pode conter emojis
-            contains_mathematical_symbols: O nome da empresa não pode conter símbolos matemáticos
+            contains_mathematical_symbols: O nome da empresa não pode conter símbolos
+              matemáticos
             contains_restricted_characters: A empresa pode conter apenas letras, números,
               caracteres locais e caracteres especiais
         first_name:
@@ -60,9 +61,10 @@ pt-BR:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O Endereço1 não pode ter mais de %{word_count}
               palavras
+            unknown_for_address: Talvez haja um erro na rua.
           warnings:
-            contains_too_many_words: É recomendável que a linha de endereço
-              1 tenha menos de %{word_count} palavras
+            contains_too_many_words: É recomendável que a linha de endereço 1 tenha
+              menos de %{word_count} palavras
         address2:
           label:
             default: Apartamento, bloco etc.
@@ -82,9 +84,10 @@ pt-BR:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O Endereço2 não pode ter mais de %{word_count}
               palavras
+            unknown_for_address: Talvez haja um erro na rua.
           warnings:
-            contains_too_many_words: É recomendável que a linha de endereço
-              2 tenha menos de %{word_count} palavras
+            contains_too_many_words: É recomendável que a linha de endereço 2 tenha
+              menos de %{word_count} palavras
         city:
           label:
             default: Cidade
@@ -102,6 +105,7 @@ pt-BR:
             contains_restricted_characters: A cidade pode conter apenas letras, números,
               caracteres locais e caracteres especiais
             contains_too_many_words: A cidade não pode ter mais de %{word_count} palavras
+            unknown_for_address: Talvez haja um erro na cidade.
         country:
           label:
             default: País/Região
@@ -121,7 +125,8 @@ pt-BR:
             invalid: Insira um número de telefone válido
             too_long: O telefone é muito longo (máximo de 255 caracteres)
             contains_emojis: O número de telefone não pode conter emojis
-            contains_mathematical_symbols: O número de telefone não pode conter símbolos matemáticos
+            contains_mathematical_symbols: O número de telefone não pode conter símbolos
+              matemáticos
             contains_restricted_characters: O número de telefone pode conter apenas
               letras, números, caracteres locais e caracteres especiais
         province:
@@ -135,6 +140,7 @@ pt-BR:
             unknown_for_city_and_zip: Insira uma região válida para %{city}, %{zip}
             unknown_for_city: Selecione uma região válida para %{city}
             unknown_for_zip: Selecione uma região válida para %{zip}
+            unknown_for_address: Talvez haja um erro na região.
         zip:
           label:
             default: CEP
@@ -156,6 +162,9 @@ pt-BR:
             contains_restricted_characters: O CEP pode conter apenas letras, números,
               caracteres locais e caracteres especiais
             invalid_for_province: Insira um CEP válido para %{province}
+            unknown_for_street_and_city: Talvez haja um erro no CEP de %{street},
+              %{city}.
+            unknown_for_address: Talvez haja um erro no CEP.
         address:
           errors:
             may_not_exist: O endereço não foi encontrado ou não existe

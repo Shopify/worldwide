@@ -54,6 +54,7 @@ zh-CN:
             contains_mathematical_symbols: 地址 1 不能包含数学符号
             contains_restricted_characters: "“地址 1”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“地址 1”字段不能超过 %{word_count} 个单词"
+            unknown_for_address: 街道可能不正确。
           warnings:
             contains_too_many_words: 建议地址行 1 少于 %{word_count} 个字词
         address2:
@@ -72,6 +73,7 @@ zh-CN:
             contains_mathematical_symbols: 地址 2 不能包含数学符号
             contains_restricted_characters: "“地址 2”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“地址 2”字段不能超过 %{word_count} 个单词"
+            unknown_for_address: 街道可能不正确。
           warnings:
             contains_too_many_words: 建议地址行 2 少于 %{word_count} 个字词
         city:
@@ -90,6 +92,7 @@ zh-CN:
             contains_mathematical_symbols: 城市不能包含数学符号
             contains_restricted_characters: "“城市”字段只能包含字母、数字、当地字符和特殊字符"
             contains_too_many_words: "“城市”字段不能超过 %{word_count} 个单词"
+            unknown_for_address: 城市可能不正确。
         country:
           label:
             default: 国家/地区
@@ -121,6 +124,7 @@ zh-CN:
             unknown_for_city_and_zip: 输入 %{zip} %{city} 对应的有效城市
             unknown_for_city: 选择 %{city} 对应的有效区域
             unknown_for_zip: 选择 %{zip} 对应的有效区域
+            unknown_for_address: 地区可能不正确。
         zip:
           label:
             default: 邮政编码
@@ -139,6 +143,8 @@ zh-CN:
             contains_mathematical_symbols: 邮政编码不能包含数学符号
             contains_restricted_characters: "“邮政编码”字段只能包含字母、数字、当地字符和特殊字符"
             invalid_for_province: 请输入 %{province} 对应的有效邮政编码
+            unknown_for_street_and_city: 邮政编码可能与 %{city} %{street} 不匹配
+            unknown_for_address: 邮政编码可能不正确。
         address:
           errors:
             may_not_exist: 找不到地址或地址不存在

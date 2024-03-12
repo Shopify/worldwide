@@ -63,6 +63,7 @@ nb:
               tall, lokale tegn og spesialtegn
             contains_too_many_words: Adresse1 kan ikke inneholde mer enn %{word_count}
               ord
+            unknown_for_address: Gaten kan være feil.
           warnings:
             contains_too_many_words: Det anbefales at adresselinje 1 inneholder færre
               enn %{word_count} ord
@@ -85,6 +86,7 @@ nb:
               tall, lokale tegn og spesialtegn
             contains_too_many_words: Adresse2 kan ikke inneholde mer enn %{word_count}
               ord
+            unknown_for_address: Gaten kan være feil.
           warnings:
             contains_too_many_words: Det anbefales at adresselinje 2 inneholder færre
               enn %{word_count} ord
@@ -106,6 +108,7 @@ nb:
             contains_restricted_characters: By kan kun inneholde bokstaver, tall,
               lokale tegn og spesialtegn
             contains_too_many_words: By kan ikke inneholde mer enn %{word_count} ord
+            unknown_for_address: Poststedet kan være feil.
         country:
           label:
             default: Land/region
@@ -140,6 +143,7 @@ nb:
             unknown_for_city_and_zip: Angi et gyldig område for %{city}, %{zip}
             unknown_for_city: Velg et gyldig område for %{city}
             unknown_for_zip: Velg et gyldig område for %{zip}
+            unknown_for_address: Området kan være feil.
         zip:
           label:
             default: Postnummer
@@ -162,6 +166,9 @@ nb:
             contains_restricted_characters: Postnummer kan kun inneholde bokstaver,
               tall, lokale tegn og spesialtegn
             invalid_for_province: Skriv inn et gyldig postnummer for %{province}
+            unknown_for_street_and_city: Postnummeret kan være feil for %{street},
+              %{city}
+            unknown_for_address: Postnummeret kan være feil.
         address:
           errors:
             may_not_exist: Fant ikke adressen, eller så eksisterer den ikke

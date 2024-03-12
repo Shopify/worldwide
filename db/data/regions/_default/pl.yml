@@ -61,9 +61,10 @@ pl:
               znaki lokalne i znaki specjalne.
             contains_too_many_words: Adres 1 może zawierać maksymalnie do %{word_count}
               słów
+            unknown_for_address: Ulica może być nieprawidłowa.
           warnings:
-            contains_too_many_words: Zaleca się, aby linia adresu 1 zawierała
-              mniej niż %{word_count} słów
+            contains_too_many_words: Zaleca się, aby linia adresu 1 zawierała mniej
+              niż %{word_count} słów
         address2:
           label:
             default: Mieszkanie, apartament itp.
@@ -84,9 +85,10 @@ pl:
               znaki lokalne i znaki specjalne.
             contains_too_many_words: Adres 2 może zawierać maksymalnie do %{word_count}
               słów
+            unknown_for_address: Ulica może być nieprawidłowa.
           warnings:
-            contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała
-              mniej niż %{word_count} słów
+            contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała mniej
+              niż %{word_count} słów
         city:
           label:
             default: Miasto
@@ -106,6 +108,7 @@ pl:
               znaki lokalne i znaki specjalne.
             contains_too_many_words: Miasto może zawierać maksymalnie do %{word_count}
               słów
+            unknown_for_address: Miasto może być nieprawidłowe.
         country:
           label:
             default: Kraj/region
@@ -126,7 +129,8 @@ pl:
             too_long: Numer telefonu jest zbyt długi (maksymalna liczba znaków to
               255)
             contains_emojis: Numer telefonu nie może zawierać emoji
-            contains_mathematical_symbols: Numer telefonu nie może zawierać symboli matematycznych
+            contains_mathematical_symbols: Numer telefonu nie może zawierać symboli
+              matematycznych
             contains_restricted_characters: Pole Telefon może zawierać litery, cyfry,
               znaki lokalne i znaki specjalne.
         province:
@@ -140,6 +144,7 @@ pl:
             unknown_for_city_and_zip: Wprowadź prawidłowy region dla %{city}, %{zip}
             unknown_for_city: Wybierz prawidłowy region dla %{city}
             unknown_for_zip: Wybierz prawidłowy region dla %{zip}
+            unknown_for_address: Region może być nieprawidłowy.
         zip:
           label:
             default: Kod pocztowy
@@ -157,10 +162,14 @@ pl:
             not_supported: Nie obsługujemy obecnie tego kraju/regionu. Wprowadź nowy
               adres i spróbuj ponownie.
             unknown_for_province: Wprowadź prawidłowy kod pocztowy dla %{province}
-            contains_mathematical_symbols: Kod pocztowy nie może zawierać symboli matematycznych
+            contains_mathematical_symbols: Kod pocztowy nie może zawierać symboli
+              matematycznych
             contains_restricted_characters: Pole Kod pocztowy może zawierać litery,
               cyfry, znaki lokalne i znaki specjalne.
             invalid_for_province: Wprowadź prawidłowy kod pocztowy dla %{province}
+            unknown_for_street_and_city: Kod pocztowy może być nieprawidłowy dla %{street},
+              %{city}
+            unknown_for_address: Kod pocztowy może być nieprawidłowy.
         address:
           errors:
             may_not_exist: Nie znaleziono adresu lub adres nie istnieje

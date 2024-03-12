@@ -54,6 +54,7 @@ ja:
             contains_mathematical_symbols: 住所1に数学記号を含めることはできません
             contains_restricted_characters: 住所1には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 住所1には、%{word_count}語以上を入力できません
+            unknown_for_address: 住所1は正しくない可能性があります。
           warnings:
             contains_too_many_words: 住所1は%{word_count}文字未満が推奨されています
         address2:
@@ -72,6 +73,7 @@ ja:
             contains_mathematical_symbols: 住所2に数学記号を含めることはできません
             contains_restricted_characters: 住所2には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 住所2には、%{word_count}語以上を入力できません
+            unknown_for_address: 住所2は正しくない可能性があります。
           warnings:
             contains_too_many_words: 住所2は%{word_count}文字未満が推奨されています
         city:
@@ -90,6 +92,7 @@ ja:
             contains_mathematical_symbols: 市区町村に数学記号を含めることはできません
             contains_restricted_characters: 市には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             contains_too_many_words: 市には、%{word_count}語以上を入力できません
+            unknown_for_address: 市区町村は正しくない可能性があります。
         country:
           label:
             default: 国/地域
@@ -121,6 +124,7 @@ ja:
             unknown_for_city_and_zip: "%{zip}、%{city}の有効な地域を入力してください"
             unknown_for_city: "%{city}の有効な地域を選択してください"
             unknown_for_zip: "%{zip}の有効な地域を選択してください"
+            unknown_for_address: 地域は正しくない可能性があります。
         zip:
           label:
             default: 郵便番号
@@ -139,6 +143,8 @@ ja:
             contains_mathematical_symbols: 郵便番号に数学記号を含めることはできません
             contains_restricted_characters: 郵便番号には、文字、数字、地域の文字、特殊文字のみを含めることができます。
             invalid_for_province: "%{province}の有効な郵便番号を入力してください"
+            unknown_for_street_and_city: "%{city}、%{street}の郵便番号は正しくない可能性があります。"
+            unknown_for_address: 郵便番号は正しくない可能性があります。
         address:
           errors:
             may_not_exist: 住所が見つからない、または存在しません

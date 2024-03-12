@@ -12,7 +12,8 @@ nl:
             too_long: Bedrijfsnaam is te lang (het maximum is 255 tekens)
             contains_html_tags: Bedrijf mag geen HTML-tags bevatten.
             contains_emojis: Bedrijf mag geen emoji's bevatten
-            contains_mathematical_symbols: Bedrijfsnaam mag geen wiskundige symbolen bevatten.
+            contains_mathematical_symbols: Bedrijfsnaam mag geen wiskundige symbolen
+              bevatten.
             contains_restricted_characters: Het veld Bedrijf mag alleen letters, cijfers,
               lokale tekens en speciale tekens bevatten
         first_name:
@@ -38,7 +39,8 @@ nl:
             contains_html_tags: Achternaam mag geen HTML-tags bevatten.
             contains_emojis: Achternaam mag geen emoji's bevatten
             contains_url: Achternaam mag geen URL bevatten.
-            contains_mathematical_symbols: Achternaam mag geen wiskundige symbolen bevatten.
+            contains_mathematical_symbols: Achternaam mag geen wiskundige symbolen
+              bevatten.
             contains_restricted_characters: Het veld Achternaam mag alleen letters,
               cijfers, lokale tekens en speciale tekens bevatten
         address1:
@@ -55,14 +57,16 @@ nl:
             street_unknown_for_zip: Voer een geldige straatnaam in voor %{zip}.
             building_number_invalid: Gebouwnummer voor %{street}, %{zip} kan niet
               worden gevonden.
-            contains_mathematical_symbols: De eerste adresregel mag geen wiskundige symbolen bevatten.
+            contains_mathematical_symbols: De eerste adresregel mag geen wiskundige
+              symbolen bevatten.
             contains_restricted_characters: Het veld Adres1 mag alleen letters, cijfers,
               lokale tekens en speciale tekens bevatten
             contains_too_many_words: Adres1 mag niet langer zijn dan %{word_count}
               woorden
+            unknown_for_address: De straat is mogelijk onjuist.
           warnings:
-            contains_too_many_words: Geef minder dan %{word_count} woorden
-              op voor adresregel 1.
+            contains_too_many_words: Geef minder dan %{word_count} woorden op voor
+              adresregel 1.
         address2:
           label:
             default: Appartementnr. etc.
@@ -77,14 +81,16 @@ nl:
             street_unknown_for_zip: Voer een geldige straatnaam in voor %{zip}.
             building_number_invalid: Gebouwnummer voor %{street}, %{zip} kan niet
               worden gevonden.
-            contains_mathematical_symbols: De tweede adresregel mag geen wiskundige symbolen bevatten.
+            contains_mathematical_symbols: De tweede adresregel mag geen wiskundige
+              symbolen bevatten.
             contains_restricted_characters: Het veld Adres2 mag alleen letters, cijfers,
               lokale tekens en speciale tekens bevatten
             contains_too_many_words: Adres2 mag niet langer zijn dan %{word_count}
               woorden
+            unknown_for_address: De straat is mogelijk onjuist.
           warnings:
-            contains_too_many_words: Geef minder dan %{word_count} woorden
-              op voor adresregel 2.
+            contains_too_many_words: Geef minder dan %{word_count} woorden op voor
+              adresregel 2.
         city:
           label:
             default: Stad
@@ -104,6 +110,7 @@ nl:
               lokale tekens en speciale tekens bevatten
             contains_too_many_words: Plaats mag niet langer zijn dan %{word_count}
               woorden
+            unknown_for_address: De plaats is mogelijk onjuist.
         country:
           label:
             default: Land/regio
@@ -123,7 +130,8 @@ nl:
             invalid: Voer een geldig telefoonnummer in
             too_long: Het telefoonnummer is te lang (het maximum is 255 tekens)
             contains_emojis: Telefoonnummer mag geen emoji's bevatten
-            contains_mathematical_symbols: Telefoonnummer mag geen wiskundige symbolen bevatten.
+            contains_mathematical_symbols: Telefoonnummer mag geen wiskundige symbolen
+              bevatten.
             contains_restricted_characters: Het veld Telefoonnummer mag alleen letters,
               cijfers, lokale tekens en speciale tekens bevatten
         province:
@@ -137,6 +145,7 @@ nl:
             unknown_for_city_and_zip: Voer een geldige regio in voor %{city}, %{zip}
             unknown_for_city: Selecteer een geldige regio voor %{city}
             unknown_for_zip: Selecteer een geldige regio voor %{zip}
+            unknown_for_address: De regio is mogelijk onjuist.
         zip:
           label:
             default: Postcode
@@ -158,6 +167,9 @@ nl:
             contains_restricted_characters: Het veld Postcode mag alleen letters,
               cijfers, lokale tekens en speciale tekens bevatten
             invalid_for_province: Voer een geldige postcode in voor %{province}.
+            unknown_for_street_and_city: De postcode is mogelijk onjuist voor %{street},
+              %{city}
+            unknown_for_address: De postcode is mogelijk onjuist.
         address:
           errors:
             may_not_exist: Adres niet gevonden of bestaat niet
