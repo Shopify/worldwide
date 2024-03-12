@@ -155,7 +155,7 @@ module Worldwide
       return if parts.size <= 1
 
       region_code = parts.last
-      return if region_code.blank?
+      return if Util.blank?(region_code)
 
       region = Worldwide::Cldr.t(region_code, scope: :territories, default: nil)
       region = region.nil? ? region_code : Worldwide::Cldr::ContextTransforms.transform(region, :territory, :start_of_sentence)

@@ -810,7 +810,7 @@ module Worldwide
           source_content = File.read(file_path)
           flattened = FlattenHash.run(YAML.safe_load(source_content, permitted_classes: [Symbol]))
           filtered = flattened.select { |key, _value| paths_to_keep.any? { |path| path == key[0...path.size] } }
-          if filtered.blank?
+          if Util.blank?(filtered)
             File.delete(file_path)
             return true
           end

@@ -92,10 +92,10 @@ module Worldwide
 
       result = number.reverse.scan(/.{1,4}/).zip(JAPAN_MYRIAD_UNITS).map do |segment, unit|
         segment.gsub!(/0*$/, "")
-        segment.blank? ? "" : (unit + segment)
+        Util.blank?(segment) ? "" : (unit + segment)
       end.join.reverse
 
-      result = "0" if result.blank?
+      result = "0" if Util.blank?(result)
       result = "#{result}#{decimal_marker}#{decimal}" if decimal
 
       result
