@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add translations for address line 1, 2 concern messages [#115](https://github.com/Shopify/worldwide/pull/115), [#116](https://github.com/Shopify/worldwide/pull/116)
 - Make new concern messages more generic for address line 1, 2 [#114](https://github.com/Shopify/worldwide/pull/114)
 - Add localized concern messages when field is unknown for address [#109](https://github.com/Shopify/worldwide/pull/109)
 
