@@ -59,6 +59,7 @@ tr:
             contains_restricted_characters: Adres1 yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: 1. adres en fazla %{word_count} kelime içerebilir
+            unknown_for_address: Adres satırı 1 yalnış olabilir.
           warnings:
             contains_too_many_words: Adres satırı 1'de %{word_count} adetten az kelime
               olması önerilir
@@ -80,6 +81,7 @@ tr:
             contains_restricted_characters: Adres2 yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: Adres2 en fazla %{word_count} kelime içerebilir
+            unknown_for_address: Adres satırı 2 yalnış olabilir.
           warnings:
             contains_too_many_words: Adres satırı 2'de %{word_count} adetten az kelime
               olması önerilir
@@ -101,6 +103,7 @@ tr:
             contains_restricted_characters: Şehir adı yalnızca harfler, sayılar, yerel
               karakterler ve özel karakterler içerebilir
             contains_too_many_words: Şehir en fazla %{word_count} kelime içerebilir
+            unknown_for_address: Şehir yanlış olabilir.
         country:
           label:
             default: Ülke/bölge
@@ -135,6 +138,7 @@ tr:
             unknown_for_city_and_zip: "%{city}, %{zip} için geçerli bir bölge girin"
             unknown_for_city: "%{city} için geçerli bir bölge seçin"
             unknown_for_zip: "%{zip} için geçerli bir bölge seçin"
+            unknown_for_address: Bölge yanlış olabilir.
         zip:
           label:
             default: Posta kodu
@@ -156,6 +160,9 @@ tr:
             contains_restricted_characters: Posta kodu yalnızca harfler, sayılar,
               yerel karakterler ve özel karakterler içerebilir
             invalid_for_province: "%{province} için geçerli bir posta kodu girin"
+            unknown_for_street_and_city: "%{street}, %{city} için posta kodu yanlış
+              olabilir"
+            unknown_for_address: Posta kodu yanlış olabilir.
         address:
           errors:
             may_not_exist: Adres bulunamadı veya mevcut değil

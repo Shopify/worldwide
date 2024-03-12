@@ -66,6 +66,7 @@ it:
               numeri, caratteri locali e caratteri speciali
             contains_too_many_words: L'indirizzo 1 non può superare %{word_count}
               parole
+            unknown_for_address: Il campo 1 dell'indirizzo potrebbe non essere corretto.
           warnings:
             contains_too_many_words: La riga 1 dell'indirizzo deve contenere meno
               di %{word_count} parole
@@ -90,6 +91,7 @@ it:
               numeri, caratteri locali e caratteri speciali
             contains_too_many_words: L'indirizzo 2 non può superare %{word_count}
               parole
+            unknown_for_address: Il campo 2 dell'indirizzo potrebbe non essere corretto.
           warnings:
             contains_too_many_words: La riga 2 dell'indirizzo deve contenere meno
               di %{word_count} parole
@@ -112,6 +114,7 @@ it:
             contains_restricted_characters: La città può contenere solo lettere, numeri,
               caratteri locali e caratteri speciali
             contains_too_many_words: La città non può superare %{word_count} parole
+            unknown_for_address: La città potrebbe non essere corretta.
         country:
           label:
             default: Paese/area geografica
@@ -149,6 +152,7 @@ it:
               %{zip}
             unknown_for_city: Seleziona un'area geografica valida per %{city}
             unknown_for_zip: Seleziona un'area geografica valida per %{zip}
+            unknown_for_address: L'area geografica potrebbe non essere corretta.
         zip:
           label:
             default: CAP
@@ -171,6 +175,9 @@ it:
             contains_restricted_characters: Il codice di avviamento postale può contenere
               solo lettere, numeri, caratteri locali e caratteri speciali
             invalid_for_province: Inserisci un codice postale valido per %{province}
+            unknown_for_street_and_city: Il codice postale potrebbe non essere corretto
+              per la %{street} e la %{city}
+            unknown_for_address: Il codice postale potrebbe non essere corretto.
         address:
           errors:
             may_not_exist: Indirizzo non trovato o non esistente

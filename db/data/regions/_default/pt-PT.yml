@@ -62,6 +62,7 @@ pt-PT:
               caracteres locais e caracteres especiais
             contains_too_many_words: O "Endereço1" não pode ter mais do que %{word_count}
               palavras
+            unknown_for_address: A linha 1 do endereço pode estar incorreta.
           warnings:
             contains_too_many_words: Recomenda-se que a linha de endereço 1 tenha
               menos de %{word_count} palavras
@@ -85,6 +86,7 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: O "Endereço2" não pode ter mais do que %{word_count}
               palavras
+            unknown_for_address: A linha 2 do endereço pode estar incorreta.
           warnings:
             contains_too_many_words: Recomenda-se que a linha de endereço 2 tenha
               menos de %{word_count} palavras
@@ -107,6 +109,7 @@ pt-PT:
               números, caracteres locais e caracteres especiais
             contains_too_many_words: A cidade não pode ter mais do que %{word_count}
               palavras
+            unknown_for_address: A cidade pode estar incorreta.
         country:
           label:
             default: País/região
@@ -142,6 +145,7 @@ pt-PT:
             unknown_for_city_and_zip: Introduza uma região válida para %{city}, %{zip}
             unknown_for_city: Selecione uma região válida para %{city}
             unknown_for_zip: Selecione uma região válida para %{zip}
+            unknown_for_address: A região pode estar incorreta.
         zip:
           label:
             default: Código postal
@@ -164,6 +168,9 @@ pt-PT:
             contains_restricted_characters: O campo "Código postal" só pode conter
               letras, números, caracteres locais e caracteres especiais
             invalid_for_province: 'Introduza um código postal válido para: %{province}'
+            unknown_for_street_and_city: O código postal pode estar incorreto para
+              %{street}, %{city}
+            unknown_for_address: O código postal pode estar incorreto.
         address:
           errors:
             may_not_exist: Endereço não encontrado ou não existe

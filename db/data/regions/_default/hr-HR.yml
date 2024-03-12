@@ -65,6 +65,7 @@ hr-HR:
               brojeve, lokalne znakove i posebne znakove
             contains_too_many_words: Adresa 1 ne smije sadržavati više od %{word_count}
               riječi
+            unknown_for_address: Adresa u retku 1 možda nije točna.
           warnings:
             contains_too_many_words: Preporučujemo da redak adrese 1 sadrži manje
               od %{word_count} riječ/i
@@ -89,6 +90,7 @@ hr-HR:
               brojeve, lokalne znakove i posebne znakove
             contains_too_many_words: Adresa 2 ne smije sadržavati više od %{word_count}
               riječi
+            unknown_for_address: Adresa u retku 2 možda nije točna.
           warnings:
             contains_too_many_words: Preporučujemo da redak adrese 2 sadrži manje
               od %{word_count} riječ/i
@@ -112,6 +114,7 @@ hr-HR:
               brojeve, lokalne znakove i posebne znakove
             contains_too_many_words: Ime grada ne smije sadržavati više od %{word_count}
               riječi
+            unknown_for_address: Grad možda nije točan.
         country:
           label:
             default: Država/regija
@@ -147,6 +150,7 @@ hr-HR:
             unknown_for_city_and_zip: Unesite valjanu regiju za %{city}, %{zip}
             unknown_for_city: Odaberite valjanu regiju za %{city}
             unknown_for_zip: Odaberite valjanu regiju za %{zip}
+            unknown_for_address: Regija možda nije točna.
         zip:
           label:
             default: Poštanski broj
@@ -169,6 +173,9 @@ hr-HR:
             contains_restricted_characters: Poštanski broj smije sadržavati samo slova,
               brojeve, lokalne znakove i posebne znakove
             invalid_for_province: Unesite valjani poštanski broj za %{province}
+            unknown_for_street_and_city: Možda nije točan poštanski broj za %{street},
+              %{city}
+            unknown_for_address: Možda nije točan poštanski broj.
         address:
           errors:
             may_not_exist: Adresa nije pronađena ili ne postoji

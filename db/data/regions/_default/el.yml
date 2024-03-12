@@ -67,6 +67,8 @@ el:
               στην οδό %{street}, %{zip}.
             contains_too_many_words: Το πεδίο "Διεύθυνση1" δεν μπορεί να περιέχει
               πάνω από %{word_count} λέξεις
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γραμμή διεύθυνσης
+              1.
           warnings:
             contains_too_many_words: Το πεδίο "Διεύθυνση 1" συνιστάται να έχει λιγότερες
               από %{word_count} λέξεις
@@ -92,6 +94,8 @@ el:
               στην οδό %{street}, %{zip}.
             contains_too_many_words: Το πεδίο "Διεύθυνση2" δεν μπορεί να περιέχει
               πάνω από %{word_count} λέξεις
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γραμμή διεύθυνσης
+              2.
           warnings:
             contains_too_many_words: Το πεδίο "Διεύθυνση 2" συνιστάται να έχει λιγότερες
               από %{word_count} λέξεις
@@ -114,6 +118,7 @@ el:
             unknown_for_zip_and_province: Εισαγάγετε έγκυρη πόλη για %{zip}, %{province}
             contains_too_many_words: Το πεδίο "Πόλη" δεν μπορεί να περιέχει πάνω από
               %{word_count} λέξεις
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην πόλη.
         country:
           label:
             default: Χώρα/περιοχή
@@ -149,6 +154,7 @@ el:
             unknown_for_city_and_zip: Εισαγάγετε έγκυρη περιοχή για %{city}, %{zip}
             unknown_for_city: Επιλέξτε έγκυρη περιοχή για %{city}
             unknown_for_zip: Επιλέξτε έγκυρη περιοχή για %{zip}
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην περιοχή.
         zip:
           label:
             default: Ταχυδρομικός κώδικας
@@ -172,6 +178,9 @@ el:
               Εισαγάγετε νέα διεύθυνση και δοκιμάστε ξανά.
             unknown_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{province}
             invalid_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{province}
+            unknown_for_street_and_city: Ενδέχεται να υπάρχει λάθος στον ταχυδρομικό
+              κώδικα για την τοποθεσία %{street}, %{city}
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στον ταχυδρομικό κώδικα.
         address:
           errors:
             may_not_exist: Η διεύθυνση δεν βρέθηκε ή δεν υπάρχει

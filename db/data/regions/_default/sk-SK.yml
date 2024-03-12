@@ -62,6 +62,7 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 1 nemôže mať viac ako tento počet slov:
               %{word_count}'
+            unknown_for_address: Riadok adresy 1 môže byť nesprávny.
           warnings:
             contains_too_many_words: 'Riadok adresy 1 by nemal mať viac ako tento
               počet slov: %{word_count}'
@@ -84,6 +85,7 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Adresa 2 nemôže mať viac ako tento počet slov:
               %{word_count}'
+            unknown_for_address: Riadok adresy 2 môže byť nesprávny.
           warnings:
             contains_too_many_words: 'Riadok adresy 2 by nemal mať viac ako tento
               počet slov: %{word_count}'
@@ -105,6 +107,7 @@ sk-SK:
               miestne znaky a špeciálne znaky
             contains_too_many_words: 'Mesto nemôže mať viac ako tento počet slov:
               %{word_count}'
+            unknown_for_address: Mesto môže byť nesprávne.
         country:
           label:
             default: Krajina/oblasť
@@ -140,6 +143,7 @@ sk-SK:
             unknown_for_city_and_zip: 'Zadajte platnú oblasť pre: %{city}, %{zip}'
             unknown_for_city: 'Vyberte platnú oblasť pre: %{city}'
             unknown_for_zip: 'Vyberte platnú oblasť pre: %{zip}'
+            unknown_for_address: Oblasť môže byť nesprávna.
         zip:
           label:
             default: Poštové smerovacie číslo
@@ -162,6 +166,9 @@ sk-SK:
             contains_restricted_characters: Poštové smerovacie číslo môže obsahovať
               len písmená, číslice, miestne znaky a špeciálne znaky
             invalid_for_province: 'Zadajte platné poštové smerovacie číslo pre: %{province}'
+            unknown_for_street_and_city: PSČ pre ulicu %{street}, mesto %{city} môže
+              byť nesprávne.
+            unknown_for_address: PSČ môže byť nesprávne.
         address:
           errors:
             may_not_exist: Adresa nebola nájdená alebo neexistuje

@@ -66,6 +66,7 @@ bg-BG:
             building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
             contains_too_many_words: "„Адрес1“ не може да съдържа повече от %{word_count}
               думи"
+            unknown_for_address: Възможно е ред 1 от адреса да е неправилен.
           warnings:
             contains_too_many_words: Препоръчително е редът за адрес 1 да не съдържа
               повече от %{word_count} думи
@@ -89,6 +90,7 @@ bg-BG:
             building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
             contains_too_many_words: "„Адрес2“ не може да съдържа повече от %{word_count}
               думи"
+            unknown_for_address: Възможно е ред 2 от адреса да е неправилен.
           warnings:
             contains_too_many_words: Препоръчително е редът за адрес 2 да не съдържа
               повече от %{word_count} думи
@@ -111,6 +113,7 @@ bg-BG:
             unknown_for_zip_and_province: Въведете валиден град за %{zip}, %{province}
             contains_too_many_words: "„Град“ не може да съдържа повече от %{word_count}
               думи"
+            unknown_for_address: Възможно е градът да е неправилен.
         country:
           label:
             default: Държава/регион
@@ -145,6 +148,7 @@ bg-BG:
             unknown_for_city_and_zip: Въведете валиден регион за %{city}, %{zip}
             unknown_for_city: Изберете валиден регион за %{city}
             unknown_for_zip: Изберете валиден регион за %{zip}
+            unknown_for_address: Възможно е регионът да е неправилен.
         zip:
           label:
             default: Пощенски код
@@ -167,6 +171,9 @@ bg-BG:
               Въведете нов адрес и опитайте отново.
             unknown_for_province: Въведете валиден пощенски код за %{province}
             invalid_for_province: Въведете валиден пощенски код за %{province}
+            unknown_for_street_and_city: Възможно е пощенският код за %{street}, %{city}
+              да е неправилен
+            unknown_for_address: Възможно е пощенският код да е неправилен.
         address:
           errors:
             may_not_exist: Адресът не е открит или не съществува

@@ -66,6 +66,8 @@ ro-RO:
               caractere locale și caractere speciale
             contains_too_many_words: Câmpul Adresă 1 nu poate conține mai mult de
               %{word_count} cuvinte
+            unknown_for_address: Este posibil ca valoarea din câmpul Linie 1 adresă
+              să fie incorectă.
           warnings:
             contains_too_many_words: Se recomandă ca în câmpul Linie 1 adresă să nu
               introduci mai mult de %{word_count} cuvinte
@@ -90,6 +92,8 @@ ro-RO:
               caractere locale și caractere speciale
             contains_too_many_words: Câmpul Adresă 2 nu poate conține mai mult de
               %{word_count} cuvinte
+            unknown_for_address: Este posibil ca valoarea din câmpul Linie 2 adresă
+              să fie incorectă.
           warnings:
             contains_too_many_words: Se recomandă ca în câmpul Linie 2 adresă să nu
               introduci mai mult de %{word_count} cuvinte
@@ -114,6 +118,7 @@ ro-RO:
               cifre, caractere locale și caractere speciale
             contains_too_many_words: Câmpul Oraș nu poate conține mai mult de %{word_count}
               cuvinte
+            unknown_for_address: Este posibil ca valoarea din câmpul Oraș să fie incorectă.
         country:
           label:
             default: Țară/regiune
@@ -149,6 +154,8 @@ ro-RO:
             unknown_for_city_and_zip: Introdu o regiune validă pentru %{city}, %{zip}
             unknown_for_city: Selectează o regiune validă pentru %{city}
             unknown_for_zip: Selectează o regiune validă pentru %{zip}
+            unknown_for_address: Este posibil ca valoarea din câmpul Regiune să fie
+              incorectă.
         zip:
           label:
             default: Cod poștal
@@ -171,6 +178,10 @@ ro-RO:
             contains_restricted_characters: Codul poștal poate conține numai litere,
               cifre, caractere locale și caractere speciale
             invalid_for_province: Introdu un cod poștal valid pentru %{province}
+            unknown_for_street_and_city: Este posibil ca valoarea din câmpul Cod poștal
+              să fie incorectă pentru %{street}, %{city}
+            unknown_for_address: Este posibil ca valoarea din câmpul Cod poștal să
+              fie incorectă.
         address:
           errors:
             may_not_exist: Adresa nu a fost găsită sau nu există

@@ -64,6 +64,7 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             contains_too_many_words: A cím 1. sora legfeljebb %{word_count} szóból
               állhat
+            unknown_for_address: Vélhetően helytelen a cím első sora.
           warnings:
             contains_too_many_words: A cím 1. sorának javasolt hossza kevesebb mint
               %{word_count} szó
@@ -89,6 +90,7 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             contains_too_many_words: A cím 2. sora legfeljebb %{word_count} szóból
               állhat
+            unknown_for_address: Vélhetően helytelen a cím második sora.
           warnings:
             contains_too_many_words: A cím 2. sorának javasolt hossza kevesebb mint
               %{word_count} szó
@@ -113,6 +115,7 @@ hu:
             contains_restricted_characters: A településnév csak betűket, számokat,
               helyi karaktereket és különleges karaktereket tartalmazhat
             contains_too_many_words: A település legfeljebb %{word_count} szóból állhat
+            unknown_for_address: Vélhetően helytelen a településnév.
         country:
           label:
             default: Ország/régió
@@ -148,6 +151,7 @@ hu:
               régiót
             unknown_for_city: 'Ennek megfelelő régiót válassz: %{city}'
             unknown_for_zip: 'Ennek megfelelő régiót válassz: %{zip}'
+            unknown_for_address: Vélhetően helytelen a régió neve.
         zip:
           label:
             default: Irányítószám
@@ -174,6 +178,9 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             invalid_for_province: 'Olyan irányítószámot írj be, amely itt található:
               %{province}'
+            unknown_for_street_and_city: Vélhetően nem felel meg az irányítószám a
+              címnek (%{city}, %{street})
+            unknown_for_address: Vélhetően helytelen az irányítószám.
         address:
           errors:
             may_not_exist: A cím nem található, vagy nem létezik

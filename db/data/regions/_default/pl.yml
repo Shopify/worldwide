@@ -61,6 +61,7 @@ pl:
               znaki lokalne i znaki specjalne
             contains_too_many_words: Adres 1 może zawierać maksymalnie %{word_count}
               słów (słowa)
+            unknown_for_address: Linia adresu 1 może być nieprawidłowa.
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 1 zawierała mniej
               niż %{word_count} słów (słowa)
@@ -84,6 +85,7 @@ pl:
               znaki lokalne i znaki specjalne
             contains_too_many_words: Adres 2 może zawierać maksymalnie do %{word_count}
               słów (słowa)
+            unknown_for_address: Linia adresu 2 może być nieprawidłowa.
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała mniej
               niż %{word_count} słów (słowa)
@@ -106,6 +108,7 @@ pl:
               znaki lokalne i znaki specjalne
             contains_too_many_words: Miasto może zawierać maksymalnie %{word_count}
               słów (słowa)
+            unknown_for_address: Miasto może być nieprawidłowe.
         country:
           label:
             default: Kraj/region
@@ -141,6 +144,7 @@ pl:
             unknown_for_city_and_zip: Wprowadź prawidłowy region dla %{city}, %{zip}
             unknown_for_city: Wybierz prawidłowy region dla %{city}
             unknown_for_zip: Wybierz prawidłowy region dla %{zip}
+            unknown_for_address: Region może być nieprawidłowy.
         zip:
           label:
             default: Kod pocztowy
@@ -163,6 +167,9 @@ pl:
             contains_restricted_characters: Pole Kod pocztowy może zawierać litery,
               cyfry, znaki lokalne i znaki specjalne
             invalid_for_province: Wprowadź prawidłowy kod pocztowy dla %{province}
+            unknown_for_street_and_city: Kod pocztowy może być nieprawidłowy dla %{street},
+              %{city}
+            unknown_for_address: Kod pocztowy może być nieprawidłowy.
         address:
           errors:
             may_not_exist: Nie znaleziono adresu lub adres nie istnieje

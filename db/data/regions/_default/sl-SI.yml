@@ -64,6 +64,7 @@ sl-SI:
               številke, lokalne znake in posebne znake
             contains_too_many_words: Vrstica za naslov 1 ne sme vsebovati več kot
               %{word_count} besed
+            unknown_for_address: Vrstica za naslov 1 morda ni pravilna.
           warnings:
             contains_too_many_words: Vrstica za naslov 1 naj ne vsebuje več kot %{word_count}
               besed
@@ -89,6 +90,7 @@ sl-SI:
               številke, lokalne znake in posebne znake
             contains_too_many_words: Vrstica za naslov 2 ne sme vsebovati več kot
               %{word_count} besed
+            unknown_for_address: Vrstica za naslov 2 morda ni pravilna.
           warnings:
             contains_too_many_words: Vrstica za naslov 2 naj ne vsebuje več kot %{word_count}
               besed
@@ -111,6 +113,7 @@ sl-SI:
               lokalne znake in posebne znake
             contains_too_many_words: Ime kraja ne sme vsebovati več kot %{word_count}
               besed
+            unknown_for_address: Kraj morda ni pravilen.
         country:
           label:
             default: Država/regija
@@ -146,6 +149,7 @@ sl-SI:
             unknown_for_city_and_zip: Vnesite veljavno regijo za kraj %{city}, %{zip}
             unknown_for_city: Izberite veljavno regijo za kraj %{city}
             unknown_for_zip: Izberite veljavno regijo za poštno številko %{zip}
+            unknown_for_address: Regija morda ni pravilna.
         zip:
           label:
             default: Poštna številka
@@ -168,6 +172,9 @@ sl-SI:
             contains_restricted_characters: Poštna številka lahko vsebuje le črke,
               številke, lokalne znake in posebne znake
             invalid_for_province: Vnesite veljavno poštno številko za provinco %{province}
+            unknown_for_street_and_city: Poštna številka morda ni pravilna za %{street},
+              %{city}
+            unknown_for_address: Poštna številka morda ni pravilna.
         address:
           errors:
             may_not_exist: Naslova ni mogoče najti ali ne obstaja

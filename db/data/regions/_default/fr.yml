@@ -66,6 +66,7 @@ fr:
               pour %{street}, %{zip}.
             contains_too_many_words: Le champ Adresse 1 ne doit pas comporter plus
               de %{word_count} mots
+            unknown_for_address: La ligne 1 de l’adresse peut être erronée.
           warnings:
             contains_too_many_words: Il est conseillé que le champ Adresse 1 comporte
               moins de %{word_count} mots
@@ -91,6 +92,7 @@ fr:
               pour %{street}, %{zip}.
             contains_too_many_words: Le champ Adresse 2 ne doit pas comporter plus
               de %{word_count} mots
+            unknown_for_address: La ligne 2 de l’adresse peut être erronée.
           warnings:
             contains_too_many_words: Il est conseillé que le champ Adresse 2 comporte
               moins de %{word_count} mots
@@ -112,6 +114,7 @@ fr:
             unknown_for_province: Saisir une ville valide pour %{province}
             unknown_for_zip_and_province: Saisir une ville valide pour %{zip}, %{province}
             contains_too_many_words: La ville ne doit pas comporter plus de %{word_count} mots
+            unknown_for_address: La ville peut être erronée.
         country:
           label:
             default: Pays/région
@@ -147,6 +150,7 @@ fr:
             unknown_for_city_and_zip: Saisir une région valide pour %{city}, %{zip}
             unknown_for_city: Saisir une région valide pour %{city}
             unknown_for_zip: Saisir une région valide pour %{zip}
+            unknown_for_address: La région peut être erronée.
         zip:
           label:
             default: Code postal
@@ -169,6 +173,9 @@ fr:
               Saisissez une nouvelle adresse et réessayez.
             unknown_for_province: Saisir un code postal valide pour %{province}
             invalid_for_province: Saisir un code postal valide pour %{province}
+            unknown_for_street_and_city: Le code postal peut être erroné pour %{street},
+              %{city}
+            unknown_for_address: Le code postal peut être erroné.
         address:
           errors:
             may_not_exist: L’adresse est introuvable ou inexistante

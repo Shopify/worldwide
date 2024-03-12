@@ -64,6 +64,7 @@ de:
               nicht gefunden werden.
             contains_too_many_words: Adresse 1 darf nicht mehr als %{word_count} Wörter
               enthalten
+            unknown_for_address: Adresszeile 1 ist möglicherweise falsch.
           warnings:
             contains_too_many_words: Adresszeile 1 sollte weniger als %{word_count}
               Wörter haben
@@ -87,6 +88,7 @@ de:
               nicht gefunden werden.
             contains_too_many_words: Adresse 2 darf nicht mehr als %{word_count} Wörter
               enthalten
+            unknown_for_address: Adresszeile 2 ist möglicherweise falsch.
           warnings:
             contains_too_many_words: Adresszeile 2 sollte weniger als %{word_count}
               Wörter haben
@@ -110,6 +112,7 @@ de:
               eingeben
             contains_too_many_words: Stadt darf nicht mehr als %{word_count} Wörter
               enthalten
+            unknown_for_address: Stadt ist ggf. falsch.
         country:
           label:
             default: Land/Region
@@ -144,6 +147,7 @@ de:
             unknown_for_city_and_zip: Eine gültige Region für %{city}, %{zip} eingeben
             unknown_for_city: Eine gültige Region für %{city} auswählen
             unknown_for_zip: Eine gültige Region für %{zip} auswählen
+            unknown_for_address: Region ist ggf. falsch.
         zip:
           label:
             default: Postleitzahl
@@ -166,6 +170,9 @@ de:
               Gib eine neue Adresse ein und versuche es erneut.
             unknown_for_province: Eine gültige Postleitzahl für %{province} eingeben
             invalid_for_province: Eine gültige Postleitzahl für %{province} eingeben
+            unknown_for_street_and_city: Postleitzahl stimmt ggf. nicht mit %{street},
+              %{city} überein
+            unknown_for_address: Postleitzahl ist möglicherweise falsch.
         address:
           errors:
             may_not_exist: Adresse nicht gefunden oder existiert nicht

@@ -60,6 +60,7 @@ hi:
               स्थानीय वर्ण और स्पेशल कैरेक्टर हो सकते हैं
             contains_too_many_words: पते की पहली पंक्ति में %{word_count} से अधिक
               शब्द नहीं हो सकते
+            unknown_for_address: पता लाइन 1 गलत हो सकता है.
           warnings:
             contains_too_many_words: पते की पहली पंक्ति में %{word_count} शब्दों से
               कम शब्द लिखने का सुझाव दिया जाता है
@@ -82,6 +83,7 @@ hi:
               स्थानीय वर्ण और स्पेशल कैरेक्टर हो सकते हैं
             contains_too_many_words: पते की दूसरी पंक्ति में %{word_count} से अधिक
               शब्द नहीं हो सकते
+            unknown_for_address: पता लाइन 2 गलत हो सकता है.
           warnings:
             contains_too_many_words: पते की दूसरी पंक्ति में %{word_count} शब्दों
               से कम शब्द लिखने का सुझाव दिया जाता है
@@ -103,6 +105,7 @@ hi:
             contains_restricted_characters: शहर में सिर्फ अक्षर, संख्याएं, स्थानीय
               वर्ण और स्पेशल कैरेक्टर हो सकते हैं
             contains_too_many_words: शहर में %{word_count} से अधिक शब्द नहीं हो सकते
+            unknown_for_address: शहर गलत हो सकता है.
         country:
           label:
             default: देश/क्षेत्र
@@ -137,6 +140,7 @@ hi:
               करें"
             unknown_for_city: "%{city} के लिए एक मान्य प्रांत चुनें"
             unknown_for_zip: "%{zip} के लिए एक मान्य प्रांत चुनें"
+            unknown_for_address: क्षेत्र गलत हो सकता है.
         zip:
           label:
             default: डाक कोड
@@ -158,6 +162,9 @@ hi:
             contains_restricted_characters: पोस्टल कोड में सिर्फ अक्षर, संख्याएं,
               स्थानीय वर्ण और स्पेशल कैरेक्टर हो सकते हैं
             invalid_for_province: "%{province} के लिए एक मान्य डाक कोड दर्ज करें"
+            unknown_for_street_and_city: "%{street}, %{city} के लिए डाक कोड गलत हो
+              सकता है"
+            unknown_for_address: डाक कोड गलत हो सकता है.
         address:
           errors:
             may_not_exist: पता नहीं मिला या यहां मौजूद नहीं है
