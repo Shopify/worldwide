@@ -588,10 +588,6 @@ module Worldwide
             [:HK, "中國香港特別行政區", "香港特別行政區"],
             [:MO, "中國澳門特別行政區", "澳門特別行政區"],
           ])
-          patch_territories(:"zh-TW", [
-            [:HK, "中國香港特別行政區", "香港特別行政區"],
-            [:MO, "中國澳門特別行政區", "澳門特別行政區"],
-          ])
 
           # Should use capitalized letters for territories in UI list context, by default.
           # https://github.com/Shopify/shopify-i18n/issues/1551
@@ -694,7 +690,7 @@ module Worldwide
 
         def sort_cldr_files
           puts("🔀 Sorting the keys in the patched files")
-          files_changed = Dir.glob(File.join(["data", "cldr", "**", "*.yml"])).sum do |filepath|
+          Dir.glob(File.join(["data", "cldr", "**", "*.yml"])).sum do |filepath|
             next 0 if filepath.start_with?("data/cldr/transforms")
             next 0 if filepath.start_with?("data/cldr/metazones.yml")
 
@@ -706,7 +702,6 @@ module Worldwide
             file_changed = SortYaml.sort_file(filepath, output_filename: filepath)
             file_changed ? 1 : 0
           end
-          raise NotNeededError, "Sorting the CLDR files made no changes." if files_changed == 0
         end
 
         # How one refers to Macau and Hong Kong is contentious
@@ -810,7 +805,7 @@ module Worldwide
           source_content = File.read(file_path)
           flattened = FlattenHash.run(YAML.safe_load(source_content, permitted_classes: [Symbol]))
           filtered = flattened.select { |key, _value| paths_to_keep.any? { |path| path == key[0...path.size] } }
-          if filtered.blank?
+          if Util.blank?(filtered)
             File.delete(file_path)
             return true
           end

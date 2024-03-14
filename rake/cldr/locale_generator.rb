@@ -19,20 +19,18 @@ module Worldwide
         initialize_i18n
 
         generate_plural_keys_lookup
+        sort_cldr_files
 
-        initialize_i18n # We need to re-initialize i18n to load the new data for the next step
+        initialize_i18n
 
         # CLDR is missing pluralization keys in some cases
         # We fill in the holes by copying from the existing values
         # based on the premise that having poor grammar is better than falling back
         # to a different language.
         expand_cldr_to_cover_missing_plurals
-
-        # Sort the expanded files.
-        # Ideally, plural key expansion would be done in rake/cldr/patch.rb
-        # However, it depends on `generate_plural_keys_lookup` being run, which belongs in this file
-        # So instead, we just sort the files again.
         sort_cldr_files
+
+        initialize_i18n
 
         Worldwide::Locales.map(&:to_s).each do |locale|
           puts "Generating date/time formats for locale '#{locale}'..."
@@ -44,7 +42,7 @@ module Worldwide
         # Expand the keys to cover all the keys needed for the language.
         expand_output_to_cover_missing_plurals
 
-        initialize_i18n # We need to re-initialize i18n to load the new data for the next step
+        initialize_i18n
 
         generate_format_documentation
       end
