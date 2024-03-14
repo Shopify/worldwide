@@ -27,6 +27,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+-
+
+---
+
+[0.10.3] - 2024-03-14
+
 - Add regional language for zip_unknown_for_address, province_unknown_for_address. Remove error message for zip_unknown_for_street_and_city [#121](https://github.com/Shopify/worldwide/pull/121)
 - Fix broken CLDR `import`/`patch`/`generate` rake tasks [#119](https://github.com/Shopify/worldwide/pull/119)
 - Patch El Salvador department names, standardizing on not including "department of" [#120](https://github.com/Shopify/worldwide/pull/120)
