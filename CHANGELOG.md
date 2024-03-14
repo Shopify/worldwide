@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add regional language for zip_unknown_for_address, province_unknown_for_address. Remove error message for zip_unknown_for_street_and_city [#121](https://github.com/Shopify/worldwide/pull/121)
+- Fix broken CLDR `import`/`patch`/`generate` rake tasks [#119](https://github.com/Shopify/worldwide/pull/119)
 
 ---
 
