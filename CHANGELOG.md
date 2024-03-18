@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Add translations for regionalized zip_unknown_for_address, province_unknown_for_address [#125](https://github.com/Shopify/worldwide/pull/125)
+- Add translations for regionalized zip_unknown_for_address, province_unknown_for_address [#125](https://github.com/Shopify/worldwide/pull/125), [#126](https://github.com/Shopify/worldwide/pull/126)
 
 ---
 
