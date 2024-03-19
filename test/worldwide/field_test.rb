@@ -31,6 +31,7 @@ module Worldwide
 
     test "autofills city as expected when there is a country_code" do
       [
+        [:en, :ae, "-"],
         [:en, :sg, "Singapore"],
         [:fr, :sg, "Singapour"],
         [:ja, :sg, "シンガポール"],
