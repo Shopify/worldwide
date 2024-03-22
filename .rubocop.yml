@@ -15,6 +15,9 @@ AllCops:
 Layout/LineLength:
   Enabled: false
 
+Metrics/CollectionLiteralLength:
+  Enabled: false
+
 # The problem with assert(foo) is that it'll pass if foo is 1.
 # But there are times when we want to be sure that foo is true, not just truthy.
 # So, let's allow `assert_equal true, foo` without complaints.
