@@ -386,7 +386,7 @@ module Worldwide
     # If the Region has an autofill zip, return the value that will be autofilled
     # Otherwise, return nil
     def zip_autofill
-      return zip_example if zip_autofill_enabled
+      zip_example if zip_autofill_enabled
     end
 
     # is a postal code required for this region?
@@ -511,7 +511,7 @@ module Worldwide
       return iso_code if iso_code.nil? || iso_code.length < 3
 
       country_code, subdivision_code = iso_code.split("-")
-      return subdivision_code if country_code.casecmp(associated_country.iso_code).zero?
+      subdivision_code if country_code.casecmp(associated_country.iso_code).zero?
     end
 
     def valid_normalized_zip?(normalized, province_code: nil, partial_match: false)

@@ -14,7 +14,7 @@ class PluralizationSubkeyExpander
         File.join(File.dirname(filename), "#{File.basename(filename, extension)}_expanded#{extension}")
       end
 
-      translations = YAML.load(File.read(filename), permitted_classes: [Symbol])
+      translations = YAML.load_file(filename, permitted_classes: [Symbol])
       expanded = expand(translations, locale)
 
       File.write(output_filename, YAML.dump(expanded)) if translations != expanded
