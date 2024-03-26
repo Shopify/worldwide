@@ -45,7 +45,7 @@ module Worldwide
     end
 
     def currency_codes
-      @currency_codes ||= YAML.safe_load(File.read(CURRENCY_CODES_FILE_PATH))
+      @currency_codes ||= YAML.safe_load_file(CURRENCY_CODES_FILE_PATH)
     end
 
     def map_alpha_three_to_numeric_three

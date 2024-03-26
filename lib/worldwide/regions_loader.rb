@@ -199,7 +199,7 @@ module Worldwide
 
     def country_codes
       @country_codes ||=
-        YAML.safe_load(File.read("#{Worldwide::Paths::DB_DATA_ROOT}/country_codes.yml"))["country_codes"]
+        YAML.safe_load_file("#{Worldwide::Paths::DB_DATA_ROOT}/country_codes.yml")["country_codes"]
     end
 
     def find_region(code:)
@@ -212,7 +212,7 @@ module Worldwide
     end
 
     def load_territory(filename)
-      spec = YAML.safe_load(File.read(filename))
+      spec = YAML.safe_load_file(filename)
       code = spec["code"]
 
       loaded_regions = []

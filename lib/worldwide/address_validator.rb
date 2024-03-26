@@ -73,7 +73,7 @@ module Worldwide
 
       return [] if country.nil?
       return [] if country.zones.nil?
-      return [] if country.zones.select(&:province?).empty?
+      return [] if country.zones.none?(&:province?)
       return [] if country.hide_provinces_from_addresses
 
       if Util.blank?(address.province_code)

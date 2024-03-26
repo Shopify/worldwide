@@ -9,7 +9,7 @@ module Worldwide
   class RegionYmlConsistencyTest < ActiveSupport::TestCase
     setup do
       @raw_yml = Dir["#{Worldwide::Paths::REGIONS_ROOT}/*.yml"].map do |filename|
-        YAML.safe_load(File.read(filename)).freeze
+        YAML.safe_load_file(filename).freeze
       end
     end
 

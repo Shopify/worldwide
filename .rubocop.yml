@@ -8,12 +8,14 @@ require:
   - rubocop-rake
 
 AllCops:
-  TargetRubyVersion: 3.0
   Exclude:
     - "data/**/*"
   NewCops: enable
 
 Layout/LineLength:
+  Enabled: false
+
+Metrics/CollectionLiteralLength:
   Enabled: false
 
 # The problem with assert(foo) is that it'll pass if foo is 1.

@@ -943,9 +943,7 @@ module Worldwide
 
         return [] unless File.exist?(plural_rules_path)
 
-        rules = YAML.safe_load(
-          File.read(plural_rules_path),
-        ).dig(locale, type)
+        rules = YAML.safe_load_file(plural_rules_path).dig(locale, type)
 
         (rules || {}).keys.sort.map(&:to_sym)
       end
