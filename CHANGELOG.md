@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-
+- Re-introduce city from UAE address form and disable city autofill [#131](https://github.com/Shopify/worldwide/pull/131)
 - Add translations for regionalized zip_unknown_for_address, province_unknown_for_address [#125](https://github.com/Shopify/worldwide/pull/125), [#126](https://github.com/Shopify/worldwide/pull/126)
 - Remove city from UAE address form and enable city autofill [#127](https://github.com/Shopify/worldwide/pull/127)
 ---
