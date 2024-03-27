@@ -300,7 +300,7 @@ module Worldwide
     end
 
     def normalize_city
-      Worldwide.region(code: @country_code)&.field(key: :city)&.autofill || @city
+      Worldwide.region(code: @country_code)&.autofill_city || @city
     end
 
     def normalize_country_code(autocorrect_level:)
