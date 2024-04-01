@@ -243,6 +243,30 @@ module Worldwide
       end
     end
 
+    test "city does not autofill where no autofill is expected" do
+      [:ca, :de, :es, :fr, :it, :nl, :us, :ve].each do |country_code|
+        assert_nil Worldwide.region(code: country_code).autofill_city
+      end
+    end
+
+    test "#autofill_city returns values as expected" do
+      [
+        [:en, :sg, "Singapore"],
+        [:fr, :sg, "Singapour"],
+        [:ja, :sg, "シンガポール"],
+        [:"zh-CN", :sg, "新加坡"],
+        [:en, :gi, "Gibraltar"],
+        [:en, :gs, "Grytviken"],
+        [:en, :pn, "Adamstown"],
+        [:en, :ta, "Edinburgh of the Seven Seas"],
+        [:en, :va, "Vatican City"],
+      ].each do |locale, country_code, expected|
+        I18n.with_locale(locale) do
+          assert_equal expected, Worldwide.region(code: country_code).autofill_city(locale: locale), "autofill in #{locale}"
+        end
+      end
+    end
+
     test "city_required? returns values as expected" do
       city_not_required_countries = [:gi, :gs, :pn, :sg, :ta, :va]
       city_required_countries = [:ca, :us, :gb]

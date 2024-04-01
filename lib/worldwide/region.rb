@@ -291,13 +291,14 @@ module Worldwide
       zip_example if @zip_autofill_enabled
     end
 
-    def autofill_city
-      field(key: :city).autofill
+    # The value with which to autofill the city, if this region has a default city; otherwise, nil.
+    def autofill_city(locale: I18n.locale)
+      field(key: :city).autofill(locale: locale)
     end
 
     # Does this region require cities to be specified?
     def city_required?
-      autofill_city.nil?
+      autofill_city(locale: :en).nil?
     end
 
     # Is this Region a continent?
