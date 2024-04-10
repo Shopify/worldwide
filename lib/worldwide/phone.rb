@@ -48,6 +48,11 @@ module Worldwide
       @parsed_number.valid?
     end
 
+    # Returns the country prefix for the phone number
+    def country_prefix
+      @parsed_number.country_code
+    end
+
     private
 
     # For various reasons, Worldwide considers these territories to be zones inside the USA
