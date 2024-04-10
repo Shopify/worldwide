@@ -114,6 +114,20 @@ module Worldwide
       # rubocop:enable Metrics/ParameterLists
     end
 
+    test "correct country prefix" do
+      # rubocop:disable Metrics/ParameterLists
+      [
+        [:ca, "613-356-6900", "(613) 356-6900", "+16133566900", "+1 613-356-6900", "CA", "1"], # IBM Ottawa
+
+      ].each do |input_country, input_number, domestic, e164, international, country, prefix|
+        phone = Phone.new(number: input_number, country_code: input_country)
+        validate_phone(phone, input_number, domestic, e164, international, country)
+
+        assert_equal prefix, phone.country_prefix
+      end
+      # rubocop:enable Metrics/ParameterLists
+    end
+
     private
 
     # rubocop:disable Metrics/ParameterLists
