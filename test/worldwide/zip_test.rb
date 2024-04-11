@@ -167,7 +167,7 @@ module Worldwide
         [:AC, "ASCN 1ZZ"],
         [:CA, "K1A 1A1"],
         [:FR, "75009"],
-        [:GB, "SW1 1AA"],
+        [:GB, "SW1A 1AA"],
         [:GI, "GX11 1AA"],
         [:JE, "JE3 7FW"],
         [:US, "90210"],
@@ -364,9 +364,9 @@ module Worldwide
 
     test "normalize adjusts valid UK postal codes as expected" do
       [
-        ["SW11AA", "SW1 1AA"],
-        ["SW1 1AA", "SW1 1AA"],
-        ["SW1  1AA", "SW1 1AA"],
+        ["SW1A1AA", "SW1A 1AA"],
+        ["SW1A 1AA", "SW1A 1AA"],
+        ["SW1A  1AA", "SW1A 1AA"],
         ["CH65YJ", "CH6 5YJ"],
         ["CH6 5YJ", "CH6 5YJ"],
         ["CH6  5YJ", "CH6 5YJ"],
@@ -423,9 +423,9 @@ module Worldwide
 
     test "normalize adjusts incomplete (outcode-only) UK postal codes by appending a space" do
       [
-        ["SW1", "SW1 "],
-        ["SW1 ", "SW1 "],
-        ["SW1  ", "SW1 "],
+        ["SW1A", "SW1A "],
+        ["SW1A ", "SW1A "],
+        ["SW1A  ", "SW1A "],
         ["CH6", "CH6 "],
         ["CH6 ", "CH6 "],
         ["CH6  ", "CH6 "],
@@ -436,6 +436,19 @@ module Worldwide
         spaces_inserted = Zip.normalize(country_code: "GB", zip: zip)
 
         assert_equal expected, spaces_inserted
+      end
+    end
+
+    test "normalized adjusts area-only UK postcodes by upcasing without appending a space" do
+      [
+        ["E", "E"],
+        ["E ", "E"],
+        ["EH", "EH"],
+        ["EH ", "EH"],
+        ["SO", "SO"],
+        ["SO ", "SO"],
+      ].each do |input, expected|
+        assert_equal expected, Zip.normalize(country_code: "GB", zip: input)
       end
     end
 
@@ -453,6 +466,19 @@ module Worldwide
         normalized = Zip.normalize(country_code: country_code, zip: zip)
 
         assert_equal expected, normalized, "Normalization of #{zip.inspect} returned #{normalized.inspect}"
+      end
+    end
+
+    test "normalize of UK-style postcodes with complete outcode and partial incode inserts space appropriately" do
+      [
+        [:GB, "E21A", "E2 1A"],
+        [:GB, "E201A", "E20 1A"],
+        [:GB, "EH21A", "EH2 1A"],
+        [:GB, "EC1A1", "EC1A 1"],
+      ].each do |country_code, input, expected|
+        normalized = Zip.normalize(country_code: country_code, zip: input)
+
+        assert_equal expected, normalized, "Normalization of #{input.inspect} returned #{normalized.inspect}"
       end
     end
 
@@ -477,7 +503,7 @@ module Worldwide
     test "normalize strips leading and trailing whitespace" do
       [
         [:CA, "K1S 1A1 ", "K1S 1A1"],
-        [:GB, " SW1 1AA", "SW1 1AA"],
+        [:GB, " SW1A 1AA", "SW1A 1AA"],
         [:GB, "CH15 1AA ", "CH15 1AA"],
         [:US, " 90210", "90210"],
         [:US, " 10010  ", "10010"],
@@ -590,7 +616,7 @@ module Worldwide
       assert_equal "GX11 1AA", Zip.normalize(country_code: "GI", zip: nil)
       assert_equal "GX11 1AA", Zip.normalize(country_code: "GI", zip: "")
       assert_equal "GX11 1AA", Zip.normalize(country_code: "GI", zip: "bogus")
-      assert_equal "GX11 1AA", Zip.normalize(country_code: "GI", zip: "SW1 1AA")
+      assert_equal "GX11 1AA", Zip.normalize(country_code: "GI", zip: "SW1A 1AA")
     end
 
     test "replace ohs and zeros for GB where expected" do
@@ -830,9 +856,44 @@ module Worldwide
         [:CA, "K1A 0A9", "K1A"],
         [:IE, "D08 K092", "D08"],
         [:GB, "EC1A 1AA", "EC1A"],
-        [:GB, "SW1 1AA", "SW1"],
-        [:GB, "sw11 aa", "SW1"], # Check that normalization is applied, too
+        [:GB, "SW1A 1AA", "SW1A"],
+        [:GB, "sw1a1 aa", "SW1A"], # Check that normalization is applied, too
         [:JE, "JE2 4TQ", "JE2"],
+      ].each do |country_code, postcode, expected|
+        actual = Zip.outcode(country_code: country_code, zip: postcode)
+
+        assert_equal expected, actual, "Outcode for #{postcode.inspect} should be #{expected} but was #{actual}"
+      end
+    end
+
+    test "outcode returns a plausible outcode when provided with an incomplete postcode" do
+      [
+        [:CA, "K1S1", "K1S"],
+        [:CA, "K1S 1", "K1S"],
+        [:CA, "K1S1A", "K1S"],
+        [:CA, "K1S 1A", "K1S"],
+        [:GB, "E11A", "E1"],
+        [:GB, "EC1A1", "EC1A"],
+        [:GB, "EC1A 1", "EC1A"],
+        [:GB, "EC1A1B", "EC1A"],
+        [:GB, "EC1A 1B", "EC1A"],
+        [:GB, "GL71", "GL7"],
+        [:GB, "GL72", "GL7"],
+        [:GB, "MK438", "MK43"],
+        [:GB, "MK43 8", "MK43"],
+        [:GB, "MK438A", "MK43"],
+        [:GB, "MK43 8A", "MK43"],
+        [:GB, "SW1A", "SW1A"],
+        [:GB, "SW1A1", "SW1A"],
+        [:GB, "SW1A 1", "SW1A"],
+        [:GB, "SW1A1A", "SW1A"],
+        [:GB, "SW1A 1A", "SW1A"],
+        [:GB, "SW1P", "SW1P"],
+        [:GB, "SW1P1", "SW1P"],
+        [:IE, "D6W", "D6W"],
+        [:IE, "D01", "D01"],
+        [:IE, "A91H26", "A91"],
+        [:IE, "A91 H26", "A91"],
       ].each do |country_code, postcode, expected|
         actual = Zip.outcode(country_code: country_code, zip: postcode)
 

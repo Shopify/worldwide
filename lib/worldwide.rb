@@ -10,6 +10,7 @@ require "worldwide/locale"
 require "worldwide/locales"
 require "worldwide/paths"
 require "worldwide/version"
+require "worldwide/extant_outcodes"
 
 require "worldwide/address"
 require "worldwide/address_validator"
