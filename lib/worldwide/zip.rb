@@ -107,40 +107,38 @@ module Worldwide
         zip = strip_extraneous_characters(zip: zip, country_code: country_code)
       end
 
-      result = if gb_style?(country_code: country.iso_code)
-        normalize_for_gb(zip: zip)
-      else
-        # Remove both normal-width and double-width spaces
-        zip.delete!(" 　")
-        zip = replace_letters_and_numbers(country_code: country.iso_code, zip: zip)
+      return normalize_for_gb(zip: zip) if gb_style?(country_code: country.iso_code)
 
-        if "BD" == country.iso_code
-          normalize_for_bd(zip: zip)
-        elsif "FO" == country.iso_code
-          normalize_for_fo(zip: zip)
-        elsif "GH" == country.iso_code
-          normalize_for_gh(zip: zip)
-        elsif "HT" == country.iso_code
-          normalize_for_ht(zip: zip)
-        elsif "LK" == country.iso_code
-          normalize_for_lk(zip: zip)
-        elsif "MD" == country.iso_code
-          normalize_for_md(zip: zip)
-        elsif "MG" == country.iso_code
-          normalize_for_mg(zip: zip)
-        elsif "NG" == country.iso_code
-          normalize_for_ng(zip: zip)
-        elsif "SG" == country.iso_code
-          normalize_for_sg(zip: zip)
-        elsif "MA" == country.iso_code
-          normalize_for_ma(zip: zip)
-        elsif "XK" == country.iso_code
-          normalize_for_xk(zip: zip)
-        elsif "BR" == country.iso_code || "JP" == country.iso_code
-          insert_spaces_and_hyphens_for_partial_code(country_code: country.iso_code, zip: zip)
-        else
-          insert_spaces_and_hyphens(country_code: country.iso_code, zip: zip)
-        end
+      # Remove both normal-width and double-width spaces
+      zip.delete!(" 　")
+      zip = replace_letters_and_numbers(country_code: country.iso_code, zip: zip)
+
+      result = if "BD" == country.iso_code
+        normalize_for_bd(zip: zip)
+      elsif "FO" == country.iso_code
+        normalize_for_fo(zip: zip)
+      elsif "GH" == country.iso_code
+        normalize_for_gh(zip: zip)
+      elsif "HT" == country.iso_code
+        normalize_for_ht(zip: zip)
+      elsif "LK" == country.iso_code
+        normalize_for_lk(zip: zip)
+      elsif "MD" == country.iso_code
+        normalize_for_md(zip: zip)
+      elsif "MG" == country.iso_code
+        normalize_for_mg(zip: zip)
+      elsif "NG" == country.iso_code
+        normalize_for_ng(zip: zip)
+      elsif "SG" == country.iso_code
+        normalize_for_sg(zip: zip)
+      elsif "MA" == country.iso_code
+        normalize_for_ma(zip: zip)
+      elsif "XK" == country.iso_code
+        normalize_for_xk(zip: zip)
+      elsif "BR" == country.iso_code || "JP" == country.iso_code
+        insert_spaces_and_hyphens_for_partial_code(country_code: country.iso_code, zip: zip)
+      else
+        insert_spaces_and_hyphens(country_code: country.iso_code, zip: zip)
       end
 
       if country.send(:valid_normalized_zip?, result)
@@ -161,7 +159,26 @@ module Worldwide
 
       return zip unless @split_code_countries.include?(country_code.to_s.upcase)
 
-      normalize(country_code: country_code, zip: zip)&.split(" ")&.first
+      normalized_input = normalize(country_code: country_code, zip: zip).upcase
+      normalized_country_code = country_code.to_s.upcase
+
+      if Worldwide.region(code: country_code).valid_zip?(normalized_input)
+        # We successfully normalized the postcode, so we can split on the space to determine the outcode
+        normalized_input&.split(" ")&.first
+      else
+        # We have either an invalid or an incomplete postcode.  Let's try some fancy heuristics
+        case country_code.to_s.upcase
+        when "CA", "IE"
+          # the FSA / routing code is the first 3 characters
+          normalized_input[0..2]
+        when "GB", "GG", "IM", "JE"
+          gb_style_outcode(country_code: normalized_country_code, input: normalized_input)
+        when "GI"
+          "GX11"
+        else
+          normalized_input
+        end
+      end
     end
 
     def strip_optional_country_prefix(country_code:, zip:)
@@ -192,6 +209,55 @@ module Worldwide
         zip
       else
         stripped
+      end
+    end
+
+    def gb_style_outcode(country_code:, input:)
+      normalized = input
+
+      m = /^([A-Z]{1,2})/.match(normalized)
+      return normalized if m.nil?
+
+      area = m[1]
+      return normalized if area.nil?
+
+      # Let's get the first, second and third characters following the area
+      first = normalized[area.length]
+      second = normalized[area.length + 1]
+      third = normalized[area.length + 2]
+
+      candidate = case area
+      when "E", "EC", "N", "NW", "SE", "SW", "W", "WC"
+        # These London districts may include a single-letter suffix as part of the district
+        # In all such cases, the district is one digit + one letter
+
+        if /[A-Z]/.match?(second)
+          # This must be a district suffix, so disctrict consists of first + second
+          "#{area}#{first}#{second}".strip
+        elsif /[A-Z]/.match?(third)
+          # Because third is a letter, second must be the sector, and the district must be a single digit
+          "#{area}#{first}".strip
+        else
+          # Otherwise, we'll assume that we've got a two-digit district
+          "#{area}#{first}#{second}".strip
+        end
+      else
+        # The outcode is the area plus at most two digits following it
+
+        if /[A-Z]/.match?(third)
+          # Because third is a letter, second must be the sector, and the district must be a single digit
+          "#{area}#{first}"
+        else
+          "#{area}#{first}#{second}".strip
+        end
+      end
+
+      if /[0-9]/.match?(second) && !Worldwide::ExtantOutcodes.for_country(code: country_code).include?(candidate)
+        # We've guessed a two-digit district that does not actually exist, so we'll assume a single-digit district.
+        # For example, "GL71" can't be an outcode, so we'll assume the user meant outcode "GL7".
+        "#{area}#{first}"
+      else
+        candidate
       end
     end
 
@@ -350,7 +416,7 @@ module Worldwide
     GB_POSTAL_TOWN_WITH_SECOND_CHAR_OH = ["C", "S", "P", "Y"]
     private_constant :GB_POSTAL_TOWN_WITH_SECOND_CHAR_OH
 
-    # Based on postal code formats here: https://en.wikipedia.org/wiki/List_of_postal_codes
+    # Based on postal code formats here: https://en.wikipedia.org/wiki/List_of_zips
     NUMERIC_ONLY_ZIP_COUNTRIES = Set.new([
       "AF",
       "AL",
@@ -786,11 +852,22 @@ module Worldwide
         return "#{postal_town}#{division}#{division_suffix} #{digit}#{alpha}"
       end
 
-      # Check for outcode-only postcode
-      m = upcased.match(/^([A-Z]{1,2}\d{1,2}[A-Z]{0,1})\s*$/)
-      if !m.nil? && m[1].length <= 4
+      # If the input is only the postcode area (one or two letters), return just that with no trailing space
+      return upcased.strip if /^[A-Z]{1,2}$/.match?(upcased.strip)
+
+      inferred_outcode = gb_style_outcode(country_code: "GB", input: upcased)
+
+      if inferred_outcode.strip == upcased.strip
         # Note that we're intentionally appending a space, so that this outcode will work for prefix matching
-        "#{m[1]} "
+        return "#{inferred_outcode.strip} "
+      end
+
+      if inferred_outcode.nil?
+        # Fallback to returning the unmodified input if we weren't able to make sense of it
+        input
+      else
+        remainder = upcased[inferred_outcode.length..-1]
+        "#{inferred_outcode.strip} #{remainder.strip}"
       end
     end
 
