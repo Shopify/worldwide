@@ -528,6 +528,8 @@ module Worldwide
           confidence = candidate_regex[1]
 
           normalized = normalize(country_code: candidate_code, zip: zip, allow_autofill: false)
+          next unless /[A-Z]/.match?(normalized) # Numeric-only postal codes are insufficiently specific
+
           if normalized.match(regex)
             candidate = Worldwide.region(code: candidate_code)
             suggestions.append([candidate, confidence]) if candidate.valid_zip?(normalized)

@@ -184,6 +184,7 @@ module Worldwide
         [:CA, "Q1Q 1Q1"],
         [:CA, "90210"],
         [:GB, "ASCN 1AA"],
+        [:GB, "IS200"],
         [:GB, "90210"],
         [:US, "K1A 1A1"],
         [nil, "3008"], # Southern Cross Station, VIC, AU
