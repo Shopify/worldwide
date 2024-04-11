@@ -27,7 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Nil.
+- Handle blank strings for Region, country_code parameter in Zip normalization
+  [#138](https://github.com/Shopify/worldwide/pull/138)
 
 ---
 
