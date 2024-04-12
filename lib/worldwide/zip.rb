@@ -85,7 +85,7 @@ module Worldwide
     def normalize(country_code:, zip:, allow_autofill: true, strip_extraneous_characters: false)
       input = zip # preserve the original zip, in case we need to fall back to it
 
-      return input if country_code.nil?
+      return input if Util.blank?(country_code)
 
       country = Worldwide.region(code: country_code)
       return zip if country.nil? || NORMALIZATION_DISABLED_COUNTRIES.include?(country.iso_code)
