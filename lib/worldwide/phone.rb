@@ -76,11 +76,13 @@ module Worldwide
       pn: :nz,
       um: :us,
     }
+    VALID_ALPHA_CHARS = /[a-zA-Z]/
+    E161_MAPPING = Hash[*"a2b2c2d3e3f3g4h4i4j5k5l5m6n6o6p7q7r7s7t8u8v8w9x9y9z9".split("")]
     private_constant :UNSUPPORTED_COUNTRIES
 
     def parse_number(number:, country_code:)
       base_number, extension = split_extension(transliterate(number))
-
+      base_number = base_number.gsub(VALID_ALPHA_CHARS) { |c| E161_MAPPING[c.downcase] }
       return [Phonelib.parse(base_number), extension, nil] if country_code.nil?
 
       adjusted_code = country_code.to_s.downcase.to_sym
