@@ -75,7 +75,6 @@ module Worldwide
           patch_file(:it, "numbers.yml", [:numbers, :latn, :formats, :decimal, :patterns, :long, :standard, :"1000", :one], "mille", "0 mille")
 
           # Large number formatting for es
-          # https://github.com/Shopify/shopify-i18n/issues/1267
           patch_file(:es, "numbers.yml", [:numbers, :latn, :formats, :decimal, :patterns, :short, :standard, :"10000000000", :one], "00 mil M", "00000 M")
           patch_file(:es, "numbers.yml", [:numbers, :latn, :formats, :decimal, :patterns, :short, :standard, :"10000000000", :other], "00 mil M", "00000 M")
           patch_file(:es, "numbers.yml", [:numbers, :latn, :formats, :currency, :patterns, :short, :standard, :"10000000000", :one], "00 mil M¤", "00000 M¤")
@@ -150,7 +149,7 @@ module Worldwide
             [:clap, "Región de Arica y Parinacota", "Arica y Parinacota"],
             [:clar, "Región de la Araucanía", "Araucanía"],
             [:clat, "Región de Atacama", "Atacama"],
-            # CLDR has "Región del Bío Bío", but CountryDb and Wikipedia's Spanish page agree that it's "Biobío"
+            # CLDR has "Región del Bío Bío", but Worldwide and Wikipedia's Spanish page agree that it's "Biobío"
             [:clbi, "Región del Bío Bío", "Biobío"],
             [:clco, "Región de Coquimbo", "Coquimbo"],
             [:clli, "Región de O’Higgins", "O’Higgins"],
@@ -281,7 +280,7 @@ module Worldwide
           # Aosta Valley in Italy is both a region and a province
           # In 2019, ISO 3166 deleted IT-AO (the province) leaving only IT-23 (the region)
           #   https://www.iso.org/obp/ui/#iso:code:3166:IT
-          # CLDR continues to have both, and CountryDb treats them as alternates for each other.
+          # CLDR continues to have both, and Worldwide treats them as alternates for each other.
           # But, CLDR has slightly different names for the two in some lanugages, and that causes problems.
           # (In general, CLDR has "Aosta" for IT-AO, and "Aosta Valley" for IT-23.)
           # So, we'll override the names for IT-AO to set them equal to the name for IT-23 in our main locales.
@@ -1075,7 +1074,6 @@ module Worldwide
           ])
 
           # Should use capitalized letters for territories in UI list context, by default.
-          # https://github.com/Shopify/shopify-i18n/issues/1551
           patch_file(:root, "context_transforms.yml", [:context_transforms, :territory, :ui_list_or_menu], nil, "titlecase_first_word", allow_file_creation: true)
 
           patch_sar_china_suffix
@@ -1084,7 +1082,6 @@ module Worldwide
           patch_units
 
           # CLDR wants to use 999 for `ZZ` (Unknown Region), but we use that for `Rest of World`
-          # https://github.com/Shopify/shopify-i18n/pull/824
           patch_cldr_level_file("country_codes.yml", [:country_codes, :ZZ, :numeric], "999", "000")
 
           patch_cldr_level_file_delete_keys("country_codes.yml", [:country_codes], ["CP", "DG"])
@@ -1191,7 +1188,6 @@ module Worldwide
 
         # How one refers to Macau and Hong Kong is contentious
         # For now, we want to use the "SAR" suffix, not the "SAR China" suffix
-        # https://github.com/Shopify/shopify-i18n/pull/779
         def patch_sar_china_suffix
           # Remove the "China" suffix from "SAR China"
           patch_territories(:en, [
