@@ -75,7 +75,7 @@ module Worldwide
 
     # The string that results from appending " Countries" to the adjectival form of the {group_name}
     # @example
-    #   CountryDb.country(code: "CA").group == "North American Countries"
+    #   Worldwide.region(code: "CA").group == "North American Countries"
     attr_accessor :group
 
     # The continent that this region is part of.
@@ -101,13 +101,11 @@ module Worldwide
     # The code used by the legacy Shopify ecosystem for this region.
     # E.g., for MX-CMX it will return "DF".
     # This code should _never_ be shown in the user interface.
-    # This is the code that was traditionally returned by "country_db".
     attr_reader :legacy_code
 
     # The name used by the legacy Shopify ecosystem for this region.
     # E.g., "Sao Tome And[sic] Principe" for "ST".
     # This name should _never_ be shown in the user interface.
-    # This name is the name that was traditionally returned by "country_db".
     attr_reader :legacy_name
 
     # Other names that may be used to refer to this region.
