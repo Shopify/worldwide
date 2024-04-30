@@ -8,18 +8,27 @@ sv:
             default: Delstat
             optional: Delstat (valfritt)
           errors:
-            blank: Välj stat
+            blank_instructional: Välj en stat
+            blank_informative: Stat saknas
         zip:
           label:
             default: PIN-kod
             optional: PIN-kod (valfritt)
           errors:
-            blank: Ange en PIN-kod
-            invalid_for_country: Ange en giltig PIN-kod för %{country}
-            invalid_for_country_and_province: Ange en giltig PIN-kod för %{province},
-              %{country}
-            too_long: PIN-koden är för lång
-            contains_html_tags: PIN-kod får inte innehålla HTML-taggar.
-            contains_emojis: PIN-kod får inte innehålla emojis
-            contains_restricted_characters: PIN-koden får inte innehålla begränsade
-              tecken
+            blank_instructional: Ange en PIN-kod
+            blank_informative: PIN-kod saknas
+            invalid_for_country_instructional: Ange en giltig PIN-kod för %{country}
+            invalid_for_country_informative: PIN-koden är inte giltig
+            invalid_for_country_and_province_instructional: Ange en giltig PIN-kod
+              för %{province}, %{country}
+            invalid_for_country_and_province_informative: PIN-koden är inte giltig
+            too_long_instructional: PIN-koden är för lång
+            too_long_informative: PIN-koden är för lång
+            contains_emojis_instructional: PIN-kod får inte innehålla emojis
+            contains_emojis_informative: PIN-kod får inte innehålla emojis
+            contains_restricted_characters_instructional: PIN-kod får inte innehålla
+              begränsade tecken
+            contains_restricted_characters_informative: PIN-kod får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: PIN-kod får inte innehålla HTML
+            contains_html_tags_informative: PIN-kod får inte innehålla HTML

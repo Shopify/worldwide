@@ -8,8 +8,14 @@ da:
             default: Provins
             optional: Provins (valgfrit)
           errors:
-            blank: Vælg en provins
-            unknown_for_city_and_zip: Indtast en gyldig provins for %{city}, %{zip}
-            unknown_for_city: Indtast en gyldig provins for %{city}
-            unknown_for_zip: Indtast en gyldig provins for %{zip}
-            unknown_for_address: Provins kan være forkert.
+            unknown_for_address: Provins kan være forkert
+            blank_instructional: Vælg en provins
+            blank_informative: Provins mangler
+            unknown_for_city_and_zip_instructional: Angiv en gyldig provins for %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Provinsen er ikke gyldig for %{city},
+              %{zip}
+            unknown_for_city_instructional: Angiv en gyldig provins for %{city}
+            unknown_for_city_informative: Provinsen er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Angiv en gyldig provins for %{zip}
+            unknown_for_zip_informative: Provinsen er ikke gyldig for %{zip}

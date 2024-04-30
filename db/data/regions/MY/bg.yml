@@ -8,14 +8,20 @@ bg:
             default: Щат/територия
             optional: Щат/територия (незадължително)
           errors:
-            blank: Изберете щат/територия
+            blank_instructional: Изберете щат/територия
+            blank_informative: Липсва щат/територия
         zip:
           label:
             default: Пощенски код
             optional: Пощенски код (незадължително)
           errors:
-            too_long: Пощенският код е с твърде голяма дължина
-            contains_html_tags: Пощенският код не може да съдържа HTML етикети.
-            contains_emojis: Пощенският код не може да съдържа емоджита
-            contains_restricted_characters: Пощенският код не може да съдържа забранени
-              знаци
+            too_long_instructional: "„Пощенски код“ е с твърде голяма дължина"
+            too_long_informative: "„Пощенски код“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Пощенски код“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Пощенски код“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„Пощенски код“ не може
+              да съдържа забранени знаци"
+            contains_restricted_characters_informative: "„Пощенски код“ не може да
+              съдържа забранени знаци"
+            contains_html_tags_instructional: "„Пощенски код“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Пощенски код“ не може да съдържа HTML"

@@ -8,23 +8,36 @@ ja:
             default: 州
             optional: 州 (任意)
           errors:
-            blank: 州を選択してください
-            invalid_for_country: 有効な%{country}の州を入力してください
-            unknown_for_city_and_zip: "%{zip}、%{city}の有効な州を入力してください"
-            unknown_for_city: "%{city}の有効な州を選択してください"
-            unknown_for_zip: "%{zip}の有効な州を選択してください"
-            unknown_for_address: 州は正しくない可能性があります。
+            unknown_for_address: 州は正しくない可能性があります
+            blank_instructional: 州を選択してください
+            blank_informative: 州を入力してください
+            invalid_for_country_instructional: "%{zip}の%{city}の有効な州を入力してください"
+            invalid_for_country_informative: 州が有効ではありません
+            unknown_for_city_and_zip_instructional: "%{zip}の%{city}の有効な州を入力してください"
+            unknown_for_city_and_zip_informative: "%{zip}の%{city}の州が有効ではありません"
+            unknown_for_city_instructional: "%{city}の有効な州を選択してください"
+            unknown_for_city_informative: "%{city}の州が有効ではありません"
+            unknown_for_zip_instructional: "%{zip}の有効な州を選択してください"
+            unknown_for_zip_informative: "%{zip}の州が有効ではありません"
         zip:
           label:
             default: 郵便番号
             optional: 郵便番号 (任意)
           errors:
-            blank: 郵便番号を入力してください
-            invalid_for_country: "%{country}の有効な郵便番号を入力してください"
-            invalid_for_country_and_province: "%{country}の%{province}の有効な郵便番号を入力してください"
-            too_long: 郵便番号の値が長すぎます
-            contains_html_tags: 郵便番号の値にHTMLタグを含めることはできません。
-            contains_emojis: 郵便番号に絵文字を含めることはできません
-            contains_restricted_characters: 郵便番号には制限されている文字を入力できません
-            invalid_for_province: "%{province}の有効な郵便番号を入力してください"
-            unknown_for_address: 郵便番号は正しくない可能性があります。
+            unknown_for_address: 郵便番号は正しくない可能性があります
+            blank_instructional: 郵便番号を入力してください
+            blank_informative: 郵便番号がありません
+            invalid_for_country_instructional: "%{country}の有効な郵便番号を入力してください"
+            invalid_for_country_informative: "%{country}の郵便番号が有効ではありません"
+            invalid_for_province_instructional: "%{province}の有効な郵便番号を入力してください"
+            invalid_for_province_informative: "%{province}の郵便番号が有効ではありません"
+            invalid_for_country_and_province_instructional: "%{country}の%{province}の有効な郵便番号を入力してください"
+            invalid_for_country_and_province_informative: "%{country}の%{province}の郵便番号が有効ではありません"
+            too_long_instructional: 郵便番号が長すぎます
+            too_long_informative: 郵便番号が長すぎます (最大255文字)
+            contains_emojis_instructional: 郵便番号に絵文字を含めることはできません
+            contains_emojis_informative: 郵便番号に絵文字を含めることはできません
+            contains_restricted_characters_instructional: 郵便番号には制限されている文字を入力できません
+            contains_restricted_characters_informative: 郵便番号には制限されている文字を入力できません
+            contains_html_tags_instructional: 郵便番号にはHTMLを入力できません
+            contains_html_tags_informative: 郵便番号にはHTMLを入力できません

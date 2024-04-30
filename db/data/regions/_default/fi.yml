@@ -8,83 +8,142 @@ fi:
             default: Yritys
             optional: Yritys (valinnainen)
           errors:
-            blank: Anna yrityksen nimi
-            too_long: Yrityksen nimi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Yritys ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Yritys ei voi sisältää emojeita
-            contains_mathematical_symbols: Yritys ei voi sisältää matemaattisia symboleja
-            contains_restricted_characters: Yritys voi sisältää vain kirjaimia, numeroita,
-              paikallisia merkkejä ja erikoismerkkejä
+            blank_instructional: Anna yritys
+            blank_informative: Yritys puuttuu
+            too_long_instructional: Yritys on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Yritys on liian pitkä
+            contains_emojis_instructional: Yritys ei voi sisältää emojeita
+            contains_emojis_informative: Yritys ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Yritys ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Yritys ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Yritys voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Yritys ei voi sisältää rajoitettuja
+              merkkejä
+            contains_html_tags_instructional: Yritys ei voi sisältää HTML:ää
+            contains_html_tags_informative: Yritys ei voi sisältää HTML:ää
         first_name:
           label:
             default: Etunimi
             optional: Etunimi (valinnainen)
           errors:
-            blank: Anna etunimi
-            too_long: Etunimi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Etunimi ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Etunimi ei voi sisältää emojeita
-            contains_mathematical_symbols: Etunimi ei voi sisältää matemaattisia symboleja
-            contains_restricted_characters: Etunimi voi sisältää vain kirjaimia, numeroita,
-              paikallisia merkkejä ja erikoismerkkejä
-            contains_url: Etunimi ei voi sisältää URL-osoitetta.
+            blank_instructional: Anna etunimi
+            blank_informative: Etunimi puuttuu
+            too_long_instructional: Etunimi on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Etunimi on liian pitkä
+            contains_emojis_instructional: Etunimi ei voi sisältää emojeita
+            contains_emojis_informative: Etunimi ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Etunimi ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Etunimi ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Etunimi voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Etunimi ei voi sisältää rajoitettuja
+              merkkejä
+            contains_html_tags_instructional: Etunimi ei voi sisältää HTML:ää
+            contains_html_tags_informative: Etunimi ei voi sisältää HTML:ää
+            contains_url_instructional: Etunimi ei voi sisältää URL-osoitetta
+            contains_url_informative: Etunimi ei voi sisältää URL-osoitetta
         last_name:
           label:
             default: Sukunimi
             optional: Sukunimi (valinnainen)
           errors:
-            blank: Anna sukunimi
-            too_long: Sukunimi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Sukunimi ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Suku nimi ei voi sisältää emojeita
-            contains_mathematical_symbols: Sukunimi ei voi sisältää matemaattisia
+            blank_instructional: Anna sukunimi
+            blank_informative: Sukunimi puuttuu
+            too_long_instructional: Sukunimi on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Sukunimi on liian pitkä
+            contains_emojis_instructional: Sukunimi ei voi sisältää emojeita
+            contains_emojis_informative: Sukunimi ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Sukunimi ei voi sisältää
+              matemaattisia symboleja
+            contains_mathematical_symbols_informative: Sukunimi ei voi sisältää matemaattisia
               symboleja
-            contains_restricted_characters: Sukunimi voi sisältää vain kirjaimia,
-              numeroita, paikallisia merkkejä ja erikoismerkkejä
-            contains_url: Sukunimi ei voi sisältää URL-osoitetta.
+            contains_restricted_characters_instructional: Sukunimi voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Sukunimi ei voi sisältää rajoitettuja
+              merkkejä
+            contains_html_tags_instructional: Sukunimi ei voi sisältää HTML:ää
+            contains_html_tags_informative: Sukunimi ei voi sisältää HTML:ää
+            contains_url_instructional: Sukunimi ei voi sisältää URL-osoitetta
+            contains_url_informative: Sukunimi ei voi sisältää URL-osoitetta
         address1:
           label:
             default: Osoite
             optional: Osoite (valinnainen)
-          errors:
-            blank: Anna osoite
-            too_long: Ensimmäinen osoiterivi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Osoite1 ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Osoite1 ei voi sisältää emojeita
-            contains_mathematical_symbols: Osoite1 ei voi sisältää matemaattisia symboleja
-            contains_restricted_characters: Osoite1 voi sisältää vain kirjaimia, numeroita,
-              paikallisia merkkejä ja erikoismerkkejä
-            contains_url: Osoite1 ei voi sisältää URL-osoitteita.
-            missing_building_number: Lisää rakennuksennumero, jos sinulla on sellainen.
-            street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi.
-            building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
-              %{zip}.
-            contains_too_many_words: Osoite 1 -kentässä voi olla enintään %{word_count}
-              sanaa
-            unknown_for_address: Osoiterivi 1 voi olla väärä.
           warnings:
             contains_too_many_words: Osoiterivin 1 pituudeksi suositellaan alle %{word_count}
               sanaa
+          errors:
+            blank_instructional: Anna osoite
+            blank_informative: Osoite puuttuu
+            too_long_instructional: Ensimmäinen osoiterivi on liian pitkä (enintään
+              255 merkkiä)
+            too_long_informative: Ensimmäinen osoiterivi on liian pitkä
+            contains_emojis_instructional: Yritys ei voi sisältää emojeita
+            contains_emojis_informative: Yritys ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Osoite ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Osoite ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Osoite voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Osoite ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Osoitteessa saa olla enintään %{word_count}
+              sanaa
+            contains_too_many_words_informative: Osoitteessa saa olla enintään %{word_count}
+              sanaa
+            contains_html_tags_instructional: Osoite ei voi sisältää HTML:ää
+            contains_html_tags_informative: Osoite ei voi sisältää HTML:ää
+            contains_url_instructional: Osoite ei voi sisältää URL-osoitetta
+            contains_url_informative: Osoite ei voi sisältää URL-osoitetta
+            missing_building_number_instructional: Lisää rakennuksen numero, jos sinulla
+              on sellainen
+            missing_building_number_informative: Rakennuksen numero voi puuttua
+            street_unknown_for_zip_instructional: Anna postinumerolle %{zip} kelvollinen
+              kadunnimi
+            street_unknown_for_zip_informative: Kadunnimi ei vastaa postinumeroa %{zip}
+            building_number_invalid_instructional: Rakennuksen numeroa ei löytynyt
+              kadulle %{street}, %{zip}
+            building_number_invalid_informative: Rakennuksen numeroa ei löytynyt kadulle
+              %{street}, %{zip}
+            unknown_for_address_instructional: Osoiterivi 1 voi olla väärä
+            unknown_for_address_informative: Osoiterivi 1 voi olla väärä
         address2:
           label:
             default: Huoneisto jne.
             optional: Huoneisto jne. (valinnainen)
           errors:
-            blank: Anna huoneisto jne.
-            too_long: Toinen osoiterivi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Osoite2 ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Osoite2 ei voi sisältää emojeita
-            contains_mathematical_symbols: Osoite2 ei voi sisältää matemaattisia symboleja
-            contains_restricted_characters: Osoite2 voi sisältää vain kirjaimia, numeroita,
-              paikallisia merkkejä ja erikoismerkkejä
-            contains_url: Osoite2 ei voi sisältää URL-osoitteita.
-            missing_building_number: Lisää rakennuksennumero, jos sinulla on sellainen.
-            street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi.
-            building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
-              %{zip}.
-            contains_too_many_words: Osoite 2 -kentässä voi olla enintään %{word_count}
+            contains_html_tags: Osoiterivi 2 ei voi sisältää HTML:ää
+            contains_emojis: Osoiterivi 2 ei voi sisältää emojeita
+            contains_mathematical_symbols: Osoiterivi 2 ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters: Osoiterivi 2 voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_url: Osoiterivi 2 ei voi sisältää URL-osoitetta
+            contains_too_many_words: Osoiterivi 2 voi sisältää enintään %{word_count}
               sanaa
-            unknown_for_address: Osoiterivi 2 voi olla väärä.
+            unknown_for_address: Osoiterivi 2 voi olla väärä
+            blank_instructional: Anna asunto, huoneisto jne.
+            blank_informative: Huoneisto puuttuu
+            too_long_instructional: Osoiterivi 2 on liian pitkä (sallittu enintään
+              255 merkkiä)
+            too_long_informational: Osoiterivi 2 on liian pitkä
+            missing_building_number_instructional: Lisää rakennuksen numero, jos sinulla
+              on sellainen
+            missing_building_number_informative: Rakennuksen numero voi puuttua
+            street_unknown_for_zip_instructional: Anna postinumerolle %{zip} kelvollinen
+              kadunnimi
+            street_unknown_for_zip_informative: Kauppa ei ole kelvollinen postinumerolle
+              %{zip}
+            building_number_invalid_instructional: Rakennuksen numeroa ei löytynyt
+              kadulle %{street}, %{zip}
+            building_number_invalid_informative: Rakennuksen numeroa ei löytynyt kadulle
+              %{street}, %{zip}
           warnings:
             contains_too_many_words: Osoiterivin 2 pituudeksi suositellaan alle %{word_count}
               sanaa
@@ -93,122 +152,181 @@ fi:
             default: Kaupunki
             optional: Kaupunki (valinnainen)
           errors:
-            blank: Anna kaupunki
             too_long: Kaupungin nimi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Paikkakunta ei voi sisältää HTML-tunnisteita.
+            contains_html_tags: Kaupunki ei voi sisältää HTML:ää
             contains_emojis: Kaupunki ei voi sisältää emojeita
-            contains_mathematical_symbols: Postitoimipaikka ei voi sisältää matemaattisia
+            contains_mathematical_symbols: Kaupunki ei voi sisältää matemaattisia
               symboleja
             contains_restricted_characters: Kaupunki voi sisältää vain kirjaimia,
               numeroita, paikallisia merkkejä ja erikoismerkkejä
-            contains_url: Paikkakunnan nimi ei voi sisältää URL-osoitetta
-            unknown_for_zip: Anna kelvollinen paikkakunta postinumerolle %{zip}
-            unknown_for_province: Anna kelvollinen paikkakunta postinumerolle %{province}
-            unknown_for_zip_and_province: Anna kelvollinen paikkakunta kohteelle %{zip},
+            contains_url: Kaupunki ei voi sisältää URL-osoitetta
+            contains_too_many_words: Kaupungissa voi olla enintään %{word_count} sanaa
+            unknown_for_address: Kaupunki voi olla väärä
+            blank_instructional: Anna kaupunki
+            blank_informative: Kaupunki puuttuu
+            unknown_for_zip_instructional: Anna postinumerolle %{zip} kelvollinen
+              kaupunki
+            unknown_for_zip_informative: Kaupunki ei vastaa postinumeroa %{zip}
+            unknown_for_province_instructional: Anna kelvollinen kaupunki provinssille
               %{province}
-            contains_too_many_words: Postitoimipaikka-kentässä voi olla enintään %{word_count}
-              sanaa
-            unknown_for_address: Kaupunki voi olla väärä.
+            unknown_for_province_informative: Kaupunki ei vastaa provinssia %{province}
+            unknown_for_zip_and_province_instructional: Anna kelvollinen kaupunki
+              alueelle %{zip}, %{province}
+            unknown_for_zip_and_province_informative: Kaupunki voi olla väärä
         country:
           label:
             default: Maa/alue
             optional: Maa/alue (valinnainen)
           errors:
-            blank: Valitse maa/alue
-            not_supported: Emme tällä hetkellä tue tätä maata/aluetta. Anna uusi osoite
-              ja yritä uudelleen.
-            invalid: Anna kelvollinen maa/alue
-            invalid_for_zip: Anna kelvollinen maa/alue tälle postinumerolle
+            blank_instructional: Valitse maa/alue
+            blank_informative: Maa/alue puuttuu
+            not_supported_instructional: Maata/aluetta ei tueta
+            not_supported_informative: Maata/aluetta ei tueta
+            invalid_instructional: Anna kelvollinen maa/alue
+            invalid_informative: Maa/alue ei ole kelvollinen
+            invalid_for_zip_instructional: Anna kelvollinen maa/alue tälle postinumerolle
+            invalid_for_zip_informative: "%{country} ei vastaa maata/aluetta"
         phone:
           label:
             default: Puhelin
             optional: Puhelin (valinnainen)
           errors:
-            blank: Anna puhelinnumero
-            invalid: Anna kelvollinen puhelinnumero
-            too_long: Puhelinnumero on liian pitkä (enintään 255 merkkiä)
             contains_emojis: Puhelinnumero ei voi sisältää emojeita
             contains_mathematical_symbols: Puhelinnumero ei voi sisältää matemaattisia
               symboleja
             contains_restricted_characters: Puhelinnumero voi sisältää vain kirjaimia,
               numeroita, paikallisia merkkejä ja erikoismerkkejä
+            blank_instructional: Anna puhelinnumero
+            blank_informative: Puhelinnumero puuttuu
+            invalid_instructional: Anna kelvollinen puhelinnumero
+            invalid_informative: Puhelinnumero ei ole kelvollinen
+            too_long_instructional: Puhelinnumero on liian pitkä
+            too_long_informative: Puhelinnumero on liian pitkä
         province:
           label:
             default: Alue
             optional: Alue (valinnainen)
           errors:
-            blank: Valitse alue
-            invalid: Anna kelvollinen alue
-            invalid_for_country: Anna kelvollinen alue maalle %{country}
-            unknown_for_city_and_zip: Anna kelvollinen alue kohteelle %{city}, %{zip}
-            unknown_for_city: Valitse kelvollinen alue kohteelle %{city}
-            unknown_for_zip: Valitse kelvollinen alue kohteelle %{zip}
-            unknown_for_address: Alue voi olla väärä.
+            unknown_for_address: Alue voi olla väärä
+            blank_instructional: Valitse alue
+            blank_informative: Alue puuttuu
+            invalid_instructional: Valitse alue
+            invalid_informative: Alue puuttuu
+            invalid_for_country_instructional: Anna kelvollinen alue maalle %{country}
+            invalid_for_country_informative: Alue ei vastaa kaupunkia %{country}
+            unknown_for_city_and_zip_instructional: Valitse kelvollinen alue kaupungille
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Alue ei vastaa kaupunkia %{city},
+              %{zip}
+            unknown_for_city_informative: Valitse kelvollinen alue postinumerolle
+              %{city}
+            unknown_for_city_instructional: Alue ei vastaa kaupunkia %{city}
+            unknown_for_zip_instructional: Valitse kelvollinen alue postinumerolle
+              %{zip}
+            unknown_for_zip_informative: Alue ei vastaa kaupunkia %{zip}
         zip:
           label:
             default: Postinumero
             optional: Postinumero (valinnainen)
           errors:
-            blank: Anna postinumero
-            blocked_address: Tätä sijaintia ei tueta.
-            invalid_for_country: Anna kelvollinen postinumero maassa %{country}
-            invalid_for_country_and_province: Anna kelvollinen postinumero provinssissa
-              %{province}, %{country}
-            invalid: Anna kelvollinen postinumero
+            blocked_address: Tätä sijaintia ei tueta
             too_long: Postinumero on liian pitkä
-            contains_html_tags: Postinumero ei voi sisältää HTML-tunnisteita.
+            contains_html_tags: Postinumero ei voi sisältää HTML:ää
             contains_emojis: Postinumero ei voi sisältää emojeita
             contains_mathematical_symbols: Postinumero ei voi sisältää matemaattisia
               symboleja
             contains_restricted_characters: Postinumero voi sisältää vain kirjaimia,
               numeroita, paikallisia merkkejä ja erikoismerkkejä
-            not_supported: Emme tällä hetkellä tue tätä maata/aluetta. Anna uusi osoite
-              ja yritä uudelleen.
-            unknown_for_province: Anna kelvollinen postinumero maassa %{province}
-            invalid_for_province: Anna kelvollinen postinumero alueelle %{province}
-            unknown_for_address: Postikoodi voi olla väärä.
-        address:
-          errors:
-            may_not_exist: Osoitetta ei löydy tai sitä ei ole
+            unknown_for_address: Postikoodi voi olla väärä
+            blank_instructional: Anna postinumero
+            blank_informative: Postinumero puuttuu
+            invalid_instructional: Anna kelvollinen postinumero
+            invalid_informative: Postinumero ei ole kelvollinen
+            invalid_for_country_instructional: Anna kelvollinen postinumero provinssille
+              %{country}
+            invalid_for_country_informative: Postinumero ei vastaa provinssia %{country}
+            invalid_for_province_instructional: Anna kelvollinen postinumero provinssille
+              %{province}
+            invalid_for_province_informative: Postinumero ei vastaa provinssia %{province}
+            invalid_for_country_and_province_instructional: Anna kelvollinen postinumero
+              provinssille %{province}, %{country}
+            invalid_for_country_and_province_informative: Postinumero ei vastaa provinssia
+              %{province}, %{country}
+            not_supported_instructional: Postinumeroa ei tueta. Anna uusi osoite ja
+              yritä uudelleen
+            not_supported_informativel: Postinumeroa ei tueta
+            unknown_for_province_instructional: Anna kelvollinen postinumero provinssille
+              %{province}
+            unknown_for_province_informative: Postinumero on virheellinen provinssille
+              %{province}
         street_name:
           label:
             default: Katu
             optional: Katu (valinnainen)
-          errors:
-            blank: Lisää kadun nimi
-            too_long: Katu on liian pitkä (enintään 255 merkkiä)
-            contains_emojis: Katu ei voi sisältää emojeita
-            contains_mathematical_symbols: Katu ei voi sisältää matemaattisia symboleja
-            contains_restricted_characters: Katu voi sisältää vain kirjaimia, numeroita,
-              paikallisia merkkejä ja erikoismerkkejä
-            contains_too_many_words: Katu voi sisältää enintään %{word_count} sanaa
-            contains_html_tags: Katu ei voi sisältää HTML-tunnisteita.
-            contains_url: Katu ei voi sisältää URL-osoitteita.
-            street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi.
-            unknown_for_address: Katu voi olla väärä.
           warnings:
             contains_too_many_words: Katu-kentän pituudeksi suositellaan alle %{word_count}
               sanaa
+          errors:
+            blank_instructional: Anna katu
+            blank_informative: Katu puuttuu
+            too_long_instructional: Katu on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Katu on liian pitkä
+            contains_emojis_instructional: Katu ei voi sisältää emojeita
+            contains_emojis_informative: Katu ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Katu ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Katu ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Katu voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Osoite ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Katu voi sisältää enintään %{word_count}
+              sanaa
+            contains_too_many_words_informational: Katu voi sisältää enintään %{word_count}
+              sanaa
+            contains_html_tags_instructional: Katu ei voi sisältää HTML:ää
+            contains_html_tags_informational: Katu ei voi sisältää HTML:ää
+            contains_url_instructional: Katu ei voi sisältää URL-osoitetta
+            contains_url_informative: Katu ei voi sisältää URL-osoitetta
+            street_unknown_for_zip_instructional: Anna kelvollinen katu postinumerolle
+              %{zip}
+            street_unknown_for_zip_informative: Katu virheellinen postinumerolle %{zip}
+            unknown_for_address_instructional: Katu voi olla väärä
+            unknown_for_address_informative: Katu voi olla väärä
         street_number:
           label:
             default: Rakennuksen numero
             optional: Rakennuksen numero (valinnainen)
-          errors:
-            blank: Lisää rakennuksen numero
-            too_long: Rakennuksen numero on liian pitkä (enintään 255 merkkiä)
-            contains_emojis: Rakennuksen numero ei voi sisältää emojeita
-            contains_mathematical_symbols: Rakennuksen numero ei voi sisältää matemaattisia
-              symboleja
-            contains_restricted_characters: Rakennuksen numero voi sisältää vain kirjaimia,
-              numeroita, paikallisia merkkejä ja erikoismerkkejä
-            contains_html_tags: Rakennuksen numero ei voi sisältää HTML-tunnisteita.
-            contains_url: Rakennuksen numero ei voi sisältää URL-osoitteita.
-            building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
-              %{zip}.
-            unknown_for_address: Rakennuksen numero voi olla väärä.
           warnings:
             contains_too_many_words: Rakennuksen numero -kentän pituudeksi suositellaan
               alle %{word_count} sanaa
+          errors:
+            blank_instructional: Anna rakennuksen numero
+            blank_informative: Rakennuksen numero puuttuu
+            too_long_instructional: Rakennuksen numero on liian pitkä (enintään 255
+              merkkiä)
+            too_long_informative: Rakennuksen numero on liian pitkä
+            contains_emojis_instructional: Rakennuksen numero ei voi sisältää emojeita
+            contains_emojis_informative: Rakennuksen numero ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Rakennuksen numero ei voi
+              sisältää matemaattisia symboleja
+            contains_mathematical_symbols_informative: Rakennuksen numero ei voi sisältää
+              matemaattisia symboleja
+            contains_restricted_characters_instructional: Rakennuksen numero voi sisältää
+              vain kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Rakennuksen numero ei voi
+              sisältää rajoitettuja merkkejä
+            contains_html_tags_instructional: Rakennuksen numero ei voi sisältää HTML:ää
+            contains_html_tags_informative: Rakennuksen numero ei voi sisältää HTML:ää
+            contains_url_instructional: Rakennuksen numero ei voi sisältää URL-osoitteita
+            contains_url_informative: Rakennuksen numero ei voi sisältää URL-osoitteita
+            building_number_invalid_instructional: Rakennuksen numeroa ei löytynyt
+              kadulle %{street}, %{zip}
+            building_number_invalid_informative: Rakennuksen numeroa ei löytynyt kadulle
+              %{street}, %{zip}
+            unknown_for_address_instructional: Anna kelvollinen rakennuksen numero
+            unknown_for_address_informative: Rakennuksen numero ei ole kelvollinen
         neighborhood:
           label:
             default: Asuinalue
@@ -221,14 +339,13 @@ fi:
               symboleja
             contains_restricted_characters: Asuinalue voi sisältää vain kirjaimia,
               numeroita, paikallisia merkkejä ja erikoismerkkejä
-            contains_too_many_words: Asuinalue -kentässä voi olla enintään %{word_count}
+            contains_too_many_words: Asuinalueessa voi olla enintään %{word_count}
               sanaa
-            contains_html_tags: Asuinalue ei voi sisältää HTML-tunnisteita.
-            contains_url: Asuinalue ei voi sisältää URL-osoitteita.
-            unknown_for_city: Anna postinumerolle %{city} kelvollinen asuinalueen
-              nimi.
-            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen asuinalueen nimi.
-            unknown_for_address: Asuinalue voi olla väärä.
+            contains_html_tags: Asuinalue ei voi sisältää HTML:ää
+            contains_url: Asuinalue ei voi sisältää URL-osoitteita
+            unknown_for_city: Anna kaupungille %{city} kelvollinen asuinalueen nimi
+            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen asuinalueen nimi
+            unknown_for_address: Asuinalue voi olla väärä
           warnings:
             contains_too_many_words: Asuinalue-kentän pituudeksi suositellaan alle
               %{word_count} sanaa
@@ -256,3 +373,7 @@ fi:
           warnings:
             contains_too_many_words: Osoiterivin 2 pituudeksi suositellaan alle %{word_count}
               sanaa
+        address:
+          errors:
+            may_not_exist_instructional: Osoitetta ei löydy tai sitä ei ole
+            may_not_exist_informative: Osoitetta ei löydy

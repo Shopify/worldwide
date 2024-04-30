@@ -8,21 +8,41 @@ it:
             default: Circoscrizione
             optional: Circoscrizione (facoltativo)
           errors:
-            blank: Inserisci una circoscrizione
-            too_long: Il nome della circoscrizione è troppo lungo (lunghezza massima
-              255 caratteri)
-            contains_emojis: Il campo Circoscrizione non può contenere emoji
-            contains_mathematical_symbols: Il campo Circoscrizione non può contenere
-              simboli matematici
-            contains_restricted_characters: Il campo Circoscrizione può contenere
-              solo lettere, numeri, caratteri locali e caratteri speciali
-            contains_too_many_words: Il campo Circoscrizione non può superare le %{word_count}
-              parole
-            contains_html_tags: Il campo Circoscrizione non può contenere tag HTML.
-            contains_url: Il campo Circoscrizione non può contenere URL.
-            unknown_for_city: Inserisci un nome di una circoscrizione valido per %{city}.
-            unknown_for_zip: Inserisci un nome di una circoscrizione valido per %{zip}.
-            unknown_for_address: La circoscrizione potrebbe non essere corretta.
+            unknown_for_address: La circoscrizione potrebbe non essere corretta
+            blank_instructional: Inserisci una circoscrizione
+            blank_informative: Circoscrizione mancante
+            too_long_instructional: Il nome della circoscrizione è troppo lungo
+            too_long_informative: Il nome della circoscrizione è troppo lungo (lunghezza
+              massima 255 caratteri)
+            contains_emojis_instructional: Il campo Circoscrizione non può contenere
+              emoji
+            contains_emojis_informative: Il campo Circoscrizione non può contenere
+              emoji
+            contains_mathematical_symbols_instructional: Il campo Circoscrizione non
+              può contenere simboli matematici
+            contains_mathematical_symbols_informative: Il campo Circoscrizione non
+              può contenere simboli matematici
+            contains_restricted_characters_instructional: Il campo Circoscrizione
+              può contenere solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Circoscrizione non
+              può contenere caratteri vietati
+            contains_too_many_words_instructional: Il campo Circoscrizione deve contenere
+              meno di %{word_count} parole
+            contains_too_many_words_informative: Il campo Circoscrizione deve contenere
+              meno di %{word_count} parole
+            contains_html_tags_instructional: Il campo Circoscrizione non può contenere
+              HTML
+            contains_html_tags_informative: Il campo Circoscrizione non può contenere
+              HTML
+            contains_url_instructional: Il campo Circoscrizione non può contenere
+              URL
+            contains_url_informative: Il campo Circoscrizione non può contenere URL
+            unknown_for_city_instructional: Inserisci un nome di una circoscrizione
+              valido per %{city}
+            unknown_for_city_informative: La Circoscrizione non corrisponde a %{city}
+            unknown_for_zip_instructional: Inserisci un nome di una circoscrizione
+              valido per %{zip}
+            unknown_for_zip_informational: La Circoscrizione non corrisponde a %{zip}
           warnings:
             contains_too_many_words: Il campo Circoscrizione deve contenere meno di
               %{word_count} parole

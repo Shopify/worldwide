@@ -8,20 +8,34 @@ cs:
             default: Okres
             optional: Okres (volitelné)
           errors:
-            blank: Zadejte okres.
-            too_long: Název okresu je příliš dlouhý (maximum je 255 znaků).
-            contains_emojis: Název okresu nemůže obsahovat emoji.
-            contains_mathematical_symbols: Název okresu nemůže obsahovat matematické
-              symboly.
-            contains_restricted_characters: Název okresu může obsahovat pouze písmena,
-              číslice, místní znaky a speciální znaky.
-            contains_too_many_words: 'Název okresu nemůže obsahovat více než tento
-              počet slov: %{word_count}.'
-            contains_html_tags: Název okresu nemůže obsahovat HTML tagy.
-            contains_url: Název okresu nemůže obsahovat adresy URL.
-            unknown_for_city: 'Zadejte platný název okresu pro: %{city}.'
-            unknown_for_zip: 'Zadejte platný název okresu pro: %{zip}.'
             unknown_for_address: Okres může být nesprávný.
+            blank_instructional: Zadejte okres.
+            blank_informative: Název okresu chybí.
+            too_long_instructional: Název okresu je příliš dlouhý (maximum je 255
+              znaků).
+            too_long_informative: Název okresu je příliš dlouhý.
+            contains_emojis_instructional: Název okresu nemůže obsahovat emoji.
+            contains_emojis_informative: Název okresu nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: Název okresu nemůže obsahovat
+              matematické symboly.
+            contains_mathematical_symbols_informative: Název okresu nemůže obsahovat
+              matematické symboly.
+            contains_restricted_characters_instructional: Název okresu může obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Název okresu nemůže obsahovat
+              zakázané znaky.
+            contains_too_many_words_instructional: 'Název okresu musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_too_many_words_informative: 'Název okresu musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_html_tags_instructional: Název okresu nemůže obsahovat HTML.
+            contains_html_tags_informative: Název okresu nemůže obsahovat HTML.
+            contains_url_instructional: Název okresu nemůže obsahovat adresu URL.
+            contains_url_informative: Název okresu nemůže obsahovat adresu URL.
+            unknown_for_city_instructional: 'Zadejte platný název okresu pro: %{city}.'
+            unknown_for_city_informative: 'Okres není platný pro: %{city}.'
+            unknown_for_zip_instructional: 'Zadejte platný název okresu pro: %{zip}.'
+            unknown_for_zip_informative: 'Okres není platný pro: %{zip}.'
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název okresu obsahoval méně
               než tento počet slov: %{word_count}.'

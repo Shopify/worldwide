@@ -8,9 +8,16 @@ hu:
             default: Tartomány
             optional: Tartomány (nem kötelező megadni)
           errors:
-            blank: Válassz tartományt
-            unknown_for_city_and_zip: 'Az ennek megfelelő megyét/tartományt válaszd
-              ki: %{city}, %{zip}'
-            unknown_for_city: 'Az ennek megfelelő megyét/tartományt válaszd ki: %{city}'
-            unknown_for_zip: 'Az ennek megfelelő megyét/tartományt válaszd ki: %{zip}'
-            unknown_for_address: Vélhetően helytelen a tartománynév.
+            unknown_for_address: Vélhetően helytelen a tartománynév
+            blank_instructional: Válassz tartományt
+            blank_informative: A tartomány nincs megadva
+            unknown_for_city_and_zip_instructional: 'Az ennek megfelelő tartományt
+              válaszd ki: %{city}, %{zip}'
+            unknown_for_city_and_zip_informative: 'A tartomány nem felel meg ennek:
+              %{city}, %{zip}'
+            unknown_for_city_instructional: 'Az ennek megfelelő tartományt válaszd
+              ki: %{city}'
+            unknown_for_city_informative: 'A tartomány nem felel meg ennek: %{city}'
+            unknown_for_zip_instructional: 'Az ennek megfelelő tartományt válaszd
+              ki: %{zip}'
+            unknown_for_zip_informative: 'A tartomány nem felel meg ennek: %{zip}'

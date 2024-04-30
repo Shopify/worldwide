@@ -8,30 +8,46 @@ bg:
             default: Предградие
             optional: Предградие (незадължително)
           errors:
-            blank: Въведете предградие
-            too_long: Името на предградието е с твърде голяма дължина (максимумът
-              е 255 знака)
-            contains_html_tags: Името на предградието не може да съдържа HTML етикети.
-            contains_emojis: "„Предградие“ не може да съдържа емоджита"
-            contains_restricted_characters: "„Предградие“ може да съдържа само букви,
-              цифри, местни знаци и специални знаци"
+            blank_instructional: Въведете предградие
+            blank_informative: Липсва предградие
+            too_long_instructional: "„Предградие“ е с твърде голяма дължина (максимумът
+              е 255 знака)"
+            too_long_informative: "„Предградие“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Предградие“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Предградие“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„Предградие“ може да съдържа
+              само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Предградие“ не може да съдържа
+              забранени знаци"
+            contains_html_tags_instructional: "„Предградие“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Предградие“ не може да съдържа HTML"
         province:
           label:
             default: Щат/територия
             optional: Щат/територия (незадължително)
           errors:
-            blank: Изберете щат/територия
+            blank_instructional: Изберете щат/територия
+            blank_informative: Липсва щат/територия
         zip:
           label:
             default: Пощенски код
             optional: Пощенски код (незадължително)
           errors:
-            blank: Въведете пощенски код
-            invalid_for_country: Въведете валиден пощенски код за %{country}
-            invalid_for_country_and_province: Въведете валиден пощенски код за %{province},
-              %{country}
-            too_long: Пощенският код е с твърде голяма дължина
-            contains_html_tags: Пощенският код не може да съдържа HTML етикети.
-            contains_emojis: Пощенският код не може да съдържа емоджита
-            contains_restricted_characters: "„Пощенски код“ може да съдържа само букви,
-              цифри, местни знаци и специални знаци"
+            blank_instructional: Въведете пощенски код
+            blank_informative: Липсва пощенски код
+            invalid_for_country_instructional: Въведете валиден пощенски код за %{country}
+            invalid_for_country_informative: Пощенският код не е валиден за %{country}
+            invalid_for_country_and_province_instructional: Въведете валиден пощенски
+              код за %{province}, %{country}
+            invalid_for_country_and_province_informative: Пощенският код не е валиден
+              за %{province}, %{country}
+            too_long_instructional: "„Пощенски код“ е с твърде голяма дължина"
+            too_long_informative: "„Пощенски код“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Пощенски код“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Пощенски код“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„Пощенски код“ може да
+              съдържа само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Пощенски код“ не може да
+              съдържа забранени знаци"
+            contains_html_tags_instructional: "„Пощенски код“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Пощенски код“ не може да съдържа HTML"

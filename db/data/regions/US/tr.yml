@@ -8,25 +8,46 @@ tr:
             default: Eyalet
             optional: Eyalet (isteğe bağlı)
           errors:
-            blank: Eyalet seçin
-            invalid_for_country: Geçerli bir %{country} eyaleti girin
-            unknown_for_city_and_zip: "%{city}, %{zip} için geçerli bir eyalet girin"
-            unknown_for_city: "%{city} için geçerli bir eyalet seçin"
-            unknown_for_zip: "%{zip} için geçerli bir eyalet seçin"
-            unknown_for_address: Eyalet yanlış olabilir.
+            unknown_for_address: Eyalet yanlış olabilir
+            blank_instructional: Eyalet seçin
+            blank_informative: Eyalet girin
+            invalid_for_country_instructional: "%{city}, %{zip} için geçerli bir eyalet
+              girin"
+            invalid_for_country_informative: Eyalet geçerli değil
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} için geçerli
+              bir eyalet girin"
+            unknown_for_city_and_zip_informative: Eyalet %{city}, %{zip} için geçerli
+              değil
+            unknown_for_city_instructional: "%{city} için geçerli bir eyalet seçin"
+            unknown_for_city_informative: Eyalet %{city} için geçerli değil
+            unknown_for_zip_instructional: "%{zip} için geçerli bir eyalet seçin"
+            unknown_for_zip_informative: Eyalet %{zip} için geçerli değil
         zip:
           label:
             default: Posta kodu
             optional: Posta kodu (isteğe bağlı)
           errors:
-            blank: Posta kodu girin
-            invalid_for_country: Geçerli bir %{country} posta kodu girin
-            invalid_for_country_and_province: "%{province}, %{country} için geçerli
-              bir posta kodu girin"
-            too_long: Posta kodu değeri çok uzun
-            contains_html_tags: ZIP kodu değeri, HTML etiketleri içeremez.
-            contains_emojis: Posta kodu, emoji içeremez
-            contains_restricted_characters: Posta kodunda kısıtlanmış karakterler
-              kullanılamaz
-            invalid_for_province: "%{province} için geçerli bir posta kodu girin"
-            unknown_for_address: Posta kodu yanlış olabilir.
+            unknown_for_address: Posta kodu yanlış olabilir
+            blank_instructional: Posta kodu girin
+            blank_informative: Posta kodu eksik
+            invalid_for_country_instructional: "%{country} için geçerli bir posta
+              kodu girin"
+            invalid_for_country_informative: Posta kodu %{country} için geçerli değil
+            invalid_for_province_instructional: "%{province} için geçerli bir posta
+              kodu girin"
+            invalid_for_province_informative: Posta kodu %{province} için geçerli
+              değil
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              için geçerli bir posta kodu girin"
+            invalid_for_country_and_province_informative: Posta kodu %{province},
+              %{country} için geçerli değil
+            too_long_instructional: Posta kodu çok uzun
+            too_long_informative: Posta kodu çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis_instructional: Posta kodu emoji içeremez
+            contains_emojis_informative: Posta kodu emoji içeremez
+            contains_restricted_characters_instructional: Posta kodu, kısıtlanmış
+              karakterler içeremez
+            contains_restricted_characters_informative: Posta kodu, kısıtlanmış karakterler
+              içeremez
+            contains_html_tags_instructional: Posta kodu HTML içeremez
+            contains_html_tags_informative: Posta kodu HTML içeremez

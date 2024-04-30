@@ -8,8 +8,13 @@ lt:
             default: Provincija
             optional: Provincija (pasirinktinai)
           errors:
-            blank: Pasirinkite provinciją
-            unknown_for_city_and_zip: Įveskite tinkamą %{city}, %{zip}, provinciją
-            unknown_for_city: Pasirinkite tinkamą %{city} provinciją
-            unknown_for_zip: Pasirinkite tinkamą %{zip} provinciją
-            unknown_for_address: Provincija gali būti neteisinga.
+            unknown_for_address: Provincija gali būti neteisinga
+            blank_instructional: Pasirinkite provinciją
+            blank_informative: Trūksta provincijos
+            unknown_for_city_and_zip_instructional: Įveskite tinkamą %{city}, %{zip},
+              provinciją
+            unknown_for_city_and_zip_informative: "%{city}, %{zip} provincija neteisinga"
+            unknown_for_city_instructional: Pasirinkite tinkamą %{city} provinciją
+            unknown_for_city_informative: "%{city} provincija neteisinga"
+            unknown_for_zip_instructional: Pasirinkite tinkamą %{zip} provinciją
+            unknown_for_zip_informative: "%{zip} provincija neteisinga"

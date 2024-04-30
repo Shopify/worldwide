@@ -8,19 +8,35 @@ fr:
             default: District
             optional: District (facultatif)
           errors:
-            blank: Saisir un district
-            too_long: Le district est trop long (le maximum est de 255 caractères)
-            contains_emojis: Le district ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le district ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: Le district ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_too_many_words: Le district ne doit pas comporter plus de %{word_count} mots
-            contains_html_tags: Le district ne peut pas contenir de balises HTML.
-            contains_url: Le district ne peut pas contenir d’URL.
-            unknown_for_city: Saisir un nom de district valide pour %{city}.
-            unknown_for_zip: Saisir un nom de district valide pour %{zip}.
-            unknown_for_address: Le district peut être erroné.
+            unknown_for_address: Le district peut être erroné
+            blank_instructional: Saisir un district
+            blank_informative: Le district est manquant
+            too_long_instructional: Le district est trop long (le maximum est de 255 caractères)
+            too_long_informative: Le district est trop long
+            contains_emojis_instructional: Le district ne peut pas contenir d’emojis
+            contains_emojis_informative: Le district ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le district ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: Le district ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: Le district ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le district ne peut pas contenir
+              de caractères non autorisés
+            contains_too_many_words_instructional: Le district doit comporter moins
+              de %{word_count} mots
+            contains_too_many_words_informative: Le district doit comporter moins
+              de %{word_count} mots
+            contains_html_tags_instructional: Le district ne peut pas contenir de
+              HTML
+            contains_html_tags_informative: Le district ne peut pas contenir de HTML
+            contains_url_instructional: Le district ne peut pas contenir d’URL
+            contains_url_informative: Le district ne peut pas contenir d’URL
+            unknown_for_city_instructional: Saisir un district valide pour %{city}
+            unknown_for_city_informative: Le district n'est pas valide pour %{city}
+            unknown_for_zip_instructional: Saisir un district valide pour %{zip}
+            unknown_for_zip_informative: Le district n'est pas valide pour %{zip}
           warnings:
             contains_too_many_words: Il est conseillé que le district comporte moins
               de %{word_count} mots

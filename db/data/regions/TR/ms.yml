@@ -8,19 +8,33 @@ ms:
             default: Daerah
             optional: Daerah (opsyenal)
           errors:
-            blank: Masukkan daerah
-            too_long: Daerah terlalu panjang (maksimum ialah 255 aksara)
-            contains_emojis: Daerah tidak boleh mengandungi emoji
-            contains_mathematical_symbols: Daerah tidak boleh mengandungi simbol matematik
-            contains_restricted_characters: Daerah hanya boleh mengandungi huruf,
-              nombor, aksara tempatan dan aksara khas
-            contains_too_many_words: Daerah tidak boleh mengandungi lebih daripada
+            unknown_for_address: Daerah mungkin salah
+            blank_instructional: Masukkan daerah
+            blank_informative: Daerah tiada
+            too_long_instructional: Daerah terlalu panjang (maksimum ialah 255 aksara)
+            too_long_informative: Daerah terlalu panjang
+            contains_emojis_instructional: Daerah tidak boleh mengandungi emoji
+            contains_emojis_informative: Daerah tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Daerah tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Daerah tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Daerah hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Daerah tidak boleh mengandungi
+              aksara terhad
+            contains_too_many_words_instructional: Daerah mesti mengandungi kurang
+              daripada %{word_count} perkataan
+            contains_too_many_words_informative: Daerah mesti mengandungi kurang daripada
               %{word_count} perkataan
-            contains_html_tags: Daerah tidak boleh mengandungi tag HTML.
-            contains_url: Daerah tidak boleh mengandungi URL
-            unknown_for_city: Masukkan nama daerah yang sah untuk %{city}.
-            unknown_for_zip: Masukkan nama daerah yang sah untuk %{zip}.
-            unknown_for_address: Daerah mungkin salah.
+            contains_html_tags_instructional: Daerah tidak boleh mengandungi HTML
+            contains_html_tags_informative: Daerah tidak boleh mengandungi HTML
+            contains_url_instructional: Daerah tidak boleh mengandungi URL
+            contains_url_informative: Daerah tidak boleh mengandungi URL
+            unknown_for_city_instructional: Masukkan daerah yang sah untuk %{city}
+            unknown_for_city_informative: Daerah tidak sah untuk %{city}
+            unknown_for_zip_instructional: Masukkan daerah yang sah untuk %{zip}
+            unknown_for_zip_informative: Daerah tidak sah untuk %{zip}
           warnings:
             contains_too_many_words: Daerah disyorkan untuk mengandungi kurang daripada
               %{word_count} perkataan

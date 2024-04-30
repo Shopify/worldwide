@@ -8,24 +8,44 @@ nl:
             default: Staat
             optional: Staat (optioneel)
           errors:
-            blank: Selecteer een staat
-            invalid_for_country: Voer een geldige staat van %{country} in
-            unknown_for_city_and_zip: Voer een geldige staat in voor %{city}, %{zip}.
-            unknown_for_city: Selecteer een geldige staat voor %{city}.
-            unknown_for_zip: Selecteer een geldige staat voor %{zip}.
-            unknown_for_address: De staat klopt misschien niet.
+            unknown_for_address: De staat klopt misschien niet
+            blank_instructional: Selecteer een staat
+            blank_informative: Voer een staat in
+            invalid_for_country_instructional: Voer een geldige staat in voor %{city},
+              %{zip}
+            invalid_for_country_informative: Staat is niet geldig
+            unknown_for_city_and_zip_instructional: Voer een geldige staat in voor
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Staat is niet geldig voor %{city},
+              %{zip}
+            unknown_for_city_instructional: Selecteer een geldige staat voor %{city}
+            unknown_for_city_informative: Staat is niet geldig voor %{city}
+            unknown_for_zip_instructional: Selecteer een geldige staat voor %{zip}
+            unknown_for_zip_informative: Staat is niet geldig voor %{zip}
         zip:
           label:
             default: Postcode
             optional: Postcode (optioneel)
           errors:
-            blank: Voer een postcode in
-            invalid_for_country: Voer een geldige postcode in voor %{country}
-            invalid_for_country_and_province: Voer een geldige postcode in voor %{province},
-              %{country}
-            too_long: De waarde van de postcode is te lang
-            contains_html_tags: De postcode mag geen HTML-tags bevatten.
-            contains_emojis: De postcode mag geen emoji's bevatten
-            contains_restricted_characters: De postcode mag geen verboden tekens bevatten
-            invalid_for_province: Voer een geldige ZIP-code in voor %{province}.
-            unknown_for_address: De postcode klopt misschien niet.
+            unknown_for_address: De postcode klopt misschien niet
+            blank_instructional: Voer een postcode in
+            blank_informative: Postcode ontbreekt
+            invalid_for_country_instructional: Voer een geldige postcode in voor %{country}
+            invalid_for_country_informative: Postcode is niet geldig voor %{country}
+            invalid_for_province_instructional: Voer een geldige postcode in voor
+              %{province}
+            invalid_for_province_informative: Postcode is niet geldig voor %{province}
+            invalid_for_country_and_province_instructional: Voer een geldige postcode
+              in voor %{province}, %{country}
+            invalid_for_country_and_province_informative: Postcode is niet geldig
+              voor %{province}, %{country}
+            too_long_instructional: Postcode is te lang
+            too_long_informative: Postcode is te lang (het maximum is 255 tekens)
+            contains_emojis_instructional: Postcode mag geen emoji's bevatten
+            contains_emojis_informative: Postcode mag geen emoji's bevatten
+            contains_restricted_characters_instructional: Postcode mag geen verboden
+              tekens bevatten
+            contains_restricted_characters_informative: Postcode mag geen verboden
+              tekens bevatten
+            contains_html_tags_instructional: Postcode mag geen HTML bevatten
+            contains_html_tags_informative: Postcode mag geen HTML bevatten

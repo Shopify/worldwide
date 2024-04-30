@@ -8,29 +8,52 @@ fr:
             default: Banlieue
             optional: Banlieue (optional)
           errors:
-            blank: Saisir une banlieue
-            contains_html_tags: Le quartier ne peut pas contenir de balises HTML.
-            too_long: Le nom de la ville est trop long (255 caractères maximum).
-            contains_emojis: La banlieue/le quartier ne peut pas contenir d’emojis
-            contains_restricted_characters: La banlieue ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
+            blank_instructional: Saisir une banlieue
+            blank_informative: La banlieue est manquante
+            too_long_instructional: La banlieue est trop longue (le maximum est de
+              255 caractères)
+            too_long_informative: La banlieue est trop longue
+            contains_emojis_instructional: La banlieue ne peut pas contenir d’emojis
+            contains_emojis_informative: La banlieue ne peut pas contenir d’emojis
+            contains_restricted_characters_instructional: La banlieue ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: La banlieue ne peut pas contenir
+              de caractères non autorisés
+            contains_html_tags_instructional: La banlieue ne peut pas contenir de
+              HTML
+            contains_html_tags_informative: La banlieue ne peut pas contenir de HTML
         province:
           label:
             default: État/territoire
             optional: État/territoire (facultatif)
           errors:
-            blank: Sélectionner un État/territoire
+            blank_instructional: Sélectionner un État/territoire
+            blank_informative: L’État/le territoire est manquant
         zip:
           label:
             default: Code postal
             optional: Code postal (facultatif)
           errors:
-            blank: Saisir un code postal
-            invalid_for_country: Saisir un code postal valide pour %{country}
-            invalid_for_country_and_province: Saisir un code postal valide pour %{province},
+            blank_instructional: Saisir un code postal
+            blank_informative: Le code postal est manquant
+            invalid_for_country_instructional: Saisir un code postal valide pour %{country}
+            invalid_for_country_informative: Le code postal n'est pas valide pour
               %{country}
-            contains_html_tags: Le code postal ne peut pas contenir de balises HTML.
-            too_long: La valeur du code postal est trop longue.
-            contains_emojis: Le code postal ne peut pas contenir d’emojis
-            contains_restricted_characters: Le code postal ne peut contenir que des
-              lettres, des chiffres, des caractères locaux et des caractères spéciaux
+            invalid_for_country_and_province_instructional: Saisir un code postal
+              valide pour %{province}, %{country}
+            invalid_for_country_and_province_informative: Le code postal n'est pas
+              valide pour %{province}, %{country}
+            too_long_instructional: Le code postal est trop long
+            too_long_informative: Le code postal est trop long
+            contains_emojis_instructional: Le code postal ne peut pas contenir d’emojis
+            contains_emojis_informative: Le code postal ne peut pas contenir d’emojis
+            contains_restricted_characters_instructional: Le code postal ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le code postal ne peut pas
+              contenir de caractères non autorisés
+            contains_html_tags_instructional: Le code postal ne peut pas contenir
+              de HTML
+            contains_html_tags_informative: Le code postal ne peut pas contenir de
+              HTML

@@ -8,18 +8,27 @@ en:
             default: District
             optional: District (optional)
           errors:
-            blank: Enter a district
-            too_long: District is too long (maximum is %{limit} characters)
-            contains_emojis: District cannot contain emojis
-            contains_mathematical_symbols: District cannot contain mathematical symbols
-            contains_restricted_characters: District can only contain letters, numbers,
-              local characters, and special characters
-            contains_too_many_words: District cannot have more than %{word_count}
-              words
-            contains_html_tags: District cannot contain HTML tags.
-            contains_url: District cannot contain URLs.
-            unknown_for_city: Enter a valid district name for %{city}.
-            unknown_for_zip: Enter a valid district name for %{zip}.
-            unknown_for_address: District may be incorrect.
+            blank_instructional: Enter a district
+            blank_informative: District is missing
+            too_long_instructional: District is too long (maximum is 255 characters)
+            too_long_informative: District is too long
+            contains_emojis_instructional: District can't contain emojis
+            contains_emojis_informative:  District can't contain emojis
+            contains_mathematical_symbols_instructional: District can't contain mathematical symbols
+            contains_mathematical_symbols_informative: District can't contain mathematical symbols
+            contains_restricted_characters_instructional: District can only contain letters, numbers, local characters,
+              and special characters
+            contains_restricted_characters_informative: District can't contain restricted characters
+            contains_too_many_words_instructional: District must have fewer than %{word_count} words
+            contains_too_many_words_informative: District must have fewer than %{word_count} words
+            contains_html_tags_instructional: District can't contain HTML
+            contains_html_tags_informative: District can't contain HTML
+            contains_url_instructional: District can't contain a URL
+            contains_url_informative: District can't contain a URL
+            unknown_for_city_instructional: Enter a valid district for %{city}
+            unknown_for_city_informative: District isn't valid for %{city}
+            unknown_for_zip_instructional: Enter a valid district for %{zip}
+            unknown_for_zip_informative: District isn't valid for %{zip}
+            unknown_for_address: District may be incorrect
           warnings:
             contains_too_many_words: District is recommended to have less than %{word_count} words

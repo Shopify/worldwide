@@ -8,14 +8,20 @@ hr:
             default: Savezna država / teritorij
             optional: Savezna država / teritorij (neobavezno)
           errors:
-            blank: Odaberi državu/teritorij
+            blank_instructional: Odaberite saveznu državu/teritorij
+            blank_informative: Nedostaje savezna država/teritorij
         zip:
           label:
             default: Poštanski broj
             optional: Poštanski broj (neobavezno)
           errors:
-            too_long: Poštanski broj je predugačak
-            contains_html_tags: Poštanski broj ne smije sadržavati HTML oznake.
-            contains_emojis: Poštanski broj ne smije sadržavati emotikone
-            contains_restricted_characters: Poštanski broj ne smije sadržavati zabranjene
-              znakove
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
+            contains_emojis_instructional: Poštanski broj ne smije sadržavati emotikone
+            contains_emojis_informative: Poštanski broj ne smije sadržavati emotikone
+            contains_restricted_characters_instructional: Poštanski broj ne smije
+              sadržavati zabranjene znakove
+            contains_restricted_characters_informative: Poštanski broj ne smije sadržavati
+              zabranjene znakove
+            contains_html_tags_instructional: Poštanski broj ne smije sadržavati HTML
+            contains_html_tags_informative: Poštanski broj ne smije sadržavati HTML

@@ -8,9 +8,18 @@ ro:
             default: Provincie
             optional: Provincie (opțional)
           errors:
-            blank: Selectează o provincie
-            unknown_for_city_and_zip: Introdu o provincie validă pentru %{city}, %{zip}
-            unknown_for_city: Selectează o provincie validă pentru %{city}
-            unknown_for_zip: Selectează o provincie validă pentru %{zip}
-            unknown_for_address: Este posibil ca valoarea din câmpul Provincie să
-              fie incorectă.
+            unknown_for_address: Denumirea provinciei este posibil să fie incorectă
+            blank_instructional: Selectează o denumire de provincie
+            blank_informative: Denumirea provinciei lipsește
+            unknown_for_city_and_zip_instructional: Introdu o denumire de provincie
+              validă pentru %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Denumirea provinciei nu este validă
+              pentru %{city}, %{zip}
+            unknown_for_city_instructional: Selectează o denumire de provincie validă
+              pentru %{city}
+            unknown_for_city_informative: Denumirea provinciei nu este validă pentru
+              %{city}
+            unknown_for_zip_instructional: Selectează o denumire de provincie validă
+              pentru %{zip}
+            unknown_for_zip_informative: Denumirea provinciei nu este validă pentru
+              %{zip}

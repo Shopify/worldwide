@@ -8,25 +8,42 @@ bg:
             default: Щат
             optional: Щат (незадължително)
           errors:
-            blank: Изберете щат
-            invalid_for_country: Въведете валиден щат в %{country}
-            unknown_for_city_and_zip: Въведете валиден щат за %{city}, %{zip}
-            unknown_for_city: Изберете валиден щат за %{city}
-            unknown_for_zip: Изберете валиден щат за %{zip}
-            unknown_for_address: Възможно е щатът да е неправилен.
+            unknown_for_address: Възможно е щатът да е неправилен
+            blank_instructional: Изберете щат
+            blank_informative: Въведете щат
+            invalid_for_country_instructional: Въведете валиден щат за %{city}, %{zip}
+            invalid_for_country_informative: Щатът не е валиден
+            unknown_for_city_and_zip_instructional: Въведете валиден щат за %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Щатът не е валиден за %{city}, %{zip}
+            unknown_for_city_instructional: Изберете валиден щат за %{city}
+            unknown_for_city_informative: Щатът не е валиден за %{city}
+            unknown_for_zip_instructional: Изберете валиден щат за %{zip}
+            unknown_for_zip_informative: Щатът не е валиден за %{zip}
         zip:
           label:
             default: Пощенски код
             optional: Пощенски код (незадължително)
           errors:
-            blank: Въведете ZIP код
-            invalid_for_country: Въведете валиден ZIP код за %{country}
-            invalid_for_country_and_province: Въведете валиден ZIP код за %{province},
-              %{country}
-            too_long: ZIP кодът е с твърде голяма дължина
-            contains_html_tags: ZIP кодът не може да съдържа HTML етикети.
-            contains_emojis: Пощенският код не може да съдържа емоджита
-            contains_restricted_characters: ZIP кодът не може да съдържа забранени
-              знаци
-            invalid_for_province: Въведете валиден ZIP код за %{province}
-            unknown_for_address: Възможно е пощенският код да е неправилен.
+            unknown_for_address: Възможно е ZIP кодът да е неправилен.
+            blank_instructional: Въведете ZIP код
+            blank_informative: Липсва ZIP код
+            invalid_for_country_instructional: Въведете валиден ZIP код за %{country}
+            invalid_for_country_informative: ZIP кодът не е валиден за %{country}
+            invalid_for_province_instructional: Въведете валиден ZIP код за %{province}
+            invalid_for_province_informative: ZIP кодът не е валиден за %{province}
+            invalid_for_country_and_province_instructional: Въведете валиден ZIP код
+              за %{province}, %{country}
+            invalid_for_country_and_province_informative: ZIP кодът не е валиден за
+              %{province}, %{country}
+            too_long_instructional: "„ZIP код“ е с твърде голяма дължина"
+            too_long_informative: "„ZIP код“ е с твърде голяма дължина (максимумът
+              е 255 знака)"
+            contains_emojis_instructional: "„ZIP код“ не може да съдържа емоджита"
+            contains_emojis_informative: "„ZIP код“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„ZIP код“ не може да съдържа
+              забранени знаци"
+            contains_restricted_characters_informative: "„ZIP код“ не може да съдържа
+              забранени знаци"
+            contains_html_tags_instructional: "„ZIP код“ не може да съдържа HTML"
+            contains_html_tags_informative: "„ZIP код“ не може да съдържа HTML"

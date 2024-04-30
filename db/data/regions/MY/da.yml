@@ -8,14 +8,20 @@ da:
             default: Delstat/territorium
             optional: Delstat/territorium (valgfrit)
           errors:
-            blank: Vælg stat/territorium
+            blank_instructional: Vælg stat/territorium
+            blank_informative: Stat/territorium mangler
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfrit)
           errors:
-            too_long: Postnummerværdien er for lang
-            contains_html_tags: Postnummeret må ikke indeholde HTML-tags.
-            contains_emojis: Postnummeret må ikke indeholde emojis
-            contains_restricted_characters: Postnummeret må ikke indeholde begrænsede
-              tegn
+            too_long_instructional: Postnummeret er for langt
+            too_long_informative: Postnummer er for lang
+            contains_emojis_instructional: Postnummer må ikke indeholde emojis
+            contains_emojis_informative: Postnummer må ikke indeholde emojis
+            contains_restricted_characters_instructional: Postnummer må ikke indeholde
+              begrænsede tegn
+            contains_restricted_characters_informative: Postnummeret må ikke indeholde
+              begrænsede tegn
+            contains_html_tags_instructional: Postnummer må ikke indeholde HTML
+            contains_html_tags_informative: Postnummer må ikke indeholde HTML

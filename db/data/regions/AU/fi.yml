@@ -8,29 +8,47 @@ fi:
             default: Kaupunginosa
             optional: Kaupunginosa (valinnainen)
           errors:
-            blank: Anna esikaupunkialue
-            too_long: Esikaupungin nimi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Kaupunginosa ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Esikaupunki ei voi sisältää emojeita
-            contains_restricted_characters: Kaupunginosa voi sisältää vain kirjaimia,
-              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            blank_instructional: Anna esikaupunki
+            blank_informative: Esikaupunki puuttuu
+            too_long_instructional: Esikaupunki on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Esikaupunki on liian pitkä
+            contains_emojis_instructional: Esikaupunki ei voi sisältää emojeita
+            contains_emojis_informative: Esikaupunki ei voi sisältää emojeita
+            contains_restricted_characters_instructional: Esikaupunki voi sisältää
+              vain kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Esikaupunki ei voi sisältää
+              rajoitettuja merkkejä
+            contains_html_tags_instructional: Esikaupunki ei voi sisältää HTML:ää
+            contains_html_tags_informative: Esikaupunki ei voi sisältää HTML:ää
         province:
           label:
             default: Osavaltio/territorio
             optional: Osavaltio/territorio (valinnainen)
           errors:
-            blank: Valitse osavaltio/territorio
+            blank_instructional: Valitse osavaltio/territorio
+            blank_informative: Osavaltio/territorio puuttuu
         zip:
           label:
             default: Postinumero
             optional: Postinumero (valinnainen)
           errors:
-            blank: Anna postinumero
-            invalid_for_country: Anna kelvollinen postinumero maassa %{country}
-            invalid_for_country_and_province: Anna kelvollinen postinumero provinssissa
-              %{province}, %{country}
-            too_long: Postinumeron arvo on liian pitkä
-            contains_html_tags: Postinumero ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Postinumero ei voi sisältää emojeita
-            contains_restricted_characters: Postinumero voi sisältää vain kirjaimia,
-              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            blank_instructional: Anna postinumero
+            blank_informative: Postinumero puuttuu
+            invalid_for_country_instructional: Anna kelvollinen postinumero maalle
+              %{country}
+            invalid_for_country_informative: Puhelinnumero ei ole kelvollinen maalle
+              %{country}
+            invalid_for_country_and_province_instructional: Anna kelvollinen postinumero
+              provinssille %{province}, %{country}
+            invalid_for_country_and_province_informative: Postinumero ei ole kelvollinen
+              provinssille %{province}, %{country}
+            too_long_instructional: Postinumero on liian pitkä
+            too_long_informative: Postinumero on liian pitkä
+            contains_emojis_instructional: Postinumero ei voi sisältää emojeita
+            contains_emojis_informative: Postinumero ei voi sisältää emojeita
+            contains_restricted_characters_instructional: Postinumero voi sisältää
+              vain kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Postinumero ei voi sisältää
+              rajoitettuja merkkejä
+            contains_html_tags_instructional: Postinumero ei voi sisältää HTML:ää
+            contains_html_tags_informative: Postinumero ei voi sisältää HTML:ää

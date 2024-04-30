@@ -8,29 +8,46 @@ cs:
             default: Předměstí
             optional: Předměstí (volitelné)
           errors:
-            blank: Zadejte předměstí
-            too_long: Název předměstí je příliš dlouhý (maximum je 255 znaků)
-            contains_html_tags: Předměstí nemůže obsahovat HTML tagy.
-            contains_emojis: Název předměstí nemůže obsahovat emoji
-            contains_restricted_characters: Předměstí může obsahovat pouze písmena,
-              číslice, místní znaky a speciální znaky
+            blank_instructional: Zadejte předměstí.
+            blank_informative: Předměstí chybí.
+            too_long_instructional: Název předměstí je příliš dlouhý (maximum je 255
+              znaků).
+            too_long_informative: Název předměstí je příliš dlouhý.
+            contains_emojis_instructional: Název předměstí nemůže obsahovat emoji.
+            contains_emojis_informative: Název předměstí nemůže obsahovat emoji.
+            contains_restricted_characters_instructional: Název předměstí může obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Název předměstí nemůže obsahovat
+              zakázané znaky.
+            contains_html_tags_instructional: Název předměstí nemůže obsahovat HTML.
+            contains_html_tags_informative: Název předměstí nemůže obsahovat HTML.
         province:
           label:
             default: Stát/teritorium
             optional: Stát/teritorium (volitelné)
           errors:
-            blank: Vyberte stát/teritorium
+            blank_instructional: Vyberte stát/teritorium.
+            blank_informative: Stát/teritorium chybí.
         zip:
           label:
             default: PSČ
             optional: PSČ (volitelné)
           errors:
-            blank: Zadejte PSČ
-            invalid_for_country: Zadejte platné PSČ pro zemi %{country}
-            invalid_for_country_and_province: 'Zadejte platné PSČ pro: %{province},
-              %{country}'
-            too_long: Hodnota PSČ je příliš dlouhá
-            contains_html_tags: PSČ nemůže obsahovat HTML tagy.
-            contains_emojis: PSČ nemůže obsahovat emoji
-            contains_restricted_characters: PSČ může obsahovat pouze písmena, číslice,
-              místní znaky a speciální znaky
+            blank_instructional: Zadejte PSČ.
+            blank_informative: PSČ chybí.
+            invalid_for_country_instructional: Zadejte platné PSČ pro zemi %{country}.
+            invalid_for_country_informative: 'PSČ není platné pro: %{country}.'
+            invalid_for_country_and_province_instructional: 'Zadejte platné PSČ pro:
+              %{province}, %{country}.'
+            invalid_for_country_and_province_informative: 'PSČ není platné pro: %{province},
+              %{country}.'
+            too_long_instructional: PSČ je příliš dlouhé.
+            too_long_informative: PSČ je příliš dlouhé.
+            contains_emojis_instructional: PSČ nemůže obsahovat emoji.
+            contains_emojis_informative: PSČ nemůže obsahovat emoji.
+            contains_restricted_characters_instructional: PSČ může obsahovat pouze
+              písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: PSČ nemůže obsahovat zakázané
+              znaky.
+            contains_html_tags_instructional: PSČ nemůže obsahovat HTML.
+            contains_html_tags_informative: PSČ nemůže obsahovat HTML.

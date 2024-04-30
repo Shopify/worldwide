@@ -8,20 +8,33 @@ nb:
             default: Bydel
             optional: Bydel (valgfritt)
           errors:
-            blank: Angi en bydel
-            too_long: Bydelsnavnet er for langt (maksimalt 255 tegn)
-            contains_emojis: Bydelsnavnet kan ikke inneholde emojier
-            contains_mathematical_symbols: Bydelsnavnet kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Bydelsnavnet kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Bydelsnavnet kan ikke inneholde mer enn %{word_count}
-              ord
-            contains_html_tags: Bydelsnavnet kan ikke inneholde HTML-tagger.
-            contains_url: Bydelsnavnet kan ikke inneholde URL-adresser.
-            unknown_for_city: Angi et gyldig bydelsnavn for %{city}.
-            unknown_for_zip: Angi et gyldig bydelsnavn for %{zip}.
-            unknown_for_address: Bydelsnavnet kan være feil.
+            unknown_for_address: Bydelsnavnet kan være feil
+            blank_instructional: Angi en bydel
+            blank_informative: Bydel mangler
+            too_long_instructional: Bydelsnavnet er for langt
+            too_long_informative: Bydelsnavnet er for langt (maksimalt 255 tegn)
+            contains_emojis_instructional: Bydelsnavnet kan ikke inneholde emojier
+            contains_emojis_informative: Bydelsnavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Bydelsnavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Bydelsnavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Bydelsnavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Bydelsnavnet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Bydelsnavnet må bestå av færre
+              enn %{word_count} ord
+            contains_too_many_words_informative: Bydelsnavnet må bestå av færre enn
+              %{word_count} ord
+            contains_html_tags_instructional: Bydelsnavnet kan ikke inneholde HTML
+            contains_html_tags_informative: Bydelsnavnet kan ikke inneholde HTML
+            contains_url_instructional: Bydelsnavnet kan ikke inneholde en URL-adresse
+            contains_url_informative: Bydelsnavnet kan ikke inneholde en URL-adresse
+            unknown_for_city_instructional: Angi et gyldig bydelsnavn for %{city}
+            unknown_for_city_informative: Bydelsnavnet samsvarer ikke med %{city}
+            unknown_for_zip_instructional: Angi et gyldig bydelsnavn for %{zip}
+            unknown_for_zip_informational: Bydelsnavnet samsvarer ikke med %{zip}
           warnings:
             contains_too_many_words: Vi anbefaler at bydelsnavnet inneholder færre
               enn %{word_count} ord

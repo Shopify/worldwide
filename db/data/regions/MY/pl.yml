@@ -8,14 +8,20 @@ pl:
             default: Państwo/terytorium
             optional: Państwo/terytorium (opcjonalnie)
           errors:
-            blank: Wybierz stan / terytorium
+            blank_instructional: Wybierz stan/terytorium
+            blank_informative: Brakuje stanu/terytorium
         zip:
           label:
             default: Kod pocztowy
             optional: Kod pocztowy (opcjonalnie)
           errors:
-            too_long: Wartość kodu pocztowego jest zbyt długa
-            contains_html_tags: Kod pocztowy nie może zawierać tagów HTML.
-            contains_emojis: Kod pocztowy nie może zawierać emoji
-            contains_restricted_characters: Pole Kod pocztowy nie może zawierać znaków
-              objętych ograniczeniami
+            too_long_instructional: Kod pocztowy jest za długi
+            too_long_informative: Kod pocztowy jest za długi
+            contains_emojis_instructional: Kod pocztowy nie może zawierać emoji
+            contains_emojis_informative: Kod pocztowy nie może zawierać emoji
+            contains_restricted_characters_instructional: Kod pocztowy nie może zawierać
+              znaków objętych ograniczeniami
+            contains_restricted_characters_informative: Kod pocztowy nie może zawierać
+              znaków objętych ograniczeniami
+            contains_html_tags_instructional: Kod pocztowy nie może zawierać HTML
+            contains_html_tags_informative: Kod pocztowy nie może zawierać HTML

@@ -8,10 +8,17 @@ zh-TW:
             default: 郵遞區號
             optional: 郵遞區號 (選填)
           errors:
-            blank: 輸入郵遞區號
-            invalid_for_country: 輸入有效的英國郵遞區號
-            invalid_for_country_and_province: 輸入英國 %{province} 的有效郵遞區號
-            too_long: 郵遞區號過長
-            contains_html_tags: 郵遞區號不得包含 HTML 標記。
-            contains_emojis: "「區域」不得包含表情符號"
-            contains_restricted_characters: 郵遞區號不可包含限制的字元
+            blank_instructional: 請輸入郵遞區號
+            blank_informative: 缺少郵遞區號
+            invalid_for_country_instructional: 請輸入有效的英國郵遞區號
+            invalid_for_country_informative: 英國的郵遞區號無效
+            invalid_for_country_and_province_instructional: 請輸入英國 %{province} 的有效郵遞區號
+            invalid_for_country_and_province_informative: 英國 %{province} 的郵遞區號無效
+            too_long_instructional: 郵遞區號過長
+            too_long_informative: 郵遞區號過長
+            contains_emojis_instructional: 郵遞區號不得包含表情符號
+            contains_emojis_informative: 郵遞區號不得包含表情符號
+            contains_restricted_characters_instructional: 郵遞區號不得包含限制的字元
+            contains_restricted_characters_informative: 郵遞區號僅可包含字母、數字、當地字元和特殊字元
+            contains_html_tags_instructional: 郵遞區號不得包含 HTML
+            contains_html_tags_informative: 郵遞區號不得包含 HTML

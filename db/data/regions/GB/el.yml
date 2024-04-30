@@ -8,14 +8,27 @@ el:
             default: Ταχυδρομικός κώδικας
             optional: Ταχυδρομικός κώδικας (προαιρετικά)
           errors:
-            blank: Εισαγάγετε ταχυδρομικό κώδικα
-            invalid_for_country: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για το Ηνωμένο
-              Βασίλειο
-            invalid_for_country_and_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα
-              για %{province}, Η.Β.
-            too_long: Η τιμή του ταχυδρομικού κώδικα είναι πολύ μεγάλη
-            contains_html_tags: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει ετικέτες
-              HTML.
-            contains_emojis: Ο ταχυδρομικός κωδικός δεν μπορεί να περιέχει emoji
-            contains_restricted_characters: Το πεδίο "Ταχυδρομικός κωδικός" δεν μπορεί
-              να περιέχει απαγορευμένους χαρακτήρες
+            blank_instructional: Εισαγάγετε έναν ταχυδρομικό κώδικα
+            blank_informative: Ο ταχυδρομικός κώδικας λείπει
+            invalid_for_country_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό
+              κώδικα για το Ηνωμένο Βασίλειο
+            invalid_for_country_informative: Ο ταχυδρομικός κώδικας δεν είναι έγκυρος
+              για το Ηνωμένο Βασίλειο
+            invalid_for_country_and_province_instructional: Εισαγάγετε έναν έγκυρο
+              ταχυδρομικό κώδικα για την επαρχία %{province} στο Η.Β.
+            invalid_for_country_and_province_informative: Ο ταχυδρομικός κώδικας δεν
+              είναι έγκυρος για την επαρχία %{province} στο Η.Β.
+            too_long_instructional: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος
+            too_long_informative: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος
+            contains_emojis_instructional: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              emoji
+            contains_emojis_informative: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              emoji
+            contains_restricted_characters_instructional: Ο ταχυδρομικός κώδικας δεν
+              μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_restricted_characters_informative: Ο ταχυδρομικός κώδικας μπορεί
+              να περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_html_tags_instructional: Ο ταχυδρομικός κώδικας δεν μπορεί να
+              περιέχει κώδικα HTML
+            contains_html_tags_informative: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              κώδικα HTML

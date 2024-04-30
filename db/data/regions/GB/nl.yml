@@ -8,12 +8,23 @@ nl:
             default: Postcode
             optional: Postcode (optioneel)
           errors:
-            blank: Voer een postcode in
-            invalid_for_country: Voer een geldige postcode in voor het Verenigd Koninkrijk
-            invalid_for_country_and_province: Voer een geldige postcode in voor %{province},
-              VK
-            too_long: De waarde van de postcode is te lang
-            contains_html_tags: Postcode mag geen HTML-tags bevatten.
-            contains_emojis: Postcode mag geen emoji's bevatten
-            contains_restricted_characters: Het veld Postcode mag geen verboden tekens
-              bevatten
+            blank_instructional: Voer een postcode in
+            blank_informative: Postcode ontbreekt
+            invalid_for_country_instructional: Voer een geldige postcode in voor het
+              Verenigd Koninkrijk
+            invalid_for_country_informative: Postcode is ongeldig voor het Verenigd
+              Koninkrijk
+            invalid_for_country_and_province_instructional: Voer een geldige postcode
+              in voor %{province}, VK
+            invalid_for_country_and_province_informative: Postcode is ongeldig voor
+              %{province}, VK
+            too_long_instructional: Postcode is te lang
+            too_long_informative: Postcode is te lang
+            contains_emojis_instructional: Postcode mag geen emoji's bevatten
+            contains_emojis_informative: Postcode mag geen emoji's bevatten
+            contains_restricted_characters_instructional: Postcode mag geen verboden
+              tekens bevatten
+            contains_restricted_characters_informative: Postcode mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_html_tags_instructional: Postcode mag geen HTML bevatten
+            contains_html_tags_informative: Postcode mag geen HTML bevatten

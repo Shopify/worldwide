@@ -8,8 +8,12 @@ zh-TW:
             default: 省
             optional: 省 (選填)
           errors:
-            blank: 選擇一個省分
-            unknown_for_city_and_zip: 輸入 %{zip} %{city}的有效省份
-            unknown_for_city: 選取%{city}的有效省分
-            unknown_for_zip: 選取%{zip}的有效省分
-            unknown_for_address: 省可能並不正確。
+            unknown_for_address: 省可能不正確
+            blank_instructional: 請選取省分
+            blank_informative: 缺少省分
+            unknown_for_city_and_zip_instructional: 請輸入 %{zip} %{city} 的有效省分
+            unknown_for_city_and_zip_informative: "%{zip} %{city} 的省分無效"
+            unknown_for_city_instructional: 請選取 %{city} 的有效省分
+            unknown_for_city_informative: "%{city} 的省分無效"
+            unknown_for_zip_instructional: 請選取 %{zip} 的有效省分
+            unknown_for_zip_informative: "%{zip} 的省分無效"

@@ -8,20 +8,40 @@ cs:
             default: Městská čtvrť
             optional: Městská čtvrť (volitelné)
           errors:
-            blank: Zadejte městskou čtvrť.
-            too_long: Název městské čtvrti je příliš dlouhý (maximum je 255 znaků).
-            contains_emojis: Název městské čtvrti nemůže obsahovat emoji.
-            contains_mathematical_symbols: Název městské čtvrti nemůže obsahovat matematické
-              symboly.
-            contains_restricted_characters: Název městské čtvrti může obsahovat pouze
-              písmena, číslice, místní znaky a speciální znaky.
-            contains_too_many_words: 'Název městské čtvrti nemůže obsahovat více než
-              tento počet slov: %{word_count}.'
-            contains_html_tags: Název městské čtvrti nemůže obsahovat HTML tagy.
-            contains_url: Název městské čtvrti nemůže obsahovat adresy URL.
-            unknown_for_city: 'Zadejte platný název městské čtvrti pro: %{city}.'
-            unknown_for_zip: 'Zadejte platný název městské čtvrti pro: %{zip}.'
             unknown_for_address: Městská čtvrť může být nesprávná.
+            blank_instructional: Zadejte městskou čtvrť.
+            blank_informative: Městská čtvrť chybí.
+            too_long_instructional: Název městské čtvrti je příliš dlouhý.
+            too_long_informative: Název městské čtvrti je příliš dlouhý (maximum je
+              255 znaků).
+            contains_emojis_instructional: Název městské čtvrti nemůže obsahovat emoji.
+            contains_emojis_informative: Název městské čtvrti nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: Název městské čtvrti nemůže
+              obsahovat matematické symboly.
+            contains_mathematical_symbols_informative: Název městské čtvrti nemůže
+              obsahovat matematické symboly.
+            contains_restricted_characters_instructional: Název městské čtvrti může
+              obsahovat pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Název městské čtvrti nemůže
+              obsahovat zakázané znaky.
+            contains_too_many_words_instructional: 'Název městské čtvrti musí obsahovat
+              méně než tento počet slov: %{word_count}.'
+            contains_too_many_words_informative: 'Název městské čtvrti musí obsahovat
+              méně než tento počet slov: %{word_count}.'
+            contains_html_tags_instructional: Název městské čtvrti nemůže obsahovat
+              HTML.
+            contains_html_tags_informative: Název městské čtvrti nemůže obsahovat
+              HTML.
+            contains_url_instructional: Název městské čtvrti nemůže obsahovat adresu
+              URL.
+            contains_url_informative: Název městské čtvrti nemůže obsahovat adresu
+              URL.
+            unknown_for_city_instructional: 'Zadejte platný název městské čtvrti pro:
+              %{city}.'
+            unknown_for_city_informative: Městská čtvrť neodpovídá městu %{city}.
+            unknown_for_zip_instructional: 'Zadejte platný název městské čtvrti pro:
+              %{zip}.'
+            unknown_for_zip_informational: Městská čtvrť neodpovídá PSČ %{zip}.
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název městské čtvrti obsahoval
               méně než tento počet slov: %{word_count}.'

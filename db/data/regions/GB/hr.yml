@@ -8,12 +8,23 @@ hr:
             default: Poštanski broj
             optional: Poštanski broj (neobavezno)
           errors:
-            blank: Unesi poštanski broj
-            invalid_for_country: Unesi valjan poštanski broj za Veliku Britaniju
-            invalid_for_country_and_province: Unesite valjani poštanski broj za %{province},
-              UK
-            too_long: Poštanski broj je predugačak
-            contains_html_tags: Poštanski broj ne smije sadržavati HTML oznake.
-            contains_emojis: Poštanski broj ne smije sadržavati emotikone
-            contains_restricted_characters: Poštanski broj ne smije sadržavati zabranjene
-              znakove
+            blank_instructional: Unesite poštanski broj
+            blank_informative: Nedostaje poštanski broj
+            invalid_for_country_instructional: Unesite valjani poštanski broj za Ujedinjeno
+              Kraljevstvo
+            invalid_for_country_informative: Poštanski broj nije valjan za Ujedinjeno
+              Kraljevstvo
+            invalid_for_country_and_province_instructional: Unesite valjani poštanski
+              broj za %{province}, UK
+            invalid_for_country_and_province_informative: Poštanski broj nije valjan
+              za %{province}, UK
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
+            contains_emojis_instructional: Poštanski broj ne smije sadržavati emotikone
+            contains_emojis_informative: Poštanski broj ne smije sadržavati emotikone
+            contains_restricted_characters_instructional: Poštanski broj ne smije
+              sadržavati zabranjene znakove
+            contains_restricted_characters_informative: Poštanski broj smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_html_tags_instructional: Poštanski broj ne smije sadržavati HTML
+            contains_html_tags_informative: Poštanski broj ne smije sadržavati HTML

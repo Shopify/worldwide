@@ -8,14 +8,20 @@ sv:
             default: Stat/territorium
             optional: Stat/territorium (valfritt)
           errors:
-            blank: Välj ett land/territorium
+            blank_instructional: Välj en stat/ett territorium
+            blank_informative: Stat/territorium saknas
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            too_long: Postnumret är för långt
-            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
-            contains_emojis: Postnumret får inte innehålla emojis
-            contains_restricted_characters: Postnumret får inte innehålla begränsade
-              tecken
+            too_long_instructional: Postnumret är för långt
+            too_long_informative: Postnumret är för långt
+            contains_emojis_instructional: Postnummer får inte innehålla emojis
+            contains_emojis_informative: Postnummer får inte innehålla emojis
+            contains_restricted_characters_instructional: Postnummer får inte innehålla
+              begränsade tecken
+            contains_restricted_characters_informative: Postnummer får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Postnummer får inte innehålla HTML
+            contains_html_tags_informative: Postnummer får inte innehålla HTML

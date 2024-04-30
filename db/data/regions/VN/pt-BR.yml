@@ -8,19 +8,35 @@ pt-BR:
             default: Distrito
             optional: Distrito (opcional)
           errors:
-            blank: Insira um distrito
-            too_long: O distrito é longo demais (máximo de 255 caracteres)
-            contains_emojis: O distrito não pode conter emojis
-            contains_mathematical_symbols: O distrito não pode conter símbolos matemáticos
-            contains_restricted_characters: O distrito pode conter apenas letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: O distrito não pode ter mais de %{word_count}
+            unknown_for_address: Talvez haja um erro no distrito
+            blank_instructional: Insira um distrito
+            blank_informative: Falta o distrito
+            too_long_instructional: O distrito é longo demais
+            too_long_informative: O distrito é longo demais (máximo de 255 caracteres)
+            contains_emojis_instructional: O distrito não pode conter emojis
+            contains_emojis_informative: O distrito não pode conter emojis
+            contains_mathematical_symbols_instructional: O distrito não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O distrito não pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O distrito pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O distrito não pode conter
+              caracteres restritos
+            contains_too_many_words_instructional: O distrito precisa ter menos de
+              %{word_count} palavras
+            contains_too_many_words_informative: O distrito precisa ter menos de %{word_count}
               palavras
-            contains_html_tags: O distrito não pode ter tags HTML.
-            contains_url: O distrito não pode ter URLs.
-            unknown_for_city: Insira um nome de distrito válido para %{city}.
-            unknown_for_zip: Insira um nome de distrito válido para %{zip}.
-            unknown_for_address: Talvez haja um erro no distrito.
+            contains_html_tags_instructional: O distrito não pode conter HTML
+            contains_html_tags_informative: O distrito não pode conter HTML
+            contains_url_instructional: O distrito não pode conter um URL
+            contains_url_informative: O distrito não pode conter um URL
+            unknown_for_city_instructional: Insira um nome de distrito válido para
+              %{city}
+            unknown_for_city_informative: O distrito não corresponde a %{city}
+            unknown_for_zip_instructional: Insira um nome de distrito válido para
+              %{zip}
+            unknown_for_zip_informational: O distrito não corresponde a %{zip}
           warnings:
             contains_too_many_words: É recomendável que o distrito tenha menos de
               %{word_count} palavras

@@ -8,8 +8,14 @@ sk:
             default: Provincia
             optional: Provincia (voliteľné)
           errors:
-            blank: Vyberte provinciu
-            unknown_for_city_and_zip: 'Zadajte platnú provinciu pre: %{city}, %{zip}'
-            unknown_for_city: 'Vyberte platnú provinciu pre: %{city}'
-            unknown_for_zip: 'Vyberte platnú provinciu pre: %{zip}'
-            unknown_for_address: Provincia môže byť nesprávna.
+            unknown_for_address: Provincia môže byť nesprávna
+            blank_instructional: Vyberte provinciu
+            blank_informative: Chýba provincia
+            unknown_for_city_and_zip_instructional: Zadajte platnú provinciu pre mesto
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Provincia nie je platná pre mesto
+              %{city}, %{zip}
+            unknown_for_city_instructional: Vyberte platnú provinciu pre mesto %{city}
+            unknown_for_city_informative: Provincia nie je platná pre mesto %{city}
+            unknown_for_zip_instructional: Vyberte platnú provinciu pre PSČ %{zip}
+            unknown_for_zip_informative: Provincia nie je platná pre PSČ %{zip}

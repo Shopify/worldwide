@@ -8,18 +8,33 @@ tr:
             default: İlçe
             optional: İlçe (İsteğe bağlı)
           errors:
-            blank: İlçe girin
-            too_long: İlçe adı çok uzun (maksimum 255 karakter olmalıdır)
-            contains_emojis: İlçe, emoji içeremez
-            contains_mathematical_symbols: İlçe adı matematiksel semboller içeremez
-            contains_restricted_characters: İlçe adı yalnızca harfler, sayılar, yerel
-              karakterler ve özel karakterler içerebilir
-            contains_too_many_words: İlçe adı en fazla %{word_count} kelime içerebilir
-            contains_html_tags: İlçe HTML etiketleri içeremez.
-            contains_url: İlçe adı emoji içeremez.
-            unknown_for_city: "%{city} için geçerli bir ilçe adı girin."
-            unknown_for_zip: "%{zip} için geçerli bir ilçe adı girin."
-            unknown_for_address: İlçe adı yanlış olabilir.
+            unknown_for_address: İlçe adı yanlış olabilir
+            blank_instructional: İlçe girin
+            blank_informative: İlçe eksik
+            too_long_instructional: İlçe adı çok uzun (maksimum 255 karakter olmalıdır)
+            too_long_informative: İlçe adı çok uzun
+            contains_emojis_instructional: İlçe emoji içeremez
+            contains_emojis_informative: İlçe emoji içeremez
+            contains_mathematical_symbols_instructional: İlçe adı matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: İlçe adı matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: İlçe yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: İlçe, kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: İlçe için karakter sayısı %{word_count}
+              altında olmalıdır
+            contains_too_many_words_informative: İlçe için karakter sayısı %{word_count}
+              altında olmalıdır
+            contains_html_tags_instructional: İlçe adı HTML içeremez
+            contains_html_tags_informative: İlçe adı HTML içeremez
+            contains_url_instructional: İlçe adı URL içeremez
+            contains_url_informative: İlçe adı URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir ilçe girin"
+            unknown_for_city_informative: İlçe %{city} için geçerli değil
+            unknown_for_zip_instructional: "%{zip} için geçerli bir ilçe girin"
+            unknown_for_zip_informative: İlçe %{zip} için geçerli değil
           warnings:
             contains_too_many_words: İlçe adında %{word_count} adetten az kelime olması
               önerilir

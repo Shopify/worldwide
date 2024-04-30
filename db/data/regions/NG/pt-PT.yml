@@ -8,8 +8,10 @@ pt-PT:
             default: Estado
             optional: Estado (opcional)
           errors:
-            blank: Selecione um estado
+            blank_instructional: Selecione um estado
+            blank_informative: O estado está em falta
         zip:
           errors:
-            invalid_for_country: Introduza um código postal de 6 dígitos válido para
-              a Nigéria ou deixe em branco.
+            invalid_for_country_instructional: Introduza um código postal de 6 dígitos
+              válido para a Nigéria ou deixe em branco
+            invalid_for_country_informative: O código postal é inválido para a Nigéria

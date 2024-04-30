@@ -8,12 +8,23 @@ bg:
             default: Пощенски код
             optional: Пощенски код (незадължително)
           errors:
-            blank: Въведете пощенски код
-            invalid_for_country: Въведете валиден пощенски код за Обединеното кралство
-            invalid_for_country_and_province: Въведете валиден пощенски код за %{province},
-              Обединеното кралство
-            too_long: Пощенският код е с твърде голяма дължина
-            contains_html_tags: Пощенският код не може да съдържа HTML етикети.
-            contains_emojis: Пощенският код не може да съдържа емоджита
-            contains_restricted_characters: "„Пощенски код“ не може да съдържа забранени
-              знаци"
+            blank_instructional: Въведете пощенски код
+            blank_informative: Липсва пощенски код
+            invalid_for_country_instructional: Въведете валиден пощенски код за Обединеното
+              кралство
+            invalid_for_country_informative: Пощенският код е невалиден за Обединеното
+              кралство
+            invalid_for_country_and_province_instructional: Въведете валиден пощенски
+              код за %{province}, Обединеното кралство
+            invalid_for_country_and_province_informative: Пощенският код е невалиден
+              за %{province}, Обединеното кралство
+            too_long_instructional: "„Пощенски код“ е с твърде голяма дължина"
+            too_long_informative: "„Пощенски код“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Пощенски код“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Пощенски код“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„Пощенски код“ не може
+              да съдържа забранени знаци"
+            contains_restricted_characters_informative: "„Пощенски код“ може да съдържа
+              само букви, цифри, местни знаци и специални знаци"
+            contains_html_tags_instructional: "„Пощенски код“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Пощенски код“ не може да съдържа HTML"

@@ -8,21 +8,34 @@ cs:
             default: Stát
             optional: Stát (volitelné)
           errors:
-            blank: Vyberte stát
+            blank_instructional: Vyberte stát.
+            blank_informative: Stát chybí.
         zip:
           label:
             default: PIN kód
             optional: PIN kód (volitelné)
           errors:
-            blank: Zadejte PIN kód (tj. poštovní indexové číslo)
-            invalid_for_country: Zadejte platný PIN kód (tj. poštovní indexové číslo)
-              pro zemi %{country}
-            invalid_for_country_and_province: 'Zadejte platný PIN kód pro: %{province},
-              %{country}'
-            too_long: Hodnota PIN kódu (tj. poštovního indexového čísla) je příliš
-              dlouhá
-            contains_html_tags: PIN kód (tj. poštovní indexové číslo) nemůže obsahovat
-              HTML tagy.
-            contains_emojis: PIN kód (poštovní indexové číslo) nemůže obsahovat emoji
-            contains_restricted_characters: PIN kód (poštovní indexové číslo) nesmí
-              obsahovat zakázané znaky
+            blank_instructional: Zadejte PIN kód (poštovní indexové číslo).
+            blank_informative: PIN kód (poštovní indexové číslo) chybí.
+            invalid_for_country_instructional: 'Zadejte platný PIN kód (poštovní indexové
+              číslo) pro zemi: %{country}.'
+            invalid_for_country_informative: PIN kód (poštovní indexové číslo) není
+              platný.
+            invalid_for_country_and_province_instructional: 'Zadejte platný PIN kód
+              (poštovní indexové číslo) pro: %{province}, %{country}.'
+            invalid_for_country_and_province_informative: PIN kód (poštovní indexové
+              číslo) není platný.
+            too_long_instructional: PIN kód (poštovní indexové číslo) je příliš dlouhý.
+            too_long_informative: PIN kód (poštovní indexové číslo) je příliš dlouhý.
+            contains_emojis_instructional: PIN kód (poštovní indexové číslo) nemůže
+              obsahovat emoji.
+            contains_emojis_informative: PIN kód (poštovní indexové číslo) nemůže
+              obsahovat emoji.
+            contains_restricted_characters_instructional: PIN kód (poštovní indexové
+              číslo) nemůže obsahovat zakázané znaky.
+            contains_restricted_characters_informative: PIN kód (poštovní indexové
+              číslo) nemůže obsahovat zakázané znaky.
+            contains_html_tags_instructional: PIN kód (poštovní indexové číslo) nemůže
+              obsahovat HTML.
+            contains_html_tags_informative: PIN kód (poštovní indexové číslo) nemůže
+              obsahovat HTML.

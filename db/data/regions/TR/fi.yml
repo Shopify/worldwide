@@ -8,18 +8,33 @@ fi:
             default: Alue
             optional: Alue (valinnainen)
           errors:
-            blank: Anna alue
-            too_long: Alue on liian pitkä (enintään 255 merkkiä)
-            contains_emojis: Alue ei voi sisältää emojeita
-            contains_mathematical_symbols: Alue ei voi sisältää matemaattisia symboleja
-            contains_restricted_characters: Alue voi sisältää vain kirjaimia, numeroita,
-              paikallisia merkkejä ja erikoismerkkejä
-            contains_too_many_words: Alue voi sisältää enintään %{word_count} sanaa
-            contains_html_tags: Alue ei voi sisältää HTML-tunnisteita.
-            contains_url: Alue ei voi sisältää URL-osoitteita.
-            unknown_for_city: Anna paikkakunnalle %{city} kelvollinen alueen nimi.
-            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen alueen nimi.
-            unknown_for_address: Alue voi olla väärä.
+            unknown_for_address: Alue voi olla väärä
+            blank_instructional: Anna alue
+            blank_informative: Alue puuttuu
+            too_long_instructional: Alue on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Alue on liian pitkä
+            contains_emojis_instructional: Alue ei voi sisältää emojeita
+            contains_emojis_informative: Alue ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Alue ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Alue ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Alue voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Alue ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Alueessa saa olla enintään %{word_count}
+              sanaa
+            contains_too_many_words_informative: Alueessa saa olla enintään %{word_count}
+              sanaa
+            contains_html_tags_instructional: Alue ei voi sisältää HTML:ää
+            contains_html_tags_informative: Alue ei voi sisältää HTML:ää
+            contains_url_instructional: Alue ei voi sisältää URL-osoitetta
+            contains_url_informative: Alue ei voi sisältää URL-osoitetta
+            unknown_for_city_instructional: Anna kaupungille %{city} kelvollinen alue
+            unknown_for_city_informative: Alue on virheellinen postinumerolle %{city}
+            unknown_for_zip_instructional: Anna kaupungille %{zip} kelvollinen alue
+            unknown_for_zip_informative: Alue on virheellinen postinumerolle %{zip}
           warnings:
             contains_too_many_words: Alue-kentän pituudeksi suositellaan alle %{word_count}
               sanaa

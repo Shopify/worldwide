@@ -8,10 +8,17 @@ ja:
             default: 郵便番号
             optional: 郵便番号 (任意)
           errors:
-            blank: 郵便番号を入力してください
-            invalid_for_country: イギリスの有効な郵便番号を入力してください
-            invalid_for_country_and_province: イギリスの%{province}の有効な郵便番号を入力してください
-            too_long: 郵便番号の値が長すぎます
-            contains_html_tags: 郵便番号にHTMLタグを含めることはできません。
-            contains_emojis: 郵便番号に絵文字を含めることはできません
-            contains_restricted_characters: 郵便番号には制限されている文字を入力できません
+            blank_instructional: 郵便番号を入力してください
+            blank_informative: 郵便番号がありません
+            invalid_for_country_instructional: イギリスの有効な郵便番号を入力してください
+            invalid_for_country_informative: イギリスの郵便番号が無効です
+            invalid_for_country_and_province_instructional: イギリスの%{province}の有効な郵便番号を入力してください
+            invalid_for_country_and_province_informative: イギリスの%{province}の郵便番号が無効です
+            too_long_instructional: 郵便番号が長すぎます
+            too_long_informative: 郵便番号が長すぎます
+            contains_emojis_instructional: 郵便番号には絵文字を入力できません
+            contains_emojis_informative: 郵便番号には絵文字を入力できません
+            contains_restricted_characters_instructional: 郵便番号には制限されている文字を入力できません
+            contains_restricted_characters_informative: 郵便番号には、文字、数字、地域の文字、特殊文字のみを含めることができます
+            contains_html_tags_instructional: 郵便番号にはHTMLを入力できません
+            contains_html_tags_informative: 郵便番号にはHTMLを入力できません

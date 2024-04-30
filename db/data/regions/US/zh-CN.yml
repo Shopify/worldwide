@@ -8,23 +8,38 @@ zh-CN:
             default: 州
             optional: 州（可选）
           errors:
-            blank: 选择州
-            invalid_for_country: 输入有效的 %{country} 州
-            unknown_for_city_and_zip: 请输入 %{city}（%{zip}）对应的有效州
-            unknown_for_city: 请选择 %{city} 对应的有效州
-            unknown_for_zip: 请选择 %{zip} 对应的有效州
-            unknown_for_address: 州可能不正确。
+            unknown_for_address: 州可能不正确
+            blank_instructional: 选择州
+            blank_informative: 输入州
+            invalid_for_country_instructional: 输入 %{city} (%{zip} 对应的有效州
+            invalid_for_country_informative: 州无效
+            unknown_for_city_and_zip_instructional: 输入 %{city} (%{zip} 对应的有效州
+            unknown_for_city_and_zip_informative: 州对 %{city} (%{zip}) 无效
+            unknown_for_city_instructional: 选择 %{city} 对应的有效州
+            unknown_for_city_informative: 州对 %{city} 无效
+            unknown_for_zip_instructional: 选择 %{zip} 对应的有效州
+            unknown_for_zip_informative: 州对 %{zip} 无效
         zip:
           label:
             default: 邮政编码
             optional: 邮政编码（可选）
           errors:
-            blank: 输入邮政编码
-            invalid_for_country: 输入有效的 %{country} 邮编
-            invalid_for_country_and_province: 输入 %{country} %{province} 的有效邮政编码
-            too_long: 邮政编码值过长
-            contains_html_tags: 邮政编码值不能包含 HTML 标记。
-            contains_emojis: 邮政编码不能包含表情符号
-            contains_restricted_characters: "“邮政编码”字段不能包含受限字符"
-            invalid_for_province: 请输入 %{province} 对应的有效邮政编码
-            unknown_for_address: 邮政编码可能不正确。
+            unknown_for_address: 邮政编码可能不正确
+            blank_instructional: 输入邮政编码
+            blank_informative: 缺少邮政编码
+            invalid_for_country_instructional: 输入 %{country} 对应的有效邮政编码
+            invalid_for_country_informative: 邮政编码对 %{country} 无效
+            invalid_for_province_instructional: 输入 %{province} 对应的有效邮政编码
+            invalid_for_province_informative: 邮政编码对 %{province} 无效
+            invalid_for_country_and_province_instructional: 输入 %{country} %{province}
+              对应的有效邮政编码
+            invalid_for_country_and_province_informative: 邮政编码对 %{country} %{province}
+              无效
+            too_long_instructional: 邮政编码过长
+            too_long_informative: 邮政编码过长（最多 255 个字符）
+            contains_emojis_instructional: 邮政编码不能包含表情符号
+            contains_emojis_informative: 邮政编码不能包含表情符号
+            contains_restricted_characters_instructional: 邮政编码不能包含受限字符
+            contains_restricted_characters_informative: 邮政编码不能包含受限字符
+            contains_html_tags_instructional: 邮政编码不能包含 HTML
+            contains_html_tags_informative: 邮政编码不能包含 HTML

@@ -8,20 +8,33 @@ da:
             default: Bydistrikt
             optional: Bydistrikt (valgfrit)
           errors:
-            blank: Angiv et bydistrikt
-            too_long: Bydistrikt er for lang (højst 255 tegn)
-            contains_emojis: Bydistrikt må ikke indeholde emojis
-            contains_mathematical_symbols: Bydistrikt må ikke indeholde matematiske
-              symboler
-            contains_restricted_characters: Bydistrikt må kun indeholde bogstaver,
-              tal, lokale tegn og specialtegn
-            contains_too_many_words: Bydistrikt må ikke indeholde flere end %{word_count}
-              ord
-            contains_html_tags: Bydistrikt må ikke indeholde HTML-tags.
-            contains_url: Bydistrikt må ikke indeholde webadresser.
-            unknown_for_city: Angiv et gyldigt bydistriktsnavn for %{city}.
-            unknown_for_zip: Angiv et gyldigt bydistriktsnavn for %{zip}.
-            unknown_for_address: Bydistrikt kan være forkert.
+            unknown_for_address: Bydistrikt kan være forkert
+            blank_instructional: Angiv et bydistrikt
+            blank_informative: Bydistrikt mangler
+            too_long_instructional: Bydistrikt er for lang
+            too_long_informative: Bydistrikt er for lang (højst 255 tegn)
+            contains_emojis_instructional: Bydistriktet må ikke indeholde emojis
+            contains_emojis_informative: Bydistrikt må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Bydistrikt må ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Bydistrikt må ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Bydistriktet må kun indeholde
+              bogstaver, tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Bydistriktet må ikke indeholde
+              begrænsede tegn
+            contains_too_many_words_instructional: Bydistrikt skal indeholde færre
+              end %{word_count} ord
+            contains_too_many_words_informative: Bydistrikt skal indeholde færre end
+              %{word_count} ord
+            contains_html_tags_instructional: Bydistrikt må ikke indeholde HTML
+            contains_html_tags_informative: Bydistrikt må ikke indeholde HTML
+            contains_url_instructional: Bydistrikt må ikke indeholde en webadresse
+            contains_url_informative: Bydistrikt må ikke indeholde en webadresse
+            unknown_for_city_instructional: Angiv et gyldigt bydistriktsnavn for %{city}
+            unknown_for_city_informative: Bydistriktet matcher ikke %{city}
+            unknown_for_zip_instructional: Angiv et gyldigt bydistriktsnavn for %{zip}
+            unknown_for_zip_informational: Bydistriktet matcher ikke %{zip}
           warnings:
             contains_too_many_words: Det anbefales, at bydistrikt indeholder færre
               end %{word_count} ord

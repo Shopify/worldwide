@@ -8,8 +8,14 @@ de:
             default: Provinz
             optional: Provinz (optional)
           errors:
-            blank: Wähle eine Provinz aus
-            unknown_for_city_and_zip: Eine gültige Provinz für %{city}, %{zip} eingeben
-            unknown_for_city: Eine gültige Provinz für %{city} auswählen
-            unknown_for_zip: Eine gültige Provinz für %{zip} auswählen
-            unknown_for_address: Bundesland ist ggf. falsch.
+            unknown_for_address: Provinz ist ggf. falsch
+            blank_instructional: Provinz auswählen
+            blank_informative: Provinz fehlt
+            unknown_for_city_and_zip_instructional: Eine gültige Provinz für %{city},
+              %{zip} eingeben
+            unknown_for_city_and_zip_informative: Provinz ist für %{city}, %{zip}
+              nicht gültig
+            unknown_for_city_instructional: Eine gültige Provinz für %{city} auswählen
+            unknown_for_city_informative: Provinz ist für %{city} nicht gültig
+            unknown_for_zip_instructional: Eine gültige Provinz für %{zip} auswählen
+            unknown_for_zip_informative: Provinz ist für %{zip} nicht gültig

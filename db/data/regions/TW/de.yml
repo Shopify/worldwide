@@ -8,20 +8,33 @@ de:
             default: District
             optional: District (optional)
           errors:
-            blank: Gib einen District ein.
-            too_long: District ist zu lang (maximal 255 Zeichen).
-            contains_emojis: District darf keine Emojis enthalten.
-            contains_mathematical_symbols: District darf keine mathematischen Symbole
-              enthalten.
-            contains_restricted_characters: District darf nur Buchstaben, Zahlen,
-              Zeichen der lokalen Sprache und Sonderzeichen enthalten.
-            contains_too_many_words: District darf nicht mehr als %{word_count} Wörter
-              enthalten.
-            contains_html_tags: District darf keine HTML-Tags enthalten.
-            contains_url: District darf keine URLs enthalten.
-            unknown_for_city: Gib einen gültigen Districtnamen für %{city} ein.
-            unknown_for_zip: Gib einen gültigen Districtnamen für %{zip} ein.
-            unknown_for_address: District ist ggf. falsch.
+            unknown_for_address: Distrikt ist ggf. falsch
+            blank_instructional: Einen Distrikt eingeben
+            blank_informative: Distrikt fehlt
+            too_long_instructional: Distrikt ist zu lang (maximal 255 Zeichen).
+            too_long_informative: Distrikt ist zu lang
+            contains_emojis_instructional: Distrikt darf keine Emojis enthalten
+            contains_emojis_informative: Distrikt darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Distrikt darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Distrikt darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Distrikt darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_restricted_characters_informative: Distrikt darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Distrikt muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Distrikt muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Distrikt darf kein HTML enthalten
+            contains_html_tags_informative: Distrikt darf kein HTML enthalten
+            contains_url_instructional: Distrikt darf keine URL enthalten
+            contains_url_informative: Distrikt darf keine URL enthalten
+            unknown_for_city_instructional: Einen gültigen Distrikt für %{city} eingeben
+            unknown_for_city_informative: Distrikt ist für %{city} nicht gültig
+            unknown_for_zip_instructional: Einen gültigen Distrikt für %{zip} eingeben
+            unknown_for_zip_informative: Distrikt ist für %{zip} nicht gültig
           warnings:
             contains_too_many_words: Es wird empfohlen, dass der District weniger
               als %{word_count} Wörter enthält.

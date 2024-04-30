@@ -8,8 +8,14 @@ tr:
             default: İl
             optional: İl (isteğe bağlı)
           errors:
-            blank: İl seçin
-            unknown_for_city_and_zip: "%{city}, %{zip} için geçerli bir vilayet girin"
-            unknown_for_city: "%{city} için geçerli bir vilayet seçin"
-            unknown_for_zip: "%{zip} için geçerli bir vilayet seçin"
-            unknown_for_address: Vilayet yanlış olabilir.
+            unknown_for_address: Vilayet yanlış olabilir
+            blank_instructional: İl seçin
+            blank_informative: İl eksik
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} için geçerli
+              bir il girin"
+            unknown_for_city_and_zip_informative: İl %{city}, %{zip} için geçerli
+              değil
+            unknown_for_city_instructional: "%{city} için geçerli bir il seçin"
+            unknown_for_city_informative: İl %{city} için geçerli değil
+            unknown_for_zip_instructional: "%{zip} için geçerli bir il seçin"
+            unknown_for_zip_informative: İl %{zip} için geçerli değil

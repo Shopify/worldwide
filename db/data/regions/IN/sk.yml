@@ -8,18 +8,28 @@ sk:
             default: Štát
             optional: Štát (voliteľné)
           errors:
-            blank: Vyberte štát
+            blank_instructional: Vyberte štát
+            blank_informative: Chýba štát
         zip:
           label:
             default: PIN kód
             optional: PIN kód (voliteľné)
           errors:
-            blank: Zadajte PIN kód
-            invalid_for_country: 'Zadajte platný PIN kód pre: %{country}'
-            invalid_for_country_and_province: 'Zadajte platný PIN kód pre: %{province},
-              %{country}'
-            too_long: Hodnota PIN kódu je príliš dlhá
-            contains_html_tags: Poštové smerovacie číslo (PIN) nemôže obsahovať HTML
-              značky.
-            contains_emojis: PIN kód nemôže obsahovať emotikony
-            contains_restricted_characters: PIN kód nemôže obsahovať zakázané znaky
+            blank_instructional: Zadajte PIN kód
+            blank_informative: Chýba PIN kód
+            invalid_for_country_instructional: Zadajte platný PIN kód pre krajinu
+              %{country}
+            invalid_for_country_informative: PIN kód nie je platný
+            invalid_for_country_and_province_instructional: Zadajte platný PIN kód
+              pre provinciu %{province}, %{country}
+            invalid_for_country_and_province_informative: PIN kód nie je platný
+            too_long_instructional: PIN kód je príliš dlhý
+            too_long_informative: PIN kód je príliš dlhý
+            contains_emojis_instructional: PIN kód nemôže obsahovať emotikony
+            contains_emojis_informative: PIN kód nemôže obsahovať emotikony
+            contains_restricted_characters_instructional: PIN kód nemôže obsahovať
+              zakázané znaky
+            contains_restricted_characters_informative: PIN kód nemôže obsahovať zakázané
+              znaky
+            contains_html_tags_instructional: PIN kód nemôže obsahovať HTML
+            contains_html_tags_informative: PIN kód nemôže obsahovať HTML

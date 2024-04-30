@@ -8,14 +8,20 @@ ms:
             default: Negeri/wilayah
             optional: Negeri/wilayah (opsyenal)
           errors:
-            blank: Pilih negeri/jajahan
+            blank_instructional: Pilih negeri/wilayah
+            blank_informative: Negeri/wilayah tiada
         zip:
           label:
             default: Poskod
             optional: Poskod (opsyenal)
           errors:
-            too_long: Nilai poskod terlalu panjang
-            contains_html_tags: Poskod tidak boleh mengandungi tag HTML.
-            contains_emojis: Poskod tidak boleh mengandungi emoji
-            contains_restricted_characters: Poskod tidak boleh mengandungi aksara
-              terhad
+            too_long_instructional: Poskod terlalu panjang
+            too_long_informative: Poskod terlalu panjang
+            contains_emojis_instructional: Poskod tidak boleh mengandungi emoji
+            contains_emojis_informative: Poskod tidak boleh mengandungi emoji
+            contains_restricted_characters_instructional: Poskod tidak boleh mengandungi
+              aksara terhad
+            contains_restricted_characters_informative: Poskod tidak boleh mengandungi
+              aksara terhad
+            contains_html_tags_instructional: Poskod tidak boleh mengandungi HTML
+            contains_html_tags_informative: Poskod tidak boleh mengandungi HTML

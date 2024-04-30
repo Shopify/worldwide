@@ -8,13 +8,18 @@ en:
             default: State/territory
             optional: State/territory (optional)
           errors:
-            blank: Select a state/territory
+            blank_instructional: Select a state/territory
+            blank_informative: State/territory is missing
         zip:
           label:
             default: Postcode
             optional: Postcode (optional)
           errors:
-            too_long: The postcode value is too long
-            contains_emojis: The postcode cannot contain emojis
-            contains_restricted_characters: The postcode cannot have restricted characters
-            contains_html_tags: The postcode cannot contain HTML tags.
+            too_long_instructional: Postcode is too long
+            too_long_informative: Postcode is too long
+            contains_emojis_instructional: Postcode can't contain emojis
+            contains_emojis_informative: Postcode can't contain emojis
+            contains_restricted_characters_instructional: Postcode can't contain restricted characters
+            contains_restricted_characters_informative: Postcode can't contain restricted characters
+            contains_html_tags_instructional: Postcode can't contain HTML
+            contains_html_tags_informative: Postcode can't contain HTML

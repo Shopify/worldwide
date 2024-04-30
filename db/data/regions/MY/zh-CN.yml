@@ -8,13 +8,18 @@ zh-CN:
             default: 州/领地
             optional: 州/领地（可选）
           errors:
-            blank: 选择州/领地
+            blank_instructional: 选择州/领地
+            blank_informative: 缺少州/领地
         zip:
           label:
             default: 邮政编码
             optional: 邮政编码（可选）
           errors:
-            too_long: 邮政编码值过长
-            contains_html_tags: 邮政编码不能包含 HTML 标记。
-            contains_emojis: 邮政编码不能包含表情符号
-            contains_restricted_characters: "“邮政编码”字段不能包含受限字符"
+            too_long_instructional: 邮政编码过长
+            too_long_informative: 邮政编码过长
+            contains_emojis_instructional: 邮政编码不能包含表情符号
+            contains_emojis_informative: 邮政编码不能包含表情符号
+            contains_restricted_characters_instructional: 邮政编码不能包含受限字符
+            contains_restricted_characters_informative: 邮政编码不能包含受限字符
+            contains_html_tags_instructional: 邮政编码不能包含 HTML
+            contains_html_tags_informative: 邮政编码不能包含 HTML

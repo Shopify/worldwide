@@ -8,23 +8,42 @@ lt:
             default: Seniūnija
             optional: Seniūnija (pasirinktinai)
           errors:
-            blank: Įveskite seniūniją
-            too_long: Seniūnijos pavadinimas yra per ilgas (turi sudaryti ne daugiau
-              kaip 255 simboliai)
-            contains_emojis: Seniūnijos pavadinime negali būti naudojami „emoji“
-            contains_mathematical_symbols: Seniūnijos pavadinime negali būti naudojami
-              matematiniai simboliai
-            contains_restricted_characters: Seniūnijos pavadinimą gali sudaryti tik
-              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
-            contains_too_many_words: Seniūnijos pavadinimo negali sudaryti daugiau
-              nei %{word_count} žodžiai (-ių, -is)
-            contains_html_tags: Seniūnijos pavadinime negali būti naudojamos HTML
-              žymės.
-            contains_url: Seniūnijos pavadinime negali būti naudojami URL.
-            unknown_for_city: Įveskite seniūnijos pavadinimą, atitinkantį miestą %{city}.
-            unknown_for_zip: Įveskite seniūnijos pavadinimą, atitinkantį pašto kodą
-              %{zip}.
-            unknown_for_address: Seniūnija gali būti neteisinga.
+            unknown_for_address: Seniūnijos pavadinimas gali būti neteisingas
+            blank_instructional: Įveskite seniūnijos pavadinimą
+            blank_informative: Trūksta seniūnijos pavadinimo
+            too_long_instructional: Seniūnijos pavadinimas yra per ilgas
+            too_long_informative: Seniūnijos pavadinimas yra per ilgas (turi sudaryti
+              ne daugiau kaip 255 simboliai)
+            contains_emojis_instructional: Seniūnijos pavadinime negali būti naudojami
+              jausmaženkliai
+            contains_emojis_informative: Seniūnijos pavadinime negali būti naudojami
+              jausmaženkliai
+            contains_mathematical_symbols_instructional: Seniūnijos pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Seniūnijos pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Seniūnijos pavadinimą gali
+              sudaryti tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Seniūnijos pavadinimą negali
+              sudaryti ribojami simboliai
+            contains_too_many_words_instructional: Seniūnijos pavadinimą turi sudaryti
+              mažiau kaip %{word_count} žodžiai
+            contains_too_many_words_informative: Seniūnijos pavadinimą turi sudaryti
+              mažiau kaip %{word_count} žodžiai
+            contains_html_tags_instructional: Seniūnijos pavadinime negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Seniūnijos pavadinime negali būti naudojamos
+              HTML žymės
+            contains_url_instructional: Seniūnijos pavadinimas negali turėti URL adreso
+            contains_url_informative: Seniūnijos pavadinimas negali turėti URL adreso
+            unknown_for_city_instructional: Įveskite seniūnijos pavadinimą, atitinkantį
+              miestą %{city}
+            unknown_for_city_informative: Seniūnijos pavadinimas neatitinka miesto
+              %{city}
+            unknown_for_zip_instructional: Įveskite seniūnijos pavadinimą, atitinkantį
+              miestą %{zip}
+            unknown_for_zip_informational: Seniūnijos pavadinimas neatitinka pašto
+              kodo %{zip}
           warnings:
             contains_too_many_words: Patartina, kad seniūnijos pavadinimą sudarytų
               mažiau nei %{word_count} žodžiai (-ių, -is)

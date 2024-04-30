@@ -8,24 +8,47 @@ it:
             default: Stato
             optional: Stato (facoltativo)
           errors:
-            blank: Seleziona uno stato
-            invalid_for_country: Inserisci uno stato valido per gli %{country}
-            unknown_for_city_and_zip: Inserisci uno stato valido per %{city}, %{zip}
-            unknown_for_city: Seleziona uno stato valido per %{city}
-            unknown_for_zip: Seleziona uno stato valido per %{zip}
-            unknown_for_address: Lo stato potrebbe non essere corretto.
+            unknown_for_address: Lo stato potrebbe non essere corretto
+            blank_instructional: Seleziona uno stato
+            blank_informative: Inserisci uno stato
+            invalid_for_country_instructional: Inserisci uno stato valido per %{city},
+              %{zip}
+            invalid_for_country_informative: Stato non valido
+            unknown_for_city_and_zip_instructional: Inserisci uno stato valido per
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Lo stato non è valido per %{city},
+              %{zip}
+            unknown_for_city_instructional: Seleziona uno stato valido per %{city}
+            unknown_for_city_informative: Lo stato non è valido per %{city}
+            unknown_for_zip_instructional: Seleziona uno stato valido per %{zip}
+            unknown_for_zip_informative: Lo stato non è valido per %{zip}
         zip:
           label:
             default: CAP
             optional: CAP (facoltativo)
           errors:
-            blank: Inserisci un CAP
-            invalid_for_country: Inserisci un CAP valido per %{country}
-            invalid_for_country_and_province: Inserisci un CAP valido per %{province},
-              %{country}
-            too_long: Il valore del codice postale è troppo lungo
-            contains_html_tags: Il CAP non può contenere tag HTML.
-            contains_emojis: Il CAP non può contenere emoji
-            contains_restricted_characters: Il CAP non può contenere caratteri vietati
-            invalid_for_province: Inserisci un CAP valido per %{province}
-            unknown_for_address: Il CAP potrebbe non essere corretto.
+            unknown_for_address: Il CAP potrebbe non essere corretto
+            blank_instructional: Inserisci un CAP
+            blank_informative: CAP mancante
+            invalid_for_country_instructional: 'Inserisci un CAP valido per il seguente
+              paese: %{country}'
+            invalid_for_country_informative: 'Il CAP non è valido per il seguente
+              paese: %{country}'
+            invalid_for_province_instructional: 'Inserisci un CAP valido per il seguente
+              paese: %{province}'
+            invalid_for_province_informative: 'Il CAP non è valido per il seguente
+              paese: %{province}'
+            invalid_for_country_and_province_instructional: Inserisci un CAP valido
+              per %{province}, %{country}
+            invalid_for_country_and_province_informative: Il CAP non è valido per
+              %{province}, %{country}
+            too_long_instructional: Il CAP è troppo lungo
+            too_long_informative: Il CAP è troppo lungo (lunghezza massima 255 caratteri)
+            contains_emojis_instructional: Il CAP non può contenere emoji
+            contains_emojis_informative: Il CAP non può contenere emoji
+            contains_restricted_characters_instructional: Il CAP non può contenere
+              caratteri vietati
+            contains_restricted_characters_informative: Il CAP non può contenere caratteri
+              vietati
+            contains_html_tags_instructional: Il CAP non può contenere HTML
+            contains_html_tags_informative: Il CAP non può contenere HTML

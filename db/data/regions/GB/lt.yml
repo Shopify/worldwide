@@ -8,12 +8,24 @@ lt:
             default: Pašto kodas
             optional: Pašto kodas (pasirinktinai)
           errors:
-            blank: Įveskite pašto kodą
-            invalid_for_country: Įveskite galiojąntį Jungtinės Karalystės pašto kodą
-            invalid_for_country_and_province: Įveskite galiojantį %{province}, JK,
+            blank_instructional: Įveskite pašto kodą
+            blank_informative: Trūksta pašto kodo
+            invalid_for_country_instructional: Įveskite tinkamą Jungtinės Karalystės
               pašto kodą
-            too_long: Pašto kodas yra per ilgas
-            contains_html_tags: Pašto kode negali būti naudojamos HTML žymės.
-            contains_emojis: Pašto kode negali būti naudojami „emoji“
-            contains_restricted_characters: Pašto indekso negali sudaryti ribojami
-              simboliai
+            invalid_for_country_informative: Jungtinės Karalystės pašto kodas neteisingas
+            invalid_for_country_and_province_instructional: Įveskite tinkamą JK %{province}
+              pašto kodą
+            invalid_for_country_and_province_informative: JK %{province} pašto kodas
+              neteisingas
+            too_long_instructional: Pašto kodas per ilgas
+            too_long_informative: Pašto kodas per ilgas
+            contains_emojis_instructional: Pašto kodo negali būti sudaryti jausmaženkliai
+            contains_emojis_informative: Pašto kodo negali sudaryti jausmaženkliai
+            contains_restricted_characters_instructional: Pašto kodo negali sudaryti
+              ribojami simboliai
+            contains_restricted_characters_informative: Pašto kodą gali sudaryti tik
+              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_html_tags_instructional: Pašto kode negali būti naudojamos HTML
+              žymės
+            contains_html_tags_informative: Pašto kode negali būti naudojamos HTML
+              žymės

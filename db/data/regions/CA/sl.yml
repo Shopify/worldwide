@@ -8,8 +8,14 @@ sl:
             default: Provinca
             optional: Provinca (izbirno)
           errors:
-            blank: Izberite provinco
-            unknown_for_city_and_zip: Vnesite veljavno provinco za %{city}, %{zip}
-            unknown_for_city: Izberite veljavno provinco za %{city}
-            unknown_for_zip: Izberite veljavno provinco za %{zip}
-            unknown_for_address: Pokrajina morda ni pravilna.
+            unknown_for_address: Provinca morda ni pravilna
+            blank_instructional: Izberite provinco
+            blank_informative: Manjka provinca
+            unknown_for_city_and_zip_instructional: Vnesite veljavno provinco za kraj
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Provinca ni veljavna za kraj %{city},
+              %{zip}
+            unknown_for_city_instructional: Izberite veljavno provinco za kraj %{city}
+            unknown_for_city_informative: Provinca ni veljavna za kraj %{city}
+            unknown_for_zip_instructional: Izberite veljavno provinco za kraj %{zip}
+            unknown_for_zip_informative: Provinca ni veljavna za kraj %{zip}

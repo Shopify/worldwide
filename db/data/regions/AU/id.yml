@@ -8,29 +8,50 @@ id:
             default: Pinggiran kota
             optional: Pinggiran kota (opsional)
           errors:
-            blank: Masukkan pinggiran kota
-            too_long: Nama pinggiran kota terlalu panjang (maksimum berisi 255 karakter)
-            contains_html_tags: Nama pinggiran kota tidak bisa berisi tag HTML.
-            contains_emojis: Pinggiran kota tidak boleh berisi emoji
-            contains_restricted_characters: Nama Daerah Pinggiran hanya boleh terdiri
-              dari huruf, angka, karakter lokal, dan karakter khusus
+            blank_instructional: Masukkan pinggiran kota
+            blank_informative: Nama pinggiran kota belum diisi
+            too_long_instructional: Nama pinggiran kota terlalu panjang (maksimum
+              berisi 255 karakter)
+            too_long_informative: Nama pinggiran kota terlalu panjang
+            contains_emojis_instructional: Nama pinggiran kota tidak boleh berisi
+              emoji
+            contains_emojis_informative: Nama pinggiran kota tidak boleh berisi emoji
+            contains_restricted_characters_instructional: Nama pinggiran kota hanya
+              boleh terdiri dari huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Nama pinggiran kota tidak
+              boleh memuat karakter yang dilarang
+            contains_html_tags_instructional: Nama pinggiran kota tidak boleh berisi
+              HTML
+            contains_html_tags_informative: Nama pinggiran kota tidak boleh berisi
+              HTML
         province:
           label:
             default: Negara bagian/wilayah
             optional: Negara bagian/wilayah (opsional)
           errors:
-            blank: Pilih negara bagian/wilayah
+            blank_instructional: Pilih negara bagian/wilayah
+            blank_informative: Nama negara bagian/wilayah belum diisi
         zip:
           label:
             default: Kode pos
             optional: Kode pos (opsional)
           errors:
-            blank: Masukkan kode pos
-            invalid_for_country: Masukkan kode pos yang valid untuk %{country}
-            invalid_for_country_and_province: Masukkan kode pos yang valid untuk %{province},
+            blank_instructional: Masukkan kode pos
+            blank_informative: Kode pos belum diisi
+            invalid_for_country_instructional: Masukkan kode pos yang valid untuk
               %{country}
-            too_long: Nilai kode pos terlalu panjang
-            contains_html_tags: Kode pos tidak bisa berisi tag HTML.
-            contains_emojis: Kode pos tidak boleh berisi emoji
-            contains_restricted_characters: Kode Pos hanya boleh terdiri dari huruf,
-              angka, karakter lokal, dan karakter khusus
+            invalid_for_country_informative: Kode pos tidak valid untuk %{country}
+            invalid_for_country_and_province_instructional: Masukkan kode pos yang
+              valid untuk %{province}, %{country}
+            invalid_for_country_and_province_informative: Kode pos tidak valid untuk
+              %{province}, %{country}
+            too_long_instructional: Kode pos terlalu panjang
+            too_long_informative: Kode pos terlalu panjang
+            contains_emojis_instructional: Kode pos tidak boleh berisi emoji
+            contains_emojis_informative: Kode pos tidak boleh berisi emoji
+            contains_restricted_characters_instructional: Kode Pos hanya boleh terdiri
+              dari huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Kode pos tidak boleh memuat
+              karakter yang dilarang
+            contains_html_tags_instructional: Kode pos tidak boleh berisi HTML
+            contains_html_tags_informative: Kode pos tidak boleh berisi HTML

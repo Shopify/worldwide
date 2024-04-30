@@ -8,20 +8,36 @@ sl:
             default: Četrt
             optional: Četrt (izbirno)
           errors:
-            blank: Vnesite ime četrti
-            too_long: Ime četrti je predolgo (največje dovoljeno št. znakov je 255)
-            contains_emojis: Ime četrti ne sme vsebovati čustvenih simbolov
-            contains_mathematical_symbols: Ime četrti ne sme vsebovati matematičnih
-              simbolov
-            contains_restricted_characters: Ime četrti lahko vsebuje le črke, številke,
-              lokalne znake in posebne znake
-            contains_too_many_words: Ime četrti ne sme vsebovati več kot %{word_count}
-              besed
-            contains_html_tags: Ime četrti ne sme vsebovati oznak HTML.
-            contains_url: Ime četrti ne sme vsebovati naslovov URL.
-            unknown_for_city: Vnesite veljavno ime četrti za kraj %{city}.
-            unknown_for_zip: Vnesite veljavno ime četrti za poštno številko %{zip}.
-            unknown_for_address: Četrt morda ni pravilna.
+            unknown_for_address: Četrt morda ni pravilna
+            blank_instructional: Vnesite ime četrti
+            blank_informative: Manjka ime četrti
+            too_long_instructional: Ime četrti je predolgo
+            too_long_informative: Ime četrti je predolgo (največje dovoljeno št. znakov
+              je 255)
+            contains_emojis_instructional: Ime četrti ne sme vsebovati čustvenih simbolov
+            contains_emojis_informative: Ime četrti ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols_instructional: Ime četrti ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Ime četrti ne sme vsebovati
+              matematičnih simbolov
+            contains_restricted_characters_instructional: Ime četrti lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Ime četrti ne sme vsebovati
+              prepovedanih znakov
+            contains_too_many_words_instructional: Ime četrti ne sme vsebovati več
+              kot %{word_count} besed
+            contains_too_many_words_informative: Ime četrti ne sme vsebovati več kot
+              %{word_count} besed
+            contains_html_tags_instructional: Ime četrti ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Ime četrti ne sme vsebovati oznak HTML
+            contains_url_instructional: Ime četrti ne sme vsebovati naslovov URL
+            contains_url_informative: Ime četrti ne sme vsebovati naslovov URL
+            unknown_for_city_instructional: Vnesite veljavno ime četrti za kraj %{city}
+            unknown_for_city_informative: Ime četrti se ne ujema z mestom %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime četrti za poštno številko
+              %{zip}.
+            unknown_for_zip_informational: Ime četrti se ne ujema s poštno številko
+              %{zip}
           warnings:
             contains_too_many_words: Ime četrti naj ne vsebuje več kot %{word_count}
               besed

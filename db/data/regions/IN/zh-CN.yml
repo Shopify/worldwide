@@ -8,16 +8,25 @@ zh-CN:
             default: 邦
             optional: 邦（可选）
           errors:
-            blank: 选择州
+            blank_instructional: 选择州
+            blank_informative: 缺少州
         zip:
           label:
             default: PIN 代码
             optional: PIN 代码（可选）
           errors:
-            blank: 输入 PIN 代码
-            invalid_for_country: 输入 %{country} 的有效 PIN 代码
-            invalid_for_country_and_province: 输入 %{country} %{province} 的有效 PIN 代码
-            too_long: PIN 代码值过长
-            contains_html_tags: PIN 代码不能包含 HTML 标记。
-            contains_emojis: PIN 代码不能包含表情符号
-            contains_restricted_characters: "“PIN 代码”字段不能包含受限字符"
+            blank_instructional: 输入 PIN 代码
+            blank_informative: 缺少 PIN 代码
+            invalid_for_country_instructional: 输入 %{country} 对应的有效 PIN 代码
+            invalid_for_country_informative: PIN 代码无效
+            invalid_for_country_and_province_instructional: 输入 %{country} %{province}
+              对应的有效 PIN 代码
+            invalid_for_country_and_province_informative: PIN 代码无效
+            too_long_instructional: PIN 代码过长
+            too_long_informative: PIN 代码过长
+            contains_emojis_instructional: PIN 代码不能包含表情符号
+            contains_emojis_informative: PIN 代码不能包含表情符号
+            contains_restricted_characters_instructional: PIN 代码不能包含受限字符
+            contains_restricted_characters_informative: PIN 代码不能包含受限字符
+            contains_html_tags_instructional: PIN 代码不能包含 HTML
+            contains_html_tags_informative: PIN 代码不能包含 HTML

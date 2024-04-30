@@ -8,12 +8,22 @@ tr:
             default: Posta kodu
             optional: Posta kodu (isteğe bağlı)
           errors:
-            blank: Posta kodu girin
-            invalid_for_country: Birleşik Krallık için geçerli bir posta kodu girin
-            invalid_for_country_and_province: "%{province}, Birleşik Krallık için
-              geçerli bir posta kodu girin"
-            too_long: Posta kodu değeri çok uzun
-            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
-            contains_emojis: Posta kodu, emoji içeremez
-            contains_restricted_characters: Posta kodunda kısıtlanmış karakterler
-              kullanılamaz
+            blank_instructional: Posta kodu girin
+            blank_informative: Posta kodu eksik
+            invalid_for_country_instructional: Birleşik Krallık için geçerli bir posta
+              kodu girin
+            invalid_for_country_informative: Posta kodu Birleşik Krallık için geçersiz
+            invalid_for_country_and_province_instructional: "%{province}, Birleşik
+              Krallık için geçerli bir posta kodu girin"
+            invalid_for_country_and_province_informative: Posta kodu %{province},
+              Birleşik Krallık için geçersiz
+            too_long_instructional: Posta kodu çok uzun
+            too_long_informative: Posta kodu çok uzun
+            contains_emojis_instructional: Posta kodu, emoji içeremez
+            contains_emojis_informative: Posta kodu, emoji içeremez
+            contains_restricted_characters_instructional: Posta kodu, kısıtlanmış
+              karakterler içeremez
+            contains_restricted_characters_informative: Posta kodu yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_html_tags_instructional: Posta kodu, HTML içeremez
+            contains_html_tags_informative: Posta kodu, HTML içeremez

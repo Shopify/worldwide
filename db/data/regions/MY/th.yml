@@ -8,13 +8,18 @@ th:
             default: รัฐ/เขตแดน
             optional: รัฐ/เขตแดน (ไม่บังคับ)
           errors:
-            blank: เลือกรัฐ/เขตแดน
+            blank_instructional: เลือกรัฐ/เขตแดน
+            blank_informative: ไม่พบรัฐ/เขตแดน
         zip:
           label:
             default: รหัสไปรษณีย์
             optional: รหัสไปรษณีย์ (ไม่บังคับ)
           errors:
-            too_long: รหัสไปรษณีย์ยาวเกินไป
-            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
-            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสไปรษณีย์
-            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัสไปรษณีย์ได้
+            too_long_instructional: รหัสไปรษณีย์ยาวเกินไป
+            too_long_informative: รหัสไปรษณีย์ยาวเกินไป
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
+            contains_restricted_characters_instructional: ไม่สามารถใส่อักขระต้องห้ามในรหัสไปรษณีย์ได้
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในรหัสไปรษณีย์ได้
+            contains_html_tags_instructional: รหัสไปรษณีย์ต้องไม่มี HTML
+            contains_html_tags_informative: รหัสไปรษณีย์ต้องไม่มี HTML

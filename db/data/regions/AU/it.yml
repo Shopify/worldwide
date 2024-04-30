@@ -8,30 +8,52 @@ it:
             default: Zona
             optional: Zona (facoltativo)
           errors:
-            blank: Inserisci una zona
-            too_long: Il nome della zona è troppo lungo (la lunghezza massima è di
+            blank_instructional: Inserisci una zona
+            blank_informative: Zona mancante
+            too_long_instructional: Il nome della zona è troppo lungo (lunghezza massima
               255 caratteri)
-            contains_html_tags: Il sobborgo non può contenere tag HTML.
-            contains_emojis: La zona non può contenere emoji
-            contains_restricted_characters: La zona può contenere solo lettere, numeri,
-              caratteri locali e caratteri speciali
+            too_long_informative: Il nome della zona è troppo lungo
+            contains_emojis_instructional: Il campo Zona non può contenere emoji
+            contains_emojis_informative: Il campo Zona non può contenere emoji
+            contains_restricted_characters_instructional: Il campo Zona può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Zona non può contenere
+              caratteri vietati
+            contains_html_tags_instructional: Il campo Zona non può contenere HTML
+            contains_html_tags_informative: Il campo Zona non può contenere HTML
         province:
           label:
             default: Stato/territorio
             optional: Stato/territorio (facoltativo)
           errors:
-            blank: Seleziona uno stato/territorio
+            blank_instructional: Seleziona uno stato/territorio
+            blank_informative: Stato/territorio mancante
         zip:
           label:
             default: Codice postale
             optional: Codice postale (facoltativo)
           errors:
-            blank: Inserisci un codice postale
-            invalid_for_country: Inserisci un codice postale valido per %{country}
-            invalid_for_country_and_province: Inserisci un codice postale valido per
-              %{province}, %{country}
-            too_long: Il valore del codice postale è troppo lungo
-            contains_html_tags: Il codice postale non può contenere tag HTML.
-            contains_emojis: Il codice postale non può contenere emoji
-            contains_restricted_characters: Il codice postale può contenere solo lettere,
-              numeri, caratteri locali e caratteri speciali
+            blank_instructional: Inserisci un codice postale
+            blank_informative: Codice postale mancante
+            invalid_for_country_instructional: 'Inserisci un codice postale valido
+              per il seguente paese: %{country}'
+            invalid_for_country_informative: 'Il codice postale non è valido per il
+              seguente paese: %{country}'
+            invalid_for_country_and_province_instructional: Inserisci un codice postale
+              valido per %{province}, %{country}
+            invalid_for_country_and_province_informative: Il codice postale non è
+              valido per %{province}, %{country}
+            too_long_instructional: Il campo Codice postale è troppo lungo
+            too_long_informative: Il campo Codice postale è troppo lungo
+            contains_emojis_instructional: Il campo Codice postale non può contenere
+              emoji
+            contains_emojis_informative: Il campo Codice postale non può contenere
+              emoji
+            contains_restricted_characters_instructional: Il campo Codice postale
+              può contenere solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Codice postale non
+              può contenere caratteri vietati
+            contains_html_tags_instructional: Il campo Codice postale non può contenere
+              HTML
+            contains_html_tags_informative: Il campo Codice postale non può contenere
+              HTML

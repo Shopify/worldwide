@@ -8,8 +8,13 @@ th:
             default: เขต
             optional: เขต (ไม่บังคับ)
           errors:
-            blank: ป้อนเขต
-            too_long: ชื่อเขตยาวเกินไป (สูงสุดคือ 255 อักขระ)
-            contains_html_tags: ห้ามมีแท็ก HTML ในเขต
-            contains_emojis: ไม่สามารถใส่อิโมจิในเขต
-            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในเขตได้
+            blank_instructional: ป้อนเขต
+            blank_informative: ไม่พบเขต
+            too_long_instructional: ชื่อเขตยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            too_long_informative: ชื่อเขตยาวเกินไป
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในชื่อเขตได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในชื่อเขตได้
+            contains_restricted_characters_instructional: ไม่สามารถใส่อักขระต้องห้ามในชื่อเขตได้
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในชื่อเขตได้
+            contains_html_tags_instructional: ชื่อเขตต้องไม่มี HTML
+            contains_html_tags_informative: ชื่อเขตต้องไม่มี HTML

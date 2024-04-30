@@ -8,12 +8,23 @@ fi:
             default: Postinumero
             optional: Postinumero (valinnainen)
           errors:
-            blank: Anna postinumero
-            invalid_for_country: Anna kelvollinen Yhdistyneen kuningaskunnan postinumero
-            invalid_for_country_and_province: Anna kelvollinen postinumero Yhdistyneen
-              kuningaskunnan alueella %{province}
-            too_long: Postinumeron arvo on liian pitkä
-            contains_html_tags: Postinumero ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Postinumero ei voi sisältää emojeita
-            contains_restricted_characters: Postinumero ei voi sisältää kiellettyjä
-              merkkejä
+            blank_instructional: Anna postinumero
+            blank_informative: Postinumero puuttuu
+            invalid_for_country_instructional: Anna kelvollinen Yhdistyneen kuningaskunnan
+              postinumero
+            invalid_for_country_informative: Postinumero on virheellinen Yhdistyneelle
+              kuningaskunnalle
+            invalid_for_country_and_province_instructional: Anna kelvollinen postinumero
+              Yhdistyneen kuningaskunnan alueella %{province}
+            invalid_for_country_and_province_informative: Postinumero on virheellinen
+              Yhdistyneen kuningaskunnan alueelle %{province}
+            too_long_instructional: Postinumero on liian pitkä
+            too_long_informative: Postinumero on liian pitkä
+            contains_emojis_instructional: Postinumero ei voi sisältää emojeita
+            contains_emojis_informative: Postinumero ei voi sisältää emojeita
+            contains_restricted_characters_instructional: Postinumero ei voi sisältää
+              kiellettyjä merkkejä
+            contains_restricted_characters_informative: Postinumero voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_html_tags_instructional: Postinumero ei voi sisältää HTML:ää
+            contains_html_tags_informative: Postinumero ei voi sisältää HTML:ää

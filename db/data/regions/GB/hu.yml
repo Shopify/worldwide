@@ -8,13 +8,22 @@ hu:
             default: Irányítószám
             optional: Irányítószám (nem kötelező megadni)
           errors:
-            blank: Írd be az irányítószámot
-            invalid_for_country: Érvénytelen egyesült királysági irányítószámot írtál
-              be
-            invalid_for_country_and_province: 'Érvénytelen irányítószámot írtál be
-              ehhez az egyesült királysági zónához: %{province}'
-            too_long: Túl hosszú az irányítószám.
-            contains_html_tags: Az irányítószám nem tartalmazhat HTML-címkéket.
-            contains_emojis: Az irányítószám nem tartalmazhat emodzsikat.
-            contains_restricted_characters: Az irányítószám nem tartalmazhat tiltott
-              karaktereket
+            blank_instructional: Írd be az irányítószámot
+            blank_informative: Az irányítószám nincs megadva
+            invalid_for_country_instructional: Érvénytelen egyesült királysági irányítószámot
+              írtál be
+            invalid_for_country_informative: Érvénytelen egyesül királysági irányítószám
+            invalid_for_country_and_province_instructional: 'Érvénytelen irányítószámot
+              írtál be ehhez az egyesült királysági tartományhoz: %{province}'
+            invalid_for_country_and_province_informative: 'Érvénytelen irányítószám
+              ehhez az egyesül királysági tartományhoz: %{province}'
+            too_long_instructional: Túl hosszú az irányítószám
+            too_long_informative: Túl hosszú az irányítószám
+            contains_emojis_instructional: Az irányítószám nem tartalmazhat emojikat
+            contains_emojis_informative: Az irányítószám nem tartalmazhat emojikat
+            contains_restricted_characters_instructional: Az irányítószám nem tartalmazhat
+              tiltott karaktereket
+            contains_restricted_characters_informative: Az irányítószám csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_html_tags_instructional: Az irányítószám nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: Az irányítószám nem tartalmazhat HTML-címkét

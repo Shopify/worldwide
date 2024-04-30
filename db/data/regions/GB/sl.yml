@@ -8,12 +8,27 @@ sl:
             default: Poštna številka
             optional: Poštna številka (izbirno)
           errors:
-            blank: Vnesite poštno številko
-            invalid_for_country: Vnesite veljavno poštno številko za Združeno kraljestvo
-            invalid_for_country_and_province: Vnesite veljavno poštno številko za
-              območje %{province}, Združeno kraljestvo
-            too_long: Poštna številka je predolga
-            contains_html_tags: Poštna številka ne sme vsebovati oznak HTML.
-            contains_emojis: Poštna številka ne sme vsebovati čustvenih simbolov
-            contains_restricted_characters: Poštna številka ne sme vsebovati prepovedanih
-              znakov
+            blank_instructional: Vnesite poštno številko
+            blank_informative: Manjka poštna številka
+            invalid_for_country_instructional: Vnesite veljavno poštno številko za
+              Združeno kraljestvo
+            invalid_for_country_informative: Poštna številka ni veljavna za Združeno
+              kraljestvo
+            invalid_for_country_and_province_instructional: Vnesite veljavno poštno
+              številko za provinco %{province}, Združeno kraljestvo
+            invalid_for_country_and_province_informative: Poštna številka ni veljavna
+              za provinco %{province}, Združeno kraljestvo
+            too_long_instructional: Poštna številka je predolga
+            too_long_informative: Poštna številka je predolga
+            contains_emojis_instructional: Poštna številka ne sme vsebovati čustvenih
+              simbolov
+            contains_emojis_informative: Poštna številka ne sme vsebovati čustvenih
+              simbolov
+            contains_restricted_characters_instructional: Poštna številka ne sme vsebovati
+              prepovedanih znakov
+            contains_restricted_characters_informative: Poštna številka lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_html_tags_instructional: Poštna številka ne sme vsebovati oznak
+              HTML
+            contains_html_tags_informative: Poštna številka ne sme vsebovati oznak
+              HTML

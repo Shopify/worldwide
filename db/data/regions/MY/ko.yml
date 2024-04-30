@@ -8,13 +8,18 @@ ko:
             default: 시/도/지역
             optional: 시/도/지역(선택 사항)
           errors:
-            blank: 시/도/지역 선택
+            blank_instructional: 주/지역 선택
+            blank_informative: 주/지역이 누락되었습니다
         zip:
           label:
             default: 우편 번호
             optional: 우편 번호(선택 사항)
           errors:
-            too_long: 우편 번호 값이 너무 깁니다.
-            contains_html_tags: 우편 번호에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 우편 번호에 이모티콘을 포함할 수 없음
-            contains_restricted_characters: 우편 번호에는 제한 문자가 포함될 수 없습니다
+            too_long_instructional: 우편 번호가 너무 깁니다
+            too_long_informative: 우편 번호가 너무 깁니다
+            contains_emojis_instructional: 우편 번호에 이모티콘을 포함할 수 없습니다
+            contains_emojis_informative: 우편 번호에 이모티콘을 포함할 수 없습니다
+            contains_restricted_characters_instructional: 우편 번호에는 제한 문자를 포함할 수 없습니다
+            contains_restricted_characters_informative: 우편 번호에는 제한 문자를 포함할 수 없습니다
+            contains_html_tags_instructional: 우편 번호에는 HTML을 포함할 수 없습니다
+            contains_html_tags_informative: 우편 번호에는 HTML을 포함할 수 없습니다

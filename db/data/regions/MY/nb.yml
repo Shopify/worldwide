@@ -8,14 +8,20 @@ nb:
             default: Stat/territorium
             optional: Stat/territorium (valgfritt)
           errors:
-            blank: Velg stat/territorium
+            blank_instructional: Velg stat/territorium
+            blank_informative: Stat/territorium mangler
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfritt)
           errors:
-            too_long: Verdien for postnummer er for lang
-            contains_html_tags: Postnummer kan ikke inneholde HTML-tagger.
-            contains_emojis: Postnummeret kan ikke inneholde emojier
-            contains_restricted_characters: Postnummer kan ikke inneholde begrensede
-              tegn
+            too_long_instructional: Postnummeret er for langt
+            too_long_informative: Postnummeret er for langt
+            contains_emojis_instructional: Postnummer kan ikke inneholde emojier
+            contains_emojis_informative: Postnummer kan ikke inneholde emojier
+            contains_restricted_characters_instructional: Postnummer kan ikke inneholde
+              begrensede tegn
+            contains_restricted_characters_informative: Postnummer kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: Postnummer kan ikke inneholde HTML
+            contains_html_tags_informative: Postnummer kan ikke inneholde HTML

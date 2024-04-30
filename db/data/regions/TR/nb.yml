@@ -8,20 +8,33 @@ nb:
             default: Distrikt
             optional: Distrikt (valgfritt)
           errors:
-            blank: Angi et distrikt
-            too_long: Distriktsnavnet er for langt (maksimalt 255 tegn)
-            contains_emojis: Distriktsnavnet kan ikke inneholde emojier
-            contains_mathematical_symbols: Distriktsnavnet kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Distriktsnavnet kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Distriktsnavnet kan ikke inneholde mer enn %{word_count}
-              ord
-            contains_html_tags: Distriktsnavnet kan ikke inneholde HTML-tagger.
-            contains_url: Distriktsnavnet kan ikke inneholde URL-adresser.
-            unknown_for_city: Skriv inn et gyldig distriktsnavn for %{city}.
-            unknown_for_zip: Skriv inn et gyldig distriktsnavn for %{zip}.
-            unknown_for_address: Distriktsnavnet kan være feil.
+            unknown_for_address: Distriktsnavnet kan være feil
+            blank_instructional: Angi et distrikt
+            blank_informative: Distrikt mangler
+            too_long_instructional: Distriktsnavnet er for langt (maksimalt 255 tegn)
+            too_long_informative: Distriktsnavnet er for langt
+            contains_emojis_instructional: Distriktsnavnet kan ikke inneholde emojier
+            contains_emojis_informative: Distriktsnavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Distriktsnavnet kan ikke
+              inneholde matematiske symboler
+            contains_mathematical_symbols_informative: Distriktsnavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Distriktsnavnet kan kun
+              inneholde bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Distriktsnavnet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Distriktsnavnet må bestå av færre
+              enn %{word_count} ord
+            contains_too_many_words_informative: Distriktsnavnet må bestå av færre
+              enn %{word_count} ord
+            contains_html_tags_instructional: Distriktsnavnet kan ikke inneholde HTML
+            contains_html_tags_informative: Distriktsnavnet kan ikke inneholde HTML
+            contains_url_instructional: Distriktsnavnet kan ikke inneholde en URL-adresse
+            contains_url_informative: Distriktsnavnet kan ikke inneholde en URL-adresse
+            unknown_for_city_instructional: Angi et gyldig distrikt for %{city}
+            unknown_for_city_informative: Distriktet er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Angi et gyldig distrikt for %{zip}
+            unknown_for_zip_informative: Distriktet er ikke gyldig for %{zip}
           warnings:
             contains_too_many_words: Vi anbefaler at distriktsnavnet inneholder færre
               enn %{word_count} ord

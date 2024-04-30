@@ -8,59 +8,89 @@ en:
             default: Company
             optional: Company (optional)
           errors:
-            blank: Enter a company name
-            too_long: Company name is too long (maximum is 255 characters)
-            contains_emojis: Company cannot contain emojis
-            contains_mathematical_symbols: Company cannot contain mathematical symbols
-            contains_restricted_characters: Company can only contain letters, numbers,
+            blank_instructional: Enter a company
+            blank_informative: Company is missing
+            too_long_instructional: Company is too long (maximum is 255 characters)
+            too_long_informative: Company is too long
+            contains_emojis_instructional: Company can't contain emojis
+            contains_emojis_informative: Company can't contain emojis
+            contains_mathematical_symbols_instructional: Company can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Company can't contain mathematical symbols
+            contains_restricted_characters_instructional: Company can only contain letters, numbers,
               local characters, and special characters
-            contains_html_tags: Company cannot contain HTML tags.
+            contains_restricted_characters_informative: Company can't contain restricted characters
+            contains_html_tags_instructional: Company can't contain HTML
+            contains_html_tags_informative: Company can't contain HTML
         first_name:
           label:
             default: First name
             optional: First name (optional)
           errors:
-            blank: Enter a first name
-            too_long: First name is too long (maximum is 255 characters)
-            contains_emojis: First name cannot contain emojis
-            contains_mathematical_symbols: First name cannot contain mathematical symbols
-            contains_restricted_characters: First name can only contain letters, numbers,
+            blank_instructional: Enter a first name
+            blank_informative: First name is missing
+            too_long_instructional: First name is too long (maximum is 255 characters)
+            too_long_informative: First name is too long
+            contains_emojis_instructional: First name can't contain emojis
+            contains_emojis_informative: First name can't contain emojis
+            contains_mathematical_symbols_instructional: First name can't contain mathematical symbols
+            contains_mathematical_symbols_informative: First name can't contain mathematical symbols
+            contains_restricted_characters_instructional: First name can only contain letters, numbers,
               local characters, and special characters
-            contains_html_tags: First name cannot contain HTML tags.
-            contains_url: First name cannot contain a URL.
+            contains_restricted_characters_informative: First name can't contain restricted characters
+            contains_html_tags_instructional: First name can't contain HTML
+            contains_html_tags_informative: First name can't contain HTML
+            contains_url_instructional: First name can't contain a URL
+            contains_url_informative: First name can't contain a URL
         last_name:
           label:
             default: Last name
             optional: Last name (optional)
           errors:
-            blank: Enter a last name
-            too_long: Last name is too long (maximum is 255 characters)
-            contains_emojis: Last name cannot contain emojis
-            contains_mathematical_symbols: Last name cannot contain mathematical symbols
-            contains_restricted_characters: Last name can only contain letters, numbers,
+            blank_instructional: Enter a last name
+            blank_informative: Last name is missing
+            too_long_instructional: Last name is too long (maximum is 255 characters)
+            too_long_informative: Last name is too long
+            contains_emojis_instructional: Last name can't contain emojis
+            contains_emojis_informative: Last name can't contain emojis
+            contains_mathematical_symbols_instructional: Last name can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Last name can't contain mathematical symbols
+            contains_restricted_characters_instructional: Last name can only contain letters, numbers,
               local characters, and special characters
-            contains_html_tags: Last name cannot contain HTML tags.
-            contains_url: Last name cannot contain a URL.
+            contains_restricted_characters_informative: Last name can't contain restricted characters
+            contains_html_tags_instructional: Last name can't contain HTML
+            contains_html_tags_informative: Last name can't contain HTML
+            contains_url_instructional: Last name can't contain a URL
+            contains_url_informative: Last name can't contain a URL
         address1:
           label:
             default: Address
             optional: Address (optional)
           errors:
-            blank: Enter an address
-            too_long: The first address line is too long (maximum is 255 characters)
-            contains_emojis: Address1 cannot contain emojis
-            contains_mathematical_symbols: Address1 cannot contain mathematical symbols
-            contains_restricted_characters: Address1 can only contain letters, numbers,
+            blank_instructional: Enter an address
+            blank_informative: Address is missing
+            too_long_instructional: The first address line is too long (maximum is 255 characters)
+            too_long_informative: The first address line is too long
+            contains_emojis_instructional: Address can't contain emojis
+            contains_emojis_informative: Address can't contain emojis
+            contains_mathematical_symbols_instructional: Address can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Address can't contain mathematical symbols
+            contains_restricted_characters_instructional: Address can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: Address1 cannot have more than %{word_count}
-              words
-            contains_html_tags: Address1 cannot contain HTML tags.
-            contains_url: Address1 cannot contain URLs.
-            missing_building_number: Add a building number if you have one.
-            street_unknown_for_zip: Enter a valid street name for %{zip}.
-            building_number_invalid: Building number couldn't be located for %{street},
-              %{zip}.
-            unknown_for_address: Address line 1 may be incorrect.
+            contains_restricted_characters_informative: Address can't contain restricted characters
+            contains_too_many_words_instructional: Address must have fewer than %{word_count} words
+            contains_too_many_words_informative: Address must have fewer than %{word_count} words
+            contains_html_tags_instructional: Address can't contain HTML
+            contains_html_tags_informative: Address can't contain HTML
+            contains_url_instructional: Address can't contain a URL
+            contains_url_informative: Address can't contain a URL
+            missing_building_number_instructional: Add a building number if you have one
+            missing_building_number_informative: Building number may be missing
+            street_unknown_for_zip_instructional: Enter a valid street name for %{zip}
+            street_unknown_for_zip_informative: Street name doesn't match %{zip}
+            building_number_invalid_instructional: Building number couldn't be located for %{street}, %{zip}
+            building_number_invalid_informative: Building number couldn't be located for %{street}, %{zip}
+            unknown_for_address_instructional: Address line 1 may be incorrect
+            unknown_for_address_informative: Address line 1 may be incorrect
           warnings:
             contains_too_many_words: Address line 1 is recommended to have less than %{word_count} words
         street_name:
@@ -68,17 +98,27 @@ en:
             default: Street
             optional: Street (optional)
           errors:
-            blank: Enter a street name
-            too_long: Street is too long (maximum is 255 characters)
-            contains_emojis: Street cannot contain emojis
-            contains_mathematical_symbols: Street cannot contain mathematical symbols
-            contains_restricted_characters: Street can only contain letters, numbers,
+            blank_instructional: Enter a street
+            blank_informative: Street is missing
+            too_long_instructional: Street is too long (maximum is 255 characters)
+            too_long_informative: Street is too long
+            contains_emojis_instructional: Street can't contain emojis
+            contains_emojis_informative: Street can't contain emojis
+            contains_mathematical_symbols_instructional: Street can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Street can't contain mathematical symbols
+            contains_restricted_characters_instructional: Street can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: Street cannot have more than %{word_count} words
-            contains_html_tags: Street cannot contain HTML tags.
-            contains_url: Street cannot contain URLs.
-            street_unknown_for_zip: Enter a valid street name for %{zip}.
-            unknown_for_address: Street may be incorrect.
+            contains_restricted_characters_informative: Street can't contain restricted characters
+            contains_too_many_words_instructional: Street can't have more than %{word_count} words
+            contains_too_many_words_informational: Street can't have more than %{word_count} words
+            contains_html_tags_instructional: Street can't contain HTML
+            contains_html_tags_informational: Street can't contain HTML
+            contains_url_instructional: Street can't contain a URL
+            contains_url_informative: Street can't contain a URL
+            street_unknown_for_zip_instructional: Enter a valid street for %{zip}
+            street_unknown_for_zip_informative: Street invalid for %{zip}
+            unknown_for_address_instructional: Street may be incorrect
+            unknown_for_address_informative: Street may be incorrect
           warnings:
             contains_too_many_words: Street is recommended to have less than %{word_count} words
         street_number:
@@ -86,39 +126,53 @@ en:
             default: Building number
             optional: Building number (optional)
           errors:
-            blank: Enter a building number
-            too_long: Building number is too long (maximum is 255 characters)
-            contains_emojis: Building number cannot contain emojis
-            contains_mathematical_symbols: Building number cannot contain mathematical symbols
-            contains_restricted_characters: Building number can only contain letters,
+            blank_instructional: Enter a building number
+            blank_informative: Building number is missing
+            too_long_instructional: Building number is too long (maximum is 255 characters)
+            too_long_informative: Building number is too long
+            contains_emojis_instructional: Building number can't contain emojis
+            contains_emojis_informative: Building number can't contain emojis
+            contains_mathematical_symbols_instructional: Building number can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Building number can't contain mathematical symbols
+            contains_restricted_characters_instructional: Building number can only contain letters,
               numbers, local characters, and special characters
-            contains_html_tags: Building number cannot contain HTML tags.
-            contains_url: Building number cannot contain URLs.
-            building_number_invalid: Building number couldn't be located for %{street},
-              %{zip}.
-            unknown_for_address: Building number may be incorrect.
+            contains_restricted_characters_informative: Building number can't contain restricted characters
+            contains_html_tags_instructional: Building number can't contain HTML
+            contains_html_tags_informative: Building number can't contain HTML
+            contains_url_instructional: Building number can't contain a URL
+            contains_url_informative: Building number can't contain a URL
+            building_number_invalid_instructional: Building number couldn't be located for %{street},
+              %{zip}
+            building_number_invalid_informative: Building number couldn't be located for %{street},
+              %{zip}
+            unknown_for_address_instructional: Enter valid building number
+            unknown_for_address_informative: Building number isn't valid
           warnings:
             contains_too_many_words: Building number is recommended to have less than %{word_count} words
         address2:
           label:
-            default: Apartment, suite, etc.
-            optional: Apartment, suite, etc. (optional)
+            default: Apartment, suite, etc
+            optional: Apartment, suite, etc (optional)
           errors:
-            blank: Enter an apartment, suite, etc.
-            too_long: The second address line is too long (maximum is 255 characters)
-            contains_emojis: Address2 cannot contain emojis
-            contains_mathematical_symbols: Address2 cannot contain mathematical symbols
-            contains_restricted_characters: Address2 can only contain letters, numbers,
+            blank_instructional: Enter an apartment, suite, etc
+            blank_informative: Apartment or suite is missing
+            too_long_instructional: Address line 2 is too long (maximum is 255 characters)
+            too_long_informational: Address line 2 is too long
+            contains_emojis: Address line 2 can't contain emojis
+            contains_mathematical_symbols: Address line 2 can't contain mathematical symbols
+            contains_restricted_characters: Address line 2 can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: Address2 cannot have more than %{word_count}
+            contains_too_many_words: Address line 2 can't have more than %{word_count}
               words
-            contains_html_tags: Address2 cannot contain HTML tags.
-            contains_url: Address2 cannot contain URLs.
-            missing_building_number: Add a building number if you have one.
-            street_unknown_for_zip: Enter a valid street name for %{zip}.
-            building_number_invalid: Building number couldn't be located for %{street},
-              %{zip}.
-            unknown_for_address: Address line 2 may be incorrect.
+            contains_html_tags: Address line 2 can't contain HTML
+            contains_url: Address line 2 can't contain a URL
+            missing_building_number_instructional: Add a building number if you have one
+            missing_building_number_informative: Building number may be missing
+            street_unknown_for_zip_instructional: Enter a valid street name for %{zip}
+            street_unknown_for_zip_informative: Street name isn't valid for %{zip}
+            building_number_invalid_instructional: Building number couldn't be located for %{street}, %{zip}
+            building_number_invalid_informative: Building number couldn't be located for %{street}, %{zip}
+            unknown_for_address: Address line 2 may be incorrect
           warnings:
             contains_too_many_words: Address line 2 is recommended to have less than %{word_count} words
         line2:
@@ -126,21 +180,28 @@ en:
             default: Apartment, suite, etc.
             optional: Apartment, suite, etc. (optional)
           errors:
-            blank: Enter an apartment, suite, etc.
-            too_long: The second address line is too long (maximum is %{limit} characters)
-            contains_emojis: The second address line cannot contain emojis
-            contains_mathematical_symbols: The second address line cannot contain mathematical symbols
-            contains_restricted_characters: The second address line can only contain letters, numbers,
+            blank_instructional: Enter an apartment, suite, etc.
+            blank_informative: Apartment or suite is missing
+            too_long_instructional: The second address line is too long (maximum is %{limit} characters)
+            too_long_informative: The second address line is too long
+            contains_emojis_instructional: The second address line can't contain emojis
+            contains_emojis_informative: The second address line can't contain emojis
+            contains_mathematical_symbols_instructional: The second address line can't contain mathematical symbols
+            contains_mathematical_symbols_informative: The second address line can't contain mathematical symbols
+            contains_restricted_characters_instructional: The second address line can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: The second address line cannot have more than %{word_count}
-              words
-            contains_html_tags: The second address line cannot contain HTML tags.
-            contains_url: The second address line cannot contain URLs.
-            missing_building_number: Add a building number if you have one.
-            street_unknown_for_zip: Enter a valid street name for %{zip}.
+            contains_restricted_characters_informative: The second address line can't contain restricted characters
+            contains_too_many_words_instructional: The second address line must have fewer than %{word_count} words
+            contains_too_many_words_informative: The second address line must have fewer than %{word_count} words
+            contains_html_tags_instructional: The second address line can't contain HTML tags
+            contains_html_tags_informative: The second address line can't contain HTML tags
+            contains_url_instructional: The second address line can't contain a URL
+            contains_url_informative: The second address line can't contain a URL
+            missing_building_number: Add a building number if you have one
+            street_unknown_for_zip: Enter a valid street name for %{zip}
             building_number_invalid: Building number couldn't be located for %{street},
-              %{zip}.
-            unknown_for_address: The second address line may be incorrect.
+              %{zip}
+            unknown_for_address: The second address line may be incorrect
           warnings:
             contains_too_many_words: The second address line is recommended to have less than %{word_count} words
         neighborhood:
@@ -150,17 +211,17 @@ en:
           errors:
             blank: Enter a neighborhood
             too_long: Neighborhood is too long (maximum is %{limit} characters)
-            contains_emojis: Neighborhood cannot contain emojis
-            contains_mathematical_symbols: Neighborhood cannot contain mathematical symbols
+            contains_emojis: Neighborhood can't contain emojis
+            contains_mathematical_symbols: Neighborhood can't contain mathematical symbols
             contains_restricted_characters: Neighborhood can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: Neighborhood cannot have more than %{word_count}
+            contains_too_many_words: Neighborhood can't have more than %{word_count}
               words
-            contains_html_tags: Neighborhood cannot contain HTML tags.
-            contains_url: Neighborhood cannot contain URLs.
-            unknown_for_city: Enter a valid neighborhood name for %{city}.
-            unknown_for_zip: Enter a valid neighborhood name for %{zip}.
-            unknown_for_address: Neighborhood may be incorrect.
+            contains_html_tags: Neighborhood can't contain HTML tags
+            contains_url: Neighborhood can't contain URLs
+            unknown_for_city: Enter a valid neighborhood name for %{city}
+            unknown_for_zip: Enter a valid neighborhood name for %{zip}
+            unknown_for_address: Neighborhood may be incorrect
           warnings:
             contains_too_many_words: Neighborhood is recommended to have less than %{word_count} words
         city:
@@ -168,75 +229,97 @@ en:
             default: City
             optional: City (optional)
           errors:
-            blank: Enter a city
+            blank_instructional: Enter a city
+            blank_informative: City is missing
             too_long: City is too long (maximum is 255 characters)
-            contains_emojis: City cannot contain emojis
-            contains_mathematical_symbols: City cannot contain mathematical symbols
+            contains_emojis: City can't contain emojis
+            contains_mathematical_symbols: City can't contain mathematical symbols
             contains_restricted_characters: City can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: City cannot have more than %{word_count} words
-            contains_html_tags: City cannot contain HTML tags.
-            contains_url: City cannot contain a URL
-            unknown_for_zip: Enter a valid city for %{zip}
-            unknown_for_province: Enter a valid city for %{province}
-            unknown_for_zip_and_province: Enter a valid city for %{zip}, %{province}
-            unknown_for_address: City may be incorrect.
+            contains_too_many_words: City can't have more than %{word_count} words
+            contains_html_tags: City can't contain HTML
+            contains_url: City can't contain a URL
+            unknown_for_zip_instructional: Enter a valid city for %{zip}
+            unknown_for_zip_informative: City doesn't match %{zip}
+            unknown_for_province_instructional: Enter a valid city for %{province}
+            unknown_for_province_informative: City doesn't match %{province}
+            unknown_for_zip_and_province_instructional: Enter a valid city for %{zip}, %{province}
+            unknown_for_zip_and_province_informative: City may be incorrect
+            unknown_for_address: City may be incorrect
         province:
           label:
             default: Region
             optional: Region (optional)
           errors:
-            blank: Select a region
-            invalid: Enter a valid region
-            invalid_for_country: Enter a valid region for %{country}
-            unknown_for_city_and_zip: Enter a valid region for %{city}, %{zip}
-            unknown_for_city: Select a valid region for %{city}
-            unknown_for_zip: Select a valid region for %{zip}
-            unknown_for_address: Region may be incorrect.
+            blank_instructional: Select a region
+            blank_informative: Region is missing
+            invalid_instructional: Select a region
+            invalid_informative: Region is missing
+            invalid_for_country_instructional: Enter a valid region for %{country}
+            invalid_for_country_informative: Region doesn't match %{country}
+            unknown_for_city_and_zip_instructional: Select a valid region for %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Region doesn't match %{city}, %{zip}
+            unknown_for_city_informative: Select a valid region for %{city}
+            unknown_for_city_instructional: Region doesn't match %{city}
+            unknown_for_zip_instructional: Select a valid region for %{zip}
+            unknown_for_zip_informative: Region doesn't match %{zip}
+            unknown_for_address: Region may be incorrect
         country:
           label:
             default: Country/region
             optional: Country/region (optional)
           errors:
-            blank: Select a country/region
-            not_supported: We don't currently support this country/region. Enter a
-              new address and try again.
-            invalid: Enter a valid country/region
-            invalid_for_zip: Enter a valid country/region for this postal code
+            blank_instructional: Select a country/region
+            blank_informative: Country/region is missing
+            not_supported_instructional: Country/region not supported
+            not_supported_informative: Country/region not supported
+            invalid_instructional: Enter a valid country/region
+            invalid_informative: Country/region isn't valid
+            invalid_for_zip_instructional: Enter a valid country/region for this postal code
+            invalid_for_zip_informative: "%{country} doesn't match country/region"
         zip:
           label:
             default: Postal code
             optional: Postal code (optional)
           errors:
-            blank: Enter a postal code
-            blocked_address: This location isn't supported.
-            invalid: Enter a valid postal code
-            invalid_for_country: Enter a valid postal code for %{country}
-            invalid_for_province: Enter a valid postal code for %{province}
-            invalid_for_country_and_province: Enter a valid postal code for %{province},
-              %{country}
-            too_long: The postal code value is too long
-            contains_emojis: Postal code cannot contain emojis
-            contains_mathematical_symbols: Postal code cannot contain mathematical symbols
+            blank_instructional: Enter a postal code
+            blank_informative: Postal code is missing
+            blocked_address: This location isn't supported
+            invalid_instructional: Enter a valid postal code
+            invalid_informative: Postal code isn't valid
+            invalid_for_country_instructional: Enter a valid postal code for %{country}
+            invalid_for_country_informative: Postal code doesn't match %{country}
+            invalid_for_province_instructional: Enter a valid postal code for %{province}
+            invalid_for_province_informative: Postal code doesn't match %{province}
+            invalid_for_country_and_province_instructional: Enter a valid postal code for %{province}, %{country}
+            invalid_for_country_and_province_informative: Postal code doesn't match %{province}, %{country}
+            too_long: The postal code is too long
+            contains_emojis: Postal code can't contain emojis
+            contains_mathematical_symbols: Postal code can't contain mathematical symbols
             contains_restricted_characters: Postal code can only contain letters,
               numbers, local characters, and special characters
-            not_supported: We don't currently support this country/region. Enter a
-              new address and try again.
-            contains_html_tags: Postal code cannot contain HTML tags.
-            unknown_for_province: Enter a valid postal code for %{province}
-            unknown_for_address: Postal code may be incorrect.
+            not_supported_instructional: Postal code not supported. Enter a new address and try again
+            not_supported_informativel: Postal code not supported
+            contains_html_tags: Postal code can't contain HTML
+            unknown_for_province_instructional: Enter a valid postal code for %{province}
+            unknown_for_province_informative: Postal code is invalid for %{province}
+            unknown_for_address: Postal code may be incorrect
         phone:
           label:
             default: Phone
             optional: Phone (optional)
           errors:
-            blank: Enter a phone number
-            invalid: Enter a valid phone number
-            too_long: Phone is too long (maximum is 255 characters)
-            contains_emojis: Phone number cannot contain emojis
-            contains_mathematical_symbols: Phone number cannot contain mathematical symbols
+            blank_instructional: Enter a phone number
+            blank_informative: Phone number is missing
+            invalid_instructional: Enter a valid phone number
+            invalid_informative: Phone number isn't valid
+            too_long_instructional: Phone number is too long
+            too_long_informative: Phone number is too long
+            contains_emojis: Phone number can't contain emojis
+            contains_mathematical_symbols: Phone number can't contain mathematical symbols
             contains_restricted_characters: Phone number can only contain letters,
               numbers, local characters, and special characters
         address:
           errors:
-            may_not_exist: Address not found or does not exist
+            may_not_exist_instructional: Address not found or doesn't exist
+            may_not_exist_informative: Address not found

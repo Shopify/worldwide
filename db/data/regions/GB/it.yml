@@ -8,12 +8,27 @@ it:
             default: Codice postale
             optional: Codice postale (facoltativo)
           errors:
-            blank: Inserisci un codice postale
-            invalid_for_country: Inserisci un codice postale valido per il Regno Unito
-            invalid_for_country_and_province: Inserisci un codice postale valido per
-              %{province}, Regno Unito
-            too_long: Il valore del codice postale è troppo lungo
-            contains_html_tags: Il codice postale non può contenere tag HTML.
-            contains_emojis: Il codice postale non può contenere emoji
-            contains_restricted_characters: Il codice postale non può contenere caratteri
-              vietati
+            blank_instructional: Inserisci un codice postale
+            blank_informative: Codice postale mancante
+            invalid_for_country_instructional: Inserisci un codice postale valido
+              per il Regno Unito
+            invalid_for_country_informative: Il codice postale non è valido per il
+              Regno Unito
+            invalid_for_country_and_province_instructional: Inserisci un codice postale
+              valido per %{province}, Regno Unito
+            invalid_for_country_and_province_informative: Il codice postale non è
+              valido per %{province}, Regno Unito
+            too_long_instructional: Il campo Codice postale è troppo lungo
+            too_long_informative: Il campo Codice postale è troppo lungo
+            contains_emojis_instructional: Il campo Codice postale non può contenere
+              emoji
+            contains_emojis_informative: Il campo Codice postale non può contenere
+              emoji
+            contains_restricted_characters_instructional: Il campo Codice postale
+              non può contenere caratteri vietati
+            contains_restricted_characters_informative: Il campo Codice postale può
+              contenere solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_html_tags_instructional: Il campo Codice postale non può contenere
+              HTML
+            contains_html_tags_informative: Il campo Codice postale non può contenere
+              HTML

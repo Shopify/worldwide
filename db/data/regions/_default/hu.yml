@@ -8,89 +8,142 @@ hu:
             default: Cégnév
             optional: Cégnév (nem kötelező megadni)
           errors:
-            blank: Írd be a cégnevet
-            too_long: Túl hosszú a cég neve (legfeljebb 255 karakter hosszú lehet).
-            contains_html_tags: A cégnév nem tartalmazhat HTML-címkéket.
-            contains_emojis: A cégnév nem tartalmazhat emodzsikat.
-            contains_mathematical_symbols: A cégnév nem tartalmazhat matematikai szimbólumokat
-            contains_restricted_characters: A cégnév csak betűket, számokat, helyi
-              karaktereket és különleges karaktereket tartalmazhat
+            blank_instructional: Írd be a cég nevét
+            blank_informative: A cégnév nincs megadva
+            too_long_instructional: Túl hosszú a cég neve (legfeljebb 255 karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a cég neve
+            contains_emojis_instructional: A cégnév nem tartalmazhat emojikat
+            contains_emojis_informative: A cégnév nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A cégnév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A cégnév nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters_instructional: A cégnév csak betűket, számokat,
+              helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A cégnév nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: A cégnév nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A cégnév nem tartalmazhat HTML-címkét
         first_name:
           label:
             default: Utónév
             optional: Utónév (nem kötelező megadni)
           errors:
-            blank: Írd be az utónevet
-            too_long: Túl hosszú az utónév (legfeljebb 255 karakter hosszú lehet).
-            contains_html_tags: Az utónév nem tartalmazhat HTML-címkéket.
-            contains_emojis: Az utónév nem tartalmazhat emodzsikat.
-            contains_url: Az utónév nem tartalmazhat URL-címet.
-            contains_mathematical_symbols: Az utónév nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: Az utónév csak betűket, számokat, helyi
-              karaktereket és különleges karaktereket tartalmazhat
+            blank_instructional: Írd be az utónevet
+            blank_informative: Az utónév nincs megadva
+            too_long_instructional: Túl hosszú az utónév (legfeljebb 255 karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú az utónév
+            contains_emojis_instructional: Az utónév nem tartalmazhat emojikat
+            contains_emojis_informative: Az utónév nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: Az utónév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: Az utónév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: Az utónév csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: Az utónév nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: Az utónév nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: Az utónév nem tartalmazhat HTML-címkét
+            contains_url_instructional: Az utónév nem tartalmazhat URL-címet
+            contains_url_informative: Az utónév nem tartalmazhat URL-címet
         last_name:
           label:
             default: Vezetéknév
             optional: Vezetéknév (nem kötelező megadni)
           errors:
-            blank: Írd be a vezetéknevet
-            too_long: Túl hosszú a vezetéknév (legfeljebb 255 karakter hosszú lehet).
-            contains_html_tags: A vezetéknév nem tartalmazhat HTML-címkéket.
-            contains_emojis: A vezetéknév nem tartalmazhat emodzsikat.
-            contains_url: A vezetéknév nem tartalmazhat URL-címet.
-            contains_mathematical_symbols: A vezetéknév nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: A vezetéknév csak betűket, számokat, helyi
-              karaktereket és különleges karaktereket tartalmazhat
+            blank_instructional: Írd be a vezetéknevet
+            blank_informative: A vezetéknév nincs megadva
+            too_long_instructional: Túl hosszú a vezetéknév (legfeljebb 255 karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a vezetéknév
+            contains_emojis_instructional: A vezetéknév nem tartalmazhat emojikat
+            contains_emojis_informative: A vezetéknév nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A vezetéknév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A vezetéknév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A vezetéknév csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A vezetéknév nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: A vezetéknév nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A vezetéknév nem tartalmazhat HTML-címkét
+            contains_url_instructional: A vezetéknév nem tartalmazhat URL-címet
+            contains_url_informative: A vezetéknév nem tartalmazhat URL-címet
         address1:
           label:
             default: Cím
             optional: Cím (nem kötelező megadni)
-          errors:
-            blank: Írd be a címet
-            too_long: Túl hosszú a cím első sora (legfeljebb 255 karakter hosszú lehet).
-            contains_html_tags: A cím első sora nem tartalmazhat HTML-címkéket.
-            contains_emojis: A cím első sora nem tartalmazhat emodzsikat.
-            contains_url: A cím első sora nem tartalmazhat URL-címet.
-            missing_building_number: Ha van házszám, azt is add meg.
-            street_unknown_for_zip: 'Olyan utcanevet adj meg, amely megfelel ennek:
-              %{zip}.'
-            building_number_invalid: 'Nem található ilyen házszám itt: %{street},
-              %{zip}.'
-            contains_mathematical_symbols: A cím első sora nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: A cím első sora csak betűket, számokat,
-              helyi karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: A cím 1. sora legfeljebb %{word_count} szóból
-              állhat
-            unknown_for_address: Vélhetően helytelen a cím első sora.
           warnings:
             contains_too_many_words: A cím 1. sorának javasolt hossza kevesebb mint
               %{word_count} szó
+          errors:
+            blank_instructional: Írd be a címet
+            blank_informative: A cím nincs megadva
+            too_long_instructional: Túl hosszú a cím első sora (legfeljebb 255 karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a cím első sora
+            contains_emojis_instructional: A cím nem tartalmazhat emojikat
+            contains_emojis_informative: A cím nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A cím nem tartalmazhat matematikai
+              szimbólumokat
+            contains_mathematical_symbols_informative: A cím nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters_instructional: A cím csak betűket, számokat,
+              helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A cím nem tartalmazhat tiltott
+              karaktereket
+            contains_too_many_words_instructional: A cím legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A cím legfeljebb %{word_count} szóból
+              állhat
+            contains_html_tags_instructional: A cím nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A cím nem tartalmazhat HTML-címkét
+            contains_url_instructional: A cím nem tartalmazhat URL-címet
+            contains_url_informative: A cím nem tartalmazhat URL-címet
+            missing_building_number_instructional: Ha van házszám, azt is add meg
+            missing_building_number_informative: Vélhetően hiányzik a házszám
+            street_unknown_for_zip_instructional: 'Olyan utcanevet adj meg, amely
+              megfelel ennek: %{zip}'
+            street_unknown_for_zip_informative: 'Az utcanév nem felel meg ennek: %{zip}'
+            building_number_invalid_instructional: 'Nem található ilyen házszám itt:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Nem található ilyen házszám itt:
+              %{street}, %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen a cím első sora
+            unknown_for_address_informative: Vélhetően helytelen a cím első sora
         address2:
           label:
             default: Épület, emelet, ajtó stb.
-            optional: Épület, emelet, ajtó stb. (nem kötelező megadni)
+            optional: Épület, emelet, ajtó stb. (nem kötelező)
           errors:
-            blank: Írd be az épület, emelet, ajtó stb. jelölését
-            too_long: Túl hosszú a cím második sora (legfeljebb 255 karakter hosszú
-              lehet).
-            contains_html_tags: A cím második sora nem tartalmazhat HTML-címkéket.
-            contains_emojis: A cím második sora nem tartalmazhat emodzsikat.
-            contains_url: A cím második sora nem tartalmazhat URL-címet.
-            missing_building_number: Ha van házszám, azt is add meg.
-            street_unknown_for_zip: 'Olyan utcanevet adj meg, amely megfelel ennek:
-              %{zip}.'
-            building_number_invalid: 'Nem található ilyen házszám itt: %{street},
-              %{zip}.'
+            contains_html_tags: A cím második sora nem tartalmazhat HTML-címkét
+            contains_emojis: A cím második sora nem tartalmazhat emojikat
+            contains_url: A cím második sora nem tartalmazhat URL-címet
             contains_mathematical_symbols: A cím második sora nem tartalmazhat matematikai
               szimbólumokat
             contains_restricted_characters: A cím második sora csak betűket, számokat,
               helyi karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: A cím 2. sora legfeljebb %{word_count} szóból
+            contains_too_many_words: A cím második sora legfeljebb %{word_count} szóból
               állhat
-            unknown_for_address: Vélhetően helytelen a cím második sora.
+            unknown_for_address: Vélhetően helytelen a cím második sora
+            blank_instructional: Írd be az épület, emelet, ajtó stb. jelölését
+            blank_informative: Hiányzik az épület vagy az emelet
+            too_long_instructional: Túl hosszú a cím 2. sora (legfeljebb 255 karakter
+              hosszú lehet)
+            too_long_informational: Túl hosszú a cím 2. sora
+            missing_building_number_instructional: Ha van házszám, azt is add meg
+            missing_building_number_informative: Vélhetően hiányzik a házszám
+            street_unknown_for_zip_instructional: 'Olyan utcanevet adj meg, amely
+              megfelel ennek: %{zip}'
+            street_unknown_for_zip_informative: 'Az utcanév nem felel meg ennek: %{zip}'
+            building_number_invalid_instructional: 'Nem található ilyen házszám itt:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Nem található ilyen házszám itt:
+              %{street}, %{zip}'
           warnings:
             contains_too_many_words: A cím 2. sorának javasolt hossza kevesebb mint
               %{word_count} szó
@@ -99,129 +152,186 @@ hu:
             default: Település
             optional: Település (nem kötelező megadni)
           errors:
-            blank: Írd be a település nevét
             too_long: Túl hosszú a település neve (legfeljebb 255 karakter hosszú
               lehet).
-            contains_html_tags: A településnév nem tartalmazhat HTML-címkéket.
-            contains_emojis: A településnév nem tartalmazhat emodzsikat.
+            contains_html_tags: A településnév nem tartalmazhat HTML-címkét
+            contains_emojis: A településnév nem tartalmazhat emojikat
             contains_url: A településnév nem tartalmazhat URL-címet
-            unknown_for_zip: Írj be az irányítószámnak (%{zip}) megfelelő településnevet
-            unknown_for_province: 'Olyan településnevet írj be, amely itt található:
-              %{province}'
-            unknown_for_zip_and_province: 'Olyan településnevet írj be, amely itt
-              található: %{zip}, %{province}'
             contains_mathematical_symbols: A település neve nem tartalmazhat matematikai
               szimbólumokat
             contains_restricted_characters: A településnév csak betűket, számokat,
               helyi karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: A település legfeljebb %{word_count} szóból állhat
-            unknown_for_address: Vélhetően helytelen a településnév.
+            contains_too_many_words: A település neve legfeljebb %{word_count} szóból
+              állhat
+            unknown_for_address: Vélhetően helytelen a településnév
+            blank_instructional: Írd be a település nevét
+            blank_informative: A település neve nincs megadva
+            unknown_for_zip_instructional: 'Olyan településnevet írj be, amely itt
+              található: %{zip}'
+            unknown_for_zip_informative: 'A település nem felel meg ennek: %{zip}'
+            unknown_for_province_instructional: 'Olyan településnevet írj be, amely
+              itt található: %{province}'
+            unknown_for_province_informative: 'A település nem felel meg ennek: %{province}'
+            unknown_for_zip_and_province_instructional: 'Olyan településnevet írj
+              be, amely itt található: %{zip}, %{province}'
+            unknown_for_zip_and_province_informative: Vélhetően helytelen a településnév
         country:
           label:
             default: Ország/régió
             optional: Ország/régió (nem kötelező megadni)
           errors:
-            blank: Válassz országot vagy régiót
-            not_supported: Ebben az országban vagy régióban egyelőre nem veheted igénybe
-              szolgáltatásainkat. Írj be egy másik címet, és próbálkozz újra.
-            invalid: Érvénytelen országot/régiót írtál be
-            invalid_for_zip: Írj be az irányítószámnak megfelelő országot vagy régiót
+            blank_instructional: Válassz országot vagy régiót
+            blank_informative: Az ország vagy régió nincs megadva
+            not_supported_instructional: Ez az ország vagy régió nincs támogatva
+            not_supported_informative: Ez az ország vagy régió nincs támogatva
+            invalid_instructional: Érvénytelen országot vagy régiót írtál be
+            invalid_informative: Érvénytelen ország vagy régió
+            invalid_for_zip_instructional: Írj be az irányítószámnak megfelelő országot
+              vagy régiót
+            invalid_for_zip_informative: 'Az ország vagy régió nem felel meg ennek:
+              %{country}'
         phone:
           label:
             default: Telefonszám
             optional: Telefonszám (nem kötelező megadni)
           errors:
-            blank: Adj meg egy telefonszámot
-            invalid: Érvénytelen telefonszámot írtál be
-            too_long: Túl hosszú telefonszám (legfeljebb 255 karakter hosszú lehet)
-            contains_emojis: A telefonszám nem tartalmazhat emodzsikat.
+            contains_emojis: A telefonszám nem tartalmazhat emojikat
             contains_mathematical_symbols: A telefonszám nem tartalmazhat matematikai
               szimbólumokat
             contains_restricted_characters: A telefonszám csak betűket, számokat,
               helyi karaktereket és különleges karaktereket tartalmazhat
+            blank_instructional: Adj meg egy telefonszámot
+            blank_informative: A telefonszám nincs megadva
+            invalid_instructional: Írj be egy érvényes telefonszámot
+            invalid_informative: Érvénytelen telefonszám
+            too_long_instructional: Túl hosszú a telefonszám
+            too_long_informative: Túl hosszú a telefonszám
         province:
           label:
             default: Régió
             optional: Régió (nem kötelező megadni)
           errors:
-            blank: Válassz régiót
-            invalid: Adj meg egy érvényes régiót
-            invalid_for_country: "%{country} területén nincs ilyen nevű régió"
-            unknown_for_city_and_zip: Add meg a településnek (%{city}, %{zip}) megfelelő
-              régiót
-            unknown_for_city: 'Ennek megfelelő régiót válassz: %{city}'
-            unknown_for_zip: Válaszd ki az irányítószámnak (%{zip}) megfelelő régiót
-            unknown_for_address: Vélhetően helytelen a régió neve.
+            unknown_for_address: Vélhetően helytelen a régió neve
+            blank_instructional: Válassz régiót
+            blank_informative: A régió nincs megadva
+            invalid_instructional: Válassz régiót
+            invalid_informative: A régió nincs megadva
+            invalid_for_country_instructional: "%{country} területén nincs ilyen nevű
+              régió"
+            invalid_for_country_informative: 'A régió nem felel meg ennek: %{country}'
+            unknown_for_city_and_zip_instructional: Válaszd ki a településnek (%{city},
+              %{zip}) megfelelő régiót
+            unknown_for_city_and_zip_informative: 'A régió nem felel meg ennek: %{city},
+              %{zip}'
+            unknown_for_city_informative: 'Ennek megfelelő régiót válassz: %{city}'
+            unknown_for_city_instructional: 'A régió nem felel meg ennek: %{city}'
+            unknown_for_zip_instructional: 'Ennek megfelelő régiót válassz: %{zip}'
+            unknown_for_zip_informative: 'A régió nem felel meg ennek: %{zip}'
         zip:
           label:
             default: Irányítószám
             optional: Irányítószám (nem kötelező megadni)
           errors:
-            blank: Írd be az irányítószámot
-            blocked_address: Erre a címre nem szállítunk, és nem is adható meg szállítási
-              címként.
-            invalid_for_country: 'Érvénytelen irányítószámot írtál be ehhez az országhoz:
-              %{country}'
-            invalid_for_country_and_province: 'Érvénytelen irányítószámot írtál be
-              ehhez a zónához és országhoz: %{province}, %{country}'
-            invalid: Érvénytelen a beírt irányítószám.
-            too_long: Túl hosszú az irányítószám.
-            contains_html_tags: Az irányítószám nem tartalmazhat HTML-címkéket.
-            contains_emojis: Az irányítószám nem tartalmazhat emodzsikat.
-            not_supported: Ebben az országban vagy régióban egyelőre nem veheted igénybe
-              szolgáltatásainkat. Írj be egy másik címet, és próbálkozz újra.
-            unknown_for_province: Add meg a tartománynak (%{province}) megfelelő irányítószámot
+            blocked_address: Ez a cím nem támogatott
+            too_long: Túl hosszú az irányítószám
+            contains_html_tags: Az irányítószám nem tartalmazhat HTML-címkét
+            contains_emojis: Az irányítószám nem tartalmazhat emojikat
             contains_mathematical_symbols: Az irányítószám nem tartalmazhat matematikai
               szimbólumokat
             contains_restricted_characters: Az irányítószám csak betűket, számokat,
               helyi karaktereket és különleges karaktereket tartalmazhat
-            invalid_for_province: 'Olyan irányítószámot írj be, amely itt található:
+            unknown_for_address: Vélhetően helytelen az irányítószám
+            blank_instructional: Írd be az irányítószámot
+            blank_informative: Az irányítószám nincs megadva
+            invalid_instructional: Érvénytelen a beírt irányítószám
+            invalid_informative: Érvénytelen irányítószám
+            invalid_for_country_instructional: 'Olyan irányítószámot írj be, amely
+              itt található: %{country}'
+            invalid_for_country_informative: 'Az irányítószám nem itt található: %{country}'
+            invalid_for_province_instructional: 'Olyan irányítószámot írj be, amely
+              itt található: %{province}'
+            invalid_for_province_informative: 'Az irányítószám nem itt található:
               %{province}'
-            unknown_for_address: Vélhetően helytelen az irányítószám.
-        address:
-          errors:
-            may_not_exist: A cím nem található, vagy nem létezik
+            invalid_for_country_and_province_instructional: Add meg a településnek
+              (%{province}, %{country}) megfelelő irányítószámot
+            invalid_for_country_and_province_informative: 'Az irányítószám nem itt
+              található: %{province}, %{country}'
+            not_supported_instructional: Ez az irányítószám nincs támogatva. Írj be
+              egy másik címet, és próbálkozz újra
+            not_supported_informativel: Az irányítószám nincs támogatva
+            unknown_for_province_instructional: 'Olyan irányítószámot írj be, amely
+              itt található: %{province}'
+            unknown_for_province_informative: 'Az irányítószám nem itt található:
+              %{province}'
         street_name:
           label:
             default: Utca
             optional: Utca (nem kötelező megadni)
-          errors:
-            blank: Add meg az utcanevet
-            too_long: Túl hosszú utcanév (legfeljebb 255 karakter hosszú lehet)
-            contains_emojis: Az utcanév nem tartalmazhat emodzsikat
-            contains_mathematical_symbols: Az utcanév nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: Az utcanév csak betűket, számokat, helyi
-              karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: Az utcanév legfeljebb %{word_count} szóból állhat
-            contains_html_tags: Az utcanév nem tartalmazhat HTML-címkéket.
-            contains_url: Az utcanév nem tartalmazhat URL-címet.
-            street_unknown_for_zip: 'Olyan utcanevet adj meg, amely megfelel ennek:
-              %{zip}.'
-            unknown_for_address: Vélhetően helytelen az utcanév.
           warnings:
             contains_too_many_words: Az utcanév javasolt hossza kevesebb mint %{word_count}
               szó
+          errors:
+            blank_instructional: Add meg az utcanevet
+            blank_informative: Az utcanév nincs megadva
+            too_long_instructional: Túl hosszú utcanév (legfeljebb 255 karakter hosszú
+              lehet)
+            too_long_informative: Túl hosszú utcanév
+            contains_emojis_instructional: Az utcanév nem tartalmazhat emojikat
+            contains_emojis_informative: Az utcanév nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: Az utcanév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: Az utcanév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: Az utcanév csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: Az utcanév nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: Az utcanév legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informational: Az utcanév legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: Az utcanév nem tartalmazhat HTML-címkét
+            contains_html_tags_informational: Az utcanév nem tartalmazhat HTML-címkét
+            contains_url_instructional: Az utcanév nem tartalmazhat URL-címet
+            contains_url_informative: Az utcanév nem tartalmazhat URL-címet
+            street_unknown_for_zip_instructional: 'Olyan utcanevet adj meg, amely
+              itt található: %{zip}'
+            street_unknown_for_zip_informative: 'Az utcanév nem található itt: %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen az utcanév
+            unknown_for_address_informative: Vélhetően helytelen az utcanév
         street_number:
           label:
             default: Házszám
             optional: Hátszám (nem kötelező megadni)
-          errors:
-            blank: Add meg a hátszámot
-            too_long: Túl hosszú a házszám (legfeljebb 255 karakter hosszú lehet).
-            contains_emojis: A házszám nem tartalmazhat emodzsikat.
-            contains_mathematical_symbols: A házszám nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: A házszám csak betűket, számokat, helyi
-              karaktereket és különleges karaktereket tartalmazhat
-            contains_html_tags: A házszám nem tartalmazhat HTML-címkéket
-            contains_url: A házszám nem tartalmazhat URL-eket.
-            building_number_invalid: 'Nem található ilyen házszám itt: %{street},
-              %{zip}.'
-            unknown_for_address: Vélhetően helytelen a házszám.
           warnings:
             contains_too_many_words: A házszám javasolt hossza kevesebb mint %{word_count}
               szó
+          errors:
+            blank_instructional: Add meg a házszámot
+            blank_informative: A házszám nincs megadva
+            too_long_instructional: Túl hosszú a házszám (legfeljebb 255 karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a házszám
+            contains_emojis_instructional: A házszám nem tartalmazhat emojikat
+            contains_emojis_informative: A házszám nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A házszám nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A házszám nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A házszám csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A házszám nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: A házszám nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A házszám nem tartalmazhat HTML-címkét
+            contains_url_instructional: A házszám nem tartalmazhat URL-címet
+            contains_url_informative: A házszám nem tartalmazhat URL-címet
+            building_number_invalid_instructional: 'Nem található ilyen házszám itt:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Nem található ilyen házszám itt:
+              %{street}, %{zip}'
+            unknown_for_address_instructional: Érvényes házszámot adj meg
+            unknown_for_address_informative: Érvénytelen házszám
         neighborhood:
           label:
             default: Városnegyed
@@ -237,12 +347,12 @@ hu:
               helyi karaktereket és különleges karaktereket tartalmazhat
             contains_too_many_words: A városnegyed neve legfeljebb %{word_count} szóból
               állhat
-            contains_html_tags: A városnegyed neve nem tartalmazhat HTML-címkéket.
-            contains_url: A városnegyed neve nem tartalmazhat URL-eket.
+            contains_html_tags: A városnegyed neve nem tartalmazhat HTML-címkéket
+            contains_url: A városnegyed neve nem tartalmazhat URL-címeket
             unknown_for_city: 'Olyan városnegyedet adj meg, amely megfelel ennek:
-              %{city}.'
-            unknown_for_zip: 'Olyan városnegyedet adj meg, amely megfelel ennek: %{zip}.'
-            unknown_for_address: Vélhetően helytelen a városnegyed neve.
+              %{city}'
+            unknown_for_zip: 'Olyan városnegyedet adj meg, amely megfelel ennek: %{zip}'
+            unknown_for_address: Vélhetően helytelen a városnegyed neve
           warnings:
             contains_too_many_words: A városnegyed nevének javasolt hossza kevesebb
               mint %{word_count} szó
@@ -272,3 +382,7 @@ hu:
           warnings:
             contains_too_many_words: A cím második sorának javasolt hossza kevesebb
               mint %{word_count} szó
+        address:
+          errors:
+            may_not_exist_instructional: A cím nem található, vagy nem létezik
+            may_not_exist_informative: A cím nem található

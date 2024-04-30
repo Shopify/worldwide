@@ -8,17 +8,32 @@ vi:
             default: Quận
             optional: Quận (không bắt buộc)
           errors:
-            blank: Nhập quận
-            too_long: Quận quá dài (tối đa 255 ký tự)
-            contains_emojis: Quận không được chứa biểu tượng cảm xúc
-            contains_mathematical_symbols: Quận không được chứa ký hiệu toán học
-            contains_restricted_characters: Quận chỉ được chứa chữ cái, chữ số, ký
-              tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Quận không được có nhiều hơn %{word_count} từ
-            contains_html_tags: Quận không được chứa thẻ HTML.
-            contains_url: Quận không được chứa URL.
-            unknown_for_city: Nhập tên quận hợp lệ cho %{city}.
-            unknown_for_zip: Nhập tên quận hợp lệ cho %{zip}.
-            unknown_for_address: Quận có thể không chính xác.
+            unknown_for_address: Quận có thể không chính xác
+            blank_instructional: Nhập quận
+            blank_informative: Thiếu quận
+            too_long_instructional: Quận quá dài (tối đa 255 ký tự)
+            too_long_informative: Quận quá dài
+            contains_emojis_instructional: Quận không được chứa biểu tượng cảm xúc
+            contains_emojis_informative: Quận không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols_instructional: Quận không được chứa ký hiệu
+              toán học
+            contains_mathematical_symbols_informative: Quận không được chứa ký hiệu
+              toán học
+            contains_restricted_characters_instructional: Quận chỉ được chứa chữ cái,
+              chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Quận không được chứa ký tự
+              bị hạn chế
+            contains_too_many_words_instructional: Quận phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Quận phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Quận không được chứa HTML
+            contains_html_tags_informative: Quận không được chứa HTML
+            contains_url_instructional: Quận không được chứa URL
+            contains_url_informative: Quận không được chứa URL
+            unknown_for_city_instructional: Nhập quận hợp lệ cho %{city}
+            unknown_for_city_informative: Quận cho %{city} không hợp lệ
+            unknown_for_zip_instructional: Nhập quận hợp lệ cho %{zip}
+            unknown_for_zip_informative: Quận cho %{zip} không hợp lệ
           warnings:
             contains_too_many_words: Quận nên có tối đa %{word_count} từ

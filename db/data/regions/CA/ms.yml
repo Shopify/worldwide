@@ -8,8 +8,14 @@ ms:
             default: Wilayah
             optional: Wilayah (opsyenal)
           errors:
-            blank: Pilih wilayah
-            unknown_for_city_and_zip: Masukkan wilayah yang sah untuk %{city}, %{zip}
-            unknown_for_city: Pilih wilayah yang sah untuk %{city}
-            unknown_for_zip: Pilih wilayah yang sah untuk %{zip}
-            unknown_for_address: Wilayah mungkin salah.
+            unknown_for_address: Wilayah mungkin salah
+            blank_instructional: Pilih wilayah
+            blank_informative: Wilayah tiada
+            unknown_for_city_and_zip_instructional: Masukkan wilayah yang sah untuk
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Wilayah tidak sah untuk %{city},
+              %{zip}
+            unknown_for_city_instructional: Pilih wilayah yang sah untuk %{city}
+            unknown_for_city_informative: Wilayah tidak sah untuk %{city}
+            unknown_for_zip_instructional: Pilih wilayah yang sah untuk %{zip}
+            unknown_for_zip_informative: Wilayah tidak sah untuk %{zip}

@@ -8,10 +8,20 @@ es:
             default: Distrito
             optional: Distrito (opcional)
           errors:
-            blank: Introduce un distrito
-            too_long: El nombre del distrito es demasiado largo (el máximo es 255
-              caracteres)
-            contains_html_tags: El distrito no puede contener etiquetas HTML.
-            contains_emojis: El distrito no puede contener emojis
-            contains_restricted_characters: El distrito no puede tener caracteres
-              restringidos.
+            blank_instructional: Introduce un distrito.
+            blank_informative: Falta el distrito.
+            too_long_instructional: El nombre del distrito es demasiado largo (el
+              máximo es de 255 caracteres).
+            too_long_informative: El nombre del distrito es demasiado largo.
+            contains_emojis_instructional: El nombre del distrito no puede contener
+              emojis.
+            contains_emojis_informative: El nombre del distrito no puede contener
+              emojis.
+            contains_restricted_characters_instructional: El nombre del distrito no
+              puede contener caracteres restringidos.
+            contains_restricted_characters_informative: El nombre del distrito no
+              puede contener caracteres restringidos.
+            contains_html_tags_instructional: El nombre del distrito no puede contener
+              HTML.
+            contains_html_tags_informative: El nombre del distrito no puede contener
+              HTML.

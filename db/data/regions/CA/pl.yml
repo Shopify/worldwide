@@ -8,8 +8,14 @@ pl:
             default: Prowincja
             optional: Prowincja (opcjonalnie)
           errors:
-            blank: Wybierz województwo
-            unknown_for_city_and_zip: Wprowadź prawidłową prowincję dla %{city}, %{zip}
-            unknown_for_city: Wybierz prawidłową prowincję dla %{city}
-            unknown_for_zip: Wybierz prawidłową prowincję dla %{zip}
-            unknown_for_address: Prowincja może być nieprawidłowa.
+            unknown_for_address: Województwo może być nieprawidłowe
+            blank_instructional: Wybierz województwo
+            blank_informative: Brakuje województwa
+            unknown_for_city_and_zip_instructional: Wprowadź prawidłowe województwo
+              dla %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Województwo jest nieprawidłowe dla
+              %{city}, %{zip}
+            unknown_for_city_instructional: Wybierz prawidłowe województwo dla %{city}
+            unknown_for_city_informative: Województwo jest nieprawidłowe dla %{city}
+            unknown_for_zip_instructional: Wybierz prawidłowe województwo dla %{zip}
+            unknown_for_zip_informative: Województwo jest nieprawidłowe dla %{zip}

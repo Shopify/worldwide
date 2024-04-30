@@ -8,8 +8,14 @@ vi:
             default: Tỉnh
             optional: Tỉnh (không bắt buộc)
           errors:
-            blank: Chọn tỉnh
-            unknown_for_city_and_zip: Nhập tỉnh hợp lệ cho %{city}, %{zip}
-            unknown_for_city: Chọn tỉnh hợp lệ cho %{city}
-            unknown_for_zip: Chọn tỉnh hợp lệ cho %{zip}
-            unknown_for_address: Tỉnh có thể không chính xác.
+            unknown_for_address: Tỉnh có thể không chính xác
+            blank_instructional: Chọn tỉnh
+            blank_informative: Thiếu tỉnh
+            unknown_for_city_and_zip_instructional: Nhập tỉnh hợp lệ cho %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Tỉnh cho %{city}, %{zip} không hợp
+              lệ
+            unknown_for_city_instructional: Chọn tỉnh hợp lệ cho %{city}
+            unknown_for_city_informative: Tỉnh cho %{city} không hợp lệ
+            unknown_for_zip_instructional: Chọn tỉnh hợp lệ cho %{zip}
+            unknown_for_zip_informative: Tỉnh cho %{zip} không hợp lệ

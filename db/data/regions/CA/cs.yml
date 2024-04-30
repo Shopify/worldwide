@@ -8,8 +8,14 @@ cs:
             default: Provincie
             optional: Provincie (volitelné)
           errors:
-            blank: Vyberte provincii
-            unknown_for_city_and_zip: 'Zadejte platnou provincii pro: %{city}, %{zip}'
-            unknown_for_city: 'Vyberte platnou provincií pro: %{city}'
-            unknown_for_zip: 'Vyberte platnou provincií pro: %{zip}'
             unknown_for_address: Provincie může být nesprávná.
+            blank_instructional: Vyberte provincii.
+            blank_informative: Provincie chybí.
+            unknown_for_city_and_zip_instructional: 'Zadejte platnou provincii pro:
+              %{city}, %{zip}.'
+            unknown_for_city_and_zip_informative: 'Provincie není platná pro: %{city},
+              %{zip}.'
+            unknown_for_city_instructional: 'Vyberte platnou provincii pro: %{city}.'
+            unknown_for_city_informative: 'Provincie není platná pro: %{city}.'
+            unknown_for_zip_instructional: 'Vyberte platnou provincii pro: %{zip}.'
+            unknown_for_zip_informative: 'Provincie není platná pro: %{zip}.'

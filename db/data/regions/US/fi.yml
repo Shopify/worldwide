@@ -8,26 +8,50 @@ fi:
             default: Osavaltio
             optional: Osavaltio (valinnainen)
           errors:
-            blank: Valitse osavaltio
-            invalid_for_country: Anna kelvollinen osavaltio maalle %{country}
-            unknown_for_city_and_zip: Anna kelvollinen osavaltio kohteelle %{city},
+            unknown_for_address: Osavaltio voi olla väärä
+            blank_instructional: Valitse osavaltio
+            blank_informative: Anna osavaltio
+            invalid_for_country_instructional: Anna kelvollinen osavaltio kaupungille
+              %{city}, %{zip}
+            invalid_for_country_informative: Kaupunki ei ole kelvollinen
+            unknown_for_city_and_zip_instructional: Anna kelvollinen osavaltio kaupungille
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Osavaltio ei ole kelvollinen kaupungille
+              %{city}, %{zip}
+            unknown_for_city_instructional: Valitse kelvollinen osavaltio postikoodille
+              %{city}
+            unknown_for_city_informative: Osavaltio on virheellinen postikoodille
+              %{city}
+            unknown_for_zip_instructional: Valitse kelvollinen osavaltio postikoodille
               %{zip}
-            unknown_for_city: Valitse kelvollinen osavaltio kohteelle %{city}
-            unknown_for_zip: Valitse kelvollinen osavaltio kohteelle %{zip}
-            unknown_for_address: Osavaltio voi olla väärä.
+            unknown_for_zip_informative: Osavaltio on virheellinen postikoodille %{zip}
         zip:
           label:
             default: Postinumero
             optional: Postinumero (valinnainen)
           errors:
-            blank: Anna postinumero
-            invalid_for_country: Anna kelvollinen postinumero maassa %{country}
-            invalid_for_country_and_province: Anna kelvollinen postinumero provinssissa
-              %{province}, %{country}
-            too_long: Postinumeron arvo on liian pitkä
-            contains_html_tags: Postikoodi ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Postinumero ei voi sisältää emojeita
-            contains_restricted_characters: Postinumero ei voi sisältää kiellettyjä
-              merkkejä
-            invalid_for_province: Anna kelvollinen postinumero alueelle %{province}
-            unknown_for_address: Postinumero voi olla väärä.
+            unknown_for_address: Postinumero voi olla väärä
+            blank_instructional: Anna postinumero
+            blank_informative: Postinumero puuttuu
+            invalid_for_country_instructional: Anna kelvollinen postinumero provinssille
+              %{country}
+            invalid_for_country_informative: Postinumero ei ole kelvollinen provinssille
+              %{country}
+            invalid_for_province_instructional: Anna kelvollinen postinumero provinssille
+              %{province}
+            invalid_for_province_informative: Postinumero ei ole kelvollinen provinssille
+              %{province}
+            invalid_for_country_and_province_instructional: Anna kelvollinen postinumero
+              provinssille %{province}, %{country}
+            invalid_for_country_and_province_informative: Postinumero ei ole kelvollinen
+              alueelle %{province}, %{country}
+            too_long_instructional: Postinumero on liian pitkä
+            too_long_informative: Postinumero on liian pitkä (enintään 255 merkkiä)
+            contains_emojis_instructional: Postinumero ei voi sisältää emojeita
+            contains_emojis_informative: Postinumero ei voi sisältää emojeita
+            contains_restricted_characters_instructional: Postinumero ei voi sisältää
+              rajoitettuja merkkejä
+            contains_restricted_characters_informative: Postinumero ei voi sisältää
+              rajoitettuja merkkejä
+            contains_html_tags_instructional: Postinumero ei voi sisältää HTML:ää
+            contains_html_tags_informative: Postinumero ei voi sisältää HTML:ää

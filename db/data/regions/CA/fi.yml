@@ -8,9 +8,18 @@ fi:
             default: Provinssi
             optional: Provinssi (valinnainen)
           errors:
-            blank: Valitse provinssi
-            unknown_for_city_and_zip: Anna kelvollinen provinssi kohteelle %{city},
+            unknown_for_address: Provinssi voi olla väärä
+            blank_instructional: Valitse provinssi
+            blank_informative: Provinssi puuttuu
+            unknown_for_city_and_zip_instructional: Anna kelvollinen provinssi kaupungille
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Provinssi ei ole kelvollinen kaupungille
+              %{city}, %{zip}
+            unknown_for_city_instructional: Valitse kelvollinen provinssi postinumerolle
+              %{city}
+            unknown_for_city_informative: Provinssi ei ole kelvollinen postinumerolle
+              %{city}
+            unknown_for_zip_instructional: Valitse kelvollinen provinssi postinumerolle
               %{zip}
-            unknown_for_city: Valitse kelvollinen provinssi kohteelle %{city}
-            unknown_for_zip: Valitse kelvollinen provinssi kohteelle %{zip}
-            unknown_for_address: Provinssi voi olla väärä.
+            unknown_for_zip_informative: Provinssi ei ole kelvollinen postinumerolle
+              %{zip}

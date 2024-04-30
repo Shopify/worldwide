@@ -8,8 +8,15 @@ fr:
             default: Province
             optional: Province (facultatif)
           errors:
-            blank: Sélectionner une province
-            unknown_for_city_and_zip: Saisir une province valide pour %{city}, %{zip}
-            unknown_for_city: Sélectionner une province valide pour %{city}
-            unknown_for_zip: Sélectionner une province valide pour %{zip}
-            unknown_for_address: La province peut être erronée.
+            unknown_for_address: La province peut être erronée
+            blank_instructional: Sélectionner une province
+            blank_informative: La province est manquante
+            unknown_for_city_and_zip_instructional: Saisir une province valide pour
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: La province n'est pas valide pour
+              %{city}, %{zip}
+            unknown_for_city_instructional: Sélectionner une province valide pour
+              %{city}
+            unknown_for_city_informative: La province n'est pas valide pour %{city}
+            unknown_for_zip_instructional: Sélectionner une province valide pour %{zip}
+            unknown_for_zip_informative: La province n'est pas valide pour %{zip}

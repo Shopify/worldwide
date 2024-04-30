@@ -8,8 +8,11 @@ sk:
             default: Štát
             optional: Štát (voliteľné)
           errors:
-            blank: Vyberte štát
+            blank_instructional: Vyberte štát
+            blank_informative: Chýba štát
         zip:
           errors:
-            invalid_for_country: Zadajte platné 6-miestne PSČ pre Nigériu alebo pole
-              nechajte prázdne.
+            invalid_for_country_instructional: Zadajte platné 6-miestne poštové smerovacie
+              číslo pre Nigériu alebo pole nechajte prázdne
+            invalid_for_country_informative: Poštové smerovacie číslo je neplatné
+              pre Nigériu

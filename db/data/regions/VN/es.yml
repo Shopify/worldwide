@@ -8,21 +8,44 @@ es:
             default: Municipalidad
             optional: Municipalidad (opcional)
           errors:
-            blank: Introduce una municipalidad.
-            too_long: La municipalidad es demasiado larga (máximo de 255 caracteres).
-            contains_emojis: La municipalidad no puede contener emojis.
-            contains_mathematical_symbols: La municipalidad no puede contener símbolos
-              matemáticos.
-            contains_restricted_characters: La municipalidad solo puede contener letras,
-              números y caracteres locales y especiales.
-            contains_too_many_words: La municipalidad no puede tener más de %{word_count}
-              palabras.
-            contains_html_tags: La municipalidad no puede contener etiquetas HTML.
-            contains_url: La municipalidad no puede contener URL.
-            unknown_for_city: Introduce un nombre de municipalidad válido para %{city}.
-            unknown_for_zip: Introduce un nombre de municipalidad válido para el código
-              postal %{zip}.
             unknown_for_address: Puede que la municipalidad no sea correcta.
+            blank_instructional: Introduce una municipalidad.
+            blank_informative: Falta la municipalidad.
+            too_long_instructional: El nombre de la municipalidad es demasiado largo.
+            too_long_informative: El nombre de la municipalidad es demasiado largo
+              (el máximo es de 255 caracteres).
+            contains_emojis_instructional: El nombre de la municipalidad no puede
+              contener emojis.
+            contains_emojis_informative: El nombre de la municipalidad no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre de la municipalidad
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre de la municipalidad
+              no puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre de la municipalidad
+              solo puede contener letras, números, caracteres locales y caracteres
+              especiales.
+            contains_restricted_characters_informative: El nombre de la municipalidad
+              no puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre de la municipalidad debe
+              tener menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre de la municipalidad debe
+              tener menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre de la municipalidad no puede
+              contener HTML.
+            contains_html_tags_informative: El nombre de la municipalidad no puede
+              contener HTML.
+            contains_url_instructional: El nombre de la municipalidad no puede contener
+              una URL.
+            contains_url_informative: El nombre de la municipalidad no puede contener
+              una URL.
+            unknown_for_city_instructional: Introduce un nombre de municipalidad válido
+              para %{city}.
+            unknown_for_city_informative: La municipalidad no coincide con %{city}.
+            unknown_for_zip_instructional: Introduce un nombre de municipalidad válido
+              para el código postal %{zip}.
+            unknown_for_zip_informational: La municipalidad no coincide con el código
+              postal %{zip}.
           warnings:
             contains_too_many_words: Se recomienda que la municipalidad tenga menos
               de %{word_count} palabras.

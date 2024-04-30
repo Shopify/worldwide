@@ -8,8 +8,14 @@ bg:
             default: Провинция
             optional: Провинция (незадължително)
           errors:
-            blank: Изберете провинция
-            unknown_for_city_and_zip: Въведете валидна провинция за %{city}, %{zip}
-            unknown_for_city: Изберете валидна провинция за %{city}
-            unknown_for_zip: Изберете валидна провинция за %{zip}
-            unknown_for_address: Възможно е провинцията да е неправилна.
+            unknown_for_address: Възможно е провинцията да е неправилна
+            blank_instructional: Изберете провинция
+            blank_informative: Липсва провинция
+            unknown_for_city_and_zip_instructional: Въведете валидна провинция за
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Провинцията не е валидна за %{city},
+              %{zip}
+            unknown_for_city_instructional: Изберете валидна провинция за %{city}
+            unknown_for_city_informative: Провинцията не е валидна за %{city}
+            unknown_for_zip_instructional: Изберете валидна провинция за %{zip}
+            unknown_for_zip_informative: Провинцията не е валидна за %{zip}

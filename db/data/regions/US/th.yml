@@ -8,24 +8,38 @@ th:
             default: รัฐ
             optional: รัฐ (ไม่บังคับ)
           errors:
-            blank: เลือกรัฐ
-            invalid_for_country: ป้อนรัฐ %{country} ที่ถูกต้อง
-            unknown_for_city_and_zip: ป้อนชื่อรัฐที่ถูกต้องสำหรับ %{city}, %{zip}
-            unknown_for_city: เลือกรัฐที่ถูกต้องสำหรับ %{city}
-            unknown_for_zip: เลือกรัฐที่ถูกต้องสำหรับ %{zip}
             unknown_for_address: รัฐอาจไม่ถูกต้อง
+            blank_instructional: เลือกรัฐ
+            blank_informative: ป้อนรัฐ
+            invalid_for_country_instructional: ป้อนรัฐของ%{city}, %{zip} ให้ถูกต้อง
+            invalid_for_country_informative: รัฐไม่ถูกต้อง
+            unknown_for_city_and_zip_instructional: ป้อนรัฐของ%{city}, %{zip} ให้ถูกต้อง
+            unknown_for_city_and_zip_informative: รัฐของ%{city}, %{zip} ไม่ถูกต้อง
+            unknown_for_city_instructional: เลือกรัฐที่ถูกต้องของ %{city}
+            unknown_for_city_informative: รัฐของ %{city} ไม่ถูกต้อง
+            unknown_for_zip_instructional: เลือกรัฐที่ถูกต้องของ %{zip}
+            unknown_for_zip_informative: รัฐของ %{zip} ไม่ถูกต้อง
         zip:
           label:
             default: รหัสไปรษณีย์
             optional: รหัสไปรษณีย์ (ไม่บังคับ)
           errors:
-            blank: ป้อนรหัส ZIP
-            invalid_for_country: ป้อนรหัส ZIP ใน %{country} ให้ถูกต้อง
-            invalid_for_country_and_province: ป้อนรหัส ZIP ของ %{province} ใน %{country}
-              ให้ถูกต้อง
-            too_long: รหัส ZIP ยาวเกินไป
-            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
-            contains_emojis: ไม่สามารถใส่อิโมจิในรหัส ZIP
-            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัส ZIP ได้
-            invalid_for_province: ป้อนรหัส ZIP ที่ถูกต้องสำหรับ %{province}
-            unknown_for_address: รหัสไปรษณีย์อาจไม่ถูกต้อง
+            unknown_for_address: รหัส ZIP อาจไม่ถูกต้อง
+            blank_instructional: ป้อนรหัส ZIP
+            blank_informative: ไม่พบรหัส ZIP
+            invalid_for_country_instructional: ป้อนรหัส ZIP ที่ถูกต้องสำหรับ%{country}
+            invalid_for_country_informative: รหัส ZIP สำหรับ%{country}ไม่ถูกต้อง
+            invalid_for_province_instructional: ป้อนรหัส ZIP ที่ถูกต้องสำหรับ%{province}
+            invalid_for_province_informative: รหัส ZIP สำหรับ%{province}ไม่ถูกต้อง
+            invalid_for_country_and_province_instructional: ป้อนรหัส ZIP ของ%{province}ใน%{country}ให้ถูกต้อง
+            invalid_for_country_and_province_informative: รหัส ZIP ของ%{province}ใน%{country}ไม่ถูกต้อง
+            too_long_instructional: รหัส ZIP ยาวเกินไป
+            too_long_informative: รหัส ZIP ยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในรหัส ZIP ได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในรหัส ZIP ได้
+            contains_restricted_characters_instructional: ไม่สามารถใส่อักขระต้องห้ามในรหัส
+              ZIP ได้
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในรหัส
+              ZIP ได้
+            contains_html_tags_instructional: ไม่สามารถใส่ HTML ในรหัส ZIP ได้
+            contains_html_tags_informative: ไม่สามารถใส่ HTML ในรหัส ZIP ได้

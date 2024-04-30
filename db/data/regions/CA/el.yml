@@ -8,8 +8,17 @@ el:
             default: Επαρχία
             optional: Επαρχία (προαιρετικά)
           errors:
-            blank: Επιλέξτε επαρχία
-            unknown_for_city_and_zip: Εισαγάγετε έγκυρη επαρχία για %{city}, %{zip}
-            unknown_for_city: Επιλέξτε έγκυρη επαρχία για %{city}
-            unknown_for_zip: Επιλέξτε έγκυρη επαρχία για %{zip}
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην επαρχία.
+            unknown_for_address: Η επαρχία ενδέχεται να είναι εσφαλμένη
+            blank_instructional: Επιλέξτε μια επαρχία
+            blank_informative: Η επαρχία λείπει
+            unknown_for_city_and_zip_instructional: Εισαγάγετε μια έγκυρη επαρχία
+              για την πόλη %{city} και τον Τ.Κ. %{zip}
+            unknown_for_city_and_zip_informative: Η επαρχία δεν είναι έγκυρη για την
+              πόλη %{city} και τον Τ.Κ. %{zip}
+            unknown_for_city_instructional: Επιλέξτε μια έγκυρη επαρχία για την πόλη
+              %{city}
+            unknown_for_city_informative: Η επαρχία δεν είναι έγκυρη για την πόλη
+              %{city}
+            unknown_for_zip_instructional: Επιλέξτε μια έγκυρη επαρχία για τον Τ.Κ.
+              %{zip}
+            unknown_for_zip_informative: Η επαρχία δεν είναι έγκυρη για τον Τ.Κ. %{zip}

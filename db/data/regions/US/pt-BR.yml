@@ -8,24 +8,43 @@ pt-BR:
             default: Estado
             optional: Estado (opcional)
           errors:
-            blank: Selecione um estado
-            invalid_for_country: Insira um estado válido para %{country}
-            unknown_for_city_and_zip: Insira um estado válido para %{city}, %{zip}
-            unknown_for_city: Selecione um estado válido para %{city}
-            unknown_for_zip: Selecione um estado válido para %{zip}
-            unknown_for_address: Talvez haja um erro no estado.
+            unknown_for_address: Talvez haja um erro no estado
+            blank_instructional: Selecione um estado
+            blank_informative: Insira um estado
+            invalid_for_country_instructional: Insira um estado válido para %{city},
+              %{zip}
+            invalid_for_country_informative: O estado não é válido
+            unknown_for_city_and_zip_instructional: Insira um estado válido para %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: O estado não é válido para %{city},
+              %{zip}
+            unknown_for_city_instructional: Selecione um estado válido para %{city}
+            unknown_for_city_informative: O estado não é válido para %{city}
+            unknown_for_zip_instructional: Selecione um estado válido para %{zip}
+            unknown_for_zip_informative: O estado não é válido para %{zip}
         zip:
           label:
             default: CEP
             optional: CEP (opcional)
           errors:
-            blank: Insira um CEP
-            invalid_for_country: Insira um CEP válido para %{country}
-            invalid_for_country_and_province: Insira um CEP válido para %{province},
-              %{country}
-            too_long: O valor de CEP é longo demais
-            contains_html_tags: O valor do CEP não pode ter tags HTML.
-            contains_emojis: CEP não pode conter emojis
-            contains_restricted_characters: O CEP não pode ter caracteres restritos
-            invalid_for_province: Insira um CEP válido para %{province}
-            unknown_for_address: Talvez haja um erro no CEP.
+            unknown_for_address: Talvez haja um erro no CEP
+            blank_instructional: Insira um CEP
+            blank_informative: Falta o CEP
+            invalid_for_country_instructional: Insira um CEP válido para %{country}
+            invalid_for_country_informative: O CEP não é válido para %{country}
+            invalid_for_province_instructional: Insira um CEP válido para %{province}
+            invalid_for_province_informative: O CEP não é válido para %{province}
+            invalid_for_country_and_province_instructional: Insira um CEP válido para
+              %{province}, %{country}
+            invalid_for_country_and_province_informative: O CEP não é válido para
+              %{province}, %{country}
+            too_long_instructional: O CEP é longo demais
+            too_long_informative: O CEP é muito longo (máximo de 255 caracteres)
+            contains_emojis_instructional: O CEP não pode conter emojis
+            contains_emojis_informative: O CEP não pode conter emojis
+            contains_restricted_characters_instructional: O CEP não pode conter caracteres
+              restritos
+            contains_restricted_characters_informative: O CEP não pode conter caracteres
+              restritos
+            contains_html_tags_instructional: O CEP não pode conter HTML
+            contains_html_tags_informative: O CEP não pode conter HTML

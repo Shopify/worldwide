@@ -8,19 +8,36 @@ fr:
             default: Quartier
             optional: Quartier (facultatif)
           errors:
-            blank: Saisir un quartier
-            too_long: Le quartier est trop long (le maximum est de 255 caractères)
-            contains_emojis: Le quartier ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le quartier ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: Le quartier ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_too_many_words: Le quartier ne doit pas comporter plus de %{word_count} mots
-            contains_html_tags: Le quartier ne peut pas contenir de balises HTML.
-            contains_url: Le quartier ne peut pas contenir d’URL.
-            unknown_for_city: Saisir un nom de quartier valide pour %{city}.
-            unknown_for_zip: Saisir un nom de quartier valide pour %{zip}.
-            unknown_for_address: Le quartier peut être erroné.
+            unknown_for_address: Le quartier peut être erroné
+            blank_instructional: Saisir un quartier
+            blank_informative: Le quartier est manquant
+            too_long_instructional: Le quartier est trop long
+            too_long_informative: Le quartier est trop long (le maximum est de 255 caractères)
+            contains_emojis_instructional: Le quartier ne peut pas contenir d’emojis
+            contains_emojis_informative: Le quartier ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le quartier ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: Le quartier ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: Le quartier ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le quartier ne peut pas contenir
+              de caractères non autorisés
+            contains_too_many_words_instructional: Le quartier doit comporter moins
+              de %{word_count} mots
+            contains_too_many_words_informative: Le quartier doit comporter moins
+              de %{word_count} mots
+            contains_html_tags_instructional: Le quartier ne peut pas contenir de
+              HTML
+            contains_html_tags_informative: Le quartier ne peut pas contenir de HTML
+            contains_url_instructional: Le quartier ne peut pas contenir d’URL
+            contains_url_informative: Le quartier ne peut pas contenir d’URL
+            unknown_for_city_instructional: Saisir un nom de quartier valide pour
+              %{city}
+            unknown_for_city_informative: Le quartier ne concorde pas avec %{city}
+            unknown_for_zip_instructional: Saisir un nom de quartier valide pour %{zip}
+            unknown_for_zip_informational: Le quartier ne concorde pas avec %{zip}
           warnings:
             contains_too_many_words: Il est conseillé que le quartier comporte moins
               de %{word_count} mots

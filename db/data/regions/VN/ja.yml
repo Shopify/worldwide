@@ -8,16 +8,26 @@ ja:
             default: 区
             optional: 区 (任意)
           errors:
-            blank: 区を入力してください
-            too_long: 区が長すぎます (最大255文字)
-            contains_emojis: 区に絵文字を含めることはできません
-            contains_mathematical_symbols: 区に数学記号を含めることはできません
-            contains_restricted_characters: 区には、文字、数字、地域の文字、特殊文字のみを含めることができます
-            contains_too_many_words: 区には、%{word_count}語を超えて入力することはできません
-            contains_html_tags: 区にHTMLタグを含めることはできません。
-            contains_url: 区にURLを含めることはできません。
-            unknown_for_city: "%{city}に対応する有効な区名を入力してください。"
-            unknown_for_zip: "%{zip}に対応する有効な区名を入力してください。"
-            unknown_for_address: 区は正しくない可能性があります。
+            unknown_for_address: 区は正しくない可能性があります
+            blank_instructional: 区を入力してください
+            blank_informative: 区がありません
+            too_long_instructional: 区が長すぎます
+            too_long_informative: 区が長すぎます (最大255文字)
+            contains_emojis_instructional: 区には絵文字を入力できません
+            contains_emojis_informative: 区に絵文字を含めることはできません
+            contains_mathematical_symbols_instructional: 区に数学記号を含めることはできません
+            contains_mathematical_symbols_informative: 区に数学記号を含めることはできません
+            contains_restricted_characters_instructional: 区には、文字、数字、地域の文字、特殊文字のみを含めることができます
+            contains_restricted_characters_informative: 区には制限されている文字を入力できません
+            contains_too_many_words_instructional: 区は%{word_count}文字未満にする必要があります
+            contains_too_many_words_informative: 区は%{word_count}文字未満にする必要があります
+            contains_html_tags_instructional: 区にHTMLを含めることはできません
+            contains_html_tags_informative: 区にHTMLを含めることはできません
+            contains_url_instructional: 区にURLを含めることはできません
+            contains_url_informative: 区にURLを含めることはできません
+            unknown_for_city_instructional: "%{city}の有効な区名を入力してください"
+            unknown_for_city_informative: 区が%{city}と一致していません
+            unknown_for_zip_instructional: "%{zip}の有効な区名を入力してください"
+            unknown_for_zip_informational: 区が%{zip}と一致していません
           warnings:
             contains_too_many_words: 区は%{word_count}文字未満が推奨されています

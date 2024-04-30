@@ -8,18 +8,28 @@ id:
             default: Negara bagian
             optional: Negara bagian (opsional)
           errors:
-            blank: Pilih negara bagian
+            blank_instructional: Pilih negara bagian
+            blank_informative: Nama negara bagian belum diisi
         zip:
           label:
             default: Kode PIN
             optional: Kode PIN (opsional)
           errors:
-            blank: Masukkan kode PIN
-            invalid_for_country: Masukkan kode PIN yang valid untuk %{country}
-            invalid_for_country_and_province: Masukkan kode PIN yang valid untuk %{province},
+            blank_instructional: Masukkan kode PIN
+            blank_informative: Kode PIN belum diisi
+            invalid_for_country_instructional: Masukkan kode PIN yang valid untuk
               %{country}
-            too_long: Nilai kode PIN terlalu panjang
-            contains_html_tags: Kode PIN tidak bisa berisi tag HTML.
-            contains_emojis: Kode PIN tidak boleh berisi emoji
-            contains_restricted_characters: Kode PIN tidak boleh memuat karakter yang
-              dilarang
+            invalid_for_country_informative: Kode PIN tidak valid
+            invalid_for_country_and_province_instructional: Masukkan kode PIN yang
+              valid untuk %{province}, %{country}
+            invalid_for_country_and_province_informative: Kode PIN tidak valid
+            too_long_instructional: Kode PIN terlalu panjang
+            too_long_informative: Kode PIN terlalu panjang
+            contains_emojis_instructional: Kode PIN tidak boleh berisi emoji
+            contains_emojis_informative: Kode PIN tidak boleh berisi emoji
+            contains_restricted_characters_instructional: Kode PIN tidak boleh berisi
+              karakter yang dilarang
+            contains_restricted_characters_informative: Kode PIN tidak boleh berisi
+              karakter yang dilarang
+            contains_html_tags_instructional: Kode PIN tidak boleh berisi HTML
+            contains_html_tags_informative: Kode PIN tidak boleh berisi HTML

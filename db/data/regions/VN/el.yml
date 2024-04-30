@@ -8,21 +8,38 @@ el:
             default: Διαμέρισμα
             optional: Διαμέρισμα (προαιρετικά)
           errors:
-            blank: Εισαγωγή διαμερίσματος
-            too_long: Το πεδίο "Διαμέρισμα" είναι πολύ μεγάλο (το μέγιστο όριο είναι
-              255 χαρακτήρες)
-            contains_emojis: Το διαμέρισμα δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Το διαμέρισμα δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το διαμέρισμα μπορεί να περιέχει μόνο
-              γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_too_many_words: Το διαμέρισμα δεν μπορεί να περιέχει πάνω από
-              %{word_count} λέξεις
-            contains_html_tags: Το διαμέρισμα δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_url: Το διαμέρισμα δεν μπορεί να περιέχει URL.
-            unknown_for_city: Εισαγάγετε ένα έγκυρο όνομα διαμερίσματος για %{city}.
-            unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα διαμερίσματος για %{zip}.
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στο όνομα διαμερίσματος.
+            unknown_for_address: Το διαμέρισμα ενδέχεται να είναι εσφαλμένο
+            blank_instructional: Εισαγάγετε ένα διαμέρισμα
+            blank_informative: Το διαμέρισμα λείπει
+            too_long_instructional: Το διαμέρισμα είναι πολύ μεγάλο
+            too_long_informative: Το διαμέρισμα είναι πολύ μεγάλο (το μέγιστο όριο
+              είναι 255 χαρακτήρες)
+            contains_emojis_instructional: Το διαμέρισμα δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Το διαμέρισμα δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Το διαμέρισμα δεν μπορεί
+              να περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Το διαμέρισμα δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Το διαμέρισμα μπορεί να
+              περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Το διαμέρισμα δεν μπορεί να
+              περιέχει περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Το διαμέρισμα πρέπει να διαθέτει
+              λιγότερες από %{word_count} λέξεις
+            contains_too_many_words_informative: Το διαμέρισμα πρέπει να διαθέτει
+              λιγότερες από %{word_count} λέξεις
+            contains_html_tags_instructional: Το διαμέρισμα δεν μπορεί να περιέχει
+              κώδικα HTML
+            contains_html_tags_informative: Το διαμέρισμα δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_url_instructional: Το διαμέρισμα δεν μπορεί να περιέχει URL
+            contains_url_informative: Το διαμέρισμα δεν μπορεί να περιέχει URL
+            unknown_for_city_instructional: Εισαγάγετε ένα έγκυρο όνομα διαμερίσματος
+              για την πόλη %{city}
+            unknown_for_city_informative: Το διαμέρισμα δεν αντιστοιχεί σε %{city}
+            unknown_for_zip_instructional: Εισαγάγετε ένα έγκυρο όνομα διαμερίσματος
+              για τον Τ.Κ. %{zip}
+            unknown_for_zip_informational: Το διαμέρισμα δεν αντιστοιχεί σε %{zip}
           warnings:
             contains_too_many_words: Το διαμέρισμα συνιστάται να έχει λιγότερες από
               %{word_count} λέξεις

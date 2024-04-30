@@ -8,18 +8,27 @@ da:
             default: Stat
             optional: Stat (valgfrit)
           errors:
-            blank: Vælg en stat
+            blank_instructional: Vælg en stat
+            blank_informative: Stat mangler
         zip:
           label:
             default: Pinkode
             optional: Pinkode (valgfrit)
           errors:
-            blank: Angiv en pinkode
-            invalid_for_country: Angiv en gyldig pinkode for %{country}
-            invalid_for_country_and_province: Angiv en gyldig pinkode for %{province},
-              %{country}
-            too_long: Postnummerværdien er for lang (Indien – pinkode)
-            contains_html_tags: Pinkoden må ikke indeholde HTML-tags.
-            contains_emojis: Pinkode må ikke indeholde emojis
-            contains_restricted_characters: Pinkoden må ikke indeholde begrænsede
-              tegn
+            blank_instructional: Angiv et postnummer
+            blank_informative: Postnummer mangler
+            invalid_for_country_instructional: Angiv et gyldigt postnummer for %{country}
+            invalid_for_country_informative: Postnummeret er ikke gyldigt
+            invalid_for_country_and_province_instructional: Angiv et gyldigt postnummer
+              for %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnummeret er ikke gyldigt
+            too_long_instructional: Postnummer er for lang
+            too_long_informative: Postnummer er for lang
+            contains_emojis_instructional: Postnummer må ikke indeholde emojis
+            contains_emojis_informative: Postnummer må ikke indeholde emojis
+            contains_restricted_characters_instructional: Postnummer må ikke indeholde
+              begrænsede tegn
+            contains_restricted_characters_informative: Postnummeret må ikke indeholde
+              begrænsede tegn
+            contains_html_tags_instructional: Postnummer må ikke indeholde HTML
+            contains_html_tags_informative: Postnummer må ikke indeholde HTML

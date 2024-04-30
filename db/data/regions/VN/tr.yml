@@ -8,18 +8,33 @@ tr:
             default: Semt
             optional: Semt (isteğe bağlı)
           errors:
-            blank: Bir semt girin
-            too_long: Semt adı çok uzun (maksimum 255 karakter olmalıdır)
-            contains_emojis: Semt adı emoji içeremez
-            contains_mathematical_symbols: Semt adı matematiksel semboller içeremez
-            contains_restricted_characters: Semt adı yalnızca harfler, sayılar, yerel
-              karakterler ve özel karakterler içerebilir
-            contains_too_many_words: Semt adı en fazla %{word_count} kelime içerebilir
-            contains_html_tags: Semt adı HTML etiketleri içeremez.
-            contains_url: Semt adı URL içeremez.
-            unknown_for_city: "%{city} için geçerli bir semt adı girin."
-            unknown_for_zip: "%{zip} için geçerli bir semt adı girin."
-            unknown_for_address: Semt adı yanlış olabilir.
+            unknown_for_address: Semt adı yanlış olabilir
+            blank_instructional: Semt girin
+            blank_informative: Semt eksik
+            too_long_instructional: Semt adı çok uzun
+            too_long_informative: Semt adı çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis_instructional: Semt adı emoji içeremez
+            contains_emojis_informative: Semt adı emoji içeremez
+            contains_mathematical_symbols_instructional: Semt adı matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Semt adı matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Semt adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Semt adı, kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Semt için karakter sayısı %{word_count}
+              altında olmalıdır
+            contains_too_many_words_informative: Semt için karakter sayısı %{word_count}
+              altında olmalıdır
+            contains_html_tags_instructional: Semt adı HTML içeremez
+            contains_html_tags_informative: Semt adı HTML içeremez
+            contains_url_instructional: Semt adı URL içeremez
+            contains_url_informative: Semt adı URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir semt adı girin"
+            unknown_for_city_informative: Semt, %{city} ile eşleşmiyor
+            unknown_for_zip_instructional: "%{zip} için geçerli bir semt adı girin"
+            unknown_for_zip_informational: Semt, %{zip} ile eşleşmiyor
           warnings:
             contains_too_many_words: Semt adında %{word_count} adetten az kelime olması
               önerilir

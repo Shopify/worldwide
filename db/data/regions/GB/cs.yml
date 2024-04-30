@@ -8,11 +8,21 @@ cs:
             default: PSČ
             optional: PSČ (volitelné)
           errors:
-            blank: Zadejte PSČ
-            invalid_for_country: Zadejte platné PSČ pro Spojené království
-            invalid_for_country_and_province: 'Zadejte platné PSČ pro: %{province},
-              Spojené království'
-            too_long: Hodnota PSČ je příliš dlouhá
-            contains_html_tags: PSČ nemůže obsahovat HTML tagy.
-            contains_emojis: PSČ nemůže obsahovat emoji
-            contains_restricted_characters: PSČ nesmí obsahovat zakázané znaky
+            blank_instructional: Zadejte PSČ.
+            blank_informative: PSČ chybí.
+            invalid_for_country_instructional: Zadejte platné PSČ pro Spojené království.
+            invalid_for_country_informative: PSČ není pro Spojené království platné.
+            invalid_for_country_and_province_instructional: 'Zadejte platné PSČ pro:
+              %{province}, Spojené království.'
+            invalid_for_country_and_province_informative: 'PSČ není platné pro: %{province},
+              Spojené království.'
+            too_long_instructional: PSČ je příliš dlouhé.
+            too_long_informative: PSČ je příliš dlouhé.
+            contains_emojis_instructional: PSČ nemůže obsahovat emoji.
+            contains_emojis_informative: PSČ nemůže obsahovat emoji.
+            contains_restricted_characters_instructional: PSČ nesmí obsahovat zakázané
+              znaky.
+            contains_restricted_characters_informative: PSČ může obsahovat pouze písmena,
+              číslice, místní znaky a speciální znaky.
+            contains_html_tags_instructional: PSČ nemůže obsahovat HTML.
+            contains_html_tags_informative: PSČ nemůže obsahovat HTML.

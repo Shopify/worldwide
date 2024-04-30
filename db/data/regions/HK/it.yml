@@ -8,10 +8,17 @@ it:
             default: Distretto
             optional: Distretto (facoltativo)
           errors:
-            blank: Inserisci un distretto
-            too_long: Il nome del distretto è troppo lungo (la lunghezza massima è
-              di 255 caratteri)
-            contains_html_tags: Il distretto non può contenere tag HTML.
-            contains_emojis: Il distretto non può contenere emoji
-            contains_restricted_characters: Il distretto non può contenere caratteri
-              vietati
+            blank_instructional: Inserisci un distretto
+            blank_informative: Distretto mancante
+            too_long_instructional: Il nome del distretto è troppo lungo (lunghezza
+              massima 255 caratteri)
+            too_long_informative: Il nome del distretto è troppo lungo
+            contains_emojis_instructional: Il campo Distretto non può contenere emoji
+            contains_emojis_informative: Il campo Distretto non può contenere emoji
+            contains_restricted_characters_instructional: Il campo Distretto non può
+              contenere caratteri vietati
+            contains_restricted_characters_informative: Il campo Distretto non può
+              contenere caratteri vietati
+            contains_html_tags_instructional: Il campo Distretto non può contenere
+              HTML
+            contains_html_tags_informative: Il campo Distretto non può contenere HTML

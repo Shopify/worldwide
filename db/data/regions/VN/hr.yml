@@ -8,20 +8,34 @@ hr:
             default: Općina
             optional: Općina (neobavezno)
           errors:
-            blank: Unesite općinu
-            too_long: Naziv općine je predugačak (dopušteno je najviše 255 znakova)
-            contains_emojis: Naziv općine ne smije sadržavati emotikone
-            contains_mathematical_symbols: Naziv općine ne smije sadržavati matematičke
-              simbole
-            contains_restricted_characters: Naziv općine smije sadržavati samo slova,
-              brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: 'Naziv općine smije sadržavati najviše sljedeći
-              broj riječi: %{word_count}'
-            contains_html_tags: Naziv općine ne smije sadržavati HTML oznake.
-            contains_url: Naziv općine ne smije sadržavati URL-ove.
-            unknown_for_city: Unesite valjani naziv općine za %{city}.
-            unknown_for_zip: Unesite valjani naziv općine za %{zip}.
-            unknown_for_address: Naziv općine možda nije točan.
+            unknown_for_address: Naziv općine možda nije točan
+            blank_instructional: Unesite općinu
+            blank_informative: Nedostaje općina
+            too_long_instructional: Naziv općine je predugačak
+            too_long_informative: Naziv općine je predugačak (dopušteno je najviše
+              255 znakova)
+            contains_emojis_instructional: Naziv općine ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv općine ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Naziv općine ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naziv općine ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Naziv općine smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv općine ne smije sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: 'Naziv općine smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Naziv općine smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Naziv općine ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv općine ne smije sadržavati HTML
+            contains_url_instructional: Naziv općine ne smije sadržavati URL
+            contains_url_informative: Naziv općine ne smije sadržavati URL
+            unknown_for_city_instructional: Unesite valjani naziv općine za %{city}
+            unknown_for_city_informative: Naziv općine ne odgovara za %{city}
+            unknown_for_zip_instructional: Unesite valjani naziv općine za %{zip}
+            unknown_for_zip_informational: Naziv općine ne odgovara za %{zip}
           warnings:
             contains_too_many_words: Preporučujemo da naziv općine sadrži manje od
               %{word_count} riječ/i

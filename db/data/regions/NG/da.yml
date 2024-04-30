@@ -8,8 +8,10 @@ da:
             default: Stat
             optional: Stat (valgfrit)
           errors:
-            blank: Vælg en stat
+            blank_instructional: Vælg en stat
+            blank_informative: Stat mangler
         zip:
           errors:
-            invalid_for_country: Angiv et gyldigt 6-cifret postnummer for Nigeria,
-              eller lad feltet stå tomt.
+            invalid_for_country_instructional: Angiv et gyldigt 6-cifret postnummer
+              for Nigeria, eller lad feltet stå tomt
+            invalid_for_country_informative: Postnummeret er ugyldigt for Nigeria

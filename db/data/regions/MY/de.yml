@@ -8,14 +8,20 @@ de:
             default: Staat/Territorium
             optional: Staat/Territorium (optional)
           errors:
-            blank: Wähle einen Staat/ein Territorium aus
+            blank_instructional: Wähle einen Staat/ein Territorium aus
+            blank_informative: Staat/Territorium fehlt
         zip:
           label:
             default: Postleitzahl
             optional: Postleitzahl (optional)
           errors:
-            too_long: Der Postleitzahl-Wert ist zu lang
-            contains_html_tags: Postleitzahl darf keine HTML-Tags enthalten.
-            contains_emojis: Die Postleitzahl darf keine Emojis enthalten.
-            contains_restricted_characters: Die Postleitzahl darf keine eingeschränkten
+            too_long_instructional: Postleitzahl ist zu lang
+            too_long_informative: Postleitzahl ist zu lang
+            contains_emojis_instructional: Postleitzahl darf keine Emojis enthalten
+            contains_emojis_informative: Postleitzahl darf keine Emojis enthalten
+            contains_restricted_characters_instructional: Postleitzahl darf keine
+              eingeschränkten Zeichen enthalten
+            contains_restricted_characters_informative: Postleitzahl darf keine eingeschränkten
               Zeichen enthalten
+            contains_html_tags_instructional: Postleitzahl darf kein HTML enthalten
+            contains_html_tags_informative: Postleitzahl darf kein HTML enthalten

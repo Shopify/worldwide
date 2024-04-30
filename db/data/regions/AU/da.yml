@@ -8,29 +8,45 @@ da:
             default: Forstad
             optional: Forstad (valgfrit)
           errors:
-            blank: Indtast en forstad
-            too_long: Navnet på forstaden er for langt (højst 255 tegn)
-            contains_html_tags: Forstad må ikke indeholde HTML-tags.
-            contains_emojis: Forstad må ikke indeholde emojis
-            contains_restricted_characters: Forstad må kun indeholde bogstaver, tegn,
-              lokale tegn og specialtegn
+            blank_instructional: Angiv en forstad
+            blank_informative: Forstad mangler
+            too_long_instructional: Forstad er for lang (højst 255 tegn)
+            too_long_informative: Forstad er for lang
+            contains_emojis_instructional: Forstad må ikke indeholde emojis
+            contains_emojis_informative: Forstad må ikke indeholde emojis
+            contains_restricted_characters_instructional: Forstad må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Forstad må ikke indeholde
+              begrænsede tegn
+            contains_html_tags_instructional: Forstad må ikke indeholde HTML
+            contains_html_tags_informative: Forstad må ikke indeholde HTML
         province:
           label:
             default: Stat/territorium
             optional: Stat/territorium (valgfrit)
           errors:
-            blank: Vælg stat/territorium
+            blank_instructional: Vælg stat/territorium
+            blank_informative: Stat/territorium mangler
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfrit)
           errors:
-            blank: Angiv et postnummer
-            invalid_for_country: Angiv et gyldigt postnummer for %{country}
-            invalid_for_country_and_province: Angiv et gyldigt postnummer for %{province},
-              %{country}
-            too_long: Postnummerværdien er for lang
-            contains_html_tags: Postnummer må ikke indeholde HTML-tags.
-            contains_emojis: Postnummer må ikke indeholde emojis
-            contains_restricted_characters: Postnummer må kun indeholde bogstaver,
-              tegn, lokale tegn og specialtegn
+            blank_instructional: Angiv et postnummer
+            blank_informative: Postnummer mangler
+            invalid_for_country_instructional: Angiv et gyldigt postnummer for %{country}
+            invalid_for_country_informative: Postnummeret er ikke gyldigt for %{country}
+            invalid_for_country_and_province_instructional: Angiv et gyldigt postnummer
+              for %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnummeret er ikke gyldigt
+              for %{province}, %{country}
+            too_long_instructional: Postnummer er for lang
+            too_long_informative: Postnummer er for lang
+            contains_emojis_instructional: Postnummer må ikke indeholde emojis
+            contains_emojis_informative: Postnummer må ikke indeholde emojis
+            contains_restricted_characters_instructional: Postnummer må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Postnummer må ikke indeholde
+              begrænsede tegn
+            contains_html_tags_instructional: Postnummer må ikke indeholde HTML
+            contains_html_tags_informative: Postnummer må ikke indeholde HTML

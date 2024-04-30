@@ -8,12 +8,21 @@ da:
             default: Postnummer
             optional: Postnummer (valgfrit)
           errors:
-            blank: Angiv et postnummer
-            invalid_for_country: Angiv et gyldigt postnummer for Storbritannien
-            invalid_for_country_and_province: Angiv et gyldigt postnummer for %{province},
-              Storbritannien
-            too_long: Postnummerværdien er for lang
-            contains_html_tags: Postnummer må ikke indeholde HTML-tags.
-            contains_emojis: Postnummer må ikke indeholde emojis
-            contains_restricted_characters: Postnummeret må ikke indeholde begrænsede
-              tegn
+            blank_instructional: Angiv et postnummer
+            blank_informative: Postnummer mangler
+            invalid_for_country_instructional: Angiv et gyldigt postnummer for Storbritannien
+            invalid_for_country_informative: Postnummeret er ikke gyldigt for Storbritannien
+            invalid_for_country_and_province_instructional: Angiv et gyldigt postnummer
+              for %{province}, Storbritannien
+            invalid_for_country_and_province_informative: Postnummeret er ikke gyldigt
+              for %{province}, Storbritannien
+            too_long_instructional: Postnummer er for lang
+            too_long_informative: Postnummer er for lang
+            contains_emojis_instructional: Postnummer må ikke indeholde emojis
+            contains_emojis_informative: Postnummer må ikke indeholde emojis
+            contains_restricted_characters_instructional: Postnummer må ikke indeholde
+              begrænsede tegn
+            contains_restricted_characters_informative: Postnummer må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_html_tags_instructional: Postnummer må ikke indeholde HTML
+            contains_html_tags_informative: Postnummer må ikke indeholde HTML

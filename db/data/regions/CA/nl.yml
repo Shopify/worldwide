@@ -8,9 +8,14 @@ nl:
             default: Provincie
             optional: Provincie (optioneel)
           errors:
-            blank: Selecteer provincie
-            unknown_for_city_and_zip: Voer een geldige provincie in voor %{city},
+            unknown_for_address: De provincie klopt misschien niet
+            blank_instructional: Selecteer een provincie
+            blank_informative: Provincie ontbreekt
+            unknown_for_city_and_zip_instructional: Voer een geldige provincie in
+              voor %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Provincie is niet geldig voor %{city},
               %{zip}
-            unknown_for_city: Selecteer een geldige provincie voor %{city}
-            unknown_for_zip: Selecteer een geldige provincie voor %{zip}
-            unknown_for_address: De provincie klopt misschien niet.
+            unknown_for_city_instructional: Selecteer een geldige provincie voor %{city}
+            unknown_for_city_informative: Provincie is niet geldig voor %{city}
+            unknown_for_zip_instructional: Selecteer een geldige provincie voor %{zip}
+            unknown_for_zip_informative: Provincie is niet geldig voor %{zip}
