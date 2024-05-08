@@ -51,5 +51,12 @@ module Worldwide
       assert_nil address.zip
       assert_equal "ZZ", address.country_code
     end
+
+    focus
+    test "generate_address1 when given street and building number, with decorators, append only" do
+      address = Address.new(street: "Main Street", building_number: "123", country_code: "BR")
+
+      assert_equal "Main Street, 123", address.generate_address1
+    end
   end
 end

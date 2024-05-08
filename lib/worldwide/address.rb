@@ -11,8 +11,16 @@ module Worldwide
       :city,
       :province_code,
       :country_code,
-      :phone
+      :phone,
+      :street,
+      :building_number,
+      :neighborhood
 
+    CONCATENATION_DELIMITER = " "
+
+    # refactor this to take a full address rather than individual fields?
+    # this is different from how AddressFormatter is set up in Shopifyi18n
+    # perhaps we just define our methods as class methods instead of adding to the instance methods
     def initialize(
       first_name: nil,
       last_name: nil,
@@ -23,7 +31,10 @@ module Worldwide
       city: nil,
       province_code: nil,
       country_code: "ZZ", # Unknown region
-      phone: nil
+      phone: nil,
+      street: nil,
+      building_number: nil,
+      neighborhood: nil
     )
       @first_name = first_name
       @last_name = last_name
@@ -35,6 +46,9 @@ module Worldwide
       @province_code = province_code&.to_s&.upcase
       @country_code = country_code.to_s.upcase
       @phone = phone
+      @street = street
+      @building_number = building_number
+      @neighborhood = neighborhood
     end
 
     def errors
@@ -56,6 +70,39 @@ module Worldwide
 
     def normalize(autocorrect_level: 1)
       dup.normalize!(autocorrect_level: autocorrect_level)
+    end
+
+    def generate_address1
+      # what to do if address missing house number and street? defaults?
+
+      # get additional address field definitions for address country
+      region = Worldwide.region(code: country_code)
+      additional_fields = region&.additional_address_fields&.[](:address1)
+      # return address1 if no additional fields
+
+      # require "pry"
+      # binding.pry
+
+      new_address = ""
+
+      additional_fields.each do |field|
+        field_value = send(field[:key].to_sym)
+        if field[:position] == "append"
+          if field[:delimiter].present?
+            delimiter = field[:delimiter] + CONCATENATION_DELIMITER
+            new_address += delimiter + field_value
+          else
+            new_address += field_value
+          end
+        elsif field[:delimiter].present?
+          delimiter = field[:delimiter] + CONCATENATION_DELIMITER
+          new_address.prepend(field_value + delimter)
+        else
+          new_address.prepend(field_value + CONCATENATION_DELIMITER)
+        end
+      end
+
+      new_address
     end
 
     def normalize!(autocorrect_level: 1)

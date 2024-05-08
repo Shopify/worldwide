@@ -232,6 +232,7 @@ module Worldwide
         tax_name: spec["tax_name"],
         tax_rate: spec["tax"],
         use_zone_code_as_short_name: spec["use_zone_code_as_short_name"] || false,
+        additional_address_fields: spec["additional_address_fields"]&.deep_symbolize_keys || {},
       )
 
       apply_territory_attributes(region, spec)
