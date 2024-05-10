@@ -70,7 +70,7 @@ module Worldwide
     end
 
     def generate_address1
-      # what to do if address missing house number and street? defaults?
+      return address1 if address1.present?
 
       region = Worldwide.region(code: country_code) # this can be memoized
       additional_fields = region&.additional_address_fields&.[](:address1) || {}

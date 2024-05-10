@@ -82,15 +82,20 @@ module Worldwide
       assert_equal "", address.generate_address1
     end
 
-    test "generate_address1 returns empty string when only address1 provided" do
+    test "generate_address1 returns address1 when provided" do
       address = Address.new(address1: "Main Street, 123", country_code: "BR")
 
-      # fall back on address1? or empty string?
-      assert_equal "", address.generate_address1
+      assert_equal "Main Street, 123", address.generate_address1
+    end
+
+    test "generate_address1 returns address1 when provided, even when additional fields are provided" do
+      address = Address.new(address1: "A Street 456", street: "Main Street", building_number: "123", country_code: "CL")
+
+      assert_equal "A Street 456", address.generate_address1
     end
 
     test "generate_address1 when given street and building number, no decorators" do
-      address = Address.new(street: "Main Street", building_number: "123", address1: "ignored value", country_code: "CL")
+      address = Address.new(street: "Main Street", building_number: "123", country_code: "CL")
 
       assert_equal "Main Street 123", address.generate_address1
     end
