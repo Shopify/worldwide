@@ -16,7 +16,7 @@ module Worldwide
       :building_number,
       :neighborhood
 
-    CONCATENATION_DELIMITER = " "
+    UNIVERSAL_DELIMITER = " "
 
     # refactor this to take a full address rather than individual fields?
     # this is different from how AddressFormatter is set up in Shopifyi18n
@@ -75,31 +75,23 @@ module Worldwide
     def generate_address1
       # what to do if address missing house number and street? defaults?
 
-      # get additional address field definitions for address country
       region = Worldwide.region(code: country_code)
-      additional_fields = region&.additional_address_fields&.[](:address1)
-      # return address1 if no additional fields
-
-      # require "pry"
-      # binding.pry
+      additional_fields = region&.additional_address_fields&.[](:address1) || {}
+      return address1 if additional_fields.empty? 
 
       new_address = ""
 
       additional_fields.each do |field|
-        field_value = send(field[:key].to_sym)
-        if field[:position] == "append"
-          if field[:delimiter].present?
-            delimiter = field[:delimiter] + CONCATENATION_DELIMITER
-            new_address += delimiter + field_value
+        field_value = send(field[:key].to_sym) || ""
+          next if field_value.blank?
+
+          delimiter = if field[:delimiter].present?
+            new_address.blank? ? UNIVERSAL_DELIMITER : field[:delimiter] + UNIVERSAL_DELIMITER
           else
-            new_address += field_value
+            new_address.blank? ? "" : UNIVERSAL_DELIMITER
           end
-        elsif field[:delimiter].present?
-          delimiter = field[:delimiter] + CONCATENATION_DELIMITER
-          new_address.prepend(field_value + delimter)
-        else
-          new_address.prepend(field_value + CONCATENATION_DELIMITER)
-        end
+
+          new_address += delimiter + field_value
       end
 
       new_address

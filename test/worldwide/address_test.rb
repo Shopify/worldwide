@@ -52,8 +52,44 @@ module Worldwide
       assert_equal "ZZ", address.country_code
     end
 
-    focus
-    test "generate_address1 when given street and building number, with decorators, append only" do
+    test "generate_address1 when no additional address fields defined" do
+      address = Address.new(address1: "123 Main Street", street: "Main Street", building_number: "123", country_code: "US")
+
+      assert_equal "123 Main Street", address.generate_address1
+    end
+
+    test "generate_address1 when only provided building num" do
+      address = Address.new(building_number: "123", country_code: "BR")
+
+      assert_equal " 123", address.generate_address1 # universal delimiter only
+    end
+
+    test "generate_address1 when only provided street" do
+      address = Address.new(street: "Main Street", country_code: "BR")
+
+      assert_equal "Main Street", address.generate_address1 # no delimiter
+    end
+
+    test "generate_address1 when insufficient parameters" do
+      address = Address.new(country_code: "BR")
+
+      assert_equal "", address.generate_address1
+    end
+
+    test "generate_address1 when only address1 provided" do
+      address = Address.new(address1: "Main Street, 123", country_code: "BR")
+
+      # fall back on address1? or empty string?
+      assert_equal "", address.generate_address1
+    end
+
+    test "generate_address1 when given street and building number, no decorators" do
+      address = Address.new(street: "Main Street", building_number: "123", address1: "ignored value", country_code: "CL")
+
+      assert_equal "Main Street 123", address.generate_address1
+    end
+
+    test "generate_address1 when given street and building number, with decorators" do
       address = Address.new(street: "Main Street", building_number: "123", country_code: "BR")
 
       assert_equal "Main Street, 123", address.generate_address1
