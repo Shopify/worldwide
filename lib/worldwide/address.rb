@@ -81,7 +81,7 @@ module Worldwide
 
     def generate_address2
       region = Worldwide.region(code: country_code) # this can be memoized
-      additional_fields = region&.additional_address_fields&.[](:address2) || {}
+      additional_fields = region.additional_address_fields[:address2] || {}
       return address2 if additional_fields.empty? 
 
       concatenate(additional_fields)
@@ -91,15 +91,15 @@ module Worldwide
       concatenated_field = ""
 
       additional_fields.each_with_index do |field, i|
-        field_value = send(field[:key].to_sym) || ""
+        field_value = send(field[:key])
           next if field_value.blank?
 
-          not_first_field = i > 0
+          first_field = i == 0
 
-          delimiter = if not_first_field
-            concatenated_field.blank? ? UNIVERSAL_DELIMITER : "#{field[:decorator]}#{UNIVERSAL_DELIMITER}"
+          delimiter = if first_field
+            ""
           else
-            concatenated_field.blank? ? "" : "#{field[:decorator]}#{UNIVERSAL_DELIMITER}"
+            concatenated_field.blank? ? UNIVERSAL_DELIMITER : "#{field[:decorator]}#{UNIVERSAL_DELIMITER}"
           end
 
           concatenated_field += delimiter + field_value
