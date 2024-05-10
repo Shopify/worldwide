@@ -18,9 +18,6 @@ module Worldwide
 
     UNIVERSAL_DELIMITER = " "
 
-    # refactor this to take a full address rather than individual fields?
-    # this is different from how AddressFormatter is set up in Shopifyi18n
-    # perhaps we just define our methods as class methods instead of adding to the instance methods
     def initialize(
       first_name: nil,
       last_name: nil,
