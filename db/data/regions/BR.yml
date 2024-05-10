@@ -24,7 +24,11 @@ additional_address_fields:
   address1:
     - key: street
     - key: building_number
-      delimiter: ","
+      decorator: ","
+  address2:
+    - key: address2
+    - key: neighborhood
+      decorator: ","
 localized_data:
 - name: tax_credential_br
   purpose: tax

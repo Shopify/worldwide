@@ -58,8 +58,14 @@ module Worldwide
       assert_equal "123 Main Street", address.generate_address1
     end
 
-    test "generate_address1 when only provided building num" do
+    test "generate_address1 when only provided building num, has decorator" do
       address = Address.new(building_number: "123", country_code: "BR")
+
+      assert_equal " 123", address.generate_address1 # universal delimiter only
+    end
+
+    test "generate_address1 when only provided building num, no decorator" do
+      address = Address.new(building_number: "123", country_code: "CL")
 
       assert_equal " 123", address.generate_address1 # universal delimiter only
     end
@@ -93,6 +99,42 @@ module Worldwide
       address = Address.new(street: "Main Street", building_number: "123", country_code: "BR")
 
       assert_equal "Main Street, 123", address.generate_address1
+    end
+
+    test "generate_address2 when no additional address fields defined" do
+      address = Address.new(address2: "Apt 4", country_code: "US")
+
+      assert_equal "Apt 4", address.generate_address2
+    end
+
+    test "generate_address2 when given only address2" do
+      address = Address.new(address2: "dpto 4", country_code: "CL")
+
+      assert_equal "dpto 4", address.generate_address2
+    end
+
+    test "generate_address2 when given neighborhood and empty address2, no decorators" do
+      address = Address.new(neighborhood: "Centro", country_code: "CL")
+
+      assert_equal " Centro", address.generate_address2
+    end
+
+    test "generate_address2 when given neighborhood and address2, no decorators" do
+      address = Address.new(address2: "dpto 4", neighborhood: "Centro", country_code: "CL")
+
+      assert_equal "dpto 4 Centro", address.generate_address2
+    end
+
+    test "generate_address2 when given neighborhood and empty address2, with decorators" do
+      address = Address.new(neighborhood: "Centro", country_code: "BR")
+
+      assert_equal " Centro", address.generate_address2
+    end
+
+    test "generate_address2 when given neighborhood and address2, with decorators" do
+      address = Address.new(address2: "dpto 4", neighborhood: "Centro", country_code: "BR")
+
+      assert_equal "dpto 4, Centro", address.generate_address2
     end
   end
 end

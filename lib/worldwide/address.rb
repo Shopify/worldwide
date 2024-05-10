@@ -75,26 +75,40 @@ module Worldwide
     def generate_address1
       # what to do if address missing house number and street? defaults?
 
-      region = Worldwide.region(code: country_code)
+      region = Worldwide.region(code: country_code) # this can be memoized
       additional_fields = region&.additional_address_fields&.[](:address1) || {}
       return address1 if additional_fields.empty? 
 
-      new_address = ""
+      concatenate(additional_fields)
+    end
 
-      additional_fields.each do |field|
+    def generate_address2
+      region = Worldwide.region(code: country_code) # this can be memoized
+      additional_fields = region&.additional_address_fields&.[](:address2) || {}
+      return address2 if additional_fields.empty? 
+
+      concatenate(additional_fields)
+    end
+
+    def concatenate(additional_fields)
+      concatenated_field = ""
+
+      additional_fields.each_with_index do |field, i|
         field_value = send(field[:key].to_sym) || ""
           next if field_value.blank?
 
-          delimiter = if field[:delimiter].present?
-            new_address.blank? ? UNIVERSAL_DELIMITER : field[:delimiter] + UNIVERSAL_DELIMITER
+          not_first_field = i > 0
+
+          delimiter = if not_first_field
+            concatenated_field.blank? ? UNIVERSAL_DELIMITER : "#{field[:decorator]}#{UNIVERSAL_DELIMITER}"
           else
-            new_address.blank? ? "" : UNIVERSAL_DELIMITER
+            concatenated_field.blank? ? "" : "#{field[:decorator]}#{UNIVERSAL_DELIMITER}"
           end
 
-          new_address += delimiter + field_value
+          concatenated_field += delimiter + field_value
       end
 
-      new_address
+      concatenated_field
     end
 
     def normalize!(autocorrect_level: 1)
