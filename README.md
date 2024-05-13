@@ -377,6 +377,8 @@ $ I18n.with_locale(:'zh-CN') { lon.single_line }
 => "英国London"
 ```
 
+Address format strings are described in detail [here](docs/address_format_strings.md).
+
 #### Validation
 
 ```ruby
