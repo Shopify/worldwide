@@ -27,11 +27,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [0.11.1] - 2024-05-13
+
 - Handle blank strings for Region, country_code parameter in Zip normalization
   [#138](https://github.com/Shopify/worldwide/pull/138)
 - Reposition zip in NF show: format to come after country, not before city. [#142](https://github.com/Shopify/worldwide/pull/142)
 - Allow building number on address2 for CH [#143](https://github.com/Shopify/worldwide/pull/143)
----
 
 ## [0.11.0] - 2024-04-11
 
