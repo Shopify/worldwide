@@ -2,7 +2,7 @@
 
 ## Introduction <!-- omit in toc -->
 
-CountryDB defines different address format strings that control the layout of address elements for each territory.
+Worldwide defines different address format strings that control the layout of address elements for each country region.
 
 Each format string has a different syntax, and is meant for use in different scenarios.
 
@@ -27,7 +27,7 @@ This page aims to document these syntaxes, their usage and limitations for those
 
 ## `edit`
 
-The `edit` address format string controls the layout of elements within an address input form for a territory.
+The `edit` address format string controls the layout of elements within an address input form for a country region.
 
 e.g., `{company}_{address1}_{address2}_{city}_{country}{province}{zip}_{phone}`
 
