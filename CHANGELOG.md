@@ -29,7 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Handle blank strings for Region, country_code parameter in Zip normalization
   [#138](https://github.com/Shopify/worldwide/pull/138)
-
+- Reposition zip in NF show: format to come after country, not before city. [#142](https://github.com/Shopify/worldwide/pull/142)
 ---
 
 ## [0.11.0] - 2024-04-11
