@@ -11,7 +11,12 @@ module Worldwide
       :city,
       :province_code,
       :country_code,
-      :phone
+      :phone,
+      :street,
+      :building_number,
+      :neighborhood
+
+    UNIVERSAL_DELIMITER = " "
 
     def initialize(
       first_name: nil,
@@ -23,7 +28,10 @@ module Worldwide
       city: nil,
       province_code: nil,
       country_code: "ZZ", # Unknown region
-      phone: nil
+      phone: nil,
+      street: nil,
+      building_number: nil,
+      neighborhood: nil
     )
       @first_name = first_name
       @last_name = last_name
@@ -35,6 +43,9 @@ module Worldwide
       @province_code = province_code&.to_s&.upcase
       @country_code = country_code.to_s.upcase
       @phone = phone
+      @street = street
+      @building_number = building_number
+      @neighborhood = neighborhood
     end
 
     def errors
@@ -56,6 +67,45 @@ module Worldwide
 
     def normalize(autocorrect_level: 1)
       dup.normalize!(autocorrect_level: autocorrect_level)
+    end
+
+    def generate_address1
+      return address1 if address1.present?
+
+      region = Worldwide.region(code: country_code) # this can be memoized
+      additional_fields = region&.additional_address_fields&.[](:address1) || {}
+      return address1 if additional_fields.empty? 
+
+      concatenate(additional_fields)
+    end
+
+    def generate_address2
+      region = Worldwide.region(code: country_code) # this can be memoized
+      additional_fields = region.additional_address_fields[:address2] || {}
+      return address2 if additional_fields.empty? 
+
+      concatenate(additional_fields)
+    end
+
+    def concatenate(additional_fields)
+      concatenated_field = ""
+
+      additional_fields.each_with_index do |field, i|
+        field_value = send(field[:key])
+          next if field_value.blank?
+
+          first_field = i == 0
+
+          delimiter = if first_field
+            ""
+          else
+            concatenated_field.blank? ? UNIVERSAL_DELIMITER : "#{field[:decorator]}#{UNIVERSAL_DELIMITER}"
+          end
+
+          concatenated_field += delimiter + field_value
+      end
+
+      concatenated_field
     end
 
     def normalize!(autocorrect_level: 1)

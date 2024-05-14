@@ -189,6 +189,8 @@ module Worldwide
     # If true, then the province is optional for addresses in this region.
     attr_accessor :province_optional
 
+    attr_reader :additional_address_fields
+
     def initialize(
       alpha_three: nil,
       continent: false,
@@ -203,7 +205,8 @@ module Worldwide
       short_name: nil,
       tax_name: nil,
       tax_rate: 0.0,
-      use_zone_code_as_short_name: false
+      use_zone_code_as_short_name: false,
+      additional_address_fields: {}
     )
       if iso_code.nil? && numeric_three.nil?
         raise ArgumentError, "At least one of iso_code: and numeric_three: must be provided"
@@ -223,6 +226,7 @@ module Worldwide
       @tax_name = tax_name
       @tax_rate = tax_rate
       @use_zone_code_as_short_name = use_zone_code_as_short_name
+      @additional_address_fields = additional_address_fields
 
       @building_number_required = false
       @building_number_may_be_in_address2 = false

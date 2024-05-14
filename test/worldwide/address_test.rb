@@ -51,5 +51,95 @@ module Worldwide
       assert_nil address.zip
       assert_equal "ZZ", address.country_code
     end
+
+    test "generate_address1 returns address1 no additional address fields defined" do
+      address = Address.new(address1: "123 Main Street", street: "Main Street", building_number: "123", country_code: "US")
+
+      assert_equal "123 Main Street", address.generate_address1
+    end
+
+    test "generate_address1 returns building num with delimiter when only provided building num and country has no decorator" do
+      address = Address.new(building_number: "123", country_code: "CL")
+
+      assert_equal " 123", address.generate_address1 # universal delimiter only
+    end
+
+    test "generate_address1 returns building num with delimiter when only provided building num and country has decorator" do
+      address = Address.new(building_number: "123", country_code: "BR")
+
+      assert_equal " 123", address.generate_address1 # universal delimiter only
+    end
+
+    test "generate_address1 returns street with no delimiter when only provided street" do
+      address = Address.new(street: "Main Street", country_code: "BR")
+
+      assert_equal "Main Street", address.generate_address1 # no delimiter
+    end
+
+    test "generate_address1 returns empty string when given insufficient parameters" do
+      address = Address.new(country_code: "BR")
+
+      assert_equal "", address.generate_address1
+    end
+
+    test "generate_address1 returns address1 when provided" do
+      address = Address.new(address1: "Main Street, 123", country_code: "BR")
+
+      assert_equal "Main Street, 123", address.generate_address1
+    end
+
+    test "generate_address1 returns address1 when provided, even when additional fields are provided" do
+      address = Address.new(address1: "A Street 456", street: "Main Street", building_number: "123", country_code: "CL")
+
+      assert_equal "A Street 456", address.generate_address1
+    end
+
+    test "generate_address1 when given street and building number, no decorators" do
+      address = Address.new(street: "Main Street", building_number: "123", country_code: "CL")
+
+      assert_equal "Main Street 123", address.generate_address1
+    end
+
+    test "generate_address1 when given street and building number, with decorators" do
+      address = Address.new(street: "Main Street", building_number: "123", country_code: "BR")
+
+      assert_equal "Main Street, 123", address.generate_address1
+    end
+
+    test "generate_address2 returns address2 when no additional address fields defined" do
+      address = Address.new(address2: "Apt 4", country_code: "US")
+
+      assert_equal "Apt 4", address.generate_address2
+    end
+
+    test "generate_address2 returns address 2 with no delimiters when given only address2" do
+      address = Address.new(address2: "dpto 4", country_code: "CL")
+
+      assert_equal "dpto 4", address.generate_address2
+    end
+
+    test "generate_address2 returns neighborhood with delimiter when given neighborhood and empty address2, no decorators" do
+      address = Address.new(neighborhood: "Centro", country_code: "CL")
+
+      assert_equal " Centro", address.generate_address2
+    end
+
+    test "generate_address2 returns neighborhood with delimiter when given neighborhood and empty address2, with decorators" do
+      address = Address.new(neighborhood: "Centro", country_code: "BR")
+
+      assert_equal " Centro", address.generate_address2
+    end
+
+    test "generate_address2 when given neighborhood and address2, no decorators" do
+      address = Address.new(address2: "dpto 4", neighborhood: "Centro", country_code: "CL")
+
+      assert_equal "dpto 4 Centro", address.generate_address2
+    end
+
+    test "generate_address2 when given neighborhood and address2, with decorators" do
+      address = Address.new(address2: "dpto 4", neighborhood: "Centro", country_code: "BR")
+
+      assert_equal "dpto 4, Centro", address.generate_address2
+    end
   end
 end
