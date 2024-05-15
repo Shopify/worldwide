@@ -14,6 +14,17 @@ week_start_day: sunday
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}"
+additional_address_fields:
+  address1:
+    - key: streetName
+      required: true
+    - key: streetNumber
+      required: false
+  address2:
+    - key: address2
+      required: false
+    - key: neighborhood
+      required: false
 emoji: "\U0001F1E8\U0001F1F1"
 languages:
   - es
