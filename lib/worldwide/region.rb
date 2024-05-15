@@ -19,6 +19,7 @@ module Worldwide
       :example_city,
       :flag,
       :format,
+      :format_extended,
       :group,
       :group_name,
       :cldr_code,
@@ -73,6 +74,12 @@ module Worldwide
     #   - edit: the fields to present on an address input form
     #   - show: how to arrange the fields when formatting an address for display
     attr_accessor :format
+
+    # Hash of strings denoting how to format an address in this region, including substitute and/or additional fields.
+    # The format is described in https://shopify.engineering/handling-addresses-from-all-around-the-world
+    #   - edit: the fields to present on an address input form
+    #   - show: how to arrange the fields when formatting an address for display
+    attr_accessor :format_extended
 
     # The string that results from appending " Countries" to the adjectival form of the {group_name}
     # @example
@@ -234,6 +241,7 @@ module Worldwide
       @currency = nil
       @flag = nil
       @format = {}
+      @format_extended = {}
       @group = nil
       @group_name = nil
       @languages = []

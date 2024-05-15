@@ -15,6 +15,8 @@ module Worldwide
       assert_equal "ZZ", region.iso_code
       assert_nil region.legacy_code
       assert_nil region.legacy_name
+      assert_empty(region.format)
+      assert_empty(region.format_extended)
       assert_nil region.numeric_three
       assert_equal false, region.province?
       # short_name currently throws a NoMethodError because it's not yet implemented

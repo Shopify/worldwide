@@ -103,6 +103,7 @@ module Worldwide
       region.currency = Worldwide.currency(code: currency_code) unless currency_code.nil?
       region.flag = spec["emoji"]
       region.format = spec["format"]
+      region.format_extended = spec["format_extended"] || {}
       region.group = spec["group"]
       region.group_name = spec["group_name"]
       region.hide_provinces_from_addresses = spec["hide_provinces_from_addresses"] || false
