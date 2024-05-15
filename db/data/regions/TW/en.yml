@@ -1,0 +1,25 @@
+---
+en:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: District
+            optional: District (optional)
+          errors:
+            blank: Enter a district
+            too_long: District is too long (maximum is 255 characters)
+            contains_emojis: District cannot contain emojis
+            contains_mathematical_symbols: District cannot contain mathematical symbols
+            contains_restricted_characters: District can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: District cannot have more than %{word_count}
+              words
+            contains_html_tags: District cannot contain HTML tags.
+            contains_url: District cannot contain URLs.
+            unknown_for_city: Enter a valid district name for %{city}.
+            unknown_for_zip: Enter a valid district name for %{zip}.
+            unknown_for_address: District may be incorrect.
+          warnings:
+            contains_too_many_words: District is recommended to have less than %{word_count} words

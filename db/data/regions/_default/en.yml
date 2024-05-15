@@ -63,6 +63,42 @@ en:
             unknown_for_address: Address line 1 may be incorrect.
           warnings:
             contains_too_many_words: Address line 1 is recommended to have less than %{word_count} words
+        street:
+          label:
+            default: Street
+            optional: Street (optional)
+          errors:
+            blank: Enter a street name
+            too_long: Street is too long (maximum is 255 characters)
+            contains_emojis: Street cannot contain emojis
+            contains_mathematical_symbols: Street cannot contain mathematical symbols
+            contains_restricted_characters: Street can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Street cannot have more than %{word_count} words
+            contains_html_tags: Street cannot contain HTML tags.
+            contains_url: Street cannot contain URLs.
+            street_unknown_for_zip: Enter a valid street name for %{zip}.
+            unknown_for_address: Street may be incorrect.
+          warnings:
+            contains_too_many_words: Street is recommended to have less than %{word_count} words
+        building_number:
+          label:
+            default: Building number
+            optional: Building number (optional)
+          errors:
+            blank: Enter a building number
+            too_long: Building number is too long (maximum is 255 characters)
+            contains_emojis: Building number cannot contain emojis
+            contains_mathematical_symbols: Building number cannot contain mathematical symbols
+            contains_restricted_characters: Building number can only contain letters,
+              numbers, local characters, and special characters
+            contains_html_tags: Building number cannot contain HTML tags.
+            contains_url: Building number cannot contain URLs.
+            building_number_invalid: Building number couldn't be located for %{street},
+              %{zip}.
+            unknown_for_address: Building number may be incorrect.
+          warnings:
+            contains_too_many_words: Building number is recommended to have less than %{word_count} words
         address2:
           label:
             default: Apartment, suite, etc.
@@ -83,9 +119,28 @@ en:
             building_number_invalid: Building number couldn't be located for %{street},
               %{zip}.
             unknown_for_address: Address line 2 may be incorrect.
-
           warnings:
             contains_too_many_words: Address line 2 is recommended to have less than %{word_count} words
+        neighborhood:
+          label:
+            default: Neighborhood
+            optional: Neighborhood (optional)
+          errors:
+            blank: Enter a neighborhood
+            too_long: Neighborhood is too long (maximum is 255 characters)
+            contains_emojis: Neighborhood cannot contain emojis
+            contains_mathematical_symbols: Neighborhood cannot contain mathematical symbols
+            contains_restricted_characters: Neighborhood can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Neighborhood cannot have more than %{word_count}
+              words
+            contains_html_tags: Neighborhood cannot contain HTML tags.
+            contains_url: Neighborhood cannot contain URLs.
+            unknown_for_city: Enter a valid neighborhood name for %{city}.
+            unknown_for_zip: Enter a valid neighborhood name for %{zip}.
+            unknown_for_address: Neighborhood may be incorrect.
+          warnings:
+            contains_too_many_words: Neighborhood is recommended to have less than %{word_count} words
         city:
           label:
             default: City

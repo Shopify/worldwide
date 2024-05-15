@@ -1,0 +1,25 @@
+---
+en:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Ward
+            optional: Ward (optional)
+          errors:
+            blank: Enter a ward
+            too_long: Ward is too long (maximum is 255 characters)
+            contains_emojis: Ward cannot contain emojis
+            contains_mathematical_symbols: Ward cannot contain mathematical symbols
+            contains_restricted_characters: Ward can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Ward cannot have more than %{word_count}
+              words
+            contains_html_tags: Ward cannot contain HTML tags.
+            contains_url: Ward cannot contain URLs.
+            unknown_for_city: Enter a valid ward name for %{city}.
+            unknown_for_zip: Enter a valid ward name for %{zip}.
+            unknown_for_address: Ward may be incorrect.
+          warnings:
+            contains_too_many_words: Ward is recommended to have less than %{word_count} words

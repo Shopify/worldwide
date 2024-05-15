@@ -1,0 +1,25 @@
+---
+en:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Commune
+            optional: Commune (optional)
+          errors:
+            blank: Enter a commune
+            too_long: Commune is too long (maximum is 255 characters)
+            contains_emojis: Commune cannot contain emojis
+            contains_mathematical_symbols: Commune cannot contain mathematical symbols
+            contains_restricted_characters: Commune can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Commune cannot have more than %{word_count}
+              words
+            contains_html_tags: Commune cannot contain HTML tags.
+            contains_url: Commune cannot contain URLs.
+            unknown_for_city: Enter a valid commune name for %{city}.
+            unknown_for_zip: Enter a valid commune name for %{zip}.
+            unknown_for_address: Commune may be incorrect.
+          warnings:
+            contains_too_many_words: Commune is recommended to have less than %{word_count} words

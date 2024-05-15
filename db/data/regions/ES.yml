@@ -21,6 +21,8 @@ languages:
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}"
+format_extended:
+  edit: "{country}_{firstName}{lastName}_{company}_{street}{buildingNumber}_{address2}_{zip}{city}{province}_{phone}"
 additional_address_fields:
   address1:
     - key: streetName

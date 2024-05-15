@@ -59,6 +59,62 @@ module Worldwide
       end
     end
 
+    test "format keys must belong to a limited set of required and allowed keys" do
+      allowed_keys = ["edit", "show"]
+      required_format_keys = ["{firstName}", "{lastName}", "{company}", "{address1}", "{address2}", "{country}", "{phone}"]
+      allowed_format_keys = ["{city}", "{zip}", "{province}"]
+
+      Regions.all.select(&:country?).each do |country|
+        formats = country.format
+
+        allowed_keys.each do |allowed_key|
+          format = formats[allowed_key]
+          keys = format.scan(/{[^}]+}/)
+          missing_required_keys = required_format_keys - keys
+
+          assert_empty missing_required_keys, "#{country.iso_code} #{allowed_key} format is missing required keys #{missing_required_keys}"
+
+          unknown_keys = keys - required_format_keys - allowed_format_keys
+
+          assert_empty unknown_keys, "#{country.iso_code} #{allowed_key} format has unknown keys: #{unknown_keys}"
+        end
+      end
+    end
+
+    test "format_extended keys must belong to a limited set of required and allowed keys" do
+      required_format_keys = ["{firstName}", "{lastName}", "{company}", "{country}", "{phone}"]
+      allowed_format_keys = ["{address1}", "{address2}", "{street}", "{buildingNumber}", "{neighborhood}", "{city}", "{zip}", "{province}"]
+
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_extended.blank?
+
+        format = country.format_extended["edit"]
+        keys = format.scan(/{[^}]+}/)
+        missing_required_keys = required_format_keys - keys
+
+        assert_empty missing_required_keys, "#{country.iso_code} edit format_extended is missing required keys #{missing_required_keys}"
+
+        unknown_keys = keys - required_format_keys - allowed_format_keys
+
+        assert_empty unknown_keys, "#{country.iso_code} edit format_extended has unknown keys: #{unknown_keys}"
+      end
+    end
+
+    test "If zones key does not exists, should not have {province} in format key" do
+      Regions.all.select do |region|
+        region.country? && region.zones.blank?
+      end.each do |country|
+        next if country.format.blank?
+
+        assert_not_includes country.format["edit"], "{province}", "#{country.iso_code} does not have zones so should not have {province} key in format"
+        assert_not_includes country.format["show"], "{province}", "#{country.iso_code} does not have zones so should not have {province} key in format"
+
+        next if country.format_extended["edit"].blank?
+
+        assert_not_includes country.format_extended["edit"], "{province}", "#{country.iso_code} does not have zones so should not have {province} key in format_extended"
+      end
+    end
+
     test "address1 formats include {building_num} and {street} tags" do
       expected_fields = ["building_num", "street"]
       Regions.all.select(&:country?).each do |country|
@@ -91,6 +147,12 @@ module Worldwide
         format = country.format.dig("edit")
 
         assert_includes format, "{zip}", "#{country.iso_code} requires zip but doesn't prompt for it."
+
+        format_extended = country.format_extended.dig("edit")
+
+        next if format_extended.blank?
+
+        assert_includes format_extended, "{zip}", "#{country.iso_code} format_extended requires zip but doesn't prompt for it."
       end
     end
 
@@ -101,6 +163,48 @@ module Worldwide
         format = country.format.dig("edit")
 
         refute_includes format, "{zip}", "#{country.iso_code} has zip autofill but prompts for zip"
+
+        format_extended = country.format_extended.dig("edit")
+
+        next if format_extended.blank?
+
+        refute_includes format_extended, "{zip}", "#{country.iso_code} format_extended has zip autofill but prompts for zip"
+      end
+    end
+
+    test "if format key is missing {city}, then autofill_city must be active" do
+      formats = ["edit", "show"]
+
+      Regions.all.select(&:country?).each do |country|
+        formats.each do |format|
+          unless country.format[format].include?("{city}")
+            assert_not_nil country.autofill_city, "#{country.iso_code} has no {city} in #{format} but autofill_city is not active"
+          end
+        end
+
+        next if country.format_extended["edit"].blank?
+
+        unless country.format_extended["edit"].include?("{city}")
+          assert_not_nil country.autofill_city, "#{country.iso_code} has no {city} in format_extended but autofill_city is not active"
+        end
+      end
+    end
+
+    test "if autofill_city is active, then edit format must not have a city field" do
+      Regions.all.select(&:country?).each do |country|
+        next unless country.autofill_city
+
+        refute_includes country.format["edit"], "{city}", "#{country.iso_code} has both autofill and {city} in edit format"
+
+        next if country.format_extended["edit"].blank?
+
+        refute_includes country.format_extended["edit"], "{city}", "#{country.iso_code} has both autofill and {city} in edit format_extended"
+      end
+    end
+
+    test "in show format, each field must be separated from other fields by at least one character" do
+      Regions.all.select(&:country?).each do |country|
+        refute_includes country.format["show"], "}{", "#{country.iso_code} show format has fields without separation"
       end
     end
 
