@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
----
+- Add pry-byebug gem [#149](https://github.com/Shopify/worldwide/pull/149)
 
 ## [0.11.1] - 2024-05-13
 
