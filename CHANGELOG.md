@@ -27,11 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [0.12.0] - 2024-05-15
+
 - Add pry-byebug gem [#149](https://github.com/Shopify/worldwide/pull/149)
 - Introduce additional_address_fields to Region class and define them for BE, BR, CL, CO, ES, ID, MX, NL, PH, TR, VN [#148](https://github.com/Shopify/worldwide/pull/148)
 - Define format_extended attribute on 12 country regions [#150](https://github.com/Shopify/worldwide/pull/150)
-
----
 
 ## [0.11.1] - 2024-05-13
 
