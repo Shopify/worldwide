@@ -350,5 +350,27 @@ module Worldwide
         assert_equal expected_value, Worldwide.region(code: region_code).building_number_required
       end
     end
+
+    test "additional_address_fields returns values as expected" do
+      [
+        [:us, {}],
+        [:be, {
+          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => false }],
+        },],
+        [:br, {
+          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "decorator" => ",", "required" => true }],
+          "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
+        },],
+        [:cl, {
+          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => false }],
+          "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "required" => false }],
+        },],
+        [:id, {
+          "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
+        },],
+      ].each do |region_code, expected_value|
+        assert_equal expected_value, Worldwide.region(code: region_code).additional_address_fields
+      end
+    end
   end
 end

@@ -32,6 +32,7 @@ module Worldwide
       :zip_example,
       :zip_regex,
       :zip_requirement,
+      :additional_address_fields,
     ]
 
     # A region may have more than one parent.
@@ -189,6 +190,9 @@ module Worldwide
     # If true, then the province is optional for addresses in this region.
     attr_accessor :province_optional
 
+    # A hash of additional address fields and the rules for concatening them into the standard fields
+    attr_accessor :additional_address_fields
+
     def initialize(
       alpha_three: nil,
       continent: false,
@@ -224,6 +228,7 @@ module Worldwide
       @tax_rate = tax_rate
       @use_zone_code_as_short_name = use_zone_code_as_short_name
 
+      @additional_address_fields = {}
       @building_number_required = false
       @building_number_may_be_in_address2 = false
       @currency = nil

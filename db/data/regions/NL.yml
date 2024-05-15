@@ -23,5 +23,11 @@ languages:
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+additional_address_fields:
+  address1:
+    - key: streetName
+      required: true
+    - key: streetNumber
+      required: true
 emoji: "\U0001F1F3\U0001F1F1"
 timezone: Europe/Amsterdam

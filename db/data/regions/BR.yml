@@ -19,6 +19,19 @@ languages:
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{zip}_{address1}_{address2}_{city}{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city} {province}_{country}_{phone}"
+additional_address_fields:
+  address1:
+    - key: streetName
+      required: true
+    - key: streetNumber
+      decorator: ","
+      required: true
+  address2:
+    - key: address2
+      required: false
+    - key: neighborhood
+      decorator: ","
+      required: false
 emoji: "\U0001F1E7\U0001F1F7"
 localized_data:
 - name: tax_credential_br

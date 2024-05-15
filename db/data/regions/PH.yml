@@ -15,6 +15,13 @@ week_start_day: sunday
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}"
+additional_address_fields:
+  address2:
+    - key: address2
+      required: false
+    - key: neighborhood
+      decorator: "Barangay"
+      required: true
 emoji: "\U0001F1F5\U0001F1ED"
 languages:
   - en
