@@ -83,7 +83,7 @@ module Worldwide
 
     test "format_extended keys must belong to a limited set of required and allowed keys" do
       required_format_keys = ["{firstName}", "{lastName}", "{company}", "{country}", "{phone}"]
-      allowed_format_keys = ["{address1}", "{address2}", "{street}", "{buildingNumber}", "{neighborhood}", "{city}", "{zip}", "{province}"]
+      allowed_format_keys = ["{address1}", "{address2}", "{streetName}", "{streetNumber}", "{neighborhood}", "{city}", "{zip}", "{province}"]
 
       Regions.all.select(&:country?).each do |country|
         next if country.format_extended.blank?
