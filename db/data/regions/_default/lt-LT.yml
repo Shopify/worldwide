@@ -180,3 +180,71 @@ lt-LT:
         address:
           errors:
             may_not_exist: Adresas nerastas arba neegzistuoja
+        street_name:
+          label:
+            default: Gatvė
+            optional: Gatvė (pasirinktinai)
+          errors:
+            blank: Įveskite gatvės pavadinimą
+            too_long: Gatvės pavadinimas yra per ilgas (turi sudaryti ne daugiau kaip
+              255 simboliai)
+            contains_emojis: Gatvės pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols: Gatvės pavadinime negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Gatvės pavadinimą gali sudaryti tik raidės,
+              skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Gatvės pavadinimo negali sudaryti daugiau nei
+              %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Gatvės pavadinime negali būti naudojamos HTML žymės.
+            contains_url: Gatvės pavadinime negali būti naudojami URL.
+            street_unknown_for_zip: Įveskite gatvės pavadinimą, atitinkantį pašto
+              kodą %{zip}.
+            unknown_for_address: Gatvė gali būti neteisinga.
+          warnings:
+            contains_too_many_words: Patartina, kad gatvės pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)
+        street_number:
+          label:
+            default: Namo numeris
+            optional: Namo numeris (pasirinktinai)
+          errors:
+            blank: Įveskite namo numerį
+            too_long: Namo numeris yra per ilgas (turi sudaryti ne daugiau kaip 255
+              simboliai)
+            contains_emojis: Namo numeryje negali būti naudojami „emoji“
+            contains_mathematical_symbols: Namo numeryje negali būti naudojami matematiniai
+              simboliai
+            contains_restricted_characters: Namo numerį gali sudaryti tik raidės,
+              skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_html_tags: Namo numeryje negali būti naudojamos HTML žymės.
+            contains_url: Namo numeryje negali būti naudojami URL.
+            building_number_invalid: Nerastas namo numeris, atitinkantis %{street},
+              %{zip}.
+            unknown_for_address: Namo numeris gali būti neteisingas.
+          warnings:
+            contains_too_many_words: Patartina, kad namo numerį sudarytų mažiau nei
+              %{word_count} žodžiai (-ių, -is)
+        neighborhood:
+          label:
+            default: Kvartalas
+            optional: Kvartalas (pasirinktinai)
+          errors:
+            blank: Įveskite kvartalą
+            too_long: Kvartalo pavadinimas yra per ilgas (turi sudaryti ne daugiau
+              kaip 255 simboliai)
+            contains_emojis: Kvartalo pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols: Kvartalo pavadinime negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Kvartalo pavadinimą gali sudaryti tik
+              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Kvartalo pavadinimo negali sudaryti daugiau nei
+              %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Kvartalo pavadinime negali būti naudojamos HTML žymės.
+            contains_url: Kvartalo pavadinime negali būti naudojami URL.
+            unknown_for_city: Įveskite kvartalo pavadinimą, atitinkantį miestą %{city}.
+            unknown_for_zip: Įveskite kvartalo pavadinimą, atitinkantį pašto kodą
+              %{zip}.
+            unknown_for_address: Kvartalas gali būti neteisingas.
+          warnings:
+            contains_too_many_words: Patartina, kad kvartalo pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)

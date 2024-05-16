@@ -1,0 +1,27 @@
+---
+ru:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Округ
+            optional: Округ (необязательно)
+          errors:
+            blank: Укажите округ
+            too_long: Название округа слишком длинное (должно содержать не больше
+              255 символов)
+            contains_emojis: Название округа не может содержать емодзи
+            contains_mathematical_symbols: Название округа не может содержать математические
+              символы
+            contains_restricted_characters: Поле «Округ» может содержать только буквы,
+              цифры, а также местные и специальные символы
+            contains_too_many_words: Название округа не может превышать %{word_count} сл.
+            contains_html_tags: Название округа не может содержать HTML-теги.
+            contains_url: Название округа не может содержать URL-адреса.
+            unknown_for_city: Укажите действительное название округа для %{city}.
+            unknown_for_zip: Укажите действительное название округа для %{zip}.
+            unknown_for_address: Название округа может быть указано неправильно.
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле названия округа
+              не более %{word_count} сл.

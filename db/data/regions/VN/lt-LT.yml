@@ -1,0 +1,30 @@
+---
+lt-LT:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Seniūnija
+            optional: Seniūnija (pasirinktinai)
+          errors:
+            blank: Įveskite seniūniją
+            too_long: Seniūnijos pavadinimas yra per ilgas (turi sudaryti ne daugiau
+              kaip 255 simboliai)
+            contains_emojis: Seniūnijos pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols: Seniūnijos pavadinime negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Seniūnijos pavadinimą gali sudaryti tik
+              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Seniūnijos pavadinimo negali sudaryti daugiau
+              nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Seniūnijos pavadinime negali būti naudojamos HTML
+              žymės.
+            contains_url: Seniūnijos pavadinime negali būti naudojami URL.
+            unknown_for_city: Įveskite seniūnijos pavadinimą, atitinkantį miestą %{city}.
+            unknown_for_zip: Įveskite seniūnijos pavadinimą, atitinkantį pašto kodą
+              %{zip}.
+            unknown_for_address: Seniūnija gali būti neteisinga.
+          warnings:
+            contains_too_many_words: Patartina, kad seniūnijos pavadinimą sudarytų
+              mažiau nei %{word_count} žodžiai (-ių, -is)

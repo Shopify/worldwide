@@ -1,0 +1,26 @@
+---
+pl:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Okręg
+            optional: Okręg (opcjonalnie)
+          errors:
+            blank: Wprowadź okręg
+            too_long: Okręg zawiera za dużo znaków (maksymalna liczba znaków to 255)
+            contains_emojis: Okręg nie może zawierać emoji
+            contains_mathematical_symbols: Okręg nie może zawierać symboli matematycznych
+            contains_restricted_characters: Okręg może zawierać litery, cyfry, znaki
+              lokalne i znaki specjalne
+            contains_too_many_words: Okręg może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags: Okręg nie może zawierać tagów HTML.
+            contains_url: Okręg nie może zawierać adresów URL.
+            unknown_for_city: Wpisz prawidłową nazwę okręgu dla %{city}.
+            unknown_for_zip: Wpisz prawidłową nazwę okręgu dla %{zip}.
+            unknown_for_address: Okręg może być nieprawidłowy.
+          warnings:
+            contains_too_many_words: Zaleca się, aby okręg zawierał mniej niż %{word_count}
+              słów (słowa)

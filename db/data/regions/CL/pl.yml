@@ -1,0 +1,26 @@
+---
+pl:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Gmina
+            optional: Gmina (opcjonalnie)
+          errors:
+            blank: Wpisz gminę
+            too_long: Gmina jest za długa (maksymalna liczba znaków to 255)
+            contains_emojis: Gmina nie może zawierać emoji
+            contains_mathematical_symbols: Gmina nie może zawierać symboli matematycznych
+            contains_restricted_characters: Gmina może zawierać litery, cyfry, znaki
+              lokalne i znaki specjalne
+            contains_too_many_words: Gmina może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags: Gmina nie może zawierać tagów HTML.
+            contains_url: Gmina nie może zawierać adresów URL.
+            unknown_for_city: Wpisz prawidłową nazwę gminy dla %{city}.
+            unknown_for_zip: Wpisz prawidłową nazwę gminy dla %{zip}.
+            unknown_for_address: Gmina może być nieprawidłowa.
+          warnings:
+            contains_too_many_words: Zaleca się, aby gmina zawierała mniej niż %{word_count}
+              słów (słowa)
