@@ -177,3 +177,68 @@ sl-SI:
         address:
           errors:
             may_not_exist: Naslova ni mogoče najti ali ne obstaja
+        street_name:
+          label:
+            default: Ulica
+            optional: Ulica (izbirno)
+          errors:
+            blank: Vnesite ime ulice
+            too_long: Ime ulice je predolgo (največje dovoljeno št. znakov je 255)
+            contains_emojis: Ime ulice ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols: Ime ulice ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters: Ime ulice lahko vsebuje le črke, številke,
+              lokalne znake in posebne znake
+            contains_too_many_words: Ime ulice ne sme vsebovati več kot %{word_count}
+              besed
+            contains_html_tags: Ime ulice ne sme vsebovati oznak HTML.
+            contains_url: Ime ulice ne sme vsebovati naslovov URL.
+            street_unknown_for_zip: Vnesite veljavno ime ulice za poštno številko
+              %{zip}.
+            unknown_for_address: Ulica morda ni pravilna.
+          warnings:
+            contains_too_many_words: Ime ulice naj ne vsebuje več kot %{word_count}
+              besed
+        street_number:
+          label:
+            default: Hišna številka
+            optional: Hišna številka (izbirno)
+          errors:
+            blank: Vnesite hišno številko
+            too_long: Hišna številka je predolga (največje dovoljeno št. znakov je
+              255)
+            contains_emojis: Hišna številka ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols: Hišna številka ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters: Hišna številka lahko vsebuje le črke,
+              številke, lokalne znake in posebne znake
+            contains_html_tags: Hišna številka ne sme vsebovati oznak HTML.
+            contains_url: Hišna številka ne sme vsebovati naslovov URL.
+            building_number_invalid: Hišne številke ni bilo mogoče najti za ulico
+              %{street}, %{zip}.
+            unknown_for_address: Hišna številka morda ni pravilna.
+          warnings:
+            contains_too_many_words: Hišna številka naj ne vsebuje več kot %{word_count}
+              besed
+        neighborhood:
+          label:
+            default: Soseska
+            optional: Soseska (izbirno)
+          errors:
+            blank: Vnesite sosesko
+            too_long: Ime soseske je predolgo (največje dovoljeno št. znakov je 255)
+            contains_emojis: Ime soseske ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols: Ime soseske ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters: Ime soseske lahko vsebuje le črke, številke,
+              lokalne znake in posebne znake
+            contains_too_many_words: Ime soseske ne sme vsebovati več kot %{word_count}
+              besed
+            contains_html_tags: Ime soseske ne sme vsebovati oznak HTML.
+            contains_url: Ime soseske ne sme vsebovati naslovov URL.
+            unknown_for_city: Vnesite veljavno ime soseske za kraj %{city}.
+            unknown_for_zip: Vnesite veljavno ime soseske za poštno številko %{zip}.
+            unknown_for_address: Soseska morda ni pravilna.
+          warnings:
+            contains_too_many_words: Ime soseske naj ne vsebuje več kot %{word_count}
+              besed

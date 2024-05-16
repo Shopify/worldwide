@@ -1,0 +1,26 @@
+---
+hi:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: वार्ड का नाम
+            optional: वार्ड का नाम (वैकल्पिक)
+          errors:
+            blank: किसी वार्ड का नाम डालें
+            too_long: वार्ड का नाम बहुत लंबा है (अधिकतम कैरेक्टर 255)
+            contains_emojis: वार्ड के नाम में इमोजी नहीं हो सकते
+            contains_mathematical_symbols: वार्ड के नाम में गणितीय चिह्न नहीं हो सकते
+            contains_restricted_characters: वार्ड के नाम में सिर्फ़ अक्षर, संख्या,
+              लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_too_many_words: वार्ड के नाम में %{word_count} से ज़्यादा शब्द
+              नहीं हो सकते
+            contains_html_tags: वार्ड के नाम में HTML टैग नहीं हो सकते.
+            contains_url: वार्ड के नाम में URL नहीं हो सकते.
+            unknown_for_city: "%{city} के लिए वार्ड का एक मान्य नाम डालें."
+            unknown_for_zip: "%{zip} के लिए वार्ड का एक मान्य नाम डालें."
+            unknown_for_address: वार्ड गलत हो सकता है.
+          warnings:
+            contains_too_many_words: इस बात का सुझाव दिया जाता है कि वार्ड के नाम
+              में %{word_count} से कम शब्द होने चाहिए

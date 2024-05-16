@@ -1,0 +1,24 @@
+---
+th:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: แขวง
+            optional: แขวง (ไม่บังคับ)
+          errors:
+            blank: ป้อนชื่อแขวง
+            too_long: ชื่อแขวงยาวเกินไป (สูงสุด 255 อักขระ)
+            contains_emojis: ห้ามใส่อีโมจิในชื่อแขวง
+            contains_mathematical_symbols: ห้ามใส่สัญลักษณ์ทางคณิตศาสตร์ในชื่อแขวง
+            contains_restricted_characters: ชื่อแขวงต้องใช้เฉพาะตัวอักษร ตัวเลข อักขระท้องถิ่น
+              และอักขระพิเศษเท่านั้น
+            contains_too_many_words: ชื่อแขวงต้องมีไม่เกิน %{word_count} คำ
+            contains_html_tags: ห้ามใส่แท็ก HTML ในชื่อแขวง
+            contains_url: ห้ามใส่ URL ในชื่อแขวง
+            unknown_for_city: ป้อนชื่อแขวงที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip: ป้อนชื่อแขวงที่ถูกต้องสำหรับ %{zip}
+            unknown_for_address: ชื่อแขวงอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ชื่อแขวงควรมีความยาวน้อยกว่า %{word_count} คำ

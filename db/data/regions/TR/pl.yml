@@ -1,0 +1,26 @@
+---
+pl:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Dystrykt
+            optional: Dystrykt (opcjonalnie)
+          errors:
+            blank: Wpisz dystrykt
+            too_long: Dystrykt jest za długi (maksymalnie 255 znaków)
+            contains_emojis: Dystrykt nie może zawierać emoji
+            contains_mathematical_symbols: Dystrykt nie może zawierać symboli matematycznych
+            contains_restricted_characters: Dystrykt może zawierać tylko litery, cyfry,
+              znaki lokalne i znaki specjalne
+            contains_too_many_words: Dystrykt może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags: Dystrykt nie może zawierać tagów HTML.
+            contains_url: Dystrykt nie może zawierać adresów URL.
+            unknown_for_city: Wpisz prawidłową nazwę dystryktu dla %{city}.
+            unknown_for_zip: Wpisz prawidłową nazwę dystryktu dla %{zip}.
+            unknown_for_address: Dystrykt może być nieprawidłowy.
+          warnings:
+            contains_too_many_words: Zaleca się, aby dystrykt zawierał mniej niż %{word_count}
+              słów (słowa)

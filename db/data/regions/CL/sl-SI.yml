@@ -1,0 +1,28 @@
+---
+sl-SI:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Skupnost
+            optional: Skupnost (izbirno)
+          errors:
+            blank: Vnesite ime skupnosti
+            too_long: Ime skupnosti je predolgo (največje dovoljeno št. znakov je
+              255)
+            contains_emojis: Ime skupnosti ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols: Ime skupnosti ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters: Ime skupnosti lahko vsebuje le črke, številke,
+              lokalne znake in posebne znake
+            contains_too_many_words: Ime skupnosti ne sme vsebovati več kot %{word_count}
+              besed
+            contains_html_tags: Ime skupnosti ne sme vsebovati oznak HTML.
+            contains_url: Ime skupnosti ne sme vsebovati naslovov URL.
+            unknown_for_city: Vnesite veljavno ime skupnosti za kraj %{city}.
+            unknown_for_zip: Vnesite veljavno ime skupnosti za poštno številko %{zip}.
+            unknown_for_address: Skupnost morda ni pravilna.
+          warnings:
+            contains_too_many_words: Ime skupnosti naj ne vsebuje več kot %{word_count}
+              besed
