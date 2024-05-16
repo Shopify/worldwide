@@ -182,3 +182,68 @@ ro-RO:
         address:
           errors:
             may_not_exist: Adresa nu a fost găsită sau nu există
+        street_name:
+          label:
+            default: Stradă
+            optional: Stradă (opțional)
+          errors:
+            blank: Introdu un nume de stradă
+            too_long: Numele străzii este prea lung (lungimea maximă este de 255 caractere)
+            contains_emojis: Numele străzii nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele străzii nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele străzii poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_too_many_words: Numele străzii nu poate conține mai mult de %{word_count}
+              cuvinte
+            contains_html_tags: Numele străzii nu poate conține etichete HTML.
+            contains_url: Numele străzii nu poate conține adrese URL.
+            street_unknown_for_zip: Introdu un nume de stradă valid pentru %{zip}.
+            unknown_for_address: Este posibil ca numele străzii să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele străzii să nu aibă mai
+              mult de %{word_count} cuvinte
+        street_number:
+          label:
+            default: Număr clădire
+            optional: Număr clădire (opțional)
+          errors:
+            blank: Introdu un număr de clădire
+            too_long: Numărul clădirii este prea lung (lungimea maximă este de 255
+              caractere)
+            contains_emojis: Numărul clădirii nu poate conține emoji-uri
+            contains_mathematical_symbols: Numărul clădirii nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numărul clădirii poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_html_tags: Numărul clădirii nu poate conține etichete HTML.
+            contains_url: Numărul clădirii nu poate conține adrese URL.
+            building_number_invalid: Numărul clădirii nu a putut fi găsit pentru %{street},
+              %{zip}.
+            unknown_for_address: Este posibil ca numărul clădirii să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numărul clădirii să nu aibă mai
+              mult de %{word_count} cuvinte
+        neighborhood:
+          label:
+            default: Cartier
+            optional: Cartier (opțional)
+          errors:
+            blank: Introdu un nume de cartier
+            too_long: Numele cartierului este prea lung (lungimea maximă este de 255
+              caractere)
+            contains_emojis: Numele cartierului nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele cartierului nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele cartierului poate conține numai
+              litere, cifre, caractere locale și caractere speciale
+            contains_too_many_words: Numele cartierului nu poate conține mai mult
+              de %{word_count} cuvinte
+            contains_html_tags: Numele cartierului nu poate conține etichete HTML.
+            contains_url: Numele cartierului nu poate conține adrese URL.
+            unknown_for_city: Introdu un nume de cartier valid pentru %{city}.
+            unknown_for_zip: Introdu un nume de cartier valid pentru %{zip}.
+            unknown_for_address: Este posibil ca numele cartierului să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele cartierului să nu aibă
+              mai mult de %{word_count} cuvinte

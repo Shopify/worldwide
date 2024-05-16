@@ -1,0 +1,23 @@
+---
+ja:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: コミューン
+            optional: コミューン (任意)
+          errors:
+            blank: コミューンを入力してください
+            too_long: コミューンが長すぎます (最大255文字)
+            contains_emojis: コミューンに絵文字を含めることはできません
+            contains_mathematical_symbols: コミューンに数学記号を含めることはできません
+            contains_restricted_characters: コミューンには、文字、数字、地域の文字、特殊文字のみを含めることができます
+            contains_too_many_words: コミューンには、%{word_count}語を超えて入力することはできません
+            contains_html_tags: コミューンにHTMLタグを含めることはできません。
+            contains_url: コミューンにURLを含めることはできません。
+            unknown_for_city: "%{city}に対応する有効なコミューン名を入力してください。"
+            unknown_for_zip: "%{zip}に対応する有効なコミューン名を入力してください。"
+            unknown_for_address: コミューンは正しくない可能性があります。
+          warnings:
+            contains_too_many_words: コミューンは%{word_count}文字未満が推奨されています

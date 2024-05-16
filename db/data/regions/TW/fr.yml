@@ -1,0 +1,26 @@
+---
+fr:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: District
+            optional: District (facultatif)
+          errors:
+            blank: Saisir un district
+            too_long: Le district est trop long (le maximum est de 255 caractères)
+            contains_emojis: Le district ne peut pas contenir d’emojis
+            contains_mathematical_symbols: Le district ne peut pas contenir de symboles
+              mathématiques
+            contains_restricted_characters: Le district ne peut contenir que des lettres,
+              des chiffres, des caractères locaux et des caractères spéciaux
+            contains_too_many_words: Le district ne doit pas comporter plus de %{word_count} mots
+            contains_html_tags: Le district ne peut pas contenir de balises HTML.
+            contains_url: Le district ne peut pas contenir d’URL.
+            unknown_for_city: Saisir un nom de district valide pour %{city}.
+            unknown_for_zip: Saisir un nom de district valide pour %{zip}.
+            unknown_for_address: Le district peut être erroné.
+          warnings:
+            contains_too_many_words: Il est conseillé que le district comporte moins
+              de %{word_count} mots
