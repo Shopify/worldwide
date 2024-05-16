@@ -179,3 +179,67 @@ it:
         address:
           errors:
             may_not_exist: Indirizzo non trovato o non esistente
+        street_name:
+          label:
+            default: Via
+            optional: Via (facoltativo)
+          errors:
+            blank: Inserisci il nome di una via
+            too_long: Il nome della via è troppo lungo (lunghezza massima 255 caratteri)
+            contains_emojis: Il campo Via non può contenere emoji
+            contains_mathematical_symbols: Il campo Via non può contenere simboli
+              matematici
+            contains_restricted_characters: Il campo Via può contenere solo lettere,
+              numeri, caratteri locali e caratteri speciali
+            contains_too_many_words: Il campo Via non può superare le %{word_count}
+              parole
+            contains_html_tags: Il campo Via non può contenere tag HTML.
+            contains_url: Il campo Via non può contenere URL.
+            street_unknown_for_zip: Inserisci un nome di una via valido per %{zip}.
+            unknown_for_address: La via potrebbe non essere corretta.
+          warnings:
+            contains_too_many_words: Il campo Via deve contenere meno di %{word_count}
+              parole
+        street_number:
+          label:
+            default: Numero civico
+            optional: Numero civico (facoltativo)
+          errors:
+            blank: Inserisci un numero civico
+            too_long: Il numero civico è troppo lungo (lunghezza massima 255 caratteri)
+            contains_emojis: Il campo Numero civico non può contenere emoji
+            contains_mathematical_symbols: Il campo Numero civico non può contenere
+              simboli matematici
+            contains_restricted_characters: Il campo Numero civico può contenere solo
+              lettere, numeri, caratteri locali e caratteri speciali
+            contains_html_tags: Il campo Numero civico non può contenere tag HTML.
+            contains_url: Il campo Numero civico non può contenere URL.
+            building_number_invalid: Impossibile localizzare il numero civico per
+              %{street}, %{zip}.
+            unknown_for_address: Il numero civico potrebbe non essere corretto.
+          warnings:
+            contains_too_many_words: Il campo Numero civico deve contenere meno di
+              %{word_count} parole
+        neighborhood:
+          label:
+            default: Quartiere
+            optional: Quartiere (facoltativo)
+          errors:
+            blank: Inserisci un quartiere
+            too_long: Il nome del quartiere è troppo lungo (lunghezza massima 255
+              caratteri)
+            contains_emojis: Il campo Quartiere non può contenere emoji
+            contains_mathematical_symbols: Il campo Quartiere non può contenere simboli
+              matematici
+            contains_restricted_characters: Il campo Quartiere può contenere solo
+              lettere, numeri, caratteri locali e caratteri speciali
+            contains_too_many_words: Il campo Quartiere non può superare le %{word_count}
+              parole
+            contains_html_tags: Il campo Quartiere non può contenere tag HTML.
+            contains_url: Il campo Quartiere non può contenere URL.
+            unknown_for_city: Inserisci un nome di un quartiere valido per %{city}.
+            unknown_for_zip: Inserisci un nome di un quartiere valido per %{zip}.
+            unknown_for_address: Il quartiere potrebbe non essere corretto.
+          warnings:
+            contains_too_many_words: Il campo Quartiere deve contenere meno di %{word_count}
+              parole

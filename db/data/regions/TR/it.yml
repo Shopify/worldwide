@@ -1,0 +1,28 @@
+---
+it:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Distretto
+            optional: Distretto (facoltativo)
+          errors:
+            blank: Inserisci un distretto
+            too_long: Il nome del distretto è troppo lungo (lunghezza massima 255
+              caratteri)
+            contains_emojis: Il campo Distretto non può contenere emoji
+            contains_mathematical_symbols: Il campo Distretto non può contenere simboli
+              matematici
+            contains_restricted_characters: Il campo Distretto può contenere solo
+              lettere, numeri, caratteri locali e caratteri speciali
+            contains_too_many_words: Il campo Distretto non può superare le %{word_count}
+              parole
+            contains_html_tags: Il campo Distretto non può contenere tag HTML.
+            contains_url: Il campo Distretto non può contenere URL.
+            unknown_for_city: Inserisci un nome di un distretto valido per %{city}.
+            unknown_for_zip: Inserisci un nome di un distretto valido per %{zip}.
+            unknown_for_address: Il distretto potrebbe non essere corretto.
+          warnings:
+            contains_too_many_words: Il campo Distretto deve contenere meno di %{word_count}
+              parole

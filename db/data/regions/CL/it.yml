@@ -1,0 +1,27 @@
+---
+it:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Comune
+            optional: Comune (facoltativo)
+          errors:
+            blank: Inserisci una comune
+            too_long: Il nome del comune è troppo lungo (lunghezza massima 255 caratteri)
+            contains_emojis: Il campo Comune non può contenere emoji
+            contains_mathematical_symbols: Il campo Comune non può contenere simboli
+              matematici
+            contains_restricted_characters: Il campo Comune può contenere solo lettere,
+              numeri, caratteri locali e caratteri speciali
+            contains_too_many_words: Il campo Comune non può superare le %{word_count}
+              parole
+            contains_html_tags: Il campo Comune non può contenere tag HTML.
+            contains_url: Il campo Comune non può contenere URL.
+            unknown_for_city: Inserisci un nome di un comune valido per %{city}.
+            unknown_for_zip: Inserisci un nome di un comune valido per %{zip}.
+            unknown_for_address: Il comune potrebbe non essere corretto.
+          warnings:
+            contains_too_many_words: Il campo Comune deve contenere meno di %{word_count}
+              parole

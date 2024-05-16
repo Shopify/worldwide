@@ -1,0 +1,27 @@
+---
+cs:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Komuna
+            optional: Komuna (volitelné)
+          errors:
+            blank: Zadejte komunu.
+            too_long: Název komuny je příliš dlouhý (maximum je 255 znaků).
+            contains_emojis: Název komuny nemůže obsahovat emoji.
+            contains_mathematical_symbols: Název komuny nemůže obsahovat matematické
+              symboly.
+            contains_restricted_characters: Název komuny může obsahovat pouze písmena,
+              číslice, místní znaky a speciální znaky.
+            contains_too_many_words: 'Název komuny nemůže obsahovat více než tento
+              počet slov: %{word_count}.'
+            contains_html_tags: Název komuny nemůže obsahovat HTML tagy.
+            contains_url: Název komuny nemůže obsahovat adresy URL.
+            unknown_for_city: 'Zadejte platný název komuny pro: %{city}.'
+            unknown_for_zip: 'Zadejte platný název komuny pro: %{zip}.'
+            unknown_for_address: Komuna může být nesprávná.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby název komuny obsahoval méně
+              než tento počet slov: %{word_count}.'
