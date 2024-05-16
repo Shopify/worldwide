@@ -171,3 +171,64 @@ da:
         address:
           errors:
             may_not_exist: Adressen blev ikke fundet eller findes ikke.
+        street_name:
+          label:
+            default: Gade
+            optional: Gade (valgfrit)
+          errors:
+            blank: Angiv et gadenavn
+            too_long: Gade er for lang (højst 255 tegn)
+            contains_emojis: Gade må ikke indeholde emojis
+            contains_mathematical_symbols: Gade må ikke indeholde matematiske symboler
+            contains_restricted_characters: Gade må kun indeholde bogstaver, tal,
+              lokale tegn og specialtegn
+            contains_too_many_words: Gade må ikke indeholde flere end %{word_count}
+              ord
+            contains_html_tags: Gade må ikke indeholde HTML-tags.
+            contains_url: Gade må ikke indeholde webadresser.
+            street_unknown_for_zip: Angiv et gyldigt gadenavn for %{zip}.
+            unknown_for_address: Gade kan være forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at gade indeholder færre end %{word_count}
+              tegn
+        street_number:
+          label:
+            default: Bygningsnummer
+            optional: Bygningsnummer (valgfrit)
+          errors:
+            blank: Angiv et bygningsnummer
+            too_long: Bygningsnummer er for lang (højst 255 tegn)
+            contains_emojis: Bygningsnummer må ikke indeholde emojis
+            contains_mathematical_symbols: Bygningsnummer må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters: Bygningsnummer må kun indeholde bogstaver,
+              tal, lokale tegn og specialtegn
+            contains_html_tags: Bygningsnummer må ikke indeholde HTML-tags.
+            contains_url: Bygningsnummer må ikke indeholde webadresser.
+            building_number_invalid: Der kunne ikke findes et bygningsnummer for %{street},
+              %{zip}.
+            unknown_for_address: Bygningsnummer kan være forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at bygningsnummer indeholder færre
+              end %{word_count} ord
+        neighborhood:
+          label:
+            default: Bydel
+            optional: Bydel (valgfrit)
+          errors:
+            blank: Angiv en bydel
+            too_long: Bydel er for lang (højst 255 tegn)
+            contains_emojis: Bydel må ikke indeholde emojis
+            contains_mathematical_symbols: Bydel må ikke indeholde matematiske symboler
+            contains_restricted_characters: Bydel må kun indeholde bogstaver, tal,
+              lokale tegn og specialtegn
+            contains_too_many_words: Bydel må ikke indeholde flere end %{word_count}
+              ord
+            contains_html_tags: Bydel må ikke indeholde HTML-tags.
+            contains_url: Bydel må ikke indeholde webadresser.
+            unknown_for_city: Angiv et gyldigt bydelsnavn for %{city}.
+            unknown_for_zip: Angiv et gyldigt bydelsnavn for %{zip}.
+            unknown_for_address: Bydel kan være forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at bydel indeholder færre end
+              %{word_count} ord

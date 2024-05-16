@@ -1,0 +1,27 @@
+---
+da:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Bydistrikt
+            optional: Bydistrikt (valgfrit)
+          errors:
+            blank: Angiv et bydistrikt
+            too_long: Bydistrikt er for lang (højst 255 tegn)
+            contains_emojis: Bydistrikt må ikke indeholde emojis
+            contains_mathematical_symbols: Bydistrikt må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters: Bydistrikt må kun indeholde bogstaver,
+              tal, lokale tegn og specialtegn
+            contains_too_many_words: Bydistrikt må ikke indeholde flere end %{word_count}
+              ord
+            contains_html_tags: Bydistrikt må ikke indeholde HTML-tags.
+            contains_url: Bydistrikt må ikke indeholde webadresser.
+            unknown_for_city: Angiv et gyldigt bydistriktsnavn for %{city}.
+            unknown_for_zip: Angiv et gyldigt bydistriktsnavn for %{zip}.
+            unknown_for_address: Bydistrikt kan være forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at bydistrikt indeholder færre
+              end %{word_count} ord

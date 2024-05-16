@@ -166,3 +166,59 @@ vi:
         address:
           errors:
             may_not_exist: Không tìm thấy địa chỉ hoặc địa chỉ không tồn tại
+        street_name:
+          label:
+            default: Đường
+            optional: Đường (không bắt buộc)
+          errors:
+            blank: Nhập tên đường
+            too_long: Đường quá dài (tối đa 255 ký tự)
+            contains_emojis: Đường không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Đường không được chứa ký hiệu toán học
+            contains_restricted_characters: Đường chỉ được chứa chữ cái, chữ số, ký
+              tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Đường không được có nhiều hơn %{word_count} từ
+            contains_html_tags: Đường không được chứa thẻ HTML.
+            contains_url: Đường không được chứa URL.
+            street_unknown_for_zip: Nhập tên đường hợp lệ cho %{zip}.
+            unknown_for_address: Đường có thể không chính xác.
+          warnings:
+            contains_too_many_words: Đường nên có tối đa %{word_count} từ
+        street_number:
+          label:
+            default: Số tòa nhà
+            optional: Số tòa nhà (không bắt buộc)
+          errors:
+            blank: Nhập số tòa nhà
+            too_long: Số tòa nhà quá dài (tối đa 255 ký tự)
+            contains_emojis: Số tòa nhà không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Số tòa nhà không được chứa ký hiệu toán
+              học
+            contains_restricted_characters: Số tòa nhà chỉ được chứa chữ cái, chữ
+              số, ký tự địa phương và ký tự đặc biệt
+            contains_html_tags: Số tòa nhà không được chứa thẻ HTML.
+            contains_url: Số tòa nhà không được chứa URL.
+            building_number_invalid: Không thể định vị số tòa nhà cho %{street}, %{zip}.
+            unknown_for_address: Số tòa nhà có thể không chính xác.
+          warnings:
+            contains_too_many_words: Số tòa nhà nên có tối đa %{word_count} từ
+        neighborhood:
+          label:
+            default: Khu phố
+            optional: Khu phố (không bắt buộc)
+          errors:
+            blank: Nhập khu phố
+            too_long: Khu phố quá dài (tối đa 255 ký tự)
+            contains_emojis: Khu phố không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Khu phố không được chứa ký hiệu toán học
+            contains_restricted_characters: Khu phố chỉ được chứa chữ cái, chữ số,
+              ký tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Khu phố không được có nhiều hơn %{word_count}
+              từ
+            contains_html_tags: Khu phố không được chứa thẻ HTML.
+            contains_url: Khu phố không được chứa URL.
+            unknown_for_city: Nhập tên khu phố hợp lệ cho %{city}.
+            unknown_for_zip: Nhập tên khu phố hợp lệ cho %{zip}.
+            unknown_for_address: Khu phố có thể không chính xác.
+          warnings:
+            contains_too_many_words: Khu phố nên có tối đa %{word_count} từ

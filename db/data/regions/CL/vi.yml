@@ -1,0 +1,24 @@
+---
+vi:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Xã
+            optional: Xã (không bắt buộc)
+          errors:
+            blank: Nhập xã
+            too_long: Xã quá dài (tối đa 255 ký tự)
+            contains_emojis: Xã không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Xã không được chứa ký hiệu toán học
+            contains_restricted_characters: Xã chỉ được chứa chữ cái, chữ số, ký tự
+              địa phương và ký tự đặc biệt
+            contains_too_many_words: Xã không được có nhiều hơn %{word_count} từ
+            contains_html_tags: Xã không được chứa thẻ HTML.
+            contains_url: Xã không được chứa URL.
+            unknown_for_city: Nhập tên xã hợp lệ cho %{city}.
+            unknown_for_zip: Nhập tên xã hợp lệ cho %{zip}.
+            unknown_for_address: Xã có thể không chính xác.
+          warnings:
+            contains_too_many_words: Xã nên có tối đa %{word_count} từ
