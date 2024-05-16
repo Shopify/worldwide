@@ -1,0 +1,25 @@
+---
+fi:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Alue
+            optional: Alue (valinnainen)
+          errors:
+            blank: Anna alue
+            too_long: Alue on liian pitkä (enintään 255 merkkiä)
+            contains_emojis: Alue ei voi sisältää emojeita
+            contains_mathematical_symbols: Alue ei voi sisältää matemaattisia symboleja
+            contains_restricted_characters: Alue voi sisältää vain kirjaimia, numeroita,
+              paikallisia merkkejä ja erikoismerkkejä
+            contains_too_many_words: Alue voi sisältää enintään %{word_count} sanaa
+            contains_html_tags: Alue ei voi sisältää HTML-tunnisteita.
+            contains_url: Alue ei voi sisältää URL-osoitteita.
+            unknown_for_city: Anna paikkakunnalle %{city} kelvollinen alueen nimi.
+            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen alueen nimi.
+            unknown_for_address: Alue voi olla väärä.
+          warnings:
+            contains_too_many_words: Alue-kentän pituudeksi suositellaan alle %{word_count}
+              sanaa

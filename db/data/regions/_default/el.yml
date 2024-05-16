@@ -182,3 +182,70 @@ el:
         address:
           errors:
             may_not_exist: Η διεύθυνση δεν βρέθηκε ή δεν υπάρχει
+        street_name:
+          label:
+            default: Οδός
+            optional: Οδός (προαιρετικά)
+          errors:
+            blank: Εισαγωγή ονόματος οδού
+            too_long: Το όνομα οδού είναι πολύ μεγάλο (το μέγιστο όριο είναι 255 χαρακτήρες)
+            contains_emojis: Το όνομα οδού δεν μπορεί να περιλαμβάνει emoji
+            contains_mathematical_symbols: Το όνομα οδού δεν μπορεί να περιέχει μαθηματικά
+              σύμβολα
+            contains_restricted_characters: Το όνομα οδού μπορεί να περιέχει μόνο
+              γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_too_many_words: Το όνομα οδού δεν μπορεί να περιέχει πάνω από
+              %{word_count} λέξεις
+            contains_html_tags: Το όνομα οδού δεν μπορεί να περιέχει ετικέτες HTML.
+            contains_url: Το όνομα οδού δεν μπορεί να περιέχει URL.
+            street_unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα οδού για %{zip}.
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην οδό.
+          warnings:
+            contains_too_many_words: Το όνομα οδού συνιστάται να έχει λιγότερες από
+              %{word_count} λέξεις
+        street_number:
+          label:
+            default: Αριθμός κτιρίου
+            optional: Αριθμός κτιρίου (προαιρετικά)
+          errors:
+            blank: Εισαγωγή αριθμού κτιρίου
+            too_long: Ο αριθμός κτιρίου είναι πολύ μεγάλος (το μέγιστο όριο είναι
+              255 χαρακτήρες)
+            contains_emojis: Ο αριθμός κτιρίου δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols: Ο αριθμός κτιρίου δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters: Ο αριθμός κτιρίου μπορεί να περιέχει μόνο
+              γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_html_tags: Ο αριθμός κτιρίου δεν μπορεί να περιέχει ετικέτες
+              HTML.
+            contains_url: Ο αριθμός κτιρίου δεν μπορεί να περιέχει URL.
+            building_number_invalid: Δεν ήταν δυνατός ο εντοπισμός του αριθμού κτιρίου
+              στην οδό %{street}, %{zip}.
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στον αριθμό κτιρίου.
+          warnings:
+            contains_too_many_words: Ο αριθμός κτιρίου συνιστάται να έχει λιγότερες
+              από %{word_count} λέξεις
+        neighborhood:
+          label:
+            default: Γειτονιά
+            optional: Γειτονιά (προαιρετικά)
+          errors:
+            blank: Εισαγωγή γειτονιάς
+            too_long: Το πεδίο "Γειτονιά" είναι πολύ μεγάλο (το μέγιστο όριο είναι
+              255 χαρακτήρες)
+            contains_emojis: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters: Το πεδίο "Γειτονιά" μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_too_many_words: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει πάνω
+              από %{word_count} λέξεις
+            contains_html_tags: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει ετικέτες
+              HTML.
+            contains_url: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει URL.
+            unknown_for_city: Εισαγάγετε μια έγκυρη γειτονιά για %{city}.
+            unknown_for_zip: Εισαγάγετε μια έγκυρη γειτονιά για %{zip}.
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γειτονιά.
+          warnings:
+            contains_too_many_words: Το πεδίο "Γειτονιά" συνιστάται να έχει λιγότερες
+              από %{word_count} λέξεις

@@ -1,0 +1,26 @@
+---
+ms:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Wad
+            optional: Wad (opsyenal)
+          errors:
+            blank: Masukkan wad
+            too_long: Wad terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Wad tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Wad tidak boleh mengandungi simbol matematik
+            contains_restricted_characters: Wad hanya boleh mengandungi huruf, nombor,
+              aksara tempatan dan aksara khas
+            contains_too_many_words: Wad tidak boleh mengandungi lebih daripada %{word_count}
+              perkataan
+            contains_html_tags: Wad tidak boleh mengandungi tag HTML.
+            contains_url: Wad tidak boleh mengandungi URL.
+            unknown_for_city: Masukkan nama wad yang sah untuk %{city}.
+            unknown_for_zip: Masukkan nama wad yang sah untuk %{zip}.
+            unknown_for_address: Wad mungkin salah.
+          warnings:
+            contains_too_many_words: Wad disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan

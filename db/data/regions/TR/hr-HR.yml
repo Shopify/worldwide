@@ -1,0 +1,27 @@
+---
+hr-HR:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Okrug
+            optional: Okrug (neobavezno)
+          errors:
+            blank: Unesite okrug
+            too_long: Naziv okruga je predugačak (dopušteno je najviše 255 znakova)
+            contains_emojis: Naziv okruga ne smije sadržavati emotikone
+            contains_mathematical_symbols: Naziv okruga ne smije sadržavati matematičke
+              simbole
+            contains_restricted_characters: Naziv okruga smije sadržavati samo slova,
+              brojeve, lokalne znakove i posebne znakove
+            contains_too_many_words: 'Naziv okruga smije sadržavati najviše sljedeći
+              broj riječi: %{word_count}'
+            contains_html_tags: Naziv okruga ne smije sadržavati HTML oznake.
+            contains_url: Naziv okruga ne smije sadržavati URL-ove.
+            unknown_for_city: Unesite valjani naziv okruga za %{city}.
+            unknown_for_zip: Unesite valjani naziv okruga za %{zip}.
+            unknown_for_address: Naziv okruga možda nije točan.
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv okruga sadrži manje od
+              %{word_count} riječ/i

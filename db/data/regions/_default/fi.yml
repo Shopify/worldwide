@@ -170,3 +170,65 @@ fi:
         address:
           errors:
             may_not_exist: Osoitetta ei löydy tai sitä ei ole
+        street_name:
+          label:
+            default: Katu
+            optional: Katu (valinnainen)
+          errors:
+            blank: Lisää kadun nimi
+            too_long: Katu on liian pitkä (enintään 255 merkkiä)
+            contains_emojis: Katu ei voi sisältää emojeita
+            contains_mathematical_symbols: Katu ei voi sisältää matemaattisia symboleja
+            contains_restricted_characters: Katu voi sisältää vain kirjaimia, numeroita,
+              paikallisia merkkejä ja erikoismerkkejä
+            contains_too_many_words: Katu voi sisältää enintään %{word_count} sanaa
+            contains_html_tags: Katu ei voi sisältää HTML-tunnisteita.
+            contains_url: Katu ei voi sisältää URL-osoitteita.
+            street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi.
+            unknown_for_address: Katu voi olla väärä.
+          warnings:
+            contains_too_many_words: Katu-kentän pituudeksi suositellaan alle %{word_count}
+              sanaa
+        street_number:
+          label:
+            default: Rakennuksen numero
+            optional: Rakennuksen numero (valinnainen)
+          errors:
+            blank: Lisää rakennuksen numero
+            too_long: Rakennuksen numero on liian pitkä (enintään 255 merkkiä)
+            contains_emojis: Rakennuksen numero ei voi sisältää emojeita
+            contains_mathematical_symbols: Rakennuksen numero ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters: Rakennuksen numero voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_html_tags: Rakennuksen numero ei voi sisältää HTML-tunnisteita.
+            contains_url: Rakennuksen numero ei voi sisältää URL-osoitteita.
+            building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
+              %{zip}.
+            unknown_for_address: Rakennuksen numero voi olla väärä.
+          warnings:
+            contains_too_many_words: Rakennuksen numero -kentän pituudeksi suositellaan
+              alle %{word_count} sanaa
+        neighborhood:
+          label:
+            default: Asuinalue
+            optional: Asuinalue (valinnainen)
+          errors:
+            blank: Lisää asuinalue
+            too_long: Asuinalue on liian pitkä (enintään 255 merkkiä)
+            contains_emojis: Asuinalue ei voi sisältää emojeita
+            contains_mathematical_symbols: Asuinalue ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters: Asuinalue voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_too_many_words: Asuinalue -kentässä voi olla enintään %{word_count}
+              sanaa
+            contains_html_tags: Asuinalue ei voi sisältää HTML-tunnisteita.
+            contains_url: Asuinalue ei voi sisältää URL-osoitteita.
+            unknown_for_city: Anna postinumerolle %{city} kelvollinen asuinalueen
+              nimi.
+            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen asuinalueen nimi.
+            unknown_for_address: Asuinalue voi olla väärä.
+          warnings:
+            contains_too_many_words: Asuinalue-kentän pituudeksi suositellaan alle
+              %{word_count} sanaa

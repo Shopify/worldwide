@@ -171,3 +171,65 @@ ms:
         address:
           errors:
             may_not_exist: Alamat tidak ditemui atau tidak wujud
+        street_name:
+          label:
+            default: Jalan
+            optional: Jalan (opsyenal)
+          errors:
+            blank: Masukkan nama jalan
+            too_long: Jalan terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Jalan tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Jalan tidak boleh mengandungi simbol matematik
+            contains_restricted_characters: Jalan hanya boleh mengandungi huruf, nombor,
+              aksara tempatan dan aksara khas
+            contains_too_many_words: Jalan tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+            contains_html_tags: Jalan tidak boleh mengandungi tag HTML.
+            contains_url: Jalan tidak boleh mengandungi URL.
+            street_unknown_for_zip: Masukkan nama jalan yang sah untuk %{zip}.
+            unknown_for_address: Jalan mungkin salah.
+          warnings:
+            contains_too_many_words: Jalan disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan
+        street_number:
+          label:
+            default: Nombor bangunan
+            optional: Nombor bangunan (opsyenal)
+          errors:
+            blank: Masukkan nombor bangunan
+            too_long: Nombor bangunan terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Nombor bangunan tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Nombor bangunan tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters: Nombor bangunan hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_html_tags: Nombor bangunan tidak boleh mengandungi tag HTML.
+            contains_url: Nombor bangunan tidak boleh mengandungi URL.
+            building_number_invalid: Nombor bangunan tidak dapat ditemukan untuk %{street},
+              %{zip}.
+            unknown_for_address: Nombor bangunan mungkin salah.
+          warnings:
+            contains_too_many_words: Nombor bangunan disyorkan untuk mengandungi kurang
+              daripada %{word_count} perkataan
+        neighborhood:
+          label:
+            default: Jiranan
+            optional: Jiranan (opsyenal)
+          errors:
+            blank: Masukkan jiranan
+            too_long: Jiranan terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Jiranan tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Jiranan tidak boleh mengandungi simbol
+              matematik
+            contains_restricted_characters: Jiranan hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            contains_too_many_words: Jiranan tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+            contains_html_tags: Jiranan tidak boleh mengandungi tag HTML.
+            contains_url: Jiranan tidak boleh mengandungi URL.
+            unknown_for_city: Masukkan nama jiranan yang sah untuk %{city}.
+            unknown_for_zip: Masukkan nama jiranan yang sah untuk %{zip}.
+            unknown_for_address: Jiranan mungkin salah.
+          warnings:
+            contains_too_many_words: Jiranan disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan

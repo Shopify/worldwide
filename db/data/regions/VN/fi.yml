@@ -1,0 +1,29 @@
+---
+fi:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Hallinnollinen alue
+            optional: Hallinnollinen alue (valinnainen)
+          errors:
+            blank: Lisää hallinnollinen alue
+            too_long: Hallinnollinen alue on liian pitkä (enintään 255 merkkiä)
+            contains_emojis: Hallinnollinen alue ei voi sisältää emojeita
+            contains_mathematical_symbols: Hallinnollinen alue ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters: Hallinnollinen alue voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_too_many_words: Hallinnollinen alue -kentässä voi olla enintään
+              %{word_count} sanaa
+            contains_html_tags: Hallinnollinen alue ei voi sisältää HTML-tunnisteita.
+            contains_url: Hallinnollinen alue ei voi sisältää URL-osoitteita.
+            unknown_for_city: Anna paikkakunnalle %{city} kelvollinen hallinnollisen
+              alueen nimi.
+            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen hallinnollisen
+              alueen nimi.
+            unknown_for_address: Hallinnollinen alue voi olla väärä.
+          warnings:
+            contains_too_many_words: Hallinnollinen alue -kentän pituudeksi suositellaan
+              alle %{word_count} sanaa

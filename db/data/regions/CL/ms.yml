@@ -1,0 +1,26 @@
+---
+ms:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Komun
+            optional: Komun (opsyenal)
+          errors:
+            blank: Masukkan komun
+            too_long: Komun terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Komun tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Komun tidak boleh mengandungi simbol matematik
+            contains_restricted_characters: Komun hanya boleh mengandungi huruf, nombor,
+              aksara tempatan dan aksara khas
+            contains_too_many_words: Komun tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+            contains_html_tags: Komun tidak boleh mengandungi tag HTML.
+            contains_url: Komun tidak boleh mengandungi URL.
+            unknown_for_city: Masukkan nama komun yang sah untuk %{city}.
+            unknown_for_zip: Masukkan nama komun yang sah untuk %{zip}.
+            unknown_for_address: Komun mungkin salah.
+          warnings:
+            contains_too_many_words: Komun disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan

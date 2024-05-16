@@ -1,0 +1,26 @@
+---
+ms:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Daerah
+            optional: Daerah (opsyenal)
+          errors:
+            blank: Masukkan daerah
+            too_long: Daerah terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis: Daerah tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Daerah tidak boleh mengandungi simbol matematik
+            contains_restricted_characters: Daerah hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            contains_too_many_words: Daerah tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+            contains_html_tags: Daerah tidak boleh mengandungi tag HTML.
+            contains_url: Daerah tidak boleh mengandungi URL
+            unknown_for_city: Masukkan nama daerah yang sah untuk %{city}.
+            unknown_for_zip: Masukkan nama daerah yang sah untuk %{zip}.
+            unknown_for_address: Daerah mungkin salah.
+          warnings:
+            contains_too_many_words: Daerah disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan
