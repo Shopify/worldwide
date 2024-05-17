@@ -1,0 +1,26 @@
+---
+id:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Komune
+            optional: Komune (opsional)
+          errors:
+            blank: Masukkan nama komune
+            too_long: Nama komune terlalu panjang (maksimum berisi 255 karakter)
+            contains_emojis: Nama komune tidak boleh berisi emoji
+            contains_mathematical_symbols: Nama komune tidak boleh berisi simbol matematika
+            contains_restricted_characters: Nama komune hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Nama komune tidak boleh memuat lebih dari %{word_count}
+              kata
+            contains_html_tags: Nama komune tidak boleh berisi tag HTML.
+            contains_url: Nama komune tidak boleh berisi URL.
+            unknown_for_city: Masukkan nama komune yang valid untuk %{city}.
+            unknown_for_zip: Masukkan nama komune yang valid untuk %{zip}.
+            unknown_for_address: Nama komune mungkin salah.
+          warnings:
+            contains_too_many_words: Nama komune sebaiknya berisi kurang dari %{word_count}
+              kata

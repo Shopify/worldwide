@@ -1,0 +1,28 @@
+---
+sv:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrikt
+            optional: Distrikt (valfritt)
+          errors:
+            blank: Ange ett distrikt
+            too_long: Namnet på det administrativa området är för långt (max. 255
+              tecken)
+            contains_emojis: Administrativt område får inte innehålla emojier
+            contains_mathematical_symbols: Administrativt område får inte innehålla
+              matematiska symboler
+            contains_restricted_characters: Administrativt område får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_too_many_words: Administrativt område får inte innehålla fler
+              än %{word_count} ord
+            contains_html_tags: Administrativt område får inte innehålla HTML-taggar.
+            contains_url: Administrativt område får inte innehålla URL:er.
+            unknown_for_city: Ange ett giltigt administrativt område för %{city}.
+            unknown_for_zip: Ange ett giltigt administrativt område för %{zip}.
+            unknown_for_address: Administrativt område kan vara felaktigt.
+          warnings:
+            contains_too_many_words: Vi rekommenderar att det administrativa området
+              består av färre än %{word_count} ord

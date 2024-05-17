@@ -172,3 +172,64 @@ sv:
         address:
           errors:
             address_may_not_exist: Adressen hittades inte eller finns inte
+        street_name:
+          label:
+            default: Gata
+            optional: Gata (valfritt)
+          errors:
+            blank: Ange ett gatunamn
+            too_long: Gatunamnet är för långt (max. 255 tecken)
+            contains_emojis: Gata får inte innehålla emojier
+            contains_mathematical_symbols: Gata får inte innehålla matematiska symboler
+            contains_restricted_characters: Gata får endast innehålla bokstäver, siffror,
+              lokala tecken och specialtecken
+            contains_too_many_words: Gata får inte innehålla fler än %{word_count}
+              ord
+            contains_html_tags: Gata får inte innehålla HTML-taggar.
+            contains_url: Gata får inte innehålla URL:er.
+            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
+            unknown_for_address: Gatan kan vara felaktig.
+          warnings:
+            contains_too_many_words: Vi rekommenderar att gatan består av färre än
+              %{word_count} ord
+        street_number:
+          label:
+            default: Husnummer
+            optional: Husnummer (valfritt)
+          errors:
+            blank: Ange ett husnummer
+            too_long: Husnumret är för långt (max. 255 tecken)
+            contains_emojis: Husnummer får inte innehålla emojier
+            contains_mathematical_symbols: Husnummer får inte innehålla matematiska
+              symboler
+            contains_restricted_characters: Husnummer får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            contains_html_tags: Husnummer får inte innehålla HTML-taggar.
+            contains_url: Husnummer får inte innehålla URL:er.
+            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
+              %{zip}.
+            unknown_for_address: Husnumret kan vara felaktigt.
+          warnings:
+            contains_too_many_words: Vi rekommenderar att husnumret består av färre
+              än %{word_count} ord
+        neighborhood:
+          label:
+            default: Område
+            optional: Område (valfritt)
+          errors:
+            blank: Ange ett område
+            too_long: Områdesnamnet är för långt (max. 255 tecken)
+            contains_emojis: Område får inte innehålla emojier
+            contains_mathematical_symbols: Område får inte innehålla matematiska symboler
+            contains_restricted_characters: Område får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            contains_too_many_words: Område får inte innehålla fler än %{word_count}
+              ord
+            contains_html_tags: Område får inte innehålla HTML-taggar.
+            contains_url: Område får inte innehålla URL:er.
+            unknown_for_city: Ange ett giltigt områdesnamn för %{city}.
+            unknown_for_zip: Ange ett giltigt områdesnamn för %{zip}.
+            unknown_for_address: Området kan vara felaktigt.
+          warnings:
+            contains_too_many_words: Vi rekommenderar att området består av färre
+              än %{word_count} ord

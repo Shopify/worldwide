@@ -1,0 +1,25 @@
+---
+tr:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: İlçe
+            optional: İlçe (İsteğe bağlı)
+          errors:
+            blank: İlçe girin
+            too_long: İlçe adı çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis: İlçe, emoji içeremez
+            contains_mathematical_symbols: İlçe adı matematiksel semboller içeremez
+            contains_restricted_characters: İlçe adı yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: İlçe adı en fazla %{word_count} kelime içerebilir
+            contains_html_tags: İlçe HTML etiketleri içeremez.
+            contains_url: İlçe adı emoji içeremez.
+            unknown_for_city: "%{city} için geçerli bir ilçe adı girin."
+            unknown_for_zip: "%{zip} için geçerli bir ilçe adı girin."
+            unknown_for_address: İlçe adı yanlış olabilir.
+          warnings:
+            contains_too_many_words: İlçe adında %{word_count} adetten az kelime olması
+              önerilir
