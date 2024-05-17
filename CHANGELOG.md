@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [0.12.1] - 2024-05-17
+- Use `>=` instead of `~>` for `activesupport` in `.gemspec` [#156](https://github.com/Shopify/worldwide/pull/156)
+
 ## [0.12.0] - 2024-05-15
 
 - Add pry-byebug gem [#149](https://github.com/Shopify/worldwide/pull/149)
