@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 3.0.0"
 
-  spec.add_dependency("activesupport", "~> 7.0")
+  spec.add_dependency("activesupport", ">= 7.0")
   spec.add_dependency("i18n")
   spec.add_dependency("phonelib", "~> 0.8")
 end
