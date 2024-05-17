@@ -174,3 +174,66 @@ de:
         address:
           errors:
             may_not_exist: Adresse nicht gefunden oder existiert nicht
+        street_name:
+          label:
+            default: Straße
+            optional: Straße (optional)
+          errors:
+            blank: Gib einen Straßennamen ein.
+            too_long: Straße ist zu lang (maximal 255 Zeichen).
+            contains_emojis: Straße darf keine Emojis enthalten.
+            contains_mathematical_symbols: Straße darf keine mathematischen Symbole
+              enthalten.
+            contains_restricted_characters: Straße darf nur Buchstaben, Zahlen, Zeichen
+              der lokalen Sprache und Sonderzeichen enthalten.
+            contains_too_many_words: Straße darf nicht mehr als %{word_count} Wörter
+              enthalten.
+            contains_html_tags: Straße darf keine HTML-Tags enthalten.
+            contains_url: Straße darf keine URLs enthalten.
+            street_unknown_for_zip: Gib einen gültigen Straßennamen für %{zip} ein.
+            unknown_for_address: Straße ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass die Straße weniger als
+              %{word_count} Wörter enthält.
+        street_number:
+          label:
+            default: Hausnummer
+            optional: Hausnummer (optional)
+          errors:
+            blank: Gib eine Hausnummer ein.
+            too_long: Hausnummer ist zu lang (maximal 255 Zeichen).
+            contains_emojis: Hausnummer darf keine Emojis enthalten.
+            contains_mathematical_symbols: Hausnummer darf keine mathematischen Symbole
+              enthalten.
+            contains_restricted_characters: Hausnummer darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_html_tags: Hausnummer darf keine HTML-Tags enthalten.
+            contains_url: Hausnummer darf keine URLs enthalten.
+            building_number_invalid: Hausnummer für %{street}, %{zip}, konnte nicht
+              gefunden werden.
+            unknown_for_address: Hausnummer ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass die Hausnummer weniger
+              als %{word_count} Wörter enthält.
+        neighborhood:
+          label:
+            default: Stadtviertel
+            optional: Stadtviertel (optional)
+          errors:
+            blank: Gib ein Stadtviertel ein.
+            too_long: Stadtviertel ist zu lang (maximal 255 Zeichen).
+            contains_emojis: Stadtviertel darf keine Emojis enthalten.
+            contains_mathematical_symbols: Stadtviertel darf keine mathematischen
+              Symbole enthalten.
+            contains_restricted_characters: Stadtviertel darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_too_many_words: Stadtviertel darf nicht mehr als %{word_count} Wörter
+              enthalten.
+            contains_html_tags: Stadtviertel darf keine HTML-Tags enthalten.
+            contains_url: Stadtviertel darf keine URLs enthalten.
+            unknown_for_city: Gib einen gültigen Stadtviertelnamen für %{city} ein.
+            unknown_for_zip: Gib einen gültigen Stadtviertelnamen für %{zip} ein.
+            unknown_for_address: Stadtviertel ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass das Stadtviertel weniger
+              als %{word_count} Wörter enthält.

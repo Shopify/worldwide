@@ -170,3 +170,65 @@ nb:
         address:
           errors:
             may_not_exist: Fant ikke adressen, eller så eksisterer den ikke
+        street_name:
+          label:
+            default: Gate
+            optional: Gate (valgfritt)
+          errors:
+            blank: Angi et gatenavn
+            too_long: Gatenavnet er for langt (maksimalt 255 tegn)
+            contains_emojis: Gatenavnet kan ikke inneholde emojier
+            contains_mathematical_symbols: Gatenavnet kan ikke inneholde matematiske
+              symboler
+            contains_restricted_characters: Gatenavnet kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+            contains_too_many_words: Gatenavnet kan ikke inneholde mer enn %{word_count}
+              ord
+            contains_html_tags: Gatenavnet kan ikke inneholde HTML-tagger.
+            contains_url: Gatenavnet kan ikke inneholde URL-adresser.
+            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
+            unknown_for_address: Gaten kan være feil.
+          warnings:
+            contains_too_many_words: Vi anbefaler at gatenavnet inneholder færre enn
+              %{word_count} ord
+        street_number:
+          label:
+            default: Bygningsnummer
+            optional: Bygningsnummer (valgfritt)
+          errors:
+            blank: Angi et bygningsnummer
+            too_long: Bygningsnummeret er for langt (maksimalt 255 tegn)
+            contains_emojis: Bygningsnummeret kan ikke inneholde emojier
+            contains_mathematical_symbols: Bygningsnummeret kan ikke inneholde matematiske
+              symboler
+            contains_restricted_characters: Bygningsnummeret kan kun inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+            contains_html_tags: Bygningsnummeret kan ikke inneholde HTML-tagger.
+            contains_url: Bygningsnummeret kan ikke inneholde URL-adresser.
+            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
+            unknown_for_address: Bygningsnummeret kan være feil.
+          warnings:
+            contains_too_many_words: Vi anbefaler at bygningsnummeret inneholder færre
+              enn %{word_count} ord
+        neighborhood:
+          label:
+            default: Nabolag
+            optional: Nabolag (valgfritt)
+          errors:
+            blank: Angi et nabolag
+            too_long: Nabolagsnavnet er for langt (maksimalt 255 tegn)
+            contains_emojis: Nabolagsnavnet kan ikke inneholde emojier
+            contains_mathematical_symbols: Nabolagsnavnet kan ikke inneholde matematiske
+              symboler
+            contains_restricted_characters: Nabolagsnavnet kan bare inneholde bokstaver,
+              tall, lokale tegn og spesialtegn
+            contains_too_many_words: Nabolagsnavnet kan ikke inneholde mer enn %{word_count}
+              ord
+            contains_html_tags: Nabolagsnavnet kan ikke inneholde HTML-tagger.
+            contains_url: Nabolagsnavnet kan ikke inneholde URL-adresser.
+            unknown_for_city: Angi et gyldig nabolagsnavn for %{city}.
+            unknown_for_zip: Angi et gyldig nabolagsnavn for %{zip}.
+            unknown_for_address: Nabolagsnavnet kan være feil.
+          warnings:
+            contains_too_many_words: Vi anbefaler at nabolagsnavnet inneholder færre
+              enn %{word_count} ord

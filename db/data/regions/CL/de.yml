@@ -1,0 +1,27 @@
+---
+de:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Gemeinde
+            optional: Gemeinde (optional)
+          errors:
+            blank: Gib eine Gemeinde ein.
+            too_long: Gemeinde ist zu lang (maximal 255 Zeichen).
+            contains_emojis: Gemeinde darf keine Emojis enthalten.
+            contains_mathematical_symbols: Gemeinde darf keine mathematischen Symbole
+              enthalten.
+            contains_restricted_characters: Gemeinde darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_too_many_words: Gemeinde darf nicht mehr als %{word_count} Wörter
+              enthalten.
+            contains_html_tags: Gemeinde darf keine HTML-Tags enthalten.
+            contains_url: Gemeinde darf keine URLs enthalten.
+            unknown_for_city: Gib einen gültigen Gemeindenamen für %{city} ein.
+            unknown_for_zip: Gib einen gültigen Gemeindenamen für %{zip} ein.
+            unknown_for_address: Gemeinde ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass die Gemeinde weniger
+              als %{word_count} Wörter enthält.
