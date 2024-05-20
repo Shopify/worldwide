@@ -1,0 +1,25 @@
+---
+pt-PT:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Região
+            optional: Região (opcional)
+          errors:
+            blank: Introduza uma região
+            too_long: A região é demasiado longa (o máximo são 255 caracteres)
+            contains_emojis: A região não pode conter emojis
+            contains_mathematical_symbols: A região não pode conter símbolos matemáticos
+            contains_restricted_characters: A região pode conter apenas letras, números,
+              caracteres locais e caracteres especiais
+            contains_too_many_words: A região não pode ter mais de %{word_count} palavras
+            contains_html_tags: A região não pode conter etiquetas HTML.
+            contains_url: A região não pode conter URL.
+            unknown_for_city: Introduza um nome de região válido para %{city}.
+            unknown_for_zip: Introduza um nome de região válido para %{zip}.
+            unknown_for_address: A região poderá estar incorreta.
+          warnings:
+            contains_too_many_words: É recomendável que a região tenha menos de %{word_count}
+              palavras
