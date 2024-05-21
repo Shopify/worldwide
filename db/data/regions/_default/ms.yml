@@ -32,10 +32,10 @@ ms:
               nombor, aksara tempatan dan aksara khas
         last_name:
           label:
-            default: Nama terakhir
-            optional: Nama terakhir (opsyenal)
+            default: Nama keluarga
+            optional: Nama keluarga (opsyenal)
           errors:
-            blank: Masukkan nama terakhir
+            blank: Masukkan nama keluarga
             too_long: Nama keluarga terlalu panjang (maksimum ialah 255 aksara)
             contains_html_tags: Nama keluarga tidak boleh mengandungi tag HTML.
             contains_emojis: Nama keluarga tidak boleh mengandungi emoji
@@ -51,8 +51,8 @@ ms:
           errors:
             blank: Masukkan alamat
             too_long: Baris alamat pertama terlalu panjang (maksimum ialah 255 aksara)
-            contains_html_tags: Address1 tidak boleh mengandungi tag HTML.
-            contains_emojis: Address1 tidak boleh mengandungi emoji
+            contains_html_tags: Alamat1 tidak boleh mengandungi tag HTML.
+            contains_emojis: Alamat1 tidak boleh mengandungi emoji
             contains_url: Alamat1 tidak boleh mengandungi URL.
             missing_building_number: Tambahkan nombor bangunan jika ada.
             street_unknown_for_zip: Masukkan nama jalan yang sah untuk %{zip}.
@@ -70,13 +70,13 @@ ms:
               daripada %{word_count} perkataan
         address2:
           label:
-            default: Pangsapuri, suite, dsb.
-            optional: Pangsapuri, suite, dsb. (opsyenal)
+            default: Apartmen, suite, dll.
+            optional: Apartmen, suite, dsb. (opsyenal)
           errors:
             blank: Masukkan apartmen, suite, dll.
             too_long: Baris alamat kedua terlalu panjang (maksimum ialah 255 aksara)
-            contains_html_tags: Address2 tidak boleh mengandungi tag HTML.
-            contains_emojis: Address2 tidak boleh mengandungi emoji
+            contains_html_tags: Alamat2 tidak boleh mengandungi tag HTML.
+            contains_emojis: Alamat2 tidak boleh mengandungi emoji
             contains_url: Alamat2 tidak boleh mengandungi URL.
             missing_building_number: Tambahkan nombor bangunan jika ada.
             street_unknown_for_zip: Masukkan nama jalan yang sah untuk %{zip}.
@@ -113,8 +113,8 @@ ms:
             unknown_for_address: Bandar mungkin salah.
         country:
           label:
-            default: Negara/Wilayah
-            optional: Negara/Wilayah (opsyenal)
+            default: Negara/rantau
+            optional: Negara/rantau (opsyenal)
           errors:
             blank: Pilih negara/rantau
             not_supported: Kami tidak menyokong negara/rantau ini pada masa ini. Masukkan
@@ -144,7 +144,7 @@ ms:
             invalid_for_country: Masukkan rantau yang sah untuk %{country}
             unknown_for_city_and_zip: Masukkan rantau yang sah untuk %{city}, %{zip}
             unknown_for_city: Pilih rantau yang sah untuk %{city}
-            unknown_for_zip: Masukkan rantau yang sah untuk %{zip}
+            unknown_for_zip: Pilih rantau yang sah untuk %{zip}
             unknown_for_address: Rantau mungkin salah.
         zip:
           label:
@@ -170,7 +170,7 @@ ms:
             unknown_for_address: Poskod mungkin salah.
         address:
           errors:
-            may_not_exist: Alamat tidak ditemui atau tidak wujud
+            may_not_exist: Alamat tidak ditemukan atau tidak wujud
         street_name:
           label:
             default: Jalan
