@@ -8,10 +8,10 @@ pt-BR:
             default: Empresa
             optional: Empresa (opcional)
           errors:
-            blank: Insira um nome de empresa
+            blank: Insira o nome da empresa
             too_long: O nome da empresa é longo demais (máximo de 255 caracteres)
             contains_html_tags: A empresa não pode ter tags HTML.
-            contains_emojis: O nome da empresa não pode conter emojis
+            contains_emojis: A empresa não pode conter emojis
             contains_mathematical_symbols: O nome da empresa não pode conter símbolos
               matemáticos
             contains_restricted_characters: A empresa pode conter apenas letras, números,
@@ -21,7 +21,7 @@ pt-BR:
             default: Nome
             optional: Nome (opcional)
           errors:
-            blank: Insira um nome
+            blank: Insira o nome
             too_long: O nome é longo demais (máximo de 255 caracteres)
             contains_html_tags: O nome não pode ter tags HTML.
             contains_emojis: O nome não pode conter emojis
@@ -34,7 +34,7 @@ pt-BR:
             default: Sobrenome
             optional: Sobrenome (opcional)
           errors:
-            blank: Insira um sobrenome
+            blank: Insira o sobrenome
             too_long: O sobrenome é longo demais (máximo de 255 caracteres)
             contains_html_tags: O sobrenome não pode ter tags HTML.
             contains_emojis: O sobrenome não pode conter emojis
@@ -47,20 +47,20 @@ pt-BR:
             default: Endereço
             optional: Endereço (opcional)
           errors:
-            blank: Insira um endereço
+            blank: Insira o endereço
             too_long: A primeira linha do endereço é longa demais (máximo de 255 caracteres)
-            contains_html_tags: O endereço 1 não pode ter tags HTML.
-            contains_emojis: O endereço1 não pode conter emojis
-            contains_url: O endereço1 não pode ter URLs.
+            contains_html_tags: A primeira linha do endereço não pode ter tags HTML.
+            contains_emojis: A primeira linha do endereço não pode conter emojis
+            contains_url: A primeira linha do endereço não pode ter URLs.
             missing_building_number: Adicione o número do prédio, se houver.
             street_unknown_for_zip: Insira um nome de rua válido para %{zip}.
             building_number_invalid: Não foi possível localizar o número do prédio
               em %{street}, %{zip}.
             contains_mathematical_symbols: O endereço 1 não pode conter símbolos matemáticos
-            contains_restricted_characters: O Endereço1 pode conter apenas letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: O Endereço1 não pode ter mais de %{word_count}
-              palavras
+            contains_restricted_characters: A primeira linha do endereço pode conter
+              apenas letras, números, caracteres locais e caracteres especiais
+            contains_too_many_words: A primeira linha do endereço não pode ter mais
+              de %{word_count} palavras
             unknown_for_address: Talvez haja um erro no endereço (linha 1).
           warnings:
             contains_too_many_words: É recomendável que a linha de endereço 1 tenha
@@ -68,22 +68,22 @@ pt-BR:
         address2:
           label:
             default: Apartamento, bloco etc.
-            optional: Apartamento, bloco etc. (opcional)
+            optional: Casa, apto. etc. (opcional)
           errors:
-            blank: Insira um complemento, apartamento, bloco etc.
-            too_long: A segunda linha do endereço é longa demais (máximo de 255 caracteres)
-            contains_html_tags: O endereço 2 não pode ter tags HTML.
-            contains_emojis: O endereço2 não pode conter emojis
-            contains_url: O endereço2 não pode ter URLs.
+            blank: Insira apartamento, bloco etc.
+            too_long: A segunda linha do endereço é longa demais (máximo é 255 caracteres)
+            contains_html_tags: A segunda linha do endereço não pode ter tags HTML.
+            contains_emojis: A segunda linha do endereço não pode conter emojis
+            contains_url: A segunda linha do endereço não pode ter URLs.
             missing_building_number: Adicione o número do prédio, se houver.
             street_unknown_for_zip: Insira um nome de rua válido para %{zip}.
             building_number_invalid: Não foi possível localizar o número do prédio
               em %{street}, %{zip}.
             contains_mathematical_symbols: O endereço 2 não pode conter símbolos matemáticos
-            contains_restricted_characters: O Endereço2 pode conter apenas letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: O Endereço2 não pode ter mais de %{word_count}
-              palavras
+            contains_restricted_characters: A segunda linha do endereço pode conter
+              apenas letras, números, caracteres locais e caracteres especiais
+            contains_too_many_words: A segunda linha do endereço não pode ter mais
+              de %{word_count} palavras
             unknown_for_address: Talvez haja um erro no endereço (linha 2).
           warnings:
             contains_too_many_words: É recomendável que a linha de endereço 2 tenha
@@ -108,7 +108,7 @@ pt-BR:
             unknown_for_address: Talvez haja um erro na cidade.
         country:
           label:
-            default: País/Região
+            default: País/região
             optional: País/Região (opcional)
           errors:
             blank: Selecione um país/região
@@ -122,7 +122,7 @@ pt-BR:
             optional: Telefone (opcional)
           errors:
             blank: Insira um número de telefone
-            invalid: Insira um número de telefone válido
+            invalid: Insira um telefone válido
             too_long: O telefone é muito longo (máximo de 255 caracteres)
             contains_emojis: O número de telefone não pode conter emojis
             contains_mathematical_symbols: O número de telefone não pode conter símbolos
