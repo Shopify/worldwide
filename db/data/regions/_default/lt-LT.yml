@@ -63,18 +63,18 @@ lt-LT:
               %{zip}.
             contains_mathematical_symbols: Adrese (1) negali būti naudojami matematiniai
               simboliai
-            contains_restricted_characters: 1 adresą gali sudaryti tik raidės, skaičiai,
+            contains_restricted_characters: Adresą (1) gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Adreso (1) negali sudaryti daugiau nei %{word_count}
-              žodžiai (-ių)
+              žodžiai (-ių, -is)
             unknown_for_address: Pirmoji adreso eilutė gali būti neteisinga.
           warnings:
-            contains_too_many_words: Patartina, kad 1 adreso eilutę sudarytų mažiau
-              nei %{word_count} žodžiai (-ių)
+            contains_too_many_words: Patartina, kad pirmąją adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių, -is)
         address2:
           label:
-            default: Butas, apartamentai ar kt.
-            optional: Butas, apartamentai ar kt. (pasirinktinai)
+            default: Butas, apartamentas ar kt.
+            optional: Butas, apartamentas ar kt. (pasirinktinai)
           errors:
             blank: Įveskite butą, apartamentą ar kt.
             too_long: Antroji adreso eilutė yra per ilga (turi sudaryti ne daugiau
@@ -89,14 +89,14 @@ lt-LT:
               %{zip}.
             contains_mathematical_symbols: Adrese (2) negali būti naudojami matematiniai
               simboliai
-            contains_restricted_characters: 2 adresą gali sudaryti tik raidės, skaičiai,
+            contains_restricted_characters: Adresą (2) gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Adreso (2) negali sudaryti daugiau nei %{word_count}
-              žodžiai (-ių)
+              žodžiai (-ių, -is)
             unknown_for_address: Antroji adreso eilutė gali būti neteisinga.
           warnings:
-            contains_too_many_words: Patartina, kad 2 adreso eilutę sudarytų mažiau
-              nei %{word_count} žodžiai (-ių)
+            contains_too_many_words: Patartina, kad antrąją adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių, -is)
         city:
           label:
             default: Miestas
@@ -108,15 +108,15 @@ lt-LT:
             contains_html_tags: Miesto pavadinime negali būti naudojamos HTML žymės.
             contains_emojis: Miesto pavadinime negali būti naudojami „emoji“
             contains_url: Miesto pavadinime negali būti naudojamas URL
-            unknown_for_zip: Įveskite teisingą pašto kodo %{zip} miestą
-            unknown_for_province: Įveskite teisingą %{province} miestą
-            unknown_for_zip_and_province: Įveskite teisingą %{zip}, %{province} miestą
+            unknown_for_zip: Įveskite tinkamą %{zip} miestą
+            unknown_for_province: Įveskite tinkamą %{province} miestą
+            unknown_for_zip_and_province: Įveskite tinkamą %{zip}, %{province}, miestą
             contains_mathematical_symbols: Miesto pavadinime negali būti naudojami
               matematiniai simboliai
             contains_restricted_characters: Miesto pavadinimą gali sudaryti tik raidės,
               skaičiai, vietiniai simboliai ir specialieji simboliai
             contains_too_many_words: Miesto pavadinimo negali sudaryti daugiau nei
-              %{word_count} žodžiai (-ių)
+              %{word_count} žodžiai (-ių, -is)
             unknown_for_address: Miestas gali būti neteisingas.
         country:
           label:
@@ -134,7 +134,7 @@ lt-LT:
             optional: Telefonas (pasirinktinai)
           errors:
             blank: Įveskite telefono numerį
-            invalid: Įveskite teisingą telefono numerį
+            invalid: Įveskite tinkamą telefono numerį
             too_long: Telefono numeris yra per ilgas (turi sudaryti ne daugiau kaip
               255 simboliai)
             contains_emojis: Telefono numeryje negali būti naudojami „emoji“
@@ -160,9 +160,9 @@ lt-LT:
             optional: Pašto kodas (pasirinktinai)
           errors:
             blank: Įveskite pašto kodą
-            blocked_address: Šioje vietovėje nedirbame.
-            invalid_for_country: Įveskite galiojantį pašto kodą %{country}
-            invalid_for_country_and_province: Įveskite galiojantį %{province}, %{country},
+            blocked_address: Ši vietovė nepalaikoma.
+            invalid_for_country: Įveskite tinkamą %{country} pašto kodą
+            invalid_for_country_and_province: Įveskite tinkamą %{province}, %{country},
               pašto kodą
             invalid: Įveskite tinkamą pašto kodą
             too_long: Pašto kodas yra per ilgas
@@ -175,7 +175,7 @@ lt-LT:
               simboliai
             contains_restricted_characters: Pašto kodą gali sudaryti tik raidės, skaičiai,
               vietiniai simboliai ir specialieji simboliai
-            invalid_for_province: Įveskite teisingą %{province} pašto kodą
+            invalid_for_province: Įveskite tinkamą %{province} pašto kodą
             unknown_for_address: Pašto kodas gali būti neteisingas.
         address:
           errors:

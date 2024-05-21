@@ -8,106 +8,106 @@ pl:
             default: Firma
             optional: Firma (opcjonalnie)
           errors:
-            blank: Wprowadź nazwę firmy
+            blank: Wpisz nazwę firmy
             too_long: Nazwa firmy jest za długa (maksymalna liczba znaków to 255)
             contains_html_tags: Firma nie może zawierać tagów HTML.
             contains_emojis: Firma nie może zawierać emoji
             contains_mathematical_symbols: Firma nie może zawierać symboli matematycznych
             contains_restricted_characters: Pole Firma może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
+              znaki lokalne i znaki specjalne
         first_name:
           label:
             default: Imię
             optional: Imię (opcjonalnie)
           errors:
-            blank: Wprowadź imię
+            blank: Wpisz imię
             too_long: Imię jest za długie (maksymalna liczba znaków to 255)
             contains_html_tags: Imię nie może zawierać tagów HTML.
             contains_emojis: Imię nie może zawierać emoji
             contains_url: Imię nie może zawierać adresu URL.
             contains_mathematical_symbols: Imię nie może zawierać symboli matematycznych
             contains_restricted_characters: Pole Imię może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
+              znaki lokalne i znaki specjalne
         last_name:
           label:
             default: Nazwisko
             optional: Nazwisko (opcjonalnie)
           errors:
-            blank: Wprowadź nazwisko
+            blank: Wpisz nazwisko
             too_long: Nazwisko jest za długie (maksymalna liczba znaków to 255)
             contains_html_tags: Nazwisko nie może zawierać tagów HTML.
             contains_emojis: Nazwisko nie może zawierać emoji
             contains_url: Nazwisko nie może zawierać adresu URL.
             contains_mathematical_symbols: Nazwisko nie może zawierać symboli matematycznych
             contains_restricted_characters: Pole Nazwisko może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
+              znaki lokalne i znaki specjalne
         address1:
           label:
             default: Adres
             optional: Adres (opcjonalnie)
           errors:
-            blank: Wprowadź adres
+            blank: Wpisz adres
             too_long: Pierwsza linia adresu jest za długa (maksymalna liczba znaków
               to 255)
             contains_html_tags: Adres 1 nie może zawierać tagów HTML.
             contains_emojis: Adres 1 nie może zawierać emoji
             contains_url: Adres 1 nie może zawierać adresów URL.
-            missing_building_number: Dodaj numer budynku, jeśli go posiadasz
+            missing_building_number: Dodaj numer budynku, jeśli go posiadasz.
             street_unknown_for_zip: Wprowadź prawidłową nazwę ulicy dla %{zip}.
             building_number_invalid: Nie udało się zlokalizować numeru budynku dla
               %{street}, %{zip}.
             contains_mathematical_symbols: Adres 1 nie może zawierać symboli matematycznych
             contains_restricted_characters: Pole Adres1 może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
-            contains_too_many_words: Adres 1 może zawierać maksymalnie do %{word_count}
-              słów
+              znaki lokalne i znaki specjalne
+            contains_too_many_words: Adres 1 może zawierać maksymalnie %{word_count}
+              słów (słowa)
             unknown_for_address: Linia adresu 1 może być nieprawidłowa.
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 1 zawierała mniej
-              niż %{word_count} słów
+              niż %{word_count} słów (słowa)
         address2:
           label:
-            default: Mieszkanie, apartament itp.
+            default: Mieszkanie, apartament, itp.
             optional: Mieszkanie, apartament itp. (opcjonalnie)
           errors:
-            blank: Wprowadź mieszkanie, apartament itp.
+            blank: Wpisz mieszkanie, apartament itp.
             too_long: Druga linia adresu jest za długa (maksymalna liczba znaków to
               255)
             contains_html_tags: Adres 2 nie może zawierać tagów HTML.
             contains_emojis: Adres 2 nie może zawierać emoji
             contains_url: Adres 2 nie może zawierać adresów URL.
-            missing_building_number: Dodaj numer budynku, jeśli go posiadasz
+            missing_building_number: Dodaj numer budynku, jeśli go posiadasz.
             street_unknown_for_zip: Wprowadź prawidłową nazwę ulicy dla %{zip}.
             building_number_invalid: Nie udało się zlokalizować numeru budynku dla
               %{street}, %{zip}.
             contains_mathematical_symbols: Adres 2 nie może zawierać symboli matematycznych
             contains_restricted_characters: Pole Adres może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
+              znaki lokalne i znaki specjalne
             contains_too_many_words: Adres 2 może zawierać maksymalnie do %{word_count}
-              słów
+              słów (słowa)
             unknown_for_address: Linia adresu 2 może być nieprawidłowa.
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała mniej
-              niż %{word_count} słów
+              niż %{word_count} słów (słowa)
         city:
           label:
             default: Miasto
             optional: Miasto (opcjonalnie)
           errors:
-            blank: Wprowadź miasto
+            blank: Wpisz miasto
             too_long: Miasto zawiera zbyt dużo znaków (maksymalna liczba znaków to
               255)
             contains_html_tags: Miasto nie może zawierać tagów HTML.
             contains_emojis: Miasto nie może zawierać emoji
             contains_url: Miasto nie może zawierać adresu URL
-            unknown_for_zip: Wprowadź właściwe miasto dla %{zip}
+            unknown_for_zip: Wprowadź prawidłowe miasto dla %{zip}
             unknown_for_province: Wprowadź prawidłowe miasto dla %{province}
             unknown_for_zip_and_province: Wprowadź prawidłowe miasto dla %{zip}, %{province}
             contains_mathematical_symbols: Miasto nie może zawierać symboli matematycznych
             contains_restricted_characters: Pole Miasto może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
-            contains_too_many_words: Miasto może zawierać maksymalnie do %{word_count}
-              słów
+              znaki lokalne i znaki specjalne
+            contains_too_many_words: Miasto może zawierać maksymalnie %{word_count}
+              słów (słowa)
             unknown_for_address: Miasto może być nieprawidłowe.
         country:
           label:
@@ -125,14 +125,14 @@ pl:
             optional: Telefon (opcjonalnie)
           errors:
             blank: Wprowadź numer telefonu
-            invalid: Wprowadź prawidłowy numer telefonu
+            invalid: Wpisz prawidłowy numer telefonu
             too_long: Numer telefonu jest zbyt długi (maksymalna liczba znaków to
               255)
             contains_emojis: Numer telefonu nie może zawierać emoji
             contains_mathematical_symbols: Numer telefonu nie może zawierać symboli
               matematycznych
             contains_restricted_characters: Pole Telefon może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
+              znaki lokalne i znaki specjalne
         province:
           label:
             default: Region
@@ -155,7 +155,7 @@ pl:
             invalid_for_country: Wprowadź prawidłowy kod pocztowy dla %{country}
             invalid_for_country_and_province: Wprowadź prawidłowy kod pocztowy dla
               %{province}, %{country}
-            invalid: Wpisz prawidłowy kod pocztowy
+            invalid: Wprowadź prawidłowy kod pocztowy
             too_long: Wartość kodu pocztowego jest zbyt długa
             contains_html_tags: Kod pocztowy nie może zawierać tagów HTML.
             contains_emojis: Kod pocztowy nie może zawierać emoji
@@ -165,7 +165,7 @@ pl:
             contains_mathematical_symbols: Kod pocztowy nie może zawierać symboli
               matematycznych
             contains_restricted_characters: Pole Kod pocztowy może zawierać litery,
-              cyfry, znaki lokalne i znaki specjalne.
+              cyfry, znaki lokalne i znaki specjalne
             invalid_for_province: Wprowadź prawidłowy kod pocztowy dla %{province}
             unknown_for_address: Kod pocztowy może być nieprawidłowy.
         address:

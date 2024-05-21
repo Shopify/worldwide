@@ -14,7 +14,7 @@ sl-SI:
             contains_emojis: Podjetje ne sme vsebovati čustvenih simbolov
             contains_mathematical_symbols: Podjetje ne sme vsebovati matematičnih
               simbolov
-            contains_restricted_characters: Ime podjetja lahko vsebuje le črke, številke,
+            contains_restricted_characters: Podjetje lahko vsebuje le črke, številke,
               lokalne znake in posebne znake
         first_name:
           label:
@@ -60,18 +60,18 @@ sl-SI:
               %{street}, %{zip}.
             contains_mathematical_symbols: Naslov 1 ne sme vsebovati matematičnih
               simbolov
-            contains_restricted_characters: Naslov1 lahko vsebuje le črke, številke,
-              lokalne znake in posebne znake
-            contains_too_many_words: Naslov1 ne sme vsebovati več kot %{word_count}
-              besed
+            contains_restricted_characters: Vrstica za naslov 1 lahko vsebuje le črke,
+              številke, lokalne znake in posebne znake
+            contains_too_many_words: Vrstica za naslov 1 ne sme vsebovati več kot
+              %{word_count} besed
             unknown_for_address: Vrstica za naslov 1 morda ni pravilna.
           warnings:
-            contains_too_many_words: Naslov 1 naj ne vsebuje več kot %{word_count}
+            contains_too_many_words: Vrstica za naslov 1 naj ne vsebuje več kot %{word_count}
               besed
         address2:
           label:
-            default: Stanovanje, apartma itn.
-            optional: Stanovanje, apartma itn. (izbirno)
+            default: Št. stanovanja, apartmaja itn.
+            optional: Št. stanovanja, apartmaja itn. (izbirno)
           errors:
             blank: Vnesite št. stanovanja, apartmaja itn.
             too_long: Naslov v drugi vrstici je predolg (največje dovoljeno št. znakov
@@ -86,32 +86,32 @@ sl-SI:
               %{street}, %{zip}.
             contains_mathematical_symbols: Naslov 2 ne sme vsebovati matematičnih
               simbolov
-            contains_restricted_characters: Naslov2 lahko vsebuje le črke, številke,
-              lokalne znake in posebne znake
-            contains_too_many_words: Naslov2 ne sme vsebovati več kot %{word_count}
-              besed
+            contains_restricted_characters: Vrstica za naslov 2 lahko vsebuje le črke,
+              številke, lokalne znake in posebne znake
+            contains_too_many_words: Vrstica za naslov 2 ne sme vsebovati več kot
+              %{word_count} besed
             unknown_for_address: Vrstica za naslov 2 morda ni pravilna.
           warnings:
-            contains_too_many_words: Naslov 2 naj ne vsebuje več kot %{word_count}
+            contains_too_many_words: Vrstica za naslov 2 naj ne vsebuje več kot %{word_count}
               besed
         city:
           label:
             default: Kraj
             optional: Kraj (izbirno)
           errors:
-            blank: Vnesite mesto
-            too_long: Mesto je predolgo (največje dovoljeno št. znakov je 255)
-            contains_html_tags: Mesto ne sme vsebovati oznak HTML.
-            contains_emojis: Mesto ne sme vsebovati čustvenih simbolov
-            contains_url: Mesto ne sme vsebovati oznak URL
-            unknown_for_zip: Vnesite veljavno mesto za poštno številko %{zip}
-            unknown_for_province: Vnesite veljavno mesto za provinco %{province}
-            unknown_for_zip_and_province: Vnesite veljavno mesto za poštno številko
-              %{zip}, provinco %{province}
+            blank: Vnesite kraj
+            too_long: Ime kraja je predolgo (največje dovoljeno št. znakov je 255)
+            contains_html_tags: Ime kraja ne sme vsebovati oznak HTML.
+            contains_emojis: Ime kraja ne sme vsebovati čustvenih simbolov
+            contains_url: Ime kraja ne sme vsebovati oznak URL
+            unknown_for_zip: Vnesite veljavno ime kraja za poštno številko %{zip}
+            unknown_for_province: Vnesite veljavno ime kraja za provinco %{province}
+            unknown_for_zip_and_province: Vnesite veljavno ime kraja za poštno številko
+              %{zip}, %{province}
             contains_mathematical_symbols: Kraj ne sme vsebovati matematičnih simbolov
             contains_restricted_characters: Ime kraja lahko vsebuje le črke, številke,
               lokalne znake in posebne znake
-            contains_too_many_words: Mesto ne sme vsebovati več kot %{word_count}
+            contains_too_many_words: Ime kraja ne sme vsebovati več kot %{word_count}
               besed
             unknown_for_address: Kraj morda ni pravilen.
         country:
@@ -146,8 +146,8 @@ sl-SI:
             blank: Izberite regijo
             invalid: Vnesite veljavno regijo
             invalid_for_country: Vnesite veljavno regijo za državo %{country}
-            unknown_for_city_and_zip: Vnesite veljavno regijo za mesto %{city}, %{zip}
-            unknown_for_city: Izberite veljavno regijo za mesto %{city}
+            unknown_for_city_and_zip: Vnesite veljavno regijo za kraj %{city}, %{zip}
+            unknown_for_city: Izberite veljavno regijo za kraj %{city}
             unknown_for_zip: Izberite veljavno regijo za poštno številko %{zip}
             unknown_for_address: Regija morda ni pravilna.
         zip:
@@ -159,7 +159,7 @@ sl-SI:
             blocked_address: Ta lokacija ni podprta.
             invalid_for_country: Vnesite veljavno poštno številko za državo %{country}
             invalid_for_country_and_province: Vnesite veljavno poštno številko za
-              območje %{province}, %{country}
+              provinco %{province}, %{country}
             invalid: Vnesite veljavno poštno številko
             too_long: Poštna številka je predolga
             contains_html_tags: Poštna številka ne sme vsebovati oznak HTML.
@@ -171,8 +171,7 @@ sl-SI:
               simbolov
             contains_restricted_characters: Poštna številka lahko vsebuje le črke,
               številke, lokalne znake in posebne znake
-            invalid_for_province: Vnesite veljavno poštno številko za zvezno državo
-              %{province}
+            invalid_for_province: Vnesite veljavno poštno številko za provinco %{province}
             unknown_for_address: Poštna številka morda ni pravilna.
         address:
           errors:
