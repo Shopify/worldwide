@@ -164,3 +164,61 @@ tr:
         address:
           errors:
             may_not_exist: Adres bulunamadı veya mevcut değil
+        street_name:
+          label:
+            default: Sokak
+            optional: Sokak (isteğe bağlı)
+          errors:
+            blank: Bir sokak adı girin
+            too_long: Sokak adı çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis: Sokak adı emoji içeremez
+            contains_mathematical_symbols: Sokak adı matematiksel semboller içeremez
+            contains_restricted_characters: Sokak adı yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: Sokak adı en fazla %{word_count} kelime içerebilir
+            contains_html_tags: Sokak adı HTML etiketleri içeremez.
+            contains_url: Sokak adı URL içeremez.
+            street_unknown_for_zip: "%{zip} için geçerli bir sokak adı girin."
+            unknown_for_address: Sokak adı yanlış olabilir.
+          warnings:
+            contains_too_many_words: Sokak adında %{word_count} adetten az kelime
+              olması önerilir
+        street_number:
+          label:
+            default: Bina numarası
+            optional: Bina numarası (isteğe bağlı)
+          errors:
+            blank: Bina numarası girin
+            too_long: Bina numarası çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis: Bina numarası emoji içeremez
+            contains_mathematical_symbols: Bina numarası matematiksel semboller içeremez
+            contains_restricted_characters: Bina numarası yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+            contains_html_tags: Bina numarası HTML etiketleri içeremez.
+            contains_url: Bina numarası URL içeremez.
+            building_number_invalid: "%{street} %{zip} için girilen kaydın bina numarası
+              bulunamadı."
+            unknown_for_address: Bina numarası yanlış olabilir.
+          warnings:
+            contains_too_many_words: Bina numarasında %{word_count} adetten az kelime
+              olması önerilir
+        neighborhood:
+          label:
+            default: Mahalle
+            optional: Mahalle (isteğe bağlı)
+          errors:
+            blank: Mahalle girin
+            too_long: Mahalle adı çok uzun (maksimum 255 karakter)
+            contains_emojis: Mahalle adı emoji içeremez
+            contains_mathematical_symbols: Mahalle adı matematiksel semboller içeremez
+            contains_restricted_characters: Mahalle adı yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+            contains_too_many_words: Mahalle adı en fazla %{word_count} kelime içerebilir
+            contains_html_tags: Mahalle adı HTML etiketleri içeremez.
+            contains_url: Mahalle adı URL içeremez.
+            unknown_for_city: "%{city} için geçerli bir mahalle adı girin."
+            unknown_for_zip: "%{zip} için geçerli bir mahalle adı girin."
+            unknown_for_address: Mahalle adı yanlış olabilir.
+          warnings:
+            contains_too_many_words: Mahalle adında %{word_count} adetten az kelime
+              olması önerilir

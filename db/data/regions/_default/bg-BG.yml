@@ -175,3 +175,66 @@ bg-BG:
         address:
           errors:
             may_not_exist: Адресът не е открит или не съществува
+        street_name:
+          label:
+            default: Улица
+            optional: Улица (незадължително)
+          errors:
+            blank: Въведете име на улица
+            too_long: "„Улица“ е с твърде голяма дължина (максимумът е 255 знака)"
+            contains_emojis: "„Улица“ не може да съдържа емоджита"
+            contains_mathematical_symbols: "„Улица“ не може да съдържа математически
+              символи"
+            contains_restricted_characters: "„Улица“ може да съдържа само букви, цифри,
+              местни знаци и специални знаци"
+            contains_too_many_words: "„Улица“ не може да съдържа повече от %{word_count}
+              думи"
+            contains_html_tags: "„Улица“ не може да съдържа HTML етикети."
+            contains_url: "„Улица“ не може да съдържа емоджита"
+            street_unknown_for_zip: Въведете валидно име на улица за %{zip}.
+            unknown_for_address: Възможно е улицата да е неправилна.
+          warnings:
+            contains_too_many_words: Препоръчително е „Улица“ да не съдържа повече
+              от %{word_count} думи
+        street_number:
+          label:
+            default: Номер на сграда
+            optional: Номер на сграда (незадължително)
+          errors:
+            blank: Въведете номер на сграда
+            too_long: "„Номер на сграда“ е с твърде голяма дължина (максимумът е 255
+              знака)"
+            contains_emojis: "„Номер на сграда“ не може да съдържа емоджита"
+            contains_mathematical_symbols: "„Номер на сграда“ не може да съдържа математически
+              символи"
+            contains_restricted_characters: "„Номер на сграда“ може да съдържа само
+              букви, цифри, местни знаци и специални знаци"
+            contains_html_tags: "„Номер на сграда“ не може да съдържа HTML етикети."
+            contains_url: "„Номер на сграда“ не може да съдържа URL адрес."
+            building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}.
+            unknown_for_address: Възможно е номерът на сграда да е неправилен.
+          warnings:
+            contains_too_many_words: Препоръчително е „Номер на сграда“ да не съдържа
+              повече от %{word_count} думи
+        neighborhood:
+          label:
+            default: Квартал
+            optional: Квартал (незадължително)
+          errors:
+            blank: Въведете квартал
+            too_long: "„Квартал“ е с твърде голяма дължина (максимумът е 255 знака)"
+            contains_emojis: "„Квартал“ не може да съдържа емоджита"
+            contains_mathematical_symbols: "„Квартал“ не може да съдържа математически
+              символи"
+            contains_restricted_characters: "„Квартал“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+            contains_too_many_words: "„Квартал“ не може да съдържа повече от %{word_count}
+              думи"
+            contains_html_tags: "„Квартал“ не може да съдържа HTML етикети."
+            contains_url: "„Квартал“ не може да съдържа URL адреси."
+            unknown_for_city: Въведете валидно име на квартал за %{city}.
+            unknown_for_zip: Въведете валидно име на квартал за %{zip}.
+            unknown_for_address: Възможно е кварталът да е неправилен.
+          warnings:
+            contains_too_many_words: Препоръчително е „Квартал“ да не съдържа повече
+              от %{word_count} думи

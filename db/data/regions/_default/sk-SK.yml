@@ -171,3 +171,64 @@ sk-SK:
         address:
           errors:
             may_not_exist: Adresa nebola nájdená alebo neexistuje
+        street_name:
+          label:
+            default: Ulica
+            optional: Ulica (voliteľné)
+          errors:
+            blank: Zadajte názov ulice
+            too_long: Ulica je príliš dlhá (maximálne 255 znakov)
+            contains_emojis: Ulica nemôže obsahovať emotikony
+            contains_mathematical_symbols: Ulica nemôže obsahovať matematické značky
+            contains_restricted_characters: Ulica môže obsahovať len písmená, číslice,
+              miestne znaky a špeciálne znaky
+            contains_too_many_words: 'Ulica nemôže mať viac ako tento počet slov:
+              %{word_count}'
+            contains_html_tags: Ulica nemôže obsahovať HTML značky.
+            contains_url: Ulica nemôže obsahovať URL adresy.
+            street_unknown_for_zip: Zadajte platný názov ulice pre PSČ %{zip}.
+            unknown_for_address: Ulica môže byť nesprávna.
+          warnings:
+            contains_too_many_words: 'Ulica by nemala mať viac ako tento počet slov:
+              %{word_count}'
+        street_number:
+          label:
+            default: Číslo budovy
+            optional: Číslo budovy (voliteľné)
+          errors:
+            blank: Zadajte číslo budovy
+            too_long: Číslo budovy je príliš dlhý (maximálne 255 znakov)
+            contains_emojis: Číslo budovy nemôže obsahovať emotikony
+            contains_mathematical_symbols: Číslo budovy nemôže obsahovať matematické
+              značky
+            contains_restricted_characters: Číslo budovy môže obsahovať len písmená,
+              číslice, miestne znaky a špeciálne znaky
+            contains_html_tags: Číslo budovy nemôže obsahovať HTML značky.
+            contains_url: Číslo budovy nemôže obsahovať URL adresy.
+            building_number_invalid: Číslo budovy na ulici %{street} s PSČ %{zip}
+              sa nepodarilo nájsť.
+            unknown_for_address: Číslo budovy môže byť nesprávny.
+          warnings:
+            contains_too_many_words: 'Číslo budovy by nemalo mať viac ako tento počet
+              slov: %{word_count}'
+        neighborhood:
+          label:
+            default: Sídlisko
+            optional: Sídlisko (voliteľné)
+          errors:
+            blank: Zadajte sídlisko
+            too_long: Sídlisko je príliš dlhé (maximálne 255 znakov)
+            contains_emojis: Sídlisko nemôže obsahovať emotikony
+            contains_mathematical_symbols: Sídlisko nemôže obsahovať matematické značky
+            contains_restricted_characters: Sídlisko môže obsahovať len písmená, číslice,
+              miestne znaky a špeciálne znaky
+            contains_too_many_words: 'Sídlisko nemôže mať viac ako tento počet slov:
+              %{word_count}'
+            contains_html_tags: Sídlisko nemôže obsahovať HTML značky.
+            contains_url: Sídlisko nemôže obsahovať URL adresy.
+            unknown_for_city: Zadajte platný názov sídliska pre mesto %{city}.
+            unknown_for_zip: Zadajte platný názov sídliska pre PSČ %{zip}.
+            unknown_for_address: Sídlisko môže byť nesprávne.
+          warnings:
+            contains_too_many_words: 'Sídlisko by nemalo mať viac ako tento počet
+              slov: %{word_count}'

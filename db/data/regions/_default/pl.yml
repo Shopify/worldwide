@@ -171,3 +171,64 @@ pl:
         address:
           errors:
             may_not_exist: Nie znaleziono adresu lub adres nie istnieje
+        street_name:
+          label:
+            default: Ulica
+            optional: Ulica (opcjonalnie)
+          errors:
+            blank: Wpisz nazwę ulicy
+            too_long: Ulica jest za długa (maksymalnie 255 znaków)
+            contains_emojis: Ulica nie może zawierać emoji
+            contains_mathematical_symbols: Ulica nie może zawierać symboli matematycznych
+            contains_restricted_characters: Ulica może zawierać tylko litery, cyfry,
+              znaki lokalne i znaki specjalne
+            contains_too_many_words: Ulica może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags: Ulica nie może zawierać tagów HTML.
+            contains_url: Ulica nie może zawierać adresów URL.
+            street_unknown_for_zip: Wpisz prawidłową nazwę ulicy dla %{zip}.
+            unknown_for_address: Ulica może być nieprawidłowa.
+          warnings:
+            contains_too_many_words: Zaleca się, aby ulica zawierała mniej niż %{word_count}
+              słów (słowa)
+        street_number:
+          label:
+            default: Numer budynku
+            optional: Numer budynku (opcjonalnie)
+          errors:
+            blank: Wpisz numer budynku
+            too_long: Numer budynku jest za długi (maksymalna liczba znaków to 255)
+            contains_emojis: Numer budynku nie może zawierać emoji
+            contains_mathematical_symbols: Numer budynku nie może zawierać symboli
+              matematycznych
+            contains_restricted_characters: Numer budynku może zawierać litery, cyfry,
+              znaki lokalne i znaki specjalne
+            contains_html_tags: Numer budynku nie może zawierać tagów HTML.
+            contains_url: Numer budynku nie może zawierać adresów URL.
+            building_number_invalid: Nie udało się zlokalizować numeru budynku dla
+              %{street}, %{zip}.
+            unknown_for_address: Numer budynku może być nieprawidłowy.
+          warnings:
+            contains_too_many_words: Zaleca się, aby numer budynku zawierał mniej
+              niż %{word_count} słów (słowa)
+        neighborhood:
+          label:
+            default: Dzielnica
+            optional: Dzielnica (opcjonalnie)
+          errors:
+            blank: Wpisz dzielnicę
+            too_long: Dzielnica jest za długa (maksymalnie 255 znaków)
+            contains_emojis: Dzielnica nie może zawierać emoji
+            contains_mathematical_symbols: Dzielnica nie może zawierać symboli matematycznych
+            contains_restricted_characters: Dzielnica może zawierać litery, cyfry,
+              znaki lokalne i znaki specjalne
+            contains_too_many_words: Dzielnica może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags: Dzielnica nie może zawierać tagów HTML.
+            contains_url: Dzielnica nie może zawierać adresów URL.
+            unknown_for_city: Wpisz prawidłową nazwę dzielnicy dla %{city}.
+            unknown_for_zip: Wpisz prawidłową nazwę dzielnicy dla %{zip}.
+            unknown_for_address: Dzielnica może być nieprawidłowa.
+          warnings:
+            contains_too_many_words: Zaleca się, aby dzielnica zawierała mniej niż
+              %{word_count} słów (słowa)

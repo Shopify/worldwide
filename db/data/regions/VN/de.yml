@@ -1,0 +1,27 @@
+---
+de:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Bezirk
+            optional: Bezirk (optional)
+          errors:
+            blank: Gib einen Bezirk ein.
+            too_long: Bezirk ist zu lang (maximal 255 Zeichen).
+            contains_emojis: Bezirk darf keine Emojis enthalten.
+            contains_mathematical_symbols: Bezirk darf keine mathematischen Symbole
+              enthalten.
+            contains_restricted_characters: Bezirk darf nur Buchstaben, Zahlen, Zeichen
+              der lokalen Sprache und Sonderzeichen enthalten.
+            contains_too_many_words: Bezirk darf nicht mehr als %{word_count} Wörter
+              enthalten.
+            contains_html_tags: Bezirk darf keine HTML-Tags enthalten.
+            contains_url: Bezirk darf keine URLs enthalten.
+            unknown_for_city: Gib einen gültigen Bezirknamen für %{city} ein.
+            unknown_for_zip: Gib einen gültigen Bezirknamen für %{zip} ein.
+            unknown_for_address: Bezirk ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass der Bezirk weniger als
+              %{word_count} Wörter enthält.

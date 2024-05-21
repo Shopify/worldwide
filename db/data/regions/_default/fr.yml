@@ -177,3 +177,66 @@ fr:
         address:
           errors:
             may_not_exist: L’adresse est introuvable ou inexistante
+        street_name:
+          label:
+            default: Rue
+            optional: Rue (facultatif)
+          errors:
+            blank: Saisir un nom de rue
+            too_long: La rue est trop longue (le maximum est de 255 caractères)
+            contains_emojis: La rue ne peut pas contenir d’emojis
+            contains_mathematical_symbols: La rue ne peut pas contenir de symboles
+              mathématiques
+            contains_restricted_characters: La rue ne peut contenir que des lettres,
+              des chiffres, des caractères locaux et des caractères spéciaux
+            contains_too_many_words: La rue ne doit pas compter plus de %{word_count} mots
+            contains_html_tags: La rue ne peut pas contenir de balises HTML.
+            contains_url: La rue ne peut pas contenir d’URL.
+            street_unknown_for_zip: Saisir un nom de rue valide pour %{zip}.
+            unknown_for_address: La rue peut être erronée.
+          warnings:
+            contains_too_many_words: Il est conseillé que la rue comporte moins de
+              %{word_count} mots
+        street_number:
+          label:
+            default: Numéro de bâtiment
+            optional: Numéro de bâtiment (facultatif)
+          errors:
+            blank: Saisir un numéro de bâtiment
+            too_long: Le numéro de bâtiment est trop long (le maximum est de 255 caractères)
+            contains_emojis: Le numéro de bâtiment ne peut pas contenir d’emojis
+            contains_mathematical_symbols: le numéro de bâtiment ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters: Le numéro de bâtiment ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_html_tags: Le numéro de bâtiment ne peut pas contenir de balise
+              HTML.
+            contains_url: Le numéro de bâtiment ne peut pas contenir d’URL.
+            building_number_invalid: Impossible de localiser le numéro de bâtiment
+              pour %{street}, %{zip}.
+            unknown_for_address: Le numéro de bâtiment peut être erroné.
+          warnings:
+            contains_too_many_words: Il est conseillé que le champ numéro de bâtiment
+              comporte moins de %{word_count} mots
+        neighborhood:
+          label:
+            default: Quartier
+            optional: Quartier (facultatif)
+          errors:
+            blank: Saisir un quartier
+            too_long: Le quartier est trop long (le maximum est de 255 caractères)
+            contains_emojis: Le quartier ne peut pas contenir d’emojis
+            contains_mathematical_symbols: Le quartier ne peut pas contenir de symboles
+              mathématiques
+            contains_restricted_characters: Le quartier ne peut contenir que des lettres,
+              des chiffres, des caractères locaux et des caractères spéciaux
+            contains_too_many_words: Le quartier ne doit pas comporter plus de %{word_count} mots
+            contains_html_tags: Le quartier ne peut pas contenir de balises HTML.
+            contains_url: Le quartier ne peut pas contenir d’URL.
+            unknown_for_city: Saisir un nom de quartier valide pour %{city}.
+            unknown_for_zip: Saisir un nom de quartier valide pour %{zip}.
+            unknown_for_address: Le quartier peut être erroné.
+          warnings:
+            contains_too_many_words: Il est conseillé que le quartier comporte moins
+              de %{word_count} mots

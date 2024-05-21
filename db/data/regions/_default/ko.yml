@@ -148,3 +148,54 @@ ko:
         address:
           errors:
             may_not_exist: 주소를 찾을 수 없거나 없습니다
+        street_name:
+          label:
+            default: 도로명
+            optional: 도로명(선택 사항)
+          errors:
+            blank: 도로명을 입력하십시오
+            too_long: 도로명이 너무 깁니다(최대 255자)
+            contains_emojis: 도로명에 이모티콘을 포함할 수 없음
+            contains_mathematical_symbols: 도로명에 수학 기호를 포함할 수 없음
+            contains_restricted_characters: 도로명에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
+            contains_too_many_words: 도로명은 %{word_count}단어 이하여야 합니다
+            contains_html_tags: 도로명에 HTML 태그를 포함할 수 없습니다.
+            contains_url: 도로명에 URL을 포함할 수 없습니다.
+            street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하십시오."
+            unknown_for_address: 도로명이 잘못되었을 수 있습니다.
+          warnings:
+            contains_too_many_words: 도로명에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다
+        street_number:
+          label:
+            default: 건물 번호
+            optional: 건물 번호(선택 사항)
+          errors:
+            blank: 건물 번호를 입력하십시오
+            too_long: 건물 번호가 너무 깁니다(최대 255자)
+            contains_emojis: 건물 번호에 이모티콘을 포함할 수 없습니다
+            contains_mathematical_symbols: 건물 번호에 수학 기호를 포함할 수 없음
+            contains_restricted_characters: 건물 번호에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
+            contains_html_tags: 건물 번호에 HTML 태그를 포함할 수 없습니다.
+            contains_url: 건물 번호에 URL을 포함할 수 없습니다.
+            building_number_invalid: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다."
+            unknown_for_address: 건물 번호가 잘못되었을 수 있습니다.
+          warnings:
+            contains_too_many_words: 건물 번호에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다
+        neighborhood:
+          label:
+            default: 이웃
+            optional: 이웃(선택 사항)
+          errors:
+            blank: 이웃을 입력하십시오
+            too_long: 이웃이 너무 깁니다(최대 255자)
+            contains_emojis: 이웃에 이모티콘을 포함할 수 없음
+            contains_mathematical_symbols: 이웃에 수학 기호를 포함할 수 없음
+            contains_restricted_characters: 이웃에는 문자, 숫자, 지역 문자, 특수 문자만 포함할 수 있습니다
+            contains_too_many_words: 이웃은 %{word_count}단어 이하여야 합니다
+            contains_html_tags: 이웃에 HTML 태그를 포함할 수 없습니다.
+            contains_url: 이웃에 URL을 포함할 수 없습니다.
+            unknown_for_city: "%{city}의 올바른 이웃 이름을 입력하십시오."
+            unknown_for_zip: "%{zip}의 올바른 이웃 이름을 입력하십시오."
+            unknown_for_address: 이웃이 잘못되었을 수 있습니다.
+          warnings:
+            contains_too_many_words: 이웃에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다

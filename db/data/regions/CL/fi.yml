@@ -1,0 +1,26 @@
+---
+fi:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Kunta
+            optional: Kunta (valinnainen)
+          errors:
+            blank: Lisää kunta
+            too_long: Kunta on liian pitkä (enintään 255 merkkiä)
+            contains_emojis: Kunta ei voi sisältää emojeita
+            contains_mathematical_symbols: Kunta ei voi sisältää matemaattisia symboleja
+            contains_restricted_characters: Kunta voi sisältää vain kirjaimia, numeroita,
+              paikallisia merkkejä ja erikoismerkkejä
+            contains_too_many_words: Kunta-kentässä voi olla enintään %{word_count}
+              sanaa
+            contains_html_tags: Kunta ei voi sisältää HTML-tunnisteita.
+            contains_url: Kunta ei voi sisältää URL-osoitteita.
+            unknown_for_city: Anna paikkakunnalle %{city} kelvollinen kunnan nimi.
+            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kunnan nimi.
+            unknown_for_address: Kunta voi olla väärä.
+          warnings:
+            contains_too_many_words: Kunta-kentän pituudeksi suositellaan alle %{word_count}
+              sanaa

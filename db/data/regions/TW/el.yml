@@ -1,0 +1,28 @@
+---
+el:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Συνοικία
+            optional: Συνοικία (προαιρετικά)
+          errors:
+            blank: Εισαγάγετε μια συνοικία
+            too_long: Το πεδίο "Συνοικία" είναι πολύ μεγάλο (το μέγιστο όριο είναι
+              255 χαρακτήρες)
+            contains_emojis: Η συνοικία δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols: Η συνοικία δεν μπορεί να περιέχει μαθηματικά
+              σύμβολα
+            contains_restricted_characters: Η συνοικία μπορεί να περιέχει μόνο γράμματα,
+              αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_too_many_words: Η συνοικία δεν μπορεί να περιέχει πάνω από %{word_count}
+              λέξεις
+            contains_html_tags: Η συνοικία δεν μπορεί να περιέχει ετικέτες HTML.
+            contains_url: Η συνοικία δεν μπορεί να περιέχει URL.
+            unknown_for_city: Εισαγάγετε ένα έγκυρο όνομα συνοικίας για %{city}.
+            unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα συνοικίας για %{zip}.
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη συνοικία.
+          warnings:
+            contains_too_many_words: Η συνοικία συνιστάται να έχει λιγότερες από %{word_count}
+              λέξεις

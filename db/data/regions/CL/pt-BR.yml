@@ -1,0 +1,26 @@
+---
+pt-BR:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Município
+            optional: Município (opcional)
+          errors:
+            blank: Insira um município
+            too_long: O município é longo demais (máximo de 255 caracteres)
+            contains_emojis: O município não pode conter emojis
+            contains_mathematical_symbols: O município não pode conter símbolos matemáticos
+            contains_restricted_characters: O município pode conter apenas letras,
+              números, caracteres locais e caracteres especiais
+            contains_too_many_words: O município não pode ter mais de %{word_count}
+              palavras
+            contains_html_tags: O município não pode ter tags HTML.
+            contains_url: O município não pode conter URLs.
+            unknown_for_city: Insira um nome de município válido para %{city}.
+            unknown_for_zip: Insira um nome de município válido para %{zip}.
+            unknown_for_address: Talvez haja um erro no município.
+          warnings:
+            contains_too_many_words: É recomendável que o município tenha menos de
+              %{word_count} palavras

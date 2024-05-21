@@ -169,3 +169,65 @@ id:
         address:
           errors:
             may_not_exist: Alamat tidak ditemukan atau tidak ada
+        street_name:
+          label:
+            default: Jalan
+            optional: Jalan (opsional)
+          errors:
+            blank: Masukkan nama jalan
+            too_long: Nama jalan terlalu panjang (maksimum berisi 255 karakter)
+            contains_emojis: Nama jalan tidak boleh berisi emoji
+            contains_mathematical_symbols: Nama jalan tidak boleh berisi simbol matematika
+            contains_restricted_characters: Nama jalan hanya boleh terdiri dari huruf,
+              angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Nama jalan tidak boleh memuat lebih dari %{word_count}
+              kata
+            contains_html_tags: Nama jalan tidak boleh berisi tag HTML.
+            contains_url: Nama jalan tidak boleh berisi URL.
+            street_unknown_for_zip: Masukkan nama jalan yang valid untuk %{zip}.
+            unknown_for_address: Nama jalan mungkin salah.
+          warnings:
+            contains_too_many_words: Nama jalan sebaiknya berisi kurang dari %{word_count}
+              kata
+        street_number:
+          label:
+            default: Nomor gedung
+            optional: Nomor gedung (opsional)
+          errors:
+            blank: Masukkan nomor gedung
+            too_long: Nomor gedung terlalu panjang (maksimum berisi 255 karakter)
+            contains_emojis: Nomor gedung tidak boleh berisi emoji
+            contains_mathematical_symbols: Nomor gedung tidak boleh berisi simbol
+              matematika
+            contains_restricted_characters: Nomor gedung hanya boleh terdiri dari
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_html_tags: Nomor gedung tidak boleh berisi tag HTML.
+            contains_url: Nomor gedung tidak boleh berisi URL.
+            building_number_invalid: Nomor gedung untuk %{street}, %{zip} tidak dapat
+              ditemukan.
+            unknown_for_address: Nomor gedung mungkin salah.
+          warnings:
+            contains_too_many_words: Nomor gedung sebaiknya berisi kurang dari %{word_count}
+              kata
+        neighborhood:
+          label:
+            default: Perumahan
+            optional: Perumahan (opsional)
+          errors:
+            blank: Masukkan nama perumahan
+            too_long: Nama perumahan terlalu panjang (maksimum berisi 255 karakter)
+            contains_emojis: Nama perumahan tidak boleh berisi emoji
+            contains_mathematical_symbols: Nama perumahan tidak boleh berisi simbol
+              matematika
+            contains_restricted_characters: Nama perumahan hanya boleh terdiri dari
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Nama perumahan tidak boleh memuat lebih dari
+              %{word_count} kata
+            contains_html_tags: Nama perumahan tidak boleh berisi tag HTML.
+            contains_url: Nama perumahan tidak boleh berisi URL.
+            unknown_for_city: Masukkan nama perumahan yang valid untuk %{city}.
+            unknown_for_zip: Masukkan nama perumahan yang valid untuk %{zip}.
+            unknown_for_address: Nama perumahan mungkin salah.
+          warnings:
+            contains_too_many_words: Perumahan sebaiknya berisi kurang dari %{word_count}
+              kata

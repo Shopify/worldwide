@@ -1,0 +1,23 @@
+---
+ko:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: 구역
+            optional: 구역(선택 사항)
+          errors:
+            blank: 구역을 입력하십시오
+            too_long: 구역 이름이 너무 깁니다(최대 255자)
+            contains_emojis: 구역에 이모티콘을 포함할 수 없음
+            contains_mathematical_symbols: 구역에 수학 기호를 포함할 수 없음
+            contains_restricted_characters: 구역에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
+            contains_too_many_words: 구역은 %{word_count}단어 이하여야 합니다
+            contains_html_tags: 구역에 HTML 태그를 포함할 수 없습니다.
+            contains_url: 구역에 URL을 포함할 수 없습니다.
+            unknown_for_city: "%{city}의 올바른 구역 이름을 입력하십시오."
+            unknown_for_zip: "%{zip}의 올바른 구역 이름을 입력하십시오."
+            unknown_for_address: 구역이 잘못되었을 수 있습니다.
+          warnings:
+            contains_too_many_words: 구역에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다

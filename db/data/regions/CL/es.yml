@@ -1,0 +1,27 @@
+---
+es:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Comuna
+            optional: Comuna (opcional)
+          errors:
+            blank: Introduce una comuna.
+            too_long: La comuna es demasiado larga (máximo de 255 caracteres).
+            contains_emojis: La comuna no puede contener emojis.
+            contains_mathematical_symbols: La comuna no puede contener símbolos matemáticos.
+            contains_restricted_characters: La comuna solo puede contener letras,
+              números y caracteres locales y especiales.
+            contains_too_many_words: La comuna no puede tener más de %{word_count}
+              palabras.
+            contains_html_tags: La comuna no puede contener etiquetas HTML.
+            contains_url: La comuna no puede contener URL.
+            unknown_for_city: Introduce un nombre de comuna válido para %{city}.
+            unknown_for_zip: Introduce un nombre de comuna válido para el código postal
+              %{zip}.
+            unknown_for_address: Puede que la comuna no sea correcta.
+          warnings:
+            contains_too_many_words: Se recomienda que la comuna tenga menos de %{word_count}
+              palabras.

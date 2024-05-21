@@ -177,3 +177,67 @@ hr-HR:
         address:
           errors:
             may_not_exist: Adresa nije pronađena ili ne postoji
+        street_name:
+          label:
+            default: Ulica
+            optional: Ulica (neobavezno)
+          errors:
+            blank: Unesite naziv ulice
+            too_long: Naziv ulice je predugačak (dopušteno je najviše 255 znakova)
+            contains_emojis: Naziv ulice ne smije sadržavati emotikone
+            contains_mathematical_symbols: Naziv ulice ne smije sadržavati matematičke
+              simbole
+            contains_restricted_characters: Naziv ulice smije sadržavati samo slova,
+              brojeve, lokalne znakove i posebne znakove
+            contains_too_many_words: 'Naziv ulice smije sadržavati najviše sljedeći
+              broj riječi: %{word_count}'
+            contains_html_tags: Naziv ulice ne smije sadržavati HTML oznake.
+            contains_url: Naziv ulice ne smije sadržavati URL-ove.
+            street_unknown_for_zip: Unesite valjani naziv ulice za %{zip}.
+            unknown_for_address: Ulica možda nije točna.
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv ulice sadrži manje od
+              %{word_count} riječ/i
+        street_number:
+          label:
+            default: Kućni broj
+            optional: Kućni broj (neobavezno)
+          errors:
+            blank: Unesite kućni broj
+            too_long: Kućni broj je predugačak (dopušteno je najviše 255 znakova)
+            contains_emojis: Kućni broj ne smije sadržavati emotikone
+            contains_mathematical_symbols: Kućni broj ne smije sadržavati matematičke
+              simbole
+            contains_restricted_characters: Kućni broj smije sadržavati samo slova,
+              brojeve, lokalne znakove i posebne znakove
+            contains_html_tags: Kućni broj ne smije sadržavati HTML oznake.
+            contains_url: Kućni broj ne smije sadržavati URL-ove.
+            building_number_invalid: Ovaj kućni broj ne postoji u ulici %{street},
+              %{zip}.
+            unknown_for_address: Kućni broj možda nije točan.
+          warnings:
+            contains_too_many_words: Preporučujemo da kućni broj sadrži manje od %{word_count}
+              riječ/i
+        neighborhood:
+          label:
+            default: Stambena četvrt
+            optional: Stambena četvrt (neobavezno)
+          errors:
+            blank: Unesite stambenu četvrt
+            too_long: Naziv stambene četvrti je predugačak (dopušteno je najviše 255
+              znakova)
+            contains_emojis: Naziv stambene četvrti ne smije sadržavati emotikone
+            contains_mathematical_symbols: Naziv stambene četvrti ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters: Naziv stambene četvrti smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_too_many_words: 'Naziv stambene četvrti smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags: Naziv stambene četvrti ne smije sadržavati HTML oznake.
+            contains_url: Naziv stambene četvrti ne smije sadržavati URL-ove.
+            unknown_for_city: Unesite valjani naziv stambene četvrti za %{city}.
+            unknown_for_zip: Unesite valjani naziv stambene četvrti za %{zip}.
+            unknown_for_address: Naziv stambene četvrti možda nije točan.
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv stambene četvrti sadrži
+              manje od %{word_count} riječ/i

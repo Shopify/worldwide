@@ -1,0 +1,27 @@
+---
+da:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrikt
+            optional: Distrikt (valgfrit)
+          errors:
+            blank: Angiv et distrikt
+            too_long: Distrikt er for lang (højst 255 tegn)
+            contains_emojis: Distrikt må ikke indeholde emojis
+            contains_mathematical_symbols: Distrikt må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters: Distrikt må kun indeholde bogstaver, tal,
+              lokale tegn og specialtegn
+            contains_too_many_words: Distrikt må ikke indeholde flere end %{word_count}
+              ord
+            contains_html_tags: Distrikt må ikke indeholde HTML-tags.
+            contains_url: Distrikt må ikke indeholde webadresser.
+            unknown_for_city: Angiv et gyldigt distriktsnavn for %{city}.
+            unknown_for_zip: Angiv et gyldigt distriktsnavn for %{zip}.
+            unknown_for_address: Distrikt kan være forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at distrikt indeholder færre end
+              %{word_count} ord

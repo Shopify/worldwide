@@ -181,3 +181,68 @@ hu:
         address:
           errors:
             may_not_exist: A cím nem található, vagy nem létezik
+        street_name:
+          label:
+            default: Utca
+            optional: Utca (nem kötelező megadni)
+          errors:
+            blank: Add meg az utcanevet
+            too_long: Túl hosszú utcanév (legfeljebb 255 karakter hosszú lehet)
+            contains_emojis: Az utcanév nem tartalmazhat emodzsikat
+            contains_mathematical_symbols: Az utcanév nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters: Az utcanév csak betűket, számokat, helyi
+              karaktereket és különleges karaktereket tartalmazhat
+            contains_too_many_words: Az utcanév legfeljebb %{word_count} szóból állhat
+            contains_html_tags: Az utcanév nem tartalmazhat HTML-címkéket.
+            contains_url: Az utcanév nem tartalmazhat URL-címet.
+            street_unknown_for_zip: 'Olyan utcanevet adj meg, amely megfelel ennek:
+              %{zip}.'
+            unknown_for_address: Vélhetően helytelen az utcanév.
+          warnings:
+            contains_too_many_words: Az utcanév javasolt hossza kevesebb mint %{word_count}
+              szó
+        street_number:
+          label:
+            default: Házszám
+            optional: Hátszám (nem kötelező megadni)
+          errors:
+            blank: Add meg a hátszámot
+            too_long: Túl hosszú a házszám (legfeljebb 255 karakter hosszú lehet).
+            contains_emojis: A házszám nem tartalmazhat emodzsikat.
+            contains_mathematical_symbols: A házszám nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters: A házszám csak betűket, számokat, helyi
+              karaktereket és különleges karaktereket tartalmazhat
+            contains_html_tags: A házszám nem tartalmazhat HTML-címkéket
+            contains_url: A házszám nem tartalmazhat URL-eket.
+            building_number_invalid: 'Nem található ilyen házszám itt: %{street},
+              %{zip}.'
+            unknown_for_address: Vélhetően helytelen a házszám.
+          warnings:
+            contains_too_many_words: A házszám javasolt hossza kevesebb mint %{word_count}
+              szó
+        neighborhood:
+          label:
+            default: Városnegyed
+            optional: Városnegyed (nem kötelező megadni)
+          errors:
+            blank: Add meg a városnegyed nevét
+            too_long: Túl hosszú a városnegyed neve (legfeljebb 255 karakter hosszú
+              lehet)
+            contains_emojis: A városnegyed neve nem tartalmazhat emodzsikat
+            contains_mathematical_symbols: A városnegyed neve nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters: A városnegyed neve csak betűket, számokat,
+              helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_too_many_words: A városnegyed neve legfeljebb %{word_count} szóból
+              állhat
+            contains_html_tags: A városnegyed neve nem tartalmazhat HTML-címkéket.
+            contains_url: A városnegyed neve nem tartalmazhat URL-eket.
+            unknown_for_city: 'Olyan városnegyedet adj meg, amely megfelel ennek:
+              %{city}.'
+            unknown_for_zip: 'Olyan városnegyedet adj meg, amely megfelel ennek: %{zip}.'
+            unknown_for_address: Vélhetően helytelen a városnegyed neve.
+          warnings:
+            contains_too_many_words: A városnegyed nevének javasolt hossza kevesebb
+              mint %{word_count} szó

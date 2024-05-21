@@ -1,0 +1,26 @@
+---
+pt-PT:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrito
+            optional: Distrito (opcional)
+          errors:
+            blank: Introduza um distrito
+            too_long: O distrito é demasiado longo (o máximo são 255 caracteres)
+            contains_emojis: O distrito não pode conter emojis
+            contains_mathematical_symbols: O distrito não pode conter símbolos matemáticos
+            contains_restricted_characters: O distrito pode conter apenas letras,
+              números, caracteres locais e caracteres especiais
+            contains_too_many_words: O distrito não pode ter mais de %{word_count}
+              palavras
+            contains_html_tags: O distrito não pode conter etiquetas HTML.
+            contains_url: O distrito não pode conter URL.
+            unknown_for_city: Introduza um nome de distrito válido para %{city}.
+            unknown_for_zip: Introduza um nome de distrito válido para %{zip}.
+            unknown_for_address: O distrito poderá estar incorreto.
+          warnings:
+            contains_too_many_words: É recomendável que o distrito tenha menos de
+              %{word_count} palavras

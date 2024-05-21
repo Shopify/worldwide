@@ -1,0 +1,26 @@
+---
+fr:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Commune
+            optional: Commune (facultatif)
+          errors:
+            blank: Saisir une commune
+            too_long: La commune est trop longue (le maximum est de 255 caractères)
+            contains_emojis: La commune ne peut pas contenir d’emojis
+            contains_mathematical_symbols: La commune ne peut pas contenir de symboles
+              mathématiques
+            contains_restricted_characters: La commune ne peut contenir que des lettres,
+              des chiffres, des caractères locaux et des caractères spéciaux
+            contains_too_many_words: La commune ne doit pas comporter plus de %{word_count} mots
+            contains_html_tags: La commune ne peut pas contenir de balises HTML.
+            contains_url: La commune ne peut pas contenir d’URL.
+            unknown_for_city: Saisir un nom de commune valide pour %{city}.
+            unknown_for_zip: Saisir un nom de commune valide pour %{zip}.
+            unknown_for_address: La commune peut être erronée.
+          warnings:
+            contains_too_many_words: Il est conseillé que le champ Commune comporte
+              moins de %{word_count} mots

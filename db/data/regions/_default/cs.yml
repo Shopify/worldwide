@@ -167,3 +167,71 @@ cs:
         address:
           errors:
             may_not_exist: Adresa nebyla nalezena nebo neexistuje.
+        street_name:
+          label:
+            default: Ulice
+            optional: Ulice (volitelné)
+          errors:
+            blank: Zadejte název ulice.
+            too_long: Název ulice je příliš dlouhý (maximum je 255 znaků).
+            contains_emojis: Název ulice nemůže obsahovat emoji.
+            contains_mathematical_symbols: Název ulice nemůže obsahovat matematické
+              symboly.
+            contains_restricted_characters: Název ulice může obsahovat pouze písmena,
+              číslice, místní znaky a speciální znaky.
+            contains_too_many_words: 'Název ulice nemůže obsahovat více než tento
+              počet slov: %{word_count}.'
+            contains_html_tags: Název ulice nemůže obsahovat HTML tagy.
+            contains_url: Název ulice nemůže obsahovat adresy URL.
+            street_unknown_for_zip: 'Zadejte platný název ulice pro: %{zip}.'
+            unknown_for_address: Ulice může být nesprávná.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby název ulice obsahoval méně
+              než tento počet slov: %{word_count}.'
+        street_number:
+          label:
+            default: Číslo budovy
+            optional: Číslo budovy (volitelné)
+          errors:
+            blank: Zadejte číslo budovy.
+            too_long: Číslo budovy je příliš dlouhé (maximum je 255 znaků).
+            contains_emojis: Číslo budovy nemůže obsahovat emoji.
+            contains_mathematical_symbols: Číslo budovy nemůže obsahovat matematické
+              symboly.
+            contains_restricted_characters: Číslo budovy může obsahovat pouze písmena,
+              číslice, místní znaky a speciální znaky.
+            contains_html_tags: Číslo budovy nemůže obsahovat HTML tagy.
+            contains_url: Číslo budovy nemůže obsahovat adresy URL.
+            building_number_invalid: 'Nepovedlo se vyhledat číslo budovy pro: %{street},
+              %{zip}.'
+            unknown_for_address: Číslo budovy může být nesprávné.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby číslo budovy obsahovalo méně
+              než tento počet slov: %{word_count}.'
+        neighborhood:
+          label:
+            default: Samosprávná jednotka města
+            optional: Samosprávná jednotka města (volitelné)
+          errors:
+            blank: Zadejte samosprávnou jednotku města.
+            too_long: Název samosprávné jednotky města je příliš dlouhý (maximálně
+              255 znaků).
+            contains_emojis: Název samosprávné jednotky města nemůže obsahovat emoji.
+            contains_mathematical_symbols: Název samosprávné jednotky města nemůže
+              obsahovat matematické symboly.
+            contains_restricted_characters: Název samosprávné jednotky města může
+              obsahovat pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_too_many_words: 'Název samosprávné jednotky města nemůže obsahovat
+              více než tento počet slov: %{word_count}.'
+            contains_html_tags: Název samosprávné jednotky města nemůže obsahovat
+              HTML tagy.
+            contains_url: Název samosprávné jednotky města nemůže obsahovat adresy
+              URL.
+            unknown_for_city: 'Zadejte platný název samosprávné jednotky města pro:
+              %{city}.'
+            unknown_for_zip: 'Zadejte platný název samosprávné jednotky města pro:
+              %{zip}.'
+            unknown_for_address: Samosprávná jednotka města může být nesprávná.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby název samosprávné jednotky
+              města obsahoval méně než tento počet slov: %{word_count}.'

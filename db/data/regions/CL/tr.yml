@@ -1,0 +1,25 @@
+---
+tr:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Belde
+            optional: Belde (isteğe bağlı)
+          errors:
+            blank: Belde girin
+            too_long: Belde adı çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis: Belde adı emoji içeremez
+            contains_mathematical_symbols: Belde adı matematiksel semboller içeremez
+            contains_restricted_characters: Belde adı yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: Belde adı en fazla %{word_count} kelime içerebilir
+            contains_html_tags: Belde adı HTML etiketleri içeremez.
+            contains_url: Belde adı URL içeremez.
+            unknown_for_city: "%{city} için geçerli bir belde adı girin."
+            unknown_for_zip: "%{zip} için geçerli bir belde adı girin."
+            unknown_for_address: Belde adı yanlış olabilir.
+          warnings:
+            contains_too_many_words: Belde adında %{word_count} adetten az kelime
+              olması önerilir

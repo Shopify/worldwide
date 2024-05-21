@@ -1,0 +1,26 @@
+---
+nl:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: District
+            optional: District (optioneel)
+          errors:
+            blank: Vul een district in
+            too_long: District is te lang (mag maximaal 255 tekens zijn)
+            contains_emojis: District mag geen emoji's bevatten
+            contains_mathematical_symbols: District mag geen wiskundige symbolen bevatten
+            contains_restricted_characters: District mag alleen letters, cijfers,
+              lokale tekens en speciale tekens bevatten
+            contains_too_many_words: District mag niet langer zijn dan %{word_count}
+              woorden
+            contains_html_tags: District mag geen HTML-tags bevatten.
+            contains_url: District mag geen URL's bevatten.
+            unknown_for_city: Vul een geldige districtnaam in voor %{city}.
+            unknown_for_zip: Vul een geldige districtnaam in voor %{zip}.
+            unknown_for_address: District is mogelijk onjuist.
+          warnings:
+            contains_too_many_words: Geef minder dan %{word_count} woorden op voor
+              district

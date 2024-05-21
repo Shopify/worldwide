@@ -1,0 +1,25 @@
+---
+tr:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Semt
+            optional: Semt (isteğe bağlı)
+          errors:
+            blank: Bir semt girin
+            too_long: Semt adı çok uzun (maksimum 255 karakter olmalıdır)
+            contains_emojis: Semt adı emoji içeremez
+            contains_mathematical_symbols: Semt adı matematiksel semboller içeremez
+            contains_restricted_characters: Semt adı yalnızca harfler, sayılar, yerel
+              karakterler ve özel karakterler içerebilir
+            contains_too_many_words: Semt adı en fazla %{word_count} kelime içerebilir
+            contains_html_tags: Semt adı HTML etiketleri içeremez.
+            contains_url: Semt adı URL içeremez.
+            unknown_for_city: "%{city} için geçerli bir semt adı girin."
+            unknown_for_zip: "%{zip} için geçerli bir semt adı girin."
+            unknown_for_address: Semt adı yanlış olabilir.
+          warnings:
+            contains_too_many_words: Semt adında %{word_count} adetten az kelime olması
+              önerilir

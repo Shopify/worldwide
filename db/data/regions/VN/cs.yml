@@ -1,0 +1,27 @@
+---
+cs:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Městská čtvrť
+            optional: Městská čtvrť (volitelné)
+          errors:
+            blank: Zadejte městskou čtvrť.
+            too_long: Název městské čtvrti je příliš dlouhý (maximum je 255 znaků).
+            contains_emojis: Název městské čtvrti nemůže obsahovat emoji.
+            contains_mathematical_symbols: Název městské čtvrti nemůže obsahovat matematické
+              symboly.
+            contains_restricted_characters: Název městské čtvrti může obsahovat pouze
+              písmena, číslice, místní znaky a speciální znaky.
+            contains_too_many_words: 'Název městské čtvrti nemůže obsahovat více než
+              tento počet slov: %{word_count}.'
+            contains_html_tags: Název městské čtvrti nemůže obsahovat HTML tagy.
+            contains_url: Název městské čtvrti nemůže obsahovat adresy URL.
+            unknown_for_city: 'Zadejte platný název městské čtvrti pro: %{city}.'
+            unknown_for_zip: 'Zadejte platný název městské čtvrti pro: %{zip}.'
+            unknown_for_address: Městská čtvrť může být nesprávná.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby název městské čtvrti obsahoval
+              méně než tento počet slov: %{word_count}.'

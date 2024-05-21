@@ -1,0 +1,27 @@
+---
+sv:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrikt
+            optional: Distrikt (valfritt)
+          errors:
+            blank: Ange ett distrikt
+            too_long: Distriktsnamnet är för långt (max. 255 tecken)
+            contains_emojis: Distrikt får inte innehålla emojier
+            contains_mathematical_symbols: Distrikt får inte innehålla matematiska
+              symboler
+            contains_restricted_characters: Distrikt får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            contains_too_many_words: Distrikt får inte innehålla fler än %{word_count}
+              ord
+            contains_html_tags: Distrikt får inte innehålla HTML-taggar.
+            contains_url: Distrikt får inte innehålla URL:er.
+            unknown_for_city: Ange ett giltigt distriktsnamn för %{city}.
+            unknown_for_zip: Ange ett giltigt distriktsnamn för %{zip}.
+            unknown_for_address: Distriktet kan vara felaktigt.
+          warnings:
+            contains_too_many_words: Vi rekommenderar att distriktet består av färre
+              än %{word_count} ord

@@ -1,0 +1,24 @@
+---
+vi:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Quận
+            optional: Quận (không bắt buộc)
+          errors:
+            blank: Nhập quận
+            too_long: Quận quá dài (tối đa 255 ký tự)
+            contains_emojis: Quận không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Quận không được chứa ký hiệu toán học
+            contains_restricted_characters: Quận chỉ được chứa chữ cái, chữ số, ký
+              tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Quận không được có nhiều hơn %{word_count} từ
+            contains_html_tags: Quận không được chứa thẻ HTML.
+            contains_url: Quận không được chứa URL.
+            unknown_for_city: Nhập tên quận hợp lệ cho %{city}.
+            unknown_for_zip: Nhập tên quận hợp lệ cho %{zip}.
+            unknown_for_address: Quận có thể không chính xác.
+          warnings:
+            contains_too_many_words: Quận nên có tối đa %{word_count} từ

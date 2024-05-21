@@ -178,3 +178,65 @@ ru:
         address:
           errors:
             may_not_exist: Адрес не найден или его не существует
+        street_name:
+          label:
+            default: Улица
+            optional: Улица (необязательно)
+          errors:
+            blank: Укажите название улицы
+            too_long: Название улицы слишком длинное (должно содержать не больше 255 символов)
+            contains_emojis: Название улицы не может содержать емодзи
+            contains_mathematical_symbols: Название улицы не может содержать математические
+              символы
+            contains_restricted_characters: Поле «Название улицы» может содержать
+              только буквы, цифры, а также местные и специальные символы
+            contains_too_many_words: Название улицы не может превышать %{word_count} сл.
+            contains_html_tags: Название улицы не может содержать HTML-теги.
+            contains_url: Название улицы не может содержать URL-адреса.
+            street_unknown_for_zip: Укажите действительное название улицы для %{zip}.
+            unknown_for_address: Название улицы может быть указано неправильно.
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле названия улицы не
+              более %{word_count} сл.
+        street_number:
+          label:
+            default: Номер дома
+            optional: Номер дома (необязательно)
+          errors:
+            blank: Укажите номер дома
+            too_long: Номер дома слишком длинный (должно содержать не больше 255 символов)
+            contains_emojis: Номер дома не может содержать емодзи
+            contains_mathematical_symbols: Номер дома не может содержать математические
+              символы
+            contains_restricted_characters: Поле «Номер дома» может содержать только
+              буквы, цифры, а также местные и специальные символы
+            contains_html_tags: Номер дома не может содержать HTML-теги.
+            contains_url: Номер дома не может содержать URL-адреса.
+            building_number_invalid: 'Не удалось найти номер дома по этому адресу:
+              %{street}, %{zip}.'
+            unknown_for_address: Номер дома может быть указан неправильно.
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле «Номер дома» не
+              более %{word_count} сл.
+        neighborhood:
+          label:
+            default: Район
+            optional: Район (необязательно)
+          errors:
+            blank: Укажите район
+            too_long: Название района слишком длинное (должно содержать не больше
+              255 символов)
+            contains_emojis: Название района не может содержать емодзи
+            contains_mathematical_symbols: Название района не может содержать математические
+              символы
+            contains_restricted_characters: Поле «Район» может содержать только буквы,
+              цифры, а также местные и специальные символы
+            contains_too_many_words: Название района не может превышать %{word_count} сл.
+            contains_html_tags: Название района не может содержать HTML-теги.
+            contains_url: Название района не может содержать URL-адреса.
+            unknown_for_city: Укажите действительное название района для %{city}.
+            unknown_for_zip: Укажите действительное название района для %{zip}.
+            unknown_for_address: Название района может быть указано неправильно.
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле названия района
+              не более %{word_count} сл.

@@ -166,3 +166,64 @@ hi:
         address:
           errors:
             may_not_exist: पता नहीं मिला या यहां मौजूद नहीं है
+        street_name:
+          label:
+            default: सड़क
+            optional: सड़क (वैकल्पिक)
+          errors:
+            blank: सड़क का नाम डालें
+            too_long: सड़क का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            contains_emojis: सड़क के नाम में इमोजी नहीं हो सकते
+            contains_mathematical_symbols: सड़क के नाम में गणितीय चिह्न नहीं हो सकते
+            contains_restricted_characters: सड़क के नाम में सिर्फ़ अक्षर, संख्या, लोकल
+              कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_too_many_words: सड़क के नाम में %{word_count} से ज़्यादा शब्द नहीं
+              हो सकते
+            contains_html_tags: सड़क के नाम में HTML टैग नहीं हो सकते.
+            contains_url: सड़क के नाम में URL नहीं हो सकते.
+            street_unknown_for_zip: "%{zip} के लिए सड़क का एक मान्य नाम डालें."
+            unknown_for_address: सड़क का नाम गलत हो सकता है.
+          warnings:
+            contains_too_many_words: इस बात का सुझाव दिया जाता है कि सड़क के नाम में
+              %{word_count} से कम शब्द होने चाहिए
+        street_number:
+          label:
+            default: बिल्डिंग नंबर
+            optional: बिल्डिंग नंबर (वैकल्पिक)
+          errors:
+            blank: बिल्डिंग नंबर डालें
+            too_long: बिल्डिंग नंबर बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            contains_emojis: बिल्डिंग नंबर में इमोजी नहीं हो सकते
+            contains_mathematical_symbols: बिल्डिंग नंबर में गणितीय चिह्न नहीं हो
+              सकते
+            contains_restricted_characters: बिल्डिंग नंबर में सिर्फ़ अक्षर, संख्या,
+              लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_html_tags: बिल्डिंग नंबर में HTML टैग नहीं हो सकते.
+            contains_url: बिल्डिंग नंबर में URL नहीं हो सकते.
+            building_number_invalid: "%{zip}, %{street} के लिए बिल्डिंग नंबर नहीं
+              मिल सका."
+            unknown_for_address: बिल्डिंग नंबर गलत हो सकता है.
+          warnings:
+            contains_too_many_words: इस बात का सुझाव दिया जाता है कि बिल्डिंग नंबर
+              में %{word_count} से कम शब्द होने चाहिए
+        neighborhood:
+          label:
+            default: पड़ोसी का नाम
+            optional: पड़ोसी का नाम (वैकल्पिक)
+          errors:
+            blank: पड़ोसी का नाम डालें
+            too_long: पड़ोसी का नाम बहुत लंबा नहीं हो सकता (अधिकतम 255 कैरेक्टर)
+            contains_emojis: पड़ोसी के नाम में इमोजी नहीं हो सकते
+            contains_mathematical_symbols: पड़ोसी के नाम में गणितीय चिह्न नहीं हो सकते
+            contains_restricted_characters: पड़ोसी के नाम में सिर्फ़ अक्षर, संख्या,
+              लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_too_many_words: पड़ोसी के नाम में %{word_count} से ज़्यादा शब्द
+              नहीं हो सकते
+            contains_html_tags: पड़ोसी के नाम में HTML टैग नहीं हो सकते.
+            contains_url: पड़ोसी के नाम में URL नहीं हो सकते.
+            unknown_for_city: "%{city} के लिए पड़ोसी का एक मान्य नाम डालें."
+            unknown_for_zip: "%{zip} के लिए पड़ोसी का एक मान्य नाम डालें."
+            unknown_for_address: पड़ोसी का नाम गलत हो सकता है.
+          warnings:
+            contains_too_many_words: इस बात का सुझाव दिया जाता है कि पड़ोसी के नाम
+              में %{word_count} से कम शब्द होने चाहिए

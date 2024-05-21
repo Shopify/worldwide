@@ -1,0 +1,28 @@
+---
+lt-LT:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Rajonas
+            optional: Rajonas (pasirinktinai)
+          errors:
+            blank: Įveskite rajoną
+            too_long: Rajono pavadinimas yra per ilgas (turi sudaryti ne daugiau kaip
+              255 simboliai)
+            contains_emojis: Rajono pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols: Rajono pavadinime negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Rajono pavadinimą gali sudaryti tik raidės,
+              skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Rajono pavadinimo negali sudaryti daugiau nei
+              %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Rajono pavadinime negali būti naudojamos HTML žymės.
+            contains_url: Rajono pavadinime negali būti naudojami URL.
+            unknown_for_city: Įveskite rajono pavadinimą, atitinkantį miestą %{city}.
+            unknown_for_zip: Įveskite rajono pavadinimą, atitinkantį pašto kodą %{zip}.
+            unknown_for_address: Rajonas gali būti neteisingas.
+          warnings:
+            contains_too_many_words: Patartina, kad rajono pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)

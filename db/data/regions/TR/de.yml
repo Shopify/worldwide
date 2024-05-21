@@ -1,0 +1,27 @@
+---
+de:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: District
+            optional: District (optional)
+          errors:
+            blank: Gib einen District ein.
+            too_long: District ist zu lang (maximal 255 Zeichen).
+            contains_emojis: District darf keine Emojis enthalten.
+            contains_mathematical_symbols: District darf keine mathematischen Symbole
+              enthalten.
+            contains_restricted_characters: District darf nur Buchstaben, Zahlen,
+              Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_too_many_words: District darf nicht mehr als %{word_count} Wörter
+              enthalten.
+            contains_html_tags: District darf keine HTML-Tags enthalten.
+            contains_url: District darf keine URLs enthalten.
+            unknown_for_city: Gib einen gültigen Districtnamen für %{city} ein.
+            unknown_for_zip: Gib einen gültigen Districtnamen für %{zip} ein.
+            unknown_for_address: District ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass der District weniger
+              als %{word_count} Wörter enthält.

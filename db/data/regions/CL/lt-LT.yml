@@ -1,0 +1,28 @@
+---
+lt-LT:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Komuna
+            optional: Komuna (pasirinktinai)
+          errors:
+            blank: Įveskite komuną
+            too_long: Komunos pavadinimas yra per ilgas (turi sudaryti ne daugiau
+              kaip 255 simboliai)
+            contains_emojis: Komunos pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols: Komunos pavadinime negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Komunos pavadinimą gali sudaryti tik raidės,
+              skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Komunos pavadinimo negali sudaryti daugiau nei
+              %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Komunos pavadinime negali būti naudojamos HTML žymės.
+            contains_url: Komunos pavadinime negali būti naudojami URL.
+            unknown_for_city: Įveskite komunos pavadinimą, atitinkantį miestą %{city}.
+            unknown_for_zip: Įveskite komunos pavadinimą, atitinkantį pašto kodą %{zip}.
+            unknown_for_address: Komuna gali būti neteisinga.
+          warnings:
+            contains_too_many_words: Patartina, kad komunos pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)
