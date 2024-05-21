@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add missing `address1` and `address1_with_unit` formatting keys for GB [#160](https://github.com/Shopify/worldwide/pull/160).
+
 ---
 
 ## [0.12.1] - 2024-05-17
