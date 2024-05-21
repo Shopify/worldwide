@@ -8,10 +8,10 @@ ko:
             default: 회사
             optional: 회사(선택 사항)
           errors:
-            blank: 회사명 입력
-            too_long: 회사명이 너무 깁니다(최대 255자).
+            blank: 회사명을 입력하세요
+            too_long: 회사명이 너무 깁니다(최대 255자)
             contains_html_tags: 회사에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 회사에 이모티콘을 포함할 수 없음
+            contains_emojis: 회사에 이모티콘을 포함할 수 없습니다
             contains_mathematical_symbols: 회사에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 회사에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
         first_name:
@@ -19,10 +19,10 @@ ko:
             default: 이름
             optional: 이름(선택 사항)
           errors:
-            blank: 이름 입력
-            too_long: 이름이 너무 깁니다(최대 255자).
+            blank: 이름을 입력하세요
+            too_long: 이름이 너무 깁니다(최대 255자)
             contains_html_tags: 이름에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 이름에 이모티콘을 포함할 수 없음
+            contains_emojis: 이름에 이모티콘을 포함할 수 없습니다
             contains_url: 이름에 URL을 포함할 수 없습니다.
             contains_mathematical_symbols: 이름에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 이름에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
@@ -31,10 +31,10 @@ ko:
             default: 성
             optional: 성(선택 사항)
           errors:
-            blank: 성 입력
-            too_long: 성이 너무 깁니다(최대 255자).
+            blank: 성을 입력하세요
+            too_long: 성이 너무 깁니다(최대 255자)
             contains_html_tags: 성에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 성에 이모티콘을 포함할 수 없음
+            contains_emojis: 성에 이모티콘을 포함할 수 없습니다
             contains_url: 성에 URL을 포함할 수 없습니다.
             contains_mathematical_symbols: 성에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 성에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
@@ -43,32 +43,32 @@ ko:
             default: 주소
             optional: 주소(선택 사항)
           errors:
-            blank: 주소 입력
-            too_long: 첫 번째 주소 줄이 너무 깁니다(최대 255자).
+            blank: 주소를 입력하세요
+            too_long: 첫 번째 주소 줄이 너무 깁니다(최대 255자)
             contains_html_tags: 주소1에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 주소1에 이모티콘을 포함할 수 없음
+            contains_emojis: 주소1에 이모티콘을 포함할 수 없습니다
             contains_url: 주소 1에 URL을 포함할 수 없습니다.
-            missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하십시오.
-            street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하십시오."
+            missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하세요.
+            street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하세요."
             building_number_invalid: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다."
             contains_mathematical_symbols: 주소 1에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 주소1에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
             contains_too_many_words: 주소 1은 %{word_count}단어 이하여야 합니다
             unknown_for_address: 주소란 1이 잘못되었을 수 있습니다.
           warnings:
-            contains_too_many_words: 주소 입력란 1은 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다.
+            contains_too_many_words: 주소 입력란 1은 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다
         address2:
           label:
             default: 아파트, 동/호수 등
             optional: 아파트, 동/호수 등(선택 사항)
           errors:
-            blank: 아파트, 동/호수 등 입력
-            too_long: 두 번째 주소 줄이 너무 깁니다(최대 255자).
+            blank: 아파트, 동/호수 등을 입력하세요
+            too_long: 두 번째 주소 줄이 너무 깁니다(최대 255자)
             contains_html_tags: 주소2에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 주소2에 이모티콘을 포함할 수 없음
+            contains_emojis: 주소2에 이모티콘을 포함할 수 없습니다
             contains_url: 주소 2에 URL을 포함할 수 없습니다.
-            missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하십시오.
-            street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하십시오."
+            missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하세요.
+            street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하세요."
             building_number_invalid: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다."
             contains_mathematical_symbols: 주소 2에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 주소2에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
@@ -81,17 +81,17 @@ ko:
             default: 구/군/시
             optional: 구/군/시(선택 사항)
           errors:
-            blank: 구/군/시 입력
-            too_long: 도시 이름이 너무 깁니다(최대 255자).
-            contains_html_tags: 시에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 시에 이모티콘을 포함할 수 없음
+            blank: 구/군/시를 입력하세요
+            too_long: 구/군/시 이름이 너무 깁니다(최대 255자)
+            contains_html_tags: 구/군/시에 HTML 태그를 포함할 수 없습니다.
+            contains_emojis: 구/군/시에 이모티콘을 포함할 수 없습니다
             contains_url: 구/군/시에 URL을 포함할 수 없습니다
-            unknown_for_zip: "%{zip}에 대해 올바른 구/군/시를 입력하십시오"
-            unknown_for_province: "%{province}에 대해 올바른 구/군/시를 입력하십시오"
-            unknown_for_zip_and_province: "%{zip}, %{province}에 대해 올바른 구/군/시를 입력하십시오"
+            unknown_for_zip: "%{zip}에 대해 올바른 도시를 입력하세요"
+            unknown_for_province: "%{province}에 대해 올바른 도시를 입력하세요"
+            unknown_for_zip_and_province: "%{zip}, %{province}에 대해 올바른 도시를 입력하세요"
             contains_mathematical_symbols: 구/군/시에 수학 기호를 포함할 수 없음
-            contains_restricted_characters: 시에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
-            contains_too_many_words: 시는 %{word_count}단어 이하여야 합니다
+            contains_restricted_characters: 구/군/시에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
+            contains_too_many_words: 구/군/시는 %{word_count}단어 이하여야 합니다
             unknown_for_address: 시/도가 잘못되었을 수 있습니다.
         country:
           label:
@@ -99,18 +99,18 @@ ko:
             optional: 국가/지역(선택 사항)
           errors:
             blank: 국가/지역 선택
-            not_supported: 현재 이 국가/지역으로의 배송이 지원되지 않습니다. 새 주소를 입력하고 다시 시도하십시오.
-            invalid: 유효한 국가/지역을 입력하십시오
-            invalid_for_zip: 이 우편 번호에 대해 유효한 국가/지역을 입력하십시오
+            not_supported: 현재 이 국가/지역을 지원하지 않습니다. 새 주소를 입력하고 다시 시도하세요.
+            invalid: 유효한 국가/지역을 입력하세요
+            invalid_for_zip: 이 우편 번호에 대해 유효한 국가/지역을 입력하세요
         phone:
           label:
             default: 전화
-            optional: 전화(선택 사항)
+            optional: 전화 (선택 사항)
           errors:
-            blank: 전화번호를 입력하십시오.
-            invalid: 유효한 전화번호를 입력하십시오.
+            blank: 전화번호를 입력하세요
+            invalid: 유효한 전화번호를 입력하세요
             too_long: 전화번호가 너무 깁니다(최대 255자).
-            contains_emojis: 전화번호에 이모티콘을 포함할 수 없음
+            contains_emojis: 전화번호에 이모티콘을 포함할 수 없습니다
             contains_mathematical_symbols: 전화 번호에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 전화번호에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
         province:
@@ -120,30 +120,30 @@ ko:
           errors:
             blank: 지역 선택
             invalid: 유효한 지역을 입력하세요
-            invalid_for_country: "%{country}의 유효한 지역을 입력하십시오"
-            unknown_for_city_and_zip: "%{city}, %{zip}에 대해 올바른 지역을 입력하십시오"
-            unknown_for_city: "%{city}에 대해 올바른 지역을 선택하십시오"
-            unknown_for_zip: "%{zip}에 대해 유효한 지역을 선택하십시오"
+            invalid_for_country: "%{country}의 유효한 지역을 입력하세요"
+            unknown_for_city_and_zip: "%{city}, %{zip}에 대해 올바른 지역을 입력하세요"
+            unknown_for_city: "%{city}에 대해 올바른 지역을 선택하세요"
+            unknown_for_zip: "%{zip}에 대해 올바른 지역을 선택하세요"
             unknown_for_address: 지역이 잘못되었을 수 있습니다.
         zip:
           label:
             default: 우편 번호
             optional: 우편 번호(선택 사항)
           errors:
-            blank: 우편 번호 입력
+            blank: 우편 번호를 입력하세요
             blocked_address: 해당 위치는 지원되지 않습니다.
-            invalid_for_country: "%{country}의 유효한 우편 번호 입력"
-            invalid_for_country_and_province: "%{country}, %{province}의 유효한 우편 번호를
-              입력하십시오."
-            invalid: 유효한 우편 번호 입력
+            invalid_for_country: "%{country}의 유효한 우편 번호를 입력하세요"
+            invalid_for_country_and_province: "%{province}, %{country}에 대해 올바른 우편
+              번호를 입력하세요"
+            invalid: 유효한 우편 번호를 입력하세요
             too_long: 우편 번호 값이 너무 깁니다.
             contains_html_tags: 우편 번호에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 우편 번호에 이모티콘을 포함할 수 없음
-            not_supported: 현재 이 국가/지역을 지원하지 않습니다. 새 주소를 입력하고 다시 시도하십시오.
-            unknown_for_province: "%{province}에 대해 올바른 우편 번호를 입력하십시오"
+            contains_emojis: 우편 번호에 이모티콘을 포함할 수 없습니다
+            not_supported: 현재 이 국가/지역을 지원하지 않습니다. 새 주소를 입력하고 다시 시도하세요.
+            unknown_for_province: "%{province}의 유효한 우편 번호를 입력하세요"
             contains_mathematical_symbols: 우편 번호에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 우편 번호에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
-            invalid_for_province: "%{province}의 유효한 우편 번호 입력"
+            invalid_for_province: "%{province}의 유효한 우편 번호를 입력하세요"
             unknown_for_address: 우편 번호가 잘못되었을 수 있습니다.
         address:
           errors:
