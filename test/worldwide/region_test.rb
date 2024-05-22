@@ -13,6 +13,7 @@ module Worldwide
       assert_equal false, region.deprecated?
       assert_equal false, region.has_zip?
       assert_equal "ZZ", region.iso_code
+      assert_empty region.localization_keys.to_h
       assert_nil region.legacy_code
       assert_nil region.legacy_name
       assert_empty(region.format)
@@ -292,6 +293,15 @@ module Worldwide
         us: "US",
       }.each do |region_code, expected_country|
         assert_equal expected_country, Worldwide.region(code: region_code).associated_country.iso_code
+      end
+    end
+
+    test "localization_keys returns the expected result" do
+      {
+        ZW: { "zone" => "region" },
+        CA: {},
+      }.each do |region_code, expected_localization_keys|
+        assert_equal(expected_localization_keys, Worldwide.region(code: region_code).localization_keys.to_h)
       end
     end
 

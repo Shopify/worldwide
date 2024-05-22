@@ -116,6 +116,8 @@ module Worldwide
     # This name should _never_ be shown in the user interface.
     attr_reader :legacy_name
 
+    attr_accessor :localization_keys
+
     # Other names that may be used to refer to this region.
     # E.g., "Czech Republic" is also known as "Czechia".
     attr_accessor :name_alternates
@@ -245,6 +247,7 @@ module Worldwide
       @group = nil
       @group_name = nil
       @languages = []
+      @localization_keys = LocalizationKeys.new({}.freeze)
       @neighbours = []
       @partial_zip_regex = nil
       @phone_number_prefix = nil

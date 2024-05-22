@@ -38,6 +38,7 @@ require "worldwide/time_zone"
 require "worldwide/units"
 require "worldwide/util"
 require "worldwide/zip"
+require "worldwide/localization_keys"
 
 module Worldwide
   @currencies_cache = {}
