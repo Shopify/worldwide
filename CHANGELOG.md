@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add Address#concatenated_address1 and Address#concatenated_address2 methods [#158](https://github.com/Shopify/worldwide/pull/158)
 - Updated root translation keys for regional locales `bg-BG`, `hr-HR`, `lt-LT`, `ro-RO`, `sk-SK`, `sl-SI`  to the base locale (e.g. `bg`) [#164](https://github.com/Shopify/worldwide/pull/164).
+- Remove city from UAE address form and enable city autofill [#159](https://github.com/Shopify/worldwide/pull/159)
 
 ## [0.12.2] - 2024-05-21
 
