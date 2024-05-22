@@ -298,8 +298,9 @@ module Worldwide
 
     test "localization_keys returns the expected result" do
       {
+        CA: { "address2" => "apt_unit_number", "zone" => "province" },
+        US: { "postal_code" => "zip_code", "zone" => "state" },
         ZW: { "zone" => "region" },
-        CA: {},
       }.each do |region_code, expected_localization_keys|
         assert_equal(expected_localization_keys, Worldwide.region(code: region_code).localization_keys.to_h)
       end
