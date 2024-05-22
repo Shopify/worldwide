@@ -11,7 +11,10 @@ module Worldwide
       :city,
       :province_code,
       :country_code,
-      :phone
+      :phone,
+      :street_name,
+      :street_number,
+      :neighborhood
 
     def initialize(
       first_name: nil,
@@ -23,7 +26,10 @@ module Worldwide
       city: nil,
       province_code: nil,
       country_code: "ZZ", # Unknown region
-      phone: nil
+      phone: nil,
+      street_name: nil,
+      street_number: nil,
+      neighborhood: nil
     )
       @first_name = first_name
       @last_name = last_name
@@ -35,6 +41,9 @@ module Worldwide
       @province_code = province_code&.to_s&.upcase
       @country_code = country_code.to_s.upcase
       @phone = phone
+      @street_name = street_name
+      @street_number = street_number
+      @neighborhood = neighborhood
     end
 
     def errors
@@ -133,7 +142,26 @@ module Worldwide
       Util.blank?(errors)
     end
 
+    RESERVED_DELIMITER = " "
+    def concatenated_address1
+      return address1 if address1.present?
+
+      additional_fields = region.additional_address_fields["address1"] || []
+      concatenate_fields(additional_fields)
+    end
+
+    def concatenated_address2
+      additional_fields = region.additional_address_fields["address2"] || []
+      concatenate_fields(additional_fields)
+    end
+
     private
+
+    def region
+      return @region if defined?(@region)
+
+      @region = Worldwide.region(code: country_code)
+    end
 
     LINE_SEP = "_"
     private_constant :LINE_SEP
@@ -412,6 +440,27 @@ module Worldwide
         stripped.delete!("〒") if blank?(zip) || excluded_fields.include?("zip")
         stripped.delete!("様") if blank?(last_name) || excluded_fields.include?("lastName")
         stripped
+      end
+    end
+
+    def concatenate_fields(fields)
+      concatenated_field = ""
+      fields.each_with_index do |field, i|
+        field_value = send(field["key"].underscore.to_sym)
+        next if field_value.blank?
+
+        delimiter = concatenation_delimiter(concatenated_field, field["decorator"], i)
+        concatenated_field += delimiter + field_value
+      end
+
+      concatenated_field
+    end
+
+    def concatenation_delimiter(concatenated_field, decorator, field_index)
+      if field_index == 0
+        ""
+      else
+        concatenated_field.blank? ? RESERVED_DELIMITER : "#{decorator}#{RESERVED_DELIMITER}"
       end
     end
   end
