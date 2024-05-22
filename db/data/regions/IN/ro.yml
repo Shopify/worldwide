@@ -1,0 +1,24 @@
+---
+ro:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Stat
+            optional: Stat (opțional)
+          errors:
+            blank: Selectează un stat
+        zip:
+          label:
+            default: Cod PIN
+            optional: Cod PIN (opțional)
+          errors:
+            blank: Introdu un cod PIN
+            invalid_for_country: Introdu un cod PIN valid pentru %{country}
+            invalid_for_country_and_province: Introdu un cod PIN valid pentru %{province},
+              %{country}
+            too_long: Valoarea pentru codul PIN este prea lungă
+            contains_html_tags: Codul PIN nu poate conține etichete HTML.
+            contains_emojis: Codul PIN nu poate conține emoji-uri
+            contains_restricted_characters: Codul PIN nu poate conține caractere restricționate

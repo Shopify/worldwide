@@ -1,0 +1,249 @@
+---
+ro:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Companie
+            optional: Companie (opțional)
+          errors:
+            blank: Introdu un nume de companie
+            too_long: Denumirea companiei este prea lungă (lungimea maximă este de
+              255 caractere)
+            contains_html_tags: Denumirea companiei nu poate conține etichete HTML.
+            contains_emojis: Denumirea companiei nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele companiei nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele companiei poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+        first_name:
+          label:
+            default: Prenume
+            optional: Prenume (opțional)
+          errors:
+            blank: Introdu un prenume
+            too_long: Prenumele este prea lung (lungimea maximă este de 255 caractere)
+            contains_html_tags: Prenumele nu poate conține etichete HTML.
+            contains_emojis: Prenumele nu poate conține emoji-uri
+            contains_url: Prenumele nu poate conține o adresă URL.
+            contains_mathematical_symbols: Prenumele nu poate conține simboluri matematice
+            contains_restricted_characters: Prenumele poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+        last_name:
+          label:
+            default: Nume de familie
+            optional: Nume de familie (opțional)
+          errors:
+            blank: Introdu un nume de familie
+            too_long: Numele de familie este prea lung (lungimea maximă este de 255
+              caractere)
+            contains_html_tags: Numele de familie nu poate conține etichete HTML.
+            contains_emojis: Numele de familie nu poate conține emoji-uri
+            contains_url: Numele de familie nu poate conține o adresă URL.
+            contains_mathematical_symbols: Numele de familie nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele de familie poate conține numai
+              litere, cifre, caractere locale și caractere speciale
+        address1:
+          label:
+            default: Adresă
+            optional: Adresă (opțional)
+          errors:
+            blank: Introdu o adresă
+            too_long: Prima linie a adresei este prea lungă (lungimea maximă este
+              de 255 caractere)
+            contains_html_tags: Linia de adresă 1 nu poate conține etichete HTML.
+            contains_emojis: Linia 1 a adresei nu poate conține emoji-uri
+            contains_url: Linia 1 a adresei nu poate conține adrese URL.
+            missing_building_number: Adaugă un număr de clădire, dacă ai unul.
+            street_unknown_for_zip: Introdu un nume de stradă valid pentru %{zip}.
+            building_number_invalid: Numărul clădirii nu a putut fi găsit pentru %{street},
+              %{zip}.
+            contains_mathematical_symbols: Linia 1 a adresei nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Adresa 1 poate conține numai litere, cifre,
+              caractere locale și caractere speciale
+            contains_too_many_words: Câmpul Adresă 1 nu poate conține mai mult de
+              %{word_count} cuvinte
+            unknown_for_address: Este posibil ca valoarea din câmpul Linie 1 adresă
+              să fie incorectă.
+          warnings:
+            contains_too_many_words: Se recomandă ca în câmpul Linie 1 adresă să nu
+              introduci mai mult de %{word_count} cuvinte
+        address2:
+          label:
+            default: Apartament, cameră etc.
+            optional: Apartament, cameră etc. (opțional)
+          errors:
+            blank: Introdu un apartament, o cameră etc.
+            too_long: A doua linie a adresei este prea lungă (lungimea maximă este
+              de 255 caractere)
+            contains_html_tags: Linia de adresă 2 nu poate conține etichete HTML.
+            contains_emojis: Linia 2 a adresei nu poate conține emoji-uri
+            contains_url: Linia 2 a adresei nu poate conține adrese URL.
+            missing_building_number: Adaugă un număr de clădire, dacă ai unul.
+            street_unknown_for_zip: Introdu un nume de stradă valid pentru %{zip}.
+            building_number_invalid: Numărul clădirii nu a putut fi găsit pentru %{street},
+              %{zip}.
+            contains_mathematical_symbols: Linia 2 a adresei nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Adresa 2 poate conține numai litere, cifre,
+              caractere locale și caractere speciale
+            contains_too_many_words: Câmpul Adresă 2 nu poate conține mai mult de
+              %{word_count} cuvinte
+            unknown_for_address: Este posibil ca valoarea din câmpul Linie 2 adresă
+              să fie incorectă.
+          warnings:
+            contains_too_many_words: Se recomandă ca în câmpul Linie 2 adresă să nu
+              introduci mai mult de %{word_count} cuvinte
+        city:
+          label:
+            default: Localitate
+            optional: Localitate (opțional)
+          errors:
+            blank: Introdu un oraș
+            too_long: Denumirea orașului este prea lungă (lungimea maximă este de
+              255 caractere)
+            contains_html_tags: Numele orașului nu poate conține etichete HTML.
+            contains_emojis: Numele orașului nu poate conține emoji-uri
+            contains_url: Orașul nu poate conține adrese URL
+            unknown_for_zip: Introdu un oraș valid pentru %{zip}
+            unknown_for_province: Introdu un oraș valid pentru %{province}
+            unknown_for_zip_and_province: Introdu un oraș valid pentru %{zip}, %{province}
+            contains_mathematical_symbols: Numele orașului nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele orașului poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_too_many_words: Câmpul Oraș nu poate conține mai mult de %{word_count}
+              cuvinte
+            unknown_for_address: Este posibil ca valoarea din câmpul Oraș să fie incorectă.
+        country:
+          label:
+            default: Țară/Regiune
+            optional: Țară/Regiune (opțional)
+          errors:
+            blank: Selectează o țară/regiune
+            not_supported: Momentan, nu oferim suport pentru această țară/regiune.
+              Introdu o nouă adresă și încearcă din nou.
+            invalid: Introdu o țară/regiune validă
+            invalid_for_zip: Introdu o țară/regiune validă pentru acest cod poștal
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (opțional)
+          errors:
+            blank: Introdu un număr de telefon
+            invalid: Introdu un număr de telefon valid
+            too_long: Numărul de telefon este prea lung (lungimea maximă este de 255
+              caractere)
+            contains_emojis: Numărul de telefon nu poate conține emoji-uri
+            contains_mathematical_symbols: Numărul de telefon nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numărul de telefon poate conține numai
+              litere, cifre, caractere locale și caractere speciale
+        province:
+          label:
+            default: Regiune
+            optional: Regiune (opțional)
+          errors:
+            blank: Selectează o regiune
+            invalid: Introdu o regiune validă
+            invalid_for_country: Introdu o regiune validă pentru %{country}
+            unknown_for_city_and_zip: Introdu o regiune validă pentru %{city}, %{zip}
+            unknown_for_city: Selectează o regiune validă pentru %{city}
+            unknown_for_zip: Selectează o regiune validă pentru %{zip}
+            unknown_for_address: Este posibil ca valoarea din câmpul Regiune să fie
+              incorectă.
+        zip:
+          label:
+            default: Cod poștal
+            optional: Cod poștal (opțional)
+          errors:
+            blank: Introdu un cod poștal
+            blocked_address: Această locație nu este acceptată.
+            invalid_for_country: Introdu un cod poștal valid pentru %{country}
+            invalid_for_country_and_province: Introdu un cod poștal valid pentru %{province},
+              %{country}
+            invalid: Introdu un cod poștal valid
+            too_long: Valoarea pentru codul poștal este prea lungă
+            contains_html_tags: Codul poștal nu poate conține etichete HTML.
+            contains_emojis: Codul poștal nu poate conține emoji-uri
+            not_supported: Momentan, nu oferim suport pentru această țară/regiune.
+              Introdu o nouă adresă și încearcă din nou.
+            unknown_for_province: Introdu un cod poștal valid pentru %{province}
+            contains_mathematical_symbols: Codul poștal nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Codul poștal poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            invalid_for_province: Introdu un cod poștal valid pentru %{province}
+            unknown_for_address: Este posibil ca valoarea din câmpul Cod poștal să
+              fie incorectă.
+        address:
+          errors:
+            may_not_exist: Adresa nu a fost găsită sau nu există
+        street_name:
+          label:
+            default: Stradă
+            optional: Stradă (opțional)
+          errors:
+            blank: Introdu un nume de stradă
+            too_long: Numele străzii este prea lung (lungimea maximă este de 255 caractere)
+            contains_emojis: Numele străzii nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele străzii nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele străzii poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_too_many_words: Numele străzii nu poate conține mai mult de %{word_count}
+              cuvinte
+            contains_html_tags: Numele străzii nu poate conține etichete HTML.
+            contains_url: Numele străzii nu poate conține adrese URL.
+            street_unknown_for_zip: Introdu un nume de stradă valid pentru %{zip}.
+            unknown_for_address: Este posibil ca numele străzii să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele străzii să nu aibă mai
+              mult de %{word_count} cuvinte
+        street_number:
+          label:
+            default: Număr clădire
+            optional: Număr clădire (opțional)
+          errors:
+            blank: Introdu un număr de clădire
+            too_long: Numărul clădirii este prea lung (lungimea maximă este de 255
+              caractere)
+            contains_emojis: Numărul clădirii nu poate conține emoji-uri
+            contains_mathematical_symbols: Numărul clădirii nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numărul clădirii poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_html_tags: Numărul clădirii nu poate conține etichete HTML.
+            contains_url: Numărul clădirii nu poate conține adrese URL.
+            building_number_invalid: Numărul clădirii nu a putut fi găsit pentru %{street},
+              %{zip}.
+            unknown_for_address: Este posibil ca numărul clădirii să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numărul clădirii să nu aibă mai
+              mult de %{word_count} cuvinte
+        neighborhood:
+          label:
+            default: Cartier
+            optional: Cartier (opțional)
+          errors:
+            blank: Introdu un nume de cartier
+            too_long: Numele cartierului este prea lung (lungimea maximă este de 255
+              caractere)
+            contains_emojis: Numele cartierului nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele cartierului nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele cartierului poate conține numai
+              litere, cifre, caractere locale și caractere speciale
+            contains_too_many_words: Numele cartierului nu poate conține mai mult
+              de %{word_count} cuvinte
+            contains_html_tags: Numele cartierului nu poate conține etichete HTML.
+            contains_url: Numele cartierului nu poate conține adrese URL.
+            unknown_for_city: Introdu un nume de cartier valid pentru %{city}.
+            unknown_for_zip: Introdu un nume de cartier valid pentru %{zip}.
+            unknown_for_address: Este posibil ca numele cartierului să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele cartierului să nu aibă
+              mai mult de %{word_count} cuvinte
