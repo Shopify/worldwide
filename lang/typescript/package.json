@@ -1,5 +1,13 @@
 {
   "name": "@shopify/worldwide",
+  "version": "0.1.0-dev",
+  "repository": "git@github.com:Shopify/worldwide.git",
+  "author": "Kenny Goff <kenny.goff@shopify.com>",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "packageManager": "yarn@4.2.2",
   "scripts": {
     "build": "rollup -c rollup.config.mjs",
@@ -10,6 +18,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
+    "@changesets/cli": "^2.27.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@shopify/eslint-plugin": "^45.0.0",
     "@shopify/prettier-config": "^1.1.2",
