@@ -1,0 +1,27 @@
+---
+ro:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Secție
+            optional: Secție (opțional)
+          errors:
+            blank: Introdu un nume de secție
+            too_long: Numele secției este prea lung (lungimea maximă este de 255 caractere)
+            contains_emojis: Numele secției nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele secției nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele secției poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_too_many_words: Numele secției nu poate conține mai mult de %{word_count}
+              cuvinte
+            contains_html_tags: Numele secției nu poate conține etichete HTML.
+            contains_url: Numele secției nu poate conține adrese URL.
+            unknown_for_city: Introdu un nume de secție valid pentru %{city}.
+            unknown_for_zip: Introdu un nume de secție valid pentru %{zip}.
+            unknown_for_address: Este posibil ca numele secției să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele secției să nu aibă mai
+              mult de %{word_count} cuvinte

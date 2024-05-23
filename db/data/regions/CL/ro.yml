@@ -1,0 +1,27 @@
+---
+ro:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Comună
+            optional: Comună (opțional)
+          errors:
+            blank: Introdu un nume de comună
+            too_long: Numele comunei este prea lung (lungimea maximă este de 255 caractere)
+            contains_emojis: Numele comunei nu poate conține emoji-uri
+            contains_mathematical_symbols: Numele comunei nu poate conține simboluri
+              matematice
+            contains_restricted_characters: Numele comunei poate conține numai litere,
+              cifre, caractere locale și caractere speciale
+            contains_too_many_words: Numele comunei nu poate conține mai mult de %{word_count}
+              cuvinte
+            contains_html_tags: Numele comunei nu poate conține etichete HTML.
+            contains_url: Numele comunei nu poate conține adrese URL.
+            unknown_for_city: Introdu un nume de comună valid pentru %{city}.
+            unknown_for_zip: Introdu un nume de comună valid pentru %{zip}.
+            unknown_for_address: Este posibil ca numele comunei să fie incorect.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele comunei să nu aibă mai
+              mult de %{word_count} cuvinte

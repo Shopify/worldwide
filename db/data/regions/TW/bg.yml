@@ -1,0 +1,27 @@
+---
+bg:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: Район
+            optional: Район (незадължително)
+          errors:
+            blank: Въведете район
+            too_long: "„Район“ е с твърде голяма дължина (максимумът е 255 знака)"
+            contains_emojis: "„Район“ не може да съдържа емоджита"
+            contains_mathematical_symbols: "„Район“ не може да съдържа математически
+              символи"
+            contains_restricted_characters: "„Район“ може да съдържа само букви, цифри,
+              местни знаци и специални знаци"
+            contains_too_many_words: "„Район“ не може да съдържа повече от %{word_count}
+              думи"
+            contains_html_tags: "„Район“ не може да съдържа HTML етикети."
+            contains_url: "„Район“ не може да съдържа емоджита"
+            unknown_for_city: Въведете валидно име на район за %{city}.
+            unknown_for_zip: Въведете валидно име на район за %{zip}.
+            unknown_for_address: Възможно е районът да е неправилен.
+          warnings:
+            contains_too_many_words: Препоръчително е „Район“ да не съдържа повече
+              от %{word_count} думи

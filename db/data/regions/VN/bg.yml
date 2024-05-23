@@ -1,0 +1,27 @@
+---
+bg:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Община
+            optional: Община (незадължително)
+          errors:
+            blank: Въведете община
+            too_long: "„Община“ е с твърде голяма дължина (максимумът е 255 знака)"
+            contains_emojis: "„Община“ не може да съдържа емоджита"
+            contains_mathematical_symbols: "„Община“ не може да съдържа математически
+              символи"
+            contains_restricted_characters: "„Община“ може да съдържа само букви,
+              цифри, местни знаци и специални знаци"
+            contains_too_many_words: "„Община“ не може да съдържа повече от %{word_count}
+              думи"
+            contains_html_tags: "„Община“ не може да съдържа HTML етикети."
+            contains_url: "„Община“ не може да съдържа URL адреси."
+            unknown_for_city: Въведете валидно име на община за %{city}.
+            unknown_for_zip: Въведете валидно име на община за %{zip}.
+            unknown_for_address: Възможно е общината да е неправилна.
+          warnings:
+            contains_too_many_words: Препоръчително е „Община“ да не съдържа повече
+              от %{word_count} думи

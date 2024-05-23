@@ -1,0 +1,27 @@
+---
+sl:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Četrt
+            optional: Četrt (izbirno)
+          errors:
+            blank: Vnesite ime četrti
+            too_long: Ime četrti je predolgo (največje dovoljeno št. znakov je 255)
+            contains_emojis: Ime četrti ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols: Ime četrti ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters: Ime četrti lahko vsebuje le črke, številke,
+              lokalne znake in posebne znake
+            contains_too_many_words: Ime četrti ne sme vsebovati več kot %{word_count}
+              besed
+            contains_html_tags: Ime četrti ne sme vsebovati oznak HTML.
+            contains_url: Ime četrti ne sme vsebovati naslovov URL.
+            unknown_for_city: Vnesite veljavno ime četrti za kraj %{city}.
+            unknown_for_zip: Vnesite veljavno ime četrti za poštno številko %{zip}.
+            unknown_for_address: Četrt morda ni pravilna.
+          warnings:
+            contains_too_many_words: Ime četrti naj ne vsebuje več kot %{word_count}
+              besed

@@ -1,0 +1,38 @@
+---
+lt:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Priemiestis
+            optional: Priemiestis (pasirinktinai)
+          errors:
+            blank: Įveskite priemiestį
+            too_long: Rajono pavadinimas yra per ilgas (turi sudaryti ne daugiau kaip
+              255 simboliai)
+            contains_html_tags: Priemiesčio pavadinime negali būti naudojamos HTML
+              žymės.
+            contains_emojis: Priemiesčio pavadinime negali būti naudojami „emoji“
+            contains_restricted_characters: Priemiesčio pavadinimą gali sudaryti tik
+              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+        province:
+          label:
+            default: Valstija / teritorija
+            optional: Valstija / teritorija (pasirinktinai)
+          errors:
+            blank: Pasirinkti valstiją / teritoriją
+        zip:
+          label:
+            default: Pašto kodas
+            optional: Pašto kodas (pasirinktinai)
+          errors:
+            blank: Įveskite pašto kodą
+            invalid_for_country: Įveskite galiojantį pašto kodą %{country}
+            invalid_for_country_and_province: Įveskite galiojantį %{province}, %{country},
+              pašto kodą
+            too_long: Pašto kodas yra per ilgas
+            contains_html_tags: Pašto kode negali būti naudojamos HTML žymės.
+            contains_emojis: Pašto kode negali būti naudojami „emoji“
+            contains_restricted_characters: Pašto indeksą gali sudaryti tik raidės,
+              skaičiai, vietiniai simboliai ir specialieji simboliai
