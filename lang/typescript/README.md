@@ -1,14 +1,18 @@
 # Worldwide - Typescript
 
-## Setup
+🚧 Still in development -- not ready for use yet 🚧
 
-We use Yarn for dependency management. Run:
+## Contributing & Development
+
+### Setup
+
+We use Yarn for dependency management. To setup run:
 
 ```sh
 yarn install
 ```
 
-## Build
+### Build
 
 To run a build run:
 
