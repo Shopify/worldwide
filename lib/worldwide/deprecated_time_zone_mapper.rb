@@ -8,6 +8,11 @@ module Worldwide
       def to_supported(zone)
         DEPRECATED_ZONES_MAP.fetch(zone&.to_sym, zone)
       end
+
+      # Maps from any IANA timezone to the closest Rails timezone.
+      def to_rails(zone)
+        IANA_TO_RAILS_ZONES_MAP.fetch(zone&.to_sym, zone)
+      end
     end
 
     DEPRECATED_ZONES_MAP = {
@@ -89,6 +94,10 @@ module Worldwide
       "US/Samoa": "Pacific/Pago_Pago",
       "W-SU": "Europe/Moscow",
       Zulu: "UTC",
+    }
+
+    IANA_TO_RAILS_ZONES_MAP = {
+
     }
   end
 end
