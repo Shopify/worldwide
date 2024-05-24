@@ -97,7 +97,19 @@ module Worldwide
     }
 
     IANA_TO_RAILS_ZONES_MAP = {
-
+      "Africa/Abidjan" => "Europe/London",
+      "Africa/Accra" => "Europe/London",
+      "Africa/Addis_Ababa" => "Europe/Moscow",
+      "Africa/Algiers" => "Africa/Algiers",
+      "Africa/Asmara" => "Europe/Moscow",
+      "Africa/Asmera" => "Europe/Moscow",
+      "Africa/Bamako" => "Europe/London",
+      "Africa/Bangui" => "Africa/Algiers",
+      "Africa/Banjul" => "Europe/London",
+      "Africa/Bissau" => "Europe/London",
+      "Africa/Blantyre" => "Africa/Cairo",
+      "Africa/Brazzaville" => "Africa/Algiers"
+      "Africa/Bujumbura"
     }
   end
 end
