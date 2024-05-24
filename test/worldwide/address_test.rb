@@ -143,9 +143,108 @@ module Worldwide
     end
 
     test "concatenated_address2 returns address2 concatenated with neighborhood separated by delimiter and decorator" do
-      address = Address.new(address2: "dpto 4", neighborhood: "Centro", country_code: "BR")
+      br_address = Address.new(address2: "dpto 4", neighborhood: "Centro", country_code: "BR")
+      ph_address = Address.new(address2: "apt 4", neighborhood: "294", country_code: "PH")
+      vn_address = Address.new(address2: "apt 4", neighborhood: "Cầu Giấy", country_code: "VN")
 
-      assert_equal "dpto 4, Centro", address.concatenated_address2
+      assert_equal "dpto 4, Centro", br_address.concatenated_address2
+      assert_equal "apt 4 Barangay 294", ph_address.concatenated_address2
+      assert_equal "apt 4, Quận Cầu Giấy", vn_address.concatenated_address2
+    end
+
+    test "split_address1 returns nil when additional address fields are not defined for the country" do
+      address = Address.new(address1: "123 Main Street", country_code: "US")
+
+      assert_nil address.split_address1
+    end
+
+    test "split_address1 returns blank fields when address1 is blank" do
+      blank_address1 = Address.new(address1: "", country_code: "CL") # regular space
+      nil_address1 = Address.new(address1: nil, country_code: "CL") # regular space
+
+      expected_hash = {}
+
+      assert_equal expected_hash, blank_address1.split_address1
+      assert_equal expected_hash, nil_address1.split_address1
+    end
+
+    test "split_address1 returns entire address1 as street when address1 does not contain a delimiter" do
+      address = Address.new(address1: "Main Street 123", country_code: "CL") # regular space
+      expected_hash = { "street_name" => "Main Street 123" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    test "split_address1 returns only street number if no string is present before the delimiter" do
+      cl_address = Address.new(address1: " 123", country_code: "CL")
+      br_address = Address.new(address1: " 123", country_code: "BR")
+      expected_hash = { "street_number" => "123" }
+
+      assert_equal expected_hash, cl_address.split_address1
+      assert_equal expected_hash, br_address.split_address1
+    end
+
+    test "split_address1 returns street name and street number when both values are present and seperated by a delimiter" do
+      address = Address.new(address1: "Main Street 123", country_code: "CL")
+      expected_hash = { "street_name" => "Main Street", "street_number" => "123" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    test "split_address1 returns street name and street number when both values are present and seperated by a delimiter and decorator" do
+      address = Address.new(address1: "Main Street, 123", country_code: "BR")
+      expected_hash = { "street_name" => "Main Street", "street_number" => "123" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    test "split_address2 returns nil when additional address fields are not defined for the country" do
+      address = Address.new(address2: "apt 4, Centretown", country_code: "US")
+
+      assert_nil address.split_address2
+    end
+
+    test "split_address2 returns blank fields when when address2 is blank" do
+      blank_address2 = Address.new(address2: "", country_code: "CL") # regular space
+      nil_address2 = Address.new(address2: nil, country_code: "CL") # regular space
+
+      expected_hash = {}
+
+      assert_equal expected_hash, blank_address2.split_address2
+      assert_equal expected_hash, nil_address2.split_address2
+    end
+
+    test "split_address2 returns only address2 when address2 does not contain a delimiter" do
+      address = Address.new(address2: "dpto 4", country_code: "CL") # regular space
+      expected_hash = { "address2" => "dpto 4" }
+
+      assert_equal expected_hash, address.split_address2
+    end
+
+    test "split_address2 returns only neighborhood if no string is present before the delimiter" do
+      cl_address = Address.new(address2: " Centro", country_code: "CL")
+      br_address = Address.new(address2: " Centro", country_code: "BR")
+      expected_hash = { "neighborhood" => "Centro" }
+
+      assert_equal expected_hash, cl_address.split_address2
+      assert_equal expected_hash, br_address.split_address2
+    end
+
+    test "split_address2 returns address2 and neighborhood when both values are present and seperated by a delimiter" do
+      cl_address = Address.new(address2: "dpto 4 Centro", country_code: "CL")
+      expected_hash = { "address2" => "dpto 4", "neighborhood" => "Centro" }
+
+      assert_equal expected_hash, cl_address.split_address2
+    end
+
+    test "split_address2 returns address2 and neighborhood when both values are present and seperated by a delimiter and a decorator" do
+      br_address = Address.new(address2: "dpto 4, Centro", country_code: "BR")
+      ph_address = Address.new(address2: "dpto 4 Barangay 294", country_code: "PH")
+      expected_hash_br = { "address2" => "dpto 4", "neighborhood" => "Centro" }
+      expected_hash_ph = { "address2" => "dpto 4", "neighborhood" => "294" }
+
+      assert_equal expected_hash_br, br_address.split_address2
+      assert_equal expected_hash_ph, ph_address.split_address2
     end
   end
 end

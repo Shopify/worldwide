@@ -142,7 +142,7 @@ module Worldwide
       Util.blank?(errors)
     end
 
-    RESERVED_DELIMITER = " "
+    RESERVED_DELIMITER = "\u00A0"
     def concatenated_address1
       return address1 if address1.present?
 
@@ -153,6 +153,18 @@ module Worldwide
     def concatenated_address2
       additional_fields = region.additional_address_fields["address2"] || []
       concatenate_fields(additional_fields)
+    end
+
+    def split_address1
+      additional_fields = region.additional_address_fields["address1"] || []
+      split_fields_arr = address1&.split(RESERVED_DELIMITER) || []
+      split_fields(additional_fields, split_fields_arr)
+    end
+
+    def split_address2
+      additional_fields = region.additional_address_fields["address2"] || []
+      split_fields_arr = address2&.split(RESERVED_DELIMITER) || []
+      split_fields(additional_fields, split_fields_arr)
     end
 
     private
@@ -462,6 +474,22 @@ module Worldwide
       else
         concatenated_field.blank? ? RESERVED_DELIMITER : "#{decorator}#{RESERVED_DELIMITER}"
       end
+    end
+
+    def split_fields(field_definitions, field_values)
+      return if field_definitions.empty?
+
+      field_definitions.each_with_index.with_object({}) do |(field, i), split_fields|
+        next unless field_values[i].present?
+
+        field_name = field["key"].underscore
+        split_fields[field_name] = strip_decorators(field_definitions[i + 1], field_values[i])
+      end
+    end
+
+    def strip_decorators(next_field_definition, current_field_value)
+      delimiter = next_field_definition&.fetch("decorator", nil) || ""
+      current_field_value&.delete_suffix(delimiter)
     end
   end
 end
