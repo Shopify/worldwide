@@ -1,11 +1,11 @@
-import {UNIVERSAL_DELIMETER, tempConcatStrings} from './index';
+import {RESERVED_DELIMETER, tempConcatStrings} from './index';
 
 test('universal delimeter is non-breaking space', () => {
-  expect(UNIVERSAL_DELIMETER).toBe(' ');
-  expect(UNIVERSAL_DELIMETER).toBe('\xA0');
-  expect(UNIVERSAL_DELIMETER).toBe('\u00A0');
-  expect(UNIVERSAL_DELIMETER).not.toBe('\x20');
-  expect(UNIVERSAL_DELIMETER).not.toBe(' ');
+  expect(RESERVED_DELIMETER).toBe(' ');
+  expect(RESERVED_DELIMETER).toBe('\xA0');
+  expect(RESERVED_DELIMETER).toBe('\u00A0');
+  expect(RESERVED_DELIMETER).not.toBe('\x20');
+  expect(RESERVED_DELIMETER).not.toBe(' ');
 });
 
 test('concat strings using universal delimeter', () => {
