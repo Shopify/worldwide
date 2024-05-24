@@ -37,8 +37,8 @@ module Worldwide
       @first_name = attributes.fetch("first_name", nil)
       @last_name = attributes.fetch("last_name", nil)
       @phone = attributes.fetch("phone", nil)
-      @postal_code = attributes.fetch("postal_code", nil)
-      @zone = attributes.fetch("zone", nil)
+      @zip = attributes.fetch("zip", nil)
+      @province = attributes.fetch("province", nil)
 
       @to_h = PUBLIC_ATTRIBUTES.map do |attr|
         [attr.to_s, instance_variable_get(:"@#{attr}")]
@@ -85,8 +85,8 @@ module Worldwide
       :first_name,
       :last_name,
       :phone,
-      :postal_code,
-      :zone,
+      :zip,
+      :province,
     ]
     private_constant :PUBLIC_ATTRIBUTES
     attr_reader(*PUBLIC_ATTRIBUTES)

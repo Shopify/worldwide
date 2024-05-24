@@ -15,3 +15,23 @@ en:
             optional: State (optional)
           errors:
             blank: Select a state
+        neighborhood:
+          label:
+            default: Colony
+            optional: Colony (optional)
+          errors:
+            blank: Enter a colony
+            too_long: Colony is too long (maximum is 255 characters)
+            contains_emojis: Colony cannot contain emojis
+            contains_mathematical_symbols: Colony cannot contain mathematical symbols
+            contains_restricted_characters: Colony can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Colony cannot have more than %{word_count}
+              words
+            contains_html_tags: Colony cannot contain HTML tags.
+            contains_url: Colony cannot contain URLs.
+            unknown_for_city: Enter a valid colony name for %{city}.
+            unknown_for_zip: Enter a valid colony name for %{zip}.
+            unknown_for_address: Colony may be incorrect.
+          warnings:
+            contains_too_many_words: Colony is recommended to have less than %{word_count} words
