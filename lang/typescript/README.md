@@ -16,4 +16,4 @@ To run a build run:
 yarn build
 ```
 
-This will use Rollup generate `output/`, which is our bundled JS package.
+This will use Rollup to generate `dist/`, which is our bundled JS package.

@@ -13,7 +13,7 @@
     "build": "rollup -c rollup.config.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "yarn eslint '**/*.{ts,tsx}'",
-    "format": "yarn prettier src --write",
+    "format": "yarn prettier src *.config.{js,mjs} --write",
     "test": "jest"
   },
   "devDependencies": {
