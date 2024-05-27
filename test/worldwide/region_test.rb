@@ -356,15 +356,18 @@ module Worldwide
     test "additional_address_fields returns values as expected" do
       [
         [:us, {}],
+        [:il, {
+          "address1" => [{ "key" => "streetNumber", "required" => true }, { "key" => "streetName", "required" => true }],
+        },],
         [:be, {
-          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => false }],
+          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => true }],
         },],
         [:br, {
           "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "decorator" => ",", "required" => true }],
           "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
         },],
         [:cl, {
-          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => false }],
+          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => true }],
           "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "required" => false }],
         },],
         [:id, {
