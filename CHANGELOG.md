@@ -27,6 +27,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+nil.
+
+---
+
+## [0.13.0] - 2024-05-27
+
 - Add Address#split_address1 and Address#split_address2 methods [#165](https://github.com/Shopify/worldwide/pull/165)
 - Add Address#concatenated_address1 and Address#concatenated_address2 methods [#158](https://github.com/Shopify/worldwide/pull/158)
 - Updated root translation keys for regional locales `bg-BG`, `hr-HR`, `lt-LT`, `ro-RO`, `sk-SK`, `sl-SI`  to the base locale (e.g. `bg`) [#164](https://github.com/Shopify/worldwide/pull/164).
