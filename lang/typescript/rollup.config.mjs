@@ -1,6 +1,10 @@
+import path from 'path';
+
 import typescript from '@rollup/plugin-typescript';
 import yaml from '@rollup/plugin-yaml';
 import alias from '@rollup/plugin-alias';
+
+const projectRootDir = path.resolve(import.meta.dirname);
 
 export default {
   input: 'src/index.ts',
@@ -10,13 +14,16 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    typescript(),
+    yaml(),
     alias({
       entries: [
-        {find: '@', replacement: './src'},
-        {find: '@data', replacement: '../../db/data'},
+        {find: '@', replacement: path.resolve(projectRootDir, 'src')},
+        {
+          find: '@data',
+          replacement: path.resolve(projectRootDir, '../../db/data'),
+        },
       ],
     }),
-    yaml(),
+    typescript(),
   ],
 };

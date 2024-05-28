@@ -1,8 +1,2 @@
-export const RESERVED_DELIMETER = '\xA0';
-
-/**
- * Temp placeholder during project setup
- */
-export function tempConcatStrings(...args: string[]) {
-  return args.join(RESERVED_DELIMETER);
-}
+export {RESERVED_DELIMETER} from './utils';
+export {generateAddress1} from './generateAddress1';

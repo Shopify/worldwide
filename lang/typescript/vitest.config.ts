@@ -1,17 +1,25 @@
 import path from 'path';
 
 import {defineConfig} from 'vitest/config';
+import yaml from '@rollup/plugin-yaml';
+import alias from '@rollup/plugin-alias';
+
+const projectRootDir = path.resolve(__dirname);
 
 export default defineConfig({
   test: {
     globals: true,
   },
-  resolve: {
-    alias: {
-      /* eslint-disable @typescript-eslint/naming-convention */
-      '@': path.resolve(__dirname, './src'),
-      '@data': path.resolve(__dirname, '../../db/data'),
-      /* eslint-enable @typescript-eslint/naming-convention */
-    },
-  },
+  plugins: [
+    yaml(),
+    alias({
+      entries: [
+        {find: '@', replacement: path.resolve(projectRootDir, 'src')},
+        {
+          find: '@data',
+          replacement: path.resolve(projectRootDir, '../../db/data'),
+        },
+      ],
+    }),
+  ],
 });
