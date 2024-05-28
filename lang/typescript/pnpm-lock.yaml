@@ -14,9 +14,15 @@ importers:
       '@changesets/cli':
         specifier: ^2.27.3
         version: 2.27.4
+      '@rollup/plugin-alias':
+        specifier: ^5.1.0
+        version: 5.1.0(rollup@4.18.0)
       '@rollup/plugin-typescript':
         specifier: ^11.1.6
         version: 11.1.6(rollup@4.18.0)(tslib@2.6.2)(typescript@5.4.5)
+      '@rollup/plugin-yaml':
+        specifier: ^4.1.2
+        version: 4.1.2(rollup@4.18.0)
       '@shopify/eslint-plugin':
         specifier: ^45.0.0
         version: 45.0.0(@babel/core@7.24.6)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.5)
@@ -437,6 +443,15 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@rollup/plugin-alias@5.1.0':
+    resolution: {integrity: sha512-lpA3RZ9PdIG7qqhEfv79tBffNaoDuukFDrmhLqg9ifv99u/ehn+lOg30x2zmhf8AQqQUZaMk/B9fZraQ6/acDQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
   '@rollup/plugin-typescript@11.1.6':
     resolution: {integrity: sha512-R92yOmIACgYdJ7dJ97p4K69I8gg6IEHt8M7dUBxN3W6nrO8uUxX5ixl0yU/N3aZTi8WhPuICvOHXQvF6FaykAA==}
     engines: {node: '>=14.0.0'}
@@ -448,6 +463,15 @@ packages:
       rollup:
         optional: true
       tslib:
+        optional: true
+
+  '@rollup/plugin-yaml@4.1.2':
+    resolution: {integrity: sha512-RpupciIeZMUqhgFE97ba0s98mOFS7CWzN3EJNhJkqSv9XLlWYtwVdtE6cDw6ASOF/sZVFS7kRJXftaqM2Vakdw==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
         optional: true
 
   '@rollup/pluginutils@5.1.0':
@@ -2148,6 +2172,10 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
+  slash@4.0.0:
+    resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
+    engines: {node: '>=12'}
+
   smartwrap@2.0.2:
     resolution: {integrity: sha512-vCsKNQxb7PnCNd2wY1WClWifAc2lwqsG8OaswpJkVJsvMGcnEntdTCDajZCkk93Ay1U3t/9puJmb525Rg5MZBA==}
     engines: {node: '>=6'}
@@ -2274,6 +2302,10 @@ packages:
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
+
+  tosource@2.0.0-alpha.3:
+    resolution: {integrity: sha512-KAB2lrSS48y91MzFPFuDg4hLbvDiyTjOVgaK7Erw+5AmZXNq4sFRVn8r6yxSLuNs15PaokrDRpS61ERY9uZOug==}
+    engines: {node: '>=10'}
 
   trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
@@ -2982,6 +3014,12 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
+  '@rollup/plugin-alias@5.1.0(rollup@4.18.0)':
+    dependencies:
+      slash: 4.0.0
+    optionalDependencies:
+      rollup: 4.18.0
+
   '@rollup/plugin-typescript@11.1.6(rollup@4.18.0)(tslib@2.6.2)(typescript@5.4.5)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
@@ -2990,6 +3028,14 @@ snapshots:
     optionalDependencies:
       rollup: 4.18.0
       tslib: 2.6.2
+
+  '@rollup/plugin-yaml@4.1.2(rollup@4.18.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
+      js-yaml: 4.1.0
+      tosource: 2.0.0-alpha.3
+    optionalDependencies:
+      rollup: 4.18.0
 
   '@rollup/pluginutils@5.1.0(rollup@4.18.0)':
     dependencies:
@@ -4917,6 +4963,8 @@ snapshots:
 
   slash@3.0.0: {}
 
+  slash@4.0.0: {}
+
   smartwrap@2.0.2:
     dependencies:
       array.prototype.flat: 1.3.2
@@ -5054,6 +5102,8 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  tosource@2.0.0-alpha.3: {}
 
   trim-newlines@3.0.1: {}
 

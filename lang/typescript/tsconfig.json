@@ -6,11 +6,16 @@
         "target": "ES6",
         "strict": true,
         "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@data/*": ["../../db/data/*"]
+        },
         "rootDir": ".",
         "types": ["vitest/globals"],
     },
     "include": [
-        "src",
+        "src/**/*.ts",
+        "vitest.config.ts"
     ],
     "exclude": [
         "node_modules",

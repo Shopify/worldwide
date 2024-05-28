@@ -1,7 +1,7 @@
-// rollup.config.js
 import typescript from '@rollup/plugin-typescript';
+import yaml from '@rollup/plugin-yaml';
+import alias from '@rollup/plugin-alias';
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: 'src/index.ts',
   output: {
@@ -9,5 +9,14 @@ export default {
     format: 'cjs',
     sourcemap: true,
   },
-  plugins: [typescript()],
+  plugins: [
+    typescript(),
+    alias({
+      entries: [
+        {find: '@', replacement: './src'},
+        {find: '@data', replacement: '../../db/data'},
+      ],
+    }),
+    yaml(),
+  ],
 };

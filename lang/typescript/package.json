@@ -15,7 +15,7 @@
   "scripts": {
     "build": "rollup -c rollup.config.mjs",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint '**/*.{ts,tsx}'",
+    "lint": "eslint src *.config.{ts,js,mjs}",
     "format": "prettier src *.config.{ts,js,mjs} --write",
     "test": "vitest run --config vitest.config.ts",
     "test:watch": "vitest",
@@ -24,7 +24,9 @@
   "devDependencies": {
     "@babel/core": "^7.24.5",
     "@changesets/cli": "^2.27.3",
+    "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-yaml": "^4.1.2",
     "@shopify/eslint-plugin": "^45.0.0",
     "@shopify/prettier-config": "^1.1.2",
     "@shopify/typescript-configs": "^5.1.0",
