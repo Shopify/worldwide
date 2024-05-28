@@ -6,10 +6,10 @@
 
 ### Setup
 
-We use Yarn for dependency management. To setup run:
+We use PNPM for dependency management. To setup run:
 
 ```sh
-yarn install
+pnpm install
 ```
 
 ### Build
@@ -17,7 +17,7 @@ yarn install
 To run a build run:
 
 ```sh
-yarn build
+pnpm build
 ```
 
 This will use Rollup to generate `dist/`, which is our bundled JS package.
