@@ -2,6 +2,8 @@
     "extends": "@shopify/typescript-configs/library.json",
     "compilerOptions": {
         "outDir": "dist",
+        "declaration": true,
+        "declarationDir": "dist/dts",
         "module": "esnext",
         "target": "ES6",
         "strict": true,
@@ -10,11 +12,12 @@
         "types": ["vitest/globals"],
     },
     "include": [
-        "src",
+        "src/**/*.ts",
+        "vitest.config.ts",
+        "rollup.config.ts"
     ],
     "exclude": [
         "node_modules",
         "dist",
-        "rollup.config.mjs"
     ]
 }
