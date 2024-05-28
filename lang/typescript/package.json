@@ -6,7 +6,7 @@
   "author": "Shopify Inc.",
   "license": "MIT",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
@@ -17,7 +17,8 @@
     "lint": "eslint '**/*.{ts,tsx}'",
     "format": "prettier src *.config.{ts,js,mjs} --write",
     "test": "vitest run --config vitest.config.ts",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
