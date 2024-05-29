@@ -121,13 +121,35 @@ en:
             unknown_for_address: Address line 2 may be incorrect.
           warnings:
             contains_too_many_words: Address line 2 is recommended to have less than %{word_count} words
+        line2:
+          label:
+            default: Apartment, suite, etc.
+            optional: Apartment, suite, etc. (optional)
+          errors:
+            blank: Enter an apartment, suite, etc.
+            too_long: The second address line is too long (maximum is %{limit} characters)
+            contains_emojis: The second address line cannot contain emojis
+            contains_mathematical_symbols: The second address line cannot contain mathematical symbols
+            contains_restricted_characters: The second address line can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: The second address line cannot have more than %{word_count}
+              words
+            contains_html_tags: The second address line cannot contain HTML tags.
+            contains_url: The second address line cannot contain URLs.
+            missing_building_number: Add a building number if you have one.
+            street_unknown_for_zip: Enter a valid street name for %{zip}.
+            building_number_invalid: Building number couldn't be located for %{street},
+              %{zip}.
+            unknown_for_address: The second address line may be incorrect.
+          warnings:
+            contains_too_many_words: The second address line is recommended to have less than %{word_count} words
         neighborhood:
           label:
             default: Neighborhood
             optional: Neighborhood (optional)
           errors:
             blank: Enter a neighborhood
-            too_long: Neighborhood is too long (maximum is 255 characters)
+            too_long: Neighborhood is too long (maximum is %{limit} characters)
             contains_emojis: Neighborhood cannot contain emojis
             contains_mathematical_symbols: Neighborhood cannot contain mathematical symbols
             contains_restricted_characters: Neighborhood can only contain letters, numbers,

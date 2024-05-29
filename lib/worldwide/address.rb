@@ -14,6 +14,7 @@ module Worldwide
       :phone,
       :street_name,
       :street_number,
+      :line2,
       :neighborhood
 
     def initialize(
@@ -29,6 +30,7 @@ module Worldwide
       phone: nil,
       street_name: nil,
       street_number: nil,
+      line2: nil,
       neighborhood: nil
     )
       @first_name = first_name
@@ -43,6 +45,7 @@ module Worldwide
       @phone = phone
       @street_name = street_name
       @street_number = street_number
+      @line2 = line2
       @neighborhood = neighborhood
     end
 
