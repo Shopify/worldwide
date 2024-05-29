@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add support for a line2 address field [#173](https://github.com/Shopify/worldwide/pull/173)
-
+- Remove city from UAE address form and enable city autofill [#175](https://github.com/Shopify/worldwide/pull/175)
 ---
 
 ## [0.13.0] - 2024-05-27
