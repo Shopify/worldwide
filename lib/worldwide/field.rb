@@ -14,6 +14,7 @@ module Worldwide
       :street_name,
       :street_number,
       :address2,
+      :line2,
       :neighborhood,
       :city,
       :province,

@@ -364,14 +364,14 @@ module Worldwide
         },],
         [:br, {
           "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "decorator" => ",", "required" => true }],
-          "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
+          "address2" => [{ "key" => "line2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
         },],
         [:cl, {
           "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => true }],
-          "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "required" => false }],
+          "address2" => [{ "key" => "line2", "required" => false }, { "key" => "neighborhood", "required" => false }],
         },],
         [:id, {
-          "address2" => [{ "key" => "address2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
+          "address2" => [{ "key" => "line2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
         },],
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).additional_address_fields
