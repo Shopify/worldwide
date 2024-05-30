@@ -217,7 +217,7 @@ da:
             optional: Bydel (valgfrit)
           errors:
             blank: Angiv en bydel
-            too_long: Bydel er for lang (højst 255 tegn)
+            too_long: Bydelen er for lang (højst %{limit} tegn)
             contains_emojis: Bydel må ikke indeholde emojis
             contains_mathematical_symbols: Bydel må ikke indeholde matematiske symboler
             contains_restricted_characters: Bydel må kun indeholde bogstaver, tal,
@@ -232,3 +232,27 @@ da:
           warnings:
             contains_too_many_words: Det anbefales, at bydel indeholder færre end
               %{word_count} ord
+        line2:
+          label:
+            default: Lejlighed, etage osv.
+            optional: Lejlighed, etage osv. (valgfri)
+          errors:
+            blank: Angiv lejlighed, etage osv.
+            too_long: Anden linje i adressen er for lang (højst %{limit} tegn)
+            contains_emojis: Anden linje i adressen må ikke indeholde emojier
+            contains_mathematical_symbols: Anden linje i adressen må ikke indeholde
+              matematiske symboler
+            contains_restricted_characters: Anden linje i adressen må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_too_many_words: Anden linje i adressen må ikke indeholde mere
+              end %{word_count} ord
+            contains_html_tags: Anden linje i adressen må ikke indeholde HTML-tags.
+            contains_url: Anden linje i adressen må ikke indeholde webadresser.
+            missing_building_number: Tilføj et bygningsnummer, hvis du har et.
+            street_unknown_for_zip: Angiv et gyldigt gadenavn for %{zip}.
+            building_number_invalid: Der kunne ikke findes et bygningsnummer for %{street},
+              %{zip}.
+            unknown_for_address: Anden linje i adressen er muligvis forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at den anden linje i adressen
+              har under %{word_count} ord

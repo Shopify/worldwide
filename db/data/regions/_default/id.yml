@@ -215,7 +215,7 @@ id:
             optional: Perumahan (opsional)
           errors:
             blank: Masukkan nama perumahan
-            too_long: Nama perumahan terlalu panjang (maksimum berisi 255 karakter)
+            too_long: Nama perumahan terlalu panjang (maksimum berisi %{limit} karakter)
             contains_emojis: Nama perumahan tidak boleh berisi emoji
             contains_mathematical_symbols: Nama perumahan tidak boleh berisi simbol
               matematika
@@ -231,3 +231,28 @@ id:
           warnings:
             contains_too_many_words: Perumahan sebaiknya berisi kurang dari %{word_count}
               kata
+        line2:
+          label:
+            default: Apartemen, suite, dsb.
+            optional: Apartemen, suite, dsb. (opsional)
+          errors:
+            blank: Masukkan apartemen, suite, dsb.
+            too_long: Baris kedua alamat terlalu panjang (maksimum berisi %{limit}
+              karakter)
+            contains_emojis: Baris kedua alamat tidak boleh berisi emoji
+            contains_mathematical_symbols: Baris kedua alamat tidak boleh berisi simbol
+              matematika
+            contains_restricted_characters: Baris kedua alamat hanya boleh berisi
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Baris kedua alamat tidak boleh berisi lebih dari
+              %{word_count} kata
+            contains_html_tags: Baris kedua alamat tidak boleh berisi tag HTML.
+            contains_url: Baris kedua alamat tidak boleh berisi URL.
+            missing_building_number: Tambahkan nomor gedung jika ada.
+            street_unknown_for_zip: Masukkan nama jalan yang valid untuk %{zip}.
+            building_number_invalid: Nomor gedung untuk %{street}, %{zip} tidak dapat
+              ditemukan.
+            unknown_for_address: Baris kedua alamat mungkin salah.
+          warnings:
+            contains_too_many_words: Baris kedua alamat sebaiknya berisi kurang dari
+              %{word_count} kata

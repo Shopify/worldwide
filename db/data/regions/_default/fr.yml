@@ -225,7 +225,7 @@ fr:
             optional: Quartier (facultatif)
           errors:
             blank: Saisir un quartier
-            too_long: Le quartier est trop long (le maximum est de 255 caractères)
+            too_long: Le quartier est trop long (le maximum est de %{limit} caractères)
             contains_emojis: Le quartier ne peut pas contenir d’emojis
             contains_mathematical_symbols: Le quartier ne peut pas contenir de symboles
               mathématiques
@@ -240,3 +240,30 @@ fr:
           warnings:
             contains_too_many_words: Il est conseillé que le quartier comporte moins
               de %{word_count} mots
+        line2:
+          label:
+            default: Appartement, suite, etc.
+            optional: Appartement, suite, etc. (facultatif)
+          errors:
+            blank: Saisir un appartement, suite, etc.
+            too_long: La deuxième ligne d’adresse est trop longue (le maximum est
+              de %{limit} caractères)
+            contains_emojis: La deuxième ligne d’adresse ne peut pas contenir d’emojis
+            contains_mathematical_symbols: La deuxième ligne d’adresse ne peut pas
+              contenir de symboles mathématiques
+            contains_restricted_characters: La deuxième ligne d’adresse ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_too_many_words: La deuxième ligne d’adresse ne peut pas compter
+              plus de %{word_count} mots
+            contains_html_tags: La deuxième ligne d’adresse ne peut pas contenir de
+              balises HTML.
+            contains_url: La deuxième ligne d’adresse ne peut pas contenir d’URL.
+            missing_building_number: Ajoutez un numéro de bâtiment, le cas échéant.
+            street_unknown_for_zip: Saisissez un nom de rue valide pour %{zip}.
+            building_number_invalid: Impossible de localiser le numéro de bâtiment
+              pour %{street}, %{zip}.
+            unknown_for_address: La deuxième ligne d’adresse peut être erronée.
+          warnings:
+            contains_too_many_words: Il est conseillé que la deuxième ligne d’adresse
+              comporte moins de %{word_count} mots
