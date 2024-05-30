@@ -186,7 +186,7 @@ zh-CN:
             optional: 街区（选填）
           errors:
             blank: 输入街区
-            too_long: 街区过长（最多包含 255 个字符）
+            too_long: 街区名过长（最多 %{limit} 个字符）
             contains_emojis: 街区名不能包含表情符号
             contains_mathematical_symbols: 街区名不能包含数学符号
             contains_restricted_characters: 街区名只能包含字母、数字、当地字符和特殊字符
@@ -198,3 +198,22 @@ zh-CN:
             unknown_for_address: 街区名可能不正确。
           warnings:
             contains_too_many_words: 建议街区名少于 %{word_count} 个字词
+        line2:
+          label:
+            default: 公寓、房间号等
+            optional: 公寓、房间号等（可选）
+          errors:
+            blank: 输入公寓、房间号等
+            too_long: 第二个地址行过长（最多 %{limit} 个字符）
+            contains_emojis: 第二个地址行不能包含表情符号
+            contains_mathematical_symbols: 第二个地址行不能包含数学符号
+            contains_restricted_characters: 第二个地址行只能包含字母、数字、当地字符和特殊字符
+            contains_too_many_words: 第二个地址行不能超过 %{word_count} 个字词
+            contains_html_tags: 第二个地址行不能包含 HTML 标记。
+            contains_url: 第二个地址行不能包含 URL。
+            missing_building_number: 添加大楼编号（如果有）。
+            street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称。
+            building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
+            unknown_for_address: 第二个地址行可能不正确。
+          warnings:
+            contains_too_many_words: 建议第二个地址行少于 %{word_count} 个字词

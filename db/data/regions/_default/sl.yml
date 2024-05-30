@@ -226,7 +226,7 @@ sl:
             optional: Soseska (izbirno)
           errors:
             blank: Vnesite sosesko
-            too_long: Ime soseske je predolgo (največje dovoljeno št. znakov je 255)
+            too_long: Ime soseske je predolgo (največje dovoljeno št. znakov je %{limit})
             contains_emojis: Ime soseske ne sme vsebovati čustvenih simbolov
             contains_mathematical_symbols: Ime soseske ne sme vsebovati matematičnih
               simbolov
@@ -242,3 +242,29 @@ sl:
           warnings:
             contains_too_many_words: Ime soseske naj ne vsebuje več kot %{word_count}
               besed
+        line2:
+          label:
+            default: Št. stanovanja, apartmaja itd.
+            optional: Št. stanovanja, apartmaja itn. (izbirno)
+          errors:
+            blank: Vnesite št. stanovanja, apartmaja itn.
+            too_long: Naslov v drugi vrstici je predolg (največje dovoljeno št. znakov
+              je %{limit})
+            contains_emojis: Naslov v drugi vrstici ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols: Naslov v drugi vrstici ne sme vsebovati
+              matematičnih simbolov
+            contains_restricted_characters: Naslov v drugi vrstici lahko vsebuje le
+              črke, številke, lokalne znake in posebne znake
+            contains_too_many_words: Naslov v drugi vrstici ne sme vsebovati več kot
+              %{word_count} besed
+            contains_html_tags: Naslov v drugi vrstici ne sme vsebovati oznak HTML.
+            contains_url: Naslov v drugi vrstici ne sme vsebovati naslovov URL.
+            missing_building_number: Dodajte hišno številko, če jo imate.
+            street_unknown_for_zip: Vnesite veljavno ime ulice za poštno številko
+              %{zip}.
+            building_number_invalid: Hišne številke ni bilo mogoče najti za ulico
+              %{street}, %{zip}.
+            unknown_for_address: Naslov v drugi vrstici morda ni pravilen.
+          warnings:
+            contains_too_many_words: Naslov v drugi vrstici naj ne vsebuje več kot
+              %{word_count} besed

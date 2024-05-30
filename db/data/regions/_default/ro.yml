@@ -230,7 +230,7 @@ ro:
             optional: Cartier (opțional)
           errors:
             blank: Introdu un nume de cartier
-            too_long: Numele cartierului este prea lung (lungimea maximă este de 255
+            too_long: Numele cartierului este prea lung (lungimea maximă este de %{limit}
               caractere)
             contains_emojis: Numele cartierului nu poate conține emoji-uri
             contains_mathematical_symbols: Numele cartierului nu poate conține simboluri
@@ -247,3 +247,28 @@ ro:
           warnings:
             contains_too_many_words: Se recomandă ca numele cartierului să nu aibă
               mai mult de %{word_count} cuvinte
+        line2:
+          label:
+            default: Apartament, cameră etc.
+            optional: Apartament, cameră etc. (opțional)
+          errors:
+            blank: Introdu un apartament, o cameră etc.
+            too_long: A doua linie a adresei este prea lungă (lungimea maximă este
+              de %{limit} caractere)
+            contains_emojis: A doua linie de adresă nu poate conține emoji-uri
+            contains_mathematical_symbols: A doua linie de adresă nu poate conține
+              simboluri matematice
+            contains_restricted_characters: A doua linie de adresă poate conține numai
+              litere, cifre, caractere locale și caractere speciale
+            contains_too_many_words: A doua linie de adresă nu poate conține mai mult
+              de %{word_count} cuvinte
+            contains_html_tags: A doua linie de adresă nu poate conține etichete HTML.
+            contains_url: A doua linie de adresă nu poate conține adrese URL.
+            missing_building_number: Adaugă un număr de clădire, dacă ai unul.
+            street_unknown_for_zip: Introdu o denumire de stradă validă pentru %{zip}.
+            building_number_invalid: Numărul clădirii nu a putut fi găsit pentru %{street},
+              %{zip}.
+            unknown_for_address: Este posibil ca a doua linie de adresă să fie incorectă.
+          warnings:
+            contains_too_many_words: Se recomandă ca pentru a doua linie de adresă
+              să nu introduci mai mult de %{word_count} cuvinte

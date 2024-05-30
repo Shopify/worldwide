@@ -231,7 +231,7 @@ lt:
           errors:
             blank: Įveskite kvartalą
             too_long: Kvartalo pavadinimas yra per ilgas (turi sudaryti ne daugiau
-              kaip 255 simboliai)
+              kaip %{limit} simboliai)
             contains_emojis: Kvartalo pavadinime negali būti naudojami „emoji“
             contains_mathematical_symbols: Kvartalo pavadinime negali būti naudojami
               matematiniai simboliai
@@ -248,3 +248,30 @@ lt:
           warnings:
             contains_too_many_words: Patartina, kad kvartalo pavadinimą sudarytų mažiau
               nei %{word_count} žodžiai (-ių, -is)
+        line2:
+          label:
+            default: Butas, apartamentas ar kt.
+            optional: Butas, apartamentas ar kt. (pasirinktinai)
+          errors:
+            blank: Įveskite butą, apartamentą ar kt.
+            too_long: Antroji adreso eilutė yra per ilga (turi sudaryti ne daugiau
+              kaip %{limit} simboliai)
+            contains_emojis: Antroje adreso eilutėje negali būti naudojami jausmaženkliai
+            contains_mathematical_symbols: Antroje adreso eilutėje negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Antrąją adreso eilutę gali sudaryti tik
+              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Antrąją adreso eilutę negali sudaryti daugiau
+              nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Antroje adreso eilutėje negali būti naudojamos HTML
+              žymės.
+            contains_url: Antroje adreso eilutėje negali būti naudojami URL adresai.
+            missing_building_number: Jei turite, pridėkite pastato numerį.
+            street_unknown_for_zip: Įveskite gatvės pavadinimą, atitinkantį pašto
+              kodą %{zip}.
+            building_number_invalid: Nerastas namo numeris, atitinkantis %{street},
+              %{zip}.
+            unknown_for_address: Antroji adreso eilutė gali būti neteisinga.
+          warnings:
+            contains_too_many_words: Patartina, kad antrąją adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių, -is)
