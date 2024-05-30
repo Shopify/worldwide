@@ -4,7 +4,7 @@ import typescript from '@rollup/plugin-typescript';
 import yaml from '@rollup/plugin-yaml';
 import alias from '@rollup/plugin-alias';
 
-const projectRootDir = path.resolve(import.meta.dirname);
+const projectRootDir = path.resolve(__dirname);
 const regionConfigFileRegex = /db\/data\/regions\/[a-zA-Z]{2}\.yml/;
 
 export default {
