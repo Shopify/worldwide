@@ -1,9 +1,11 @@
 import BR from '@data/regions/BR.yml';
 import CL from '@data/regions/CL.yml';
+import PH from '@data/regions/PH.yml';
+import VN from '@data/regions/VN.yml';
 // import US from '@data/regions/US.yml';
 
 // TODO: Include all available country codes
-export type CountryCode = 'BR' | 'CL' | 'US';
+export type CountryCode = 'BR' | 'CL' | 'PH' | 'VN' | 'US';
 export interface AdditionalAddressField {
   key: string;
   required: boolean;
@@ -31,6 +33,10 @@ export function getRegionConfig(
       return isRegionYamlConfig(BR) ? BR : null;
     case 'CL':
       return isRegionYamlConfig(CL) ? CL : null;
+    case 'PH':
+      return isRegionYamlConfig(PH) ? PH : null;
+    case 'VN':
+      return isRegionYamlConfig(VN) ? VN : null;
     // TODO: Resolve yaml parsing issue with US data
     case 'US':
       return {code: 'US'};

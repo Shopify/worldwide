@@ -2,6 +2,30 @@
 
 🚧 Still in development -- not ready for use yet 🚧
 
+## Usage
+
+```ts
+import {generateAddress1, generateAddress2} from '@shopify/worldwide';
+
+// Generate Address1
+generateAddress1('BR', {
+  streetName: 'Main',
+  streetNumber: '123',
+}); // returns '123,\u00A0Main'
+generateAddress1('US', {
+  address1: '123 Main',
+}); // returns '123 Main'
+
+// Generate Address2
+generateAddress1('BR', {
+  line2: '#2',
+  neighborhood: 'Centro',
+}); // returns '#2,\u00A0Centro'
+generateAddress1('US', {
+  address1: 'Apt 2',
+}); // returns 'Apt 2'
+```
+
 ## Contributing & Development
 
 ### Setup
