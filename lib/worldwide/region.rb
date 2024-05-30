@@ -34,6 +34,7 @@ module Worldwide
       :zip_regex,
       :zip_requirement,
       :additional_address_fields,
+      :combined_address_format,
     ]
 
     # A region may have more than one parent.
@@ -197,8 +198,11 @@ module Worldwide
     # If true, then the province is optional for addresses in this region.
     attr_accessor :province_optional
 
-    # A hash of additional address fields and the rules for concatening them into the standard fields
+    # An array of the additional address fields that are defined for this region
     attr_accessor :additional_address_fields
+
+    # A hash of the rules for concatening the additional address fields into the standard fields
+    attr_accessor :combined_address_format
 
     def initialize(
       alpha_three: nil,
@@ -235,7 +239,8 @@ module Worldwide
       @tax_rate = tax_rate
       @use_zone_code_as_short_name = use_zone_code_as_short_name
 
-      @additional_address_fields = {}
+      @additional_address_fields = []
+      @combined_address_format = {}
       @building_number_required = false
       @building_number_may_be_in_address2 = false
       @currency = nil
@@ -414,6 +419,21 @@ module Worldwide
       end
     end
 
+    # is a neighborhood required for this region?
+    def neighborhood_required?
+      additional_field_required?("neighborhood")
+    end
+
+    # is a street name required for this region?
+    def street_name_required?
+      additional_field_required?("streetName")
+    end
+
+    # is a street number required for this region?
+    def street_number_required?
+      additional_field_required?("streetNumber")
+    end
+
     # is the given postal code value valid for this region?
     def valid_zip?(zip, partial_match: false)
       normalized = Zip.normalize(
@@ -439,6 +459,11 @@ module Worldwide
       zone.code_alternates&.each do |code|
         @zones_by_code[code] = zone
       end
+    end
+
+    def additional_field_required?(field_name)
+      field = additional_address_fields.find { |f| f["name"] == field_name }
+      field ? !!field["required"] : false
     end
 
     def answers_to_cldr_code(search_code)

@@ -27,10 +27,13 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{streetName}{streetNumber}_{address2}_{zip}{city}_{phone}"
 additional_address_fields:
+  - name: streetName
+    required: true
+  - name: streetNumber
+    required: true
+combined_address_format:
   address1:
     - key: streetName
-      required: true
     - key: streetNumber
-      required: true
 emoji: "\U0001F1E7\U0001F1EA"
 timezone: Europe/Brussels

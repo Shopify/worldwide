@@ -18,12 +18,14 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{line2}{neighborhood}_{zip}{city}_{province}_{phone}"
 additional_address_fields:
+  - name: line2
+  - name: neighborhood
+    required: true
+combined_address_format:
   address2:
     - key: line2
-      required: false
     - key: neighborhood
       decorator: " Barangay"
-      required: true
 emoji: "\U0001F1F5\U0001F1ED"
 languages:
   - en

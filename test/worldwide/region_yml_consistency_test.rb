@@ -100,6 +100,50 @@ module Worldwide
       end
     end
 
+    test "additional_address_fields names must belong to a limited set of allowed names" do
+      allowed_names = ["streetName", "streetNumber", "line2", "neighborhood"]
+
+      Regions.all.select(&:country?).each do |country|
+        next if country.additional_address_fields.blank?
+
+        country.additional_address_fields.each do |field|
+          field_name = field["name"]
+
+          assert_includes allowed_names, field_name, "#{country.iso_code} additional_address_field #{field_name} is not an allowed name"
+        end
+      end
+    end
+
+    test "additional_address_fields names are present as keys in the combined_address_format" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.additional_address_fields.blank?
+
+        country.additional_address_fields.each do |field|
+          field_name = field["name"]
+          present = country.combined_address_format.any? do |_, fields|
+            fields.any? { |f| f["key"] == field_name }
+          end
+
+          assert present, "#{country.iso_code} additional_address_field #{field_name} is not present in combined_address_format"
+        end
+      end
+    end
+
+    test "combined_address_format keys are present in additional_address_fields" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.combined_address_format.blank?
+
+        country.combined_address_format.each do |_key, fields|
+          fields.each do |field|
+            field_name = field["key"]
+            present = country.additional_address_fields.any? { |f| f["name"] == field_name }
+
+            assert present, "#{country.iso_code} combined_address_format key #{field_name} is not present in additional_address_fields"
+          end
+        end
+      end
+    end
+
     test "If zones key does not exists, should not have {province} in format key" do
       Regions.all.select do |region|
         region.country? && region.zones.blank?

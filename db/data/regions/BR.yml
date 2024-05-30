@@ -22,18 +22,21 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{neighborhood}_{city}{province}_{phone}"
 additional_address_fields:
+  - name: streetName
+    required: true
+  - name: streetNumber
+    required: true
+  - name: line2
+  - name: neighborhood
+combined_address_format:
   address1:
     - key: streetName
-      required: true
     - key: streetNumber
       decorator: ","
-      required: true
   address2:
     - key: line2
-      required: false
     - key: neighborhood
       decorator: ","
-      required: false
 emoji: "\U0001F1E7\U0001F1F7"
 localized_data:
 - name: tax_credential_br
