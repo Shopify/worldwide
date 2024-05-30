@@ -208,7 +208,7 @@ tr:
             optional: Mahalle (isteğe bağlı)
           errors:
             blank: Mahalle girin
-            too_long: Mahalle adı çok uzun (maksimum 255 karakter)
+            too_long: Mahalle adı çok uzun (maksimum %{limit} karakter olmalıdır)
             contains_emojis: Mahalle adı emoji içeremez
             contains_mathematical_symbols: Mahalle adı matematiksel semboller içeremez
             contains_restricted_characters: Mahalle adı yalnızca harfler, sayılar,
@@ -222,3 +222,26 @@ tr:
           warnings:
             contains_too_many_words: Mahalle adında %{word_count} adetten az kelime
               olması önerilir
+        line2:
+          label:
+            default: Apartman, daire vb.
+            optional: Apartman, Daire vb. (isteğe bağlı)
+          errors:
+            blank: Apartman, daire vb. girin
+            too_long: İkinci adres satırı çok uzun (maksimum %{limit} karakter olmalıdır)
+            contains_emojis: İkinci adres satırı emoji içeremez
+            contains_mathematical_symbols: İkinci adres satırı matematiksel semboller
+              içeremez
+            contains_restricted_characters: İkinci adres satırı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_too_many_words: İkinci adres satırı en fazla %{word_count} kelime
+              içerebilir
+            contains_html_tags: İkinci adres satırı HTML etiketleri içeremez.
+            contains_url: İkinci adres satırı URL içeremez.
+            missing_building_number: Varsa bina numaranızı ekleyin.
+            street_unknown_for_zip: "%{zip} için geçerli bir sokak adı girin."
+            building_number_invalid: "%{street} %{zip} için bina numarası bulunamadı."
+            unknown_for_address: İkinci adres satırı yanlış olabilir.
+          warnings:
+            contains_too_many_words: İkinci adres satırında %{word_count} adetten
+              az kelime olması önerilir

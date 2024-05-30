@@ -214,8 +214,8 @@ cs:
             optional: Samosprávná jednotka města (volitelné)
           errors:
             blank: Zadejte samosprávnou jednotku města.
-            too_long: Název samosprávné jednotky města je příliš dlouhý (maximálně
-              255 znaků).
+            too_long: 'Název samosprávné jednotky města je příliš dlouhý (maximální
+              počet znaků: %{limit}).'
             contains_emojis: Název samosprávné jednotky města nemůže obsahovat emoji.
             contains_mathematical_symbols: Název samosprávné jednotky města nemůže
               obsahovat matematické symboly.
@@ -235,3 +235,28 @@ cs:
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název samosprávné jednotky
               města obsahoval méně než tento počet slov: %{word_count}.'
+        line2:
+          label:
+            default: Byt, jednotka apod.
+            optional: Byt, jednotka apod. (volitelné)
+          errors:
+            blank: Zadejte číslo bytu, jednotky apod.
+            too_long: 'Druhý řádek adresy je příliš dlouhý (maximální počet znaků:
+              %{limit}).'
+            contains_emojis: Druhý řádek adresy nemůže obsahovat emoji.
+            contains_mathematical_symbols: Druhý řádek adresy nemůže obsahovat matematické
+              symboly.
+            contains_restricted_characters: Druhý řádek adresy může obsahovat pouze
+              písmena, číslice, místní znaky a speciální znaky.
+            contains_too_many_words: 'Druhý řádek adresy nemůže obsahovat více než
+              tento počet slov: %{word_count}.'
+            contains_html_tags: Druhý řádek adresy nemůže obsahovat HTML tagy.
+            contains_url: Druhý řádek adresy nemůže obsahovat adresy URL.
+            missing_building_number: Zadejte číslo budovy, pokud existuje.
+            street_unknown_for_zip: 'Zadejte platný název ulice pro: %{zip}.'
+            building_number_invalid: 'Nepovedlo se vyhledat číslo budovy pro: %{street},
+              %{zip}.'
+            unknown_for_address: Druhý řádek adresy může být nesprávný.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby druhý název adresy obsahoval
+              méně než tento počet slov: %{word_count}.'

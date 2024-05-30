@@ -211,7 +211,7 @@ pt-BR:
             optional: Bairro (opcional)
           errors:
             blank: Insira um bairro
-            too_long: O bairro é muito longo (máximo de 255 caracteres)
+            too_long: O bairro é muito longo (máximo de %{limit} caracteres)
             contains_emojis: O bairro não pode conter emojis
             contains_mathematical_symbols: O bairro não pode conter símbolos matemáticos
             contains_restricted_characters: O bairro pode conter apenas letras, números,
@@ -225,3 +225,28 @@ pt-BR:
           warnings:
             contains_too_many_words: É recomendável que o bairro tenha menos de %{word_count}
               palavras
+        line2:
+          label:
+            default: Apartamento, bloco etc.
+            optional: Casa, apto. etc. (opcional)
+          errors:
+            blank: Insira apartamento, bloco etc.
+            too_long: A segunda linha do endereço é longa demais (máximo é %{limit}
+              caracteres)
+            contains_emojis: A segunda linha do endereço não pode conter emojis
+            contains_mathematical_symbols: A segunda linha do endereço não pode conter
+              símbolos matemáticos
+            contains_restricted_characters: A segunda linha do endereço pode conter
+              apenas letras, números, caracteres locais e caracteres especiais
+            contains_too_many_words: A segunda linha do endereço não pode ter mais
+              do que %{word_count} palavras
+            contains_html_tags: A segunda linha do endereço não pode conter tags HTML
+            contains_url: A segunda linha do endereço não pode conter URLs
+            missing_building_number: Adicione o número do prédio, se houver.
+            street_unknown_for_zip: Insira um nome de rua válido para %{zip}.
+            building_number_invalid: Não foi possível localizar o número do prédio
+              em %{street}, %{zip}.
+            unknown_for_address: A segunda linha do endereço pode estar incorreta.
+          warnings:
+            contains_too_many_words: É recomendável que a segunda linha do endereço
+              tenha menos que %{word_count} palavras

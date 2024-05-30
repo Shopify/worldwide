@@ -208,7 +208,7 @@ vi:
             optional: Khu phố (không bắt buộc)
           errors:
             blank: Nhập khu phố
-            too_long: Khu phố quá dài (tối đa 255 ký tự)
+            too_long: Khu phố quá dài (tối đa %{limit} ký tự)
             contains_emojis: Khu phố không được chứa biểu tượng cảm xúc
             contains_mathematical_symbols: Khu phố không được chứa ký hiệu toán học
             contains_restricted_characters: Khu phố chỉ được chứa chữ cái, chữ số,
@@ -222,3 +222,26 @@ vi:
             unknown_for_address: Khu phố có thể không chính xác.
           warnings:
             contains_too_many_words: Khu phố nên có tối đa %{word_count} từ
+        line2:
+          label:
+            default: Căn hộ, dãy, v.v.
+            optional: Căn hộ, dãy, v.v. (không bắt buộc)
+          errors:
+            blank: Nhập căn hộ, dãy, v.v.
+            too_long: Dòng địa chỉ thứ hai quá dài (tối đa %{limit} ký tự)
+            contains_emojis: Dòng địa chỉ thứ hai không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Dòng địa chỉ thứ hai không được chứa ký
+              hiệu toán học
+            contains_restricted_characters: Dòng địa chỉ thứ hai chỉ được chứa chữ
+              cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Dòng địa chỉ thứ hai chỉ được có tối đa %{word_count}
+              từ
+            contains_html_tags: Dòng địa chỉ thứ hai không được chứa thẻ HTML.
+            contains_url: Dòng địa chỉ thứ hai không được chứa URL.
+            missing_building_number: Thêm số tòa nhà nếu có.
+            street_unknown_for_zip: Nhập tên đường hợp lệ cho %{zip}.
+            building_number_invalid: Không thể định vị số tòa nhà cho %{street}, %{zip}.
+            unknown_for_address: Dòng địa chỉ thứ hai có thể không chính xác.
+          warnings:
+            contains_too_many_words: Dòng địa chỉ thứ hai nên có tối đa %{word_count}
+              từ
