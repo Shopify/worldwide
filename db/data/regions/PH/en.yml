@@ -1,0 +1,25 @@
+---
+en:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (optional)
+          errors:
+            blank: Enter a barangay
+            too_long: Barangay is too long (maximum is %{limit} characters)
+            contains_emojis: Barangay cannot contain emojis
+            contains_mathematical_symbols: Barangay cannot contain mathematical symbols
+            contains_restricted_characters: Barangay can only contain letters, numbers,
+              local characters, and special characters
+            contains_too_many_words: Barangay cannot have more than %{word_count}
+              words
+            contains_html_tags: Barangay cannot contain HTML tags.
+            contains_url: Barangay cannot contain URLs.
+            unknown_for_city: Enter a valid barangay name for %{city}.
+            unknown_for_zip: Enter a valid barangay name for %{zip}.
+            unknown_for_address: Barangay may be incorrect.
+          warnings:
+            contains_too_many_words: Barangay is recommended to have less than %{word_count} words
