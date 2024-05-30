@@ -11,11 +11,12 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lang/typescript
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.SHOPIFY_GH_ACCESS_TOKEN }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -33,4 +34,4 @@ jobs:
           publish: pnpm release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.SHOPIFY_GH_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
