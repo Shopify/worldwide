@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/Shopify/worldwide/blob/main/CHANGELOG.md"
 
   spec.files = %x(git ls-files -z).split("\x0").reject do |f|
-    f.match(%r{^(rake|test|spec|features)/})
+    f.match(%r{^(rake|test|spec|features|lang/typescript)/})
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
