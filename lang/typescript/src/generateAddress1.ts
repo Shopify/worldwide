@@ -19,7 +19,7 @@ export function generateAddress1(
   address1: Address1,
 ): string | null {
   const config = getRegionConfig(countryCode);
-  const address1AdditionalFields = config?.additional_address_fields?.address1;
+  const address1AdditionalFields = config?.combined_address_format?.address1;
 
   if (address1.address1 !== undefined) {
     // Always default to returning address1 if it's provided

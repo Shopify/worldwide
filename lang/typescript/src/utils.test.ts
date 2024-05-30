@@ -14,8 +14,8 @@ describe('RESERVED_DELIMETER', () => {
 describe('concatAddressField', () => {
   test('creates a concatenated address field with reserved delimeter', () => {
     const fieldDefinition: AdditionalAddressField[] = [
-      {key: 'streetNumber', required: false},
-      {key: 'streetName', required: false},
+      {key: 'streetNumber'},
+      {key: 'streetName'},
     ];
     const fieldValues = {
       streetNumber: '123',
@@ -28,12 +28,12 @@ describe('concatAddressField', () => {
 
   test('field definition order matters', () => {
     const fieldDefinitionNumberFirst: AdditionalAddressField[] = [
-      {key: 'streetNumber', required: false},
-      {key: 'streetName', required: false},
+      {key: 'streetNumber'},
+      {key: 'streetName'},
     ];
     const fieldDefinitionNameFirst: AdditionalAddressField[] = [
-      {key: 'streetName', required: false},
-      {key: 'streetNumber', required: false},
+      {key: 'streetName'},
+      {key: 'streetNumber'},
     ];
     const fieldValues = {
       streetNumber: '123',
@@ -47,11 +47,10 @@ describe('concatAddressField', () => {
     );
   });
 
-  // TODO: Do we care about the required field for concatenation or just when we do actual field validation on the UI/Atlas?
   test('creates a concatenated string without fields required by the region config', () => {
     const fieldDefinition: AdditionalAddressField[] = [
-      {key: 'streetNumber', required: true},
-      {key: 'streetName', required: true},
+      {key: 'streetNumber'},
+      {key: 'streetName'},
     ];
     const fieldValues = {
       streetNumber: '123',
@@ -76,8 +75,8 @@ describe('concatAddressField', () => {
   describe('fields with decorators', () => {
     test('creates a concatenated address field with decorator', () => {
       const fieldDefinition: AdditionalAddressField[] = [
-        {key: 'streetName', required: false},
-        {key: 'streetNumber', required: false, decorator: ','},
+        {key: 'streetName'},
+        {key: 'streetNumber', decorator: ','},
       ];
       const fieldValues = {
         streetNumber: '123',
@@ -89,8 +88,8 @@ describe('concatAddressField', () => {
     });
     test("doesn't include decorator if previous field is empty", () => {
       const fieldDefinition: AdditionalAddressField[] = [
-        {key: 'streetName', required: false},
-        {key: 'streetNumber', required: false, decorator: ','},
+        {key: 'streetName'},
+        {key: 'streetNumber', decorator: ','},
       ];
       const fieldValues = {
         streetNumber: '123',
@@ -101,8 +100,8 @@ describe('concatAddressField', () => {
     });
     test("doesn't include decorator or delimeter if field is empty", () => {
       const fieldDefinition: AdditionalAddressField[] = [
-        {key: 'streetName', required: false},
-        {key: 'streetNumber', required: false, decorator: ','},
+        {key: 'streetName'},
+        {key: 'streetNumber', decorator: ','},
       ];
       const fieldValues = {
         streetName: 'Main',

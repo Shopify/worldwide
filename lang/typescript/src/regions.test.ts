@@ -4,22 +4,16 @@ describe('yaml loading', () => {
   //   test('US', () => {
   //     const config = getRegionConfig('US');
   //     expect(config).not.toBeNull();
-  //     expect(config!.additional_address_fields).toBeNull();
+  //     expect(config!.combined_address_format).toBeNull();
   //   });
 
   test('BR', () => {
     const config = getRegionConfig('BR');
     expect(config).not.toBeNull();
-    expect(config!.additional_address_fields).not.toBeNull();
-    expect(config!.additional_address_fields).toEqual({
-      address1: [
-        {key: 'streetName', required: true},
-        {key: 'streetNumber', required: true, decorator: ','},
-      ],
-      address2: [
-        {key: 'line2', required: false},
-        {key: 'neighborhood', required: false, decorator: ','},
-      ],
+    expect(config!.combined_address_format).not.toBeNull();
+    expect(config!.combined_address_format).toEqual({
+      address1: [{key: 'streetName'}, {key: 'streetNumber', decorator: ','}],
+      address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],
     });
   });
 });

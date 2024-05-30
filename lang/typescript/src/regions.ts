@@ -8,14 +8,13 @@ import VN from '@data/regions/VN.yml';
 export type CountryCode = 'BR' | 'CL' | 'PH' | 'VN' | 'US';
 export interface AdditionalAddressField {
   key: string;
-  required: boolean;
   decorator?: string;
 }
-export type AdditionalAddressFields = Record<string, AdditionalAddressField[]>;
+export type CombinedAddressFormat = Record<string, AdditionalAddressField[]>;
 export type RegionYamlConfig = Record<string, any> & {
   code: string;
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  additional_address_fields?: AdditionalAddressFields;
+  combined_address_format?: CombinedAddressFormat;
 };
 
 function isRegionYamlConfig(
