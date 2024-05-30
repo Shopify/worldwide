@@ -228,8 +228,8 @@ hu:
             optional: Városnegyed (nem kötelező megadni)
           errors:
             blank: Add meg a városnegyed nevét
-            too_long: Túl hosszú a városnegyed neve (legfeljebb 255 karakter hosszú
-              lehet)
+            too_long: Túl hosszú a városnegyed neve (legfeljebb %{limit} karakter
+              hosszú lehet)
             contains_emojis: A városnegyed neve nem tartalmazhat emodzsikat
             contains_mathematical_symbols: A városnegyed neve nem tartalmazhat matematikai
               szimbólumokat
@@ -245,4 +245,30 @@ hu:
             unknown_for_address: Vélhetően helytelen a városnegyed neve.
           warnings:
             contains_too_many_words: A városnegyed nevének javasolt hossza kevesebb
+              mint %{word_count} szó
+        line2:
+          label:
+            default: Épület, emelet, ajtó stb.
+            optional: Épület, emelet, ajtó stb. (nem kötelező)
+          errors:
+            blank: Írd be az épület, emelet, ajtó stb. jelölését
+            too_long: Túl hosszú a cím második sora (legfeljebb %{limit} karakter
+              hosszú lehet)
+            contains_emojis: A cím második sora nem tartalmazhat emojikat
+            contains_mathematical_symbols: A cím második sora nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters: A cím második sora csak betűket, számokat,
+              helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_too_many_words: A cím második sora legfeljebb %{word_count} szóból
+              állhat
+            contains_html_tags: A cím második sora nem tartalmazhat HTML-címkéket.
+            contains_url: A cím második sora nem tartalmazhat URL-címeket.
+            missing_building_number: Ha van házszám, azt is add meg.
+            street_unknown_for_zip: 'Olyan utcanevet adj meg, amely megfelel ennek:
+              %{zip}.'
+            building_number_invalid: 'Nem található ilyen házszám itt: %{street},
+              %{zip}.'
+            unknown_for_address: Vélhetően helytelen a cím második sora.
+          warnings:
+            contains_too_many_words: A cím második sorának javasolt hossza kevesebb
               mint %{word_count} szó
