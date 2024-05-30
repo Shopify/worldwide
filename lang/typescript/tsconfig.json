@@ -1,0 +1,20 @@
+{
+    "extends": "@shopify/typescript-configs/library.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "esnext",
+        "target": "ES6",
+        "strict": true,
+        "baseUrl": ".",
+        "rootDir": ".",
+        "types": ["vitest/globals"],
+    },
+    "include": [
+        "src",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "rollup.config.mjs"
+    ]
+}
