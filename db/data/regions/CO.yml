@@ -18,11 +18,12 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{line2}{neighborhood}_{city}{province}{zip}_{phone}"
 additional_address_fields:
+  - name: line2
+  - name: neighborhood
+combined_address_format:
   address2:
     - key: line2
-      required: false
     - key: neighborhood
-      required: false
 emoji: "\U0001F1E8\U0001F1F4"
 languages:
   - es

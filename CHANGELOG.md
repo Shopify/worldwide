@@ -27,9 +27,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Created npm package `@shopify/worldwide` (see [README.md](./lang/typescript/README.md)) [#167](https://github.com/Shopify/worldwide/pull/167)
+- Update additional_address_fields and introduce combined_address_format definitions, introduce Region#{field}_required? methods for street_name, street_number, and neighborhood [#177](https://github.com/Shopify/worldwide/pull/177)
 
 ---
-
 ## [0.14.0] - 2024-05-29
 
 - Add support for a line2 address field [#173](https://github.com/Shopify/worldwide/pull/173)

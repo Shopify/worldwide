@@ -282,6 +282,45 @@ module Worldwide
       end
     end
 
+    test "street_name_required? returns values as expected" do
+      street_name_not_required_countries = [:ca, :us, :id]
+      street_name_required_countries = [:nl, :be, :br, :cl, :es]
+
+      street_name_not_required_countries.each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).street_name_required?
+      end
+
+      street_name_required_countries.each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :street_name_required?
+      end
+    end
+
+    test "street_number_required? returns values as expected" do
+      street_number_not_required_countries = [:ca, :us, :id]
+      street_number_required_countries = [:be, :br, :cl, :es]
+
+      street_number_not_required_countries.each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).street_number_required?
+      end
+
+      street_number_required_countries.each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :street_number_required?
+      end
+    end
+
+    test "neighborhood_required? returns values as expected" do
+      neighborhood_not_required_countries = [:ca, :cl, :mx, :id]
+      neighborhood_required_countries = [:ph, :vn, :tr]
+
+      neighborhood_not_required_countries.each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).neighborhood_required?
+      end
+
+      neighborhood_required_countries.each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :neighborhood_required?
+      end
+    end
+
     test "associated_country returns the expected country" do
       {
         ca: "CA",
@@ -353,26 +392,35 @@ module Worldwide
       end
     end
 
-    test "additional_address_fields returns values as expected" do
+    test "combined_address_format returns values as expected" do
       [
         [:us, {}],
         [:il, {
-          "address1" => [{ "key" => "streetNumber", "required" => true }, { "key" => "streetName", "required" => true }],
-        },],
-        [:be, {
-          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => true }],
+          "address1" => [{ "key" => "streetNumber" }, { "key" => "streetName" }],
         },],
         [:br, {
-          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "decorator" => ",", "required" => true }],
-          "address2" => [{ "key" => "line2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
+          "address1" => [{ "key" => "streetName" }, { "key" => "streetNumber", "decorator" => "," }],
+          "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
         },],
         [:cl, {
-          "address1" => [{ "key" => "streetName", "required" => true }, { "key" => "streetNumber", "required" => true }],
-          "address2" => [{ "key" => "line2", "required" => false }, { "key" => "neighborhood", "required" => false }],
+          "address1" => [{ "key" => "streetName" }, { "key" => "streetNumber" }],
+          "address2" => [{ "key" => "line2" }, { "key" => "neighborhood" }],
         },],
         [:id, {
-          "address2" => [{ "key" => "line2", "required" => false }, { "key" => "neighborhood", "decorator" => ",", "required" => false }],
+          "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
         },],
+      ].each do |region_code, expected_value|
+        assert_equal expected_value, Worldwide.region(code: region_code).combined_address_format
+      end
+    end
+
+    test "additional_address_fields returns values as expected" do
+      [
+        [:us, []],
+        [:br, [{ "name" => "streetName", "required" => true }, { "name" => "streetNumber", "required" => true }, { "name" => "line2" }, { "name" => "neighborhood" }]],
+        [:be, [{ "name" => "streetName", "required" => true }, { "name" => "streetNumber", "required" => true }]],
+        [:id, [{ "name" => "line2" }, { "name" => "neighborhood" }]],
+        [:tr, [{ "name" => "line2" }, { "name" => "neighborhood", "required" => true }]],
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).additional_address_fields
       end

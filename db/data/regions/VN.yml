@@ -16,12 +16,14 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{line2}_{neighborhood}_{city}{zip}_{phone}"
 additional_address_fields:
+  - name: line2
+  - name: neighborhood
+    required: true
+combined_address_format:
   address2:
     - key: line2
-      required: false
     - key: neighborhood
       decorator: ", Quận"
-      required: false
 emoji: "\U0001F1FB\U0001F1F3"
 languages:
   - fr

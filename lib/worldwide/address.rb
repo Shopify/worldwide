@@ -149,23 +149,23 @@ module Worldwide
     def concatenated_address1
       return address1 if address1.present?
 
-      additional_fields = region.additional_address_fields["address1"] || []
+      additional_fields = region.combined_address_format["address1"] || []
       concatenate_fields(additional_fields)
     end
 
     def concatenated_address2
-      additional_fields = region.additional_address_fields["address2"] || []
+      additional_fields = region.combined_address_format["address2"] || []
       concatenate_fields(additional_fields)
     end
 
     def split_address1
-      additional_fields = region.additional_address_fields["address1"] || []
+      additional_fields = region.combined_address_format["address1"] || []
       split_fields_arr = address1&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
 
     def split_address2
-      additional_fields = region.additional_address_fields["address2"] || []
+      additional_fields = region.combined_address_format["address2"] || []
       split_fields_arr = address2&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
