@@ -1,14 +1,14 @@
 import {getRegionConfig} from './regions';
 
 describe('yaml loading', () => {
-  //   test('US', () => {
-  //     const config = getRegionConfig('US');
-  //     expect(config).not.toBeNull();
-  //     expect(config!.combined_address_format).toBeNull();
-  //   });
+  test('US', async () => {
+    const config = await getRegionConfig('US');
+    expect(config).not.toBeNull();
+    expect(config!.combined_address_format).toBeUndefined();
+  });
 
-  test('BR', () => {
-    const config = getRegionConfig('BR');
+  test('BR', async () => {
+    const config = await getRegionConfig('BR');
     expect(config).not.toBeNull();
     expect(config!.combined_address_format).not.toBeNull();
     expect(config!.combined_address_format).toEqual({

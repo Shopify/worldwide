@@ -3,6 +3,7 @@ import path from 'path';
 import typescript from '@rollup/plugin-typescript';
 import yaml from '@rollup/plugin-yaml';
 import alias from '@rollup/plugin-alias';
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 const projectRootDir = path.resolve(__dirname);
 const regionConfigFileRegex = /db\/data\/regions\/[a-zA-Z]{2}\.yml/;
@@ -17,6 +18,20 @@ export default {
   plugins: [
     yaml({
       transform(data, filePath) {
+        // console.log(
+        //   filePath,
+        //   regionConfigFileRegex.test(filePath) &&
+        //     typeof data === 'object' &&
+        //     data !== null &&
+        //     'code' in data &&
+        //     typeof data.code === 'string',
+        // );
+        // if (
+        //   filePath ===
+        //   '/home/spin/src/github.com/Shopify/worldwide/db/data/regions/AU.yml'
+        // ) {
+        //   console.log(data);
+        // }
         // On the region config yamls, we only need combined_address_format
         // 1. Strip any data we don't need from the yaml before its bundled in
         //    the JS, which drastically reduces the bundle size
@@ -44,6 +59,7 @@ export default {
         },
       ],
     }),
+    dynamicImportVars({errorWhenNoFilesFound: true}),
     typescript(),
   ],
 };

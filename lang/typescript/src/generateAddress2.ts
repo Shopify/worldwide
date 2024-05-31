@@ -13,11 +13,11 @@ interface Address2 {
  * @param address2 object containing full `address2` field or a combination of `line2` and `neighborhood` sub-fields
  * @returns concatenated address string or null if invalid input was sent
  */
-export function generateAddress2(
+export async function generateAddress2(
   countryCode: CountryCode,
   address2: Address2,
-): string | null {
-  const config = getRegionConfig(countryCode);
+): Promise<string | null> {
+  const config = await getRegionConfig(countryCode);
   const address2CombinedFormat = config?.combined_address_format?.address2;
   const address2NotEmpty =
     Object.values(address2).filter((value) => value !== undefined).length > 0;
