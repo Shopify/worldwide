@@ -217,7 +217,8 @@ pl:
             optional: Dzielnica (opcjonalnie)
           errors:
             blank: Wpisz dzielnicę
-            too_long: Dzielnica jest za długa (maksymalnie 255 znaków)
+            too_long: Dzielnica zawiera zbyt dużo znaków (maksymalna liczba znaków
+              to %{limit})
             contains_emojis: Dzielnica nie może zawierać emoji
             contains_mathematical_symbols: Dzielnica nie może zawierać symboli matematycznych
             contains_restricted_characters: Dzielnica może zawierać litery, cyfry,
@@ -232,3 +233,28 @@ pl:
           warnings:
             contains_too_many_words: Zaleca się, aby dzielnica zawierała mniej niż
               %{word_count} słów (słowa)
+        line2:
+          label:
+            default: Mieszkanie, apartament, itp.
+            optional: Mieszkanie, apartament itp. (opcjonalnie)
+          errors:
+            blank: Wpisz mieszkanie, apartament itp.
+            too_long: Druga linia adresu zawiera zbyt dużo znaków (maksymalna liczba
+              znaków to %{limit})
+            contains_emojis: Druga linia adresu nie może zawierać emoji
+            contains_mathematical_symbols: Druga linia adresu nie może zawierać symboli
+              matematycznych
+            contains_restricted_characters: Druga linia adresu może zawierać tylko
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_too_many_words: Druga linia adresu może składać się maksymalnie
+              z %{word_count} słów
+            contains_html_tags: Druga linia adresu nie może zawierać tagów HTML.
+            contains_url: Druga linia adresu nie może zawierać adresów URL.
+            missing_building_number: Dodaj numer budynku, jeśli go posiadasz.
+            street_unknown_for_zip: Wpisz prawidłową nazwę ulicy dla %{zip}.
+            building_number_invalid: Nie udało się zlokalizować numeru budynku dla
+              %{street}, %{zip}.
+            unknown_for_address: Druga linia adresu może być nieprawidłowa.
+          warnings:
+            contains_too_many_words: Zaleca się, aby druga linia adresu zawierała
+              poniżej %{word_count} słów

@@ -187,7 +187,7 @@ ko:
             optional: 이웃(선택 사항)
           errors:
             blank: 이웃을 입력하십시오
-            too_long: 이웃이 너무 깁니다(최대 255자)
+            too_long: 이웃이 너무 깁니다(최대 %{limit}자)
             contains_emojis: 이웃에 이모티콘을 포함할 수 없음
             contains_mathematical_symbols: 이웃에 수학 기호를 포함할 수 없음
             contains_restricted_characters: 이웃에는 문자, 숫자, 지역 문자, 특수 문자만 포함할 수 있습니다
@@ -199,3 +199,23 @@ ko:
             unknown_for_address: 이웃이 잘못되었을 수 있습니다.
           warnings:
             contains_too_many_words: 이웃에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다
+        line2:
+          label:
+            default: 아파트, 동/호수 등
+            optional: 아파트, 동/호수 등(선택 사항)
+          errors:
+            blank: 아파트, 동/호수 등을 입력하세요
+            too_long: 두 번째 주소 줄이 너무 깁니다(최대 %{limit}자)
+            contains_emojis: 주소의 두 번째 줄에 이모티콘을 포함할 수 없습니다
+            contains_mathematical_symbols: 주소의 두 번째 줄에 수학 기호를 포함할 수 없습니다
+            contains_restricted_characters: 주소의 두 번째 줄에는 문자, 숫자, 지역 문자, 특수 문자만 포함할
+              수 있습니다
+            contains_too_many_words: 주소의 두 번째 줄은 %{word_count}단어 이하여야 합니다
+            contains_html_tags: 주소의 두 번째 줄에 HTML 태그를 포함할 수 없습니다.
+            contains_url: 주소의 두 번째 줄에 URL을 포함할 수 없습니다.
+            missing_building_number: 건물 번호가 있는 경우 건물 번호를 추가하세요.
+            street_unknown_for_zip: "%{zip}의 올바른 도로명을 입력하세요."
+            building_number_invalid: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다."
+            unknown_for_address: 주소의 두 번째 줄이 잘못되었을 수 있습니다.
+          warnings:
+            contains_too_many_words: 주소의 두 번째 줄은 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다

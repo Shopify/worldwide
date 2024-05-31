@@ -221,7 +221,7 @@ de:
             optional: Stadtviertel (optional)
           errors:
             blank: Gib ein Stadtviertel ein.
-            too_long: Stadtviertel ist zu lang (maximal 255 Zeichen).
+            too_long: Stadtviertel ist zu lang (maximal %{limit} Zeichen)
             contains_emojis: Stadtviertel darf keine Emojis enthalten.
             contains_mathematical_symbols: Stadtviertel darf keine mathematischen
               Symbole enthalten.
@@ -237,3 +237,27 @@ de:
           warnings:
             contains_too_many_words: Es wird empfohlen, dass das Stadtviertel weniger
               als %{word_count} Wörter enthält.
+        line2:
+          label:
+            default: Wohnung, Zimmer usw.
+            optional: Wohnung, Zimmer, usw. (optional)
+          errors:
+            blank: Gib eine Wohnung, ein Zimmer usw. ein
+            too_long: Die zweite Adresszeile ist zu lang (maximal %{limit} Zeichen)
+            contains_emojis: Die zweite Adresszeile darf keine Emojis enthalten
+            contains_mathematical_symbols: Die zweite Adresszeile darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters: Die zweite Adresszeile darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_too_many_words: Die zweite Adresszeile darf maximal %{word_count} Wörter
+              enthalten
+            contains_html_tags: Die zweite Adresszeile darf keine HTML-Tags enthalten.
+            contains_url: Die zweite Adresszeile darf keine URLs enthalten.
+            missing_building_number: Falls verfügbar, füge eine Hausnummer hinzu.
+            street_unknown_for_zip: Gib einen gültigen Straßennamen für %{zip} ein.
+            building_number_invalid: Hausnummer für %{street}, %{zip}, konnte nicht
+              gefunden werden.
+            unknown_for_address: Die zweite Adresszeile ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Die zweite Adresszeile sollte Empfehlungen zufolge
+              weniger als %{word_count} Wörter haben
