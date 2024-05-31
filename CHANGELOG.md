@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Merge duplicate language definition on some region yaml files to restore missing languages; `NO` adds "en" and "nb", `SA` adds "en", SG does not change [#188](https://github.com/Shopify/worldwide/pull/188)
+- updated format_extended for TW VN [#187]https://github.com/Shopify/worldwide/pull/187)
 
 ---
 
