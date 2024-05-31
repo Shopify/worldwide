@@ -27,9 +27,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- update neighborhood too_long error message, add MX, PH neighborhood labels [#182](https://github.com/Shopify/worldwide/pull/182)
+- Nil.
 
 ---
+
+## [1.0.0] - 2024-05-30
+
+- update neighborhood too_long error message, add MX, PH neighborhood labels [#182](https://github.com/Shopify/worldwide/pull/182)
+
 ## [0.15.0] - 2024-05-30
 
 - Created npm package `@shopify/worldwide` (see [README.md](./lang/typescript/README.md)) [#167](https://github.com/Shopify/worldwide/pull/167)
