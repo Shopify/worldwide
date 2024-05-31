@@ -1,4 +1,7 @@
 import path from 'path';
+import glob from 'fast-glob';
+import {promises as fsAsync} from 'fs';
+import YAML from 'js-yaml';
 
 import typescript from '@rollup/plugin-typescript';
 import yaml from '@rollup/plugin-yaml';
@@ -15,6 +18,44 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    {
+      name: 'custom:regions',
+      resolveId: (id: string) => {
+        if (id === 'custom:regions') {
+          return id;
+        }
+      },
+      load: async (id: string) => {
+        if (id === 'custom:regions') {
+          const regions: Record<string, any> = {};
+          for (const ymlPath of await glob(
+            path.resolve(projectRootDir, '../../db/data/regions/*.yml'),
+          )) {
+            const [fname] = ymlPath.split('/').slice(-1);
+            const yamlData = YAML.load(
+              (await fsAsync.readFile(ymlPath)).toString(),
+            );
+            if (
+              typeof yamlData === 'object' &&
+              yamlData !== null &&
+              'code' in yamlData &&
+              typeof yamlData.code === 'string'
+            ) {
+              const {code, name, combined_address_format} = yamlData as Record<
+                string,
+                any
+              >;
+              regions[fname.replace(/\.yml$/, '')] = {
+                code,
+                name,
+                combined_address_format,
+              };
+            }
+          }
+          return `export default ${JSON.stringify(regions, undefined, '\t')}`;
+        }
+      },
+    },
     yaml({
       transform(data, filePath) {
         // On the region config yamls, we only need combined_address_format
