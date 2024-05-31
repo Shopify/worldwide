@@ -216,7 +216,7 @@ nb:
             optional: Nabolag (valgfritt)
           errors:
             blank: Angi et nabolag
-            too_long: Nabolagsnavnet er for langt (maksimalt 255 tegn)
+            too_long: Nabolagsnavnet er for langt (maksimalt %{limit} tegn)
             contains_emojis: Nabolagsnavnet kan ikke inneholde emojier
             contains_mathematical_symbols: Nabolagsnavnet kan ikke inneholde matematiske
               symboler
@@ -232,3 +232,26 @@ nb:
           warnings:
             contains_too_many_words: Vi anbefaler at nabolagsnavnet inneholder færre
               enn %{word_count} ord
+        line2:
+          label:
+            default: Leilighet, etasje osv.
+            optional: Leilighet, etasje osv. (valgfritt)
+          errors:
+            blank: Skriv inn en leilighet, etasje osv.
+            too_long: Den andre adresselinjen er for lang (maksimalt %{limit} tegn)
+            contains_emojis: Den andre adresselinjen kan ikke inneholde emojier
+            contains_mathematical_symbols: Den andre adresselinjen kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters: Den andre adresselinjen kan bare inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_too_many_words: Den andre adresselinjen kan ikke bestå av mer
+              enn %{word_count} ord
+            contains_html_tags: Den andre adresselinjen kan ikke inneholde HTML-tagger.
+            contains_url: Den andre adresselinjen kan ikke inneholde URL-adresser.
+            missing_building_number: Legg til et bygningsnummer hvis du har et.
+            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
+            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
+            unknown_for_address: Den andre adresselinjen kan være feil.
+          warnings:
+            contains_too_many_words: Vi anbefaler at den andre adresselinjen inneholder
+              færre enn %{word_count} ord

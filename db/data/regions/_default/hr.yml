@@ -224,8 +224,8 @@ hr:
             optional: Stambena četvrt (neobavezno)
           errors:
             blank: Unesite stambenu četvrt
-            too_long: Naziv stambene četvrti je predugačak (dopušteno je najviše 255
-              znakova)
+            too_long: Naziv stambene četvrti je predugačak (najveći dopušteni broj
+              znakova je %{limit})
             contains_emojis: Naziv stambene četvrti ne smije sadržavati emotikone
             contains_mathematical_symbols: Naziv stambene četvrti ne smije sadržavati
               matematičke simbole
@@ -241,3 +241,28 @@ hr:
           warnings:
             contains_too_many_words: Preporučujemo da naziv stambene četvrti sadrži
               manje od %{word_count} riječ/i
+        line2:
+          label:
+            default: Broj stana, apartmana itd.
+            optional: Broj stana, apartmana itd. (nije obavezno)
+          errors:
+            blank: Unesite broj stana, apartmana itd.
+            too_long: Drugi redak adrese je predugačak (najveći dopušteni broj znakova
+              je %{limit})
+            contains_emojis: Drugi redak adrese ne smije sadržavati emotikone
+            contains_mathematical_symbols: Drugi redak adrese ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters: Drugi redak adrese smije sadržavati samo
+              slova, brojeve, lokalne znakove i posebne znakove
+            contains_too_many_words: Broj riječi koje drugi redak može sadržavati
+              jest najviše %{word_count}
+            contains_html_tags: Drugi redak adrese ne smije sadržavati HTML oznake.
+            contains_url: Drugi redak adrese ne smije sadržavati URL-ove.
+            missing_building_number: Unesite kućni broj ako postoji.
+            street_unknown_for_zip: Unesite valjani naziv ulice za grad %{zip}.
+            building_number_invalid: Ovaj kućni broj ne postoji u ulici %{street},
+              %{zip}.
+            unknown_for_address: Drugi redak adrese možda nije točan.
+          warnings:
+            contains_too_many_words: 'Preporučljivo je da drugi redak adrese ne sadrži
+              više od sljedećeg broja riječi: %{word_count}'
