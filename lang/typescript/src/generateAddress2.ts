@@ -1,7 +1,6 @@
 import {concatAddressField} from '@/utils';
 import {CountryCode, getRegionConfig} from '@/regions';
 
-// TODO: Decide on how flexible we want the inputs
 interface Address2 {
   address2?: string;
   line2?: string;
@@ -19,15 +18,17 @@ export function generateAddress2(
   address2: Address2,
 ): string | null {
   const config = getRegionConfig(countryCode);
-  const address2AdditionalFields = config?.combined_address_format?.address2;
+  const address2CombinedFormat = config?.combined_address_format?.address2;
+  const address2NotEmpty =
+    Object.values(address2).filter((value) => value !== undefined).length > 0;
 
   if (address2.address2 !== undefined) {
     // Always default to returning address2 if it's provided
     return address2.address2;
-  } else if (address2AdditionalFields) {
+  } else if (address2CombinedFormat && address2NotEmpty) {
     // concatAddressField utility works on arbitrary keys, just expects `Record<string, string>`
     const addressValues = {...address2};
-    return concatAddressField(address2AdditionalFields, addressValues);
+    return concatAddressField(address2CombinedFormat, addressValues);
   }
 
   return null;

@@ -10,8 +10,7 @@ describe('generateAddress1', () => {
     ).toBeNull();
   });
 
-  // TODO: Do we need this in the TS version?
-  test.skip('returns null if address1 is missing for region with additional fields', () => {
+  test('returns null if address1 is missing for region with additional fields', () => {
     expect(generateAddress1('BR', {})).toBeNull();
     expect(generateAddress1('CL', {})).toBeNull();
   });
