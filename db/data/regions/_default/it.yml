@@ -226,7 +226,7 @@ it:
             optional: Quartiere (facoltativo)
           errors:
             blank: Inserisci un quartiere
-            too_long: Il nome del quartiere è troppo lungo (lunghezza massima 255
+            too_long: Il campo Quartiere è troppo lungo (lunghezza massima %{limit}
               caratteri)
             contains_emojis: Il campo Quartiere non può contenere emoji
             contains_mathematical_symbols: Il campo Quartiere non può contenere simboli
@@ -243,3 +243,31 @@ it:
           warnings:
             contains_too_many_words: Il campo Quartiere deve contenere meno di %{word_count}
               parole
+        line2:
+          label:
+            default: Appartamento, scala, ecc.
+            optional: Appartamento, scala, ecc. (opzionale)
+          errors:
+            blank: Inserisci appartamento, scala, ecc.
+            too_long: Il campo Seconda riga dell'indirizzo è troppo lunga (lunghezza
+              massima %{limit}caratteri)
+            contains_emojis: Il campo Seconda riga dell'indirizzo non può contenere
+              emoji
+            contains_mathematical_symbols: Il campo Seconda riga dell'indirizzo non
+              può contenere simboli matematici
+            contains_restricted_characters: Il campo Seconda riga dell'indirizzo può
+              contenere solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_too_many_words: Il campo Seconda riga dell'indirizzo non può
+              superare le %{word_count} parole
+            contains_html_tags: Il campo Seconda riga dell'indirizzo non può contenere
+              tag HTML.
+            contains_url: Il campo Seconda riga dell'indirizzo non può contenere URL.
+            missing_building_number: Aggiungi un numero civico, se esistente.
+            street_unknown_for_zip: Inserisci un nome di una via valido per %{zip}.
+            building_number_invalid: Impossibile localizzare il numero civico per
+              %{street}, %{zip}.
+            unknown_for_address: È possibile che il campo Seconda riga dell'indirizzo
+              non sia corretto.
+          warnings:
+            contains_too_many_words: Il campo Seconda riga dell'indirizzo deve contenere
+              meno di %{word_count} parole
