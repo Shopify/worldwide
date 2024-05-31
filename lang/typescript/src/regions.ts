@@ -1,5 +1,7 @@
 import regions from 'custom:regions';
 
+import {ValidYamlType} from './types/yaml';
+
 // TODO: Strictly type this to only available country codes
 export type CountryCode = string;
 export interface AdditionalAddressField {
@@ -8,24 +10,38 @@ export interface AdditionalAddressField {
 }
 export type CombinedAddressFormat = Record<string, AdditionalAddressField[]>;
 export type RegionYamlConfig = Record<string, any> & {
+  /** Two-letter country code */
   code: string;
+  /** Full region name */
   name: string;
   // eslint-disable-next-line @typescript-eslint/naming-convention
   combined_address_format?: CombinedAddressFormat;
 };
 
-// TODO: Use ValidYamlConfig or similar type instead of Record<string, any>
+/**
+ * Type-guard to ensure we're operating on the right yaml data.
+ *
+ * combined_address_format is optional, so check against `code` and
+ * `name` which should be on all region configs.
+ */
 function isRegionYamlConfig(
-  yamlConfig: Record<string, any>,
+  yamlConfig: ValidYamlType,
 ): yamlConfig is RegionYamlConfig {
-  return 'code' in yamlConfig && typeof yamlConfig.code === 'string';
+  return (
+    yamlConfig !== null &&
+    typeof yamlConfig === 'object' &&
+    'code' in yamlConfig &&
+    typeof yamlConfig.code === 'string' &&
+    'name' in yamlConfig &&
+    typeof yamlConfig.name === 'string'
+  );
 }
 
 export function getRegionConfig(
   countryCode: CountryCode,
 ): RegionYamlConfig | null {
   const regionConfig = regions[countryCode];
-  if (isRegionYamlConfig(regionConfig)) {
+  if (regionConfig && isRegionYamlConfig(regionConfig)) {
     return regionConfig;
   }
 
