@@ -17,3 +17,26 @@ hr:
           errors:
             blank_instructional: Odaberite saveznu državu
             blank_informative: Nedostaje savezna država
+        neighborhood:
+          label:
+            default: Kolonija
+            optional: Kolonija (neobavezno)
+          errors:
+            blank: Unesite koloniju
+            too_long: Naziv kolonije je predugačak (najveći dopušteni broj znakova
+              je %{limit})
+            contains_emojis: Naziv kolonije ne smije sadržavati emotikone
+            contains_mathematical_symbols: Naziv kolonije ne smije sadržavati matematičke
+              simbole
+            contains_restricted_characters: Naziv kolonije smije sadržavati samo slova,
+              brojeve, lokalne znakove i posebne znakove
+            contains_too_many_words: 'Naziv kolonije smije sadržavati najviše sljedeći
+              broj riječi: %{word_count}'
+            contains_html_tags: Naziv kolonije ne smije sadržavati HTML oznake.
+            contains_url: Naziv kolonije ne smije sadržavati URL-ove.
+            unknown_for_city: Unesite valjani naziv kolonije za %{city}.
+            unknown_for_zip: Unesite valjani naziv kolonije za %{zip}.
+            unknown_for_address: Naziv kolonije možda nije točan.
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv kolonije sadrži manje
+              od %{word_count} riječ/i
