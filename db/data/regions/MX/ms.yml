@@ -17,3 +17,25 @@ ms:
           errors:
             blank_instructional: Pilih negeri
             blank_informative: Negeri tiada
+            blank: Pilih negeri
+        neighborhood:
+          label:
+            default: Koloni
+            optional: Koloni (opsyenal)
+          errors:
+            blank: Masukkan koloni
+            too_long: Koloni terlalu panjang (maksimum ialah %{limit} aksara)
+            contains_emojis: Koloni tidak boleh mengandungi emoji
+            contains_mathematical_symbols: Koloni tidak boleh mengandungi simbol matematik
+            contains_restricted_characters: Koloni hanya boleh mengandungi huruf,
+              nombor, aksara tempatan dan aksara khas
+            contains_too_many_words: Koloni tidak boleh mengandungi lebih daripada
+              %{word_count} perkataan
+            contains_html_tags: Koloni tidak boleh mengandungi tag HTML.
+            contains_url: Koloni tidak boleh mengandungi URL.
+            unknown_for_city: Masukkan nama koloni yang sah untuk %{city}.
+            unknown_for_zip: Masukkan nama koloni yang sah untuk %{zip}.
+            unknown_for_address: Koloni mungkin salah.
+          warnings:
+            contains_too_many_words: Koloni disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan

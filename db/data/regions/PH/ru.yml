@@ -1,0 +1,27 @@
+---
+ru:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Барангай
+            optional: Барангай (необязательно)
+          errors:
+            blank: Укажите барангай
+            too_long: Название барангая слишком длинное (должно содержать не больше
+              %{limit} симв.)
+            contains_emojis: Название барангая не может содержать емодзи
+            contains_mathematical_symbols: Название барангая не может содержать математические
+              символы
+            contains_restricted_characters: Поле «Название барангая» может содержать
+              только буквы, цифры, а также местные и специальные символы
+            contains_too_many_words: Название барангая не может превышать %{word_count} сл.
+            contains_html_tags: Название барангая не может содержать HTML-теги.
+            contains_url: Название барангая не может содержать URL-адреса.
+            unknown_for_city: Укажите действительное название барангая для %{city}.
+            unknown_for_zip: Укажите действительное название барангая для %{zip}.
+            unknown_for_address: Название барангая может быть указано неправильно.
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле названия барангая
+              не более %{word_count} сл.
