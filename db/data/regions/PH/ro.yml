@@ -1,0 +1,29 @@
+---
+ro:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (opțional)
+          errors:
+            blank: Introdu o denumire pentru barangay
+            too_long: Denumirea pentru barangay este prea lungă (lungimea maximă este
+              de %{limit} caractere)
+            contains_emojis: Denumirea pentru barangay nu poate conține emoji-uri
+            contains_mathematical_symbols: Denumirea pentru barangay nu poate conține
+              simboluri matematice
+            contains_restricted_characters: Denumirea pentru barangay poate conține
+              numai litere, cifre, caractere locale și caractere speciale
+            contains_too_many_words: Denumirea pentru barangay nu poate conține mai
+              mult de %{word_count} cuvinte
+            contains_html_tags: Denumirea pentru barangay nu poate conține etichete
+              HTML.
+            contains_url: Denumirea pentru barangay nu poate conține adrese URL.
+            unknown_for_city: Introdu o denumire pentru barangay validă pentru %{city}
+            unknown_for_zip: Introdu o denumire pentru barangay validă pentru %{zip}
+            unknown_for_address: Denumirea pentru barangay este posibil să fie incorectă.
+          warnings:
+            contains_too_many_words: Se recomandă ca denumirea pentru barangay să
+              nu aibă mai mult de %{word_count} cuvinte
