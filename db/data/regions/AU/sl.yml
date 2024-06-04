@@ -8,30 +8,52 @@ sl:
             default: Predmestje
             optional: Predmestje (izbirno)
           errors:
-            blank: Vnesite predmestno četrt
-            too_long: Ime predmestja je predolgo (največje dovoljeno št. znakov je
-              255)
-            contains_html_tags: Predmestje ne sme vsebovati oznak HTML.
-            contains_emojis: Predmestje ne sme vsebovati čustvenih simbolov
-            contains_restricted_characters: Ime predmestja lahko vsebuje le črke,
-              številke, lokalne znake in posebne znake
+            blank_instructional: Vnesite predmestje
+            blank_informative: Manjka predmestje
+            too_long_instructional: Ime predmestja je predolgo (največje dovoljeno
+              št. znakov je 255)
+            too_long_informative: Ime predmestja je predolgo
+            contains_emojis_instructional: Predmestje ne sme vsebovati čustvenih simbolov
+            contains_emojis_informative: Predmestje ne sme vsebovati čustvenih simbolov
+            contains_restricted_characters_instructional: Ime predmestja lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Ime predmestja ne sme vsebovati
+              prepovedanih znakov
+            contains_html_tags_instructional: Predmestje ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Predmestje ne sme vsebovati oznak HTML
         province:
           label:
             default: Država/teritorij
             optional: Država/teritorij (izbirno)
           errors:
-            blank: Izberite zvezno državo/ozemlje
+            blank_instructional: Izberite zvezno državo/ozemlje
+            blank_informative: Manjka zvezna država/ozemlje
         zip:
           label:
             default: Poštna številka
             optional: Poštna številka (izbirno)
           errors:
-            blank: Vnesite poštno številko
-            invalid_for_country: Vnesite veljavno poštno številko za državo %{country}
-            invalid_for_country_and_province: Vnesite veljavno poštno številko za
-              območje %{province}, %{country}
-            too_long: Poštna številka je predolga
-            contains_html_tags: Poštna številka ne sme vsebovati oznak HTML.
-            contains_emojis: Poštna številka ne sme vsebovati čustvenih simbolov
-            contains_restricted_characters: Poštna številka lahko vsebuje le črke,
-              številke, lokalne znake in posebne znake
+            blank_instructional: Vnesite poštno številko
+            blank_informative: Manjka poštna številka
+            invalid_for_country_instructional: Vnesite veljavno poštno številko za
+              državo %{country}
+            invalid_for_country_informative: Poštna številka ni veljavna za državo
+              %{country}
+            invalid_for_country_and_province_instructional: Vnesite veljavno poštno
+              številko za provinco %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštna številka ni veljavna
+              za provinco %{province}, %{country}
+            too_long_instructional: Poštna številka je predolga
+            too_long_informative: Poštna številka je predolga
+            contains_emojis_instructional: Poštna številka ne sme vsebovati čustvenih
+              simbolov
+            contains_emojis_informative: Poštna številka ne sme vsebovati čustvenih
+              simbolov
+            contains_restricted_characters_instructional: Poštna številka lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Poštna številka ne sme vsebovati
+              prepovedanih znakov
+            contains_html_tags_instructional: Poštna številka ne sme vsebovati oznak
+              HTML
+            contains_html_tags_informative: Poštna številka ne sme vsebovati oznak
+              HTML

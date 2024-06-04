@@ -85,7 +85,7 @@ module Worldwide
     test "error returns expected value when there is no country code" do
       [
         [:en, :us, "Enter a valid postal code"],
-        [:fr, nil, "Saisissez un code postal valide."],
+        [:fr, nil, "Saisir un code postal valide"],
       ].each do |locale, country_code, expected|
         I18n.with_locale(locale) do
           actual = Worldwide::Field.new(country_code: country_code, field_key: :zip).error(code: :invalid)
@@ -183,6 +183,35 @@ module Worldwide
       ].each do |locale, country_code, field, expected|
         I18n.with_locale(locale) do
           actual = Worldwide::Field.new(country_code: country_code, field_key: field).label_marked_optional
+
+          assert_equal expected, actual
+        end
+      end
+    end
+
+    test "if an `_instructional` error key is submitted but that key does not exist, it will fall back to the original " \
+      "field's error message" do
+      [
+        [:en, :us, :province, "State may be incorrect"],
+      ].each do |locale, country_code, field, expected|
+        I18n.with_locale(locale) do
+          actual = Worldwide::Field.new(country_code: country_code, field_key: field).error(
+            code: :unknown_for_address_instructional,
+          )
+
+          assert_equal expected, actual
+        end
+      end
+    end
+
+    test "if an `_instructional` error key is ommited but that key does exist, it will return the correct error message" do
+      [
+        [:en, :us, :province, "Select a state"],
+      ].each do |locale, country_code, field, expected|
+        I18n.with_locale(locale) do
+          actual = Worldwide::Field.new(country_code: country_code, field_key: field).error(
+            code: :blank,
+          )
 
           assert_equal expected, actual
         end

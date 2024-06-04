@@ -8,21 +8,43 @@ ro:
             default: District
             optional: District (opțional)
           errors:
-            blank: Introdu un nume de district
-            too_long: Numele districtului este prea lung (lungimea maximă este de
-              255 caractere)
-            contains_emojis: Numele districtului nu poate conține emoji-uri
-            contains_mathematical_symbols: Numele districtului nu poate conține simboluri
-              matematice
-            contains_restricted_characters: Numele districtului poate conține numai
-              litere, cifre, caractere locale și caractere speciale
-            contains_too_many_words: Numele districtului nu poate conține mai mult
-              de %{word_count} cuvinte
-            contains_html_tags: Numele districtului nu poate conține etichete HTML.
-            contains_url: Numele districtului nu poate conținea adrese URL.
-            unknown_for_city: Introdu un nume de district valid pentru %{city}.
-            unknown_for_zip: Introdu un nume de district valid pentru %{zip}.
-            unknown_for_address: Este posibil ca numele districtului să fie incorect.
+            unknown_for_address: Denumirea districtului este posibil să fie incorectă
+            blank_instructional: Introdu o denumire de district
+            blank_informative: Denumirea districtului lipsește
+            too_long_instructional: Denumirea districtului este prea lungă (lungimea
+              maximă este de 255 caractere)
+            too_long_informative: Denumirea districtului este prea lungă
+            contains_emojis_instructional: Denumirea districtului nu poate conține
+              emoji-uri
+            contains_emojis_informative: Denumirea districtului nu poate conține emoji-uri
+            contains_mathematical_symbols_instructional: Denumirea districtului nu
+              poate conține simboluri matematice
+            contains_mathematical_symbols_informative: Denumirea districtului nu poate
+              conține simboluri matematice
+            contains_restricted_characters_instructional: Denumirea districtului poate
+              conține numai litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Denumirea districtului nu
+              poate conține caractere restricționate
+            contains_too_many_words_instructional: Denumirea districtului nu poate
+              conține mai mult de %{word_count} cuvinte
+            contains_too_many_words_informative: Denumirea districtului nu poate conține
+              mai mult de %{word_count} cuvinte
+            contains_html_tags_instructional: Denumirea districtului nu poate conține
+              etichete HTML
+            contains_html_tags_informative: Denumirea districtului nu poate conține
+              etichete HTML
+            contains_url_instructional: Denumirea districtului nu poate conține o
+              adresă URL
+            contains_url_informative: Denumirea districtului nu poate conține o adresă
+              URL
+            unknown_for_city_instructional: Introdu o denumire de district validă
+              pentru %{city}
+            unknown_for_city_informative: Denumirea districtului nu este validă pentru
+              %{city}
+            unknown_for_zip_instructional: Introdu o denumire de district validă pentru
+              %{zip}
+            unknown_for_zip_informative: Denumirea districtului nu este validă pentru
+              %{zip}
           warnings:
             contains_too_many_words: Se recomandă ca numele districtului să nu aibă
               mai mult de %{word_count} cuvinte

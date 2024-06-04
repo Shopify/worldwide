@@ -8,12 +8,23 @@ pt-PT:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blank: Introduza um código postal
-            invalid_for_country: Introduza um código postal válido para o Reino Unido
-            invalid_for_country_and_province: Introduza um código postal válido para
-              %{province}, Reino Unido
-            too_long: O valor do código postal é demasiado longo
-            contains_html_tags: O código postal não pode conter etiquetas HTML.
-            contains_emojis: O código postal não pode conter emojis
-            contains_restricted_characters: O código postal não pode ter carateres
-              restritos
+            blank_instructional: Introduza um código postal
+            blank_informative: O código postal está em falta
+            invalid_for_country_instructional: Introduza um código postal válido para
+              o Reino Unido
+            invalid_for_country_informative: O código postal é inválido para o Reino
+              Unido
+            invalid_for_country_and_province_instructional: Introduza um código postal
+              válido para %{province}, Reino Unido
+            invalid_for_country_and_province_informative: O código postal é inválido
+              para %{province}, Reino Unido
+            too_long_instructional: O código postal é demasiado longo
+            too_long_informative: O código postal é demasiado longo
+            contains_emojis_instructional: O código postal não pode conter emojis
+            contains_emojis_informative: O código postal não pode conter emojis
+            contains_restricted_characters_instructional: O código postal não pode
+              ter caracteres restritos
+            contains_restricted_characters_informative: O código postal só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_html_tags_instructional: O código postal não pode conter HTML
+            contains_html_tags_informative: O código postal não pode conter HTML

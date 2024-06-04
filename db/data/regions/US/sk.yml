@@ -8,24 +8,43 @@ sk:
             default: Štát
             optional: Štát (voliteľné)
           errors:
-            blank: Vyberte štát
-            invalid_for_country: Zadajte platný štát krajiny %{country}
-            unknown_for_city_and_zip: 'Zadajte platný štát pre: %{city}, %{zip}'
-            unknown_for_city: 'Vyberte platný štát pre: %{city}'
-            unknown_for_zip: 'Vyberte platný štát pre: %{zip}'
-            unknown_for_address: Štát môže byť nesprávny.
+            unknown_for_address: Štát môže byť nesprávny
+            blank_instructional: Vyberte štát
+            blank_informative: Chýba štát
+            invalid_for_country_instructional: Zadajte platný štát pre mesto %{city},
+              %{zip}
+            invalid_for_country_informative: Štát nie je platný
+            unknown_for_city_and_zip_instructional: Zadajte platný štát pre mesto
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Štát nie je platný pre mesto %{city},
+              %{zip}
+            unknown_for_city_instructional: Vyberte platný štát pre mesto %{city}
+            unknown_for_city_informative: Štát nie je platný pre mesto %{city}
+            unknown_for_zip_instructional: Vyberte platný štát pre PSČ %{zip}
+            unknown_for_zip_informative: Štát nie je platný pre PSČ %{zip}
         zip:
           label:
             default: PSČ
             optional: PSČ (voliteľné)
           errors:
-            blank: Zadajte PSČ
-            invalid_for_country: 'Zadajte platné PSČ pre: %{country}'
-            invalid_for_country_and_province: 'Zadajte platné PSČ pre: %{province},
-              %{country}'
-            too_long: Hodnota PSČ je príliš dlhá
-            contains_html_tags: PSČ nemôže obsahovať HTML značky.
-            contains_emojis: PSČ nemôže obsahovať emotikony
-            contains_restricted_characters: PSČ nemôže obsahovať zakázané znaky
-            invalid_for_province: Zadajte platné PSČ pre provinciu %{province}
-            unknown_for_address: PSČ môže byť nesprávne.
+            unknown_for_address: PSČ môže byť nesprávne
+            blank_instructional: Zadajte PSČ
+            blank_informative: Chýba PSČ
+            invalid_for_country_instructional: Zadajte platné PSČ pre krajinu %{country}
+            invalid_for_country_informative: PSČ nie je platné pre krajinu %{country}
+            invalid_for_province_instructional: Zadajte platné PSČ pre provinciu %{province}
+            invalid_for_province_informative: PSČ nie je platné pre provinciu %{province}
+            invalid_for_country_and_province_instructional: Zadajte platné PSČ pre
+              provinciu %{province}, %{country}
+            invalid_for_country_and_province_informative: PSČ nie je platné pre provinciu
+              %{province}, %{country}
+            too_long_instructional: PSČ je príliš dlhé
+            too_long_informative: PSČ je príliš dlhé (maximálne 255 znakov)
+            contains_emojis_instructional: PSČ nemôže obsahovať emotikony
+            contains_emojis_informative: PSČ nemôže obsahovať emotikony
+            contains_restricted_characters_instructional: PSČ nemôže obsahovať zakázané
+              znaky
+            contains_restricted_characters_informative: PSČ nemôže obsahovať zakázané
+              znaky
+            contains_html_tags_instructional: PSČ nemôže obsahovať HTML
+            contains_html_tags_informative: PSČ nemôže obsahovať HTML

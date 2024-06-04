@@ -8,17 +8,25 @@ ko:
             default: 주
             optional: 주(선택 사항)
           errors:
-            blank: 시 선택
+            blank_instructional: 주 선택
+            blank_informative: 주가 누락되었습니다
         zip:
           label:
             default: PIN 코드
             optional: PIN 코드(선택 사항)
           errors:
-            blank: PIN 코드 입력
-            invalid_for_country: "%{country}의 유효한 PIN 코드 입력"
-            invalid_for_country_and_province: "%{country}, %{province}의 유효한 PIN 코드를
-              입력하십시오."
-            too_long: PIN 코드 값이 너무 깁니다.
-            contains_html_tags: PIN 코드에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: PIN 코드에 이모티콘을 포함할 수 없음
-            contains_restricted_characters: PIN 코드에는 제한 문자가 포함될 수 없습니다
+            blank_instructional: PIN 코드를 입력하세요
+            blank_informative: PIN 코드가 누락되었습니다
+            invalid_for_country_instructional: "%{country}의 유효한 PIN 코드를 입력하세요"
+            invalid_for_country_informative: PIN 코드가 올바르지 않음
+            invalid_for_country_and_province_instructional: "%{country}, %{province}의
+              유효한 PIN 코드를 입력하세요"
+            invalid_for_country_and_province_informative: PIN 코드가 올바르지 않음
+            too_long_instructional: PIN 코드가 너무 깁니다
+            too_long_informative: PIN 코드가 너무 깁니다
+            contains_emojis_instructional: PIN 코드에 이모티콘을 포함할 수 없습니다
+            contains_emojis_informative: PIN 코드에 이모티콘을 포함할 수 없습니다
+            contains_restricted_characters_instructional: PIN 코드에는 제한 문자를 포함할 수 없습니다
+            contains_restricted_characters_informative: PIN 코드에는 제한 문자를 포함할 수 없습니다
+            contains_html_tags_instructional: PIN 코드에는 HTML을 포함할 수 없습니다
+            contains_html_tags_informative: PIN 코드에는 HTML을 포함할 수 없습니다

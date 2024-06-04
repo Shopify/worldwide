@@ -8,94 +8,157 @@ el:
             default: Εταιρεία
             optional: Εταιρεία (προαιρετικά)
           errors:
-            blank: Εισαγάγετε επωνυμία εταιρείας
-            too_long: Η επωνυμία της εταιρείας είναι πολύ μεγάλη (το μέγιστο όριο
+            blank_instructional: Εισαγάγετε μια εταιρεία
+            blank_informative: Η εταιρεία λείπει
+            too_long_instructional: Η εταιρεία είναι πολύ μεγάλη (το μέγιστο όριο
               είναι 255 χαρακτήρες)
-            contains_html_tags: Η εταιρεία δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_emojis: Η εταιρεία δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Η εταιρεία δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το πεδίο "Εταιρεία" μπορεί να περιέχει
+            too_long_informative: Η εταιρεία είναι πολύ μεγάλη
+            contains_emojis_instructional: Η εταιρεία δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Η εταιρεία δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Η εταιρεία δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η εταιρεία δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η εταιρεία μπορεί να περιέχει
               μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η εταιρεία δεν μπορεί να περιέχει
+              περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Η εταιρεία δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_html_tags_informative: Η εταιρεία δεν μπορεί να περιέχει κώδικα
+              HTML
         first_name:
           label:
             default: Όνομα
             optional: Όνομα (προαιρετικά)
           errors:
-            blank: Εισαγάγετε όνομα
-            too_long: Το όνομα είναι πολύ μεγάλο (το μέγιστο όριο είναι 255 χαρακτήρες)
-            contains_html_tags: Το όνομα δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_emojis: Το όνομα δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Το όνομα δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το πεδίο "Όνομα" μπορεί να περιέχει μόνο
-              γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_url: Το όνομα δεν μπορεί να περιέχει URL.
+            blank_instructional: Εισαγάγετε ένα όνομα
+            blank_informative: Το όνομα λείπει
+            too_long_instructional: Το όνομα είναι πολύ μεγάλο (το μέγιστο όριο είναι
+              255 χαρακτήρες)
+            too_long_informative: Το όνομα είναι πολύ μεγάλο
+            contains_emojis_instructional: Το όνομα δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Το όνομα δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Το όνομα δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Το όνομα δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Το όνομα μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Το όνομα δεν μπορεί να περιέχει
+              περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Το όνομα δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_html_tags_informative: Το όνομα δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_url_instructional: Το όνομα δεν μπορεί να περιέχει URL
+            contains_url_informative: Το όνομα δεν μπορεί να περιέχει URL
         last_name:
           label:
             default: Επίθετο
             optional: Επίθετο (προαιρετικά)
           errors:
-            blank: Εισαγάγετε επίθετο
-            too_long: Το επίθετο είναι πολύ μεγάλο (το μέγιστο όριο είναι 255 χαρακτήρες)
-            contains_html_tags: Το επίθετο δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_emojis: Το επίθετο δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Το επίθετο δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το πεδίο "Επίθετο" μπορεί να περιέχει
+            blank_instructional: Εισαγάγετε ένα επώνυμο
+            blank_informative: Το επώνυμο λείπει
+            too_long_instructional: Το επώνυμο είναι πολύ μεγάλο (το μέγιστο όριο
+              είναι 255 χαρακτήρες)
+            too_long_informative: Το επώνυμο είναι πολύ μεγάλο
+            contains_emojis_instructional: Το επώνυμο δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Το επώνυμο δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Το επώνυμο δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Το επώνυμο δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Το επώνυμο μπορεί να περιέχει
               μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_url: Το επίθετο δεν μπορεί να περιέχει URL.
+            contains_restricted_characters_informative: Το επώνυμο δεν μπορεί να περιέχει
+              περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Το επώνυμο δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_html_tags_informative: Το επώνυμο δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_url_instructional: Το επώνυμο δεν μπορεί να περιέχει URL
+            contains_url_informative: Το επώνυμο δεν μπορεί να περιέχει URL
         address1:
           label:
             default: Διεύθυνση
             optional: Διεύθυνση (προαιρετικά)
-          errors:
-            blank: Εισαγάγετε διεύθυνση
-            too_long: Η πρώτη γραμμή της διεύθυνσης είναι πολύ μεγάλη (το μέγιστο
-              όριο είναι 255 χαρακτήρες)
-            contains_html_tags: Η διεύθυνση1 δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_emojis: Η διεύθυνση1 δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Η διεύθυνση1 δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το πεδίο "Διεύθυνση1" μπορεί να περιέχει
-              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_url: Η διεύθυνση1 δεν μπορεί να περιέχει URL.
-            missing_building_number: Προσθέστε αριθμό κτιρίου, αν υπάρχει.
-            street_unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα δρόμου για τον ταχυδρομικό
-              κώδικα %{zip}.
-            building_number_invalid: Δεν ήταν δυνατός ο εντοπισμός του αριθμού κτιρίου
-              στην οδό %{street}, %{zip}.
-            contains_too_many_words: Το πεδίο "Διεύθυνση1" δεν μπορεί να περιέχει
-              πάνω από %{word_count} λέξεις
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γραμμή διεύθυνσης
-              1.
           warnings:
             contains_too_many_words: Το πεδίο "Διεύθυνση 1" συνιστάται να έχει λιγότερες
               από %{word_count} λέξεις
+          errors:
+            blank_instructional: Εισαγάγετε μια διεύθυνση
+            blank_informative: Η διεύθυνση λείπει
+            too_long_instructional: Η πρώτη γραμμή της διεύθυνσης είναι πολύ μεγάλη
+              (το μέγιστο όριο είναι 255 χαρακτήρες)
+            too_long_informative: Η πρώτη γραμμή της διεύθυνσης είναι πολύ μεγάλη
+            contains_emojis_instructional: Η διεύθυνση δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Η διεύθυνση δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Η διεύθυνση δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η διεύθυνση δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η διεύθυνση μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η διεύθυνση δεν μπορεί να
+              περιέχει περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Η διεύθυνση πρέπει να διαθέτει
+              λιγότερες από %{word_count} λέξεις
+            contains_too_many_words_informative: Η διεύθυνση πρέπει να διαθέτει λιγότερες
+              από %{word_count} λέξεις
+            contains_html_tags_instructional: Η διεύθυνση δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_html_tags_informative: Η διεύθυνση δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_url_instructional: Η διεύθυνση δεν μπορεί να περιέχει URL
+            contains_url_informative: Η διεύθυνση δεν μπορεί να περιέχει URL
+            missing_building_number_instructional: Προσθέστε έναν αριθμό κτιρίου,
+              αν υπάρχει
+            missing_building_number_informative: Ο αριθμός κτιρίου ενδέχεται να λείπει
+            street_unknown_for_zip_instructional: Εισαγάγετε ένα έγκυρο όνομα οδού
+              για τον Τ.Κ. %{zip}
+            street_unknown_for_zip_informative: Το όνομα οδού δεν αντιστοιχεί στον
+              Τ.Κ. %{zip}
+            building_number_invalid_instructional: Δεν ήταν δυνατός ο εντοπισμός του
+              αριθμού κτιρίου στην οδό %{street} με Τ.Κ. %{zip}
+            building_number_invalid_informative: Δεν ήταν δυνατός ο εντοπισμός του
+              αριθμού κτιρίου στην οδό %{street} με Τ.Κ. %{zip}
+            unknown_for_address_instructional: Η γραμμή διεύθυνσης 1 ενδέχεται να
+              είναι εσφαλμένη
+            unknown_for_address_informative: Η γραμμή διεύθυνσης 1 ενδέχεται να είναι
+              εσφαλμένη
         address2:
           label:
             default: Διαμέρισμα, σουίτα, κ.λπ.
-            optional: Διαμέρισμα, σουίτα, κ.λπ. (προαιρετικά)
+            optional: Διαμέρισμα, σουίτα κ.λπ. (προαιρετικά)
           errors:
-            blank: Εισαγάγετε διαμέρισμα, σουίτα κ.λπ.
-            too_long: Η δεύτερη γραμμή της διεύθυνσης είναι πολύ μεγάλη (το μέγιστο
-              όριο είναι 255 χαρακτήρες)
-            contains_html_tags: Η διεύθυνση2 δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_emojis: Η διεύθυνση2 δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Η διεύθυνση2 δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το πεδίο "Διεύθυνση2" μπορεί να περιέχει
+            contains_html_tags: Η γραμμή διεύθυνσης 2 δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_emojis: Η γραμμή διεύθυνσης 2 δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols: Η γραμμή διεύθυνσης 2 δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters: Η γραμμή διεύθυνσης 2 μπορεί να περιέχει
               μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_url: Η διεύθυνση2 δεν μπορεί να περιέχει URL.
-            missing_building_number: Προσθέστε αριθμό κτιρίου, αν υπάρχει.
-            street_unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα δρόμου για τον ταχυδρομικό
-              κώδικα %{zip}.
-            building_number_invalid: Δεν ήταν δυνατός ο εντοπισμός του αριθμού κτιρίου
-              στην οδό %{street}, %{zip}.
-            contains_too_many_words: Το πεδίο "Διεύθυνση2" δεν μπορεί να περιέχει
-              πάνω από %{word_count} λέξεις
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γραμμή διεύθυνσης
-              2.
+            contains_url: Η γραμμή διεύθυνσης 2 δεν μπορεί να περιέχει URL
+            contains_too_many_words: Η γραμμή διεύθυνσης 2 δεν μπορεί να περιέχει
+              περισσότερες από %{word_count} λέξεις
+            unknown_for_address: Η γραμμή διεύθυνσης 2 ενδέχεται να είναι εσφαλμένη
+            blank_instructional: Εισαγάγετε ένα διαμέρισμα, μια σουίτα κ.λπ.
+            blank_informative: Το διαμέρισμα ή η σουίτα λείπει
+            too_long_instructional: Η γραμμή διεύθυνσης 2 είναι πολύ μεγάλη (το μέγιστο
+              όριο είναι 255 χαρακτήρες)
+            too_long_informational: Η γραμμή διεύθυνσης 2 είναι πολύ μεγάλη
+            missing_building_number_instructional: Προσθέστε έναν αριθμό κτιρίου,
+              αν υπάρχει
+            missing_building_number_informative: Ο αριθμός κτιρίου ενδέχεται να λείπει
+            street_unknown_for_zip_instructional: Εισαγάγετε ένα έγκυρο όνομα οδού
+              για τον Τ.Κ. %{zip}
+            street_unknown_for_zip_informative: Το όνομα δρόμου δεν είναι έγκυρο για
+              τον Τ.Κ. %{zip}
+            building_number_invalid_instructional: Δεν ήταν δυνατός ο εντοπισμός του
+              αριθμού κτιρίου στην οδό %{street} με Τ.Κ. %{zip}
+            building_number_invalid_informative: Δεν ήταν δυνατός ο εντοπισμός του
+              αριθμού κτιρίου στην οδό %{street} με Τ.Κ. %{zip}
           warnings:
             contains_too_many_words: Το πεδίο "Διεύθυνση 2" συνιστάται να έχει λιγότερες
               από %{word_count} λέξεις
@@ -104,127 +167,193 @@ el:
             default: Πόλη
             optional: Πόλη (προαιρετικά)
           errors:
-            blank: Εισαγάγετε πόλη
             too_long: Η πόλη είναι πολύ μεγάλη (το μέγιστο όριο είναι 255 χαρακτήρες)
-            contains_html_tags: Η πόλη δεν μπορεί να περιέχει ετικέτες HTML.
+            contains_html_tags: Η πόλη δεν μπορεί να περιέχει κώδικα HTML
             contains_mathematical_symbols: Η πόλη δεν μπορεί να περιέχει μαθηματικά
               σύμβολα
             contains_restricted_characters: Το πεδίο "Πόλη" μπορεί να περιέχει μόνο
               γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
             contains_emojis: Η πόλη δεν μπορεί να περιέχει emoji
             contains_url: Η πόλη δεν μπορεί να περιέχει URL
-            unknown_for_zip: Εισαγάγετε μια έγκυρη πόλη για %{zip}
-            unknown_for_province: Εισαγάγετε έγκυρη πόλη για %{province}
-            unknown_for_zip_and_province: Εισαγάγετε έγκυρη πόλη για %{zip}, %{province}
-            contains_too_many_words: Το πεδίο "Πόλη" δεν μπορεί να περιέχει πάνω από
+            contains_too_many_words: Η πόλη δεν μπορεί να περιέχει περισσότερες από
               %{word_count} λέξεις
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην πόλη.
+            unknown_for_address: Η πόλη ενδέχεται να είναι εσφαλμένη
+            blank_instructional: Εισαγάγετε μια πόλη
+            blank_informative: Η πόλη λείπει
+            unknown_for_zip_instructional: Εισαγάγετε μια έγκυρη πόλη για %{zip}
+            unknown_for_zip_informative: Η πόλη δεν αντιστοιχεί στον Τ.Κ. %{zip}
+            unknown_for_province_instructional: Εισαγάγετε μια έγκυρη πόλη για την
+              επαρχία %{province}
+            unknown_for_province_informative: Η πόλη δεν αντιστοιχεί σε %{province}
+            unknown_for_zip_and_province_instructional: Εισαγάγετε μια έγκυρη πόλη
+              για τον Τ.Κ. %{zip} στην επαρχία %{province}
+            unknown_for_zip_and_province_informative: Η πόλη ενδέχεται να είναι εσφαλμένη
         country:
           label:
             default: Χώρα/Περιοχή
             optional: Χώρα/Περιοχή (προαιρετικά)
           errors:
-            blank: Επιλέξτε χώρα/περιοχή
-            not_supported: Προς το παρόν, δεν υποστηρίζουμε αυτήν τη χώρα/περιοχή.
-              Εισαγάγετε νέα διεύθυνση αποστολής και δοκιμάστε ξανά.
-            invalid: Εισαγάγετε μια έγκυρη χώρα/περιοχή
-            invalid_for_zip: Εισαγάγετε μια έγκυρη χώρα/περιοχή για αυτόν τον ταχυδρομικό
-              κώδικα
+            blank_instructional: Επιλέξτε μια χώρα/περιοχή
+            blank_informative: Η χώρα/περιοχή λείπει
+            not_supported_instructional: Η χώρα/περιοχή δεν υποστηρίζεται
+            not_supported_informative: Η χώρα/περιοχή δεν υποστηρίζεται
+            invalid_instructional: Εισαγάγετε μια έγκυρη χώρα/περιοχή
+            invalid_informative: Η χώρα/περιοχή δεν είναι έγκυρη
+            invalid_for_zip_instructional: Εισαγάγετε μια έγκυρη χώρα/περιοχή για
+              αυτόν τον ταχυδρομικό κώδικα
+            invalid_for_zip_informative: Η χώρα %{country} δεν αντιστοιχεί στη χώρα/περιοχή
         phone:
           label:
             default: Τηλέφωνο
             optional: Τηλέφωνο (προαιρετικά)
           errors:
-            blank: Εισαγάγετε έναν αριθμό τηλεφώνου
-            invalid: Εισαγάγετε έγκυρο αριθμό τηλεφώνου
-            too_long: Το τηλέφωνο είναι πολύ μεγάλο (το μέγιστο όριο είναι 255 χαρακτήρες)
             contains_emojis: Ο αριθμός τηλεφώνου δεν μπορεί να περιέχει emoji
             contains_mathematical_symbols: Ο αριθμός τηλεφώνου δεν μπορεί να περιέχει
               μαθηματικά σύμβολα
             contains_restricted_characters: Το πεδίο "Αριθμός τηλεφώνου" μπορεί να
               περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            blank_instructional: Εισαγάγετε έναν αριθμό τηλεφώνου
+            blank_informative: Ο αριθμός τηλεφώνου λείπει
+            invalid_instructional: Εισαγάγετε έναν έγκυρο αριθμό τηλεφώνου
+            invalid_informative: Ο αριθμός τηλεφώνου δεν είναι έγκυρος
+            too_long_instructional: Ο αριθμός τηλεφώνου είναι πολύ μεγάλος
+            too_long_informative: Ο αριθμός τηλεφώνου είναι πολύ μεγάλος
         province:
           label:
             default: Περιοχή
             optional: Περιοχή (προαιρετικά)
           errors:
-            blank: Επιλέξτε περιοχή
-            invalid: Εισαγάγετε μια έγκυρη περιοχή
-            invalid_for_country: Εισαγάγετε μια έγκυρη περιοχή για τη χώρα %{country}
-            unknown_for_city_and_zip: Εισαγάγετε έγκυρη περιοχή για %{city}, %{zip}
-            unknown_for_city: Επιλέξτε έγκυρη περιοχή για %{city}
-            unknown_for_zip: Επιλέξτε έγκυρη περιοχή για %{zip}
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην περιοχή.
+            unknown_for_address: Η περιοχή ενδέχεται να είναι εσφαλμένη
+            blank_instructional: Επιλέξτε μια περιοχή
+            blank_informative: Η περιοχή λείπει
+            invalid_instructional: Επιλέξτε μια περιοχή
+            invalid_informative: Η περιοχή λείπει
+            invalid_for_country_instructional: Εισαγάγετε μια έγκυρη περιοχή για τη
+              χώρα %{country}
+            invalid_for_country_informative: Η περιοχή δεν αντιστοιχεί στη χώρα %{country}
+            unknown_for_city_and_zip_instructional: Επιλέξτε έγκυρη περιοχή για %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Η περιοχή δεν αντιστοιχεί στην πόλη
+              %{city} και στον Τ.Κ. %{zip}
+            unknown_for_city_informative: Επιλέξτε μια έγκυρη περιοχή για την πόλη
+              %{city}
+            unknown_for_city_instructional: Η περιοχή δεν αντιστοιχεί στην πόλη %{city}
+            unknown_for_zip_instructional: Επιλέξτε μια έγκυρη περιοχή για τον Τ.Κ.
+              %{zip}
+            unknown_for_zip_informative: Η περιοχή δεν αντιστοιχεί στον Τ.Κ. %{zip}
         zip:
           label:
             default: Ταχυδρομικός κώδικας
             optional: Ταχυδρομικός κώδικας (προαιρετικά)
           errors:
-            blank: Εισαγάγετε ταχυδρομικό κώδικα
-            blocked_address: Η τοποθεσία δεν υποστηρίζεται.
-            invalid_for_country: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{country}
-            invalid_for_country_and_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα
-              για %{province}, %{country}
-            invalid: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα
-            too_long: Η τιμή του ταχυδρομικού κώδικα είναι πολύ μεγάλη
-            contains_html_tags: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει ετικέτες
-              HTML.
+            blocked_address: Αυτή η τοποθεσία δεν υποστηρίζεται
+            too_long: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος
+            contains_html_tags: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει κώδικα
+              HTML
             contains_emojis: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει emoji
             contains_mathematical_symbols: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
               μαθηματικά σύμβολα
             contains_restricted_characters: Το πεδίο "Ταχυδρομικός κώδικας" μπορεί
               να περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            not_supported: Προς το παρόν, δεν υποστηρίζουμε αυτήν τη χώρα/περιοχή.
-              Εισαγάγετε νέα διεύθυνση και δοκιμάστε ξανά.
-            unknown_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{province}
-            invalid_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κώδικα για %{province}
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στον ταχυδρομικό κώδικα.
-        address:
-          errors:
-            may_not_exist: Η διεύθυνση δεν βρέθηκε ή δεν υπάρχει
+            unknown_for_address: O ταχυδρομικός κώδικας ενδέχεται να είναι εσφαλμένος
+            blank_instructional: Εισαγάγετε έναν ταχυδρομικό κώδικα
+            blank_informative: Ο ταχυδρομικός κώδικας λείπει
+            invalid_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό κώδικα
+            invalid_informative: Ο ταχυδρομικός κώδικας δεν είναι έγκυρος
+            invalid_for_country_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό
+              κώδικα για τη χώρα %{country}
+            invalid_for_country_informative: Ο ταχυδρομικός κώδικας δεν αντιστοιχεί
+              στη χώρα %{country}
+            invalid_for_province_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό
+              κώδικα για την επαρχία %{province}
+            invalid_for_province_informative: Ο ταχυδρομικός κώδικας δεν αντιστοιχεί
+              στην επαρχία %{province}
+            invalid_for_country_and_province_instructional: Εισαγάγετε έναν έγκυρο
+              ταχυδρομικό κώδικα για την επαρχία%{province} στη χώρα %{country}
+            invalid_for_country_and_province_informative: Ο ταχυδρομικός κώδικας δεν
+              αντιστοιχεί στην επαρχία %{province} στη χώρα %{country}
+            not_supported_instructional: Ο ταχυδρομικός κώδικας δεν υποστηρίζεται.
+              Εισαγάγετε μια νέα διεύθυνση και δοκιμάστε ξανά
+            not_supported_informativel: Ο ταχυδρομικός κώδικας δεν υποστηρίζεται
+            unknown_for_province_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό
+              κώδικα για την επαρχία %{province}
+            unknown_for_province_informative: Ο ταχυδρομικός κώδικας δεν είναι έγκυρος
+              για την επαρχία %{province}
         street_name:
           label:
             default: Οδός
             optional: Οδός (προαιρετικά)
-          errors:
-            blank: Εισαγωγή ονόματος οδού
-            too_long: Το όνομα οδού είναι πολύ μεγάλο (το μέγιστο όριο είναι 255 χαρακτήρες)
-            contains_emojis: Το όνομα οδού δεν μπορεί να περιλαμβάνει emoji
-            contains_mathematical_symbols: Το όνομα οδού δεν μπορεί να περιέχει μαθηματικά
-              σύμβολα
-            contains_restricted_characters: Το όνομα οδού μπορεί να περιέχει μόνο
-              γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_too_many_words: Το όνομα οδού δεν μπορεί να περιέχει πάνω από
-              %{word_count} λέξεις
-            contains_html_tags: Το όνομα οδού δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_url: Το όνομα οδού δεν μπορεί να περιέχει URL.
-            street_unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα οδού για %{zip}.
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην οδό.
           warnings:
             contains_too_many_words: Το όνομα οδού συνιστάται να έχει λιγότερες από
               %{word_count} λέξεις
+          errors:
+            blank_instructional: Εισαγάγετε μια οδό
+            blank_informative: Η οδός λείπει
+            too_long_instructional: Η οδός είναι πολύ μεγάλη (το μέγιστο όριο είναι
+              255 χαρακτήρες)
+            too_long_informative: Η οδός είναι πολύ μεγάλη
+            contains_emojis_instructional: Η οδός δεν μπορεί να περιλαμβάνει emoji
+            contains_emojis_informative: Η οδός δεν μπορεί να περιλαμβάνει emoji
+            contains_mathematical_symbols_instructional: Η οδός δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η οδός δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η οδός μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η οδός δεν μπορεί να περιέχει
+              περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Η οδός δεν μπορεί να περιέχει περισσότερες
+              από %{word_count} λέξεις
+            contains_too_many_words_informational: Η οδός δεν μπορεί να περιέχει περισσότερες
+              από %{word_count} λέξεις
+            contains_html_tags_instructional: Η οδός δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_html_tags_informational: Η οδός δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_url_instructional: Η οδός δεν μπορεί να περιέχει URL
+            contains_url_informative: Η οδός δεν μπορεί να περιέχει URL
+            street_unknown_for_zip_instructional: Εισαγάγετε μια έγκυρη οδό για τον
+              Τ.Κ. %{zip}
+            street_unknown_for_zip_informative: Μη έγκυρη οδός για τον Τ.Κ. %{zip}
+            unknown_for_address_instructional: Η οδός ενδέχεται να είναι εσφαλμένη
+            unknown_for_address_informative: Η οδός ενδέχεται να είναι εσφαλμένη
         street_number:
           label:
             default: Αριθμός κτιρίου
             optional: Αριθμός κτιρίου (προαιρετικά)
-          errors:
-            blank: Εισαγωγή αριθμού κτιρίου
-            too_long: Ο αριθμός κτιρίου είναι πολύ μεγάλος (το μέγιστο όριο είναι
-              255 χαρακτήρες)
-            contains_emojis: Ο αριθμός κτιρίου δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Ο αριθμός κτιρίου δεν μπορεί να περιέχει
-              μαθηματικά σύμβολα
-            contains_restricted_characters: Ο αριθμός κτιρίου μπορεί να περιέχει μόνο
-              γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_html_tags: Ο αριθμός κτιρίου δεν μπορεί να περιέχει ετικέτες
-              HTML.
-            contains_url: Ο αριθμός κτιρίου δεν μπορεί να περιέχει URL.
-            building_number_invalid: Δεν ήταν δυνατός ο εντοπισμός του αριθμού κτιρίου
-              στην οδό %{street}, %{zip}.
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στον αριθμό κτιρίου.
           warnings:
             contains_too_many_words: Ο αριθμός κτιρίου συνιστάται να έχει λιγότερες
               από %{word_count} λέξεις
+          errors:
+            blank_instructional: Εισαγάγετε έναν αριθμό κτιρίου
+            blank_informative: Ο αριθμός κτιρίου λείπει
+            too_long_instructional: Ο αριθμός κτιρίου είναι πολύ μεγάλος (το μέγιστο
+              όριο είναι 255 χαρακτήρες)
+            too_long_informative: Ο αριθμός κτιρίου είναι πολύ μεγάλος
+            contains_emojis_instructional: Ο αριθμός κτιρίου δεν μπορεί να περιέχει
+              emoji
+            contains_emojis_informative: Ο αριθμός κτιρίου δεν μπορεί να περιέχει
+              emoji
+            contains_mathematical_symbols_instructional: Ο αριθμός κτιρίου δεν μπορεί
+              να περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Ο αριθμός κτιρίου δεν μπορεί
+              να περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Ο αριθμός κτιρίου μπορεί
+              να περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Ο αριθμός κτιρίου δεν μπορεί
+              να περιέχει περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Ο αριθμός κτιρίου δεν μπορεί να περιέχει
+              κώδικα HTML
+            contains_html_tags_informative: Ο αριθμός κτιρίου δεν μπορεί να περιέχει
+              κώδικα HTML
+            contains_url_instructional: Ο αριθμός κτιρίου δεν μπορεί να περιέχει URL
+            contains_url_informative: Ο αριθμός κτιρίου δεν μπορεί να περιέχει URL
+            building_number_invalid_instructional: Δεν ήταν δυνατός ο εντοπισμός του
+              αριθμού κτιρίου στην οδό %{street} με Τ.Κ. %{zip}
+            building_number_invalid_informative: Δεν ήταν δυνατός ο εντοπισμός του
+              αριθμού κτιρίου στην οδό %{street} με Τ.Κ. %{zip}
+            unknown_for_address_instructional: Εισαγάγετε έναν αριθμό κτιρίου
+            unknown_for_address_informative: Ο αριθμός κτιρίου δεν είναι έγκυρος
         neighborhood:
           label:
             default: Γειτονιά
@@ -234,18 +363,17 @@ el:
             too_long: Το πεδίο "Γειτονιά" είναι πολύ μεγάλο (το μέγιστο όριο είναι
               %{limit} χαρακτήρες)
             contains_emojis: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει emoji
-            contains_mathematical_symbols: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει
-              μαθηματικά σύμβολα
+            contains_mathematical_symbols: Η γειτονιά δεν μπορεί να περιέχει μαθηματικά
+              σύμβολα
             contains_restricted_characters: Το πεδίο "Γειτονιά" μπορεί να περιέχει
               μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
-            contains_too_many_words: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει πάνω
+            contains_too_many_words: Η γειτονιά δεν μπορεί να περιέχει περισσότερες
               από %{word_count} λέξεις
-            contains_html_tags: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει ετικέτες
-              HTML.
-            contains_url: Το πεδίο "Γειτονιά" δεν μπορεί να περιέχει URL.
-            unknown_for_city: Εισαγάγετε μια έγκυρη γειτονιά για %{city}.
-            unknown_for_zip: Εισαγάγετε μια έγκυρη γειτονιά για %{zip}.
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γειτονιά.
+            contains_html_tags: Η γειτονιά δεν μπορεί να περιέχει ετικέτες HTML
+            contains_url: Η γειτονιά δεν μπορεί να περιέχει URL
+            unknown_for_city: Εισαγάγετε μια έγκυρη γειτονιά για %{city}
+            unknown_for_zip: Εισαγάγετε μια έγκυρη γειτονιά για %{zip}
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη γειτονιά
           warnings:
             contains_too_many_words: Το πεδίο "Γειτονιά" συνιστάται να έχει λιγότερες
               από %{word_count} λέξεις
@@ -276,3 +404,7 @@ el:
           warnings:
             contains_too_many_words: Η δεύτερη γραμμή διεύθυνσης συνιστάται να έχει
               λιγότερες από %{word_count} λέξεις
+        address:
+          errors:
+            may_not_exist_instructional: Η διεύθυνση δεν βρέθηκε ή δεν υπάρχει
+            may_not_exist_informative: Η διεύθυνση δεν βρέθηκε

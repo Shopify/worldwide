@@ -8,31 +8,51 @@ lt:
             default: Priemiestis
             optional: Priemiestis (pasirinktinai)
           errors:
-            blank: Įveskite priemiestį
-            too_long: Rajono pavadinimas yra per ilgas (turi sudaryti ne daugiau kaip
-              255 simboliai)
-            contains_html_tags: Priemiesčio pavadinime negali būti naudojamos HTML
-              žymės.
-            contains_emojis: Priemiesčio pavadinime negali būti naudojami „emoji“
-            contains_restricted_characters: Priemiesčio pavadinimą gali sudaryti tik
-              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            blank_instructional: Įveskite priemiestį
+            blank_informative: Trūksta priemiesčio
+            too_long_instructional: Priemiesčio pavadinimas yra per ilgas (turi sudaryti
+              ne daugiau kaip 255 simboliai)
+            too_long_informative: Priemiesčio pavadinimas yra per ilgas
+            contains_emojis_instructional: Priemiesčio pavadinimo negali sudaryti
+              jausmaženkliai
+            contains_emojis_informative: Priemiesčio pavadinimo negali sudaryti jausmaženkliai
+            contains_restricted_characters_instructional: Priemiesčio pavadinimą gali
+              sudaryti tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Priemiesčio pavadinimą negali
+              sudaryti ribojami simboliai
+            contains_html_tags_instructional: Priemiesčio pavadinime negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Priemiesčio pavadinime negali būti naudojamos
+              HTML žymės
         province:
           label:
             default: Valstija / teritorija
             optional: Valstija / teritorija (pasirinktinai)
           errors:
-            blank: Pasirinkti valstiją / teritoriją
+            blank_instructional: Pasirinkite valstiją / teritoriją
+            blank_informative: Trūksta valstijos / teritorijos
         zip:
           label:
             default: Pašto kodas
             optional: Pašto kodas (pasirinktinai)
           errors:
-            blank: Įveskite pašto kodą
-            invalid_for_country: Įveskite galiojantį pašto kodą %{country}
-            invalid_for_country_and_province: Įveskite galiojantį %{province}, %{country},
-              pašto kodą
-            too_long: Pašto kodas yra per ilgas
-            contains_html_tags: Pašto kode negali būti naudojamos HTML žymės.
-            contains_emojis: Pašto kode negali būti naudojami „emoji“
-            contains_restricted_characters: Pašto indeksą gali sudaryti tik raidės,
-              skaičiai, vietiniai simboliai ir specialieji simboliai
+            blank_instructional: Įveskite pašto kodą
+            blank_informative: Trūksta pašto kodo
+            invalid_for_country_instructional: Įveskite tinkamą %{country} pašto kodą
+            invalid_for_country_informative: "%{country} pašto kodas neteisingas"
+            invalid_for_country_and_province_instructional: Įveskite tinkamą %{province},
+              %{country}, pašto kodą
+            invalid_for_country_and_province_informative: "%{province}, %{country}
+              pašto kodas neteisingas"
+            too_long_instructional: Pašto kodas per ilgas
+            too_long_informative: Pašto kodas per ilgas
+            contains_emojis_instructional: Pašto kodo negali būti sudaryti jausmaženkliai
+            contains_emojis_informative: Pašto kodo negali būti sudaryti jausmaženkliai
+            contains_restricted_characters_instructional: Pašto kodą gali sudaryti
+              tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Pašto kodo negali sudaryti
+              ribojami simboliai
+            contains_html_tags_instructional: Pašto kode negali būti naudojamos HTML
+              žymės
+            contains_html_tags_informative: Pašto kode negali būti naudojamos HTML
+              žymės

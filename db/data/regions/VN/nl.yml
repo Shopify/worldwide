@@ -8,18 +8,33 @@ nl:
             default: Wijk
             optional: Wijk (optioneel)
           errors:
-            blank: Vul een wijk in
-            too_long: Wijk is te lang (mag maximaal 255 tekens zijn)
-            contains_emojis: Wijk mag geen emoji's bevatten
-            contains_mathematical_symbols: Wijk mag geen wiskundige symbolen bevatten.
-            contains_restricted_characters: Wijk mag alleen letters, cijfers, lokale
-              tekens en speciale tekens bevatten
-            contains_too_many_words: Wijk mag niet langer zijn dan %{word_count} woorden
-            contains_html_tags: Wijk mag geen HTML-tags bevatten.
-            contains_url: Wijk mag geen URL's bevatten.
-            unknown_for_city: Vul een geldige wijknaam in voor %{city}.
-            unknown_for_zip: Vul een geldige wijknaam in voor %{zip}.
-            unknown_for_address: De wijk klopt misschien niet.
+            unknown_for_address: De wijk klopt misschien niet
+            blank_instructional: Vul een wijk in
+            blank_informative: Wijk ontbreekt
+            too_long_instructional: Wijk is te lang
+            too_long_informative: Wijk is te lang (het maximum is 255 tekens)
+            contains_emojis_instructional: Wijk mag geen emoji's bevatten
+            contains_emojis_informative: Wijk mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Wijk mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Wijk mag geen wiskundige symbolen
+              bevatten
+            contains_restricted_characters_instructional: Wijk mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Wijk mag geen verboden tekens
+              bevatten
+            contains_too_many_words_instructional: Wijk mag niet langer zijn dan %{word_count}
+              woorden
+            contains_too_many_words_informative: Wijk mag niet langer zijn dan %{word_count}
+              woorden
+            contains_html_tags_instructional: Wijk mag geen HTML bevatten
+            contains_html_tags_informative: Wijk mag geen HTML bevatten
+            contains_url_instructional: Wijk mag geen URL bevatten
+            contains_url_informative: Wijk mag geen URL bevatten
+            unknown_for_city_instructional: Vul een geldige wijknaam in voor %{city}
+            unknown_for_city_informative: Wijk komt niet overeen met %{city}
+            unknown_for_zip_instructional: Vul een geldige wijknaam in voor %{zip}
+            unknown_for_zip_informational: Wijk komt niet overeen met %{zip}
           warnings:
             contains_too_many_words: Geef minder dan %{word_count} woorden op voor
               wijk

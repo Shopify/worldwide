@@ -8,18 +8,27 @@ en:
             default: Ward
             optional: Ward (optional)
           errors:
-            blank: Enter a ward
-            too_long: Ward is too long (maximum is %{limit} characters)
-            contains_emojis: Ward cannot contain emojis
-            contains_mathematical_symbols: Ward cannot contain mathematical symbols
-            contains_restricted_characters: Ward can only contain letters, numbers,
+            blank_instructional: Enter a ward
+            blank_informative: Ward is missing
+            too_long_instructional: Ward is too long
+            too_long_informative: Ward is too long (maximum is 255 characters)
+            contains_emojis_instructional: Ward can't contain emojis
+            contains_emojis_informative: Ward can't contain emojis
+            contains_mathematical_symbols_instructional: Ward can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Ward can't contain mathematical symbols
+            contains_restricted_characters_instructional: Ward can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: Ward cannot have more than %{word_count}
-              words
-            contains_html_tags: Ward cannot contain HTML tags.
-            contains_url: Ward cannot contain URLs.
-            unknown_for_city: Enter a valid ward name for %{city}.
-            unknown_for_zip: Enter a valid ward name for %{zip}.
-            unknown_for_address: Ward may be incorrect.
+            contains_restricted_characters_informative: Ward can't contain restricted characters
+            contains_too_many_words_instructional: Ward must have fewer than %{word_count} words
+            contains_too_many_words_informative: Ward must have fewer than %{word_count} words
+            contains_html_tags_instructional: Ward can't contain HTML
+            contains_html_tags_informative: Ward can't contain HTML
+            contains_url_instructional: Ward can't contain a URL
+            contains_url_informative: Ward can't contain a URL
+            unknown_for_city_instructional: Enter a valid ward name for %{city}
+            unknown_for_city_informative: Ward doesn't match %{city}
+            unknown_for_zip_instructional: Enter a valid ward name for %{zip}
+            unknown_for_zip_informational: Ward doesn't match %{zip}
+            unknown_for_address: Ward may be incorrect
           warnings:
             contains_too_many_words: Ward is recommended to have less than %{word_count} words

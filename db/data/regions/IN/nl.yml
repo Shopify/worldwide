@@ -8,18 +8,27 @@ nl:
             default: Staat
             optional: Staat (optioneel)
           errors:
-            blank: Selecteer een staat
+            blank_instructional: Selecteer een staat
+            blank_informative: Staat ontbreekt
         zip:
           label:
             default: Pincode
             optional: Pincode (optioneel)
           errors:
-            blank: Voer een pincode in
-            invalid_for_country: Voer een geldige pincode in voor %{country}
-            invalid_for_country_and_province: Voer een geldige pincode in voor %{province},
-              %{country}
-            too_long: De waarde van de pincode is te lang
-            contains_html_tags: De pincode mag geen HTML-tags bevatten.
-            contains_emojis: De pincode mag geen emoji's bevatten
-            contains_restricted_characters: Het veld Pincode mag geen verboden tekens
-              bevatten
+            blank_instructional: Voer een pincode in
+            blank_informative: Pincode ontbreekt
+            invalid_for_country_instructional: Voer een geldige pincode in voor %{country}
+            invalid_for_country_informative: Pincode is niet geldig
+            invalid_for_country_and_province_instructional: Voer een geldige pincode
+              in voor %{province}, %{country}
+            invalid_for_country_and_province_informative: Pincode is niet geldig
+            too_long_instructional: Pincode is te lang
+            too_long_informative: Pincode is te lang
+            contains_emojis_instructional: Pincode mag geen emoji's bevatten
+            contains_emojis_informative: Pincode mag geen emoji's bevatten
+            contains_restricted_characters_instructional: Pincode mag geen verboden
+              tekens bevatten
+            contains_restricted_characters_informative: Pincode mag geen verboden
+              tekens bevatten
+            contains_html_tags_instructional: Pincode mag geen HTML bevatten
+            contains_html_tags_informative: Pincode mag geen HTML bevatten

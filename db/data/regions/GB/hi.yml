@@ -8,11 +8,23 @@ hi:
             default: पिन कोड
             optional: पिन कोड (वैकल्पिक)
           errors:
-            blank: एक पोस्टकोड दर्ज करें
-            invalid_for_country: यूनाइटेड किंगडम के लिए एक मान्य पोस्टकोड दर्ज करें
-            invalid_for_country_and_province: "%{province}, यूके के लिए एक मान्य पोस्टकोड
-              दर्ज करें"
-            too_long: पोस्टकोड का मान बहुत लंबा है
-            contains_html_tags: पोस्टकोड के फ़ील्ड में HTML टैग नहीं हो सकते.
-            contains_emojis: पोस्टकोड में इमोजी नहीं हो सकते
-            contains_restricted_characters: पोस्टकोड में कैरेक्टर सीमित नहीं हो सकते
+            blank_instructional: एक पोस्टकोड डालें
+            blank_informative: पोस्टकोड गुम है
+            invalid_for_country_instructional: यूनाइटेड किंगडम के लिए एक मान्य पोस्टकोड
+              दर्ज करें
+            invalid_for_country_informative: यूनाइटेड किंगडम के लिए पोस्टकोड अमान्य
+              है
+            invalid_for_country_and_province_instructional: "%{province}, यूके के
+              लिए एक मान्य पोस्टकोड डालें"
+            invalid_for_country_and_province_informative: "%{province}, यूके के लिए
+              पोस्टकोड अमान्य है"
+            too_long_instructional: पोस्टकोड बहुत लंबा है
+            too_long_informative: पोस्टकोड बहुत लंबा है
+            contains_emojis_instructional: पोस्टकोड में इमोजी नहीं हो सकते
+            contains_emojis_informative: पोस्टकोड में इमोजी नहीं हो सकते
+            contains_restricted_characters_instructional: पोस्टकोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_restricted_characters_informative: पोस्टकोड में सिर्फ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_html_tags_instructional: पोस्टकोड में HTML नहीं हो सकता
+            contains_html_tags_informative: पोस्टकोड में HTML नहीं हो सकता

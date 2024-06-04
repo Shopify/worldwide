@@ -8,26 +8,49 @@ fr:
             default: État
             optional: État (facultatif)
           errors:
-            blank: Sélectionner un État
-            invalid_for_country: 'Saisissez un état valide pour : %{country}'
-            unknown_for_city_and_zip: Saisissez un État valide pour %{city}, %{zip}
-            unknown_for_city: Saisissez un État valide pour %{city}
-            unknown_for_zip: Saisissez un État valide pour %{zip}
-            unknown_for_address: L'État peut être erroné.
+            unknown_for_address: L’État peut être erroné
+            blank_instructional: Sélectionner un État
+            blank_informative: Saisir un État
+            invalid_for_country_instructional: Saisir un État valide pour %{city},
+              %{zip}
+            invalid_for_country_informative: L’État n’est pas valide
+            unknown_for_city_and_zip_instructional: Saisir un État valide pour %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: L’État n’est pas valide pour %{city},
+              %{zip}
+            unknown_for_city_instructional: Saisir un État valide pour %{city}
+            unknown_for_city_informative: L’État n’est pas valide pour %{city}
+            unknown_for_zip_instructional: Saisir un État valide pour %{zip}
+            unknown_for_zip_informative: L’État n’est pas valide pour %{zip}
         zip:
           label:
             default: Code postal
             optional: Code postal (facultatif)
           errors:
-            blank: Saisir un code postal
-            invalid_for_country: Saisir un code postal %{country} valide
-            invalid_for_country_and_province: Saisir un code postal valide pour %{province},
+            unknown_for_address: Le code postal peut être erroné
+            blank_instructional: Saisir un code postal
+            blank_informative: Le code postal est manquant
+            invalid_for_country_instructional: Saisir un code postal valide pour %{country}
+            invalid_for_country_informative: Le code postal n’est pas valide pour
               %{country}
-            contains_html_tags: La valeur du code postal ne peut pas contenir de balises
-              HTML.
-            too_long: La valeur du code postal est trop longue.
-            contains_emojis: Le code postal ne peut pas contenir d’emojis
-            contains_restricted_characters: Le code postal ne peut pas contenir de
-              caractères non autorisés
-            invalid_for_province: Saisissez un code postal valide pour %{province}
-            unknown_for_address: Le code postal peut être erroné.
+            invalid_for_province_instructional: Saisir un code postal valide pour
+              %{province}
+            invalid_for_province_informative: Le code postal n’est pas valide pour
+              %{province}
+            invalid_for_country_and_province_instructional: Saisir un code postal
+              valide pour %{province}, %{country}
+            invalid_for_country_and_province_informative: Le code postal n’est pas
+              valide pour %{province}, %{country}
+            too_long_instructional: Le code postal est trop long
+            too_long_informative: Le code postal est trop long (le maximum est de
+              255 caractères)
+            contains_emojis_instructional: Le code postal ne peut pas contenir d’emojis
+            contains_emojis_informative: Le code postal ne peut pas contenir d’emojis
+            contains_restricted_characters_instructional: Le code postal ne peut pas
+              contenir de caractères non autorisés
+            contains_restricted_characters_informative: Le code postal ne peut pas
+              contenir de caractères non autorisés
+            contains_html_tags_instructional: Le code postal ne peut pas contenir
+              de HTML
+            contains_html_tags_informative: Le code postal ne peut pas contenir de
+              HTML

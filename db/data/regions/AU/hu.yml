@@ -8,31 +8,48 @@ hu:
             default: Település
             optional: Település (nem kötelező megadni)
           errors:
-            blank: Írd be az előváros nevét
-            too_long: Túl hosszú az előváros neve (legfeljebb 255 karakter hosszú
-              lehet).
-            contains_html_tags: A településrész neve nem tartalmazhat HTML-címkéket.
-            contains_emojis: A településrész neve nem tartalmazhat emodzsikat.
-            contains_restricted_characters: A településrész csak betűket, számokat,
-              helyi karaktereket és különleges karaktereket tartalmazhat
+            blank_instructional: Írd be a településrész nevét
+            blank_informative: A településrész neve nincs megadva
+            too_long_instructional: Túl hosszú a településrész neve (legfeljebb 255
+              karakter hosszú lehet)
+            too_long_informative: Túl hosszú a településrész neve
+            contains_emojis_instructional: A településrész neve nem tartalmazhat emojikat
+            contains_emojis_informative: A településrész neve nem tartalmazhat emojikat
+            contains_restricted_characters_instructional: A településrész csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A településrész nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: A településrész nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A településrész nem tartalmazhat HTML-címkét
         province:
           label:
             default: Állam vagy terület
             optional: Állam vagy terület (nem kötelező megadni)
           errors:
-            blank: Válassz államot vagy területet
+            blank_instructional: Válassz államot vagy területet
+            blank_informative: Az állam vagy terület nincs megadva
         zip:
           label:
             default: Irányítószám
             optional: Irányítószám (nem kötelező megadni)
           errors:
-            blank: Írd be az irányítószámot
-            invalid_for_country: 'Érvénytelen irányítószámot írtál be ehhez az országhoz:
+            blank_instructional: Írd be az irányítószámot
+            blank_informative: Az irányítószám nincs megadva
+            invalid_for_country_instructional: 'Érvénytelen irányítószámot írtál be
+              ehhez az országhoz: %{country}'
+            invalid_for_country_informative: 'Érvénytelen irányítószám ehhez az országhoz:
               %{country}'
-            invalid_for_country_and_province: 'Érvénytelen irányítószámot írtál be
-              ehhez a zónához és országhoz: %{province}, %{country}'
-            too_long: Túl hosszú az irányítószám.
-            contains_html_tags: Az irányítószám nem tartalmazhat HTML-címkéket.
-            contains_emojis: Az irányítószám nem tartalmazhat emojikat
-            contains_restricted_characters: Az irányítószám csak betűket, számokat,
-              helyi karaktereket és különleges karaktereket tartalmazhat
+            invalid_for_country_and_province_instructional: 'Érvénytelen irányítószámot
+              írtál be ehhez a tartományhoz és országhoz: %{province}, %{country}'
+            invalid_for_country_and_province_informative: 'Érvénytelen irányítószám
+              ehhez a tartományhoz országhoz: %{province}, %{country}'
+            too_long_instructional: Túl hosszú az irányítószám
+            too_long_informative: Túl hosszú az irányítószám
+            contains_emojis_instructional: Az irányítószám nem tartalmazhat emojikat
+            contains_emojis_informative: Az irányítószám nem tartalmazhat emojikat
+            contains_restricted_characters_instructional: Az irányítószám csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: Az irányítószám nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: Az irányítószám nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: Az irányítószám nem tartalmazhat HTML-címkét

@@ -8,22 +8,39 @@ fi:
             default: Hallinnollinen alue
             optional: Hallinnollinen alue (valinnainen)
           errors:
-            blank: Lisää hallinnollinen alue
-            too_long: Hallinnollinen alue on liian pitkä (enintään 255 merkkiä)
-            contains_emojis: Hallinnollinen alue ei voi sisältää emojeita
-            contains_mathematical_symbols: Hallinnollinen alue ei voi sisältää matemaattisia
-              symboleja
-            contains_restricted_characters: Hallinnollinen alue voi sisältää vain
-              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
-            contains_too_many_words: Hallinnollinen alue -kentässä voi olla enintään
-              %{word_count} sanaa
-            contains_html_tags: Hallinnollinen alue ei voi sisältää HTML-tunnisteita.
-            contains_url: Hallinnollinen alue ei voi sisältää URL-osoitteita.
-            unknown_for_city: Anna paikkakunnalle %{city} kelvollinen hallinnollisen
-              alueen nimi.
-            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen hallinnollisen
-              alueen nimi.
-            unknown_for_address: Hallinnollinen alue voi olla väärä.
+            unknown_for_address: Hallinnollinen alue voi olla väärä
+            blank_instructional: Lisää hallinnollinen alue
+            blank_informative: Hallinnollinen alue puuttuu
+            too_long_instructional: Hallinnollinen alue on liian pitkä
+            too_long_informative: Hallinnollinen alue on liian pitkä (enintään 255
+              merkkiä)
+            contains_emojis_instructional: Hallinnollinen alue ei voi sisältää emojeita
+            contains_emojis_informative: Hallinnollinen alue ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Hallinnollinen alue ei voi
+              sisältää matemaattisia symboleja
+            contains_mathematical_symbols_informative: Hallinnollinen alue ei voi
+              sisältää matemaattisia symboleja
+            contains_restricted_characters_instructional: Hallinnollinen alue voi
+              sisältää vain kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Hallinnollinen alue ei voi
+              sisältää rajoitettuja merkkejä
+            contains_too_many_words_instructional: Hallinnollisessa alueessa saa olla
+              enintään %{word_count} sanaa
+            contains_too_many_words_informative: Hallinnollisessa alueessa saa olla
+              enintään %{word_count} sanaa
+            contains_html_tags_instructional: Hallinnollinen alue ei voi sisältää
+              HTML:ää
+            contains_html_tags_informative: Hallinnollinen alue ei voi sisältää HTML:ää
+            contains_url_instructional: Hallinnollinen alue ei voi sisältää URL-osoitetta
+            contains_url_informative: Hallinnollinen alue ei voi sisältää URL-osoitetta
+            unknown_for_city_instructional: Anna postinumerolle %{city} kelvollinen
+              hallinnollinen alue
+            unknown_for_city_informative: Hallinnollinen alue ei vastaa kaupunkia
+              %{city}
+            unknown_for_zip_instructional: Anna postinumerolle %{zip} kelvollinen
+              hallinnollinen alue
+            unknown_for_zip_informational: Hallinnollinen alue ei vastaa postinumeroa
+              %{zip}
           warnings:
             contains_too_many_words: Hallinnollinen alue -kentän pituudeksi suositellaan
               alle %{word_count} sanaa

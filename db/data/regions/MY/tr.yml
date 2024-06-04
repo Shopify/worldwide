@@ -8,14 +8,20 @@ tr:
             default: Eyalet/bölge
             optional: Eyalet/bölge (isteğe bağlı)
           errors:
-            blank: Eyalet/bölge seçin
+            blank_instructional: Eyalet/bölge seçin
+            blank_informative: Eyalet/bölge eksik
         zip:
           label:
             default: Posta kodu
             optional: Posta kodu (isteğe bağlı)
           errors:
-            too_long: Posta kodu değeri çok uzun
-            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
-            contains_emojis: Posta kodu, emoji içeremez
-            contains_restricted_characters: Posta kodunda kısıtlanmış karakterler
-              kullanılamaz
+            too_long_instructional: Posta kodu çok uzun
+            too_long_informative: Posta kodu çok uzun
+            contains_emojis_instructional: Posta kodu, emoji içeremez
+            contains_emojis_informative: Posta kodu, emoji içeremez
+            contains_restricted_characters_instructional: Posta kodu, kısıtlanmış
+              karakterler içeremez
+            contains_restricted_characters_informative: Posta kodu, kısıtlanmış karakterler
+              içeremez
+            contains_html_tags_instructional: Posta kodu, HTML içeremez
+            contains_html_tags_informative: Posta kodu, HTML içeremez

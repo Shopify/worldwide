@@ -8,14 +8,20 @@ pt-PT:
             default: Estado/território
             optional: Estado/território (opcional)
           errors:
-            blank: Selecione um estado/território
+            blank_instructional: Selecione um estado/território
+            blank_informative: O estado/território está em falta
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            too_long: O valor do código postal é demasiado longo
-            contains_html_tags: O código postal não pode conter etiquetas HTML.
-            contains_emojis: O código postal não pode conter emojis
-            contains_restricted_characters: O código postal não pode ter carateres
-              restritos
+            too_long_instructional: O código postal é demasiado longo
+            too_long_informative: O código postal é demasiado longo
+            contains_emojis_instructional: O código postal não pode conter emojis
+            contains_emojis_informative: O código postal não pode conter emojis
+            contains_restricted_characters_instructional: O código postal não pode
+              conter caracteres restritos
+            contains_restricted_characters_informative: O código postal não pode incluir
+              caracteres restritos
+            contains_html_tags_instructional: O código postal não pode conter HTML
+            contains_html_tags_informative: O código postal não pode conter HTML

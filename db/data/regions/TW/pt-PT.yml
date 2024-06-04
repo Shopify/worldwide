@@ -8,18 +8,34 @@ pt-PT:
             default: Região
             optional: Região (opcional)
           errors:
-            blank: Introduza uma região
-            too_long: A região é demasiado longa (o máximo são 255 caracteres)
-            contains_emojis: A região não pode conter emojis
-            contains_mathematical_symbols: A região não pode conter símbolos matemáticos
-            contains_restricted_characters: A região pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: A região não pode ter mais de %{word_count} palavras
-            contains_html_tags: A região não pode conter etiquetas HTML.
-            contains_url: A região não pode conter URL.
-            unknown_for_city: Introduza um nome de região válido para %{city}.
-            unknown_for_zip: Introduza um nome de região válido para %{zip}.
-            unknown_for_address: A região poderá estar incorreta.
+            unknown_for_address: A região poderá estar incorreta
+            blank_instructional: Introduza uma região
+            blank_informative: A região está em falta
+            too_long_instructional: O nome da região é demasiado longo (o máximo são
+              255 caracteres)
+            too_long_informative: O nome da região é demasiado longo
+            contains_emojis_instructional: O nome da região não pode conter emojis
+            contains_emojis_informative: O nome da região não pode conter emojis
+            contains_mathematical_symbols_instructional: O nome da região não pode
+              conter símbolos matemáticos
+            contains_mathematical_symbols_informative: O nome da região não pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O nome da região pode conter
+              apenas letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O nome da região não pode
+              conter caracteres restritos
+            contains_too_many_words_instructional: O nome da região deve ter menos
+              de %{word_count} palavras
+            contains_too_many_words_informative: O nome da região deve ter menos de
+              %{word_count} palavras
+            contains_html_tags_instructional: O nome da região não pode conter HTML
+            contains_html_tags_informative: O nome da região não pode conter HTML
+            contains_url_instructional: O nome da região não pode conter um URL
+            contains_url_informative: O nome da região não pode conter um URL
+            unknown_for_city_instructional: Introduza uma região válida para %{city}
+            unknown_for_city_informative: O distrito não é válido para %{city}
+            unknown_for_zip_instructional: Introduza uma região válida para %{zip}
+            unknown_for_zip_informative: A região não é válida para %{zip}
           warnings:
             contains_too_many_words: É recomendável que a região tenha menos de %{word_count}
               palavras

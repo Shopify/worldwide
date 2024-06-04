@@ -8,24 +8,43 @@ vi:
             default: Tiểu bang
             optional: Tiểu bang (không bắt buộc)
           errors:
-            blank: Chọn tiểu bang
-            invalid_for_country: Nhập tiểu bang %{country} hợp lệ
-            unknown_for_city_and_zip: Nhập tiểu bang hợp lệ cho %{city}, %{zip}
-            unknown_for_city: Chọn tiểu bang hợp lệ cho %{city}
-            unknown_for_zip: Chọn tiểu bang hợp lệ cho %{zip}
-            unknown_for_address: Tiểu bang có thể không chính xác.
+            unknown_for_address: Tiểu bang có thể không chính xác
+            blank_instructional: Chọn tiểu bang
+            blank_informative: Nhập tiểu bang
+            invalid_for_country_instructional: Nhập tiểu bang hợp lệ cho %{city},
+              %{zip}
+            invalid_for_country_informative: Tiểu bang không hợp lệ
+            unknown_for_city_and_zip_instructional: Nhập tiểu bang hợp lệ cho %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Tiểu bang cho %{city}, %{zip} không
+              hợp lệ
+            unknown_for_city_instructional: Chọn tiểu bang hợp lệ cho %{city}
+            unknown_for_city_informative: Tiểu bang cho %{city} không hợp lệ
+            unknown_for_zip_instructional: Chọn tiểu bang hợp lệ cho %{zip}
+            unknown_for_zip_informative: Tiểu bang cho %{zip} không hợp lệ
         zip:
           label:
             default: Mã ZIP
             optional: Mã ZIP (không bắt buộc)
           errors:
-            blank: Nhập mã ZIP
-            invalid_for_country: Nhập mã ZIP %{country} hợp lệ
-            invalid_for_country_and_province: Nhập mã ZIP hợp lệ cho %{province},
-              %{country}
-            too_long: Giá trị mã ZIP quá dài
-            contains_html_tags: Giá trị mã ZIP không được chứa thẻ HTML.
-            contains_emojis: Mã ZIP không được chứa biểu tượng cảm xúc
-            contains_restricted_characters: Mã ZIP không được chứa ký tự bị hạn chế
-            invalid_for_province: Nhập mã ZIP hợp lệ cho %{province}
-            unknown_for_address: Mã ZIP có thể không chính xác.
+            unknown_for_address: Mã ZIP có thể không chính xác
+            blank_instructional: Nhập mã ZIP
+            blank_informative: Thiếu mã ZIP
+            invalid_for_country_instructional: Nhập mã ZIP hợp lệ cho %{country}
+            invalid_for_country_informative: Mã ZIP cho %{country} không hợp lệ
+            invalid_for_province_instructional: Nhập mã ZIP hợp lệ cho %{province}
+            invalid_for_province_informative: Mã ZIP cho %{province} không hợp lệ
+            invalid_for_country_and_province_instructional: Nhập mã ZIP hợp lệ cho
+              %{province}, %{country}
+            invalid_for_country_and_province_informative: Mã ZIP cho %{province},
+              %{country} không hợp lệ
+            too_long_instructional: Mã ZIP quá dài
+            too_long_informative: Mã ZIP quá dài (tối đa 255 ký tự)
+            contains_emojis_instructional: Mã ZIP không được chứa biểu tượng cảm xúc
+            contains_emojis_informative: Mã ZIP không được chứa biểu tượng cảm xúc
+            contains_restricted_characters_instructional: Mã ZIP không được chứa ký
+              tự bị hạn chế
+            contains_restricted_characters_informative: Mã ZIP không được chứa ký
+              tự bị hạn chế
+            contains_html_tags_instructional: Mã ZIP không được chứa HTML
+            contains_html_tags_informative: Mã ZIP không được chứa HTML

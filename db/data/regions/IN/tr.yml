@@ -8,17 +8,28 @@ tr:
             default: Eyalet
             optional: Eyalet (isteğe bağlı)
           errors:
-            blank: Eyalet seçin
+            blank_instructional: Eyalet seçin
+            blank_informative: Eyalet eksik
         zip:
           label:
             default: PIN kodu
             optional: PIN kodu (isteğe bağlı)
           errors:
-            blank: PIN kodu girin
-            invalid_for_country: "%{country} için geçerli bir PIN kodu girin"
-            invalid_for_country_and_province: "%{province}, %{country} için geçerli
-              bir PIN kodu girin"
-            too_long: PIN kodu değeri çok uzun
-            contains_html_tags: PIN kodu, HTML etiketleri içeremez.
-            contains_emojis: PIN kodu emoji içeremez
-            contains_restricted_characters: PIN kodunda kısıtlanmış karakterler kullanılamaz
+            blank_instructional: PIN kodu girin
+            blank_informative: PIN kodu eksik
+            invalid_for_country_instructional: "%{country} için geçerli bir PIN kodu
+              girin"
+            invalid_for_country_informative: PIN kodu geçerli değil
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              için geçerli bir PIN kodu girin"
+            invalid_for_country_and_province_informative: PIN kodu geçerli değil
+            too_long_instructional: PIN kodu çok uzun
+            too_long_informative: PIN kodu çok uzun
+            contains_emojis_instructional: PIN kodu emoji içeremez
+            contains_emojis_informative: PIN kodu emoji içeremez
+            contains_restricted_characters_instructional: PIN kodu, kısıtlanmış karakterler
+              içeremez
+            contains_restricted_characters_informative: PIN kodu, kısıtlanmış karakterler
+              içeremez
+            contains_html_tags_instructional: PIN kodu HTML içeremez
+            contains_html_tags_informative: PIN kodu HTML içeremez

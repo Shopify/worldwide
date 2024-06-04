@@ -8,12 +8,21 @@ sv:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            blank: Ange ett postnummer
-            invalid_for_country: Ange ett giltigt postnummer för Storbritannien
-            invalid_for_country_and_province: Ange ett giltigt postnummer för %{province},
-              Storbritannien
-            too_long: Postnumret är för långt
-            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
-            contains_emojis: Postnummer får inte innehålla emojis
-            contains_restricted_characters: Postnummer får inte innehålla begränsade
-              tecken
+            blank_instructional: Ange ett postnummer
+            blank_informative: Postnummer saknas
+            invalid_for_country_instructional: Ange ett giltigt postnummer för Storbritannien
+            invalid_for_country_informative: Postnumret är ogiltigt för Storbritannien
+            invalid_for_country_and_province_instructional: Ange ett giltigt postnummer
+              för %{province}, Storbritannien
+            invalid_for_country_and_province_informative: Postnumret är ogiltigt för
+              %{province}, Storbritannien
+            too_long_instructional: Postnumret är för långt
+            too_long_informative: Postnumret är för långt
+            contains_emojis_instructional: Postnummer får inte innehålla emojis
+            contains_emojis_informative: Postnummer får inte innehålla emojis
+            contains_restricted_characters_instructional: Postnummer får inte innehålla
+              begränsade tecken
+            contains_restricted_characters_informative: Postnummer får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_html_tags_instructional: Postnummer får inte innehålla HTML
+            contains_html_tags_informative: Postnummer får inte innehålla HTML

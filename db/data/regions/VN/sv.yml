@@ -8,21 +8,33 @@ sv:
             default: Distrikt
             optional: Distrikt (valfritt)
           errors:
-            blank: Ange ett distrikt
-            too_long: Namnet på det administrativa området är för långt (max. 255
-              tecken)
-            contains_emojis: Administrativt område får inte innehålla emojier
-            contains_mathematical_symbols: Administrativt område får inte innehålla
+            unknown_for_address: Församlingen kan vara felaktig
+            blank_instructional: Ange en församling
+            blank_informative: Församling saknas
+            too_long_instructional: Församling är för lång
+            too_long_informative: Namnet på församlingen är för långt (max. 255 tecken)
+            contains_emojis_instructional: Kvarter får inte innehålla emojis
+            contains_emojis_informative: Församling får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Församling får inte innehålla
               matematiska symboler
-            contains_restricted_characters: Administrativt område får endast innehålla
+            contains_mathematical_symbols_informative: Församling får inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Kvarter får endast innehålla
               bokstäver, siffror, lokala tecken och specialtecken
-            contains_too_many_words: Administrativt område får inte innehålla fler
-              än %{word_count} ord
-            contains_html_tags: Administrativt område får inte innehålla HTML-taggar.
-            contains_url: Administrativt område får inte innehålla URL:er.
-            unknown_for_city: Ange ett giltigt administrativt område för %{city}.
-            unknown_for_zip: Ange ett giltigt administrativt område för %{zip}.
-            unknown_for_address: Administrativt område kan vara felaktigt.
+            contains_restricted_characters_informative: Kvarter får inte innehålla
+              begränsade tecken
+            contains_too_many_words_instructional: Församling måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Församling måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Församling får inte innehålla HTML
+            contains_html_tags_informative: Församling får inte innehålla HTML
+            contains_url_instructional: Församling får inte innehålla en URL
+            contains_url_informative: Församling får inte innehålla en URL
+            unknown_for_city_instructional: Ange ett giltigt församlingsnamn för %{city}
+            unknown_for_city_informative: Kvarteret matchar inte %{city}
+            unknown_for_zip_instructional: Ange ett giltigt församlingsnamn för %{zip}
+            unknown_for_zip_informational: Kvarteret matchar inte %{zip}
           warnings:
             contains_too_many_words: Vi rekommenderar att det administrativa området
               består av färre än %{word_count} ord

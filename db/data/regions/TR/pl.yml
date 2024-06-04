@@ -8,19 +8,33 @@ pl:
             default: Dystrykt
             optional: Dystrykt (opcjonalnie)
           errors:
-            blank: Wpisz dystrykt
-            too_long: Dystrykt jest za długi (maksymalnie 255 znaków)
-            contains_emojis: Dystrykt nie może zawierać emoji
-            contains_mathematical_symbols: Dystrykt nie może zawierać symboli matematycznych
-            contains_restricted_characters: Dystrykt może zawierać tylko litery, cyfry,
-              znaki lokalne i znaki specjalne
-            contains_too_many_words: Dystrykt może zawierać maksymalnie %{word_count}
-              słów (słowa)
-            contains_html_tags: Dystrykt nie może zawierać tagów HTML.
-            contains_url: Dystrykt nie może zawierać adresów URL.
-            unknown_for_city: Wpisz prawidłową nazwę dystryktu dla %{city}.
-            unknown_for_zip: Wpisz prawidłową nazwę dystryktu dla %{zip}.
-            unknown_for_address: Dystrykt może być nieprawidłowy.
+            unknown_for_address: Dystrykt może być nieprawidłowy
+            blank_instructional: Wpisz dystrykt
+            blank_informative: Brakuje dystryktu
+            too_long_instructional: Dystrykt jest za długi (maksymalnie 255 znaków)
+            too_long_informative: Dystrykt jest za długi
+            contains_emojis_instructional: Dystrykt nie może zawierać emoji
+            contains_emojis_informative: Dystrykt nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Dystrykt nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Dystrykt nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Dystrykt może zawierać tylko
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Dystrykt nie może zawierać
+              znaków objętych ograniczeniami
+            contains_too_many_words_instructional: Dystrykt musi składać się z mniej
+              niż %{word_count} słów
+            contains_too_many_words_informative: Dystrykt musi składać się z mniej
+              niż %{word_count} słów
+            contains_html_tags_instructional: Dystrykt nie może zawierać HTML
+            contains_html_tags_informative: Dystrykt nie może zawierać HTML
+            contains_url_instructional: Dystrykt nie może zawierać adresu URL
+            contains_url_informative: Dystrykt nie może zawierać adresu URL
+            unknown_for_city_instructional: Wpisz prawidłowy dystrykt dla %{city}
+            unknown_for_city_informative: Dystrykt jest nieprawidłowy dla %{city}
+            unknown_for_zip_instructional: Wpisz prawidłowy dystrykt dla %{zip}
+            unknown_for_zip_informative: Dystrykt jest nieprawidłowy dla %{zip}
           warnings:
             contains_too_many_words: Zaleca się, aby dystrykt zawierał mniej niż %{word_count}
               słów (słowa)

@@ -8,25 +8,37 @@ en:
             default: State
             optional: State (optional)
           errors:
-            blank: Select a state
-            invalid_for_country: Enter a valid %{country} state
-            unknown_for_city_and_zip: Enter a valid state for %{city}, %{zip}
-            unknown_for_city: Select a valid state for %{city}
-            unknown_for_zip: Select a valid state for %{zip}
-            unknown_for_address: State may be incorrect.
-
+            blank_instructional: Select a state
+            blank_informative: Enter a state
+            invalid_for_country_instructional: Enter a valid state for %{city}, %{zip}
+            invalid_for_country_informative: State isn't valid
+            unknown_for_city_and_zip_instructional: Enter a valid state for %{city}, %{zip}
+            unknown_for_city_and_zip_informative: State isn't valid for %{city}, %{zip}
+            unknown_for_city_instructional: Select a valid state for %{city}
+            unknown_for_city_informative: State isn't valid for %{city}
+            unknown_for_zip_instructional: Select a valid state for %{zip}
+            unknown_for_zip_informative: State isn't valid for %{zip}
+            unknown_for_address: State may be incorrect
         zip:
           label:
             default: ZIP code
             optional: ZIP code (optional)
           errors:
-            blank: Enter a ZIP code
-            invalid_for_country: Enter a valid %{country} ZIP code
-            invalid_for_province: Enter a valid ZIP code for %{province}
-            invalid_for_country_and_province: Enter a valid ZIP code for %{province},
+            blank_instructional: Enter a ZIP code
+            blank_informative: ZIP code is missing
+            invalid_for_country_instructional: Enter a valid ZIP code for %{country}
+            invalid_for_country_informative: ZIP code isn't valid for %{country}
+            invalid_for_province_instructional: Enter a valid ZIP code for %{province}
+            invalid_for_province_informative: ZIP code isn't valid for %{province}
+            invalid_for_country_and_province_instructional: Enter a valid ZIP code for %{province},
               %{country}
-            too_long: The ZIP code value is too long
-            contains_emojis: The ZIP code cannot contain emojis
-            contains_restricted_characters: The ZIP code cannot have restricted characters
-            contains_html_tags: The ZIP code value cannot contain HTML tags.
-            unknown_for_address: ZIP code may be incorrect.
+            invalid_for_country_and_province_informative: ZIP code isn't valid for %{province}, %{country}
+            too_long_instructional: ZIP code is too long
+            too_long_informative: ZIP code is too long (maximum is 255 characters)
+            contains_emojis_instructional: ZIP code can't contain emojis
+            contains_emojis_informative: ZIP code can't contain emojis
+            contains_restricted_characters_instructional: ZIP code can't contain restricted characters
+            contains_restricted_characters_informative: ZIP code can't contain restricted characters
+            contains_html_tags_instructional: ZIP code can't contain HTML
+            contains_html_tags_informative: ZIP code can't contain HTML
+            unknown_for_address: ZIP code may be incorrect

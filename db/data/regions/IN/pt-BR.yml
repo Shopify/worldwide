@@ -8,17 +8,27 @@ pt-BR:
             default: Estado
             optional: Estado (opcional)
           errors:
-            blank: Selecione um estado
+            blank_instructional: Selecione um estado
+            blank_informative: Falta o estado
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blank: Insira um código postal
-            invalid_for_country: Insira um código postal válido para %{country}
-            invalid_for_country_and_province: Insira um CEP válido para %{province},
-              %{country}
-            too_long: O valor de código PIN é longo demais
-            contains_html_tags: O código PIN não pode ter tags HTML.
-            contains_emojis: O código PIN não pode conter emojis
-            contains_restricted_characters: O código PIN não pode ter caracteres restritos
+            blank_instructional: Insira um código PIN
+            blank_informative: Falta o código PIN
+            invalid_for_country_instructional: Insira um código PIN válido para %{country}
+            invalid_for_country_informative: O código PIN é inválido
+            invalid_for_country_and_province_instructional: Insira um código PIN válido
+              para %{province}, %{country}
+            invalid_for_country_and_province_informative: O código PIN é inválido
+            too_long_instructional: O código PIN é longo demais
+            too_long_informative: O código PIN é longo demais
+            contains_emojis_instructional: O código PIN não pode conter emojis
+            contains_emojis_informative: O código PIN não pode conter emojis
+            contains_restricted_characters_instructional: O código PIN não pode conter
+              caracteres restritos
+            contains_restricted_characters_informative: O código PIN não pode conter
+              caracteres restritos
+            contains_html_tags_instructional: O código PIN não pode conter HTML
+            contains_html_tags_informative: O código PIN não pode conter HTML

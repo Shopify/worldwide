@@ -8,18 +8,27 @@ nb:
             default: Stat
             optional: Stat (valgfritt)
           errors:
-            blank: Velg en stat
+            blank_instructional: Velg en stat
+            blank_informative: Stat mangler
         zip:
           label:
             default: PIN-kode
             optional: PIN-kode (valgfritt)
           errors:
-            blank: Angi en PIN-kode
-            invalid_for_country: Angi en gyldig PIN-kode for %{country}
-            invalid_for_country_and_province: Angi en gyldig PIN-kode for %{province},
-              %{country}
-            too_long: Verdien for PIN-kode er for lang
-            contains_html_tags: PIN-kode kan ikke inneholde HTML-tagger.
-            contains_emojis: PIN-kode kan ikke inneholde emojier
-            contains_restricted_characters: PIN-koder kan ikke inneholde begrensede
-              tegn
+            blank_instructional: Angi en PIN-kode
+            blank_informative: PIN-kode mangler
+            invalid_for_country_instructional: Angi en gyldig PIN-kode for %{country}
+            invalid_for_country_informative: PIN-koden er ugyldig
+            invalid_for_country_and_province_instructional: Angi en gyldig PIN-kode
+              for %{province}, %{country}
+            invalid_for_country_and_province_informative: PIN-koden er ugyldig
+            too_long_instructional: PIN-koden er for lang
+            too_long_informative: PIN-koden er for lang
+            contains_emojis_instructional: PIN-koden kan ikke inneholde emojier
+            contains_emojis_informative: PIN-koden kan ikke inneholde emojier
+            contains_restricted_characters_instructional: PIN-koden kan ikke inneholde
+              begrensede tegn
+            contains_restricted_characters_informative: PIN-koden kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: PIN-koden kan ikke inneholde HTML
+            contains_html_tags_informative: PIN-koden kan ikke inneholde HTML

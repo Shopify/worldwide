@@ -8,13 +8,20 @@ hi:
             default: राज्य/क्षेत्र
             optional: राज्य/क्षेत्र (वैकल्पिक)
           errors:
-            blank: एक राज्य/क्षेत्र चुनें
+            blank_instructional: कोई राज्य/प्रदेश चुनें
+            blank_informative: राज्य/प्रदेश का नाम गुम है
         zip:
           label:
             default: पोस्टल कोड
             optional: पोस्टल कोड (वैकल्पिक)
           errors:
-            too_long: पोस्टकोड का मान बहुत लंबा है
-            contains_html_tags: पोस्टकोड के फ़ील्ड में HTML टैग नहीं हो सकते.
-            contains_emojis: पोस्टकोड फ़ील्ड में इमोजी नहीं हो सकते
-            contains_restricted_characters: पोस्टकोड में कैरेक्टर सीमित नहीं हो सकते
+            too_long_instructional: पोस्टकोड बहुत लंबा है
+            too_long_informative: पोस्टकोड बहुत लंबा है
+            contains_emojis_instructional: पोस्टकोड में इमोजी नहीं हो सकते
+            contains_emojis_informative: पोस्टकोड में इमोजी नहीं हो सकते
+            contains_restricted_characters_instructional: पोस्टकोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_restricted_characters_informative: पोस्टकोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_html_tags_instructional: पोस्टकोड में HTML नहीं हो सकता
+            contains_html_tags_informative: पोस्टकोड में HTML नहीं हो सकता

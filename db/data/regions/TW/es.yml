@@ -8,21 +8,42 @@ es:
             default: Distrito
             optional: Distrito (opcional)
           errors:
-            blank: Introduce un distrito.
-            too_long: El distrito es demasiado largo (máximo de 255 caracteres).
-            contains_emojis: El distrito no puede contener emojis.
-            contains_mathematical_symbols: El distrito no puede contener símbolos
-              matemáticos.
-            contains_restricted_characters: El distrito solo puede contener letras,
-              números y caracteres locales y especiales.
-            contains_too_many_words: El distrito no puede tener más de %{word_count}
-              palabras.
-            contains_html_tags: El distrito no puede contener etiquetas HTML.
-            contains_url: El distrito no puede contener URL.
-            unknown_for_city: Introduce un nombre de distrito válido para %{city}.
-            unknown_for_zip: Introduce un nombre de distrito válido para el código
-              postal %{zip}.
             unknown_for_address: Puede que el distrito no sea correcto.
+            blank_instructional: Introduce un distrito.
+            blank_informative: Falta el distrito.
+            too_long_instructional: El nombre del distrito es demasiado largo (el
+              máximo es de 255 caracteres).
+            too_long_informative: El nombre del distrito es demasiado largo.
+            contains_emojis_instructional: El nombre del distrito no puede contener
+              emojis.
+            contains_emojis_informative: El nombre del distrito no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre del distrito no
+              puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre del distrito no puede
+              contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre del distrito solo
+              puede contener letras, números, caracteres locales y caracteres especiales.
+            contains_restricted_characters_informative: El nombre del distrito no
+              puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre del distrito debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre del distrito debe tener
+              menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre del distrito no puede contener
+              HTML.
+            contains_html_tags_informative: El nombre del distrito no puede contener
+              HTML.
+            contains_url_instructional: El nombre del distrito no puede contener una
+              URL.
+            contains_url_informative: El nombre del distrito no puede contener una
+              URL.
+            unknown_for_city_instructional: Introduce un distrito válido para %{city}.
+            unknown_for_city_informative: El distrito no es válido para %{city}.
+            unknown_for_zip_instructional: Introduce un distrito válido para el código
+              postal %{zip}.
+            unknown_for_zip_informative: El distrito no es válido para el código postal
+              %{zip}.
           warnings:
             contains_too_many_words: Se recomienda que el distrito tenga menos de
               %{word_count} palabras.

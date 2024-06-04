@@ -8,8 +8,15 @@ ru:
             default: Область
             optional: Область (необязательно)
           errors:
-            blank: Выберите провинцию
-            unknown_for_city_and_zip: Укажите название области для %{city}, %{zip}
-            unknown_for_city: Выберите название области для %{city}
-            unknown_for_zip: Выберите название области для %{zip}
-            unknown_for_address: Название региона может быть указано неправильно.
+            unknown_for_address: Название области может быть указано неправильно
+            blank_instructional: Выберите область
+            blank_informative: Область отсутствует
+            unknown_for_city_and_zip_instructional: Укажите название области для города
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Недействительная область для города
+              (%{city}, %{zip})
+            unknown_for_city_instructional: Выберите действительную область для города
+              %{city}
+            unknown_for_city_informative: Недействительная область для города %{city}
+            unknown_for_zip_instructional: Выберите действительную область для %{zip}
+            unknown_for_zip_informative: Недействительная область для %{zip}

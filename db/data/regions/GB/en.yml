@@ -8,11 +8,19 @@ en:
             default: Postcode
             optional: Postcode (optional)
           errors:
-            blank: Enter a postcode
-            invalid_for_country: Enter a valid postcode for the United Kingdom
-            invalid_for_country_and_province: Enter a valid postcode for %{province},
+            blank_instructional: Enter a postcode
+            blank_informative: Postcode is missing
+            invalid_for_country_instructional: Enter a valid postcode for the United Kingdom
+            invalid_for_country_informative: Postcode is invalid for the United Kingdom
+            invalid_for_country_and_province_instructional: Enter a valid postcode for %{province},
               UK
-            too_long: The postcode value is too long
-            contains_emojis: Postcode cannot contain emojis
-            contains_restricted_characters: Postcode cannot have restricted characters
-            contains_html_tags: Postcode cannot contain HTML tags.
+            invalid_for_country_and_province_informative: Postcode is invalid for %{province}, UK
+            too_long_instructional: Postcode is too long
+            too_long_informative: Postcode is too long
+            contains_emojis_instructional: Postcode can't contain emojis
+            contains_emojis_informative: Postcode can't contain emojis
+            contains_restricted_characters_instructional: Postcode can't have restricted characters
+            contains_restricted_characters_informative: Postcode can only contain letters, numbers, local characters,
+              and special characters
+            contains_html_tags_instructional: Postcode can't contain HTML
+            contains_html_tags_informative: Postcode can't contain HTML

@@ -8,20 +8,34 @@ de:
             default: Bezirk
             optional: Bezirk (optional)
           errors:
-            blank: Gib einen Bezirk ein.
-            too_long: Bezirk ist zu lang (maximal 255 Zeichen).
-            contains_emojis: Bezirk darf keine Emojis enthalten.
-            contains_mathematical_symbols: Bezirk darf keine mathematischen Symbole
-              enthalten.
-            contains_restricted_characters: Bezirk darf nur Buchstaben, Zahlen, Zeichen
-              der lokalen Sprache und Sonderzeichen enthalten.
-            contains_too_many_words: Bezirk darf nicht mehr als %{word_count} Wörter
-              enthalten.
-            contains_html_tags: Bezirk darf keine HTML-Tags enthalten.
-            contains_url: Bezirk darf keine URLs enthalten.
-            unknown_for_city: Gib einen gültigen Bezirknamen für %{city} ein.
-            unknown_for_zip: Gib einen gültigen Bezirknamen für %{zip} ein.
-            unknown_for_address: Bezirk ist ggf. falsch.
+            unknown_for_address: Bezirk ist ggf. falsch
+            blank_instructional: Einen Bezirk eingeben
+            blank_informative: Bezirk fehlt
+            too_long_instructional: Bezirk ist zu lang
+            too_long_informative: Bezirk ist zu lang (maximal 255 Zeichen).
+            contains_emojis_instructional: Bezirk darf keine Emojis enthalten
+            contains_emojis_informative: Bezirk darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Bezirk darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Bezirk darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Bezirk darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_restricted_characters_informative: Bezirk darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Bezirk muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Bezirk muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Bezirk darf kein HTML enthalten
+            contains_html_tags_informative: Bezirk darf kein HTML enthalten
+            contains_url_instructional: Bezirk darf keine URL enthalten
+            contains_url_informative: Bezirk darf keine URL enthalten
+            unknown_for_city_instructional: Einen gültigen Bezirknamen für %{city}
+              eingeben
+            unknown_for_city_informative: Bezirk stimmt nicht mit %{city} überein
+            unknown_for_zip_instructional: Einen gültigen Bezirknamen für %{zip} eingeben
+            unknown_for_zip_informational: Bezirk stimmt nicht mit %{zip} überein
           warnings:
             contains_too_many_words: Es wird empfohlen, dass der Bezirk weniger als
               %{word_count} Wörter enthält.

@@ -8,9 +8,14 @@ hi:
             default: प्रांत
             optional: प्रांत (वैकल्पिक)
           errors:
-            blank: एक प्रांत चुनें
-            unknown_for_city_and_zip: "%{city}, %{zip} के लिए एक मान्य प्रांत का नाम
-              डालें"
-            unknown_for_city: "%{city} के लिए एक मान्य प्रांत चुनें"
-            unknown_for_zip: "%{zip} के लिए एक मान्य प्रांत चुनें"
             unknown_for_address: प्रांत गलत हो सकता है.
+            blank_instructional: कोई प्रांत चुनें
+            blank_informative: प्रांत गुम है
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} के लिए एक मान्य
+              प्रांत डालें"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip} के लिए प्रांत मान्य
+              नहीं है"
+            unknown_for_city_instructional: "%{city} के लिए एक मान्य प्रांत चुनें"
+            unknown_for_city_informative: "%{city} के लिए प्रांत मान्य नहीं है"
+            unknown_for_zip_instructional: "%{zip} के लिए एक मान्य प्रांत चुनें"
+            unknown_for_zip_informative: "%{zip} के लिए प्रांत मान्य नहीं है"

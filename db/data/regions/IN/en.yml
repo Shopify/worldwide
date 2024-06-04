@@ -8,17 +8,25 @@ en:
             default: State
             optional: State (optional)
           errors:
-            blank: Select a state
+            blank_instructional: Select a state
+            blank_informative: State is missing
         zip:
           label:
             default: PIN code
             optional: PIN code (optional)
           errors:
-            blank: Enter a PIN code
-            invalid_for_country: Enter a valid PIN code for %{country}
-            invalid_for_country_and_province: Enter a valid PIN code for %{province},
+            blank_instructional: Enter a PIN code
+            blank_informative: PIN code is missing
+            invalid_for_country_instructional: Enter a valid PIN code for %{country}
+            invalid_for_country_informative: PIN code isn't valid
+            invalid_for_country_and_province_instructional: Enter a valid PIN code for %{province},
               %{country}
-            too_long: The PIN code value is too long
-            contains_emojis: The PIN code cannot contain emojis
-            contains_restricted_characters: The PIN code cannot have restricted characters
-            contains_html_tags: The PIN code cannot contain HTML tags.
+            invalid_for_country_and_province_informative: PIN code isn't valid
+            too_long_instructional: PIN code is too long
+            too_long_informative: PIN code is too long
+            contains_emojis_instructional: PIN code can't contain emojis
+            contains_emojis_informative: PIN code can't contain emojis
+            contains_restricted_characters_instructional: PIN code can't contain restricted characters
+            contains_restricted_characters_informative: PIN code can't contain restricted characters
+            contains_html_tags_instructional: PIN code can't contain HTML
+            contains_html_tags_informative: PIN code can't contain HTML

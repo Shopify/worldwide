@@ -8,14 +8,22 @@ vi:
             default: Tiểu bang/Vùng lãnh thổ
             optional: Tiểu bang/Vùng lãnh thổ (không bắt buộc)
           errors:
-            blank: Chọn tiểu bang/vùng lãnh thổ
+            blank_instructional: Chọn tiểu bang/vùng lãnh thổ
+            blank_informative: Thiếu tiểu bang/vùng lãnh thổ
         zip:
           label:
             default: Mã bưu điện
             optional: Mã bưu điện (không bắt buộc)
           errors:
-            too_long: Giá trị mã bưu chính quá dài
-            contains_html_tags: Mã bưu điện không được chứa thẻ HTML.
-            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
-            contains_restricted_characters: Mã bưu chính không được chứa ký tự bị
-              hạn chế
+            too_long_instructional: Mã bưu chính quá dài
+            too_long_informative: Mã bưu chính quá dài
+            contains_emojis_instructional: Mã bưu chính không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Mã bưu chính không được chứa biểu tượng cảm
+              xúc
+            contains_restricted_characters_instructional: Mã bưu chính không được
+              chứa ký tự bị hạn chế
+            contains_restricted_characters_informative: Mã bưu chính không được chứa
+              ký tự bị hạn chế
+            contains_html_tags_instructional: Mã bưu chính không được chứa HTML
+            contains_html_tags_informative: Mã bưu chính không được chứa HTML

@@ -8,25 +8,48 @@ es:
             default: Estado
             optional: Estado (opcional)
           errors:
-            blank: Selecciona un estado
-            invalid_for_country: Ingresa un estado válido para %{country}
-            unknown_for_city_and_zip: Introduce un estado válido para %{city}, %{zip}
-            unknown_for_city: Selecciona un estado válido para %{city}
-            unknown_for_zip: Selecciona un estado válido para %{zip}
             unknown_for_address: Puede que el estado sea incorrecto.
+            blank_instructional: Selecciona un estado.
+            blank_informative: Introduce un estado.
+            invalid_for_country_instructional: Introduce un estado válido para %{city},
+              %{zip}.
+            invalid_for_country_informative: El estado no es válido.
+            unknown_for_city_and_zip_instructional: Introduce un estado válido para
+              %{city}, %{zip}.
+            unknown_for_city_and_zip_informative: El estado no es válido para %{city},
+              %{zip}.
+            unknown_for_city_instructional: Selecciona un estado válido para %{city}.
+            unknown_for_city_informative: El estado no es válido para %{city}.
+            unknown_for_zip_instructional: Selecciona un estado válido para el código
+              postal %{zip}.
+            unknown_for_zip_informative: El estado no es válido para el código postal
+              %{zip}.
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blank: Introduce un código postal (ZIP)
-            invalid_for_country: Introduce un código postal válido de %{country}
-            invalid_for_country_and_province: Introduce un código postal válido para
-              %{province}, %{country}
-            too_long: El valor del código postal es demasiado largo
-            contains_html_tags: El código postal no puede contener etiquetas HTML.
-            contains_emojis: El código postal no puede contener emojis
-            contains_restricted_characters: El código postal no puede tener caracteres
-              restringidos.
-            invalid_for_province: Introduce un código postal válido para %{province}.
             unknown_for_address: Puede que el código postal sea incorrecto.
+            blank_instructional: Introduce un código postal.
+            blank_informative: Falta el código postal.
+            invalid_for_country_instructional: Introduce un código postal válido para
+              %{country}.
+            invalid_for_country_informative: El código postal no es válido para %{country}.
+            invalid_for_province_instructional: Introduce un código postal válido
+              para %{province}.
+            invalid_for_province_informative: El código postal no es válido para %{province}.
+            invalid_for_country_and_province_instructional: Introduce un código postal
+              válido para %{province}, %{country}.
+            invalid_for_country_and_province_informative: El código postal no es válido
+              para %{province}, %{country}.
+            too_long_instructional: El código postal es demasiado largo.
+            too_long_informative: El código postal es demasiado largo (el máximo es
+              de 255 caracteres).
+            contains_emojis_instructional: El código postal no puede contener emojis.
+            contains_emojis_informative: El código postal no puede contener emojis.
+            contains_restricted_characters_instructional: El código postal no puede
+              contener caracteres restringidos.
+            contains_restricted_characters_informative: El código postal no puede
+              contener caracteres restringidos.
+            contains_html_tags_instructional: El código postal no puede contener HTML.
+            contains_html_tags_informative: El código postal no puede contener HTML.

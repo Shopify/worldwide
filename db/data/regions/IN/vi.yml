@@ -8,17 +8,27 @@ vi:
             default: Tiểu bang
             optional: Tiểu bang (không bắt buộc)
           errors:
-            blank: Chọn tiểu bang
+            blank_instructional: Chọn tiểu bang
+            blank_informative: Thiếu tiểu bang
         zip:
           label:
             default: Mã PIN
             optional: Mã PIN (không bắt buộc)
           errors:
-            blank: Nhập mã PIN
-            invalid_for_country: Nhập mã PIN hợp lệ cho %{country}
-            invalid_for_country_and_province: Nhập mã PIN hợp lệ cho %{province},
-              %{country}
-            too_long: Giá trị mã PIN quá dài
-            contains_html_tags: Mã PIN không được chứa thẻ HTML.
-            contains_emojis: Mã PIN không được chứa biểu tượng cảm xúc
-            contains_restricted_characters: Mã PIN không được chứa ký tự bị hạn chế
+            blank_instructional: Nhập mã PIN
+            blank_informative: Thiếu mã PIN
+            invalid_for_country_instructional: Nhập mã PIN hợp lệ cho %{country}
+            invalid_for_country_informative: Mã PIN không hợp lệ
+            invalid_for_country_and_province_instructional: Nhập mã PIN hợp lệ cho
+              %{province}, %{country}
+            invalid_for_country_and_province_informative: Mã PIN không hợp lệ
+            too_long_instructional: Mã PIN quá dài
+            too_long_informative: Mã PIN quá dài
+            contains_emojis_instructional: Mã PIN không được chứa biểu tượng cảm xúc
+            contains_emojis_informative: Mã PIN không được chứa biểu tượng cảm xúc
+            contains_restricted_characters_instructional: Mã PIN không được chứa ký
+              tự bị hạn chế
+            contains_restricted_characters_informative: Mã PIN không được chứa ký
+              tự bị hạn chế
+            contains_html_tags_instructional: Mã PIN không được chứa HTML
+            contains_html_tags_informative: Mã PIN không được chứa HTML

@@ -8,12 +8,25 @@ ro:
             default: Cod poștal
             optional: Cod poștal (opțional)
           errors:
-            blank: Introdu un cod poștal
-            invalid_for_country: Introdu un cod poștal valid pentru Regatul Unit
-            invalid_for_country_and_province: Introdu un cod poștal valid pentru %{province},
+            blank_instructional: Introdu un cod poștal
+            blank_informative: Codul poștal lipsește
+            invalid_for_country_instructional: Introdu un cod poștal valid pentru
               Regatul Unit
-            too_long: Valoarea pentru codul poștal este prea lungă
-            contains_html_tags: Codul poștal nu poate conține etichete HTML.
-            contains_emojis: Codul poștal nu poate conține emoji-uri
-            contains_restricted_characters: Câmpul Cod poștal nu poate conține caractere
-              restricționate
+            invalid_for_country_informative: Codul poștal este nevalid pentru Regatul
+              Unit
+            invalid_for_country_and_province_instructional: Introdu un cod poștal
+              valid pentru %{province}, Regatul Unit
+            invalid_for_country_and_province_informative: Codul poștal este nevalid
+              pentru %{province}, Regatul Unit
+            too_long_instructional: Codul poștal este prea lung
+            too_long_informative: Codul poștal este prea lung
+            contains_emojis_instructional: Codul poștal nu poate conține emoji-uri
+            contains_emojis_informative: Codul poștal nu poate conține emoji-uri
+            contains_restricted_characters_instructional: Câmpul Cod poștal nu poate
+              conține caractere restricționate
+            contains_restricted_characters_informative: Codul poștal poate conține
+              numai litere, cifre, caractere locale și caractere speciale
+            contains_html_tags_instructional: Codul poștal nu poate conține etichete
+              HTML
+            contains_html_tags_informative: Codul poștal nu poate conține etichete
+              HTML

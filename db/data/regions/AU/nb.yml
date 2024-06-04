@@ -8,29 +8,49 @@ nb:
             default: Forstad
             optional: Forstad (valgfritt)
           errors:
-            blank: Angi en forstad
-            too_long: Verdien for forsted er for lang (maksimalt 255 tegn)
-            contains_html_tags: Forstad kan ikke inneholde HTML-tagger.
-            contains_emojis: Forstad kan ikke inneholde emojier
-            contains_restricted_characters: Forstad kan kun inneholde bokstaver, tall,
-              lokale tegn og spesialtegn
+            blank_instructional: Angi en forstad
+            blank_informative: Forstad mangler
+            too_long_instructional: Navnet på forstaden er for langt (maksimalt 255
+              tegn)
+            too_long_informative: Navnet på forstaden er for langt
+            contains_emojis_instructional: Navnet på forstaden kan ikke inneholde
+              emojier
+            contains_emojis_informative: Navnet på forstaden kan ikke inneholde emojier
+            contains_restricted_characters_instructional: Navnet på forstaden kan
+              kun inneholde bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Navnet på forstaden kan ikke
+              inneholde begrensede tegn
+            contains_html_tags_instructional: Navnet på forstaden kan ikke inneholde
+              HTML
+            contains_html_tags_informative: Navnet på forstaden kan ikke inneholde
+              HTML
         province:
           label:
             default: Stat/territorium
             optional: Stat/territorium (valgfritt)
           errors:
-            blank: Velg stat/territorium
+            blank_instructional: Velg stat/territorium
+            blank_informative: Stat/territorium mangler
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfritt)
           errors:
-            blank: Angi et postnummer
-            invalid_for_country: Angi et gyldig postnummer for %{country}
-            invalid_for_country_and_province: Angi et gyldig postnummer for %{province},
-              %{country}
-            too_long: Verdien for postnummer er for lang
-            contains_html_tags: Postnummer kan ikke inneholde HTML-tagger.
-            contains_emojis: Postnummeret kan ikke inneholde emojier
-            contains_restricted_characters: Postnummer kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
+            blank_instructional: Angi et postnummer
+            blank_informative: Postnummer mangler
+            invalid_for_country_instructional: Angi et gyldig postnummer for %{country}
+            invalid_for_country_informative: Postnummeret er ikke gyldig for %{country}
+            invalid_for_country_and_province_instructional: Angi et gyldig postnummer
+              for %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnummeret er ikke gyldig
+              for %{province}, %{country}
+            too_long_instructional: Postnummeret er for langt
+            too_long_informative: Postnummeret er for langt
+            contains_emojis_instructional: Postnummer kan ikke inneholde emojier
+            contains_emojis_informative: Postnummer kan ikke inneholde emojier
+            contains_restricted_characters_instructional: Postnummer kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Postnummer kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: Postnummer kan ikke inneholde HTML
+            contains_html_tags_informative: Postnummer kan ikke inneholde HTML

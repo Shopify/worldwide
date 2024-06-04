@@ -8,25 +8,43 @@ ms:
             default: Negeri
             optional: Negeri (opsyenal)
           errors:
-            blank: Pilih negeri
-            invalid_for_country: Masukkan negeri %{country} yang sah
-            unknown_for_city_and_zip: Masukkan negeri yang sah untuk %{city}, %{zip}
-            unknown_for_city: Pilih negeri yang sah untuk %{city}
-            unknown_for_zip: Pilih negeri yang sah untuk %{zip}
-            unknown_for_address: Negeri mungkin salah.
+            unknown_for_address: Negeri mungkin salah
+            blank_instructional: Pilih negeri
+            blank_informative: Masukkan negeri
+            invalid_for_country_instructional: Masukkan negeri yang sah untuk %{city},
+              %{zip}
+            invalid_for_country_informative: Negeri tidak sah
+            unknown_for_city_and_zip_instructional: Masukkan negeri yang sah untuk
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Negeri tidak sah untuk %{city},
+              %{zip}
+            unknown_for_city_instructional: Pilih negeri yang sah untuk %{city}
+            unknown_for_city_informative: Negeri tidak sah untuk %{city}
+            unknown_for_zip_instructional: Pilih negeri yang sah untuk %{zip}
+            unknown_for_zip_informative: Negeri tidak sah untuk %{zip}
         zip:
           label:
             default: Kod ZIP
             optional: Kod ZIP (opsyenal)
           errors:
-            blank: Masukkan kod ZIP
-            invalid_for_country: Masukkan kod ZIP %{country} yang sah
-            invalid_for_country_and_province: Masukkan kod ZIP yang sah untuk %{province},
-              %{country}
-            too_long: Nilai kod ZIP terlalu panjang
-            contains_html_tags: Kod ZIP tidak boleh mengandungi tag HTML.
-            contains_emojis: Kod ZIP tidak boleh mengandungi emoji
-            contains_restricted_characters: Kod ZIP tidak boleh mengandungi aksara
-              terhad
-            invalid_for_province: Masukkan kod ZIP yang sah untuk %{province}
-            unknown_for_address: Kod ZIP mungkin salah.
+            unknown_for_address: Kod ZIP mungkin salah
+            blank_instructional: Masukkan kod ZIP
+            blank_informative: Kod ZIP tiada
+            invalid_for_country_instructional: Masukkan kod ZIP yang sah untuk %{country}
+            invalid_for_country_informative: Kod ZIP tidak sah untuk %{country}
+            invalid_for_province_instructional: Masukkan kod ZIP yang sah untuk %{province}
+            invalid_for_province_informative: Kod ZIP tidak sah untuk %{province}
+            invalid_for_country_and_province_instructional: Masukkan kod ZIP yang
+              sah untuk %{province}, %{country}
+            invalid_for_country_and_province_informative: Kod ZIP tidak sah untuk
+              %{province}, %{country}
+            too_long_instructional: Kod ZIP terlalu panjang
+            too_long_informative: Kod ZIP terlalu panjang (maksimum ialah 255 aksara)
+            contains_emojis_instructional: Kod ZIP tidak boleh mengandungi emoji
+            contains_emojis_informative: Kod ZIP tidak boleh mengandungi emoji
+            contains_restricted_characters_instructional: Kod ZIP tidak boleh mengandungi
+              aksara terhad
+            contains_restricted_characters_informative: Kod ZIP tidak boleh mengandungi
+              aksara terhad
+            contains_html_tags_instructional: Kod ZIP tidak boleh mengandungi HTML
+            contains_html_tags_informative: Kod ZIP tidak boleh mengandungi HTML

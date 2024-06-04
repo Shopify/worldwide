@@ -8,14 +8,24 @@ sk:
             default: Štát/územie
             optional: Štát/územie (voliteľné)
           errors:
-            blank: Vyberte štát/územie
+            blank_instructional: Vyberte štát/územie
+            blank_informative: Chýba štát/územie
         zip:
           label:
             default: Poštové smerovacie číslo
             optional: Poštové smerovacie číslo (voliteľné)
           errors:
-            too_long: Hodnota poštového smerovacieho čísla je príliš dlhá
-            contains_html_tags: Poštové smerovacie číslo nemôže obsahovať HTML značky.
-            contains_emojis: Poštové smerovacie číslo nemôže obsahovať emotikony
-            contains_restricted_characters: Poštové smerovacie číslo nemôže obsahovať
-              zakázané znaky
+            too_long_instructional: Poštové smerovacie číslo je príliš dlhé
+            too_long_informative: Poštové smerovacie číslo je príliš dlhé
+            contains_emojis_instructional: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_emojis_informative: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_restricted_characters_instructional: Poštové smerovacie číslo
+              nemôže obsahovať zakázané znaky
+            contains_restricted_characters_informative: Poštové smerovacie číslo nemôže
+              obsahovať zakázané znaky
+            contains_html_tags_instructional: Poštové smerovacie číslo nemôže obsahovať
+              HTML
+            contains_html_tags_informative: Poštové smerovacie číslo nemôže obsahovať
+              HTML

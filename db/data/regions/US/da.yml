@@ -8,25 +8,42 @@ da:
             default: Stat
             optional: Stat (valgfrit)
           errors:
-            blank: Vælg en stat
-            invalid_for_country: Angiv en gyldig delstat for %{country}
-            unknown_for_city_and_zip: Angiv en gyldig stat for %{city}, %{zip}
-            unknown_for_city: Angiv en gyldig stat for %{city}
-            unknown_for_zip: Angiv en gyldig stat for %{zip}
-            unknown_for_address: Delstat kan være forkert.
+            unknown_for_address: Stat kan være forkert
+            blank_instructional: Vælg en stat
+            blank_informative: Angiv en stat
+            invalid_for_country_instructional: Angiv en gyldig stat for %{city}, %{zip}
+            invalid_for_country_informative: Staten er ikke gyldig
+            unknown_for_city_and_zip_instructional: Angiv en gyldig stat for %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Staten er ikke gyldig for %{city},
+              %{zip}
+            unknown_for_city_instructional: Vælg en gyldig stat for %{city}
+            unknown_for_city_informative: Staten er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Vælg en gyldig stat for %{zip}
+            unknown_for_zip_informative: Staten er ikke gyldig for %{zip}
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfrit)
           errors:
-            blank: Angiv et postnummer
-            invalid_for_country: Indtast et gyldigt postnummer for %{country}
-            invalid_for_country_and_province: Angiv et gyldigt postnummer for %{province},
-              %{country}
-            too_long: Postnummerværdien er for lang
-            contains_html_tags: Værdien for postnummer må ikke indeholde HTML-tags.
-            contains_emojis: Postnummeret må ikke indeholde emojis
-            contains_restricted_characters: Postnummeret må ikke indeholde begrænsede
-              tegn
-            invalid_for_province: Angiv et gyldigt postnummer for %{province}
-            unknown_for_address: Postnummer kan være forkert.
+            unknown_for_address: Postnummer kan være forkert
+            blank_instructional: Angiv et postnummer
+            blank_informative: Postnummer mangler
+            invalid_for_country_instructional: Angiv et gyldigt postnummer for %{country}
+            invalid_for_country_informative: Postnummeret er ikke gyldigt for %{country}
+            invalid_for_province_instructional: Angiv et gyldigt postnummer for %{province}
+            invalid_for_province_informative: Postnummeret er ikke gyldigt for %{province}
+            invalid_for_country_and_province_instructional: Angiv et gyldigt postnummer
+              for %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnummeret er ikke gyldigt
+              for %{province}, %{country}
+            too_long_instructional: Postnummer er for lang
+            too_long_informative: Postnummer er for lang (højst 255 tegn)
+            contains_emojis_instructional: Postnummer må ikke indeholde emojis
+            contains_emojis_informative: Postnummer må ikke indeholde emojis
+            contains_restricted_characters_instructional: Postnummer må ikke indeholde
+              begrænsede tegn
+            contains_restricted_characters_informative: Postnummeret må ikke indeholde
+              begrænsede tegn
+            contains_html_tags_instructional: Postnummeret må ikke indeholde HTML
+            contains_html_tags_informative: Postnummeret må ikke indeholde HTML

@@ -8,90 +8,150 @@ fr:
             default: Entreprise
             optional: Entreprise (facultatif)
           errors:
-            blank: Saisir un nom d'entreprise
-            contains_html_tags: L'entreprise ne peut pas contenir de balises HTML.
-            too_long: Le nom de l’entreprise est trop long (le maximum est de 255 caractères)
-            contains_emojis: L'entreprise ne peut pas contenir d'emojis
-            contains_mathematical_symbols: L’entreprise ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: L’entreprise ne peut contenir que des
-              lettres, des chiffres, des caractères locaux et des caractères spéciaux
+            blank_instructional: Saisir une entreprise
+            blank_informative: L’entreprise est manquante
+            too_long_instructional: L’entreprise est trop longue (le maximum est de
+              255 caractères)
+            too_long_informative: L’entreprise est trop longue
+            contains_emojis_instructional: L’entreprise ne peut pas contenir d’emojis
+            contains_emojis_informative: L’entreprise ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: L’entreprise ne peut pas
+              contenir de symboles mathématiques
+            contains_mathematical_symbols_informative: L’entreprise ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: L’entreprise ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: L’entreprise ne peut pas contenir
+              de caractères non autorisés
+            contains_html_tags_instructional: L’entreprise ne peut pas contenir de
+              HTML
+            contains_html_tags_informative: L’entreprise ne peut pas contenir de HTML
         first_name:
           label:
             default: Prénom
             optional: Prénom (facultatif)
           errors:
-            blank: Saisir un prénom
-            contains_html_tags: Le prénom ne peut pas contenir de balises HTML.
-            too_long: Le prénom est trop long (le maximum est de 255 caractères)
-            contains_emojis: Le prénom ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le prénom ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: Le prénom ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le prénom ne peut pas contenir d'URL.
+            blank_instructional: Saisir un prénom
+            blank_informative: Le prénom est manquant
+            too_long_instructional: Le prénom est trop long (le maximum est de 255 caractères)
+            too_long_informative: Le prénom est trop long
+            contains_emojis_instructional: Le prénom ne peut pas contenir d’emojis
+            contains_emojis_informative: Le prénom ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le prénom ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: Le prénom ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: Le prénom ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le prénom ne peut pas contenir
+              de caractères non autorisés
+            contains_html_tags_instructional: Le prénom ne peut pas contenir de HTML
+            contains_html_tags_informative: Le prénom ne peut pas contenir de HTML
+            contains_url_instructional: Le prénom ne peut pas contenir d’URL
+            contains_url_informative: Le prénom ne peut pas contenir d’URL
         last_name:
           label:
             default: Nom
             optional: Nom (facultatif)
           errors:
-            blank: Saisir un nom
-            contains_html_tags: Le nom de famille ne peut pas contenir de balises
-              HTML.
-            too_long: Le nom de famille est trop long (le maximum est de 255 caractères)
-            contains_emojis: Le nom ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le nom ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: Le nom ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le nom ne peut pas contenir d'URL.
+            blank_instructional: Saisir un nom
+            blank_informative: Le nom est manquant
+            too_long_instructional: Le nom est trop long (le maximum est de 255 caractères)
+            too_long_informative: Le nom est trop long
+            contains_emojis_instructional: Le nom ne peut pas contenir d’emojis
+            contains_emojis_informative: Le nom ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le nom ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: Le nom ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: Le nom ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le nom ne peut pas contenir
+              de caractères non autorisés
+            contains_html_tags_instructional: Le nom ne peut pas contenir de HTML
+            contains_html_tags_informative: Le nom ne peut pas contenir de HTML
+            contains_url_instructional: Le nom ne peut pas contenir d’URL
+            contains_url_informative: Le nom ne peut pas contenir d’URL
         address1:
           label:
             default: Adresse
             optional: Adresse (facultatif)
-          errors:
-            blank: Saisir une adresse
-            contains_html_tags: L'adresse1 ne peut pas contenir de balises HTML.
-            too_long: La première ligne d’adresse est trop longue (le maximum est
-              de 255 caractères)
-            contains_emojis: Le champ d'adresse 1 ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le champ d’adresse 1 ne peut pas contenir
-              de symboles mathématiques
-            contains_restricted_characters: Le champ Adresse 1 ne peut contenir que
-              des lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le champ d’adresse 1 ne peut pas contenir d’URL.
-            missing_building_number: Ajoutez un numéro de bâtiment, le cas échéant.
-            street_unknown_for_zip: Saisissez un nom de rue valide pour %{zip}.
-            building_number_invalid: Impossible de localiser le numéro de bâtiment
-              pour %{street}, %{zip}.
-            contains_too_many_words: Le champ Adresse 1 ne doit pas comporter plus
-              de %{word_count} mots
-            unknown_for_address: La ligne 1 de l’adresse peut être erronée.
           warnings:
             contains_too_many_words: Il est conseillé que la ligne d’adresse 1 ait
               moins de %{word_count} mots
+          errors:
+            blank_instructional: Saisir une adresse
+            blank_informative: L’adresse est manquante
+            too_long_instructional: La première ligne d’adresse est trop longue (le
+              maximum est de 255 caractères)
+            too_long_informative: La première ligne d’adresse est trop longue
+            contains_emojis_instructional: L’adresse ne peut pas contenir d’emojis
+            contains_emojis_informative: L’adresse ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: L’adresse ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: L’adresse ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: L’adresse ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: L’adresse ne peut pas contenir
+              de caractères non autorisés
+            contains_too_many_words_instructional: L’adresse doit comporter moins
+              de %{word_count} mots
+            contains_too_many_words_informative: L’adresse doit comporter moins de
+              %{word_count} mots
+            contains_html_tags_instructional: L’adresse ne peut pas contenir de HTML
+            contains_html_tags_informative: L’adresse ne peut pas contenir de HTML
+            contains_url_instructional: L’adresse ne peut pas contenir d’URL
+            contains_url_informative: L’adresse ne peut pas contenir d’URL
+            missing_building_number_instructional: Ajouter un numéro de bâtiment,
+              le cas échéant
+            missing_building_number_informative: Le numéro de bâtiment peut être manquant
+            street_unknown_for_zip_instructional: Saisir un nom de rue valide pour
+              %{zip}
+            street_unknown_for_zip_informative: Le nom de rue ne concorde pas avec
+              %{zip}
+            building_number_invalid_instructional: Impossible de localiser le numéro
+              de bâtiment pour %{street}, %{zip}
+            building_number_invalid_informative: Impossible de localiser le numéro
+              de bâtiment pour %{street}, %{zip}
+            unknown_for_address_instructional: La ligne 1 de l’adresse peut être erronée
+            unknown_for_address_informative: La ligne 1 de l’adresse peut être erronée
         address2:
           label:
             default: Appartement, suite, etc.
             optional: Appartement, suite, etc. (facultatif)
           errors:
-            blank: Saisir un numéro d'appartement, de suite, etc.
-            contains_html_tags: L'adresse2 ne peut pas contenir de balises HTML.
-            too_long: La deuxième ligne d’adresse est trop longue (le maximum est
-              de 255 caractères)
-            contains_emojis: Le champ d'adresse 2 ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le champ d’adresse 2 ne peut pas contenir
+            contains_html_tags: La ligne 2 de l’adresse ne peut pas contenir de HTML
+            contains_emojis: La ligne 2 de l’adresse ne peut pas contenir d’emojis
+            contains_mathematical_symbols: La ligne 2 de l’adresse ne peut pas contenir
               de symboles mathématiques
-            contains_restricted_characters: Le champ Adresse 2 ne peut contenir que
-              des lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: Le champ d’adresse 2 ne peut pas contenir d’URL.
-            missing_building_number: Ajoutez un numéro de bâtiment, le cas échéant.
-            street_unknown_for_zip: Saisissez un nom de rue valide pour %{zip}.
-            building_number_invalid: Impossible de localiser le numéro de bâtiment
-              pour %{street}, %{zip}.
-            contains_too_many_words: Le champ Adresse 2 ne doit pas comporter plus
+            contains_restricted_characters: La ligne 2 de l’adresse ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_url: La ligne 2 de l’adresse ne peut pas contenir d’URL
+            contains_too_many_words: La ligne 2 de l’adresse ne peut pas compter plus
               de %{word_count} mots
-            unknown_for_address: La ligne 2 de l’adresse peut être erronée.
+            unknown_for_address: La ligne 2 de l’adresse peut être erronée
+            blank_instructional: Entrez un numéro d’appartement, de suite, etc.
+            blank_informative: L’appartement ou la suite est manquant(e)
+            too_long_instructional: La deuxième ligne d’adresse est trop longue (255 caractères
+              maximum)
+            too_long_informational: La deuxième ligne d’adresse est trop longue
+            missing_building_number_instructional: Ajouter un numéro de bâtiment,
+              le cas échéant
+            missing_building_number_informative: Le numéro de bâtiment peut être manquant
+            street_unknown_for_zip_instructional: Saisir un nom de rue valide pour
+              %{zip}
+            street_unknown_for_zip_informative: Le nom de la rue n’est pas valide
+              pour %{zip}
+            building_number_invalid_instructional: Impossible de localiser le numéro
+              de bâtiment pour %{street}, %{zip}
+            building_number_invalid_informative: Impossible de localiser le numéro
+              de bâtiment pour %{street}, %{zip}
           warnings:
             contains_too_many_words: Il est conseillé que la ligne d’adresse 2 ait
               moins de %{word_count} mots
@@ -100,8 +160,7 @@ fr:
             default: Ville
             optional: Ville (facultatif)
           errors:
-            blank: Saisir une ville
-            contains_html_tags: La ville ne peut pas contenir de balises HTML.
+            contains_html_tags: La ville ne peut pas contenir de HTML
             too_long: Le nom de la ville est trop long (le maximum est de 255 caractères)
             contains_emojis: La ville ne peut pas contenir d’emojis
             contains_mathematical_symbols: La ville ne peut pas contenir de symboles
@@ -109,116 +168,179 @@ fr:
             contains_restricted_characters: La ville ne peut contenir que des lettres,
               des chiffres, des caractères locaux et des caractères spéciaux
             contains_url: La ville ne peut pas contenir d’URL
-            unknown_for_zip: Saisissez une ville valide pour %{zip}
-            unknown_for_province: Saisissez une ville valide pour %{province}
-            unknown_for_zip_and_province: Saisissez une ville valide pour %{zip},
-              %{province}
-            contains_too_many_words: La ville ne doit pas comporter plus de %{word_count} mots
-            unknown_for_address: La ville peut être erronée.
+            contains_too_many_words: La ville ne peut pas comporter plus de %{word_count} mots
+            unknown_for_address: La ville peut être erronée
+            blank_instructional: Saisir une ville
+            blank_informative: La ville est manquante
+            unknown_for_zip_instructional: Saisir une ville valide pour %{zip}
+            unknown_for_zip_informative: La ville ne concorde pas avec %{zip}
+            unknown_for_province_instructional: Saisir une ville valide pour %{province}
+            unknown_for_province_informative: La ville ne concorde pas avec %{province}
+            unknown_for_zip_and_province_instructional: Saisir une ville valide pour
+              %{zip}, %{province}
+            unknown_for_zip_and_province_informative: La ville peut être erronée
         country:
           label:
             default: Pays/région
             optional: Pays/région (facultatif)
           errors:
-            blank: Sélectionner un pays/une région
-            not_supported: Nous ne prenons pas en charge ce pays/cette région pour
-              le moment. Saisissez une nouvelle adresse et réessayez.
-            invalid: Saisissez une région/un pays valide
-            invalid_for_zip: Saisissez une région/un pays valide pour ce code postal
+            blank_instructional: Sélectionner un pays/une région
+            blank_informative: Le pays/la région est manquant(e)
+            not_supported_instructional: Pays/région non pris(e) en charge
+            not_supported_informative: Pays/région non pris(e) en charge
+            invalid_instructional: Saisir un pays/une région valide
+            invalid_informative: Le pays/la région n’est pas valide
+            invalid_for_zip_instructional: Saisir une région/un pays valide pour ce
+              code postal
+            invalid_for_zip_informative: "%{country} ne concorde pas avec le pays/la
+              région"
         phone:
           label:
             default: Téléphone
             optional: Téléphone (facultatif)
           errors:
-            blank: Saisir un numéro de téléphone
-            invalid: Saisir un numéro de téléphone valide
-            too_long: Le téléphone est trop long (le maximum est de 255 caractères)
             contains_emojis: Le numéro de téléphone ne peut pas contenir d’emojis
             contains_mathematical_symbols: Le numéro de téléphone ne peut pas contenir
               de symboles mathématiques
             contains_restricted_characters: Le numéro de téléphone ne peut contenir
               que des lettres, des chiffres, des caractères locaux et des caractères
               spéciaux
+            blank_instructional: Saisir un numéro de téléphone
+            blank_informative: Le numéro de téléphone est manquant
+            invalid_instructional: Saisir un numéro de téléphone valide
+            invalid_informative: Le numéro de téléphone n’est pas valide
+            too_long_instructional: Le numéro de téléphone est trop long
+            too_long_informative: Le numéro de téléphone est trop long
         province:
           label:
             default: Région
             optional: Région (facultatif)
           errors:
-            blank: Sélectionner une région
-            invalid: Saisir une région valide
-            invalid_for_country: 'Saisissez une région valide pour : %{country}'
-            unknown_for_city_and_zip: Saisissez une région valide pour %{city}, %{zip}
-            unknown_for_city: Saisissez une région valide pour %{city}
-            unknown_for_zip: Saisissez une région valide pour %{zip}
-            unknown_for_address: La région peut être erronée.
+            unknown_for_address: La région peut être erronée
+            blank_instructional: Sélectionner une région
+            blank_informative: La région est manquante
+            invalid_instructional: Sélectionner une région
+            invalid_informative: La région est manquante
+            invalid_for_country_instructional: Saisir une région valide pour %{country}
+            invalid_for_country_informative: La région ne concorde pas avec %{country}
+            unknown_for_city_and_zip_instructional: Sélectionnez une région valide
+              pour %{zip}, %{city}
+            unknown_for_city_and_zip_informative: La région ne concorde pas avec %{city},
+              %{zip}
+            unknown_for_city_informative: Saisir une région valide pour %{city}
+            unknown_for_city_instructional: La région ne concorde pas avec %{city}
+            unknown_for_zip_instructional: Saisir une région valide pour %{zip}
+            unknown_for_zip_informative: La région ne concorde pas avec %{zip}
         zip:
           label:
             default: Code postal
             optional: Code postal (facultatif)
           errors:
-            blank: Saisir un code postal
-            blocked_address: Cet emplacement n'est pas pris en charge.
-            invalid_for_country: Saisir un code postal valide pour %{country}
-            invalid_for_country_and_province: Saisir un code postal valide pour %{province},
-              %{country}
-            invalid: Saisissez un code postal valide.
-            contains_html_tags: Le code postal ne peut pas contenir de balises HTML.
-            too_long: La valeur du code postal est trop longue.
+            blocked_address: Cet emplacement n’est pas pris en charge
+            contains_html_tags: Le code postal ne peut pas contenir de HTML
+            too_long: Le code postal est trop long
             contains_emojis: Le code postal ne peut pas contenir d’emojis
             contains_mathematical_symbols: Le code postal ne peut pas contenir de
               symboles mathématiques
             contains_restricted_characters: Le code postal ne peut contenir que des
               lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            not_supported: Nous ne prenons pas en charge ce pays/cette région pour
-              le moment. Saisissez une nouvelle adresse et réessayez.
-            unknown_for_province: Saisissez un code postal valide pour %{province}
-            invalid_for_province: Saisissez un code postal valide pour %{province}
-            unknown_for_address: Le code postal peut être erroné.
-        address:
-          errors:
-            may_not_exist: L’adresse est introuvable ou inexistante
+            unknown_for_address: Le code postal peut être erroné
+            blank_instructional: Saisir un code postal
+            blank_informative: Le code postal est manquant
+            invalid_instructional: Saisir un code postal valide
+            invalid_informative: Le code postal n’est pas valide
+            invalid_for_country_instructional: Saisir un code postal valide pour %{country}
+            invalid_for_country_informative: Le code postal ne concorde pas avec %{country}
+            invalid_for_province_instructional: Saisir un code postal valide pour
+              %{province}
+            invalid_for_province_informative: Le code postal ne concorde pas avec
+              %{province}
+            invalid_for_country_and_province_instructional: Saisir un code postal
+              valide pour %{province}, %{country}
+            invalid_for_country_and_province_informative: Le code postal ne concorde
+              pas avec %{province}, %{country}
+            not_supported_instructional: Le code postal n’est pas pris en charge.
+              Saisir une nouvelle adresse et réessayer
+            not_supported_informativel: Code postal non pris en charge
+            unknown_for_province_instructional: Saisir un code postal valide pour
+              %{province}
+            unknown_for_province_informative: Le code postal n’est pas valide pour
+              %{province}
         street_name:
           label:
             default: Rue
             optional: Rue (facultatif)
-          errors:
-            blank: Saisir un nom de rue
-            too_long: La rue est trop longue (le maximum est de 255 caractères)
-            contains_emojis: La rue ne peut pas contenir d’emojis
-            contains_mathematical_symbols: La rue ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: La rue ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_too_many_words: La rue ne doit pas compter plus de %{word_count} mots
-            contains_html_tags: La rue ne peut pas contenir de balises HTML.
-            contains_url: La rue ne peut pas contenir d’URL.
-            street_unknown_for_zip: Saisir un nom de rue valide pour %{zip}.
-            unknown_for_address: La rue peut être erronée.
           warnings:
             contains_too_many_words: Il est conseillé que la rue comporte moins de
               %{word_count} mots
+          errors:
+            blank_instructional: Saisir une rue
+            blank_informative: La rue est manquante
+            too_long_instructional: La rue est trop longue (le maximum est de 255 caractères)
+            too_long_informative: La rue est trop longue
+            contains_emojis_instructional: La rue ne peut pas contenir d’emojis
+            contains_emojis_informative: La rue ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: La rue ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: La rue ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: La rue ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: La rue ne peut pas contenir
+              de caractères non autorisés
+            contains_too_many_words_instructional: La rue ne peut pas compter plus
+              de %{word_count} mots
+            contains_too_many_words_informational: La rue ne peut pas compter plus
+              de %{word_count} mots
+            contains_html_tags_instructional: La rue ne peut pas contenir de HTML
+            contains_html_tags_informational: La rue ne peut pas contenir de HTML
+            contains_url_instructional: La rue ne peut pas contenir d’URL
+            contains_url_informative: La rue ne peut pas contenir d’URL
+            street_unknown_for_zip_instructional: Saisir un nom de rue valide pour
+              %{zip}
+            street_unknown_for_zip_informative: Rue invalide pour %{zip}
+            unknown_for_address_instructional: La rue peut être erronée
+            unknown_for_address_informative: La rue peut être erronée
         street_number:
           label:
             default: Numéro de bâtiment
             optional: Numéro de bâtiment (facultatif)
-          errors:
-            blank: Saisir un numéro de bâtiment
-            too_long: Le numéro de bâtiment est trop long (le maximum est de 255 caractères)
-            contains_emojis: Le numéro de bâtiment ne peut pas contenir d’emojis
-            contains_mathematical_symbols: le numéro de bâtiment ne peut pas contenir
-              de symboles mathématiques
-            contains_restricted_characters: Le numéro de bâtiment ne peut contenir
-              que des lettres, des chiffres, des caractères locaux et des caractères
-              spéciaux
-            contains_html_tags: Le numéro de bâtiment ne peut pas contenir de balise
-              HTML.
-            contains_url: Le numéro de bâtiment ne peut pas contenir d’URL.
-            building_number_invalid: Impossible de localiser le numéro de bâtiment
-              pour %{street}, %{zip}.
-            unknown_for_address: Le numéro de bâtiment peut être erroné.
           warnings:
             contains_too_many_words: Il est conseillé que le champ numéro de bâtiment
               comporte moins de %{word_count} mots
+          errors:
+            blank_instructional: Saisir un numéro de bâtiment
+            blank_informative: Le numéro de bâtiment est manquant
+            too_long_instructional: Le numéro de bâtiment est trop long (le maximum
+              est de 255 caractères)
+            too_long_informative: Le numéro de bâtiment est trop long
+            contains_emojis_instructional: Le numéro de bâtiment ne peut pas contenir
+              d’emojis
+            contains_emojis_informative: Le numéro de bâtiment ne peut pas contenir
+              d’emojis
+            contains_mathematical_symbols_instructional: Le numéro de bâtiment ne
+              peut pas contenir de symboles mathématiques
+            contains_mathematical_symbols_informative: Le numéro de bâtiment ne peut
+              pas contenir de symboles mathématiques
+            contains_restricted_characters_instructional: Le numéro de bâtiment ne
+              peut contenir que des lettres, des chiffres, des caractères locaux et
+              des caractères spéciaux
+            contains_restricted_characters_informative: Le numéro de bâtiment ne peut
+              pas contenir de caractères non autorisés
+            contains_html_tags_instructional: Le numéro de bâtiment ne peut pas contenir
+              de HTML
+            contains_html_tags_informative: Le numéro de bâtiment ne peut pas contenir
+              de HTML
+            contains_url_instructional: Le numéro de bâtiment ne peut pas contenir
+              d’URL
+            contains_url_informative: Le numéro de bâtiment ne peut pas contenir d’URL
+            building_number_invalid_instructional: Impossible de localiser le numéro
+              de bâtiment pour %{street}, %{zip}
+            building_number_invalid_informative: Impossible de localiser le numéro
+              de bâtiment pour %{street}, %{zip}
+            unknown_for_address_instructional: Saisir un numéro de bâtiment valide
+            unknown_for_address_informative: Le numéro de bâtiment n’est pas valide
         neighborhood:
           label:
             default: Quartier
@@ -231,12 +353,12 @@ fr:
               mathématiques
             contains_restricted_characters: Le quartier ne peut contenir que des lettres,
               des chiffres, des caractères locaux et des caractères spéciaux
-            contains_too_many_words: Le quartier ne doit pas comporter plus de %{word_count} mots
-            contains_html_tags: Le quartier ne peut pas contenir de balises HTML.
-            contains_url: Le quartier ne peut pas contenir d’URL.
-            unknown_for_city: Saisir un nom de quartier valide pour %{city}.
-            unknown_for_zip: Saisir un nom de quartier valide pour %{zip}.
-            unknown_for_address: Le quartier peut être erroné.
+            contains_too_many_words: Le quartier ne peut pas comporter plus de %{word_count} mots
+            contains_html_tags: Le quartier ne peut pas contenir de balises HTML
+            contains_url: Le quartier ne peut pas contenir d’URL
+            unknown_for_city: Saisir un nom de quartier valide pour %{city}
+            unknown_for_zip: Saisir un nom de quartier valide pour %{zip}
+            unknown_for_address: Le quartier peut être erroné
           warnings:
             contains_too_many_words: Il est conseillé que le quartier comporte moins
               de %{word_count} mots
@@ -267,3 +389,7 @@ fr:
           warnings:
             contains_too_many_words: Il est conseillé que la deuxième ligne d’adresse
               comporte moins de %{word_count} mots
+        address:
+          errors:
+            may_not_exist_instructional: Adresse introuvable ou inexistante
+            may_not_exist_informative: Adresse introuvable

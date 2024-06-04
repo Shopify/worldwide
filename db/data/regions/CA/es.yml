@@ -8,9 +8,16 @@ es:
             default: Provincia
             optional: Provincia (opcional)
           errors:
-            blank: Selecciona una provincia
-            unknown_for_city_and_zip: Introduce una provincia válida para %{city},
-              %{zip}
-            unknown_for_city: Selecciona una provincia válida para %{city}
-            unknown_for_zip: Selecciona una provincia válida para %{zip}
             unknown_for_address: Puede que la provincia sea incorrecta.
+            blank_instructional: Selecciona una provincia.
+            blank_informative: Falta la provincia.
+            unknown_for_city_and_zip_instructional: Introduce una provincia válida
+              para %{city}, %{zip}.
+            unknown_for_city_and_zip_informative: La provincia no es válida para %{city},
+              %{zip}.
+            unknown_for_city_instructional: Selecciona una provincia válida para %{city}.
+            unknown_for_city_informative: La provincia no es válida para %{city}.
+            unknown_for_zip_instructional: Selecciona una provincia válida para el
+              código postal %{zip}.
+            unknown_for_zip_informative: La provincia no es válida para el código
+              postal %{zip}.

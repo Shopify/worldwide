@@ -8,18 +8,32 @@ vi:
             default: Phường
             optional: Phường (không bắt buộc)
           errors:
-            blank: Nhập phường
-            too_long: Phường quá dài (tối đa 255 ký tự)
-            contains_emojis: Phường không được chứa biểu tượng cảm xúc
-            contains_mathematical_symbols: Phường không được chứa ký hiệu toán học
-            contains_restricted_characters: Phường chỉ được chứa chữ cái, chữ số,
-              ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Phường không được có nhiều hơn %{word_count}
+            unknown_for_address: Phường có thể không chính xác
+            blank_instructional: Nhập phường
+            blank_informative: Thiếu phường
+            too_long_instructional: Phường quá dài
+            too_long_informative: Phường quá dài (tối đa 255 ký tự)
+            contains_emojis_instructional: Phường không được chứa biểu tượng cảm xúc
+            contains_emojis_informative: Phường không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols_instructional: Phường không được chứa ký
+              hiệu toán học
+            contains_mathematical_symbols_informative: Phường không được chứa ký hiệu
+              toán học
+            contains_restricted_characters_instructional: Phường chỉ được chứa chữ
+              cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Phường không được chứa ký
+              tự bị hạn chế
+            contains_too_many_words_instructional: Phường phải có ít hơn %{word_count}
               từ
-            contains_html_tags: Phường không được chứa thẻ HTML.
-            contains_url: Phường không được chứa URL.
-            unknown_for_city: Nhập tên phường hợp lệ cho %{city}.
-            unknown_for_zip: Nhập tên phường hợp lệ cho %{zip}.
-            unknown_for_address: Phường có thể không chính xác.
+            contains_too_many_words_informative: Phường phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Phường không được chứa HTML
+            contains_html_tags_informative: Phường không được chứa HTML
+            contains_url_instructional: Phường không được chứa URL
+            contains_url_informative: Phường không được chứa URL
+            unknown_for_city_instructional: Nhập tên phường hợp lệ cho %{city}
+            unknown_for_city_informative: Phường không khớp với %{city}
+            unknown_for_zip_instructional: Nhập tên phường hợp lệ cho %{zip}
+            unknown_for_zip_informational: Phường không khớp với %{zip}
           warnings:
             contains_too_many_words: Phường nên có tối đa %{word_count} từ

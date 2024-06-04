@@ -8,16 +8,19 @@ it:
             default: Indirizzo e numero civico
             optional: Indirizzo e numero civico (facoltativo)
           errors:
-            blank: Inserisci indirizzo e numero civico
+            blank_instructional: Inserisci indirizzo e numero civico
+            blank_informative: Indirizzo e numero civico mancanti
         address2:
           label:
             default: Interno, scala, ecc.
             optional: Interno, scala, ecc. (facoltativo)
           errors:
-            blank: Inserisci scala, interno, ecc.
+            blank_instructional: Inserisci scala, interno, ecc.
+            blank_informative: Scala o interno mancante
         city:
           label:
             default: Città/paese
             optional: Città/paese (facoltativo)
           errors:
-            blank: Inserisci una città/località
+            blank_instructional: Inserisci una città/località
+            blank_informative: Città/località mancante

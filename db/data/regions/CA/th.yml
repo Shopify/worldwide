@@ -8,8 +8,13 @@ th:
             default: จังหวัด
             optional: จังหวัด (ไม่จำเป็น)
           errors:
-            blank: เลือกจังหวัด
-            unknown_for_city_and_zip: ป้อนจังหวัดของ %{city}, %{zip} ให้ถูกต้อง
-            unknown_for_city: เลือกจังหวัดที่ถูกต้องใน %{city}
-            unknown_for_zip: เลือกจังหวัดที่ถูกต้องใน %{zip}
             unknown_for_address: จังหวัดอาจไม่ถูกต้อง
+            blank_instructional: เลือกจังหวัด
+            blank_informative: ไม่พบจังหวัด
+            unknown_for_city_and_zip_instructional: ป้อนจังหวัดของ%{city}, %{zip}
+              ให้ถูกต้อง
+            unknown_for_city_and_zip_informative: จังหวัดของ%{city}, %{zip} ไม่ถูกต้อง
+            unknown_for_city_instructional: เลือกจังหวัดที่ถูกต้องใน%{city}
+            unknown_for_city_informative: จังหวัดใน%{city}ไม่ถูกต้อง
+            unknown_for_zip_instructional: เลือกจังหวัดที่ถูกต้องใน%{zip}
+            unknown_for_zip_informative: จังหวัดใน%{zip}ไม่ถูกต้อง

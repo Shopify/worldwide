@@ -8,13 +8,23 @@ de:
             default: Postleitzahl
             optional: Postleitzahl (optional)
           errors:
-            blank: Gib eine Postleitzahl ein
-            invalid_for_country: Gib eine gültige Postleitzahl für das Vereinigte
-              Königreich ein
-            invalid_for_country_and_province: Gib eine gültige Postleitzahl für %{province},
-              UK ein
-            too_long: Der Postleitzahl-Wert ist zu lang
-            contains_html_tags: Postleitzahl darf keine HTML-Tags enthalten.
-            contains_emojis: Postleitzahl darf keine Emojis enthalten
-            contains_restricted_characters: '"Postleitzahl" darf keine eingeschränkten
-              Zeichen enthalten'
+            blank_instructional: Postleitzahl eingeben
+            blank_informative: Postleitzahl fehlt
+            invalid_for_country_instructional: Eine gültige Postleitzahl für das Vereinigte
+              Königreich eingeben
+            invalid_for_country_informative: Postleitzahl ist für das Vereinigte Königreich
+              ungültig
+            invalid_for_country_and_province_instructional: Eine gültige Postleitzahl
+              für %{province}, Vereinigtes Königreich eingeben
+            invalid_for_country_and_province_informative: Postleitzahl ist für %{province},
+              Vereinigtes Königreich ungültig
+            too_long_instructional: Postleitzahl ist zu lang
+            too_long_informative: Postleitzahl ist zu lang
+            contains_emojis_instructional: Postleitzahl darf keine Emojis enthalten
+            contains_emojis_informative: Postleitzahl darf keine Emojis enthalten
+            contains_restricted_characters_instructional: Postleitzahl darf keine
+              eingeschränkten Zeichen enthalten
+            contains_restricted_characters_informative: Postleitzahl darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_html_tags_instructional: Postleitzahl darf kein HTML enthalten
+            contains_html_tags_informative: Postleitzahl darf kein HTML enthalten

@@ -8,9 +8,15 @@ sv:
             default: Distrikt
             optional: Distrikt (valfritt)
           errors:
-            blank: Ange ett distrikt
-            too_long: Distriktsnamnet är för långt (max 255 tecken)
-            contains_html_tags: Distrikt får inte innehålla HTML-taggar.
-            contains_emojis: Distrikt får inte innehålla emojis
-            contains_restricted_characters: Distrikt får inte innehålla begränsade
-              tecken
+            blank_instructional: Ange ett distrikt
+            blank_informative: Distrikt saknas
+            too_long_instructional: Distriktsnamnet är för långt (max. 255 tecken)
+            too_long_informative: Distriktet är för långt
+            contains_emojis_instructional: Distrikt får inte innehålla emojis
+            contains_emojis_informative: Distrikt får inte innehålla emojis
+            contains_restricted_characters_instructional: Distrikt får inte innehålla
+              begränsade tecken
+            contains_restricted_characters_informative: Distrikt får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Distrikt får inte innehålla HTML
+            contains_html_tags_informative: Distrikt får inte innehålla HTML

@@ -8,9 +8,14 @@ id:
             default: Provinsi
             optional: Provinsi (opsional)
           errors:
-            blank: Pilih provinsi
-            unknown_for_city_and_zip: Masukkan provinsi yang valid untuk %{city},
+            unknown_for_address: Nama provinsi mungkin salah
+            blank_instructional: Pilih provinsi
+            blank_informative: Nama provinsi belum diisi
+            unknown_for_city_and_zip_instructional: Masukkan provinsi yang valid untuk
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Provinsi tidak valid untuk %{city},
               %{zip}
-            unknown_for_city: Pilih provinsi yang valid untuk %{city}
-            unknown_for_zip: Pilih provinsi yang valid untuk %{zip}
-            unknown_for_address: Provinsi mungkin salah.
+            unknown_for_city_instructional: Pilih provinsi yang valid untuk %{city}
+            unknown_for_city_informative: Provinsi tidak valid untuk %{city}
+            unknown_for_zip_instructional: Pilih provinsi yang valid untuk %{zip}
+            unknown_for_zip_informative: Provinsi tidak valid untuk %{zip}

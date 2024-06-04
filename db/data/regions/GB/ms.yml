@@ -8,12 +8,22 @@ ms:
             default: Poskod
             optional: Poskod (opsyenal)
           errors:
-            blank: Masukkan poskod
-            invalid_for_country: Masukkan poskod yang sah untuk United Kingdom
-            invalid_for_country_and_province: Masukkan poskod yang sah untuk %{province},
+            blank_instructional: Masukkan poskod
+            blank_informative: Poskod tiada
+            invalid_for_country_instructional: Masukkan poskod yang sah untuk United
+              Kingdom
+            invalid_for_country_informative: Poskod tidak sah untuk United Kingdom
+            invalid_for_country_and_province_instructional: Masukkan poskod yang sah
+              untuk %{province}, UK
+            invalid_for_country_and_province_informative: Poskod tidak sah untuk %{province},
               UK
-            too_long: Nilai poskod terlalu panjang
-            contains_html_tags: Poskod tidak boleh mengandungi tag HTML.
-            contains_emojis: Poskod tidak boleh mengandungi emoji
-            contains_restricted_characters: Poskod tidak boleh mengandungi aksara
-              terhad
+            too_long_instructional: Poskod terlalu panjang
+            too_long_informative: Poskod terlalu panjang
+            contains_emojis_instructional: Poskod tidak boleh mengandungi emoji
+            contains_emojis_informative: Poskod tidak boleh mengandungi emoji
+            contains_restricted_characters_instructional: Poskod tidak boleh mengandungi
+              aksara terhad
+            contains_restricted_characters_informative: Poskod hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_html_tags_instructional: Poskod tidak boleh mengandungi HTML
+            contains_html_tags_informative: Poskod tidak boleh mengandungi HTML

@@ -8,17 +8,28 @@ hi:
             default: राज्य
             optional: राज्य (वैकल्पिक)
           errors:
-            blank: एक राज्य चुनें
+            blank_instructional: कोई राज्य चुनें
+            blank_informative: राज्य का नाम गुम है
         zip:
           label:
             default: पिन कोड
             optional: पिन कोड (वैकल्पिक)
           errors:
-            blank: एक पिन कोड दर्ज करें
-            invalid_for_country: "%{country} के लिए एक मान्य पिन कोड दर्ज करें"
-            invalid_for_country_and_province: "%{province}, %{country} के लिए एक मान्य
-              पिन कोड दर्ज करें"
-            too_long: पिन कोड का मान बहुत लंबा है
-            contains_html_tags: पिन कोड के फ़ील्ड में HTML टैग नहीं हो सकते.
-            contains_emojis: पिन कोड में इमोजी नहीं हो सकते
-            contains_restricted_characters: पिन कोड में कैरेक्टर सीमित नहीं हो सकते
+            blank_instructional: एक पिन कोड दर्ज करें
+            blank_informative: पिन कोड गुम है
+            invalid_for_country_instructional: "%{country} के लिए एक मान्य पिन कोड
+              डालें"
+            invalid_for_country_informative: पिन कोड मान्य नहीं है
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              के लिए एक मान्य पिन कोड दर्ज करें"
+            invalid_for_country_and_province_informative: पिन कोड मान्य नहीं है
+            too_long_instructional: पिन कोड बहुत लंबा है
+            too_long_informative: पिन कोड बहुत लंबा है
+            contains_emojis_instructional: पिन कोड में इमोजी नहीं हो सकते
+            contains_emojis_informative: पिन कोड में इमोजी नहीं हो सकते
+            contains_restricted_characters_instructional: पिन कोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_restricted_characters_informative: पिन कोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_html_tags_instructional: पिन कोड में HTML नहीं हो सकता
+            contains_html_tags_informative: पिन कोड में HTML नहीं हो सकता

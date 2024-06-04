@@ -8,19 +8,33 @@ hi:
             default: जिला का नाम
             optional: जिला का नाम (वैकल्पिक)
           errors:
-            blank: किसी जिला का नाम डालें
-            too_long: जिला का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर)
-            contains_emojis: जिला के नाम में इमोजी नहीं हो सकते
-            contains_mathematical_symbols: जिला के नाम में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: जिला के नाम में सिर्फ़ अक्षर, संख्या, लोकल
-              कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
-            contains_too_many_words: जिला के नाम में %{word_count} से ज़्यादा शब्द
+            unknown_for_address: जिला का नाम गलत हो सकता है
+            blank_instructional: किसी जिला का नाम डालें
+            blank_informative: जिला का नाम गुम है
+            too_long_instructional: जिला का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            too_long_informative: जिला का नाम बहुत लंबा है
+            contains_emojis_instructional: जिला के नाम में इमोजी नहीं हो सकते
+            contains_emojis_informative: जिला के नाम में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: जिला के नाम में गणितीय चिह्न
               नहीं हो सकते
-            contains_html_tags: जिला के नाम में HTML टैग नहीं हो सकते.
-            contains_url: जिला के नाम में URL नहीं हो सकते.
-            unknown_for_city: "%{city} के लिए जिला का एक मान्य नाम डालें."
-            unknown_for_zip: "%{zip} के लिए जिला का एक मान्य नाम डालें."
-            unknown_for_address: जिला का नाम गलत हो सकता है.
+            contains_mathematical_symbols_informative: जिला के नाम में गणितीय चिह्न
+              नहीं हो सकते
+            contains_restricted_characters_instructional: जिला के नाम में सिर्फ़ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: जिला के नाम में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_too_many_words_instructional: जिला के नाम में %{word_count} से
+              कम शब्द होने चाहिए
+            contains_too_many_words_informative: जिला के नाम में %{word_count} से
+              कम शब्द होने चाहिए
+            contains_html_tags_instructional: जिला के नाम में HTML नहीं हो सकता
+            contains_html_tags_informative: जिला के नाम में HTML नहीं हो सकता
+            contains_url_instructional: जिला के नाम में URL नहीं हो सकता
+            contains_url_informative: जिला के नाम में URL नहीं हो सकता
+            unknown_for_city_instructional: "%{city} के लिए जिला का एक मान्य नाम डालें"
+            unknown_for_city_informative: "%{city} के लिए जिला का नाम मान्य नहीं है"
+            unknown_for_zip_instructional: "%{zip} के लिए जिला का एक मान्य नाम डालें"
+            unknown_for_zip_informative: "%{zip} के लिए जिला का नाम मान्य नहीं है"
           warnings:
             contains_too_many_words: इस बात का सुझाव दिया जाता है कि जिला के नाम में
               %{word_count} से कम शब्द होने चाहिए

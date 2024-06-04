@@ -8,18 +8,28 @@ sl:
             default: Zvezna država
             optional: Zvezna država (izbirno)
           errors:
-            blank: Izberite zvezno državo
+            blank_instructional: Izberite državo
+            blank_informative: Manjka država
         zip:
           label:
             default: Koda PIN
             optional: Koda PIN (izbirno)
           errors:
-            blank: Vnesite kodo PIN
-            invalid_for_country: Vnesite veljavno kodo PIN za državo %{country}
-            invalid_for_country_and_province: Vnesite veljavno kodo PIN za območje
-              %{province}, %{country}
-            too_long: Koda PIN je predolga
-            contains_html_tags: Koda PIN ne sme vsebovati oznak HTML.
-            contains_emojis: Koda PIN ne sme vsebovati čustvenih simbolov
-            contains_restricted_characters: Koda PIN ne sme vsebovati prepovedanih
-              znakov
+            blank_instructional: Vnesite kodo PIN
+            blank_informative: Manjka koda PIN
+            invalid_for_country_instructional: Vnesite veljavno kodo PIN za državo
+              %{country}
+            invalid_for_country_informative: Koda PIN ni veljavna
+            invalid_for_country_and_province_instructional: Vnesite veljavno kodo
+              PIN za provinco %{province}, %{country}
+            invalid_for_country_and_province_informative: Koda PIN ni veljavna
+            too_long_instructional: Koda PIN je predolga
+            too_long_informative: Koda PIN je predolga
+            contains_emojis_instructional: Koda PIN ne sme vsebovati čustvenih simbolov
+            contains_emojis_informative: Koda PIN ne sme vsebovati čustvenih simbolov
+            contains_restricted_characters_instructional: Koda PIN ne sme vsebovati
+              prepovedanih znakov
+            contains_restricted_characters_informative: Koda PIN ne sme vsebovati
+              prepovedanih znakov
+            contains_html_tags_instructional: Koda PIN ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Koda PIN ne sme vsebovati oznak HTML

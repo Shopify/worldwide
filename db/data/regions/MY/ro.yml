@@ -8,14 +8,22 @@ ro:
             default: Stat/teritoriu
             optional: Stat/teritoriu (opțional)
           errors:
-            blank: Selectează un stat/un teritoriu
+            blank_instructional: Selectează un stat/un teritoriu
+            blank_informative: Statul/teritoriul lipsește
         zip:
           label:
             default: Cod poștal
             optional: Cod poștal (opțional)
           errors:
-            too_long: Valoarea pentru codul poștal este prea lungă
-            contains_html_tags: Codul poștal nu poate conține etichete HTML.
-            contains_emojis: Codul poștal nu poate conține emoji-uri
-            contains_restricted_characters: Codul poștal nu poate conține caractere
-              restricționate
+            too_long_instructional: Codul poștal este prea lung
+            too_long_informative: Codul poștal este prea lung
+            contains_emojis_instructional: Codul poștal nu poate conține emoji-uri
+            contains_emojis_informative: Codul poștal nu poate conține emoji-uri
+            contains_restricted_characters_instructional: Codul poștal nu poate conține
+              caractere restricționate
+            contains_restricted_characters_informative: Codul poștal nu poate conține
+              caractere restricționate
+            contains_html_tags_instructional: Codul poștal nu poate conține etichete
+              HTML
+            contains_html_tags_informative: Codul poștal nu poate conține etichete
+              HTML

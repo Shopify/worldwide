@@ -8,15 +8,24 @@ el:
             default: Πολιτεία/επικράτεια
             optional: Πολιτεία/επικράτεια (προαιρετικά)
           errors:
-            blank: Επιλέξτε νομό/περιοχή
+            blank_instructional: Επιλέξτε νομό/επικράτεια
+            blank_informative: Ο νομός ή επικράτεια λείπει
         zip:
           label:
             default: Ταχυδρομικός κώδικας
             optional: Ταχυδρομικός κώδικας (προαιρετικά)
           errors:
-            too_long: Η τιμή του ταχυδρομικού κώδικα είναι πολύ μεγάλη
-            contains_html_tags: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει ετικέτες
-              HTML.
-            contains_emojis: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει emoji
-            contains_restricted_characters: Ο ταχυδρομικός κωδικός δεν μπορεί να περιέχει
-              απαγορευμένους χαρακτήρες
+            too_long_instructional: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος
+            too_long_informative: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος
+            contains_emojis_instructional: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              emoji
+            contains_emojis_informative: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              emoji
+            contains_restricted_characters_instructional: Ο ταχυδρομικός κώδικας δεν
+              μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_restricted_characters_informative: Ο ταχυδρομικός κώδικας δεν
+              μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Ο ταχυδρομικός κώδικας δεν μπορεί να
+              περιέχει κώδικα HTML
+            contains_html_tags_informative: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              κώδικα HTML

@@ -8,20 +8,35 @@ sk:
             default: Mestská štvrť
             optional: Mestská štvrť (voliteľné)
           errors:
-            blank: Zadajte mestskú štvrť
-            too_long: Mestská štvrť je príliš dlhá (maximálne 255 znakov)
-            contains_emojis: Mestská štvrť nemôže obsahovať emotikony
-            contains_mathematical_symbols: Mestská štvrť nemôže obsahovať matematické
-              značky
-            contains_restricted_characters: Mestská štvrť môže obsahovať len písmená,
-              číslice, miestne znaky a špeciálne znaky
-            contains_too_many_words: 'Mestská štvrť nemôže mať viac ako tento počet
-              slov: %{word_count}'
-            contains_html_tags: Mestská štvrť nemôže obsahovať HTML značky.
-            contains_url: Mestská štvrť nemôže obsahovať URL adresy.
-            unknown_for_city: Zadajte platný názov mestskej štvrti pre mesto %{city}.
-            unknown_for_zip: Zadajte platný názov mestskej štvrti pre PSČ %{zip}.
-            unknown_for_address: Mestská štvrť môže byť nesprávna.
+            unknown_for_address: Mestská štvrť môže byť nesprávna
+            blank_instructional: Zadajte mestskú štvrť
+            blank_informative: Chýba mestská štvrť
+            too_long_instructional: Mestská štvrť je príliš dlhá
+            too_long_informative: Mestská štvrť je príliš dlhá (maximálne 255 znakov)
+            contains_emojis_instructional: Mestská štvrť nemôže obsahovať emotikony
+            contains_emojis_informative: Mestská štvrť nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Mestská štvrť nemôže obsahovať
+              matematické značky
+            contains_mathematical_symbols_informative: Mestská štvrť nemôže obsahovať
+              matematické značky
+            contains_restricted_characters_instructional: Mestská štvrť môže obsahovať
+              len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Mestská štvrť nemôže obsahovať
+              zakázané znaky
+            contains_too_many_words_instructional: 'Mestská štvrť musí mať menej ako
+              tento počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Mestská štvrť musí mať menej ako
+              tento počet slov: %{word_count}'
+            contains_html_tags_instructional: Mestská štvrť nemôže obsahovať HTML
+            contains_html_tags_informative: Mestská štvrť nemôže obsahovať HTML
+            contains_url_instructional: Mestská štvrť nemôže obsahovať URL adresu
+            contains_url_informative: Mestská štvrť nemôže obsahovať URL adresu
+            unknown_for_city_instructional: Zadajte platný názov mestskej štvrti pre
+              mesto %{city}
+            unknown_for_city_informative: Mestská štvrť sa nezhoduje s mestom %{city}
+            unknown_for_zip_instructional: Zadajte platný názov mestskej štvrti pre
+              PSČ %{zip}
+            unknown_for_zip_informational: Mestská štvrť sa nezhoduje s PSČ %{zip}
           warnings:
             contains_too_many_words: 'Mestská štvrť by nemala mať viac ako tento počet
               slov: %{word_count}'

@@ -8,29 +8,51 @@ sk:
             default: Predmestie
             optional: Predmestie (voliteľné)
           errors:
-            blank: Zadajte predmestie
-            too_long: Názov predmestia je príliš dlhý (maximálne 255 znakov)
-            contains_html_tags: Predmestie nemôže obsahovať HTML značky.
-            contains_emojis: Predmestie nemôže obsahovať emotikony
-            contains_restricted_characters: Predmestie môže obsahovať len písmená,
-              číslice, miestne znaky a špeciálne znaky
+            blank_instructional: Zadajte predmestie
+            blank_informative: Chýba predmestie
+            too_long_instructional: Predmestie je príliš dlhé (maximálne 255 znakov)
+            too_long_informative: Predmestie je príliš dlhé
+            contains_emojis_instructional: Predmestie nemôže obsahovať emotikony
+            contains_emojis_informative: Predmestie nemôže obsahovať emotikony
+            contains_restricted_characters_instructional: Predmestie môže obsahovať
+              len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Predmestie nemôže obsahovať
+              zakázané znaky
+            contains_html_tags_instructional: Predmestie nemôže obsahovať HTML
+            contains_html_tags_informative: Predmestie nemôže obsahovať HTML
         province:
           label:
             default: Štát/územie
             optional: Štát/územie (voliteľné)
           errors:
-            blank: Vyberte štát/územie
+            blank_instructional: Vyberte štát/územie
+            blank_informative: Chýba štát/územie
         zip:
           label:
             default: Poštové smerovacie číslo
             optional: Poštové smerovacie číslo (voliteľné)
           errors:
-            blank: Zadajte poštové smerovacie číslo
-            invalid_for_country: 'Zadajte platné poštové smerovacie číslo pre: %{country}'
-            invalid_for_country_and_province: 'Zadajte platné poštové smerovacie číslo
-              pre: %{province}, %{country}'
-            too_long: Hodnota poštového smerovacieho čísla je príliš dlhá
-            contains_html_tags: Poštové smerovacie číslo nemôže obsahovať HTML značky.
-            contains_emojis: Poštové smerovacie číslo nemôže obsahovať emotikony
-            contains_restricted_characters: Poštové smerovacie číslo môže obsahovať
-              len písmená, číslice, miestne znaky a špeciálne znaky
+            blank_instructional: Zadajte poštové smerovacie číslo
+            blank_informative: Chýba poštové smerovacie číslo
+            invalid_for_country_instructional: Zadajte platné poštové smerovacie číslo
+              pre krajinu %{country}
+            invalid_for_country_informative: Poštové smerovacie číslo nie je platné
+              pre krajinu %{country}
+            invalid_for_country_and_province_instructional: Zadajte platné poštové
+              smerovacie číslo pre provinciu %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštové smerovacie číslo
+              nie je platné pre provinciu %{province}, %{country}
+            too_long_instructional: Poštové smerovacie číslo je príliš dlhé
+            too_long_informative: Poštové smerovacie číslo je príliš dlhé
+            contains_emojis_instructional: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_emojis_informative: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_restricted_characters_instructional: Poštové smerovacie číslo
+              môže obsahovať len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Poštové smerovacie číslo nemôže
+              obsahovať zakázané znaky
+            contains_html_tags_instructional: Poštové smerovacie číslo nemôže obsahovať
+              HTML
+            contains_html_tags_informative: Poštové smerovacie číslo nemôže obsahovať
+              HTML

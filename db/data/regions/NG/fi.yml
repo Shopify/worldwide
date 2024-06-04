@@ -8,8 +8,10 @@ fi:
             default: Osavaltio
             optional: Osavaltio (valinnainen)
           errors:
-            blank: Valitse osavaltio
+            blank_instructional: Valitse osavaltio
+            blank_informative: Osavaltio puuttuu
         zip:
           errors:
-            invalid_for_country: Syötä kelvollinen 6-numeroinen Nigerian postinumero
-              tai jätä kenttä tyhjäksi.
+            invalid_for_country_instructional: Anna kelvollinen 6-numeroinen Nigerian
+              postinumero tai jätä kenttä tyhjäksi
+            invalid_for_country_informative: Postinumero on virheellinen Nigerialle

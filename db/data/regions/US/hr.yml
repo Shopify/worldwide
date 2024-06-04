@@ -8,26 +8,45 @@ hr:
             default: Savezna država
             optional: Savezna država (neobavezno)
           errors:
-            blank: Odaberi državu
-            invalid_for_country: Unesite valjanu saveznu državu za %{country}
-            unknown_for_city_and_zip: Unesite valjanu državu za %{city}, %{zip}
-            unknown_for_city: Odaberite valjanu državu za %{city}
-            unknown_for_zip: Odaberite valjanu državu za %{zip}
-            unknown_for_address: Možda nije točna država.
+            unknown_for_address: Naziv savezne države možda nije točan
+            blank_instructional: Odaberite saveznu državu
+            blank_informative: Unesite saveznu državu
+            invalid_for_country_instructional: Unesite valjanu saveznu državu za grad
+              %{city}, %{zip}
+            invalid_for_country_informative: Savezna država nije valjana
+            unknown_for_city_and_zip_instructional: Unesite valjanu saveznu državu
+              za grad %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Savezna država nije valjana za %{city},
+              %{zip}
+            unknown_for_city_instructional: Odaberite valjanu saveznu državu za %{city}
+            unknown_for_city_informative: Savezna država nije valjana za %{city}
+            unknown_for_zip_instructional: Odaberite valjanu saveznu državu za %{zip}
+            unknown_for_zip_informative: Savezna država nije valjana za %{zip}
         zip:
           label:
             default: Poštanski broj
             optional: Poštanski broj (nije obavezno)
           errors:
-            blank: Unesi poštanski broj
-            invalid_for_country: Unesi valjan poštanski broj za državu %{country}
-            invalid_for_country_and_province: Unesite valjani poštanski broj za %{province},
-              %{country}
-            too_long: Poštanski broj je predugačak
-            contains_html_tags: Vrijednost poštanskog broja ne smije sadržavati HTML
-              oznake.
-            contains_emojis: Poštanski broj ne smije sadržavati emotikone
-            contains_restricted_characters: Poštanski broj ne smije sadržavati zabranjene
-              znakove
-            invalid_for_province: Unesite valjani poštanski broj za %{province}
-            unknown_for_address: Možda nije točan poštanski broj.
+            unknown_for_address: Poštanski broj možda nije točan
+            blank_instructional: Unesite poštanski broj
+            blank_informative: Nedostaje poštanski broj
+            invalid_for_country_instructional: Unesite valjani poštanski broj za %{country}
+            invalid_for_country_informative: Unesite valjani poštanski broj za %{country}
+            invalid_for_province_instructional: Unesite valjani poštanski broj za
+              %{province}
+            invalid_for_province_informative: Unesite valjani poštanski broj za %{province}
+            invalid_for_country_and_province_instructional: Unesite valjani poštanski
+              broj za grad %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštanski broj nije valjan
+              za %{province}, %{country}
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak (najveći dopušteni
+              broj znakova je 255)
+            contains_emojis_instructional: Poštanski broj ne smije sadržavati emotikone
+            contains_emojis_informative: Poštanski broj ne smije sadržavati emotikone
+            contains_restricted_characters_instructional: Poštanski broj ne smije
+              sadržavati zabranjene znakove
+            contains_restricted_characters_informative: Poštanski broj ne smije sadržavati
+              zabranjene znakove
+            contains_html_tags_instructional: Poštanski broj ne smije sadržavati HTML
+            contains_html_tags_informative: Poštanski broj ne smije sadržavati HTML

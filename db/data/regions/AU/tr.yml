@@ -8,29 +8,46 @@ tr:
             default: Banliyö
             optional: Banliyö (isteğe bağlı)
           errors:
-            blank: Mahalle girin
-            too_long: Mahalle adı çok uzun (maksimum 255 karakter olmalı)
-            contains_html_tags: Banliyö, HTML etiketleri içeremez.
-            contains_emojis: Mahalle emoji içeremez
-            contains_restricted_characters: Banliyö adı yalnızca harfler, sayılar,
-              yerel karakterler ve özel karakterler içerebilir
+            blank_instructional: Banliyö adı girin
+            blank_informative: Banliyö adı eksik
+            too_long_instructional: Banliyö adı çok uzun (maksimum 255 karakter olmalıdır)
+            too_long_informative: Banliyö adı çok uzun
+            contains_emojis_instructional: Banliyö adı emoji içeremez
+            contains_emojis_informative: Banliyö adı emoji içeremez
+            contains_restricted_characters_instructional: Banliyö adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Banliyö adı, kısıtlanmış karakterler
+              içeremez
+            contains_html_tags_instructional: Banliyö adı HTML içeremez
+            contains_html_tags_informative: Banliyö adı HTML içeremez
         province:
           label:
             default: Eyalet/bölge
             optional: Eyalet/bölge (isteğe bağlı)
           errors:
-            blank: Eyalet/bölge seçin
+            blank_instructional: Eyalet/bölge seçin
+            blank_informative: Eyalet/bölge eksik
         zip:
           label:
             default: Posta kodu
             optional: Posta kodu (isteğe bağlı)
           errors:
-            blank: Posta kodu girin
-            invalid_for_country: "%{country} için geçerli bir posta kodu girin"
-            invalid_for_country_and_province: "%{province}, %{country} için geçerli
-              bir posta kodu girin"
-            too_long: Posta kodu değeri çok uzun
-            contains_html_tags: Posta kodu, HTML etiketleri içeremez.
-            contains_emojis: Posta kodu, emoji içeremez
-            contains_restricted_characters: Posta kodu yalnızca harfler, sayılar,
-              yerel karakterler ve özel karakterler içerebilir
+            blank_instructional: Posta kodu girin
+            blank_informative: Posta kodu eksik
+            invalid_for_country_instructional: "%{country} için geçerli bir posta
+              kodu girin"
+            invalid_for_country_informative: Posta kodu %{country} için geçerli değil
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              için geçerli bir posta kodu girin"
+            invalid_for_country_and_province_informative: Posta kodu %{province},
+              %{country} için geçerli değil
+            too_long_instructional: Posta kodu çok uzun
+            too_long_informative: Posta kodu çok uzun
+            contains_emojis_instructional: Posta kodu, emoji içeremez
+            contains_emojis_informative: Posta kodu, emoji içeremez
+            contains_restricted_characters_instructional: Posta kodu yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Posta kodu, kısıtlanmış karakterler
+              içeremez
+            contains_html_tags_instructional: Posta kodu, HTML içeremez
+            contains_html_tags_informative: Posta kodu, HTML içeremez

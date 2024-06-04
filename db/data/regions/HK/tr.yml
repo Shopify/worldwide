@@ -8,8 +8,15 @@ tr:
             default: Bölge
             optional: Bölge (İsteğe bağlı)
           errors:
-            blank: İlçe girin
-            too_long: İlçe adı çok uzun (maksimum 255 karakter olmalı)
-            contains_html_tags: İlçe, HTML etiketleri içeremez.
-            contains_emojis: İlçe, emoji içeremez
-            contains_restricted_characters: İlçe adında kısıtlanmış karakterler kullanılamaz
+            blank_instructional: İlçe girin
+            blank_informative: İlçe eksik
+            too_long_instructional: İlçe adı çok uzun (maksimum 255 karakter olmalıdır)
+            too_long_informative: İlçe adı çok uzun
+            contains_emojis_instructional: İlçe emoji içeremez
+            contains_emojis_informative: İlçe emoji içeremez
+            contains_restricted_characters_instructional: İlçe, kısıtlanmış karakterler
+              içeremez
+            contains_restricted_characters_informative: İlçe, kısıtlanmış karakterler
+              içeremez
+            contains_html_tags_instructional: İlçe HTML içeremez
+            contains_html_tags_informative: İlçe HTML içeremez

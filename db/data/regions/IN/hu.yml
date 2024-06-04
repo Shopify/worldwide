@@ -8,18 +8,28 @@ hu:
             default: Állam
             optional: Állam (nem kötelező megadni)
           errors:
-            blank: Válassz államot
+            blank_instructional: Válassz államot
+            blank_informative: Az állam nincs megadva
         zip:
           label:
             default: PIN-kód
             optional: PIN-kód (nem kötelező megadni)
           errors:
-            blank: Írd be a PIN-kódot
-            invalid_for_country: 'Érvénytelen PIN-kódot írtál be ehhez az országhoz:
-              %{country}'
-            invalid_for_country_and_province: 'Érvénytelen PIN-kódot írtál be ehhez
-              a zónához és országhoz: %{province}, %{country}'
-            too_long: Túl hosszú a PIN-kód.
-            contains_html_tags: A PIN-kód nem tartalmazhat HTML-címkéket.
-            contains_emojis: A PIN-kód nem tartalmazhat emodzsikat.
-            contains_restricted_characters: A PIN-kód nem tartalmazhat tiltott karaktereket
+            blank_instructional: Írd be a PIN-kódot
+            blank_informative: A PIN-kód nincs megadva
+            invalid_for_country_instructional: 'Érvénytelen PIN-kódot írtál be ehhez
+              az országhoz: %{country}'
+            invalid_for_country_informative: Érvénytelen PIN-kód
+            invalid_for_country_and_province_instructional: 'Érvénytelen PIN-kódot
+              írtál be ehhez a tartományhoz és országhoz: %{province}, %{country}'
+            invalid_for_country_and_province_informative: Érvénytelen PIN-kód
+            too_long_instructional: Túl hosszú a PIN-kód
+            too_long_informative: Túl hosszú a PIN-kód
+            contains_emojis_instructional: A PIN-kód nem tartalmazhat emojikat
+            contains_emojis_informative: A PIN-kód nem tartalmazhat emojikat
+            contains_restricted_characters_instructional: A PIN-kód nem tartalmazhat
+              tiltott karaktereket
+            contains_restricted_characters_informative: A PIN-kód nem tartalmazhat
+              tiltott karaktereket
+            contains_html_tags_instructional: A PIN-kód nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A PIN-kód nem tartalmazhat HTML-címkét

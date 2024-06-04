@@ -8,9 +8,16 @@ id:
             default: Distrik
             optional: Distrik (opsional)
           errors:
-            blank: Masukkan distrik
-            too_long: Nama distrik terlalu panjang (maksimum berisi 255 karakter)
-            contains_html_tags: Nama distrik tidak bisa berisi tag HTML.
-            contains_emojis: Distrik tidak boleh berisi emoji
-            contains_restricted_characters: Distrik tidak boleh memuat karakter yang
-              dilarang
+            blank_instructional: Masukkan nama distrik
+            blank_informative: Nama distrik belum diisi
+            too_long_instructional: Nama distrik terlalu panjang (maksimum berisi
+              255 karakter)
+            too_long_informative: Nama distrik terlalu panjang
+            contains_emojis_instructional: Nama distrik tidak boleh berisi emoji
+            contains_emojis_informative: Nama distrik tidak boleh berisi emoji
+            contains_restricted_characters_instructional: Nama distrik tidak boleh
+              berisi karakter yang dilarang
+            contains_restricted_characters_informative: Nama distrik tidak boleh berisi
+              karakter yang dilarang
+            contains_html_tags_instructional: Nama distrik tidak boleh berisi HTML
+            contains_html_tags_informative: Nama distrik tidak boleh berisi HTML

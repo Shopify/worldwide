@@ -8,12 +8,23 @@ pl:
             default: Kod pocztowy
             optional: Kod pocztowy (opcjonalnie)
           errors:
-            blank: Wprowadź kod pocztowy
-            invalid_for_country: Wprowadź prawidłowy kod pocztowy dla Wielkiej Brytanii
-            invalid_for_country_and_province: Wprowadź prawidłowy kod pocztowy dla
+            blank_instructional: Wprowadź kod pocztowy
+            blank_informative: Brakuje kodu pocztowego
+            invalid_for_country_instructional: Wprowadź prawidłowy kod pocztowy dla
+              Wielkiej Brytanii
+            invalid_for_country_informative: Kod pocztowy jest nieprawidłowy dla Wielkiej
+              Brytanii
+            invalid_for_country_and_province_instructional: Wprowadź prawidłowy kod
+              pocztowy dla %{province}, Wielka Brytania
+            invalid_for_country_and_province_informative: Kod pocztowy jest nieprawidłowy
               %{province}, Wielka Brytania
-            too_long: Wartość kodu pocztowego jest zbyt długa
-            contains_html_tags: Kod pocztowy nie może zawierać tagów HTML.
-            contains_emojis: Kod pocztowy nie może zawierać emoji
-            contains_restricted_characters: Pole Kod pocztowy nie może zawierać znaków
-              objętych ograniczeniami
+            too_long_instructional: Kod pocztowy jest za długi
+            too_long_informative: Kod pocztowy jest za długi
+            contains_emojis_instructional: Kod pocztowy nie może zawierać emoji
+            contains_emojis_informative: Kod pocztowy nie może zawierać emoji
+            contains_restricted_characters_instructional: Pole Kod pocztowy nie może
+              zawierać znaków objętych ograniczeniami
+            contains_restricted_characters_informative: Pole Kod pocztowy może zawierać
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_html_tags_instructional: Kod pocztowy nie może zawierać HTML
+            contains_html_tags_informative: Kod pocztowy nie może zawierać HTML

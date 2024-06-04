@@ -8,9 +8,15 @@ nb:
             default: Distrikt
             optional: Distrikt (valgfritt)
           errors:
-            blank: Angi et distrikt
-            too_long: Distriktsnavnet er for langt (maksimalt 255 tegn)
-            contains_html_tags: Distrikt kan ikke inneholde HTML-tagger.
-            contains_emojis: Distriktet kan ikke inneholde emojier
-            contains_restricted_characters: Distrikt kan ikke inneholde begrensede
-              tegn
+            blank_instructional: Angi et distrikt
+            blank_informative: Distrikt mangler
+            too_long_instructional: Distriktsnavnet er for langt (maksimalt 255 tegn)
+            too_long_informative: Distriktsnavnet er for langt
+            contains_emojis_instructional: Distriktsnavnet kan ikke inneholde emojier
+            contains_emojis_informative: Distriktsnavnet kan ikke inneholde emojier
+            contains_restricted_characters_instructional: Distriktsnavnet kan ikke
+              inneholde begrensede tegn
+            contains_restricted_characters_informative: Distriktsnavnet kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: Distriktsnavnet kan ikke inneholde HTML
+            contains_html_tags_informative: Distriktsnavnet kan ikke inneholde HTML

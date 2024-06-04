@@ -8,8 +8,11 @@ ru:
             default: Штат
             optional: Штат (необязательно)
           errors:
-            blank: Выберите штат
+            blank_instructional: Выберите штат
+            blank_informative: Штат отсутствует
         zip:
           errors:
-            invalid_for_country: Укажите действительный шестизначный почтовый индекс
-              для Нигерии или оставьте поле незаполненным.
+            invalid_for_country_instructional: Укажите действительный шестизначный
+              почтовый индекс для Нигерии или оставьте поле незаполненным
+            invalid_for_country_informative: Недействительный почтовый индекс для
+              Нигерии

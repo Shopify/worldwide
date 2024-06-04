@@ -8,10 +8,16 @@ bg:
             default: Район
             optional: Район (незадължително)
           errors:
-            blank: Въведете област
-            too_long: Името на окръга е с твърде голяма дължина (максимумът е 255
-              знака)
-            contains_html_tags: Името на района не може да съдържа HTML етикети.
-            contains_emojis: Районът не може да съдържа емоджита
-            contains_restricted_characters: "„Район“ не може да съдържа забранени
-              знаци"
+            blank_instructional: Въведете район
+            blank_informative: Липсва район
+            too_long_instructional: "„Район“ е с твърде голяма дължина (максимумът
+              е 255 знака)"
+            too_long_informative: "„Район“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Район“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Район“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„Район“ не може да съдържа
+              забранени знаци"
+            contains_restricted_characters_informative: "„Район“ не може да съдържа
+              забранени знаци"
+            contains_html_tags_instructional: "„Район“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Район“ не може да съдържа HTML"

@@ -8,20 +8,36 @@ hu:
             default: Körzet
             optional: Körzet (nem kötelező)
           errors:
-            blank: Körzet megadása
-            too_long: Túl hosszú a körzet neve (legfeljebb 255 karakter hosszú lehet).
-            contains_emojis: A körzet neve nem tartalmazhat emodzsikat
-            contains_mathematical_symbols: A körzet neve nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: A körzet neve csak betűket, számokat,
-              helyi karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: A körzet neve legfeljebb %{word_count} szóból
-              állhat
-            contains_html_tags: A körzet neve nem tartalmazhat HTML-címkéket.
-            contains_url: A körzet neve nem tartalmazhat URL-címet.
-            unknown_for_city: 'Olyan körzetnevet adj meg, amely megfelel ennek: %{city}.'
-            unknown_for_zip: 'Olyan körzetnevet adj meg, amely megfelel ennek: %{zip}.'
-            unknown_for_address: Vélhetően helytelen a körzetnév.
+            unknown_for_address: Vélhetően helytelen a körzetnév
+            blank_instructional: Körzet megadása
+            blank_informative: A körzet nincs megadva
+            too_long_instructional: Túl hosszú a körzet neve
+            too_long_informative: Túl hosszú a körzet neve (legfeljebb 255 karakter
+              hosszú lehet)
+            contains_emojis_instructional: A körzet neve nem tartalmazhat emojikat
+            contains_emojis_informative: A körzet neve nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A körzet neve nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A körzet neve nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A körzet neve csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A körzet neve nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A körzet neve legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A körzet neve legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: A körzet neve nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A körzet neve nem tartalmazhat HTML-címkét
+            contains_url_instructional: A körzet neve nem tartalmazhat URL-címet
+            contains_url_informative: A körzet neve nem tartalmazhat URL-címet
+            unknown_for_city_instructional: 'Olyan körzetnevet adj meg, amely megfelel
+              ennek: %{city}'
+            unknown_for_city_informative: 'A körzet nem felel meg ennek: %{city}'
+            unknown_for_zip_instructional: 'Olyan körzetnevet adj meg, amely megfelel
+              ennek: %{zip}'
+            unknown_for_zip_informational: 'A körzet nem felel meg ennek: %{zip}'
           warnings:
             contains_too_many_words: A körzetnév javasolt hossza kevesebb mint %{word_count}
               szó

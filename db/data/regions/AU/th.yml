@@ -8,29 +8,41 @@ th:
             default: เขตชานเมือง
             optional: เขตชานเมือง (ไม่จำเป็น)
           errors:
-            blank: ป้อนเขตชานเมือง
-            too_long: ชื่อเขตชานเมืองยาวเกินไป (สูงสุดคือ 255 อักขระ)
-            contains_html_tags: ห้ามมีแท็ก HTML ในเขตชานเมือง
-            contains_emojis: ไม่สามารถใส่อีโมจิในชื่อเขตชานเมืองได้
-            contains_restricted_characters: เขตชานเมืองสามารถประกอบด้วยตัวอักษร ตัวเลข
-              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            blank_instructional: ป้อนเขตชานเมือง
+            blank_informative: ไม่พบเขตชานเมือง
+            too_long_instructional: ชื่อเขตชานเมืองยาวเกินไป (สูงสุดคือ 255 อักขระ)
+            too_long_informative: ชื่อเขตชานเมืองยาวเกินไป
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในชื่อเขตชานเมืองได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในชื่อเขตชานเมืองได้
+            contains_restricted_characters_instructional: ชื่อเขตชานเมืองสามารถประกอบด้วยตัวอักษร
+              ตัวเลข อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในชื่อเขตชานเมืองได้
+            contains_html_tags_instructional: ชื่อเขตชานเมืองต้องไม่มี HTML
+            contains_html_tags_informative: ชื่อเขตชานเมืองต้องไม่มี HTML
         province:
           label:
             default: รัฐ/เขตแดน
             optional: รัฐ/เขตแดน (ไม่จำเป็น)
           errors:
-            blank: เลือกรัฐ/เขตแดน
+            blank_instructional: เลือกรัฐ/เขตแดน
+            blank_informative: ไม่พบรัฐ/เขตแดน
         zip:
           label:
             default: รหัสไปรษณีย์
             optional: รหัสไปรษณีย์ (ไม่จำเป็น)
           errors:
-            blank: ป้อนรหัสไปรษณีย์
-            invalid_for_country: ป้อนรหัสไปรษณีย์ใน %{country} ให้ถูกต้อง
-            invalid_for_country_and_province: ป้อนรหัสไปรษณีย์ของ %{province} ใน %{country}
-              ให้ถูกต้อง
-            too_long: รหัสไปรษณีย์ยาวเกินไป
-            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสไปรษณีย์
-            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสไปรษณีย์
-            contains_restricted_characters: รหัสไปรษณีย์สามารถประกอบด้วยตัวอักษร ตัวเลข
-              อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            blank_instructional: ป้อนรหัสไปรษณีย์
+            blank_informative: ไม่พบรหัสไปรษณีย์
+            invalid_for_country_instructional: ป้อนรหัสไปรษณีย์สำหรับ%{country}ให้ถูกต้อง
+            invalid_for_country_informative: รหัสไปรษณีย์สำหรับ%{country}ไม่ถูกต้อง
+            invalid_for_country_and_province_instructional: ป้อนรหัสไปรษณีย์ของ%{province}ใน%{country}ให้ถูกต้อง
+            invalid_for_country_and_province_informative: รหัสไปรษณีย์ของ%{province}ใน%{country}ไม่ถูกต้อง
+            too_long_instructional: รหัสไปรษณีย์ยาวเกินไป
+            too_long_informative: รหัสไปรษณีย์ยาวเกินไป
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในรหัสไปรษณีย์ได้
+            contains_restricted_characters_instructional: รหัสไปรษณีย์สามารถประกอบด้วยตัวอักษร
+              ตัวเลข อักขระท้องถิ่น และอักขระพิเศษได้เท่านั้น
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในรหัสไปรษณีย์ได้
+            contains_html_tags_instructional: รหัสไปรษณีย์ต้องไม่มี HTML
+            contains_html_tags_informative: รหัสไปรษณีย์ต้องไม่มี HTML

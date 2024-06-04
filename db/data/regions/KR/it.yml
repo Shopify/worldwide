@@ -8,8 +8,10 @@ it:
             default: Provincia
             optional: Provincia (facoltativo)
           errors:
-            blank: Seleziona una provincia
+            blank_instructional: Seleziona una provincia
+            blank_informative: Provincia mancante
         zip:
           errors:
-            invalid: Inserisci un codice postale a cinque cifre valido per la Corea
-              del Sud
+            invalid_instructional: Inserisci un codice postale a cinque cifre valido
+              per la Corea del Sud
+            invalid_informative: Codice postale mancante

@@ -8,90 +8,151 @@ it:
             default: Azienda
             optional: Azienda (facoltativo)
           errors:
-            blank: Inserisci nome dell'azienda
-            too_long: Il nome dell'azienda è troppo lungo (la lunghezza massima è
-              di 255 caratteri)
-            contains_html_tags: L'azienda non può contenere tag HTML.
-            contains_emojis: L'azienda non può contenere emoji
-            contains_mathematical_symbols: Il campo Azienda non può contenere simboli
-              matematici
-            contains_restricted_characters: L'azienda può contenere solo lettere,
-              numeri, caratteri locali e caratteri speciali
+            blank_instructional: Inserisci un'azienda
+            blank_informative: Azienda mancante
+            too_long_instructional: Il nome dell'azienda è troppo lungo (la lunghezza
+              massima è di 255 caratteri)
+            too_long_informative: Il nome dell'azienda è troppo lungo
+            contains_emojis_instructional: Il campo Azienda non può contenere emoji
+            contains_emojis_informative: Il campo Azienda non può contenere emoji
+            contains_mathematical_symbols_instructional: Il campo Azienda non può
+              contenere simboli matematici
+            contains_mathematical_symbols_informative: Il campo Azienda non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il campo Azienda può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Azienda non può contenere
+              caratteri vietati
+            contains_html_tags_instructional: Il campo Azienda non può contenere HTML
+            contains_html_tags_informative: Il campo Azienda non può contenere HTML
         first_name:
           label:
             default: Nome
             optional: Nome (facoltativo)
           errors:
-            blank: Inserisci nome
-            too_long: Il nome è troppo lungo (la lunghezza massima è di 255 caratteri)
-            contains_html_tags: Il nome non può contenere tag HTML.
-            contains_emojis: Il nome non può contenere emoji
-            contains_url: Il nome non può contenere un URL.
-            contains_mathematical_symbols: Il campo Nome non può contenere simboli
-              matematici
-            contains_restricted_characters: Il nome può contenere solo lettere, numeri,
-              caratteri locali e caratteri speciali
+            blank_instructional: Inserisci il nome
+            blank_informative: Nome mancante
+            too_long_instructional: Il nome è troppo lungo (la lunghezza massima è
+              di 255 caratteri)
+            too_long_informative: Il nome è troppo lungo
+            contains_emojis_instructional: Il campo Nome non può contenere emoji
+            contains_emojis_informative: Il campo Nome non può contenere emoji
+            contains_mathematical_symbols_instructional: Il campo Nome non può contenere
+              simboli matematici
+            contains_mathematical_symbols_informative: Il campo Nome non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il campo Nome può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Nome non può contenere
+              caratteri vietati
+            contains_html_tags_instructional: Il campo Nome non può contenere HTML
+            contains_html_tags_informative: Il campo Nome non può contenere HTML
+            contains_url_instructional: Il campo Nome non può contenere un URL
+            contains_url_informative: Il campo Nome non può contenere un URL
         last_name:
           label:
             default: Cognome
             optional: Cognome (facoltativo)
           errors:
-            blank: Inserisci cognome
-            too_long: Il cognome è troppo lungo (la lunghezza massima è di 255 caratteri)
-            contains_html_tags: Il cognome non può contenere tag HTML.
-            contains_emojis: Il cognome non può contenere emoji
-            contains_url: Il cognome non può contenere un URL.
-            contains_mathematical_symbols: Il campo Cognome non può contenere simboli
-              matematici
-            contains_restricted_characters: Il cognome può contenere solo lettere,
-              numeri, caratteri locali e caratteri speciali
+            blank_instructional: Inserisci il cognome
+            blank_informative: Cognome mancante
+            too_long_instructional: Il cognome è troppo lungo (la lunghezza massima
+              è di 255 caratteri)
+            too_long_informative: Il cognome è troppo lungo
+            contains_emojis_instructional: Il campo Cognome non può contenere emoji
+            contains_emojis_informative: Il campo Cognome non può contenere emoji
+            contains_mathematical_symbols_instructional: Il campo Cognome non può
+              contenere simboli matematici
+            contains_mathematical_symbols_informative: Il campo Cognome non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il campo Cognome può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Cognome non può contenere
+              caratteri vietati
+            contains_html_tags_instructional: Il campo Cognome non può contenere HTML
+            contains_html_tags_informative: Il campo Cognome non può contenere HTML
+            contains_url_instructional: Il campo Cognome non può contenere un URL
+            contains_url_informative: Il campo Cognome non può contenere un URL
         address1:
           label:
             default: Indirizzo
             optional: Indirizzo (facoltativo)
-          errors:
-            blank: Inserisci un indirizzo
-            too_long: La prima riga dell'indirizzo è troppo lunga (la lunghezza massima
-              è di 255 caratteri)
-            contains_html_tags: Il campo 1 dell'indirizzo non può contenere tag HTML.
-            contains_emojis: Il campo 1 dell'indirizzo non può contenere emoji
-            contains_url: La riga 1 dell'indirizzo non può contenere URL.
-            missing_building_number: Aggiungi un numero civico, se esistente.
-            street_unknown_for_zip: Inserisci un nome della via valido per %{zip}.
-            building_number_invalid: Impossibile localizzare il numero civico per
-              %{street}, %{zip}.
-            contains_mathematical_symbols: Il campo Indirizzo 1 non può contenere
-              simboli matematici
-            contains_restricted_characters: L'indirizzo 1 può contenere solo lettere,
-              numeri, caratteri locali e caratteri speciali
-            contains_too_many_words: L'indirizzo 1 non può superare %{word_count}
-              parole
-            unknown_for_address: Il campo 1 dell'indirizzo potrebbe non essere corretto.
           warnings:
             contains_too_many_words: La riga 1 dell'indirizzo deve contenere meno
               di %{word_count} parole
+          errors:
+            blank_instructional: Inserisci l'indirizzo
+            blank_informative: Indirizzo mancante
+            too_long_instructional: La prima riga dell'indirizzo è troppo lunga (la
+              lunghezza massima è di 255 caratteri)
+            too_long_informative: La prima riga dell'indirizzo è troppo lunga
+            contains_emojis_instructional: Il campo Indirizzo non può contenere emoji
+            contains_emojis_informative: Il campo Indirizzo non può contenere emoji
+            contains_mathematical_symbols_instructional: Il campo Indirizzo non può
+              contenere simboli matematici
+            contains_mathematical_symbols_informative: Il campo Indirizzo non può
+              contenere simboli matematici
+            contains_restricted_characters_instructional: Il campo Indirizzo può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Indirizzo non può
+              contenere caratteri vietati
+            contains_too_many_words_instructional: Il campo Indirizzo deve contenere
+              meno di %{word_count} parole
+            contains_too_many_words_informative: Il campo Indirizzo deve contenere
+              meno di %{word_count} parole
+            contains_html_tags_instructional: Il campo Indirizzo non può contenere
+              codice HTML
+            contains_html_tags_informative: Il campo Indirizzo non può contenere codice
+              HTML
+            contains_url_instructional: Il campo Indirizzo non può contenere URL
+            contains_url_informative: Il campo Indirizzo non può contenere URL
+            missing_building_number_instructional: Aggiungi un numero civico, se esistente
+            missing_building_number_informative: Il numero civico potrebbe non essere
+              indicato
+            street_unknown_for_zip_instructional: Inserisci un nome di una via valido
+              per %{zip}
+            street_unknown_for_zip_informative: Il nome della via non corrisponde
+              a %{zip}
+            building_number_invalid_instructional: Impossibile localizzare il numero
+              civico per %{street}, %{zip}
+            building_number_invalid_informative: Impossibile localizzare il numero
+              civico per %{street}, %{zip}
+            unknown_for_address_instructional: La prima riga dell'indirizzo potrebbe
+              non essere corretta
+            unknown_for_address_informative: La prima riga dell'indirizzo potrebbe
+              non essere corretta
         address2:
           label:
-            default: Interno, scala, ecc.
-            optional: Interno, scala, ecc. (facoltativo)
+            default: Interno
+            optional: Appartamento, scala, ecc. (opzionale)
           errors:
-            blank: Inserisci scala, interno, ecc.
-            too_long: La seconda riga dell'indirizzo è troppo lunga (la lunghezza
-              massima è di 255 caratteri)
-            contains_html_tags: Il campo 2 dell'indirizzo non può contenere tag HTML.
-            contains_emojis: Il campo 2 dell'indirizzo non può contenere emoji
-            contains_url: La riga 2 dell'indirizzo non può contenere URL.
-            missing_building_number: Aggiungi un numero civico, se esistente.
-            street_unknown_for_zip: Inserisci un nome della via valido per %{zip}.
-            building_number_invalid: Impossibile localizzare il numero civico per
-              %{street}, %{zip}.
-            contains_mathematical_symbols: Il campo Indirizzo 2 non può contenere
-              simboli matematici
-            contains_restricted_characters: L'indirizzo 2 può contenere solo lettere,
-              numeri, caratteri locali e caratteri speciali
-            contains_too_many_words: L'indirizzo 2 non può superare %{word_count}
-              parole
-            unknown_for_address: Il campo 2 dell'indirizzo potrebbe non essere corretto.
+            contains_html_tags: La seconda riga dell'indirizzo non può contenere HTML
+            contains_emojis: La seconda riga dell'indirizzo non può contenere emoji
+            contains_url: La seconda riga dell'indirizzo non può contenere URL
+            contains_mathematical_symbols: La seconda riga dell'indirizzo non può
+              contenere simboli matematici
+            contains_restricted_characters: La seconda riga dell'indirizzo può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_too_many_words: La seconda riga dell'indirizzo non può superare
+              le %{word_count} parole
+            unknown_for_address: La seconda riga dell'indirizzo potrebbe non essere
+              corretta
+            blank_instructional: Inserisci scala, interno, ecc.
+            blank_informative: Scala o interno mancante
+            too_long_instructional: La seconda riga dell'indirizzo è troppo lunga
+              (la lunghezza massima è di 255 caratteri)
+            too_long_informational: La seconda riga dell'indirizzo è troppo lunga
+            missing_building_number_instructional: Aggiungi un numero civico, se esistente
+            missing_building_number_informative: Il numero civico potrebbe non essere
+              indicato
+            street_unknown_for_zip_instructional: Inserisci un nome di una via valido
+              per %{zip}
+            street_unknown_for_zip_informative: Il nome della via non è valido per
+              %{zip}
+            building_number_invalid_instructional: Impossibile localizzare il numero
+              civico per %{street}, %{zip}
+            building_number_invalid_informative: Impossibile localizzare il numero
+              civico per %{street}, %{zip}
           warnings:
             contains_too_many_words: La riga 2 dell'indirizzo deve contenere meno
               di %{word_count} parole
@@ -100,126 +161,189 @@ it:
             default: Città
             optional: Città (facoltativo)
           errors:
-            blank: Inserisci una città
             too_long: Il nome della città è troppo lungo (la lunghezza massima è di
               255 caratteri)
-            contains_html_tags: La città non può contenere tag HTML.
-            contains_emojis: La città non può contenere emoji
-            contains_url: La città non può contenere un URL
-            unknown_for_zip: Inserisci una città valida per %{zip}
-            unknown_for_province: Inserisci una città valida per %{province}
-            unknown_for_zip_and_province: Inserisci una città valida per %{zip}, %{province}
+            contains_html_tags: Il campo Città non può contenere HTML
+            contains_emojis: Il campo Città non può contenere emoji
+            contains_url: Il campo Città non può contenere un URL
             contains_mathematical_symbols: Il campo Città non può contenere simboli
               matematici
             contains_restricted_characters: La città può contenere solo lettere, numeri,
               caratteri locali e caratteri speciali
-            contains_too_many_words: La città non può superare %{word_count} parole
-            unknown_for_address: La città potrebbe non essere corretta.
+            contains_too_many_words: Il campo Città non può superare le %{word_count}
+              parole
+            unknown_for_address: La città potrebbe non essere corretta
+            blank_instructional: Inserisci la città
+            blank_informative: Città mancante
+            unknown_for_zip_instructional: Inserisci una città valida per %{zip}
+            unknown_for_zip_informative: La città non corrisponde a %{zip}
+            unknown_for_province_instructional: Inserisci una città valida per %{province}
+            unknown_for_province_informative: La città non corrisponde a %{province}
+            unknown_for_zip_and_province_instructional: Inserisci una città valida
+              per %{zip}, %{province}
+            unknown_for_zip_and_province_informative: La città potrebbe non essere
+              corretta
         country:
           label:
             default: Paese/Regione
             optional: Paese/Regione (facoltativo)
           errors:
-            blank: Seleziona un paese/area geografica
-            not_supported: Attualmente non supportiamo questo paese/questa area geografica.
-              Inserisci un nuovo indirizzo e riprova.
-            invalid: Inserisci un'area geografica/un paese validi
-            invalid_for_zip: Inserisci un'area geografica/un paese validi per questo
-              codice postale
+            blank_instructional: Seleziona un paese/area geografica
+            blank_informative: Paese/area geografica mancante
+            not_supported_instructional: Paese o area geografica non supportati
+            not_supported_informative: Paese o area geografica non supportati
+            invalid_instructional: Inserisci un'area geografica/un paese validi
+            invalid_informative: Paese o area geografica non validi
+            invalid_for_zip_instructional: Inserisci un'area geografica/un paese validi
+              per questo codice postale
+            invalid_for_zip_informative: "%{country} non corrisponde al paese/area
+              geografica"
         phone:
           label:
             default: Numero di telefono
             optional: Numero di telefono (facoltativo)
           errors:
-            blank: Inserisci un numero di telefono
-            invalid: Inserisci un numero di telefono valido
-            too_long: Numero di telefono troppo lungo (lunghezza massima 255 caratteri)
-            contains_emojis: Il numero di telefono non può contenere emoji
+            contains_emojis: Il campo Telefono non può contenere emoji
             contains_mathematical_symbols: Il campo Telefono non può contenere simboli
               matematici
             contains_restricted_characters: Il numero di telefono può contenere solo
               lettere, numeri, caratteri locali e caratteri speciali
+            blank_instructional: Inserisci un numero di telefono
+            blank_informative: Numero di telefono mancante
+            invalid_instructional: Inserisci un numero di telefono valido
+            invalid_informative: Numero di telefono non valido
+            too_long_instructional: Il numero di telefono è troppo lungo
+            too_long_informative: Il numero di telefono è troppo lungo
         province:
           label:
             default: Area geografica
             optional: Area geografica (facoltativo)
           errors:
-            blank: Seleziona un'area geografica
-            invalid: Inserisci un'area geografica valida
-            invalid_for_country: 'Inserisci un''area geografica valida per il seguente
-              paese: %{country}'
-            unknown_for_city_and_zip: Inserisci un'area geografica valida per %{city},
+            unknown_for_address: L'area geografica potrebbe non essere corretta
+            blank_instructional: Seleziona un'area geografica
+            blank_informative: Area geografica mancante
+            invalid_instructional: Seleziona un'area geografica
+            invalid_informative: Area geografica mancante
+            invalid_for_country_instructional: 'Inserisci un''area geografica valida
+              per il seguente paese: %{country}'
+            invalid_for_country_informative: L'area geografica non corrisponde a %{country}
+            unknown_for_city_and_zip_instructional: Seleziona un'area geografica valida
+              per %{city}, %{zip}
+            unknown_for_city_and_zip_informative: L'area geografica non corrisponde
+              a %{city}, %{zip}
+            unknown_for_city_informative: Seleziona un'area geografica valida per
+              %{city}
+            unknown_for_city_instructional: L'area geografica non corrisponde a %{city}
+            unknown_for_zip_instructional: Seleziona un'area geografica valida per
               %{zip}
-            unknown_for_city: Seleziona un'area geografica valida per %{city}
-            unknown_for_zip: Seleziona un'area geografica valida per %{zip}
-            unknown_for_address: L'area geografica potrebbe non essere corretta.
+            unknown_for_zip_informative: L'area geografica non corrisponde a %{zip}
         zip:
           label:
             default: CAP
             optional: CAP (facoltativo)
           errors:
-            blank: Inserisci un codice postale
-            blocked_address: Questa posizione non è supportata.
-            invalid_for_country: Inserisci un codice postale valido per %{country}
-            invalid_for_country_and_province: Inserisci un codice postale valido per
-              %{province}, %{country}
-            invalid: Inserisci un codice postale valido
-            too_long: Il valore del codice postale è troppo lungo
-            contains_html_tags: Il codice postale non può contenere tag HTML.
-            contains_emojis: Il CAP non può contenere emoji
-            not_supported: Attualmente non supportiamo questo paese/questa area geografica.
-              Inserisci un nuovo indirizzo e riprova.
-            unknown_for_province: Inserisci un codice postale valido per %{province}
+            blocked_address: Questa posizione non è supportata
+            too_long: Il codice postale è troppo lungo
+            contains_html_tags: Il campo Codice postale non può contenere HTML
+            contains_emojis: Il campo Codice postale non può contenere emoji
             contains_mathematical_symbols: Il campo Codice postale non può contenere
               simboli matematici
             contains_restricted_characters: Il codice di avviamento postale può contenere
               solo lettere, numeri, caratteri locali e caratteri speciali
-            invalid_for_province: Inserisci un codice postale valido per %{province}
-            unknown_for_address: Il codice postale potrebbe non essere corretto.
-        address:
-          errors:
-            may_not_exist: Indirizzo non trovato o non esistente
+            unknown_for_address: Il codice postale potrebbe non essere corretto
+            blank_instructional: Inserisci un codice postale
+            blank_informative: Codice postale mancante
+            invalid_instructional: Inserisci un codice postale valido
+            invalid_informative: Codice postale non valido
+            invalid_for_country_instructional: 'Inserisci un codice postale valido
+              per il seguente paese: %{country}'
+            invalid_for_country_informative: Il codice postale non corrisponde a %{country}
+            invalid_for_province_instructional: 'Inserisci un codice postale valido
+              per il seguente paese: %{province}'
+            invalid_for_province_informative: Il codice postale non corrisponde a
+              %{province}
+            invalid_for_country_and_province_instructional: Inserisci un codice postale
+              valido per %{province}, %{country}
+            invalid_for_country_and_province_informative: Il codice postale non corrisponde
+              a %{province}, %{country}
+            not_supported_instructional: Codice postale non supportato. Inserisci
+              un nuovo indirizzo e riprova
+            not_supported_informativel: Codice postale non supportato
+            unknown_for_province_instructional: 'Inserisci un codice postale valido
+              per il seguente paese: %{province}'
+            unknown_for_province_informative: Il codice postale non è valido per %{province}
         street_name:
           label:
             default: Via
             optional: Via (facoltativo)
-          errors:
-            blank: Inserisci il nome di una via
-            too_long: Il nome della via è troppo lungo (lunghezza massima 255 caratteri)
-            contains_emojis: Il campo Via non può contenere emoji
-            contains_mathematical_symbols: Il campo Via non può contenere simboli
-              matematici
-            contains_restricted_characters: Il campo Via può contenere solo lettere,
-              numeri, caratteri locali e caratteri speciali
-            contains_too_many_words: Il campo Via non può superare le %{word_count}
-              parole
-            contains_html_tags: Il campo Via non può contenere tag HTML.
-            contains_url: Il campo Via non può contenere URL.
-            street_unknown_for_zip: Inserisci un nome di una via valido per %{zip}.
-            unknown_for_address: La via potrebbe non essere corretta.
           warnings:
             contains_too_many_words: Il campo Via deve contenere meno di %{word_count}
               parole
+          errors:
+            blank_instructional: Inserisci una via
+            blank_informative: Via mancante
+            too_long_instructional: Il nome della via è troppo lungo (lunghezza massima
+              255 caratteri)
+            too_long_informative: Il nome della via è troppo lungo
+            contains_emojis_instructional: Il campo Via non può contenere emoji
+            contains_emojis_informative: Il campo Via non può contenere emoji
+            contains_mathematical_symbols_instructional: Il campo Via non può contenere
+              simboli matematici
+            contains_mathematical_symbols_informative: Il campo Via non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il campo Via può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Via non può contenere
+              caratteri vietati
+            contains_too_many_words_instructional: Il campo Via non può superare le
+              %{word_count} parole
+            contains_too_many_words_informational: Il campo Via non può superare le
+              %{word_count} parole
+            contains_html_tags_instructional: Il campo Via non può contenere HTML
+            contains_html_tags_informational: Il campo Via non può contenere HTML
+            contains_url_instructional: Il campo Via non può contenere URL
+            contains_url_informative: Il campo Via non può contenere URL
+            street_unknown_for_zip_instructional: Inserisci una via valida per %{zip}
+            street_unknown_for_zip_informative: La via non è valida per %{zip}
+            unknown_for_address_instructional: La via potrebbe non essere corretta
+            unknown_for_address_informative: La via potrebbe non essere corretta
         street_number:
           label:
             default: Numero civico
             optional: Numero civico (facoltativo)
-          errors:
-            blank: Inserisci un numero civico
-            too_long: Il numero civico è troppo lungo (lunghezza massima 255 caratteri)
-            contains_emojis: Il campo Numero civico non può contenere emoji
-            contains_mathematical_symbols: Il campo Numero civico non può contenere
-              simboli matematici
-            contains_restricted_characters: Il campo Numero civico può contenere solo
-              lettere, numeri, caratteri locali e caratteri speciali
-            contains_html_tags: Il campo Numero civico non può contenere tag HTML.
-            contains_url: Il campo Numero civico non può contenere URL.
-            building_number_invalid: Impossibile localizzare il numero civico per
-              %{street}, %{zip}.
-            unknown_for_address: Il numero civico potrebbe non essere corretto.
           warnings:
             contains_too_many_words: Il campo Numero civico deve contenere meno di
               %{word_count} parole
+          errors:
+            blank_instructional: Inserisci un numero civico
+            blank_informative: Numero civico mancante
+            too_long_instructional: Il numero civico è troppo lungo (lunghezza massima
+              255 caratteri)
+            too_long_informative: Il numero civico è troppo lungo
+            contains_emojis_instructional: Il campo Numero civico non può contenere
+              emoji
+            contains_emojis_informative: Il campo Numero civico non può contenere
+              emoji
+            contains_mathematical_symbols_instructional: Il campo Numero civico non
+              può contenere simboli matematici
+            contains_mathematical_symbols_informative: Il campo Numero civico non
+              può contenere simboli matematici
+            contains_restricted_characters_instructional: Il campo Numero civico può
+              contenere solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Numero civico non
+              può contenere caratteri vietati
+            contains_html_tags_instructional: Il campo Numero civico non può contenere
+              HTML
+            contains_html_tags_informative: Il campo Numero civico non può contenere
+              HTML
+            contains_url_instructional: Il campo Numero civico non può contenere URL
+            contains_url_informative: Il campo Numero civico non può contenere URL
+            building_number_invalid_instructional: Impossibile localizzare il numero
+              civico per %{street}, %{zip}
+            building_number_invalid_informative: Impossibile localizzare il numero
+              civico per %{street}, %{zip}
+            unknown_for_address_instructional: Inserisci un numero civico valido
+            unknown_for_address_informative: Il numero dell'edificio non è valido
         neighborhood:
           label:
             default: Quartiere
@@ -235,11 +359,11 @@ it:
               lettere, numeri, caratteri locali e caratteri speciali
             contains_too_many_words: Il campo Quartiere non può superare le %{word_count}
               parole
-            contains_html_tags: Il campo Quartiere non può contenere tag HTML.
-            contains_url: Il campo Quartiere non può contenere URL.
-            unknown_for_city: Inserisci un nome di un quartiere valido per %{city}.
-            unknown_for_zip: Inserisci un nome di un quartiere valido per %{zip}.
-            unknown_for_address: Il quartiere potrebbe non essere corretto.
+            contains_html_tags: Il campo Quartiere non può contenere tag HTML
+            contains_url: Il campo Quartiere non può contenere URL
+            unknown_for_city: Inserisci un nome di un quartiere valido per %{city}
+            unknown_for_zip: Inserisci un nome di un quartiere valido per %{zip}
+            unknown_for_address: Il quartiere potrebbe non essere corretto
           warnings:
             contains_too_many_words: Il campo Quartiere deve contenere meno di %{word_count}
               parole
@@ -271,3 +395,7 @@ it:
           warnings:
             contains_too_many_words: Il campo Seconda riga dell'indirizzo deve contenere
               meno di %{word_count} parole
+        address:
+          errors:
+            may_not_exist_instructional: Indirizzo non trovato o non esistente
+            may_not_exist_informative: Indirizzo non trovato

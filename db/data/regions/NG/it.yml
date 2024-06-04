@@ -8,8 +8,11 @@ it:
             default: Stato
             optional: Stato (facoltativo)
           errors:
-            blank: Seleziona uno stato
+            blank_instructional: Seleziona uno stato
+            blank_informative: Stato mancante
         zip:
           errors:
-            invalid_for_country: Inserisci un codice postale a sei cifre valido per
-              la Nigeria, o lascialo vuoto.
+            invalid_for_country_instructional: Inserisci un codice postale a sei cifre
+              valido per la Nigeria oppure lascialo vuoto
+            invalid_for_country_informative: Il codice postale non è valido per la
+              Nigeria

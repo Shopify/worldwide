@@ -8,87 +8,137 @@ sv:
             default: Företag
             optional: Företag (valfritt)
           errors:
-            blank: Ange ett företagsnamn
-            too_long: Företagsnamnet är för långt (max 255 tecken)
-            contains_html_tags: Företag får inte innehålla HTML-taggar.
-            contains_emojis: Företag får inte innehålla emojis
-            contains_mathematical_symbols: Företag får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Företag får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
+            blank_instructional: Ange ett företag
+            blank_informative: Företag saknas
+            too_long_instructional: Företag är för långt (max. 255 tecken)
+            too_long_informative: Företag är för långt
+            contains_emojis_instructional: Företag får inte innehålla emojis
+            contains_emojis_informative: Företag får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Företag får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Företag får inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Företag får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Företag får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Företag får inte innehålla HTML
+            contains_html_tags_informative: Företag får inte innehålla HTML
         first_name:
           label:
             default: Förnamn
             optional: Förnamn (valfritt)
           errors:
-            blank: Ange ett förnamn
-            too_long: Förnamnet är för långt (max 255 tecken)
-            contains_html_tags: Förnamn får inte innehålla HTML-taggar.
-            contains_emojis: Förnamn får inte innehålla emojis
-            contains_url: Förnamn får inte innehålla en URL.
-            contains_mathematical_symbols: Förnamn får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Förnamn får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
+            blank_instructional: Ange ett förnamn
+            blank_informative: Förnamn saknas
+            too_long_instructional: Förnamn är för långt (max. 255 tecken)
+            too_long_informative: Förnamn är för långt
+            contains_emojis_instructional: Förnamn får inte innehålla emojis
+            contains_emojis_informative: Förnamn får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Förnamn får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Förnamn får inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Förnamn får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Förnamn får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Förnamn får inte innehålla HTML
+            contains_html_tags_informative: Förnamn får inte innehålla HTML
+            contains_url_instructional: Förnamn får inte innehålla en URL
+            contains_url_informative: Förnamn får inte innehålla en URL
         last_name:
           label:
             default: Efternamn
             optional: Efternamn (valfritt)
           errors:
-            blank: Ange ett efternamn
-            too_long: Efternamnet är för långt (max 255 tecken)
-            contains_html_tags: Efternamn får inte innehålla HTML-taggar.
-            contains_emojis: Efternamn får inte innehålla emojis
-            contains_url: Efternamn får inte innehålla en URL.
-            contains_mathematical_symbols: Efternamn får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Efternamn får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
+            blank_instructional: Ange ett efternamn
+            blank_informative: Efternamn saknas
+            too_long_instructional: Efternamn är för långt (max. 255 tecken)
+            too_long_informative: Efternamn är för långt
+            contains_emojis_instructional: Efternamn får inte innehålla emojis
+            contains_emojis_informative: Efternamn får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Efternamn får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Efternamn får inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Efternamn får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Efternamn får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Efternamn får inte innehålla HTML
+            contains_html_tags_informative: Efternamn får inte innehålla HTML
+            contains_url_instructional: Efternamn får inte innehålla en URL
+            contains_url_informative: Efternamn får inte innehålla en URL
         address1:
           label:
             default: Adress
             optional: Adress (valfritt)
-          errors:
-            blank: Ange en adress
-            too_long: Den första adressraden är för lång (max 255 tecken)
-            contains_html_tags: Adress 1 får inte innehålla HTML-taggar.
-            contains_emojis: Adress 1 får inte innehålla emojis
-            contains_url: Adress1 får inte innehålla URL:er.
-            missing_building_number: Lägg till ett husnummer om du har ett.
-            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
-            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
-              %{zip}.
-            contains_mathematical_symbols: Adressrad 1 får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Adress1 får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
-            contains_too_many_words: Adress1 får inte innehålla fler än %{word_count}
-              ord
-            unknown_for_address: Adressrad 1 kan vara felaktig.
           warnings:
             contains_too_many_words: Vi rekommenderar att adressrad 1 består av färre
               än %{word_count} ord
+          errors:
+            blank_instructional: Ange en adress
+            blank_informative: Adress saknas
+            too_long_instructional: Den första adressraden är för lång (max. 255 tecken)
+            too_long_informative: Den första adressraden är för lång
+            contains_emojis_instructional: Adress får inte innehålla emojis
+            contains_emojis_informative: Adress får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Adress får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Adress får inte innehålla matematiska
+              symboler
+            contains_restricted_characters_instructional: Adress får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Adress får inte innehålla
+              begränsade tecken
+            contains_too_many_words_instructional: Adress måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Adress måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Adress får inte innehålla HTML
+            contains_html_tags_informative: Adress får inte innehålla HTML
+            contains_url_instructional: Adress får inte innehålla en URL
+            contains_url_informative: Adress får inte innehålla en URL
+            missing_building_number_instructional: Lägg till ett husnummer om du har
+              ett
+            missing_building_number_informative: Husnummer kan saknas
+            street_unknown_for_zip_instructional: Ange ett giltigt gatunamn för %{zip}
+            street_unknown_for_zip_informative: Gatunamnet matchar inte %{zip}
+            building_number_invalid_instructional: Vi kunde inte hitta husnumret för
+              %{street}, %{zip}
+            building_number_invalid_informative: Vi kunde inte hitta husnumret för
+              %{street}, %{zip}
+            unknown_for_address_instructional: Adressrad 1 kan vara felaktig
+            unknown_for_address_informative: Adressrad 1 kan vara felaktig
         address2:
           label:
-            default: Lägenhetsnummer, våning etc.
-            optional: Lägenhetsnummer, våning etc. (valfritt)
+            default: Lägenhet, trappa osv.
+            optional: Lägenhet, trappa osv. (valfritt)
           errors:
-            blank: Ange lägenhet, trappa etc.
-            too_long: Den andra adressraden är för lång (max 255 tecken)
-            contains_html_tags: Adress 2 får inte innehålla HTML-taggar.
-            contains_emojis: Adress 2 får inte innehålla emojis
-            contains_url: Adress2 får inte innehålla URL:er.
-            missing_building_number: Lägg till ett husnummer om du har ett.
-            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
-            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
-              %{zip}.
+            contains_html_tags: Adressrad 2 får inte innehålla HTML
+            contains_emojis: Adressrad 2 får inte innehålla emojis
+            contains_url: Adressrad 2 får inte innehålla en URL
             contains_mathematical_symbols: Adressrad 2 får inte innehålla matematiska
               symboler
-            contains_restricted_characters: Adress2 får endast innehålla bokstäver,
+            contains_restricted_characters: Adressrad 2 får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
-            contains_too_many_words: Adress2 får inte innehålla fler än %{word_count}
+            contains_too_many_words: Adressrad 2 får inte ha mer än %{word_count}
               ord
-            unknown_for_address: Adressrad 2 kan vara felaktig.
+            unknown_for_address: Adressrad 2 kan vara felaktig
+            blank_instructional: Ange lägenhet, trappa osv.
+            blank_informative: Lägenhet eller våning saknas
+            too_long_instructional: Adressrad 2 är för lång (högst 255 tecken)
+            too_long_informational: Adressrad 2 är för lång
+            missing_building_number_instructional: Lägg till ett husnummer om du har
+              ett
+            missing_building_number_informative: Husnummer kan saknas
+            street_unknown_for_zip_instructional: Ange ett giltigt gatunamn för %{zip}
+            street_unknown_for_zip_informative: Gatunamnet är ogiltigt för %{zip}
+            building_number_invalid_instructional: Vi kunde inte hitta husnumret för
+              %{street}, %{zip}
+            building_number_invalid_informative: Vi kunde inte hitta husnumret för
+              %{street}, %{zip}
           warnings:
             contains_too_many_words: Vi rekommenderar att adressrad 2 består av färre
               än %{word_count} ord
@@ -97,121 +147,176 @@ sv:
             default: Stad
             optional: Stad (valfritt)
           errors:
-            blank: Ange en stad
             too_long: Stadsnamnet är för långt (max 255 tecken)
-            contains_html_tags: Stad får inte innehålla HTML-taggar.
+            contains_html_tags: Stad får inte innehålla HTML
             contains_emojis: Stad får inte innehålla emojis
             contains_url: Stad får inte innehålla en URL
-            unknown_for_zip: Ange en giltig stad för %{zip}
-            unknown_for_province: Ange en giltig stad för %{province}
-            unknown_for_zip_and_province: Ange en giltig stad för %{zip}, %{province}
             contains_mathematical_symbols: Stad får inte innehålla matematiska symboler
             contains_restricted_characters: Stad får endast innehålla bokstäver, siffror,
               lokala tecken och specialtecken
             contains_too_many_words: Stad får inte innehålla fler än %{word_count}
               ord
-            unknown_for_address: Staden kan vara felaktig.
+            unknown_for_address: Staden kan vara felaktig
+            blank_instructional: Ange en stad
+            blank_informative: Stad saknas
+            unknown_for_zip_instructional: Ange en giltig stad för %{zip}
+            unknown_for_zip_informative: Stad matchar inte %{zip}
+            unknown_for_province_instructional: Ange en giltig stad för %{province}
+            unknown_for_province_informative: Stad matchar inte %{province}
+            unknown_for_zip_and_province_instructional: Ange en giltig stad för %{zip},
+              %{province}
+            unknown_for_zip_and_province_informative: Staden kan vara felaktig
         country:
           label:
             default: Land/Region
             optional: Land/Region (valfritt)
           errors:
-            blank: Välj ett land/en region
-            not_supported: Vi stöder för närvarande inte landet/regionen. Ange en
-              ny adress och försök igen.
-            invalid: Ange ett giltigt land/en giltig region
-            invalid_for_zip: Ange ett giltigt land/en giltig region för det här postnumret
+            blank_instructional: Välj land/region
+            blank_informative: Land/region saknas
+            not_supported_instructional: Land/region stöds inte
+            not_supported_informative: Land/region stöds inte
+            invalid_instructional: Ange ett giltigt land/en giltig region
+            invalid_informative: Land/region är inte giltigt/giltig
+            invalid_for_zip_instructional: Ange ett giltigt land/en giltig region
+              för det här postnumret
+            invalid_for_zip_informative: "%{country} matchar inte land/region"
         phone:
           label:
             default: Telefon
             optional: Telefon (valfritt)
           errors:
-            blank: Ange ett telefonnummer
-            invalid: Ange ett giltigt telefonnummer
-            too_long: Telefonnumret är för långt (max 255 tecken)
             contains_emojis: Telefonnummer får inte innehålla emojis
             contains_mathematical_symbols: Telefonnummer får inte innehålla matematiska
               symboler
             contains_restricted_characters: Telefonnummer får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
+            blank_instructional: Ange ett telefonnummer
+            blank_informative: Telefonnummer saknas
+            invalid_instructional: Ange ett giltigt telefonnummer
+            invalid_informative: Telefonnumret är ogiltigt
+            too_long_instructional: Telefonnumret är för långt
+            too_long_informative: Telefonnumret är för långt
         province:
           label:
             default: Region
             optional: Region (valfritt)
           errors:
-            blank: Välj region
-            invalid: Ange en giltig region
-            invalid_for_country: Ange en giltig region för %{country}
-            unknown_for_city_and_zip: Ange en giltig region för %{city}, %{zip}
-            unknown_for_city: Ange en giltig region för %{city}
-            unknown_for_zip: Ange en giltig region för %{zip}
-            unknown_for_address: Regionen kan vara felaktig.
+            unknown_for_address: Regionen kan vara felaktig
+            blank_instructional: Välj en region
+            blank_informative: Region saknas
+            invalid_instructional: Välj en region
+            invalid_informative: Region saknas
+            invalid_for_country_instructional: Ange en giltig region för %{country}
+            invalid_for_country_informative: Regionen matchar inte %{country}
+            unknown_for_city_and_zip_instructional: Ange en giltig region för %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Regionen matchar inte %{city}, %{zip}
+            unknown_for_city_informative: Välj en giltig region för %{city}
+            unknown_for_city_instructional: Regionen matchar inte %{city}
+            unknown_for_zip_instructional: Välj en giltig region för %{zip}
+            unknown_for_zip_informative: Regionen matchar inte %{zip}
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            blank: Ange ett postnummer
-            blocked_address: Platsen stöds inte.
-            invalid_for_country: Ange ett giltigt postnummer för %{country}
-            invalid_for_country_and_province: Ange ett giltigt postnummer för %{province},
-              %{country}
-            invalid: Ange giltigt postnummer
+            blocked_address: Platsen stöds inte
             too_long: Postnumret är för långt
-            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
+            contains_html_tags: Postnummer får inte innehålla HTML
             contains_emojis: Postnummer får inte innehålla emojis
-            not_supported: Vi stöder för närvarande inte landet/regionen. Ange en
-              ny adress och försök igen.
-            unknown_for_province: Ange ett giltigt postnummer för %{province}
             contains_mathematical_symbols: Postnummer får inte innehålla matematiska
               symboler
             contains_restricted_characters: Postnummer får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
-            invalid_for_province: Ange ett giltigt postnummer för %{province}
-            unknown_for_address: Postnumret kan vara felaktigt.
+            unknown_for_address: Postnumret kan vara felaktigt
+            blank_instructional: Ange ett postnummer
+            blank_informative: Postnummer saknas
+            invalid_instructional: Ange ett giltigt postnummer
+            invalid_informative: Postnumret är ogiltigt
+            invalid_for_country_instructional: Ange ett giltigt postnummer för %{country}
+            invalid_for_country_informative: Postnumret matchar inte %{country}
+            invalid_for_province_instructional: Ange ett giltigt postnummer för %{province}
+            invalid_for_province_informative: Postnumret matchar inte %{province}
+            invalid_for_country_and_province_instructional: Ange ett giltigt postnummer
+              för %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnumret matchar inte
+              %{province}, %{country}
+            not_supported_instructional: Postnumret stöds inte. Ange en ny adress
+              och försök igen
+            not_supported_informativel: Postnumret stöds inte
+            unknown_for_province_instructional: Ange ett giltigt postnummer för %{province}
+            unknown_for_province_informative: Postnumret är ogiltigt för %{province}
         address:
           errors:
             address_may_not_exist: Adressen hittades inte eller finns inte
+            may_not_exist_instructional: Adressen hittades inte eller finns inte
+            may_not_exist_informative: Adress hittades inte
         street_name:
           label:
             default: Gata
             optional: Gata (valfritt)
-          errors:
-            blank: Ange ett gatunamn
-            too_long: Gatunamnet är för långt (max. 255 tecken)
-            contains_emojis: Gata får inte innehålla emojier
-            contains_mathematical_symbols: Gata får inte innehålla matematiska symboler
-            contains_restricted_characters: Gata får endast innehålla bokstäver, siffror,
-              lokala tecken och specialtecken
-            contains_too_many_words: Gata får inte innehålla fler än %{word_count}
-              ord
-            contains_html_tags: Gata får inte innehålla HTML-taggar.
-            contains_url: Gata får inte innehålla URL:er.
-            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
-            unknown_for_address: Gatan kan vara felaktig.
           warnings:
             contains_too_many_words: Vi rekommenderar att gatan består av färre än
               %{word_count} ord
+          errors:
+            blank_instructional: Ange en gata
+            blank_informative: Gata saknas
+            too_long_instructional: Gata är för lång (max. 255 tecken)
+            too_long_informative: Gata är för lång
+            contains_emojis_instructional: Gata får inte innehålla emojis
+            contains_emojis_informative: Gata får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Gata får inte innehålla matematiska
+              symboler
+            contains_mathematical_symbols_informative: Gata får inte innehålla matematiska
+              symboler
+            contains_restricted_characters_instructional: Gata får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Gata får inte innehålla begränsade
+              tecken
+            contains_too_many_words_instructional: Gata får inte innehålla fler än
+              %{word_count} ord
+            contains_too_many_words_informational: Gata får inte innehålla fler än
+              %{word_count} ord
+            contains_html_tags_instructional: Gata får inte innehålla HTML
+            contains_html_tags_informational: Gata får inte innehålla HTML
+            contains_url_instructional: Gata får inte innehålla en URL
+            contains_url_informative: Gata får inte innehålla en URL
+            street_unknown_for_zip_instructional: Ange en giltig gata för %{zip}
+            street_unknown_for_zip_informative: Gata ogiltig för %{zip}
+            unknown_for_address_instructional: Gata kan vara felaktig
+            unknown_for_address_informative: Gata kan vara felaktig
         street_number:
           label:
             default: Husnummer
             optional: Husnummer (valfritt)
-          errors:
-            blank: Ange ett husnummer
-            too_long: Husnumret är för långt (max. 255 tecken)
-            contains_emojis: Husnummer får inte innehålla emojier
-            contains_mathematical_symbols: Husnummer får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Husnummer får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
-            contains_html_tags: Husnummer får inte innehålla HTML-taggar.
-            contains_url: Husnummer får inte innehålla URL:er.
-            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
-              %{zip}.
-            unknown_for_address: Husnumret kan vara felaktigt.
           warnings:
             contains_too_many_words: Vi rekommenderar att husnumret består av färre
               än %{word_count} ord
+          errors:
+            blank_instructional: Ange ett husnummer
+            blank_informative: Husnummer saknas
+            too_long_instructional: Husnummer är för långt (max. 255 tecken)
+            too_long_informative: Husnummer är för långt
+            contains_emojis_instructional: Husnummer får inte innehålla emojis
+            contains_emojis_informative: Husnummer får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Husnummer får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Husnummer får inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Husnummer får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Husnummer får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Husnummer får inte innehålla HTML
+            contains_html_tags_informative: Husnummer får inte innehålla HTML
+            contains_url_instructional: Husnummer får inte innehålla en URL
+            contains_url_informative: Husnummer får inte innehålla en URL
+            building_number_invalid_instructional: Vi kunde inte hitta husnumret för
+              %{street}, %{zip}
+            building_number_invalid_informative: Vi kunde inte hitta husnumret för
+              %{street}, %{zip}
+            unknown_for_address_instructional: Ange ett giltigt husnummer
+            unknown_for_address_informative: Husnumret är ogiltigt
         neighborhood:
           label:
             default: Område
@@ -225,11 +330,11 @@ sv:
               siffror, lokala tecken och specialtecken
             contains_too_many_words: Område får inte innehålla fler än %{word_count}
               ord
-            contains_html_tags: Område får inte innehålla HTML-taggar.
-            contains_url: Område får inte innehålla URL:er.
-            unknown_for_city: Ange ett giltigt områdesnamn för %{city}.
-            unknown_for_zip: Ange ett giltigt områdesnamn för %{zip}.
-            unknown_for_address: Området kan vara felaktigt.
+            contains_html_tags: Område får inte innehålla HTML-taggar
+            contains_url: Område får inte innehålla URL:er
+            unknown_for_city: Ange ett giltigt områdesnamn för %{city}
+            unknown_for_zip: Ange ett giltigt områdesnamn för %{zip}
+            unknown_for_address: Området kan vara felaktigt
           warnings:
             contains_too_many_words: Vi rekommenderar att området består av färre
               än %{word_count} ord

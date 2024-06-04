@@ -8,26 +8,52 @@ sl:
             default: Zvezna država
             optional: Zvezna država (izbirno)
           errors:
-            blank: Izberite zvezno državo
-            invalid_for_country: Vnesite veljavno zvezno državo za %{country}
-            unknown_for_city_and_zip: Vnesite veljavno zvezno državo za %{city}, %{zip}
-            unknown_for_city: Izberite veljavno zvezno državo za %{city}
-            unknown_for_zip: Izberite veljavno zvezno državo za %{zip}
-            unknown_for_address: Država morda ni pravilna.
+            unknown_for_address: Država morda ni pravilna
+            blank_instructional: Izberite državo
+            blank_informative: Vnesite državo
+            invalid_for_country_instructional: Vnesite veljavno državo za kraj %{city},
+              %{zip}
+            invalid_for_country_informative: Država ni veljavna
+            unknown_for_city_and_zip_instructional: Vnesite veljavno državo za kraj
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Država ni veljavna za kraj %{city},
+              %{zip}
+            unknown_for_city_instructional: Izberite veljavno državo za poštno številko
+              %{city}
+            unknown_for_city_informative: Država ni veljavna za kraj %{city}
+            unknown_for_zip_instructional: Izberite veljavno državo za poštno številko
+              %{zip}
+            unknown_for_zip_informative: Država ni veljavna za poštno številko %{zip}
         zip:
           label:
             default: Poštna številka
             optional: Poštna številka (izbirno)
           errors:
-            blank: Vnesite poštno številko
-            invalid_for_country: Vnesite veljavno poštno številko za državo %{country}
-            invalid_for_country_and_province: Vnesite veljavno poštno številko za
-              območje %{province}, %{country}
-            too_long: Poštna številka je predolga
-            contains_html_tags: Poštna številka ne sme vsebovati oznak HTML.
-            contains_emojis: Poštna številka ne sme vsebovati čustvenih simbolov
-            contains_restricted_characters: Poštna številka ne sme vsebovati prepovedanih
-              znakov
-            invalid_for_province: Vnesite veljavno poštno številko za zvezno državo
+            unknown_for_address: Poštna številka morda ni pravilna
+            blank_instructional: Vnesite poštno številko
+            blank_informative: Manjka poštna številka
+            invalid_for_country_instructional: Vnesite veljavno poštno številko za
+              državo %{country}
+            invalid_for_country_informative: Poštna številka ni veljavna za državo
+              %{country}
+            invalid_for_province_instructional: Vnesite veljavno poštno številko za
+              provinco %{province}
+            invalid_for_province_informative: Poštna številka ni veljavna za provinco
               %{province}
-            unknown_for_address: Poštna številka morda ni pravilna.
+            invalid_for_country_and_province_instructional: Vnesite veljavno poštno
+              številko za provinco %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštna številka ni veljavna
+              za provinco %{province}, %{country}
+            too_long_instructional: Poštna številka je predolga
+            too_long_informative: Poštna številka je predolga (največje dovoljeno
+              št. znakov je 255)
+            contains_emojis_instructional: Poštna številka ne sme vsebovati čustvenih
+              simbolov
+            contains_emojis_informative: Poštna številka ne sme vsebovati čustvenih
+              simbolov
+            contains_restricted_characters_instructional: Poštna številka ne sme vsebovati
+              prepovedanih znakov
+            contains_restricted_characters_informative: Poštna številka ne sme vsebovati
+              prepovedanih znakov
+            contains_html_tags_instructional: Koda PIN ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Koda PIN ne sme vsebovati oznak HTML

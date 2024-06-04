@@ -8,9 +8,15 @@ hi:
             default: जिला
             optional: जिला (वैकल्पिक)
           errors:
-            blank: कोई जिला दर्ज करें
-            too_long: जिला का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: जिला के फ़ील्ड में HTML टैग नहीं हो सकते.
-            contains_emojis: जिला फ़ील्ड में इमोजी नहीं हो सकते
-            contains_restricted_characters: जिला के नाम में कैरेक्टर सीमित नहीं हो
-              सकते
+            blank_instructional: किसी जिला का नाम डालें
+            blank_informative: जिला का नाम गुम है
+            too_long_instructional: जिला का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            too_long_informative: जिला का नाम बहुत लंबा है
+            contains_emojis_instructional: जिला के नाम में इमोजी नहीं हो सकते
+            contains_emojis_informative: जिला के नाम में इमोजी नहीं हो सकते
+            contains_restricted_characters_instructional: जिला के नाम में निषिद्ध
+              कैरेक्टर नहीं हो सकते
+            contains_restricted_characters_informative: जिला के नाम में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_html_tags_instructional: जिला के नाम में HTML नहीं हो सकता
+            contains_html_tags_informative: जिला के नाम में HTML नहीं हो सकता

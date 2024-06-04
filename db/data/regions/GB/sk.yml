@@ -8,13 +8,27 @@ sk:
             default: Poštové smerovacie číslo
             optional: Poštové smerovacie číslo (voliteľné)
           errors:
-            blank: Zadajte poštové smerovacie číslo
-            invalid_for_country: Zadajte platné poštové smerovacie číslo pre Spojené
-              kráľovstvo
-            invalid_for_country_and_province: 'Zadajte platné poštové smerovacie číslo
-              pre: %{province}, Spojené kráľovstvo'
-            too_long: Hodnota poštového smerovacieho čísla je príliš dlhá
-            contains_html_tags: Poštové smerovacie číslo nemôže obsahovať HTML značky.
-            contains_emojis: Poštové smerovacie číslo nemôže obsahovať emotikony
-            contains_restricted_characters: Poštové smerovacie číslo nemôže obsahovať
-              zakázané znaky
+            blank_instructional: Zadajte poštové smerovacie číslo
+            blank_informative: Chýba poštové smerovacie číslo
+            invalid_for_country_instructional: Zadajte platné poštové smerovacie číslo
+              pre Spojené kráľovstvo
+            invalid_for_country_informative: Poštové smerovacie číslo je neplatné
+              pre Spojené kráľovstvo
+            invalid_for_country_and_province_instructional: Zadajte platné poštové
+              smerovacie číslo pre provinciu %{province}, Spojené kráľovstvo
+            invalid_for_country_and_province_informative: Poštové smerovacie číslo
+              je neplatné pre provinciu %{province}, Spojené kráľovstvo
+            too_long_instructional: Poštové smerovacie číslo je príliš dlhé
+            too_long_informative: Poštové smerovacie číslo je príliš dlhé
+            contains_emojis_instructional: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_emojis_informative: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_restricted_characters_instructional: Poštové smerovacie číslo
+              nemôže obsahovať zakázané znaky
+            contains_restricted_characters_informative: Poštové smerovacie číslo môže
+              obsahovať len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_html_tags_instructional: Poštové smerovacie číslo nemôže obsahovať
+              HTML
+            contains_html_tags_informative: Poštové smerovacie číslo nemôže obsahovať
+              HTML

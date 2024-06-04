@@ -8,85 +8,139 @@ nb:
             default: Bedrift
             optional: Bedrift (valgfritt)
           errors:
-            blank: Angi et bedriftsnavn
-            too_long: Firmanavnet er for langt (maksimalt 255 tegn)
-            contains_html_tags: Bedrift kan ikke inneholde HTML-tagger.
-            contains_emojis: Bedrift kan ikke inneholde emojier
-            contains_mathematical_symbols: Bedrift kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Bedrift kan kun inneholde bokstaver, tall,
-              lokale tegn og spesialtegn
+            blank_instructional: Angi et firmanavn
+            blank_informative: Firmanavnet mangler
+            too_long_instructional: Firmanavnet er for langt (maksimalt 255 tegn)
+            too_long_informative: Firmanavnet er for langt
+            contains_emojis_instructional: Firmanavnet kan ikke inneholde emojier
+            contains_emojis_informative: Firmanavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Firmanavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Firmanavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Firmanavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Firmanavnet kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: Firmanavnet kan ikke inneholde HTML
+            contains_html_tags_informative: Firmanavnet kan ikke inneholde HTML
         first_name:
           label:
             default: Fornavn
             optional: Fornavn (valgfritt)
           errors:
-            blank: Angi et fornavn
-            too_long: Fornavnet er for langt (maksimalt 255 tegn)
-            contains_html_tags: Fornavnet kan ikke inneholde HTML-tagger.
-            contains_emojis: Fornavn kan ikke inneholde emojier
-            contains_url: Fornavn kan ikke inneholde en URL-adresse.
-            contains_mathematical_symbols: Fornavn kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Fornavn kan kun inneholde bokstaver, tall,
-              lokale tegn og spesialtegn
+            blank_instructional: Skriv inn et fornavn
+            blank_informative: Fornavnet mangler
+            too_long_instructional: Fornavnet er for langt (maksimalt 255 tegn)
+            too_long_informative: Fornavnet er for langt
+            contains_emojis_instructional: Fornavnet kan ikke inneholde emojier
+            contains_emojis_informative: Fornavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Fornavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Fornavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Fornavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Fornavnet kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: Fornavnet kan ikke inneholde HTML
+            contains_html_tags_informative: Fornavnet kan ikke inneholde HTML
+            contains_url_instructional: Fornavnet kan ikke inneholde URL-adresser
+            contains_url_informative: Fornavnet kan ikke inneholde URL-adresser
         last_name:
           label:
             default: Etternavn
             optional: Etternavn (valgfritt)
           errors:
-            blank: Angi et etternavn
-            too_long: Etternavnet er for langt (maksimalt 255 tegn)
-            contains_html_tags: Etternavnet kan ikke inneholde HTML-tagger.
-            contains_emojis: Etternavn kan ikke inneholde emojier
-            contains_url: Etternavn kan ikke inneholde en URL-adresse.
-            contains_mathematical_symbols: Etternavn kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Etternavn kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
+            blank_instructional: Skriv inn et etternavn
+            blank_informative: Etternavnet mangler
+            too_long_instructional: Etternavnet er for langt (maksimalt 255 tegn)
+            too_long_informative: Etternavnet er for langt
+            contains_emojis_instructional: Etternavnet kan ikke inneholde emojier
+            contains_emojis_informative: Etternavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Etternavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Etternavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Etternavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Etternavnet kan ikke inneholde
+              begrensede tegn
+            contains_html_tags_instructional: Etternavnet kan ikke inneholde HTML
+            contains_html_tags_informative: Etternavnet kan ikke inneholde HTML
+            contains_url_instructional: Etternavnet kan ikke inneholde URL-adresser
+            contains_url_informative: Etternavnet kan ikke inneholde URL-adresser
         address1:
           label:
             default: Adresse
             optional: Adresse (valgfritt)
-          errors:
-            blank: Angi en adresse
-            too_long: Den første adresselinjen er for lang (maksimalt 255 tegn)
-            contains_html_tags: Adresse1 kan ikke inneholde HTML-tagger.
-            contains_emojis: Adresse1 kan ikke inneholde emojier
-            contains_url: Adresse1 kan ikke inneholde URL-adresser.
-            missing_building_number: Legg til et bygningsnummer hvis du har et.
-            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
-            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
-            contains_mathematical_symbols: Address1 kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Adresse1 kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Adresse1 kan ikke inneholde mer enn %{word_count}
-              ord
-            unknown_for_address: Adresselinje 1 kan være feil.
           warnings:
             contains_too_many_words: Det anbefales at adresselinje 1 inneholder færre
               enn %{word_count} ord
+          errors:
+            blank_instructional: Skriv inn en adresse
+            blank_informative: Adressen mangler
+            too_long_instructional: Den første adresselinjen er for lang (maksimalt
+              255 tegn)
+            too_long_informative: Den første adresselinjen er for lang
+            contains_emojis_instructional: Adressen kan ikke inneholde emojier
+            contains_emojis_informative: Adressen kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Adressen kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Adressen kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Adressen kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Adressen kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Adressen må bestå av færre enn
+              %{word_count} ord
+            contains_too_many_words_informative: Adressen må bestå av færre enn %{word_count}
+              ord
+            contains_html_tags_instructional: Adressen kan ikke inneholde HTML
+            contains_html_tags_informative: Adressen kan ikke inneholde HTML
+            contains_url_instructional: Adressen kan ikke inneholde en URL-adresse
+            contains_url_informative: Adressen kan ikke inneholde en URL-adresse
+            missing_building_number_instructional: Legg til et bygningsnummer hvis
+              du har et
+            missing_building_number_informative: Det kan hende bygningsnummeret mangler
+            street_unknown_for_zip_instructional: Oppgi et gyldig gatenavn for %{zip}
+            street_unknown_for_zip_informative: Gatenavnet samsvarer ikke med %{zip}
+            building_number_invalid_instructional: Fant ikke bygningsnummeret for
+              %{street} %{zip}
+            building_number_invalid_informative: Fant ikke bygningsnummeret for %{street}
+              %{zip}
+            unknown_for_address_instructional: Den første adresselinjen kan være feil
+            unknown_for_address_informative: Den første adresselinjen kan være feil
         address2:
           label:
             default: Leilighet, etasje osv.
-            optional: Leilighet, etasje osv. (valgfritt)
+            optional: Leilighet, suite, osv. (valgfritt)
           errors:
-            blank: Angi en leilighet, suite, osv.
-            too_long: Den andre adresselinjen er for lang (maksimalt 255 tegn)
-            contains_html_tags: Adresse2 kan ikke inneholde HTML-tagger.
-            contains_emojis: Adresse2 kan ikke inneholde emojier
-            contains_url: Adresse2 kan ikke inneholde URL-adresser.
-            missing_building_number: Legg til et bygningsnummer hvis du har et.
-            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
-            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
-            contains_mathematical_symbols: Address2 kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Adresse2 kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Adresse2 kan ikke inneholde mer enn %{word_count}
-              ord
-            unknown_for_address: Adresselinje 2 kan være feil.
+            contains_html_tags: Den andre adresselinjen kan ikke inneholde HTML
+            contains_emojis: Den andre adresselinjen kan ikke inneholde emojier
+            contains_url: Den andre adresselinjen kan ikke inneholde en URL-adresse
+            contains_mathematical_symbols: Den andre adresselinjen kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters: Den andre adresselinjen kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_too_many_words: Den andre adresselinjen kan ikke bestå av mer
+              enn %{word_count} ord
+            unknown_for_address: Den andre adresselinjen kan være feil
+            blank_instructional: Angi en leilighet, etasje, osv.
+            blank_informative: Leilighet eller suite mangler
+            too_long_instructional: Den andre adresselinjen er for lang (maksimalt
+              255 tegn)
+            too_long_informational: Den andre adresselinjen er for lang
+            missing_building_number_instructional: Legg til et bygningsnummer hvis
+              du har et
+            missing_building_number_informative: Det kan hende bygningsnummeret mangler
+            street_unknown_for_zip_instructional: Oppgi et gyldig gatenavn for %{zip}
+            street_unknown_for_zip_informative: Gatenavnet er ugyldig for %{zip}
+            building_number_invalid_instructional: Fant ikke bygningsnummeret for
+              %{street} %{zip}
+            building_number_invalid_informative: Fant ikke bygningsnummeret for %{street}
+              %{zip}
           warnings:
             contains_too_many_words: Det anbefales at adresselinje 2 inneholder færre
               enn %{word_count} ord
@@ -95,121 +149,177 @@ nb:
             default: By
             optional: By (valgfritt)
           errors:
-            blank: Angi en by
             too_long: Poststed er for langt (maksimalt 255 tegn)
-            contains_html_tags: Poststed kan ikke inneholde HTML-tagger.
-            contains_emojis: Poststed kan ikke inneholde emojier
-            contains_url: Poststed kan ikke inneholde en URL-adresse
-            unknown_for_zip: Skriv inn et gyldig poststed for %{zip}
-            unknown_for_province: Skriv inn et gyldig poststed for %{province}
-            unknown_for_zip_and_province: Skriv inn et gyldig poststed for %{zip},
-              %{province}
-            contains_mathematical_symbols: By kan ikke inneholde matematiske symboler
+            contains_html_tags: Poststedet kan ikke inneholde HTML
+            contains_emojis: Poststedet kan ikke inneholde emojier
+            contains_url: Poststedet kan ikke inneholde en URL-adresse
+            contains_mathematical_symbols: Poststedet kan ikke inneholde matematiske
+              symboler
             contains_restricted_characters: By kan kun inneholde bokstaver, tall,
               lokale tegn og spesialtegn
-            contains_too_many_words: By kan ikke inneholde mer enn %{word_count} ord
-            unknown_for_address: Poststedet kan være feil.
+            contains_too_many_words: Poststedet kan ikke bestå av mer enn %{word_count}
+              ord
+            unknown_for_address: Poststedet kan være feil
+            blank_instructional: Skriv inn en by
+            blank_informative: Poststed mangler
+            unknown_for_zip_instructional: Skriv inn et gyldig poststed for %{zip}
+            unknown_for_zip_informative: Poststedet samsvarer ikke med %{zip}
+            unknown_for_province_instructional: Skriv inn et gyldig poststed for %{province}
+            unknown_for_province_informative: Poststedet samsvarer ikke med %{province}
+            unknown_for_zip_and_province_instructional: Skriv inn et gyldig poststed
+              for %{zip}, %{province}
+            unknown_for_zip_and_province_informative: Poststedet kan være feil
         country:
           label:
             default: Land/region
             optional: Land/region (valgfritt)
           errors:
-            blank: Velg et land/område
-            not_supported: Vi støtter ikke dette landet/regionen for øyeblikket. Angi
-              en ny adresse og prøv på nytt.
-            invalid: Skriv inn et gyldig land/område
-            invalid_for_zip: Skriv inn et gyldig land / område for dette postnummeret
+            blank_instructional: Velg land/område
+            blank_informative: Land/område mangler
+            not_supported_instructional: Land/område støttes ikke
+            not_supported_informative: Land/område støttes ikke
+            invalid_instructional: Skriv inn et gyldig land/område
+            invalid_informative: Land/område er ugyldig
+            invalid_for_zip_instructional: Skriv inn et gyldig land / område for dette
+              postnummeret
+            invalid_for_zip_informative: "%{country} samsvarer ikke med landet/området"
         phone:
           label:
             default: Telefon
             optional: Telefon (valgfritt)
           errors:
-            blank: Angi et telefonnummer
-            invalid: Angi et gyldig telefonnummer
-            too_long: Telefonnummer er for langt (maksimalt 255 tegn)
-            contains_emojis: Telefonnummer kan ikke inneholde emojier
-            contains_mathematical_symbols: Telefonnummer kan ikke inneholde matematiske
+            contains_emojis: Telefonnummeret kan ikke inneholde emojier
+            contains_mathematical_symbols: Telefonnummeret kan ikke inneholde matematiske
               symboler
             contains_restricted_characters: Telefonnummer kan kun inneholde bokstaver,
               tall, lokale tegn og spesialtegn
+            blank_instructional: Angi et telefonnummer
+            blank_informative: Telefonnummer mangler
+            invalid_instructional: Angi et gyldig telefonnummer
+            invalid_informative: Telefonnummeret er ikke gyldig
+            too_long_instructional: Telefonnummeret er for langt
+            too_long_informative: Telefonnummeret er for langt
         province:
           label:
             default: Region
             optional: Region (valgfritt)
           errors:
-            blank: Velg et område
-            invalid: Angi et gyldig område
-            invalid_for_country: Skriv inn et gyldig område i %{country}
-            unknown_for_city_and_zip: Angi et gyldig område for %{city}, %{zip}
-            unknown_for_city: Velg et gyldig område for %{city}
-            unknown_for_zip: Velg et gyldig område for %{zip}
-            unknown_for_address: Området kan være feil.
+            unknown_for_address: Området kan være feil
+            blank_instructional: Velg et område
+            blank_informative: Område mangler
+            invalid_instructional: Velg et område
+            invalid_informative: Område mangler
+            invalid_for_country_instructional: Skriv inn et gyldig område i %{country}
+            invalid_for_country_informative: Området samsvarer ikke med %{country}
+            unknown_for_city_and_zip_instructional: Velg et gyldig område for %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Området samsvarer ikke med %{city},
+              %{zip}
+            unknown_for_city_informative: Velg et gyldig område for %{city}
+            unknown_for_city_instructional: Området samsvarer ikke med %{city}
+            unknown_for_zip_instructional: Velg et gyldig område for %{zip}
+            unknown_for_zip_informative: Området samsvarer ikke med %{zip}
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfritt)
           errors:
-            blank: Angi et postnummer
-            blocked_address: Denne lokalisasjonen støttes ikke.
-            invalid_for_country: Angi et gyldig postnummer for %{country}
-            invalid_for_country_and_province: Angi et gyldig postnummer for %{province},
-              %{country}
-            invalid: Angi et gyldig postnummer
-            too_long: Verdien for postnummer er for lang
-            contains_html_tags: Postnummeret kan ikke inneholde HTML-tagger.
-            contains_emojis: Postnummer kan ikke inneholde emojier
-            not_supported: Vi støtter ikke dette landet/regionen for øyeblikket. Angi
-              en ny adresse og prøv på nytt.
-            unknown_for_province: Angi et gyldig postnummer for %{province}
-            contains_mathematical_symbols: Postnummer kan ikke inneholde matematiske
+            blocked_address: Denne lokalisasjonen støttes ikke
+            too_long: Postnummeret er for langt
+            contains_html_tags: Postnummeret kan ikke inneholde HTML
+            contains_emojis: Postnummeret kan ikke inneholde emojier
+            contains_mathematical_symbols: Postnummeret kan ikke inneholde matematiske
               symboler
             contains_restricted_characters: Postnummer kan kun inneholde bokstaver,
               tall, lokale tegn og spesialtegn
-            invalid_for_province: Skriv inn et gyldig postnummer for %{province}
-            unknown_for_address: Postnummeret kan være feil.
-        address:
-          errors:
-            may_not_exist: Fant ikke adressen, eller så eksisterer den ikke
+            unknown_for_address: Postnummeret kan være feil
+            blank_instructional: Angi et postnummer
+            blank_informative: Postnummer mangler
+            invalid_instructional: Angi et gyldig postnummer
+            invalid_informative: Postnummeret er ikke gyldig
+            invalid_for_country_instructional: Skriv inn et gyldig postnummer for
+              %{country}
+            invalid_for_country_informative: Postnummeret samsvarer ikke med %{country}
+            invalid_for_province_instructional: Skriv inn et gyldig postnummer for
+              %{province}
+            invalid_for_province_informative: Postnummeret samsvarer ikke med %{province}
+            invalid_for_country_and_province_instructional: Angi et gyldig postnummer
+              for %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnummeret samsvarer ikke
+              med %{province}, %{country}
+            not_supported_instructional: Postnummeret støttes ikke. Angi en ny adresse
+              og prøv på nytt
+            not_supported_informativel: Postnummeret støttes ikke
+            unknown_for_province_instructional: Skriv inn et gyldig postnummer for
+              %{province}
+            unknown_for_province_informative: Postnummeret er ugyldig for %{province}
         street_name:
           label:
             default: Gate
             optional: Gate (valgfritt)
-          errors:
-            blank: Angi et gatenavn
-            too_long: Gatenavnet er for langt (maksimalt 255 tegn)
-            contains_emojis: Gatenavnet kan ikke inneholde emojier
-            contains_mathematical_symbols: Gatenavnet kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Gatenavnet kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Gatenavnet kan ikke inneholde mer enn %{word_count}
-              ord
-            contains_html_tags: Gatenavnet kan ikke inneholde HTML-tagger.
-            contains_url: Gatenavnet kan ikke inneholde URL-adresser.
-            street_unknown_for_zip: Oppgi et gyldig gatenavn for %{zip}.
-            unknown_for_address: Gaten kan være feil.
           warnings:
             contains_too_many_words: Vi anbefaler at gatenavnet inneholder færre enn
               %{word_count} ord
+          errors:
+            blank_instructional: Angi et gatenavn
+            blank_informative: Gatenavnet mangler
+            too_long_instructional: Gatenavnet er for langt (maksimalt 255 tegn)
+            too_long_informative: Gatenavnet er for langt
+            contains_emojis_instructional: Gatenavnet kan ikke inneholde emojier
+            contains_emojis_informative: Gatenavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Gatenavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Gatenavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Gatenavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Gatenavnet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Gatenavnet kan ikke bestå av mer
+              enn %{word_count} ord
+            contains_too_many_words_informational: Gatenavnet kan ikke bestå av mer
+              enn %{word_count} ord
+            contains_html_tags_instructional: Gatenavnet kan ikke inneholde HTML
+            contains_html_tags_informational: Gatenavnet kan ikke inneholde HTML
+            contains_url_instructional: Gatenavnet kan ikke inneholde en URL-adresse
+            contains_url_informative: Gatenavnet kan ikke inneholde en URL-adresse
+            street_unknown_for_zip_instructional: Skriv inn en gyldig gate for %{zip}
+            street_unknown_for_zip_informative: Gatenavnet er ugyldig for %{zip}
+            unknown_for_address_instructional: Gatenavnet kan være feil
+            unknown_for_address_informative: Gatenavnet kan være feil
         street_number:
           label:
             default: Bygningsnummer
             optional: Bygningsnummer (valgfritt)
-          errors:
-            blank: Angi et bygningsnummer
-            too_long: Bygningsnummeret er for langt (maksimalt 255 tegn)
-            contains_emojis: Bygningsnummeret kan ikke inneholde emojier
-            contains_mathematical_symbols: Bygningsnummeret kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Bygningsnummeret kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_html_tags: Bygningsnummeret kan ikke inneholde HTML-tagger.
-            contains_url: Bygningsnummeret kan ikke inneholde URL-adresser.
-            building_number_invalid: Fant ikke bygningsnummeret for %{street} %{zip}.
-            unknown_for_address: Bygningsnummeret kan være feil.
           warnings:
             contains_too_many_words: Vi anbefaler at bygningsnummeret inneholder færre
               enn %{word_count} ord
+          errors:
+            blank_instructional: Angi et bygningsnummer
+            blank_informative: Bygningsnummer mangler
+            too_long_instructional: Bygningsnummeret er for langt (maksimalt 255 tegn)
+            too_long_informative: Bygningsnummeret er for langt
+            contains_emojis_instructional: Bygningsnummeret kan ikke inneholde emojier
+            contains_emojis_informative: Bygningsnummeret kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Bygningsnummeret kan ikke
+              inneholde matematiske symboler
+            contains_mathematical_symbols_informative: Bygningsnummeret kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Bygningsnummeret kan kun
+              inneholde bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Bygningsnummeret kan ikke
+              inneholde begrensede tegn
+            contains_html_tags_instructional: Bygningsnummeret kan ikke inneholde
+              HTML
+            contains_html_tags_informative: Bygningsnummeret kan ikke inneholde HTML
+            contains_url_instructional: Bygningsnummeret kan ikke inneholde en URL-adresse
+            contains_url_informative: Bygningsnummeret kan ikke inneholde en URL-adresse
+            building_number_invalid_instructional: Fant ikke bygningsnummeret for
+              %{street} %{zip}
+            building_number_invalid_informative: Fant ikke bygningsnummeret for %{street}
+              %{zip}
+            unknown_for_address_instructional: Angi et gyldig bygningsnummer
+            unknown_for_address_informative: Bygningsnummeret er ugyldig
         neighborhood:
           label:
             default: Nabolag
@@ -222,13 +332,13 @@ nb:
               symboler
             contains_restricted_characters: Nabolagsnavnet kan bare inneholde bokstaver,
               tall, lokale tegn og spesialtegn
-            contains_too_many_words: Nabolagsnavnet kan ikke inneholde mer enn %{word_count}
+            contains_too_many_words: Nabolagsnavnet kan ikke bestå av mer enn %{word_count}
               ord
-            contains_html_tags: Nabolagsnavnet kan ikke inneholde HTML-tagger.
-            contains_url: Nabolagsnavnet kan ikke inneholde URL-adresser.
-            unknown_for_city: Angi et gyldig nabolagsnavn for %{city}.
-            unknown_for_zip: Angi et gyldig nabolagsnavn for %{zip}.
-            unknown_for_address: Nabolagsnavnet kan være feil.
+            contains_html_tags: Nabolagsnavnet kan ikke inneholde HTML-tagger
+            contains_url: Nabolagsnavnet kan ikke inneholde URL-adresser
+            unknown_for_city: Angi et gyldig nabolagsnavn for %{city}
+            unknown_for_zip: Angi et gyldig nabolagsnavn for %{zip}
+            unknown_for_address: Nabolagsnavnet kan være feil
           warnings:
             contains_too_many_words: Vi anbefaler at nabolagsnavnet inneholder færre
               enn %{word_count} ord
@@ -255,3 +365,7 @@ nb:
           warnings:
             contains_too_many_words: Vi anbefaler at den andre adresselinjen inneholder
               færre enn %{word_count} ord
+        address:
+          errors:
+            may_not_exist_instructional: Adressen ble ikke funnet, eller finnes ikke
+            may_not_exist_informative: Fant ikke adressen

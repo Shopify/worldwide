@@ -8,17 +8,24 @@ th:
             default: รัฐ
             optional: รัฐ (ไม่จำเป็น)
           errors:
-            blank: เลือกรัฐ
+            blank_instructional: เลือกรัฐ
+            blank_informative: ไม่พบรัฐ
         zip:
           label:
             default: รหัสพิน
             optional: รหัสพิน (ไม่จำเป็น)
           errors:
-            blank: ป้อนรหัส PIN
-            invalid_for_country: ป้อนรหัส PIN ใน %{country} ให้ถูกต้อง
-            invalid_for_country_and_province: ป้อนรหัส PIN ของ %{province} ใน %{country}
-              ให้ถูกต้อง
-            too_long: รหัส PIN ยาวเกินไป
-            contains_html_tags: ห้ามมีแท็ก HTML ในรหัสพิน
-            contains_emojis: ไม่สามารถใส่อิโมจิในรหัสพินได้
-            contains_restricted_characters: ไม่สามารถมีอักขระต้องห้ามในรหัสพินได้
+            blank_instructional: ป้อนรหัสพิน
+            blank_informative: ไม่พบรหัสพิน
+            invalid_for_country_instructional: ป้อนรหัสพินสำหรับ%{country}ให้ถูกต้อง
+            invalid_for_country_informative: รหัสพินไม่ถูกต้อง
+            invalid_for_country_and_province_instructional: ป้อนรหัสพินของ%{province}ใน%{country}ให้ถูกต้อง
+            invalid_for_country_and_province_informative: รหัสพินไม่ถูกต้อง
+            too_long_instructional: รหัสพินยาวเกินไป
+            too_long_informative: รหัสพินยาวเกินไป
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในรหัสพินได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในรหัสพินได้
+            contains_restricted_characters_instructional: ไม่สามารถใส่อักขระต้องห้ามในรหัสพินได้
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในรหัสพินได้
+            contains_html_tags_instructional: รหัสพินต้องไม่มี HTML
+            contains_html_tags_informative: รหัสพินต้องไม่มี HTML

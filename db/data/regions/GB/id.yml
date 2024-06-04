@@ -8,12 +8,22 @@ id:
             default: Kode pos
             optional: Kode pos (opsional)
           errors:
-            blank: Masukkan kode pos
-            invalid_for_country: Masukkan kode pos yang valid untuk Inggris
-            invalid_for_country_and_province: Masukkan kode pos yang valid untuk %{province},
+            blank_instructional: Masukkan kode pos
+            blank_informative: Kode pos belum diisi
+            invalid_for_country_instructional: Masukkan kode pos yang valid untuk
               Inggris
-            too_long: Nilai kode pos terlalu panjang
-            contains_html_tags: Kode pos tidak bisa berisi tag HTML.
-            contains_emojis: Kode pos tidak boleh berisi emoji
-            contains_restricted_characters: Kode Pos tidak boleh memuat karakter yang
-              dilarang
+            invalid_for_country_informative: Kode pos tidak valid untuk Inggris
+            invalid_for_country_and_province_instructional: Masukkan kode pos yang
+              valid untuk %{province}, Inggris
+            invalid_for_country_and_province_informative: Kode pos tidak valid untuk
+              %{province}, Inggris
+            too_long_instructional: Kode pos terlalu panjang
+            too_long_informative: Kode pos terlalu panjang
+            contains_emojis_instructional: Kode pos tidak boleh berisi emoji
+            contains_emojis_informative: Kode pos tidak boleh berisi emoji
+            contains_restricted_characters_instructional: Kode Pos tidak boleh memuat
+              karakter yang dilarang
+            contains_restricted_characters_informative: Kode Pos hanya boleh terdiri
+              dari huruf, angka, karakter lokal, dan karakter khusus
+            contains_html_tags_instructional: Kode pos tidak boleh berisi HTML
+            contains_html_tags_informative: Kode pos tidak boleh berisi HTML

@@ -8,14 +8,20 @@ id:
             default: Negara bagian/wilayah
             optional: Negara bagian/wilayah (opsional)
           errors:
-            blank: Pilih negara bagian/wilayah
+            blank_instructional: Pilih negara bagian/wilayah
+            blank_informative: Nama negara bagian/wilayah belum diisi
         zip:
           label:
             default: Kode pos
             optional: Kode pos (opsional)
           errors:
-            too_long: Nilai kode pos terlalu panjang
-            contains_html_tags: Kode pos tidak bisa berisi tag HTML.
-            contains_emojis: Kode pos tidak boleh berisi emoji
-            contains_restricted_characters: Kode Pos ini tidak boleh memuat karakter
-              yang dilarang
+            too_long_instructional: Kode pos terlalu panjang
+            too_long_informative: Kode pos terlalu panjang
+            contains_emojis_instructional: Kode pos tidak boleh berisi emoji
+            contains_emojis_informative: Kode pos tidak boleh berisi emoji
+            contains_restricted_characters_instructional: Kode pos tidak boleh berisi
+              karakter yang dilarang
+            contains_restricted_characters_informative: Kode pos tidak boleh berisi
+              karakter yang dilarang
+            contains_html_tags_instructional: Kode pos tidak boleh berisi HTML
+            contains_html_tags_informative: Kode pos tidak boleh berisi HTML

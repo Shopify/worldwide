@@ -8,10 +8,16 @@ hr:
             default: Okrug
             optional: Okrug (neobavezno)
           errors:
-            blank: Unesi okrug
-            too_long: Naziv okruga je predugačak (najveći dopušteni broj znakova je
-              255)
-            contains_html_tags: Okrug ne smije sadržavati HTML oznake.
-            contains_emojis: Okrug ne smije sadržavati emotikone
-            contains_restricted_characters: Naziv okruga ne smije sadržavati zabranjene
-              znakove
+            blank_instructional: Unesite okrug
+            blank_informative: Nedostaje okrug
+            too_long_instructional: Naziv okruga je predugačak (dopušteno je najviše
+              255 znakova)
+            too_long_informative: Naziv okruga je predugačak
+            contains_emojis_instructional: Naziv okruga ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv okruga ne smije sadržavati emotikone
+            contains_restricted_characters_instructional: Naziv okruga ne smije sadržavati
+              zabranjene znakove
+            contains_restricted_characters_informative: Naziv okruga ne smije sadržavati
+              zabranjene znakove
+            contains_html_tags_instructional: Naziv okruga ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv okruga ne smije sadržavati HTML

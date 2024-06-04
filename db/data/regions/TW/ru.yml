@@ -8,20 +8,36 @@ ru:
             default: Округ
             optional: Округ (необязательно)
           errors:
-            blank: Укажите округ
-            too_long: Название округа слишком длинное (должно содержать не больше
-              255 символов)
-            contains_emojis: Название округа не может содержать емодзи
-            contains_mathematical_symbols: Название округа не может содержать математические
-              символы
-            contains_restricted_characters: Поле «Округ» может содержать только буквы,
-              цифры, а также местные и специальные символы
-            contains_too_many_words: Название округа не может превышать %{word_count} сл.
-            contains_html_tags: Название округа не может содержать HTML-теги.
-            contains_url: Название округа не может содержать URL-адреса.
-            unknown_for_city: Укажите действительное название округа для %{city}.
-            unknown_for_zip: Укажите действительное название округа для %{zip}.
-            unknown_for_address: Название округа может быть указано неправильно.
+            unknown_for_address: Название округа может быть указано неправильно
+            blank_instructional: Укажите округ
+            blank_informative: Округ отсутствует
+            too_long_instructional: Название округа слишком длинное (должно содержать
+              не больше 255 символов)
+            too_long_informative: Название округа слишком длинное
+            contains_emojis_instructional: Название округа не может содержать емодзи
+            contains_emojis_informative: Название округа не может содержать емодзи
+            contains_mathematical_symbols_instructional: Название округа не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Название округа не может содержать
+              математические символы
+            contains_restricted_characters_instructional: Поле «Округ» может содержать
+              только буквы, цифры, а также местные и специальные символы
+            contains_restricted_characters_informative: Поле «Округ» не может содержать
+              недопустимые символы
+            contains_too_many_words_instructional: Название округа не может превышать
+              %{word_count} сл.
+            contains_too_many_words_informative: Название округа не может превышать
+              %{word_count} сл.
+            contains_html_tags_instructional: Название округа не может содержать HTML
+            contains_html_tags_informative: Название округа не может содержать HTML
+            contains_url_instructional: Название округа не может содержать URL-адрес
+            contains_url_informative: Название округа не может содержать URL-адрес
+            unknown_for_city_instructional: Укажите действительное название округа
+              для города %{city}
+            unknown_for_city_informative: Недействительное название округа для %{city}
+            unknown_for_zip_instructional: Укажите действительное название округа
+              для %{zip}
+            unknown_for_zip_informative: Недействительное название округа для %{zip}
           warnings:
             contains_too_many_words: Рекомендуем указывать в поле названия округа
               не более %{word_count} сл.

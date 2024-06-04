@@ -8,16 +8,24 @@ ja:
             default: 州
             optional: 州 (任意)
           errors:
-            blank: 州を選択してください
+            blank_instructional: 州を選択してください
+            blank_informative: 州がありません
         zip:
           label:
             default: PINコード
             optional: PINコード (任意)
           errors:
-            blank: PINコードを入力してください
-            invalid_for_country: "%{country}の有効なPINコードを入力してください"
-            invalid_for_country_and_province: "%{country}の%{province}の有効なPINコードを入力してください"
-            too_long: PINコードの値が長すぎます
-            contains_html_tags: PINコードにHTMLタグを含めることはできません。
-            contains_emojis: PINコードに絵文字を含めることはできません
-            contains_restricted_characters: PINコードには制限されている文字を入力できません
+            blank_instructional: PINコードを入力してください
+            blank_informative: PINコードがありません
+            invalid_for_country_instructional: "%{country}の有効なPINコードを入力してください"
+            invalid_for_country_informative: PINコードが有効ではありません
+            invalid_for_country_and_province_instructional: "%{country}の%{province}の有効なPINコードを入力してください"
+            invalid_for_country_and_province_informative: PINコードが有効ではありません
+            too_long_instructional: PINコードが長すぎます
+            too_long_informative: PINコードが長すぎます
+            contains_emojis_instructional: PINコードには絵文字を入力できません
+            contains_emojis_informative: PINコードには絵文字を入力できません
+            contains_restricted_characters_instructional: PINコードには制限されている文字を入力できません
+            contains_restricted_characters_informative: PINコードには制限されている文字を入力できません
+            contains_html_tags_instructional: PINコードにHTMLを含めることはできません
+            contains_html_tags_informative: PINコードにHTMLを含めることはできません

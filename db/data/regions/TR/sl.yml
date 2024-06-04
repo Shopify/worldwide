@@ -8,20 +8,35 @@ sl:
             default: Okrožje
             optional: Okrožje (izbirno)
           errors:
-            blank: Vnesite ime okrožja
-            too_long: Ime okrožja je predolgo (največje dovoljeno št. znakov je 255)
-            contains_emojis: Ime okrožja ne sme vsebovati čustvenih simbolov
-            contains_mathematical_symbols: Ime okrožja ne sme vsebovati matematičnih
+            unknown_for_address: Okrožje morda ni pravilno
+            blank_instructional: Vnesite ime okrožja
+            blank_informative: Manjka ime okrožja
+            too_long_instructional: Ime okrožja je predolgo (največje dovoljeno št.
+              znakov je 255)
+            too_long_informative: Ime okrožja je predolgo
+            contains_emojis_instructional: Ime okrožja ne sme vsebovati čustvenih
               simbolov
-            contains_restricted_characters: Ime okrožja lahko vsebuje le črke, številke,
-              lokalne znake in posebne znake
-            contains_too_many_words: Ime okrožja ne sme vsebovati več kot %{word_count}
-              besed
-            contains_html_tags: Ime okrožja ne sme vsebovati oznak HTML.
-            contains_url: Ime okrožja ne sme vsebovati naslovov URL.
-            unknown_for_city: Vnesite veljavno ime okrožja za kraj %{city}.
-            unknown_for_zip: Vnesite veljavno ime okrožja za poštno številko %{zip}.
-            unknown_for_address: Okrožje morda ni pravilno.
+            contains_emojis_informative: Ime okrožja ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols_instructional: Ime okrožja ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Ime okrožja ne sme vsebovati
+              matematičnih simbolov
+            contains_restricted_characters_instructional: Ime okrožja lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Ime okrožja ne sme vsebovati
+              prepovedanih znakov
+            contains_too_many_words_instructional: Ime okrožja ne sme vsebovati več
+              kot %{word_count} besed
+            contains_too_many_words_informative: Ime okrožja ne sme vsebovati več
+              kot %{word_count} besed
+            contains_html_tags_instructional: Ime okrožja ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Ime okrožja ne sme vsebovati oznak HTML
+            contains_url_instructional: Ime okrožja ne sme vsebovati naslovov URL
+            contains_url_informative: Ime okrožja ne sme vsebovati naslovov URL
+            unknown_for_city_instructional: Vnesite veljavno ime okrožja za kraj %{city}
+            unknown_for_city_informative: Ime okrožja ni veljavno za kraj %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime okrožja za kraj %{zip}
+            unknown_for_zip_informative: Ime okrožja ni veljavno za kraj %{zip}
           warnings:
             contains_too_many_words: Ime okrožja naj ne vsebuje več kot %{word_count}
               besed

@@ -8,26 +8,50 @@ ro:
             default: Stat
             optional: Stat (opțional)
           errors:
-            blank: Selectează un stat
-            invalid_for_country: Introdu un stat valid din %{country}
-            unknown_for_city_and_zip: Introdu un stat valid pentru %{city}, %{zip}
-            unknown_for_city: Selectează un stat valid pentru %{city}
-            unknown_for_zip: Selectează un stat valid pentru %{zip}
-            unknown_for_address: Este posibil ca valoarea din câmpul Stat să fie incorectă.
+            unknown_for_address: Denumirea statului este posibil să fie incorectă
+            blank_instructional: Selectează o denumire de stat
+            blank_informative: Introdu o denumire de stat
+            invalid_for_country_instructional: Introdu o denumire de stat validă pentru
+              %{city}, %{zip}
+            invalid_for_country_informative: Denumirea statului este nevalidă
+            unknown_for_city_and_zip_instructional: Introdu o denumire de stat validă
+              pentru %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Denumirea statului nu este validă
+              pentru %{city}, %{zip}
+            unknown_for_city_instructional: Selectează o denumire de stat validă pentru
+              %{city}
+            unknown_for_city_informative: Denumirea statului nu este validă pentru
+              %{city}
+            unknown_for_zip_instructional: Selectează o denumire de stat validă pentru
+              %{zip}
+            unknown_for_zip_informative: Denumirea statului nu este validă pentru
+              %{zip}
         zip:
           label:
             default: Cod ZIP
             optional: Cod ZIP (opțional)
           errors:
-            blank: Introdu un cod ZIP
-            invalid_for_country: Introdu un cod ZIP valid pentru %{country}
-            invalid_for_country_and_province: Introdu un cod ZIP valid pentru %{province},
-              %{country}
-            too_long: Valoarea pentru codul ZIP (doar SUA) este prea lungă
-            contains_html_tags: Valoarea pentru codul ZIP nu poate conține etichete
-              HTML.
-            contains_emojis: Codul ZIP (doar SUA) nu poate conține emoji-uri
-            contains_restricted_characters: Codul ZIP nu poate conține caractere restricționate
-            invalid_for_province: Introdu un cod ZIP (doar SUA) valid pentru %{province}
-            unknown_for_address: Este posibil ca valoarea din câmpul Cod ZIP să fie
-              incorectă.
+            unknown_for_address: Codul ZIP este posibil să fie incorect
+            blank_instructional: Introdu un cod ZIP
+            blank_informative: Codul ZIP lipsește
+            invalid_for_country_instructional: Introdu un cod ZIP valid pentru %{country}
+            invalid_for_country_informative: Codul ZIP este nevalid pentru %{country}
+            invalid_for_province_instructional: Introdu un cod ZIP (doar SUA) valid
+              pentru %{province}
+            invalid_for_province_informative: Codul ZIP este nevalid pentru %{province}
+            invalid_for_country_and_province_instructional: Introdu un cod ZIP (doar
+              SUA) valid pentru %{province}, %{country}
+            invalid_for_country_and_province_informative: Codul ZIP este nevalid pentru
+              %{province}, %{country}
+            too_long_instructional: Codul ZIP este prea lung
+            too_long_informative: Codul ZIP este prea lung (lungimea maximă este de
+              255 caractere)
+            contains_emojis_instructional: Codul PIN nu poate conține emoji-uri
+            contains_emojis_informative: Codul PIN nu poate conține emoji-uri
+            contains_restricted_characters_instructional: Codul poștal nu poate conține
+              caractere restricționate
+            contains_restricted_characters_informative: Codul poștal nu poate conține
+              caractere restricționate
+            contains_html_tags_instructional: Codul ZIP nu poate conține etichete
+              HTML
+            contains_html_tags_informative: Codul ZIP nu poate conține etichete HTML

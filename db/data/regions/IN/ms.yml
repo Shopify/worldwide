@@ -8,18 +8,27 @@ ms:
             default: Negeri
             optional: Negeri (opsyenal)
           errors:
-            blank: Pilih negeri
+            blank_instructional: Pilih negeri
+            blank_informative: Negeri tiada
         zip:
           label:
             default: Kod PIN
             optional: Kod PIN (opsyenal)
           errors:
-            blank: Masukkan kod PIN
-            invalid_for_country: Masukkan kod PIN yang sah untuk %{country}
-            invalid_for_country_and_province: Masukkan kod PIN yang sah untuk %{province},
-              %{country}
-            too_long: Nilai kod PIN terlalu panjang
-            contains_html_tags: Kod PIN tidak boleh mengandungi tag HTML.
-            contains_emojis: Kod PIN tidak boleh mengandungi emoji
-            contains_restricted_characters: Kod PIN tidak boleh mengandungi aksara
-              terhad
+            blank_instructional: Masukkan kod PIN
+            blank_informative: Kod PIN tiada
+            invalid_for_country_instructional: Masukkan kod PIN yang sah untuk %{country}
+            invalid_for_country_informative: Kod PIN tidak sah
+            invalid_for_country_and_province_instructional: Masukkan kod PIN yang
+              sah untuk %{province}, %{country}
+            invalid_for_country_and_province_informative: Kod PIN tidak sah
+            too_long_instructional: Kod PIN terlalu panjang
+            too_long_informative: Kod PIN terlalu panjang
+            contains_emojis_instructional: Kod PIN tidak boleh mengandungi emoji
+            contains_emojis_informative: Kod PIN tidak boleh mengandungi emoji
+            contains_restricted_characters_instructional: Kod PIN tidak boleh mengandungi
+              aksara terhad
+            contains_restricted_characters_informative: Kod PIN tidak boleh mengandungi
+              aksara terhad
+            contains_html_tags_instructional: Kod PIN tidak boleh mengandungi HTML
+            contains_html_tags_informative: Kod PIN tidak boleh mengandungi HTML

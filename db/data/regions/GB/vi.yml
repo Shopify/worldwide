@@ -8,12 +8,25 @@ vi:
             default: Mã bưu chính
             optional: Mã bưu chính (không bắt buộc)
           errors:
-            blank: Nhập mã bưu chính
-            invalid_for_country: Nhập mã bưu chính hợp lệ cho Vương quốc Anh
-            invalid_for_country_and_province: Nhập mã bưu chính hợp lệ cho %{province},
-              Vương quốc Anh
-            too_long: Giá trị mã bưu chính quá dài
-            contains_html_tags: Mã bưu điện không được chứa thẻ HTML.
-            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
-            contains_restricted_characters: Mã bưu chính không được chứa ký tự bị
-              hạn chế
+            blank_instructional: Nhập mã bưu chính
+            blank_informative: Thiếu mã bưu chính
+            invalid_for_country_instructional: Nhập mã bưu chính hợp lệ của Vương
+              quốc Anh
+            invalid_for_country_informative: Mã bưu chính cho Vương quốc Anh không
+              hợp lệ
+            invalid_for_country_and_province_instructional: Nhập mã bưu chính hợp
+              lệ cho %{province}, Vương quốc Anh
+            invalid_for_country_and_province_informative: Mã bưu chính cho %{province},
+              Vương quốc Anh không hợp lệ
+            too_long_instructional: Mã bưu chính quá dài
+            too_long_informative: Mã bưu chính quá dài
+            contains_emojis_instructional: Mã bưu chính không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Mã bưu chính không được chứa biểu tượng cảm
+              xúc
+            contains_restricted_characters_instructional: Mã bưu chính không được
+              chứa ký tự bị hạn chế
+            contains_restricted_characters_informative: Mã bưu chính chỉ được chứa
+              chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_html_tags_instructional: Mã bưu chính không được chứa HTML
+            contains_html_tags_informative: Mã bưu chính không được chứa HTML

@@ -8,30 +8,51 @@ ro:
             default: Suburbie
             optional: Suburbie (opțional)
           errors:
-            blank: Introdu o suburbie
-            too_long: Denumirea suburbiei este prea lungă (lungimea maximă este de
-              255 caractere)
-            contains_html_tags: Denumirea suburbiei nu poate conține etichete HTML.
-            contains_emojis: Numele suburbiei nu poate conține emoji-uri
-            contains_restricted_characters: Numele suburbiei poate conține numai litere,
-              cifre, caractere locale și caractere speciale
+            blank_instructional: Introdu o denumire de suburbie
+            blank_informative: Denumirea suburbiei lipsește
+            too_long_instructional: Denumirea suburbiei este prea lungă (lungimea
+              maximă este de 255 caractere)
+            too_long_informative: Denumirea suburbiei este prea lungă
+            contains_emojis_instructional: Denumirea suburbiei nu poate conține emoji-uri
+            contains_emojis_informative: Denumirea suburbiei nu poate conține emoji-uri
+            contains_restricted_characters_instructional: Denumirea suburbiei poate
+              conține numai litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Denumirea suburbiei nu poate
+              conține caractere restricționate
+            contains_html_tags_instructional: Denumirea suburbiei nu poate conține
+              etichete HTML
+            contains_html_tags_informative: Denumirea suburbiei nu poate conține etichete
+              HTML
         province:
           label:
             default: Stat/teritoriu
             optional: Stat/teritoriu (opțional)
           errors:
-            blank: Selectează un stat/un teritoriu
+            blank_instructional: Selectează un stat/un teritoriu
+            blank_informative: Statul/teritoriul lipsește
         zip:
           label:
             default: Cod poștal
             optional: Cod poștal (opțional)
           errors:
-            blank: Introdu un cod poștal
-            invalid_for_country: Introdu un cod poștal valid pentru %{country}
-            invalid_for_country_and_province: Introdu un cod poștal valid pentru %{province},
+            blank_instructional: Introdu un cod poștal
+            blank_informative: Codul poștal lipsește
+            invalid_for_country_instructional: Introdu un cod poștal valid pentru
               %{country}
-            too_long: Valoarea pentru codul poștal este prea lungă
-            contains_html_tags: Codul poștal nu poate conține etichete HTML.
-            contains_emojis: Codul poștal nu poate conține emoji-uri
-            contains_restricted_characters: Codul poștal poate conține numai litere,
-              cifre, caractere locale și caractere speciale
+            invalid_for_country_informative: Codul poștal nu este valid pentru %{country}
+            invalid_for_country_and_province_instructional: Introdu un cod poștal
+              valid pentru %{province}, %{country}
+            invalid_for_country_and_province_informative: Codul poștal nu este valid
+              pentru %{province}, %{country}
+            too_long_instructional: Codul poștal este prea lung
+            too_long_informative: Codul poștal este prea lung
+            contains_emojis_instructional: Codul poștal nu poate conține emoji-uri
+            contains_emojis_informative: Codul poștal nu poate conține emoji-uri
+            contains_restricted_characters_instructional: Codul poștal poate conține
+              numai litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Codul poștal nu poate conține
+              caractere restricționate
+            contains_html_tags_instructional: Codul poștal nu poate conține etichete
+              HTML
+            contains_html_tags_informative: Codul poștal nu poate conține etichete
+              HTML
