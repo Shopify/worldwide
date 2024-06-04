@@ -5,10 +5,12 @@ ja:
       addresses:
         province:
           label:
-            default: 州
+            default: 州/都道府県
             optional: 州 (任意)
           errors:
-            blank: 州を選択してください
+            blank_instructional: 州を選択してください
+            blank_informative: 州がありません
         zip:
           errors:
-            invalid_for_country: ナイジェリアの有効な郵便番号 (6桁) を入力するか、または空白にしてください。
+            invalid_for_country_instructional: ナイジェリアの有効な6桁の郵便番号を入力するか、空白のままにしてください
+            invalid_for_country_informative: ナイジェリアの郵便番号が無効です
