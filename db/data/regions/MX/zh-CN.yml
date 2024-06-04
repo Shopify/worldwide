@@ -17,3 +17,21 @@ zh-CN:
           errors:
             blank_instructional: 选择州
             blank_informative: 缺少州
+        neighborhood:
+          label:
+            default: 殖民地
+            optional: 殖民地（选填）
+          errors:
+            blank: 输入殖民地
+            too_long: 殖民地名过长（最多 %{limit} 个字符）
+            contains_emojis: 殖民地名不能包含表情符号
+            contains_mathematical_symbols: 殖民地名不能包含数学符号
+            contains_restricted_characters: 殖民地名只能包含字母、数字、当地字符和特殊字符
+            contains_too_many_words: 殖民地名不能超过 %{word_count} 个字词
+            contains_html_tags: 殖民地名不能包含 HTML 标记。
+            contains_url: 殖民地名不能包含 URL。
+            unknown_for_city: 输入 %{city} 对应的有效殖民地名称。
+            unknown_for_zip: 输入 %{zip} 对应的有效殖民地名称。
+            unknown_for_address: 殖民地名可能不正确。
+          warnings:
+            contains_too_many_words: 建议殖民地名少于 %{word_count} 个字词
