@@ -5,11 +5,12 @@ ko:
       addresses:
         city:
           label:
-            default: 시/구/정/촌
-            optional: 시/구/정/촌(선택 사항)
+            default: 시/구/읍/마을
+            optional: 시/구/읍/마을(선택 사항)
         province:
           label:
             default: 현
             optional: 현(선택 사항)
           errors:
-            blank: 현 선택
+            blank_instructional: 현 선택
+            blank_informative: 현이 누락되었습니다

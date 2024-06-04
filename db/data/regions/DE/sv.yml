@@ -5,13 +5,15 @@ sv:
       addresses:
         address1:
           label:
-            default: Gatunummer och husnummer
-            optional: Gatunummer och husnummer (frivilligt)
+            default: Gatuadress och husnummer
+            optional: Gatuadress och husnummer (valfritt)
           errors:
-            blank: Ange en gata eller ett husnummer
+            blank_instructional: Ange en gata och ett husnummer
+            blank_informative: Gata och husnummer saknas
         address2:
           label:
             default: Ytterligare adress
             optional: Ytterligare adress (valfritt)
           errors:
-            blank: Ange ytterligare adressinformation
+            blank_instructional: Ange ytterligare adressinformation
+            blank_informative: Ytterligare adressinformation saknas
