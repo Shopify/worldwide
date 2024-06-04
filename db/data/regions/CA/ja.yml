@@ -5,11 +5,15 @@ ja:
       addresses:
         province:
           label:
-            default: 州
-            optional: 州 (任意)
+            default: 都道府県
+            optional: 都道府県 (任意)
           errors:
-            blank: 州を選択してください
-            unknown_for_city_and_zip: "%{city}、%{zip}の有効な州を入力してください"
-            unknown_for_city: "%{city}の有効な州を選択してください"
-            unknown_for_zip: "%{zip}の有効な州を選択してください"
-            unknown_for_address: 州は正しくない可能性があります。
+            unknown_for_address: 州は正しくない可能性があります
+            blank_instructional: 州を選択してください
+            blank_informative: 州がありません
+            unknown_for_city_and_zip_instructional: "%{city} (%{zip}) の有効な州を入力してください"
+            unknown_for_city_and_zip_informative: "%{zip}の%{city}の州が有効ではありません"
+            unknown_for_city_instructional: "%{city}の有効な州を選択してください"
+            unknown_for_city_informative: "%{city}の州が有効ではありません"
+            unknown_for_zip_instructional: "%{zip}の有効な州を選択してください"
+            unknown_for_zip_informative: "%{zip}の州が有効ではありません"
