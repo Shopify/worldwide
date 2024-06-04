@@ -5,29 +5,57 @@ el:
       addresses:
         province:
           label:
-            default: Πολιτεία
+            default: Επαρχία
             optional: Πολιτεία (προαιρετικά)
           errors:
-            blank: Επιλέξτε νομό
-            invalid_for_country: Εισαγάγετε μια έγκυρη πολιτεία %{country}
-            unknown_for_city_and_zip: Εισαγάγετε έγκυρο νομό για %{city}, %{zip}
-            unknown_for_city: Επιλέξτε έγκυρο νομό για %{city}
-            unknown_for_zip: Επιλέξτε έγκυρο νομό για %{zip}
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στην πολιτεία.
+            unknown_for_address: Η πολιτεία ενδέχεται να είναι εσφαλμένη
+            blank_instructional: Επιλέξτε έναν νομό
+            blank_informative: Εισαγάγετε έναν νομό
+            invalid_for_country_instructional: Εισαγάγετε έναν έγκυρο νομό για την
+              πόλη %{city} με Τ.Κ. %{zip}
+            invalid_for_country_informative: Ο νομός δεν είναι έγκυρος
+            unknown_for_city_and_zip_instructional: Εισαγάγετε έναν έγκυρο νομό για
+              την πόλη %{city} με Τ.Κ. %{zip}
+            unknown_for_city_and_zip_informative: Ο ταχυδρομικός κώδικας δεν είναι
+              έγκυρος για την πόλη %{city} με Τ.Κ. %{zip}
+            unknown_for_city_instructional: Επιλέξτε έναν έγκυρο νομό για την πόλη
+              %{city}
+            unknown_for_city_informative: Ο νομός δεν είναι έγκυρος για την πόλη %{city}
+            unknown_for_zip_instructional: Επιλέξτε έναν έγκυρο νομό για τον Τ.Κ.
+              %{zip}
+            unknown_for_zip_informative: Ο νομός δεν είναι έγκυρος για τον Τ.Κ. %{zip}
         zip:
           label:
             default: Ταχυδρομικός κωδικός
             optional: Ταχυδρομικός κωδικός (προαιρετικά)
           errors:
-            blank: Εισαγάγετε ταχυδρομικό κώδικα
-            invalid_for_country: Εισαγάγετε έναν έγκυρο ταχυδρομικό κώδικα για %{country}
-            invalid_for_country_and_province: Εισαγάγετε έναν έγκυρο ταχυδρομικό κώδικα
-              για %{province}, %{country}
-            too_long: Η τιμή του ταχυδρομικού κώδικα είναι πολύ μεγάλη
-            contains_html_tags: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει ετικέτες
-              HTML.
-            contains_emojis: Ο ταχυδρομικός κωδικός δεν μπορεί να περιέχει emoji
-            contains_restricted_characters: Το πεδίο "Ταχυδρομικός κώδικας" δεν μπορεί
-              να περιέχει απαγορευμένους χαρακτήρες
-            invalid_for_province: Εισαγάγετε έγκυρο ταχυδρομικό κωδικό για %{province}
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στον ταχυδρομικό κώδικα.
+            unknown_for_address: Ο ταχυδρομικός κώδικας ενδέχεται να είναι εσφαλμένος
+            blank_instructional: Εισαγάγετε έναν ταχυδρομικό κώδικα
+            blank_informative: Ο ταχυδρομικός κώδικας λείπει
+            invalid_for_country_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό
+              κώδικα για τη χώρα %{country}
+            invalid_for_country_informative: Ο ταχυδρομικός κώδικας δεν είναι έγκυρος
+              για τη χώρα %{country}
+            invalid_for_province_instructional: Εισαγάγετε έναν έγκυρο ταχυδρομικό
+              κώδικα για την επαρχία%{province}
+            invalid_for_province_informative: Ο ταχυδρομικός κώδικας δεν είναι έγκυρος
+              για την επαρχία %{province}
+            invalid_for_country_and_province_instructional: Εισαγάγετε έναν έγκυρο
+              ταχυδρομικό κώδικα για την επαρχία %{province} στη χώρα %{country}
+            invalid_for_country_and_province_informative: Ο ταχυδρομικός κώδικας δεν
+              είναι έγκυρος για την επαρχία %{province} στη χώρα %{country}
+            too_long_instructional: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος
+            too_long_informative: Ο ταχυδρομικός κώδικας είναι πολύ μεγάλος (το μέγιστο
+              όριο είναι 255 χαρακτήρες)
+            contains_emojis_instructional: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              emoji
+            contains_emojis_informative: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              emoji
+            contains_restricted_characters_instructional: Ο ταχυδρομικός κώδικας δεν
+              μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_restricted_characters_informative: Ο ταχυδρομικός κώδικας δεν
+              μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Ο ταχυδρομικός κώδικας δεν μπορεί να
+              περιέχει κώδικα HTML
+            contains_html_tags_informative: Ο ταχυδρομικός κώδικας δεν μπορεί να περιέχει
+              κώδικα HTML

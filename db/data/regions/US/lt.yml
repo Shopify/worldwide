@@ -1,0 +1,52 @@
+---
+lt:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Valstija
+            optional: Valstija (pasirinktinai)
+          errors:
+            unknown_for_address: Valstija gali būti neteisinga
+            blank_instructional: Pasirinkite valstiją
+            blank_informative: Įveskite valstiją
+            invalid_for_country_instructional: Įveskite tinkamą %{city}, %{zip}, valstiją
+            invalid_for_country_informative: Valstija neteisinga
+            unknown_for_city_and_zip_instructional: Įveskite tinkamą %{city}, %{zip},
+              valstiją
+            unknown_for_city_and_zip_informative: "%{city},%{zip} valstija neteisinga"
+            unknown_for_city_instructional: Pasirinkite tinkamą %{city} valstiją
+            unknown_for_city_informative: "%{city} valstija neteisinga"
+            unknown_for_zip_instructional: Pasirinkite tinkamą %{zip} valstiją
+            unknown_for_zip_informative: "%{zip} valstija neteisinga"
+        zip:
+          label:
+            default: Pašto kodas
+            optional: Pašto kodas (pasirinktinai)
+          errors:
+            unknown_for_address: Pašto kodas gali būti neteisingas
+            blank_instructional: Įveskite pašto kodą
+            blank_informative: Trūksta pašto kodo
+            invalid_for_country_instructional: Įveskite tinkamą %{country} pašto kodą
+            invalid_for_country_informative: "%{country} pašto kodas neteisingas"
+            invalid_for_province_instructional: Įveskite tinkamą %{province} pašto
+              kodą
+            invalid_for_province_informative: "%{province} pašto kodas neteisingas"
+            invalid_for_country_and_province_instructional: Įveskite tinkamą %{province},
+              %{country}, pašto kodą
+            invalid_for_country_and_province_informative: "%{province}, %{country},
+              pašto kodas neteisingas"
+            too_long_instructional: Pašto kodas per ilgas
+            too_long_informative: Pašto kodas yra per ilgas (turi sudaryti ne daugiau
+              kaip 255 simboliai)
+            contains_emojis_instructional: Pašto kodo negali sudaryti jausmaženkliai
+            contains_emojis_informative: Pašto kodo negali sudaryti jausmaženkliai
+            contains_restricted_characters_instructional: Pašto kodo negali sudaryti
+              ribojami simboliai
+            contains_restricted_characters_informative: Pašto kodo negali sudaryti
+              ribojami simboliai
+            contains_html_tags_instructional: Pašto kode kode negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Pašto kode kode negali būti naudojamos
+              HTML žymės

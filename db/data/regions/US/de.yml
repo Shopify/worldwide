@@ -5,28 +5,46 @@ de:
       addresses:
         province:
           label:
-            default: Bundesstaat
-            optional: Bundesstaat (optional)
+            default: Bundesland/Provinz
+            optional: Bundesland/Provinz (optional)
           errors:
-            blank: Wähle einen Bundesstaat aus
-            invalid_for_country: Gültigen Staat in %{country} angeben
-            unknown_for_city_and_zip: Einen gültigen Staat für %{city}, %{zip} eingeben
-            unknown_for_city: Einen gültigen Staat für %{city} auswählen
-            unknown_for_zip: Einen gültigen Staat für %{zip} auswählen
-            unknown_for_address: Staat ist ggf. falsch.
+            unknown_for_address: Staat ist ggf. falsch
+            blank_instructional: Staat auswählen
+            blank_informative: Staat eingeben
+            invalid_for_country_instructional: Gültigen Staat für %{city}, %{zip}
+              eingeben
+            invalid_for_country_informative: Staat ist nicht gültig
+            unknown_for_city_and_zip_instructional: Gültigen Staat für %{city}, %{zip}
+              eingeben
+            unknown_for_city_and_zip_informative: Staat ist für %{city}, %{zip} nicht
+              gültig
+            unknown_for_city_instructional: Gültigen Staat für %{city} auswählen
+            unknown_for_city_informative: Staat ist für %{city} nicht gültig
+            unknown_for_zip_instructional: Gültigen Staat für %{zip} auswählen
+            unknown_for_zip_informative: Staat ist für %{zip} nicht gültig
         zip:
           label:
-            default: PLZ
-            optional: PLZ (optional)
+            default: Postleitzahl
+            optional: Postleitzahl (optional)
           errors:
-            blank: Gib eine Postleitzahl ein
-            invalid_for_country: Gib eine gültige Postleitzahl für %{country} ein
-            invalid_for_country_and_province: Gib eine gültige Postleitzahl für %{province},
-              %{country} ein
-            too_long: Der Postleitzahl-Wert ist zu lang
-            contains_html_tags: PLZ-Wert darf keine HTML-Tags enthalten.
-            contains_emojis: Die PLZ darf keine Emojis enthalten
-            contains_restricted_characters: Die PLZ darf keine eingeschränkten Zeichen
-              enthalten
-            invalid_for_province: Eine gültige Postleitzahl für %{province} eingeben
-            unknown_for_address: Postleitzahl ist ggf. falsch.
+            unknown_for_address: PLZ ist ggf. falsch
+            blank_instructional: Eine PLZ eingeben
+            blank_informative: PLZ fehlt
+            invalid_for_country_instructional: Eine gültige PLZ für %{country} eingeben
+            invalid_for_country_informative: PLZ ist für %{country} nicht gültig
+            invalid_for_province_instructional: Eine gültige PLZ für %{province} eingeben
+            invalid_for_province_informative: PLZ ist für %{province} nicht gültig
+            invalid_for_country_and_province_instructional: Eine gültige Postleitzahl
+              für %{province}, %{country} eingeben
+            invalid_for_country_and_province_informative: PLZ ist für %{province},
+              %{country} nicht gültig
+            too_long_instructional: PLZ ist zu lang
+            too_long_informative: PLZ ist zu lang (maximal 255 Zeichen)
+            contains_emojis_instructional: PLZ darf keine Emojis enthalten
+            contains_emojis_informative: PLZ darf keine Emojis enthalten
+            contains_restricted_characters_instructional: PLZ darf keine eingeschränkten
+              Zeichen enthalten
+            contains_restricted_characters_informative: PLZ darf keine eingeschränkten
+              Zeichen enthalten
+            contains_html_tags_instructional: PLZ darf kein HTML enthalten
+            contains_html_tags_informative: PLZ darf kein HTML enthalten
