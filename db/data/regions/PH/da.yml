@@ -1,0 +1,26 @@
+---
+da:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Område
+            optional: Område (valgfrit)
+          errors:
+            blank: Angiv et område
+            too_long: Område er for lang (højst %{limit} tegn)
+            contains_emojis: Område må ikke indeholde emojis
+            contains_mathematical_symbols: Område må ikke indeholde matematiske symboler
+            contains_restricted_characters: Område må kun indeholde bogstaver, tal,
+              lokale tegn og specialtegn
+            contains_too_many_words: Område må ikke indeholde flere end %{word_count}
+              ord
+            contains_html_tags: Område må ikke indeholde HTML-tags.
+            contains_url: Område må ikke indeholde webadresser.
+            unknown_for_city: Angiv et gyldigt områdenavn for %{city}.
+            unknown_for_zip: Angiv et gyldigt områdenavn for %{zip}.
+            unknown_for_address: Området er muligvis forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at området indeholder færre end
+              %{word_count} ord

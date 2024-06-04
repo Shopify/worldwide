@@ -17,3 +17,24 @@ da:
           errors:
             blank_instructional: Vælg en stat
             blank_informative: Stat mangler
+        neighborhood:
+          label:
+            default: Bydel
+            optional: Bydel (valgfrit)
+          errors:
+            blank: Angiv en bydel
+            too_long: Bydel er for lang (højst %{limit} tegn)
+            contains_emojis: Bydel må ikke indeholde emojis
+            contains_mathematical_symbols: Bydel må ikke indeholde matematiske symboler
+            contains_restricted_characters: Bydel må kun indeholde bogstaver, tal,
+              lokale tegn og specialtegn
+            contains_too_many_words: Bydel må ikke indeholde flere end %{word_count}
+              ord
+            contains_html_tags: Bydel må ikke indeholde HTML-tags.
+            contains_url: Bydel må ikke indeholde webadresser.
+            unknown_for_city: Angiv et gyldigt navn på bydelen for %{city}.
+            unknown_for_zip: Angiv et gyldigt navn på bydelen for %{zip}.
+            unknown_for_address: Bydelen er muligvis forkert.
+          warnings:
+            contains_too_many_words: Det anbefales, at bydelen indeholder færre end
+              %{word_count} ord
