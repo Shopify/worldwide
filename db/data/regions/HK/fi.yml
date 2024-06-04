@@ -5,11 +5,18 @@ fi:
       addresses:
         city:
           label:
-            default: Alue
-            optional: Alue (valinnainen)
+            default: Piiri
+            optional: Piiri (valinnainen)
           errors:
-            blank: Anna alue
-            too_long: Alueen nimi on liian pitkä (enintään 255 merkkiä)
-            contains_html_tags: Alue ei voi sisältää HTML-tunnisteita.
-            contains_emojis: Alue ei voi sisältää emojeita
-            contains_restricted_characters: Alue ei voi sisältää kiellettyjä merkkejä
+            blank_instructional: Anna alue
+            blank_informative: Alue puuttuu
+            too_long_instructional: Alue on liian pitkä (enintään 255 merkkiä)
+            too_long_informative: Alue on liian pitkä
+            contains_emojis_instructional: Alue ei voi sisältää emojeita
+            contains_emojis_informative: Alue ei voi sisältää emojeita
+            contains_restricted_characters_instructional: Alue ei voi sisältää rajoitettuja
+              merkkejä
+            contains_restricted_characters_informative: Alue ei voi sisältää rajoitettuja
+              merkkejä
+            contains_html_tags_instructional: Alue ei voi sisältää HTML:ää
+            contains_html_tags_informative: Alue ei voi sisältää HTML:ää

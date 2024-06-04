@@ -5,12 +5,19 @@ cs:
       addresses:
         city:
           label:
-            default: Městský obvod
-            optional: Městský obvod (volitelné)
+            default: Obvod
+            optional: Obvod (volitelné)
           errors:
-            blank: Zadejte obvod
-            too_long: Název obvodu je příliš dlouhý (maximum je 255 znaků)
-            contains_html_tags: Obvod nemůže obsahovat HTML tagy.
-            contains_emojis: Obvod nemůže obsahovat emoji
-            contains_restricted_characters: Obvod/distrikt/okres nesmí obsahovat zakázané
-              znaky
+            blank_instructional: Zadejte okres.
+            blank_informative: Název okresu chybí.
+            too_long_instructional: Název okresu je příliš dlouhý (maximum je 255
+              znaků).
+            too_long_informative: Název okresu je příliš dlouhý.
+            contains_emojis_instructional: Název okresu nemůže obsahovat emoji.
+            contains_emojis_informative: Název okresu nemůže obsahovat emoji.
+            contains_restricted_characters_instructional: Název okresu nemůže obsahovat
+              zakázané znaky.
+            contains_restricted_characters_informative: Název okresu nemůže obsahovat
+              zakázané znaky.
+            contains_html_tags_instructional: Název okresu nemůže obsahovat HTML.
+            contains_html_tags_informative: Název okresu nemůže obsahovat HTML.
