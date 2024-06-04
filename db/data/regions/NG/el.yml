@@ -5,11 +5,14 @@ el:
       addresses:
         province:
           label:
-            default: Πολιτεία
+            default: Επαρχία
             optional: Πολιτεία (προαιρετικά)
           errors:
-            blank: Επιλέξτε νομό
+            blank_instructional: Επιλέξτε έναν νομό
+            blank_informative: Ο νομός λείπει
         zip:
           errors:
-            invalid_for_country: Εισαγάγετε έναν έγκυρο 6-ψήφιο ταχυδρομικό κώδικα
-              για τη Νιγηρία ή αφήστε το πεδίο κενό.
+            invalid_for_country_instructional: Εισαγάγετε έναν έγκυρο 6-ψήφιο ταχυδρομικό
+              κώδικα για τη Νιγηρία ή αφήστε το πεδίο κενό
+            invalid_for_country_informative: Ο ταχυδρομικός κώδικας δεν είναι έγκυρος
+              για τη Νιγηρία
