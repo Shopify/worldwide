@@ -6,12 +6,19 @@ zh-CN:
         zip:
           label:
             default: 邮政编码
-            optional: 邮政编码（可选）
+            optional: 邮政编码（选填）
           errors:
-            blank: 输入邮政编码
-            invalid_for_country: 输入英国的有效邮政编码
-            invalid_for_country_and_province: 输入英国 %{province} 的有效邮政编码
-            too_long: 邮政编码值过长
-            contains_html_tags: 邮政编码不能包含 HTML 标记。
-            contains_emojis: 邮政编码不能包含表情符号
-            contains_restricted_characters: "“邮政编码”字段不能包含受限字符"
+            blank_instructional: 输入邮政编码
+            blank_informative: 缺少邮政编码
+            invalid_for_country_instructional: 输入英国的有效邮政编码
+            invalid_for_country_informative: 邮政编码对英国无效
+            invalid_for_country_and_province_instructional: 输入英国 %{province} 的有效邮政编码
+            invalid_for_country_and_province_informative: 邮政编码对英国 %{province} 无效
+            too_long_instructional: 邮政编码过长
+            too_long_informative: 邮政编码过长
+            contains_emojis_instructional: 邮政编码不能包含表情符号
+            contains_emojis_informative: 邮政编码不能包含表情符号
+            contains_restricted_characters_instructional: 邮政编码不能包含受限字符
+            contains_restricted_characters_informative: 邮政编码只能包含字母、数字、当地字符和特殊字符
+            contains_html_tags_instructional: 邮政编码不能包含 HTML
+            contains_html_tags_informative: 邮政编码不能包含 HTML

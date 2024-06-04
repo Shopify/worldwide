@@ -5,32 +5,48 @@ sv:
       addresses:
         city:
           label:
-            default: Förort
-            optional: Förort (valfritt)
+            default: Område
+            optional: Område (valfritt)
           errors:
-            blank: Ange en förort
-            too_long: Områdesnamnet är för långt (max 255 tecken)
-            contains_html_tags: Område får inte innehålla HTML-taggar.
-            contains_emojis: Område får inte innehålla emojis
-            contains_restricted_characters: Förort får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
+            blank_instructional: Ange en förort
+            blank_informative: Förort saknas
+            too_long_instructional: Förort är för lång (max. 255 tecken)
+            too_long_informative: Förort är för lång
+            contains_emojis_instructional: Förort får inte innehålla emojis
+            contains_emojis_informative: Förort får inte innehålla emojis
+            contains_restricted_characters_instructional: Förort får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Förort får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Förort får inte innehålla HTML
+            contains_html_tags_informative: Förort får inte innehålla HTML
         province:
           label:
             default: Stat/territorium
             optional: Stat/territorium (valfritt)
           errors:
-            blank: Välj ett land/territorium
+            blank_instructional: Välj en stat/ett territorium
+            blank_informative: Stat/territorium saknas
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            blank: Ange ett postnummer
-            invalid_for_country: Ange ett giltigt postnummer för %{country}
-            invalid_for_country_and_province: Ange ett giltigt postnummer för %{province},
-              %{country}
-            too_long: Postnumret är för långt
-            contains_html_tags: Postnummer får inte innehålla HTML-taggar.
-            contains_emojis: Postnummer får inte innehålla emojis
-            contains_restricted_characters: Postnummer får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
+            blank_instructional: Ange ett postnummer
+            blank_informative: Postnummer saknas
+            invalid_for_country_instructional: Ange ett giltigt postnummer för %{country}
+            invalid_for_country_informative: Postnumret är inte giltigt för %{country}
+            invalid_for_country_and_province_instructional: Ange ett giltigt postnummer
+              för %{province}, %{country}
+            invalid_for_country_and_province_informative: Postnumret är inte giltigt
+              för %{province}, %{country}
+            too_long_instructional: Postnumret är för långt
+            too_long_informative: Postnumret är för långt
+            contains_emojis_instructional: Postnummer får inte innehålla emojis
+            contains_emojis_informative: Postnummer får inte innehålla emojis
+            contains_restricted_characters_instructional: Postnummer får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Postnummer får inte innehålla
+              begränsade tecken
+            contains_html_tags_instructional: Postnummer får inte innehålla HTML
+            contains_html_tags_informative: Postnummer får inte innehålla HTML

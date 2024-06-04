@@ -8,29 +8,47 @@ pt-PT:
             default: Subúrbio
             optional: Subúrbio (opcional)
           errors:
-            blank: Introduza um subúrbio
-            too_long: O apelido é demasiado longo (o máximo são 255 caracteres)
-            contains_html_tags: O subúrbio não pode conter etiquetas HTML.
-            contains_emojis: O bairro não pode conter emojis
-            contains_restricted_characters: O campo "Bairro" só pode conter letras,
-              números, caracteres locais e caracteres especiais
+            blank_instructional: Introduza um bairro
+            blank_informative: O bairro está em falta
+            too_long_instructional: O nome do bairro é demasiado longo (o máximo são
+              255 caracteres)
+            too_long_informative: O nome do bairro é demasiado longo
+            contains_emojis_instructional: O nome do bairro não pode conter emojis
+            contains_emojis_informative: O nome do bairro não pode conter emojis
+            contains_restricted_characters_instructional: O nome do bairro só pode
+              conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O nome do bairro não pode
+              conter caracteres restritos
+            contains_html_tags_instructional: O nome do bairro não pode conter HTML
+            contains_html_tags_informative: O nome do bairro não pode conter HTML
         province:
           label:
-            default: Estado/território
+            default: Estado/Território
             optional: Estado/território (opcional)
           errors:
-            blank: Selecione um estado/território
+            blank_instructional: Selecione um estado/território
+            blank_informative: O estado/território está em falta
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blank: Introduza um código postal
-            invalid_for_country: Introduza um código postal válido para %{country}
-            invalid_for_country_and_province: Introduza um código postal válido para
-              %{province}, %{country}
-            too_long: O valor do código postal é demasiado longo
-            contains_html_tags: O código postal não pode conter etiquetas HTML.
-            contains_emojis: Código postal não pode conter emojis
-            contains_restricted_characters: O campo "Código postal" só pode conter
-              letras, números, caracteres locais e caracteres especiais
+            blank_instructional: Introduza um código postal
+            blank_informative: O código postal está em falta
+            invalid_for_country_instructional: Introduza um código postal válido para
+              %{country}
+            invalid_for_country_informative: O código postal não é válido para %{country}
+            invalid_for_country_and_province_instructional: Introduza um código postal
+              válido para %{province}, %{country}
+            invalid_for_country_and_province_informative: O código postal não é válido
+              para %{province}, %{country}
+            too_long_instructional: O código postal é demasiado longo
+            too_long_informative: O código postal é demasiado longo
+            contains_emojis_instructional: O código postal não pode conter emojis
+            contains_emojis_informative: O código postal não pode conter emojis
+            contains_restricted_characters_instructional: O código postal só pode
+              conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O código postal não pode conter
+              caracteres restritos
+            contains_html_tags_instructional: O código postal não pode conter HTML
+            contains_html_tags_informative: O código postal não pode conter HTML

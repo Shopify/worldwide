@@ -8,29 +8,50 @@ vi:
             default: Ngoại ô
             optional: Ngoại ô (không bắt buộc)
           errors:
-            blank: Nhập vùng ngoại ô
-            too_long: Tên vùng ngoại ô quá dài (tối đa 255 ký tự)
-            contains_html_tags: Vùng ngoại ô không được chứa thẻ HTML.
-            contains_emojis: Ngoại ô không được chứa biểu tượng cảm xúc
-            contains_restricted_characters: Vùng ngoại ô chỉ được chứa chữ cái, chữ
-              số, ký tự địa phương và ký tự đặc biệt
+            blank_instructional: Nhập vùng ngoại ô
+            blank_informative: Thiếu vùng ngoại ô
+            too_long_instructional: Vùng ngoại ô quá dài (tối đa 255 ký tự)
+            too_long_informative: Vùng ngoại ô quá dài
+            contains_emojis_instructional: Vùng ngoại ô không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Vùng ngoại ô không được chứa biểu tượng cảm
+              xúc
+            contains_restricted_characters_instructional: Vùng ngoại ô chỉ được chứa
+              chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Vùng ngoại ô không được chứa
+              ký tự bị hạn chế
+            contains_html_tags_instructional: Vùng ngoại ô không được chứa HTML
+            contains_html_tags_informative: Vùng ngoại ô không được chứa HTML
         province:
           label:
-            default: Tiểu bang/Vùng lãnh thổ
+            default: Tiểu bang/vùng lãnh thổ
             optional: Tiểu bang/Vùng lãnh thổ (không bắt buộc)
           errors:
-            blank: Chọn tiểu bang/vùng lãnh thổ
+            blank_instructional: Chọn tiểu bang/vùng lãnh thổ
+            blank_informative: Thiếu tiểu bang/vùng lãnh thổ
         zip:
           label:
-            default: Mã bưu chính
-            optional: Mã bưu chính (không bắt buộc)
+            default: Mã bưu điện
+            optional: mã bưu chính (không bắt buộc)
           errors:
-            blank: Nhập mã bưu chính
-            invalid_for_country: Nhập mã bưu chính hợp lệ cho %{country}
-            invalid_for_country_and_province: Nhập mã bưu chính hợp lệ cho %{province},
-              %{country}
-            too_long: Giá trị mã bưu chính quá dài
-            contains_html_tags: Mã bưu điện không được chứa thẻ HTML.
-            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
-            contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
-              số, ký tự địa phương và ký tự đặc biệt
+            blank_instructional: Nhập mã bưu chính
+            blank_informative: Thiếu mã bưu chính
+            invalid_for_country_instructional: Nhập mã bưu chính hợp lệ cho %{country}
+            invalid_for_country_informative: Mã bưu chính cho %{country} không hợp
+              lệ
+            invalid_for_country_and_province_instructional: Nhập mã bưu chính hợp
+              lệ cho %{province}, %{country}
+            invalid_for_country_and_province_informative: Mã bưu chính cho %{province},
+              %{country} không hợp lệ
+            too_long_instructional: Mã bưu chính quá dài
+            too_long_informative: Mã bưu chính quá dài
+            contains_emojis_instructional: Mã bưu chính không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Mã bưu chính không được chứa biểu tượng cảm
+              xúc
+            contains_restricted_characters_instructional: Mã bưu chính chỉ được chứa
+              chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Mã bưu chính không được chứa
+              ký tự bị hạn chế
+            contains_html_tags_instructional: Mã bưu chính không được chứa HTML
+            contains_html_tags_informative: Mã bưu chính không được chứa HTML
