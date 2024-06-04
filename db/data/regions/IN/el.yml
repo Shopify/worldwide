@@ -5,21 +5,34 @@ el:
       addresses:
         province:
           label:
-            default: Πολιτεία
+            default: Επαρχία
             optional: Πολιτεία (προαιρετικά)
           errors:
-            blank: Επιλέξτε νομό
+            blank_instructional: Επιλέξτε έναν νομό
+            blank_informative: Ο νομός λείπει
         zip:
           label:
             default: Κωδικός PIN
             optional: Κωδικός PIN (προαιρετικά)
           errors:
-            blank: Εισαγάγετε κωδικό PIN
-            invalid_for_country: Εισαγάγετε έγκυρο κωδικό PIN για %{country}
-            invalid_for_country_and_province: Εισαγάγετε έγκυρο κωδικό PIN για %{province},
-              %{country}
-            too_long: Η τιμή του κωδικού PIN είναι πολύ μεγάλη
-            contains_html_tags: Ο κωδικός PIN δεν μπορεί να περιέχει ετικέτες HTML.
-            contains_emojis: Ο κωδικός PIN δεν μπορεί να περιέχει emoji
-            contains_restricted_characters: Το πεδίο "Κωδικός PIN" δεν μπορεί να περιέχει
-              απαγορευμένους χαρακτήρες
+            blank_instructional: Εισαγάγετε έναν κωδικό PIN
+            blank_informative: Ο κωδικός PIN λείπει
+            invalid_for_country_instructional: Εισαγάγετε έναν έγκυρο κωδικό PIN για
+              τη χώρα %{country}
+            invalid_for_country_informative: Ο κωδικός PIN δεν είναι έγκυρος
+            invalid_for_country_and_province_instructional: Εισαγάγετε έναν έγκυρο
+              κωδικό PIN για την επαρχία %{province} στη χώρα %{country}
+            invalid_for_country_and_province_informative: Ο κωδικός PIN δεν είναι
+              έγκυρος
+            too_long_instructional: Ο κωδικός PIN είναι πολύ μεγάλος
+            too_long_informative: Ο κωδικός PIN είναι πολύ μεγάλος
+            contains_emojis_instructional: Ο κωδικός PIN δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Ο κωδικός PIN δεν μπορεί να περιέχει emoji
+            contains_restricted_characters_instructional: Ο κωδικός PIN δεν μπορεί
+              να περιέχει περιορισμένους χαρακτήρες
+            contains_restricted_characters_informative: Ο κωδικός PIN δεν μπορεί να
+              περιέχει περιορισμένους χαρακτήρες
+            contains_html_tags_instructional: Ο κωδικός PIN δεν μπορεί να περιέχει
+              κώδικα HTML
+            contains_html_tags_informative: Ο κωδικός PIN δεν μπορεί να περιέχει κώδικα
+              HTML

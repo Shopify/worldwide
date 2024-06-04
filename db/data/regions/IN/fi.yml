@@ -8,18 +8,27 @@ fi:
             default: Osavaltio
             optional: Osavaltio (valinnainen)
           errors:
-            blank: Valitse osavaltio
+            blank_instructional: Valitse osavaltio
+            blank_informative: Osavaltio puuttuu
         zip:
           label:
-            default: Postinumero
-            optional: Postinumero (valinnainen)
+            default: PIN-koodi
+            optional: PIN-koodi (valinnainen)
           errors:
-            blank: Anna PIN-koodi
-            invalid_for_country: Anna kelvollinen PIN-koodi maassa %{country}
-            invalid_for_country_and_province: Anna kelvollinen PIN-koodi provinssissa
-              %{province}, %{country}
-            too_long: Intian PIN-postinumeron arvo on liian pitkä
-            contains_html_tags: PIN-koodi ei voi sisältää HTML-tunnisteita.
-            contains_emojis: PIN-koodi ei voi sisältää emojeita
-            contains_restricted_characters: PIN-koodi ei voi sisältää kiellettyjä
-              merkkejä
+            blank_instructional: Anna PIN-koodi
+            blank_informative: PIN-koodi puuttuu
+            invalid_for_country_instructional: Anna kelvollinen PIN-koodi maalle %{country}
+            invalid_for_country_informative: PIN-koodi ei ole kelvollinen
+            invalid_for_country_and_province_instructional: Anna kelvollinen PIN-koodi
+              provinssille %{province}, %{country}
+            invalid_for_country_and_province_informative: PIN-koodi ei ole kelvollinen
+            too_long_instructional: PIN-koodi on liian pitkä
+            too_long_informative: PIN-koodi on liian pitkä
+            contains_emojis_instructional: PIN-koodi ei voi sisältää emojeita
+            contains_emojis_informative: PIN-koodi ei voi sisältää emojeita
+            contains_restricted_characters_instructional: PIN-koodi ei voi sisältää
+              rajoitettuja merkkejä
+            contains_restricted_characters_informative: PIN-koodi ei voi sisältää
+              rajoitettuja merkkejä
+            contains_html_tags_instructional: PIN-koodi ei voi sisältää HTML:ää
+            contains_html_tags_informative: PIN-koodi ei voi sisältää HTML:ää

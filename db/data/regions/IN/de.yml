@@ -5,21 +5,31 @@ de:
       addresses:
         province:
           label:
-            default: Bundesstaat
-            optional: Bundesstaat (optional)
+            default: Bundesland/Provinz
+            optional: Bundesland/Provinz (optional)
           errors:
-            blank: Wähle einen Bundesstaat aus
+            blank_instructional: Staat auswählen
+            blank_informative: Staat fehlt
         zip:
           label:
             default: PIN-Code
             optional: PIN-Code (optional)
           errors:
-            blank: Gib eine Postleitzahl ein
-            invalid_for_country: Gib eine gültige Postleitzahl für %{country} ein
-            invalid_for_country_and_province: Gib einen gültigen PIN-Code für %{province},
-              %{country} ein
-            too_long: Der PIN-Code-Wert ist zu lang
-            contains_html_tags: PIN-Code darf keine HTML-Tags enthalten.
-            contains_emojis: Der PIN-Code darf keine Emojis enthalten
-            contains_restricted_characters: Der PIN-Code darf keine eingeschränkten
+            blank_instructional: PIN-Code eingeben
+            blank_informative: PIN-Code fehlt
+            invalid_for_country_instructional: Eine gültige Postleitzahl für %{country}
+              eingeben
+            invalid_for_country_informative: PIN-Code ist nicht gültig
+            invalid_for_country_and_province_instructional: Einen gültigen PIN-Code
+              für %{province}, %{country} eingeben
+            invalid_for_country_and_province_informative: PIN-Code ist nicht gültig
+            too_long_instructional: PIN-Code ist zu lang
+            too_long_informative: PIN-Code ist zu lang
+            contains_emojis_instructional: PIN-Code darf keine Emojis enthalten
+            contains_emojis_informative: PIN-Code darf keine Emojis enthalten
+            contains_restricted_characters_instructional: PIN-Code darf keine eingeschränkten
               Zeichen enthalten
+            contains_restricted_characters_informative: PIN-Code darf keine eingeschränkten
+              Zeichen enthalten
+            contains_html_tags_instructional: PIN-Code darf kein HTML enthalten
+            contains_html_tags_informative: PIN-Code darf kein HTML enthalten

@@ -8,18 +8,28 @@ fr:
             default: État
             optional: État (facultatif)
           errors:
-            blank: Sélectionner un État
+            blank_instructional: Sélectionner un État
+            blank_informative: L'État est manquant
         zip:
           label:
-            default: Code postal PIN
-            optional: Code postal PIN (facultatif)
+            default: Code PIN
+            optional: Code PIN (facultatif)
           errors:
-            blank: Saisir un code confidentiel
-            invalid_for_country: Saisir un code confidentiel valide pour %{country}
-            invalid_for_country_and_province: Saisir un code confidentiel valide pour
-              %{province}, %{country}
-            contains_html_tags: Le code PIN ne peut pas contenir de balises HTML.
-            too_long: La valeur du code PIN est trop longue.
-            contains_emojis: Le code PIN ne peut pas contenir d’emojis
-            contains_restricted_characters: Le code PIN ne peut pas contenir de caractères
-              non autorisés
+            blank_instructional: Saisir un code PIN
+            blank_informative: Le code PIN est manquant
+            invalid_for_country_instructional: Saisir un code PIN valide pour %{country}
+            invalid_for_country_informative: Le code PIN n’est pas valide
+            invalid_for_country_and_province_instructional: Saisir un code PIN valide
+              pour %{province}, %{country}
+            invalid_for_country_and_province_informative: Le code PIN n’est pas valide
+            too_long_instructional: Le code PIN est trop long
+            too_long_informative: Le code PIN est trop long
+            contains_emojis_instructional: Le code PIN ne peut pas contenir d’emojis
+            contains_emojis_informative: Le code PIN ne peut pas contenir d’emojis
+            contains_restricted_characters_instructional: Le code PIN ne peut pas
+              contenir de caractères non autorisés
+            contains_restricted_characters_informative: Le code PIN ne peut pas contenir
+              de caractères non autorisés
+            contains_html_tags_instructional: Le code PIN ne peut pas contenir de
+              HTML
+            contains_html_tags_informative: Le code PIN ne peut pas contenir de HTML
