@@ -1,0 +1,34 @@
+---
+bg:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Щат
+            optional: Щат (незадължително)
+          errors:
+            blank_instructional: Изберете щат
+            blank_informative: Липсва щат
+        zip:
+          label:
+            default: ПИН код
+            optional: ПИН код (незадължително)
+          errors:
+            blank_instructional: Въведете ПИН код
+            blank_informative: Липсва ПИН код
+            invalid_for_country_instructional: Въведете валиден ПИН код за %{country}
+            invalid_for_country_informative: ПИН кодът не е валиден
+            invalid_for_country_and_province_instructional: Въведете валиден ПИН код
+              за %{province}, %{country}
+            invalid_for_country_and_province_informative: ПИН кодът не е валиден
+            too_long_instructional: "„ПИН код“ е с твърде голяма дължина"
+            too_long_informative: "„ПИН код“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„ПИН код“ не може да съдържа емоджита"
+            contains_emojis_informative: "„ПИН код“ не може да съдържа емоджита"
+            contains_restricted_characters_instructional: "„ПИН код“ не може да съдържа
+              забранени знаци"
+            contains_restricted_characters_informative: "„ПИН код“ не може да съдържа
+              забранени знаци"
+            contains_html_tags_instructional: "„ПИН код“ не може да съдържа HTML"
+            contains_html_tags_informative: "„ПИН код“ не може да съдържа HTML"
