@@ -5,13 +5,19 @@ ru:
       addresses:
         city:
           label:
-            default: Округ
-            optional: Округ (необязательно)
+            default: Район
+            optional: Район (необязательно)
           errors:
-            blank: Укажите район
-            too_long: Название района слишком длинное (должно содержать не больше
-              255 символов)
-            contains_html_tags: Название области не может содержать HTML-теги.
-            contains_emojis: Название области не может содержать емодзи
-            contains_restricted_characters: Поле «Район» не может содержать недопустимые
-              символы
+            blank_instructional: Укажите округ
+            blank_informative: Округ отсутствует
+            too_long_instructional: Название округа слишком длинное (должно содержать
+              не больше 255 символов)
+            too_long_informative: Название округа слишком длинное
+            contains_emojis_instructional: Название округа не может содержать емодзи
+            contains_emojis_informative: Название округа не может содержать емодзи
+            contains_restricted_characters_instructional: Поле «Округ» не может содержать
+              недопустимые символы
+            contains_restricted_characters_informative: Поле «Округ» не может содержать
+              недопустимые символы
+            contains_html_tags_instructional: Название округа не может содержать HTML
+            contains_html_tags_informative: Название округа не может содержать HTML

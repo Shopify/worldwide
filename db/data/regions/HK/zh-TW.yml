@@ -5,11 +5,16 @@ zh-TW:
       addresses:
         city:
           label:
-            default: 區
-            optional: 區 (選填)
+            default: 行政區
+            optional: 行政區 (選填)
           errors:
-            blank: 輸入一個區
-            too_long: 行政區名稱過長 (最多 255 個字元)
-            contains_html_tags: 行政區不得包含 HTML 標記。
-            contains_emojis: 行政區不得包含表情符號
-            contains_restricted_characters: 區不可包含限制的字元
+            blank_instructional: 請輸入行政區
+            blank_informative: 缺少行政區
+            too_long_instructional: 行政區過長 (最多 255 個字元)
+            too_long_informative: 行政區過長
+            contains_emojis_instructional: 行政區不得包含表情符號
+            contains_emojis_informative: 行政區不得包含表情符號
+            contains_restricted_characters_instructional: 行政區不得包含限制的字元
+            contains_restricted_characters_informative: 行政區不得包含限制的字元
+            contains_html_tags_instructional: 行政區不得包含 HTML
+            contains_html_tags_informative: 行政區不得包含 HTML

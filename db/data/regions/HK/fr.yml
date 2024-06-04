@@ -5,12 +5,19 @@ fr:
       addresses:
         city:
           label:
-            default: Arrondissement
-            optional: Arrondissement (facultatif)
+            default: District
+            optional: District (facultatif)
           errors:
-            blank: Saisir un district
-            contains_html_tags: L'arrondissement ne peut pas contenir de balises HTML.
-            too_long: Le nom du district est trop long (255 caractères maximum).
-            contains_emojis: L’arrondissement ne peut pas contenir d’emojis
-            contains_restricted_characters: Le district ne peut pas contenir de caractères
-              non autorisés
+            blank_instructional: Saisir un district
+            blank_informative: Le district est manquant
+            too_long_instructional: Le district est trop long (le maximum est de 255 caractères)
+            too_long_informative: Le district est trop long
+            contains_emojis_instructional: Le district ne peut pas contenir d’emojis
+            contains_emojis_informative: Le district ne peut pas contenir d’emojis
+            contains_restricted_characters_instructional: Le district ne peut pas
+              contenir de caractères non autorisés
+            contains_restricted_characters_informative: Le district ne peut pas contenir
+              de caractères non autorisés
+            contains_html_tags_instructional: Le district ne peut pas contenir de
+              HTML
+            contains_html_tags_informative: Le district ne peut pas contenir de HTML
