@@ -8,19 +8,29 @@ ru:
             default: Штат
             optional: Штат (необязательно)
           errors:
-            blank: Выберите штат
+            blank_instructional: Выберите штат
+            blank_informative: Штат отсутствует
         zip:
           label:
-            default: PIN-код
-            optional: PIN-код (необязательно)
+            default: Почтовый индекс
+            optional: Почтовый индекс (необязательно)
           errors:
-            blank: Укажите почтовый индекс
-            invalid_for_country: Укажите действительный почтовый индекс для страны
-              %{country}
-            invalid_for_country_and_province: Укажите действительный почтовый индекс
-              для региона %{province} (%{country})
-            too_long: PIN-код слишком длинный
-            contains_html_tags: Индекс не может содержать HTML-теги.
-            contains_emojis: PIN-код не может содержать емодзи
-            contains_restricted_characters: Поле «Почтовый индекс» не может содержать
-              недопустимые символы
+            blank_instructional: Введите почтовый индекс
+            blank_informative: Почтовый индекс отсутствует
+            invalid_for_country_instructional: Укажите действительный почтовый индекс
+              для страны (%{country})
+            invalid_for_country_informative: Недействительный почтовый индекс
+            invalid_for_country_and_province_instructional: Укажите действительный
+              почтовый индекс для области (%{province}, %{country})
+            invalid_for_country_and_province_informative: Недействительный почтовый
+              индекс
+            too_long_instructional: Почтовый индекс слишком длинный
+            too_long_informative: Почтовый индекс слишком длинный
+            contains_emojis_instructional: Почтовый индекс не может содержать емодзи
+            contains_emojis_informative: Почтовый индекс не может содержать емодзи
+            contains_restricted_characters_instructional: Поле «Почтовый индекс» не
+              может содержать недопустимые символы
+            contains_restricted_characters_informative: Поле «Почтовый индекс» не
+              может содержать недопустимые символы
+            contains_html_tags_instructional: Почтовый индекс не может содержать HTML
+            contains_html_tags_informative: Почтовый индекс не может содержать HTML
