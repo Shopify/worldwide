@@ -6,28 +6,43 @@ zh-CN:
         city:
           label:
             default: 郊区
-            optional: 郊区（可选）
+            optional: 郊区（选填）
           errors:
-            blank: 输入郊区
-            too_long: 郊区名称过长（最多 255 个字符）
-            contains_html_tags: 郊区不能包含 HTML 标记。
-            contains_emojis: 郊区不能包含表情符号
-            contains_restricted_characters: "“郊区”字段只能包含字母、数字、当地字符和特殊字符"
+            blank_instructional: 输入郊区
+            blank_informative: 缺少郊区
+            too_long_instructional: 郊区名过长（最多 255 个字符）
+            too_long_informative: 郊区名过长
+            contains_emojis_instructional: 郊区名不能包含表情符号
+            contains_emojis_informative: 郊区名不能包含表情符号
+            contains_restricted_characters_instructional: 郊区名只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 郊区名不能包含受限字符
+            contains_html_tags_instructional: 郊区名不能包含 HTML
+            contains_html_tags_informative: 郊区名不能包含 HTML
         province:
           label:
             default: 州/领地
-            optional: 州/领地（可选）
+            optional: 州/领地（选填）
           errors:
-            blank: 选择州/领地
+            blank_instructional: 选择州/领地
+            blank_informative: 缺少州/领地
         zip:
           label:
             default: 邮政编码
-            optional: 邮政编码（可选）
+            optional: 邮政编码（选填）
           errors:
-            blank: 输入邮政编码
-            invalid_for_country: 输入 %{country} 的有效邮政编码
-            invalid_for_country_and_province: 输入 %{country} %{province} 的有效邮政编码
-            too_long: 邮政编码值过长
-            contains_html_tags: 邮政编码不能包含 HTML 标记。
-            contains_emojis: 邮政编码不能包含表情符号
-            contains_restricted_characters: "“邮政编码”字段只能包含字母、数字、当地字符和特殊字符"
+            blank_instructional: 输入邮政编码
+            blank_informative: 缺少邮政编码
+            invalid_for_country_instructional: 输入 %{country} 对应的有效邮政编码
+            invalid_for_country_informative: 邮政编码对 %{country} 无效
+            invalid_for_country_and_province_instructional: 输入 %{country} %{province}
+              对应的有效邮政编码
+            invalid_for_country_and_province_informative: 邮政编码对 %{country} %{province}
+              无效
+            too_long_instructional: 邮政编码过长
+            too_long_informative: 邮政编码过长
+            contains_emojis_instructional: 邮政编码不能包含表情符号
+            contains_emojis_informative: 邮政编码不能包含表情符号
+            contains_restricted_characters_instructional: 邮政编码只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 邮政编码不能包含受限字符
+            contains_html_tags_instructional: 邮政编码不能包含 HTML
+            contains_html_tags_informative: 邮政编码不能包含 HTML

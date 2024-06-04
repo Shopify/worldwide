@@ -5,30 +5,46 @@ ko:
       addresses:
         city:
           label:
-            default: 교외
-            optional: 교외(선택 사항)
+            default: 지역
+            optional: 지역(선택 사항)
           errors:
-            blank: 구 입력
-            too_long: 지역 이름이 너무 깁니다(최대 255자).
-            contains_html_tags: 지역(Suburb)에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 지역(Suburb)에 이모티콘을 포함할 수 없음
-            contains_restricted_characters: 교외에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
+            blank_instructional: 지역을 입력하세요
+            blank_informative: 지역이 누락되었습니다
+            too_long_instructional: 지역 이름이 너무 깁니다(최대 255자)
+            too_long_informative: 지역 이름이 너무 깁니다
+            contains_emojis_instructional: 지역(Suburb)에 이모티콘을 포함할 수 없습니다
+            contains_emojis_informative: 지역(Suburb)에 이모티콘을 포함할 수 없습니다
+            contains_restricted_characters_instructional: 지역에는 문자, 숫자, 지역 문자, 특수 문자만
+              포함할 수 있습니다
+            contains_restricted_characters_informative: 지역에는 제한 문자를 포함할 수 없습니다
+            contains_html_tags_instructional: 지역에는 HTML을 포함할 수 없습니다
+            contains_html_tags_informative: 지역에는 HTML을 포함할 수 없습니다
         province:
           label:
-            default: 시/도/지역
-            optional: 시/도/지역(선택 사항)
+            default: 주/지역
+            optional: 주/지역(선택 사항)
           errors:
-            blank: 시/도/지역 선택
+            blank_instructional: 주/지역 선택
+            blank_informative: 주/지역이 누락되었습니다
         zip:
           label:
             default: 우편 번호
             optional: 우편 번호(선택 사항)
           errors:
-            blank: 우편 번호 입력
-            invalid_for_country: "%{country}의 유효한 우편 번호 입력"
-            invalid_for_country_and_province: "%{country}, %{province}의 유효한 우편 번호를
-              입력하십시오."
-            too_long: 우편 번호 값이 너무 깁니다.
-            contains_html_tags: 우편 번호에 HTML 태그를 포함할 수 없습니다.
-            contains_emojis: 우편 번호에 이모티콘을 포함할 수 없음
-            contains_restricted_characters: 우편 번호에는 문자, 숫자, 지역 문자, 특수 문자만 포함될 수 있습니다
+            blank_instructional: 우편 번호를 입력하세요
+            blank_informative: 우편 번호가 누락되었습니다
+            invalid_for_country_instructional: "%{country}의 유효한 우편 번호를 입력하세요"
+            invalid_for_country_informative: "%{country}의 우편 번호가 유효하지 않습니다"
+            invalid_for_country_and_province_instructional: "%{country}, %{province}의
+              유효한 우편 번호를 입력하세요"
+            invalid_for_country_and_province_informative: "%{country}, %{province}의
+              우편 번호가 유효하지 않습니다"
+            too_long_instructional: 우편 번호가 너무 깁니다
+            too_long_informative: 우편 번호가 너무 깁니다
+            contains_emojis_instructional: 우편 번호에 이모티콘을 포함할 수 없습니다
+            contains_emojis_informative: 우편 번호에 이모티콘을 포함할 수 없습니다
+            contains_restricted_characters_instructional: 우편 번호에는 문자, 숫자, 지역 문자, 특수
+              문자만 포함될 수 있습니다
+            contains_restricted_characters_informative: 우편 번호에는 제한 문자를 포함할 수 없습니다
+            contains_html_tags_instructional: 우편 번호에는 HTML을 포함할 수 없습니다
+            contains_html_tags_informative: 우편 번호에는 HTML을 포함할 수 없습니다

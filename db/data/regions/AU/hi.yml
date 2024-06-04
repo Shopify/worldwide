@@ -8,29 +8,47 @@ hi:
             default: उपनगर
             optional: उपनगर (वैकल्पिक)
           errors:
-            blank: सबर्ब दर्ज करें
-            too_long: उपनगर का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: उपशहर के फ़ील्ड में HTML टैग नहीं हो सकते.
-            contains_emojis: सबअर्ब में इमोजी नहीं हो सकते
-            contains_restricted_characters: उपनगर में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+            blank_instructional: किसी उपनगर का नाम डालें
+            blank_informative: उपनगर का नाम गुम है
+            too_long_instructional: उपनगर का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            too_long_informative: उपनगर का नाम बहुत लंबा है
+            contains_emojis_instructional: उपनगर में इमोजी नहीं हो सकते
+            contains_emojis_informative: उपनगर में इमोजी नहीं हो सकते
+            contains_restricted_characters_instructional: उपनगर में सिर्फ अक्षर, संख्या,
+              लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: उपनगर के नाम में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_html_tags_instructional: उपनगर में HTML नहीं हो सकता
+            contains_html_tags_informative: उपनगर में HTML नहीं हो सकता
         province:
           label:
             default: राज्य/क्षेत्र
             optional: राज्य/क्षेत्र (वैकल्पिक)
           errors:
-            blank: एक राज्य/क्षेत्र चुनें
+            blank_instructional: कोई राज्य/प्रदेश चुनें
+            blank_informative: राज्य/प्रदेश का नाम गुम है
         zip:
           label:
-            default: पिन कोड
-            optional: पिन कोड (वैकल्पिक)
+            default: पोस्टकोड
+            optional: पोस्टकोड (वैकल्पिक)
           errors:
-            blank: एक पोस्टकोड दर्ज करें
-            invalid_for_country: "%{country} के लिए एक मान्य पोस्टकोड दर्ज करें"
-            invalid_for_country_and_province: "%{province}, %{country} के लिए एक मान्य
-              पोस्टकोड दर्ज करें"
-            too_long: पोस्टकोड का मान बहुत लंबा है
-            contains_html_tags: पोस्टकोड में HTML टैग नहीं हो सकते.
-            contains_emojis: पोस्टकोड में इमोजी नहीं हो सकते
-            contains_restricted_characters: पोस्टकोड में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
+            blank_instructional: एक पोस्टकोड डालें
+            blank_informative: पोस्टकोड गुम है
+            invalid_for_country_instructional: "%{country} के लिए एक मान्य पोस्टकोड
+              डालें"
+            invalid_for_country_informative: "%{country} के लिए पोस्टकोड मान्य नहीं
+              है"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              के लिए एक मान्य पोस्टकोड डालें"
+            invalid_for_country_and_province_informative: "%{province}, %{country}
+              के लिए पोस्टकोड मान्य नहीं है"
+            too_long_instructional: पोस्टकोड बहुत लंबा है
+            too_long_informative: पोस्टकोड बहुत लंबा है
+            contains_emojis_instructional: पोस्टकोड में इमोजी नहीं हो सकते
+            contains_emojis_informative: पोस्टकोड में इमोजी नहीं हो सकते
+            contains_restricted_characters_instructional: पोस्टकोड में सिर्फ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: पोस्टकोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_html_tags_instructional: पोस्टकोड में HTML नहीं हो सकता
+            contains_html_tags_informative: पोस्टकोड में HTML नहीं हो सकता

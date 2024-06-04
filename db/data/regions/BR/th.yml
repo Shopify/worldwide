@@ -8,10 +8,12 @@ th:
             default: หมายเลขถนนและบ้านเลขที่
             optional: หมายเลขถนนและบ้านเลขที่ (ไม่บังคับ)
           errors:
-            blank: ป้อนหมายเลขถนนและบ้านเลขที่
+            blank_instructional: ป้อนหมายเลขถนนและบ้านเลขที่
+            blank_informative: ไม่พบหมายเลขถนนและบ้านเลขที่
         province:
           label:
             default: รัฐ
-            optional: รัฐ (ไม่จำเป็น)
+            optional: รัฐ (ไม่บังคับ)
           errors:
-            blank: เลือกรัฐ
+            blank_instructional: เลือกรัฐ
+            blank_informative: ไม่พบรัฐ

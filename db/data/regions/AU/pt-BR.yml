@@ -8,29 +8,45 @@ pt-BR:
             default: Bairro
             optional: Bairro (opcional)
           errors:
-            blank: Insira um bairro
-            too_long: O nome do bairro é longo demais (máximo de 255 caracteres)
-            contains_html_tags: O bairro não pode ter tags HTML
-            contains_emojis: O nome do bairro não pode conter emojis
-            contains_restricted_characters: O bairro pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
+            blank_instructional: Insira um bairro
+            blank_informative: Falta o bairro
+            too_long_instructional: O bairro é longo demais (máximo de 255 caracteres)
+            too_long_informative: O bairro é longo demais
+            contains_emojis_instructional: O bairro não pode conter emojis
+            contains_emojis_informative: O bairro não pode conter emojis
+            contains_restricted_characters_instructional: O bairro pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O bairro não pode conter caracteres
+              restritos
+            contains_html_tags_instructional: O bairro não pode conter HTML
+            contains_html_tags_informative: O bairro não pode conter HTML
         province:
           label:
-            default: Estado/território
+            default: Estado/Território
             optional: Estado/território (opcional)
           errors:
-            blank: Selecione um estado/território
+            blank_instructional: Selecione um estado/território
+            blank_informative: Falta o estado/território
         zip:
           label:
-            default: Código postal
-            optional: Código postal (opcional)
+            default: CEP
+            optional: CEP (opcional)
           errors:
-            blank: Insira um código postal
-            invalid_for_country: Insira um código postal válido para %{country}
-            invalid_for_country_and_province: Insira um CEP válido para %{province},
-              %{country}
-            too_long: O valor de CEP é longo demais
-            contains_html_tags: O CEP não pode ter tags HTML.
-            contains_emojis: Código postal não pode conter emojis
-            contains_restricted_characters: O CEP pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
+            blank_instructional: Insira um CEP
+            blank_informative: Falta o CEP
+            invalid_for_country_instructional: Insira um CEP válido para %{country}
+            invalid_for_country_informative: O CEP não é válido para %{country}
+            invalid_for_country_and_province_instructional: Insira um CEP válido para
+              %{province}, %{country}
+            invalid_for_country_and_province_informative: O CEP não é válido para
+              %{province}, %{country}
+            too_long_instructional: O CEP é longo demais
+            too_long_informative: O CEP é longo demais
+            contains_emojis_instructional: O CEP não pode conter emojis
+            contains_emojis_informative: O CEP não pode conter emojis
+            contains_restricted_characters_instructional: O CEP pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O CEP não pode conter caracteres
+              restritos
+            contains_html_tags_instructional: O CEP não pode conter HTML
+            contains_html_tags_informative: O CEP não pode conter HTML

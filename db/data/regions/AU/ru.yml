@@ -5,34 +5,53 @@ ru:
       addresses:
         city:
           label:
-            default: Район
-            optional: Район (необязательно)
+            default: Пригород
+            optional: Пригород (необязательно)
           errors:
-            blank: Укажите район
-            too_long: Название пригорода слишком длинное (должно содержать не больше
-              255 символов)
-            contains_html_tags: Название района не может содержать HTML-теги.
-            contains_emojis: Район не может содержать емодзи
-            contains_restricted_characters: Поле «Район» может содержать только буквы,
-              цифры, а также местные и специальные символы
+            blank_instructional: Укажите пригород
+            blank_informative: Пригород отсутствует
+            too_long_instructional: Название пригорода слишком длинное (должно содержать
+              не больше 255 символов)
+            too_long_informative: Название пригорода слишком длинное
+            contains_emojis_instructional: Название пригорода не может содержать емодзи
+            contains_emojis_informative: Название пригорода не может содержать емодзи
+            contains_restricted_characters_instructional: Поле «Название пригорода»
+              может содержать только буквы, цифры, а также местные и специальные символы
+            contains_restricted_characters_informative: Поле «Название пригорода»
+              не может содержать недопустимые символы
+            contains_html_tags_instructional: Название пригорода не может содержать
+              HTML
+            contains_html_tags_informative: Название пригорода не может содержать
+              HTML
         province:
           label:
-            default: Государство/территория
-            optional: Государство/территория (необязательно)
+            default: Штат/территория
+            optional: Штат/территория (необязательно)
           errors:
-            blank: Выберите штат/территорию
+            blank_instructional: Выберите штат/территорию
+            blank_informative: Штат/территория отсутствуют
         zip:
           label:
             default: Почтовый индекс
             optional: Почтовый индекс (необязательно)
           errors:
-            blank: Укажите почтовый индекс
-            invalid_for_country: Укажите действительный почтовый индекс для страны
-              %{country}
-            invalid_for_country_and_province: Укажите действительный почтовый индекс
-              для региона %{province} (%{country})
-            too_long: Почтовый индекс слишком длинный
-            contains_html_tags: Индекс не может содержать HTML-теги.
-            contains_emojis: Индекс не может содержать емодзи
-            contains_restricted_characters: Поле «Индекс» может содержать только буквы,
-              цифры, а также местные и специальные символы
+            blank_instructional: Укажите почтовый индекс
+            blank_informative: Почтовый индекс отсутствует
+            invalid_for_country_instructional: Укажите действительный почтовый индекс
+              для страны (%{country})
+            invalid_for_country_informative: Недействительный почтовый индекс для
+              страны (%{country})
+            invalid_for_country_and_province_instructional: Укажите действительный
+              почтовый индекс для области (%{province}, %{country})
+            invalid_for_country_and_province_informative: Недействительный почтовый
+              индекс для области (%{province}, %{country})
+            too_long_instructional: Почтовый индекс слишком длинный
+            too_long_informative: Почтовый индекс слишком длинный
+            contains_emojis_instructional: Почтовый индекс не может содержать емодзи
+            contains_emojis_informative: Почтовый индекс не может содержать емодзи
+            contains_restricted_characters_instructional: Поле «Почтовый индекс» может
+              содержать только буквы, цифры, а также местные и специальные символы
+            contains_restricted_characters_informative: Поле «Почтовый индекс» не
+              может содержать недопустимые символы
+            contains_html_tags_instructional: Почтовый индекс не может содержать HTML
+            contains_html_tags_informative: Почтовый индекс не может содержать HTML

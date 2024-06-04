@@ -1,0 +1,53 @@
+---
+hr:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Naselje
+            optional: Naselje (nije obavezno)
+          errors:
+            blank_instructional: Unesite naselje
+            blank_informative: Nedostaje naselje
+            too_long_instructional: Naziv naselja je predugačak (dopušteno je najviše
+              255 znakova)
+            too_long_informative: Naziv naselja je predugačak
+            contains_emojis_instructional: Naziv naselja ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv naselja ne smije sadržavati emotikone
+            contains_restricted_characters_instructional: Naziv naselja smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv naselja ne smije sadržavati
+              zabranjene znakove
+            contains_html_tags_instructional: Naziv naselja ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv naselja ne smije sadržavati HTML
+        province:
+          label:
+            default: Savezna država / teritorij
+            optional: Savezna država / teritorij (neobavezno)
+          errors:
+            blank_instructional: Odaberite saveznu državu/teritorij
+            blank_informative: Nedostaje savezna država/teritorij
+        zip:
+          label:
+            default: Poštanski kod
+            optional: Poštanski broj (neobavezno)
+          errors:
+            blank_instructional: Unesite poštanski broj
+            blank_informative: Nedostaje poštanski broj
+            invalid_for_country_instructional: Unesite valjani poštanski broj za %{country}
+            invalid_for_country_informative: Poštanski broj nije valjan za %{country}
+            invalid_for_country_and_province_instructional: Unesite valjani poštanski
+              broj za %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštanski broj nije valjan
+              za %{province}, %{country}
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
+            contains_emojis_instructional: Poštanski broj ne smije sadržavati emotikone
+            contains_emojis_informative: Poštanski broj ne smije sadržavati emotikone
+            contains_restricted_characters_instructional: Poštanski broj smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Poštanski broj ne smije sadržavati
+              zabranjene znakove
+            contains_html_tags_instructional: Poštanski broj ne smije sadržavati HTML
+            contains_html_tags_informative: Poštanski broj ne smije sadržavati HTML
