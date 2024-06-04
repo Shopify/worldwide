@@ -8,16 +8,19 @@ cs:
             default: Ulice a číslo domu
             optional: Ulice a číslo domu (volitelné)
           errors:
-            blank: Zadejte ulici a číslo domu
+            blank_instructional: Zadejte ulici a číslo domu.
+            blank_informative: Ulice a číslo domu chybí.
         address2:
           label:
-            default: Byt, apartmá atd.
-            optional: Byt, apartmá atd. (volitelné)
+            default: Byt, jednotka apod.
+            optional: Byt, jednotka apod. (volitelné)
           errors:
-            blank: Zadejte č. bytu, domu atd.
+            blank_instructional: Zadejte číslo bytu, jednotky apod.
+            blank_informative: Informace o bytu nebo jednotce chybí.
         city:
           label:
-            default: Velkoměsto/město
-            optional: Velkoměsto/město (volitelné)
+            default: Obec
+            optional: Obec (volitelné)
           errors:
-            blank: Zadejte město
+            blank_instructional: Zadejte obec.
+            blank_informative: Obec chybí.
