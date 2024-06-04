@@ -5,13 +5,15 @@ fi:
       addresses:
         address2:
           label:
-            default: Esikaupunki
-            optional: Esikaupunki (valinnainen)
+            default: Kaupunginosa
+            optional: Kaupunginosa (valinnainen)
           errors:
-            blank: Anna esikaupunkialue
+            blank_instructional: Anna esikaupunki
+            blank_informative: Esikaupunki puuttuu
         province:
           label:
             default: Provinssi
             optional: Provinssi (valinnainen)
           errors:
-            blank: Valitse provinssi
+            blank_instructional: Valitse provinssi
+            blank_informative: Provinssi puuttuu
