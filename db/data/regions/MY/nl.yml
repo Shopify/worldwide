@@ -5,16 +5,23 @@ nl:
       addresses:
         province:
           label:
-            default: Staat/territorium
-            optional: Staat/territorium (optioneel)
+            default: Staat/grondgebied
+            optional: Staat/grondgebied (optioneel)
           errors:
-            blank: Selecteer een staat/grondgebied
+            blank_instructional: Selecteer een staat/grondgebied
+            blank_informative: Staat/grondgebied ontbreekt
         zip:
           label:
             default: Postcode
             optional: Postcode (optioneel)
           errors:
-            too_long: De waarde van de postcode is te lang
-            contains_html_tags: De postcode mag geen HTML-tags bevatten.
-            contains_emojis: De postcode mag geen emoji's bevatten
-            contains_restricted_characters: De postcode mag geen verboden tekens bevatten
+            too_long_instructional: Postcode is te lang
+            too_long_informative: Postcode is te lang
+            contains_emojis_instructional: Postcode mag geen emoji's bevatten
+            contains_emojis_informative: Postcode mag geen emoji's bevatten
+            contains_restricted_characters_instructional: Postcode mag geen verboden
+              tekens bevatten
+            contains_restricted_characters_informative: Postcode mag geen verboden
+              tekens bevatten
+            contains_html_tags_instructional: Postcode mag geen HTML bevatten
+            contains_html_tags_informative: Postcode mag geen HTML bevatten

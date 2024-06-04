@@ -8,16 +8,19 @@ th:
             default: หมายเลขถนนและบ้านเลขที่
             optional: หมายเลขถนนและบ้านเลขที่ (ไม่บังคับ)
           errors:
-            blank: ป้อนหมายเลขถนนและบ้านเลขที่
+            blank_instructional: ป้อนหมายเลขถนนและบ้านเลขที่
+            blank_informative: ไม่พบหมายเลขถนนและบ้านเลขที่
         address2:
           label:
-            default: อพาร์ทเม้นท์ ห้องชุด เป็นต้น
-            optional: อพาร์ทเม้นท์ ห้องชุด เป็นต้น (ไม่บังคับ)
+            default: อะพาร์ตเมนต์ ห้องชุด เป็นต้น
+            optional: อะพาร์ตเมนต์ ห้องชุด เป็นต้น (ไม่จำเป็น)
           errors:
-            blank: ป้อนชื่ออพาร์ตเมนต์ ห้องชุด ฯลฯ
+            blank_instructional: ป้อนอะพาร์ตเมนต์ ห้องชุด ฯลฯ
+            blank_informative: ไม่พบอะพาร์ตเมนต์หรือห้องชุด
         city:
           label:
             default: เมือง/ตัวเมือง
             optional: เมือง/ตัวเมือง (ไม่บังคับ)
           errors:
-            blank: ป้อนชื่อเมือง/ตัวเมือง
+            blank_instructional: ป้อนเมือง/ตัวเมือง
+            blank_informative: ไม่พบเมือง/ตัวเมือง
