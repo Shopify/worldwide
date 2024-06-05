@@ -33,3 +33,40 @@ export function concatAddressField(
     return concatenatedAddress;
   }, '');
 }
+
+/**
+ * Utility function that parses an address string based on a provided field
+ * definition and set of values for those fields
+ *
+ * @param fieldDefinition Array of definitions of address sub-fields
+ * @param concatenatedAddress Concatenated string of address field
+ * @returns Partial Address object of fields parsed from string
+ */
+export function splitAddressField(
+  fieldDefinition: FieldConcatenationRule[],
+  concatenatedAddress: string,
+): Partial<Address> {
+  const values = concatenatedAddress.split(RESERVED_DELIMITER);
+
+  const parsedAddressObject = values.reduce((obj, value, index) => {
+    if (value !== '') {
+      // Decorator is included as a suffix in the previous sub-field value,
+      // so we need to strip it from the current field by looking ahead at the
+      // next field's definition
+      // Ex: streetNumber decorator is ","; ["Main,", "123"] => ["Main", "123"]
+      const nextFieldDecorator = fieldDefinition[index + 1]?.decorator;
+      const fieldValue =
+        nextFieldDecorator && value.endsWith(nextFieldDecorator)
+          ? value.substring(0, value.length - nextFieldDecorator.length)
+          : value;
+      return {
+        ...obj,
+        [fieldDefinition[index].key]: fieldValue,
+      };
+    }
+
+    return obj;
+  }, {});
+
+  return parsedAddressObject;
+}
