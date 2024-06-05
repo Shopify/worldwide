@@ -1,6 +1,69 @@
 # Worldwide - Typescript
 
-🚧 Still in development -- not ready for use yet 🚧
+Utilities for parsing and formatting address fields
+
+## Usage
+
+### Generating a concatenated address string
+
+To generate a concatenated string for a specific address field, pass an address
+object with the country code and extended fields as defined in the region yaml.
+
+For example, the Brazil yaml defines the format as follows:
+
+```yaml
+# db/data/region/BR.yml
+combined_address_format:
+  address1:
+    - key: streetName
+    - key: streetNumber
+      decorator: ","
+  address2:
+    - key: line2
+    - key: neighborhood
+      decorator: ","
+```
+
+To generate a correctly formatted `address1` string for Brazil, include
+`streetName` and `streetNumber` in the address object.
+
+```ts
+concatenateAddress1({
+  countryCode: 'BR',
+  streetName: 'Av. Paulista',
+  streetNumber: '1578',
+}); // returns 'Av. Paulista,\u00A0 1578'
+```
+
+You can generate Address1 or Address2 fields for any supported country, even if
+there is not a `combined_address_format` for that region. In those cases we
+return an unmodified `address1`.
+
+```ts
+import {concatenateAddress1, concatenateAddress2} from '@shopify/worldwide';
+
+// Generate Address1
+concatenateAddress1({
+  countryCode: 'BR',
+  streetName: 'Av. Paulista',
+  streetNumber: '1578',
+}); // returns 'Av. Paulista,\u00A0 1578'
+concatenateAddress1({
+  countryCode: 'US',
+  address1: '123 Main',
+}); // returns '123 Main'
+
+// Generate Address2
+concatenateAddress2({
+  countryCode: 'BR',
+  line2: 'dpto 4',
+  neighborhood: 'Centro',
+}); // returns 'dpto 4,\u00A0Centro'
+concatenateAddress2({
+  countryCode: 'US',
+  address2: 'Apt 2',
+}); // returns 'Apt 2'
+```
 
 ## Contributing & Development
 
@@ -49,3 +112,13 @@ pnpm test
 # Run test watcher (w/ vitest)
 pnpm test:watch
 ```
+
+### Adding a changelog
+
+To add a changelog entry use:
+
+```sh
+pnpm changeset
+```
+
+Changesets will create a new version after merging the [corresponding PR](https://github.com/Shopify/worldwide/pulls?q=is%3Apr+is%3Aopen+%22Version+Packages%22) that merges unreleased changesets and handles the version bump.
