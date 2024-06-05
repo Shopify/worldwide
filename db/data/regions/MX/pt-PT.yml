@@ -8,10 +8,33 @@ pt-PT:
             default: Rua e número da casa
             optional: Rua e número da casa (opcional)
           errors:
-            blank: Introduza nome de rua e número
+            blank_instructional: Introduza a rua e o número de porta
+            blank_informative: A rua e o número de porta estão em falta
         province:
           label:
             default: Estado
             optional: Estado (opcional)
           errors:
-            blank: Selecione um estado
+            blank_instructional: Selecione um estado
+            blank_informative: O estado está em falta
+        neighborhood:
+          label:
+            default: Colónia
+            optional: Colónia (opcional)
+          errors:
+            blank: Introduza uma colónia
+            too_long: A colónia é demasiado longa (máximo de %{limit} caracteres)
+            contains_emojis: A colónia não pode conter emojis
+            contains_mathematical_symbols: A colónia não pode conter símbolos matemáticos
+            contains_restricted_characters: A colónia só pode conter letras, números,
+              caracteres locais e caracteres especiais
+            contains_too_many_words: A colónia não pode ter mais de %{word_count}
+              palavras
+            contains_html_tags: A colónia não pode conter tags HTML.
+            contains_url: A colónia não pode conter URL.
+            unknown_for_city: Introduza um nome de colónia válido para %{city}.
+            unknown_for_zip: Introduza um nome de colónia válido para %{zip}.
+            unknown_for_address: A colónia poderá estar incorreta.
+          warnings:
+            contains_too_many_words: É recomendado que a colónia tenha menos de %{word_count}
+              palavras
