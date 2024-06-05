@@ -8,6 +8,16 @@ module Worldwide
       def to_supported(zone)
         DEPRECATED_ZONES_MAP.fetch(zone&.to_sym, zone)
       end
+
+      def to_rails(iana_timezone)
+        iana_timezones[iana_timezone]
+      end
+
+      private
+
+      def iana_timezones
+        @iana_timezones ||= YAML.safe_load_file("#{Worldwide::Paths::DB_DATA_ROOT}/iana_to_rails_time_zone.yml")
+      end
     end
 
     DEPRECATED_ZONES_MAP = {
