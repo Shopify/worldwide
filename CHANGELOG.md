@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Update translations for neighborhood too_long error message, add translations for localized neighborhood errors in MX, PH [#191](https://github.com/Shopify/worldwide/pull/191)
+- Generate concatenated address1/2 values when some additional field values are present [#199](https://github.com/Shopify/worldwide/pull/199)
 
 --
 

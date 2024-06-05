@@ -52,104 +52,124 @@ module Worldwide
       assert_equal "ZZ", address.country_code
     end
 
-    test "concatenated_address1 returns empty string when neither address1 nor additional address fields are present" do
+    test "concatenate_address1 returns address1 when additional fields are unset" do
       nil_address = Address.new(country_code: "BR")
-      blank_address = Address.new(address1: "", street_name: "", street_number: "", country_code: "BR")
+      address_with_no_additional_fields = Address.new(address1: "123 Main Street", country_code: "BR")
+      address_with_nil_additional_fields = Address.new(address1: "123 Main Street", street_name: nil, street_number: nil, country_code: "BR")
 
-      assert_equal "", nil_address.concatenated_address1
-      assert_equal "", blank_address.concatenated_address1
+      assert_nil nil_address.concatenate_address1
+      assert_equal "123 Main Street", address_with_no_additional_fields.concatenate_address1
+      assert_equal "123 Main Street", address_with_nil_additional_fields.concatenate_address1
     end
 
-    test "concatenated_address1 ignores additional address fields if they are not defined for the country" do
+    test "concatenate_address1 ignores additional fields if they are not defined for the country" do
       nil_address1 = Address.new(street_name: "Other Street", street_number: "456", country_code: "US")
       blank_address1 = Address.new(address1: "", street_name: "Other Street", street_number: "456", country_code: "US")
 
-      assert_equal "", nil_address1.concatenated_address1
-      assert_equal "", blank_address1.concatenated_address1
+      assert_nil nil_address1.concatenate_address1
+      assert_equal "", blank_address1.concatenate_address1
     end
 
-    test "concatenated_address1 returns address1 when address1 is present" do
-      cl_address = Address.new(address1: "Main Street 123", street_name: "Other Street", street_number: "456", country_code: "CL")
-      us_address = Address.new(address1: "123 Main Street", street_name: "Other Street", street_number: "456", country_code: "CL")
+    test "concatenate_address1 ignores address1 when some additional fields are not nil" do
+      empty_street_name = Address.new(address1: "123 Main Street", street_name: "", country_code: "BR")
 
-      assert_equal "Main Street 123", cl_address.concatenated_address1
-      assert_equal "123 Main Street", us_address.concatenated_address1
+      assert_equal "", empty_street_name.concatenate_address1
     end
 
-    test "concatenated_address1 returns street name with no delimiter and no decorator when only street name is present" do
+    test "concatenate_address1 does not return delimiters for empty additional fields" do
+      empty_street_name = Address.new(street_name: "", street_number: "", country_code: "BR")
+
+      assert_equal "", empty_street_name.concatenate_address1
+    end
+
+    test "concatenate_address1 returns street name with no delimiter and no decorator when only street name is present" do
       cl_address = Address.new(street_name: "Main Street", country_code: "CL")
       br_address = Address.new(street_name: "Main Street", country_code: "BR")
 
-      assert_equal "Main Street", cl_address.concatenated_address1
-      assert_equal "Main Street", br_address.concatenated_address1
+      assert_equal "Main Street", cl_address.concatenate_address1
+      assert_equal "Main Street", br_address.concatenate_address1
     end
 
-    test "concatenated_address1 returns street number prefixed by a delimiter and no decorator when only street number is present" do
+    test "concatenate_address1 returns street number prefixed by a delimiter and no decorator when only street number is present" do
       cl_address = Address.new(street_number: "123", country_code: "CL")
       br_address = Address.new(street_number: "123", country_code: "BR")
 
-      assert_equal " 123", cl_address.concatenated_address1
-      assert_equal " 123", br_address.concatenated_address1
+      assert_equal " 123", cl_address.concatenate_address1
+      assert_equal " 123", br_address.concatenate_address1
     end
 
-    test "concatenated_address1 returns street name concatenated with street number separated by delimiter" do
+    test "concatenate_address1 returns street name concatenated with street number separated by delimiter" do
       address = Address.new(street_name: "Main Street", street_number: "123", country_code: "CL")
 
-      assert_equal "Main Street 123", address.concatenated_address1
+      assert_equal "Main Street 123", address.concatenate_address1
     end
 
-    test "concatenated_address1 returns street name concatenated with street number separated by delimiter and decorator" do
+    test "concatenate_address1 returns street name concatenated with street number separated by delimiter and decorator" do
       address = Address.new(street_name: "Main Street", street_number: "123", country_code: "BR")
 
-      assert_equal "Main Street, 123", address.concatenated_address1
+      assert_equal "Main Street, 123", address.concatenate_address1
     end
 
-    test "concatenated_address2 returns empty string when neither address2 nor additional address fields are present" do
+    test "concatenate_address2 returns address2 when additional fields are unset" do
       nil_address = Address.new(country_code: "BR")
-      blank_address = Address.new(address2: "", line2: "", neighborhood: "", country_code: "BR")
+      address_with_no_additional_fields = Address.new(address2: "Centretown", country_code: "BR")
+      address_with_nil_additional_fields = Address.new(address2: "Centretown", line2: nil, neighborhood: nil, country_code: "BR")
 
-      assert_equal "", nil_address.concatenated_address2
-      assert_equal "", blank_address.concatenated_address2
+      assert_nil nil_address.concatenate_address2
+      assert_equal "Centretown", address_with_no_additional_fields.concatenate_address2
+      assert_equal "Centretown", address_with_nil_additional_fields.concatenate_address2
     end
 
-    test "concatenated_address2 ignores additional address fields if they are not defined for the country" do
+    test "concatenate_address2 ignores additional address fields if they are not defined for the country" do
       nil_address2 = Address.new(neighborhood: "Centretown", country_code: "US")
       blank_address2 = Address.new(address2: "", line2: "#2", neighborhood: "Centretown", country_code: "US")
 
-      assert_equal "", nil_address2.concatenated_address2
-      assert_equal "", blank_address2.concatenated_address2
+      assert_nil nil_address2.concatenate_address2
+      assert_equal "", blank_address2.concatenate_address2
     end
 
-    test "concatenated_address2 returns address2 with no delimiters when only line2 is present" do
+    test "concatenate_address2 ignores address2 when some additional fields are not nil" do
+      empty_street_name = Address.new(address2: "Centertown", line2: "", country_code: "BR")
+
+      assert_equal "", empty_street_name.concatenate_address2
+    end
+
+    test "concatenate_address2 does not return delimiters for empty additional fields" do
+      empty_street_name = Address.new(line2: "", neighborhood: "", country_code: "BR")
+
+      assert_equal "", empty_street_name.concatenate_address2
+    end
+
+    test "concatenate_address2 returns address2 with no delimiters when only line2 is present" do
       cl_address = Address.new(line2: "dpto 4", country_code: "CL")
       br_address = Address.new(line2: "dpto 4", country_code: "BR")
 
-      assert_equal "dpto 4", cl_address.concatenated_address2
-      assert_equal "dpto 4", br_address.concatenated_address2
+      assert_equal "dpto 4", cl_address.concatenate_address2
+      assert_equal "dpto 4", br_address.concatenate_address2
     end
 
-    test "concatenated_address2 returns neighborhood with delimiter when only neighborhood is present" do
+    test "concatenate_address2 returns neighborhood with delimiter when only neighborhood is present" do
       cl_address = Address.new(neighborhood: "Centro", country_code: "CL")
       br_address = Address.new(neighborhood: "Centro", country_code: "BR")
 
-      assert_equal " Centro", cl_address.concatenated_address2
-      assert_equal " Centro", br_address.concatenated_address2
+      assert_equal " Centro", cl_address.concatenate_address2
+      assert_equal " Centro", br_address.concatenate_address2
     end
 
-    test "concatenated_address2 returns line2 concatenated with neighborhood separated by delimiter" do
+    test "concatenate_address2 returns line2 concatenated with neighborhood separated by delimiter" do
       address = Address.new(line2: "dpto 4", neighborhood: "Centro", country_code: "CL")
 
-      assert_equal "dpto 4 Centro", address.concatenated_address2
+      assert_equal "dpto 4 Centro", address.concatenate_address2
     end
 
-    test "concatenated_address2 returns line2 concatenated with neighborhood separated by delimiter and decorator" do
+    test "concatenate_address2 returns line2 concatenated with neighborhood separated by delimiter and decorator" do
       br_address = Address.new(line2: "dpto 4", neighborhood: "Centro", country_code: "BR")
       ph_address = Address.new(line2: "apt 4", neighborhood: "294", country_code: "PH")
       vn_address = Address.new(line2: "apt 4", neighborhood: "Cầu Giấy", country_code: "VN")
 
-      assert_equal "dpto 4, Centro", br_address.concatenated_address2
-      assert_equal "apt 4 Barangay 294", ph_address.concatenated_address2
-      assert_equal "apt 4, Quận Cầu Giấy", vn_address.concatenated_address2
+      assert_equal "dpto 4, Centro", br_address.concatenate_address2
+      assert_equal "apt 4 Barangay 294", ph_address.concatenate_address2
+      assert_equal "apt 4, Quận Cầu Giấy", vn_address.concatenate_address2
     end
 
     test "split_address1 returns nil when additional address fields are not defined for the country" do
