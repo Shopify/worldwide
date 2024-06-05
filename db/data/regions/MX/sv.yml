@@ -6,12 +6,35 @@ sv:
         address1:
           label:
             default: Gatuadress och husnummer
-            optional: Gatuadress och husnummer (frivilligt)
+            optional: Gatuadress och husnummer (valfritt)
           errors:
-            blank: Ange en gata eller ett husnummer
+            blank_instructional: Ange en gata eller ett husnummer
+            blank_informative: Gata och husnummer saknas
         province:
           label:
-            default: Delstat
-            optional: Delstat (valfritt)
+            default: Stat
+            optional: Stat (valfritt)
           errors:
-            blank: Välj stat
+            blank_instructional: Välj en stat
+            blank_informative: Stat saknas
+        neighborhood:
+          label:
+            default: Koloni
+            optional: Koloni (valfritt)
+          errors:
+            blank: Ange en koloni
+            too_long: Koloninamnet är för långt (max %{limit} tecken)
+            contains_emojis: Koloni får inte innehålla emojis
+            contains_mathematical_symbols: Koloni får inte innehålla matematiska symboler
+            contains_restricted_characters: Koloni får endast innehålla bokstäver,
+              siffror, lokala tecken och specialtecken
+            contains_too_many_words: Koloni får inte innehålla fler än %{word_count}
+              ord
+            contains_html_tags: Koloni får inte innehålla HTML-taggar.
+            contains_url: Koloni får inte innehålla URL:er.
+            unknown_for_city: Ange ett giltigt koloninamn för %{city}.
+            unknown_for_zip: Ange ett giltigt koloninamn för %{zip}.
+            unknown_for_address: Kolonin kan vara felaktig.
+          warnings:
+            contains_too_many_words: Vi rekommenderar att koloninamnet består av färre
+              än %{word_count} ord
