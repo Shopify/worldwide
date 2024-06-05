@@ -17,3 +17,25 @@ pl:
           errors:
             blank_instructional: Wybierz stan
             blank_informative: Brakuje stanu
+        neighborhood:
+          label:
+            default: Kolonia
+            optional: Colony (opcjonalnie)
+          errors:
+            blank: Wprowadź kolonię
+            too_long: Kolonia zawiera zbyt dużo znaków (maksymalna liczba znaków to
+              %{limit})
+            contains_emojis: Kolonia nie może zawierać emoji
+            contains_mathematical_symbols: Kolonia nie może zawierać symboli matematycznych
+            contains_restricted_characters: Kolonia może zawierać tylko litery, cyfry,
+              znaki lokalne i znaki specjalne
+            contains_too_many_words: Kolonia może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags: Kolonia nie może zawierać tagów HTML.
+            contains_url: Kolonia nie może zawierać adresów URL.
+            unknown_for_city: Wpisz prawidłową nazwę kolonii dla %{city}.
+            unknown_for_zip: Wpisz prawidłową nazwę kolonii dla %{zip}.
+            unknown_for_address: Kolonia może być niepoprawna.
+          warnings:
+            contains_too_many_words: Zaleca się, aby kolonia zawierała mniej niż %{word_count}
+              słów (słowa)

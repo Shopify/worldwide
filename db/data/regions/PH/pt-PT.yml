@@ -1,0 +1,26 @@
+---
+pt-PT:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (opcional)
+          errors:
+            blank: Introduza um barangay
+            too_long: O barangay é demasiado longo (máximo de %{limit} caracteres)
+            contains_emojis: O barangay não pode conter emojis
+            contains_mathematical_symbols: O barangay não pode conter símbolos matemáticos
+            contains_restricted_characters: O barangay só pode conter letras, números,
+              caracteres locais e caracteres especiais
+            contains_too_many_words: O barangay não pode ter mais de %{word_count}
+              palavras
+            contains_html_tags: O barangay não pode conter tags HTML.
+            contains_url: O barangay não pode contar URL.
+            unknown_for_city: Introduza um nome de barangay válido para %{city}.
+            unknown_for_zip: Introduza um nome de barangay válido para %{zip}.
+            unknown_for_address: O barangay poderá estar incorreto.
+          warnings:
+            contains_too_many_words: É recomendado que o barangay tenha menos de %{word_count}
+              palavras

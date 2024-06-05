@@ -17,3 +17,25 @@ de:
           errors:
             blank_instructional: Staat auswählen
             blank_informative: Staat fehlt
+        neighborhood:
+          label:
+            default: Colonia
+            optional: Colonia (optional)
+          errors:
+            blank: Kolonie eingeben
+            too_long: Kolonie ist zu lang (maximal %{limit} Zeichen)
+            contains_emojis: Kolonie darf keine Emojis enthalten
+            contains_mathematical_symbols: Kolonie darf keine mathematischen Symbole
+              enthalten
+            contains_restricted_characters: Kolonie darf nur Buchstaben, Zahlen, Zeichen
+              der lokalen Sprache und Sonderzeichen enthalten
+            contains_too_many_words: Kolonie darf nicht mehr als %{word_count} Wörter
+              enthalten
+            contains_html_tags: Kolonie darf keine HTML-Tags enthalten.
+            contains_url: Kolonie darf keine URLs enthalten.
+            unknown_for_city: Gib einen gültigen Kolonienamen für %{city} ein.
+            unknown_for_zip: Gib einen gültigen Kolonienamen für %{zip} ein.
+            unknown_for_address: Kolonie ist ggf. falsch.
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass die Kolonie weniger als
+              %{word_count} Wörter enthält

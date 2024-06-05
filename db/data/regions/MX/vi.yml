@@ -17,3 +17,24 @@ vi:
           errors:
             blank_instructional: Chọn tiểu bang
             blank_informative: Thiếu tiểu bang
+        neighborhood:
+          label:
+            default: Khu kiều dân
+            optional: Khu kiều dân (không bắt buộc)
+          errors:
+            blank: Nhập khu kiều dân
+            too_long: Khu kiều dân quá dài (tối đa %{limit} ký tự)
+            contains_emojis: Khu kiều dân không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols: Khu kiều dân không được chứa ký hiệu toán
+              học
+            contains_restricted_characters: Khu kiều dân chỉ được chứa chữ cái, chữ
+              số, ký tự địa phương và ký tự đặc biệt
+            contains_too_many_words: Khu kiều dân không được có nhiều hơn %{word_count}
+              từ
+            contains_html_tags: Khu kiều dân không được chứa thẻ HTML.
+            contains_url: Khu kiều dân không được chứa URL.
+            unknown_for_city: Nhập tên khu kiều dân hợp lệ cho %{city}.
+            unknown_for_zip: Nhập tên khu kiều dân hợp lệ cho %{zip}.
+            unknown_for_address: Khu kiều dân có thể không chính xác.
+          warnings:
+            contains_too_many_words: Khu kiều dân nên có tối đa %{word_count} từ

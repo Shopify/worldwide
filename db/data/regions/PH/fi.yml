@@ -1,0 +1,27 @@
+---
+fi:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (valinnainen)
+          errors:
+            blank: Lisää barangay
+            too_long: Barangay on liian pitkä (enimmäismäärä on %{limit} merkkiä)
+            contains_emojis: Barangay ei voi sisältää emojeita
+            contains_mathematical_symbols: Barangay ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters: Barangay voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_too_many_words: Barangay-kentässä voi olla enintään %{word_count}
+              sanaa
+            contains_html_tags: Barangay ei voi sisältää HTML-tunnisteita.
+            contains_url: Barangay ei voi sisältää URL-osoitteita.
+            unknown_for_city: Anna postinumerolle %{city} kelvollinen barangayn nimi.
+            unknown_for_zip: Anna postinumerolle %{zip} kelvollinen barangayn nimi.
+            unknown_for_address: Barangay saattaa olla väärä.
+          warnings:
+            contains_too_many_words: Barangay-kentän pituudeksi suositellaan alle
+              %{word_count} sanaa

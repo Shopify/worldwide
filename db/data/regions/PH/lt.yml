@@ -1,0 +1,28 @@
+---
+lt:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Baris
+            optional: Baris (pasirinktinai)
+          errors:
+            blank: Įveskite bario pavadinimą
+            too_long: Bario pavadinimas yra per ilgas (turi sudaryti ne daugiau kaip
+              %{limit} simboliai)
+            contains_emojis: Bario pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols: Bario pavadinime negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters: Bario pavadinimą gali sudaryti tik raidės,
+              skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_too_many_words: Bario pavadinimo negali sudaryti daugiau nei
+              %{word_count} žodžiai (-ių, -is)
+            contains_html_tags: Bario pavadinime negali būti naudojamos HTML žymės.
+            contains_url: Bario pavadinime negali būti naudojami URL.
+            unknown_for_city: Įveskite bario pavadinimą, atitinkantį miestą %{city}.
+            unknown_for_zip: Įveskite bario pavadinimą, atitinkantį pašto kodą %{zip}.
+            unknown_for_address: Baris gali būti neteisingas.
+          warnings:
+            contains_too_many_words: Patartina, kad bario pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)

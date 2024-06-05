@@ -17,3 +17,24 @@ pt-BR:
           errors:
             blank_instructional: Selecione um estado
             blank_informative: Falta o estado
+        neighborhood:
+          label:
+            default: Colônia
+            optional: Colônia (opcional)
+          errors:
+            blank: Insira uma colônia
+            too_long: A colônia é muito longa (máximo de %{limit} caracteres)
+            contains_emojis: A colônia não pode conter emojis
+            contains_mathematical_symbols: A colônia não pode conter símbolos matemáticos
+            contains_restricted_characters: A colônia pode conter apenas letras, números,
+              caracteres locais e caracteres especiais
+            contains_too_many_words: A colônia não pode ter mais de %{word_count}
+              palavras
+            contains_html_tags: A colônia não pode conter tags HTML.
+            contains_url: A colônia não pode conter URLs.
+            unknown_for_city: Insira um nome de colônia válido para %{city}.
+            unknown_for_zip: Insira um nome de colônia válido para %{zip}.
+            unknown_for_address: Talvez haja um erro na colônia.
+          warnings:
+            contains_too_many_words: É recomendável que a colônia tenha menos de %{word_count}
+              palavras

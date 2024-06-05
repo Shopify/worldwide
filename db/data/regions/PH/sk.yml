@@ -1,0 +1,26 @@
+---
+sk:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (voliteľné)
+          errors:
+            blank: Zadajte barangay
+            too_long: Barangay je príliš dlhé (maximálne %{limit} znakov)
+            contains_emojis: Barangay nemôže obsahovať emotikony
+            contains_mathematical_symbols: Barangay nemôže obsahovať matematické značky
+            contains_restricted_characters: Barangay môže obsahovať len písmená, číslice,
+              miestne znaky a špeciálne znaky
+            contains_too_many_words: 'Barangay nemôže mať viac ako tento počet slov:
+              %{word_count}'
+            contains_html_tags: Barangay nemôže obsahovať HTML značky.
+            contains_url: Barangay nemôže obsahovať URL adresy.
+            unknown_for_city: Zadajte platný názov barangay pre mesto %{city}.
+            unknown_for_zip: Zadajte platný názov barangay pre PSČ %{zip}.
+            unknown_for_address: Barangay môže byť nesprávne.
+          warnings:
+            contains_too_many_words: 'Barangay by nemalo mať viac ako tento počet
+              slov: %{word_count}'

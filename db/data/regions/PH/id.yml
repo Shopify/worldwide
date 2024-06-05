@@ -1,0 +1,27 @@
+---
+id:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (opsional)
+          errors:
+            blank: Masukkan nama barangay
+            too_long: Nama barangay terlalu panjang (maksimum %{limit} karakter)
+            contains_emojis: Nama barangay tidak boleh berisi emoji
+            contains_mathematical_symbols: Nama barangay tidak boleh berisi simbol
+              matematika
+            contains_restricted_characters: Nama barangay hanya boleh terdiri dari
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_too_many_words: Nama barangay tidak boleh memuat lebih dari %{word_count}
+              kata
+            contains_html_tags: Nama barangay tidak boleh berisi tag HTML.
+            contains_url: Nama barangay tidak boleh berisi URL.
+            unknown_for_city: Masukkan nama barangay yang valid untuk %{city}.
+            unknown_for_zip: Masukkan nama barangay yang valid untuk %{zip}.
+            unknown_for_address: Nama barangay mungkin salah.
+          warnings:
+            contains_too_many_words: Nama barangay sebaiknya berisi kurang dari %{word_count}
+              kata

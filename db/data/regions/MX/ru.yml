@@ -17,3 +17,26 @@ ru:
           errors:
             blank_instructional: Выберите штат
             blank_informative: Штат отсутствует
+            blank: Выберите штат
+        neighborhood:
+          label:
+            default: Район
+            optional: Район (необязательно)
+          errors:
+            blank: Укажите район
+            too_long: Название района слишком длинное (должно содержать не больше
+              %{limit} симв.)
+            contains_emojis: Название района не может содержать емодзи
+            contains_mathematical_symbols: Название района не может содержать математические
+              символы
+            contains_restricted_characters: Поле «Название района» может содержать
+              только буквы, цифры, а также местные и специальные символы
+            contains_too_many_words: Название района не может превышать %{word_count} сл.
+            contains_html_tags: Название района не может содержать HTML-теги.
+            contains_url: Название района не может содержать URL-адреса.
+            unknown_for_city: Укажите действительное название района для %{city}.
+            unknown_for_zip: Укажите действительное название района для %{zip}.
+            unknown_for_address: Название района может быть указано неправильно.
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле названия района
+              не более %{word_count} сл.
