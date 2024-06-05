@@ -146,15 +146,21 @@ module Worldwide
     end
 
     RESERVED_DELIMITER = "\u00A0"
-    def concatenated_address1
-      return address1 if address1.present?
-
+    def concatenate_address1
       additional_fields = region.combined_address_format["address1"] || []
+      additional_field_keys = additional_fields.map { |field| field["key"] }
+
+      return address1 if field_values(additional_field_keys).empty?
+
       concatenate_fields(additional_fields)
     end
 
-    def concatenated_address2
+    def concatenate_address2
       additional_fields = region.combined_address_format["address2"] || []
+      additional_field_keys = additional_fields.map { |field| field["key"] }
+
+      return address2 if field_values(additional_field_keys).empty?
+
       concatenate_fields(additional_fields)
     end
 
@@ -469,6 +475,12 @@ module Worldwide
       end
 
       concatenated_field
+    end
+
+    def field_values(fields)
+      fields.index_with do |field|
+        send(field.underscore.to_sym)
+      end.compact
     end
 
     def concatenation_delimiter(concatenated_field, decorator, field_index)
