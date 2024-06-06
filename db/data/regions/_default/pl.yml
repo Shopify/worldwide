@@ -365,11 +365,38 @@ pl:
               z %{word_count} słów
             contains_html_tags: Druga linia adresu nie może zawierać tagów HTML.
             contains_url: Druga linia adresu nie może zawierać adresów URL.
-            missing_building_number: Dodaj numer budynku, jeśli go posiadasz.
-            street_unknown_for_zip: Wpisz prawidłową nazwę ulicy dla %{zip}.
+            missing_building_number: Dodaj numer budynku, jeśli go posiadasz
+            street_unknown_for_zip: Wpisz prawidłową nazwę ulicy dla %{zip}
             building_number_invalid: Nie udało się zlokalizować numeru budynku dla
-              %{street}, %{zip}.
-            unknown_for_address: Druga linia adresu może być nieprawidłowa.
+              %{street}, %{zip}
+            unknown_for_address: Druga linia adresu może być nieprawidłowa
+            blank_instructional: Wpisz mieszkanie, apartament itp.
+            blank_informative: Brak numeru mieszkania lub lokalu
+            too_long_instructional: Druga linia adresu zawiera zbyt dużo znaków (maksymalna
+              liczba znaków to %{limit})
+            too_long_informative: Druga linia adresu jest za długa
+            contains_emojis_instructional: Druga linia adresu nie może zawierać emoji
+            contains_emojis_informative: Druga linia adresu nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Druga linia adresu nie może
+              zawierać symboli matematycznych
+            contains_mathematical_symbols_informative: Druga linia adresu nie może
+              zawierać symboli matematycznych
+            contains_restricted_characters_instructional: Druga linia adresu może
+              zawierać tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Druga linia adresu nie może
+              zawierać znaków objętych ograniczeniami
+            contains_too_many_words_instructional: Druga linia adresu musi mieć mniej
+              niż %{word_count} słów
+            contains_too_many_words_informative: Druga linia adresu musi mieć mniej
+              niż %{word_count} słów
+            contains_html_tags_instructional: Druga linia adresu nie może zawierać
+              tagów HTML
+            contains_html_tags_informative: Druga linia adresu nie może zawierać tagów
+              HTML
+            contains_url_instructional: Druga linia adresu nie może zawierać adresu
+              URL
+            contains_url_informative: Druga linia adresu nie może zawierać adresu
+              URL
           warnings:
             contains_too_many_words: Zaleca się, aby druga linia adresu zawierała
               poniżej %{word_count} słów
