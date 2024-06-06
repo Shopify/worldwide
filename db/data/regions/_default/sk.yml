@@ -362,11 +362,36 @@ sk:
               počet slov: %{word_count}'
             contains_html_tags: Druhý riadok adresy nemôže obsahovať HTML značky.
             contains_url: Druhý riadok adresy nemôže obsahovať URL adresy.
-            missing_building_number: Ak máte číslo budovy, pridajte ho.
-            street_unknown_for_zip: Zadajte platný názov ulice pre PSČ %{zip}.
+            missing_building_number: Ak máte číslo budovy, pridajte ho
+            street_unknown_for_zip: Zadajte platný názov ulice pre PSČ %{zip}
             building_number_invalid: Číslo budovy na ulici %{street} s PSČ %{zip}
-              sa nepodarilo nájsť.
-            unknown_for_address: Druhý riadok adresy môže byť nesprávny.
+              sa nepodarilo nájsť
+            unknown_for_address: Druhý riadok adresy môže byť nesprávny
+            blank_instructional: Zadajte apartmán, byt atď.
+            blank_informative: Chýba apartmán alebo byt
+            too_long_instructional: Druhý riadok adresy je príliš dlhý (maximálne
+              %{limit} znakov)
+            too_long_informative: Druhý riadok adresy je príliš dlhý
+            contains_emojis_instructional: Druhý riadok adresy nemôže obsahovať emotikony
+            contains_emojis_informative: Druhý riadok adresy nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Druhý riadok adresy nemôže
+              obsahovať matematické značky
+            contains_mathematical_symbols_informative: Druhý riadok adresy nemôže
+              obsahovať matematické značky
+            contains_restricted_characters_instructional: Druhý riadok adresy môže
+              obsahovať len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Druhý riadok adresy nemôže
+              obsahovať zakázané znaky
+            contains_too_many_words_instructional: 'Druhý riadok adresy musí mať menej
+              ako tento počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Druhý riadok adresy musí mať menej
+              ako tento počet slov: %{word_count}'
+            contains_html_tags_instructional: Druhý riadok adresy nemôže obsahovať
+              HTML značky
+            contains_html_tags_informative: Druhý riadok adresy nemôže obsahovať HTML
+              značky
+            contains_url_instructional: Druhý riadok adresy nemôže obsahovať URL adresu
+            contains_url_informative: Druhý riadok adresy nemôže obsahovať URL adresu
           warnings:
             contains_too_many_words: 'Druhý riadok adresy by nemal mať viac ako tento
               počet slov: %{word_count}'

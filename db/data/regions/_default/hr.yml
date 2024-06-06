@@ -368,11 +368,37 @@ hr:
               jest najviše %{word_count}
             contains_html_tags: Drugi redak adrese ne smije sadržavati HTML oznake.
             contains_url: Drugi redak adrese ne smije sadržavati URL-ove.
-            missing_building_number: Unesite kućni broj ako postoji.
-            street_unknown_for_zip: Unesite valjani naziv ulice za grad %{zip}.
+            missing_building_number: Unesite kućni broj ako postoji
+            street_unknown_for_zip: Unesite valjani naziv ulice za %{zip}
             building_number_invalid: Ovaj kućni broj ne postoji u ulici %{street},
-              %{zip}.
-            unknown_for_address: Drugi redak adrese možda nije točan.
+              %{zip}
+            unknown_for_address: Drugi redak adrese možda nije točan
+            blank_instructional: Unesite broj stana, apartmana itd.
+            blank_informative: Nedostaje broj stana ili apartmana
+            too_long_instructional: Drugi redak adrese je predugačak (najveći dopušteni
+              broj znakova je %{limit})
+            too_long_informative: Drugi redak adrese je predugačak
+            contains_emojis_instructional: Drugi redak adrese ne smije sadržavati
+              emotikone
+            contains_emojis_informative: Drugi redak adrese ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Drugi redak adrese ne smije
+              sadržavati matematičke simbole
+            contains_mathematical_symbols_informative: Drugi redak adrese ne smije
+              sadržavati matematičke simbole
+            contains_restricted_characters_instructional: Drugi redak adrese smije
+              sadržavati samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Drugi redak adrese ne smije
+              sadržavati zabranjene znakove
+            contains_too_many_words_instructional: Broj riječi koje drugi redak adrese
+              može sadržavati jest najviše %{word_count}
+            contains_too_many_words_informative: Broj riječi koje drugi redak adrese
+              može sadržavati jest najviše %{word_count}
+            contains_html_tags_instructional: Drugi redak adrese ne smije sadržavati
+              HTML oznake
+            contains_html_tags_informative: Drugi redak adrese ne smije sadržavati
+              HTML oznake
+            contains_url_instructional: Drugi redak adrese ne smije sadržavati URL
+            contains_url_informative: Drugi redak adrese ne smije sadržavati URL
           warnings:
             contains_too_many_words: 'Preporučljivo je da drugi redak adrese ne sadrži
               više od sljedećeg broja riječi: %{word_count}'

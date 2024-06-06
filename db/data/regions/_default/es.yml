@@ -403,11 +403,41 @@ es:
             contains_url: La segunda línea de la dirección no puede contener direcciones
               URL.
             missing_building_number: Agrega un número de edificio, si existe.
-            street_unknown_for_zip: Introduce un nombre de calle válido para el código
+            street_unknown_for_zip: Indica un nombre de calle válido para el código
               postal %{zip}.
-            building_number_invalid: No se ha podido localizar el número de edificio
+            building_number_invalid: No se ha podido localizar un número de edificio
               para %{street}, %{zip}.
             unknown_for_address: Puede que la segunda línea de la dirección sea incorrecta.
+            blank_instructional: Indica un apartamento, una casa, etc.
+            blank_informative: Falta el apartamento o la casa.
+            too_long_instructional: La segunda línea de la dirección es demasiado
+              larga (máximo de %{limit} caracteres).
+            too_long_informative: La segunda línea de la dirección es demasiado larga.
+            contains_emojis_instructional: La segunda línea de la dirección no puede
+              contener emojis.
+            contains_emojis_informative: La segunda línea de la dirección no puede
+              contener emojis.
+            contains_mathematical_symbols_instructional: La segunda línea de la dirección
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: La segunda línea de la dirección
+              no puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: La segunda línea de la dirección
+              solo puede contener letras, números, caracteres locales y caracteres
+              especiales.
+            contains_restricted_characters_informative: La segunda línea de la dirección
+              no puede contener caracteres restringidos.
+            contains_too_many_words_instructional: La segunda línea de la dirección
+              debe tener menos de %{word_count} palabras.
+            contains_too_many_words_informative: La segunda línea de la dirección
+              debe tener menos de %{word_count} palabras.
+            contains_html_tags_instructional: La segunda línea de la dirección no
+              puede contener etiquetas HTML.
+            contains_html_tags_informative: La segunda línea de la dirección no puede
+              contener etiquetas HTML.
+            contains_url_instructional: La segunda línea de la dirección no puede
+              contener una dirección URL.
+            contains_url_informative: La segunda línea de la dirección no puede contener
+              una dirección URL.
           warnings:
             contains_too_many_words: Se recomienda que la segunda línea de la dirección
               tenga menos de %{word_count} palabras.
