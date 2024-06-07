@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.2.1
+
+### Patch Changes
+
+- 40adfed: Include ESM module
+
 ## 0.2.0
 
 ### Minor Changes
