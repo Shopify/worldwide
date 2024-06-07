@@ -1,0 +1,25 @@
+---
+tr:
+  worldwide:
+    PH:
+      addresses:
+        neighborhood:
+          label:
+            default: Barangay
+            optional: Barangay (isteğe bağlı)
+          errors:
+            blank: Bir barangay adı girin
+            too_long: Barangay adı çok uzun (maksimum %{limit} karakter olmalıdır)
+            contains_emojis: Barangay adı emoji içeremez
+            contains_mathematical_symbols: Barangay adı matematiksel semboller içeremez
+            contains_restricted_characters: Barangay adı yalnızca harfler, sayılar,
+              yerel karakterler ve özel karakterler içerebilir
+            contains_too_many_words: Barangay adı en fazla %{word_count} kelime içerebilir
+            contains_html_tags: Barangay adı HTML etiketleri içeremez.
+            contains_url: Barangay adı URL içeremez.
+            unknown_for_city: "%{city} için geçerli bir barangay adı girin."
+            unknown_for_zip: "%{zip} için geçerli bir barangay adı girin."
+            unknown_for_address: Barangay adı yanlış olabilir.
+          warnings:
+            contains_too_many_words: Barangay adında %{word_count} adetten az kelime
+              olması önerilir
