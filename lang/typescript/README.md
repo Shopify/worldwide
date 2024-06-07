@@ -126,6 +126,12 @@ pnpm build
 
 This will use Rollup to generate `dist/`, which is our bundled JS package.
 
+Verify the npm package is bundled correctly with [publint](https://publint.dev/). This should only need to be done when changing `rollup.config.ts` to modify the bundle output:
+
+```sh
+npx publint
+```
+
 ### Other commands
 
 ```sh

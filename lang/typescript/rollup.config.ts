@@ -32,11 +32,18 @@ function transformRegionYaml(data: ValidYamlType) {
 
 export const mainConfig = {
   input: 'src/index.ts',
-  output: {
-    dir: 'dist',
-    format: 'cjs',
-    sourcemap: true,
-  },
+  output: [
+    {
+      file: 'dist/index.mjs',
+      format: 'esm',
+      sourcemap: true,
+    },
+    {
+      file: 'dist/index.cjs',
+      format: 'cjs',
+      sourcemap: true,
+    },
+  ],
   plugins: [
     {
       // Custom yaml parsing plugin to load all region yamls as one object
@@ -70,14 +77,19 @@ export const mainConfig = {
         return undefined;
       },
     },
-    typescript(),
+    typescript({
+      exclude: ['**/*.config.ts', '**/*.test.ts'],
+    }),
   ],
 };
 
 const dtsConfig = {
   // path to your declaration files root
   input: './dist/dts/src/index.d.ts',
-  output: [{file: 'dist/index.d.ts', format: 'cjs'}],
+  output: [
+    {file: 'dist/index.d.ts', format: 'esm'},
+    {file: 'dist/index.d.cts', format: 'cjs'},
+  ],
   plugins: [dts()],
 };
 
