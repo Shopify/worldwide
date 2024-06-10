@@ -48,6 +48,9 @@ module Worldwide
     end
 
     def error(locale: I18n.locale, code:, options: {})
+      unless code.end_with?("_instructional", "_informative")
+        code = "#{code}_instructional"
+      end
       lookup("errors.#{code}", locale: locale, options: options)
     end
 
@@ -63,33 +66,18 @@ module Worldwide
 
     def default_lookup(key_suffix, options: {})
       base = base_key("_default")
-
-      message = I18n.t("#{base}.#{key_suffix}", default: nil, **options)
-      return message if message.present?
-
-      key = key_suffix.include?("_instructional") ? "#{base}.#{key_suffix.sub("_instructional", "")}" : "#{base}.#{key_suffix}_instructional"
-      message = I18n.t(key, default: nil, **options)
-      return message if message.present?
-
-      I18n.with_locale(:en) { I18n.t("#{base}.#{key_suffix}", default: nil, **options) }
+      I18n.t("#{base}.#{key_suffix}", default: nil, **options) ||
+        I18n.with_locale(:en) { I18n.t("#{base}.#{key_suffix}", default: nil, **options) }
     end
 
     def lookup(key_suffix, locale:, options: {})
       I18n.with_locale(locale) do
-        unless @country_code.nil?
-          message = I18n.t("#{base_key(@country_code)}.#{key_suffix}", default: nil, **options)
-          return message if message.present?
-
-          key = if key_suffix.include?("_instructional")
-            "#{base_key(@country_code)}.#{key_suffix.sub("_instructional", "")}"
-          else
-            "#{base_key(@country_code)}.#{key_suffix}_instructional"
-          end
-          message = I18n.t(key, default: nil, **options)
-          return message if message.present?
+        if @country_code.nil?
+          default_lookup(key_suffix, options: options)
+        else
+          I18n.t("#{base_key(@country_code)}.#{key_suffix}", default: nil, **options) ||
+            default_lookup(key_suffix, options: options)
         end
-
-        default_lookup(key_suffix, options: options)
       end
     end
   end
