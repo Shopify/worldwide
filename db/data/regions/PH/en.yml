@@ -8,18 +8,28 @@ en:
             default: Barangay
             optional: Barangay (optional)
           errors:
-            blank: Enter a barangay
-            too_long: Barangay is too long (maximum is %{limit} characters)
-            contains_emojis: Barangay cannot contain emojis
-            contains_mathematical_symbols: Barangay cannot contain mathematical symbols
-            contains_restricted_characters: Barangay can only contain letters, numbers,
+            blank_instructional: Enter a barangay
+            blank_informative: Barangay is missing
+            too_long_instructional: Barangay is too long (maximum is %{limit} characters)
+            too_long_informative: Barangay is too long
+            contains_emojis_instructional: Barangay can't contain emojis
+            contains_emojis_informative: Barangay can't contain emojis
+            contains_mathematical_symbols_instructional: Barangay can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Barangay can't contain mathematical symbols
+            contains_restricted_characters_instructional: Barangay can only contain letters, numbers,
               local characters, and special characters
-            contains_too_many_words: Barangay cannot have more than %{word_count}
-              words
-            contains_html_tags: Barangay cannot contain HTML tags.
-            contains_url: Barangay cannot contain URLs.
-            unknown_for_city: Enter a valid barangay name for %{city}.
-            unknown_for_zip: Enter a valid barangay name for %{zip}.
-            unknown_for_address: Barangay may be incorrect.
+            contains_restricted_characters_informative: Barangay can't contain restricted characters
+            contains_too_many_words_instructional: Barangay must have fewer than %{word_count} words
+            contains_too_many_words_informative: Barangay must have fewer than %{word_count} words
+            contains_html_tags_instructional: Barangay can't contain HTML
+            contains_html_tags_informative: Barangay can't contain HTML
+            contains_url_instructional: Barangay can't contain a URL
+            contains_url_informative: Barangay can't contain a URL
+            unknown_for_city_instructional: Enter a valid barangay name for %{city}
+            unknown_for_city_informative: Enter a valid barangay name for %{city}
+            unknown_for_zip_instructional: Enter a valid barangay name for %{zip}
+            unknown_for_zip_informative: Enter a valid barangay name for %{zip}
+            unknown_for_address_instructional: Barangay may be incorrect
+            unknown_for_address_informative: Barangay may be incorrect
           warnings:
             contains_too_many_words: Barangay is recommended to have less than %{word_count} words

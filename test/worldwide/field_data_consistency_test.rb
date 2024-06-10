@@ -37,6 +37,21 @@ module Worldwide
         value.keys.each do |key|
           assert_includes(permitted_keys, key)
         end
+
+        assert_instructional_informative_error_messages(value["errors"], file_name, key)
+      end
+    end
+
+    def assert_instructional_informative_error_messages(errors, file_name, field_key)
+      return if errors.nil?
+      return unless file_name.end_with?("en.yml")
+
+      errors.keys.each do |error_key|
+        assert_msg = "Translation: " + file_name + " -- field_key: " + field_key + " -- error_key: " + error_key
+
+        # rubocop:disable Minitest/AssertWithExpectedArgument
+        assert(error_key.end_with?("_instructional", "_informative"), assert_msg)
+        # rubocop:enable Minitest/AssertWithExpectedArgument
       end
     end
   end

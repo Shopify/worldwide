@@ -26,12 +26,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Additional field definitions in AE, CR, KW, PA, PE, SA, updated decorators for PH, VN  [#206](https://github.com/Shopify/worldwide/pull/206)
-- update street_name and street_number too_long error message [#203](https://github.com/Shopify/worldwide/pull/203)
-- Update translations for neighborhood too_long error message, add translations for localized neighborhood errors in MX, PH [#191](https://github.com/Shopify/worldwide/pull/191)
-- Generate concatenated address1/2 values when some additional field values are present [#199](https://github.com/Shopify/worldwide/pull/199)
 
 --
+
+## [1.3.0] - 2024-06-10
+
+- Update translations for neighborhood too_long error message, add translations for localized neighborhood errors in MX, PH [#191](https://github.com/Shopify/worldwide/pull/191)
+- Generate concatenated address1/2 values when some additional field values are present [#199](https://github.com/Shopify/worldwide/pull/199)
+- update street_name and street_number too_long error message [#203](https://github.com/Shopify/worldwide/pull/203)
+- Additional field definitions in AE, CR, KW, PA, PE, SA, updated decorators for PH, VN  [#206](https://github.com/Shopify/worldwide/pull/206)
+- All error messages now contain an `_instructional` and `_informative` key. If the `Worldwide::Field::error` method is called with a `code` that does not end in either `_instructional` or `_informative`, the `Worldwide::Field::error` method will append `_instructional` to the `code` and returns this error message. [#205](https://github.com/Shopify/worldwide/pull/205)
 
 ## [1.2.0] - 2024-06-05
 
