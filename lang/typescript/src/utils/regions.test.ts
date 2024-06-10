@@ -5,7 +5,6 @@ describe('region yaml loader', () => {
     const config = getRegionConfig('US');
     expect(config).not.toBeNull();
     expect(config!.code).toEqual('US');
-    expect(config!.name).toEqual('United States');
     expect(config!.combined_address_format).toBeUndefined();
   });
 
@@ -13,7 +12,6 @@ describe('region yaml loader', () => {
     const config = getRegionConfig('BR');
     expect(config).not.toBeNull();
     expect(config!.code).toEqual('BR');
-    expect(config!.name).toEqual('Brazil');
     expect(config!.combined_address_format).toEqual({
       address1: [{key: 'streetName'}, {key: 'streetNumber', decorator: ','}],
       address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],

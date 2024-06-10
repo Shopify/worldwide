@@ -11,8 +11,6 @@ export type CombinedAddressFormat = Record<string, FieldConcatenationRule[]>;
 export type RegionYamlConfig = Record<string, any> & {
   /** Two-letter country code */
   code: string;
-  /** Full region name */
-  name: string;
   /** Format definition for an extended address */
   combined_address_format?: CombinedAddressFormat;
 };
@@ -30,9 +28,7 @@ function isRegionYamlConfig(
     yamlConfig !== null &&
     typeof yamlConfig === 'object' &&
     'code' in yamlConfig &&
-    typeof yamlConfig.code === 'string' &&
-    'name' in yamlConfig &&
-    typeof yamlConfig.name === 'string'
+    typeof yamlConfig.code === 'string'
   );
 }
 

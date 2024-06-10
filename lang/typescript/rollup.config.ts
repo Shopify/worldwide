@@ -23,8 +23,8 @@ function transformRegionYaml(data: ValidYamlType) {
     'code' in data &&
     typeof data.code === 'string'
   ) {
-    const {code, name, combined_address_format} = data;
-    return {code, name, combined_address_format};
+    const {code, combined_address_format} = data;
+    return {code, combined_address_format};
   }
 
   return undefined;
