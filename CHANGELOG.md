@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- update street_name and street_number too_long error message [#203](https://github.com/Shopify/worldwide/pull/203)
 
 --
 
