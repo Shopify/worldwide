@@ -168,8 +168,8 @@ module Worldwide
       vn_address = Address.new(line2: "apt 4", neighborhood: "Cầu Giấy", country_code: "VN")
 
       assert_equal "dpto 4, Centro", br_address.concatenate_address2
-      assert_equal "apt 4 Barangay 294", ph_address.concatenate_address2
-      assert_equal "apt 4, Quận Cầu Giấy", vn_address.concatenate_address2
+      assert_equal "apt 4 294", ph_address.concatenate_address2
+      assert_equal "apt 4, Cầu Giấy", vn_address.concatenate_address2
     end
 
     test "split_address1 returns nil when additional address fields are not defined for the country" do
@@ -259,7 +259,7 @@ module Worldwide
 
     test "split_address2 returns line2 and neighborhood when both values are present and seperated by a delimiter and a decorator" do
       br_address = Address.new(address2: "dpto 4, Centro", country_code: "BR")
-      ph_address = Address.new(address2: "dpto 4 Barangay 294", country_code: "PH")
+      ph_address = Address.new(address2: "dpto 4 294", country_code: "PH")
       expected_hash_br = { "line2" => "dpto 4", "neighborhood" => "Centro" }
       expected_hash_ph = { "line2" => "dpto 4", "neighborhood" => "294" }
 

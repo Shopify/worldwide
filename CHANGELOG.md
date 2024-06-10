@@ -26,8 +26,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Additional field definitions in AE, CR, KW, PA, PE, SA, updated decorators for PH, VN  [#206](https://github.com/Shopify/worldwide/pull/206)
 - update street_name and street_number too_long error message [#203](https://github.com/Shopify/worldwide/pull/203)
-
 - Update translations for neighborhood too_long error message, add translations for localized neighborhood errors in MX, PH [#191](https://github.com/Shopify/worldwide/pull/191)
 - Generate concatenated address1/2 values when some additional field values are present [#199](https://github.com/Shopify/worldwide/pull/199)
 

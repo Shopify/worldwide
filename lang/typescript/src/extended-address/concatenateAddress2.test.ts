@@ -143,14 +143,14 @@ describe('concatenateAddress2', () => {
         line2: 'apt 4',
         neighborhood: '294',
       }),
-    ).toBe('apt 4 Barangay\u00A0294');
+    ).toBe('apt 4\u00A0294');
     expect(
       concatenateAddress2({
         countryCode: 'VN',
         line2: 'apt 4',
         neighborhood: 'Cầu Giấy',
       }),
-    ).toBe('apt 4, Quận\u00A0Cầu Giấy');
+    ).toBe('apt 4,\u00A0Cầu Giấy');
   });
 
   test('returns line2 with no delimiter or decorator if neighborhood is missing', () => {
