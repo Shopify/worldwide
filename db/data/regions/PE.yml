@@ -13,6 +13,16 @@ week_start_day: sunday
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{province}_{country}_{phone}"
+format_extended:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{line2}{neighborhood}_{city}{province}{zip}_{phone}"
+additional_address_fields:
+  - name: line2
+  - name: neighborhood
+    required: true
+combined_address_format:
+  address2:
+    - key: line2
+    - key: neighborhood
 emoji: "\U0001F1F5\U0001F1EA"
 languages:
   - es
