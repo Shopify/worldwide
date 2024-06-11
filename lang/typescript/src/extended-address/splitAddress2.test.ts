@@ -37,4 +37,20 @@ describe('splitAddress2', () => {
       neighborhood: 'Centro',
     });
   });
+
+  describe('language override', () => {
+    test("returns default format if language override doesn't match", () => {
+      expect(splitAddress2('TW', 'No. 30,\u00A0Daija District')).toEqual({
+        line2: 'No. 30',
+        neighborhood: 'Daija District',
+      });
+    });
+
+    test('returns alternate language format if language override matches', () => {
+      expect(splitAddress2('TW', '30號\u2060大甲區')).toEqual({
+        line2: '30號',
+        neighborhood: '大甲區',
+      });
+    });
+  });
 });

@@ -182,4 +182,26 @@ describe('concatenateAddress2', () => {
       }),
     ).toBe('\u00A0Centro');
   });
+
+  describe('language override', () => {
+    test("returns default format if language override doesn't match", () => {
+      expect(
+        concatenateAddress2({
+          countryCode: 'TW',
+          line2: 'No. 30',
+          neighborhood: 'Daija District',
+        }),
+      ).toBe('No. 30,\u00A0Daija District');
+    });
+
+    test('returns alternate language format if language override matches', () => {
+      expect(
+        concatenateAddress2({
+          countryCode: 'TW',
+          line2: '30號',
+          neighborhood: '大甲區',
+        }),
+      ).toBe('30號\u2060大甲區');
+    });
+  });
 });

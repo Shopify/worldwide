@@ -25,7 +25,8 @@ export function concatAddressField(
           : '';
 
       // Don't include delimiter if only first field is present
-      const delimiter = index === 0 ? '' : RESERVED_DELIMITER;
+      const delimiter =
+        index === 0 ? '' : field.delimiter ?? RESERVED_DELIMITER;
 
       return `${concatenatedAddress}${decorator}${delimiter}${address[field.key]}`;
     }
@@ -46,7 +47,13 @@ export function splitAddressField(
   fieldDefinition: FieldConcatenationRule[],
   concatenatedAddress: string,
 ): Partial<Address> {
-  const values = concatenatedAddress.split(RESERVED_DELIMITER);
+  // Support custom delimiteres defined on ANY sub-field definition
+  const customDelimiter = fieldDefinition.find(
+    (def) => def.delimiter !== undefined,
+  )?.delimiter;
+  const values = concatenatedAddress.split(
+    customDelimiter ?? RESERVED_DELIMITER,
+  );
 
   const parsedAddressObject = values.reduce((obj, value, index) => {
     if (value !== '') {

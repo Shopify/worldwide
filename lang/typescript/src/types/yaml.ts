@@ -10,3 +10,21 @@ export type ValidYamlType =
   | null
   | {[key: string]: ValidYamlType}
   | ValidYamlType[];
+
+export function isYamlObject(
+  yamlData: ValidYamlType,
+): yamlData is Record<string, ValidYamlType> {
+  return (
+    yamlData !== null &&
+    typeof yamlData === 'object' &&
+    !Array.isArray(yamlData)
+  );
+}
+
+export function isYamlArray(
+  yamlData: ValidYamlType,
+): yamlData is ValidYamlType[] {
+  return (
+    yamlData !== null && typeof yamlData === 'object' && Array.isArray(yamlData)
+  );
+}
