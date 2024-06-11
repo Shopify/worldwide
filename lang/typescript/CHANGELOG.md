@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.2.2
+
+### Patch Changes
+
+- 5219bcb: Remove names from bundled region map
+
 ## 0.2.1
 
 ### Patch Changes
