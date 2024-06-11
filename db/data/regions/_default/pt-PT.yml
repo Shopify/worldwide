@@ -337,8 +337,9 @@ pt-PT:
           errors:
             blank: Introduza um bairro
             too_long: O bairro é demasiado longo (máximo de %{limit} caracteres)
-            contains_emojis: O bairro não pode conter emojis
-            contains_mathematical_symbols: O bairro não pode conter símbolos matemáticos
+            contains_emojis: O nome do bairro não pode conter emojis
+            contains_mathematical_symbols: O nome do bairro não pode conter símbolos
+              matemáticos
             contains_restricted_characters: O bairro pode conter apenas letras, números,
               caracteres locais e caracteres especiais
             contains_too_many_words: O nome do bairro não pode ter mais de %{word_count}
@@ -369,11 +370,41 @@ pt-PT:
             contains_html_tags: A segunda linha do endereço não pode incluir tags
               HTML.
             contains_url: A segunda linha do endereço não pode incluir URLs.
-            missing_building_number: Adicione um número de edifício, caso exista.
-            street_unknown_for_zip: Introduza um nome de rua válido para %{zip}.
-            building_number_invalid: Não foi possível localizar o número do edifício
-              para %{street}, %{zip}.
-            unknown_for_address: A segunda linha do endereço pode estar incorreta.
+            missing_building_number: Adicione um número de edifício, caso exista
+            street_unknown_for_zip: Introduza um nome de rua válido para %{zip}
+            building_number_invalid: Não foi possível localizar o número de edifício
+              para %{street}, %{zip}
+            unknown_for_address: A segunda linha do endereço pode estar incorreta
+            blank_instructional: Introduza um número de apartamento, fração, etc.
+            blank_informative: O apartamento ou fração está em falta
+            too_long_instructional: A segunda linha do endereço é demasiado longa
+              (máximo de %{limit} caracteres)
+            too_long_informative: A segunda linha do endereço é demasiado longa
+            contains_emojis_instructional: A segunda linha do endereço não pode incluir
+              emojis
+            contains_emojis_informative: A segunda linha do endereço não pode incluir
+              emojis
+            contains_mathematical_symbols_instructional: A segunda linha do endereço
+              não pode incluir símbolos matemáticos
+            contains_mathematical_symbols_informative: A segunda linha do endereço
+              não pode incluir símbolos matemáticos
+            contains_restricted_characters_instructional: A segunda linha do endereço
+              apenas pode incluir letras, números, caracteres locais e caracteres
+              especiais
+            contains_restricted_characters_informative: A segunda linha do endereço
+              não pode incluir caracteres restritos
+            contains_too_many_words_instructional: A segunda linha do endereço tem
+              de ter menos de %{word_count} palavras
+            contains_too_many_words_informative: A segunda linha do endereço tem de
+              ter menos de %{word_count} palavras
+            contains_html_tags_instructional: A segunda linha do endereço não pode
+              incluir etiquetas HTML
+            contains_html_tags_informative: A segunda linha do endereço não pode incluir
+              etiquetas HTML
+            contains_url_instructional: A segunda linha do endereço não pode incluir
+              um URL
+            contains_url_informative: A segunda linha do endereço não pode incluir
+              um URL
           warnings:
             contains_too_many_words: É recomendável que a segunda linha do endereço
               tenha menos de %{word_count} palavras

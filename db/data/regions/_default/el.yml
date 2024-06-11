@@ -395,12 +395,40 @@ el:
             contains_html_tags: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί να περιέχει
               ετικέτες HTML.
             contains_url: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί να περιλαμβάνει URL.
-            missing_building_number: Προσθέστε αριθμό κτιρίου, αν υπάρχει.
-            street_unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα οδού για τον Τ.Κ.
-              %{zip}.
+            missing_building_number: Προσθέστε έναν αριθμό κτιρίου, αν υπάρχει
+            street_unknown_for_zip: Εισαγάγετε ένα έγκυρο όνομα οδού για %{zip}
             building_number_invalid: Δεν ήταν δυνατός ο εντοπισμός του αριθμού κτιρίου
-              στην οδό %{street}, %{zip}.
-            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη δεύτερη γραμμή διεύθυνσης.
+              στην οδό %{street} με Τ.Κ. %{zip}
+            unknown_for_address: Ενδέχεται να υπάρχει λάθος στη δεύτερη γραμμή διεύθυνσης
+            blank_instructional: Εισαγάγετε ένα διαμέρισμα, μια σουίτα κ.λπ.
+            blank_informative: Το διαμέρισμα ή η σουίτα λείπει
+            too_long_instructional: Η δεύτερη γραμμή της διεύθυνσης είναι πολύ μεγάλη
+              (το μέγιστο όριο είναι %{limit} χαρακτήρες)
+            too_long_informative: Η δεύτερη γραμμή της διεύθυνσης είναι πολύ μεγάλη
+            contains_emojis_instructional: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί
+              να περιέχει emoji
+            contains_emojis_informative: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί να
+              περιέχει emoji
+            contains_mathematical_symbols_instructional: Η δεύτερη γραμμή διεύθυνσης
+              δεν μπορεί να περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η δεύτερη γραμμή διεύθυνσης
+              δεν μπορεί να περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η δεύτερη γραμμή διεύθυνσης
+              μπορεί να περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η δεύτερη γραμμή διεύθυνσης
+              δεν μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Η δεύτερη γραμμή διεύθυνσης πρέπει
+              να περιέχει λιγότερες από %{word_count} λέξεις
+            contains_too_many_words_informative: Η δεύτερη γραμμή διεύθυνσης πρέπει
+              να περιέχει λιγότερες από %{word_count} λέξεις
+            contains_html_tags_instructional: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί
+              να περιέχει ετικέτες HTML
+            contains_html_tags_informative: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί
+              να περιέχει ετικέτες HTML
+            contains_url_instructional: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί να
+              περιλαμβάνει URL
+            contains_url_informative: Η δεύτερη γραμμή διεύθυνσης δεν μπορεί να περιλαμβάνει
+              URL
           warnings:
             contains_too_many_words: Η δεύτερη γραμμή διεύθυνσης συνιστάται να έχει
               λιγότερες από %{word_count} λέξεις

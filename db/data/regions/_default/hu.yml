@@ -340,7 +340,7 @@ hu:
             blank: Add meg a városnegyed nevét
             too_long: Túl hosszú a városnegyed neve (legfeljebb %{limit} karakter
               hosszú lehet)
-            contains_emojis: A városnegyed neve nem tartalmazhat emodzsikat
+            contains_emojis: A városnegyed neve nem tartalmazhat emojikat
             contains_mathematical_symbols: A városnegyed neve nem tartalmazhat matematikai
               szimbólumokat
             contains_restricted_characters: A városnegyed neve csak betűket, számokat,
@@ -373,12 +373,36 @@ hu:
               állhat
             contains_html_tags: A cím második sora nem tartalmazhat HTML-címkéket.
             contains_url: A cím második sora nem tartalmazhat URL-címeket.
-            missing_building_number: Ha van házszám, azt is add meg.
+            missing_building_number: Ha van házszám, azt is add meg
             street_unknown_for_zip: 'Olyan utcanevet adj meg, amely megfelel ennek:
-              %{zip}.'
+              %{zip}'
             building_number_invalid: 'Nem található ilyen házszám itt: %{street},
-              %{zip}.'
+              %{zip}'
             unknown_for_address: Vélhetően helytelen a cím második sora.
+            blank_instructional: Írd be az épület, emelet, ajtó stb. jelölését
+            blank_informative: Hiányzik az épület vagy az emelet
+            too_long_instructional: Túl hosszú a cím második sora (legfeljebb %{limit}
+              karakter hosszú lehet)
+            too_long_informative: Túl hosszú a cím második sora
+            contains_emojis_instructional: A cím második sora nem tartalmazhat hangulatjeleket
+            contains_emojis_informative: A cím második sora nem tartalmazhat hangulatjeleket
+            contains_mathematical_symbols_instructional: A cím második sora nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A cím második sora nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A cím második sora csak
+              betűket, számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A cím második sora nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A cím második sora kevesebb, mint
+              %{word_count} szóból állhat
+            contains_too_many_words_informative: A cím második sora kevesebb, mint
+              %{word_count} szóból állhat
+            contains_html_tags_instructional: A cím második sora nem tartalmazhat
+              HTML-címkéket.
+            contains_html_tags_informative: A cím második sora nem tartalmazhat HTML-címkéket.
+            contains_url_instructional: A cím második sora nem tartalmazhat URL-címeket.
+            contains_url_informative: A cím második sora nem tartalmazhat URL-címeket.
           warnings:
             contains_too_many_words: A cím második sorának javasolt hossza kevesebb
               mint %{word_count} szó

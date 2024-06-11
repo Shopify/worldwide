@@ -377,11 +377,37 @@ ru:
             contains_too_many_words: Вторая строка адреса не может превышать %{word_count} сл.
             contains_html_tags: Вторая строка адреса не может содержать HTML-теги.
             contains_url: Вторая строка адреса не может содержать URL-адреса.
-            missing_building_number: Укажите номер дома, если применимо.
-            street_unknown_for_zip: Укажите действительное название улицы для %{zip}.
+            missing_building_number: Укажите номер дома, если применимо
+            street_unknown_for_zip: Укажите действительное название улицы для %{zip}
             building_number_invalid: 'Не удалось найти номер дома по этому адресу:
-              %{street}, %{zip}.'
-            unknown_for_address: Адрес во второй строке может быть указан неправильно.
+              %{street}, %{zip}'
+            unknown_for_address: Адрес во второй строке может быть указан неправильно
+            blank_instructional: Укажите номер квартиры, апартаментов и т. д.
+            blank_informative: Номер квартиры или апартаментов отсутствует
+            too_long_instructional: Вторая строка адреса слишком длинная (должна содержать
+              не больше %{limit} симв.)
+            too_long_informative: Вторая строка адреса слишком длинная
+            contains_emojis_instructional: Вторая строка адреса не может содержать
+              емодзи
+            contains_emojis_informative: Вторая строка адреса не может содержать емодзи
+            contains_mathematical_symbols_instructional: Вторая строка адреса не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Вторая строка адреса не может
+              содержать математические символы
+            contains_restricted_characters_instructional: Поле «Вторая строка адреса»
+              может содержать только буквы, цифры, а также местные и специальные символы
+            contains_restricted_characters_informative: Поле «Вторая строка адреса»
+              не может содержать недопустимые символы
+            contains_too_many_words_instructional: Вторая строка адреса не может превышать
+              %{word_count} сл.
+            contains_too_many_words_informative: Вторая строка адреса не может превышать
+              %{word_count} сл.
+            contains_html_tags_instructional: Вторая строка адреса не может содержать
+              HTML-теги
+            contains_html_tags_informative: Вторая строка адреса не может содержать
+              HTML-теги
+            contains_url_instructional: Вторая строка адреса не может содержать URL-адрес
+            contains_url_informative: Вторая строка адреса не может содержать URL-адрес
           warnings:
             contains_too_many_words: Рекомендуем указывать во второй строке адреса
               не более %{word_count} сл.

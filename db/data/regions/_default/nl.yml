@@ -356,11 +356,36 @@ nl:
               %{word_count} woorden
             contains_html_tags: De tweede adresregel mag geen HTML-tags bevatten
             contains_url: De tweede adresregel mag geen URL's bevatten
-            missing_building_number: Voeg een gebouwnummer toe als dat er is.
-            street_unknown_for_zip: Vul een geldige straatnaam in voor %{zip}.
+            missing_building_number: Voeg een gebouwnummer toe als je er een hebt
+            street_unknown_for_zip: Vul een geldige straatnaam in voor %{zip}
             building_number_invalid: Kan gebouwnummer voor %{street}, %{zip} niet
-              vinden.
-            unknown_for_address: De tweede adresregel is mogelijk onjuist.
+              vinden
+            unknown_for_address: De tweede adresregel is mogelijk onjuist
+            blank_instructional: Vul een appartement- of suitenummer, enz. in
+            blank_informative: Appartement- of suitenummer ontbreekt
+            too_long_instructional: De tweede adresregel is te lang (het maximum is
+              %{limit} tekens)
+            too_long_informative: De tweede adresregel is te lang
+            contains_emojis_instructional: De tweede adresregel mag geen emoji's bevatten
+            contains_emojis_informative: De tweede adresregel mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: De tweede adresregel mag
+              geen wiskundige symbolen bevatten
+            contains_mathematical_symbols_informative: De tweede adresregel mag geen
+              wiskundige symbolen bevatten
+            contains_restricted_characters_instructional: De tweede adresregel mag
+              alleen letters, cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: De tweede adresregel mag geen
+              verboden tekens bevatten
+            contains_too_many_words_instructional: De tweede adresregel dient minder
+              dan %{word_count} woorden te bevatten
+            contains_too_many_words_informative: De tweede adresregel dient minder
+              dan %{word_count} woorden te bevatten
+            contains_html_tags_instructional: De tweede adresregel mag geen HTML-tags
+              bevatten
+            contains_html_tags_informative: De tweede adresregel mag geen HTML-tags
+              bevatten
+            contains_url_instructional: De tweede adresregel mag geen URL bevatten
+            contains_url_informative: De tweede adresregel mag geen URL bevatten
           warnings:
             contains_too_many_words: Gebruik voor de tweede adresregel minder dan
               %{word_count} woorden

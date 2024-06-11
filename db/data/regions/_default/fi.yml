@@ -365,11 +365,34 @@ fi:
               sanaa
             contains_html_tags: Osoiterivi 2 ei voi sisältää HTML-tunnisteita
             contains_url: Osoiterivi 2 ei voi sisältää URL-osoitteita
-            missing_building_number: Lisää rakennuksen numero, jos sinulla on sellainen.
-            street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen katu.
-            building_number_invalid: Rakennuksen numeroa ei löytynyt osoitteesta %{street},
-              %{zip}.
-            unknown_for_address: Osoiterivi saattaa olla virheellinen.
+            missing_building_number: Lisää rakennuksen numero, jos sinulla on sellainen
+            street_unknown_for_zip: Anna postinumerolle %{zip} kelvollinen kadunnimi
+            building_number_invalid: Rakennuksen numeroa ei löytynyt kadulle %{street},
+              jonka postinumero on %{zip}
+            unknown_for_address: Osoiterivi 2 saattaa olla virheellinen
+            blank_instructional: Anna asunto, huoneisto jne.
+            blank_informative: Huoneisto puuttuu
+            too_long_instructional: Osoiterivi 2 on liian pitkä (enintään %{limit}
+              merkkiä)
+            too_long_informative: Osoiterivi 2 on liian pitkä
+            contains_emojis_instructional: Osoiterivi 2 ei voi sisältää emojeita
+            contains_emojis_informative: Osoiterivi 2 ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Osoiterivi 2 ei voi sisältää
+              matemaattisia symboleja
+            contains_mathematical_symbols_informative: Osoiterivi 2 ei voi sisältää
+              matemaattisia symboleja
+            contains_restricted_characters_instructional: Osoiterivi 2 voi sisältää
+              vain kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Osoiterivi 2 ei voi sisältää
+              rajoitettuja merkkejä
+            contains_too_many_words_instructional: Osoiterivi 2 voi sisältää enintään
+              %{word_count} sanaa
+            contains_too_many_words_informative: Osoiterivi 2 voi sisältää enintään
+              %{word_count} sanaa
+            contains_html_tags_instructional: Osoiterivi 2 ei voi sisältää HTML-tunnisteita
+            contains_html_tags_informative: Osoiterivi 2 ei voi sisältää HTML-tunnisteita
+            contains_url_instructional: Osoiterivi 2 ei voi sisältää URL-osoitetta
+            contains_url_informative: Osoiterivi 2 ei voi sisältää URL-osoitetta
           warnings:
             contains_too_many_words: Osoiterivin 2 pituudeksi suositellaan alle %{word_count}
               sanaa

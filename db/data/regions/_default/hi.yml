@@ -359,11 +359,36 @@ hi:
               नहीं हो सकते
             contains_html_tags: पते की दूसरी लाइन में HTML टैग नहीं हो सकते.
             contains_url: पते की दूसरी लाइन में URL नहीं हो सकते.
-            missing_building_number: अगर आपके पास कोई बिल्डिंग नंबर हो, तो जोड़ें.
-            street_unknown_for_zip: "%{zip} के लिए सड़क का एक मान्य नाम डालें."
+            missing_building_number: अगर आपके पास कोई बिल्डिंग नंबर हो, तो जोड़ें
+            street_unknown_for_zip: "%{zip} के लिए सड़क का एक मान्य नाम डालें"
             building_number_invalid: "%{zip}, %{street} के लिए बिल्डिंग नंबर नहीं
-              मिल सका."
-            unknown_for_address: पते की दूसरी लाइन गलत हो सकती है.
+              मिल सका"
+            unknown_for_address: पते की दूसरी लाइन गलत हो सकती है
+            blank_instructional: अपार्टमेंट, सुइट, वगैरह का नाम डालें.
+            blank_informative: अपार्टमेंट या सुइट गुम है
+            too_long_instructional: पते की दूसरी लाइन बहुत लंबी है (अधिकतम %{limit}
+              कैरेक्टर)
+            too_long_informative: पते की दूसरी लाइन बहुत लंबी है
+            contains_emojis_instructional: पते की दूसरी लाइन में इमोजी नहीं हो सकते
+            contains_emojis_informative: पते की दूसरी लाइन में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: पते की दूसरी लाइन में गणितीय
+              चिह्न नहीं हो सकते
+            contains_mathematical_symbols_informative: पते की दूसरी लाइन में गणितीय
+              चिह्न नहीं हो सकते
+            contains_restricted_characters_instructional: पते की दूसरी लाइन में सिर्फ
+              अक्षर, संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: पते की दूसरी लाइन में निषिद्ध
+              कैरेक्टर नहीं हो सकते
+            contains_too_many_words_instructional: पते की दूसरी लाइन में %{word_count}
+              से कम शब्द होने चाहिए
+            contains_too_many_words_informative: पते की दूसरी लाइन में %{word_count}
+              से कम शब्द होने चाहिए
+            contains_html_tags_instructional: पते की दूसरी लाइन में HTML टैग नहीं
+              हो सकते
+            contains_html_tags_informative: पते की दूसरी लाइन में HTML टैग नहीं हो
+              सकते
+            contains_url_instructional: पते की दूसरी लाइन में URL नहीं हो सकते
+            contains_url_informative: पते की दूसरी लाइन में URL नहीं हो सकते
           warnings:
             contains_too_many_words: पते की दूसरी लाइन में %{word_count} शब्दों से
               कम शब्द लिखने का सुझाव दिया जाता है

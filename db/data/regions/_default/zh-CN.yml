@@ -290,10 +290,26 @@ zh-CN:
             contains_too_many_words: 第二个地址行不能超过 %{word_count} 个字词
             contains_html_tags: 第二个地址行不能包含 HTML 标记。
             contains_url: 第二个地址行不能包含 URL。
-            missing_building_number: 添加大楼编号（如果有）。
-            street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称。
-            building_number_invalid: 大楼编号与 %{street} 和 %{zip} 不匹配。
-            unknown_for_address: 第二个地址行可能不正确。
+            missing_building_number: 添加大楼编号（如果有）
+            street_unknown_for_zip: 输入 %{zip} 对应的有效街道名称
+            building_number_invalid: 大楼编号与 %{street} (%{zip}) 不匹配
+            unknown_for_address: 第二个地址行可能不正确
+            blank_instructional: 输入公寓、房间号等
+            blank_informative: 缺少公寓或房间号
+            too_long_instructional: 第二个地址行过长（最多 %{limit} 个字符）
+            too_long_informative: 第二个地址行过长
+            contains_emojis_instructional: 第二个地址行不能包含表情符号
+            contains_emojis_informative: 第二个地址行不能包含表情符号
+            contains_mathematical_symbols_instructional: 第二个地址行不能包含数学符号
+            contains_mathematical_symbols_informative: 第二个地址行不能包含数学符号
+            contains_restricted_characters_instructional: 第二个地址行只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 第二个地址行不能包含受限字符
+            contains_too_many_words_instructional: 第二个地址行必须少于 %{word_count} 个字词
+            contains_too_many_words_informative: 第二个地址行必须少于 %{word_count} 个字词
+            contains_html_tags_instructional: 第二个地址行不能包含 HTML 标记
+            contains_html_tags_informative: 第二个地址行不能包含 HTML 标记
+            contains_url_instructional: 第二个地址行不能包含 URL
+            contains_url_informative: 第二个地址行不能包含 URL
           warnings:
             contains_too_many_words: 建议第二个地址行少于 %{word_count} 个字词
         address:

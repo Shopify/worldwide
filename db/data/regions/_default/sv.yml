@@ -324,7 +324,7 @@ sv:
           errors:
             blank: Ange ett område
             too_long: Områdesnamnet är för långt (max. %{limit} tecken)
-            contains_emojis: Område får inte innehålla emojier
+            contains_emojis: Område får inte innehålla emojis
             contains_mathematical_symbols: Område får inte innehålla matematiska symboler
             contains_restricted_characters: Område får endast innehålla bokstäver,
               siffror, lokala tecken och specialtecken
@@ -354,11 +354,40 @@ sv:
               än %{word_count} ord
             contains_html_tags: Den andra adressraden får inte innehålla HTML-taggar.
             contains_url: Den andra adressraden får inte innehålla URL:er.
-            missing_building_number: Lägg till ett husnummer om du har ett.
-            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}.
+            missing_building_number: Lägg till ett husnummer om du har ett
+            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}
             building_number_invalid: Vi kunde inte hitta husnumret för %{street},
-              %{zip}.
-            unknown_for_address: Den andra adressraden kan vara felaktig.
+              %{zip}
+            unknown_for_address: Den andra adressraden kan vara felaktig
+            blank_instructional: Ange en lägenhet, våning etc.
+            blank_informative: Lägenhet eller våning saknas
+            too_long_instructional: Den andra adressraden är för lång (max. %{limit}
+              tecken)
+            too_long_informative: Den andra adressraden är för lång
+            contains_emojis_instructional: Den andra adressraden får inte innehålla
+              emojis
+            contains_emojis_informative: Den andra adressraden får inte innehålla
+              emojis
+            contains_mathematical_symbols_instructional: Den andra adressraden får
+              inte innehålla matematiska symboler
+            contains_mathematical_symbols_informative: Den andra adressraden får inte
+              innehålla matematiska symboler
+            contains_restricted_characters_instructional: Den andra adressraden får
+              endast innehålla bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Den andra adressraden får
+              inte innehålla begränsade tecken
+            contains_too_many_words_instructional: Den andra adressraden måste ha
+              färre än %{word_count} ord
+            contains_too_many_words_informative: Den andra adressraden måste ha färre
+              än %{word_count} ord
+            contains_html_tags_instructional: Den andra adressraden får inte innehålla
+              HTML-taggar
+            contains_html_tags_informative: Den andra adressraden får inte innehålla
+              HTML-taggar
+            contains_url_instructional: Den andra adressraden får inte innehålla någon
+              URL
+            contains_url_informative: Den andra adressraden får inte innehålla någon
+              URL
           warnings:
             contains_too_many_words: Vi rekommenderar att den andra adressraden består
               av färre än %{word_count} ord
