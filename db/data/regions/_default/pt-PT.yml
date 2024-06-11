@@ -121,21 +121,10 @@ pt-PT:
             default: Apartamento, fração, etc.
             optional: Apartamento, fração, etc. (opcional)
           errors:
-            contains_html_tags: A linha 2 do endereço não pode conter HTML
-            contains_emojis: A linha 2 do endereço não pode conter emojis
-            contains_url: A linha 2 do endereço não pode conter um URL
-            contains_mathematical_symbols: A linha 2 do endereço não pode conter símbolos
-              matemáticos
-            contains_restricted_characters: A linha 2 do endereço só pode conter letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: A linha 2 do endereço não pode ter mais de %{word_count}
-              palavras
-            unknown_for_address: A linha 2 do endereço pode estar incorreta
             blank_instructional: Introduza um número de apartamento, fração, etc.
             blank_informative: O apartamento ou fração está em falta
             too_long_instructional: A linha de endereço 2 é demasiado longa (máximo
               de 255 caracteres)
-            too_long_informational: A linha de endereço 2 é demasiado longa
             missing_building_number_instructional: Adicione um número de edifício,
               caso exista
             missing_building_number_informative: O número de edifício poderá estar
@@ -155,17 +144,6 @@ pt-PT:
             default: Cidade
             optional: Cidade (opcional)
           errors:
-            too_long: A localidade é demasiado longa (o máximo são 255 caracteres)
-            contains_html_tags: O nome da cidade não pode conter HTML
-            contains_emojis: O nome da cidade não pode conter emojis
-            contains_url: O nome da cidade não pode conter um URL
-            contains_mathematical_symbols: O nome da cidade não pode conter símbolos
-              matemáticos
-            contains_restricted_characters: O campo "Cidade" só pode conter letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: O nome da cidade não pode ter mais do que %{word_count}
-              palavras
-            unknown_for_address: O nome da cidade pode estar incorreto
             blank_instructional: Introduza uma cidade
             blank_informative: A cidade está em falta
             unknown_for_zip_instructional: Introduza uma cidade válida para %{zip}
@@ -196,11 +174,6 @@ pt-PT:
             default: Telefone
             optional: Telefone (opcional)
           errors:
-            contains_emojis: O número de telefone não pode conter emojis
-            contains_mathematical_symbols: O número de telefone não pode conter símbolos
-              matemáticos
-            contains_restricted_characters: O campo "Número de telefone" só pode conter
-              letras, números, caracteres locais e caracteres especiais
             blank_instructional: Introduza um número de telefone
             blank_informative: O número de telefone está em falta
             invalid_instructional: Introduza um número de telefone válido
@@ -212,7 +185,6 @@ pt-PT:
             default: Região
             optional: Região (opcional)
           errors:
-            unknown_for_address: A região pode estar incorreta
             blank_instructional: Selecione uma região
             blank_informative: A região está em falta
             invalid_instructional: Selecione uma região
@@ -232,15 +204,6 @@ pt-PT:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blocked_address: Este local não é suportado
-            too_long: O código postal é demasiado longo
-            contains_html_tags: O código postal não pode conter HTML
-            contains_emojis: O código postal não pode conter emojis
-            contains_mathematical_symbols: O código postal não pode conter símbolos
-              matemáticos
-            contains_restricted_characters: O campo "Código postal" só pode conter
-              letras, números, caracteres locais e caracteres especiais
-            unknown_for_address: O código postal pode estar incorreto
             blank_instructional: Introduza um código postal
             blank_informative: O código postal está em falta
             invalid_instructional: Introduza um código postal válido
@@ -257,7 +220,6 @@ pt-PT:
               a %{province}, %{country}
             not_supported_instructional: Código postal não suportado. Introduza um
               novo endereço e tente novamente
-            not_supported_informativel: Código postal não suportado
             unknown_for_province_instructional: Introduza um código postal válido
               para %{province}
             unknown_for_province_informative: O código postal é inválido para %{province}
@@ -286,10 +248,7 @@ pt-PT:
               caracteres restritos
             contains_too_many_words_instructional: O nome da rua não pode ter mais
               de %{word_count} palavras
-            contains_too_many_words_informational: O nome da rua não pode ter mais
-              de %{word_count} palavras
             contains_html_tags_instructional: O nome da rua não pode conter HTML
-            contains_html_tags_informational: O nome da rua não pode conter HTML
             contains_url_instructional: O nome da rua não pode conter um URL
             contains_url_informative: O nome da rua não pode conter um URL
             street_unknown_for_zip_instructional: Introduza uma rua válida para %{zip}
@@ -334,21 +293,6 @@ pt-PT:
           label:
             default: Bairro
             optional: Bairro (opcional)
-          errors:
-            blank: Introduza um bairro
-            too_long: O bairro é demasiado longo (máximo de %{limit} caracteres)
-            contains_emojis: O nome do bairro não pode conter emojis
-            contains_mathematical_symbols: O nome do bairro não pode conter símbolos
-              matemáticos
-            contains_restricted_characters: O bairro pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: O nome do bairro não pode ter mais de %{word_count}
-              palavras
-            contains_html_tags: O bairro não pode incluir tags HTML
-            contains_url: O bairro não pode incluir URLs
-            unknown_for_city: Introduza um nome de bairro válido para %{city}
-            unknown_for_zip: Introduza um nome de bairro válido para %{zip}
-            unknown_for_address: O bairro pode estar incorreto
           warnings:
             contains_too_many_words: É recomendável que o bairro tenha menos de %{word_count}
               palavras
@@ -357,24 +301,6 @@ pt-PT:
             default: Apartamento, fração, etc.
             optional: Apartamento, fração, etc. (opcional)
           errors:
-            blank: Introduza um número de apartamento, fração, etc.
-            too_long: A segunda linha do endereço é demasiado longa (máximo de %{limit}
-              caracteres)
-            contains_emojis: A segunda linha do endereço não pode incluir emojis
-            contains_mathematical_symbols: A segunda linha de endereço não pode incluir
-              símbolos matemáticos
-            contains_restricted_characters: A segunda linha do endereço apenas pode
-              incluir letras, números, caracteres locais e caracteres especiais
-            contains_too_many_words: A segunda linha do endereço não pode ter mais
-              de %{word_count} palavras
-            contains_html_tags: A segunda linha do endereço não pode incluir tags
-              HTML.
-            contains_url: A segunda linha do endereço não pode incluir URLs.
-            missing_building_number: Adicione um número de edifício, caso exista
-            street_unknown_for_zip: Introduza um nome de rua válido para %{zip}
-            building_number_invalid: Não foi possível localizar o número de edifício
-              para %{street}, %{zip}
-            unknown_for_address: A segunda linha do endereço pode estar incorreta
             blank_instructional: Introduza um número de apartamento, fração, etc.
             blank_informative: O apartamento ou fração está em falta
             too_long_instructional: A segunda linha do endereço é demasiado longa

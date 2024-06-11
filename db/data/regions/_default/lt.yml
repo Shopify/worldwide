@@ -80,8 +80,8 @@ lt:
             default: Adresas
             optional: Adresas (pasirinktinai)
           warnings:
-            contains_too_many_words: Patartina, kad 1 adreso eilutę sudarytų mažiau
-              nei %{word_count} žodžiai (-ių)
+            contains_too_many_words: Patartina, kad pirmąją adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių, -is)
           errors:
             blank_instructional: Įveskite adresą
             blank_informative: Trūksta adreso
@@ -122,22 +122,10 @@ lt:
             default: Butas, apartamentas ar kt.
             optional: Butas, apartamentas ar kt. (pasirinktinai)
           errors:
-            contains_html_tags: Antroje adreso eilutėje negali būti naudojamos HTML
-              žymės
-            contains_emojis: Antroje adreso eilutėje negali būti naudojami jausmaženkliai
-            contains_url: Antroje adreso eilutėje negali būti URL adreso
-            contains_mathematical_symbols: Antroje adreso eilutėje negali būti naudojami
-              matematiniai simboliai
-            contains_restricted_characters: Antrąją adreso eilutę gali sudaryti tik
-              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
-            contains_too_many_words: Antrąją adreso eilutę negali sudaryti daugiau
-              nei %{word_count} žodžiai (-ių, -is)
-            unknown_for_address: Antroji adreso eilutė gali būti neteisinga
             blank_instructional: Įveskite butą, apartamentą ar kt.
             blank_informative: Trūksta buto ar apartamento
             too_long_instructional: Antroji adreso eilutė yra per ilga (turi sudaryti
               ne daugiau kaip 255 simboliai)
-            too_long_informational: Antroji adreso eilutė yra per ilga
             missing_building_number_instructional: Jei turite, pridėkite namo numerį
             missing_building_number_informative: Gali trūkti namo numerio
             street_unknown_for_zip_instructional: Įveskite gatvės pavadinimą, atitinkantį
@@ -148,26 +136,39 @@ lt:
               %{street}, %{zip}
             building_number_invalid_informative: Nerastas namo numeris, atitinkantis
               %{street}, %{zip}
+            too_long_informative: Antroji adreso eilutė yra per ilga
+            contains_emojis_instructional: Antroje adreso eilutėje negali būti naudojami
+              „emoji“
+            contains_emojis_informative: Antroje adreso eilutėje negali būti naudojami
+              „emoji“
+            contains_mathematical_symbols_instructional: Antroje adreso eilutėje negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Antroje adreso eilutėje negali
+              būti naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Antrąją adreso eilutę gali
+              sudaryti tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Antrosios adreso eilutės negali
+              sudaryti ribojami simboliai
+            contains_too_many_words_instructional: Antrosios adreso eilutės negali
+              sudaryti daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_too_many_words_informative: Antrosios adreso eilutės negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags_instructional: Antroje adreso eilutėje negali būti
+              naudojamos HTML žymės
+            contains_html_tags_informative: Antroje adreso eilutėje negali būti naudojamos
+              HTML žymės
+            contains_url_instructional: Antroje adreso eilutėje negali būti URL adreso
+            contains_url_informative: Antroje adreso eilutėje negali būti URL adreso
+            unknown_for_address_instructional: Antroji adreso eilutė gali būti neteisinga
+            unknown_for_address_informative: Antroji adreso eilutė gali būti neteisinga
           warnings:
-            contains_too_many_words: Patartina, kad 2 adreso eilutę sudarytų mažiau
-              nei %{word_count} žodžiai (-ių)
+            contains_too_many_words: Patartina, kad antrąją adreso eilutę sudarytų
+              mažiau nei %{word_count} žodžiai (-ių, -is)
         city:
           label:
             default: Miestas
             optional: Miestas (pasirinktinai)
           errors:
-            too_long: Miesto pavadinimas yra per ilgas (turi sudaryti ne daugiau kaip
-              255 simboliai)
-            contains_html_tags: Miesto pavadinime negali būti naudojamos HTML žymės
-            contains_emojis: Miesto pavadinimo negali sudaryti jausmaženkliai
-            contains_url: Miesto pavadinime negali būti naudojamas URL adresas
-            contains_mathematical_symbols: Miesto pavadinime negali būti naudojami
-              matematiniai simboliai
-            contains_restricted_characters: Miesto pavadinimą gali sudaryti tik raidės,
-              skaičiai, vietiniai simboliai ir specialieji simboliai
-            contains_too_many_words: Miesto pavadinimo negali sudaryti daugiau nei
-              %{word_count} žodžiai (-ių, -is)
-            unknown_for_address: Miestas gali būti neteisingas
             blank_instructional: Įveskite miestą
             blank_informative: Trūksta miesto
             unknown_for_zip_instructional: Įveskite tinkamą %{zip} miestą
@@ -177,6 +178,34 @@ lt:
             unknown_for_zip_and_province_instructional: Įveskite tinkamą %{zip}, %{province},
               miestą
             unknown_for_zip_and_province_informative: Miestas gali būti neteisingas
+            too_long_instructional: Miesto pavadinimas yra per ilgas (turi sudaryti
+              ne daugiau kaip 255 simboliai)
+            too_long_informative: Miesto pavadinimas yra per ilgas
+            contains_emojis_instructional: Miesto pavadinime negali būti naudojami
+              „emoji“
+            contains_emojis_informative: Miesto pavadinime negali būti naudojami „emoji“
+            contains_mathematical_symbols_instructional: Miesto pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Miesto pavadinime negali būti
+              naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Miesto pavadinimą gali sudaryti
+              tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Miesto pavadinimo negali sudaryti
+              ribojami simboliai
+            contains_too_many_words_instructional: Miesto pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_too_many_words_informative: Miesto pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags_instructional: Miesto pavadinime negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Miesto pavadinime negali būti naudojamos
+              HTML žymės
+            contains_url_instructional: Miesto pavadinime negali būti naudojamas URL
+              adresas
+            contains_url_informative: Miesto pavadinime negali būti naudojamas URL
+              adresas
+            unknown_for_address_instructional: Miestas gali būti neteisingas
+            unknown_for_address_informative: Miestas gali būti neteisingas
         country:
           label:
             default: Šalis / regionas
@@ -196,23 +225,28 @@ lt:
             default: Telefonas
             optional: Telefonas (pasirinktinai)
           errors:
-            contains_emojis: Telefono numerio negali sudaryti jausmaženkliai
-            contains_mathematical_symbols: Telefono numeryje negali būti naudojami
-              matematiniai simboliai
-            contains_restricted_characters: Telefono numerį gali sudaryti tik raidės,
-              skaičiai, vietiniai simboliai ir specialieji simboliai
             blank_instructional: Įveskite telefono numerį
             blank_informative: Trūksta telefono numerio
             invalid_instructional: Įveskite tinkamą telefono numerį
             invalid_informative: Telefono numeris neteisingas
             too_long_instructional: Telefono numeris per ilgas
             too_long_informative: Telefono numeris per ilgas
+            contains_emojis_instructional: Telefono numeryje negali būti naudojami
+              „emoji“
+            contains_emojis_informative: Telefono numeryje negali būti naudojami „emoji“
+            contains_mathematical_symbols_instructional: Telefono numeryje negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Telefono numeryje negali būti
+              naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Telefono numerį gali sudaryti
+              tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Telefono numerio negali sudaryti
+              ribojami simboliai
         province:
           label:
             default: Regionas
             optional: Regionas (pasirinktinai)
           errors:
-            unknown_for_address: Regionas gali būti neteisingas
             blank_instructional: Pasirinkite regioną
             blank_informative: Trūksta regiono
             invalid_instructional: Pasirinkite regioną
@@ -226,20 +260,13 @@ lt:
             unknown_for_city_instructional: Regionas neatitinka %{city}
             unknown_for_zip_instructional: Pasirinkite tinkamą %{zip} regioną
             unknown_for_zip_informative: Regionas neatitinka %{zip}
+            unknown_for_address_instructional: Regionas gali būti neteisingas
+            unknown_for_address_informative: Regionas gali būti neteisingas
         zip:
           label:
             default: Pašto kodas
             optional: Pašto kodas (pasirinktinai)
           errors:
-            blocked_address: Ši vietovė nepalaikoma
-            too_long: Pašto kodas yra per ilgas
-            contains_html_tags: Pašto kode negali būti naudojamos HTML žymės
-            contains_emojis: Pašto kodo negali sudaryti jausmaženkliai
-            contains_mathematical_symbols: Pašto kode negali būti naudojami matematiniai
-              simboliai
-            contains_restricted_characters: Pašto kodą gali sudaryti tik raidės, skaičiai,
-              vietiniai simboliai ir specialieji simboliai
-            unknown_for_address: Pašto kodas gali būti neteisingas
             blank_instructional: Įveskite pašto kodą
             blank_informative: Trūksta pašto kodo
             invalid_instructional: Įveskite tinkamą pašto kodą
@@ -255,10 +282,28 @@ lt:
               %{country}
             not_supported_instructional: Pašto kodas nepalaikomas. Įveskite naują
               adresą ir bandykite dar kartą
-            not_supported_informativel: Pašto kodas nepalaikomas
             unknown_for_province_instructional: Įveskite tinkamą %{province} pašto
               kodą
             unknown_for_province_informative: "%{province} pašto kodas neteisingas"
+            blocked_address_instructional: Ši vietovė nepalaikoma
+            blocked_address_informative: Ši vietovė nepalaikoma
+            contains_emojis_instructional: Pašto kode negali būti naudojami „emoji“
+            contains_emojis_informative: Pašto kode negali būti naudojami „emoji“
+            contains_mathematical_symbols_instructional: Pašto kode negali būti naudojami
+              matematiniai simboliai
+            contains_mathematical_symbols_informative: Pašto kode negali būti naudojami
+              matematiniai simboliai
+            contains_restricted_characters_instructional: Pašto kodą gali sudaryti
+              tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Pašto kodo negali sudaryti
+              ribojami simboliai
+            not_supported_informative: Pašto kodas nepalaikomas
+            contains_html_tags_instructional: Pašto kode negali būti naudojamos HTML
+              žymės
+            contains_html_tags_informative: Pašto kode negali būti naudojamos HTML
+              žymės
+            unknown_for_address_instructional: Pašto kodas gali būti neteisingas
+            unknown_for_address_informative: Pašto kodas gali būti neteisingas
         street_name:
           label:
             default: Gatvė
@@ -284,11 +329,7 @@ lt:
               ribojami simboliai
             contains_too_many_words_instructional: Gatvės pavadinimą negali sudaryti
               daugiau nei %{word_count} žodžiai (-ių, -is)
-            contains_too_many_words_informational: Gatvės pavadinimą negali sudaryti
-              daugiau nei %{word_count} žodžiai (-ių, -is)
             contains_html_tags_instructional: Gatvės pavadinime gali būti naudojamos
-              HTML žymės
-            contains_html_tags_informational: Gatvės pavadinime gali būti naudojamos
               HTML žymės
             contains_url_instructional: Gatvės pavadinimas negali turėti URL adreso
             contains_url_informative: Gatvės pavadinimas negali turėti URL adreso
@@ -297,6 +338,10 @@ lt:
             street_unknown_for_zip_informative: Gatvės pavadinimas neatitinka %{zip}
             unknown_for_address_instructional: Gatvės pavadinimas gali būti neteisingas
             unknown_for_address_informative: Gatvės pavadinimas gali būti neteisingas
+            contains_too_many_words_informative: Gatvės pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags_informative: Gatvės pavadinime negali būti naudojamos
+              HTML žymės
         street_number:
           label:
             default: Namo numeris
@@ -336,50 +381,54 @@ lt:
           label:
             default: Kvartalas
             optional: Kvartalas (pasirinktinai)
-          errors:
-            blank: Įveskite kvartalą
-            too_long: Kvartalo pavadinimas yra per ilgas (turi sudaryti ne daugiau
-              kaip %{limit} simboliai)
-            contains_emojis: Kvartalo pavadinimo negali sudaryti jausmaženkliai
-            contains_mathematical_symbols: Kvartalo pavadinime negali būti naudojami
-              matematiniai simboliai
-            contains_restricted_characters: Kvartalo pavadinimą gali sudaryti tik
-              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
-            contains_too_many_words: Kvartalo pavadinimo negali sudaryti daugiau nei
-              %{word_count} žodžiai (-ių, -is)
-            contains_html_tags: Kvartalo pavadinime negali būti naudojamos HTML žymės.
-            contains_url: Kvartalo pavadinime negali būti naudojami URL adresai.
-            unknown_for_city: Įveskite kvartalo pavadinimą, atitinkantį miestą %{city}.
-            unknown_for_zip: Įveskite kvartalo pavadinimą, atitinkantį pašto kodą
-              %{zip}.
-            unknown_for_address: Kvartalas gali būti neteisingas.
           warnings:
             contains_too_many_words: Patartina, kad kvartalo pavadinimą sudarytų mažiau
               nei %{word_count} žodžiai (-ių, -is)
+          errors:
+            blank_instructional: Įveskite kvartalo pavadinimą
+            blank_informative: Trūksta kvartalo
+            too_long_instructional: Kvartalo pavadinimas yra per ilgas (turi sudaryti
+              ne daugiau kaip %{limit} simboliai)
+            too_long_informative: Kvartalo pavadinimas yra per ilgas
+            contains_emojis_instructional: Kvartalo pavadinime negali būti naudojami
+              „emoji“
+            contains_emojis_informative: Kvartalo pavadinime negali būti naudojami
+              „emoji“
+            contains_mathematical_symbols_instructional: Kvartalo pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Kvartalo pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Kvartalo pavadinimą gali
+              sudaryti tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Kvartalo pavadinimo negali
+              sudaryti ribojami simboliai
+            contains_too_many_words_instructional: Kvartalo pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_too_many_words_informative: Kvartalo pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags_instructional: Kvartalo pavadinime negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Kvartalo pavadinime negali būti naudojamos
+              HTML žymės
+            contains_url_instructional: Kvartalo pavadinime negali būti naudojami
+              URL adresai
+            contains_url_informative: Kvartalo pavadinime negali būti naudojami URL
+              adresai
+            unknown_for_city_instructional: Įveskite kvartalo pavadinimą, atitinkantį
+              miestą %{city}
+            unknown_for_city_informative: Įveskite kvartalo pavadinimą, atitinkantį
+              miestą %{city}
+            unknown_for_zip_instructional: Įveskite kvartalo pavadinimą, atitinkantį
+              pašto kodą %{zip}
+            unknown_for_zip_informative: Įveskite kvartalo pavadinimą, atitinkantį
+              pašto kodą %{zip}
+            unknown_for_address_instructional: Kvartalas gali būti neteisingas
+            unknown_for_address_informative: Kvartalas gali būti neteisingas
         line2:
           label:
             default: Butas, apartamentas ar kt.
             optional: Butas, apartamentas ar kt. (pasirinktinai)
           errors:
-            blank: Įveskite butą, apartamentą ar kt.
-            too_long: Antroji adreso eilutė yra per ilga (turi sudaryti ne daugiau
-              kaip %{limit} simboliai)
-            contains_emojis: Antroje adreso eilutėje negali būti naudojami jausmaženkliai
-            contains_mathematical_symbols: Antroje adreso eilutėje negali būti naudojami
-              matematiniai simboliai
-            contains_restricted_characters: Antrąją adreso eilutę gali sudaryti tik
-              raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
-            contains_too_many_words: Antrąją adreso eilutę negali sudaryti daugiau
-              nei %{word_count} žodžiai (-ių, -is)
-            contains_html_tags: Antroje adreso eilutėje negali būti naudojamos HTML
-              žymės.
-            contains_url: Antroje adreso eilutėje negali būti naudojami URL adresai.
-            missing_building_number: Jei turite, pridėkite namo numerį
-            street_unknown_for_zip: Įveskite gatvės pavadinimą, atitinkantį pašto
-              kodą %{zip}
-            building_number_invalid: Nerastas namo numeris, atitinkantis %{street},
-              %{zip}
-            unknown_for_address: Antroji adreso eilutė gali būti neteisinga
             blank_instructional: Įveskite butą, apartamentą ar kt.
             blank_informative: Trūksta buto ar apartamento
             too_long_instructional: Antroji adreso eilutė yra per ilga (turi sudaryti
@@ -409,6 +458,18 @@ lt:
               URL adresas
             contains_url_informative: Antroje adreso eilutėje negali būti naudojamas
               URL adresas
+            missing_building_number_instructional: Jei turite, pridėkite namo numerį
+            missing_building_number_informative: Jei turite, pridėkite namo numerį
+            street_unknown_for_zip_instructional: Įveskite gatvės pavadinimą, atitinkantį
+              pašto kodą %{zip}
+            street_unknown_for_zip_informative: Įveskite gatvės pavadinimą, atitinkantį
+              pašto kodą %{zip}
+            building_number_invalid_instructional: Nerastas namo numeris, atitinkantis
+              %{street}, %{zip}
+            building_number_invalid_informative: Nerastas namo numeris, atitinkantis
+              %{street}, %{zip}
+            unknown_for_address_instructional: Antroji adreso eilutė gali būti neteisinga
+            unknown_for_address_informative: Antroji adreso eilutė gali būti neteisinga
           warnings:
             contains_too_many_words: Patartina, kad antrąją adreso eilutę sudarytų
               mažiau nei %{word_count} žodžiai (-ių, -is)

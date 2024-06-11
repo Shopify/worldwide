@@ -122,21 +122,10 @@ pt-BR:
             default: Apartamento, bloco etc.
             optional: Casa, apto. etc. (opcional)
           errors:
-            contains_html_tags: A segunda linha do endereço não pode conter HTML
-            contains_emojis: A segunda linha do endereço não pode conter emojis
-            contains_url: A segunda linha do endereço não pode conter um URL
-            contains_mathematical_symbols: A segunda linha do endereço não pode conter
-              símbolos matemáticos
-            contains_restricted_characters: A segunda linha do endereço pode conter
-              apenas letras, números, caracteres locais e caracteres especiais
-            contains_too_many_words: A segunda linha do endereço não pode ter mais
-              de %{word_count} palavras
-            unknown_for_address: Talvez haja um erro no endereço (linha 2)
             blank_instructional: Insira apartamento, bloco etc.
             blank_informative: Falta o apartamento ou o bloco
             too_long_instructional: A segunda linha de endereço é longa demais (máximo
               de 255 caracteres)
-            too_long_informational: A segunda linha de endereço é longa demais
             missing_building_number_instructional: Adicione o número do prédio, se
               houver
             missing_building_number_informative: Talvez o número do prédio esteja
@@ -156,15 +145,6 @@ pt-BR:
             default: Cidade
             optional: Cidade (opcional)
           errors:
-            too_long: A cidade é longa demais (máximo de 255 caracteres)
-            contains_html_tags: A cidade não pode conter HTML
-            contains_emojis: A cidade não pode conter emojis
-            contains_url: A cidade não pode conter um URL
-            contains_mathematical_symbols: A cidade não pode conter símbolos matemáticos
-            contains_restricted_characters: A cidade pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: A cidade não pode ter mais de %{word_count} palavras
-            unknown_for_address: Talvez haja um erro na cidade
             blank_instructional: Insira uma cidade
             blank_informative: Falta a cidade
             unknown_for_zip_instructional: Insira uma cidade válida para %{zip}
@@ -176,7 +156,7 @@ pt-BR:
             unknown_for_zip_and_province_informative: Talvez haja um erro na cidade
         country:
           label:
-            default: País/Região
+            default: País/região
             optional: País/Região (opcional)
           errors:
             blank_instructional: Selecione um país/região
@@ -193,11 +173,6 @@ pt-BR:
             default: Telefone
             optional: Telefone (opcional)
           errors:
-            contains_emojis: O número de telefone não pode conter emojis
-            contains_mathematical_symbols: O número de telefone não pode conter símbolos
-              matemáticos
-            contains_restricted_characters: O número de telefone pode conter apenas
-              letras, números, caracteres locais e caracteres especiais
             blank_instructional: Insira um número de telefone
             blank_informative: Falta o número de telefone
             invalid_instructional: Insira um número de telefone válido
@@ -209,7 +184,6 @@ pt-BR:
             default: Região
             optional: Região (opcional)
           errors:
-            unknown_for_address: Talvez haja um erro na região
             blank_instructional: Selecione uma região
             blank_informative: Falta a região
             invalid_instructional: Selecione uma região
@@ -229,14 +203,6 @@ pt-BR:
             default: CEP
             optional: CEP (opcional)
           errors:
-            blocked_address: O local não é aceito
-            too_long: O CEP é longo demais
-            contains_html_tags: O CEP não pode conter HTML
-            contains_emojis: O CEP não pode conter emojis
-            contains_mathematical_symbols: O CEP não pode conter símbolos matemáticos
-            contains_restricted_characters: O CEP pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            unknown_for_address: Talvez haja um erro no CEP
             blank_instructional: Insira um CEP
             blank_informative: Falta o CEP
             invalid_instructional: Insira um CEP válido
@@ -251,7 +217,6 @@ pt-BR:
               %{province}, %{country}
             not_supported_instructional: O CEP não é compatível. Insira um novo endereço
               e tente de novo
-            not_supported_informativel: CEP incompatível
             unknown_for_province_instructional: Insira um CEP válido para %{province}
             unknown_for_province_informative: O CEP é inválido para %{province}
         street_name:
@@ -278,10 +243,7 @@ pt-BR:
               restritos
             contains_too_many_words_instructional: A rua não pode ter mais de %{word_count}
               palavras
-            contains_too_many_words_informational: A rua não pode ter mais de %{word_count}
-              palavras
             contains_html_tags_instructional: A rua não pode conter HTML
-            contains_html_tags_informational: A rua não pode conter HTML
             contains_url_instructional: A rua não pode conter um URL
             contains_url_informative: A rua não pode conter um URL
             street_unknown_for_zip_instructional: Insira uma rua válida para %{zip}
@@ -325,19 +287,6 @@ pt-BR:
           label:
             default: Bairro
             optional: Bairro (opcional)
-          errors:
-            blank: Insira um bairro
-            too_long: O bairro é muito longo (máximo de %{limit} caracteres)
-            contains_emojis: O bairro não pode conter emojis
-            contains_mathematical_symbols: O bairro não pode conter símbolos matemáticos
-            contains_restricted_characters: O bairro pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: O bairro não pode ter mais de %{word_count} palavras
-            contains_html_tags: O bairro não pode conter tags HTML
-            contains_url: O bairro não pode conter URLs
-            unknown_for_city: Insira um nome de bairro válido para %{city}
-            unknown_for_zip: Insira um nome de bairro válido para %{zip}
-            unknown_for_address: Talvez haja um erro no bairro
           warnings:
             contains_too_many_words: É recomendável que o bairro tenha menos de %{word_count}
               palavras
@@ -346,23 +295,6 @@ pt-BR:
             default: Apartamento, bloco etc.
             optional: Casa, apto. etc. (opcional)
           errors:
-            blank: Insira apartamento, bloco etc.
-            too_long: A segunda linha do endereço é longa demais (máximo é %{limit}
-              caracteres)
-            contains_emojis: A segunda linha do endereço não pode conter emojis
-            contains_mathematical_symbols: A segunda linha do endereço não pode conter
-              símbolos matemáticos
-            contains_restricted_characters: A segunda linha do endereço pode conter
-              apenas letras, números, caracteres locais e caracteres especiais
-            contains_too_many_words: A segunda linha do endereço não pode ter mais
-              do que %{word_count} palavras
-            contains_html_tags: A segunda linha do endereço não pode conter tags HTML
-            contains_url: A segunda linha do endereço não pode conter URLs
-            missing_building_number: Adicione o número do prédio, se houver
-            street_unknown_for_zip: Insira um nome de rua válido para %{zip}
-            building_number_invalid: Não foi possível localizar o número do prédio
-              de %{street}, %{zip}
-            unknown_for_address: A segunda linha do endereço pode estar incorreta
             blank_instructional: Insira apartamento, bloco etc.
             blank_informative: Falta o apartamento ou o bloco
             too_long_instructional: A segunda linha do endereço é longa demais (máximo

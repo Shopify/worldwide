@@ -27,7 +27,7 @@ da:
         first_name:
           label:
             default: Fornavn
-            optional: Fornavn (valgfrit)
+            optional: Fornavn (valgfri)
           errors:
             blank_instructional: Angiv et fornavn
             blank_informative: Fornavn mangler
@@ -117,21 +117,10 @@ da:
             default: Lejlighed, etage osv.
             optional: Lejlighed, etage osv. (valgfrit)
           errors:
-            contains_html_tags: Adresselinje 2 må ikke indeholde HTML
-            contains_emojis: Adresselinje 2 må ikke indeholde emojis
-            contains_mathematical_symbols: Adresselinje 2 må ikke indeholde matematiske
-              symboler
-            contains_restricted_characters: Adresselinje 2 må kun indeholde bogstaver,
-              tegn, lokale tegn og specialtegn
-            contains_url: Adresselinje 2 må ikke indeholde en webadresse
-            contains_too_many_words: Adresselinje 2 må ikke indeholde flere end %{word_count}
-              ord
-            unknown_for_address: Adresselinje 2 kan være forkert
             blank_instructional: Indtast lejligheds-, værelsesnummer osv.
             blank_informative: Lejlighed eller etage mangler
             too_long_instructional: Den anden adresselinje er for lang (højst 255
               tegn)
-            too_long_informational: Den anden adresselinje er for lang
             missing_building_number_instructional: Tilføj et bygningsnummer, hvis
               du har et
             missing_building_number_informative: Bygningsnummer mangler muligvis
@@ -141,6 +130,27 @@ da:
               for %{street}, %{zip}
             building_number_invalid_informative: Der kunne ikke findes et bygningsnummer
               for %{street}, %{zip}
+            too_long_informative: Adresselinje 2 er for lang
+            contains_emojis_instructional: Adresselinje 2 må ikke indeholde emojis
+            contains_emojis_informative: Adresselinje 2 må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Adresselinje 2 må ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Adresselinje 2 må ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Adresselinje 2 må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Adresselinje 2 må ikke indeholde
+              begrænsede tegn
+            contains_too_many_words_instructional: Adresselinje 2 skal indeholde færre
+              end %{word_count} ord
+            contains_too_many_words_informative: Adresselinje 2 skal indeholde færre
+              end %{word_count} ord
+            contains_html_tags_instructional: Adresselinje 2 må ikke indeholde HTML
+            contains_html_tags_informative: Adresselinje 2 må ikke indeholde HTML
+            contains_url_instructional: Adresselinje 2 må ikke indeholde en webadresse
+            contains_url_informative: Adresselinje 2 må ikke indeholde en webadresse
+            unknown_for_address_instructional: Adresselinje 2 kan være forkert
+            unknown_for_address_informative: Adresselinje 2 kan være forkert
           warnings:
             contains_too_many_words: Det anbefales, at adresselinje 2 har færre end
               %{word_count} ord
@@ -149,16 +159,6 @@ da:
             default: By
             optional: By (valgfrit)
           errors:
-            too_long: Bynavnet er for langt (højst 255 tegn)
-            contains_html_tags: By må ikke indeholde HTML
-            contains_emojis: By må ikke indeholde emojis
-            contains_mathematical_symbols: By må ikke indeholde matematiske symboler
-            contains_restricted_characters: By må kun indeholde bogstaver, tegn, lokale
-              tegn og specialtegn
-            contains_url: By må ikke indeholde en webadresse
-            contains_too_many_words: By må ikke indeholde flere end %{word_count}
-              ord
-            unknown_for_address: By kan være forkert
             blank_instructional: Angiv en by
             blank_informative: By mangler
             unknown_for_zip_instructional: Angiv en gyldig by for %{zip}
@@ -168,6 +168,26 @@ da:
             unknown_for_zip_and_province_instructional: Angiv en gyldig by for %{zip},
               %{province}
             unknown_for_zip_and_province_informative: By kan være forkert
+            too_long_instructional: By er for lang (højst 255 tegn)
+            too_long_informative: By er for lang
+            contains_emojis_instructional: By må ikke indeholde emojis
+            contains_emojis_informative: By må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: By må ikke indeholde matematiske
+              symboler
+            contains_mathematical_symbols_informative: By må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters_instructional: By må kun indeholde bogstaver,
+              tegn, lokale tegn og specialtegn
+            contains_restricted_characters_informative: By må ikke indeholde begrænsede
+              tegn
+            contains_too_many_words_instructional: By skal indeholde færre end %{word_count} ord
+            contains_too_many_words_informative: By skal indeholde færre end %{word_count} ord
+            contains_html_tags_instructional: By må ikke indeholde HTML
+            contains_html_tags_informative: By må ikke indeholde HTML
+            contains_url_instructional: By må ikke indeholde en webadresse
+            contains_url_informative: By må ikke indeholde en webadresse
+            unknown_for_address_instructional: By kan være forkert
+            unknown_for_address_informative: By kan være forkert
         country:
           label:
             default: Land/område
@@ -185,25 +205,29 @@ da:
         phone:
           label:
             default: Telefon
-            optional: Telefon (valgfri)
+            optional: Telefon (valgri)
           errors:
-            contains_emojis: Telefonnummer må ikke indeholde emojis
-            contains_mathematical_symbols: Telefonnummer må ikke indeholde matematiske
-              symboler
-            contains_restricted_characters: Telefonnummer må kun indeholde bogstaver,
-              tegn, lokale tegn og specialtegn
             blank_instructional: Angiv et telefonnummer
             blank_informative: Telefonnummer mangler
             invalid_instructional: Angiv et gyldigt telefonnummer
             invalid_informative: Telefonnummeret er ikke gyldigt
             too_long_instructional: Telefonnummer er for lang
             too_long_informative: Telefonnummer er for lang
+            contains_emojis_instructional: Telefonnummer må ikke indeholde emojis
+            contains_emojis_informative: Telefonnummer må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Telefonnummer må ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Telefonnummer må ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Telefonnummer må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Telefonnummer må ikke indeholde
+              begrænsede tegn
         province:
           label:
             default: Område
             optional: Område (valgfrit)
           errors:
-            unknown_for_address: Område kan være forkert
             blank_instructional: Vælg et område
             blank_informative: Område mangler
             invalid_instructional: Vælg et område
@@ -217,20 +241,13 @@ da:
             unknown_for_city_instructional: Område matcher ikke %{city}
             unknown_for_zip_instructional: Vælg et gyldigt område for %{zip}
             unknown_for_zip_informative: Område matcher ikke %{zip}
+            unknown_for_address_instructional: Område kan være forkert
+            unknown_for_address_informative: Område kan være forkert
         zip:
           label:
             default: Postnummer
             optional: Postnummer (valgfrit)
           errors:
-            blocked_address: Denne lokation understøttes ikke
-            too_long: Postnummeret er for langt
-            contains_html_tags: Postnummer må ikke indeholde HTML
-            contains_emojis: Postnummer må ikke indeholde emojis
-            contains_mathematical_symbols: Postnummer må ikke indeholde matematiske
-              symboler
-            contains_restricted_characters: Postnummer må kun indeholde bogstaver,
-              tegn, lokale tegn og specialtegn
-            unknown_for_address: Postnummer kan være forkert
             blank_instructional: Angiv et postnummer
             blank_informative: Postnummer mangler
             invalid_instructional: Angiv et gyldigt postnummer
@@ -245,9 +262,25 @@ da:
               %{province}, %{country}
             not_supported_instructional: Postnummer understøttes ikke. Angiv en ny
               adresse, og prøv igen
-            not_supported_informativel: Postnummer understøttes ikke
             unknown_for_province_instructional: Angiv et gyldigt postnummer for %{province}
             unknown_for_province_informative: Postnummeret er ugyldigt for %{province}
+            blocked_address_instructional: Denne lokation understøttes ikke
+            blocked_address_informative: Denne lokation understøttes ikke
+            contains_emojis_instructional: Postnummer må ikke indeholde emojis
+            contains_emojis_informative: Postnummer må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Postnummer må ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Postnummer må ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Postnummer må kun indeholde
+              bogstaver, tegn, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Postnummer må ikke indeholde
+              begrænsede tegn
+            not_supported_informative: Postnummer understøttes ikke
+            contains_html_tags_instructional: Postnummer må ikke indeholde HTML
+            contains_html_tags_informative: Postnummer må ikke indeholde HTML
+            unknown_for_address_instructional: Postnummer kan være forkert
+            unknown_for_address_informative: Postnummer kan være forkert
         street_name:
           label:
             default: Gade
@@ -272,16 +305,16 @@ da:
               tegn
             contains_too_many_words_instructional: Gade må ikke indeholde flere end
               %{word_count} ord
-            contains_too_many_words_informational: Gade må ikke indeholde flere end
-              %{word_count} ord
             contains_html_tags_instructional: Gade må ikke indeholde HTML
-            contains_html_tags_informational: Gade må ikke indeholde HTML
             contains_url_instructional: Gade må ikke indeholde en webadresse
             contains_url_informative: Gade må ikke indeholde en webadresse
             street_unknown_for_zip_instructional: Angiv en gyldig gade for %{zip}
             street_unknown_for_zip_informative: Gaden er ugyldig for %{zip}
             unknown_for_address_instructional: Gade kan være forkert
             unknown_for_address_informative: Gade kan være forkert
+            contains_too_many_words_informative: Gade må ikke indeholde flere end
+              %{word_count} ord
+            contains_html_tags_informative: Gade må ikke indeholde HTML
         street_number:
           label:
             default: Bygningsnummer
@@ -318,44 +351,42 @@ da:
           label:
             default: Bydel
             optional: Bydel (valgfrit)
-          errors:
-            blank: Angiv en bydel
-            too_long: Bydelen er for lang (højst %{limit} tegn)
-            contains_emojis: Bydel må ikke indeholde emojis
-            contains_mathematical_symbols: Bydel må ikke indeholde matematiske symboler
-            contains_restricted_characters: Bydel må kun indeholde bogstaver, tal,
-              lokale tegn og specialtegn
-            contains_too_many_words: Bydel må ikke indeholde flere end %{word_count}
-              ord
-            contains_html_tags: Bydelen må ikke indeholde HTML-tags
-            contains_url: Bydelen må ikke indeholde webadresser
-            unknown_for_city: Angiv et gyldigt bydelsnavn for %{city}
-            unknown_for_zip: Angiv et gyldigt bydelsnavn for %{zip}
-            unknown_for_address: Bydelen kan være forkert
           warnings:
             contains_too_many_words: Det anbefales, at bydel indeholder færre end
               %{word_count} ord
+          errors:
+            blank_instructional: Angiv en bydel
+            blank_informative: Bydel mangler
+            too_long_instructional: Bydel er for lang (højst %{limit} tegn)
+            too_long_informative: Bydel er for lang
+            contains_emojis_instructional: Bydel må ikke indeholde emojis
+            contains_emojis_informative: Bydel må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Bydel må ikke indeholde matematiske
+              symboler
+            contains_mathematical_symbols_informative: Bydel må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters_instructional: Bydel må kun indeholde bogstaver,
+              tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Bydel må ikke indeholde begrænsede
+              tegn
+            contains_too_many_words_instructional: Bydel skal indeholde færre end
+              %{word_count} ord
+            contains_too_many_words_informative: Bydel skal indeholde færre end %{word_count} ord
+            contains_html_tags_instructional: Bydel må ikke indeholde HTML-tags
+            contains_html_tags_informative: Bydel må ikke indeholde HTML-tags
+            contains_url_instructional: Bydel må ikke indeholde webadresser
+            contains_url_informative: Bydel må ikke indeholde webadresser
+            unknown_for_city_instructional: Angiv et gyldigt bydelsnavn for %{city}
+            unknown_for_city_informative: Angiv et gyldigt bydelsnavn for %{city}
+            unknown_for_zip_instructional: Angiv et gyldigt bydelsnavn for %{zip}
+            unknown_for_zip_informative: Angiv et gyldigt bydelsnavn for %{zip}
+            unknown_for_address_instructional: Bydel kan være forkert
+            unknown_for_address_informative: Bydel kan være forkert
         line2:
           label:
             default: Lejlighed, etage osv.
             optional: Lejlighed, etage osv. (valgfri)
           errors:
-            blank: Angiv lejlighed, etage osv.
-            too_long: Anden linje i adressen er for lang (højst %{limit} tegn)
-            contains_emojis: Anden linje i adressen må ikke indeholde emojier
-            contains_mathematical_symbols: Anden linje i adressen må ikke indeholde
-              matematiske symboler
-            contains_restricted_characters: Anden linje i adressen må kun indeholde
-              bogstaver, tegn, lokale tegn og specialtegn
-            contains_too_many_words: Anden linje i adressen må ikke indeholde mere
-              end %{word_count} ord
-            contains_html_tags: Anden linje i adressen må ikke indeholde HTML-tags.
-            contains_url: Anden linje i adressen må ikke indeholde webadresser.
-            missing_building_number: Tilføj et bygningsnummer, hvis du har et
-            street_unknown_for_zip: Angiv et gyldigt gadenavn for %{zip}
-            building_number_invalid: Der kunne ikke findes et bygningsnummer for %{street},
-              %{zip}
-            unknown_for_address: Anden linje i adressen er muligvis forkert
             blank_instructional: Angiv lejlighed, etage osv.
             blank_informative: Lejlighed eller etage mangler
             too_long_instructional: Anden linje i adressen er for lang (højst %{limit}
@@ -385,6 +416,19 @@ da:
               webadresse
             contains_url_informative: Anden linje i adressen må ikke indeholde en
               webadresse
+            missing_building_number_instructional: Tilføj et bygningsnummer, hvis
+              du har et
+            missing_building_number_informative: Tilføj et bygningsnummer, hvis du
+              har et
+            street_unknown_for_zip_instructional: Angiv et gyldigt gadenavn for %{zip}
+            street_unknown_for_zip_informative: Angiv et gyldigt gadenavn for %{zip}
+            building_number_invalid_instructional: Der kunne ikke findes et bygningsnummer
+              for %{street}, %{zip}
+            building_number_invalid_informative: Der kunne ikke findes et bygningsnummer
+              for %{street}, %{zip}
+            unknown_for_address_instructional: Anden linje i adressen er muligvis
+              forkert
+            unknown_for_address_informative: Anden linje i adressen er muligvis forkert
           warnings:
             contains_too_many_words: Det anbefales, at den anden linje i adressen
               har under %{word_count} ord

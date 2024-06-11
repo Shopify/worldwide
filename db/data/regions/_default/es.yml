@@ -130,23 +130,10 @@ es:
             default: Apartamento, local, etc.
             optional: Apartamento, local, etc. (opcional)
           errors:
-            contains_html_tags: La segunda línea de la dirección no puede contener
-              HTML.
-            contains_emojis: La segunda línea de la dirección no puede contener emojis.
-            contains_mathematical_symbols: La segunda línea de la dirección no puede
-              contener emojis.
-            contains_restricted_characters: La segunda línea de la dirección solo
-              puede contener letras, números, caracteres locales y caracteres especiales.
-            contains_url: La segunda línea de la dirección no puede contener una URL.
-            contains_too_many_words: La segunda línea de la dirección no puede tener
-              más de %{word_count} palabras.
-            unknown_for_address: Puede que la segunda línea de la dirección sea incorrecta.
             blank_instructional: Introduce un apartamento, local, etc.
             blank_informative: Falta el apartamento o local.
             too_long_instructional: La segunda línea de la dirección es demasiado
               larga (el máximo es de 255 caracteres).
-            too_long_informational: La segunda línea de la dirección es demasiado
-              larga.
             missing_building_number_instructional: Agrega un número de edificio, si
               lo hay.
             missing_building_number_informative: Es posible que falte introducir el
@@ -159,6 +146,36 @@ es:
               de edificio para %{street}, %{zip}.
             building_number_invalid_informative: No se ha podido localizar un número
               de edificio para %{street}, %{zip}.
+            too_long_informative: La segunda línea de la dirección es demasiado larga.
+            contains_emojis_instructional: La segunda línea de la dirección no puede
+              contener emojis.
+            contains_emojis_informative: La segunda línea de la dirección no puede
+              contener emojis.
+            contains_mathematical_symbols_instructional: La segunda línea de la dirección
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: La segunda línea de la dirección
+              no puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: La segunda línea de la dirección
+              solo puede contener letras, números, caracteres locales y caracteres
+              especiales.
+            contains_restricted_characters_informative: La segunda línea de la dirección
+              no puede contener caracteres restringidos.
+            contains_too_many_words_instructional: La segunda línea de la dirección
+              debe tener menos de %{word_count} palabras.
+            contains_too_many_words_informative: La segunda línea de la dirección
+              debe tener menos de %{word_count} palabras.
+            contains_html_tags_instructional: La segunda línea de la dirección no
+              puede contener HTML.
+            contains_html_tags_informative: La segunda línea de la dirección no puede
+              contener HTML.
+            contains_url_instructional: La segunda línea de la dirección no puede
+              contener una URL.
+            contains_url_informative: La segunda línea de la dirección no puede contener
+              una URL.
+            unknown_for_address_instructional: Puede que la segunda línea de la dirección
+              no sea correcta.
+            unknown_for_address_informative: Puede que la segunda línea de la dirección
+              no sea correcta.
           warnings:
             contains_too_many_words: Se recomienda que la línea 2 de la dirección
               tenga menos de %{word_count} palabras.
@@ -167,17 +184,6 @@ es:
             default: Ciudad
             optional: Ciudad (opcional)
           errors:
-            too_long: El nombre de la ciudad es demasiado largo (el máximo es 255
-              caracteres)
-            contains_html_tags: La ciudad no puede contener HTML.
-            contains_emojis: La ciudad no puede contener emojis.
-            contains_mathematical_symbols: La ciudad no puede contener símbolos matemáticos.
-            contains_restricted_characters: La ciudad solo puede contener letras,
-              números y caracteres locales y especiales
-            contains_url: La ciudad no puede contener una URL.
-            contains_too_many_words: La ciudad no puede tener más de %{word_count}
-              palabras.
-            unknown_for_address: Puede que la ciudad sea incorrecta.
             blank_instructional: Introduce una ciudad.
             blank_informative: Falta la ciudad.
             unknown_for_zip_instructional: Introduce una ciudad válida para el código
@@ -189,10 +195,39 @@ es:
             unknown_for_zip_and_province_instructional: Introduce una ciudad válida
               para el código postal %{zip} de %{province}.
             unknown_for_zip_and_province_informative: Puede que la ciudad sea incorrecta.
+            too_long_instructional: El nombre de la ciudad es demasiado largo (el
+              máximo es 255 caracteres).
+            too_long_informative: El nombre de la ciudad es demasiado largo.
+            contains_emojis_instructional: El nombre de la ciudad no puede contener
+              emojis.
+            contains_emojis_informative: El nombre de la ciudad no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre de la ciudad no
+              puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre de la ciudad no puede
+              contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre de la ciudad solo
+              puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El nombre de la ciudad no
+              puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre de la ciudad debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre de la ciudad debe tener
+              menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre de la ciudad no puede contener
+              HTML.
+            contains_html_tags_informative: El nombre de la ciudad no puede contener
+              HTML.
+            contains_url_instructional: El nombre de la ciudad no puede contener una
+              URL.
+            contains_url_informative: El nombre de la ciudad no puede contener una
+              URL.
+            unknown_for_address_instructional: Puede que la ciudad no sea correcta.
+            unknown_for_address_informative: Puede que la ciudad no sea correcta.
         country:
           label:
-            default: País/región
-            optional: País/región (opcional)
+            default: País o región
+            optional: País o región (opcional)
           errors:
             blank_instructional: Selecciona un país o una región.
             blank_informative: Falta el país o la región.
@@ -209,23 +244,28 @@ es:
             default: Teléfono
             optional: Teléfono (opcional)
           errors:
-            contains_emojis: El número de teléfono no puede contener emojis.
-            contains_mathematical_symbols: El número de teléfono no puede contener
-              símbolos matemáticos.
-            contains_restricted_characters: El número de teléfono solo puede contener
-              letras, números y caracteres locales y especiales
             blank_instructional: Introduce un número de teléfono.
             blank_informative: Falta el número de teléfono.
             invalid_instructional: Introduce un número de teléfono válido.
             invalid_informative: El número de teléfono no es válido.
             too_long_instructional: El número de teléfono es demasiado largo.
             too_long_informative: El número de teléfono es demasiado largo.
+            contains_emojis_instructional: El número de teléfono no puede contener
+              emojis.
+            contains_emojis_informative: El número de teléfono no puede contener emojis.
+            contains_mathematical_symbols_instructional: El número de teléfono no
+              puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El número de teléfono no puede
+              contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El número de teléfono solo
+              puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El número de teléfono no puede
+              contener caracteres restringidos.
         province:
           label:
             default: Región
             optional: Región (opcional)
           errors:
-            unknown_for_address: Puede que la región sea incorrecta.
             blank_instructional: Selecciona una región.
             blank_informative: Falta la región.
             invalid_instructional: Selecciona una región.
@@ -245,20 +285,13 @@ es:
               postal %{zip}.
             unknown_for_zip_informative: La región no coincide con el código postal
               %{zip}.
+            unknown_for_address_instructional: Puede que la región no sea correcta.
+            unknown_for_address_informative: Puede que la región no sea correcta.
         zip:
           label:
             default: Código postal
             optional: Código postal (opcional)
           errors:
-            blocked_address: Esta sucursal no se admite.
-            too_long: El código postal es demasiado largo.
-            contains_html_tags: El código postal no puede contener HTML.
-            contains_emojis: El código postal no puede contener emojis.
-            contains_mathematical_symbols: El código postal no puede contener símbolos
-              matemáticos.
-            contains_restricted_characters: El código postal solo puede contener letras,
-              números y caracteres locales y especiales
-            unknown_for_address: Puede que el código postal sea incorrecto.
             blank_instructional: Introduce un código postal.
             blank_informative: Falta el código postal.
             invalid_instructional: Introduce un código postal válido.
@@ -275,10 +308,26 @@ es:
               con %{province}, %{country}.
             not_supported_instructional: El código postal no se admite. Introduce
               una nueva dirección e inténtalo de nuevo.
-            not_supported_informativel: El código postal no se admite.
             unknown_for_province_instructional: Introduce un código postal válido
               para %{province}.
             unknown_for_province_informative: El código postal no es válido para %{province}.
+            blocked_address_instructional: No se admite esta ubicación.
+            blocked_address_informative: No se admite esta ubicación.
+            contains_emojis_instructional: El código postal no puede contener emojis.
+            contains_emojis_informative: El código postal no puede contener emojis.
+            contains_mathematical_symbols_instructional: El código postal no puede
+              contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El código postal no puede contener
+              símbolos matemáticos.
+            contains_restricted_characters_instructional: El código postal solo puede
+              contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El código postal no puede
+              contener caracteres restringidos.
+            not_supported_informative: El código postal no se admite.
+            contains_html_tags_instructional: El código postal no puede contener HTML.
+            contains_html_tags_informative: El código postal no puede contener HTML.
+            unknown_for_address_instructional: Puede que el código postal no sea correcto.
+            unknown_for_address_informative: Puede que el código postal no sea correcto.
         street_name:
           label:
             default: Calle
@@ -305,11 +354,7 @@ es:
               contener caracteres restringidos.
             contains_too_many_words_instructional: El nombre de la calle no puede
               tener más de %{word_count} palabras.
-            contains_too_many_words_informational: El nombre de la calle no puede
-              tener más de %{word_count} palabras.
             contains_html_tags_instructional: El nombre de la calle no puede contener
-              HTML.
-            contains_html_tags_informational: El nombre de la calle no puede contener
               HTML.
             contains_url_instructional: El nombre de la calle no puede contener una
               URL.
@@ -321,6 +366,10 @@ es:
               postal %{zip}.
             unknown_for_address_instructional: Puede que la calle no sea correcta.
             unknown_for_address_informative: Puede que la calle no sea correcta.
+            contains_too_many_words_informative: El nombre de la calle no puede tener
+              más de %{word_count} palabras.
+            contains_html_tags_informative: El nombre de la calle no puede contener
+              HTML.
         street_number:
           label:
             default: Número de edificio
@@ -363,51 +412,53 @@ es:
           label:
             default: Barrio
             optional: Barrio (opcional)
-          errors:
-            blank: Introduce un barrio.
-            too_long: El barrio es demasiado largo (máximo de %{limit} caracteres).
-            contains_emojis: El nombre del vecindario no puede contener emojis.
-            contains_mathematical_symbols: El nombre del vecindario no puede contener
-              símbolos matemáticos.
-            contains_restricted_characters: El barrio solo puede contener letras,
-              números y caracteres locales y especiales.
-            contains_too_many_words: El nombre del vecindario no puede tener más de
-              %{word_count} palabras.
-            contains_html_tags: El nombre del vecindario no puede contener etiquetas
-              HTML.
-            contains_url: El nombre del vecindario no puede contener URL.
-            unknown_for_city: Introduce un nombre de vecindario válido para %{city}.
-            unknown_for_zip: Introduce un nombre de vecindario válido para el código
-              postal %{zip}.
-            unknown_for_address: Puede que el vecindario no sea correcto.
           warnings:
             contains_too_many_words: Se recomienda que el barrio tenga menos de %{word_count}
               palabras.
+          errors:
+            blank_instructional: Introduce un vecindario.
+            blank_informative: Falta el vecindario.
+            too_long_instructional: El nombre del vecindario es demasiado largo (el
+              máximo es de %{limit} caracteres).
+            too_long_informative: El nombre del vecindario es demasiado largo.
+            contains_emojis_instructional: El nombre del vecindario no puede contener
+              emojis.
+            contains_emojis_informative: El nombre del vecindario no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre del vecindario
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre del vecindario no
+              puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre del vecindario
+              solo puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El nombre del vecindario no
+              puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre del vecindario debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre del vecindario debe tener
+              menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre del vecindario no puede contener
+              etiquetas HTML.
+            contains_html_tags_informative: El nombre del vecindario no puede contener
+              etiquetas HTML.
+            contains_url_instructional: El nombre del vecindario no puede contener
+              URL.
+            contains_url_informative: El nombre del vecindario no puede contener URL.
+            unknown_for_city_instructional: Introduce un nombre de vecindario válido
+              para %{city}.
+            unknown_for_city_informative: Introduce un nombre de vecindario válido
+              para %{city}.
+            unknown_for_zip_instructional: Introduce un nombre de vecindario válido
+              para %{zip}.
+            unknown_for_zip_informative: Introduce un nombre de vecindario válido
+              para %{zip}.
+            unknown_for_address_instructional: Puede que el vecindario no sea correcto.
+            unknown_for_address_informative: Puede que el vecindario no sea correcto.
         line2:
           label:
             default: Apartamento, casa, etc.
             optional: Apartamento, casa, etc. (opcional)
           errors:
-            blank: Introduce un apartamento, una casa, etc.
-            too_long: La segunda línea de la dirección es demasiado larga (máximo
-              de %{limit} caracteres).
-            contains_emojis: La segunda línea de la dirección no puede contener emojis.
-            contains_mathematical_symbols: La segunda línea de la dirección no puede
-              contener símbolos matemáticos.
-            contains_restricted_characters: La segunda línea de la dirección solo
-              puede contener letras, números, caracteres locales y caracteres especiales.
-            contains_too_many_words: La segunda línea de la dirección no puede tener
-              más de %{word_count} palabras.
-            contains_html_tags: La segunda línea de la dirección no puede contener
-              etiquetas HTML.
-            contains_url: La segunda línea de la dirección no puede contener direcciones
-              URL.
-            missing_building_number: Agrega un número de edificio, si existe.
-            street_unknown_for_zip: Indica un nombre de calle válido para el código
-              postal %{zip}.
-            building_number_invalid: No se ha podido localizar un número de edificio
-              para %{street}, %{zip}.
-            unknown_for_address: Puede que la segunda línea de la dirección sea incorrecta.
             blank_instructional: Indica un apartamento, una casa, etc.
             blank_informative: Falta el apartamento o la casa.
             too_long_instructional: La segunda línea de la dirección es demasiado
@@ -438,6 +489,22 @@ es:
               contener una dirección URL.
             contains_url_informative: La segunda línea de la dirección no puede contener
               una dirección URL.
+            missing_building_number_instructional: Agrega un número de edificio, si
+              existe.
+            missing_building_number_informative: Agrega un número de edificio, si
+              existe.
+            street_unknown_for_zip_instructional: Indica un nombre de calle válido
+              para el código postal %{zip}.
+            street_unknown_for_zip_informative: Indica un nombre de calle válido para
+              el código postal %{zip}.
+            building_number_invalid_instructional: No se ha podido localizar un número
+              de edificio para %{street}, %{zip}.
+            building_number_invalid_informative: No se ha podido localizar un número
+              de edificio para %{street}, %{zip}.
+            unknown_for_address_instructional: Puede que la segunda línea de la dirección
+              no sea correcta.
+            unknown_for_address_informative: Puede que la segunda línea de la dirección
+              no sea correcta.
           warnings:
             contains_too_many_words: Se recomienda que la segunda línea de la dirección
               tenga menos de %{word_count} palabras.
