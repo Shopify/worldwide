@@ -5,10 +5,9 @@ sv:
       addresses:
         province:
           label:
-            default: Delstat
-            optional: Delstat (valfritt)
+            default: Stat
+            optional: Stat (valfritt)
           errors:
-            unknown_for_address: Staten kan vara felaktig
             blank_instructional: Välj en stat
             blank_informative: Ange en stat
             invalid_for_country_instructional: Ange en giltig stat för %{city}, %{zip}
@@ -28,7 +27,6 @@ sv:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            unknown_for_address: Postnumret kan vara felaktigt
             blank_instructional: Ange ett postnummer
             blank_informative: Postnumret saknas
             invalid_for_country_instructional: Ange ett giltigt postnummer för %{country}
