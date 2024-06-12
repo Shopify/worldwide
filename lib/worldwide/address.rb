@@ -127,7 +127,7 @@ module Worldwide
             fields.reverse.insert(1, "：").join("")
           end
 
-          if Worldwide::Scripts.identify(text: result).include?(:Latn)
+          if Worldwide::Scripts.identify(text: result).include?(:Latin)
             result
           else
             result.delete(" \u{3000}")
@@ -147,7 +147,14 @@ module Worldwide
 
     RESERVED_DELIMITER = "\u00A0"
     def concatenate_address1
-      additional_fields = region.combined_address_format["address1"] || []
+      detected_scripts = Worldwide::Scripts.identify(text: street_name).map(&:to_s)
+      scripts = region.combined_address_format.except("default").keys
+      script = "default"
+      if detected_scripts.length == 1 && scripts.include?(detected_scripts.first)
+        script = detected_scripts.first
+      end
+
+      additional_fields = region.combined_address_format.dig(script, "address1") || []
       additional_field_keys = additional_fields.map { |field| field["key"] }
 
       return address1 if field_values(additional_field_keys).empty?
@@ -156,7 +163,14 @@ module Worldwide
     end
 
     def concatenate_address2
-      additional_fields = region.combined_address_format["address2"] || []
+      detected_scripts = Worldwide::Scripts.identify(text: neighborhood).map(&:to_s)
+      scripts = region.combined_address_format.except("default").keys
+      script = "default"
+      if detected_scripts.length == 1 && scripts.include?(detected_scripts.first)
+        script = detected_scripts.first
+      end
+
+      additional_fields = region.combined_address_format.dig(script, "address2") || []
       additional_field_keys = additional_fields.map { |field| field["key"] }
 
       return address2 if field_values(additional_field_keys).empty?
@@ -165,13 +179,27 @@ module Worldwide
     end
 
     def split_address1
-      additional_fields = region.combined_address_format["address1"] || []
+      detected_scripts = Worldwide::Scripts.identify(text: street_name).map(&:to_s)
+      scripts = region.combined_address_format.except("default").keys
+      script = "default"
+      if detected_scripts.length == 1 && scripts.include?(detected_scripts.first)
+        script = detected_scripts.first
+      end
+
+      additional_fields = region.combined_address_format.dig(script, "address1") || []
       split_fields_arr = address1&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
 
     def split_address2
-      additional_fields = region.combined_address_format["address2"] || []
+      detected_scripts = Worldwide::Scripts.identify(text: neighborhood).map(&:to_s)
+      scripts = region.combined_address_format.except("default").keys
+      script = "default"
+      if detected_scripts.length == 1 && scripts.include?(detected_scripts.first)
+        script = detected_scripts.first
+      end
+
+      additional_fields = region.combined_address_format.dig(script, "address2") || []
       split_fields_arr = address2&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
@@ -505,6 +533,10 @@ module Worldwide
     def strip_decorators(next_field_definition, current_field_value)
       delimiter = next_field_definition&.fetch("decorator", nil) || ""
       current_field_value&.delete_suffix(delimiter)
+    end
+
+    def detect_script(str)
+      str
     end
   end
 end

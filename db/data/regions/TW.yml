@@ -23,15 +23,42 @@ additional_address_fields:
   - name: line2
   - name: neighborhood
     required: true
+# combined_address_format:
+#   address2:
+#     - key: line2
+#     - key: neighborhood
+#       decorator: ","
+#       override:
+#         - lang: "zh-TW"
+#           decorator: ""
+# lang_override:
+#   - lang: "zh-TW"
+#     combined_address_format:
+#       address2:
+#         - key: line2
+#         - key: neighborhood
+# combined_address_format:
+#   address2:
+#     delimiter: "\u2060"
+#     fields:
+#       - key: line2
+#       - key: neighborhood
+#     langs:
+#       zh-TW:
+#         address2:
+#           - key: line2
+#           - key: neighborhood
+#             delimiter: "\u2060"
 combined_address_format:
-  address2:
-    - key: line2
-    - key: neighborhood
-      decorator: ","
-  zh-TW:
+  default:
     address2:
       - key: line2
       - key: neighborhood
+  Latin:
+    address2:
+      - key: line2
+      - key: neighborhood
+        decorator: ","
 emoji: "\U0001F1F9\U0001F1FC"
 languages:
   - "zh-TW"

@@ -120,8 +120,10 @@ module Worldwide
 
         country.additional_address_fields.each do |field|
           field_name = field["name"]
-          present = country.combined_address_format.any? do |_, fields|
-            fields.any? { |f| f["key"] == field_name }
+          present = country.combined_address_format.any? do |_, lang_combined_address_format|
+            lang_combined_address_format.each do |_, fields|
+              fields.any? { |f| f["key"] == field_name }
+            end
           end
 
           assert present, "#{country.iso_code} additional_address_field #{field_name} is not present in combined_address_format"
@@ -133,16 +135,63 @@ module Worldwide
       Regions.all.select(&:country?).each do |country|
         next if country.combined_address_format.blank?
 
-        country.combined_address_format.each do |_key, fields|
-          fields.each do |field|
-            field_name = field["key"]
-            present = country.additional_address_fields.any? { |f| f["name"] == field_name }
+        country.combined_address_format.each do |_lang, lang_combined_address_format|
+          lang_combined_address_format.each do |_key, fields|
+            fields.each do |field|
+              field_name = field["key"]
+              present = country.additional_address_fields.any? { |f| f["name"] == field_name }
 
-            assert present, "#{country.iso_code} combined_address_format key #{field_name} is not present in additional_address_fields"
+              assert present, "#{country.iso_code} combined_address_format key #{field_name} is not present in additional_address_fields"
+            end
           end
         end
       end
     end
+
+    # test "combined_address_format must belong to limited set of field names or languages" do
+    #   allowed_fields = ["address1", "address2"]
+    #   allowed_langs = ["zh-TW"]
+
+    #   Regions.all.select(&:country?).each do |country|
+    #     next if country.combined_address_format.blank?
+
+    #     country.combined_address_format.each do |key, _fields|
+    #       allowed = (allowed_fields.include? key) || (allowed_langs.include? key)
+
+    #       assert allowed, "#{country.iso_code} combined_address_format field #{key} is not allowed"
+    #     end
+    #   end
+    # end
+
+    # test "combined_address_format keys are present in additional_address_fields" do
+    #   allowed_langs = ["zh-TW"]
+
+    #   Regions.all.select(&:country?).each do |country|
+    #     next if country.combined_address_format.blank?
+
+    #     country.combined_address_format.each do |key, fields|
+    #       # combined_address_format = allowed_langs.include? key ? fields : fields
+
+    #       if allowed_langs.include? key
+    #         fields.each do |_key, lang_fields|
+    #           lang_fields.each do |field|
+    #             field_name = field["key"]
+    #             present = country.additional_address_fields.any? { |f| f["name"] == field_name }
+
+    #             assert present, "#{country.iso_code} (lang:#{key}) combined_address_format key #{field_name} is not present in additional_address_fields"
+    #           end
+    #         end
+    #       else
+    #         fields.each do |field|
+    #           field_name = field["key"]
+    #           present = country.additional_address_fields.any? { |f| f["name"] == field_name }
+
+    #           assert present, "#{country.iso_code} combined_address_format key #{field_name} is not present in additional_address_fields"
+    #         end
+    #       end
+    #     end
+    #   end
+    # end
 
     test "If zones key does not exists, should not have {province} in format key" do
       Regions.all.select do |region|

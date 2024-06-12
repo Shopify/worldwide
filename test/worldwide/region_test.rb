@@ -396,18 +396,34 @@ module Worldwide
       [
         [:us, {}],
         [:il, {
-          "address1" => [{ "key" => "streetNumber" }, { "key" => "streetName" }],
+          "default" => {
+            "address1" => [{ "key" => "streetNumber" }, { "key" => "streetName" }],
+          },
         },],
         [:br, {
-          "address1" => [{ "key" => "streetName" }, { "key" => "streetNumber", "decorator" => "," }],
-          "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
+          "default" => {
+            "address1" => [{ "key" => "streetName" }, { "key" => "streetNumber", "decorator" => "," }],
+            "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
+          },
         },],
         [:cl, {
-          "address1" => [{ "key" => "streetName" }, { "key" => "streetNumber" }],
-          "address2" => [{ "key" => "line2" }, { "key" => "neighborhood" }],
+          "default" => {
+            "address1" => [{ "key" => "streetName" }, { "key" => "streetNumber" }],
+            "address2" => [{ "key" => "line2" }, { "key" => "neighborhood" }],
+          },
         },],
         [:id, {
-          "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
+          "default" => {
+            "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
+          },
+        },],
+        [:tw, {
+          "default" => {
+            "address2" => [{ "key" => "line2" }, { "key" => "neighborhood" }],
+          },
+          "Latin" => {
+            "address2" => [{ "key" => "line2" }, { "key" => "neighborhood", "decorator" => "," }],
+          },
         },],
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).combined_address_format

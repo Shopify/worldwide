@@ -172,6 +172,20 @@ module Worldwide
       assert_equal "apt 4, Cầu Giấy", vn_address.concatenate_address2
     end
 
+    test "concatenate_address2 returns a concatenated string with script-specific formatting" do
+      address = Address.new(line2: "No. 3", neighborhood: "Daija District", country_code: "TW")
+
+      assert_equal "No. 3, Daija District", address.concatenate_address2
+    end
+
+    test "concatenate_address2 returns a concatenated string with script-specific formatting - default" do
+      address = Address.new(line2: "30號", neighborhood: "大甲區", country_code: "TW")
+
+      assert_equal "30號 大甲區", address.concatenate_address2
+    end
+
+    # add test for mixed scripts
+
     test "split_address1 returns nil when additional address fields are not defined for the country" do
       address = Address.new(address1: "123 Main Street", country_code: "US")
 

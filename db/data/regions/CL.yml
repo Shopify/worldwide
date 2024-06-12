@@ -24,12 +24,13 @@ additional_address_fields:
   - name: line2
   - name: neighborhood
 combined_address_format:
-  address1:
-    - key: streetName
-    - key: streetNumber
-  address2:
-    - key: line2
-    - key: neighborhood
+  default:
+    address1:
+      - key: streetName
+      - key: streetNumber
+    address2:
+      - key: line2
+      - key: neighborhood
 emoji: "\U0001F1E8\U0001F1F1"
 languages:
   - es
