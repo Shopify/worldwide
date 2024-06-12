@@ -10,3 +10,33 @@ en:
           errors:
             blank_instructional: Select an emirate
             blank_informative: Emirate is missing
+        neighborhood:
+          label:
+            default: Area
+            optional: Area (optional)
+          errors:
+            blank_instructional: Enter an area
+            blank_informative: Area is missing
+            too_long_instructional: Area is too long (maximum is %{limit} characters)
+            too_long_informative: Area is too long
+            contains_emojis_instructional: Area can't contain emojis
+            contains_emojis_informative: Area can't contain emojis
+            contains_mathematical_symbols_instructional: Area can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Area can't contain mathematical symbols
+            contains_restricted_characters_instructional: Area can only contain letters, numbers, local characters, and
+              special characters
+            contains_restricted_characters_informative: Area can't contain restricted characters
+            contains_too_many_words_instructional: Area must have fewer than %{word_count} words
+            contains_too_many_words_informative: Area must have fewer than %{word_count} words
+            contains_html_tags_instructional: Area can't contain HTML
+            contains_html_tags_informative: Area can't contain HTML
+            contains_url_instructional: Area can't contain a URL
+            contains_url_informative: Area can't contain a URL
+            unknown_for_city_instructional: Enter a valid area for %{city}
+            unknown_for_city_informative: Area isn't valid for %{city}
+            unknown_for_zip_instructional: Enter a valid area for %{zip}
+            unknown_for_zip_informative: Area isn't valid for %{zip}
+            unknown_for_address_instructional: Area may be incorrect
+            unknown_for_address_informative: Area may be incorrect
+          warnings:
+            contains_too_many_words: Area is recommended to have less than %{word_count} words
