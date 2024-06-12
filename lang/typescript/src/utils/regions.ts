@@ -5,43 +5,20 @@ import {Address} from '../types/address';
 
 import {Script, stringUsesScript} from './script';
 
-export const langScripts: Record<string, Script> = {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  'zh-TW': 'Han',
-};
-
 export interface FieldConcatenationRule {
   key: keyof Address;
   decorator?: string;
 }
 
-// TODO: Find a more elegant way to type 1 level of circular references
-export type LanguageSpecificAddressFormat = Record<
-  string,
-  FieldConcatenationRule[]
->;
-export type CombinedAddressFormat = Record<
-  string,
-  FieldConcatenationRule[] | LanguageSpecificAddressFormat
->;
+type RegionScript = 'default' | Script;
+export type CombinedAddressFormat = Record<RegionScript, FieldDefinitions>;
+export type FieldDefinitions = Record<keyof Address, FieldConcatenationRule[]>;
 export type RegionYamlConfig = Record<string, any> & {
   /** Two-letter country code */
   code: string;
   /** Format definition for an extended address */
   combined_address_format?: CombinedAddressFormat;
 };
-
-function isLanguageSpecificAddressFormat(
-  format: FieldConcatenationRule[] | LanguageSpecificAddressFormat,
-): format is LanguageSpecificAddressFormat {
-  return !Array.isArray(format);
-}
-
-function isFieldConcatenationRuleArray(
-  rules: FieldConcatenationRule[] | LanguageSpecificAddressFormat,
-): rules is FieldConcatenationRule[] {
-  return Array.isArray(rules);
-}
 
 /**
  * Type-guard to ensure we're operating on the right yaml data.
@@ -109,33 +86,26 @@ export function getConcatenationRules(
   }
 
   const combinedAddressFormat = config.combined_address_format;
-  let concatenationRules = combinedAddressFormat[extendedField];
-
-  if (!isFieldConcatenationRuleArray(concatenationRules)) {
-    // TODO: Move this to build validation, this can be handled at build and not surface to end user
-    throw Error(
-      `combined_address_format.${extendedField} must be an array. It is: ${JSON.stringify(concatenationRules, null, 2)}`,
-    );
-  }
-
-  // Check for a valid language override and use the first one found
-  const langOverrides = Object.keys(langScripts).filter(
-    (lang) => lang in combinedAddressFormat,
+  const configScripts = Object.keys(combinedAddressFormat).filter(
+    (key) => key !== 'default',
   );
-  for (const lang of langOverrides) {
-    const overrideConfig = config.combined_address_format[lang];
-    if (
-      isLanguageSpecificAddressFormat(overrideConfig) &&
-      isFieldConcatenationRuleArray(overrideConfig[extendedField]) &&
-      addressUsesScript(
-        overrideConfig[extendedField],
-        address,
-        langScripts[lang],
-      )
-    ) {
-      concatenationRules = overrideConfig[extendedField];
-      break;
+  const script: RegionScript = 'default';
+  const concatenationRules = combinedAddressFormat[script][extendedField];
+  const matchingScripts = configScripts.filter((configScript) => {
+    const ext =
+      config.combined_address_format?.[configScript as RegionScript]?.[
+        extendedField
+      ];
+    if (ext) {
+      return addressUsesScript(ext, address, configScript as Script);
     }
+    return false;
+  });
+
+  if (matchingScripts.length === 1) {
+    return combinedAddressFormat[matchingScripts[0] as RegionScript][
+      extendedField
+    ];
   }
 
   return concatenationRules;
@@ -156,29 +126,26 @@ export function getSplitRules(
   }
 
   const combinedAddressFormat = config.combined_address_format;
-  let concatenationRules = combinedAddressFormat[extendedField];
-
-  if (!isFieldConcatenationRuleArray(concatenationRules)) {
-    // TODO: Move this to build validation, this can be handled at build and not surface to end user
-    throw Error(
-      `combined_address_format.${extendedField} must be an array. It is: ${JSON.stringify(concatenationRules, null, 2)}`,
-    );
-  }
-
-  // Check for a valid language override and use the first one found
-  const langOverrides = Object.keys(langScripts).filter(
-    (lang) => lang in combinedAddressFormat,
+  const configScripts = Object.keys(combinedAddressFormat).filter(
+    (key) => key !== 'default',
   );
-  for (const lang of langOverrides) {
-    const overrideConfig = config.combined_address_format[lang];
-    if (
-      isLanguageSpecificAddressFormat(overrideConfig) &&
-      isFieldConcatenationRuleArray(overrideConfig[extendedField]) &&
-      stringUsesScript(concatenatedAddress, langScripts[lang])
-    ) {
-      concatenationRules = overrideConfig[extendedField];
-      break;
+  const script: RegionScript = 'default';
+  const concatenationRules = combinedAddressFormat[script][extendedField];
+  const matchingScripts = configScripts.filter((configScript) => {
+    const ext =
+      config.combined_address_format?.[configScript as RegionScript]?.[
+        extendedField
+      ];
+    if (ext) {
+      return stringUsesScript(concatenatedAddress, configScript as Script);
     }
+    return false;
+  });
+
+  if (matchingScripts.length === 1) {
+    return combinedAddressFormat[matchingScripts[0] as RegionScript][
+      extendedField
+    ];
   }
 
   return concatenationRules;

@@ -1,4 +1,5 @@
 import {Address} from 'src/types/address';
+
 import {
   FieldConcatenationRule,
   addressUsesScript,
@@ -20,8 +21,10 @@ describe('region yaml loader', () => {
     expect(config).not.toBeNull();
     expect(config!.code).toEqual('BR');
     expect(config!.combined_address_format).toEqual({
-      address1: [{key: 'streetName'}, {key: 'streetNumber', decorator: ','}],
-      address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],
+      default: {
+        address1: [{key: 'streetName'}, {key: 'streetNumber', decorator: ','}],
+        address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],
+      },
     });
   });
 
@@ -30,10 +33,10 @@ describe('region yaml loader', () => {
     expect(config).not.toBeNull();
     expect(config!.code).toEqual('TW');
     expect(config!.combined_address_format).toEqual({
-      address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],
+      default: {address2: [{key: 'line2'}, {key: 'neighborhood'}]},
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      'zh-TW': {
-        address2: [{key: 'line2'}, {key: 'neighborhood'}],
+      Latin: {
+        address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],
       },
     });
   });
