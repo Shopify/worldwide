@@ -61,10 +61,33 @@ describe('addressUsesScript', () => {
       {key: 'neighborhood'},
     ];
     const fieldValues = {
-      line2: '黎明里',
-      neighborhood: '黎明里',
+      line2: '30號',
+      neighborhood: '大甲區',
     };
 
     expect(addressUsesScript(fieldDefinition, fieldValues, 'Han')).toBe(true);
+  });
+
+  test('returns true for Han in mixed Taiwan Chinese and English examples', () => {
+    const fieldDefinition: FieldConcatenationRule[] = [
+      {key: 'line2'},
+      {key: 'neighborhood'},
+    ];
+    const fieldValues = {
+      line2: 'No. 30',
+      neighborhood: '大甲區',
+    };
+
+    expect(addressUsesScript(fieldDefinition, fieldValues, 'Han')).toBe(true);
+  });
+
+  test('returns false for Han in empty examples', () => {
+    const fieldDefinition: FieldConcatenationRule[] = [
+      {key: 'line2'},
+      {key: 'neighborhood'},
+    ];
+    const fieldValues = {};
+
+    expect(addressUsesScript(fieldDefinition, fieldValues, 'Han')).toBe(false);
   });
 });

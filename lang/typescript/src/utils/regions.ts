@@ -1,6 +1,6 @@
 import regions from 'custom:regions';
 
-import {ValidYamlType, isYamlArray, isYamlObject} from '../types/yaml';
+import {ValidYamlType, isYamlObject} from '../types/yaml';
 import {Address} from '../types/address';
 
 import {Script, stringUsesScript} from './script';
@@ -46,8 +46,8 @@ function isFieldConcatenationRuleArray(
 /**
  * Type-guard to ensure we're operating on the right yaml data.
  *
- * combined_address_format is optional, so check against `code` and
- * `name` which should be on all region configs.
+ * combined_address_format is optional, so check against `code` which should be
+ * on all region configs.
  */
 function isRegionYamlConfig(
   yamlConfig: ValidYamlType,
@@ -55,32 +55,7 @@ function isRegionYamlConfig(
   return (
     isYamlObject(yamlConfig) &&
     'code' in yamlConfig &&
-    typeof yamlConfig.code === 'string' &&
-    (!('combined_address_format' in yamlConfig) ||
-      isCombinedAddressFormat(yamlConfig.combined_address_format as any))
-  );
-}
-
-// TODO: Figure out a cleaner way to do this or ditch it
-function isCombinedAddressFormat(
-  yamlProperty: Record<string, any>,
-): yamlProperty is CombinedAddressFormat {
-  return (
-    isYamlObject(yamlProperty) &&
-    Object.entries(yamlProperty).every(
-      ([key, value]) =>
-        (key === 'address1' &&
-          isYamlArray(value) &&
-          isYamlObject(value[0]) &&
-          'key' in value[0] &&
-          typeof value[0].key === 'string') ||
-        (key === 'address2' &&
-          isYamlArray(value) &&
-          isYamlObject(value[0]) &&
-          'key' in value[0] &&
-          typeof value[0].key === 'string') ||
-        key === 'zh-TW',
-    )
+    typeof yamlConfig.code === 'string'
   );
 }
 
@@ -99,23 +74,24 @@ export function getRegionConfig(countryCode: string): RegionYamlConfig | null {
   return null;
 }
 
+/**
+ * Checks if one or more address field contains the character set of a given
+ * script type.
+ *
+ * @param fieldDefinition Array of definitions of address sub-fields
+ * @param address Partial address object
+ * @param script Script to detect within the value string
+ * @returns true if any characters of the specified script is found in the address
+ */
 export function addressUsesScript(
   fieldDefinition: FieldConcatenationRule[],
   address: Partial<Address>,
   script: Script,
 ): boolean {
-  const charsetFound = fieldDefinition.reduce((matchesCharset, field) => {
-    if (address[field.key]) {
-      const value = address[field.key];
-      if (value) {
-        return matchesCharset || stringUsesScript(value, script);
-      }
-    }
-
-    return matchesCharset;
-  }, false);
-
-  return charsetFound;
+  return fieldDefinition.some((field) => {
+    const value = address[field.key];
+    return value && stringUsesScript(value, script);
+  });
 }
 
 export function getConcatenationRules(
