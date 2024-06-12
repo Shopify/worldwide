@@ -1,7 +1,10 @@
+import {Address} from 'src/types/address';
 import {
   FieldConcatenationRule,
   addressUsesScript,
+  getConcatenationRules,
   getRegionConfig,
+  getSplitRules,
 } from './regions';
 
 describe('region yaml loader', () => {
@@ -38,6 +41,99 @@ describe('region yaml loader', () => {
   test('should return null for undefined region', () => {
     const config = getRegionConfig('ZZZ');
     expect(config).toBeNull();
+  });
+});
+
+describe('getConcatenationRules', () => {
+  test('returns undefined if no combined_address_format is not defined', () => {
+    const config = getRegionConfig('US');
+    const address: Address = {
+      countryCode: 'US',
+      address2: 'Apt 1',
+    };
+    expect(config).not.toBeNull();
+    expect(getConcatenationRules(config!, address, 'address2')).toBeUndefined();
+  });
+
+  test('returns default rules if no language specific rules are defined', () => {
+    const config = getRegionConfig('BR');
+    const address: Address = {
+      countryCode: 'BR',
+      line2: 'dpto 4',
+      neighborhood: 'Centro',
+    };
+    expect(config).not.toBeNull();
+    expect(getConcatenationRules(config!, address, 'address2')).toEqual([
+      {key: 'line2'},
+      {key: 'neighborhood', decorator: ','},
+    ]);
+  });
+
+  test('returns default rules if no language specific rules are defined but language is not detected', () => {
+    const config = getRegionConfig('TW');
+    const address: Address = {
+      countryCode: 'TW',
+      line2: 'No. 30',
+      neighborhood: 'Daija District',
+    };
+    expect(config).not.toBeNull();
+    expect(getConcatenationRules(config!, address, 'address2')).toEqual([
+      {key: 'line2'},
+      {key: 'neighborhood', decorator: ','},
+    ]);
+  });
+
+  test('returns language specific rules if defined and language is detected', () => {
+    const config = getRegionConfig('TW');
+    const address: Address = {
+      countryCode: 'TW',
+      line2: '30號',
+      neighborhood: '大甲區',
+    };
+    expect(config).not.toBeNull();
+    expect(getConcatenationRules(config!, address, 'address2')).toEqual([
+      {key: 'line2'},
+      {key: 'neighborhood'},
+    ]);
+  });
+});
+
+describe('getSplitRules', () => {
+  test('returns undefined if no combined_address_format is not defined', () => {
+    const config = getRegionConfig('US');
+    const address = 'Apt 1';
+    expect(config).not.toBeNull();
+    expect(getSplitRules(config!, address, 'address2')).toBeUndefined();
+  });
+
+  test('returns default rules if no language specific rules are defined', () => {
+    const config = getRegionConfig('BR');
+    const address = 'dpto 4,\u00A0Centro';
+    expect(config).not.toBeNull();
+    expect(getSplitRules(config!, address, 'address2')).toEqual([
+      {key: 'line2'},
+      {key: 'neighborhood', decorator: ','},
+    ]);
+  });
+
+  test('returns default rules if no language specific rules are defined but language is not detected', () => {
+    const config = getRegionConfig('TW');
+    const address = 'No. 30,\u00A0Daija District';
+    expect(config).not.toBeNull();
+    expect(getSplitRules(config!, address, 'address2')).toEqual([
+      {key: 'line2'},
+      {key: 'neighborhood', decorator: ','},
+    ]);
+  });
+
+  test('returns language specific rules if defined and language is detected', () => {
+    const config = getRegionConfig('TW');
+    const address = '30號\u00A0大甲區';
+    expect(config).not.toBeNull();
+    expect(getSplitRules(config!, address, 'address2')).toEqual([
+      {key: 'line2'},
+      {key: 'neighborhood'},
+    ]);
   });
 });
 

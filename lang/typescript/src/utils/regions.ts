@@ -94,6 +94,11 @@ export function addressUsesScript(
   });
 }
 
+/**
+ * Determine the extended address rules to use for a given field based on the
+ * region's config as well as analyzing the address object itself for matching
+ * character sets for language-specific overrides.
+ */
 export function getConcatenationRules(
   config: RegionYamlConfig,
   address: Address,
@@ -107,6 +112,7 @@ export function getConcatenationRules(
   let concatenationRules = combinedAddressFormat[extendedField];
 
   if (!isFieldConcatenationRuleArray(concatenationRules)) {
+    // TODO: Move this to build validation, this can be handled at build and not surface to end user
     throw Error(
       `combined_address_format.${extendedField} must be an array. It is: ${JSON.stringify(concatenationRules, null, 2)}`,
     );
@@ -135,6 +141,11 @@ export function getConcatenationRules(
   return concatenationRules;
 }
 
+/**
+ * Determine the extended address rules to use for a given field based on the
+ * region's config as well as analyzing the concatenated address string for
+ * matching character sets for language-specific overrides.
+ */
 export function getSplitRules(
   config: RegionYamlConfig,
   concatenatedAddress: string,
@@ -148,6 +159,7 @@ export function getSplitRules(
   let concatenationRules = combinedAddressFormat[extendedField];
 
   if (!isFieldConcatenationRuleArray(concatenationRules)) {
+    // TODO: Move this to build validation, this can be handled at build and not surface to end user
     throw Error(
       `combined_address_format.${extendedField} must be an array. It is: ${JSON.stringify(concatenationRules, null, 2)}`,
     );
