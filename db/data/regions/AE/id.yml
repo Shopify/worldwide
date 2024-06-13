@@ -10,3 +10,39 @@ id:
           errors:
             blank_instructional: Pilih emirat
             blank_informative: Nama emirat belum diisi
+        neighborhood:
+          label:
+            default: Area
+            optional: Area (opsional)
+          errors:
+            blank_instructional: Masukkan area
+            blank_informative: Nama area belum diisi
+            too_long_instructional: Nama area terlalu panjang (maksimum %{limit} karakter)
+            too_long_informative: Nama area terlalu panjang
+            contains_emojis_instructional: Nama area tidak boleh berisi emoji
+            contains_emojis_informative: Nama area tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Nama area tidak boleh berisi
+              simbol matematika
+            contains_mathematical_symbols_informative: Nama area tidak boleh berisi
+              simbol matematika
+            contains_restricted_characters_instructional: Nama area hanya boleh terdiri
+              dari huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Nama area tidak boleh berisi
+              karakter yang dilarang
+            contains_too_many_words_instructional: Nama area harus memuat kurang dari
+              %{word_count} kata
+            contains_too_many_words_informative: Nama area harus memuat kurang dari
+              %{word_count} kata
+            contains_html_tags_instructional: Nama area tidak boleh berisi HTML
+            contains_html_tags_informative: Nama area tidak boleh berisi HTML
+            contains_url_instructional: Nama area tidak boleh berisi URL
+            contains_url_informative: Nama area tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan nama area yang valid untuk %{city}
+            unknown_for_city_informative: Nama area tidak valid untuk %{city}
+            unknown_for_zip_instructional: Masukkan nama area yang valid untuk %{zip}
+            unknown_for_zip_informative: Nama area tidak valid untuk %{zip}
+            unknown_for_address_instructional: Nama area mungkin salah
+            unknown_for_address_informative: Nama area mungkin salah
+          warnings:
+            contains_too_many_words: Nama area sebaiknya berisi kurang dari %{word_count}
+              kata
