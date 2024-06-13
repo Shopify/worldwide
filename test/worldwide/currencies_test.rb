@@ -10,13 +10,13 @@ module Worldwide
       refute_empty currencies
 
       currencies.each do |currency|
-        assert_kind_of Worldwide::Currency, currency
+        assert currency.is_a?(Worldwide::Currency)
       end
     end
 
     test ".each should allow currencies to be enumerable" do
       Worldwide::Currencies.each do |currency|
-        assert_kind_of Worldwide::Currency, currency
+        assert currency.is_a?(Worldwide::Currency)
       end
     end
 

@@ -53,25 +53,27 @@ module Worldwide
       Regions.all.select(&:province?).each do |province|
         next if province.zip_prefixes.nil?
 
+        # rubocop:disable Performance/RedundantEqualityComparisonBlock
         assert province.zip_prefixes.all? { |prefix| prefix == prefix.upcase }
+        # rubocop:enable Performance/RedundantEqualityComparisonBlock
       end
     end
 
     test "country codes match expected formats" do
       Regions.all.select(&:country?).each do |country|
-        assert_match(/^([A-Z]{2})$/, country.iso_code, "alpha2 for #{country.legacy_name}")
-        assert_match(/^([A-Z]{3})$/, country.alpha_three, "alpha3 for #{country.legacy_name}")
+        assert country.iso_code.match?(/^([A-Z]{2})$/), "alpha2 for #{country.legacy_name}"
+        assert country.alpha_three.match?(/^([A-Z]{3})$/), "alpha3 for #{country.legacy_name}"
 
         unless country.numeric_three.nil?
-          assert_match(/^([0-9]{3})$/, country.numeric_three, "numeric3 for #{country.legacy_name}")
+          assert country.numeric_three.match?(/^([0-9]{3})$/), "numeric3 for #{country.legacy_name}"
         end
       end
     end
 
     test "province codes match expected formats" do
       Regions.all.select(&:province?).each do |province|
-        assert_match(/^[A-Z0-9-]+$/, province.iso_code, "Unexpected iso_code for #{province.legacy_name}")
-        assert_match(/^[A-Z0-9 -]+$/, province.legacy_code, "Unexpected legacy for #{province.legacy_name}")
+        assert(province.iso_code.match?(/^[A-Z0-9-]+$/), "Unexpected iso_code for #{province.legacy_name}")
+        assert(province.legacy_code.match?(/^[A-Z0-9 -]+$/), "Unexpected legacy for #{province.legacy_name}")
       end
     end
 
@@ -113,7 +115,7 @@ module Worldwide
       Regions.all.select(&:province?).each do |province|
         next if RegionDataTestHelper::ES_AND_US_DUAL_STATUS_PROVINCES.include?(province.iso_code)
 
-        assert_match(/^[A-Z][A-Z]-[A-Z0-9]{1,3}$/, province.iso_code, "#{province.iso_code} unexpected")
+        assert province.iso_code.match?(/^[A-Z][A-Z]-[A-Z0-9]{1,3}$/), "#{province.iso_code} unexpected"
       end
     end
 

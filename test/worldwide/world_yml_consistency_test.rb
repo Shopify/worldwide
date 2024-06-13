@@ -35,8 +35,9 @@ module Worldwide
 
     def all_values(collection)
       if collection.is_a?(Hash)
-        result = collection.map do |_key, value|
-          all_values(value)
+        result = []
+        collection.each do |_key, value|
+          result << all_values(value)
         end
         result.flatten
       elsif collection.is_a?(Array)
