@@ -276,6 +276,8 @@ id:
             unknown_for_province_informative: Kode pos tidak valid untuk %{province}
             blocked_address_instructional: Lokasi ini tidak didukung
             blocked_address_informative: Lokasi ini tidak didukung
+            too_long_instructional: Kode pos terlalu panjang
+            too_long_informative: Kode pos terlalu panjang
             contains_emojis_instructional: Kode pos tidak boleh berisi emoji
             contains_emojis_informative: Kode pos tidak boleh berisi emoji
             contains_mathematical_symbols_instructional: Kode pos tidak boleh berisi
@@ -364,9 +366,6 @@ id:
           label:
             default: Perumahan
             optional: Perumahan (opsional)
-          warnings:
-            contains_too_many_words: Perumahan sebaiknya berisi kurang dari %{word_count}
-              kata
           errors:
             blank_instructional: Masukkan nama perumahan
             blank_informative: Nama perumahan belum diisi
@@ -403,6 +402,9 @@ id:
               %{zip}
             unknown_for_address_instructional: Nama perumahan mungkin salah
             unknown_for_address_informative: Nama perumahan mungkin salah
+          warnings:
+            contains_too_many_words: Perumahan sebaiknya berisi kurang dari %{word_count}
+              kata
         line2:
           label:
             default: Apartemen, suite, dsb.

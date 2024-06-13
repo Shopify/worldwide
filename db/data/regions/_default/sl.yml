@@ -289,6 +289,8 @@ sl:
               %{province}
             blocked_address_instructional: Ta lokacija ni podprta
             blocked_address_informative: Ta lokacija ni podprta
+            too_long_instructional: Poštna številka je predolga
+            too_long_informative: Poštna številka je predolga
             contains_emojis_instructional: Poštna številka ne sme vsebovati čustvenih
               simbolov
             contains_emojis_informative: Poštna številka ne sme vsebovati čustvenih
@@ -386,9 +388,6 @@ sl:
           label:
             default: Soseska
             optional: Soseska (izbirno)
-          warnings:
-            contains_too_many_words: Ime soseske naj ne vsebuje več kot %{word_count}
-              besed
           errors:
             blank_instructional: Vnesite sosesko
             blank_informative: Manjka ime soseske
@@ -422,6 +421,9 @@ sl:
               %{zip}
             unknown_for_address_instructional: Soseska morda ni pravilna
             unknown_for_address_informative: Soseska morda ni pravilna
+          warnings:
+            contains_too_many_words: Ime soseske naj ne vsebuje več kot %{word_count}
+              besed
         line2:
           label:
             default: Št. stanovanja, apartmaja itd.

@@ -5,8 +5,38 @@ ko:
       addresses:
         province:
           label:
-            default: 토후국
-            optional: 토후국(선택 사항)
+            default: 에미리트
+            optional: 에미리트(선택 사항)
           errors:
             blank_instructional: 에미레이트 선택
             blank_informative: 에미레이트가 누락되었습니다
+        neighborhood:
+          label:
+            default: 면적
+            optional: Area(마카오 행정구역, 선택 사항)
+          errors:
+            blank_instructional: Area(마카오)를 입력하세요
+            blank_informative: Area(마카오)가 누락되었습니다
+            too_long_instructional: '면적이 너무 깁니다(최대값: %{limit}자).'
+            too_long_informative: 면적이 너무 깁니다
+            contains_emojis_instructional: 면적에 이모티콘을 포함할 수 없습니다
+            contains_emojis_informative: 면적에 이모티콘을 포함할 수 없습니다
+            contains_mathematical_symbols_instructional: 면적에 수학 기호를 포함할 수 없음
+            contains_mathematical_symbols_informative: 면적에 수학 기호를 포함할 수 없음
+            contains_restricted_characters_instructional: 면적에는 문자, 숫자, 지역 문자, 특수 문자만
+              포함될 수 있습니다
+            contains_restricted_characters_informative: 면적에는 제한 문자를 포함할 수 없습니다
+            contains_too_many_words_instructional: 면적은 %{word_count}단어 미만이어야 합니다
+            contains_too_many_words_informative: 면적은 %{word_count}단어 미만이어야 합니다
+            contains_html_tags_instructional: 면적에 HTML을 포함할 수 없음
+            contains_html_tags_informative: 면적에 HTML을 포함할 수 없음
+            contains_url_instructional: 면적에 URL을 포함할 수 없음
+            contains_url_informative: 면적에 URL을 포함할 수 없음
+            unknown_for_city_instructional: "%{city}에 대한 유효한 면적을 입력하십시오."
+            unknown_for_city_informative: "%{city}에 대한 면적이 유효하지 않습니다"
+            unknown_for_zip_instructional: "%{zip}에 대한 유효한 면적을 입력하십시오."
+            unknown_for_zip_informative: "%{zip}에 대한 면적이 유효하지 않습니다"
+            unknown_for_address_instructional: 면적이 잘못되었을 수 있습니다
+            unknown_for_address_informative: 면적이 잘못되었을 수 있습니다
+          warnings:
+            contains_too_many_words: 면적에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다

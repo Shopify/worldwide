@@ -22,23 +22,41 @@ es:
             default: Colonia
             optional: Colonia (opcional)
           errors:
-            blank: Introduce una colonia.
-            too_long: El nombre de la colonia es demasiado largo (el máximo es de
-              %{limit} caracteres).
-            contains_emojis: El nombre de la colonia no puede contener emojis.
-            contains_mathematical_symbols: El nombre de la colonia no puede contener
-              símbolos matemáticos.
-            contains_restricted_characters: El nombre de la colonia solo puede contener
-              letras, números, caracteres locales y caracteres especiales.
-            contains_too_many_words: El nombre de la colonia no puede tener más de
-              %{word_count} palabras.
-            contains_html_tags: El nombre de la colonia no puede contener etiquetas
+            blank_instructional: Introduce una colonia.
+            blank_informative: Falta la colonia.
+            too_long_instructional: El nombre de la colonia es demasiado largo (el
+              máximo es de %{limit} caracteres).
+            too_long_informative: El nombre de la colonia es demasiado largo.
+            contains_emojis_instructional: El nombre de la colonia no puede contener
+              emojis.
+            contains_emojis_informative: El nombre de la colonia no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre de la colonia no
+              puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre de la colonia no
+              puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre de la colonia
+              solo puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El nombre de la colonia no
+              puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre de la colonia debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre de la colonia debe tener
+              menos de %{word_count} palabras.
+            contains_html_tags_informative: El nombre de la colonia no puede contener
               HTML.
-            contains_url: El nombre de la colonia no puede contener URL.
-            unknown_for_city: Introduce un nombre de colonia válido para %{city}.
-            unknown_for_zip: Introduce un nombre de colonia válido para el código
-              postal %{zip}.
-            unknown_for_address: Es posible que el nombre de la colonia sea incorrecto.
+            contains_html_tags_instructional: El nombre de la colonia no puede contener
+              HTML.
+            contains_url_instructional: El nombre de la colonia no puede contener
+              una URL.
+            contains_url_informative: El nombre de la colonia no puede contener una
+              URL.
+            unknown_for_city_instructional: Introduce una colonia válida para %{city}.
+            unknown_for_city_informative: Introduce una colonia válida para %{city}.
+            unknown_for_zip_instructional: Introduce una colonia válida para %{zip}.
+            unknown_for_zip_informative: Introduce una colonia válida para %{zip}.
+            unknown_for_address_instructional: Puede que la colonia no sea correcta.
+            unknown_for_address_informative: Puede que la colonia no sea correcta.
           warnings:
             contains_too_many_words: Se recomienda que el nombre de la comunidad tenga
               menos de %{word_count} palabras.
