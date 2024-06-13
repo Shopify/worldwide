@@ -10,3 +10,46 @@ ro:
           errors:
             blank_instructional: Selectează un emirat
             blank_informative: Emiratul lipsește
+        neighborhood:
+          label:
+            default: Zonă
+            optional: Zonă (opțional)
+          errors:
+            blank_instructional: Introdu o denumire de zonă
+            blank_informative: Zona lipsește
+            too_long_instructional: Denumirea zonei este prea lungă (lungimea maximă
+              este de %{limit} caractere)
+            too_long_informative: Denumirea zonei este prea lungă
+            contains_emojis_instructional: Denumirea zonei nu poate conține emoji-uri
+            contains_emojis_informative: Denumirea zonei nu poate conține emoji-uri
+            contains_mathematical_symbols_instructional: Denumirea zonei nu poate
+              conține simboluri matematice
+            contains_mathematical_symbols_informative: Denumirea zonei nu poate conține
+              simboluri matematice
+            contains_restricted_characters_instructional: Denumirea zonei poate conține
+              numai litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Denumirea zonei nu poate conține
+              caractere restricționate
+            contains_too_many_words_instructional: Denumirea zonei nu poate conține
+              mai mult de %{word_count} cuvinte
+            contains_too_many_words_informative: Denumirea zonei nu poate conține
+              mai mult de %{word_count} cuvinte
+            contains_html_tags_instructional: Denumirea zonei nu poate conține etichete
+              HTML
+            contains_html_tags_informative: Denumirea zonei nu poate conține etichete
+              HTML
+            contains_url_instructional: Denumirea zonei nu poate conține o adresă
+              URL
+            contains_url_informative: Denumirea zonei nu poate conține o adresă URL
+            unknown_for_city_instructional: Introdu o denumire de zonă validă pentru
+              %{city}
+            unknown_for_city_informative: Denumirea zonei nu este validă pentru %{city}
+            unknown_for_zip_instructional: Introdu o denumire de zonă validă pentru
+              %{zip}
+            unknown_for_zip_informative: Denumirea zonei nu este validă pentru %{zip}
+            unknown_for_address_instructional: Denumirea zonei este posibil să fie
+              incorectă
+            unknown_for_address_informative: Denumirea zonei este posibil să fie incorectă
+          warnings:
+            contains_too_many_words: Se recomandă ca denumirea zonei să nu aibă mai
+              mult de %{word_count} cuvinte
