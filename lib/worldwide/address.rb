@@ -534,9 +534,5 @@ module Worldwide
       delimiter = next_field_definition&.fetch("decorator", nil) || ""
       current_field_value&.delete_suffix(delimiter)
     end
-
-    def detect_script(str)
-      str
-    end
   end
 end
