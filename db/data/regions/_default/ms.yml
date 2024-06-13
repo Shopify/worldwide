@@ -280,6 +280,8 @@ ms:
             unknown_for_province_informative: Poskod tidak sah untuk %{province}
             blocked_address_instructional: Lokasi ini tidak disokong
             blocked_address_informative: Lokasi ini tidak disokong
+            too_long_instructional: Poskod terlalu panjang
+            too_long_informative: Poskod terlalu panjang
             contains_emojis_instructional: Poskod tidak boleh mengandungi emoji
             contains_emojis_informative: Poskod tidak boleh mengandungi emoji
             contains_mathematical_symbols_instructional: Poskod tidak boleh mengandungi
@@ -370,9 +372,6 @@ ms:
           label:
             default: Jiranan
             optional: Jiranan (opsyenal)
-          warnings:
-            contains_too_many_words: Jiranan disyorkan untuk mengandungi kurang daripada
-              %{word_count} perkataan
           errors:
             blank_instructional: Masukkan kejiranan
             blank_informative: Kejiranan tiada
@@ -407,6 +406,9 @@ ms:
             unknown_for_zip_informative: Masukkan nama kejiranan yang sah untuk %{zip}
             unknown_for_address_instructional: Kejiranan mungkin salah
             unknown_for_address_informative: Kejiranan mungkin salah
+          warnings:
+            contains_too_many_words: Jiranan disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan
         line2:
           label:
             default: Apartmen, suite, dll.

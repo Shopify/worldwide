@@ -280,6 +280,8 @@ sk:
               pre provinciu %{province}
             blocked_address_instructional: Toto miesto sa nepodporuje
             blocked_address_informative: Toto miesto sa nepodporuje
+            too_long_instructional: PSČ je príliš dlhé
+            too_long_informative: PSČ je príliš dlhé
             contains_emojis_instructional: Poštové smerovacie číslo nemôže obsahovať
               emotikony
             contains_emojis_informative: Poštové smerovacie číslo nemôže obsahovať
@@ -371,9 +373,6 @@ sk:
           label:
             default: Sídlisko
             optional: Sídlisko (voliteľné)
-          warnings:
-            contains_too_many_words: 'Sídlisko by nemalo mať viac ako tento počet
-              slov: %{word_count}'
           errors:
             blank_instructional: Zadajte sídlisko
             blank_informative: Sídlisko chýba
@@ -405,6 +404,9 @@ sk:
             unknown_for_zip_informative: Zadajte platný názov sídliska pre PSČ %{zip}
             unknown_for_address_instructional: Sídlisko môže byť nesprávne
             unknown_for_address_informative: Sídlisko môže byť nesprávne
+          warnings:
+            contains_too_many_words: 'Sídlisko by nemalo mať viac ako tento počet
+              slov: %{word_count}'
         line2:
           label:
             default: Apartmán, byt atď.

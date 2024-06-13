@@ -278,6 +278,8 @@ hr:
             unknown_for_province_informative: Poštanski broj nije valjan za %{province}
             blocked_address_instructional: Ta lokacija nije podržana
             blocked_address_informative: Ta lokacija nije podržana
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
             contains_emojis_instructional: Poštanski broj ne smije sadržavati emotikone
             contains_emojis_informative: Poštanski broj ne smije sadržavati emotikone
             contains_mathematical_symbols_instructional: Poštanski broj ne smije sadržavati
@@ -366,9 +368,6 @@ hr:
           label:
             default: Stambena četvrt
             optional: Stambena četvrt (neobavezno)
-          warnings:
-            contains_too_many_words: Preporučujemo da naziv stambene četvrti sadrži
-              manje od %{word_count} riječ/i
           errors:
             blank_instructional: Unesite stambenu četvrt
             blank_informative: Nedostaje stambena četvrt
@@ -408,6 +407,9 @@ hr:
               %{zip}
             unknown_for_address_instructional: Naziv stambene četvrti možda nije točan
             unknown_for_address_informative: Naziv stambene četvrti možda nije točan
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv stambene četvrti sadrži
+              manje od %{word_count} riječ/i
         line2:
           label:
             default: Broj stana, apartmana itd.

@@ -295,6 +295,8 @@ ru:
               доставку в этом регионе
             blocked_address_informative: Вы не можете осуществлять покупки и заказывать
               доставку в этом регионе
+            too_long_instructional: Почтовый индекс слишком длинный
+            too_long_informative: Почтовый индекс слишком длинный
             contains_emojis_instructional: Почтовый индекс не может содержать емодзи
             contains_emojis_informative: Почтовый индекс не может содержать емодзи
             contains_mathematical_symbols_instructional: Почтовый индекс не может
@@ -385,9 +387,6 @@ ru:
           label:
             default: Район
             optional: Район (необязательно)
-          warnings:
-            contains_too_many_words: Рекомендуем указывать в поле названия района
-              не более %{word_count} сл.
           errors:
             blank_instructional: Укажите район
             blank_informative: Название района отсутствует
@@ -423,6 +422,9 @@ ru:
             unknown_for_address_instructional: Название района может быть указано
               неправильно
             unknown_for_address_informative: Название района может быть указано неправильно
+          warnings:
+            contains_too_many_words: Рекомендуем указывать в поле названия района
+              не более %{word_count} сл.
         line2:
           label:
             default: Квартира, апартаменты и т. д.
