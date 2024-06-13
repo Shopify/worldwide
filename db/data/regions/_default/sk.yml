@@ -144,6 +144,28 @@ sk:
               s PSČ %{zip} sa nepodarilo nájsť
             building_number_invalid_informative: Číslo budovy na ulici %{street} s
               PSČ %{zip} sa nepodarilo nájsť
+            too_long_informative: Druhý riadok adresy je príliš dlhý
+            contains_emojis_instructional: Druhý riadok adresy nemôže obsahovať emotikony
+            contains_emojis_informative: Druhý riadok adresy nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Druhý riadok adresy nemôže
+              obsahovať matematické značky
+            contains_mathematical_symbols_informative: Druhý riadok adresy nemôže
+              obsahovať matematické značky
+            contains_restricted_characters_instructional: Druhý riadok adresy môže
+              obsahovať len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Druhý riadok adresy nemôže
+              obsahovať zakázané znaky
+            contains_too_many_words_instructional: 'Druhý riadok adresy musí mať menej
+              ako tento počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Druhý riadok adresy musí mať menej
+              ako tento počet slov: %{word_count}'
+            contains_html_tags_instructional: Druhý riadok adresy nemôže obsahovať
+              HTML
+            contains_html_tags_informative: Druhý riadok adresy nemôže obsahovať HTML
+            contains_url_instructional: Druhý riadok adresy nemôže obsahovať URL adresu
+            contains_url_informative: Druhý riadok adresy nemôže obsahovať URL adresu
+            unknown_for_address_instructional: Druhý riadok adresy môže byť nesprávny
+            unknown_for_address_informative: Druhý riadok adresy môže byť nesprávny
           warnings:
             contains_too_many_words: 'Riadok adresy 2 by nemal mať viac ako tento
               počet slov: %{word_count}'
@@ -172,6 +194,28 @@ sk:
             unknown_for_zip_and_province_instructional: Zadajte platné mesto pre PSČ
               %{zip}, %{province}
             unknown_for_zip_and_province_informative: Mesto môže byť nesprávne
+            too_long_instructional: Mesto je príliš dlhé (maximálne 255 znakov)
+            too_long_informative: Mesto je príliš dlhé
+            contains_emojis_instructional: Mesto nemôže obsahovať emotikony
+            contains_emojis_informative: Mesto nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Mesto nemôže obsahovať matematické
+              značky
+            contains_mathematical_symbols_informative: Mesto nemôže obsahovať matematické
+              značky
+            contains_restricted_characters_instructional: Mesto môže obsahovať len
+              písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Mesto nemôže obsahovať zakázané
+              znaky
+            contains_too_many_words_instructional: 'Mesto musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Mesto musí mať menej ako tento počet
+              slov: %{word_count}'
+            contains_html_tags_instructional: Mesto nemôže obsahovať HTML
+            contains_html_tags_informative: Mesto nemôže obsahovať HTML
+            contains_url_instructional: Mesto nemôže obsahovať URL adresu
+            contains_url_informative: Mesto nemôže obsahovať URL adresu
+            unknown_for_address_instructional: Mesto môže byť nesprávne
+            unknown_for_address_informative: Mesto môže byť nesprávne
         country:
           label:
             default: Krajina/oblasť
@@ -202,6 +246,16 @@ sk:
             invalid_informative: Telefónne číslo nie je platné
             too_long_instructional: Telefónne číslo je príliš dlhé
             too_long_informative: Telefónne číslo je príliš dlhé
+            contains_emojis_instructional: Telefónne číslo nemôže obsahovať emotikony
+            contains_emojis_informative: Telefónne číslo nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Telefónne číslo nemôže obsahovať
+              matematické značky
+            contains_mathematical_symbols_informative: Telefónne číslo nemôže obsahovať
+              matematické značky
+            contains_restricted_characters_instructional: Telefónne číslo môže obsahovať
+              len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Telefónne číslo nemôže obsahovať
+              zakázané znaky
         province:
           label:
             default: Oblasť
@@ -222,6 +276,8 @@ sk:
             unknown_for_city_instructional: Oblasť sa nezhoduje s mestom %{city}
             unknown_for_zip_instructional: Vyberte platnú oblasť pre PSČ %{zip}
             unknown_for_zip_informative: Oblasť sa nezhoduje s PSČ %{zip}
+            unknown_for_address_instructional: Oblasť môže byť nesprávna
+            unknown_for_address_informative: Oblasť môže byť nesprávna
         zip:
           label:
             default: Poštové smerovacie číslo
@@ -259,6 +315,29 @@ sk:
               číslo pre provinciu %{province}
             unknown_for_province_informative: Poštové smerovacie číslo je neplatné
               pre provinciu %{province}
+            blocked_address_instructional: Toto miesto sa nepodporuje
+            blocked_address_informative: Toto miesto sa nepodporuje
+            too_long_instructional: PSČ je príliš dlhé
+            too_long_informative: PSČ je príliš dlhé
+            contains_emojis_instructional: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_emojis_informative: Poštové smerovacie číslo nemôže obsahovať
+              emotikony
+            contains_mathematical_symbols_instructional: Poštové smerovacie číslo
+              nemôže obsahovať matematické značky
+            contains_mathematical_symbols_informative: Poštové smerovacie číslo nemôže
+              obsahovať matematické značky
+            contains_restricted_characters_instructional: Poštové smerovacie číslo
+              môže obsahovať len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Poštové smerovacie číslo nemôže
+              obsahovať zakázané znaky
+            not_supported_informative: Poštové smerovacie číslo nie je podporované
+            contains_html_tags_instructional: Poštové smerovacie číslo nemôže obsahovať
+              HTML
+            contains_html_tags_informative: Poštové smerovacie číslo nemôže obsahovať
+              HTML
+            unknown_for_address_instructional: Poštové smerovacie číslo môže byť nesprávne
+            unknown_for_address_informative: Poštové smerovacie číslo môže byť nesprávne
         street_name:
           label:
             default: Ulica
@@ -294,6 +373,9 @@ sk:
             street_unknown_for_zip_informative: Ulica je neplatná pre PSČ %{zip}
             unknown_for_address_instructional: Ulica môže byť nesprávna
             unknown_for_address_informative: Ulica môže byť nesprávna
+            contains_too_many_words_informative: 'Ulica nemôže mať viac ako tento
+              počet slov: %{word_count}'
+            contains_html_tags_informative: Ulica nemôže obsahovať HTML
         street_number:
           label:
             default: Číslo budovy
@@ -345,6 +427,36 @@ sk:
             unknown_for_city: Zadajte platný názov sídliska pre mesto %{city}
             unknown_for_zip: Zadajte platný názov sídliska pre PSČ %{zip}
             unknown_for_address: Sídlisko môže byť nesprávne
+            blank_instructional: Zadajte sídlisko
+            blank_informative: Sídlisko chýba
+            too_long_instructional: Sídlisko je príliš dlhé (maximálne %{limit} znakov)
+            too_long_informative: Sídlisko je príliš dlhé
+            contains_emojis_instructional: Sídlisko nemôže obsahovať emotikony
+            contains_emojis_informative: Sídlisko nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Sídlisko nemôže obsahovať
+              matematické značky
+            contains_mathematical_symbols_informative: Sídlisko nemôže obsahovať matematické
+              značky
+            contains_restricted_characters_instructional: Sídlisko môže obsahovať
+              len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Sídlisko nemôže obsahovať
+              zakázané znaky
+            contains_too_many_words_instructional: 'Sídlisko musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Sídlisko musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_html_tags_instructional: Sídlisko nemôže obsahovať HTML značky
+            contains_html_tags_informative: Sídlisko nemôže obsahovať HTML značky
+            contains_url_instructional: Sídlisko nemôže obsahovať URL adresy
+            contains_url_informative: Sídlisko nemôže obsahovať URL adresy
+            unknown_for_city_instructional: Zadajte platný názov sídliska pre mesto
+              %{city}
+            unknown_for_city_informative: Zadajte platný názov sídliska pre mesto
+              %{city}
+            unknown_for_zip_instructional: Zadajte platný názov sídliska pre PSČ %{zip}
+            unknown_for_zip_informative: Zadajte platný názov sídliska pre PSČ %{zip}
+            unknown_for_address_instructional: Sídlisko môže byť nesprávne
+            unknown_for_address_informative: Sídlisko môže byť nesprávne
           warnings:
             contains_too_many_words: 'Sídlisko by nemalo mať viac ako tento počet
               slov: %{word_count}'
@@ -394,6 +506,19 @@ sk:
               značky
             contains_url_instructional: Druhý riadok adresy nemôže obsahovať URL adresu
             contains_url_informative: Druhý riadok adresy nemôže obsahovať URL adresu
+            missing_building_number_instructional: Ak máte číslo budovy, pridajte
+              ho
+            missing_building_number_informative: Ak máte číslo budovy, pridajte ho
+            street_unknown_for_zip_instructional: Zadajte platný názov ulice pre PSČ
+              %{zip}
+            street_unknown_for_zip_informative: Zadajte platný názov ulice pre PSČ
+              %{zip}
+            building_number_invalid_instructional: Číslo budovy na ulici %{street}
+              s PSČ %{zip} sa nepodarilo nájsť
+            building_number_invalid_informative: Číslo budovy na ulici %{street} s
+              PSČ %{zip} sa nepodarilo nájsť
+            unknown_for_address_instructional: Druhý riadok adresy môže byť nesprávny
+            unknown_for_address_informative: Druhý riadok adresy môže byť nesprávny
           warnings:
             contains_too_many_words: 'Druhý riadok adresy by nemal mať viac ako tento
               počet slov: %{word_count}'

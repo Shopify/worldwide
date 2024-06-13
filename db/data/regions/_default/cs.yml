@@ -141,6 +141,27 @@ cs:
               pro: %{street}, %{zip}.'
             building_number_invalid_informative: 'Nepovedlo se vyhledat číslo budovy
               pro: %{street}, %{zip}.'
+            too_long_informative: Řádek 2 adresy je příliš dlouhý.
+            contains_emojis_instructional: Řádek 2 adresy nemůže obsahovat emoji.
+            contains_emojis_informative: Řádek 2 adresy nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: Řádek 2 adresy nemůže obsahovat
+              matematické symboly.
+            contains_mathematical_symbols_informative: Řádek 2 adresy nemůže obsahovat
+              matematické symboly.
+            contains_restricted_characters_instructional: Řádek 2 adresy může obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Řádek 2 adresy nemůže obsahovat
+              zakázané znaky.
+            contains_too_many_words_instructional: 'Řádek 2 adresy musí obsahovat
+              méně než tento počet slov: %{word_count}.'
+            contains_too_many_words_informative: 'Řádek 2 adresy musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_html_tags_instructional: Řádek 2 adresy nemůže obsahovat HTML.
+            contains_html_tags_informative: Řádek 2 adresy nemůže obsahovat HTML.
+            contains_url_instructional: Řádek 2 adresy nemůže obsahovat adresu URL.
+            contains_url_informative: Řádek 2 adresy nemůže obsahovat adresu URL.
+            unknown_for_address_instructional: Řádek 2 adresy může být nesprávný.
+            unknown_for_address_informative: Řádek 2 adresy může být nesprávný.
           warnings:
             contains_too_many_words: 'Doporučuje se, aby 2. řádek adresy měl méně
               než tento počet slov: %{word_count}'
@@ -169,6 +190,28 @@ cs:
             unknown_for_zip_and_province_instructional: 'Zadejte platné město pro:
               %{zip}, %{province}.'
             unknown_for_zip_and_province_informative: Město může být nesprávné.
+            too_long_instructional: Název města je příliš dlouhý (maximum je 255 znaků).
+            too_long_informative: Název města je příliš dlouhý.
+            contains_emojis_instructional: Název města nemůže obsahovat emoji.
+            contains_emojis_informative: Název města nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: Název města nemůže obsahovat
+              matematické symboly.
+            contains_mathematical_symbols_informative: Název města nemůže obsahovat
+              matematické symboly.
+            contains_restricted_characters_instructional: Název města může obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Název města nemůže obsahovat
+              zakázané znaky.
+            contains_too_many_words_instructional: 'Název města musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_too_many_words_informative: 'Název města musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_html_tags_instructional: Název města nemůže obsahovat HTML.
+            contains_html_tags_informative: Název města nemůže obsahovat HTML.
+            contains_url_instructional: Název města nemůže obsahovat adresu URL.
+            contains_url_informative: Název města nemůže obsahovat adresu URL.
+            unknown_for_address_instructional: Město může být nesprávné.
+            unknown_for_address_informative: Město může být nesprávné.
         country:
           label:
             default: Země/oblast
@@ -199,6 +242,16 @@ cs:
             invalid_informative: Telefonní číslo není platné.
             too_long_instructional: Telefonní číslo je příliš dlouhé.
             too_long_informative: Telefonní číslo je příliš dlouhé.
+            contains_emojis_instructional: Telefonní číslo nemůže obsahovat emoji.
+            contains_emojis_informative: Telefonní číslo nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: Telefonní číslo nemůže obsahovat
+              matematické symboly.
+            contains_mathematical_symbols_informative: Telefonní číslo nemůže obsahovat
+              matematické symboly.
+            contains_restricted_characters_instructional: Telefonní číslo může obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Telefonní číslo nemůže obsahovat
+              zakázané znaky.
         province:
           label:
             default: Oblast
@@ -218,6 +271,8 @@ cs:
             unknown_for_city_instructional: 'Oblast neodpovídá městu: %{city}.'
             unknown_for_zip_instructional: 'Vyberte platnou oblast pro: %{zip}.'
             unknown_for_zip_informative: 'Oblast neodpovídá PSČ: %{zip}.'
+            unknown_for_address_instructional: Oblast může být nesprávná.
+            unknown_for_address_informative: Oblast může být nesprávná.
         zip:
           label:
             default: PSČ
@@ -248,6 +303,25 @@ cs:
             not_supported_informativel: PSČ není podporováno.
             unknown_for_province_instructional: 'Zadejte platné PSČ pro: %{province}.'
             unknown_for_province_informative: 'PSČ není platné pro: %{province}.'
+            blocked_address_instructional: Tato lokalita není podporována.
+            blocked_address_informative: Tato lokalita není podporována.
+            too_long_instructional: PSČ je příliš dlouhé.
+            too_long_informative: PSČ je příliš dlouhé.
+            contains_emojis_instructional: PSČ nemůže obsahovat emoji.
+            contains_emojis_informative: PSČ nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: PSČ nemůže obsahovat matematické
+              symboly.
+            contains_mathematical_symbols_informative: PSČ nemůže obsahovat matematické
+              symboly.
+            contains_restricted_characters_instructional: PSČ může obsahovat pouze
+              písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: PSČ nemůže obsahovat zakázané
+              znaky.
+            not_supported_informative: PSČ není podporováno.
+            contains_html_tags_instructional: PSČ nemůže obsahovat HTML.
+            contains_html_tags_informative: PSČ nemůže obsahovat HTML.
+            unknown_for_address_instructional: PSČ může být nesprávné.
+            unknown_for_address_informative: PSČ může být nesprávné.
         street_name:
           label:
             default: Ulice
@@ -283,6 +357,9 @@ cs:
             street_unknown_for_zip_informative: 'Ulice není platná pro: %{zip}.'
             unknown_for_address_instructional: Ulice může být nesprávná.
             unknown_for_address_informative: Ulice může být nesprávná.
+            contains_too_many_words_informative: 'Název ulice nemůže obsahovat více
+              než tento počet slov: %{word_count}.'
+            contains_html_tags_informative: Název ulice nemůže obsahovat HTML.
         street_number:
           label:
             default: Číslo budovy
@@ -339,6 +416,47 @@ cs:
               %{city}.
             unknown_for_zip: Zadejte platný název samosprávné jednotky města pro %{zip}.
             unknown_for_address: Samosprávná jednotka města může být nesprávná.
+            blank_instructional: Zadejte samosprávnou jednotku města.
+            blank_informative: Samosprávná jednotka města chybí.
+            too_long_instructional: 'Název samosprávné jednotky města je příliš dlouhý
+              (maximální počet znaků: %{limit}).'
+            too_long_informative: Název samosprávné jednotky města je příliš dlouhý.
+            contains_emojis_instructional: Název samosprávné jednotky města nemůže
+              obsahovat emoji.
+            contains_emojis_informative: Název samosprávné jednotky města nemůže obsahovat
+              emoji.
+            contains_mathematical_symbols_instructional: Název samosprávné jednotky
+              města nemůže obsahovat matematické symboly.
+            contains_mathematical_symbols_informative: Název samosprávné jednotky
+              města nemůže obsahovat matematické symboly.
+            contains_restricted_characters_instructional: Název samosprávné jednotky
+              města může obsahovat pouze písmena, číslice, místní znaky a speciální
+              znaky.
+            contains_restricted_characters_informative: Název samosprávné jednotky
+              města nemůže obsahovat zakázané znaky.
+            contains_too_many_words_instructional: 'Název samosprávné jednotky města
+              musí obsahovat méně než tento počet slov: %{word_count}.'
+            contains_too_many_words_informative: 'Název samosprávné jednotky města
+              musí obsahovat méně než tento počet slov: %{word_count}.'
+            contains_html_tags_instructional: Název samosprávné jednotky města nemůže
+              obsahovat HTML tagy.
+            contains_html_tags_informative: Název samosprávné jednotky města nemůže
+              obsahovat HTML tagy.
+            contains_url_instructional: Název samosprávné jednotky města nemůže obsahovat
+              adresy URL.
+            contains_url_informative: Název samosprávné jednotky města nemůže obsahovat
+              adresy URL.
+            unknown_for_city_instructional: 'Zadejte platný název samosprávné jednotky
+              města pro: %{city}.'
+            unknown_for_city_informative: 'Zadejte platný název samosprávné jednotky
+              města pro: %{city}.'
+            unknown_for_zip_instructional: 'Zadejte platný název samosprávné jednotky
+              města pro: %{zip}.'
+            unknown_for_zip_informative: 'Zadejte platný název samosprávné jednotky
+              města pro: %{zip}.'
+            unknown_for_address_instructional: Samosprávná jednotka města může být
+              nesprávná.
+            unknown_for_address_informative: Samosprávná jednotka města může být nesprávná.
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název samosprávné jednotky
               města obsahoval méně než tento počet slov: %{word_count}.'
@@ -390,6 +508,17 @@ cs:
             contains_url_instructional: Druhý řádek adresy nemůže obsahovat adresu
               URL.
             contains_url_informative: Druhý řádek adresy nemůže obsahovat adresu URL.
+            missing_building_number_instructional: Zadejte číslo budovy, pokud existuje.
+            missing_building_number_informative: Zadejte číslo budovy, pokud existuje.
+            street_unknown_for_zip_instructional: 'Zadejte platný název ulice pro:
+              %{zip}.'
+            street_unknown_for_zip_informative: 'Zadejte platný název ulice pro: %{zip}.'
+            building_number_invalid_instructional: 'Nepovedlo se vyhledat číslo budovy
+              pro: %{street}, %{zip}.'
+            building_number_invalid_informative: 'Nepovedlo se vyhledat číslo budovy
+              pro: %{street}, %{zip}.'
+            unknown_for_address_instructional: Druhý řádek adresy může být nesprávný.
+            unknown_for_address_informative: Druhý řádek adresy může být nesprávný.
           warnings:
             contains_too_many_words: 'Doporučuje se, aby druhý název adresy obsahoval
               méně než tento počet slov: %{word_count}.'

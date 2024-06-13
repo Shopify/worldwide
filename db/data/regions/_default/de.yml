@@ -140,6 +140,27 @@ de:
               %{zip} nicht gefunden werden
             building_number_invalid_informative: Hausnummer konnte für %{street},
               %{zip} nicht gefunden werden
+            too_long_informative: Adresszeile 2 ist zu lang
+            contains_emojis_instructional: Adresszeile 2 darf keine Emojis enthalten
+            contains_emojis_informative: Adresszeile 2 darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Adresszeile 2 darf keine
+              mathematischen Symbole enthalten
+            contains_mathematical_symbols_informative: Adresszeile 2 darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Adresszeile 2 darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Adresszeile 2 darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Adresszeile 2 muss weniger als
+              %{word_count} Wörter enthalten
+            contains_too_many_words_informative: Adresszeile 2 muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Adresszeile 2 darf kein HTML enthalten
+            contains_html_tags_informative: Adresszeile 2 darf kein HTML enthalten
+            contains_url_instructional: Adresszeile 2 darf keine URL enthalten
+            contains_url_informative: Adresszeile 2 darf keine URL enthalten
+            unknown_for_address_instructional: Adresszeile 2 ist ggf. falsch
+            unknown_for_address_informative: Adresszeile 2 ist ggf. falsch
           warnings:
             contains_too_many_words: Adresszeile 2 sollte weniger als %{word_count}
               Wörter haben
@@ -169,6 +190,28 @@ de:
             unknown_for_zip_and_province_instructional: Eine gültige Stadt für %{zip},
               %{province} eingeben
             unknown_for_zip_and_province_informative: Stadt ist ggf. falsch
+            too_long_instructional: Stadt ist zu lang (maximal 255 Zeichen)
+            too_long_informative: Stadt ist zu lang
+            contains_emojis_instructional: Stadt darf keine Emojis enthalten
+            contains_emojis_informative: Stadt darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Stadt darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Stadt darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: '"Ort" darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten'
+            contains_restricted_characters_informative: Stadt darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Stadt muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Stadt muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Stadt darf kein HTML enthalten
+            contains_html_tags_informative: Stadt darf kein HTML enthalten
+            contains_url_instructional: Stadt darf keine URL enthalten
+            contains_url_informative: Stadt darf keine URL enthalten
+            unknown_for_address_instructional: Stadt ist ggf. falsch
+            unknown_for_address_informative: Stadt ist ggf. falsch
         country:
           label:
             default: Land/Region
@@ -200,6 +243,16 @@ de:
             invalid_informative: Telefonnummer ist ungültig
             too_long_instructional: Telefonnummer ist zu lang
             too_long_informative: Telefonnummer ist zu lang
+            contains_emojis_instructional: Telefonnummer darf keine Emojis enthalten
+            contains_emojis_informative: Telefonnummer darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Telefonnummer darf keine
+              mathematischen Symbole enthalten
+            contains_mathematical_symbols_informative: Telefonnummer darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Telefonnummer darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Telefonnummer darf keine eingeschränkten
+              Zeichen enthalten
         province:
           label:
             default: Region
@@ -220,6 +273,8 @@ de:
             unknown_for_city_instructional: Region stimmt nicht mit %{city} überein
             unknown_for_zip_instructional: Eine gültige Region für %{zip} auswählen
             unknown_for_zip_informative: Region stimmt nicht mit %{zip} überein
+            unknown_for_address_instructional: Region ist ggf. falsch
+            unknown_for_address_informative: Region ist ggf. falsch
         zip:
           label:
             default: Postleitzahl
@@ -256,6 +311,25 @@ de:
             unknown_for_province_instructional: Eine gültige Postleitzahl für %{province}
               eingeben
             unknown_for_province_informative: Postleitzahl ist für %{province} ungültig
+            blocked_address_instructional: Dieser Standort wird nicht unterstützt
+            blocked_address_informative: Dieser Standort wird nicht unterstützt
+            too_long_instructional: Postleitzahl ist zu lang
+            too_long_informative: Postleitzahl ist zu lang
+            contains_emojis_instructional: Postleitzahl darf keine Emojis enthalten
+            contains_emojis_informative: Postleitzahl darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Postleitzahl darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Postleitzahl darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Postleitzahl darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Postleitzahl darf keine eingeschränkten
+              Zeichen enthalten
+            not_supported_informative: Postleitzahl wird nicht unterstützt.
+            contains_html_tags_instructional: Postleitzahl darf kein HTML enthalten
+            contains_html_tags_informative: Postleitzahl darf kein HTML enthalten
+            unknown_for_address_instructional: Postleitzahl ist ggf. falsch
+            unknown_for_address_informative: Postleitzahl ist ggf. falsch
         street_name:
           label:
             default: Straße
@@ -290,6 +364,9 @@ de:
             street_unknown_for_zip_informative: Straße ungültig für %{zip}
             unknown_for_address_instructional: Straße ist ggf. falsch
             unknown_for_address_informative: Straße ist ggf. falsch
+            contains_too_many_words_informative: Straße darf nicht mehr als %{word_count} Wörter
+              enthalten
+            contains_html_tags_informative: Straße darf kein HTML enthalten
         street_number:
           label:
             default: Hausnummer
@@ -341,6 +418,38 @@ de:
             unknown_for_city: Einen gültigen Stadtviertelnamen für %{city} eingeben
             unknown_for_zip: Einen gültigen Stadtviertelnamen für %{zip} eingeben
             unknown_for_address: Stadtviertel ist ggf. falsch
+            blank_instructional: Gib ein Stadtviertel ein.
+            blank_informative: Stadtviertel fehlt
+            too_long_instructional: Stadtviertel ist zu lang (maximal %{limit} Zeichen)
+            too_long_informative: Stadtviertel ist zu lang
+            contains_emojis_instructional: Stadtviertel darf keine Emojis enthalten
+            contains_emojis_informative: Stadtviertel darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Stadtviertel darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Stadtviertel darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Stadtviertel darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten.
+            contains_restricted_characters_informative: Stadtviertel darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Stadtviertel muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Stadtviertel muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Stadtviertel darf keine HTML-Tags enthalten
+            contains_html_tags_informative: Stadtviertel darf keine HTML-Tags enthalten
+            contains_url_instructional: Stadtviertel darf keine URLs enthalten
+            contains_url_informative: Stadtviertel darf keine URLs enthalten
+            unknown_for_city_instructional: Einen gültigen Stadtviertelnamen für %{city}
+              eingeben
+            unknown_for_city_informative: Einen gültigen Stadtviertelnamen für %{city}
+              eingeben
+            unknown_for_zip_instructional: Einen gültigen Stadtviertelnamen für %{zip}
+              eingeben
+            unknown_for_zip_informative: Einen gültigen Stadtviertelnamen für %{zip}
+              eingeben
+            unknown_for_address_instructional: Stadtviertel ist ggf. falsch
+            unknown_for_address_informative: Stadtviertel ist ggf. falsch
           warnings:
             contains_too_many_words: Es wird empfohlen, dass das Stadtviertel weniger
               als %{word_count} Wörter enthält.
@@ -392,6 +501,18 @@ de:
               enthalten
             contains_url_instructional: Die zweite Adresszeile darf keine URL enthalten
             contains_url_informative: Die zweite Adresszeile darf keine URL enthalten
+            missing_building_number_instructional: Falls verfügbar, Hausnummer hinzufügen
+            missing_building_number_informative: Falls verfügbar, Hausnummer hinzufügen
+            street_unknown_for_zip_instructional: Einen gültigen Straßennamen für
+              %{zip} eingeben
+            street_unknown_for_zip_informative: Einen gültigen Straßennamen für %{zip}
+              eingeben
+            building_number_invalid_instructional: Hausnummer konnte für %{street},
+              %{zip} nicht gefunden werden
+            building_number_invalid_informative: Hausnummer konnte für %{street},
+              %{zip} nicht gefunden werden
+            unknown_for_address_instructional: Die zweite Adresszeile ist ggf. falsch
+            unknown_for_address_informative: Die zweite Adresszeile ist ggf. falsch
           warnings:
             contains_too_many_words: Die zweite Adresszeile sollte Empfehlungen zufolge
               weniger als %{word_count} Wörter haben

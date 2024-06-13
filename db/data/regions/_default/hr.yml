@@ -146,6 +146,27 @@ hr:
               %{street}, %{zip}
             building_number_invalid_informative: Ovaj kućni broj ne postoji u ulici
               %{street}, %{zip}
+            too_long_informative: Redak 2 adrese je predugačak
+            contains_emojis_instructional: Redak adrese 2 ne smije sadržavati emotikone
+            contains_emojis_informative: Redak adrese 2 ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Redak adrese 2 ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Redak adrese 2 ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Redak adrese 2 smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Redak adrese 2 ne smije sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: 'Redak adrese 2 smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Redak adrese 2 smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Redak adrese 2 ne smije sadržavati HTML
+            contains_html_tags_informative: Redak adrese 2 ne smije sadržavati HTML
+            contains_url_instructional: Redak adrese 2 ne smije sadržavati URL
+            contains_url_informative: Redak adrese 2 ne smije sadržavati URL
+            unknown_for_address_instructional: Adresa u retku 2 možda nije točna
+            unknown_for_address_informative: Adresa u retku 2 možda nije točna
           warnings:
             contains_too_many_words: Preporučamo da redak adrese 2 sadrži manje od
               %{word_count} riječ/i
@@ -176,6 +197,29 @@ hr:
             unknown_for_zip_and_province_instructional: Unesite valjani grad za provinciju
               %{zip}, %{province}
             unknown_for_zip_and_province_informative: Naziv grada možda nije točan
+            too_long_instructional: Naziv grada je predugačak (najveći dopušteni broj
+              znakova je 255)
+            too_long_informative: Naziv grada je predugačak
+            contains_emojis_instructional: Naziv grada ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv grada ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Naziv grada ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naziv grada ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Naziv grada smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv grada ne smije sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: 'Naziv grada smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Naziv grada smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Naziv grada ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv grada ne smije sadržavati HTML
+            contains_url_instructional: Naziv grada ne smije sadržavati URL
+            contains_url_informative: Naziv grada ne smije sadržavati URL
+            unknown_for_address_instructional: Naziv grada možda nije točan
+            unknown_for_address_informative: Naziv grada možda nije točan
         country:
           label:
             default: Država/regija
@@ -206,6 +250,16 @@ hr:
             invalid_informative: Broj telefona nije valjan
             too_long_instructional: Broj telefona je predugačak
             too_long_informative: Broj telefona je predugačak
+            contains_emojis_instructional: Broj telefona ne smije sadržavati emotikone
+            contains_emojis_informative: Broj telefona ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Broj telefona ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Broj telefona ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Broj telefona smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Broj telefona ne smije sadržavati
+              zabranjene znakove
         province:
           label:
             default: Regija
@@ -226,6 +280,8 @@ hr:
             unknown_for_city_instructional: Regija ne odgovara %{city}
             unknown_for_zip_instructional: Odaberite valjanu regiju za %{zip}
             unknown_for_zip_informative: Regija ne odgovara %{zip}
+            unknown_for_address_instructional: Regija možda nije točna
+            unknown_for_address_informative: Regija možda nije točna
         zip:
           label:
             default: Poštanski broj
@@ -259,6 +315,25 @@ hr:
             unknown_for_province_instructional: Unesite valjani poštanski broj za
               %{province}
             unknown_for_province_informative: Poštanski broj nije valjan za %{province}
+            blocked_address_instructional: Ta lokacija nije podržana
+            blocked_address_informative: Ta lokacija nije podržana
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
+            contains_emojis_instructional: Poštanski broj ne smije sadržavati emotikone
+            contains_emojis_informative: Poštanski broj ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Poštanski broj ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Poštanski broj ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Poštanski broj smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Poštanski broj ne smije sadržavati
+              zabranjene znakove
+            not_supported_informative: Poštanski broj nije podržan
+            contains_html_tags_instructional: Poštanski broj ne smije sadržavati HTML
+            contains_html_tags_informative: Poštanski broj ne smije sadržavati HTML
+            unknown_for_address_instructional: Poštanski broj možda nije točan
+            unknown_for_address_informative: Poštanski broj možda nije točan
         street_name:
           label:
             default: Ulica
@@ -295,6 +370,9 @@ hr:
             street_unknown_for_zip_informative: Nevažeći naziv ulice za grad %{zip}
             unknown_for_address_instructional: Naziv ulice možda nije točan
             unknown_for_address_informative: Naziv ulice možda nije točan
+            contains_too_many_words_informative: 'Naziv ulice smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags_informative: Naziv ulice ne smije sadržavati HTML
         street_number:
           label:
             default: Kućni broj
@@ -348,6 +426,44 @@ hr:
             unknown_for_city: Unesite valjani naziv stambene četvrti za %{city}
             unknown_for_zip: Unesite valjani naziv stambene četvrti za %{zip}
             unknown_for_address: Naziv stambene četvrti možda nije točan
+            blank_instructional: Unesite stambenu četvrt
+            blank_informative: Nedostaje stambena četvrt
+            too_long_instructional: Naziv stambene četvrti je predugačak (najveći
+              dopušteni broj znakova je %{limit})
+            too_long_informative: Naziv stambene četvrti je predugačak
+            contains_emojis_instructional: Naziv stambene četvrti ne smije sadržavati
+              emotikone
+            contains_emojis_informative: Naziv stambene četvrti ne smije sadržavati
+              emotikone
+            contains_mathematical_symbols_instructional: Naziv stambene četvrti ne
+              smije sadržavati matematičke simbole
+            contains_mathematical_symbols_informative: Naziv stambene četvrti ne smije
+              sadržavati matematičke simbole
+            contains_restricted_characters_instructional: Naziv stambene četvrti smije
+              sadržavati samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv stambene četvrti ne
+              smije sadržavati zabranjene znakove
+            contains_too_many_words_instructional: 'Naziv stambene četvrti smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Naziv stambene četvrti smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Naziv stambene četvrti ne smije sadržavati
+              HTML oznake
+            contains_html_tags_informative: Naziv stambene četvrti ne smije sadržavati
+              HTML oznake
+            contains_url_instructional: Naziv stambene četvrti ne smije sadržavati
+              URL-ove
+            contains_url_informative: Naziv stambene četvrti ne smije sadržavati URL-ove
+            unknown_for_city_instructional: Unesite valjani naziv stambene četvrti
+              za %{city}
+            unknown_for_city_informative: Unesite valjani naziv stambene četvrti za
+              %{city}
+            unknown_for_zip_instructional: Unesite valjani naziv stambene četvrti
+              za %{zip}
+            unknown_for_zip_informative: Unesite valjani naziv stambene četvrti za
+              %{zip}
+            unknown_for_address_instructional: Naziv stambene četvrti možda nije točan
+            unknown_for_address_informative: Naziv stambene četvrti možda nije točan
           warnings:
             contains_too_many_words: Preporučujemo da naziv stambene četvrti sadrži
               manje od %{word_count} riječ/i
@@ -399,6 +515,16 @@ hr:
               HTML oznake
             contains_url_instructional: Drugi redak adrese ne smije sadržavati URL
             contains_url_informative: Drugi redak adrese ne smije sadržavati URL
+            missing_building_number_instructional: Unesite kućni broj ako postoji
+            missing_building_number_informative: Unesite kućni broj ako postoji
+            street_unknown_for_zip_instructional: Unesite valjani naziv ulice za %{zip}
+            street_unknown_for_zip_informative: Unesite valjani naziv ulice za %{zip}
+            building_number_invalid_instructional: Ovaj kućni broj ne postoji u ulici
+              %{street}, %{zip}
+            building_number_invalid_informative: Ovaj kućni broj ne postoji u ulici
+              %{street}, %{zip}
+            unknown_for_address_instructional: Drugi redak adrese možda nije točan
+            unknown_for_address_informative: Drugi redak adrese možda nije točan
           warnings:
             contains_too_many_words: 'Preporučljivo je da drugi redak adrese ne sadrži
               više od sljedećeg broja riječi: %{word_count}'
