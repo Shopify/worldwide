@@ -148,6 +148,30 @@ ms:
               untuk %{street}, %{zip}
             building_number_invalid_informative: Nombor bangunan tidak dapat ditemukan
               untuk %{street}, %{zip}
+            too_long_informative: Baris alamat 2 terlalu panjang
+            contains_emojis_instructional: Baris alamat 2 tidak boleh mengandungi
+              emoji
+            contains_emojis_informative: Baris alamat 2 tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Baris alamat 2 tidak boleh
+              mengandungi simbol matematik
+            contains_mathematical_symbols_informative: Baris alamat 2 tidak boleh
+              mengandungi simbol matematik
+            contains_restricted_characters_instructional: Baris alamat 2 hanya boleh
+              mengandungi huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Baris alamat 2 tidak boleh
+              mengandungi aksara terhad
+            contains_too_many_words_instructional: Baris alamat 2 mesti mengandungi
+              kurang daripada %{word_count} perkataan
+            contains_too_many_words_informative: Baris alamat 2 mesti mengandungi
+              kurang daripada %{word_count} perkataan
+            contains_html_tags_instructional: Baris alamat 2 tidak boleh mengandungi
+              HTML
+            contains_html_tags_informative: Baris alamat 2 tidak boleh mengandungi
+              HTML
+            contains_url_instructional: Baris alamat 2 tidak boleh mengandungi URL
+            contains_url_informative: Baris alamat 2 tidak boleh mengandungi URL
+            unknown_for_address_instructional: Baris alamat 2 mungkin salah
+            unknown_for_address_informative: Baris alamat 2 mungkin salah
           warnings:
             contains_too_many_words: Baris alamat 2 disyorkan untuk mengandungi kurang
               daripada %{word_count} perkataan
@@ -175,6 +199,28 @@ ms:
             unknown_for_zip_and_province_instructional: Masukkan bandar yang sah untuk
               %{zip}, %{province}
             unknown_for_zip_and_province_informative: Bandar mungkin salah
+            too_long_instructional: Bandar terlalu panjang (maksimum ialah 255 aksara)
+            too_long_informative: Bandar terlalu panjang
+            contains_emojis_instructional: Bandar tidak boleh mengandungi emoji
+            contains_emojis_informative: Bandar tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Bandar tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Bandar tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Bandar hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Bandar tidak boleh mengandungi
+              aksara terhad
+            contains_too_many_words_instructional: Bandar mesti mengandungi kurang
+              daripada %{word_count} perkataan
+            contains_too_many_words_informative: Bandar mesti mengandungi kurang daripada
+              %{word_count} perkataan
+            contains_html_tags_instructional: Bandar tidak boleh mengandungi HTML
+            contains_html_tags_informative: Bandar tidak boleh mengandungi HTML
+            contains_url_instructional: Bandar tidak boleh mengandungi URL
+            contains_url_informative: Bandar tidak boleh mengandungi URL
+            unknown_for_address_instructional: Bandar mungkin salah
+            unknown_for_address_informative: Bandar mungkin salah
         country:
           label:
             default: Negara/Wilayah
@@ -205,6 +251,17 @@ ms:
             invalid_informative: Nombor telefon tidak sah
             too_long_instructional: Nombor telefon terlalu panjang
             too_long_informative: Nombor telefon terlalu panjang
+            contains_emojis_instructional: Nombor telefon tidak boleh mengandungi
+              emoji
+            contains_emojis_informative: Nombor telefon tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Nombor telefon tidak boleh
+              mengandungi simbol matematik
+            contains_mathematical_symbols_informative: Nombor telefon tidak boleh
+              mengandungi simbol matematik
+            contains_restricted_characters_instructional: Nombor telefon hanya boleh
+              mengandungi huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Nombor telefon tidak boleh
+              mengandungi aksara terhad
         province:
           label:
             default: Rantau
@@ -225,6 +282,8 @@ ms:
             unknown_for_city_instructional: Rantau tidak sepadan dengan %{city}
             unknown_for_zip_instructional: Pilih rantau yang sah untuk %{zip}
             unknown_for_zip_informative: Rantau tidak sepadan dengan %{zip}
+            unknown_for_address_instructional: Rantau mungkin salah
+            unknown_for_address_informative: Rantau mungkin salah
         zip:
           label:
             default: Poskod
@@ -255,6 +314,25 @@ ms:
             not_supported_informativel: Poskod tidak disokong
             unknown_for_province_instructional: Masukkan poskod yang sah untuk %{province}
             unknown_for_province_informative: Poskod tidak sah untuk %{province}
+            blocked_address_instructional: Lokasi ini tidak disokong
+            blocked_address_informative: Lokasi ini tidak disokong
+            too_long_instructional: Poskod terlalu panjang
+            too_long_informative: Poskod terlalu panjang
+            contains_emojis_instructional: Poskod tidak boleh mengandungi emoji
+            contains_emojis_informative: Poskod tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Poskod tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Poskod tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Poskod hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Poskod tidak boleh mengandungi
+              aksara terhad
+            not_supported_informative: Poskod tidak disokong
+            contains_html_tags_instructional: Poskod tidak boleh mengandungi HTML
+            contains_html_tags_informative: Poskod tidak boleh mengandungi HTML
+            unknown_for_address_instructional: Poskod mungkin salah
+            unknown_for_address_informative: Poskod mungkin salah
         street_name:
           label:
             default: Jalan
@@ -290,6 +368,9 @@ ms:
             street_unknown_for_zip_informative: Jalan tidak sah untuk %{zip}
             unknown_for_address_instructional: Jalan mungkin salah
             unknown_for_address_informative: Jalan mungkin salah
+            contains_too_many_words_informative: Jalan tidak boleh mengandungi lebih
+              daripada %{word_count} perkataan
+            contains_html_tags_informative: Jalan tidak boleh mengandungi HTML
         street_number:
           label:
             default: Nombor bangunan
@@ -345,6 +426,39 @@ ms:
             unknown_for_city: Masukkan nama kejiranan yang sah untuk %{city}
             unknown_for_zip: Masukkan nama kejiranan yang sah untuk %{zip}
             unknown_for_address: Kejiranan mungkin salah
+            blank_instructional: Masukkan kejiranan
+            blank_informative: Kejiranan tiada
+            too_long_instructional: Kejiranan terlalu panjang (maksimum ialah %{limit}
+              aksara)
+            too_long_informative: Kejiranan terlalu panjang
+            contains_emojis_instructional: Kejiranan tidak boleh mengandungi emoji
+            contains_emojis_informative: Kejiranan tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Kejiranan tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Kejiranan tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Kejiranan hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Kejiranan tidak boleh mengandungi
+              aksara terhad
+            contains_too_many_words_instructional: Kejiranan mesti mengandungi kurang
+              daripada %{word_count} perkataan
+            contains_too_many_words_informative: Kejiranan mesti mengandungi kurang
+              daripada %{word_count} perkataan
+            contains_html_tags_instructional: Kejiranan tidak boleh mengandungi tag
+              HTML
+            contains_html_tags_informative: Kejiranan tidak boleh mengandungi tag
+              HTML
+            contains_url_instructional: Kejiranan tidak boleh mengandungi URL
+            contains_url_informative: Kejiranan tidak boleh mengandungi URL
+            unknown_for_city_instructional: Masukkan nama kejiranan yang sah untuk
+              %{city}
+            unknown_for_city_informative: Masukkan nama kejiranan yang sah untuk %{city}
+            unknown_for_zip_instructional: Masukkan nama kejiranan yang sah untuk
+              %{zip}
+            unknown_for_zip_informative: Masukkan nama kejiranan yang sah untuk %{zip}
+            unknown_for_address_instructional: Kejiranan mungkin salah
+            unknown_for_address_informative: Kejiranan mungkin salah
           warnings:
             contains_too_many_words: Jiranan disyorkan untuk mengandungi kurang daripada
               %{word_count} perkataan
@@ -398,6 +512,19 @@ ms:
             contains_url_instructional: Baris alamat kedua tidak boleh mengandungi
               URL
             contains_url_informative: Baris alamat kedua tidak boleh mengandungi URL
+            missing_building_number_instructional: Tambahkan nombor bangunan jika
+              ada
+            missing_building_number_informative: Tambahkan nombor bangunan jika ada
+            street_unknown_for_zip_instructional: Masukkan nama jalan yang sah untuk
+              %{zip}
+            street_unknown_for_zip_informative: Masukkan nama jalan yang sah untuk
+              %{zip}
+            building_number_invalid_instructional: Nombor bangunan tidak dapat ditemukan
+              untuk %{street}, %{zip}
+            building_number_invalid_informative: Nombor bangunan tidak dapat ditemukan
+              untuk %{street}, %{zip}
+            unknown_for_address_instructional: Baris alamat kedua mungkin salah
+            unknown_for_address_informative: Baris alamat kedua mungkin salah
           warnings:
             contains_too_many_words: Baris alamat kedua disyorkan untuk mengandungi
               kurang daripada %{word_count} perkataan
