@@ -10,3 +10,32 @@ zh-TW:
           errors:
             blank_instructional: 請選取一個大公國
             blank_informative: 缺少大公國
+        neighborhood:
+          label:
+            default: 區域
+            optional: 區域 (選填)
+          errors:
+            blank_instructional: 請輸入區域
+            blank_informative: 缺少區域
+            too_long_instructional: 區域過長 (最多 %{limit} 個字元)
+            too_long_informative: 區域過長
+            contains_emojis_instructional: 區域不得包含表情符號
+            contains_emojis_informative: 區域不得包含表情符號
+            contains_mathematical_symbols_instructional: 區域不得包含數學符號
+            contains_mathematical_symbols_informative: 區域不得包含數學符號
+            contains_restricted_characters_instructional: 區域僅可包含字母、數字、當地字元和特殊字元
+            contains_restricted_characters_informative: 區域不得包含限制的字元
+            contains_too_many_words_instructional: 區域必須少於 %{word_count} 個字
+            contains_too_many_words_informative: 區域必須少於 %{word_count} 個字
+            contains_html_tags_instructional: 區域不得包含 HTML
+            contains_html_tags_informative: 區域不得包含 HTML
+            contains_url_instructional: 區域不得包含網址
+            contains_url_informative: 區域不得包含網址
+            unknown_for_city_instructional: 請輸入 %{city} 的有效區域
+            unknown_for_city_informative: "%{city} 的區域無效"
+            unknown_for_zip_instructional: 請輸入 %{zip} 的有效區域
+            unknown_for_zip_informative: "%{zip} 的區域無效"
+            unknown_for_address_instructional: 區域可能不正確
+            unknown_for_address_informative: 區域可能不正確
+          warnings:
+            contains_too_many_words: 建議區域少於 %{word_count} 個字

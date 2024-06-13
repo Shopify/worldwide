@@ -1,0 +1,41 @@
+---
+da:
+  worldwide:
+    SA:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrikt
+            optional: Distrikt (valgfrit)
+          errors:
+            blank_instructional: Angiv et distrikt
+            blank_informative: Distrikt mangler
+            too_long_instructional: Distrikt er for lang (højst %{limit} tegn)
+            too_long_informative: Distrikt er for lang
+            contains_emojis_instructional: Distrikt må ikke indeholde emojis
+            contains_emojis_informative: Distrikt må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Distrikt må ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Distrikt må ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Distrikt må kun indeholde
+              bogstaver, tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Distrikt må ikke indeholde
+              begrænsede tegn
+            contains_too_many_words_instructional: Distrikt skal indeholde færre end
+              %{word_count} ord
+            contains_too_many_words_informative: Distrikt skal indeholde færre end
+              %{word_count} ord
+            contains_html_tags_instructional: Distrikt må ikke indeholde HTML
+            contains_html_tags_informative: Distrikt må ikke indeholde HTML
+            contains_url_instructional: Distrikt må ikke indeholde en webadresse
+            contains_url_informative: Distrikt må ikke indeholde en webadresse
+            unknown_for_city_instructional: Angiv et gyldigt distrikt for %{city}
+            unknown_for_city_informative: Distriktet er ikke gyldigt for %{city}
+            unknown_for_zip_instructional: Angiv et gyldigt distrikt for %{zip}
+            unknown_for_zip_informative: Distriktet er ikke gyldigt for %{zip}
+            unknown_for_address_instructional: Distrikt kan være forkert
+            unknown_for_address_informative: Distrikt kan være forkert
+          warnings:
+            contains_too_many_words: Det anbefales, at distrikt indeholder færre end
+              %{word_count} ord

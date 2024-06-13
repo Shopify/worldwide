@@ -10,3 +10,39 @@ sv:
           errors:
             blank_instructional: Välj ett emirat
             blank_informative: Emirat saknas
+        neighborhood:
+          label:
+            default: Område
+            optional: Område (valfritt)
+          errors:
+            blank_instructional: Ange ett område
+            blank_informative: Område saknas
+            too_long_instructional: Område är för långt (max %{limit} tecken)
+            too_long_informative: Område är för långt
+            contains_emojis_instructional: Område får inte innehålla emojis
+            contains_emojis_informative: Område får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Område får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Område får inte innehålla matematiska
+              symboler
+            contains_restricted_characters_instructional: Område får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Område får inte innehålla
+              begränsade tecken
+            contains_too_many_words_instructional: Område måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Område måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Område får inte innehålla HTML
+            contains_html_tags_informative: Område får inte innehålla HTML
+            contains_url_instructional: Område får inte innehålla en URL
+            contains_url_informative: Område får inte innehålla en URL
+            unknown_for_city_instructional: Ange ett giltigt område för %{city}
+            unknown_for_city_informative: Området är inte giltigt för %{city}
+            unknown_for_zip_instructional: Ange ett giltigt område för %{zip}
+            unknown_for_zip_informative: Området är inte giltigt för %{zip}
+            unknown_for_address_instructional: Området kan vara felaktigt
+            unknown_for_address_informative: Området kan vara felaktigt
+          warnings:
+            contains_too_many_words: Vi rekommenderar att området består av färre
+              än %{word_count} ord

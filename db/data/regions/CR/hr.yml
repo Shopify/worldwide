@@ -10,3 +10,40 @@ hr:
           errors:
             blank_instructional: Odaberite provinciju
             blank_informative: Nedostaje provincija
+        neighborhood:
+          label:
+            default: Okrug
+            optional: Okrug (neobavezno)
+          errors:
+            blank_instructional: Unesite okrug
+            blank_informative: Nedostaje okrug
+            too_long_instructional: Naziv okruga je predugačak (najveći dopušteni
+              broj znakova je %{limit})
+            too_long_informative: Naziv okruga je predugačak
+            contains_emojis_instructional: Naziv okruga ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv okruga ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Naziv okruga ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naziv okruga ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Naziv okruga smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv okruga ne smije sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: 'Naziv okruga smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Naziv okruga smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Naziv okruga ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv okruga ne smije sadržavati HTML
+            contains_url_instructional: Naziv okruga ne smije sadržavati URL
+            contains_url_informative: Naziv okruga ne smije sadržavati URL
+            unknown_for_city_instructional: Unesite valjani okrug za %{city}
+            unknown_for_city_informative: Okrug nije valjan za %{city}
+            unknown_for_zip_instructional: Unesite valjani okrug za %{zip}
+            unknown_for_zip_informative: Okrug nije valjan za %{zip}
+            unknown_for_address_instructional: Naziv okruga možda nije točan
+            unknown_for_address_informative: Naziv okruga možda nije točan
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv okruga sadrži manje od
+              %{word_count} riječ/i

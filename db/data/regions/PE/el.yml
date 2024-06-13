@@ -1,0 +1,44 @@
+---
+el:
+  worldwide:
+    PE:
+      addresses:
+        neighborhood:
+          label:
+            default: Συνοικία
+            optional: Συνοικία (προαιρετικά)
+          errors:
+            blank_instructional: Εισαγάγετε μια συνοικία
+            blank_informative: Η συνοικία λείπει
+            too_long_instructional: Το πεδίο "Συνοικία" είναι πολύ μεγάλο (το μέγιστο
+              όριο είναι %{limit} χαρακτήρες)
+            too_long_informative: Το πεδίο "Συνοικία" είναι πολύ μεγάλο
+            contains_emojis_instructional: Η συνοικία δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Η συνοικία δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Η συνοικία δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η συνοικία δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η συνοικία μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η συνοικία δεν μπορεί να περιέχει
+              περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Η συνοικία πρέπει να περιέχει λιγότερες
+              από %{word_count} λέξεις
+            contains_too_many_words_informative: Η συνοικία πρέπει να περιέχει λιγότερες
+              από %{word_count} λέξεις
+            contains_html_tags_instructional: Η συνοικία δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_html_tags_informative: Η συνοικία δεν μπορεί να περιέχει κώδικα
+              HTML
+            contains_url_instructional: Η συνοικία δεν μπορεί να περιέχει URL
+            contains_url_informative: Η συνοικία δεν μπορεί να περιέχει URL
+            unknown_for_city_instructional: Εισαγάγετε μια έγκυρη συνοικία για %{city}
+            unknown_for_city_informative: Η συνοικία δεν είναι έγκυρη για %{city}
+            unknown_for_zip_instructional: Εισαγάγετε μια έγκυρη συνοικία για %{zip}
+            unknown_for_zip_informative: Η συνοικία δεν είναι έγκυρη για %{zip}
+            unknown_for_address_instructional: Η συνοικία ενδέχεται να είναι εσφαλμένη
+            unknown_for_address_informative: Η συνοικία ενδέχεται να είναι εσφαλμένη
+          warnings:
+            contains_too_many_words: Η συνοικία συνιστάται να έχει λιγότερες από %{word_count}
+              λέξεις

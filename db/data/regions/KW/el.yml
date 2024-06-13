@@ -10,3 +10,52 @@ el:
           errors:
             blank_instructional: Επιλέξτε ένα κυβερνείο
             blank_informative: Το κυβερνείο λείπει
+        neighborhood:
+          label:
+            default: Οικοδομικό τετράγωνο
+            optional: Οικοδομικό τετράγωνο (προαιρετικά)
+          errors:
+            blank_instructional: Εισαγάγετε ένα οικοδομικό τετράγωνο
+            blank_informative: Λείπει το οικοδομικό τετράγωνο
+            too_long_instructional: Το πεδίο "Οικοδομικό τετράγωνο" είναι πολύ μεγάλο
+              (το μέγιστο όριο είναι %{limit} χαρακτήρες)
+            too_long_informative: Το πεδίο "Οικοδομικό τετράγωνο" είναι πολύ μεγάλο
+            contains_emojis_instructional: Το οικοδομικό τετράγωνο δεν μπορεί να περιέχει
+              emoji
+            contains_emojis_informative: Το οικοδομικό τετράγωνο δεν μπορεί να περιέχει
+              emoji
+            contains_mathematical_symbols_instructional: Το οικοδομικό τετράγωνο δεν
+              μπορεί να περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Το οικοδομικό τετράγωνο δεν
+              μπορεί να περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Το οικοδομικό τετράγωνο
+              μπορεί να περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Το οικοδομικό τετράγωνο δεν
+              μπορεί να περιέχει περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Το οικοδομικό τετράγωνο πρέπει
+              να διαθέτει λιγότερες από %{word_count} λέξεις
+            contains_too_many_words_informative: Το οικοδομικό τετράγωνο πρέπει να
+              διαθέτει λιγότερες από %{word_count} λέξεις
+            contains_html_tags_instructional: Το οικοδομικό τετράγωνο δεν μπορεί να
+              περιέχει κώδικα HTML
+            contains_html_tags_informative: Το οικοδομικό τετράγωνο δεν μπορεί να
+              περιέχει κώδικα HTML
+            contains_url_instructional: Το οικοδομικό τετράγωνο δεν μπορεί να περιέχει
+              URL
+            contains_url_informative: Το οικοδομικό τετράγωνο δεν μπορεί να περιέχει
+              URL
+            unknown_for_city_instructional: Εισαγάγετε ένα έγκυρο όνομα οικοδομικού
+              τετραγώνου για %{city}
+            unknown_for_city_informative: Το οικοδομικό τετράγωνο δεν είναι έγκυρο
+              για %{city}
+            unknown_for_zip_instructional: Εισαγάγετε ένα έγκυρο όνομα οικοδομικού
+              τετραγώνου για %{zip}
+            unknown_for_zip_informative: Το οικοδομικό τετράγωνο δεν είναι έγκυρο
+              για %{zip}
+            unknown_for_address_instructional: Το οικοδομικό τετράγωνο ενδέχεται να
+              είναι εσφαλμένο
+            unknown_for_address_informative: Το οικοδομικό τετράγωνο ενδέχεται να
+              είναι εσφαλμένο
+          warnings:
+            contains_too_many_words: Το οικοδομικό τετράγωνο συνιστάται να έχει λιγότερες
+              από %{word_count} λέξεις

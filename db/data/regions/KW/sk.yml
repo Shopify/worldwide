@@ -10,3 +10,39 @@ sk:
           errors:
             blank_instructional: Vyberte guvernorát
             blank_informative: Chýba guvernorát
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (voliteľné)
+          errors:
+            blank_instructional: Zadajte blok
+            blank_informative: Chýba blok
+            too_long_instructional: Blok je príliš dlhý (maximálne %{limit} znakov)
+            too_long_informative: Blok je príliš dlhý
+            contains_emojis_instructional: Blok nemôže obsahovať emotikony
+            contains_emojis_informative: Blok nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Blok nemôže obsahovať matematické
+              značky
+            contains_mathematical_symbols_informative: Blok nemôže obsahovať matematické
+              značky
+            contains_restricted_characters_instructional: Blok môže obsahovať len
+              písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Blok nemôže obsahovať zakázané
+              znaky
+            contains_too_many_words_instructional: 'Blok musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Blok musí mať menej ako tento počet
+              slov: %{word_count}'
+            contains_html_tags_instructional: Blok nemôže obsahovať HTML
+            contains_html_tags_informative: Blok nemôže obsahovať HTML
+            contains_url_instructional: Blok nemôže obsahovať URL adresu
+            contains_url_informative: Blok nemôže obsahovať URL adresu
+            unknown_for_city_instructional: Zadajte platný blok pre mesto %{city}
+            unknown_for_city_informative: Blok nie je platný pre mesto %{city}
+            unknown_for_zip_instructional: Zadajte platný blok pre PSČ %{zip}
+            unknown_for_zip_informative: Blok nie je platný pre PSČ %{zip}
+            unknown_for_address_instructional: Blok môže byť nesprávny
+            unknown_for_address_informative: Blok môže byť nesprávny
+          warnings:
+            contains_too_many_words: 'Blok by nemal mať viac ako tento počet slov:
+              %{word_count}'

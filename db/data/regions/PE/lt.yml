@@ -1,0 +1,48 @@
+---
+lt:
+  worldwide:
+    PE:
+      addresses:
+        neighborhood:
+          label:
+            default: Rajonas
+            optional: Rajonas (pasirinktinai)
+          errors:
+            blank_instructional: Įveskite rajono pavadinimą
+            blank_informative: Trūksta rajono
+            too_long_instructional: Rajono pavadinimas yra per ilgas (turi sudaryti
+              ne daugiau kaip %{limit} simboliai)
+            too_long_informative: Rajono pavadinimas yra per ilgas
+            contains_emojis_instructional: Rajono pavadinimo negali sudaryti „emoji“
+            contains_emojis_informative: Rajono pavadinimo negali sudaryti „emoji“
+            contains_mathematical_symbols_instructional: Rajono pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Rajono pavadinime negali būti
+              naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Rajono pavadinimą gali sudaryti
+              tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Rajono pavadinimo negali sudaryti
+              ribojami simboliai
+            contains_too_many_words_instructional: Rajono pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_too_many_words_informative: Rajono pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags_instructional: Rajono pavadinime negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Rajono pavadinime negali būti naudojamos
+              HTML žymės
+            contains_url_instructional: Rajono pavadinime negali būti naudojamas URL
+              adresas
+            contains_url_informative: Rajono pavadinime negali būti naudojamas URL
+              adresas
+            unknown_for_city_instructional: Įveskite rajono pavadinimą, atitinkantį
+              miestą %{city}
+            unknown_for_city_informative: "%{city} rajonas neteisingas"
+            unknown_for_zip_instructional: Įveskite rajono pavadinimą, atitinkantį
+              pašto kodą %{zip}
+            unknown_for_zip_informative: "%{zip} rajonas neteisingas"
+            unknown_for_address_instructional: Rajonas gali būti neteisingas
+            unknown_for_address_informative: Rajonas gali būti neteisingas
+          warnings:
+            contains_too_many_words: Patartina, kad rajono pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)

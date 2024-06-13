@@ -1,0 +1,41 @@
+---
+sk:
+  worldwide:
+    PE:
+      addresses:
+        neighborhood:
+          label:
+            default: Dištrikt
+            optional: Dištrikt (voliteľné)
+          errors:
+            blank_instructional: Zadajte dištrikt
+            blank_informative: Chýba dištrikt
+            too_long_instructional: Dištrikt je príliš dlhý (maximálne %{limit} znakov)
+            too_long_informative: Dištrikt je príliš dlhý
+            contains_emojis_instructional: Dištrikt nemôže obsahovať emotikony
+            contains_emojis_informative: Dištrikt nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Dištrikt nemôže obsahovať
+              matematické značky
+            contains_mathematical_symbols_informative: Dištrikt nemôže obsahovať matematické
+              značky
+            contains_restricted_characters_instructional: Dištrikt môže obsahovať
+              len písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Dištrikt nemôže obsahovať
+              zakázané znaky
+            contains_too_many_words_instructional: 'Dištrikt musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Dištrikt musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_html_tags_instructional: Dištrikt nemôže obsahovať HTML
+            contains_html_tags_informative: Dištrikt nemôže obsahovať HTML
+            contains_url_instructional: Dištrikt nemôže obsahovať URL adresu
+            contains_url_informative: Dištrikt nemôže obsahovať URL adresu
+            unknown_for_city_instructional: Zadajte platný dištrikt pre mesto %{city}
+            unknown_for_city_informative: Dištrikt nie je platný pre mesto %{city}
+            unknown_for_zip_instructional: Zadajte platný dištrikt pre PSČ %{zip}
+            unknown_for_zip_informative: Dištrikt nie je platný pre PSČ %{zip}
+            unknown_for_address_instructional: Dištrikt môže byť nesprávny
+            unknown_for_address_informative: Dištrikt môže byť nesprávny
+          warnings:
+            contains_too_many_words: 'Dištrikt by nemal mať viac ako tento počet slov:
+              %{word_count}'

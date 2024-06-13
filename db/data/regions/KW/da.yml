@@ -10,3 +10,36 @@ da:
           errors:
             blank_instructional: Vælg et guvernement
             blank_informative: Guvernement mangler
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (valgfrit)
+          errors:
+            blank_instructional: Angiv en blok
+            blank_informative: Blok mangler
+            too_long_instructional: Blok er for lang (højst %{limit} tegn)
+            too_long_informative: Blok er for lang
+            contains_emojis_instructional: Blok må ikke indeholde emojis
+            contains_emojis_informative: Blok må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Blok må ikke indeholde matematiske
+              symboler
+            contains_mathematical_symbols_informative: Blok må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters_instructional: Blok må kun indeholde bogstaver,
+              tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Blok må ikke indeholde begrænsede
+              tegn
+            contains_too_many_words_instructional: Blok skal indeholde færre end %{word_count} ord
+            contains_too_many_words_informative: Blok skal indeholde færre end %{word_count} ord
+            contains_html_tags_instructional: Blok må ikke indeholde HTML
+            contains_html_tags_informative: Blok må ikke indeholde HTML
+            contains_url_instructional: Blok må ikke indeholde en webadresse
+            contains_url_informative: Blok må ikke indeholde en webadresse
+            unknown_for_city_instructional: Angiv en gyldig blok for %{city}
+            unknown_for_city_informative: Blokken er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Angiv en gyldig blok for %{zip}
+            unknown_for_zip_informative: Blokken er ikke gyldig for %{zip}
+            unknown_for_address_instructional: Blok kan være forkert
+            unknown_for_address_informative: Blok kan være forkert
+          warnings:
+            contains_too_many_words: Det anbefales, at blok indeholder færre end %{word_count} ord

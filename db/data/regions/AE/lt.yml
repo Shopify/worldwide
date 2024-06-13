@@ -10,3 +10,46 @@ lt:
           errors:
             blank_instructional: Pasirinkite emyratą
             blank_informative: Trūksta emyrato
+        neighborhood:
+          label:
+            default: Sritis
+            optional: Sritis (pasirinktinai)
+          errors:
+            blank_instructional: Įveskite sritį
+            blank_informative: Trūksta srities
+            too_long_instructional: Srities pavadinimas yra per ilgas (turi sudaryti
+              ne daugiau kaip %{limit} simboliai)
+            too_long_informative: Srities pavadinimas yra per ilgas
+            contains_emojis_instructional: Srities pavadinimo negali sudaryti „emoji“
+            contains_emojis_informative: Srities pavadinimo negali sudaryti „emoji“
+            contains_mathematical_symbols_instructional: Srities pavadinime negali
+              būti naudojami matematiniai simboliai
+            contains_mathematical_symbols_informative: Srities pavadinime negali būti
+              naudojami matematiniai simboliai
+            contains_restricted_characters_instructional: Srities pavadinimą gali
+              sudaryti tik raidės, skaičiai, vietiniai simboliai ir specialieji simboliai
+            contains_restricted_characters_informative: Srities pavadinimo negali
+              sudaryti ribojami simboliai
+            contains_too_many_words_instructional: Srities pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_too_many_words_informative: Srities pavadinimo negali sudaryti
+              daugiau nei %{word_count} žodžiai (-ių, -is)
+            contains_html_tags_instructional: Srities pavadinime negali būti naudojamos
+              HTML žymės
+            contains_html_tags_informative: Srities pavadinime negali būti naudojamos
+              HTML žymės
+            contains_url_instructional: Srities pavadinime negali būti naudojamas
+              URL adresas
+            contains_url_informative: Srities pavadinime negali būti naudojamas URL
+              adresas
+            unknown_for_city_instructional: Įveskite srities pavadinimą, atitinkantį
+              miestą %{city}
+            unknown_for_city_informative: "%{city} sritis neteisinga"
+            unknown_for_zip_instructional: Įveskite srities pavadinimą, atitinkantį
+              pašto kodą %{zip}
+            unknown_for_zip_informative: "%{zip} sritis neteisinga"
+            unknown_for_address_instructional: Sritis gali būti neteisinga
+            unknown_for_address_informative: Sritis gali būti neteisinga
+          warnings:
+            contains_too_many_words: Patartina, kad srities pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)

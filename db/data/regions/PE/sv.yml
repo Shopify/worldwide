@@ -1,0 +1,41 @@
+---
+sv:
+  worldwide:
+    PE:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrikt
+            optional: Distrikt (valfritt)
+          errors:
+            blank_instructional: Ange ett distrikt
+            blank_informative: Distrikt saknas
+            too_long_instructional: Distriktsnamnet är för långt (max %{limit} tecken)
+            too_long_informative: Distriktet är för långt
+            contains_emojis_instructional: Distrikt får inte innehålla emojis
+            contains_emojis_informative: Distrikt får inte innehålla emojis
+            contains_mathematical_symbols_instructional: Distrikt får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Distrikt får inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Distrikt får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Distrikt får inte innehålla
+              begränsade tecken
+            contains_too_many_words_instructional: Distrikt måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Distrikt måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Distrikt får inte innehålla HTML
+            contains_html_tags_informative: Distrikt får inte innehålla HTML
+            contains_url_instructional: Distrikt får inte innehålla en URL
+            contains_url_informative: Distrikt får inte innehålla en URL
+            unknown_for_city_instructional: Ange ett giltigt distrikt för %{city}
+            unknown_for_city_informative: Distriktet är inte giltigt för %{city}
+            unknown_for_zip_instructional: Ange ett giltigt distrikt för %{zip}
+            unknown_for_zip_informative: Distriktet är inte giltigt för %{zip}
+            unknown_for_address_instructional: Distriktet kan vara felaktigt
+            unknown_for_address_informative: Distriktet kan vara felaktigt
+          warnings:
+            contains_too_many_words: Vi rekommenderar att distriktet består av färre
+              än %{word_count} ord

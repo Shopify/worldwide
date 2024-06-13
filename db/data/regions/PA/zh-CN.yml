@@ -1,0 +1,34 @@
+---
+zh-CN:
+  worldwide:
+    PA:
+      addresses:
+        neighborhood:
+          label:
+            default: 区
+            optional: 区（选填）
+          errors:
+            blank_instructional: 输入区
+            blank_informative: 缺少区
+            too_long_instructional: 区名过长（最多 %{limit} 个字符）
+            too_long_informative: 区名过长
+            contains_emojis_instructional: 区名不能包含表情符号
+            contains_emojis_informative: 区名不能包含表情符号
+            contains_mathematical_symbols_instructional: 区名不能包含数学符号
+            contains_mathematical_symbols_informative: 区名不能包含数学符号
+            contains_restricted_characters_instructional: 区名只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 区名不能包含受限字符
+            contains_too_many_words_instructional: 区名必须少于 %{word_count} 个字词
+            contains_too_many_words_informative: 区名必须少于 %{word_count} 个字词
+            contains_html_tags_instructional: 区名不能包含 HTML
+            contains_html_tags_informative: 区名不能包含 HTML
+            contains_url_instructional: 区名不能包含 URL
+            contains_url_informative: 区名不能包含 URL
+            unknown_for_city_instructional: 输入 %{city} 对应的有效区
+            unknown_for_city_informative: 区对 %{city} 无效
+            unknown_for_zip_instructional: 输入 %{zip} 对应的有效区
+            unknown_for_zip_informative: 区对 %{zip} 无效
+            unknown_for_address_instructional: 区名可能不正确
+            unknown_for_address_informative: 区名可能不正确
+          warnings:
+            contains_too_many_words: 建议区名少于 %{word_count} 个字词

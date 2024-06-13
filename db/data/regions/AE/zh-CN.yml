@@ -10,3 +10,32 @@ zh-CN:
           errors:
             blank_instructional: 选择酋长国
             blank_informative: 缺少酋长国
+        neighborhood:
+          label:
+            default: 区域
+            optional: 区域（选填）
+          errors:
+            blank_instructional: 输入区域
+            blank_informative: 缺少区域
+            too_long_instructional: 区域过长（最多包含 %{limit} 个字符）
+            too_long_informative: 区域过长
+            contains_emojis_instructional: 区域不能包含表情符号
+            contains_emojis_informative: 区域不能包含表情符号
+            contains_mathematical_symbols_instructional: 区域不能包含数学符号
+            contains_mathematical_symbols_informative: 区域不能包含数学符号
+            contains_restricted_characters_instructional: 区域只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 区域不能包含受限字符
+            contains_too_many_words_instructional: 区域必须少于 %{word_count} 个字词
+            contains_too_many_words_informative: 区域必须少于 %{word_count} 个字词
+            contains_html_tags_instructional: 区域不能包含 HTML
+            contains_html_tags_informative: 区域不能包含 HTML
+            contains_url_instructional: 区域不能包含 URL
+            contains_url_informative: 区域不能包含 URL
+            unknown_for_city_instructional: 输入 %{city} 的有效区域
+            unknown_for_city_informative: 区域对 %{city} 无效
+            unknown_for_zip_instructional: 输入 %{zip} 的有效区域
+            unknown_for_zip_informative: 区域对 %{zip} 无效
+            unknown_for_address_instructional: 区域可能不正确
+            unknown_for_address_informative: 区域可能不正确
+          warnings:
+            contains_too_many_words: 建议区域少于 %{word_count} 个字词

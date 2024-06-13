@@ -10,3 +10,40 @@ sk:
           errors:
             blank_instructional: Vyberte emirát
             blank_informative: Chýba emirát
+        neighborhood:
+          label:
+            default: Oblasť
+            optional: Oblasť (voliteľné)
+          errors:
+            blank_instructional: Zadajte oblasť
+            blank_informative: Chýba oblasť
+            too_long_instructional: 'Oblasť je príliš dlhá (maximálny počet znakov:
+              %{limit})'
+            too_long_informative: Oblasť je príliš dlhá
+            contains_emojis_instructional: Oblasť nemôže obsahovať emotikony
+            contains_emojis_informative: Oblasť nemôže obsahovať emotikony
+            contains_mathematical_symbols_instructional: Oblasť nemôže obsahovať matematické
+              značky
+            contains_mathematical_symbols_informative: Oblasť nemôže obsahovať matematické
+              značky
+            contains_restricted_characters_instructional: Oblasť môže obsahovať len
+              písmená, číslice, miestne znaky a špeciálne znaky
+            contains_restricted_characters_informative: Oblasť nemôže obsahovať zakázané
+              znaky
+            contains_too_many_words_instructional: 'Oblasť musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_too_many_words_informative: 'Oblasť musí mať menej ako tento
+              počet slov: %{word_count}'
+            contains_html_tags_instructional: Oblasť nemôže obsahovať HTML
+            contains_html_tags_informative: Oblasť nemôže obsahovať HTML
+            contains_url_instructional: Oblasť nemôže obsahovať URL adresu
+            contains_url_informative: Oblasť nemôže obsahovať URL adresu
+            unknown_for_city_instructional: Zadajte platnú oblasť pre mesto %{city}
+            unknown_for_city_informative: Oblasť nie je platná pre mesto %{city}
+            unknown_for_zip_instructional: Zadajte platnú oblasť pre PSČ %{zip}
+            unknown_for_zip_informative: Oblasť nie je platná pre PSČ %{zip}
+            unknown_for_address_instructional: Oblasť môže byť nesprávna
+            unknown_for_address_informative: Oblasť môže byť nesprávna
+          warnings:
+            contains_too_many_words: 'Oblasť by nemala mať viac ako tento počet slov:
+              %{word_count}'

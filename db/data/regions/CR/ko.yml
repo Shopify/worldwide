@@ -10,3 +10,33 @@ ko:
           errors:
             blank_instructional: 시/도 선택
             blank_informative: 시/도가 누락되었습니다
+        neighborhood:
+          label:
+            default: 구역
+            optional: 구역(선택 사항)
+          errors:
+            blank_instructional: 구역(District)을 입력하세요
+            blank_informative: 구역이 누락되었습니다
+            too_long_instructional: 구역(District)이 너무 깁니다(최대 %{limit}자)
+            too_long_informative: 구역 이름이 너무 깁니다
+            contains_emojis_instructional: 구역에 이모티콘을 포함할 수 없음
+            contains_emojis_informative: 구역에 이모티콘을 포함할 수 없음
+            contains_mathematical_symbols_instructional: 구역에 수학 기호를 포함할 수 없음
+            contains_mathematical_symbols_informative: 구역에 수학 기호를 포함할 수 없음
+            contains_restricted_characters_instructional: 구역에는 문자, 숫자, 지역 문자, 특수 문자만
+              포함될 수 있습니다
+            contains_restricted_characters_informative: 구역에는 제한 문자를 포함할 수 없습니다
+            contains_too_many_words_instructional: 구역은 %{word_count}단어 미만이어야 합니다
+            contains_too_many_words_informative: 구역은 %{word_count}단어 미만이어야 합니다
+            contains_html_tags_instructional: 구역에 HTML을 포함할 수 없습니다
+            contains_html_tags_informative: 구역에 HTML을 포함할 수 없습니다
+            contains_url_instructional: 구역에 URL을 포함할 수 없습니다
+            contains_url_informative: 구역에 URL을 포함할 수 없습니다
+            unknown_for_city_instructional: "%{city}의 올바른 구역을 입력하세요"
+            unknown_for_city_informative: "%{city}의 구역이 유효하지 않습니다"
+            unknown_for_zip_instructional: "%{zip}의 올바른 구역을 입력하세요"
+            unknown_for_zip_informative: "%{zip}의 구역이 유효하지 않습니다"
+            unknown_for_address_instructional: 구역이 잘못되었을 수 있습니다
+            unknown_for_address_informative: 구역이 잘못되었을 수 있습니다
+          warnings:
+            contains_too_many_words: 구역에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다

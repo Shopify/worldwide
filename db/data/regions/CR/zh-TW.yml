@@ -10,3 +10,32 @@ zh-TW:
           errors:
             blank_instructional: 請選取省分
             blank_informative: 缺少省分
+        neighborhood:
+          label:
+            default: 行政區
+            optional: 行政區 (選填)
+          errors:
+            blank_instructional: 請輸入行政區
+            blank_informative: 缺少行政區
+            too_long_instructional: 行政區過長 (最多 %{limit} 個字元)
+            too_long_informative: 行政區過長
+            contains_emojis_instructional: 行政區不得包含表情符號
+            contains_emojis_informative: 行政區不得包含表情符號
+            contains_mathematical_symbols_instructional: 行政區不得包含數學符號
+            contains_mathematical_symbols_informative: 行政區不得包含數學符號
+            contains_restricted_characters_instructional: 行政區僅可包含字母、數字、當地字元和特殊字元
+            contains_restricted_characters_informative: 行政區不得包含限制的字元
+            contains_too_many_words_instructional: 行政區必須少於 %{word_count} 個字
+            contains_too_many_words_informative: 行政區必須少於 %{word_count} 個字
+            contains_html_tags_instructional: 行政區不得包含 HTML
+            contains_html_tags_informative: 行政區不得包含 HTML
+            contains_url_instructional: 行政區不得包含網址
+            contains_url_informative: 行政區不得包含網址
+            unknown_for_city_instructional: 請輸入 %{city} 的有效行政區
+            unknown_for_city_informative: "%{city} 的行政區無效"
+            unknown_for_zip_instructional: 請輸入 %{zip} 的有效行政區
+            unknown_for_zip_informative: "%{zip} 的行政區無效"
+            unknown_for_address_instructional: 行政區可能不正確
+            unknown_for_address_informative: 行政區可能不正確
+          warnings:
+            contains_too_many_words: 建議行政區少於 %{word_count} 個字

@@ -10,3 +10,40 @@ ms:
           errors:
             blank_instructional: Pilih amiriah
             blank_informative: Amiriah tiada
+        neighborhood:
+          label:
+            default: Kawasan
+            optional: Kawasan (opsyenal)
+          errors:
+            blank_instructional: Masukkan kawasan
+            blank_informative: Kawasan tiada
+            too_long_instructional: Kawasan terlalu panjang (maksimum ialah %{limit}
+              aksara)
+            too_long_informative: Kawasan terlalu panjang
+            contains_emojis_instructional: Kawasan tidak boleh mengandungi emoji
+            contains_emojis_informative: Kawasan tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Kawasan tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Kawasan tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Kawasan hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Kawasan tidak boleh mengandungi
+              aksara terhad
+            contains_too_many_words_instructional: Kawasan mesti mengandungi kurang
+              daripada %{word_count} perkataan
+            contains_too_many_words_informative: Kawasan mesti mengandungi kurang
+              daripada %{word_count} perkataan
+            contains_html_tags_instructional: Kawasan tidak boleh mengandungi HTML
+            contains_html_tags_informative: Kawasan tidak boleh mengandungi HTML
+            contains_url_instructional: Kawasan tidak boleh mengandungi URL
+            contains_url_informative: Kawasan tidak boleh mengandungi URL
+            unknown_for_city_instructional: Masukkan kawasan yang sah untuk %{city}
+            unknown_for_city_informative: Kawasan tidak sah untuk %{city}
+            unknown_for_zip_instructional: Masukkan kawasan yang sah untuk %{zip}
+            unknown_for_zip_informative: Kawasan tidak sah untuk %{zip}
+            unknown_for_address_instructional: Kawasan mungkin salah
+            unknown_for_address_informative: Kawasan mungkin salah
+          warnings:
+            contains_too_many_words: Kawasan disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan

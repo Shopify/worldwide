@@ -10,3 +10,51 @@ ro:
           errors:
             blank_instructional: Selectează un guvernorat
             blank_informative: Guvernoratul lipsește
+        neighborhood:
+          label:
+            default: Cvartal
+            optional: Cvartal (opțional)
+          errors:
+            blank_instructional: Introdu o denumire de cvartal
+            blank_informative: Denumirea cvartalului lipsește
+            too_long_instructional: Denumirea cvartalului este prea lungă (lungimea
+              maximă este de %{limit} caractere)
+            too_long_informative: Denumirea cvartalului este prea lungă
+            contains_emojis_instructional: Denumirea cvartalului nu poate conține
+              emoji-uri
+            contains_emojis_informative: Denumirea cvartalului nu poate conține emoji-uri
+            contains_mathematical_symbols_instructional: Denumirea cvartalului nu
+              poate conține simboluri matematice
+            contains_mathematical_symbols_informative: Denumirea cvartalului nu poate
+              conține simboluri matematice
+            contains_restricted_characters_instructional: Denumirea cvartalului poate
+              conține numai litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Denumirea cvartalului nu poate
+              conține caractere restricționate
+            contains_too_many_words_instructional: Denumirea cvartalului nu poate
+              conține mai mult de %{word_count} cuvinte
+            contains_too_many_words_informative: Denumirea cvartalului nu poate conține
+              mai mult de %{word_count} cuvinte
+            contains_html_tags_instructional: Denumirea cvartalului nu poate conține
+              etichete HTML
+            contains_html_tags_informative: Denumirea cvartalului nu poate conține
+              etichete HTML
+            contains_url_instructional: Denumirea cvartalului nu poate conține o adresă
+              URL
+            contains_url_informative: Denumirea cvartalului nu poate conține o adresă
+              URL
+            unknown_for_city_instructional: Introdu o denumire de cvartal validă pentru
+              %{city}
+            unknown_for_city_informative: Denumirea cvartalului nu este validă pentru
+              %{city}
+            unknown_for_zip_instructional: Introdu o denumire de cvartal validă pentru
+              %{zip}
+            unknown_for_zip_informative: Denumirea cvartalului nu este validă pentru
+              %{zip}
+            unknown_for_address_instructional: Denumirea cvartalului este posibil
+              să fie incorectă
+            unknown_for_address_informative: Denumirea cvartalului este posibil să
+              fie incorectă
+          warnings:
+            contains_too_many_words: Se recomandă ca denumirea cvartalului să nu aibă
+              mai mult de %{word_count} cuvinte

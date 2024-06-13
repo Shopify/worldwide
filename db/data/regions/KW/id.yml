@@ -10,3 +10,39 @@ id:
           errors:
             blank_instructional: Pilih kegubernuran
             blank_informative: Kegubernuran belum diisi
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (opsional)
+          errors:
+            blank_instructional: Masukkan nama blok
+            blank_informative: Nama blok belum diisi
+            too_long_instructional: Nama blok terlalu panjang (maksimum %{limit} karakter)
+            too_long_informative: Nama blok terlalu panjang
+            contains_emojis_instructional: Nama blok tidak boleh berisi emoji
+            contains_emojis_informative: Nama blok tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Nama blok tidak boleh berisi
+              simbol matematika
+            contains_mathematical_symbols_informative: Nama blok tidak boleh berisi
+              simbol matematika
+            contains_restricted_characters_instructional: Nama blok hanya boleh berisi
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Nama blok tidak boleh berisi
+              karakter yang dilarang
+            contains_too_many_words_instructional: Nama blok harus memuat kurang dari
+              %{word_count} kata
+            contains_too_many_words_informative: Nama blok harus memuat kurang dari
+              %{word_count} kata
+            contains_html_tags_instructional: Nama blok tidak boleh berisi HTML
+            contains_html_tags_informative: Nama blok tidak boleh berisi HTML
+            contains_url_instructional: Nama blok tidak boleh berisi URL
+            contains_url_informative: Nama blok tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan nama blok yang valid untuk %{city}
+            unknown_for_city_informative: Nama blok tidak valid untuk %{city}
+            unknown_for_zip_instructional: Masukkan nama blok yang valid untuk %{zip}
+            unknown_for_zip_informative: Nama blok tidak valid untuk %{zip}
+            unknown_for_address_instructional: Nama blok mungkin salah
+            unknown_for_address_informative: Nama blok mungkin salah
+          warnings:
+            contains_too_many_words: Nama blok sebaiknya berisi kurang dari %{word_count}
+              kata

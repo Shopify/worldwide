@@ -10,3 +10,40 @@ hr:
           errors:
             blank_instructional: Odaberite emirat
             blank_informative: Nedostaje emirat
+        neighborhood:
+          label:
+            default: Regija
+            optional: Regija (neobavezno)
+          errors:
+            blank_instructional: Unesite regiju
+            blank_informative: Nedostaje regija
+            too_long_instructional: Naziv regije je predugačak (najveći dopušteni
+              broj znakova je %{limit})
+            too_long_informative: Naziv regije je predugačak
+            contains_emojis_instructional: Naziv regije ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv regije ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Naziv regije ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naziv regije ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Naziv regije smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv regije ne smije sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: 'Naziv regije smije sadržavati
+              najviše sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Naziv regije smije sadržavati najviše
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Naziv regije ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv regije ne smije sadržavati HTML
+            contains_url_instructional: Naziv regije ne smije sadržavati URL
+            contains_url_informative: Naziv regije ne smije sadržavati URL
+            unknown_for_city_instructional: Unesite valjanu regiju za %{city}
+            unknown_for_city_informative: Regija nije valjana za %{city}
+            unknown_for_zip_instructional: Unesite valjanu regiju za %{zip}
+            unknown_for_zip_informative: Regija nije valjana za %{zip}
+            unknown_for_address_instructional: Naziv regije možda nije točan
+            unknown_for_address_informative: Naziv regije možda nije točan
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv regije sadrži manje od
+              %{word_count} riječ/i
