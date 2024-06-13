@@ -10,3 +10,39 @@ sv:
           errors:
             blank_instructional: Välj ett guvernement
             blank_informative: Guvernement saknas
+        neighborhood:
+          label:
+            default: Blockera
+            optional: Blockera (valfritt)
+          errors:
+            blank_instructional: Ange ett block
+            blank_informative: Block saknas
+            too_long_instructional: Blocket är för långt (max %{limit} tecken)
+            too_long_informative: Blocket är för långt
+            contains_emojis_instructional: Block får inte innehålla emojier
+            contains_emojis_informative: Block får inte innehålla emojier
+            contains_mathematical_symbols_instructional: Block får inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Block får inte innehålla matematiska
+              symboler
+            contains_restricted_characters_instructional: Block får endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Block får inte innehålla begränsade
+              tecken
+            contains_too_many_words_instructional: Block måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Block måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Block får inte innehålla HTML
+            contains_html_tags_informative: Block får inte innehålla HTML
+            contains_url_instructional: Block får inte innehålla en URL
+            contains_url_informative: Block får inte innehålla en URL
+            unknown_for_city_instructional: Ange ett giltigt block för %{city}
+            unknown_for_city_informative: Blocket är inte giltigt för %{city}
+            unknown_for_zip_instructional: Ange ett giltigt block för %{zip}
+            unknown_for_zip_informative: Blocket är inte giltigt för %{zip}
+            unknown_for_address_instructional: Blocket kan vara felaktigt
+            unknown_for_address_informative: Blocket kan vara felaktigt
+          warnings:
+            contains_too_many_words: Vi rekommenderar att blocket består av färre
+              än %{word_count} ord

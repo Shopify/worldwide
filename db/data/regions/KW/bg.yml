@@ -10,3 +10,40 @@ bg:
           errors:
             blank_instructional: Изберете губернаторство
             blank_informative: Липсва губернаторство
+        neighborhood:
+          label:
+            default: Блок
+            optional: Блок (незадължително)
+          errors:
+            blank_instructional: Въведете блок
+            blank_informative: Липсва блок
+            too_long_instructional: "„Блок“ е с твърде голяма дължина (максимумът
+              е %{limit} знака)"
+            too_long_informative: "„Блок“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Блок“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Блок“ не може да съдържа емоджита"
+            contains_mathematical_symbols_instructional: "„Блок“ не може да съдържа
+              математически символи"
+            contains_mathematical_symbols_informative: "„Блок“ не може да съдържа
+              математически символи"
+            contains_restricted_characters_instructional: "„Блок“ може да съдържа
+              само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Блок“ не може да съдържа
+              забранени знаци"
+            contains_too_many_words_instructional: "„Блок“ не може да съдържа по-малко
+              от %{word_count} думи"
+            contains_too_many_words_informative: "„Блок“ не може да съдържа по-малко
+              от %{word_count} думи"
+            contains_html_tags_instructional: "„Блок“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Блок“ не може да съдържа HTML"
+            contains_url_instructional: "„Блок“ не може да съдържа URL адрес"
+            contains_url_informative: "„Блок“ не може да съдържа URL адрес"
+            unknown_for_city_instructional: Въведете валиден блок за %{city}
+            unknown_for_city_informative: Блокът не е валиден за %{city}
+            unknown_for_zip_instructional: Въведете валиден блок за %{zip}
+            unknown_for_zip_informative: Блокът не е валиден за %{zip}
+            unknown_for_address_instructional: Възможно е блокът да е неправилен
+            unknown_for_address_informative: Възможно е блокът да е неправилен
+          warnings:
+            contains_too_many_words: Препоръчително е „Блок“ да не съдържа повече
+              от %{word_count} думи
