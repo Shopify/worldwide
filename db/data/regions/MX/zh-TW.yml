@@ -22,16 +22,27 @@ zh-TW:
             default: 住宅區
             optional: 住宅區 (選填)
           errors:
-            blank: 請輸入「住宅區」
-            too_long: "「住宅區」過長 (最多 %{limit} 個字元)"
-            contains_emojis: "「住宅區」不得包含表情符號"
-            contains_mathematical_symbols: "「住宅區」不得包含數學符號"
-            contains_restricted_characters: "「住宅區」僅可包含字母、數字、當地字元和特殊字元"
-            contains_too_many_words: "「住宅區」不得超過 %{word_count} 個字"
-            contains_html_tags: "「住宅區」不得包含 HTML 標籤。"
-            contains_url: "「住宅區」不得包含網址。"
-            unknown_for_city: 請輸入 %{city} 的有效住宅區名。
-            unknown_for_zip: 請輸入 %{zip} 的有效住宅區名。
-            unknown_for_address: "「住宅區」可能不正確。"
+            blank_instructional: 請輸入「住宅區」
+            blank_informative: 缺少「住宅區」
+            too_long_instructional: "「住宅區」過長 (最多 %{limit} 個字元)"
+            too_long_informative: "「住宅區」過長"
+            contains_emojis_instructional: "「住宅區」不得包含表情符號"
+            contains_emojis_informative: "「住宅區」不得包含表情符號"
+            contains_mathematical_symbols_instructional: "「住宅區」不得包含數學符號"
+            contains_mathematical_symbols_informative: "「住宅區」不得包含數學符號"
+            contains_restricted_characters_instructional: "「住宅區」僅可包含字母、數字、當地字元和特殊字元"
+            contains_restricted_characters_informative: "「住宅區」不得包含限制的字元"
+            contains_too_many_words_instructional: "「住宅區」必須少於 %{word_count} 個字"
+            contains_too_many_words_informative: "「住宅區」必須少於 %{word_count} 個字"
+            contains_html_tags_informative: "「住宅區」不得包含 HTML"
+            contains_html_tags_instructional: "「住宅區」不得包含 HTML"
+            contains_url_instructional: "「住宅區」不得包含網址"
+            contains_url_informative: "「住宅區」不得包含網址"
+            unknown_for_city_instructional: 請輸入 %{city} 的有效住宅區名
+            unknown_for_city_informative: 請輸入 %{city} 的有效住宅區名
+            unknown_for_zip_instructional: 請輸入 %{zip} 的有效住宅區名
+            unknown_for_zip_informative: 請輸入 %{zip} 的有效住宅區名
+            unknown_for_address_instructional: "「住宅區」可能不正確"
+            unknown_for_address_informative: "「住宅區」可能不正確"
           warnings:
             contains_too_many_words: 建議「住宅區」少於 %{word_count} 個字

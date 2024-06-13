@@ -22,21 +22,39 @@ hu:
             default: Kolónia
             optional: Kolónia (nem kötelező megadni)
           errors:
-            blank: Add meg a kolónia nevét
-            too_long: Túl hosszú a kolónia neve (legfeljebb %{limit} karakter hosszú
-              lehet)
-            contains_emojis: A kolónia neve nem tartalmazhat emodzsikat
-            contains_mathematical_symbols: A kolónia neve nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: A kolónia neve csak betűket, számokat,
-              helyi karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: A kolónia neve legfeljebb %{word_count} szóból
-              állhat
-            contains_html_tags: A kolónia neve nem tartalmazhat HTML-címkéket.
-            contains_url: A kolónia neve nem tartalmazhat URL-eket.
-            unknown_for_city: 'Olyan kolónianevet adj meg, amely megfelel ennek: %{city}.'
-            unknown_for_zip: 'Olyan kolónianevet adj meg, amely megfelel ennek: %{zip}.'
-            unknown_for_address: Vélhetően helytelen a kolónia neve.
+            blank_instructional: Add meg a kolónia nevét
+            blank_informative: A kolónia neve hiányzik
+            too_long_instructional: Túl hosszú a kolónia neve (legfeljebb %{limit}
+              karakter hosszú lehet)
+            too_long_informative: Túl hosszú a kolónia neve
+            contains_emojis_instructional: A kolónia neve nem tartalmazhat hangulatjeleket
+            contains_emojis_informative: A kolónia neve nem tartalmazhat hangulatjeleket
+            contains_mathematical_symbols_instructional: A kolónia neve nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A kolónia neve nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A kolónia neve csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A kolónia nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A kolónia neve legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A kolónia neve legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_informative: A kolónia nem tartalmazhat HTML-címkét
+            contains_html_tags_instructional: A kolónia nem tartalmazhat HTML-címkét
+            contains_url_instructional: A kolónia nem tartalmazhat URL-eket
+            contains_url_informative: A kolónia nem tartalmazhat URL-eket
+            unknown_for_city_instructional: 'Olyan kolóniát adj meg, amely megfelel
+              ennek: %{city}'
+            unknown_for_city_informative: 'Olyan kolóniát adj meg, amely megfelel
+              ennek: %{city}'
+            unknown_for_zip_instructional: 'Olyan kolóniát adj meg, amely megfelel
+              ennek: %{zip}'
+            unknown_for_zip_informative: 'Olyan kolóniát adj meg, amely megfelel ennek:
+              %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen a kolónia neve.
+            unknown_for_address_informative: Vélhetően helytelen a kolónia neve.
           warnings:
             contains_too_many_words: A kolónia nevének javasolt hossza kevesebb mint
               %{word_count} szó
