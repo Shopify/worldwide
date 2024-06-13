@@ -10,3 +10,40 @@ hr:
           errors:
             blank_instructional: Odaberite guvernat
             blank_informative: Nedostaje guvernat
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (neobavezno)
+          errors:
+            blank_instructional: Unesite naziv bloka
+            blank_informative: Nedostaje blok
+            too_long_instructional: Naziv bloka je predugačak (najveći dopušteni broj
+              znakova je %{limit})
+            too_long_informative: Naziv bloka je predugačak
+            contains_emojis_instructional: Naziv bloka ne smije sadržavati emotikone
+            contains_emojis_informative: Naziv bloka ne smije sadržavati emotikone
+            contains_mathematical_symbols_instructional: Naziv bloka ne smije sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naziv bloka ne smije sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Naziv bloka smije sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Naziv bloka ne smije sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: 'Naziv bloka smije sadržavati samo
+              sljedeći broj riječi: %{word_count}'
+            contains_too_many_words_informative: 'Naziv bloka smije sadržavati samo
+              sljedeći broj riječi: %{word_count}'
+            contains_html_tags_instructional: Naziv bloka ne smije sadržavati HTML
+            contains_html_tags_informative: Naziv bloka ne smije sadržavati HTML
+            contains_url_instructional: Naziv bloka ne smije sadržavati URL
+            contains_url_informative: Naziv bloka ne smije sadržavati URL
+            unknown_for_city_instructional: Unesite valjani naziv bloka za %{city}
+            unknown_for_city_informative: Blok nije valjan za %{city}
+            unknown_for_zip_instructional: Unesite valjani naziv bloka za %{zip}
+            unknown_for_zip_informative: Blok nije valjan za %{zip}
+            unknown_for_address_instructional: Naziv bloka možda nije točan
+            unknown_for_address_informative: Naziv bloka možda nije točan
+          warnings:
+            contains_too_many_words: Preporučujemo da naziv bloka sadrži manje od
+              %{word_count} riječ/i

@@ -10,3 +10,40 @@ ms:
           errors:
             blank_instructional: Pilih kegabenoran
             blank_informative: Kegabenoran tiada
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (opsyenal)
+          errors:
+            blank_instructional: Masukkan blok
+            blank_informative: Blok tiada
+            too_long_instructional: Blok terlalu panjang (maksimum ialah %{limit}
+              aksara)
+            too_long_informative: Blok terlalu lama
+            contains_emojis_instructional: Blok tidak boleh mengandungi emoji
+            contains_emojis_informative: Blok tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Blok tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Blok tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Blok hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Blok tidak boleh mengandungi
+              aksara terhad
+            contains_too_many_words_instructional: Blok mesti mengandungi kurang daripada
+              %{word_count} perkataan
+            contains_too_many_words_informative: Blok mesti mengandungi kurang daripada
+              %{word_count} perkataan
+            contains_html_tags_instructional: Blok tidak boleh mengandungi HTML
+            contains_html_tags_informative: Blok tidak boleh mengandungi HTML
+            contains_url_instructional: Blok tidak boleh mengandungi URL
+            contains_url_informative: Blok tidak boleh mengandungi URL
+            unknown_for_city_instructional: Masukkan blok yang sah untuk %{city}
+            unknown_for_city_informative: Blok tidak sah untuk %{city}
+            unknown_for_zip_instructional: Masukkan blok yang sah untuk %{zip}
+            unknown_for_zip_informative: Blok tidak sah untuk %{zip}
+            unknown_for_address_instructional: Blok mungkin salah
+            unknown_for_address_informative: Blok mungkin salah
+          warnings:
+            contains_too_many_words: Blok disyorkan untuk mengandungi kurang daripada
+              %{word_count} perkataan
