@@ -3,7 +3,12 @@ import regions from 'custom:regions';
 import {ValidYamlType, isYamlObject} from '../types/yaml';
 import {Address} from '../types/address';
 
-import {Script, stringUsesScript} from './script';
+import {
+  Script,
+  identifyScripts,
+  stringExclusivelyUsesScript,
+  stringUsesScript,
+} from './script';
 
 export interface FieldConcatenationRule {
   key: keyof Address;
@@ -65,10 +70,13 @@ export function addressUsesScript(
   address: Partial<Address>,
   script: Script,
 ): boolean {
-  return fieldDefinition.some((field) => {
+  const scriptsFound = fieldDefinition.reduce((scripts, field) => {
     const value = address[field.key];
-    return value && stringUsesScript(value, script);
-  });
+    return value ? [...scripts, ...identifyScripts(value)] : scripts;
+  }, [] as Script[]);
+  // TODO: filtering for uniques, can do this better!
+  const scriptsSet = [...new Set(scriptsFound)];
+  return scriptsSet.length === 1 && scriptsSet[0] === script;
 }
 
 /**
@@ -78,7 +86,7 @@ export function addressUsesScript(
  */
 export function getConcatenationRules(
   config: RegionYamlConfig,
-  address: Address,
+  address: Address | string,
   extendedField: keyof Address,
 ): FieldConcatenationRule[] | undefined {
   if (config.combined_address_format === undefined) {
@@ -97,7 +105,11 @@ export function getConcatenationRules(
         extendedField
       ];
     if (ext) {
-      return addressUsesScript(ext, address, configScript as Script);
+      if (typeof address === 'string') {
+        return stringExclusivelyUsesScript(address, configScript as Script);
+      } else {
+        return addressUsesScript(ext, address, configScript as Script);
+      }
     }
     return false;
   });
