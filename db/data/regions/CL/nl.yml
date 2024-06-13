@@ -8,19 +8,34 @@ nl:
             default: Gemeente
             optional: Gemeente (optioneel)
           errors:
-            blank: Vul een gemeente in
-            too_long: Gemeente is te lang (het maximum is %{limit} tekens)
-            contains_emojis: Gemeente mag geen emoji's bevatten
-            contains_mathematical_symbols: Gemeente mag geen wiskundige symbolen bevatten
-            contains_restricted_characters: Gemeente mag alleen letters, cijfers,
-              lokale tekens en speciale tekens bevatten
-            contains_too_many_words: Gemeente mag niet langer zijn dan %{word_count}
-              woorden
-            contains_html_tags: Gemeente mag geen HTML-tags bevatten.
-            contains_url: Gemeente mag geen URL's bevatten
-            unknown_for_city: Vul een geldige gemeentenaam in voor %{city}.
-            unknown_for_zip: Vul een geldige gemeentenaam in voor %{zip}.
-            unknown_for_address: De gemeente klopt misschien niet.
+            blank_instructional: Vul een gemeente in
+            blank_informative: De gemeente ontbreekt
+            too_long_instructional: Gemeente is te lang (het maximum is %{limit} tekens)
+            too_long_informative: Gemeente is te lang
+            contains_emojis_instructional: Gemeente mag geen emoji's bevatten
+            contains_emojis_informative: Gemeente mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Gemeente mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Gemeente mag geen wiskundige
+              symbolen bevatten
+            contains_restricted_characters_instructional: Gemeente mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Gemeente mag geen verboden
+              tekens bevatten
+            contains_too_many_words_instructional: Gemeente dient minder dan %{word_count}
+              woorden te bevatten
+            contains_too_many_words_informative: Gemeente dient minder dan %{word_count}
+              woorden te bevatten
+            contains_html_tags_instructional: Gemeente mag geen HTML-tags bevatten
+            contains_html_tags_informative: Gemeente mag geen HTML-tags bevatten
+            contains_url_instructional: Gemeente mag geen URL's bevatten
+            contains_url_informative: Gemeente mag geen URL's bevatten
+            unknown_for_city_instructional: Vul een geldige gemeente in voor %{city}
+            unknown_for_city_informative: Vul een geldige gemeente in voor %{city}
+            unknown_for_zip_instructional: Vul een geldige gemeente in voor %{zip}
+            unknown_for_zip_informative: Vul een geldige gemeente in voor %{zip}
+            unknown_for_address_instructional: De gemeente is mogelijk onjuist
+            unknown_for_address_informative: De gemeente is mogelijk onjuist
           warnings:
             contains_too_many_words: Geef minder dan %{word_count} woorden op voor
               gemeente

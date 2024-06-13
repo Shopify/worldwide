@@ -8,7 +8,6 @@ nl:
             default: Staat
             optional: Staat (optioneel)
           errors:
-            unknown_for_address: De staat klopt misschien niet
             blank_instructional: Selecteer een staat
             blank_informative: Voer een staat in
             invalid_for_country_instructional: Voer een geldige staat in voor %{city},
@@ -22,12 +21,13 @@ nl:
             unknown_for_city_informative: Staat is niet geldig voor %{city}
             unknown_for_zip_instructional: Selecteer een geldige staat voor %{zip}
             unknown_for_zip_informative: Staat is niet geldig voor %{zip}
+            unknown_for_address_instructional: De staat is mogelijk onjuist
+            unknown_for_address_informative: De staat is mogelijk onjuist
         zip:
           label:
             default: Postcode
             optional: Postcode (optioneel)
           errors:
-            unknown_for_address: De postcode klopt misschien niet
             blank_instructional: Voer een postcode in
             blank_informative: Postcode ontbreekt
             invalid_for_country_instructional: Voer een geldige postcode in voor %{country}
@@ -49,3 +49,5 @@ nl:
               tekens bevatten
             contains_html_tags_instructional: Postcode mag geen HTML bevatten
             contains_html_tags_informative: Postcode mag geen HTML bevatten
+            unknown_for_address_instructional: De postcode is mogelijk onjuist
+            unknown_for_address_informative: De postcode is mogelijk onjuist

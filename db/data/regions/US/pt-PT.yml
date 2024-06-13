@@ -8,7 +8,6 @@ pt-PT:
             default: Estado
             optional: Estado (opcional)
           errors:
-            unknown_for_address: O estado pode estar incorreto
             blank_instructional: Selecione um estado
             blank_informative: Introduza um estado
             invalid_for_country_instructional: 'Introduza um estado válido para: %{city},
@@ -22,12 +21,13 @@ pt-PT:
             unknown_for_city_informative: O estado não é válido para %{city}
             unknown_for_zip_instructional: Selecione um estado válido para %{zip}
             unknown_for_zip_informative: O estado não é válido para %{zip}
+            unknown_for_address_instructional: O estado pode estar incorreto
+            unknown_for_address_informative: O estado pode estar incorreto
         zip:
           label:
-            default: CP
+            default: Código postal
             optional: CP (opcional)
           errors:
-            unknown_for_address: O CP pode estar incorreto
             blank_instructional: Introduza um CP
             blank_informative: O CP está em falta
             invalid_for_country_instructional: Introduza um CP válido para %{country}
@@ -48,3 +48,5 @@ pt-PT:
               restritos
             contains_html_tags_instructional: O CP não pode incluir HTML
             contains_html_tags_informative: O CP não pode incluir HTML
+            unknown_for_address_instructional: O CP pode estar incorreto
+            unknown_for_address_informative: O CP pode estar incorreto

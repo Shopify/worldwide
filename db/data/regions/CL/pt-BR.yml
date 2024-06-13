@@ -8,19 +8,35 @@ pt-BR:
             default: Município
             optional: Município (opcional)
           errors:
-            blank: Insira um município
-            too_long: O município é longo demais (máximo de %{limit} caracteres)
-            contains_emojis: O município não pode conter emojis
-            contains_mathematical_symbols: O município não pode conter símbolos matemáticos
-            contains_restricted_characters: O município pode conter apenas letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: O município não pode ter mais de %{word_count}
-              palavras
-            contains_html_tags: O município não pode ter tags HTML.
-            contains_url: O município não pode conter URLs.
-            unknown_for_city: Insira um nome de município válido para %{city}.
-            unknown_for_zip: Insira um nome de município válido para %{zip}.
-            unknown_for_address: Talvez haja um erro no município.
+            blank_instructional: Insira um município
+            blank_informative: O município está faltando
+            too_long_instructional: O município é longo demais (máximo de %{limit}
+              caracteres)
+            too_long_informative: O município é longo demais
+            contains_emojis_instructional: O município não pode conter emojis
+            contains_emojis_informative: O município não pode conter emojis
+            contains_mathematical_symbols_instructional: O município não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O município não pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O município pode conter
+              apenas letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O município não pode conter
+              caracteres restritos
+            contains_too_many_words_instructional: O município precisa ter menos de
+              %{word_count} palavras
+            contains_too_many_words_informative: O município precisa ter menos de
+              %{word_count} palavras
+            contains_html_tags_instructional: O município não pode conter tags HTML
+            contains_html_tags_informative: O município não pode conter tags HTML
+            contains_url_instructional: O município não pode conter URLs
+            contains_url_informative: O município não pode conter URLs
+            unknown_for_city_instructional: Insira um município válido para %{city}
+            unknown_for_city_informative: Insira um município válido para %{city}
+            unknown_for_zip_instructional: Insira um município válido para %{zip}
+            unknown_for_zip_informative: Insira um município válido para %{zip}
+            unknown_for_address_instructional: Talvez haja um erro no município
+            unknown_for_address_informative: Talvez haja um erro no município
           warnings:
             contains_too_many_words: É recomendável que o município tenha menos de
               %{word_count} palavras
