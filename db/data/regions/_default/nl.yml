@@ -131,6 +131,27 @@ nl:
               %{zip} niet vinden
             building_number_invalid_informative: Kan gebouwnummer voor %{street},
               %{zip} niet vinden
+            too_long_informative: Adresregel 2 is te lang
+            contains_emojis_instructional: Adresregel 2 mag geen emoji's bevatten
+            contains_emojis_informative: Adresregel 2 mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Adresregel 2 mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Adresregel 2 mag geen wiskundige
+              symbolen bevatten
+            contains_restricted_characters_instructional: Adresregel 2 mag alleen
+              letters, cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Adresregel 2 mag geen verboden
+              tekens bevatten
+            contains_too_many_words_instructional: Adresregel 2 mag niet meer dan
+              %{word_count} tekens bevatten
+            contains_too_many_words_informative: Adresregel 2 mag niet meer dan %{word_count}
+              tekens bevatten
+            contains_html_tags_instructional: Adresregel 2 mag geen HTML bevatten
+            contains_html_tags_informative: Adresregel 2 mag geen HTML bevatten
+            contains_url_instructional: Adresregel 2 mag geen URL bevatten
+            contains_url_informative: Adresregel 2 mag geen URL bevatten
+            unknown_for_address_instructional: Adresregel 2 is mogelijk onjuist
+            unknown_for_address_informative: Adresregel 2 is mogelijk onjuist
           warnings:
             contains_too_many_words: Geef minder dan %{word_count} woorden op voor
               adresregel 2
@@ -148,6 +169,28 @@ nl:
             unknown_for_zip_and_province_instructional: Voer een geldige plaats in
               voor %{zip}, %{province}
             unknown_for_zip_and_province_informative: De plaats is mogelijk onjuist
+            too_long_instructional: Plaats is te lang (het maximum is 255 tekens)
+            too_long_informative: Plaats is te lang
+            contains_emojis_instructional: Plaats mag geen emoji's bevatten
+            contains_emojis_informative: Plaats mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Plaats mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Plaats mag geen wiskundige
+              symbolen bevatten
+            contains_restricted_characters_instructional: Plaats mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Plaats mag geen verboden tekens
+              bevatten
+            contains_too_many_words_instructional: Plaats dient minder dan %{word_count}
+              woorden te bevatten
+            contains_too_many_words_informative: Plaats dient minder dan %{word_count}
+              woorden te bevatten
+            contains_html_tags_instructional: Plaats mag geen HTML bevatten
+            contains_html_tags_informative: Plaats mag geen HTML bevatten
+            contains_url_instructional: Plaats mag geen URL bevatten
+            contains_url_informative: Plaats mag geen URL bevatten
+            unknown_for_address_instructional: De plaats is mogelijk onjuist
+            unknown_for_address_informative: De plaats is mogelijk onjuist
         country:
           label:
             default: Land/regio
@@ -173,6 +216,16 @@ nl:
             invalid_informative: Telefoonnummer is niet geldig
             too_long_instructional: Telefoonnummer is te lang
             too_long_informative: Telefoonnummer is te lang
+            contains_emojis_instructional: Telefoonnummer mag geen emoji's bevatten
+            contains_emojis_informative: Telefoonnummer mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Telefoonnummer mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Telefoonnummer mag geen wiskundige
+              symbolen bevatten
+            contains_restricted_characters_instructional: Telefoonnummer mag alleen
+              letters, cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Telefoonnummer mag geen verboden
+              tekens bevatten
         province:
           label:
             default: Regio
@@ -192,6 +245,8 @@ nl:
             unknown_for_city_instructional: Regio komt niet overeen met %{city}
             unknown_for_zip_instructional: Selecteer een geldige regio voor %{zip}
             unknown_for_zip_informative: Regio komt niet overeen met %{zip}
+            unknown_for_address_instructional: De regio is mogelijk onjuist
+            unknown_for_address_informative: De regio is mogelijk onjuist
         zip:
           label:
             default: Postcode
@@ -215,6 +270,25 @@ nl:
             unknown_for_province_instructional: Voer een geldige postcode in voor
               %{province}
             unknown_for_province_informative: Postcode is ongeldig voor %{province}
+            blocked_address_instructional: Deze locatie wordt niet ondersteund
+            blocked_address_informative: Deze locatie wordt niet ondersteund
+            too_long_instructional: Postcode is te lang
+            too_long_informative: Postcode is te lang
+            contains_emojis_instructional: Postcode mag geen emoji's bevatten
+            contains_emojis_informative: Postcode mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Postcode mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Postcode mag geen wiskundige
+              symbolen bevatten
+            contains_restricted_characters_instructional: Postcode mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Postcode mag geen verboden
+              tekens bevatten
+            not_supported_informative: Postcode wordt niet ondersteund
+            contains_html_tags_instructional: Postcode mag geen HTML bevatten
+            contains_html_tags_informative: Postcode mag geen HTML bevatten
+            unknown_for_address_instructional: De postcode is mogelijk onjuist
+            unknown_for_address_informative: De postcode is mogelijk onjuist
         street_name:
           label:
             default: Straat
@@ -225,7 +299,8 @@ nl:
           errors:
             blank_instructional: Voer een straat in
             blank_informative: Straat ontbreekt
-            too_long_instructional: Straat is te lang (mag maximaal 255 tekens zijn)
+            too_long_instructional: Straat is te lang (mag maximaal %{limit} tekens
+              zijn)
             too_long_informative: Straat is te lang
             contains_emojis_instructional: Straat mag geen emoji's bevatten
             contains_emojis_informative: Straat mag geen emoji's bevatten
@@ -247,6 +322,9 @@ nl:
             street_unknown_for_zip_informative: Straat ongeldig voor %{zip}
             unknown_for_address_instructional: De straat is mogelijk onjuist
             unknown_for_address_informative: De straat is mogelijk onjuist
+            contains_too_many_words_informative: Straat mag niet langer zijn dan %{word_count}
+              woorden
+            contains_html_tags_informative: Straat mag geen HTML bevatten
         street_number:
           label:
             default: Gebouwnummer
@@ -257,8 +335,8 @@ nl:
           errors:
             blank_instructional: Vul een gebouwnummer in
             blank_informative: Gebouwnummer ontbreekt
-            too_long_instructional: Gebouwnummer is te lang (mag maximaal 255 tekens
-              zijn)
+            too_long_instructional: Gebouwnummer is te lang (mag maximaal %{limit}
+              tekens zijn)
             too_long_informative: Gebouwnummer is te lang
             contains_emojis_instructional: Gebouwnummer mag geen emoji's bevatten
             contains_emojis_informative: Gebouwnummer mag geen emoji's bevatten
@@ -284,6 +362,35 @@ nl:
           label:
             default: Buurt
             optional: Buurt (optioneel)
+          errors:
+            blank_instructional: Vul een buurt in
+            blank_informative: Buurt ontbreekt
+            too_long_instructional: Buurt is te lang (het maximum is %{limit} tekens)
+            too_long_informative: Buurt is te lang
+            contains_emojis_instructional: Buurt mag geen emoji's bevatten
+            contains_emojis_informative: Buurt mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Buurt mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Buurt mag geen wiskundige symbolen
+              bevatten
+            contains_restricted_characters_instructional: Buurt mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Buurt mag geen verboden tekens
+              bevatten
+            contains_too_many_words_instructional: Buurt dient minder dan %{word_count}
+              woorden te bevatten
+            contains_too_many_words_informative: Buurt dient minder dan %{word_count}
+              woorden te bevatten
+            contains_html_tags_instructional: Buurt mag geen HTML-tags bevatten
+            contains_html_tags_informative: Buurt mag geen HTML-tags bevatten
+            contains_url_instructional: Buurt mag geen URL's bevatten
+            contains_url_informative: Buurt mag geen URL's bevatten
+            unknown_for_city_instructional: Vul een geldige buurtnaam in voor %{city}
+            unknown_for_city_informative: Vul een geldige buurtnaam in voor %{city}
+            unknown_for_zip_instructional: Vul een geldige buurtnaam in voor %{zip}
+            unknown_for_zip_informative: Vul een geldige buurtnaam in voor %{zip}
+            unknown_for_address_instructional: De buurt is mogelijk onjuist
+            unknown_for_address_informative: De buurt is mogelijk onjuist
           warnings:
             contains_too_many_words: Geef minder dan %{word_count} woorden op voor
               buurt
@@ -317,6 +424,20 @@ nl:
               bevatten
             contains_url_instructional: De tweede adresregel mag geen URL bevatten
             contains_url_informative: De tweede adresregel mag geen URL bevatten
+            missing_building_number_instructional: Voeg een gebouwnummer toe als je
+              er een hebt
+            missing_building_number_informative: Voeg een gebouwnummer toe als je
+              er een hebt
+            street_unknown_for_zip_instructional: Vul een geldige straatnaam in voor
+              %{zip}
+            street_unknown_for_zip_informative: Vul een geldige straatnaam in voor
+              %{zip}
+            building_number_invalid_instructional: Kan gebouwnummer voor %{street},
+              %{zip} niet vinden
+            building_number_invalid_informative: Kan gebouwnummer voor %{street},
+              %{zip} niet vinden
+            unknown_for_address_instructional: De tweede adresregel is mogelijk onjuist
+            unknown_for_address_informative: De tweede adresregel is mogelijk onjuist
           warnings:
             contains_too_many_words: Gebruik voor de tweede adresregel minder dan
               %{word_count} woorden

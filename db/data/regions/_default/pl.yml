@@ -278,6 +278,8 @@ pl:
               %{province}
             blocked_address_instructional: Ta lokalizacja nie jest obsługiwana
             blocked_address_informative: Ta lokalizacja nie jest obsługiwana
+            too_long_instructional: Kod pocztowy jest za długi
+            too_long_informative: Kod pocztowy jest za długi
             contains_emojis_instructional: Kod pocztowy nie może zawierać emoji
             contains_emojis_informative: Kod pocztowy nie może zawierać emoji
             contains_mathematical_symbols_instructional: Kod pocztowy nie może zawierać
@@ -365,9 +367,6 @@ pl:
           label:
             default: Dzielnica
             optional: Dzielnica (opcjonalnie)
-          warnings:
-            contains_too_many_words: Zaleca się, aby dzielnica zawierała mniej niż
-              %{word_count} słów (słowa)
           errors:
             blank_instructional: Wpisz dzielnicę
             blank_informative: Brak dzielnicy
@@ -398,6 +397,9 @@ pl:
             unknown_for_zip_informative: Wpisz prawidłową nazwę dzielnicy dla %{zip}
             unknown_for_address_instructional: Dzielnica może być nieprawidłowa
             unknown_for_address_informative: Dzielnica może być nieprawidłowa
+          warnings:
+            contains_too_many_words: Zaleca się, aby dzielnica zawierała mniej niż
+              %{word_count} słów (słowa)
         line2:
           label:
             default: Mieszkanie, apartament, itp.

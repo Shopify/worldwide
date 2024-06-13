@@ -307,6 +307,8 @@ ro:
             unknown_for_province_informative: Codul poștal este nevalid pentru %{province}
             blocked_address_instructional: Această locație nu este acceptată
             blocked_address_informative: Această locație nu este acceptată
+            too_long_instructional: Codul poștal este prea lung
+            too_long_informative: Codul poștal este prea lung
             contains_emojis_instructional: Codul poștal nu poate conține emoji-uri
             contains_emojis_informative: Codul poștal nu poate conține emoji-uri
             contains_mathematical_symbols_instructional: Codul poștal nu poate conține
@@ -407,9 +409,6 @@ ro:
           label:
             default: Cartier
             optional: Cartier (opțional)
-          warnings:
-            contains_too_many_words: Se recomandă ca numele cartierului să nu aibă
-              mai mult de %{word_count} cuvinte
           errors:
             blank_instructional: Introdu o denumire de cartier
             blank_informative: Denumirea cartierului lipsește
@@ -451,6 +450,9 @@ ro:
               să fie incorectă.
             unknown_for_address_informative: Este posibil denumirea cartierului să
               fie incorectă.
+          warnings:
+            contains_too_many_words: Se recomandă ca numele cartierului să nu aibă
+              mai mult de %{word_count} cuvinte
         line2:
           label:
             default: Apartament, cameră etc.

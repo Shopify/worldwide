@@ -17,25 +17,40 @@ pt-PT:
           errors:
             blank_instructional: Selecione um estado
             blank_informative: O estado está em falta
-            blank: Selecione um estado
         neighborhood:
           label:
             default: Colónia
             optional: Colónia (opcional)
           errors:
-            blank: Introduza uma colónia
-            too_long: A colónia é demasiado longa (máximo de %{limit} caracteres)
-            contains_emojis: A colónia não pode conter emojis
-            contains_mathematical_symbols: A colónia não pode conter símbolos matemáticos
-            contains_restricted_characters: A colónia só pode conter letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: A colónia não pode ter mais de %{word_count}
+            blank_instructional: Introduza uma colónia
+            blank_informative: A colónia está em falta
+            too_long_instructional: A colónia é demasiado longa (máximo de %{limit}
+              caracteres)
+            too_long_informative: A colónia é demasiado longa
+            contains_emojis_instructional: A colónia não pode conter emojis
+            contains_emojis_informative: A colónia não pode conter emojis
+            contains_mathematical_symbols_instructional: A colónia não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: A colónia não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A colónia só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A colónia não pode conter
+              caracteres restritos
+            contains_too_many_words_instructional: A colónia tem de ter menos de %{word_count}
               palavras
-            contains_html_tags: A colónia não pode conter tags HTML.
-            contains_url: A colónia não pode conter URL.
-            unknown_for_city: Introduza um nome de colónia válido para %{city}.
-            unknown_for_zip: Introduza um nome de colónia válido para %{zip}.
-            unknown_for_address: A colónia poderá estar incorreta.
+            contains_too_many_words_informative: A colónia tem de ter menos de %{word_count}
+              palavras
+            contains_html_tags_informative: A colónia não pode conter HTML
+            contains_html_tags_instructional: A colónia não pode conter HTML
+            contains_url_instructional: A colónia não pode conter um URL
+            contains_url_informative: A colónia não pode conter um URL
+            unknown_for_city_instructional: Introduza uma colónia válida para %{city}
+            unknown_for_city_informative: Introduza uma colónia válida para %{city}
+            unknown_for_zip_instructional: Introduza uma colónia válida para %{zip}
+            unknown_for_zip_informative: Introduza uma colónia válida para %{zip}
+            unknown_for_address_instructional: A colónia pode estar incorreta
+            unknown_for_address_informative: A colónia pode estar incorreta
           warnings:
             contains_too_many_words: É recomendado que a colónia tenha menos de %{word_count}
               palavras

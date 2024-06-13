@@ -300,6 +300,8 @@ it:
             unknown_for_province_informative: Il codice postale non è valido per %{province}
             blocked_address_instructional: Questa sede non è supportata
             blocked_address_informative: Questa sede non è supportata
+            too_long_instructional: Il codice postale è troppo lungo
+            too_long_informative: Il codice postale è troppo lungo
             contains_emojis_instructional: Il campo Codice postale non può contenere
               emoji
             contains_emojis_informative: Il campo Codice postale non può contenere
@@ -397,9 +399,6 @@ it:
           label:
             default: Quartiere
             optional: Quartiere (facoltativo)
-          warnings:
-            contains_too_many_words: Il campo Quartiere deve contenere meno di %{word_count}
-              parole
           errors:
             blank_instructional: Inserisci un quartiere
             blank_informative: Quartiere mancante
@@ -436,6 +435,9 @@ it:
               per %{zip}
             unknown_for_address_instructional: Il quartiere potrebbe non essere corretto
             unknown_for_address_informative: Il quartiere potrebbe non essere corretto
+          warnings:
+            contains_too_many_words: Il campo Quartiere deve contenere meno di %{word_count}
+              parole
         line2:
           label:
             default: Appartamento, scala, ecc.
