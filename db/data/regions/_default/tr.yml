@@ -273,6 +273,8 @@ tr:
             unknown_for_province_informative: Posta kodu %{province} için geçersiz
             blocked_address_instructional: Bu konum desteklenmiyor
             blocked_address_informative: Bu konum desteklenmiyor
+            too_long_instructional: Posta kodu çok uzun
+            too_long_informative: Posta kodu çok uzun
             contains_emojis_instructional: Posta kodu emoji içeremez
             contains_emojis_informative: Posta kodu emoji içeremez
             contains_mathematical_symbols_instructional: Posta kodu matematiksel semboller
@@ -361,9 +363,6 @@ tr:
           label:
             default: Mahalle
             optional: Mahalle (isteğe bağlı)
-          warnings:
-            contains_too_many_words: Mahalle adında %{word_count} adetten az kelime
-              olması önerilir
           errors:
             blank_instructional: Bir mahalle adı girin
             blank_informative: Mahalle adı eksik
@@ -395,6 +394,9 @@ tr:
             unknown_for_zip_informative: "%{zip} için geçerli bir mahalle adı girin"
             unknown_for_address_instructional: Mahalle adı yanlış olabilir
             unknown_for_address_informative: Mahalle adı yanlış olabilir
+          warnings:
+            contains_too_many_words: Mahalle adında %{word_count} adetten az kelime
+              olması önerilir
         line2:
           label:
             default: Apartman, daire vb.

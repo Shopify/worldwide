@@ -287,6 +287,8 @@ lt:
             unknown_for_province_informative: "%{province} pašto kodas neteisingas"
             blocked_address_instructional: Ši vietovė nepalaikoma
             blocked_address_informative: Ši vietovė nepalaikoma
+            too_long_instructional: Pašto kodas yra per ilgas
+            too_long_informative: Pašto kodas yra per ilgas
             contains_emojis_instructional: Pašto kode negali būti naudojami „emoji“
             contains_emojis_informative: Pašto kode negali būti naudojami „emoji“
             contains_mathematical_symbols_instructional: Pašto kode negali būti naudojami
@@ -381,9 +383,6 @@ lt:
           label:
             default: Kvartalas
             optional: Kvartalas (pasirinktinai)
-          warnings:
-            contains_too_many_words: Patartina, kad kvartalo pavadinimą sudarytų mažiau
-              nei %{word_count} žodžiai (-ių, -is)
           errors:
             blank_instructional: Įveskite kvartalo pavadinimą
             blank_informative: Trūksta kvartalo
@@ -424,6 +423,9 @@ lt:
               pašto kodą %{zip}
             unknown_for_address_instructional: Kvartalas gali būti neteisingas
             unknown_for_address_informative: Kvartalas gali būti neteisingas
+          warnings:
+            contains_too_many_words: Patartina, kad kvartalo pavadinimą sudarytų mažiau
+              nei %{word_count} žodžiai (-ių, -is)
         line2:
           label:
             default: Butas, apartamentas ar kt.
