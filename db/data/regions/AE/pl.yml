@@ -10,3 +10,40 @@ pl:
           errors:
             blank_instructional: Wybierz emirat
             blank_informative: Brakuje emiratu
+        neighborhood:
+          label:
+            default: Obszar
+            optional: Obszar (opcjonalnie)
+          errors:
+            blank_instructional: Wprowadź obszar
+            blank_informative: Brakuje obszaru
+            too_long_instructional: 'Obszar ma zbyt dużo znaków (maks. liczba znaków:
+              %{limit})'
+            too_long_informative: Obszar ma zbyt dużo znaków
+            contains_emojis_instructional: Obszar nie może zawierać emoji
+            contains_emojis_informative: Obszar nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Obszar nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Obszar nie może zawierać symboli
+              matematycznych
+            contains_restricted_characters_instructional: Obszar może zawierać tylko
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Obszar nie może zawierać znaków
+              objętych ograniczeniami
+            contains_too_many_words_instructional: Obszar musi składać się z mniej
+              niż %{word_count} słów
+            contains_too_many_words_informative: Obszar musi składać się z mniej niż
+              %{word_count} słów
+            contains_html_tags_instructional: Obszar nie może zawierać HTML
+            contains_html_tags_informative: Obszar nie może zawierać HTML
+            contains_url_instructional: Obszar nie może zawierać adresu URL
+            contains_url_informative: Obszar nie może zawierać adresu URL
+            unknown_for_city_instructional: Wprowadź prawidłowy obszar dla %{city}
+            unknown_for_city_informative: Obszar jest nieprawidłowy dla %{city}
+            unknown_for_zip_instructional: Wprowadź prawidłowy obszar dla %{zip}
+            unknown_for_zip_informative: Obszar jest nieprawidłowy dla %{zip}
+            unknown_for_address_instructional: Obszar może być nieprawidłowy
+            unknown_for_address_informative: Obszar może być nieprawidłowy
+          warnings:
+            contains_too_many_words: Zaleca się, aby obszar zawierał mniej niż %{word_count}
+              słów (słowa)

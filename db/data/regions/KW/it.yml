@@ -10,3 +10,40 @@ it:
           errors:
             blank_instructional: Seleziona un governatorato
             blank_informative: Governatorato mancante
+        neighborhood:
+          label:
+            default: Isolato
+            optional: Isolato (facoltativo)
+          errors:
+            blank_instructional: Inserisci un isolato
+            blank_informative: Isolato mancante
+            too_long_instructional: Il nome dell'isolato è troppo lungo (deve contenere
+              al massimo %{limit} caratteri)
+            too_long_informative: Il nome dell'isolato è troppo lungo
+            contains_emojis_instructional: Il campo Isolato non può contenere emoji
+            contains_emojis_informative: Il campo Isolato non può contenere emoji
+            contains_mathematical_symbols_instructional: Il campo Isolato non può
+              contenere simboli matematici
+            contains_mathematical_symbols_informative: Il campo Isolato non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il campo Isolato può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il campo Isolato non può contenere
+              caratteri vietati
+            contains_too_many_words_instructional: Il campo Isolato deve contenere
+              meno di %{word_count} parole
+            contains_too_many_words_informative: Il campo Isolato deve contenere meno
+              di %{word_count} parole
+            contains_html_tags_instructional: Il campo Isolato non può contenere HTML
+            contains_html_tags_informative: Il campo Isolato non può contenere HTML
+            contains_url_instructional: Il campo Isolato non può contenere URL
+            contains_url_informative: Il campo Isolato non può contenere URL
+            unknown_for_city_instructional: Inserisci un isolato valido per %{city}
+            unknown_for_city_informative: L'isolato non è valido per %{city}
+            unknown_for_zip_instructional: Inserisci un isolato valido per %{zip}
+            unknown_for_zip_informative: L'isolato non è valido per %{zip}
+            unknown_for_address_instructional: L'isolato potrebbe non essere corretto
+            unknown_for_address_informative: L'isolato potrebbe non essere corretto
+          warnings:
+            contains_too_many_words: Il campo Isolato deve contenere meno di %{word_count}
+              parole
