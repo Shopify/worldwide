@@ -8,20 +8,35 @@ nb:
             default: Kommune
             optional: Kommune (valgfritt)
           errors:
-            blank: Angi en kommune
-            too_long: Kommunenavnet er for langt (maksimalt %{limit} tegn)
-            contains_emojis: Kommunenavnet kan ikke inneholde emojier
-            contains_mathematical_symbols: Kommunenavnet kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Kommunenavnet kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Kommunenavnet kan ikke inneholde mer enn %{word_count}
-              ord
-            contains_html_tags: Kommunenavnet kan ikke inneholde HTML-tagger.
-            contains_url: Kommunenavnet kan ikke inneholde URL-adresser.
-            unknown_for_city: Angi et gyldig kommunenavn for %{city}.
-            unknown_for_zip: Angi et gyldig kommunenavn for %{zip}.
-            unknown_for_address: Kommunenavnet kan være feil.
+            blank_instructional: Angi en kommune
+            blank_informative: Kommunenavn mangler
+            too_long_instructional: Kommunenavnet er for langt (maksimalt %{limit}
+              tegn)
+            too_long_informative: Kommunenavnet er for langt
+            contains_emojis_instructional: Kommunenavnet kan ikke inneholde emojier
+            contains_emojis_informative: Kommunenavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Kommunenavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Kommunenavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Kommunenavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Kommunenavnet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Kommunenavnet må bestå av færre
+              enn %{word_count} ord
+            contains_too_many_words_informative: Kommunenavnet må bestå av færre enn
+              %{word_count} ord
+            contains_html_tags_instructional: Kommunenavnet kan ikke inneholde HTML-tagger
+            contains_html_tags_informative: Kommunenavnet kan ikke inneholde HTML-tagger
+            contains_url_instructional: Kommunenavnet kan ikke inneholde URL-adresser
+            contains_url_informative: Kommunenavnet kan ikke inneholde URL-adresser
+            unknown_for_city_instructional: Angi et gyldig kommunenavn for %{city}
+            unknown_for_city_informative: Angi et gyldig kommunenavn for %{city}
+            unknown_for_zip_instructional: Angi et gyldig kommunenavn for %{zip}
+            unknown_for_zip_informative: Angi et gyldig kommunenavn for %{zip}
+            unknown_for_address_instructional: Kommunenavnet kan være feil
+            unknown_for_address_informative: Kommunenavnet kan være feil
           warnings:
             contains_too_many_words: Vi anbefaler at kommunenavnet inneholder færre
               enn %{word_count} ord
