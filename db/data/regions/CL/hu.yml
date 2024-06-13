@@ -8,21 +8,39 @@ hu:
             default: Megye
             optional: Megye (nem kötelező megadni)
           errors:
-            blank: Add meg a megyét
-            too_long: Túl hosszú a megye neve (legfeljebb %{limit} karakter hosszú
-              lehet)
-            contains_emojis: A megye neve nem tartalmazhat emodzsikat
-            contains_mathematical_symbols: A megye neve nem tartalmazhat matematikai
-              szimbólumokat
-            contains_restricted_characters: A megye neve csak betűket, számokat, helyi
-              karaktereket és különleges karaktereket tartalmazhat
-            contains_too_many_words: A megye neve legfeljebb %{word_count} szóból
-              állhat
-            contains_html_tags: A megye neve nem tartalmazhat HTML-címkéket.
-            contains_url: A megye neve nem tartalmazhat URL-eket.
-            unknown_for_city: 'Olyan megyenevet adj meg, amely megfelel ennek: %{city}.'
-            unknown_for_zip: 'Olyan megyenevet adj meg, amely megfelel ennek: %{zip}.'
-            unknown_for_address: Vélhetően helytelen a megye neve.
+            blank_instructional: Add meg a megyét
+            blank_informative: A megye neve hiányzik
+            too_long_instructional: Túl hosszú a megye neve (legfeljebb %{limit} karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a megye neve
+            contains_emojis_instructional: A megye neve nem tartalmazhat hangulatjeleket
+            contains_emojis_informative: A megye neve nem tartalmazhat hangulatjeleket
+            contains_mathematical_symbols_instructional: A megye neve nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A megye neve nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A megye neve csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A cégnév nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A megye neve legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A megye neve legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: A megye neve nem tartalmazhat HTML-címkéket.
+            contains_html_tags_informative: A megye neve nem tartalmazhat HTML-címkéket.
+            contains_url_instructional: A megye neve nem tartalmazhat URL-eket.
+            contains_url_informative: A megye neve nem tartalmazhat URL-eket.
+            unknown_for_city_instructional: 'Olyan megyét adj meg, amely megfelel
+              ennek: %{city}.'
+            unknown_for_city_informative: 'Olyan megyét adj meg, amely megfelel ennek:
+              %{city}.'
+            unknown_for_zip_instructional: 'Olyan megyét adj meg, amely megfelel ennek:
+              %{zip}.'
+            unknown_for_zip_informative: 'Olyan megyét adj meg, amely megfelel ennek:
+              %{zip}.'
+            unknown_for_address_instructional: Vélhetően helytelen a megye neve.
+            unknown_for_address_informative: Vélhetően helytelen a megye neve.
           warnings:
             contains_too_many_words: A megye nevének javasolt hossza kevesebb mint
               %{word_count} szó

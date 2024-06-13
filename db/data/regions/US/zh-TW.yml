@@ -8,7 +8,6 @@ zh-TW:
             default: 州
             optional: 州 (選填)
           errors:
-            unknown_for_address: 州別可能不正確
             blank_instructional: 請選取州別
             blank_informative: 請輸入有效的州別
             invalid_for_country_instructional: 請輸入 %{zip} %{city} 的有效州別
@@ -19,12 +18,13 @@ zh-TW:
             unknown_for_city_informative: "%{city} 的州別無效"
             unknown_for_zip_instructional: 請選取 %{zip} 的有效州別
             unknown_for_zip_informative: "%{zip} 的州別無效"
+            unknown_for_address_instructional: "「州」可能並不正確"
+            unknown_for_address_informative: "「州」可能並不正確"
         zip:
           label:
             default: 郵遞區號
             optional: 郵遞區號 (選填)
           errors:
-            unknown_for_address: 郵遞區號可能不正確
             blank_instructional: 請輸入郵遞區號
             blank_informative: 缺少郵遞區號
             invalid_for_country_instructional: 請輸入 %{country} 的有效郵遞區號
@@ -43,3 +43,5 @@ zh-TW:
             contains_restricted_characters_informative: 郵遞區號不得包含限制的字元
             contains_html_tags_instructional: 郵遞區號不得包含 HTML
             contains_html_tags_informative: 郵遞區號不得包含 HTML
+            unknown_for_address_instructional: "「郵遞區號」可能不正確"
+            unknown_for_address_informative: "「郵遞區號」可能不正確"

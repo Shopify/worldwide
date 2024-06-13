@@ -26,7 +26,7 @@ hi:
             contains_html_tags_informative: कंपनी के नाम में HTML नहीं हो सकता
         first_name:
           label:
-            default: पहला नाम
+            default: नाम
             optional: पहला नाम (वैकल्पिक)
           errors:
             blank_instructional: पहला नाम डालें
@@ -49,7 +49,7 @@ hi:
             contains_url_informative: पहले नाम में URL नहीं हो सकता
         last_name:
           label:
-            default: अंतिम नाम
+            default: उपनाम
             optional: अंतिम नाम (वैकल्पिक)
           errors:
             blank_instructional: उपनाम डालें
@@ -75,8 +75,8 @@ hi:
             default: पता
             optional: पता (वैकल्पिक)
           warnings:
-            contains_too_many_words: एड्रेस लाइन 1 में %{word_count} शब्दों से कम
-              शब्द लिखने का सुझाव दिया जाता है
+            contains_too_many_words: पते की पहली पंक्ति में %{word_count} शब्दों से
+              कम शब्द लिखने का सुझाव दिया जाता है
           errors:
             blank_instructional: पता डालें
             blank_informative: पता गुम है
@@ -117,19 +117,9 @@ hi:
             default: अपार्टमेंट, सुइट, वगैरह का नाम
             optional: अपार्टमेंट, सुइट, वगैरह का नाम (वैकल्पिक)
           errors:
-            contains_html_tags: पता लाइन 2 में HTML नहीं हो सकता
-            contains_emojis: पता लाइन 2 में इमोजी नहीं हो सकते
-            contains_url: पता लाइन 2 में URL नहीं हो सकता
-            contains_mathematical_symbols: पता लाइन 2 में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: पता लाइन 2 में सिर्फ अक्षर, संख्या, लोकल
-              कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
-            contains_too_many_words: पता लाइन 2 में %{word_count} से अधिक शब्द नहीं
-              हो सकते
-            unknown_for_address: पता लाइन 2 गलत हो सकता है
             blank_instructional: अपार्टमेंट, सुइट, वगैरह का नाम डालें
             blank_informative: अपार्टमेंट या सुइट गुम है
             too_long_instructional: पते का लाइन 2 बहुत लंबा है (अधिकतम 255 कैरेक्टर)
-            too_long_informational: पते का लाइन 2 बहुत लंबा है
             missing_building_number_instructional: अगर आपके पास कोई बिल्डिंग नंबर
               हो, तो जोड़ें
             missing_building_number_informative: शायद बिल्डिंग नंबर गुम है
@@ -141,24 +131,35 @@ hi:
               नंबर नहीं मिल सका"
             building_number_invalid_informative: "%{zip}, %{street} के लिए बिल्डिंग
               नंबर नहीं मिल सका"
+            too_long_informative: पते का लाइन 2 बहुत लंबा है
+            contains_emojis_instructional: पते के लाइन 2 में इमोजी नहीं हो सकते
+            contains_emojis_informative: पते के लाइन 2 में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: पते के लाइन 2 में गणितीय
+              चिह्न नहीं हो सकते
+            contains_mathematical_symbols_informative: पते के लाइन 2 में गणितीय चिह्न
+              नहीं हो सकते
+            contains_restricted_characters_instructional: पते के लाइन 2 में सिर्फ
+              अक्षर, संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: पते के लाइन 2 में निषिद्ध
+              कैरेक्टर नहीं हो सकते
+            contains_too_many_words_instructional: पते के लाइन 2 में %{word_count}
+              से कम शब्द होने चाहिए
+            contains_too_many_words_informative: पते के लाइन 2 में %{word_count} से
+              कम शब्द होने चाहिए
+            contains_html_tags_instructional: पते के लाइन 2 में HTML नहीं हो सकता
+            contains_html_tags_informative: पते के लाइन 2 में HTML नहीं हो सकता
+            contains_url_instructional: पते के लाइन 2 में URL नहीं हो सकता
+            contains_url_informative: पते के लाइन 2 में URL नहीं हो सकता
+            unknown_for_address_instructional: पते के लाइन 2 गलत हो सकता है
+            unknown_for_address_informative: पते के लाइन 2 गलत हो सकता है
           warnings:
-            contains_too_many_words: एड्रेस लाइन 2 में %{word_count} शब्दों से कम
-              शब्द लिखने का सुझाव दिया जाता है
+            contains_too_many_words: पते की दूसरी पंक्ति में %{word_count} शब्दों
+              से कम शब्द लिखने का सुझाव दिया जाता है
         city:
           label:
             default: शहर
             optional: शहर (वैकल्पिक)
           errors:
-            too_long: शहर का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर हो सकते हैं)
-            contains_html_tags: शहर के नाम में HTML नहीं हो सकता
-            contains_emojis: शहर के नाम में इमोजी नहीं हो सकते
-            contains_url: शहर के नाम में URL नहीं हो सकता
-            contains_mathematical_symbols: शहर के नाम में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: शहर में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
-            contains_too_many_words: शहर के नाम में %{word_count} से अधिक शब्द नहीं
-              हो सकते
-            unknown_for_address: शहर का नाम गलत हो सकता है
             blank_instructional: शहर का नाम डालें
             blank_informative: शहर का नाम गुम है
             unknown_for_zip_instructional: "%{zip} के लिए शहर का एक मान्य नाम डालें"
@@ -170,6 +171,28 @@ hi:
             unknown_for_zip_and_province_instructional: "%{province}, %{zip} के लिए
               शहर का एक मान्य नाम डालें"
             unknown_for_zip_and_province_informative: शहर का नाम गलत हो सकता है
+            too_long_instructional: शहर का नाम बहुत लंबा है (अधिकतम कैरेक्टर 255 है)
+            too_long_informative: शहर का नाम बहुत लंबा है
+            contains_emojis_instructional: शहर के नाम में इमोजी नहीं हो सकते
+            contains_emojis_informative: शहर के नाम में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: शहर के नाम में गणितीय चिह्न
+              नहीं हो सकते
+            contains_mathematical_symbols_informative: शहर के नाम में गणितीय चिह्न
+              नहीं हो सकते
+            contains_restricted_characters_instructional: शहर के नाम में सिर्फ़ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: शहर के नाम में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_too_many_words_instructional: शहर के नाम में %{word_count} से
+              कम शब्द होने चाहिए
+            contains_too_many_words_informative: शहर के नाम में %{word_count} से कम
+              शब्द होने चाहिए
+            contains_html_tags_instructional: शहर के नाम में HTML नहीं हो सकता
+            contains_html_tags_informative: शहर के नाम में HTML नहीं हो सकता
+            contains_url_instructional: शहर के नाम में URL नहीं हो सकता
+            contains_url_informative: शहर के नाम में URL नहीं हो सकता
+            unknown_for_address_instructional: शहर का नाम गलत हो सकता है
+            unknown_for_address_informative: शहर का नाम गलत हो सकता है
         country:
           label:
             default: देश/क्षेत्र
@@ -189,22 +212,27 @@ hi:
             default: फ़ोन
             optional: फ़ोन (वैकल्पिक)
           errors:
-            contains_emojis: फ़ोन नंबर में इमोजी नहीं हो सकते
-            contains_mathematical_symbols: फ़ोन नंबर में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: फ़ोन नंबर में सिर्फ अक्षर, संख्याएं, स्थानीय
-              वर्ण और विशेष वर्ण हो सकते हैं
             blank_instructional: एक फ़ोन नंबर डालें
             blank_informative: फ़ोन नंबर गुम है
             invalid_instructional: एक मान्य फ़ोन नंबर डालें
             invalid_informative: फ़ोन नंबर मान्य नहीं है
             too_long_instructional: फ़ोन नंबर बहुत लंबा है
             too_long_informative: फ़ोन नंबर बहुत लंबा है
+            contains_emojis_instructional: फ़ोन नंबर में इमोजी नहीं हो सकते
+            contains_emojis_informative: फ़ोन नंबर में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: फ़ोन नंबर में गणितीय चिह्न
+              नहीं हो सकते
+            contains_mathematical_symbols_informative: फ़ोन नंबर में गणितीय चिह्न नहीं
+              हो सकते
+            contains_restricted_characters_instructional: फ़ोन नंबर में सिर्फ़ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: फ़ोन नंबर में निषिद्ध कैरेक्टर
+              नहीं हो सकते
         province:
           label:
             default: क्षेत्र
             optional: क्षेत्र (वैकल्पिक)
           errors:
-            unknown_for_address: क्षेत्र गलत हो सकता है
             blank_instructional: कोई क्षेत्र चुनें
             blank_informative: क्षेत्र का नाम गुम है
             invalid_instructional: कोई क्षेत्र चुनें
@@ -222,19 +250,13 @@ hi:
               रहा
             unknown_for_zip_instructional: "%{zip} के लिए एक मान्य क्षेत्र चुनें"
             unknown_for_zip_informative: क्षेत्र का नाम %{zip} से मेल नहीं खा रहा
+            unknown_for_address_instructional: क्षेत्र गलत हो सकता है
+            unknown_for_address_informative: क्षेत्र गलत हो सकता है
         zip:
           label:
             default: डाक कोड
             optional: डाक कोड (वैकल्पिक)
           errors:
-            blocked_address: यह लोकेशन समर्थित नहीं है
-            too_long: डाक कोड बहुत लंबा है
-            contains_html_tags: डाक कोड में HTML नहीं हो सकता
-            contains_emojis: डाक कोड में इमोजी नहीं हो सकते
-            contains_mathematical_symbols: डाक कोड में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: पोस्टल कोड में सिर्फ अक्षर, संख्याएं,
-              स्थानीय वर्ण और विशेष वर्ण हो सकते हैं
-            unknown_for_address: डाक कोड गलत हो सकता है
             blank_instructional: एक डाक कोड डालें
             blank_informative: डाक कोड गुम है
             invalid_instructional: मान्य डाक कोड डालें
@@ -251,10 +273,28 @@ hi:
               से मेल नहीं खा रहा
             not_supported_instructional: डाक कोड समर्थित नहीं है. नया पता डालें और
               फिर से कोशिश करें
-            not_supported_informativel: डाक कोड समर्थित नहीं है
             unknown_for_province_instructional: "%{province} के लिए एक मान्य डाक कोड
               डालें"
             unknown_for_province_informative: डाक कोड %{province} के लिए अमान्य है
+            blocked_address_instructional: यह लोकेशन समर्थित नहीं है
+            blocked_address_informative: यह लोकेशन समर्थित नहीं है
+            too_long_instructional: डाक कोड बहुत लंबा है
+            too_long_informative: डाक कोड बहुत लंबा है
+            contains_emojis_instructional: डाक कोड में इमोजी नहीं हो सकते
+            contains_emojis_informative: डाक कोड में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: डाक कोड में गणितीय चिह्न
+              नहीं हो सकते
+            contains_mathematical_symbols_informative: डाक कोड में गणितीय चिह्न नहीं
+              हो सकते
+            contains_restricted_characters_instructional: डाक कोड में सिर्फ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: डाक कोड में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            not_supported_informative: डाक कोड समर्थित नहीं है
+            contains_html_tags_instructional: डाक कोड में HTML नहीं हो सकता
+            contains_html_tags_informative: डाक कोड में HTML नहीं हो सकता
+            unknown_for_address_instructional: डाक कोड गलत हो सकता है
+            unknown_for_address_informative: डाक कोड गलत हो सकता है
         street_name:
           label:
             default: सड़क
@@ -265,7 +305,7 @@ hi:
           errors:
             blank_instructional: सड़क का नाम डालें
             blank_informative: सड़क का नाम गुम है
-            too_long_instructional: सड़क का नाम बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            too_long_instructional: सड़क का नाम बहुत लंबा है (अधिकतम %{limit} कैरेक्टर)
             too_long_informative: सड़क का नाम बहुत लंबा है
             contains_emojis_instructional: सड़क के नाम में इमोजी नहीं हो सकते
             contains_emojis_informative: सड़क के नाम में इमोजी नहीं हो सकते
@@ -279,10 +319,7 @@ hi:
               नहीं हो सकते
             contains_too_many_words_instructional: सड़क के नाम में %{word_count} से
               ज़्यादा शब्द नहीं हो सकते
-            contains_too_many_words_informational: सड़क के नाम में %{word_count} से
-              ज़्यादा शब्द नहीं हो सकते
             contains_html_tags_instructional: सड़क के नाम में HTML नहीं हो सकता
-            contains_html_tags_informational: सड़क के नाम में HTML नहीं हो सकता
             contains_url_instructional: सड़क के नाम में URL नहीं हो सकता
             contains_url_informative: सड़क के नाम में URL नहीं हो सकता
             street_unknown_for_zip_instructional: "%{zip} के लिए सड़क का मान्य नाम
@@ -290,6 +327,9 @@ hi:
             street_unknown_for_zip_informative: "%{zip} के सड़क का अमान्य नाम"
             unknown_for_address_instructional: सड़क का नाम गलत हो सकता है
             unknown_for_address_informative: सड़क का नाम गलत हो सकता है
+            contains_too_many_words_informative: सड़क के नाम में %{word_count} से ज़्यादा
+              शब्द नहीं हो सकते
+            contains_html_tags_informative: सड़क के नाम में HTML नहीं हो सकता
         street_number:
           label:
             default: बिल्डिंग नंबर
@@ -300,7 +340,7 @@ hi:
           errors:
             blank_instructional: बिल्डिंग नंबर डालें
             blank_informative: बिल्डिंग नंबर गुम है
-            too_long_instructional: बिल्डिंग नंबर बहुत लंबा है (अधिकतम 255 कैरेक्टर)
+            too_long_instructional: बिल्डिंग नंबर बहुत लंबा है (अधिकतम %{limit} कैरेक्टर)
             too_long_informative: बिल्डिंग नंबर बहुत लंबा है
             contains_emojis_instructional: बिल्डिंग नंबर में इमोजी नहीं हो सकते
             contains_emojis_informative: बिल्डिंग नंबर में इमोजी नहीं हो सकते
@@ -327,19 +367,35 @@ hi:
             default: पड़ोसी का नाम
             optional: पड़ोसी का नाम (वैकल्पिक)
           errors:
-            blank: पड़ोसी का नाम डालें
-            too_long: पड़ोसी का नाम बहुत लंबा है (अधिकतम %{limit} कैरेक्टर)
-            contains_emojis: पड़ोसी के नाम में इमोजी नहीं हो सकते
-            contains_mathematical_symbols: पड़ोसी के नाम में गणितीय चिह्न नहीं हो सकते
-            contains_restricted_characters: पड़ोसी के नाम में सिर्फ़ अक्षर, संख्या,
-              लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
-            contains_too_many_words: पड़ोसी के नाम में %{word_count} से ज़्यादा शब्द
+            blank_instructional: पड़ोसी का नाम डालें
+            blank_informative: पड़ोसी का नाम गुम है
+            too_long_instructional: पड़ोसी का नाम बहुत लंबा है (अधिकतम %{limit} कैरेक्टर)
+            too_long_informative: पड़ोसी का नाम बहुत लंबा है
+            contains_emojis_instructional: पड़ोसी के नाम में इमोजी नहीं हो सकते
+            contains_emojis_informative: पड़ोसी के नाम में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: पड़ोसी के नाम में गणितीय चिह्न
               नहीं हो सकते
-            contains_html_tags: पड़ोसी के नाम में HTML टैग नहीं हो सकते
-            contains_url: पड़ोसी के नाम में URL नहीं हो सकते
-            unknown_for_city: "%{city} के लिए पड़ोसी का एक मान्य नाम डालें"
-            unknown_for_zip: "%{zip} के लिए पड़ोसी का एक मान्य नाम डालें"
-            unknown_for_address: पड़ोसी का नाम गलत हो सकता है
+            contains_mathematical_symbols_informative: पड़ोसी के नाम में गणितीय चिह्न
+              नहीं हो सकते
+            contains_restricted_characters_instructional: पड़ोसी के नाम में सिर्फ़ अक्षर,
+              संख्या, लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
+            contains_restricted_characters_informative: पड़ोसी के नाम में निषिद्ध कैरेक्टर
+              नहीं हो सकते
+            contains_too_many_words_instructional: पड़ोसी के नाम में %{word_count}
+              से कम शब्द होने चाहिए
+            contains_too_many_words_informative: पड़ोसी के नाम में %{word_count} से
+              कम शब्द होने चाहिए
+            contains_html_tags_instructional: पड़ोसी के नाम में HTML टैग नहीं हो सकते
+            contains_html_tags_informative: पड़ोसी के नाम में HTML टैग नहीं हो सकते
+            contains_url_instructional: पड़ोसी के नाम में URL नहीं हो सकते
+            contains_url_informative: पड़ोसी के नाम में URL नहीं हो सकते
+            unknown_for_city_instructional: "%{city} के लिए पड़ोसी का एक मान्य नाम
+              डालें"
+            unknown_for_city_informative: "%{city} के लिए पड़ोसी का एक मान्य नाम डालें"
+            unknown_for_zip_instructional: "%{zip} के लिए पड़ोसी का एक मान्य नाम डालें"
+            unknown_for_zip_informative: "%{zip} के लिए पड़ोसी का एक मान्य नाम डालें"
+            unknown_for_address_instructional: पड़ोसी का नाम गलत हो सकता है
+            unknown_for_address_informative: पड़ोसी का नाम गलत हो सकता है
           warnings:
             contains_too_many_words: इस बात का सुझाव दिया जाता है कि पड़ोसी के नाम
               में %{word_count} से कम शब्द होने चाहिए
@@ -348,22 +404,6 @@ hi:
             default: अपार्टमेंट, सुइट, वगैरह का नाम.
             optional: अपार्टमेंट, सुइट, वगैरह का नाम. (वैकल्पिक)
           errors:
-            blank: अपार्टमेंट, सुइट, वगैरह का नाम डालें.
-            too_long: पते की दूसरी लाइन बहुत लंबी है (अधिकतम %{limit} कैरेक्टर)
-            contains_emojis: पते की दूसरी लाइन में इमोजी नहीं हो सकते
-            contains_mathematical_symbols: पते की दूसरी लाइन में गणितीय चिह्न नहीं
-              हो सकते
-            contains_restricted_characters: पते की दूसरी लाइन में सिर्फ अक्षर, संख्या,
-              लोकल कैरेक्टर और स्पेशल कैरेक्टर हो सकते हैं
-            contains_too_many_words: पते की दूसरी लाइन में %{word_count} से अधिक शब्द
-              नहीं हो सकते
-            contains_html_tags: पते की दूसरी लाइन में HTML टैग नहीं हो सकते.
-            contains_url: पते की दूसरी लाइन में URL नहीं हो सकते.
-            missing_building_number: अगर आपके पास कोई बिल्डिंग नंबर हो, तो जोड़ें
-            street_unknown_for_zip: "%{zip} के लिए सड़क का एक मान्य नाम डालें"
-            building_number_invalid: "%{zip}, %{street} के लिए बिल्डिंग नंबर नहीं
-              मिल सका"
-            unknown_for_address: पते की दूसरी लाइन गलत हो सकती है
             blank_instructional: अपार्टमेंट, सुइट, वगैरह का नाम डालें.
             blank_informative: अपार्टमेंट या सुइट गुम है
             too_long_instructional: पते की दूसरी लाइन बहुत लंबी है (अधिकतम %{limit}
@@ -389,6 +429,20 @@ hi:
               सकते
             contains_url_instructional: पते की दूसरी लाइन में URL नहीं हो सकते
             contains_url_informative: पते की दूसरी लाइन में URL नहीं हो सकते
+            missing_building_number_instructional: अगर आपके पास कोई बिल्डिंग नंबर
+              हो, तो जोड़ें
+            missing_building_number_informative: अगर आपके पास कोई बिल्डिंग नंबर हो,
+              तो जोड़ें
+            street_unknown_for_zip_instructional: "%{zip} के लिए सड़क का एक मान्य नाम
+              डालें"
+            street_unknown_for_zip_informative: "%{zip} के लिए सड़क का एक मान्य नाम
+              डालें"
+            building_number_invalid_instructional: "%{zip}, %{street} के लिए बिल्डिंग
+              नंबर नहीं मिल सका"
+            building_number_invalid_informative: "%{zip}, %{street} के लिए बिल्डिंग
+              नंबर नहीं मिल सका"
+            unknown_for_address_instructional: पते की दूसरी लाइन गलत हो सकती है
+            unknown_for_address_informative: पते की दूसरी लाइन गलत हो सकती है
           warnings:
             contains_too_many_words: पते की दूसरी लाइन में %{word_count} शब्दों से
               कम शब्द लिखने का सुझाव दिया जाता है

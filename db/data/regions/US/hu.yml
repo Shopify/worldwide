@@ -8,7 +8,6 @@ hu:
             default: Állam
             optional: Állam (nem kötelező megadni)
           errors:
-            unknown_for_address: Vélhetően helytelen az állam
             blank_instructional: Válassz államot
             blank_informative: Írd be az államot
             invalid_for_country_instructional: 'Azt az államot válaszd ki, ahol ez
@@ -24,12 +23,13 @@ hu:
             unknown_for_zip_instructional: 'Az ennek megfelelő államot válaszd ki:
               %{zip}'
             unknown_for_zip_informative: 'Az állam nem felel meg ennek: %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen az állam
+            unknown_for_address_informative: Vélhetően helytelen az állam
         zip:
           label:
             default: Irányítószám
             optional: Irányítószám (nem kötelező megadni)
           errors:
-            unknown_for_address: Vélhetően helytelen az irányítószám
             blank_instructional: Írd be az irányítószámot
             blank_informative: Az irányítószám nincs megadva
             invalid_for_country_instructional: 'Ennek megfelelő irányítószámot adj
@@ -55,3 +55,5 @@ hu:
               tiltott karaktereket
             contains_html_tags_instructional: Az irányítószám nem tartalmazhat HTML-címkét
             contains_html_tags_informative: Az irányítószám nem tartalmazhat HTML-címkét
+            unknown_for_address_instructional: Vélhetően helytelen az irányítószám
+            unknown_for_address_informative: Vélhetően helytelen az irányítószám

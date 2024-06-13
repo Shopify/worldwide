@@ -8,19 +8,37 @@ pt-BR:
             default: Barangay
             optional: Barangay (optional)
           errors:
-            blank: Insira um barangay
-            too_long: O barangay é longo demais (máximo de %{limit} caracteres)
-            contains_emojis: O barangay não pode conter emojis
-            contains_mathematical_symbols: O barangay não pode conter símbolos matemáticos
-            contains_restricted_characters: O barangay pode conter apenas letras,
-              números, caracteres locais e caracteres especiais
-            contains_too_many_words: O barangay não pode ter mais de %{word_count}
+            blank_instructional: Insira um barangay
+            blank_informative: O barangay está faltando
+            too_long_instructional: O barangay é longo demais (máximo de %{limit}
+              caracteres)
+            too_long_informative: O barangay é longo demais
+            contains_emojis_instructional: O barangay não pode conter emojis
+            contains_emojis_informative: O barangay não pode conter emojis
+            contains_mathematical_symbols_instructional: O barangay não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O barangay não pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O barangay pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O barangay não pode conter
+              caracteres restritos
+            contains_too_many_words_instructional: O barangay precisa ter menos de
+              %{word_count} palavras
+            contains_too_many_words_informative: O barangay precisa ter menos de %{word_count}
               palavras
-            contains_html_tags: O barangay não pode conter tags HTML.
-            contains_url: O barangay não pode conter URLs.
-            unknown_for_city: Insira um nome de barangay válido para %{city}.
-            unknown_for_zip: Insira um nome de barangay válido para %{zip}.
-            unknown_for_address: Talvez haja um erro no barangay.
+            contains_html_tags_instructional: O barangay não pode conter HTML
+            contains_html_tags_informative: O barangay não pode conter HTML
+            contains_url_instructional: O barangay não pode conter um URL
+            contains_url_informative: O barangay não pode conter um URL
+            unknown_for_city_instructional: Insira um nome de barangay válido para
+              %{city}
+            unknown_for_city_informative: Insira um nome de barangay válido para %{city}
+            unknown_for_zip_instructional: Insira um nome de barangay válido para
+              %{zip}
+            unknown_for_zip_informative: Insira um nome de barangay válido para %{zip}
+            unknown_for_address_instructional: Talvez haja um erro no barangay
+            unknown_for_address_informative: Talvez haja um erro no barangay
           warnings:
             contains_too_many_words: É recomendável que o barangay tenha menos de
               %{word_count} palavras

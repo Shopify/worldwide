@@ -8,10 +8,9 @@ zh-TW:
             default: 行政區
             optional: 行政區 (選填)
           errors:
-            unknown_for_address: 行政區可能不正確
             blank_instructional: 請輸入行政區
             blank_informative: 缺少行政區
-            too_long_instructional: 行政區過長 (最多 255 個字元)
+            too_long_instructional: 行政區過長 (最多 %{limit} 個字元)
             too_long_informative: 行政區過長
             contains_emojis_instructional: 行政區不得包含表情符號
             contains_emojis_informative: 行政區不得包含表情符號
@@ -29,5 +28,7 @@ zh-TW:
             unknown_for_city_informative: "%{city} 的行政區無效"
             unknown_for_zip_instructional: 請輸入 %{zip} 的有效行政區
             unknown_for_zip_informative: "%{zip} 的行政區無效"
+            unknown_for_address_instructional: "「行政區」可能不正確"
+            unknown_for_address_informative: "「行政區」可能不正確"
           warnings:
             contains_too_many_words: 建議「行政區」少於 %{word_count} 個字
