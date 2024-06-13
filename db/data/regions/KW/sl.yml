@@ -10,3 +10,42 @@ sl:
           errors:
             blank_instructional: Izberite guvernat
             blank_informative: Manjka guvernat
+        neighborhood:
+          label:
+            default: Ulica
+            optional: Ulica (izbirno)
+          errors:
+            blank_instructional: Vnesite ulico
+            blank_informative: Manjka ulica
+            too_long_instructional: Ime ulice je predolgo (največje dovoljeno št.
+              znakov je %{limit})
+            too_long_informative: Ime ulice je predolgo
+            contains_emojis_instructional: Ime ulice ne sme vsebovati čustvenih simbolov
+            contains_emojis_informative: Ime ulice ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols_instructional: Ime ulice ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Ime ulice ne sme vsebovati
+              matematičnih simbolov
+            contains_restricted_characters_instructional: Ime ulice lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Ime ulice ne sme vsebovati
+              prepovedanih znakov
+            contains_too_many_words_instructional: Ime ulice ne sme vsebovati več
+              kot %{word_count} besed
+            contains_too_many_words_informative: Ime ulice ne sme vsebovati več kot
+              %{word_count} besed
+            contains_html_tags_instructional: Ime ulice ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Ime ulice ne sme vsebovati oznak HTML
+            contains_url_instructional: Ime ulice ne sme vsebovati naslovov URL
+            contains_url_informative: Ime ulice ne sme vsebovati naslovov URL
+            unknown_for_city_instructional: Vnesite veljavno ime ulice za kraj %{city}
+            unknown_for_city_informative: Ime ulice ni veljavno za kraj %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime ulice za poštno številko
+              %{zip}
+            unknown_for_zip_informative: Ime ulice ni veljavno za poštno številko
+              %{zip}
+            unknown_for_address_instructional: Ulica morda ni pravilna
+            unknown_for_address_informative: Ulica morda ni pravilna
+          warnings:
+            contains_too_many_words: Ime ulice naj ne vsebuje več kot %{word_count}
+              besed

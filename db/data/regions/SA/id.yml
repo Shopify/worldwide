@@ -1,0 +1,42 @@
+---
+id:
+  worldwide:
+    SA:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrik
+            optional: Distrik (opsional)
+          errors:
+            blank_instructional: Masukkan nama distrik
+            blank_informative: Nama distrik belum diisi
+            too_long_instructional: Nama distrik terlalu panjang (maksimum %{limit}
+              karakter)
+            too_long_informative: Nama distrik terlalu panjang
+            contains_emojis_instructional: Nama distrik tidak boleh berisi emoji
+            contains_emojis_informative: Nama distrik tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Nama distrik tidak boleh
+              berisi simbol matematika
+            contains_mathematical_symbols_informative: Nama distrik tidak boleh berisi
+              simbol matematika
+            contains_restricted_characters_instructional: Nama distrik hanya boleh
+              terdiri dari huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Nama distrik tidak boleh berisi
+              karakter yang dilarang
+            contains_too_many_words_instructional: Nama distrik harus memuat kurang
+              dari %{word_count} kata
+            contains_too_many_words_informative: Nama distrik harus memuat kurang
+              dari %{word_count} kata
+            contains_html_tags_instructional: Nama distrik tidak boleh berisi HTML
+            contains_html_tags_informative: Nama distrik tidak boleh berisi HTML
+            contains_url_instructional: Nama distrik tidak boleh berisi URL
+            contains_url_informative: Nama distrik tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan distrik yang valid untuk %{city}
+            unknown_for_city_informative: Nama distrik tidak valid untuk %{city}
+            unknown_for_zip_instructional: Masukkan distrik yang valid untuk %{zip}
+            unknown_for_zip_informative: Nama distrik tidak valid untuk %{zip}
+            unknown_for_address_instructional: Nama distrik mungkin salah
+            unknown_for_address_informative: Nama distrik mungkin salah
+          warnings:
+            contains_too_many_words: Nama distrik sebaiknya berisi kurang dari %{word_count}
+              kata

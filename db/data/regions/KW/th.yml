@@ -10,3 +10,35 @@ th:
           errors:
             blank_instructional: เลือกเขตปกครอง
             blank_informative: ไม่พบเขตปกครอง
+        neighborhood:
+          label:
+            default: บล็อก
+            optional: บล็อก (ไม่บังคับ)
+          errors:
+            blank_instructional: ป้อนชื่อบล็อก
+            blank_informative: ไม่พบบล็อก
+            too_long_instructional: ชื่อบล็อกยาวเกินไป (สูงสุด %{limit} อักขระ)
+            too_long_informative: ชื่อบล็อกยาวเกินไป
+            contains_emojis_instructional: ไม่สามารถใส่อีโมจิในชื่อบล็อกได้
+            contains_emojis_informative: ไม่สามารถใส่อีโมจิในชื่อบล็อกได้
+            contains_mathematical_symbols_instructional: ไม่สามารถใส่สัญลักษณ์ทางคณิตศาสตร์ในชื่อบล็อกได้
+            contains_mathematical_symbols_informative: ไม่สามารถใส่สัญลักษณ์ทางคณิตศาสตร์ในชื่อบล็อกได้
+            contains_restricted_characters_instructional: ชื่อบล็อกมีได้เฉพาะตัวอักษร
+              ตัวเลข อักขระท้องถิ่น และอักขระพิเศษเท่านั้น
+            contains_restricted_characters_informative: ไม่สามารถใส่อักขระต้องห้ามในชื่อบล็อกได้
+            contains_too_many_words_instructional: ชื่อบล็อกต้องไม่เกิน %{word_count}
+              คำ
+            contains_too_many_words_informative: ชื่อบล็อกต้องไม่เกิน %{word_count}
+              คำ
+            contains_html_tags_instructional: ไม่สามารถใส่ HTML ในชื่อบล็อกได้
+            contains_html_tags_informative: ไม่สามารถใส่ HTML ในชื่อบล็อกได้
+            contains_url_instructional: ไม่สามารถใส่ URL ในชื่อบล็อกได้
+            contains_url_informative: ไม่สามารถใส่ URL ในชื่อบล็อกได้
+            unknown_for_city_instructional: ป้อนชื่อบล็อกที่ถูกต้องสำหรับ %{city}
+            unknown_for_city_informative: ชื่อบล็อกของ %{city} ไม่ถูกต้อง
+            unknown_for_zip_instructional: ป้อนชื่อบล็อกที่ถูกต้องสำหรับ %{zip}
+            unknown_for_zip_informative: ชื่อบล็อกของ %{zip} ไม่ถูกต้อง
+            unknown_for_address_instructional: ชื่อบล็อกอาจไม่ถูกต้อง
+            unknown_for_address_informative: ชื่อบล็อกอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ชื่อบล็อกควรมีความยาวน้อยกว่า %{word_count} คำ

@@ -10,3 +10,43 @@ sl:
           errors:
             blank_instructional: Izberite emirat
             blank_informative: Manjka emirat
+        neighborhood:
+          label:
+            default: Območje
+            optional: Območje (izbirno)
+          errors:
+            blank_instructional: Vnesite območje
+            blank_informative: Manjka območje
+            too_long_instructional: Ime območja je predolgo (največje dovoljeno št.
+              znakov je %{limit})
+            too_long_informative: Ime območja je predolgo
+            contains_emojis_instructional: Ime območja ne sme vsebovati čustvenih
+              simbolov
+            contains_emojis_informative: Ime območja ne sme vsebovati čustvenih simbolov
+            contains_mathematical_symbols_instructional: Ime območja ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Ime območja ne sme vsebovati
+              matematičnih simbolov
+            contains_restricted_characters_instructional: Ime območja lahko vsebuje
+              le črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Ime območja ne sme vsebovati
+              prepovedanih znakov
+            contains_too_many_words_instructional: Ime območja ne sme vsebovati več
+              kot %{word_count} besed
+            contains_too_many_words_informative: Ime območja ne sme vsebovati več
+              kot %{word_count} besed
+            contains_html_tags_instructional: Ime območja ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Ime območja ne sme vsebovati oznak HTML
+            contains_url_instructional: Ime območja ne sme vsebovati naslovov URL
+            contains_url_informative: Ime območja ne sme vsebovati naslovov URL
+            unknown_for_city_instructional: Vnesite veljavno ime območja za kraj %{city}
+            unknown_for_city_informative: Ime območja ni veljavno za kraj %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime območja za poštno
+              številko %{zip}
+            unknown_for_zip_informative: Ime območja ni veljavno za poštno številko
+              %{zip}
+            unknown_for_address_instructional: Ime območja morda ni pravilno
+            unknown_for_address_informative: Ime območja morda ni pravilno
+          warnings:
+            contains_too_many_words: Ime območja naj ne vsebuje več kot %{word_count}
+              besed
