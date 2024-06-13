@@ -138,6 +138,29 @@ vi:
               %{street}, %{zip}
             building_number_invalid_informative: Không thể định vị số tòa nhà cho
               %{street}, %{zip}
+            too_long_informative: Dòng địa chỉ 2 quá dài
+            contains_emojis_instructional: Dòng địa chỉ 2 không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Dòng địa chỉ 2 không được chứa biểu tượng
+              cảm xúc
+            contains_mathematical_symbols_instructional: Dòng địa chỉ 2 không được
+              chứa ký hiệu toán học
+            contains_mathematical_symbols_informative: Dòng địa chỉ 2 không được chứa
+              ký hiệu toán học
+            contains_restricted_characters_instructional: Dòng địa chỉ 2 chỉ được
+              chứa chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Dòng địa chỉ 2 không được
+              chứa ký tự bị hạn chế
+            contains_too_many_words_instructional: Dòng địa chỉ 2 phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Dòng địa chỉ 2 phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Dòng địa chỉ 2 không được chứa HTML
+            contains_html_tags_informative: Dòng địa chỉ 2 không được chứa HTML
+            contains_url_instructional: Dòng địa chỉ 2 không được chứa URL
+            contains_url_informative: Dòng địa chỉ 2 không được chứa URL
+            unknown_for_address_instructional: Dòng địa chỉ 2 có thể không chính xác
+            unknown_for_address_informative: Dòng địa chỉ 2 có thể không chính xác
           warnings:
             contains_too_many_words: Dòng địa chỉ 2 nên có tối đa %{word_count} từ
         city:
@@ -165,6 +188,30 @@ vi:
               %{zip}, %{province}
             unknown_for_zip_and_province_informative: Thành phố có thể không chính
               xác
+            too_long_instructional: Thành phố quá dài (tối đa 255 ký tự)
+            too_long_informative: Thành phố quá dài
+            contains_emojis_instructional: Thành phố không được chứa biểu tượng cảm
+              xúc
+            contains_emojis_informative: Thành phố không được chứa biểu tượng cảm
+              xúc
+            contains_mathematical_symbols_instructional: Thành phố không được chứa
+              ký hiệu toán học
+            contains_mathematical_symbols_informative: Thành phố không được chứa ký
+              hiệu toán học
+            contains_restricted_characters_instructional: Thành phố chỉ được chứa
+              chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Thành phố không được chứa
+              ký tự bị hạn chế
+            contains_too_many_words_instructional: Thành phố phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Thành phố phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Thành phố không được chứa HTML
+            contains_html_tags_informative: Thành phố không được chứa HTML
+            contains_url_instructional: Thành phố không được chứa URL
+            contains_url_informative: Thành phố không được chứa URL
+            unknown_for_address_instructional: Thành phố có thể không chính xác
+            unknown_for_address_informative: Thành phố có thể không chính xác
         country:
           label:
             default: Quốc gia/Vùng
@@ -195,6 +242,18 @@ vi:
             invalid_informative: Số điện thoại không hợp lệ
             too_long_instructional: Số điện thoại quá dài
             too_long_informative: Số điện thoại quá dài
+            contains_emojis_instructional: Số điện thoại không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Số điện thoại không được chứa biểu tượng
+              cảm xúc
+            contains_mathematical_symbols_instructional: Số điện thoại không được
+              chứa ký hiệu toán học
+            contains_mathematical_symbols_informative: Số điện thoại không được chứa
+              ký hiệu toán học
+            contains_restricted_characters_instructional: Số điện thoại chỉ được chứa
+              chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Số điện thoại không được chứa
+              ký tự bị hạn chế
         province:
           label:
             default: Vùng
@@ -215,6 +274,8 @@ vi:
             unknown_for_city_instructional: Khu vực không khớp với %{city}
             unknown_for_zip_instructional: Chọn khu vực hợp lệ cho %{zip}
             unknown_for_zip_informative: Khu vực không khớp với %{zip}
+            unknown_for_address_instructional: Khu vực có thể không chính xác
+            unknown_for_address_informative: Khu vực có thể không chính xác
         zip:
           label:
             default: Mã bưu chính
@@ -247,6 +308,27 @@ vi:
             unknown_for_province_instructional: Nhập mã bưu chính hợp lệ cho %{province}
             unknown_for_province_informative: Mã bưu chính cho %{province} không hợp
               lệ
+            blocked_address_instructional: Địa điểm này không được hỗ trợ
+            blocked_address_informative: Địa điểm này không được hỗ trợ
+            too_long_instructional: Mã bưu chính quá dài
+            too_long_informative: Mã bưu chính quá dài
+            contains_emojis_instructional: Mã bưu chính không được chứa biểu tượng
+              cảm xúc
+            contains_emojis_informative: Mã bưu chính không được chứa biểu tượng cảm
+              xúc
+            contains_mathematical_symbols_instructional: Mã bưu chính không được chứa
+              ký hiệu toán học
+            contains_mathematical_symbols_informative: Mã bưu chính không được chứa
+              ký hiệu toán học
+            contains_restricted_characters_instructional: Mã bưu chính chỉ được chứa
+              chữ cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Mã bưu chính không được chứa
+              ký tự bị hạn chế
+            not_supported_informative: Mã bưu chính không được hỗ trợ
+            contains_html_tags_instructional: Mã bưu chính không được chứa HTML
+            contains_html_tags_informative: Mã bưu chính không được chứa HTML
+            unknown_for_address_instructional: Mã bưu chính có thể không chính xác
+            unknown_for_address_informative: Mã bưu chính có thể không chính xác
         street_name:
           label:
             default: Đường
@@ -280,6 +362,9 @@ vi:
             street_unknown_for_zip_informative: Đường cho %{zip} không hợp lệ
             unknown_for_address_instructional: Đường có thể không chính xác
             unknown_for_address_informative: Đường có thể không chính xác
+            contains_too_many_words_informative: Đường không được có nhiều hơn %{word_count}
+              từ
+            contains_html_tags_informative: Đường không được chứa HTML
         street_number:
           label:
             default: Số tòa nhà
@@ -330,6 +415,35 @@ vi:
             unknown_for_city: Nhập tên khu phố hợp lệ cho %{city}
             unknown_for_zip: Nhập tên khu phố hợp lệ cho %{zip}
             unknown_for_address: Khu phố có thể không chính xác
+            blank_instructional: Nhập khu phố
+            blank_informative: Thiếu khu phố
+            too_long_instructional: Khu phố quá dài (tối đa %{limit} ký tự)
+            too_long_informative: Khu phố quá dài
+            contains_emojis_instructional: Khu phố không được chứa biểu tượng cảm
+              xúc
+            contains_emojis_informative: Khu phố không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols_instructional: Khu phố không được chứa ký
+              hiệu toán học
+            contains_mathematical_symbols_informative: Khu phố không được chứa ký
+              hiệu toán học
+            contains_restricted_characters_instructional: Khu phố chỉ được chứa chữ
+              cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Khu phố không được chứa ký
+              tự bị hạn chế
+            contains_too_many_words_instructional: Khu phố phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Khu phố phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Khu phố không được chứa thẻ HTML
+            contains_html_tags_informative: Khu phố không được chứa thẻ HTML
+            contains_url_instructional: Khu phố không được chứa URL
+            contains_url_informative: Khu phố không được chứa URL
+            unknown_for_city_instructional: Nhập tên khu phố hợp lệ cho %{city}
+            unknown_for_city_informative: Nhập tên khu phố hợp lệ cho %{city}
+            unknown_for_zip_instructional: Nhập tên khu phố hợp lệ cho %{zip}
+            unknown_for_zip_informative: Nhập tên khu phố hợp lệ cho %{zip}
+            unknown_for_address_instructional: Khu phố có thể không chính xác
+            unknown_for_address_informative: Khu phố có thể không chính xác
           warnings:
             contains_too_many_words: Khu phố nên có tối đa %{word_count} từ
         line2:
@@ -379,6 +493,18 @@ vi:
               HTML
             contains_url_instructional: Dòng địa chỉ thứ hai không được chứa URL
             contains_url_informative: Dòng địa chỉ thứ hai không được chứa URL
+            missing_building_number_instructional: Thêm số tòa nhà nếu có
+            missing_building_number_informative: Thêm số tòa nhà nếu có
+            street_unknown_for_zip_instructional: Nhập tên đường hợp lệ cho %{zip}
+            street_unknown_for_zip_informative: Nhập tên đường hợp lệ cho %{zip}
+            building_number_invalid_instructional: Không thể định vị số tòa nhà cho
+              %{street}, %{zip}
+            building_number_invalid_informative: Không thể định vị số tòa nhà cho
+              %{street}, %{zip}
+            unknown_for_address_instructional: Dòng địa chỉ thứ hai có thể không chính
+              xác
+            unknown_for_address_informative: Dòng địa chỉ thứ hai có thể không chính
+              xác
           warnings:
             contains_too_many_words: Dòng địa chỉ thứ hai nên có tối đa %{word_count}
               từ

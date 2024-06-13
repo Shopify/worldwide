@@ -111,6 +111,21 @@ zh-CN:
             street_unknown_for_zip_informative: 街道名称对 %{zip} 无效
             building_number_invalid_instructional: 大楼编号与 %{street} (%{zip}) 不匹配
             building_number_invalid_informative: 大楼编号与 %{street} (%{zip}) 不匹配
+            too_long_informative: 地址行 2 过长
+            contains_emojis_instructional: 地址行 2 不能包含表情符号
+            contains_emojis_informative: 地址行 2 不能包含表情符号
+            contains_mathematical_symbols_instructional: 地址行 2 不能包含数学符号
+            contains_mathematical_symbols_informative: 地址行 2 不能包含数学符号
+            contains_restricted_characters_instructional: 地址行 2 只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 地址行 2不能包含受限字符
+            contains_too_many_words_instructional: 地址行 2必须少于 %{word_count} 个字词
+            contains_too_many_words_informative: 地址行 2必须少于 %{word_count} 个字词
+            contains_html_tags_instructional: 地址行 2 不能包含 HTML
+            contains_html_tags_informative: 地址行 2 不能包含 HTML
+            contains_url_instructional: 地址行 2 不能包含 URL
+            contains_url_informative: 地址行 2 不能包含 URL
+            unknown_for_address_instructional: 地址行 2 可能不正确
+            unknown_for_address_informative: 地址行 2 可能不正确
           warnings:
             contains_too_many_words: 建议地址行 2 少于 %{word_count} 个字词
         city:
@@ -134,6 +149,22 @@ zh-CN:
             unknown_for_province_informative: 城市与 %{province} 不匹配
             unknown_for_zip_and_province_instructional: 输入 %{province} (%{zip}) 对应的有效城市
             unknown_for_zip_and_province_informative: 城市可能不正确
+            too_long_instructional: 城市名过长（最多 255 个字符）
+            too_long_informative: 城市名过长
+            contains_emojis_instructional: 城市名不能包含表情符号
+            contains_emojis_informative: 城市名不能包含表情符号
+            contains_mathematical_symbols_instructional: 城市名不能包含数学符号
+            contains_mathematical_symbols_informative: 城市名不能包含数学符号
+            contains_restricted_characters_instructional: 城市只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 城市名不能包含受限字符
+            contains_too_many_words_instructional: 城市名必须少于 %{word_count} 个字词
+            contains_too_many_words_informative: 城市名必须少于 %{word_count} 个字词
+            contains_html_tags_instructional: 城市名不能包含 HTML
+            contains_html_tags_informative: 城市名不能包含 HTML
+            contains_url_instructional: 城市名不能包含 URL
+            contains_url_informative: 城市名不能包含 URL
+            unknown_for_address_instructional: 城市可能不正确
+            unknown_for_address_informative: 城市可能不正确
         country:
           label:
             default: 国家/地区
@@ -161,6 +192,12 @@ zh-CN:
             invalid_informative: 电话号码无效
             too_long_instructional: 电话号码过长
             too_long_informative: 电话号码过长
+            contains_emojis_instructional: 电话号码不能包含表情符号
+            contains_emojis_informative: 电话号码不能包含表情符号
+            contains_mathematical_symbols_instructional: 电话号码不能包含数学符号
+            contains_mathematical_symbols_informative: 电话号码不能包含数学符号
+            contains_restricted_characters_instructional: 电话号码只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 电话号码不能包含受限字符
         province:
           label:
             default: 区域
@@ -179,6 +216,8 @@ zh-CN:
             unknown_for_city_instructional: 地区与 %{city} 不匹配
             unknown_for_zip_instructional: 选择 %{zip} 对应的有效地区
             unknown_for_zip_informative: 地区与 %{zip} 不匹配
+            unknown_for_address_instructional: 地区可能不正确
+            unknown_for_address_informative: 地区可能不正确
         zip:
           label:
             default: 邮政编码
@@ -207,6 +246,21 @@ zh-CN:
             not_supported_informativel: 邮政编码不受支持
             unknown_for_province_instructional: 输入 %{province} 对应的有效邮政编码
             unknown_for_province_informative: 邮政编码对 %{province} 无效
+            blocked_address_instructional: 不支持此地点
+            blocked_address_informative: 不支持此地点
+            too_long_instructional: 邮政编码过长
+            too_long_informative: 邮政编码过长
+            contains_emojis_instructional: 邮政编码不能包含表情符号
+            contains_emojis_informative: 邮政编码不能包含表情符号
+            contains_mathematical_symbols_instructional: 邮政编码不能包含数学符号
+            contains_mathematical_symbols_informative: 邮政编码不能包含数学符号
+            contains_restricted_characters_instructional: 邮政编码只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 邮政编码不能包含受限字符
+            not_supported_informative: 邮政编码不受支持
+            contains_html_tags_instructional: 邮政编码不能包含 HTML
+            contains_html_tags_informative: 邮政编码不能包含 HTML
+            unknown_for_address_instructional: 邮政编码可能不正确
+            unknown_for_address_informative: 邮政编码可能不正确
         street_name:
           label:
             default: 街道
@@ -234,6 +288,8 @@ zh-CN:
             street_unknown_for_zip_informative: 街道名对 %{zip} 无效
             unknown_for_address_instructional: 街道名可能不正确
             unknown_for_address_informative: 街道名可能不正确
+            contains_too_many_words_informative: 街道名不能超过 %{word_count} 个字词
+            contains_html_tags_informative: 街道名不能包含 HTML
         street_number:
           label:
             default: 大楼编号
@@ -275,6 +331,28 @@ zh-CN:
             unknown_for_city: 输入 %{city} 对应的有效街区名称
             unknown_for_zip: 输入 %{zip} 对应的有效街区名称
             unknown_for_address: 街区名可能不正确
+            blank_instructional: 输入街区名
+            blank_informative: 缺少街区名
+            too_long_instructional: 街区名过长（最多 %{limit} 个字符）
+            too_long_informative: 街区名过长
+            contains_emojis_instructional: 街区名不能包含表情符号
+            contains_emojis_informative: 街区名不能包含表情符号
+            contains_mathematical_symbols_instructional: 街区名不能包含数学符号
+            contains_mathematical_symbols_informative: 街区名不能包含数学符号
+            contains_restricted_characters_instructional: 街区名只能包含字母、数字、当地字符和特殊字符
+            contains_restricted_characters_informative: 街区名不能包含受限字符
+            contains_too_many_words_instructional: 街区名必须少于 %{word_count} 个字词
+            contains_too_many_words_informative: 街区名必须少于 %{word_count} 个字词
+            contains_html_tags_instructional: 街区名不能包含 HTML 标记
+            contains_html_tags_informative: 街区名不能包含 HTML 标记
+            contains_url_instructional: 街区名不能包含 URL
+            contains_url_informative: 街区名不能包含 URL
+            unknown_for_city_instructional: 输入 %{city} 对应的有效街区名称
+            unknown_for_city_informative: 输入 %{city} 对应的有效街区名称
+            unknown_for_zip_instructional: 输入 %{zip} 对应的有效街区名称
+            unknown_for_zip_informative: 输入 %{zip} 对应的有效街区名称
+            unknown_for_address_instructional: 街区名可能不正确
+            unknown_for_address_informative: 街区名可能不正确
           warnings:
             contains_too_many_words: 建议街区名少于 %{word_count} 个字词
         line2:
@@ -310,6 +388,14 @@ zh-CN:
             contains_html_tags_informative: 第二个地址行不能包含 HTML 标记
             contains_url_instructional: 第二个地址行不能包含 URL
             contains_url_informative: 第二个地址行不能包含 URL
+            missing_building_number_instructional: 添加大楼编号（如果有）
+            missing_building_number_informative: 添加大楼编号（如果有）
+            street_unknown_for_zip_instructional: 输入 %{zip} 对应的有效街道名称
+            street_unknown_for_zip_informative: 输入 %{zip} 对应的有效街道名称
+            building_number_invalid_instructional: 大楼编号与 %{street} (%{zip}) 不匹配
+            building_number_invalid_informative: 大楼编号与 %{street} (%{zip}) 不匹配
+            unknown_for_address_instructional: 第二个地址行可能不正确
+            unknown_for_address_informative: 第二个地址行可能不正确
           warnings:
             contains_too_many_words: 建议第二个地址行少于 %{word_count} 个字词
         address:
