@@ -145,6 +145,27 @@ pl:
               budynku dla %{street}, %{zip}
             building_number_invalid_informative: Nie udało się zlokalizować numeru
               budynku dla %{street}, %{zip}
+            too_long_informative: Linia adresu 2 jest za długa
+            contains_emojis_instructional: Linia adresu 2 nie może zawierać emoji
+            contains_emojis_informative: Linia adresu 2 nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Linia adresu 2 nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Linia adresu 2 nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Linia adresu 2 może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Linia adresu 2 nie może zawierać
+              znaków objętych ograniczeniami
+            contains_too_many_words_instructional: Linia adresu 2 musi składać się
+              z mniej niż %{word_count} słów
+            contains_too_many_words_informative: Linia adresu 2 musi składać się z
+              mniej niż %{word_count} słów
+            contains_html_tags_instructional: Linia adresu 2 nie może zawierać HTML
+            contains_html_tags_informative: Linia adresu 2 nie może zawierać HTML
+            contains_url_instructional: Linia adresu 2 nie może zawierać adresu URL
+            contains_url_informative: Linia adresu 2 nie może zawierać adresu URL
+            unknown_for_address_instructional: Linia adresu 2 może być nieprawidłowa
+            unknown_for_address_informative: Linia adresu 2 może być nieprawidłowa
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała mniej
               niż %{word_count} słów
@@ -173,6 +194,29 @@ pl:
             unknown_for_zip_and_province_instructional: Wprowadź prawidłowe miasto
               dla %{zip}, %{province}
             unknown_for_zip_and_province_informative: Miasto może być nieprawidłowe
+            too_long_instructional: Miasto zawiera zbyt dużo znaków (maksymalna liczba
+              znaków to 255)
+            too_long_informative: Miasto zawiera zbyt dużo znaków
+            contains_emojis_instructional: Miasto nie może zawierać emoji
+            contains_emojis_informative: Miasto nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Miasto nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Miasto nie może zawierać symboli
+              matematycznych
+            contains_restricted_characters_instructional: Miasto może zawierać tylko
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Miasto nie może zawierać znaków
+              objętych ograniczeniami
+            contains_too_many_words_instructional: Miasto musi składać się z mniej
+              niż %{word_count} słów
+            contains_too_many_words_informative: Miasto musi składać się z mniej niż
+              %{word_count} słów
+            contains_html_tags_instructional: Nazwa miasta nie może zawierać HTML
+            contains_html_tags_informative: Nazwa miasta nie może zawierać HTML
+            contains_url_instructional: Nazwa miasta nie może zawierać adresu URL
+            contains_url_informative: Nazwa miasta nie może zawierać adresu URL
+            unknown_for_address_instructional: Miasto może być nieprawidłowe
+            unknown_for_address_informative: Miasto może być nieprawidłowe
         country:
           label:
             default: Kraj/region
@@ -203,6 +247,16 @@ pl:
             invalid_informative: Numer telefonu jest nieprawidłowy
             too_long_instructional: Numer telefonu jest za długi
             too_long_informative: Numer telefonu jest za długi
+            contains_emojis_instructional: Numer telefonu nie może zawierać emoji
+            contains_emojis_informative: Numer telefonu nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Numer telefonu nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Numer telefonu nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Numer telefonu może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Numer telefonu nie może zawierać
+              znaków objętych ograniczeniami
         province:
           label:
             default: Region
@@ -223,6 +277,8 @@ pl:
             unknown_for_city_instructional: Region jest niezgodny z %{city}
             unknown_for_zip_instructional: Wybierz prawidłowy region dla %{zip}
             unknown_for_zip_informative: Region jest niezgodny z %{zip}
+            unknown_for_address_instructional: Region może być nieprawidłowy
+            unknown_for_address_informative: Region może być nieprawidłowy
         zip:
           label:
             default: Kod pocztowy
@@ -258,6 +314,25 @@ pl:
               %{province}
             unknown_for_province_informative: Kod pocztowy jest nieprawidłowy dla
               %{province}
+            blocked_address_instructional: Ta lokalizacja nie jest obsługiwana
+            blocked_address_informative: Ta lokalizacja nie jest obsługiwana
+            too_long_instructional: Kod pocztowy jest za długi
+            too_long_informative: Kod pocztowy jest za długi
+            contains_emojis_instructional: Kod pocztowy nie może zawierać emoji
+            contains_emojis_informative: Kod pocztowy nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Kod pocztowy nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Kod pocztowy nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Kod pocztowy może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Kod pocztowy nie może zawierać
+              znaków objętych ograniczeniami
+            not_supported_informative: Kod pocztowy jest nieobsługiwany
+            contains_html_tags_instructional: Kod pocztowy nie może zawierać HTML
+            contains_html_tags_informative: Kod pocztowy nie może zawierać HTML
+            unknown_for_address_instructional: Kod pocztowy może być nieprawidłowy
+            unknown_for_address_informative: Kod pocztowy może być nieprawidłowy
         street_name:
           label:
             default: Ulica
@@ -293,6 +368,9 @@ pl:
             street_unknown_for_zip_informative: Ulica jest nieprawidłowa dla %{zip}
             unknown_for_address_instructional: Ulica może być nieprawidłowa
             unknown_for_address_informative: Ulica może być nieprawidłowa
+            contains_too_many_words_informative: Ulica może zawierać maksymalnie %{word_count}
+              słów (słowa)
+            contains_html_tags_informative: Nazwa ulicy nie może zawierać HTML
         street_number:
           label:
             default: Numer budynku
@@ -345,6 +423,35 @@ pl:
             unknown_for_city: Wpisz prawidłową nazwę dzielnicy dla %{city}
             unknown_for_zip: Wpisz prawidłową nazwę dzielnicy dla %{zip}
             unknown_for_address: Dzielnica może być nieprawidłowa
+            blank_instructional: Wpisz dzielnicę
+            blank_informative: Brak dzielnicy
+            too_long_instructional: Dzielnica zawiera zbyt dużo znaków (maksymalna
+              liczba znaków to %{limit})
+            too_long_informative: Dzielnica zawiera zbyt dużo znaków
+            contains_emojis_instructional: Dzielnica nie może zawierać emoji
+            contains_emojis_informative: Dzielnica nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Dzielnica nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Dzielnica nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Dzielnica może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Dzielnica nie może zawierać
+              znaków objętych ograniczeniami
+            contains_too_many_words_instructional: Dzielnica musi składać się z mniej
+              niż %{word_count} słów
+            contains_too_many_words_informative: Dzielnica musi składać się z mniej
+              niż %{word_count} słów
+            contains_html_tags_instructional: Dzielnica nie może zawierać tagów HTML
+            contains_html_tags_informative: Dzielnica nie może zawierać tagów HTML
+            contains_url_instructional: Dzielnica nie może zawierać adresów URL
+            contains_url_informative: Dzielnica nie może zawierać adresów URL
+            unknown_for_city_instructional: Wpisz prawidłową nazwę dzielnicy dla %{city}
+            unknown_for_city_informative: Wpisz prawidłową nazwę dzielnicy dla %{city}
+            unknown_for_zip_instructional: Wpisz prawidłową nazwę dzielnicy dla %{zip}
+            unknown_for_zip_informative: Wpisz prawidłową nazwę dzielnicy dla %{zip}
+            unknown_for_address_instructional: Dzielnica może być nieprawidłowa
+            unknown_for_address_informative: Dzielnica może być nieprawidłowa
           warnings:
             contains_too_many_words: Zaleca się, aby dzielnica zawierała mniej niż
               %{word_count} słów (słowa)
@@ -397,6 +504,17 @@ pl:
               URL
             contains_url_informative: Druga linia adresu nie może zawierać adresu
               URL
+            missing_building_number_instructional: Dodaj numer budynku, jeśli go posiadasz
+            missing_building_number_informative: Dodaj numer budynku, jeśli go posiadasz
+            street_unknown_for_zip_instructional: Wpisz prawidłową nazwę ulicy dla
+              %{zip}
+            street_unknown_for_zip_informative: Wpisz prawidłową nazwę ulicy dla %{zip}
+            building_number_invalid_instructional: Nie udało się zlokalizować numeru
+              budynku dla %{street}, %{zip}
+            building_number_invalid_informative: Nie udało się zlokalizować numeru
+              budynku dla %{street}, %{zip}
+            unknown_for_address_instructional: Druga linia adresu może być nieprawidłowa
+            unknown_for_address_informative: Druga linia adresu może być nieprawidłowa
           warnings:
             contains_too_many_words: Zaleca się, aby druga linia adresu zawierała
               poniżej %{word_count} słów

@@ -159,6 +159,36 @@ es:
               de edificio para %{street}, %{zip}.
             building_number_invalid_informative: No se ha podido localizar un número
               de edificio para %{street}, %{zip}.
+            too_long_informative: La segunda línea de la dirección es demasiado larga.
+            contains_emojis_instructional: La segunda línea de la dirección no puede
+              contener emojis.
+            contains_emojis_informative: La segunda línea de la dirección no puede
+              contener emojis.
+            contains_mathematical_symbols_instructional: La segunda línea de la dirección
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: La segunda línea de la dirección
+              no puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: La segunda línea de la dirección
+              solo puede contener letras, números, caracteres locales y caracteres
+              especiales.
+            contains_restricted_characters_informative: La segunda línea de la dirección
+              no puede contener caracteres restringidos.
+            contains_too_many_words_instructional: La segunda línea de la dirección
+              debe tener menos de %{word_count} palabras.
+            contains_too_many_words_informative: La segunda línea de la dirección
+              debe tener menos de %{word_count} palabras.
+            contains_html_tags_instructional: La segunda línea de la dirección no
+              puede contener HTML.
+            contains_html_tags_informative: La segunda línea de la dirección no puede
+              contener HTML.
+            contains_url_instructional: La segunda línea de la dirección no puede
+              contener una URL.
+            contains_url_informative: La segunda línea de la dirección no puede contener
+              una URL.
+            unknown_for_address_instructional: Puede que la segunda línea de la dirección
+              no sea correcta.
+            unknown_for_address_informative: Puede que la segunda línea de la dirección
+              no sea correcta.
           warnings:
             contains_too_many_words: Se recomienda que la línea 2 de la dirección
               tenga menos de %{word_count} palabras.
@@ -189,6 +219,35 @@ es:
             unknown_for_zip_and_province_instructional: Introduce una ciudad válida
               para el código postal %{zip} de %{province}.
             unknown_for_zip_and_province_informative: Puede que la ciudad sea incorrecta.
+            too_long_instructional: El nombre de la ciudad es demasiado largo (el
+              máximo es 255 caracteres).
+            too_long_informative: El nombre de la ciudad es demasiado largo.
+            contains_emojis_instructional: El nombre de la ciudad no puede contener
+              emojis.
+            contains_emojis_informative: El nombre de la ciudad no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre de la ciudad no
+              puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre de la ciudad no puede
+              contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre de la ciudad solo
+              puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El nombre de la ciudad no
+              puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre de la ciudad debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre de la ciudad debe tener
+              menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre de la ciudad no puede contener
+              HTML.
+            contains_html_tags_informative: El nombre de la ciudad no puede contener
+              HTML.
+            contains_url_instructional: El nombre de la ciudad no puede contener una
+              URL.
+            contains_url_informative: El nombre de la ciudad no puede contener una
+              URL.
+            unknown_for_address_instructional: Puede que la ciudad no sea correcta.
+            unknown_for_address_informative: Puede que la ciudad no sea correcta.
         country:
           label:
             default: País/región
@@ -220,6 +279,17 @@ es:
             invalid_informative: El número de teléfono no es válido.
             too_long_instructional: El número de teléfono es demasiado largo.
             too_long_informative: El número de teléfono es demasiado largo.
+            contains_emojis_instructional: El número de teléfono no puede contener
+              emojis.
+            contains_emojis_informative: El número de teléfono no puede contener emojis.
+            contains_mathematical_symbols_instructional: El número de teléfono no
+              puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El número de teléfono no puede
+              contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El número de teléfono solo
+              puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El número de teléfono no puede
+              contener caracteres restringidos.
         province:
           label:
             default: Región
@@ -245,6 +315,8 @@ es:
               postal %{zip}.
             unknown_for_zip_informative: La región no coincide con el código postal
               %{zip}.
+            unknown_for_address_instructional: Puede que la región no sea correcta.
+            unknown_for_address_informative: Puede que la región no sea correcta.
         zip:
           label:
             default: Código postal
@@ -279,6 +351,25 @@ es:
             unknown_for_province_instructional: Introduce un código postal válido
               para %{province}.
             unknown_for_province_informative: El código postal no es válido para %{province}.
+            blocked_address_instructional: No se admite esta ubicación.
+            blocked_address_informative: No se admite esta ubicación.
+            too_long_instructional: El código postal es demasiado largo.
+            too_long_informative: El código postal es demasiado largo.
+            contains_emojis_instructional: El código postal no puede contener emojis.
+            contains_emojis_informative: El código postal no puede contener emojis.
+            contains_mathematical_symbols_instructional: El código postal no puede
+              contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El código postal no puede contener
+              símbolos matemáticos.
+            contains_restricted_characters_instructional: El código postal solo puede
+              contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El código postal no puede
+              contener caracteres restringidos.
+            not_supported_informative: El código postal no se admite.
+            contains_html_tags_instructional: El código postal no puede contener HTML.
+            contains_html_tags_informative: El código postal no puede contener HTML.
+            unknown_for_address_instructional: Puede que el código postal no sea correcto.
+            unknown_for_address_informative: Puede que el código postal no sea correcto.
         street_name:
           label:
             default: Calle
@@ -321,6 +412,10 @@ es:
               postal %{zip}.
             unknown_for_address_instructional: Puede que la calle no sea correcta.
             unknown_for_address_informative: Puede que la calle no sea correcta.
+            contains_too_many_words_informative: El nombre de la calle no puede tener
+              más de %{word_count} palabras.
+            contains_html_tags_informative: El nombre de la calle no puede contener
+              HTML.
         street_number:
           label:
             default: Número de edificio
@@ -380,6 +475,44 @@ es:
             unknown_for_zip: Introduce un nombre de vecindario válido para el código
               postal %{zip}.
             unknown_for_address: Puede que el vecindario no sea correcto.
+            blank_instructional: Introduce un vecindario.
+            blank_informative: Falta el vecindario.
+            too_long_instructional: El nombre del vecindario es demasiado largo (el
+              máximo es de %{limit} caracteres).
+            too_long_informative: El nombre del vecindario es demasiado largo.
+            contains_emojis_instructional: El nombre del vecindario no puede contener
+              emojis.
+            contains_emojis_informative: El nombre del vecindario no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre del vecindario
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre del vecindario no
+              puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre del vecindario
+              solo puede contener letras, números y caracteres locales y especiales.
+            contains_restricted_characters_informative: El nombre del vecindario no
+              puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre del vecindario debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre del vecindario debe tener
+              menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre del vecindario no puede contener
+              etiquetas HTML.
+            contains_html_tags_informative: El nombre del vecindario no puede contener
+              etiquetas HTML.
+            contains_url_instructional: El nombre del vecindario no puede contener
+              URL.
+            contains_url_informative: El nombre del vecindario no puede contener URL.
+            unknown_for_city_instructional: Introduce un nombre de vecindario válido
+              para %{city}.
+            unknown_for_city_informative: Introduce un nombre de vecindario válido
+              para %{city}.
+            unknown_for_zip_instructional: Introduce un nombre de vecindario válido
+              para %{zip}.
+            unknown_for_zip_informative: Introduce un nombre de vecindario válido
+              para %{zip}.
+            unknown_for_address_instructional: Puede que el vecindario no sea correcto.
+            unknown_for_address_informative: Puede que el vecindario no sea correcto.
           warnings:
             contains_too_many_words: Se recomienda que el barrio tenga menos de %{word_count}
               palabras.
@@ -438,6 +571,22 @@ es:
               contener una dirección URL.
             contains_url_informative: La segunda línea de la dirección no puede contener
               una dirección URL.
+            missing_building_number_instructional: Agrega un número de edificio, si
+              existe.
+            missing_building_number_informative: Agrega un número de edificio, si
+              existe.
+            street_unknown_for_zip_instructional: Indica un nombre de calle válido
+              para el código postal %{zip}.
+            street_unknown_for_zip_informative: Indica un nombre de calle válido para
+              el código postal %{zip}.
+            building_number_invalid_instructional: No se ha podido localizar un número
+              de edificio para %{street}, %{zip}.
+            building_number_invalid_informative: No se ha podido localizar un número
+              de edificio para %{street}, %{zip}.
+            unknown_for_address_instructional: Puede que la segunda línea de la dirección
+              no sea correcta.
+            unknown_for_address_informative: Puede que la segunda línea de la dirección
+              no sea correcta.
           warnings:
             contains_too_many_words: Se recomienda que la segunda línea de la dirección
               tenga menos de %{word_count} palabras.

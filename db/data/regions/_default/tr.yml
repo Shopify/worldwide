@@ -141,6 +141,27 @@ tr:
               kaydın bina numarası bulunamadı"
             building_number_invalid_informative: "%{street} %{zip} için girilen kaydın
               bina numarası bulunamadı"
+            too_long_informative: Adres satırı 2 çok uzun
+            contains_emojis_instructional: Adres satırı 2, emoji içeremez
+            contains_emojis_informative: Adres satırı 2, emoji içeremez
+            contains_mathematical_symbols_instructional: Adres satırı 2, matematiksel
+              semboller içeremez
+            contains_mathematical_symbols_informative: Adres satırı 2, matematiksel
+              semboller içeremez
+            contains_restricted_characters_instructional: Adres satırı 2 yalnızca
+              harfler, sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Adres satırı 2, kısıtlanmış
+              karakterler içeremez
+            contains_too_many_words_instructional: Adres satırı 2, %{word_count} adetten
+              az sözcükten oluşmalıdır
+            contains_too_many_words_informative: Adres satırı 2, %{word_count} adetten
+              az sözcükten oluşmalıdır
+            contains_html_tags_instructional: Adres satırı 2, HTML içeremez
+            contains_html_tags_informative: Adres satırı 2, HTML içeremez
+            contains_url_instructional: Adres satırı 2, URL içeremez
+            contains_url_informative: Adres satırı 2, URL içeremez
+            unknown_for_address_instructional: Adres satırı 2 yanlış olabilir
+            unknown_for_address_informative: Adres satırı 2 yanlış olabilir
           warnings:
             contains_too_many_words: Adres satırı 2'de %{word_count} adetten az kelime
               olması önerilir
@@ -168,6 +189,28 @@ tr:
             unknown_for_zip_and_province_instructional: "%{zip}, %{province} için
               geçerli bir şehir girin"
             unknown_for_zip_and_province_informative: Şehir yanlış olabilir
+            too_long_instructional: Şehir adı çok uzun (maksimum 255 karakter olmalıdır)
+            too_long_informative: Şehir adı çok uzun
+            contains_emojis_instructional: Şehir adı emoji içeremez
+            contains_emojis_informative: Şehir adı emoji içeremez
+            contains_mathematical_symbols_instructional: Şehir adı, matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Şehir adı, matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Şehir adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Şehir adı, kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Şehir adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_too_many_words_informative: Şehir adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_html_tags_instructional: Şehir adı HTML içeremez
+            contains_html_tags_informative: Şehir adı HTML içeremez
+            contains_url_instructional: Şehir adı URL içeremez
+            contains_url_informative: Şehir adı URL içeremez
+            unknown_for_address_instructional: Şehir adı yanlış olabilir
+            unknown_for_address_informative: Şehir adı yanlış olabilir
         country:
           label:
             default: Ülke/Bölge
@@ -198,6 +241,16 @@ tr:
             invalid_informative: Telefon numarası geçerli değil
             too_long_instructional: Telefon numarası çok uzun
             too_long_informative: Telefon numarası çok uzun
+            contains_emojis_instructional: Telefon numarası emoji içeremez
+            contains_emojis_informative: Telefon numarası emoji içeremez
+            contains_mathematical_symbols_instructional: Telefon numarası, matematiksel
+              semboller içeremez
+            contains_mathematical_symbols_informative: Telefon numarası, matematiksel
+              semboller içeremez
+            contains_restricted_characters_instructional: Telefon numarası yalnızca
+              harfler, sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Telefon numarası, kısıtlanmış
+              karakterler içeremez
         province:
           label:
             default: Bölge
@@ -218,6 +271,8 @@ tr:
             unknown_for_city_instructional: Bölge %{city} ile eşleşmiyor
             unknown_for_zip_instructional: "%{zip} için geçerli bir bölge seçin"
             unknown_for_zip_informative: Bölge %{zip} ile eşleşmiyor
+            unknown_for_address_instructional: Bölge yanlış olabilir
+            unknown_for_address_informative: Bölge yanlış olabilir
         zip:
           label:
             default: Posta kodu
@@ -251,6 +306,25 @@ tr:
             unknown_for_province_instructional: "%{province} için geçerli bir posta
               kodu girin"
             unknown_for_province_informative: Posta kodu %{province} için geçersiz
+            blocked_address_instructional: Bu konum desteklenmiyor
+            blocked_address_informative: Bu konum desteklenmiyor
+            too_long_instructional: Posta kodu çok uzun
+            too_long_informative: Posta kodu çok uzun
+            contains_emojis_instructional: Posta kodu emoji içeremez
+            contains_emojis_informative: Posta kodu emoji içeremez
+            contains_mathematical_symbols_instructional: Posta kodu matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Posta kodu matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Posta kodu yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Posta kodu, kısıtlanmış karakterler
+              içeremez
+            not_supported_informative: Posta kodu desteklenmiyor
+            contains_html_tags_instructional: Posta kodu HTML içeremez
+            contains_html_tags_informative: Posta kodu HTML içeremez
+            unknown_for_address_instructional: Posta kodu yanlış olabilir
+            unknown_for_address_informative: Posta kodu yanlış olabilir
         street_name:
           label:
             default: Sokak
@@ -287,6 +361,9 @@ tr:
             street_unknown_for_zip_informative: Sokak adı %{zip} için geçersiz
             unknown_for_address_instructional: Sokak adı yanlış olabilir
             unknown_for_address_informative: Sokak adı yanlış olabilir
+            contains_too_many_words_informative: Sokak adı en fazla %{word_count}
+              kelime içerebilir
+            contains_html_tags_informative: Sokak adı HTML içeremez
         street_number:
           label:
             default: Bina numarası
@@ -337,6 +414,36 @@ tr:
             unknown_for_city: "%{city} için geçerli bir mahalle adı girin"
             unknown_for_zip: "%{zip} için geçerli bir mahalle adı girin"
             unknown_for_address: Mahalle adı yanlış olabilir
+            blank_instructional: Bir mahalle adı girin
+            blank_informative: Mahalle adı eksik
+            too_long_instructional: Mahalle adı çok uzun (maksimum %{limit} karakter
+              olmalıdır)
+            too_long_informative: Mahalle adı çok uzun
+            contains_emojis_instructional: Mahalle adı emoji içeremez
+            contains_emojis_informative: Mahalle adı emoji içeremez
+            contains_mathematical_symbols_instructional: Mahalle adı, matematiksel
+              semboller içeremez
+            contains_mathematical_symbols_informative: Mahalle adı, matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Mahalle adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Mahalle adı, kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Mahalle adı %{word_count} adetten
+              az sözcük içermelidir
+            contains_too_many_words_informative: Mahalle adı %{word_count} adetten
+              az sözcük içermelidir
+            contains_html_tags_instructional: Mahalle adı HTML etiketleri içeremez
+            contains_html_tags_informative: Mahalle adı HTML etiketleri içeremez
+            contains_url_instructional: Mahalle adı URL içeremez
+            contains_url_informative: Mahalle adı URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir mahalle adı
+              girin"
+            unknown_for_city_informative: "%{city} için geçerli bir mahalle adı girin"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir mahalle adı girin"
+            unknown_for_zip_informative: "%{zip} için geçerli bir mahalle adı girin"
+            unknown_for_address_instructional: Mahalle adı yanlış olabilir
+            unknown_for_address_informative: Mahalle adı yanlış olabilir
           warnings:
             contains_too_many_words: Mahalle adında %{word_count} adetten az kelime
               olması önerilir
@@ -384,6 +491,18 @@ tr:
             contains_html_tags_informative: İkinci adres satırı HTML etiketleri içeremez
             contains_url_instructional: İkinci adres satırı URL içeremez
             contains_url_informative: İkinci adres satırı URL içeremez
+            missing_building_number_instructional: Varsa bina numaranızı ekleyin
+            missing_building_number_informative: Varsa bina numaranızı ekleyin
+            street_unknown_for_zip_instructional: "%{zip} için geçerli bir sokak adı
+              girin"
+            street_unknown_for_zip_informative: "%{zip} için geçerli bir sokak adı
+              girin"
+            building_number_invalid_instructional: "%{street}, %{zip} için bina numarası
+              bulunamadı"
+            building_number_invalid_informative: "%{street}, %{zip} için bina numarası
+              bulunamadı"
+            unknown_for_address_instructional: İkinci adres satırı yanlış olabilir
+            unknown_for_address_informative: İkinci adres satırı yanlış olabilir
           warnings:
             contains_too_many_words: İkinci adres satırında %{word_count} adetten
               az kelime olması önerilir

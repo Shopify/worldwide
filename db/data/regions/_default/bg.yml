@@ -149,6 +149,27 @@ bg:
               %{street}, %{zip}
             building_number_invalid_informative: Не е открит номер на сграда за %{street},
               %{zip}
+            too_long_informative: Ред 2 от адреса е с твърде голяма дължина
+            contains_emojis_instructional: Ред 2 от адреса не може да съдържа емоджита
+            contains_emojis_informative: Ред 2 от адреса не може да съдържа емоджита
+            contains_mathematical_symbols_instructional: Ред 2 от адреса не може да
+              съдържа математически символи
+            contains_mathematical_symbols_informative: Ред 2 от адреса не може да
+              съдържа математически символи
+            contains_restricted_characters_instructional: Ред 2 от адреса може да
+              съдържа само букви, цифри, местни знаци и специални знаци
+            contains_restricted_characters_informative: Ред 2 от адреса не може да
+              съдържа забранени знаци
+            contains_too_many_words_instructional: Ред 2 от адреса трябва да съдържа
+              по-малко от %{word_count} думи
+            contains_too_many_words_informative: Ред 2 от адреса трябва да съдържа
+              по-малко от %{word_count} думи
+            contains_html_tags_instructional: Ред 2 от адреса не може да съдържа HTML
+            contains_html_tags_informative: Ред 2 от адреса не може да съдържа HTML
+            contains_url_instructional: Ред 2 от адреса не може да съдържа URL адрес
+            contains_url_informative: Ред 2 от адреса не може да съдържа URL адрес
+            unknown_for_address_instructional: Възможно е ред 2 от адреса да е неправилен
+            unknown_for_address_informative: Възможно е ред 2 от адреса да е неправилен
           warnings:
             contains_too_many_words: Препоръчително е редът за адрес 2 да не съдържа
               повече от %{word_count} думи
@@ -177,6 +198,29 @@ bg:
             unknown_for_zip_and_province_instructional: Въведете валиден град за %{zip},
               %{province}
             unknown_for_zip_and_province_informative: Възможно е градът да е неправилен
+            too_long_instructional: "„Град“ е с твърде голяма дължина (максимумът
+              е 255 знака)"
+            too_long_informative: "„Град“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Град“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Град“ не може да съдържа емоджита"
+            contains_mathematical_symbols_instructional: "„Град“ не може да съдържа
+              математически символи"
+            contains_mathematical_symbols_informative: "„Град“ не може да съдържа
+              математически символи"
+            contains_restricted_characters_instructional: "„Град“ може да съдържа
+              само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Град“ не може да съдържа
+              забранени знаци"
+            contains_too_many_words_instructional: "„Град“ не може да съдържа по-малко
+              от %{word_count} думи"
+            contains_too_many_words_informative: "„Град“ не може да съдържа по-малко
+              от %{word_count} думи"
+            contains_html_tags_instructional: "„Град“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Град“ не може да съдържа HTML"
+            contains_url_instructional: "„Град“ не може да съдържа URL адрес"
+            contains_url_informative: "„Град“ не може да съдържа URL адрес"
+            unknown_for_address_instructional: Възможно е градът да е неправилен
+            unknown_for_address_informative: Възможно е градът да е неправилен
         country:
           label:
             default: Държава/регион
@@ -207,6 +251,16 @@ bg:
             invalid_informative: "„Телефонен номер“ не е валиден."
             too_long_instructional: "„Телефонен номер“ е с твърде голяма дължина"
             too_long_informative: "„Телефонен номер“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Телефонен номер“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Телефонен номер“ не може да съдържа емоджита"
+            contains_mathematical_symbols_instructional: "„Телефонен номер“ не може
+              да съдържа математически символи"
+            contains_mathematical_symbols_informative: "„Телефонен номер“ не може
+              да съдържа математически символи"
+            contains_restricted_characters_instructional: "„Телефонен номер“ може
+              да съдържа само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Телефонен номер“ не може
+              да съдържа забранени знаци"
         province:
           label:
             default: Регион
@@ -227,6 +281,8 @@ bg:
             unknown_for_city_instructional: "„Регион“ не съответства на %{city}"
             unknown_for_zip_instructional: Изберете валиден регион за %{zip}
             unknown_for_zip_informative: "„Регион“ не съответства на %{zip}"
+            unknown_for_address_instructional: Възможно е регионът да е неправилен
+            unknown_for_address_informative: Възможно е регионът да е неправилен
         zip:
           label:
             default: Пощенски код
@@ -258,6 +314,25 @@ bg:
             not_supported_informativel: "„Пощенски код“ не се поддържа."
             unknown_for_province_instructional: Въведете валиден пощенски код за %{province}
             unknown_for_province_informative: "„Пощенски код“ е невалиден за %{province}"
+            blocked_address_instructional: Това местоположение не се поддържа
+            blocked_address_informative: Това местоположение не се поддържа
+            too_long_instructional: Пощенският код е с твърде голяма дължина
+            too_long_informative: Пощенският код е с твърде голяма дължина
+            contains_emojis_instructional: "„Пощенски код“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Пощенски код“ не може да съдържа емоджита"
+            contains_mathematical_symbols_instructional: "„Пощенски код“ не може да
+              съдържа математически символи"
+            contains_mathematical_symbols_informative: "„Пощенски код“ не може да
+              съдържа математически символи"
+            contains_restricted_characters_instructional: "„Пощенски код“ може да
+              съдържа само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Пощенски код“ не може да
+              съдържа забранени знаци"
+            not_supported_informative: "„Пощенски код“ не се поддържа."
+            contains_html_tags_instructional: "„Пощенски код“ не може да съдържа HTML"
+            contains_html_tags_informative: "„Пощенски код“ не може да съдържа HTML"
+            unknown_for_address_instructional: Възможно е пощенският код да е неправилен.
+            unknown_for_address_informative: Възможно е пощенският код да е неправилен.
         street_name:
           label:
             default: Улица
@@ -293,6 +368,9 @@ bg:
             street_unknown_for_zip_informative: Невалидна улица за %{zip}
             unknown_for_address_instructional: Възможно е улицата да е неправилна
             unknown_for_address_informative: Възможно е улицата да е неправилна
+            contains_too_many_words_informative: "„Улица“ не може да съдържа повече
+              от %{word_count} думи"
+            contains_html_tags_informative: "„Улица“ не може да съдържа HTML"
         street_number:
           label:
             default: Номер на сграда
@@ -349,6 +427,35 @@ bg:
             unknown_for_city: Въведете валидно име на квартал за %{city}
             unknown_for_zip: Въведете валидно име на квартал за %{zip}
             unknown_for_address: Възможно е кварталът да е неправилен.
+            blank_instructional: Въведете квартал
+            blank_informative: Липсва квартал
+            too_long_instructional: "„Квартал“ е с твърде голяма дължина (максимумът
+              е %{limit} знака)"
+            too_long_informative: "„Квартал“ е с твърде голяма дължина"
+            contains_emojis_instructional: "„Квартал“ не може да съдържа емоджита"
+            contains_emojis_informative: "„Квартал“ не може да съдържа емоджита"
+            contains_mathematical_symbols_instructional: "„Квартал“ не може да съдържа
+              математически символи"
+            contains_mathematical_symbols_informative: "„Квартал“ не може да съдържа
+              математически символи"
+            contains_restricted_characters_instructional: "„Квартал“ може да съдържа
+              само букви, цифри, местни знаци и специални знаци"
+            contains_restricted_characters_informative: "„Квартал“ не може да съдържа
+              забранени знаци"
+            contains_too_many_words_instructional: "„Квартал“ трябва да съдържа по-малко
+              от %{word_count} думи"
+            contains_too_many_words_informative: "„Квартал“ трябва да съдържа по-малко
+              от %{word_count} думи"
+            contains_html_tags_instructional: "„Квартал“ не може да съдържа HTML етикети"
+            contains_html_tags_informative: "„Квартал“ не може да съдържа HTML етикети"
+            contains_url_instructional: "„Квартал“ не може да съдържа URL адреси"
+            contains_url_informative: "„Квартал“ не може да съдържа URL адреси"
+            unknown_for_city_instructional: Въведете валидно име на квартал за %{city}
+            unknown_for_city_informative: Въведете валидно име на квартал за %{city}
+            unknown_for_zip_instructional: Въведете валидно име на квартал за %{zip}
+            unknown_for_zip_informative: Въведете валидно име на квартал за %{zip}
+            unknown_for_address_instructional: Възможно е кварталът да е неправилен.
+            unknown_for_address_informative: Възможно е кварталът да е неправилен.
           warnings:
             contains_too_many_words: Препоръчително е „Квартал“ да не съдържа повече
               от %{word_count} думи
@@ -402,6 +509,21 @@ bg:
               адрес
             contains_url_informative: Вторият ред от адреса не може да съдържа URL
               адрес
+            missing_building_number_instructional: Добавете номер на сграда, ако има
+              такъв
+            missing_building_number_informative: Добавете номер на сграда, ако има
+              такъв
+            street_unknown_for_zip_instructional: Въведете валидно име на улица за
+              %{zip}
+            street_unknown_for_zip_informative: Въведете валидно име на улица за %{zip}
+            building_number_invalid_instructional: Не е открит номер на сграда за
+              %{street}, %{zip}
+            building_number_invalid_informative: Не е открит номер на сграда за %{street},
+              %{zip}
+            unknown_for_address_instructional: Възможно е вторият ред от адреса да
+              е неправилен
+            unknown_for_address_informative: Възможно е вторият ред от адреса да е
+              неправилен
           warnings:
             contains_too_many_words: Препоръчително е вторият ред от адреса да не
               съдържа повече от %{word_count} думи

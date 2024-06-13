@@ -141,6 +141,33 @@ nb:
               %{street} %{zip}
             building_number_invalid_informative: Fant ikke bygningsnummeret for %{street}
               %{zip}
+            too_long_informative: Den andre adresselinjen er for lang
+            contains_emojis_instructional: Den andre adresselinjen kan ikke inneholde
+              emojier
+            contains_emojis_informative: Den andre adresselinjen kan ikke inneholde
+              emojier
+            contains_mathematical_symbols_instructional: Den andre adresselinjen kan
+              ikke inneholde matematiske symboler
+            contains_mathematical_symbols_informative: Den andre adresselinjen kan
+              ikke inneholde matematiske symboler
+            contains_restricted_characters_instructional: Den andre adresselinjen
+              kan kun inneholde bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Den andre adresselinjen kan
+              ikke inneholde begrensede tegn
+            contains_too_many_words_instructional: Den andre adresselinjen må bestå
+              av færre enn %{word_count} ord
+            contains_too_many_words_informative: Den andre adresselinjen må bestå
+              av færre enn %{word_count} ord
+            contains_html_tags_instructional: Den andre adresselinjen kan ikke inneholde
+              HTML
+            contains_html_tags_informative: Den andre adresselinjen kan ikke inneholde
+              HTML
+            contains_url_instructional: Den andre adresselinjen kan ikke inneholde
+              en URL-adresse
+            contains_url_informative: Den andre adresselinjen kan ikke inneholde en
+              URL-adresse
+            unknown_for_address_instructional: Den andre adresselinjen kan være feil
+            unknown_for_address_informative: Den andre adresselinjen kan være feil
           warnings:
             contains_too_many_words: Det anbefales at adresselinje 2 inneholder færre
               enn %{word_count} ord
@@ -169,6 +196,28 @@ nb:
             unknown_for_zip_and_province_instructional: Skriv inn et gyldig poststed
               for %{zip}, %{province}
             unknown_for_zip_and_province_informative: Poststedet kan være feil
+            too_long_instructional: Poststed er for langt (maksimalt 255 tegn)
+            too_long_informative: Poststedet er for langt
+            contains_emojis_instructional: Poststedet kan ikke inneholde emojier
+            contains_emojis_informative: Poststedet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Poststedet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Poststedet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Poststedet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Poststedet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Poststedet må bestå av færre enn
+              %{word_count} ord
+            contains_too_many_words_informative: Poststedet må bestå av færre enn
+              %{word_count} ord
+            contains_html_tags_instructional: Poststedet kan ikke inneholde HTML
+            contains_html_tags_informative: Poststedet kan ikke inneholde HTML
+            contains_url_instructional: Poststedet kan ikke inneholde en URL-adresse
+            contains_url_informative: Poststedet kan ikke inneholde en URL-adresse
+            unknown_for_address_instructional: Poststedet kan være feil
+            unknown_for_address_informative: Poststedet kan være feil
         country:
           label:
             default: Land/region
@@ -199,6 +248,16 @@ nb:
             invalid_informative: Telefonnummeret er ikke gyldig
             too_long_instructional: Telefonnummeret er for langt
             too_long_informative: Telefonnummeret er for langt
+            contains_emojis_instructional: Telefonnummeret kan ikke inneholde emojier
+            contains_emojis_informative: Telefonnummeret kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Telefonnummeret kan ikke
+              inneholde matematiske symboler
+            contains_mathematical_symbols_informative: Telefonnummeret kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Telefonnummer kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Telefonnummeret kan ikke inneholde
+              begrensede tegn
         province:
           label:
             default: Region
@@ -219,6 +278,8 @@ nb:
             unknown_for_city_instructional: Området samsvarer ikke med %{city}
             unknown_for_zip_instructional: Velg et gyldig område for %{zip}
             unknown_for_zip_informative: Området samsvarer ikke med %{zip}
+            unknown_for_address_instructional: Området kan være feil
+            unknown_for_address_informative: Området kan være feil
         zip:
           label:
             default: Postnummer
@@ -253,6 +314,25 @@ nb:
             unknown_for_province_instructional: Skriv inn et gyldig postnummer for
               %{province}
             unknown_for_province_informative: Postnummeret er ugyldig for %{province}
+            blocked_address_instructional: Denne lokalisasjonen støttes ikke
+            blocked_address_informative: Denne lokalisasjonen støttes ikke
+            too_long_instructional: Postnummeret er for langt
+            too_long_informative: Postnummeret er for langt
+            contains_emojis_instructional: Postnummeret kan ikke inneholde emojier
+            contains_emojis_informative: Postnummeret kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Postnummeret kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Postnummeret kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Postnummer kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Postnummeret kan ikke inneholde
+              begrensede tegn
+            not_supported_informative: Postnummeret støttes ikke
+            contains_html_tags_instructional: Postnummeret kan ikke inneholde HTML
+            contains_html_tags_informative: Postnummeret kan ikke inneholde HTML
+            unknown_for_address_instructional: Postnummeret kan være feil
+            unknown_for_address_informative: Postnummeret kan være feil
         street_name:
           label:
             default: Gate
@@ -287,6 +367,9 @@ nb:
             street_unknown_for_zip_informative: Gatenavnet er ugyldig for %{zip}
             unknown_for_address_instructional: Gatenavnet kan være feil
             unknown_for_address_informative: Gatenavnet kan være feil
+            contains_too_many_words_informative: Gatenavnet kan ikke bestå av mer
+              enn %{word_count} ord
+            contains_html_tags_informative: Gatenavnet kan ikke inneholde HTML
         street_number:
           label:
             default: Bygningsnummer
@@ -340,6 +423,35 @@ nb:
             unknown_for_city: Angi et gyldig nabolagsnavn for %{city}
             unknown_for_zip: Angi et gyldig nabolagsnavn for %{zip}
             unknown_for_address: Nabolagsnavnet kan være feil
+            blank_instructional: Angi et nabolag
+            blank_informative: Nabolagsnavnet mangler
+            too_long_instructional: Nabolagsnavnet er for langt (maksimalt %{limit}
+              tegn)
+            too_long_informative: Nabolagsnavnet er for langt
+            contains_emojis_instructional: Nabolagsnavnet kan ikke inneholde emojier
+            contains_emojis_informative: Nabolagsnavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Nabolagsnavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Nabolagsnavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Nabolagsnavnet kan bare
+              inneholde bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Nabolagsnavnet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Nabolagsnavnet må bestå av færre
+              enn %{word_count} ord
+            contains_too_many_words_informative: Nabolagsnavnet må bestå av færre
+              enn %{word_count} ord
+            contains_html_tags_instructional: Nabolagsnavnet kan ikke inneholde HTML-tagger
+            contains_html_tags_informative: Nabolagsnavnet kan ikke inneholde HTML-tagger
+            contains_url_instructional: Nabolagsnavnet kan ikke inneholde URL-adresser
+            contains_url_informative: Nabolagsnavnet kan ikke inneholde URL-adresser
+            unknown_for_city_instructional: Angi et gyldig nabolagsnavn for %{city}
+            unknown_for_city_informative: Angi et gyldig nabolagsnavn for %{city}
+            unknown_for_zip_instructional: Angi et gyldig nabolagsnavn for %{zip}
+            unknown_for_zip_informative: Angi et gyldig nabolagsnavn for %{zip}
+            unknown_for_address_instructional: Nabolagsnavnet kan være feil
+            unknown_for_address_informative: Nabolagsnavnet kan være feil
           warnings:
             contains_too_many_words: Vi anbefaler at nabolagsnavnet inneholder færre
               enn %{word_count} ord
@@ -392,6 +504,18 @@ nb:
               en URL-adresse
             contains_url_informative: Den andre adresselinjen kan ikke inneholde en
               URL-adresse
+            missing_building_number_instructional: Legg til et bygningsnummer hvis
+              du har et
+            missing_building_number_informative: Legg til et bygningsnummer hvis du
+              har et
+            street_unknown_for_zip_instructional: Oppgi et gyldig gatenavn for %{zip}
+            street_unknown_for_zip_informative: Oppgi et gyldig gatenavn for %{zip}
+            building_number_invalid_instructional: Fant ikke bygningsnummeret for
+              %{street} %{zip}
+            building_number_invalid_informative: Fant ikke bygningsnummeret for %{street}
+              %{zip}
+            unknown_for_address_instructional: Den andre adresselinjen kan være feil
+            unknown_for_address_informative: Den andre adresselinjen kan være feil
           warnings:
             contains_too_many_words: Vi anbefaler at den andre adresselinjen inneholder
               færre enn %{word_count} ord
