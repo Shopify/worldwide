@@ -10,3 +10,39 @@ vi:
           errors:
             blank_instructional: Chọn tiểu vương quốc
             blank_informative: Thiếu tiểu vương quốc
+        neighborhood:
+          label:
+            default: Khu vực
+            optional: Khu vực (không bắt buộc)
+          errors:
+            blank_instructional: Nhập khu vực
+            blank_informative: Thiếu khu vực
+            too_long_instructional: Khu vực quá dài (tối đa %{limit} ký tự)
+            too_long_informative: Khu vực quá dài
+            contains_emojis_instructional: Khu vực không được chứa biểu tượng cảm
+              xúc
+            contains_emojis_informative: Khu vực không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols_instructional: Khu vực không được chứa ký
+              hiệu toán học
+            contains_mathematical_symbols_informative: Khu vực không được chứa ký
+              hiệu toán học
+            contains_restricted_characters_instructional: Khu vực chỉ được chứa chữ
+              cái, chữ số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Khu vực không được chứa ký
+              tự bị hạn chế
+            contains_too_many_words_instructional: Khu vực phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Khu vực phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Khu vực không được chứa HTML
+            contains_html_tags_informative: Khu vực không được chứa HTML
+            contains_url_instructional: Khu vực không được chứa URL
+            contains_url_informative: Khu vực không được chứa URL
+            unknown_for_city_instructional: Nhập khu vực hợp lệ cho %{city}
+            unknown_for_city_informative: Khu vực cho không hợp lệ cho %{city}
+            unknown_for_zip_instructional: Nhập khu vực hợp lệ cho %{zip}
+            unknown_for_zip_informative: Khu vực cho không hợp lệ cho %{zip}
+            unknown_for_address_instructional: Khu vực có thể không chính xác
+            unknown_for_address_informative: Khu vực có thể không chính xác
+          warnings:
+            contains_too_many_words: Khu vực nên có tối đa %{word_count} từ

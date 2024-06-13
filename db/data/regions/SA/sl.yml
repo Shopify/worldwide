@@ -1,14 +1,13 @@
 ---
 sl:
   worldwide:
-    TR:
+    SA:
       addresses:
         neighborhood:
           label:
             default: Okrožje
             optional: Okrožje (izbirno)
           errors:
-            unknown_for_address: Okrožje morda ni pravilno
             blank_instructional: Vnesite ime okrožja
             blank_informative: Manjka ime okrožja
             too_long_instructional: Ime okrožja je predolgo (največje dovoljeno št.
@@ -34,9 +33,11 @@ sl:
             contains_url_instructional: Ime okrožja ne sme vsebovati naslovov URL
             contains_url_informative: Ime okrožja ne sme vsebovati naslovov URL
             unknown_for_city_instructional: Vnesite veljavno ime okrožja za kraj %{city}
-            unknown_for_city_informative: Ime okrožja ni veljavno za kraj %{city}
-            unknown_for_zip_instructional: Vnesite veljavno ime okrožja za kraj %{zip}
-            unknown_for_zip_informative: Ime okrožja ni veljavno za kraj %{zip}
+            unknown_for_city_informative: Ime okrožja ni veljavno za mesto %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime okrožja za poštno
+              številko %{zip}
+            unknown_for_zip_informative: Ime okrožja ni veljavno za poštno številko
+              %{zip}
             unknown_for_address_instructional: Okrožje morda ni pravilno
             unknown_for_address_informative: Okrožje morda ni pravilno
           warnings:
