@@ -10,3 +10,45 @@ el:
           errors:
             blank_instructional: Επιλέξτε ένα εμιράτο
             blank_informative: Το εμιράτο λείπει
+        neighborhood:
+          label:
+            default: Περιοχή
+            optional: Περιοχή (προαιρετικά)
+          errors:
+            blank_instructional: Εισαγάγετε μια περιοχή
+            blank_informative: Η περιοχή λείπει
+            too_long_instructional: Το πεδίο "Περιοχή" είναι πολύ μεγάλο (το μέγιστο
+              όριο είναι %{limit} χαρακτήρες)
+            too_long_informative: Το πεδίο "Περιοχή" είναι πολύ μεγάλο
+            contains_emojis_instructional: Το πεδίο "Περιοχή" δεν μπορεί να περιέχει
+              emoji
+            contains_emojis_informative: Το πεδίο "Περιοχή" δεν μπορεί να περιέχει
+              emoji
+            contains_mathematical_symbols_instructional: Το πεδίο "Περιοχή" δεν μπορεί
+              να περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Το πεδίο "Περιοχή" δεν μπορεί
+              να περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Το πεδίο "Περιοχή" μπορεί
+              να περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Το πεδίο "Περιοχή" δεν μπορεί
+              να περιέχει περιορισμένους χαρακτήρες
+            contains_too_many_words_instructional: Το πεδίο "Περιοχή" πρέπει να διαθέτει
+              λιγότερες από %{word_count} λέξεις
+            contains_too_many_words_informative: Το πεδίο "Περιοχή" πρέπει να διαθέτει
+              λιγότερες από %{word_count} λέξεις
+            contains_html_tags_instructional: Το πεδίο "Περιοχή" δεν μπορεί να περιέχει
+              κώδικα HTML
+            contains_html_tags_informative: Το πεδίο "Περιοχή" δεν μπορεί να περιέχει
+              κώδικα HTML
+            contains_url_instructional: Το πεδίο "Περιοχή" δεν μπορεί να περιέχει
+              URL
+            contains_url_informative: Το πεδίο "Περιοχή" δεν μπορεί να περιέχει URL
+            unknown_for_city_instructional: Εισαγάγετε μια έγκυρη περιοχή για %{city}
+            unknown_for_city_informative: Η περιοχή δεν είναι έγκυρη για %{city}
+            unknown_for_zip_instructional: Εισαγάγετε μια έγκυρη περιοχή για %{zip}
+            unknown_for_zip_informative: Η περιοχή δεν είναι έγκυρη για %{zip}
+            unknown_for_address_instructional: Η περιοχή ενδέχεται να είναι εσφαλμένη
+            unknown_for_address_informative: Η περιοχή ενδέχεται να είναι εσφαλμένη
+          warnings:
+            contains_too_many_words: Η περιοχή συνιστάται να έχει λιγότερες από %{word_count}
+              λέξεις
