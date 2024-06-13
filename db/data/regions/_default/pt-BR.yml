@@ -137,6 +137,35 @@ pt-BR:
               do prédio de %{street}, %{zip}.
             building_number_invalid_informative: Não foi possível localizar o número
               do prédio de %{street}, %{zip}.
+            too_long_informative: A segunda linha de endereço é longa demais
+            contains_emojis_instructional: A segunda linha do endereço não pode conter
+              emojis
+            contains_emojis_informative: A segunda linha do endereço não pode conter
+              emojis
+            contains_mathematical_symbols_instructional: A segunda linha do endereço
+              não pode conter símbolos matemáticos
+            contains_mathematical_symbols_informative: A segunda linha do endereço
+              não pode conter símbolos matemáticos
+            contains_restricted_characters_instructional: A segunda linha do endereço
+              pode conter apenas letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A segunda linha do endereço
+              não pode conter caracteres restritos
+            contains_too_many_words_instructional: A segunda linha do endereço precisa
+              ter menos de %{word_count} palavras
+            contains_too_many_words_informative: A segunda linha do endereço precisa
+              ter menos de %{word_count} palavras
+            contains_html_tags_instructional: A segunda linha do endereço não pode
+              conter HTML
+            contains_html_tags_informative: A segunda linha do endereço não pode conter
+              HTML
+            contains_url_instructional: A segunda linha do endereço não pode conter
+              um URL
+            contains_url_informative: A segunda linha do endereço não pode conter
+              um URL
+            unknown_for_address_instructional: Talvez haja um erro na segunda linha
+              do endereço
+            unknown_for_address_informative: Talvez haja um erro na segunda linha
+              do endereço
           warnings:
             contains_too_many_words: É recomendável que a linha de endereço 2 tenha
               menos de %{word_count} palavras
@@ -154,6 +183,28 @@ pt-BR:
             unknown_for_zip_and_province_instructional: Insira uma cidade válida para
               %{zip}, %{province}
             unknown_for_zip_and_province_informative: Talvez haja um erro na cidade
+            too_long_instructional: A cidade é longa demais (máximo de 255 caracteres)
+            too_long_informative: A cidade é longa demais
+            contains_emojis_instructional: A cidade não pode conter emojis
+            contains_emojis_informative: A cidade não pode conter emojis
+            contains_mathematical_symbols_instructional: A cidade não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: A cidade não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A cidade pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A cidade não pode conter caracteres
+              restritos
+            contains_too_many_words_instructional: A cidade precisa ter menos de %{word_count}
+              palavras
+            contains_too_many_words_informative: A cidade precisa ter menos de %{word_count}
+              palavras
+            contains_html_tags_instructional: A cidade não pode conter HTML
+            contains_html_tags_informative: A cidade não pode conter HTML
+            contains_url_instructional: A cidade não pode conter um URL
+            contains_url_informative: A cidade não pode conter um URL
+            unknown_for_address_instructional: Talvez haja um erro na cidade
+            unknown_for_address_informative: Talvez haja um erro na cidade
         country:
           label:
             default: País/região
@@ -179,6 +230,16 @@ pt-BR:
             invalid_informative: O número de telefone é inválido
             too_long_instructional: O número de telefone é longo demais
             too_long_informative: O número de telefone é longo demais
+            contains_emojis_instructional: O número de telefone não pode conter emojis
+            contains_emojis_informative: O número de telefone não pode conter emojis
+            contains_mathematical_symbols_instructional: O número de telefone não
+              pode conter símbolos matemáticos
+            contains_mathematical_symbols_informative: O número de telefone não pode
+              conter símbolos matemáticos
+            contains_restricted_characters_instructional: O número de telefone pode
+              conter apenas letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O número de telefone não pode
+              conter caracteres restritos
         province:
           label:
             default: Região
@@ -198,6 +259,8 @@ pt-BR:
             unknown_for_city_instructional: A região não corresponde à cidade %{city}
             unknown_for_zip_instructional: Selecione uma região válida para %{zip}
             unknown_for_zip_informative: A região não corresponde ao CEP %{zip}
+            unknown_for_address_instructional: Talvez haja um erro na região
+            unknown_for_address_informative: Talvez haja um erro na região
         zip:
           label:
             default: CEP
@@ -219,6 +282,25 @@ pt-BR:
               e tente de novo
             unknown_for_province_instructional: Insira um CEP válido para %{province}
             unknown_for_province_informative: O CEP é inválido para %{province}
+            blocked_address_instructional: O local não é aceito
+            blocked_address_informative: O local não é aceito
+            too_long_instructional: O CEP é longo demais
+            too_long_informative: O CEP é longo demais
+            contains_emojis_instructional: O CEP não pode conter emojis
+            contains_emojis_informative: O CEP não pode conter emojis
+            contains_mathematical_symbols_instructional: O CEP não pode conter símbolos
+              matemáticos
+            contains_mathematical_symbols_informative: O CEP não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O CEP pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O CEP não pode conter caracteres
+              restritos
+            not_supported_informative: CEP incompatível
+            contains_html_tags_instructional: O CEP não pode conter HTML
+            contains_html_tags_informative: O CEP não pode conter HTML
+            unknown_for_address_instructional: Talvez haja um erro no CEP
+            unknown_for_address_informative: Talvez haja um erro no CEP
         street_name:
           label:
             default: Rua
@@ -229,7 +311,8 @@ pt-BR:
           errors:
             blank_instructional: Insira uma rua
             blank_informative: Falta a rua
-            too_long_instructional: O nome da rua é longo demais (máximo de 255 caracteres)
+            too_long_instructional: O nome da rua é longo demais (máximo de %{limit}
+              caracteres)
             too_long_informative: O nome da rua é longo demais
             contains_emojis_instructional: A rua não pode conter emojis
             contains_emojis_informative: A rua não pode conter emojis
@@ -250,6 +333,9 @@ pt-BR:
             street_unknown_for_zip_informative: Rua inválida para %{zip}
             unknown_for_address_instructional: Talvez haja um erro na rua
             unknown_for_address_informative: Talvez haja um erro na rua
+            contains_too_many_words_informative: A rua não pode ter mais de %{word_count}
+              palavras
+            contains_html_tags_informative: A rua não pode conter HTML
         street_number:
           label:
             default: Número do edifício
@@ -260,8 +346,8 @@ pt-BR:
           errors:
             blank_instructional: Insira o número do prédio
             blank_informative: Falta o número do prédio
-            too_long_instructional: O número do prédio é longo demais (máximo de 255
-              caracteres)
+            too_long_instructional: O número do edifício é longo demais (máximo de
+              %{limit} caracteres)
             too_long_informative: O número do prédio é longo demais
             contains_emojis_instructional: O número do prédio não pode conter emojis
             contains_emojis_informative: O número do prédio não pode conter emojis
@@ -287,6 +373,35 @@ pt-BR:
           label:
             default: Bairro
             optional: Bairro (opcional)
+          errors:
+            blank_instructional: Insira um bairro
+            blank_informative: O bairro está faltando
+            too_long_instructional: O bairro é muito longo (máximo de %{limit} caracteres)
+            too_long_informative: O bairro é longo demais
+            contains_emojis_instructional: O bairro não pode conter emojis
+            contains_emojis_informative: O bairro não pode conter emojis
+            contains_mathematical_symbols_instructional: O bairro não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O bairro não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O bairro pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O bairro não pode conter caracteres
+              restritos
+            contains_too_many_words_instructional: O bairro precisa ter menos de %{word_count}
+              palavras
+            contains_too_many_words_informative: O bairro precisa ter menos de %{word_count}
+              palavras
+            contains_html_tags_instructional: O bairro não pode conter tags HTML
+            contains_html_tags_informative: O bairro não pode conter tags HTML
+            contains_url_instructional: O bairro não pode conter URLs
+            contains_url_informative: O bairro não pode conter URLs
+            unknown_for_city_instructional: Insira um nome de bairro válido para %{city}
+            unknown_for_city_informative: Insira um nome de bairro válido para %{city}
+            unknown_for_zip_instructional: Insira um nome de bairro válido para %{zip}
+            unknown_for_zip_informative: Insira um nome de bairro válido para %{zip}
+            unknown_for_address_instructional: Talvez haja um erro no bairro
+            unknown_for_address_informative: Talvez haja um erro no bairro
           warnings:
             contains_too_many_words: É recomendável que o bairro tenha menos de %{word_count}
               palavras
@@ -324,6 +439,21 @@ pt-BR:
               um URL
             contains_url_informative: A segunda linha do endereço não pode conter
               um URL
+            missing_building_number_instructional: Adicione o número do prédio, se
+              houver
+            missing_building_number_informative: Adicione o número do prédio, se houver
+            street_unknown_for_zip_instructional: Insira um nome de rua válido para
+              %{zip}
+            street_unknown_for_zip_informative: Insira um nome de rua válido para
+              %{zip}
+            building_number_invalid_instructional: Não foi possível localizar o número
+              do prédio de %{street}, %{zip}
+            building_number_invalid_informative: Não foi possível localizar o número
+              do prédio de %{street}, %{zip}
+            unknown_for_address_instructional: A segunda linha do endereço pode estar
+              incorreta
+            unknown_for_address_informative: A segunda linha do endereço pode estar
+              incorreta
           warnings:
             contains_too_many_words: É recomendável que a segunda linha do endereço
               tenha menos que %{word_count} palavras

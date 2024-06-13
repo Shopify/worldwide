@@ -22,19 +22,33 @@ da:
             default: Bydel
             optional: Bydel (valgfrit)
           errors:
-            blank: Angiv en bydel
-            too_long: Bydel er for lang (højst %{limit} tegn)
-            contains_emojis: Bydel må ikke indeholde emojis
-            contains_mathematical_symbols: Bydel må ikke indeholde matematiske symboler
-            contains_restricted_characters: Bydel må kun indeholde bogstaver, tal,
-              lokale tegn og specialtegn
-            contains_too_many_words: Bydel må ikke indeholde flere end %{word_count}
-              ord
-            contains_html_tags: Bydel må ikke indeholde HTML-tags.
-            contains_url: Bydel må ikke indeholde webadresser.
-            unknown_for_city: Angiv et gyldigt navn på bydelen for %{city}.
-            unknown_for_zip: Angiv et gyldigt navn på bydelen for %{zip}.
-            unknown_for_address: Bydelen er muligvis forkert.
+            blank_instructional: Angiv en bydel
+            blank_informative: Bydel mangler
+            too_long_instructional: Bydel er for lang (højst %{limit} tegn)
+            too_long_informative: Bydel er for lang
+            contains_emojis_instructional: Bydel må ikke indeholde emojis
+            contains_emojis_informative: Bydel må ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Bydel må ikke indeholde matematiske
+              symboler
+            contains_mathematical_symbols_informative: Bydel må ikke indeholde matematiske
+              symboler
+            contains_restricted_characters_instructional: Bydel må kun indeholde bogstaver,
+              tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Bydel må ikke indeholde begrænsede
+              tegn
+            contains_too_many_words_instructional: Bydel skal indeholde færre end
+              %{word_count} ord
+            contains_too_many_words_informative: Bydel skal indeholde færre end %{word_count} ord
+            contains_html_tags_informative: Bydel må ikke indeholde HTML
+            contains_html_tags_instructional: Bydel må ikke indeholde HTML
+            contains_url_instructional: Bydel må ikke indeholde en webadresse
+            contains_url_informative: Bydel må ikke indeholde en webadresse
+            unknown_for_city_instructional: Angiv en gyldig bydel for %{city}
+            unknown_for_city_informative: Angiv en gyldig bydel for %{city}
+            unknown_for_zip_instructional: Angiv en gyldig bydel for %{zip}
+            unknown_for_zip_informative: Angiv en gyldig bydel for %{zip}
+            unknown_for_address_instructional: Bydel kan være forkert
+            unknown_for_address_informative: Bydel kan være forkert
           warnings:
             contains_too_many_words: Det anbefales, at bydelen indeholder færre end
               %{word_count} ord

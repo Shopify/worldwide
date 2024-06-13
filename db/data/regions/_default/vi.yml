@@ -273,6 +273,8 @@ vi:
               lệ
             blocked_address_instructional: Địa điểm này không được hỗ trợ
             blocked_address_informative: Địa điểm này không được hỗ trợ
+            too_long_instructional: Mã bưu chính quá dài
+            too_long_informative: Mã bưu chính quá dài
             contains_emojis_instructional: Mã bưu chính không được chứa biểu tượng
               cảm xúc
             contains_emojis_informative: Mã bưu chính không được chứa biểu tượng cảm
@@ -360,8 +362,6 @@ vi:
           label:
             default: Khu phố
             optional: Khu phố (không bắt buộc)
-          warnings:
-            contains_too_many_words: Khu phố nên có tối đa %{word_count} từ
           errors:
             blank_instructional: Nhập khu phố
             blank_informative: Thiếu khu phố
@@ -392,6 +392,8 @@ vi:
             unknown_for_zip_informative: Nhập tên khu phố hợp lệ cho %{zip}
             unknown_for_address_instructional: Khu phố có thể không chính xác
             unknown_for_address_informative: Khu phố có thể không chính xác
+          warnings:
+            contains_too_many_words: Khu phố nên có tối đa %{word_count} từ
         line2:
           label:
             default: Căn hộ, dãy, v.v.

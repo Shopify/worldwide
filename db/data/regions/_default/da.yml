@@ -266,6 +266,8 @@ da:
             unknown_for_province_informative: Postnummeret er ugyldigt for %{province}
             blocked_address_instructional: Denne lokation understøttes ikke
             blocked_address_informative: Denne lokation understøttes ikke
+            too_long_instructional: Postnummer er for lang
+            too_long_informative: Postnummer er for lang
             contains_emojis_instructional: Postnummer må ikke indeholde emojis
             contains_emojis_informative: Postnummer må ikke indeholde emojis
             contains_mathematical_symbols_instructional: Postnummer må ikke indeholde
@@ -351,9 +353,6 @@ da:
           label:
             default: Bydel
             optional: Bydel (valgfrit)
-          warnings:
-            contains_too_many_words: Det anbefales, at bydel indeholder færre end
-              %{word_count} ord
           errors:
             blank_instructional: Angiv en bydel
             blank_informative: Bydel mangler
@@ -382,6 +381,9 @@ da:
             unknown_for_zip_informative: Angiv et gyldigt bydelsnavn for %{zip}
             unknown_for_address_instructional: Bydel kan være forkert
             unknown_for_address_informative: Bydel kan være forkert
+          warnings:
+            contains_too_many_words: Det anbefales, at bydel indeholder færre end
+              %{word_count} ord
         line2:
           label:
             default: Lejlighed, etage osv.

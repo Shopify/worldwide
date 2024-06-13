@@ -12,8 +12,8 @@ de:
             blank_informative: Straße und Hausnummer fehlen
         province:
           label:
-            default: Bundesstaat
-            optional: Bundesstaat (optional)
+            default: Bundesland/Provinz
+            optional: Bundesland/Provinz (optional)
           errors:
             blank_instructional: Staat auswählen
             blank_informative: Staat fehlt
@@ -22,20 +22,34 @@ de:
             default: Colonia
             optional: Colonia (optional)
           errors:
-            blank: Kolonie eingeben
-            too_long: Kolonie ist zu lang (maximal %{limit} Zeichen)
-            contains_emojis: Kolonie darf keine Emojis enthalten
-            contains_mathematical_symbols: Kolonie darf keine mathematischen Symbole
-              enthalten
-            contains_restricted_characters: Kolonie darf nur Buchstaben, Zahlen, Zeichen
-              der lokalen Sprache und Sonderzeichen enthalten
-            contains_too_many_words: Kolonie darf nicht mehr als %{word_count} Wörter
-              enthalten
-            contains_html_tags: Kolonie darf keine HTML-Tags enthalten.
-            contains_url: Kolonie darf keine URLs enthalten.
-            unknown_for_city: Gib einen gültigen Kolonienamen für %{city} ein.
-            unknown_for_zip: Gib einen gültigen Kolonienamen für %{zip} ein.
-            unknown_for_address: Kolonie ist ggf. falsch.
+            blank_instructional: Kolonie eingeben
+            blank_informative: Kolonie fehlt
+            too_long_instructional: Kolonie ist zu lang (maximal %{limit} Zeichen)
+            too_long_informative: Kolonie ist zu lang
+            contains_emojis_instructional: Kolonie darf keine Emojis enthalten
+            contains_emojis_informative: Kolonie darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Kolonie darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Kolonie darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Kolonie darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Kolonie darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Kolonie muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Kolonie muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_informative: Kolonie darf kein HTML enthalten
+            contains_html_tags_instructional: Kolonie darf kein HTML enthalten
+            contains_url_instructional: Kolonie darf keine URL enthalten
+            contains_url_informative: Kolonie darf keine URL enthalten
+            unknown_for_city_instructional: Gib eine gültige Kolonie für %{city} ein
+            unknown_for_city_informative: Gib eine gültige Kolonie für %{city} ein
+            unknown_for_zip_instructional: Gib eine gültige Kolonie für %{zip} ein
+            unknown_for_zip_informative: Gib eine gültige Kolonie für %{zip} ein
+            unknown_for_address_instructional: Kolonie ist ggf. falsch
+            unknown_for_address_informative: Kolonie ist ggf. falsch
           warnings:
             contains_too_many_words: Es wird empfohlen, dass die Kolonie weniger als
               %{word_count} Wörter enthält

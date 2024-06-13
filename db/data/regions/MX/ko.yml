@@ -22,18 +22,34 @@ ko:
             default: Colony(멕시코 행정구역)
             optional: Colony(멕시코 행정구역, 선택 사항)
           errors:
-            blank: Colony(멕시코 행정구역)를 입력하세요
-            too_long: Colony(멕시코 행정구역)가 너무 깁니다(최대 %{limit}자)
-            contains_emojis: Colony(멕시코 행정구역)에 이모티콘을 포함할 수 없습니다
-            contains_mathematical_symbols: Colony(멕시코 행정구역)에 수학 기호를 포함할 수 없습니다
-            contains_restricted_characters: Colony(멕시코 행정구역)에는 문자, 숫자, 현지 문자, 특수 문자만
-              포함할 수 있습니다
-            contains_too_many_words: Colony(멕시코 행정구역)는 %{word_count}단어 이하여야 합니다
-            contains_html_tags: Colony(멕시코 행정구역)에 HTML 태그를 포함할 수 없습니다.
-            contains_url: Colony(멕시코 행정구역)에 URL을 포함할 수 없습니다.
-            unknown_for_city: "%{city}의 올바른 Colony(멕시코 행정구역) 이름을 입력하십시오."
-            unknown_for_zip: "%{zip}의 올바른 Colony(멕시코 행정구역) 이름을 입력하십시오."
-            unknown_for_address: Colony(멕시코 행정구역)가 잘못되었을 수 있습니다.
+            blank_instructional: Colony(멕시코 행정구역)를 입력하세요
+            blank_informative: Colony(멕시코 행정구역)가 누락되었습니다
+            too_long_instructional: Colony(멕시코 행정구역)가 너무 깁니다(최대 %{limit}자)
+            too_long_informative: Colony(멕시코 행정구역)가 너무 깁니다
+            contains_emojis_instructional: Colony(멕시코 행정구역)에 이모티콘을 포함할 수 없습니다
+            contains_emojis_informative: Colony(멕시코 행정구역)에 이모티콘을 포함할 수 없습니다
+            contains_mathematical_symbols_instructional: Colony(멕시코 행정구역)에 수학 기호를
+              포함할 수 없습니다
+            contains_mathematical_symbols_informative: Colony(멕시코 행정구역)에 수학 기호를 포함할
+              수 없습니다
+            contains_restricted_characters_instructional: Colony(멕시코 행정구역)에는 문자, 숫자,
+              현지 문자, 특수 문자만 포함할 수 있습니다
+            contains_restricted_characters_informative: Colony(멕시코 행정구역)에는 제한 문자를
+              포함할 수 없습니다
+            contains_too_many_words_instructional: Colony(멕시코 행정구역)는 %{word_count}단어
+              미만이어야 합니다
+            contains_too_many_words_informative: Colony(멕시코 행정구역)는 %{word_count}단어
+              미만이어야 합니다
+            contains_html_tags_informative: Colony(멕시코 행정구역)에 HTML을 포함할 수 없습니다
+            contains_html_tags_instructional: Colony(멕시코 행정구역)에 HTML을 포함할 수 없습니다
+            contains_url_instructional: Colony(멕시코 행정구역)에 URL을 포함할 수 없습니다
+            contains_url_informative: Colony(멕시코 행정구역)에 URL을 포함할 수 없습니다
+            unknown_for_city_instructional: "%{city}의 올바른 Colony(멕시코 행정구역)를 입력하세요"
+            unknown_for_city_informative: "%{city}의 올바른 Colony(멕시코 행정구역)를 입력하세요"
+            unknown_for_zip_instructional: "%{zip}의 올바른 Colony(멕시코 행정구역)를 입력하세요"
+            unknown_for_zip_informative: "%{zip}의 올바른 Colony(멕시코 행정구역)를 입력하세요"
+            unknown_for_address_instructional: Colony(멕시코 행정구역)가 잘못되었을 수 있습니다
+            unknown_for_address_informative: Colony(멕시코 행정구역)가 잘못되었을 수 있습니다
           warnings:
             contains_too_many_words: Colony(멕시코 행정구역)에는 %{word_count}개 미만의 단어를 사용하는
               것이 좋습니다

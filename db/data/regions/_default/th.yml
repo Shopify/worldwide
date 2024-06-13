@@ -242,6 +242,8 @@ th:
             unknown_for_province_informative: รหัสไปรษณีย์สำหรับ%{province}ไม่ถูกต้อง
             blocked_address_instructional: ไม่รองรับตำแหน่งที่ตั้งนี้
             blocked_address_informative: ไม่รองรับตำแหน่งที่ตั้งนี้
+            too_long_instructional: รหัสไปรษณีย์ยาวเกินไป
+            too_long_informative: รหัสไปรษณีย์ยาวเกินไป
             contains_emojis_instructional: ห้ามใส่อีโมจิในรหัสไปรษณีย์
             contains_emojis_informative: ห้ามใส่อีโมจิในรหัสไปรษณีย์
             contains_mathematical_symbols_instructional: ห้ามใส่สัญลักษณ์ทางคณิตศาสตร์ในรหัสไปรษณีย์
@@ -317,9 +319,6 @@ th:
           label:
             default: สถานที่ใกล้เคียง
             optional: สถานที่ใกล้เคียง (ไม่บังคับ)
-          warnings:
-            contains_too_many_words: ชื่อสถานที่ใกล้เคียงควรมีความยาวน้อยกว่า %{word_count}
-              คำ
           errors:
             blank_instructional: ป้อนชื่อสถานที่ใกล้เคียง
             blank_informative: ไม่พบสถานที่ใกล้เคียง
@@ -351,6 +350,9 @@ th:
               %{zip}
             unknown_for_address_instructional: ชื่อสถานที่ใกล้เคียงอาจไม่ถูกต้อง
             unknown_for_address_informative: ชื่อสถานที่ใกล้เคียงอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ชื่อสถานที่ใกล้เคียงควรมีความยาวน้อยกว่า %{word_count}
+              คำ
         line2:
           label:
             default: อะพาร์ตเมนต์ ห้องชุด เป็นต้น

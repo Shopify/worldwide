@@ -299,6 +299,8 @@ fr:
               %{province}
             blocked_address_instructional: Cet emplacement n’est pas pris en charge
             blocked_address_informative: Cet emplacement n’est pas pris en charge
+            too_long_instructional: Le code postal est trop long
+            too_long_informative: Le code postal est trop long
             contains_emojis_instructional: Le code postal ne peut pas contenir d’emojis
             contains_emojis_informative: Le code postal ne peut pas contenir d’emojis
             contains_mathematical_symbols_instructional: Le code postal ne peut pas
@@ -398,9 +400,6 @@ fr:
           label:
             default: Quartier
             optional: Quartier (facultatif)
-          warnings:
-            contains_too_many_words: Il est conseillé que le quartier comporte moins
-              de %{word_count} mots
           errors:
             blank_instructional: Saisir le nom de quartier
             blank_informative: Le nom de quartier est manquant
@@ -436,6 +435,9 @@ fr:
             unknown_for_zip_informative: Saisir un nom de quartier valide pour %{zip}
             unknown_for_address_instructional: Le nom de quartier est peut-être erroné
             unknown_for_address_informative: Le nom de quartier est peut-être erroné
+          warnings:
+            contains_too_many_words: Il est conseillé que le quartier comporte moins
+              de %{word_count} mots
         line2:
           label:
             default: Appartement, suite, etc.
