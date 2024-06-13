@@ -131,6 +131,17 @@ module Worldwide
       end
     end
 
+    test "combined_address_format defines default property" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.combined_address_format.blank?
+
+        keys_found = country.combined_address_format.keys
+        includes_default = keys_found.include? "default"
+
+        assert includes_default, "#{country.iso_code} combined_address_format must define default, only defines languages #{keys_found}"
+      end
+    end
+
     test "combined_address_format keys are present in additional_address_fields" do
       Regions.all.select(&:country?).each do |country|
         next if country.combined_address_format.blank?
