@@ -268,6 +268,8 @@ cs:
             unknown_for_province_informative: 'PSČ není platné pro: %{province}.'
             blocked_address_instructional: Tato lokalita není podporována.
             blocked_address_informative: Tato lokalita není podporována.
+            too_long_instructional: PSČ je příliš dlouhé.
+            too_long_informative: PSČ je příliš dlouhé.
             contains_emojis_instructional: PSČ nemůže obsahovat emoji.
             contains_emojis_informative: PSČ nemůže obsahovat emoji.
             contains_mathematical_symbols_instructional: PSČ nemůže obsahovat matematické
@@ -355,9 +357,6 @@ cs:
           label:
             default: Samosprávná jednotka města
             optional: Samosprávná jednotka města (volitelné)
-          warnings:
-            contains_too_many_words: 'Doporučuje se, aby název samosprávné jednotky
-              města obsahoval méně než tento počet slov: %{word_count}.'
           errors:
             blank_instructional: Zadejte samosprávnou jednotku města.
             blank_informative: Samosprávná jednotka města chybí.
@@ -400,6 +399,9 @@ cs:
             unknown_for_address_instructional: Samosprávná jednotka města může být
               nesprávná.
             unknown_for_address_informative: Samosprávná jednotka města může být nesprávná.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby název samosprávné jednotky
+              města obsahoval méně než tento počet slov: %{word_count}.'
         line2:
           label:
             default: Byt, jednotka apod.

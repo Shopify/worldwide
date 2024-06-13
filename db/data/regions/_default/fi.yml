@@ -279,6 +279,8 @@ fi:
               %{province}
             blocked_address_instructional: Tätä sijaintia ei tueta
             blocked_address_informative: Tätä sijaintia ei tueta
+            too_long_instructional: Postinumero on liian pitkä
+            too_long_informative: Postinumero on liian pitkä
             contains_emojis_instructional: Postinumero ei voi sisältää emojeita
             contains_emojis_informative: Postinumero ei voi sisältää emojeita
             contains_mathematical_symbols_instructional: Postinumero ei voi sisältää
@@ -366,9 +368,6 @@ fi:
           label:
             default: Asuinalue
             optional: Asuinalue (valinnainen)
-          warnings:
-            contains_too_many_words: Asuinalue-kentän pituudeksi suositellaan alle
-              %{word_count} sanaa
           errors:
             blank_instructional: Lisää asuinalue
             blank_informative: Asuinalue puuttuu
@@ -402,6 +401,9 @@ fi:
               nimi
             unknown_for_address_instructional: Asuinalue voi olla väärä
             unknown_for_address_informative: Asuinalue voi olla väärä
+          warnings:
+            contains_too_many_words: Asuinalue-kentän pituudeksi suositellaan alle
+              %{word_count} sanaa
         line2:
           label:
             default: Asunto, huoneisto jne.

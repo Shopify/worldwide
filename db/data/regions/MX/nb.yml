@@ -22,20 +22,35 @@ nb:
             default: Koloni
             optional: Koloni (valgfritt)
           errors:
-            blank: Angi en koloni
-            too_long: Koloninavnet er for langt (maksimalt %{limit} tegn)
-            contains_emojis: Koloninavnet kan ikke inneholde emojier
-            contains_mathematical_symbols: Koloninavnet kan ikke inneholde matematiske
-              symboler
-            contains_restricted_characters: Koloninavnet kan kun inneholde bokstaver,
-              tall, lokale tegn og spesialtegn
-            contains_too_many_words: Koloninavnet kan ikke bestå av mer enn %{word_count}
-              ord
-            contains_html_tags: Koloninavnet kan ikke inneholde HTML-tagger.
-            contains_url: Koloninavnet kan ikke inneholde URL-adresser.
-            unknown_for_city: Angi et gyldig koloninavn for %{city}.
-            unknown_for_zip: Angi et gyldig koloninavn for %{zip}.
-            unknown_for_address: Koloninavnet kan være feil.
+            blank_instructional: Angi en koloni
+            blank_informative: Koloninavnet mangler
+            too_long_instructional: Koloninavnet er for langt (maksimalt %{limit}
+              tegn)
+            too_long_informative: Koloninavnet er for langt
+            contains_emojis_instructional: Koloninavnet kan ikke inneholde emojier
+            contains_emojis_informative: Koloninavnet kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Koloninavnet kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Koloninavnet kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Koloninavnet kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Koloninavnet kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Koloninavnet må bestå av færre
+              enn %{word_count} ord
+            contains_too_many_words_informative: Koloninavnet må bestå av færre enn
+              %{word_count} ord
+            contains_html_tags_informative: Koloninavnet kan ikke inneholde HTML
+            contains_html_tags_instructional: Koloninavnet kan ikke inneholde HTML
+            contains_url_instructional: Koloninavnet kan ikke inneholde en URL-adresse
+            contains_url_informative: Koloninavnet kan ikke inneholde en URL-adresse
+            unknown_for_city_instructional: Angi et gyldig koloninavn for %{city}
+            unknown_for_city_informative: Angi et gyldig koloninavn for %{city}
+            unknown_for_zip_instructional: Angi et gyldig koloninavn for %{zip}
+            unknown_for_zip_informative: Angi et gyldig koloninavn for %{zip}
+            unknown_for_address_instructional: Koloninavnet kan være feil
+            unknown_for_address_informative: Koloninavnet kan være feil
           warnings:
             contains_too_many_words: Vi anbefaler at koloninavnet inneholder færre
               enn %{word_count} ord

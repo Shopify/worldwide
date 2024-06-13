@@ -218,6 +218,8 @@ ja:
             unknown_for_province_informative: "%{province}の郵便番号が無効です"
             blocked_address_instructional: このロケーションには対応していません
             blocked_address_informative: このロケーションには対応していません
+            too_long_instructional: 郵便番号が長すぎます
+            too_long_informative: 郵便番号が長すぎます
             contains_emojis_instructional: 郵便番号に絵文字を含めることはできません
             contains_emojis_informative: 郵便番号に絵文字を含めることはできません
             contains_mathematical_symbols_instructional: 郵便番号に数学記号を含めることはできません
@@ -285,8 +287,6 @@ ja:
           label:
             default: 近隣地域
             optional: 近隣地域 (任意)
-          warnings:
-            contains_too_many_words: 近隣地域は%{word_count}文字未満が推奨されています
           errors:
             blank_instructional: 近隣地域を入力してください
             blank_informative: 近隣地域がありません
@@ -310,6 +310,8 @@ ja:
             unknown_for_zip_informative: "%{zip}に対応する有効な近隣地域名を入力してください"
             unknown_for_address_instructional: 近隣地域は正しくない可能性があります
             unknown_for_address_informative: 近隣地域は正しくない可能性があります
+          warnings:
+            contains_too_many_words: 近隣地域は%{word_count}文字未満が推奨されています
         line2:
           label:
             default: 建物名、部屋番号など
