@@ -97,6 +97,7 @@ describe('concatAddressField', () => {
         'Main,\u2060123',
       );
     });
+
     test("doesn't include decorator if previous field is empty", () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
@@ -109,6 +110,7 @@ describe('concatAddressField', () => {
         '\u2060123',
       );
     });
+
     test("doesn't include decorator or delimiter if field is empty", () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
@@ -186,7 +188,8 @@ describe('splitAddressField', () => {
         streetNumber: '123',
       });
     });
-    test('splits address without defined decorator', () => {
+
+    test('splits address without defined decorator if no delimiter is found', () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
         {key: 'streetNumber', decorator: ','},
@@ -197,7 +200,8 @@ describe('splitAddressField', () => {
         streetName: 'Main',
       });
     });
-    test('splits address without defined decorator 2', () => {
+
+    test('splits address without defined decorator if leading delimiter is found', () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
         {key: 'streetNumber', decorator: ','},
