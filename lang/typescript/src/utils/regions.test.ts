@@ -13,8 +13,8 @@ describe('region yaml loader', () => {
     expect(config).not.toBeNull();
     expect(config!.code).toEqual('BR');
     expect(config!.combined_address_format).toEqual({
-      address1: [{key: 'streetName'}, {key: 'streetNumber', decorator: ','}],
-      address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ','}],
+      address1: [{key: 'streetName'}, {key: 'streetNumber', decorator: ', '}],
+      address2: [{key: 'line2'}, {key: 'neighborhood', decorator: ', '}],
     });
   });
 

@@ -16,19 +16,19 @@ describe('splitAddress1', () => {
   });
 
   test('returns street number if string before delimiter is empty', () => {
-    expect(splitAddress1('CL', '\u00A0123')).toEqual({streetNumber: '123'});
-    expect(splitAddress1('BR', '\u00A0123')).toEqual({streetNumber: '123'});
+    expect(splitAddress1('CL', '\u2060123')).toEqual({streetNumber: '123'});
+    expect(splitAddress1('BR', '\u2060123')).toEqual({streetNumber: '123'});
   });
 
   test('returns full address object when separated by delimiter', () => {
-    expect(splitAddress1('CL', 'Main\u00A0123')).toEqual({
+    expect(splitAddress1('CL', 'Main\u2060123')).toEqual({
       streetName: 'Main',
       streetNumber: '123',
     });
   });
 
   test('returns full address object when separated by delimiter and decorator', () => {
-    expect(splitAddress1('BR', 'Main,\u00A0123')).toEqual({
+    expect(splitAddress1('BR', 'Main,\u2060123')).toEqual({
       streetName: 'Main',
       streetNumber: '123',
     });

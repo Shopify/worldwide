@@ -2,7 +2,7 @@ import {Address} from '../types/address';
 
 import {FieldConcatenationRule} from './regions';
 
-export const RESERVED_DELIMITER = '\xA0';
+export const RESERVED_DELIMITER = '\u2060';
 
 /**
  * Utility function that concatenates address fields based on a provided field
