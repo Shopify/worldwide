@@ -10,3 +10,39 @@ de:
           errors:
             blank_instructional: Gouvernement auswählen
             blank_informative: Gouvernement fehlt
+        neighborhood:
+          label:
+            default: Block
+            optional: Block (optional)
+          errors:
+            blank_instructional: Gib einen Block ein
+            blank_informative: Block fehlt
+            too_long_instructional: Block ist zu lang (höchstens %{limit} Zeichen)
+            too_long_informative: Block ist zu lang
+            contains_emojis_instructional: Block darf keine Emojis enthalten
+            contains_emojis_informative: Block darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Block darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Block darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Block darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Block darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Block muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Block muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Block darf kein HTML enthalten
+            contains_html_tags_informative: Block darf kein HTML enthalten
+            contains_url_instructional: Block darf keine URL enthalten
+            contains_url_informative: Block darf keine URL enthalten
+            unknown_for_city_instructional: Gib einen gültigen Block ein für %{city}
+            unknown_for_city_informative: Block ist für %{city} nicht gültig
+            unknown_for_zip_instructional: Gib einen gültigen Block ein für %{zip}
+            unknown_for_zip_informative: Block ist für %{zip} nicht gültig
+            unknown_for_address_instructional: Block ist ggf. falsch
+            unknown_for_address_informative: Block ist ggf. falsch
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass der Block weniger als
+              %{word_count} Wörter enthält

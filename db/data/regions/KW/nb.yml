@@ -10,3 +10,39 @@ nb:
           errors:
             blank_instructional: Velg et guvernement
             blank_informative: Guvernementet mangler
+        neighborhood:
+          label:
+            default: Blokk
+            optional: Blokk (valgfritt)
+          errors:
+            blank_instructional: Skriv inn en blokk
+            blank_informative: Blokk mangler
+            too_long_instructional: Blokken er for lang (maksimum er %{limit} tegn)
+            too_long_informative: Blokken er for lang
+            contains_emojis_instructional: Blokken kan ikke inneholde emojier
+            contains_emojis_informative: Blokken kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Blokken kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Blokken kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Blokken kan kun inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Blokken kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Blokken må bestå av færre enn %{word_count}
+              ord
+            contains_too_many_words_informative: Blokken må bestå av færre enn %{word_count}
+              ord
+            contains_html_tags_instructional: Blokken kan ikke inneholde HTML
+            contains_html_tags_informative: Blokken kan ikke inneholde HTML
+            contains_url_instructional: Blokken kan ikke inneholde en URL-adresse
+            contains_url_informative: Blokken kan ikke inneholde en URL-adresse
+            unknown_for_city_instructional: Skriv inn en gyldig blokk for %{city}
+            unknown_for_city_informative: Blokken er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Skriv inn en gyldig blokk for %{zip}
+            unknown_for_zip_informative: Blokken er ikke gyldig for %{zip}
+            unknown_for_address_instructional: Blokken kan være feil
+            unknown_for_address_informative: Blokken kan være feil
+          warnings:
+            contains_too_many_words: Vi anbefaler at blokken inneholder færre enn
+              %{word_count} ord
