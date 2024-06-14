@@ -364,7 +364,7 @@ $ library_address.format(
   "United Kingdom",
 ]
 ```
-Finally, you can generate a single-line form of the address.  This can be useful, for example,
+You can also generate a single-line form of the address.  This can be useful, for example,
 to identify cities in which warehouses are located.
 ```ruby
 $ lon = Worldwide.address( country_code: 'GB', city: 'London' )
@@ -378,6 +378,51 @@ $ I18n.with_locale(:'zh-CN') { lon.single_line }
 ```
 
 Address format strings are described in detail [here](docs/address_format_strings.md).
+
+The Address class also offers concatenation & splitting methods for converting between the standard and extended address formats. Equivalent Typescript methods are offered in the NPM package (see [README](https://github.com/Shopify/worldwide/blob/main/lang/typescript/README.md)).
+```ruby
+$ address = Worldwide.address(street_name: "Main Street", street_number: "123", country_code: "BR")
+=> Worldwide::Address
+$ address.concatenate_address1
+=> "Main Street, 123"
+
+$ address = Worldwide.address(address1: "Main Street, 123", country_code: "BR")
+=> Worldwide::Address
+$ address.split_address1
+=> { "street_name" => "Main Street", "street_number" => "123" }
+
+$ address = Worldwide.address(line2: "dpto 4", neighborhood: "Centro", country_code: "BR")
+=> Worldwide::Address
+$ address.concatenate_address2
+=> "dpto 4, Centro"
+
+$ address = Worldwide.address(address2: "dpto 4, Centro", country_code: "BR")
+=> Worldwide::Address
+$ address.split_address2
+=> { "line2" => "dpto 4", "neighborhood" => "Centro" }
+```
+
+The additional address fields that are part of each country's extended address format and their concatenation rules are defined in the country YAML files. For example:
+```ruby
+# db/data/region/BR.yml
+additional_address_fields:
+  - name: streetName
+    required: true
+  - name: streetNumber
+    required: true
+  - name: line2
+  - name: neighborhood
+combined_address_format:
+  address1:
+    - key: streetName
+    - key: streetNumber
+      decorator: ","
+  address2:
+    - key: line2
+    - key: neighborhood
+      decorator: ","
+```
+If a country does not have additional address fields, concatenation will simply return `address1`, and splitting will return `nil`.
 
 #### Validation
 
