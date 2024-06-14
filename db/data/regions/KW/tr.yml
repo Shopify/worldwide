@@ -10,3 +10,40 @@ tr:
           errors:
             blank_instructional: Valilik seçin
             blank_informative: Valilik eksik
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (isteğe bağlı)
+          errors:
+            blank_instructional: Bir blok girin
+            blank_informative: Blok eksik
+            too_long_instructional: Blok adı çok uzun (maksimum %{limit} karakter
+              olmalıdır)
+            too_long_informative: Blok adı çok uzun
+            contains_emojis_instructional: Blok adı emoji içeremez
+            contains_emojis_informative: Blok adı emoji içeremez
+            contains_mathematical_symbols_instructional: Blok adı matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Blok adı matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Blok adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Blok adı, kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Blok adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_too_many_words_informative: Blok adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_html_tags_instructional: Blok adı HTML içeremez
+            contains_html_tags_informative: Blok adı HTML içeremez
+            contains_url_instructional: Blok adı URL içeremez
+            contains_url_informative: Blok adı URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir blok girin"
+            unknown_for_city_informative: "%{city} için blok geçerli değil"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir blok girin"
+            unknown_for_zip_informative: "%{zip} için blok geçerli değil"
+            unknown_for_address_instructional: Blok adı yanlış olabilir
+            unknown_for_address_informative: Blok adı yanlış olabilir
+          warnings:
+            contains_too_many_words: Blok adında %{word_count} adetten az sözcük olması
+              önerilir

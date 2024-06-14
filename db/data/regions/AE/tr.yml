@@ -10,3 +10,40 @@ tr:
           errors:
             blank_instructional: Emirlik seçin
             blank_informative: Emirlik eksik
+        neighborhood:
+          label:
+            default: Bölge
+            optional: Bölge (isteğe bağlı)
+          errors:
+            blank_instructional: Bir bölge girin
+            blank_informative: Bölge eksik
+            too_long_instructional: Bölge adı çok uzun (maksimum %{limit} karakter
+              olmalıdır)
+            too_long_informative: Bölge adı çok uzun
+            contains_emojis_instructional: Bölge adı emoji içeremez
+            contains_emojis_informative: Bölge adı emoji içeremez
+            contains_mathematical_symbols_instructional: Bölge adı matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Bölge adı matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Bölge adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: Bölge adı, kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Bölge adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_too_many_words_informative: Bölge adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_html_tags_instructional: Bölge adı HTML içeremez
+            contains_html_tags_informative: Bölge adı HTML içeremez
+            contains_url_instructional: Bölge adı URL içeremez
+            contains_url_informative: Bölge adı URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir alan girin"
+            unknown_for_city_informative: "%{city} için alan geçerli değil"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir alan girin"
+            unknown_for_zip_informative: "%{zip} için alan geçerli değil"
+            unknown_for_address_instructional: Alan adı yanlış olabilir
+            unknown_for_address_informative: Alan adı yanlış olabilir
+          warnings:
+            contains_too_many_words: Alan adında %{word_count} adetten az sözcük olması
+              önerilir

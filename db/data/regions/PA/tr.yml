@@ -1,43 +1,42 @@
 ---
 tr:
   worldwide:
-    TR:
+    PA:
       addresses:
         neighborhood:
           label:
             default: İlçe
             optional: İlçe (İsteğe bağlı)
           errors:
-            unknown_for_address: İlçe adı yanlış olabilir
-            blank_instructional: İlçe girin
+            blank_instructional: Bir ilçe adı girin
             blank_informative: İlçe eksik
             too_long_instructional: İlçe adı çok uzun (maksimum %{limit} karakter
               olmalıdır)
             too_long_informative: İlçe adı çok uzun
-            contains_emojis_instructional: İlçe emoji içeremez
-            contains_emojis_informative: İlçe emoji içeremez
+            contains_emojis_instructional: İlçe adı emoji içeremez
+            contains_emojis_informative: İlçe adı emoji içeremez
             contains_mathematical_symbols_instructional: İlçe adı matematiksel semboller
               içeremez
             contains_mathematical_symbols_informative: İlçe adı matematiksel semboller
               içeremez
-            contains_restricted_characters_instructional: İlçe yalnızca harfler, sayılar,
-              yerel karakterler ve özel karakterler içerebilir
-            contains_restricted_characters_informative: İlçe, kısıtlanmış karakterler
+            contains_restricted_characters_instructional: İlçe adı yalnızca harfler,
+              sayılar, yerel karakterler ve özel karakterler içerebilir
+            contains_restricted_characters_informative: İlçe adı kısıtlanmış karakterler
               içeremez
-            contains_too_many_words_instructional: İlçe için karakter sayısı %{word_count}
-              altında olmalıdır
-            contains_too_many_words_informative: İlçe için karakter sayısı %{word_count}
-              altında olmalıdır
+            contains_too_many_words_instructional: İlçe adında %{word_count} adetten
+              az sözcük olmalıdır
+            contains_too_many_words_informative: İlçe adında %{word_count} adetten
+              az sözcük olmalıdır
             contains_html_tags_instructional: İlçe adı HTML içeremez
             contains_html_tags_informative: İlçe adı HTML içeremez
             contains_url_instructional: İlçe adı URL içeremez
             contains_url_informative: İlçe adı URL içeremez
             unknown_for_city_instructional: "%{city} için geçerli bir ilçe girin"
-            unknown_for_city_informative: İlçe %{city} için geçerli değil
+            unknown_for_city_informative: "%{city} için ilçe geçerli değil"
             unknown_for_zip_instructional: "%{zip} için geçerli bir ilçe girin"
-            unknown_for_zip_informative: İlçe %{zip} için geçerli değil
+            unknown_for_zip_informative: "%{zip} için ilçe geçerli değil"
             unknown_for_address_instructional: İlçe adı yanlış olabilir
             unknown_for_address_informative: İlçe adı yanlış olabilir
           warnings:
-            contains_too_many_words: İlçe adında %{word_count} adetten az kelime olması
+            contains_too_many_words: İlçe adında %{word_count} adetten az sözcük olması
               önerilir

@@ -10,3 +10,40 @@ pt-BR:
           errors:
             blank_instructional: Selecione um emirado
             blank_informative: Falta o emirado
+        neighborhood:
+          label:
+            default: Área
+            optional: Área (opcional)
+          errors:
+            blank_instructional: Insira uma área
+            blank_informative: Falta a área
+            too_long_instructional: A área é longa demais (o máximo é de %{limit}
+              caracteres)
+            too_long_informative: A área é longa demais
+            contains_emojis_instructional: A área não pode conter emojis
+            contains_emojis_informative: A área não pode conter emojis
+            contains_mathematical_symbols_instructional: A área não pode conter símbolos
+              matemáticos
+            contains_mathematical_symbols_informative: A área não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A área pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A área não pode conter caracteres
+              restritos
+            contains_too_many_words_instructional: A área precisa ter menos de %{word_count}
+              palavras
+            contains_too_many_words_informative: A área precisa ter menos de %{word_count}
+              palavras
+            contains_html_tags_instructional: A área não pode conter HTML
+            contains_html_tags_informative: A área não pode conter HTML
+            contains_url_instructional: A área não pode conter um URL
+            contains_url_informative: A área não pode conter um URL
+            unknown_for_city_instructional: Insira uma área válida para %{city}
+            unknown_for_city_informative: A área não é válida para %{city}
+            unknown_for_zip_instructional: Insira uma área válida para %{zip}
+            unknown_for_zip_informative: A área não é válida para %{zip}
+            unknown_for_address_instructional: Talvez haja um erro na área
+            unknown_for_address_informative: Talvez haja um erro na área
+          warnings:
+            contains_too_many_words: É recomendável que a área tenha menos de %{word_count}
+              palavras
