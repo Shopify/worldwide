@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Add localized error strings for neighborhood in AE, CR, KW, PA, PE, SA [#215](https://github.com/Shopify/worldwide/pull/215)
+- Change delimiter from Non-Breaking Space to Word Joiner [#221](https://github.com/Shopify/worldwide/pull/221)
 
 --
 
