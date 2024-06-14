@@ -16,23 +16,23 @@ describe('splitAddress2', () => {
   });
 
   test('returns neighborhood if string before delimiter is empty', () => {
-    expect(splitAddress2('CL', '\u00A0Centro')).toEqual({
+    expect(splitAddress2('CL', '\u2060Centro')).toEqual({
       neighborhood: 'Centro',
     });
-    expect(splitAddress2('BR', '\u00A0Centro')).toEqual({
+    expect(splitAddress2('BR', '\u2060Centro')).toEqual({
       neighborhood: 'Centro',
     });
   });
 
   test('returns full address object when separated by delimiter', () => {
-    expect(splitAddress2('CL', 'dpto 4\u00A0Centro')).toEqual({
+    expect(splitAddress2('CL', 'dpto 4 \u2060Centro')).toEqual({
       line2: 'dpto 4',
       neighborhood: 'Centro',
     });
   });
 
   test('returns full address object when separated by delimiter and decorator', () => {
-    expect(splitAddress2('BR', 'dpto 4,\u00A0Centro')).toEqual({
+    expect(splitAddress2('BR', 'dpto 4, \u2060Centro')).toEqual({
       line2: 'dpto 4',
       neighborhood: 'Centro',
     });

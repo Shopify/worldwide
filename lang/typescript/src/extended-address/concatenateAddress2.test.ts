@@ -43,7 +43,7 @@ describe('concatenateAddress2', () => {
         line2: 'dpto 4',
         neighborhood: 'Centro',
       }),
-    ).toBe('dpto 4,\u00A0Centro');
+    ).toBe('dpto 4, \u2060Centro');
     expect(
       concatenateAddress2({
         countryCode: 'CL',
@@ -51,7 +51,7 @@ describe('concatenateAddress2', () => {
         line2: 'dpto 4',
         neighborhood: 'Centro',
       }),
-    ).toBe('dpto 4\u00A0Centro');
+    ).toBe('dpto 4 \u2060Centro');
   });
 
   test('returns address2 string if no additional address fields are found', () => {
@@ -91,7 +91,7 @@ describe('concatenateAddress2', () => {
         line2: '',
         neighborhood: 'Centro',
       }),
-    ).toBe('\u00A0Centro');
+    ).toBe('\u2060Centro');
     expect(
       concatenateAddress2({
         countryCode: 'BR',
@@ -109,14 +109,14 @@ describe('concatenateAddress2', () => {
         line2: 'dpto 4',
         neighborhood: 'Centro',
       }),
-    ).toBe('dpto 4,\u00A0Centro');
+    ).toBe('dpto 4, \u2060Centro');
     expect(
       concatenateAddress2({
         countryCode: 'BR',
         neighborhood: 'Centro',
         line2: 'dpto 4',
       }),
-    ).toBe('dpto 4,\u00A0Centro');
+    ).toBe('dpto 4, \u2060Centro');
   });
 
   test('returns concatenated address', () => {
@@ -126,7 +126,7 @@ describe('concatenateAddress2', () => {
         line2: 'dpto 4',
         neighborhood: 'Centro',
       }),
-    ).toBe('dpto 4\u00A0Centro');
+    ).toBe('dpto 4 \u2060Centro');
   });
 
   test('returns concatenated address with decorator', () => {
@@ -136,21 +136,21 @@ describe('concatenateAddress2', () => {
         line2: 'dpto 4',
         neighborhood: 'Centro',
       }),
-    ).toBe('dpto 4,\u00A0Centro');
+    ).toBe('dpto 4, \u2060Centro');
     expect(
       concatenateAddress2({
         countryCode: 'PH',
         line2: 'apt 4',
         neighborhood: '294',
       }),
-    ).toBe('apt 4\u00A0294');
+    ).toBe('apt 4 \u2060294');
     expect(
       concatenateAddress2({
         countryCode: 'VN',
         line2: 'apt 4',
         neighborhood: 'Cầu Giấy',
       }),
-    ).toBe('apt 4,\u00A0Cầu Giấy');
+    ).toBe('apt 4, \u2060Cầu Giấy');
   });
 
   test('returns line2 with no delimiter or decorator if neighborhood is missing', () => {
@@ -174,12 +174,12 @@ describe('concatenateAddress2', () => {
         countryCode: 'BR',
         neighborhood: 'Centro',
       }),
-    ).toBe('\u00A0Centro');
+    ).toBe('\u2060Centro');
     expect(
       concatenateAddress2({
         countryCode: 'CL',
         neighborhood: 'Centro',
       }),
-    ).toBe('\u00A0Centro');
+    ).toBe('\u2060Centro');
   });
 });

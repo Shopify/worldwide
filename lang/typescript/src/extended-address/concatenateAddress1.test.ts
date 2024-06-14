@@ -35,7 +35,7 @@ describe('concatenateAddress1', () => {
         streetName: 'Main',
         streetNumber: '123',
       }),
-    ).toBe('Main,\u00A0123');
+    ).toBe('Main, \u2060123');
     expect(
       concatenateAddress1({
         countryCode: 'CL',
@@ -43,7 +43,7 @@ describe('concatenateAddress1', () => {
         streetName: 'Main',
         streetNumber: '123',
       }),
-    ).toBe('Main\u00A0123');
+    ).toBe('Main \u2060123');
   });
 
   test('returns address1 string if no additional address fields are found', () => {
@@ -83,7 +83,7 @@ describe('concatenateAddress1', () => {
         streetName: '',
         streetNumber: '123',
       }),
-    ).toBe('\u00A0123');
+    ).toBe('\u2060123');
     expect(
       concatenateAddress1({
         countryCode: 'BR',
@@ -101,14 +101,14 @@ describe('concatenateAddress1', () => {
         streetName: 'Main',
         streetNumber: '123',
       }),
-    ).toBe('Main,\u00A0123');
+    ).toBe('Main, \u2060123');
     expect(
       concatenateAddress1({
         countryCode: 'BR',
         streetNumber: '123',
         streetName: 'Main',
       }),
-    ).toBe('Main,\u00A0123');
+    ).toBe('Main, \u2060123');
   });
 
   test('returns concatenated address', () => {
@@ -118,7 +118,7 @@ describe('concatenateAddress1', () => {
         streetName: 'Main',
         streetNumber: '123',
       }),
-    ).toBe('Main\u00A0123');
+    ).toBe('Main \u2060123');
   });
 
   test('returns concatenated address with decorator', () => {
@@ -128,7 +128,7 @@ describe('concatenateAddress1', () => {
         streetName: 'Main',
         streetNumber: '123',
       }),
-    ).toBe('Main,\u00A0123');
+    ).toBe('Main, \u2060123');
   });
 
   test('returns street name with no delimiter or decorator if street number is missing', () => {
@@ -152,12 +152,12 @@ describe('concatenateAddress1', () => {
         countryCode: 'BR',
         streetNumber: '123',
       }),
-    ).toBe('\u00A0123');
+    ).toBe('\u2060123');
     expect(
       concatenateAddress1({
         countryCode: 'CL',
         streetNumber: '123',
       }),
-    ).toBe('\u00A0123');
+    ).toBe('\u2060123');
   });
 });

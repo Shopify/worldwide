@@ -7,11 +7,18 @@ import {
 
 describe('RESERVED_DELIMITER', () => {
   test('is a non-breaking space', () => {
-    expect(RESERVED_DELIMITER).toBe(' ');
-    expect(RESERVED_DELIMITER).toBe('\xA0');
-    expect(RESERVED_DELIMITER).toBe('\u00A0');
-    expect(RESERVED_DELIMITER).not.toBe('\x20');
+    // Word Joiner (U+2060)
+    expect(RESERVED_DELIMITER).toBe('⁠');
+    expect(RESERVED_DELIMITER).toBe('\u2060');
+
+    // Non-breaking space (U+00A0)
+    expect(RESERVED_DELIMITER).not.toBe(' ');
+    expect(RESERVED_DELIMITER).not.toBe('\xA0');
+    expect(RESERVED_DELIMITER).not.toBe('\u00A0');
+
+    // Regular space
     expect(RESERVED_DELIMITER).not.toBe(' ');
+    expect(RESERVED_DELIMITER).not.toBe('\x20');
   });
 });
 
@@ -26,7 +33,7 @@ describe('concatAddressField', () => {
       streetName: 'Main',
     };
     expect(concatAddressField(fieldDefinition, fieldValues)).toBe(
-      '123\u00A0Main',
+      '123\u2060Main',
     );
   });
 
@@ -44,10 +51,10 @@ describe('concatAddressField', () => {
       streetName: 'Main',
     };
     expect(concatAddressField(fieldDefinitionNumberFirst, fieldValues)).toBe(
-      '123\u00A0Main',
+      '123\u2060Main',
     );
     expect(concatAddressField(fieldDefinitionNameFirst, fieldValues)).toBe(
-      'Main\u00A0123',
+      'Main\u2060123',
     );
   });
 
@@ -61,7 +68,7 @@ describe('concatAddressField', () => {
       streetName: 'Main',
     };
     expect(concatAddressField(fieldDefinition, fieldValues)).toBe(
-      '123\u00A0Main',
+      '123\u2060Main',
     );
     expect(
       concatAddressField(fieldDefinition, {
@@ -72,7 +79,7 @@ describe('concatAddressField', () => {
       concatAddressField(fieldDefinition, {
         streetName: fieldValues.streetName,
       }),
-    ).toBe('\u00A0Main');
+    ).toBe('\u2060Main');
     expect(concatAddressField(fieldDefinition, {})).toBe('');
   });
 
@@ -87,9 +94,10 @@ describe('concatAddressField', () => {
         streetName: 'Main',
       };
       expect(concatAddressField(fieldDefinition, fieldValues)).toBe(
-        'Main,\u00A0123',
+        'Main,\u2060123',
       );
     });
+
     test("doesn't include decorator if previous field is empty", () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
@@ -99,9 +107,10 @@ describe('concatAddressField', () => {
         streetNumber: '123',
       };
       expect(concatAddressField(fieldDefinition, fieldValues)).toBe(
-        '\u00A0123',
+        '\u2060123',
       );
     });
+
     test("doesn't include decorator or delimiter if field is empty", () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
@@ -121,7 +130,7 @@ describe('splitAddressField', () => {
       {key: 'streetNumber'},
       {key: 'streetName'},
     ];
-    const concatenatedAddress = '123\u00A0Main';
+    const concatenatedAddress = '123\u2060Main';
 
     expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual({
       streetNumber: '123',
@@ -138,7 +147,7 @@ describe('splitAddressField', () => {
       {key: 'streetName'},
       {key: 'streetNumber'},
     ];
-    const concatenatedAddress = '123\u00A0Main';
+    const concatenatedAddress = '123\u2060Main';
     expect(
       splitAddressField(fieldDefinitionNumberFirst, concatenatedAddress),
     ).toEqual({
@@ -161,7 +170,7 @@ describe('splitAddressField', () => {
     expect(splitAddressField(fieldDefinition, '123')).toEqual({
       streetNumber: '123',
     });
-    expect(splitAddressField(fieldDefinition, '\u00A0Main')).toEqual({
+    expect(splitAddressField(fieldDefinition, '\u2060Main')).toEqual({
       streetName: 'Main',
     });
   });
@@ -172,14 +181,15 @@ describe('splitAddressField', () => {
         {key: 'streetName'},
         {key: 'streetNumber', decorator: ','},
       ];
-      const concatenatedAddress = 'Main,\u00A0123';
+      const concatenatedAddress = 'Main,\u2060123';
 
       expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual({
         streetName: 'Main',
         streetNumber: '123',
       });
     });
-    test('splits address without defined decorator', () => {
+
+    test('splits address without defined decorator if no delimiter is found', () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
         {key: 'streetNumber', decorator: ','},
@@ -190,12 +200,13 @@ describe('splitAddressField', () => {
         streetName: 'Main',
       });
     });
-    test('splits address without defined decorator 2', () => {
+
+    test('splits address without defined decorator if leading delimiter is found', () => {
       const fieldDefinition: FieldConcatenationRule[] = [
         {key: 'streetName'},
         {key: 'streetNumber', decorator: ','},
       ];
-      const concatenatedAddress = '\u00A0123';
+      const concatenatedAddress = '\u2060123';
 
       expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual({
         streetNumber: '123',

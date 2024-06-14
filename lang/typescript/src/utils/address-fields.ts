@@ -2,7 +2,7 @@ import {Address} from '../types/address';
 
 import {FieldConcatenationRule} from './regions';
 
-export const RESERVED_DELIMITER = '\xA0';
+export const RESERVED_DELIMITER = '\u2060';
 
 /**
  * Utility function that concatenates address fields based on a provided field
@@ -56,7 +56,9 @@ export function splitAddressField(
       // Ex: streetNumber decorator is ","; ["Main,", "123"] => ["Main", "123"]
       const nextFieldDecorator = fieldDefinition[index + 1]?.decorator;
       const fieldValue =
-        nextFieldDecorator && value.endsWith(nextFieldDecorator)
+        nextFieldDecorator &&
+        nextFieldDecorator.length > 0 &&
+        value.endsWith(nextFieldDecorator)
           ? value.substring(0, value.length - nextFieldDecorator.length)
           : value;
       return {

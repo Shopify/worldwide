@@ -144,6 +144,26 @@ module Worldwide
       end
     end
 
+    test "combined_address_format decorators are non-empty strings when set" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.combined_address_format.blank?
+
+        country.combined_address_format.each do |_combined_field, fields|
+          fields.each do |field|
+            decorator = field["decorator"]
+
+            next if decorator.nil?
+
+            refute_predicate(
+              decorator,
+              :empty?,
+              "#{country.iso_code} combined_address_format decorator for #{field["key"]} can't be an empty string",
+            )
+          end
+        end
+      end
+    end
+
     test "If zones key does not exists, should not have {province} in format key" do
       Regions.all.select do |region|
         region.country? && region.zones.blank?
