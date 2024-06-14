@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.3.0
+
+### Minor Changes
+
+- 6102f2b: Change reserved delimiter to word joiner
+
 ## 0.2.2
 
 ### Patch Changes
