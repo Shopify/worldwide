@@ -5,15 +5,20 @@ import {
   splitAddressField,
 } from './address-fields';
 
-describe.only('RESERVED_DELIMITER', () => {
-  test.only('is a non-breaking space', () => {
+describe('RESERVED_DELIMITER', () => {
+  test('is a non-breaking space', () => {
+    // Word Joiner (U+2060)
     expect(RESERVED_DELIMITER).toBe('⁠');
     expect(RESERVED_DELIMITER).toBe('\u2060');
+
+    // Non-breaking space (U+00A0)
     expect(RESERVED_DELIMITER).not.toBe(' ');
     expect(RESERVED_DELIMITER).not.toBe('\xA0');
     expect(RESERVED_DELIMITER).not.toBe('\u00A0');
-    expect(RESERVED_DELIMITER).not.toBe('\x20');
+
+    // Regular space
     expect(RESERVED_DELIMITER).not.toBe(' ');
+    expect(RESERVED_DELIMITER).not.toBe('\x20');
   });
 });
 

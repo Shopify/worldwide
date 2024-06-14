@@ -21,14 +21,14 @@ describe('splitAddress1', () => {
   });
 
   test('returns full address object when separated by delimiter', () => {
-    expect(splitAddress1('CL', 'Main\u2060123')).toEqual({
+    expect(splitAddress1('CL', 'Main \u2060123')).toEqual({
       streetName: 'Main',
       streetNumber: '123',
     });
   });
 
   test('returns full address object when separated by delimiter and decorator', () => {
-    expect(splitAddress1('BR', 'Main,\u2060123')).toEqual({
+    expect(splitAddress1('BR', 'Main, \u2060123')).toEqual({
       streetName: 'Main',
       streetNumber: '123',
     });
