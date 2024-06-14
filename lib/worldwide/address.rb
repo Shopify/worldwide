@@ -2,6 +2,8 @@
 
 module Worldwide
   class Address
+    RESERVED_DELIMITER = "\u2060"
+
     attr_reader :first_name,
       :last_name,
       :company,
@@ -145,7 +147,6 @@ module Worldwide
       Util.blank?(errors)
     end
 
-    RESERVED_DELIMITER = "\u00A0"
     def concatenate_address1
       additional_fields = region.combined_address_format["address1"] || []
       additional_field_keys = additional_fields.map { |field| field["key"] }

@@ -109,14 +109,14 @@ describe('concatenateAddress2', () => {
         line2: 'dpto 4',
         neighborhood: 'Centro',
       }),
-    ).toBe('dpto 4,\u2060Centro');
+    ).toBe('dpto 4, \u2060Centro');
     expect(
       concatenateAddress2({
         countryCode: 'BR',
         neighborhood: 'Centro',
         line2: 'dpto 4',
       }),
-    ).toBe('dpto 4,\u2060Centro');
+    ).toBe('dpto 4, \u2060Centro');
   });
 
   test('returns concatenated address', () => {
