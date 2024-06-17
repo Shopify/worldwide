@@ -10,3 +10,40 @@ cs:
           errors:
             blank_instructional: Vyberte guvernorát.
             blank_informative: Guvernorát chybí.
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (volitelné)
+          errors:
+            blank_instructional: Zadejte blok.
+            blank_informative: Blok chybí.
+            too_long_instructional: 'Název bloku je příliš dlouhý (maximální počet
+              znaků: %{limit}).'
+            too_long_informative: Název bloku je příliš dlouhý.
+            contains_emojis_instructional: Název bloku nemůže obsahovat emoji.
+            contains_emojis_informative: Název bloku nemůže obsahovat emoji.
+            contains_mathematical_symbols_instructional: Název bloku nemůže obsahovat
+              matematické symboly.
+            contains_mathematical_symbols_informative: Název bloku nemůže obsahovat
+              matematické symboly.
+            contains_restricted_characters_instructional: Název bloku může obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky.
+            contains_restricted_characters_informative: Název bloku nemůže obsahovat
+              zakázané znaky.
+            contains_too_many_words_instructional: 'Název bloku musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_too_many_words_informative: 'Název bloku musí obsahovat méně
+              než tento počet slov: %{word_count}.'
+            contains_html_tags_instructional: Název bloku nemůže obsahovat HTML.
+            contains_html_tags_informative: Název bloku nemůže obsahovat HTML.
+            contains_url_instructional: Název bloku nemůže obsahovat adresu URL.
+            contains_url_informative: Název bloku nemůže obsahovat adresu URL.
+            unknown_for_city_instructional: 'Zadejte platný blok pro: %{city}.'
+            unknown_for_city_informative: 'Blok není platný pro: %{city}.'
+            unknown_for_zip_instructional: 'Zadejte platný blok pro: %{zip}.'
+            unknown_for_zip_informative: 'Blok není platný pro: %{zip}.'
+            unknown_for_address_instructional: Blok může být nesprávný.
+            unknown_for_address_informative: Blok může být nesprávný.
+          warnings:
+            contains_too_many_words: 'Doporučuje se, aby název bloku obsahoval méně
+              než tento počet slov: %{word_count}.'

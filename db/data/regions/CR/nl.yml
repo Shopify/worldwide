@@ -10,3 +10,39 @@ nl:
           errors:
             blank_instructional: Selecteer een provincie
             blank_informative: Provincie ontbreekt
+        neighborhood:
+          label:
+            default: District
+            optional: District (optioneel)
+          errors:
+            blank_instructional: Vul een district in
+            blank_informative: District ontbreekt
+            too_long_instructional: District is te lang (maximaal %{limit} tekens)
+            too_long_informative: District is te lang
+            contains_emojis_instructional: District mag geen emoji's bevatten
+            contains_emojis_informative: District mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: District mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: District mag geen wiskundige
+              symbolen bevatten
+            contains_restricted_characters_instructional: District mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: District mag geen verboden
+              tekens bevatten
+            contains_too_many_words_instructional: District mag niet langer zijn dan
+              %{word_count} woorden
+            contains_too_many_words_informative: District mag niet langer zijn dan
+              %{word_count} woorden
+            contains_html_tags_instructional: District mag geen HTML bevatten
+            contains_html_tags_informative: District mag geen HTML bevatten
+            contains_url_instructional: District mag geen URL bevatten
+            contains_url_informative: District mag geen URL bevatten
+            unknown_for_city_instructional: Voer een geldig district in voor %{city}
+            unknown_for_city_informative: District is niet geldig voor %{city}
+            unknown_for_zip_instructional: Voer een geldig district in voor %{zip}
+            unknown_for_zip_informative: District is niet geldig voor %{zip}
+            unknown_for_address_instructional: Het district is mogelijk onjuist
+            unknown_for_address_informative: Het district is mogelijk onjuist
+          warnings:
+            contains_too_many_words: Geef minder dan %{word_count} woorden op voor
+              het district

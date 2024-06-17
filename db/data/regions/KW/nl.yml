@@ -10,3 +10,39 @@ nl:
           errors:
             blank_instructional: Selecteer een gouvernement
             blank_informative: Gouvernement ontbreekt
+        neighborhood:
+          label:
+            default: Blok
+            optional: Blok (optioneel)
+          errors:
+            blank_instructional: Voer een blok in
+            blank_informative: Blok ontbreekt
+            too_long_instructional: Blok is te lang (maximum is %{limit} tekens)
+            too_long_informative: Blok is te lang
+            contains_emojis_instructional: Blok mag geen emoji's bevatten
+            contains_emojis_informative: Blok mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Blok mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Blok mag geen wiskundige symbolen
+              bevatten
+            contains_restricted_characters_instructional: Blok mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Blok mag geen verboden tekens
+              bevatten
+            contains_too_many_words_instructional: Blok dient minder dan %{word_count}
+              woorden te bevatten
+            contains_too_many_words_informative: Blok dient minder dan %{word_count}
+              woorden te bevatten
+            contains_html_tags_instructional: Blok mag geen HTML bevatten
+            contains_html_tags_informative: Blok mag geen HTML bevatten
+            contains_url_instructional: Blok mag geen URL bevatten
+            contains_url_informative: Blok mag geen URL bevatten
+            unknown_for_city_instructional: Vul een geldig blok in voor %{city}
+            unknown_for_city_informative: Blok is niet geldig voor %{city}
+            unknown_for_zip_instructional: Vul een geldig blok in voor %{zip}
+            unknown_for_zip_informative: Blok is niet geldig voor %{zip}
+            unknown_for_address_instructional: Het blok is mogelijk onjuist
+            unknown_for_address_informative: Het blok is mogelijk onjuist
+          warnings:
+            contains_too_many_words: Geef minder dan %{word_count} woorden op voor
+              het blok

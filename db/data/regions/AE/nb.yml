@@ -10,3 +10,39 @@ nb:
           errors:
             blank_instructional: Velg et emirat
             blank_informative: Emirat mangler
+        neighborhood:
+          label:
+            default: Område
+            optional: Område (valgfritt)
+          errors:
+            blank_instructional: Angi et område
+            blank_informative: Område mangler
+            too_long_instructional: Området er for langt (maksimum er %{limit} tegn)
+            too_long_informative: Området er for langt
+            contains_emojis_instructional: Området kan ikke inneholde emojier
+            contains_emojis_informative: Området kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Området kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Området kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Området kan bare inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Området kan ikke inneholde
+              begrensede tegn
+            contains_too_many_words_instructional: Området må ha færre enn %{word_count}
+              ord
+            contains_too_many_words_informative: Området må ha færre enn %{word_count}
+              ord
+            contains_html_tags_instructional: Området kan ikke inneholde HTML
+            contains_html_tags_informative: Området kan ikke inneholde HTML
+            contains_url_instructional: Området kan ikke inneholde en URL-adresse
+            contains_url_informative: Området kan ikke inneholde en URL-adresse
+            unknown_for_city_instructional: Skriv inn et gyldig område for %{city}
+            unknown_for_city_informative: Området er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Skriv inn et gyldig område for %{zip}
+            unknown_for_zip_informative: Området er ikke gyldig for %{zip}
+            unknown_for_address_instructional: Området er muligens feil
+            unknown_for_address_informative: Området er muligens feil
+          warnings:
+            contains_too_many_words: Vi anbefaler at området inneholder færre enn
+              %{word_count} ord

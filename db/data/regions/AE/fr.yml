@@ -10,3 +10,43 @@ fr:
           errors:
             blank_instructional: Sélectionner un émirat
             blank_informative: L’émirat est manquant
+        neighborhood:
+          label:
+            default: Zone
+            optional: Zone (facultatif)
+          errors:
+            blank_instructional: Saisir le nom de zone
+            blank_informative: Le nom de zone est manquant
+            too_long_instructional: Le nom de zone est trop long (la limite est de
+              %{limit} caractères)
+            too_long_informative: Le nom de zone est trop long
+            contains_emojis_instructional: Le nom de zone ne peut pas contenir d’emojis
+            contains_emojis_informative: Le nom de zone ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le nom de zone ne peut pas
+              contenir de symboles mathématiques
+            contains_mathematical_symbols_informative: Le nom de zone ne peut pas
+              contenir de symboles mathématiques
+            contains_restricted_characters_instructional: Le nom de zone ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le nom de zone ne peut pas
+              contenir de caractères non autorisés
+            contains_too_many_words_instructional: Le nom de zone doit comporter moins
+              de %{word_count} mots
+            contains_too_many_words_informative: Le nom de zone doit comporter moins
+              de %{word_count} mots
+            contains_html_tags_instructional: Le nom de zone ne peut pas contenir
+              de HTML
+            contains_html_tags_informative: Le nom de zone ne peut pas contenir de
+              HTML
+            contains_url_instructional: Le nom de zone ne peut pas contenir d’URL
+            contains_url_informative: Le nom de zone ne peut pas contenir d’URL
+            unknown_for_city_instructional: Saisir un nom de zone valide pour %{city}
+            unknown_for_city_informative: Le nom de zone n’est pas valide pour %{city}
+            unknown_for_zip_instructional: Saisir un nom de zone valide pour %{zip}
+            unknown_for_zip_informative: Le nom de zone n’est pas valide pour %{zip}
+            unknown_for_address_instructional: Le nom de zone est peut-être erroné
+            unknown_for_address_informative: Le nom de zone est peut-être erroné
+          warnings:
+            contains_too_many_words: Il est conseillé que le nom de zone comporte
+              moins de %{word_count} mots

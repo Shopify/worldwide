@@ -10,3 +10,39 @@ de:
           errors:
             blank_instructional: Emirat auswählen
             blank_informative: Emirat fehlt
+        neighborhood:
+          label:
+            default: Gebiet
+            optional: Gebiet (optional)
+          errors:
+            blank_instructional: Gebiet eingeben
+            blank_informative: Gebiet fehlt
+            too_long_instructional: Gebiet ist zu lang (höchstens %{limit} Zeichen)
+            too_long_informative: Gebiet ist zu lang
+            contains_emojis_instructional: Gebiet darf keine Emojis enthalten
+            contains_emojis_informative: Gebiet darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Gebiet darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Gebiet darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Gebiet darf nur Buchstaben,
+              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Gebiet darf keine eingeschränkten
+              Zeichen enthalten
+            contains_too_many_words_instructional: Gebiet muss weniger als %{word_count}
+              Wörter enthalten
+            contains_too_many_words_informative: Gebiet muss weniger als %{word_count}
+              Wörter enthalten
+            contains_html_tags_instructional: Gebiet darf kein HTML enthalten
+            contains_html_tags_informative: Gebiet darf kein HTML enthalten
+            contains_url_instructional: Gebiet darf keine URL enthalten
+            contains_url_informative: Gebiet darf keine URL enthalten
+            unknown_for_city_instructional: Gib ein gültiges Gebiet ein für %{city}
+            unknown_for_city_informative: Gebiet ist für %{city} nicht gültig
+            unknown_for_zip_instructional: Gib ein gültiges Gebiet ein für %{zip}
+            unknown_for_zip_informative: Gebiet ist für %{zip} nicht gültig
+            unknown_for_address_instructional: Gebiet ist ggf. falsch
+            unknown_for_address_informative: Gebiet ist ggf. falsch
+          warnings:
+            contains_too_many_words: Es wird empfohlen, dass das Gebiet weniger als
+              %{word_count} Wörter enthält
