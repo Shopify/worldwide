@@ -10,3 +10,42 @@ hu:
           errors:
             blank_instructional: Válassz emírséget
             blank_informative: Az emírség nincs megadva
+        neighborhood:
+          label:
+            default: Tartomány
+            optional: Tartomány (nem kötelező)
+          errors:
+            blank_instructional: Tartomány megadása
+            blank_informative: A tartomány nincs megadva
+            too_long_instructional: Túl hosszú tartománynév (legfeljebb %{limit} karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú tartománynév
+            contains_emojis_instructional: A tartomány neve nem tartalmazhat hangulatjeleket
+            contains_emojis_informative: A tartomány neve nem tartalmazhat hangulatjeleket
+            contains_mathematical_symbols_instructional: A tartománynév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A tartománynév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A tartománynév csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A tartománynév nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A tartomány legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A tartomány legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: A tartomány nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A tartomány nem tartalmazhat HTML-címkét
+            contains_url_instructional: A tartomány nem tartalmazhat URL-t
+            contains_url_informative: A tartomány nem tartalmazhat URL-t
+            unknown_for_city_instructional: 'Olyan tartományt adj meg, amely megfelel
+              ennek: %{city}'
+            unknown_for_city_informative: 'A tartomány nem felel meg ennek: %{city}'
+            unknown_for_zip_instructional: 'Olyan tartományt adj meg, amely megfelel
+              ennek: %{zip}'
+            unknown_for_zip_informative: 'A tartomány nem felel meg ennek: %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen a tartománynév
+            unknown_for_address_informative: Vélhetően helytelen a tartománynév
+          warnings:
+            contains_too_many_words: A tartománynév javasolt hossza kevesebb mint
+              %{word_count} szó
