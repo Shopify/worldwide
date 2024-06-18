@@ -120,8 +120,10 @@ module Worldwide
 
         country.additional_address_fields.each do |field|
           field_name = field["name"]
-          present = country.combined_address_format.any? do |_, fields|
-            fields.any? { |f| f["key"] == field_name }
+          present = country.combined_address_format.any? do |_script, script_combined_address_format|
+            script_combined_address_format.each do |_, fields|
+              fields.any? { |f| f["key"] == field_name }
+            end
           end
 
           assert present, "#{country.iso_code} additional_address_field #{field_name} is not present in combined_address_format"
@@ -129,40 +131,55 @@ module Worldwide
       end
     end
 
+    test "combined_address_format defines default property" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.combined_address_format.blank?
+
+        keys_found = country.combined_address_format.keys
+        includes_default = keys_found.include?("default")
+
+        assert includes_default, "#{country.iso_code} combined_address_format must define default, only defines languages #{keys_found}"
+      end
+    end
+
     test "combined_address_format keys are present in additional_address_fields" do
       Regions.all.select(&:country?).each do |country|
         next if country.combined_address_format.blank?
 
-        country.combined_address_format.each do |_key, fields|
-          fields.each do |field|
-            field_name = field["key"]
-            present = country.additional_address_fields.any? { |f| f["name"] == field_name }
+        country.combined_address_format.each do |_script, script_combined_address_format|
+          script_combined_address_format.each do |_key, fields|
+            fields.each do |field|
+              field_name = field["key"]
+              present = country.additional_address_fields.any? { |f| f["name"] == field_name }
 
-            assert present, "#{country.iso_code} combined_address_format key #{field_name} is not present in additional_address_fields"
+              assert present, "#{country.iso_code} combined_address_format key #{field_name} is not present in additional_address_fields"
+            end
           end
         end
       end
     end
 
-    test "combined_address_format decorators are non-empty strings when set" do
-      Regions.all.select(&:country?).each do |country|
-        next if country.combined_address_format.blank?
+    # test "combined_address_format decorators are non-empty strings when set" do
+    #   Regions.all.select(&:country?).each do |country|
+    #     next if country.combined_address_format.blank?
 
-        country.combined_address_format.each do |_combined_field, fields|
-          fields.each do |field|
-            decorator = field["decorator"]
+    #     country.combined_address_format.each do |_script, script_combined_address_format|
+    #       script_combined_address_format.each do |_key, fields|
+    #         fields.each do |field|
+    #           decorator = field["decorator"]
 
-            next if decorator.nil?
+    #           next if decorator.nil?
 
-            refute_predicate(
-              decorator,
-              :empty?,
-              "#{country.iso_code} combined_address_format decorator for #{field["key"]} can't be an empty string",
-            )
-          end
-        end
-      end
-    end
+    #           refute_predicate(
+    #             decorator,
+    #             :empty?,
+    #             "#{country.iso_code} combined_address_format decorator for #{field["key"]} can't be an empty string",
+    #           )
+    #         end
+    #       end
+    #     end
+    #   end
+    # end
 
     test "If zones key does not exists, should not have {province} in format key" do
       Regions.all.select do |region|

@@ -148,7 +148,7 @@ module Worldwide
     end
 
     def concatenate_address1
-      additional_fields = region.combined_address_format["address1"] || []
+      additional_fields = region.combined_address_format.dig("default", "address1") || []
       additional_field_keys = additional_fields.map { |field| field["key"] }
 
       return address1 if field_values(additional_field_keys).empty?
@@ -157,7 +157,7 @@ module Worldwide
     end
 
     def concatenate_address2
-      additional_fields = region.combined_address_format["address2"] || []
+      additional_fields = region.combined_address_format.dig("default", "address2") || []
       additional_field_keys = additional_fields.map { |field| field["key"] }
 
       return address2 if field_values(additional_field_keys).empty?
@@ -166,13 +166,13 @@ module Worldwide
     end
 
     def split_address1
-      additional_fields = region.combined_address_format["address1"] || []
+      additional_fields = region.combined_address_format.dig("default", "address1") || []
       split_fields_arr = address1&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
 
     def split_address2
-      additional_fields = region.combined_address_format["address2"] || []
+      additional_fields = region.combined_address_format.dig("default", "address2") || []
       split_fields_arr = address2&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end

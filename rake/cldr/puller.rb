@@ -45,7 +45,7 @@ module Worldwide
         end
 
         def normalize_components(components)
-          components = components.split(",").map(&:strip).map(&:to_sym).sort if components
+          components = components.split(",").map { |x| x.strip.to_sym }.sort if components
 
           invalid_selected_components = (components || []) - ::Cldr::Export::Data.components
           raise ArgumentError, "Requested unknown CLDR components: #{invalid_selected_components}" if Util.present?(invalid_selected_components)

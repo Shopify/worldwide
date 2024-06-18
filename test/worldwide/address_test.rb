@@ -100,7 +100,7 @@ module Worldwide
 
     test "concatenate_address1 returns street name concatenated with street number separated by delimiter" do
       Worldwide::Region.any_instance.stubs(:combined_address_format).returns(
-        { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] },
+        { "default" => { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] } },
       )
       address = Address.new(street_name: "文林路", street_number: "88號", country_code: "TW")
 
@@ -209,7 +209,7 @@ module Worldwide
 
     test "split_address1 returns street name and street number when both values are present and separated by a delimiter" do
       Worldwide::Region.any_instance.stubs(:combined_address_format).returns(
-        { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] },
+        { "default" => { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] } },
       )
       address = Address.new(address1: "文林路⁠88號", country_code: "TW")
       expected_hash = { "street_name" => "文林路", "street_number" => "88號" }

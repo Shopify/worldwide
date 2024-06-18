@@ -29,14 +29,15 @@ additional_address_fields:
   - name: line2
   - name: neighborhood
 combined_address_format:
-  address1:
-    - key: streetName
-    - key: streetNumber
-      decorator: ", "
-  address2:
-    - key: line2
-    - key: neighborhood
-      decorator: ", "
+  default:
+    address1:
+      - key: streetName
+      - key: streetNumber
+        decorator: ", "
+    address2:
+      - key: line2
+      - key: neighborhood
+        decorator: ", "
 emoji: "\U0001F1E7\U0001F1F7"
 localized_data:
 - name: tax_credential_br

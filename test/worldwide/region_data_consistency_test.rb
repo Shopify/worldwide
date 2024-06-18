@@ -53,9 +53,7 @@ module Worldwide
       Regions.all.select(&:province?).each do |province|
         next if province.zip_prefixes.nil?
 
-        # rubocop:disable Performance/RedundantEqualityComparisonBlock
         assert province.zip_prefixes.all? { |prefix| prefix == prefix.upcase }
-        # rubocop:enable Performance/RedundantEqualityComparisonBlock
       end
     end
 
