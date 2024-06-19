@@ -10,3 +10,50 @@ es:
           errors:
             blank_instructional: Selecciona un emirato.
             blank_informative: Falta el emirato.
+        neighborhood:
+          label:
+            default: Subdivisión
+            optional: Subdivisión (opcional)
+          errors:
+            blank_instructional: Introduce una subdivisión.
+            blank_informative: Falta introducir la subdivisión.
+            too_long_instructional: El nombre de la subdivisión es demasiado largo
+              (el máximo es de %{limit} caracteres).
+            too_long_informative: El nombre de la subdivisión es demasiado largo.
+            contains_emojis_instructional: El nombre de la subdivisión no puede contener
+              emojis.
+            contains_emojis_informative: El nombre de la subdivisión no puede contener
+              emojis.
+            contains_mathematical_symbols_instructional: El nombre de la subdivisión
+              no puede contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre de la subdivisión
+              no puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre de la subdivisión
+              solo puede contener letras, números, caracteres locales y caracteres
+              especiales.
+            contains_restricted_characters_informative: El nombre de la subdivisión
+              no puede contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre de la subdivisión debe
+              tener menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre de la subdivisión debe
+              tener menos de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre de la subdivisión no puede
+              contener HTML.
+            contains_html_tags_informative: El nombre de la subdivisión no puede contener
+              HTML.
+            contains_url_instructional: El nombre de la subdivisión no puede contener
+              una URL.
+            contains_url_informative: El nombre de la subdivisión no puede contener
+              una URL.
+            unknown_for_city_instructional: Introduce una subdivisión válida para
+              %{city}.
+            unknown_for_city_informative: La subdivisión no es válida para %{city}.
+            unknown_for_zip_instructional: Introduce una subdivisión válida para el
+              código postal %{zip}.
+            unknown_for_zip_informative: La subdivisión no es válida para el código
+              postal %{zip}.
+            unknown_for_address_instructional: Puede que la subdivisión no sea correcta.
+            unknown_for_address_informative: Puede que la subdivisión no sea correcta.
+          warnings:
+            contains_too_many_words: Se recomienda que la subdivisión tenga menos
+              de %{word_count} palabras.

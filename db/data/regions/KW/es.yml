@@ -10,3 +10,46 @@ es:
           errors:
             blank_instructional: Selecciona una provincia.
             blank_informative: Falta la provincia.
+        neighborhood:
+          label:
+            default: Bloque
+            optional: Bloque (opcional)
+          errors:
+            blank_instructional: Introduce un bloque.
+            blank_informative: Falta introducir el bloque.
+            too_long_instructional: El nombre del bloque es demasiado largo (el máximo
+              es de %{limit} caracteres).
+            too_long_informative: El nombre del bloque es demasiado largo.
+            contains_emojis_instructional: El nombre del bloque no puede contener
+              emojis.
+            contains_emojis_informative: El nombre del bloque no puede contener emojis.
+            contains_mathematical_symbols_instructional: El nombre del bloque no puede
+              contener símbolos matemáticos.
+            contains_mathematical_symbols_informative: El nombre de la colonia no
+              puede contener símbolos matemáticos.
+            contains_restricted_characters_instructional: El nombre del bloque solo
+              puede contener letras, números, caracteres locales y caracteres especiales.
+            contains_restricted_characters_informative: El nombre del bloque no puede
+              contener caracteres restringidos.
+            contains_too_many_words_instructional: El nombre del bloque debe tener
+              menos de %{word_count} palabras.
+            contains_too_many_words_informative: El nombre del bloque debe tener menos
+              de %{word_count} palabras.
+            contains_html_tags_instructional: El nombre del bloque no puede contener
+              HTML.
+            contains_html_tags_informative: El nombre del bloque no puede contener
+              HTML.
+            contains_url_instructional: El nombre del bloque no puede contener una
+              URL.
+            contains_url_informative: El nombre del bloque no puede contener una URL.
+            unknown_for_city_instructional: Introduce un bloque válido para %{city}.
+            unknown_for_city_informative: El bloque no es válido para %{city}.
+            unknown_for_zip_instructional: Introduce un bloque válido para el código
+              postal %{zip}.
+            unknown_for_zip_informative: El bloque no es válido para el código postal
+              %{zip}.
+            unknown_for_address_instructional: Puede que el bloque no sea correcto.
+            unknown_for_address_informative: Puede que el bloque no sea correcto.
+          warnings:
+            contains_too_many_words: Se recomienda que el nombre del bloque tenga
+              menos de %{word_count} palabras.
