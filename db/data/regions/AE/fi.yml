@@ -5,8 +5,45 @@ fi:
       addresses:
         province:
           label:
-            default: Emiraatti
-            optional: Emiraatti (valinnainen)
+            default: Emiirikunta
+            optional: Emiirikunta (valinnainen)
           errors:
             blank_instructional: Valitse emiirikunta
             blank_informative: Emiirikunta puuttuu
+        neighborhood:
+          label:
+            default: Alue
+            optional: Alue (valinnainen)
+          errors:
+            blank_instructional: Syötä alue
+            blank_informative: Alue puuttuu
+            too_long_instructional: Alue on liian pitkä (enimmäismäärä on %{limit}
+              merkkiä)
+            too_long_informative: Alue on liian pitkä
+            contains_emojis_instructional: Alue ei voi sisältää emojeita
+            contains_emojis_informative: Alue ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Alue ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Alue ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Alue voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Alue ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Alueessa saa olla enintään %{word_count}
+              sanaa
+            contains_too_many_words_informative: Alueessa saa olla enintään %{word_count}
+              sanaa
+            contains_html_tags_instructional: Alue ei voi sisältää HTML:ää
+            contains_html_tags_informative: Alue ei voi sisältää HTML:ää
+            contains_url_instructional: Alue ei voi sisältää URL-osoitetta
+            contains_url_informative: Alue ei voi sisältää URL-osoitetta
+            unknown_for_city_instructional: Anna kelvollinen alue kaupungille %{city}
+            unknown_for_city_informative: Alue ei kelpaa kaupungille %{city}
+            unknown_for_zip_instructional: Anna kelvollinen alue postinumerolle %{zip}
+            unknown_for_zip_informative: Alue ei kelpaa postinumerolle %{zip}
+            unknown_for_address_instructional: Alue voi olla väärä
+            unknown_for_address_informative: Alue voi olla väärä
+          warnings:
+            contains_too_many_words: Alueen pituudeksi suositellaan alle %{word_count}
+              sanaa
