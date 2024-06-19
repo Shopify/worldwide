@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 --
 
+## [1.5.0] - 2024-06-17
+- Make street number optional in CL [#228](https://github.com/Shopify/worldwide/pull/228)
+
 ## [1.4.1] - 2024-06-17
 - Add translations for neighborhood error strings in AE, CR, KW, PA, PE, SA [#220](https://github.com/Shopify/worldwide/pull/220)
 

@@ -296,8 +296,8 @@ module Worldwide
     end
 
     test "street_number_required? returns values as expected" do
-      street_number_not_required_countries = [:ca, :us, :id]
-      street_number_required_countries = [:be, :br, :cl, :es]
+      street_number_not_required_countries = [:ca, :cl, :us, :id]
+      street_number_required_countries = [:be, :br, :il, :mx, :nl, :es]
 
       street_number_not_required_countries.each do |country_code|
         assert_equal false, Worldwide.region(code: country_code).street_number_required?
