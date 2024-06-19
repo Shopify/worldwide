@@ -1,5 +1,5 @@
 import {concatAddressField} from '../utils/address-fields';
-import {getRegionConfig} from '../utils/regions';
+import {getConcatenationRules, getRegionConfig} from '../utils/regions';
 import {Address} from '../types/address';
 
 /**
@@ -10,13 +10,15 @@ import {Address} from '../types/address';
  */
 export function concatenateAddress2(address: Address): string | null {
   const config = getRegionConfig(address.countryCode);
-  const address2CombinedFormat = config?.combined_address_format?.address2;
-  const containsAddress2ExtendedFields = address2CombinedFormat?.some(
+  const fieldConcatenationRules = config
+    ? getConcatenationRules(config, address, 'address2')
+    : undefined;
+  const containsAddress2ExtendedFields = fieldConcatenationRules?.some(
     (rule) => rule.key in address && address[rule.key] !== undefined,
   );
 
-  if (address2CombinedFormat && containsAddress2ExtendedFields) {
-    return concatAddressField(address2CombinedFormat, address);
+  if (fieldConcatenationRules && containsAddress2ExtendedFields) {
+    return concatAddressField(fieldConcatenationRules, address);
   } else if (address.address2 !== undefined) {
     return address.address2;
   }

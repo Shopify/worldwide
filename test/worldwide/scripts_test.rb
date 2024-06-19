@@ -14,8 +14,8 @@ module Worldwide
         "車": [:Han],
         "车": [:Han],
         "부산광역시": [:Hangul],
-        "The quick brown fox jumps": [:Latn],
-        "Ｔｈｅ ｑｕｉｃｋ ｂｒｏｗｎ ｆｏｘ ｊｕｍｐｓ ｆｕｌｌ ｗｉｄｔｈ": [:Latn],
+        "The quick brown fox jumps": [:Latin],
+        "Ｔｈｅ ｑｕｉｃｋ ｂｒｏｗｎ ｆｏｘ ｊｕｍｐｓ ｆｕｌｌ ｗｉｄｔｈ": [:Latin],
         "อักษรไทย" => [:Thai],
       }.each do |text, expected|
         actual = Worldwide::Scripts.identify(text: text)

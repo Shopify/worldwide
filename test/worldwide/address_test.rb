@@ -100,7 +100,7 @@ module Worldwide
 
     test "concatenate_address1 returns street name concatenated with street number separated by delimiter" do
       Worldwide::Region.any_instance.stubs(:combined_address_format).returns(
-        { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] },
+        { "default" => { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] } },
       )
       address = Address.new(street_name: "文林路", street_number: "88號", country_code: "TW")
 
@@ -111,6 +111,35 @@ module Worldwide
       address = Address.new(street_name: "Main Street", street_number: "123", country_code: "BR")
 
       assert_equal "Main Street, ⁠123", address.concatenate_address1
+    end
+
+    # mock conctenation rules as we don't currently have a country that fits this use case
+    test "concatenate_address1 returns a concatenated string with default script-specific formatting" do
+      mock_address1_concat_rules
+      address = Address.new(street_number: "30號", street_name: "水杉道", country_code: "TW")
+
+      assert_equal "水杉道⁠30號", address.concatenate_address1
+    end
+
+    test "concatenate_address1 returns a concatenated string with script-specific formatting when alt script is detected" do
+      mock_address1_concat_rules
+      address = Address.new(street_number: "No. 3", street_name: "Water Fir Ave", country_code: "TW")
+
+      assert_equal "Water Fir Ave ⁠No. 3", address.concatenate_address1
+    end
+
+    test "concatenate_address1 returns a concatenated string with default script-specific formatting when no script is detected" do
+      mock_address1_concat_rules
+      address = Address.new(street_number: "5", street_name: "", country_code: "TW")
+
+      assert_equal "⁠5", address.concatenate_address1
+    end
+
+    test "concatenate_address1 returns a concatenated string with default script-specific formatting when multiple scripts are detected" do
+      mock_address1_concat_rules
+      address = Address.new(street_number: "No. 3", street_name: "水杉道", country_code: "TW")
+
+      assert_equal "水杉道⁠No. 3", address.concatenate_address1
     end
 
     test "concatenate_address2 returns address2 when additional fields are unset" do
@@ -175,6 +204,30 @@ module Worldwide
       assert_equal "apt 4, ⁠Cầu Giấy", vn_address.concatenate_address2
     end
 
+    test "concatenate_address2 returns a concatenated string with default script-specific formatting" do
+      address = Address.new(line2: "30號", neighborhood: "大甲區", country_code: "TW")
+
+      assert_equal "30號⁠大甲區", address.concatenate_address2
+    end
+
+    test "concatenate_address2 returns a concatenated string with script-specific formatting when alt script is detected" do
+      address = Address.new(line2: "No. 3", neighborhood: "Daija District", country_code: "TW")
+
+      assert_equal "No. 3, ⁠Daija District", address.concatenate_address2
+    end
+
+    test "concatenate_address2 returns a concatenated string with default script-specific formatting when no script is detected" do
+      address = Address.new(line2: "5", neighborhood: "", country_code: "TW")
+
+      assert_equal "5", address.concatenate_address2
+    end
+
+    test "concatenate_address2 returns a concatenated string with default script-specific formatting when multiple scripts are detected" do
+      address = Address.new(line2: "No. 3", neighborhood: "大甲區", country_code: "TW")
+
+      assert_equal "No. 3⁠大甲區", address.concatenate_address2
+    end
+
     test "split_address1 returns nil when additional address fields are not defined for the country" do
       address = Address.new(address1: "123 Main Street", country_code: "US")
 
@@ -209,7 +262,7 @@ module Worldwide
 
     test "split_address1 returns street name and street number when both values are present and separated by a delimiter" do
       Worldwide::Region.any_instance.stubs(:combined_address_format).returns(
-        { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] },
+        { "default" => { "address1" => [{ "key" => "street_name" }, { "key" => "street_number" }] } },
       )
       address = Address.new(address1: "文林路⁠88號", country_code: "TW")
       expected_hash = { "street_name" => "文林路", "street_number" => "88號" }
@@ -227,6 +280,39 @@ module Worldwide
     test "split_address1 returns street name and street number when delimiter is present but decorator is missing" do
       address = Address.new(address1: "Main Street⁠123", country_code: "BR")
       expected_hash = { "street_name" => "Main Street", "street_number" => "123" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    # mock conctenation rules as we don't currently have a country that fits this use case
+    test "split_address1 returns street name and street number based on default script-specific formatting" do
+      mock_address1_concat_rules
+      address = Address.new(address1: "水杉道⁠30號", country_code: "TW")
+      expected_hash = { "street_name" => "水杉道", "street_number" => "30號" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    test "split_address1 returns street name and street number based on default script-specific formatting when multiple scripts are detected" do
+      mock_address1_concat_rules
+      address = Address.new(address1: "水杉道⁠No. 3", country_code: "TW")
+      expected_hash = { "street_name" => "水杉道", "street_number" => "No. 3" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    test "split_address1 returns returns fields based on default script-specific formatting when no script is detected" do
+      mock_address1_concat_rules
+      address = Address.new(address1: "⁠5", country_code: "TW")
+      expected_hash = { "street_number" => "5" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
+    test "split_address1 returns street name and street number based on script-specific formatting when alt script is detected" do
+      mock_address1_concat_rules
+      address = Address.new(address1: "Water Fir Ave ⁠No. 3", country_code: "TW")
+      expected_hash = { "street_number" => "No. 3", "street_name" => "Water Fir Ave" }
 
       assert_equal expected_hash, address.split_address1
     end
@@ -285,6 +371,53 @@ module Worldwide
       expected_hash = { "line2" => "dpto 4", "neighborhood" => "Centro" }
 
       assert_equal expected_hash, address.split_address2
+    end
+
+    test "split_address2 returns line2 and neighborhood based on default script-specific formatting" do
+      address = Address.new(address2: "30號⁠大甲區", country_code: "TW")
+      expected_hash = { "line2" => "30號", "neighborhood" => "大甲區" }
+
+      assert_equal expected_hash, address.split_address2
+    end
+
+    test "split_address2 returns line2 and neighborhood based on default script-specific formatting when multiple scripts are detected" do
+      address = Address.new(address2: "No. 3⁠大甲區", country_code: "TW")
+      expected_hash = { "line2" => "No. 3", "neighborhood" => "大甲區" }
+
+      assert_equal expected_hash, address.split_address2
+    end
+
+    test "split_address2 returns returns fields based on default script-specific formatting when no script is detected" do
+      address = Address.new(address2: "5", country_code: "TW")
+      expected_hash = { "line2" => "5" }
+
+      assert_equal expected_hash, address.split_address2
+    end
+
+    test "split_address2 returns line2 and neighborhood based on script-specific formatting when alt script is detected" do
+      address = Address.new(address2: "No. 3, ⁠Daija District", country_code: "TW")
+      expected_hash = { "line2" => "No. 3", "neighborhood" => "Daija District" }
+
+      assert_equal expected_hash, address.split_address2
+    end
+
+    private
+
+    def mock_address1_concat_rules
+      Region.any_instance.stubs(:combined_address_format).returns({
+        "default" => {
+          "address1" => [
+            { "key" => "streetName" },
+            { "key" => "streetNumber" },
+          ],
+        },
+        "Latin" => {
+          "address1" => [
+            { "key" => "streetName" },
+            { "key" => "streetNumber", "decorator" => " " },
+          ],
+        },
+      })
     end
   end
 end
