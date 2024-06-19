@@ -10,3 +10,42 @@ fi:
           errors:
             blank_instructional: Valitse kuvernoraatti
             blank_informative: Kuvernoraatti puuttuu
+        neighborhood:
+          label:
+            default: Kortteli
+            optional: Kortteli (valinnainen)
+          errors:
+            blank_instructional: Syötä kortteli
+            blank_informative: Kortteli puuttuu
+            too_long_instructional: Kortteli on liian pitkä (enimmäismäärä on %{limit}
+              merkkiä)
+            too_long_informative: Kortteli on liian pitkä
+            contains_emojis_instructional: Kortteli ei voi sisältää emojeita
+            contains_emojis_informative: Kortteli ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Kortteli ei voi sisältää
+              matemaattisia symboleja
+            contains_mathematical_symbols_informative: Kortteli ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Kortteli voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Kortteli ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Korttelissa saa olla enintään %{word_count}
+              sanaa
+            contains_too_many_words_informative: Korttelissa saa olla enintään %{word_count}
+              sanaa
+            contains_html_tags_instructional: Kortteli ei voi sisältää HTML:ää
+            contains_html_tags_informative: Kortteli ei voi sisältää HTML:ää
+            contains_url_instructional: Kortteli ei voi sisältää URL-osoitetta
+            contains_url_informative: Kortteli ei voi sisältää URL-osoitetta
+            unknown_for_city_instructional: Anna kelvollinen kortteli kaupungille
+              %{city}
+            unknown_for_city_informative: Kortteli on virheellinen postinumerolle
+              %{city}
+            unknown_for_zip_instructional: Anna kelvollinen kortteli kaupungille %{zip}
+            unknown_for_zip_informative: Kortteli on virheellinen postinumerolle %{zip}
+            unknown_for_address_instructional: Kortteli voi olla väärä
+            unknown_for_address_informative: Kortteli voi olla väärä
+          warnings:
+            contains_too_many_words: Korttelin pituudeksi suositellaan alle %{word_count}
+              sanaa

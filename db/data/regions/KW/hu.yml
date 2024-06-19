@@ -10,3 +10,42 @@ hu:
           errors:
             blank_instructional: Válassz kormányzóságot
             blank_informative: A kormányzóság nincs megadva
+        neighborhood:
+          label:
+            default: Tömb
+            optional: Tömb (nem kötelező)
+          errors:
+            blank_instructional: Tömb megadása
+            blank_informative: A tömb nincs megadva
+            too_long_instructional: Túl hosszú a tömb neve (legfeljebb %{limit} karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a tömb neve
+            contains_emojis_instructional: A tömb neve nem tartalmazhat hangulatjeleket
+            contains_emojis_informative: A tömb neve nem tartalmazhat hangulatjeleket
+            contains_mathematical_symbols_instructional: A tömbnév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A tömbnév nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A tömbnév csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A tömbnév nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A tömbnév legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A tömbnév legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: A tömb nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A tömb nem tartalmazhat HTML-címkét
+            contains_url_instructional: A tömb nem tartalmazhat URL-t
+            contains_url_informative: A tömb nem tartalmazhat URL-t
+            unknown_for_city_instructional: 'Olyan tömböt adj meg, amely megfelel
+              ennek: %{city}'
+            unknown_for_city_informative: 'A tömb nem felel meg ennek: %{city}'
+            unknown_for_zip_instructional: 'Olyan tömböt adj meg, amely megfelel ennek:
+              %{zip}'
+            unknown_for_zip_informative: 'A tömb nem felel meg ennek: %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen a tömbnév
+            unknown_for_address_informative: Vélhetően helytelen a tömbnév
+          warnings:
+            contains_too_many_words: A tömb nevének javasolt hossza kevesebb mint
+              %{word_count} szó

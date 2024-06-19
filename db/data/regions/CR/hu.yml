@@ -10,3 +10,42 @@ hu:
           errors:
             blank_instructional: Válassz tartományt
             blank_informative: A tartomány nincs megadva
+        neighborhood:
+          label:
+            default: Kerület
+            optional: Kerület (nem kötelező megadni)
+          errors:
+            blank_instructional: Írd be a kerületet
+            blank_informative: A kerület nincs megadva
+            too_long_instructional: Túl hosszú a kerület (legfeljebb %{limit} karakter
+              hosszú lehet)
+            too_long_informative: Túl hosszú a kerületnév
+            contains_emojis_instructional: A kerület nem tartalmazhat hangulatjeleket
+            contains_emojis_informative: A kerület nem tartalmazhat hangulatjeleket
+            contains_mathematical_symbols_instructional: A kerület nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A kerület nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A kerület csak betűket,
+              számokat, helyi karaktereket és különleges karaktereket tartalmazhat
+            contains_restricted_characters_informative: A kerület nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A kerület legfeljebb %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A kerület legfeljebb %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: A kerület nem tartalmazhat HTML-címkét
+            contains_html_tags_informative: A kerület nem tartalmazhat HTML-címkét
+            contains_url_instructional: A kerület nem tartalmazhat URL-címet
+            contains_url_informative: A kerület nem tartalmazhat URL-címet
+            unknown_for_city_instructional: 'Olyan kerületet adj meg, amely megfelel
+              ennek: %{city}'
+            unknown_for_city_informative: 'A kerület nem felel meg ennek: %{city}'
+            unknown_for_zip_instructional: 'Olyan kerületet adj meg, amely megfelel
+              ennek: %{zip}'
+            unknown_for_zip_informative: 'A kerület nem felel meg ennek: %{zip}'
+            unknown_for_address_instructional: Vélhetően helytelen a kerület
+            unknown_for_address_informative: Vélhetően helytelen a kerület
+          warnings:
+            contains_too_many_words: A kerület javasolt hossza kevesebb mint %{word_count}
+              szó

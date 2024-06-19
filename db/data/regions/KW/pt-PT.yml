@@ -10,3 +10,40 @@ pt-PT:
           errors:
             blank_instructional: Selecione uma província
             blank_informative: A província está em falta
+        neighborhood:
+          label:
+            default: Bloco
+            optional: Bloco (opcional)
+          errors:
+            blank_instructional: Introduza um bloco
+            blank_informative: Falta o bloco
+            too_long_instructional: O bloco é demasiado longo (máximo de %{limit}
+              caracteres)
+            too_long_informative: O bloco é demasiado longo
+            contains_emojis_instructional: O bloco não pode conter emojis
+            contains_emojis_informative: O bloco não pode conter emojis
+            contains_mathematical_symbols_instructional: O bloco não pode conter símbolos
+              matemáticos
+            contains_mathematical_symbols_informative: O bloco não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O bloco pode conter apenas
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O bloco não pode conter caracteres
+              restritos
+            contains_too_many_words_instructional: O bloco deve ter menos de %{word_count}
+              palavras
+            contains_too_many_words_informative: O bloco deve ter menos de %{word_count}
+              palavras
+            contains_html_tags_instructional: O bloco não pode conter HTML
+            contains_html_tags_informative: O bloco não pode conter HTML
+            contains_url_instructional: O bloco não pode conter um URL
+            contains_url_informative: O bloco não pode conter um URL
+            unknown_for_city_instructional: Introduza um bloco válido para %{city}
+            unknown_for_city_informative: O bloco não é válido para %{city}
+            unknown_for_zip_instructional: Introduza um bloco válido para %{zip}
+            unknown_for_zip_informative: O bloco não é válido para %{zip}
+            unknown_for_address_instructional: O bloco pode ser incorreto
+            unknown_for_address_informative: O bloco pode ser incorreto
+          warnings:
+            contains_too_many_words: É recomendável que o bloco tenha menos de %{word_count}
+              palavras
