@@ -5,7 +5,7 @@ bg:
       addresses:
         company:
           label:
-            default: Фирма
+            default: Компания
             optional: Фирма (незадължително)
           errors:
             blank_instructional: Въведете компания
@@ -124,21 +124,10 @@ bg:
             default: Етаж, апартамент и т.н.
             optional: Етаж, апартамент и т.н. (незадължително)
           errors:
-            contains_html_tags: Ред 2 от адреса не може да съдържа HTML
-            contains_emojis: Ред 2 от адреса не може да съдържа емоджита
-            contains_mathematical_symbols: Ред 2 от адреса не може да съдържа математически
-              символи
-            contains_restricted_characters: Ред 2 от адреса може да съдържа само букви,
-              цифри, местни знаци и специални знаци
-            contains_url: Ред 2 от адреса не може да съдържа URL адрес
-            contains_too_many_words: Ред 2 от адреса не може да съдържа повече от
-              %{word_count} думи
-            unknown_for_address: Възможно е ред 2 от адреса да е неправилен
             blank_instructional: Въведете етаж, апартамент и т.н.
             blank_informative: Липсва етаж или апартамент
             too_long_instructional: Ред 2 от адреса е с твърде голяма дължина (максимумът
               е 255 знака)
-            too_long_informational: Ред 2 от адреса е с твърде голяма дължина
             missing_building_number_instructional: Добавете номер на сграда, ако има
               такъв
             missing_building_number_informative: Възможно е номерът на сграда да липсва
@@ -178,17 +167,6 @@ bg:
             default: Град
             optional: Град (незадължително)
           errors:
-            too_long: Градът е с твърде голяма дължина (максимумът е 255 знака)
-            contains_html_tags: "„Град“ не може да съдържа HTML"
-            contains_emojis: "„Град“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Град“ не може да съдържа математически
-              символи"
-            contains_restricted_characters: "„Град“ може да съдържа само букви, цифри,
-              местни знаци и специални знаци"
-            contains_url: "„Град“ не може да съдържа URL адрес"
-            contains_too_many_words: "„Град“ не може да съдържа повече от %{word_count}
-              думи"
-            unknown_for_address: Възможно е градът да е неправилен
             blank_instructional: Въведете град
             blank_informative: Липсва град
             unknown_for_zip_instructional: Въведете валиден град за %{zip}
@@ -240,11 +218,6 @@ bg:
             default: Телефон
             optional: Телефон (незадължително)
           errors:
-            contains_emojis: "„Телефонен номер“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Телефонен номер“ не може да съдържа математически
-              символи"
-            contains_restricted_characters: "„Телефонен номер“ може да съдържа само
-              букви, цифри, местни знаци и специални знаци"
             blank_instructional: Въведете телефонен номер
             blank_informative: Липсва телефонен номер
             invalid_instructional: Въведете валиден телефонен номер
@@ -266,7 +239,6 @@ bg:
             default: Регион
             optional: Регион (незадължително)
           errors:
-            unknown_for_address: Възможно е регионът да е неправилен
             blank_instructional: Изберете регион
             blank_informative: Липсва регион
             invalid_instructional: Изберете регион
@@ -288,15 +260,6 @@ bg:
             default: Пощенски код
             optional: Пощенски код (незадължително)
           errors:
-            blocked_address: Това местоположение не се поддържа
-            too_long: Пощенският код е с твърде голяма дължина
-            contains_html_tags: "„Пощенски код“ не може да съдържа HTML"
-            contains_emojis: "„Пощенски код“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Пощенски код“ не може да съдържа математически
-              символи"
-            contains_restricted_characters: "„Пощенски код“ може да съдържа само букви,
-              цифри, местни знаци и специални знаци"
-            unknown_for_address: Възможно е пощенският код да е неправилен.
             blank_instructional: Въведете пощенски код
             blank_informative: Липсва пощенски код
             invalid_instructional: Въведете валиден пощенски код
@@ -311,7 +274,6 @@ bg:
               на %{province}, %{country}"
             not_supported_instructional: "„Пощенски код“ не се поддържа. Въведете
               нов адрес и опитайте отново."
-            not_supported_informativel: "„Пощенски код“ не се поддържа."
             unknown_for_province_instructional: Въведете валиден пощенски код за %{province}
             unknown_for_province_informative: "„Пощенски код“ е невалиден за %{province}"
             blocked_address_instructional: Това местоположение не се поддържа
@@ -358,10 +320,7 @@ bg:
               забранени знаци"
             contains_too_many_words_instructional: "„Улица“ не може да съдържа повече
               от %{word_count} думи"
-            contains_too_many_words_informational: "„Улица“ не може да съдържа повече
-              от %{word_count} думи"
             contains_html_tags_instructional: "„Улица“ не може да съдържа HTML"
-            contains_html_tags_informational: "„Улица“ не може да съдържа HTML"
             contains_url_instructional: "„Улица“ не може да съдържа URL адрес"
             contains_url_informative: "„Улица“ не може да съдържа URL адрес"
             street_unknown_for_zip_instructional: Въведете валидна улица за %{zip}
@@ -412,21 +371,6 @@ bg:
             default: Квартал
             optional: Квартал (незадължително)
           errors:
-            blank: Въведете квартал
-            too_long: "„Квартал“ е с твърде голяма дължина (максимумът е %{limit}
-              знака)"
-            contains_emojis: "„Квартал“ не може да съдържа емоджита"
-            contains_mathematical_symbols: "„Квартал“ не може да съдържа математически
-              символи"
-            contains_restricted_characters: "„Квартал“ може да съдържа само букви,
-              цифри, местни знаци и специални знаци"
-            contains_too_many_words: "„Квартал“ не може да съдържа повече от %{word_count}
-              думи"
-            contains_html_tags: "„Квартал“ не може да съдържа HTML етикети"
-            contains_url: "„Квартал“ не може да съдържа URL адреси"
-            unknown_for_city: Въведете валидно име на квартал за %{city}
-            unknown_for_zip: Въведете валидно име на квартал за %{zip}
-            unknown_for_address: Възможно е кварталът да е неправилен.
             blank_instructional: Въведете квартал
             blank_informative: Липсва квартал
             too_long_instructional: "„Квартал“ е с твърде голяма дължина (максимумът
@@ -464,22 +408,6 @@ bg:
             default: Етаж, апартамент и т.н.
             optional: Етаж, апартамент и т.н. (незадължително)
           errors:
-            blank: Въведете етаж, апартамент и т.н.
-            too_long: Вторият ред от адреса е с твърде голяма дължина (максимумът
-              е %{limit} знака)
-            contains_emojis: Вторият ред от адреса не може да съдържа емоджита
-            contains_mathematical_symbols: Вторият ред от адреса не може да съдържа
-              математически символи
-            contains_restricted_characters: Вторият ред от адреса може да съдържа
-              само букви, цифри, местни знаци и специални знаци
-            contains_too_many_words: Вторият ред от адреса не може да съдържа повече
-              от %{word_count} думи
-            contains_html_tags: Вторият ред от адреса не може да съдържа HTML етикети.
-            contains_url: Вторият ред от адреса не може да съдържа URL адреси.
-            missing_building_number: Добавете номер на сграда, ако има такъв
-            street_unknown_for_zip: Въведете валидно име на улица за %{zip}
-            building_number_invalid: Не е открит номер на сграда за %{street}, %{zip}
-            unknown_for_address: Възможно е вторият ред от адреса да е неправилен
             blank_instructional: Въведете етаж, апартамент и т.н.
             blank_informative: Липсва етаж или апартамент
             too_long_instructional: Вторият ред от адреса е с твърде голяма дължина
