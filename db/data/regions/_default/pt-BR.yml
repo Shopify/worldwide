@@ -338,11 +338,11 @@ pt-BR:
             unknown_for_address_informative: Talvez haja um erro no CEP
         street_name:
           label:
-            default: Rua
-            optional: Rua (opcional)
+            default: Endereço
+            optional: Endereço (opcional)
           warnings:
-            contains_too_many_words: É recomendável que a rua tenha menos de %{word_count}
-              palavras
+            contains_too_many_words: É recomendável que o endereço tenha menos de
+              %{word_count} palavras
           errors:
             blank_instructional: Insira uma rua
             blank_informative: Falta a rua
@@ -376,11 +376,11 @@ pt-BR:
             contains_html_tags_informative: A rua não pode conter HTML
         street_number:
           label:
-            default: Número do edifício
-            optional: Número do edifício (opcional)
+            default: Número
+            optional: Número (opcional)
           warnings:
-            contains_too_many_words: É recomendável que o número do edifício tenha
-              menos de %{word_count} palavras
+            contains_too_many_words: É recomendável que o número tenha menos de %{word_count}
+              palavras
           errors:
             blank_instructional: Insira o número do prédio
             blank_informative: Falta o número do prédio
@@ -412,18 +412,6 @@ pt-BR:
             default: Bairro
             optional: Bairro (opcional)
           errors:
-            blank: Insira um bairro
-            too_long: O bairro é muito longo (máximo de %{limit} caracteres)
-            contains_emojis: O bairro não pode conter emojis
-            contains_mathematical_symbols: O bairro não pode conter símbolos matemáticos
-            contains_restricted_characters: O bairro pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: O bairro não pode ter mais de %{word_count} palavras
-            contains_html_tags: O bairro não pode conter tags HTML
-            contains_url: O bairro não pode conter URLs
-            unknown_for_city: Insira um nome de bairro válido para %{city}
-            unknown_for_zip: Insira um nome de bairro válido para %{zip}
-            unknown_for_address: Talvez haja um erro no bairro
             blank_instructional: Insira um bairro
             blank_informative: O bairro está faltando
             too_long_instructional: O bairro é muito longo (máximo de %{limit} caracteres)
