@@ -158,7 +158,7 @@ module Worldwide
 
     def concatenate_address2
       additional_fields = region.combined_address_format["address2"] || []
-      additional_field_keys = additional_fields.map { |field| field["key"] }
+      additional_field_keys = additional_fields.map { |field| field["new_key"] }
 
       return address2 if field_values(additional_field_keys).empty?
 
