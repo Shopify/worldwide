@@ -51,8 +51,8 @@ ms:
             contains_url_informative: Nama pertama tidak boleh mengandungi URL
         last_name:
           label:
-            default: Nama terakhir
-            optional: Nama terakhir (opsyenal)
+            default: Nama keluarga
+            optional: Nama keluarga (opsyenal)
           errors:
             blank_instructional: Masukkan nama keluarga
             blank_informative: Nama keluarga tiada
@@ -123,21 +123,10 @@ ms:
             default: Apartmen, suite, dll
             optional: Apartmen, suite, dll. (opsyenal)
           errors:
-            contains_html_tags: Baris alamat 2 tidak boleh mengandungi HTML
-            contains_emojis: Baris alamat 2 tidak boleh mengandungi emoji
-            contains_url: Baris alamat 2 tidak boleh mengandungi URL
-            contains_mathematical_symbols: Baris alamat 2 tidak boleh mengandungi
-              simbol matematik
-            contains_restricted_characters: Baris alamat 2 hanya boleh mengandungi
-              huruf, nombor, aksara tempatan dan aksara khas
-            contains_too_many_words: Baris alamat 2 tidak boleh mengandungi lebih
-              daripada %{word_count} perkataan
-            unknown_for_address: Baris alamat 2 mungkin salah
             blank_instructional: Masukkan pangsapuri, suite, dll
             blank_informative: Apartmen atau suite tiada
             too_long_instructional: Baris alamat 2 terlalu panjang (maksimum ialah
               255 aksara)
-            too_long_informational: Baris alamat 2 terlalu panjang
             missing_building_number_instructional: Tambahkan nombor bangunan jika
               ada
             missing_building_number_informative: Nombor bangunan mungkin tiada
@@ -180,16 +169,6 @@ ms:
             default: Bandar
             optional: Bandar (opsyenal)
           errors:
-            too_long: Bandar terlalu panjang (maksimum ialah 255 aksara)
-            contains_html_tags: Bandar tidak boleh mengandungi HTML
-            contains_emojis: Bandar tidak boleh mengandungi emoji
-            contains_url: Bandar tidak boleh mengandungi URL
-            contains_mathematical_symbols: Bandar tidak boleh mengandungi simbol matematik
-            contains_restricted_characters: Bandar hanya boleh mengandungi huruf,
-              nombor, aksara tempatan dan aksara khas
-            contains_too_many_words: Bandar tidak boleh mengandungi lebih daripada
-              %{word_count} perkataan
-            unknown_for_address: Bandar mungkin salah
             blank_instructional: Masukkan bandar
             blank_informative: Bandar tiada
             unknown_for_zip_instructional: Masukkan bandar yang sah untuk %{zip}
@@ -223,8 +202,8 @@ ms:
             unknown_for_address_informative: Bandar mungkin salah
         country:
           label:
-            default: Negara/Wilayah
-            optional: Negara/Wilayah (opsyenal)
+            default: Negara/rantau
+            optional: Negara/rantau (opsyenal)
           errors:
             blank_instructional: Pilih negara/rantau
             blank_informative: Negara/rantau tiada
@@ -240,11 +219,6 @@ ms:
             default: Telefon
             optional: Telefon (opsyenal)
           errors:
-            contains_emojis: Nombor telefon tidak boleh mengandungi emoji
-            contains_mathematical_symbols: Nombor telefon tidak boleh mengandungi
-              simbol matematik
-            contains_restricted_characters: Nombor telefon hanya boleh mengandungi
-              huruf, nombor, aksara tempatan dan aksara khas
             blank_instructional: Masukkan nombor telefon
             blank_informative: Nombor telefon tiada
             invalid_instructional: Masukkan nombor telefon yang sah
@@ -267,7 +241,6 @@ ms:
             default: Rantau
             optional: Rantau (opsyenal)
           errors:
-            unknown_for_address: Rantau mungkin salah
             blank_instructional: Pilih rantau
             blank_informative: Rantau tiada
             invalid_instructional: Pilih rantau
@@ -289,14 +262,6 @@ ms:
             default: Poskod
             optional: Poskod (opsyenal)
           errors:
-            blocked_address: Lokasi ini tidak disokong
-            too_long: Poskod terlalu panjang
-            contains_html_tags: Poskod tidak boleh mengandungi HTML
-            contains_emojis: Poskod tidak boleh mengandungi emoji
-            contains_mathematical_symbols: Poskod tidak boleh mengandungi simbol matematik
-            contains_restricted_characters: Poskod hanya boleh mengandungi huruf,
-              nombor, aksara tempatan dan aksara khas
-            unknown_for_address: Poskod mungkin salah
             blank_instructional: Masukkan poskod
             blank_informative: Poskod tiada
             invalid_instructional: Masukkan poskod yang sah
@@ -311,7 +276,6 @@ ms:
               %{province}, %{country}
             not_supported_instructional: Poskod tidak disokong. Masukkan alamat baharu
               dan cuba lagi
-            not_supported_informativel: Poskod tidak disokong
             unknown_for_province_instructional: Masukkan poskod yang sah untuk %{province}
             unknown_for_province_informative: Poskod tidak sah untuk %{province}
             blocked_address_instructional: Lokasi ini tidak disokong
@@ -358,10 +322,7 @@ ms:
               aksara terhad
             contains_too_many_words_instructional: Jalan tidak boleh mengandungi lebih
               daripada %{word_count} perkataan
-            contains_too_many_words_informational: Jalan tidak boleh mengandungi lebih
-              daripada %{word_count} perkataan
             contains_html_tags_instructional: Jalan tidak boleh mengandungi HTML
-            contains_html_tags_informational: Jalan tidak boleh mengandungi HTML
             contains_url_instructional: Jalan tidak boleh mengandungi URL
             contains_url_informative: Jalan tidak boleh mengandungi URL
             street_unknown_for_zip_instructional: Masukkan jalan yang sah untuk %{zip}
@@ -412,20 +373,6 @@ ms:
             default: Jiranan
             optional: Jiranan (opsyenal)
           errors:
-            blank: Masukkan jiranan
-            too_long: Kejiranan terlalu panjang (maksimum ialah %{limit} aksara)
-            contains_emojis: Kejiranan tidak boleh mengandungi emoji
-            contains_mathematical_symbols: Kejiranan tidak boleh mengandungi simbol
-              matematik
-            contains_restricted_characters: Jiranan hanya boleh mengandungi huruf,
-              nombor, aksara tempatan dan aksara khas
-            contains_too_many_words: Kejiranan tidak boleh mengandungi lebih daripada
-              %{word_count} perkataan
-            contains_html_tags: Kejiranan tidak boleh mengandungi tag HTML
-            contains_url: Kejiranan tidak boleh mengandungi URL
-            unknown_for_city: Masukkan nama kejiranan yang sah untuk %{city}
-            unknown_for_zip: Masukkan nama kejiranan yang sah untuk %{zip}
-            unknown_for_address: Kejiranan mungkin salah
             blank_instructional: Masukkan kejiranan
             blank_informative: Kejiranan tiada
             too_long_instructional: Kejiranan terlalu panjang (maksimum ialah %{limit}
@@ -467,23 +414,6 @@ ms:
             default: Apartmen, suite, dll.
             optional: Apartmen, suite, dsb. (opsyenal)
           errors:
-            blank: Masukkan apartmen, suite, dll.
-            too_long: Baris alamat kedua terlalu panjang (maksimum ialah %{limit}
-              aksara)
-            contains_emojis: Baris alamat kedua tidak boleh mengandungi emoji
-            contains_mathematical_symbols: Baris alamat kedua tidak boleh mengandungi
-              simbol matematik
-            contains_restricted_characters: Baris alamat kedua hanya boleh mengandungi
-              huruf, nombor, aksara tempatan dan aksara khas
-            contains_too_many_words: Baris alamat kedua tidak boleh mengandungi lebih
-              daripada %{word_count} perkataan
-            contains_html_tags: Baris alamat kedua tidak boleh mengandungi tag HTML
-            contains_url: Baris alamat kedua tidak boleh mengandungi URL.
-            missing_building_number: Tambahkan nombor bangunan jika ada
-            street_unknown_for_zip: Masukkan nama jalan yang sah untuk %{zip}
-            building_number_invalid: Nombor bangunan tidak dapat ditemukan untuk %{street},
-              %{zip}
-            unknown_for_address: Baris alamat kedua mungkin salah
             blank_instructional: Masukkan apartmen, suite, dll.
             blank_informative: Apartmen atau suite tiada
             too_long_instructional: Baris alamat kedua terlalu panjang (maksimum ialah

@@ -76,7 +76,7 @@ nl:
             optional: Adres (optioneel)
           warnings:
             contains_too_many_words: Geef minder dan %{word_count} woorden op voor
-              adresregel 1.
+              adresregel 1
           errors:
             blank_instructional: Voer een adres in
             blank_informative: Het adres ontbreekt
@@ -118,20 +118,9 @@ nl:
             default: Appartement- of suitenummer, enz.
             optional: Appartement- of suitenummer, enz. (optioneel)
           errors:
-            contains_html_tags: Adresregel 2 mag geen HTML bevatten
-            contains_emojis: Adresregel 2 mag geen emoji's bevatten
-            contains_url: Adresregel 2 mag geen URL bevatten
-            contains_mathematical_symbols: Adresregel 2 mag geen wiskundige symbolen
-              bevatten
-            contains_restricted_characters: Adresregel 2 mag alleen letters, cijfers,
-              lokale tekens en speciale tekens bevatten
-            contains_too_many_words: Adresregel 2 mag niet langer zijn dan %{word_count}
-              woorden
-            unknown_for_address: Adresregel 2 is mogelijk onjuist
             blank_instructional: Voer een appartement- of suitenummer in
             blank_informative: Appartement- of suitenummer ontbreekt
             too_long_instructional: Adresregel 2 is te lang (het maximum is 255 tekens)
-            too_long_informational: Adresregel 2 is te lang
             missing_building_number_instructional: Voeg een gebouwnummer toe als je
               er een hebt
             missing_building_number_informative: Gebouwnummer ontbreekt mogelijk
@@ -165,22 +154,12 @@ nl:
             unknown_for_address_informative: Adresregel 2 is mogelijk onjuist
           warnings:
             contains_too_many_words: Geef minder dan %{word_count} woorden op voor
-              adresregel 2.
+              adresregel 2
         city:
           label:
-            default: Stad
-            optional: Stad (optioneel)
+            default: Plaats
+            optional: Plaats (optioneel)
           errors:
-            too_long: Plaats is te lang (het maximum is 255 tekens)
-            contains_html_tags: Plaats mag geen HTML bevatten
-            contains_emojis: Plaats mag geen emoji's bevatten
-            contains_url: Plaats mag geen URL bevatten
-            contains_mathematical_symbols: Plaats mag geen wiskundige symbolen bevatten
-            contains_restricted_characters: Het veld Plaats mag alleen letters, cijfers,
-              lokale tekens en speciale tekens bevatten
-            contains_too_many_words: Plaats mag niet langer zijn dan %{word_count}
-              woorden
-            unknown_for_address: De plaats is mogelijk onjuist
             blank_instructional: Voer een plaats in
             blank_informative: De plaats ontbreekt
             unknown_for_zip_instructional: Voer een geldige plaats in voor %{zip}
@@ -228,14 +207,9 @@ nl:
             invalid_for_zip_informative: "%{country} komt niet overeen met land/regio"
         phone:
           label:
-            default: Telefoonnummer
-            optional: Telefoonnummer (optioneel)
+            default: Telefoon
+            optional: Telefoon (optioneel)
           errors:
-            contains_emojis: Telefoonnummer mag geen emoji's bevatten
-            contains_mathematical_symbols: Telefoonnummer mag geen wiskundige symbolen
-              bevatten
-            contains_restricted_characters: Het veld Telefoonnummer mag alleen letters,
-              cijfers, lokale tekens en speciale tekens bevatten
             blank_instructional: Voer een telefoonnummer in
             blank_informative: Telefoonnummer ontbreekt
             invalid_instructional: Voer een geldig telefoonnummer in
@@ -257,7 +231,6 @@ nl:
             default: Regio
             optional: Regio (optioneel)
           errors:
-            unknown_for_address: De regio is mogelijk onjuist
             blank_instructional: Selecteer een regio
             blank_informative: Regio ontbreekt
             invalid_instructional: Selecteer een regio
@@ -279,14 +252,6 @@ nl:
             default: Postcode
             optional: Postcode (optioneel)
           errors:
-            blocked_address: Deze locatie wordt niet ondersteund
-            too_long: De postcode is te lang
-            contains_html_tags: Postcode mag geen HTML bevatten
-            contains_emojis: Postcode mag geen emoji's bevatten
-            contains_mathematical_symbols: Postcode mag geen wiskundige symbolen bevatten
-            contains_restricted_characters: Het veld Postcode mag alleen letters,
-              cijfers, lokale tekens en speciale tekens bevatten
-            unknown_for_address: De postcode is mogelijk onjuist
             blank_instructional: Voer een postcode in
             blank_informative: Postcode ontbreekt
             invalid_instructional: Vul een geldige postcode in
@@ -302,7 +267,6 @@ nl:
               met %{province}, %{country}
             not_supported_instructional: Postcode wordt niet ondersteund. Voer een
               nieuw adres in en probeer het opnieuw
-            not_supported_informativel: Postcode wordt niet ondersteund
             unknown_for_province_instructional: Voer een geldige postcode in voor
               %{province}
             unknown_for_province_informative: Postcode is ongeldig voor %{province}
@@ -350,10 +314,7 @@ nl:
               bevatten
             contains_too_many_words_instructional: Straat mag niet langer zijn dan
               %{word_count} woorden
-            contains_too_many_words_informational: Straat mag niet langer zijn dan
-              %{word_count} woorden
             contains_html_tags_instructional: Straat mag geen HTML bevatten
-            contains_html_tags_informational: Straat mag geen HTML bevatten
             contains_url_instructional: Straat mag geen URL bevatten
             contains_url_informative: Straat mag geen URL bevatten
             street_unknown_for_zip_instructional: Voer een geldige straatnaam in voor
@@ -402,19 +363,6 @@ nl:
             default: Buurt
             optional: Buurt (optioneel)
           errors:
-            blank: Vul een buurt in
-            too_long: Wijk is te lang (het maximum is %{limit} tekens)
-            contains_emojis: Buurt mag geen emoji's bevatten
-            contains_mathematical_symbols: Buurt mag geen wiskundige symbolen bevatten
-            contains_restricted_characters: Buurt mag alleen letters, cijfers, lokale
-              tekens en speciale tekens bevatten
-            contains_too_many_words: Buurt mag niet langer zijn dan %{word_count}
-              woorden
-            contains_html_tags: Buurt mag geen HTML-tags bevatten
-            contains_url: Buurt mag geen URL's bevatten
-            unknown_for_city: Vul een geldige buurtnaam in voor %{city}
-            unknown_for_zip: Vul een geldige buurtnaam in voor %{zip}
-            unknown_for_address: De buurt is mogelijk onjuist
             blank_instructional: Vul een buurt in
             blank_informative: Buurt ontbreekt
             too_long_instructional: Buurt is te lang (het maximum is %{limit} tekens)
@@ -451,22 +399,6 @@ nl:
             default: Appartement- of suitenummer, enz.
             optional: Appartement, suite, enz. (optioneel)
           errors:
-            blank: Vul een appartement- of suitenummer, enz. in
-            too_long: De tweede adresregel is te lang (het maximum is %{limit} tekens)
-            contains_emojis: De tweede adresregel mag geen emoji's bevatten
-            contains_mathematical_symbols: De tweede adresregel mag geen wiskundige
-              symbolen bevatten
-            contains_restricted_characters: De tweede adresregel mag alleen letters,
-              cijfers, lokale tekens en speciale tekens bevatten
-            contains_too_many_words: De tweede adresregel mag niet langer zijn dan
-              %{word_count} woorden
-            contains_html_tags: De tweede adresregel mag geen HTML-tags bevatten
-            contains_url: De tweede adresregel mag geen URL's bevatten
-            missing_building_number: Voeg een gebouwnummer toe als je er een hebt
-            street_unknown_for_zip: Vul een geldige straatnaam in voor %{zip}
-            building_number_invalid: Kan gebouwnummer voor %{street}, %{zip} niet
-              vinden
-            unknown_for_address: De tweede adresregel is mogelijk onjuist
             blank_instructional: Vul een appartement- of suitenummer, enz. in
             blank_informative: Appartement- of suitenummer ontbreekt
             too_long_instructional: De tweede adresregel is te lang (het maximum is

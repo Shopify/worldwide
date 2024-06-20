@@ -79,7 +79,7 @@ pl:
             optional: Adres (opcjonalnie)
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 1 zawierała mniej
-              niż %{word_count} słów
+              niż %{word_count} słów (słowa)
           errors:
             blank_instructional: Wpisz adres
             blank_informative: Brakuje adresu
@@ -120,21 +120,10 @@ pl:
             default: Mieszkanie, apartament, itp.
             optional: Mieszkanie, apartament itp. (opcjonalnie)
           errors:
-            contains_html_tags: Linia adresu 2 nie może zawierać HTML
-            contains_emojis: Linia adresu 2 nie może zawierać emoji
-            contains_url: Linia adresu 2 nie może zawierać adresu URL
-            contains_mathematical_symbols: Linia adresu 2 nie może zawierać symboli
-              matematycznych
-            contains_restricted_characters: Linia adresu 2 może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne
-            contains_too_many_words: Linia adresu 2 może składać się z maksymalnie
-              %{word_count} słów
-            unknown_for_address: Linia adresu 2 może być nieprawidłowa
             blank_instructional: Wpisz mieszkanie, apartament itp.
             blank_informative: Brak numeru mieszkania lub lokalu
             too_long_instructional: Linia adresu 2 jest za długa (maksymalna liczba
               znaków to 255)
-            too_long_informational: Linia adresu 2 jest za długa
             missing_building_number_instructional: Dodaj numer budynku, jeśli go posiadasz
             missing_building_number_informative: Może brakować numeru budynku
             street_unknown_for_zip_instructional: Wpisz prawidłową nazwę ulicy dla
@@ -168,23 +157,12 @@ pl:
             unknown_for_address_informative: Linia adresu 2 może być nieprawidłowa
           warnings:
             contains_too_many_words: Zaleca się, aby linia adresu 2 zawierała mniej
-              niż %{word_count} słów
+              niż %{word_count} słów (słowa)
         city:
           label:
             default: Miasto
             optional: Miasto (opcjonalnie)
           errors:
-            too_long: Miasto zawiera zbyt dużo znaków (maksymalna liczba znaków to
-              255)
-            contains_html_tags: Nazwa miasta nie może zawierać HTML
-            contains_emojis: Miasto nie może zawierać emoji
-            contains_url: Nazwa miasta nie może zawierać adresu URL
-            contains_mathematical_symbols: Miasto nie może zawierać symboli matematycznych
-            contains_restricted_characters: Pole Miasto może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
-            contains_too_many_words: Nazwa miasta może się składać z maksymalnie %{word_count}
-              słów
-            unknown_for_address: Miasto może być nieprawidłowe
             blank_instructional: Wpisz miasto
             blank_informative: Brakuje miasta
             unknown_for_zip_instructional: Wprowadź prawidłowe miasto dla %{zip}
@@ -236,11 +214,6 @@ pl:
             default: Telefon
             optional: Telefon (opcjonalnie)
           errors:
-            contains_emojis: Numer telefonu nie może zawierać emoji
-            contains_mathematical_symbols: Numer telefonu nie może zawierać symboli
-              matematycznych
-            contains_restricted_characters: Pole Telefon może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne.
             blank_instructional: Wprowadź numer telefonu
             blank_informative: Brakuje numeru telefonu
             invalid_instructional: Wpisz prawidłowy numer telefonu
@@ -262,7 +235,6 @@ pl:
             default: Region
             optional: Region (opcjonalnie)
           errors:
-            unknown_for_address: Region może być nieprawidłowy
             blank_instructional: Wybierz region
             blank_informative: Brakuje regionu
             invalid_instructional: Wybierz region
@@ -284,15 +256,6 @@ pl:
             default: Kod pocztowy
             optional: Kod pocztowy (opcjonalnie)
           errors:
-            blocked_address: Ta lokalizacja nie jest obsługiwana
-            too_long: Kod pocztowy jest zbyt długi
-            contains_html_tags: Kod pocztowy nie może zawierać HTML
-            contains_emojis: Kod pocztowy nie może zawierać emoji
-            contains_mathematical_symbols: Kod pocztowy nie może zawierać symboli
-              matematycznych
-            contains_restricted_characters: Pole Kod pocztowy może zawierać litery,
-              cyfry, znaki lokalne i znaki specjalne.
-            unknown_for_address: Kod pocztowy może być nieprawidłowy
             blank_instructional: Wprowadź kod pocztowy
             blank_informative: Brakuje kodu pocztowego
             invalid_instructional: Wprowadź prawidłowy kod pocztowy
@@ -309,7 +272,6 @@ pl:
               z %{province}, %{country}
             not_supported_instructional: Kod pocztowy jest nieobsługiwany. Wprowadź
               nowy adres i spróbuj ponownie
-            not_supported_informativel: Kod pocztowy jest nieobsługiwany
             unknown_for_province_instructional: Wprowadź prawidłowy kod pocztowy dla
               %{province}
             unknown_for_province_informative: Kod pocztowy jest nieprawidłowy dla
@@ -358,10 +320,7 @@ pl:
               objętych ograniczeniami
             contains_too_many_words_instructional: Ulica może zawierać maksymalnie
               %{word_count} słów (słowa)
-            contains_too_many_words_informational: Ulica może zawierać maksymalnie
-              %{word_count} słów (słowa)
             contains_html_tags_instructional: Nazwa ulicy nie może zawierać HTML
-            contains_html_tags_informational: Nazwa ulicy nie może zawierać HTML
             contains_url_instructional: Nazwa ulicy nie może zawierać adresu URL
             contains_url_informative: Nazwa ulicy nie może zawierać adresu URL
             street_unknown_for_zip_instructional: Wprowadź prawidłową ulicę dla %{zip}
@@ -409,20 +368,6 @@ pl:
             default: Dzielnica
             optional: Dzielnica (opcjonalnie)
           errors:
-            blank: Wpisz dzielnicę
-            too_long: Dzielnica zawiera zbyt dużo znaków (maksymalna liczba znaków
-              to %{limit})
-            contains_emojis: Dzielnica nie może zawierać emoji
-            contains_mathematical_symbols: Dzielnica nie może zawierać symboli matematycznych
-            contains_restricted_characters: Dzielnica może zawierać litery, cyfry,
-              znaki lokalne i znaki specjalne
-            contains_too_many_words: Dzielnica może zawierać maksymalnie %{word_count}
-              słów (słowa)
-            contains_html_tags: Dzielnica nie może zawierać tagów HTML
-            contains_url: Dzielnica nie może zawierać adresów URL
-            unknown_for_city: Wpisz prawidłową nazwę dzielnicy dla %{city}
-            unknown_for_zip: Wpisz prawidłową nazwę dzielnicy dla %{zip}
-            unknown_for_address: Dzielnica może być nieprawidłowa
             blank_instructional: Wpisz dzielnicę
             blank_informative: Brak dzielnicy
             too_long_instructional: Dzielnica zawiera zbyt dużo znaków (maksymalna
@@ -460,23 +405,6 @@ pl:
             default: Mieszkanie, apartament, itp.
             optional: Mieszkanie, apartament itp. (opcjonalnie)
           errors:
-            blank: Wpisz mieszkanie, apartament itp.
-            too_long: Druga linia adresu zawiera zbyt dużo znaków (maksymalna liczba
-              znaków to %{limit})
-            contains_emojis: Druga linia adresu nie może zawierać emoji
-            contains_mathematical_symbols: Druga linia adresu nie może zawierać symboli
-              matematycznych
-            contains_restricted_characters: Druga linia adresu może zawierać tylko
-              litery, cyfry, znaki lokalne i znaki specjalne
-            contains_too_many_words: Druga linia adresu może składać się maksymalnie
-              z %{word_count} słów
-            contains_html_tags: Druga linia adresu nie może zawierać tagów HTML.
-            contains_url: Druga linia adresu nie może zawierać adresów URL.
-            missing_building_number: Dodaj numer budynku, jeśli go posiadasz
-            street_unknown_for_zip: Wpisz prawidłową nazwę ulicy dla %{zip}
-            building_number_invalid: Nie udało się zlokalizować numeru budynku dla
-              %{street}, %{zip}
-            unknown_for_address: Druga linia adresu może być nieprawidłowa
             blank_instructional: Wpisz mieszkanie, apartament itp.
             blank_informative: Brak numeru mieszkania lub lokalu
             too_long_instructional: Druga linia adresu zawiera zbyt dużo znaków (maksymalna

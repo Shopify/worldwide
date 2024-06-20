@@ -80,8 +80,8 @@ hr:
             default: Adresa
             optional: Adresa (nije obavezno)
           warnings:
-            contains_too_many_words: Preporučamo da redak adrese 1 sadrži manje od
-              %{word_count} riječ/i
+            contains_too_many_words: Preporučujemo da redak adrese 1 sadrži manje
+              od %{word_count} riječ/i
           errors:
             blank_instructional: Unesite adresu
             blank_informative: Adresa nedostaje
@@ -122,21 +122,10 @@ hr:
             default: Broj stana, apartmana itd.
             optional: Broj stana, apartmana itd. (nije obavezno)
           errors:
-            contains_html_tags: Redak adrese 2 ne smije sadržavati HTML
-            contains_emojis: Redak adrese 2 ne smije sadržavati emotikone
-            contains_url: Redak adrese 2 ne smije sadržavati URL
-            contains_mathematical_symbols: Redak adrese 2 ne smije sadržavati matematičke
-              simbole
-            contains_restricted_characters: Redak adrese 2 smije sadržavati samo slova,
-              brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: 'Redak adrese 2 smije sadržavati najviše sljedeći
-              broj znakova: %{word_count}'
-            unknown_for_address: Adresa u retku 2 možda nije točna
             blank_instructional: Unesite broj stana, apartmana itd.
             blank_informative: Nedostaje broj stana ili apartmana
             too_long_instructional: Redak 2 adrese je predugačak (najveći dopušteni
               broj znakova je 255)
-            too_long_informational: Redak 2 adrese je predugačak
             missing_building_number_instructional: Unesite kućni broj ako postoji
             missing_building_number_informative: Kućni broj možda nedostaje
             street_unknown_for_zip_instructional: Unesite valjani naziv ulice za grad
@@ -168,25 +157,13 @@ hr:
             unknown_for_address_instructional: Adresa u retku 2 možda nije točna
             unknown_for_address_informative: Adresa u retku 2 možda nije točna
           warnings:
-            contains_too_many_words: Preporučamo da redak adrese 2 sadrži manje od
-              %{word_count} riječ/i
+            contains_too_many_words: Preporučujemo da redak adrese 2 sadrži manje
+              od %{word_count} riječ/i
         city:
           label:
             default: Grad
             optional: Grad (nije obavezno)
           errors:
-            too_long: Naziv grada je predugačak (najveći dopušteni broj znakova je
-              255)
-            contains_html_tags: Naziv grada ne smije sadržavati HTML
-            contains_emojis: Naziv grada ne smije sadržavati emotikone
-            contains_url: Naziv grada ne smije sadržavati URL
-            contains_mathematical_symbols: Naziv grada ne smije sadržavati matematičke
-              simbole
-            contains_restricted_characters: Naziv grada smije sadržavati samo slova,
-              brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: 'Naziv grada smije sadržavati najviše sljedeći
-              broj riječi: %{word_count}'
-            unknown_for_address: Naziv grada možda nije točan
             blank_instructional: Unesite grad
             blank_informative: Nedostaje grad
             unknown_for_zip_instructional: Unesite valjani grad za provinciju %{zip}
@@ -239,11 +216,6 @@ hr:
             default: Telefon
             optional: Telefon (nije obavezno)
           errors:
-            contains_emojis: Broj telefona ne smije sadržavati emotikone
-            contains_mathematical_symbols: Broj telefona ne smije sadržavati matematičke
-              simbole
-            contains_restricted_characters: Broj telefona smije sadržavati samo slova,
-              brojeve, lokalne znakove i posebne znakove
             blank_instructional: Unesite broj telefona
             blank_informative: Nedostaje broj telefona
             invalid_instructional: Unesite valjani broj telefona
@@ -265,7 +237,6 @@ hr:
             default: Regija
             optional: Regija (nije obavezno)
           errors:
-            unknown_for_address: Regija možda nije točna
             blank_instructional: Odaberite regiju
             blank_informative: Nedostaje regija
             invalid_instructional: Odaberite regiju
@@ -287,15 +258,6 @@ hr:
             default: Poštanski broj
             optional: Poštanski broj (nije obavezno)
           errors:
-            blocked_address: Ta lokacija nije podržana
-            too_long: Poštanski broj je predugačak
-            contains_html_tags: Poštanski broj ne smije sadržavati HTML
-            contains_emojis: Poštanski broj ne smije sadržavati emotikone
-            contains_mathematical_symbols: Poštanski broj ne smije sadržavati matematičke
-              simbole
-            contains_restricted_characters: Poštanski broj smije sadržavati samo slova,
-              brojeve, lokalne znakove i posebne znakove
-            unknown_for_address: Poštanski broj možda nije točan
             blank_instructional: Unesite poštanski broj
             blank_informative: Nedostaje poštanski broj
             invalid_instructional: Unesite valjani poštanski broj
@@ -311,7 +273,6 @@ hr:
               za %{province}, %{country}
             not_supported_instructional: Poštanski broj nije podržan. Unesite drugu
               adresu i pokušajte ponovno
-            not_supported_informativel: Poštanski broj nije podržan
             unknown_for_province_instructional: Unesite valjani poštanski broj za
               %{province}
             unknown_for_province_informative: Poštanski broj nije valjan za %{province}
@@ -359,10 +320,7 @@ hr:
               zabranjene znakove
             contains_too_many_words_instructional: 'Naziv ulice smije sadržavati najviše
               sljedeći broj riječi: %{word_count}'
-            contains_too_many_words_informational: 'Naziv ulice smije sadržavati najviše
-              sljedeći broj riječi: %{word_count}'
             contains_html_tags_instructional: Naziv ulice ne smije sadržavati HTML
-            contains_html_tags_informational: Naziv ulice ne smije sadržavati HTML
             contains_url_instructional: Naziv ulice ne smije sadržavati URL
             contains_url_informative: Naziv ulice ne smije sadržavati URL
             street_unknown_for_zip_instructional: Unesite valjani naziv ulice za grad
@@ -411,21 +369,6 @@ hr:
             default: Stambena četvrt
             optional: Stambena četvrt (neobavezno)
           errors:
-            blank: Unesite stambenu četvrt
-            too_long: Naziv stambene četvrti je predugačak (najveći dopušteni broj
-              znakova je %{limit})
-            contains_emojis: Naziv stambene četvrti ne smije sadržavati emotikone
-            contains_mathematical_symbols: Naziv stambene četvrti ne smije sadržavati
-              matematičke simbole
-            contains_restricted_characters: Naziv stambene četvrti smije sadržavati
-              samo slova, brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: 'Naziv stambene četvrti smije sadržavati najviše
-              sljedeći broj riječi: %{word_count}'
-            contains_html_tags: Naziv stambene četvrti ne smije sadržavati HTML oznake
-            contains_url: Naziv stambene četvrti ne smije sadržavati URL-ove
-            unknown_for_city: Unesite valjani naziv stambene četvrti za %{city}
-            unknown_for_zip: Unesite valjani naziv stambene četvrti za %{zip}
-            unknown_for_address: Naziv stambene četvrti možda nije točan
             blank_instructional: Unesite stambenu četvrt
             blank_informative: Nedostaje stambena četvrt
             too_long_instructional: Naziv stambene četvrti je predugačak (najveći
@@ -472,23 +415,6 @@ hr:
             default: Broj stana, apartmana itd.
             optional: Broj stana, apartmana itd. (nije obavezno)
           errors:
-            blank: Unesite broj stana, apartmana itd.
-            too_long: Drugi redak adrese je predugačak (najveći dopušteni broj znakova
-              je %{limit})
-            contains_emojis: Drugi redak adrese ne smije sadržavati emotikone
-            contains_mathematical_symbols: Drugi redak adrese ne smije sadržavati
-              matematičke simbole
-            contains_restricted_characters: Drugi redak adrese smije sadržavati samo
-              slova, brojeve, lokalne znakove i posebne znakove
-            contains_too_many_words: Broj riječi koje drugi redak može sadržavati
-              jest najviše %{word_count}
-            contains_html_tags: Drugi redak adrese ne smije sadržavati HTML oznake.
-            contains_url: Drugi redak adrese ne smije sadržavati URL-ove.
-            missing_building_number: Unesite kućni broj ako postoji
-            street_unknown_for_zip: Unesite valjani naziv ulice za %{zip}
-            building_number_invalid: Ovaj kućni broj ne postoji u ulici %{street},
-              %{zip}
-            unknown_for_address: Drugi redak adrese možda nije točan
             blank_instructional: Unesite broj stana, apartmana itd.
             blank_informative: Nedostaje broj stana ili apartmana
             too_long_instructional: Drugi redak adrese je predugačak (najveći dopušteni

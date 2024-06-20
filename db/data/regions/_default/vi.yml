@@ -116,20 +116,9 @@ vi:
             default: Căn hộ, dãy, v.v.
             optional: Căn hộ, dãy, v.v. (không bắt buộc)
           errors:
-            contains_html_tags: Dòng địa chỉ 2 không được chứa HTML
-            contains_emojis: Dòng địa chỉ 2 không được chứa biểu tượng cảm xúc
-            contains_url: Dòng địa chỉ 2 không được chứa URL
-            contains_mathematical_symbols: Dòng địa chỉ 2 không được chứa ký hiệu
-              toán học
-            contains_restricted_characters: Dòng địa chỉ 2 chỉ được chứa chữ cái,
-              chữ số, ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Dòng địa chỉ 2 chỉ được có tối đa %{word_count}
-              từ
-            unknown_for_address: Dòng địa chỉ 2 có thể không chính xác
             blank_instructional: Nhập căn hộ, dãy, v.v.
             blank_informative: Còn thiếu căn hộ hoặc tòa
             too_long_instructional: Dòng địa chỉ 2 quá dài (tối đa 255 ký tự)
-            too_long_informational: Dòng địa chỉ 2 quá dài
             missing_building_number_instructional: Thêm số tòa nhà nếu có
             missing_building_number_informative: Có thể còn thiếu số tòa nhà
             street_unknown_for_zip_instructional: Nhập tên đường hợp lệ cho %{zip}
@@ -168,16 +157,6 @@ vi:
             default: Thành phố
             optional: Thành phố (không bắt buộc)
           errors:
-            too_long: Tên thành phố quá dài (tối đa 255 ký tự)
-            contains_html_tags: Thành phố không được chứa HTML
-            contains_emojis: Thành phố không được chứa biểu tượng cảm xúc
-            contains_url: Thành phố không được chứa URL
-            contains_mathematical_symbols: Thành phố không được chứa ký hiệu toán
-              học
-            contains_restricted_characters: Thành phố chỉ được chứa chữ cái, chữ số,
-              ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Thành phố chỉ được có tối đa %{word_count} từ
-            unknown_for_address: Thành phố có thể không chính xác
             blank_instructional: Nhập thành phố
             blank_informative: Thiếu thành phố
             unknown_for_zip_instructional: Nhập thành phố hợp lệ cho %{zip}
@@ -214,7 +193,7 @@ vi:
             unknown_for_address_informative: Thành phố có thể không chính xác
         country:
           label:
-            default: Quốc gia/Vùng
+            default: Quốc gia/khu vực
             optional: Quốc gia/Vùng (không bắt buộc)
           errors:
             blank_instructional: Chọn quốc gia/khu vực
@@ -231,11 +210,6 @@ vi:
             default: Điện thoại
             optional: Điện thoại (không bắt buộc)
           errors:
-            contains_emojis: Số điện thoại không được chứa biểu tượng cảm xúc
-            contains_mathematical_symbols: Số điện thoại không được chứa ký hiệu toán
-              học
-            contains_restricted_characters: Số điện thoại chỉ được chứa chữ cái, chữ
-              số, ký tự địa phương và ký tự đặc biệt
             blank_instructional: Nhập số điện thoại
             blank_informative: Thiếu số điện thoại
             invalid_instructional: Nhập số điện thoại hợp lệ
@@ -256,10 +230,9 @@ vi:
               ký tự bị hạn chế
         province:
           label:
-            default: Vùng
+            default: Khu vực
             optional: Vùng (không bắt buộc)
           errors:
-            unknown_for_address: Khu vực có thể không chính xác
             blank_instructional: Chọn khu vực
             blank_informative: Thiếu khu vực
             invalid_instructional: Chọn khu vực
@@ -281,15 +254,6 @@ vi:
             default: Mã bưu chính
             optional: Mã bưu chính (không bắt buộc)
           errors:
-            blocked_address: Địa điểm này không được hỗ trợ
-            too_long: Mã bưu chính quá dài
-            contains_html_tags: Mã bưu chính không được chứa HTML
-            contains_emojis: Mã bưu chính không được chứa biểu tượng cảm xúc
-            contains_mathematical_symbols: Mã bưu chính không được chứa ký hiệu toán
-              học
-            contains_restricted_characters: Mã bưu chính chỉ được chứa chữ cái, chữ
-              số, ký tự địa phương và ký tự đặc biệt
-            unknown_for_address: Mã bưu chính có thể không chính xác
             blank_instructional: Nhập mã bưu chính
             blank_informative: Thiếu mã bưu chính
             invalid_instructional: Nhập mã bưu chính hợp lệ
@@ -304,7 +268,6 @@ vi:
               với %{province}, %{country}
             not_supported_instructional: Mã bưu chính không được hỗ trợ. Nhập địa
               chỉ mới và thử lại
-            not_supported_informativel: Mã bưu chính không được hỗ trợ
             unknown_for_province_instructional: Nhập mã bưu chính hợp lệ cho %{province}
             unknown_for_province_informative: Mã bưu chính cho %{province} không hợp
               lệ
@@ -352,10 +315,7 @@ vi:
               bị hạn chế
             contains_too_many_words_instructional: Đường không được có nhiều hơn %{word_count}
               từ
-            contains_too_many_words_informational: Đường không được có nhiều hơn %{word_count}
-              từ
             contains_html_tags_instructional: Đường không được chứa HTML
-            contains_html_tags_informational: Đường không được chứa HTML
             contains_url_instructional: Đường không được chứa URL
             contains_url_informative: Đường không được chứa URL
             street_unknown_for_zip_instructional: Nhập một đường hợp lệ cho %{zip}
@@ -403,18 +363,6 @@ vi:
             default: Khu phố
             optional: Khu phố (không bắt buộc)
           errors:
-            blank: Nhập khu phố
-            too_long: Khu phố quá dài (tối đa %{limit} ký tự)
-            contains_emojis: Khu phố không được chứa biểu tượng cảm xúc
-            contains_mathematical_symbols: Khu phố không được chứa ký hiệu toán học
-            contains_restricted_characters: Khu phố chỉ được chứa chữ cái, chữ số,
-              ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Khu phố chỉ được có tối đa %{word_count} từ
-            contains_html_tags: Khu phố không được chứa thẻ HTML
-            contains_url: Khu phố không được chứa URL
-            unknown_for_city: Nhập tên khu phố hợp lệ cho %{city}
-            unknown_for_zip: Nhập tên khu phố hợp lệ cho %{zip}
-            unknown_for_address: Khu phố có thể không chính xác
             blank_instructional: Nhập khu phố
             blank_informative: Thiếu khu phố
             too_long_instructional: Khu phố quá dài (tối đa %{limit} ký tự)
@@ -451,21 +399,6 @@ vi:
             default: Căn hộ, dãy, v.v.
             optional: Căn hộ, dãy, v.v. (không bắt buộc)
           errors:
-            blank: Nhập căn hộ, dãy, v.v.
-            too_long: Dòng địa chỉ thứ hai quá dài (tối đa %{limit} ký tự)
-            contains_emojis: Dòng địa chỉ thứ hai không được chứa biểu tượng cảm xúc
-            contains_mathematical_symbols: Dòng địa chỉ thứ hai không được chứa ký
-              hiệu toán học
-            contains_restricted_characters: Dòng địa chỉ thứ hai chỉ được chứa chữ
-              cái, chữ số, ký tự địa phương và ký tự đặc biệt
-            contains_too_many_words: Dòng địa chỉ thứ hai chỉ được có tối đa %{word_count}
-              từ
-            contains_html_tags: Dòng địa chỉ thứ hai không được chứa thẻ HTML.
-            contains_url: Dòng địa chỉ thứ hai không được chứa URL.
-            missing_building_number: Thêm số tòa nhà nếu có
-            street_unknown_for_zip: Nhập tên đường hợp lệ cho %{zip}
-            building_number_invalid: Không thể định vị số tòa nhà cho %{street}, %{zip}
-            unknown_for_address: Dòng địa chỉ thứ hai có thể không chính xác
             blank_instructional: Nhập căn hộ, dãy, v.v.
             blank_informative: Còn thiếu căn hộ hoặc tòa
             too_long_instructional: Dòng địa chỉ thứ hai quá dài (tối đa %{limit}

@@ -121,20 +121,10 @@ ru:
             default: Квартира, апартаменты и т. д.
             optional: Квартира, апартаменты и т. д. (необязательно)
           errors:
-            contains_html_tags: Адресная строка 2 не может содержать HTML
-            contains_emojis: Адресная строка 2 не может содержать емодзи
-            contains_url: Адресная строка 2 не может содержать URL-адрес
-            contains_mathematical_symbols: Адресная строка 2 не может содержать математические
-              символы
-            contains_restricted_characters: Поле «Адресная строка 2» может содержать
-              только буквы, цифры, а также местные и специальные символы
-            contains_too_many_words: Адресная строка 2 не может превышать %{word_count} сл.
-            unknown_for_address: Адрес во второй строке может быть указан неправильно
             blank_instructional: Укажите номер квартиры, апартаментов и т. д.
             blank_informative: Номер квартиры или апартаментов отсутствует
             too_long_instructional: Адресная строка 2 слишком длинная (должна содержать
               не больше 255 символов)
-            too_long_informational: Адресная строка 2 слишком длинная
             missing_building_number_instructional: Укажите номер дома, если применимо
             missing_building_number_informative: Номер дома отсутствует
             street_unknown_for_zip_instructional: Укажите действительное название
@@ -177,17 +167,6 @@ ru:
             default: Город
             optional: Город (необязательно)
           errors:
-            too_long: Название города слишком длинное (должно содержать не больше
-              255 символов)
-            contains_html_tags: Название города не может содержать HTML
-            contains_emojis: Название города не может содержать емодзи
-            contains_url: Название города не может содержать URL-адрес
-            contains_mathematical_symbols: Название города не может содержать математические
-              символы
-            contains_restricted_characters: Поле «Город» может содержать только буквы,
-              цифры, а также местные и специальные символы
-            contains_too_many_words: Название города не может превышать %{word_count} сл.
-            unknown_for_address: Название города может быть указано неправильно
             blank_instructional: Укажите город
             blank_informative: Город отсутствует
             unknown_for_zip_instructional: Укажите действительное название города
@@ -242,13 +221,8 @@ ru:
         phone:
           label:
             default: Телефон
-            optional: Телефон (необязательно)
+            optional: Номер телефона (необязательно)
           errors:
-            contains_emojis: Номер телефона не может содержать емодзи
-            contains_mathematical_symbols: Номер телефона не может содержать математические
-              символы
-            contains_restricted_characters: Поле «Номер телефона» может содержать
-              только буквы, цифры, а также местные и специальные символы
             blank_instructional: Укажите номер телефона
             blank_informative: Номер телефона отсутствует
             invalid_instructional: Укажите действительный номер телефона
@@ -270,7 +244,6 @@ ru:
             default: Регион
             optional: Регион (необязательно)
           errors:
-            unknown_for_address: Название региона может быть указано неправильно
             blank_instructional: Выберите регион
             blank_informative: Регион отсутствует
             invalid_instructional: Выберите регион
@@ -296,16 +269,6 @@ ru:
             default: Почтовый индекс
             optional: Почтовый индекс (необязательно)
           errors:
-            blocked_address: Вы не можете осуществлять покупки и заказывать доставку
-              в этом регионе
-            too_long: Почтовый индекс слишком длинный
-            contains_html_tags: Почтовый индекс не может содержать HTML
-            contains_emojis: Почтовый индекс не может содержать емодзи
-            contains_mathematical_symbols: Почтовый индекс не может содержать математические
-              символы
-            contains_restricted_characters: Поле «Почтовый индекс» может содержать
-              только буквы, цифры, а также местные и специальные символы
-            unknown_for_address: Почтовый индекс может быть указан неправильно
             blank_instructional: Введите почтовый индекс
             blank_informative: Почтовый индекс отсутствует
             invalid_instructional: Укажите действительный почтовый индекс
@@ -324,8 +287,6 @@ ru:
               области (%{province}, %{country})
             not_supported_instructional: Мы не доставляем товары в регион с этим почтовым
               индексом. Введите другой адрес доставки и повторите попытку
-            not_supported_informativel: Мы не доставляем товары в регион с этим почтовым
-              индексом
             unknown_for_province_instructional: Укажите действительный почтовый индекс
               для области (%{province})
             unknown_for_province_informative: Недействительный почтовый индекс для
@@ -377,10 +338,7 @@ ru:
               содержать недопустимые символы
             contains_too_many_words_instructional: Название улицы не может превышать
               %{word_count} сл.
-            contains_too_many_words_informational: Название улицы не может превышать
-              %{word_count} сл.
             contains_html_tags_instructional: Название улицы не может содержать HTML
-            contains_html_tags_informational: Название улицы не может содержать HTML
             contains_url_instructional: Название улицы не может содержать URL-адрес
             contains_url_informative: Название улицы не может содержать URL-адрес
             street_unknown_for_zip_instructional: Укажите действительную улицу для
@@ -430,20 +388,6 @@ ru:
             default: Район
             optional: Район (необязательно)
           errors:
-            blank: Укажите район
-            too_long: Название района слишком длинное (должно содержать не больше
-              %{limit} симв.)
-            contains_emojis: Название района не может содержать емодзи
-            contains_mathematical_symbols: Название района не может содержать математические
-              символы
-            contains_restricted_characters: Поле «Район» может содержать только буквы,
-              цифры, а также местные и специальные символы
-            contains_too_many_words: Название района не может превышать %{word_count} сл.
-            contains_html_tags: Название района не может содержать HTML-теги
-            contains_url: Название района не может содержать URL-адреса
-            unknown_for_city: Укажите действительное название района для %{city}
-            unknown_for_zip: Укажите действительное название района для %{zip}
-            unknown_for_address: Название района может быть указано неправильно
             blank_instructional: Укажите район
             blank_informative: Название района отсутствует
             too_long_instructional: Название района слишком длинное (должно содержать
@@ -486,22 +430,6 @@ ru:
             default: Квартира, апартаменты и т. д.
             optional: Квартира, апартаменты и т. д. (необязательно)
           errors:
-            blank: Укажите номер квартиры, апартаментов и т. д.
-            too_long: Вторая строка адреса слишком длинная (должна содержать не больше
-              %{limit} симв.)
-            contains_emojis: Вторая строка адреса не может содержать емодзи
-            contains_mathematical_symbols: Вторая строка адреса не может содержать
-              математические символы
-            contains_restricted_characters: Поле «Вторая строка адреса» может содержать
-              только буквы, цифры, а также местные и специальные символы
-            contains_too_many_words: Вторая строка адреса не может превышать %{word_count} сл.
-            contains_html_tags: Вторая строка адреса не может содержать HTML-теги.
-            contains_url: Вторая строка адреса не может содержать URL-адреса.
-            missing_building_number: Укажите номер дома, если применимо
-            street_unknown_for_zip: Укажите действительное название улицы для %{zip}
-            building_number_invalid: 'Не удалось найти номер дома по этому адресу:
-              %{street}, %{zip}'
-            unknown_for_address: Адрес во второй строке может быть указан неправильно
             blank_instructional: Укажите номер квартиры, апартаментов и т. д.
             blank_informative: Номер квартиры или апартаментов отсутствует
             too_long_instructional: Вторая строка адреса слишком длинная (должна содержать
