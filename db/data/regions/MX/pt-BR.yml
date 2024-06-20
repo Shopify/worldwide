@@ -5,11 +5,11 @@ pt-BR:
       addresses:
         address1:
           label:
-            default: Rua e número da casa
-            optional: Rua e número da casa (opcional)
+            default: Endereço e número da casa
+            optional: Endereço e número da casa (opcional)
           errors:
-            blank_instructional: Insira um nome de rua e o número
-            blank_informative: Faltam o nome da rua e o número
+            blank_instructional: Insira um endereço e o número
+            blank_informative: Faltam o endereço e o número
         province:
           label:
             default: Estado
@@ -22,19 +22,6 @@ pt-BR:
             default: Colônia
             optional: Colônia (opcional)
           errors:
-            blank: Insira uma colônia
-            too_long: A colônia é muito longa (máximo de %{limit} caracteres)
-            contains_emojis: A colônia não pode conter emojis
-            contains_mathematical_symbols: A colônia não pode conter símbolos matemáticos
-            contains_restricted_characters: A colônia pode conter apenas letras, números,
-              caracteres locais e caracteres especiais
-            contains_too_many_words: A colônia não pode ter mais de %{word_count}
-              palavras
-            contains_html_tags: A colônia não pode conter tags HTML.
-            contains_url: A colônia não pode conter URLs.
-            unknown_for_city: Insira um nome de colônia válido para %{city}.
-            unknown_for_zip: Insira um nome de colônia válido para %{zip}.
-            unknown_for_address: Talvez haja um erro na colônia.
             blank_instructional: Insira uma colônia
             blank_informative: A colônia está faltando
             too_long_instructional: A colônia é muito longa (máximo de %{limit} caracteres)
