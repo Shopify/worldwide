@@ -80,7 +80,7 @@ fr:
             default: Adresse
             optional: Adresse (facultatif)
           warnings:
-            contains_too_many_words: Il est conseillé que la ligne d’adresse 1 ait
+            contains_too_many_words: Il est conseillé que le champ Adresse 1 comporte
               moins de %{word_count} mots
           errors:
             blank_instructional: Saisir une adresse
@@ -125,22 +125,10 @@ fr:
             default: Appartement, suite, etc.
             optional: Appartement, suite, etc. (facultatif)
           errors:
-            contains_html_tags: La ligne 2 de l’adresse ne peut pas contenir de HTML
-            contains_emojis: La ligne 2 de l’adresse ne peut pas contenir d’emojis
-            contains_mathematical_symbols: La ligne 2 de l’adresse ne peut pas contenir
-              de symboles mathématiques
-            contains_restricted_characters: La ligne 2 de l’adresse ne peut contenir
-              que des lettres, des chiffres, des caractères locaux et des caractères
-              spéciaux
-            contains_url: La ligne 2 de l’adresse ne peut pas contenir d’URL
-            contains_too_many_words: La ligne 2 de l’adresse ne peut pas compter plus
-              de %{word_count} mots
-            unknown_for_address: La ligne 2 de l’adresse peut être erronée
             blank_instructional: Entrez un numéro d’appartement, de suite, etc.
             blank_informative: L’appartement ou la suite est manquant(e)
             too_long_instructional: La deuxième ligne d’adresse est trop longue (255 caractères
               maximum)
-            too_long_informational: La deuxième ligne d’adresse est trop longue
             missing_building_number_instructional: Ajouter un numéro de bâtiment,
               le cas échéant
             missing_building_number_informative: Le numéro de bâtiment peut être manquant
@@ -181,23 +169,13 @@ fr:
               erronée
             unknown_for_address_informative: La ligne d’adresse 2 est peut-être erronée
           warnings:
-            contains_too_many_words: Il est conseillé que la ligne d’adresse 2 ait
+            contains_too_many_words: Il est conseillé que le champ Adresse 2 comporte
               moins de %{word_count} mots
         city:
           label:
             default: Ville
             optional: Ville (facultatif)
           errors:
-            contains_html_tags: La ville ne peut pas contenir de HTML
-            too_long: Le nom de la ville est trop long (le maximum est de 255 caractères)
-            contains_emojis: La ville ne peut pas contenir d’emojis
-            contains_mathematical_symbols: La ville ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: La ville ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_url: La ville ne peut pas contenir d’URL
-            contains_too_many_words: La ville ne peut pas comporter plus de %{word_count} mots
-            unknown_for_address: La ville peut être erronée
             blank_instructional: Saisir une ville
             blank_informative: La ville est manquante
             unknown_for_zip_instructional: Saisir une ville valide pour %{zip}
@@ -252,14 +230,8 @@ fr:
         phone:
           label:
             default: Téléphone
-            optional: Téléphone (facultatif)
+            optional: Téléphone (optionnel)
           errors:
-            contains_emojis: Le numéro de téléphone ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le numéro de téléphone ne peut pas contenir
-              de symboles mathématiques
-            contains_restricted_characters: Le numéro de téléphone ne peut contenir
-              que des lettres, des chiffres, des caractères locaux et des caractères
-              spéciaux
             blank_instructional: Saisir un numéro de téléphone
             blank_informative: Le numéro de téléphone est manquant
             invalid_instructional: Saisir un numéro de téléphone valide
@@ -284,7 +256,6 @@ fr:
             default: Région
             optional: Région (facultatif)
           errors:
-            unknown_for_address: La région peut être erronée
             blank_instructional: Sélectionner une région
             blank_informative: La région est manquante
             invalid_instructional: Sélectionner une région
@@ -306,15 +277,6 @@ fr:
             default: Code postal
             optional: Code postal (facultatif)
           errors:
-            blocked_address: Cet emplacement n’est pas pris en charge
-            contains_html_tags: Le code postal ne peut pas contenir de HTML
-            too_long: Le code postal est trop long
-            contains_emojis: Le code postal ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le code postal ne peut pas contenir de
-              symboles mathématiques
-            contains_restricted_characters: Le code postal ne peut contenir que des
-              lettres, des chiffres, des caractères locaux et des caractères spéciaux
-            unknown_for_address: Le code postal peut être erroné
             blank_instructional: Saisir un code postal
             blank_informative: Le code postal est manquant
             invalid_instructional: Saisir un code postal valide
@@ -331,7 +293,6 @@ fr:
               pas avec %{province}, %{country}
             not_supported_instructional: Le code postal n’est pas pris en charge.
               Saisir une nouvelle adresse et réessayer
-            not_supported_informativel: Code postal non pris en charge
             unknown_for_province_instructional: Saisir un code postal valide pour
               %{province}
             unknown_for_province_informative: Le code postal n’est pas valide pour
@@ -384,10 +345,7 @@ fr:
               de caractères non autorisés
             contains_too_many_words_instructional: La rue ne peut pas compter plus
               de %{word_count} mots
-            contains_too_many_words_informational: La rue ne peut pas compter plus
-              de %{word_count} mots
             contains_html_tags_instructional: La rue ne peut pas contenir de HTML
-            contains_html_tags_informational: La rue ne peut pas contenir de HTML
             contains_url_instructional: La rue ne peut pas contenir d’URL
             contains_url_informative: La rue ne peut pas contenir d’URL
             street_unknown_for_zip_instructional: Saisir un nom de rue valide pour
@@ -443,19 +401,6 @@ fr:
             default: Quartier
             optional: Quartier (facultatif)
           errors:
-            blank: Saisir un quartier
-            too_long: Le quartier est trop long (le maximum est de %{limit} caractères)
-            contains_emojis: Le quartier ne peut pas contenir d’emojis
-            contains_mathematical_symbols: Le quartier ne peut pas contenir de symboles
-              mathématiques
-            contains_restricted_characters: Le quartier ne peut contenir que des lettres,
-              des chiffres, des caractères locaux et des caractères spéciaux
-            contains_too_many_words: Le quartier ne peut pas comporter plus de %{word_count} mots
-            contains_html_tags: Le quartier ne peut pas contenir de balises HTML
-            contains_url: Le quartier ne peut pas contenir d’URL
-            unknown_for_city: Saisir un nom de quartier valide pour %{city}
-            unknown_for_zip: Saisir un nom de quartier valide pour %{zip}
-            unknown_for_address: Le quartier peut être erroné
             blank_instructional: Saisir le nom de quartier
             blank_informative: Le nom de quartier est manquant
             too_long_instructional: Le nom de quartier est trop long (le maximum est
@@ -498,25 +443,6 @@ fr:
             default: Appartement, suite, etc.
             optional: Appartement, suite, etc. (facultatif)
           errors:
-            blank: Saisir un appartement, suite, etc.
-            too_long: La deuxième ligne d’adresse est trop longue (le maximum est
-              de %{limit} caractères)
-            contains_emojis: La deuxième ligne d’adresse ne peut pas contenir d’emojis
-            contains_mathematical_symbols: La deuxième ligne d’adresse ne peut pas
-              contenir de symboles mathématiques
-            contains_restricted_characters: La deuxième ligne d’adresse ne peut contenir
-              que des lettres, des chiffres, des caractères locaux et des caractères
-              spéciaux
-            contains_too_many_words: La deuxième ligne d’adresse ne peut pas compter
-              plus de %{word_count} mots
-            contains_html_tags: La deuxième ligne d’adresse ne peut pas contenir de
-              balises HTML.
-            contains_url: La deuxième ligne d’adresse ne peut pas contenir d’URL.
-            missing_building_number: Ajouter un numéro de bâtiment, le cas échéant
-            street_unknown_for_zip: Saisir un nom de rue valide pour %{zip}
-            building_number_invalid: Impossible de localiser le numéro de bâtiment
-              pour %{street}, %{zip}
-            unknown_for_address: La deuxième ligne d’adresse peut être erronée
             blank_instructional: Saisir un appartement, suite, etc.
             blank_informative: L’appartement ou la suite est manquant(e)
             too_long_instructional: La deuxième ligne d’adresse est trop longue (le

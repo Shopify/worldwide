@@ -5,7 +5,7 @@ de:
       addresses:
         company:
           label:
-            default: Firma
+            default: Unternehmen
             optional: Firma (optional)
           errors:
             blank_instructional: Ein Unternehmen eingeben
@@ -117,20 +117,9 @@ de:
             default: Wohnung, Zimmer usw.
             optional: Wohnung, Zimmer usw. (optional)
           errors:
-            contains_html_tags: Adresszeile 2 darf kein HTML enthalten
-            contains_emojis: Adresszeile 2 darf keine Emojis enthalten
-            contains_mathematical_symbols: Adresszeile 2 darf keine mathematischen
-              Symbole enthalten
-            contains_restricted_characters: Adresszeile 2 darf nur Buchstaben, Zahlen,
-              Zeichen der lokalen Sprache und Sonderzeichen enthalten
-            contains_url: Adresszeile 2 darf keine URL enthalten
-            contains_too_many_words: Adresszeile 2 darf nicht mehr als %{word_count} Wörter
-              enthalten
-            unknown_for_address: Adresszeile 2 ist ggf. falsch
             blank_instructional: Eine Wohnung, ein Zimmer usw. eingeben
             blank_informative: Wohnung oder Zimmer fehlt
             too_long_instructional: Adresszeile 2 ist zu lang (maximal 255 Zeichen)
-            too_long_informational: Adresszeile 2 ist zu lang
             missing_building_number_instructional: Falls verfügbar, Hausnummer hinzufügen
             missing_building_number_informative: Hausnummer fehlt ggf.
             street_unknown_for_zip_instructional: Einen gültigen Straßennamen für
@@ -166,20 +155,9 @@ de:
               Wörter haben
         city:
           label:
-            default: Stadt
+            default: Ort
             optional: Stadt (optional)
           errors:
-            too_long: Stadt ist zu lang (maximal 255 Zeichen)
-            contains_html_tags: Stadt darf kein HTML enthalten
-            contains_emojis: Stadt darf keine Emojis enthalten
-            contains_mathematical_symbols: Stadt darf keine mathematischen Symbole
-              enthalten
-            contains_restricted_characters: '"Ort" darf nur Buchstaben, Zahlen, Zeichen
-              der lokalen Sprache und Sonderzeichen enthalten'
-            contains_url: Stadt darf keine URL enthalten
-            contains_too_many_words: Stadt darf nicht mehr als %{word_count} Wörter
-              enthalten
-            unknown_for_address: Stadt ist ggf. falsch
             blank_instructional: Eine Stadt eingeben
             blank_informative: Stadt fehlt
             unknown_for_zip_instructional: Eine gültige Stadt für %{zip} eingeben
@@ -232,11 +210,6 @@ de:
             default: Telefon
             optional: Telefon (optional)
           errors:
-            contains_emojis: Telefonnummer darf keine Emojis enthalten
-            contains_mathematical_symbols: Telefonnummer darf keine mathematischen
-              Symbole enthalten
-            contains_restricted_characters: '"Telefonnummer" darf nur Buchstaben,
-              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten'
             blank_instructional: Eine Telefonnummer eingeben
             blank_informative: Telefonnummer fehlt
             invalid_instructional: Eine gültige Telefonnummer eingeben
@@ -258,7 +231,6 @@ de:
             default: Region
             optional: Region (optional)
           errors:
-            unknown_for_address: Region ist ggf. falsch
             blank_instructional: Region auswählen
             blank_informative: Region fehlt
             invalid_instructional: Region auswählen
@@ -280,15 +252,6 @@ de:
             default: Postleitzahl
             optional: Postleitzahl (optional)
           errors:
-            blocked_address: Dieser Standort wird nicht unterstützt
-            too_long: Die Postleitzahl ist zu lang
-            contains_html_tags: Postleitzahl darf kein HTML enthalten
-            contains_emojis: Postleitzahl darf keine Emojis enthalten
-            contains_mathematical_symbols: Postleitzahl darf keine mathematischen
-              Symbole enthalten
-            contains_restricted_characters: '"Postleitzahl" darf nur Buchstaben, Zahlen,
-              Zeichen der lokalen Sprache und Sonderzeichen enthalten'
-            unknown_for_address: Postleitzahl ist ggf. falsch
             blank_instructional: Postleitzahl eingeben
             blank_informative: Postleitzahl fehlt
             invalid_instructional: Eine gültige Postleitzahl eingeben
@@ -307,7 +270,6 @@ de:
               mit %{province}, %{country} überein
             not_supported_instructional: Postleitzahl wird nicht unterstützt. Gib
               eine neue Adresse ein und versuche es erneut.
-            not_supported_informativel: Postleitzahl wird nicht unterstützt.
             unknown_for_province_instructional: Eine gültige Postleitzahl für %{province}
               eingeben
             unknown_for_province_informative: Postleitzahl ist für %{province} ungültig
@@ -354,10 +316,7 @@ de:
               Zeichen enthalten
             contains_too_many_words_instructional: Straße darf nicht mehr als %{word_count} Wörter
               enthalten
-            contains_too_many_words_informational: Straße darf nicht mehr als %{word_count} Wörter
-              enthalten
             contains_html_tags_instructional: Straße darf kein HTML enthalten
-            contains_html_tags_informational: Straße darf kein HTML enthalten
             contains_url_instructional: Straße darf keine URL enthalten
             contains_url_informative: Straße darf keine URL enthalten
             street_unknown_for_zip_instructional: Eine gültige Straße für %{zip} eingeben
@@ -404,20 +363,6 @@ de:
             default: Stadtviertel
             optional: Stadtviertel (optional)
           errors:
-            blank: Gib ein Stadtviertel ein.
-            too_long: Stadtviertel ist zu lang (maximal %{limit} Zeichen)
-            contains_emojis: Stadtviertel darf keine Emojis enthalten
-            contains_mathematical_symbols: Stadtviertel darf keine mathematischen
-              Symbole enthalten
-            contains_restricted_characters: Stadtviertel darf nur Buchstaben, Zahlen,
-              Zeichen der lokalen Sprache und Sonderzeichen enthalten.
-            contains_too_many_words: Stadtviertel darf nicht mehr als %{word_count} Wörter
-              enthalten
-            contains_html_tags: Stadtviertel darf keine HTML-Tags enthalten
-            contains_url: Stadtviertel darf keine URLs enthalten
-            unknown_for_city: Einen gültigen Stadtviertelnamen für %{city} eingeben
-            unknown_for_zip: Einen gültigen Stadtviertelnamen für %{zip} eingeben
-            unknown_for_address: Stadtviertel ist ggf. falsch
             blank_instructional: Gib ein Stadtviertel ein.
             blank_informative: Stadtviertel fehlt
             too_long_instructional: Stadtviertel ist zu lang (maximal %{limit} Zeichen)
@@ -458,22 +403,6 @@ de:
             default: Wohnung, Zimmer usw.
             optional: Wohnung, Zimmer, usw. (optional)
           errors:
-            blank: Gib eine Wohnung, ein Zimmer usw. ein
-            too_long: Die zweite Adresszeile ist zu lang (maximal %{limit} Zeichen)
-            contains_emojis: Die zweite Adresszeile darf keine Emojis enthalten
-            contains_mathematical_symbols: Die zweite Adresszeile darf keine mathematischen
-              Symbole enthalten
-            contains_restricted_characters: Die zweite Adresszeile darf nur Buchstaben,
-              Zahlen, Zeichen der lokalen Sprache und Sonderzeichen enthalten
-            contains_too_many_words: Die zweite Adresszeile darf maximal %{word_count} Wörter
-              enthalten
-            contains_html_tags: Die zweite Adresszeile darf keine HTML-Tags enthalten.
-            contains_url: Die zweite Adresszeile darf keine URLs enthalten.
-            missing_building_number: Falls verfügbar, Hausnummer hinzufügen
-            street_unknown_for_zip: Einen gültigen Straßennamen für %{zip} eingeben
-            building_number_invalid: Hausnummer konnte für %{street}, %{zip} nicht
-              gefunden werden
-            unknown_for_address: Die zweite Adresszeile ist ggf. falsch
             blank_instructional: Gib eine Wohnung, ein Zimmer usw. ein
             blank_informative: Wohnung oder Zimmer fehlt
             too_long_instructional: Die zweite Adresszeile ist zu lang (maximal %{limit} Zeichen)
