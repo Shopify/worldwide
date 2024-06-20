@@ -116,20 +116,9 @@ sv:
             default: Lägenhet, trappa osv.
             optional: Lägenhet, trappa osv. (valfritt)
           errors:
-            contains_html_tags: Adressrad 2 får inte innehålla HTML
-            contains_emojis: Adressrad 2 får inte innehålla emojis
-            contains_url: Adressrad 2 får inte innehålla en URL
-            contains_mathematical_symbols: Adressrad 2 får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Adressrad 2 får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
-            contains_too_many_words: Adressrad 2 får inte ha mer än %{word_count}
-              ord
-            unknown_for_address: Adressrad 2 kan vara felaktig
             blank_instructional: Ange lägenhet, trappa osv.
             blank_informative: Lägenhet eller våning saknas
             too_long_instructional: Adressrad 2 är för lång (högst 255 tecken)
-            too_long_informational: Adressrad 2 är för lång
             missing_building_number_instructional: Lägg till ett husnummer om du har
               ett
             missing_building_number_informative: Husnummer kan saknas
@@ -168,16 +157,6 @@ sv:
             default: Stad
             optional: Stad (valfritt)
           errors:
-            too_long: Stadsnamnet är för långt (max 255 tecken)
-            contains_html_tags: Stad får inte innehålla HTML
-            contains_emojis: Stad får inte innehålla emojis
-            contains_url: Stad får inte innehålla en URL
-            contains_mathematical_symbols: Stad får inte innehålla matematiska symboler
-            contains_restricted_characters: Stad får endast innehålla bokstäver, siffror,
-              lokala tecken och specialtecken
-            contains_too_many_words: Stad får inte innehålla fler än %{word_count}
-              ord
-            unknown_for_address: Staden kan vara felaktig
             blank_instructional: Ange en stad
             blank_informative: Stad saknas
             unknown_for_zip_instructional: Ange en giltig stad för %{zip}
@@ -211,8 +190,8 @@ sv:
             unknown_for_address_informative: Staden kan vara felaktig
         country:
           label:
-            default: Land/Region
-            optional: Land/Region (valfritt)
+            default: Land/region
+            optional: Land/region (valfritt)
           errors:
             blank_instructional: Välj land/region
             blank_informative: Land/region saknas
@@ -228,11 +207,6 @@ sv:
             default: Telefon
             optional: Telefon (valfritt)
           errors:
-            contains_emojis: Telefonnummer får inte innehålla emojis
-            contains_mathematical_symbols: Telefonnummer får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Telefonnummer får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
             blank_instructional: Ange ett telefonnummer
             blank_informative: Telefonnummer saknas
             invalid_instructional: Ange ett giltigt telefonnummer
@@ -254,7 +228,6 @@ sv:
             default: Region
             optional: Region (valfritt)
           errors:
-            unknown_for_address: Regionen kan vara felaktig
             blank_instructional: Välj en region
             blank_informative: Region saknas
             invalid_instructional: Välj en region
@@ -275,15 +248,6 @@ sv:
             default: Postnummer
             optional: Postnummer (valfritt)
           errors:
-            blocked_address: Platsen stöds inte
-            too_long: Postnumret är för långt
-            contains_html_tags: Postnummer får inte innehålla HTML
-            contains_emojis: Postnummer får inte innehålla emojis
-            contains_mathematical_symbols: Postnummer får inte innehålla matematiska
-              symboler
-            contains_restricted_characters: Postnummer får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
-            unknown_for_address: Postnumret kan vara felaktigt
             blank_instructional: Ange ett postnummer
             blank_informative: Postnummer saknas
             invalid_instructional: Ange ett giltigt postnummer
@@ -298,7 +262,6 @@ sv:
               %{province}, %{country}
             not_supported_instructional: Postnumret stöds inte. Ange en ny adress
               och försök igen
-            not_supported_informativel: Postnumret stöds inte
             unknown_for_province_instructional: Ange ett giltigt postnummer för %{province}
             unknown_for_province_informative: Postnumret är ogiltigt för %{province}
             blocked_address_instructional: Platsen stöds inte
@@ -322,7 +285,6 @@ sv:
             unknown_for_address_informative: Postnumret kan vara felaktigt
         address:
           errors:
-            address_may_not_exist: Adressen hittades inte eller finns inte
             may_not_exist_instructional: Adressen hittades inte eller finns inte
             may_not_exist_informative: Adress hittades inte
         street_name:
@@ -349,10 +311,7 @@ sv:
               tecken
             contains_too_many_words_instructional: Gata får inte innehålla fler än
               %{word_count} ord
-            contains_too_many_words_informational: Gata får inte innehålla fler än
-              %{word_count} ord
             contains_html_tags_instructional: Gata får inte innehålla HTML
-            contains_html_tags_informational: Gata får inte innehålla HTML
             contains_url_instructional: Gata får inte innehålla en URL
             contains_url_informative: Gata får inte innehålla en URL
             street_unknown_for_zip_instructional: Ange en giltig gata för %{zip}
@@ -399,19 +358,6 @@ sv:
             default: Område
             optional: Område (valfritt)
           errors:
-            blank: Ange ett område
-            too_long: Områdesnamnet är för långt (max. %{limit} tecken)
-            contains_emojis: Område får inte innehålla emojis
-            contains_mathematical_symbols: Område får inte innehålla matematiska symboler
-            contains_restricted_characters: Område får endast innehålla bokstäver,
-              siffror, lokala tecken och specialtecken
-            contains_too_many_words: Område får inte innehålla fler än %{word_count}
-              ord
-            contains_html_tags: Område får inte innehålla HTML-taggar
-            contains_url: Område får inte innehålla URL:er
-            unknown_for_city: Ange ett giltigt områdesnamn för %{city}
-            unknown_for_zip: Ange ett giltigt områdesnamn för %{zip}
-            unknown_for_address: Området kan vara felaktigt
             blank_instructional: Ange ett område
             blank_informative: Område saknas
             too_long_instructional: Områdesnamnet är för långt (max. %{limit} tecken)
@@ -448,22 +394,6 @@ sv:
             default: Lägenhet, våning etc.
             optional: Lägenhet, svit etc. (valfritt)
           errors:
-            blank: Ange en lägenhet, våning etc.
-            too_long: Den andra adressraden är för lång (max. %{limit} tecken)
-            contains_emojis: Den andra adressraden får inte innehålla emojier
-            contains_mathematical_symbols: Den andra adressraden får inte innehålla
-              matematiska symboler
-            contains_restricted_characters: Den andra adressraden får endast innehålla
-              bokstäver, siffror, lokala tecken och specialtecken
-            contains_too_many_words: Den andra adressraden får inte innehålla fler
-              än %{word_count} ord
-            contains_html_tags: Den andra adressraden får inte innehålla HTML-taggar.
-            contains_url: Den andra adressraden får inte innehålla URL:er.
-            missing_building_number: Lägg till ett husnummer om du har ett
-            street_unknown_for_zip: Ange ett giltigt gatunamn för %{zip}
-            building_number_invalid: Vi kunde inte hitta husnumret för %{street},
-              %{zip}
-            unknown_for_address: Den andra adressraden kan vara felaktig
             blank_instructional: Ange en lägenhet, våning etc.
             blank_informative: Lägenhet eller våning saknas
             too_long_instructional: Den andra adressraden är för lång (max. %{limit}

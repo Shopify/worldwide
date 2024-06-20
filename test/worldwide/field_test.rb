@@ -102,8 +102,8 @@ module Worldwide
     test "warning accepts parameters" do
       [
         [:en, :ca, "Address line 1 is recommended to have less than 15 words"],
-        [:fr, nil, "Il est conseillé que la ligne d’adresse 1 ait moins de 15 mots"],
-        [:fr, :fr, "Il est conseillé que la ligne d’adresse 1 ait moins de 15 mots"],
+        [:fr, nil, "Il est conseillé que le champ Adresse 1 comporte moins de 15 mots"],
+        [:fr, :fr, "Il est conseillé que le champ Adresse 1 comporte moins de 15 mots"],
         [:ja, :ja, "住所1は15文字未満が推奨されています"],
       ].each do |locale, country_code, expected|
         I18n.with_locale(locale) do
