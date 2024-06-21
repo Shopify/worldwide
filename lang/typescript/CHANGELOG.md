@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.4.0
+
+### Minor Changes
+
+- fbe5457: Add script detection and support for English in Taiwan
+
 ## 0.3.0
 
 ### Minor Changes
