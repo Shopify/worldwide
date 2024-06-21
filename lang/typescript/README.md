@@ -17,11 +17,11 @@ combined_address_format:
   address1:
     - key: streetName
     - key: streetNumber
-      decorator: ","
+      decorator: ", "
   address2:
     - key: line2
     - key: neighborhood
-      decorator: ","
+      decorator: ", "
 ```
 
 To generate a correctly formatted `address1` string for Brazil, include
