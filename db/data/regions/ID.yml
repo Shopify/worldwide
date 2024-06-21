@@ -23,10 +23,11 @@ additional_address_fields:
   - name: line2
   - name: neighborhood
 combined_address_format:
-  address2:
-    - key: line2
-    - key: neighborhood
-      decorator: ", "
+  default:
+    address2:
+      - key: line2
+      - key: neighborhood
+        decorator: ", "
 emoji: "\U0001F1EE\U0001F1E9"
 zones:
 - name: Aceh

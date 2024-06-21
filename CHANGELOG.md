@@ -27,7 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
---
+- Support multiple script-based address concatenation rules for each country [#224](https://github.com/Shopify/worldwide/pull/224)
+- Fixed a typo in list of supported scripts from `Latn` to `Latin`
 
 ## [1.5.0] - 2024-06-17
 - Make street number optional in CL [#228](https://github.com/Shopify/worldwide/pull/228)

@@ -15,7 +15,7 @@ module Worldwide
           "Hangul": "\\p{Hangul}",
           "Hiragana": "\\p{Hiragana}",
           "Katakana": "\\p{Katakana}",
-          "Latn": "\\p{Latin}",
+          "Latin": "\\p{Latin}",
           "Thai": "\\p{Thai}",
         }
 

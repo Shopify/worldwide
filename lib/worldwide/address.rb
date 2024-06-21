@@ -129,7 +129,7 @@ module Worldwide
             fields.reverse.insert(1, "：").join("")
           end
 
-          if Worldwide::Scripts.identify(text: result).include?(:Latn)
+          if Worldwide::Scripts.identify(text: result).include?(:Latin)
             result
           else
             result.delete(" \u{3000}")
@@ -148,7 +148,7 @@ module Worldwide
     end
 
     def concatenate_address1
-      additional_fields = region.combined_address_format["address1"] || []
+      additional_fields = region.combined_address_format.dig(script_from_field("address1"), "address1") || []
       additional_field_keys = additional_fields.map { |field| field["key"] }
 
       return address1 if field_values(additional_field_keys).empty?
@@ -157,7 +157,7 @@ module Worldwide
     end
 
     def concatenate_address2
-      additional_fields = region.combined_address_format["address2"] || []
+      additional_fields = region.combined_address_format.dig(script_from_field("address2"), "address2") || []
       additional_field_keys = additional_fields.map { |field| field["key"] }
 
       return address2 if field_values(additional_field_keys).empty?
@@ -166,13 +166,13 @@ module Worldwide
     end
 
     def split_address1
-      additional_fields = region.combined_address_format["address1"] || []
+      additional_fields = region.combined_address_format.dig(script_from_string(address1), "address1") || []
       split_fields_arr = address1&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
 
     def split_address2
-      additional_fields = region.combined_address_format["address2"] || []
+      additional_fields = region.combined_address_format.dig(script_from_string(address2), "address2") || []
       split_fields_arr = address2&.split(RESERVED_DELIMITER) || []
       split_fields(additional_fields, split_fields_arr)
     end
@@ -463,6 +463,33 @@ module Worldwide
         stripped.delete!("様") if blank?(last_name) || excluded_fields.include?("lastName")
         stripped
       end
+    end
+
+    def script_from_string(str)
+      script = "default"
+      scripts = region.combined_address_format.except("default").keys
+      return script if scripts.empty?
+
+      detected_scripts = Worldwide::Scripts.identify(text: str).map(&:to_s)
+      if detected_scripts.length == 1 && scripts.include?(detected_scripts.first)
+        script = detected_scripts.first
+      end
+      script
+    end
+
+    def script_from_field(field)
+      scripts = region.combined_address_format.except("default").keys
+      script = scripts.find do |script|
+        combined_address_format = region.combined_address_format.dig(script, field)
+        additional_fields_string = combined_address_format.map { |field| send(field["key"].underscore.to_sym) }.join(" ")
+        text_exclusively_uses_script?(additional_fields_string, script)
+      end
+      script.present? ? script : "default"
+    end
+
+    def text_exclusively_uses_script?(text, script)
+      detected_scripts = Worldwide::Scripts.identify(text: text).map(&:to_s)
+      detected_scripts.length == 1 && detected_scripts.include?(script)
     end
 
     def concatenate_fields(fields)

@@ -1,13 +1,18 @@
 import regions from 'custom:regions';
 
-import {ValidYamlType} from '../types/yaml';
+import {ValidYamlType, isYamlObject} from '../types/yaml';
 import {Address} from '../types/address';
+
+import {Script, identifyScripts, stringExclusivelyUsesScript} from './script';
 
 export interface FieldConcatenationRule {
   key: keyof Address;
   decorator?: string;
 }
-export type CombinedAddressFormat = Record<string, FieldConcatenationRule[]>;
+
+type RegionScript = 'default' | Script;
+export type CombinedAddressFormat = Record<RegionScript, FieldDefinitions>;
+export type FieldDefinitions = Record<keyof Address, FieldConcatenationRule[]>;
 export type RegionYamlConfig = Record<string, any> & {
   /** Two-letter country code */
   code: string;
@@ -18,15 +23,14 @@ export type RegionYamlConfig = Record<string, any> & {
 /**
  * Type-guard to ensure we're operating on the right yaml data.
  *
- * combined_address_format is optional, so check against `code` and
- * `name` which should be on all region configs.
+ * combined_address_format is optional, so check against `code` which should be
+ * on all region configs.
  */
 function isRegionYamlConfig(
   yamlConfig: ValidYamlType,
 ): yamlConfig is RegionYamlConfig {
   return (
-    yamlConfig !== null &&
-    typeof yamlConfig === 'object' &&
+    isYamlObject(yamlConfig) &&
     'code' in yamlConfig &&
     typeof yamlConfig.code === 'string'
   );
@@ -45,4 +49,77 @@ export function getRegionConfig(countryCode: string): RegionYamlConfig | null {
   }
 
   return null;
+}
+
+/**
+ * Checks if one or more address field contains the character set of a given
+ * script type and only that type.
+ *
+ * @param fieldDefinition Array of definitions of address sub-fields
+ * @param address Partial address object
+ * @param script Script to detect within the value string
+ * @returns true if any characters of the specified script is found in the
+ * address and no other scripts match
+ */
+export function addressExclusivelyUsesScript(
+  fieldDefinition: FieldConcatenationRule[],
+  address: Partial<Address>,
+  script: Script,
+): boolean {
+  const scriptsFound = new Set(
+    fieldDefinition
+      .flatMap((field) => {
+        const value = address[field.key];
+        return value ? identifyScripts(value) : [];
+      })
+      .flat(),
+  );
+  return scriptsFound.size === 1 && scriptsFound.has(script);
+}
+
+/**
+ * Determine the extended address rules to use for a given field based on the
+ * region's config as well as analyzing the address object itself for matching
+ * character sets for language-specific overrides.
+ */
+export function getConcatenationRules(
+  config: RegionYamlConfig,
+  address: Address | string,
+  extendedField: keyof Address,
+): FieldConcatenationRule[] | undefined {
+  if (config.combined_address_format === undefined) {
+    return undefined;
+  }
+
+  const combinedAddressFormat = config.combined_address_format;
+  const script: RegionScript = 'default';
+  const configScripts = Object.keys(combinedAddressFormat).filter(
+    (key) => key !== 'default',
+  );
+  const concatenationRules = combinedAddressFormat[script][extendedField];
+  const matchingScripts = configScripts.filter((configScript) => {
+    const fieldDefinition =
+      config.combined_address_format?.[configScript as RegionScript]?.[
+        extendedField
+      ];
+    if (fieldDefinition) {
+      if (typeof address === 'string') {
+        return stringExclusivelyUsesScript(address, configScript as Script);
+      } else {
+        return addressExclusivelyUsesScript(
+          fieldDefinition,
+          address,
+          configScript as Script,
+        );
+      }
+    }
+    return false;
+  });
+
+  if (matchingScripts.length === 1) {
+    return combinedAddressFormat[matchingScripts[0] as RegionScript][
+      extendedField
+    ];
+  }
+  return concatenationRules;
 }
