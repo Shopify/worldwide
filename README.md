@@ -74,10 +74,17 @@ I18n.enforce_available_locales = false
 
 Here the list of the features we currently support:
 
-- [🌏  Regions](#--regions-countries--territories--subdivisions--states--provinces--prefectures--etc)
+- [🌏  Regions (Countries / Territories / Subdivisions / States / Provinces / Prefectures / etc.)](#--regions-countries--territories--subdivisions--states--provinces--prefectures--etc)
+  - [Regional Validations](#regional-validations)
+  - [Phone Validations](#phone-validations)
 - [📫  Addresses](#--addresses)
+  - [Formatting](#formatting)
+  - [Validation](#validation)
+  - [Auto-correction](#auto-correction)
 - [🗓  / ⌚  Date and Time formats](#-----date-and-time-formats)
+  - [Calendar quarter formatting](#calendar-quarter-formatting)
 - [📅  Calendar Information](#--calendar-information)
+  - [Month and Weekday labels](#month-and-weekday-labels)
 - [🕰  Localized Timezone](#--localized-timezone)
   - [➡🕰  Map Deprecated Timezone Name to Modern Name](#--map-deprecated-timezone-name-to-modern-name)
 - [👥  Names](#--names)
@@ -898,7 +905,7 @@ This module provides localized measurement unit formatting.
 
 `Units.format` supports the following arguments:
 - `amount`: the amount associated with the unit. This parameter is used to apply the unique pluralization rules of the requested locale.
-- `unit`: the measurement unit. Currently, only the keys listed in [`Worldwide::MEASUREMENT_KEYS`](https://github.com/Shopify/worldwide/blob/main/lib/worldwide/units.rb#L9-L51) are supported.
+- `unit`: the measurement unit. The keys listed in [`Worldwide.Units.measurement_keys`](https://github.com/Shopify/worldwide/blob/main/lib/worldwide/units.rb#L23-L70) are supported.
 - `humanize`: can be `:long` or `:short`. `:long` returns the translated word of the unit. `:short` returns the localized abbreviation of the unit. The default value is `:short`.
 
 ```ruby

@@ -1210,7 +1210,7 @@ module Worldwide
 
         def patch_units
           puts("📐 Patching the units.yml CLDR files")
-          measurement_keys = Worldwide::MEASUREMENT_KEYS.values.uniq.map(&:to_s)
+          measurement_keys = Worldwide.units.measurement_keys.values.uniq.map(&:to_s)
           units_filepaths = Dir.glob(File.join(["data", "cldr", "locales", "*", "units.yml"]))
           raise NotNeededError, "No CLDR units files found to patch." if units_filepaths.empty?
 
