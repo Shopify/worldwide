@@ -79,5 +79,13 @@ module Worldwide
         assert_equal "5 cm", result
       end
     end
+
+    test "#supported_humanizations returns supported humanizations" do
+      assert_not Worldwide.units.supported_humanizations.empty?
+    end
+
+    test "#measurement_keys returns supported measurement keys" do
+      assert_not Worldwide.units.measurement_keys.empty?
+    end
   end
 end
