@@ -1,6 +1,5 @@
-import regions from 'custom:regions';
+import {regions, configs} from 'custom:regions';
 
-import {ValidYamlType, isYamlObject} from '../types/yaml';
 import {Address} from '../types/address';
 
 import {Script, identifyScripts, stringExclusivelyUsesScript} from './script';
@@ -14,27 +13,9 @@ type RegionScript = 'default' | Script;
 export type CombinedAddressFormat = Record<RegionScript, FieldDefinitions>;
 export type FieldDefinitions = Record<keyof Address, FieldConcatenationRule[]>;
 export type RegionYamlConfig = Record<string, any> & {
-  /** Two-letter country code */
-  code: string;
   /** Format definition for an extended address */
   combined_address_format?: CombinedAddressFormat;
 };
-
-/**
- * Type-guard to ensure we're operating on the right yaml data.
- *
- * combined_address_format is optional, so check against `code` which should be
- * on all region configs.
- */
-function isRegionYamlConfig(
-  yamlConfig: ValidYamlType,
-): yamlConfig is RegionYamlConfig {
-  return (
-    isYamlObject(yamlConfig) &&
-    'code' in yamlConfig &&
-    typeof yamlConfig.code === 'string'
-  );
-}
 
 /**
  * Get the region config for a specified country code
@@ -43,9 +24,11 @@ function isRegionYamlConfig(
  * found
  */
 export function getRegionConfig(countryCode: string): RegionYamlConfig | null {
-  const regionConfig = regions[countryCode];
-  if (regionConfig && isRegionYamlConfig(regionConfig)) {
+  const regionConfig = configs[countryCode];
+  if (regionConfig) {
     return regionConfig;
+  } else if (regions.includes(countryCode)) {
+    return {};
   }
 
   return null;

@@ -6,29 +6,12 @@ import yaml from 'js-yaml';
 import typescript from '@rollup/plugin-typescript';
 import {dts} from 'rollup-plugin-dts';
 
-import type {ValidYamlType} from './src/types/yaml';
+import {type ValidYamlType} from './src/types/yaml';
+import {transformRegionYaml, validateRegionYaml} from './validate-region-yaml';
 
 const projectRootDir = path.resolve(__dirname);
 
 const REGIONS_IMPORT_ID = 'custom:regions';
-
-/**
- * Strip any data we don't need from the yaml before its bundled in
- * the JS, which drastically reduces the bundle size
- */
-function transformRegionYaml(data: ValidYamlType) {
-  if (
-    typeof data === 'object' &&
-    data !== null &&
-    'code' in data &&
-    typeof data.code === 'string'
-  ) {
-    const {code, combined_address_format} = data;
-    return {code, combined_address_format};
-  }
-
-  return undefined;
-}
 
 export const mainConfig = {
   input: 'src/index.ts',
@@ -58,20 +41,30 @@ export const mainConfig = {
       },
       load: async (id: string) => {
         if (id === REGIONS_IMPORT_ID) {
-          const regions: Record<string, any> = {};
+          const configs: Record<string, any> = {};
           const yamlFilesGlobPath = path.resolve(
             projectRootDir,
             '../../db/data/regions/*.yml',
           );
+          const regions: string[] = [];
           for (const ymlPath of await glob(yamlFilesGlobPath)) {
             const [fileName] = ymlPath.split('/').slice(-1);
             const data = yaml.load(
               (await fs.readFile(ymlPath)).toString(),
             ) as ValidYamlType;
             const countryCode = fileName.replace(/\.yml$/, '');
-            regions[countryCode] = transformRegionYaml(data);
+
+            const regionYaml = validateRegionYaml(fileName, data);
+
+            regions.push(countryCode);
+            if (regionYaml.combined_address_format) {
+              configs[countryCode] = transformRegionYaml(regionYaml);
+            }
           }
-          return `export default ${JSON.stringify(regions, undefined, '  ')}`;
+          return [
+            `export const regions = [${regions.map((code) => `"${code}"`).join(',')}]`,
+            `export const configs = ${JSON.stringify(configs, undefined, ' ')}`,
+          ].join('; ');
         }
 
         return undefined;

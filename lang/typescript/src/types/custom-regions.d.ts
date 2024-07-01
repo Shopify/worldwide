@@ -1,6 +1,9 @@
 declare module 'custom:regions' {
-  import {ValidYamlType} from './yaml';
+  import {RegionYamlConfig} from 'src/utils/regions';
 
-  const data: Record<string, ValidYamlType>;
-  export default data;
+  const regions: string[];
+  export const regions;
+
+  const configs: Record<string, RegionYamlConfig | undefined>;
+  export const configs;
 }
