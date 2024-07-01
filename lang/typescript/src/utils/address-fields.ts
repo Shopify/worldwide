@@ -1,6 +1,5 @@
-import {Address} from '../types/address';
-
-import {FieldConcatenationRule} from './regions';
+import type {FieldConcatenationRule} from '../types/region-yaml-config';
+import type {Address} from '../types/address';
 
 export const RESERVED_DELIMITER = '\u2060';
 

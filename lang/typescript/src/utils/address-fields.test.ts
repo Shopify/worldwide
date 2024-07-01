@@ -1,4 +1,5 @@
-import {FieldConcatenationRule} from './regions';
+import type {FieldConcatenationRule} from 'src/types/region-yaml-config';
+
 import {
   RESERVED_DELIMITER,
   concatAddressField,

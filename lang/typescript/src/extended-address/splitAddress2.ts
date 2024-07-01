@@ -1,4 +1,4 @@
-import {Address} from '../types/address';
+import type {Address} from '../types/address';
 import {splitAddressField} from '../utils/address-fields';
 import {getRegionConfig, getConcatenationRules} from '../utils/regions';
 
