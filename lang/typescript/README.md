@@ -149,10 +149,18 @@ pnpm test:watch
 
 ### Adding a changelog
 
-To add a changelog entry use:
+Make sure to add a changelog entry with a clear message and semver-compatible version type (patch, minor, major). To do this, run the following command:
 
 ```sh
 pnpm changeset
 ```
 
-Changesets will create a new version after merging the [corresponding PR](https://github.com/Shopify/worldwide/pulls?q=is%3Apr+is%3Aopen+%22Version+Packages%22) that merges unreleased changesets and handles the version bump.
+This will create a new changeset file using the [changesets](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md) tool. The auto-generated file has a random filename to avoid conflicts and can be renamed to be more relevant to match the change.
+
+See [changeset's docs](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md) for more info.
+
+### Releasing a new version
+
+Changesets will handle combining unreleased changesets on the `main` branch into a new version following [semver](https://semver.org/) in a GH Action workflow into a [corresponding PR](https://github.com/Shopify/worldwide/pulls?q=is%3Apr+is%3Aopen+%22Version+Packages%22). Merging that PR into `main` will release the new version to NPM.
+
+See [#244](https://github.com/Shopify/worldwide/pull/244) for an example.
