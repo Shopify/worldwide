@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.SHOPIFY_GH_ACCESS_TOKEN }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -33,6 +35,8 @@ jobs:
         with:
           publish: pnpm release
           cwd: lang/typescript
+          title: Version NPM Package
+          commit: Version NPM Package
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.SHOPIFY_GH_ACCESS_TOKEN }}
