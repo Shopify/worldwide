@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.4.1
+
+### Patch Changes
+
+- fba5872: Update npm package homepage to npm package readme, fix release workflow (no functional changes)
+
 ## 0.4.0
 
 ### Minor Changes
