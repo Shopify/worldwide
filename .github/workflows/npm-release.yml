@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - fix-changesets-npm-release-workflow-2
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -17,6 +18,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.SHOPIFY_GH_ACCESS_TOKEN }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
