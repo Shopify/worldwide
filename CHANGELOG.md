@@ -26,10 +26,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Move Units constants `SUPPORTED_HUMANIZATIONS` and `MEASUREMENT_KEYS` to `Worldwide.units.supported_humanizations` and `Worldwide.units.measurement_keys` [#240](https://github.com/Shopify/worldwide/pull/240)
-- Allow house numbers on address2 for Japan [#245](https://github.com/Shopify/worldwide/pull/245)
 
 ---
+
+## [1.6.1] - 2024-07-03
+- Move Units constants `SUPPORTED_HUMANIZATIONS` and `MEASUREMENT_KEYS` to `Worldwide.units.supported_humanizations` and `Worldwide.units.measurement_keys` [#240](https://github.com/Shopify/worldwide/pull/240)
+- Allow house numbers on address2 for Japan [#245](https://github.com/Shopify/worldwide/pull/245)
 
 ## [1.6.0] - 2024-06-21
 - Support multiple script-based address concatenation rules for each country [#224](https://github.com/Shopify/worldwide/pull/224)
