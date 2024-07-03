@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Move Units constants `SUPPORTED_HUMANIZATIONS` and `MEASUREMENT_KEYS` to `Worldwide.units.supported_humanizations` and `Worldwide.units.measurement_keys` [#240](https://github.com/Shopify/worldwide/pull/240)
+- Allow house numbers on address2 for Japan [#245](https://github.com/Shopify/worldwide/pull/245)
 
 ---
 
