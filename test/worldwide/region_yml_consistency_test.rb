@@ -59,6 +59,16 @@ module Worldwide
       end
     end
 
+    test "all regions that allow a building number on address2 set building_number_required to true" do
+      Regions.all.select(&:country?).each do |country|
+        next unless country.building_number_may_be_in_address2
+
+        assert_predicate country,
+          :building_number_required,
+          "#{country.iso_code} allows building number in address2 but building_number_required is not true"
+      end
+    end
+
     test "format keys must belong to a limited set of required and allowed keys" do
       allowed_keys = ["edit", "show"]
       required_format_keys = ["{firstName}", "{lastName}", "{company}", "{address1}", "{address2}", "{country}", "{phone}"]

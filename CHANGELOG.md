@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Improve tests related to building number requiredness [#249](https://github.com/Shopify/worldwide/pull/249)
+
 ---
 
 ## [1.6.1] - 2024-07-03
