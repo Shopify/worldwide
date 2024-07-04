@@ -380,7 +380,7 @@ module Worldwide
       end
     end
 
-    test "building_number_requrired returns values as expected" do
+    test "building_number_required returns values as expected" do
       [
         [:ca, true],
         [:in, false],
@@ -389,6 +389,17 @@ module Worldwide
         [:us, true],
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).building_number_required
+      end
+    end
+
+    test "building_number_may_be_in_address2 returns values as expected" do
+      [
+        [:ca, false],
+        [:de, true],
+        [:jp, true],
+        [:us, false],
+      ].each do |region_code, expected_value|
+        assert_equal expected_value, Worldwide.region(code: region_code).building_number_may_be_in_address2
       end
     end
 
