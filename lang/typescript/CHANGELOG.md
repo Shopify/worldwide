@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- bf28729: Rework yaml loading, add build-time validation, redudce bundle size
+- bf28729: Rework yaml loading, add build-time validation, reduce bundle size
 
 ## 0.4.1
 
