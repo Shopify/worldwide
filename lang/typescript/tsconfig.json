@@ -10,11 +10,13 @@
         "baseUrl": ".",
         "rootDir": ".",
         "types": ["vitest/globals"],
+        "verbatimModuleSyntax": true,
     },
     "include": [
         "src/**/*.ts",
         "vitest.config.ts",
-        "rollup.config.ts"
+        "rollup.config.ts",
+        "rollup-plugin-regions-yaml/**/*.ts"
     ],
     "exclude": [
         "node_modules",

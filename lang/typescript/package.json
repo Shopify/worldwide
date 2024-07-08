@@ -34,13 +34,16 @@
     "build": "rollup -c rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
     "clean": "rimraf ./dist",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src *.config.ts",
-    "format": "prettier src *.config.ts --write",
+    "lint": "eslint src rollup-plugin-regions-yaml *.config.ts",
+    "format": "prettier src rollup-plugin-regions-yaml *.config.ts --write",
     "test": "vitest run --config vitest.config.ts",
     "test:watch": "vitest",
-    "release": "pnpm build && changeset publish --no-git-tag"
+    "release": "pnpm build && changeset publish --no-git-tag",
+    "package:publint": "npx publint",
+    "package:attw": "attw $(npm pack) && rimraf shopify-worldwide-*.tgz"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.3",
     "@babel/core": "^7.24.5",
     "@changesets/cli": "^2.27.3",
     "@rollup/plugin-typescript": "^11.1.6",
@@ -61,7 +64,8 @@
     "rollup-plugin-dts": "^6.1.1",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "vitest": "^1.6.0",
+    "zod": "^3.23.8"
   },
   "prettier": "@shopify/prettier-config"
 }

@@ -1,6 +1,6 @@
 import {concatAddressField} from '../utils/address-fields';
 import {getConcatenationRules, getRegionConfig} from '../utils/regions';
-import {Address} from '../types/address';
+import type {Address} from '../types/address';
 
 /**
  * Generate a concatenated address2 string based on the region of the given address
