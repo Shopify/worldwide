@@ -81,12 +81,12 @@ zh-TW:
             contains_html_tags_informative: 地址不得包含 HTML
             contains_url_instructional: 地址不得包含網址
             contains_url_informative: 地址不得包含網址
-            missing_building_number_instructional: 如果您的地址有建築物號碼，請新增建築物號碼
-            missing_building_number_informative: 可能未輸入建築物號碼
+            missing_building_number_instructional: 如果您的地址有門牌號碼，請新增門牌號碼
+            missing_building_number_informative: 可能未輸入門牌號碼
             street_unknown_for_zip_instructional: 請輸入 %{zip} 的有效街道名稱
             street_unknown_for_zip_informative: 街道名稱與 %{zip} 不相符
-            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此建築物號碼
-            building_number_invalid_informative: 在 %{zip} %{street} 找不到此建築物號碼
+            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此門牌號碼
+            building_number_invalid_informative: 在 %{zip} %{street} 找不到此門牌號碼
             unknown_for_address_instructional: 地址第 1 行可能並不正確
             unknown_for_address_informative: 地址第 1 行可能並不正確
         address2:
@@ -97,12 +97,12 @@ zh-TW:
             blank_instructional: 輸入公寓、套房等
             blank_informative: 缺少公寓或套房
             too_long_instructional: 第二行地址過長 (最多 255 個字元)
-            missing_building_number_instructional: 如果您的地址有建築物號碼，請新增建築物號碼
-            missing_building_number_informative: 可能未輸入建築物號碼
+            missing_building_number_instructional: 如果您的地址有門牌號碼，請新增門牌號碼
+            missing_building_number_informative: 可能未輸入門牌號碼
             street_unknown_for_zip_instructional: 請輸入 %{zip} 的有效街道名稱
             street_unknown_for_zip_informative: "%{zip} 的街道名稱無效"
-            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此建築物號碼
-            building_number_invalid_informative: 在 %{zip} %{street} 找不到此建築物號碼
+            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此門牌號碼
+            building_number_invalid_informative: 在 %{zip} %{street} 找不到此門牌號碼
             too_long_informative: 第二行地址過長
             contains_emojis_instructional: 第二行地址不得包含表情符號
             contains_emojis_informative: 第二行地址不得包含表情符號
@@ -262,29 +262,29 @@ zh-TW:
             contains_html_tags_informative: 街道不得包含 HTML
         street_number:
           label:
-            default: 建築物號碼
-            optional: 建築物號碼 (選填)
+            default: 門牌號碼
+            optional: 門牌號碼 (選填)
           warnings:
-            contains_too_many_words: 建議「建築物號碼」少於 %{word_count} 個字
+            contains_too_many_words: 建議「門牌號碼」少於 %{word_count} 個字
           errors:
-            blank_instructional: 請輸入建築物號碼
-            blank_informative: 缺少建築物號碼
-            too_long_instructional: "「建築物號碼」過長 (最多 %{limit} 個字元)"
-            too_long_informative: 建築物號碼過長
-            contains_emojis_instructional: 建築物號碼不得包含表情符號
-            contains_emojis_informative: 建築物號碼不得包含表情符號
-            contains_mathematical_symbols_instructional: 建築物號碼不得包含數學符號
-            contains_mathematical_symbols_informative: 建築物號碼不得包含數學符號
-            contains_restricted_characters_instructional: 建築物號碼僅可包含字母、數字、當地字元和特殊字元
-            contains_restricted_characters_informative: 建築物號碼不得包含限制的字元
-            contains_html_tags_instructional: 建築物號碼不得包含 HTML
-            contains_html_tags_informative: 建築物號碼不得包含 HTML
-            contains_url_instructional: 建築物號碼不得包含網址
-            contains_url_informative: 建築物號碼不得包含網址
-            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此建築物號碼
-            building_number_invalid_informative: 在 %{zip} %{street} 找不到此建築物號碼
-            unknown_for_address_instructional: 請輸入有效的建築物號碼
-            unknown_for_address_informative: 建築物號碼無效
+            blank_instructional: 請輸入門牌號碼
+            blank_informative: 缺少門牌號碼
+            too_long_instructional: "「門牌號碼」過長 (最多 %{limit} 個字元)"
+            too_long_informative: 門牌號碼過長
+            contains_emojis_instructional: 門牌號碼不得包含表情符號
+            contains_emojis_informative: 門牌號碼不得包含表情符號
+            contains_mathematical_symbols_instructional: 門牌號碼不得包含數學符號
+            contains_mathematical_symbols_informative: 門牌號碼不得包含數學符號
+            contains_restricted_characters_instructional: 門牌號碼僅可包含字母、數字、當地字元和特殊字元
+            contains_restricted_characters_informative: 門牌號碼不得包含限制的字元
+            contains_html_tags_instructional: 門牌號碼不得包含 HTML
+            contains_html_tags_informative: 門牌號碼不得包含 HTML
+            contains_url_instructional: 門牌號碼不得包含網址
+            contains_url_informative: 門牌號碼不得包含網址
+            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此門牌號碼
+            building_number_invalid_informative: 在 %{zip} %{street} 找不到此門牌號碼
+            unknown_for_address_instructional: 請輸入有效的門牌號碼
+            unknown_for_address_informative: 門牌號碼無效
         neighborhood:
           label:
             default: 鄰
@@ -335,12 +335,12 @@ zh-TW:
             contains_html_tags_informative: "「地址第二行」不得包含 HTML 標籤"
             contains_url_instructional: "「地址第二行」不得包含網址"
             contains_url_informative: "「地址第二行」不得包含網址"
-            missing_building_number_instructional: 如果您的地址有建築物號碼，請新增建築物號碼
-            missing_building_number_informative: 如果您的地址有建築物號碼，請新增建築物號碼
+            missing_building_number_instructional: 如果您的地址有門牌號碼，請新增門牌號碼
+            missing_building_number_informative: 如果您的地址有門牌號碼，請新增門牌號碼
             street_unknown_for_zip_instructional: 請輸入 %{zip} 的有效街道名稱
             street_unknown_for_zip_informative: 請輸入 %{zip} 的有效街道名稱
-            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此建築物號碼
-            building_number_invalid_informative: 在 %{zip} %{street} 找不到此建築物號碼
+            building_number_invalid_instructional: 在 %{zip} %{street} 找不到此門牌號碼
+            building_number_invalid_informative: 在 %{zip} %{street} 找不到此門牌號碼
             unknown_for_address_instructional: "「地址第二行」可能並不正確"
             unknown_for_address_informative: "「地址第二行」可能並不正確"
           warnings:
