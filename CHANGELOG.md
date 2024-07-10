@@ -26,10 +26,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-
-- Improve tests related to building number requiredness [#249](https://github.com/Shopify/worldwide/pull/249)
+- Nil.
 
 ---
+
+## [1.6.2] - 2024-07-10
+
+- Improve tests related to building number requiredness [#249](https://github.com/Shopify/worldwide/pull/249)
+- Update Dutch translations for street_number [#236](https://github.com/Shopify/worldwide/pull/236)
 
 ## [1.6.1] - 2024-07-03
 - Move Units constants `SUPPORTED_HUMANIZATIONS` and `MEASUREMENT_KEYS` to `Worldwide.units.supported_humanizations` and `Worldwide.units.measurement_keys` [#240](https://github.com/Shopify/worldwide/pull/240)
