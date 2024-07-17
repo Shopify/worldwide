@@ -15,9 +15,14 @@ zip_example: '4750'
 phone_number_prefix: 352
 week_start_day: monday
 languages:
-  - en
-  - fr
-  - lb
+- en
+- fr
+- lb
+example_address:
+  address1: 17 Rue du Marché-aux-Herbes
+  city: Ville-Haute
+  zip: '1728'
+  phone: "+352 22 28 09"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

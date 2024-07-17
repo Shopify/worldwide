@@ -14,9 +14,15 @@ building_number_required: true
 week_start_day: sunday
 autofill_city_enabled: true
 languages:
-  - en
-  - ms
-  - zh-CN
+- en
+- ms
+- zh-CN
+example_address:
+  address1: The Istana
+  address2: Orchard Rd
+  city: Singapore
+  zip: '238823'
+  phone: "+65 8720 6021"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{country} {zip}_{phone}"

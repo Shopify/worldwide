@@ -30,6 +30,7 @@ module Worldwide
         "tags",
         "example_city",
         "example_city_zip",
+        "example_address",
       ]
 
       @raw_yml.each do |yml|
@@ -187,6 +188,24 @@ module Worldwide
               )
             end
           end
+        end
+      end
+    end
+
+    test "example_address contains the word joiner when additional_address_fields are present" do
+      word_joiner = "\u2060"
+
+      Regions.all.select(&:country?).each do |country|
+        next if country.additional_address_fields.blank?
+
+        example_address = country.example_address
+
+        next if example_address.blank?
+
+        country.combined_address_format["default"].keys.each do |key|
+          included = example_address[key].include?(word_joiner)
+
+          assert included, "#{country.iso_code} example_address #{key} should contain the unicode word joiner"
         end
       end
     end

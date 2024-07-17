@@ -16,8 +16,13 @@ phone_number_prefix: 43
 building_number_required: true
 building_number_may_be_in_address2: true
 languages:
-  - de
-  - en
+- de
+- en
+example_address:
+  address1: Josefsplatz 1
+  city: Wien
+  zip: '1015'
+  phone: "+43 1 53410"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

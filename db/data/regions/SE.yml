@@ -16,8 +16,13 @@ phone_number_prefix: 46
 building_number_required: true
 week_start_day: monday
 languages:
-  - en
-  - sv
+- en
+- sv
+example_address:
+  address1: Stortorget 2
+  city: Stockholm
+  zip: 103 16
+  phone: "+46 8 534 818 00"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

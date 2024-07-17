@@ -14,8 +14,14 @@ phone_number_prefix: 852
 building_number_required: true
 week_start_day: sunday
 languages:
-  - en
-  - zh-HK
+- en
+- zh-HK
+example_address:
+  company: The Peninsula Hotel
+  address1: Salisbury Rd
+  city: Tsim Sha Tsui
+  province_code: KL
+  phone: "+852 2920 2888"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{province} {country}_{phone}"

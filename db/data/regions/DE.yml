@@ -17,8 +17,13 @@ zip_example: '56068'
 phone_number_prefix: 49
 week_start_day: monday
 languages:
-  - de
-  - en
+- de
+- en
+example_address:
+  address1: Willy-Brandt-Straße 1
+  city: Berlin
+  zip: '10557'
+  phone: "+49 30 182722720"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

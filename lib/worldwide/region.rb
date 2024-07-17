@@ -17,6 +17,7 @@ module Worldwide
       :building_number_required,
       :currency,
       :example_city,
+      :example_address,
       :flag,
       :format,
       :format_extended,
@@ -64,6 +65,9 @@ module Worldwide
 
     # A major city in the given region that can be used as an example
     attr_accessor :example_city
+
+    # A full address in the given region that can be used as an example
+    attr_accessor :example_address
 
     # Unicode codepoints for this region's flag emoji
     attr_accessor :flag
@@ -262,6 +266,7 @@ module Worldwide
       @zip_example = nil
       @zip_prefixes = []
       @zip_regex = nil
+      @example_address = nil
 
       @parents = [].to_set
       @zones = []

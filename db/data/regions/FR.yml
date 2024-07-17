@@ -21,7 +21,12 @@ phone_number_prefix: 33
 building_number_required: true
 week_start_day: monday
 languages:
-  - fr
+- fr
+example_address:
+  address1: 6 Parvis Notre-Dame
+  city: Paris
+  zip: '75004'
+  phone: "+33 1 42 34 56 10"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

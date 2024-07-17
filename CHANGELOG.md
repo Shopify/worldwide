@@ -30,6 +30,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.7.0] - 2024-07-17
+- Introduce example_address to the worldwide region, update country ymls [#257](https://github.com/Shopify/worldwide/pull/257)
+
 ## [1.6.2] - 2024-07-10
 
 - Improve tests related to building number requiredness [#249](https://github.com/Shopify/worldwide/pull/249)
