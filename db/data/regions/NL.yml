@@ -18,8 +18,13 @@ building_number_required: true
 building_number_may_be_in_address2: true
 week_start_day: monday
 languages:
-  - en
-  - nl
+- en
+- nl
+example_address:
+  address1: Museumplein ⁠6
+  city: Amsterdam
+  zip: 1071 DJ
+  phone: "+31 20 570 5200"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

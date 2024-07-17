@@ -17,7 +17,13 @@ building_number_required: true
 building_number_may_be_in_address2: true
 week_start_day: monday
 languages:
-  - es
+- es
+example_address:
+  address1: Plaza del Rey ⁠1
+  city: Madrid
+  province_code: M
+  zip: '28004'
+  phone: "+34 91 701 72 67"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}"

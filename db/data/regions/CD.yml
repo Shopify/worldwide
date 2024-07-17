@@ -13,8 +13,10 @@ format:
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{country}_{phone}"
 emoji: 🇨🇩
 languages:
-  - fr
-  - sw
-# The DRC uses two time zones (Africa/Kinshasa, UTC+1) and (Africa/Lubumbashi, UTC+2).
-# But the DRC does not use postal codes, so we cannot determine the time zone based on the postal code.
-# For now, we don't encode timezone information for DRC for this reason.
+- fr
+- sw
+example_address:
+  address1: Palais de la Nation
+  address2: Av. de Lemera
+  city: Kinshasa
+  phone: "+243 990 819 824"

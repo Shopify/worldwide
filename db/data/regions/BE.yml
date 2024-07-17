@@ -17,10 +17,15 @@ building_number_required: true
 building_number_may_be_in_address2: true
 week_start_day: monday
 languages:
-  - de
-  - en
-  - fr
-  - nl
+- de
+- en
+- fr
+- nl
+example_address:
+  address1: Rue Brederode ⁠16
+  city: Bruxelles
+  zip: '1000'
+  phone: "+32 (0)2-551.20.20"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

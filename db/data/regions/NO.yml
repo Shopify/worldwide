@@ -15,9 +15,14 @@ zip_regex: "^(NO?( |-)?)?(?!8099|917\\d)(\\d{4})$"
 phone_number_prefix: 47
 week_start_day: monday
 languages:
-  - en
-  - nb
-  - "no"
+- en
+- nb
+- 'no'
+example_address:
+  address1: Huk Aveny 35
+  city: Oslo
+  zip: '0287'
+  phone: "+47 22 13 52 80"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

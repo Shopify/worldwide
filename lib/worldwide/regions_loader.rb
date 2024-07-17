@@ -105,6 +105,7 @@ module Worldwide
       region.flag = spec["emoji"]
       region.format = spec["format"]
       region.format_extended = spec["format_extended"] || {}
+      region.example_address = spec["example_address"] || nil
       region.group = spec["group"]
       region.group_name = spec["group_name"]
       region.hide_provinces_from_addresses = spec["hide_provinces_from_addresses"] || false

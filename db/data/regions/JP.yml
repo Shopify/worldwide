@@ -16,8 +16,14 @@ building_number_required: true
 building_number_may_be_in_address2: true
 week_start_day: sunday
 languages:
-  - en
-  - ja
+- en
+- ja
+example_address:
+  address1: 永田町２丁目３−１
+  city: 千代田区
+  province_code: JP-13
+  zip: 100-0014
+  phone: "+81 (3) 3581-0101"
 format:
   edit: "{country}_{lastName}{firstName}_{company}_{zip}{province}_{city}_{address1}_{address2}_{phone}"
   show: "{country} 〒{zip}_{province} {city}_{address1}_{address2}_{company}_{lastName} {firstName}様_{phone}"

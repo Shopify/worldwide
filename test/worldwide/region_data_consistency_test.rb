@@ -163,5 +163,57 @@ module Worldwide
         assert_equal "Türkiye", Worldwide.region(code: "TR").full_name
       end
     end
+
+    test "example_address only uses known keys" do
+      known_keys = ["company", "address1", "address2", "city", "province_code", "zip", "phone"].to_set
+
+      Regions.all.select(&:country?).each do |country|
+        next if country.example_address.blank?
+
+        country.example_address.keys.each do |key|
+          assert_includes known_keys, key, "Unexpected key #{key.inspect} in example_address for #{country.iso_code}."
+        end
+      end
+    end
+
+    test "example_address includes a valid province code if the country has provinces" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.zones.none?(&:province?)
+
+        province_code = country.example_address["province_code"]
+
+        assert_predicate province_code, :present?, "Example address for #{country.iso_code} should have a province."
+        assert_includes(
+          country.zones.map(&:legacy_code),
+          province_code,
+          "Province #{province_code.inspect} not valid for #{country.iso_code}",
+        )
+      end
+    end
+
+    test "example_address zip is valid if present" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.example_address.blank?
+
+        zip = country.example_address["zip"]
+        province_code = country.example_address["province_code"]
+
+        next if zip.blank?
+
+        assert zip.is_a?(String), "zip #{zip.inspect} for #{country.iso_code} is not a String"
+        assert country.valid_zip?(zip), "zip #{zip.inspect} invalid for #{country.iso_code}"
+
+        next if country.zones.none?(&:province?)
+
+        province = country.zone(code: province_code)
+
+        assert_not_nil province, "Can't find province #{province_code.inspect} in #{country.iso_code}"
+
+        assert(
+          province.valid_zip?(zip),
+          "zip #{zip.inspect} invalid for #{province_code} in #{country.iso_code}",
+        )
+      end
+    end
   end
 end

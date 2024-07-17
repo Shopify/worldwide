@@ -17,11 +17,16 @@ building_number_required: true
 building_number_may_be_in_address2: true
 week_start_day: monday
 languages:
-  - de
-  - en
-  - fr
-  - it
-  - rm
+- de
+- en
+- fr
+- it
+- rm
+example_address:
+  address1: Stauffacherstrasse 65/59g
+  city: Berne
+  zip: '3003'
+  phone: "+41 31 377 77 77"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"

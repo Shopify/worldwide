@@ -17,7 +17,13 @@ building_number_required: true
 building_number_may_be_in_address2: true
 week_start_day: monday
 languages:
-  - it
+- it
+example_address:
+  address1: Piazza della Rotonda
+  city: Roma
+  province_code: RM
+  zip: '00186'
+  phone: "+39 06 6830 0230"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city} {province}_{country}_{phone}"
