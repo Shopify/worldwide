@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Nil.
+- Add consistency test for default and optional field labels [#258](https://github.com/Shopify/worldwide/pull/258)
 
 ---
 

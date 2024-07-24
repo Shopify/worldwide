@@ -16,7 +16,69 @@ module Worldwide
       end
     end
 
+    test "All label overrides have a matching \"optional\" version" do
+      override_file_paths = Dir.glob(File.join(["db", "data", "regions", "*", "*.yml"])).sort
+
+      override_file_paths.each do |file_path|
+        overrides = flatten_hash(YAML.safe_load_file(file_path))
+
+        default_labels = overrides.select { |key, _value| key[-2..] == ["label", "default"] }
+        optional_labels = overrides.select { |key, _value| key[-2..] == ["label", "optional"] }
+
+        default_label_keys = default_labels.keys.map { |key| key[0...-2] }
+        optional_label_keys = optional_labels.keys.map { |key| key[0...-2] }
+
+        missing_optional_versions = default_label_keys - optional_label_keys
+
+        assert_empty(missing_optional_versions, "Missing `optional` version of #{missing_optional_versions}")
+
+        missing_default_versions = optional_label_keys - default_label_keys
+
+        assert_empty(missing_optional_versions, "Missing `default` version of #{missing_default_versions}")
+
+        default_labels.each do |key, value|
+          optional_key = key[0...-1] + ["optional"]
+
+          assert_not_equal(value, optional_labels[optional_key], "Expected that the label for `#{key[-3]}` and its optional version in `#{file_path}` would differ. Instead found that they both are: `#{value}`")
+          assert(
+            differ_only_in_contents_of_parens(value, optional_labels[optional_key]) ||
+            differ_only_in_optionality(value, optional_labels[optional_key]),
+            "Expected that the label for `#{key[-3]}` and its optional version in `#{file_path}` would only differ by the contents of the parentheses. Instead found:\n\t default: #{value}\n\toptional: #{optional_labels[optional_key]}",
+          )
+        end
+      rescue StandardError => e
+        raise StandardError, "Had a problem while analyzing `#{file_path}`: #{e}"
+      end
+    end
+
     private
+
+    def flatten_hash(hash, output = {}, parent_key = [])
+      raise ArgumentError("Expected a hash") unless hash.is_a?(Hash)
+
+      hash.keys.each do |key|
+        current_key = parent_key + [key]
+
+        if hash[key].is_a?(Hash)
+          flatten_hash(hash[key], output, current_key)
+        else
+          output[current_key] = hash[key]
+        end
+      end
+
+      output
+    end
+
+    def differ_only_in_contents_of_parens(default, optional)
+      default == optional.gsub(/ ?[\(（].*?[\)）]/, "")
+    end
+
+    # For one label, our Korean translator has opted for a phrasing that already has paretheses in the core text.
+    # This means that the (optional) phrasing shares the same parentheses, after a comma.
+    # In order to avoid failing the test on that label, we need to explicitly search for ", optional" in Korean.
+    def differ_only_in_optionality(default, optional)
+      default == optional.gsub(/, 선택 사항/, "")
+    end
 
     def sanity_check_file(file_name)
       permitted_keys = ["autofill", "label", "label_optional", "errors", "warnings"]
