@@ -26,9 +26,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Adds Kosovo to Southern Europe [#216](https://github.com/Shopify/worldwide/pull/261)
+- Nil.
 
 ---
+
+## [1.7.2] - 2024-07-25
+- Associates Kosovo with Southern Europe [#216](https://github.com/Shopify/worldwide/pull/261)
 
 ## [1.7.1] - 2024-07-25
 - Update iana_to_rails_time_zone mappings for 11 tz's, add time zone data consistency tests[#259](https://github.com/Shopify/worldwide/pull/259)
