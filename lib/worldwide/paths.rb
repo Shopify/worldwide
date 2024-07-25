@@ -9,5 +9,6 @@ module Worldwide
     GENERATED_LOCALE_ROOT = File.join(OTHER_DATA_ROOT, "generated")
     DB_DATA_ROOT = File.join(GEM_ROOT, "db/data")
     REGIONS_ROOT = File.join(DB_DATA_ROOT, "regions")
+    TIME_ZONE_ROOT = File.join(OTHER_DATA_ROOT, "timezones")
   end
 end
