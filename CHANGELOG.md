@@ -26,10 +26,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Update iana_to_rails_time_zone mappings for 11 tz's, add time zone data consistency tests[#259](https://github.com/Shopify/worldwide/pull/259)
-- Add consistency test for default and optional field labels [#258](https://github.com/Shopify/worldwide/pull/258)
+- Nil.
 
 ---
+
+## [1.7.1] - 2024-07-25
+- Update iana_to_rails_time_zone mappings for 11 tz's, add time zone data consistency tests[#259](https://github.com/Shopify/worldwide/pull/259)
+- Add consistency test for default and optional field labels [#258](https://github.com/Shopify/worldwide/pull/258)
 
 ## [1.7.0] - 2024-07-17
 - Introduce example_address to the worldwide region, update country ymls [#257](https://github.com/Shopify/worldwide/pull/257)
