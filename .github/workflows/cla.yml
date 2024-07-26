@@ -9,7 +9,7 @@ on:
 
 jobs:
   cla:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24
     if: |
       (github.event.issue.pull_request
         && !github.event.issue.pull_request.merged_at
