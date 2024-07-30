@@ -27,9 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Update NZ postcode prefixes [#265](https://github.com/Shopify/worldwide/pull/265)
-
 ---
+
+## [1.7.3] - 2024-07-30
+- Update NZ postcode prefixes [#265](https://github.com/Shopify/worldwide/pull/265)
 
 ## [1.7.2] - 2024-07-25
 - Associates Kosovo with Southern Europe [#216](https://github.com/Shopify/worldwide/pull/261)
