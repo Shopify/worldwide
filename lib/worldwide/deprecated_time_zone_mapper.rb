@@ -22,7 +22,9 @@ module Worldwide
 
     DEPRECATED_ZONES_MAP = {
       "America/Indiana": "America/Indiana/Indianapolis",
+      "America/Indianapolis": "America/Indiana/Indianapolis",
       "America/Argentina": "America/Argentina/Buenos_Aires",
+      "Asia/Calcutta": "Asia/Kolkata",
       "Asia/Chongqing": "Asia/Shanghai",
       "Asia/Istanbul": "Europe/Istanbul",
       "Australia/ACT": "Australia/Sydney",
