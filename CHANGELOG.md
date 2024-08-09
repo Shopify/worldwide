@@ -27,12 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [1.8.0] - 2024-08-09
 - Bump Ruby to 3.3.1; drop support for 3.0.x [#264](https://github.com/Shopify/worldwide/pull/264)
 - Add support for partial zip matching for SG [#271](https://github.com/Shopify/worldwide/pull/271)
 
----
-
-## [1.7.5] = 2024-08-01
+## [1.7.5] - 2024-08-01
 - Update legacy timezone mappings for America/Indianapolis and Asia/Calcutta [#267](https://github.com/Shopify/worldwide/pull/267)
 
 ## [1.7.4] - 2024-08-01
