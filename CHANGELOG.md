@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- add support for additional address fields streetName, streetNumber in DE [#273](https://github.com/Shopify/worldwide/pull/273)
 
 ---
 
