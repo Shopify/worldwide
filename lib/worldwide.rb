@@ -17,8 +17,8 @@ require "worldwide/address_validator"
 require "worldwide/calendar"
 require "worldwide/cldr"
 require "worldwide/cldr/context_transforms"
-require "worldwide/currencies"
 require "worldwide/currency"
+require "worldwide/currencies"
 require "worldwide/deprecated_time_zone_mapper"
 require "worldwide/discounts"
 require "worldwide/fields"
@@ -109,4 +109,6 @@ module Worldwide
       Units
     end
   end
+
+  Regions.instance # eagerload
 end

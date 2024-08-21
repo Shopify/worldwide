@@ -287,7 +287,7 @@ module Worldwide
     end
 
     def world_yml
-      @world_yml ||= YAML.load_file(File.join(Worldwide::Paths::DB_DATA_ROOT, "world.yml"))
+      @world_yml ||= YAML.load_file(File.join(Worldwide::Paths::DB_DATA_ROOT, "world.yml"), freeze: true)
     end
   end
 end
