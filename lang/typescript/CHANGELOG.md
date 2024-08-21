@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.6.0
+
+### Minor Changes
+
+- 67dfcd9: Introduce additional field support for DE, defining the required additional fields `streetName`, `streetNumber`, and supporting the ability to concatenate and split address1. Update additional field neighborhood requirement in BR.
+
 ## 0.5.0
 
 ### Minor Changes
