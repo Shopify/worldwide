@@ -444,7 +444,7 @@ module Worldwide
     test "additional_address_fields returns values as expected" do
       [
         [:us, []],
-        [:br, [{ "name" => "streetName", "required" => true }, { "name" => "streetNumber", "required" => true }, { "name" => "line2" }, { "name" => "neighborhood" }]],
+        [:br, [{ "name" => "streetName", "required" => true }, { "name" => "streetNumber", "required" => true }, { "name" => "line2" }, { "name" => "neighborhood", "required" => true }]],
         [:be, [{ "name" => "streetName", "required" => true }, { "name" => "streetNumber", "required" => true }]],
         [:id, [{ "name" => "line2" }, { "name" => "neighborhood" }]],
         [:tr, [{ "name" => "line2" }, { "name" => "neighborhood", "required" => true }]],
