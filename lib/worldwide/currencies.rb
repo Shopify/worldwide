@@ -4,15 +4,24 @@ module Worldwide
   module Currencies
     include Enumerable
     extend self
-    CURRENCIES_FILE_PATH = File.join(Worldwide::Paths::CLDR_ROOT, "locales", "en", "currencies.yml")
-    CURRENCY_CODES_FILE_PATH = File.join(Worldwide::Paths::OTHER_DATA_ROOT, "currency", "codes.yml")
+
+    CURRENCY_CODES = YAML.safe_load_file(
+      File.join(Worldwide::Paths::OTHER_DATA_ROOT, "currency/codes.yml"),
+      freeze: true,
+    )
+    private_constant :CURRENCY_CODES
+
+    NUMERIC_THREE_TO_ALPHA_THREE_DB = CURRENCY_CODES.to_h do |key, value|
+      [value["three_digit_code"].to_i, key.to_s.upcase.to_sym]
+    end.freeze
+    private_constant :NUMERIC_THREE_TO_ALPHA_THREE_DB
 
     def each(&block)
-      all_currencies.each(&block)
+      ALL_CURRENCIES.each(&block)
     end
 
     def all
-      all_currencies
+      ALL_CURRENCIES
     end
 
     # Convert ISO-4217 numeric-three code to ISO-4217 alpha-three code
@@ -23,39 +32,25 @@ module Worldwide
       else
         numeric_code&.to_s&.to_i
       end
-      numeric_three_to_alpha_three_db[lookup_code]&.to_s
+      NUMERIC_THREE_TO_ALPHA_THREE_DB[lookup_code]&.to_s
     end
 
     # Convert ISO-4217 alpha-three code to ISO-4217 numeric-three code
     # Note that we support some currencies (e.g. JEP) that are not recognized by ISO,
     # and there is no numeric-three code for these currencies, so nil will be returned.
     def numeric_code_for(alpha_code)
-      currency_codes.dig(alpha_code&.to_s&.upcase, "three_digit_code")&.to_i
+      CURRENCY_CODES.dig(alpha_code&.to_s&.upcase, "three_digit_code")&.to_i
     end
 
-    private
-
-    def all_currencies
-      @all_currencies ||= begin
-        currencies = {}
-        YAML.load_file(CURRENCIES_FILE_PATH)["en"]["currencies"].map do |code, _name|
-          currencies[code] = Currency.new(code: code)
-        end.sort_by(&:currency_code)
-      end
+    currencies = YAML.load_file(
+      File.join(Worldwide::Paths::CLDR_ROOT, "locales/en/currencies.yml"),
+      freeze: true,
+    )
+    ALL_CURRENCIES = currencies["en"]["currencies"].map do |code, _name|
+      Currency.new(code: code)
     end
-
-    def currency_codes
-      @currency_codes ||= YAML.safe_load_file(CURRENCY_CODES_FILE_PATH)
-    end
-
-    def map_alpha_three_to_numeric_three
-      currency_codes
-    end
-
-    def numeric_three_to_alpha_three_db
-      @map_numeric_three_to_alpha_three ||= currency_codes.to_h do |key, value|
-        [value["three_digit_code"].to_i, key.to_s.upcase.to_sym]
-      end
-    end
+    ALL_CURRENCIES.sort_by!(&:currency_code)
+    ALL_CURRENCIES.freeze
+    private_constant :ALL_CURRENCIES
   end
 end

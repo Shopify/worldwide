@@ -2,13 +2,6 @@
 
 module Worldwide
   class Locale
-    class << self
-      def unknown
-        # Special CLDR value
-        @unknown = Locale.new("und")
-      end
-    end
-
     attr_reader :code
 
     def initialize(code)
@@ -19,6 +12,10 @@ module Worldwide
       @code = code.to_sym
       @name_cache = {}
     end
+
+    # Special CLDR value
+    @unknown = new("und")
+    singleton_class.attr_reader(:unknown)
 
     def language_subtag
       code.to_s.split("-", 2).first

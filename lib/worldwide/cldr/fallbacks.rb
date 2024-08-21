@@ -26,7 +26,10 @@ module Worldwide
       private
 
       def cldr_defined_parents
-        @cldr_defined_parents ||= YAML.load_file(File.join(Worldwide::Paths::CLDR_ROOT, "parent_locales.yml")).to_h { |k, v| [k.to_sym, v.to_sym] }
+        @cldr_defined_parents ||= YAML.load_file(
+          File.join(Worldwide::Paths::CLDR_ROOT, "parent_locales.yml"),
+          symbolize_names: true,
+        ).transform_values(&:to_sym)
       end
 
       def ancestry(locale)
