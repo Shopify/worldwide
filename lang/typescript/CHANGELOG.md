@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.0-next.0
+
+### Minor Changes
+
+- 1f5d405: Add optional tryRegexFallback param to splitAddress1 function to attempt splitting address lines that do not contain the reserved delimiter
+
 ## 0.6.0
 
 ### Minor Changes

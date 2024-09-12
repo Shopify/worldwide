@@ -36,6 +36,7 @@ module Worldwide
       :zip_requirement,
       :additional_address_fields,
       :combined_address_format,
+      :address1_regex,
     ]
 
     # A region may have more than one parent.
@@ -208,6 +209,9 @@ module Worldwide
     # A hash of the rules for concatening the additional address fields into the standard fields
     attr_accessor :combined_address_format
 
+    # An array of regex patterns of the address1 field, capturing the supported additional address fields
+    attr_accessor :address1_regex
+
     def initialize(
       alpha_three: nil,
       continent: false,
@@ -245,6 +249,7 @@ module Worldwide
 
       @additional_address_fields = []
       @combined_address_format = {}
+      @address1_regex = []
       @building_number_required = false
       @building_number_may_be_in_address2 = false
       @currency = nil

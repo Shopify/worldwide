@@ -15,4 +15,6 @@ export type FieldDefinitions = Record<
 export type RegionYamlConfig = Record<string, any> & {
   /** Format definition for an extended address */
   combined_address_format?: CombinedAddressFormat;
+  /** Regex patterns for standard address1 */
+  address1_regex?: string[];
 };

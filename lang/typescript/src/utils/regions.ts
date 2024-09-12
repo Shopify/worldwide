@@ -100,3 +100,15 @@ export function getConcatenationRules(
   }
   return concatenationRules;
 }
+
+/**
+ * The regex patterns to use for splitting address1 strings that do not
+ * contain a reserved delimiter
+ */
+export function getAddress1Regex(config: RegionYamlConfig): RegExp[] {
+  if (config.address1_regex === undefined) {
+    return [];
+  }
+
+  return config.address1_regex.map((pattern) => new RegExp(pattern));
+}

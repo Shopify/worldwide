@@ -63,6 +63,7 @@ const regionYamlSchema = z.object({
     })
     .strict()
     .optional(),
+  address1_regex: z.optional(z.array(z.string())),
 });
 export type RegionYaml = z.infer<typeof regionYamlSchema>;
 
@@ -106,7 +107,10 @@ export function validateRegionYaml(
   return regionYaml;
 }
 
-export type MinimalRegionYaml = Pick<RegionYaml, 'combined_address_format'>;
+export type MinimalRegionYaml = Pick<
+  RegionYaml,
+  'combined_address_format' | 'address1_regex'
+>;
 
 /**
  * Strip the YAML data down to only what we need to keep the resulting JS
@@ -115,5 +119,6 @@ export type MinimalRegionYaml = Pick<RegionYaml, 'combined_address_format'>;
 export function transformRegionYaml(regionYaml: RegionYaml): MinimalRegionYaml {
   return {
     combined_address_format: regionYaml.combined_address_format,
+    address1_regex: regionYaml.address1_regex,
   };
 }

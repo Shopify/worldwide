@@ -97,6 +97,7 @@ module Worldwide
     def apply_territory_attributes(region, spec)
       region.additional_address_fields = spec["additional_address_fields"] || []
       region.combined_address_format = spec["combined_address_format"] || {}
+      region.address1_regex = spec["address1_regex"] || []
       region.building_number_required = spec["building_number_required"] || false
       region.building_number_may_be_in_address2 = spec["building_number_may_be_in_address2"] || false
       currency_code = spec["currency"]

@@ -192,6 +192,21 @@ module Worldwide
       end
     end
 
+    test "address1_regex capture groups must belong to a limited set of allowed names" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.address1_regex.empty?
+
+        allowed_names = country.combined_address_format["default"]["address1"].map { |field| field["key"] }
+        country.address1_regex.each do |regex|
+          address1_regex = Regexp.new(regex)
+
+          address1_regex.names do |capture_group|
+            assert_includes allowed_names, capture_group, "#{country.iso_code} regex capture group #{capture_group} is not a supported additional address field"
+          end
+        end
+      end
+    end
+
     test "example_address contains the word joiner when additional_address_fields are present" do
       word_joiner = "\u2060"
 
