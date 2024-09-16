@@ -251,6 +251,7 @@ module Worldwide
       @flag = nil
       @format = {}
       @format_extended = {}
+      @name_alternates = []
       @group = nil
       @group_name = nil
       @languages = []

@@ -17,6 +17,7 @@ module Worldwide
       assert_nil region.legacy_name
       assert_empty(region.format)
       assert_empty(region.format_extended)
+      assert_empty(region.name_alternates)
       assert_nil region.numeric_three
       assert_equal false, region.province?
       # short_name currently throws a NoMethodError because it's not yet implemented
@@ -451,6 +452,38 @@ module Worldwide
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).additional_address_fields
       end
+    end
+
+    test "initializer sets expected default attributes" do
+      region = Region.new(iso_code: "ZZ")
+
+      assert_empty region.additional_address_fields
+      assert_empty(region.combined_address_format)
+      refute region.building_number_required
+      refute region.building_number_may_be_in_address2
+      assert_nil region.currency
+      assert_nil region.flag
+      assert_empty(region.format)
+      assert_empty(region.format_extended)
+      assert_empty region.name_alternates
+      assert_nil region.group
+      assert_nil region.group_name
+      assert_empty region.languages
+      assert_empty region.neighbours
+      assert_nil region.partial_zip_regex
+      assert_nil region.phone_number_prefix
+      assert_empty region.tags
+      assert_nil region.timezone
+      assert_empty(region.timezones)
+      assert_nil region.unit_system
+      assert_nil region.week_start_day
+      refute region.zip_autofill_enabled
+      assert_nil region.zip_example
+      assert_empty region.zip_prefixes
+      assert_nil region.zip_regex
+      assert_nil region.example_address
+      assert_empty region.parents
+      assert_empty region.zones
     end
   end
 end

@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Nil.
+- Add alternate Arabic names for UAE zones [#283](https://github.com/Shopify/worldwide/pull/283)
 
 ---
 
