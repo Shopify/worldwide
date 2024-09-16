@@ -26,9 +26,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Add alternate Arabic names for UAE zones [#283](https://github.com/Shopify/worldwide/pull/283)
+- Nil.
 
 ---
+
+## [1.10.0] - 2024-09-16
+- Add alternate Arabic names for UAE zones [#283](https://github.com/Shopify/worldwide/pull/283)
 
 ## [1.9.0] - 2024-08-12
 - add support for additional address fields streetName, streetNumber in DE [#273](https://github.com/Shopify/worldwide/pull/273)
