@@ -26,6 +26,15 @@ module Worldwide
       assert_equal "£", Worldwide.currency(code: "JEP").symbol
     end
 
+    test "#symbol correctly returns the currency symbol for overridden CLDR SEK currency entries" do
+      I18n.with_locale(:en) do
+        assert_equal "SEK", Worldwide.currency(code: "SEK").symbol
+      end
+      I18n.with_locale(:sv) do
+        assert_equal "kr", Worldwide.currency(code: "SEK").symbol
+      end
+    end
+
     test "#label returns the translated values of a currency for USD currency iso code in en" do
       assert_equal "US dollar", @usd_currency.label(count: 1)
       assert_equal "US dollars", @usd_currency.label(count: 2)
@@ -165,6 +174,8 @@ module Worldwide
         [:en, :HKD, 12345, "HK$12,345.00"],
         [:"en-AU", :USD, 12.37, "$12.37"],
         [:"en-AU", :EUR, 12.37, "€12.37"],
+        [:en, :SEK, 12345, "SEK12,345.00"],
+        [:sv, :SEK, 12345, "12 345,00 kr"],
       ]
 
       data.each do |locale, currency_code, input, expected|
