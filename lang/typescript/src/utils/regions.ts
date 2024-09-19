@@ -110,5 +110,5 @@ export function getAddress1Regex(config: RegionYamlConfig): RegExp[] {
     return [];
   }
 
-  return config.address1_regex.map((pattern) => new RegExp(pattern));
+  return config.address1_regex.map((pattern) => new RegExp(pattern, 'i'));
 }

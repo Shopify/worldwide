@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Add address1_regex to regions [#281](https://github.com/Shopify/worldwide/pull/281)
+- Add address1_regex for BE, CL, MX, ES, IL [#282](https://github.com/Shopify/worldwide/pull/282)
 
 ---
 
