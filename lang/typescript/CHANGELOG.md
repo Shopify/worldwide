@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.0-next.1
+
+### Minor Changes
+
+- Add address1 regex for BE, BR, CL, ES, IL, MX
+
 ## 0.7.0-next.0
 
 ### Minor Changes
