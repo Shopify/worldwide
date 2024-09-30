@@ -119,6 +119,46 @@ describe('splitAddress1', () => {
 
   test.each([
     {
+      address: 'Ziegeleiweg 3',
+      expected: {streetName: 'Ziegeleiweg', streetNumber: '3'},
+    },
+    {
+      address: 'Sexauerstraße 3a',
+      expected: {streetName: 'Sexauerstraße', streetNumber: '3a'},
+    },
+    {
+      address: 'Straße des Friedens 6 A',
+      expected: {streetName: 'Straße des Friedens', streetNumber: '6 A'},
+    },
+    {
+      address: 'Ladenspelderstr. 52',
+      expected: {streetName: 'Ladenspelderstr.', streetNumber: '52'},
+    },
+    {
+      address: 'Marktstr.32',
+      expected: {streetName: 'Marktstr.', streetNumber: '32'},
+    },
+    {
+      address: 'Ringstraße, 16',
+      expected: {streetName: 'Ringstraße', streetNumber: '16'},
+    },
+    {
+      address: 'Ringstraße,16',
+      expected: {streetName: 'Ringstraße', streetNumber: '16'},
+    },
+    {
+      address: 'Lorbeerstr., 25',
+      expected: {streetName: 'Lorbeerstr.', streetNumber: '25'},
+    },
+  ])(
+    'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for DE',
+    ({address, expected}) => {
+      expect(splitAddress1('DE', address, true)).toEqual(expected);
+    },
+  );
+
+  test.each([
+    {
       address: 'Doornbergstraat 30',
       expected: {streetName: 'Doornbergstraat', streetNumber: '30'},
     },
