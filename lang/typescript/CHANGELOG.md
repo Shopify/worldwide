@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.0-next.2
+
+### Minor Changes
+
+- 3bfb56a: Add address1 regex for DE
+
 ## 0.7.0-next.1
 
 ### Minor Changes
