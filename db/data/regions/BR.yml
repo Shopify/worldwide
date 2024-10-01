@@ -28,6 +28,8 @@ format:
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city} {province}_{country}_{phone}"
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{neighborhood}_{city}{province}_{phone}"
+address1_regex:
+  - "^(?<streetName>(?!.*\\bnúmero\\b)[^\\d,]+(?<!\\s))(?:,? ?)(?<streetNumber>\\d+(?: ?[a-z])?)$"
 additional_address_fields:
   - name: streetName
     required: true

@@ -485,5 +485,15 @@ module Worldwide
       assert_empty region.parents
       assert_empty region.zones
     end
+
+    test "address1_regex returns values as expected" do
+      [
+        [:us, []],
+        [:nl, ["^(?<streetName>[^\\d]+) (?<streetNumber>\\d+(?: ?[a-z])?)$"]],
+        [:be, ["^(?<streetName>[^\\d,]+),? (?<streetNumber>\\d+(?: ?[a-z])?)$", "^(?<streetNumber>\\d+(?: ?[a-z])?),? (?<streetName>[^\\d,]+)$"]],
+      ].each do |region_code, expected_value|
+        assert_equal expected_value, Worldwide.region(code: region_code).address1_regex
+      end
+    end
   end
 end

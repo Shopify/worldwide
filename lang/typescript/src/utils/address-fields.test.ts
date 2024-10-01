@@ -3,6 +3,7 @@ import type {FieldConcatenationRule} from 'src/types/region-yaml-config';
 import {
   RESERVED_DELIMITER,
   concatAddressField,
+  regexSplitAddressField,
   splitAddressField,
 } from './address-fields';
 
@@ -211,6 +212,96 @@ describe('splitAddressField', () => {
 
       expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual({
         streetNumber: '123',
+      });
+    });
+  });
+
+  describe('regexSplitAddressField', () => {
+    test('creates an address object from string matching one of the defined regexes', () => {
+      const fieldDefinition: FieldConcatenationRule[] = [
+        {key: 'streetName'},
+        {key: 'streetNumber'},
+      ];
+      const regexPatterns = [
+        new RegExp('^(?<streetNumber>\\d+) (?<streetName>[^\\d]+)$'),
+        new RegExp('^(?<streetName>[^\\d]+) (?<streetNumber>\\d+)$'),
+      ];
+      const address = 'Main 123';
+
+      expect(
+        regexSplitAddressField(fieldDefinition, regexPatterns, address),
+      ).toEqual({
+        streetName: 'Main',
+        streetNumber: '123',
+      });
+    });
+
+    test('creates an address object from string matching multiple of the defined regexes', () => {
+      const fieldDefinition: FieldConcatenationRule[] = [
+        {key: 'streetName'},
+        {key: 'streetNumber'},
+      ];
+      const regexPatterns = [
+        new RegExp('^(?<streetName>[^\\d]+) (?<streetNumber>\\d+)$'),
+        new RegExp('^(?<dupName>[^\\d]+) (?<dupNumber>\\d+)$'),
+      ];
+      const address = 'Main 123';
+
+      expect(
+        regexSplitAddressField(fieldDefinition, regexPatterns, address),
+      ).toEqual({
+        streetName: 'Main',
+        streetNumber: '123',
+      });
+    });
+
+    test('creates a partial address object from string that does not match one of the defined regexes', () => {
+      const fieldDefinition: FieldConcatenationRule[] = [
+        {key: 'streetName'},
+        {key: 'streetNumber'},
+      ];
+      const regexPatterns = [
+        new RegExp('^(?<streetNumber>\\d+) (?<streetName>[^\\d]+)$'),
+      ];
+      const address = 'Main 123';
+
+      expect(
+        regexSplitAddressField(fieldDefinition, regexPatterns, address),
+      ).toEqual({
+        streetName: 'Main 123',
+      });
+    });
+
+    test('field definition order matters', () => {
+      const fieldDefinitionNumberFirst: FieldConcatenationRule[] = [
+        {key: 'streetNumber'},
+        {key: 'streetName'},
+      ];
+      const fieldDefinitionNameFirst: FieldConcatenationRule[] = [
+        {key: 'streetName'},
+        {key: 'streetNumber'},
+      ];
+      const regexPatterns = [
+        new RegExp('^(?<streetName>[^\\d]+) (?<streetNumber>\\d+)$'),
+      ];
+      const address = 'Main';
+      expect(
+        regexSplitAddressField(
+          fieldDefinitionNumberFirst,
+          regexPatterns,
+          address,
+        ),
+      ).toEqual({
+        streetNumber: 'Main',
+      });
+      expect(
+        regexSplitAddressField(
+          fieldDefinitionNameFirst,
+          regexPatterns,
+          address,
+        ),
+      ).toEqual({
+        streetName: 'Main',
       });
     });
   });

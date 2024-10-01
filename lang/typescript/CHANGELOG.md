@@ -1,5 +1,31 @@
 # @shopify/worldwide
 
+## 0.7.0
+
+### Minor Changes
+
+- bbacde1: Add address1 regex for BE, BR, CL, ES, IL, MX
+- b6e1c7f: Add address1 regex for DE
+- ee7b7a9: Add optional tryRegexFallback param to splitAddress1 function to attempt splitting address lines that do not contain the reserved delimiter
+
+## 0.7.0-next.2
+
+### Minor Changes
+
+- 3bfb56a: Add address1 regex for DE
+
+## 0.7.0-next.1
+
+### Minor Changes
+
+- Add address1 regex for BE, BR, CL, ES, IL, MX
+
+## 0.7.0-next.0
+
+### Minor Changes
+
+- 1f5d405: Add optional tryRegexFallback param to splitAddress1 function to attempt splitting address lines that do not contain the reserved delimiter
+
 ## 0.6.0
 
 ### Minor Changes

@@ -1,26 +1,54 @@
 import type {Address} from '../types/address';
-import {splitAddressField} from '../utils/address-fields';
-import {getRegionConfig, getConcatenationRules} from '../utils/regions';
+import {
+  RESERVED_DELIMITER,
+  splitAddressField,
+  regexSplitAddressField,
+} from '../utils/address-fields';
+import {
+  getRegionConfig,
+  getConcatenationRules,
+  getAddress1Regex,
+} from '../utils/regions';
 
 /**
- * Parse a concatenated address1 string based on the region specified by
- * country code
+ * Splits an address string into sub-fields using a reserved delimiter.
+ * Optionally provides a fallback mechanism to parse the address using
+ * a regex when the delimiter is absent, which should be used with caution
+ * as it may not provide accurate results.
+ *
  * @param countryCode 2-letter country code string
- * @param concatenatedAddress Combined address1 string
+ * @param address Combined address1 string
+ * @param tryRegexFallback Flag to attempt regex parsing as a fallback mechanism
  * @returns Partial Address object containing parsed address fields or null if
  * the region does not define an extended address format
  */
 export function splitAddress1(
   countryCode: string,
-  concatenatedAddress: string,
+  address: string,
+  tryRegexFallback = false,
 ): Partial<Address> | null {
   const config = getRegionConfig(countryCode);
   const fieldConcatenationRules = config
-    ? getConcatenationRules(config, concatenatedAddress, 'address1')
+    ? getConcatenationRules(config, address, 'address1')
     : undefined;
-  if (fieldConcatenationRules) {
-    return splitAddressField(fieldConcatenationRules, concatenatedAddress);
+  const address1Regex = config ? getAddress1Regex(config) : undefined;
+  if (!fieldConcatenationRules) {
+    return null;
   }
 
-  return null;
+  if (address === '') {
+    return {};
+  }
+
+  if (address.includes(RESERVED_DELIMITER)) {
+    return splitAddressField(fieldConcatenationRules, address);
+  }
+  if (tryRegexFallback && address1Regex) {
+    return regexSplitAddressField(
+      fieldConcatenationRules,
+      address1Regex,
+      address,
+    );
+  }
+  return {[fieldConcatenationRules[0].key]: address};
 }

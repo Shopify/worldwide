@@ -71,3 +71,26 @@ export function splitAddressField(
 
   return parsedAddressObject;
 }
+
+/**
+ * Utility function that attempts to parse an address string based on a regex
+ *
+ * @param fieldDefinition Array of definitions of address sub-fields
+ * @param regexPatterns Regex patterns for parsing sub-fields from an address string
+ * @param address Address string to parse
+ * @returns Partial Address object of fields parsed from string
+ */
+export function regexSplitAddressField(
+  fieldDefinition: FieldConcatenationRule[],
+  regexPatterns: RegExp[],
+  address: string,
+): Partial<Address> {
+  for (const regex of regexPatterns) {
+    const match = address.match(regex);
+    if (match?.groups) {
+      // Return the first group that matches
+      return match.groups;
+    }
+  }
+  return {[fieldDefinition[0].key]: address};
+}
