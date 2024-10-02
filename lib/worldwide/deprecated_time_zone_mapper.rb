@@ -57,6 +57,7 @@ module Worldwide
       "Etc/UCT": "UTC",
       "Etc/Universal": "UTC",
       "Etc/Zulu": "UTC",
+      "Europe/Kiev": "Europe/Kyiv",
       GB: "Europe/London",
       "GB-Eire": "Europe/London",
       "GMT+0": "Etc/GMT",
