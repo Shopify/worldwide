@@ -26,13 +26,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+
+---
+
+## [1.11.0] - 2024-10-02
 - Add address1_regex to regions [#281](https://github.com/Shopify/worldwide/pull/281)
 - Add address1_regex for BE, CL, MX, ES, IL [#282](https://github.com/Shopify/worldwide/pull/282)
 - Add address1_regex for DE [#286](https://github.com/Shopify/worldwide/pull/286)
 - Update legacy timezone mappings for Europe/Kiev [#288](https://github.com/Shopify/worldwide/pull/288)
 
-
----
 
 ## [1.10.0] - 2024-09-16
 - Add alternate Arabic names for UAE zones [#283](https://github.com/Shopify/worldwide/pull/283)
