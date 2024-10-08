@@ -137,13 +137,18 @@ module Worldwide
       number = input.downcase
 
       ["ext", "x", ";"].each do |separator|
-        if number.include?(separator)
-          m = number.match(Regexp.new("(?<base>[0-9a-z +-]*)\\s*#{separator}\\.?\\s*(?<ext>.*)"))
-          return [m["base"], m["ext"]] unless m.nil?
-        end
+        next unless number.include?(separator)
+
+        m = number.match(Regexp.new(
+          "(?<base>[0-9a-z +-]*)\\s*#{separator}\\.?\\s*(?<ext>.*)",
+          timeout: 1,
+        ))
+        return [m["base"], m["ext"]] unless m.nil?
       end
 
       # If we get this far, then we have not found an extension, and assume that the full input is just a public number
+      [input, nil]
+    rescue Regexp::TimeoutError
       [input, nil]
     end
 
