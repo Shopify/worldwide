@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Nil.
 ---
 
+## [1.12.0] - 2024-10-11
+- Update Address splitting methods to split on the first delimiter [#291](https://github.com/Shopify/worldwide/pull/291)
+
 ## [1.11.1] - 2024-10-02
 - Configure regexp timeout in Worldwide#Phone [#290](https://github.com/Shopify/worldwide/pull/290)
 

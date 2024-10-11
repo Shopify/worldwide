@@ -251,6 +251,13 @@ module Worldwide
       assert_equal expected_hash, address.split_address1
     end
 
+    test "split_address1 splits on the first delimiter" do
+      address = Address.new(address1: "Main Street⁠123⁠ n° 145", country_code: "BR")
+      expected_hash = { "street_name" => "Main Street", "street_number" => "123⁠ n° 145" }
+
+      assert_equal expected_hash, address.split_address1
+    end
+
     test "split_address1 returns only street number if no string is present before the delimiter" do
       cl_address = Address.new(address1: "⁠123", country_code: "CL")
       br_address = Address.new(address1: "⁠123", country_code: "BR")
@@ -347,6 +354,13 @@ module Worldwide
 
       assert_equal expected_hash, cl_address.split_address2
       assert_equal expected_hash, br_address.split_address2
+    end
+
+    test "split_address2 splits on the first delimiter" do
+      address = Address.new(address2: "1樓⁠士林區⁠123", country_code: "TW")
+      expected_hash = { "line2" => "1樓", "neighborhood" => "士林區⁠123" }
+
+      assert_equal expected_hash, address.split_address2
     end
 
     test "split_address2 returns line2 and neighborhood when both values are present and separated by a delimiter" do
