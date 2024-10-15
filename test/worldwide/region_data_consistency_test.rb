@@ -213,5 +213,17 @@ module Worldwide
         )
       end
     end
+
+    # lookbehinds are not supported by all browsers, https://caniuse.com/js-regexp-lookbehind
+    test "address1_regex does not contain positive or negative lookbehinds" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.address1_regex.blank?
+
+        country.address1_regex.each do |regex|
+          assert_no_match("?>=", regex, "Positive lookbehind found in #{country.iso_code}")
+          assert_no_match("?>!", regex, "Negative lookbehind found in #{country.iso_code}")
+        end
+      end
+    end
   end
 end

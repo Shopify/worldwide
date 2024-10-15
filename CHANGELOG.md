@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Nil.
 ---
 
+## [1.12.1] - 2024-10-15
+- Update BR address1_regex to remove lookbehinds [#](https://github.com/Shopify/worldwide/pull/)
+
 ## [1.12.0] - 2024-10-11
 - Update Address splitting methods to split on the first delimiter [#291](https://github.com/Shopify/worldwide/pull/291)
 
