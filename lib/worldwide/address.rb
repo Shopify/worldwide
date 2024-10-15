@@ -167,13 +167,15 @@ module Worldwide
 
     def split_address1
       additional_fields = region.combined_address_format.dig(script_from_string(address1), "address1") || []
-      split_fields_arr = address1&.split(RESERVED_DELIMITER) || []
+      number_of_fields = additional_fields.size
+      split_fields_arr = address1&.split(RESERVED_DELIMITER, number_of_fields) || []
       split_fields(additional_fields, split_fields_arr)
     end
 
     def split_address2
       additional_fields = region.combined_address_format.dig(script_from_string(address2), "address2") || []
-      split_fields_arr = address2&.split(RESERVED_DELIMITER) || []
+      number_of_fields = additional_fields.size
+      split_fields_arr = address2&.split(RESERVED_DELIMITER, number_of_fields) || []
       split_fields(additional_fields, split_fields_arr)
     end
 

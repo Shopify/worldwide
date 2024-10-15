@@ -82,6 +82,13 @@ describe('splitAddress1', () => {
     });
   });
 
+  test('splits the address on the first delimiter', () => {
+    expect(splitAddress1('CL', 'Main \u2060123\u2060abc', false)).toEqual({
+      streetName: 'Main',
+      streetNumber: '123\u2060abc',
+    });
+  });
+
   test('returns full address object when separated by delimiter and decorator', () => {
     expect(splitAddress1('BR', 'Main, \u2060123', false)).toEqual({
       streetName: 'Main',

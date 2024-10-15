@@ -38,6 +38,13 @@ describe('splitAddress2', () => {
     });
   });
 
+  test('splits the address on the first delimiter', () => {
+    expect(splitAddress2('CL', 'dpto 4 \u2060Centro\u2060abc')).toEqual({
+      line2: 'dpto 4',
+      neighborhood: 'Centro\u2060abc',
+    });
+  });
+
   describe('language override', () => {
     test("returns default format if language override doesn't match", () => {
       expect(splitAddress2('TW', '30號\u2060大甲區')).toEqual({
