@@ -379,7 +379,10 @@ describe('splitAddress1', () => {
     },
     {
       address: 'Rua Nair Costa Baldoino - número: 449',
-      expected: {streetName: 'Rua Nair Costa Baldoino - número: 449'},
+      expected: {
+        streetName: 'Rua Nair Costa Baldoino - número:',
+        streetNumber: '449',
+      },
     },
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for BR',
