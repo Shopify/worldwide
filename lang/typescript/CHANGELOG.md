@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.2
+
+### Patch Changes
+
+- 4064982: Update BR address1_regex to remove lookbehinds
+
 ## 0.7.1
 
 ### Patch Changes
