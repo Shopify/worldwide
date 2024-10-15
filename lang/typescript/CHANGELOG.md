@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.1
+
+### Patch Changes
+
+- 2c2b6f1: Handle input having multiple word joiners in address-splitting functions
+
 ## 0.7.0
 
 ### Minor Changes
