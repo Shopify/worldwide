@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Add `zip_prefixes` for Spain. [#295](https://github.com/Shopify/worldwide/pull/295)
+- Move expensive resource initialization into an explicit `eager_load!` namespace method
+[#297](https://github.com/Shopify/worldwide/pull/297)
 ---
 
 ## [1.12.1] - 2024-10-15

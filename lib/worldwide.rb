@@ -39,11 +39,17 @@ require "worldwide/units"
 require "worldwide/util"
 require "worldwide/zip"
 
+require "worldwide/rails/railtie" if defined?(Rails::Railtie)
+
 module Worldwide
   @currencies_cache = {}
   @locales_cache = {}
 
   class << self
+    def eager_load!
+      Regions.instance
+    end
+
     def address(**kwargs)
       Address.new(**kwargs)
     end
@@ -109,6 +115,4 @@ module Worldwide
       Units
     end
   end
-
-  Regions.instance # eagerload
 end
