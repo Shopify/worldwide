@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Add example_city_zip and priority accessors to Regions [#298](https://github.com/Shopify/worldwide/pull/298)
+- Add tax_type accessor to Regions [#299](https://github.com/Shopify/worldwide/pull/299)
 
 ---
 
