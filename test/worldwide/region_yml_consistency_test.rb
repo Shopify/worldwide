@@ -401,9 +401,23 @@ module Worldwide
       end
     end
 
+    test "priority is an Integer" do
+      Regions.all.select(&:province?).each do |province|
+        next unless province.priority
+
+        assert_kind_of Integer, province.priority, "Province priority should be an Integer for #{province.inspect}"
+      end
+    end
+
     test "example_city is available for each US state" do
       assert_predicate Worldwide.region(code: "US").zones, :all? do |state|
         !state.example_city&.empty?
+      end
+    end
+
+    test "example_city_zip is available for each US state" do
+      assert_predicate Worldwide.region(code: "US").zones, :all? do |state|
+        !state.example_city_zip&.empty?
       end
     end
 

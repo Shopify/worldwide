@@ -132,6 +132,8 @@ module Worldwide
       region.code_alternates = zone["code_alternates"] || []
       region.name_alternates = zone["name_alternates"] || []
       region.example_city = zone["example_city"]
+      region.example_city_zip = zone["example_city_zip"]
+      region.priority = zone["priority"]
       region.neighbours = zone["neighboring_zones"]
       region.zip_prefixes = zone["zip_prefixes"] || []
     end

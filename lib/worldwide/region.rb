@@ -17,6 +17,7 @@ module Worldwide
       :building_number_required,
       :currency,
       :example_city,
+      :example_city_zip,
       :example_address,
       :flag,
       :format,
@@ -28,6 +29,7 @@ module Worldwide
       :languages,
       :neighbours,
       :numeric_three,
+      :priority,
       :week_start_day,
       :unit_system,
       :zip_autofill_enabled,
@@ -66,6 +68,13 @@ module Worldwide
 
     # A major city in the given region that can be used as an example
     attr_accessor :example_city
+
+    # A zip code in the given region that can be used as an example; corresponds to example_city
+    attr_accessor :example_city_zip
+
+    # A value that can be used to order zones
+    # Some countries, Japan, for example, customarily order zones non-alphabetically.
+    attr_accessor :priority
 
     # A full address in the given region that can be used as an example
     attr_accessor :example_address
