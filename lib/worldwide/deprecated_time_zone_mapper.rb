@@ -16,7 +16,7 @@ module Worldwide
       private
 
       def iana_timezones
-        @iana_timezones ||= YAML.safe_load_file("#{Worldwide::Paths::DB_DATA_ROOT}/iana_to_rails_time_zone.yml")
+        @iana_timezones ||= YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/iana_to_rails_time_zone.yml")
       end
     end
 

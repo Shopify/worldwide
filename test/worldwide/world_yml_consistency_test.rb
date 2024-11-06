@@ -2,13 +2,13 @@
 
 require "test_helper"
 
-# Miscellaneous assertions about our files in db/data/regions/??.yml.
+# Miscellaneous assertions about our files in data/regions/??.yml.
 # This is intended to catch errors introduced when editing those files.
 
 module Worldwide
   class WorldYmlConsistencyTest < ActiveSupport::TestCase
     setup do
-      @raw_yml = YAML.load_file(File.join(Worldwide::Paths::DB_DATA_ROOT, "world.yml"))
+      @raw_yml = YAML.load_file(File.join(Worldwide::Paths::DATA_ROOT, "world.yml"))
     end
 
     test "every leaf node under '001' is a valid country code" do

@@ -411,7 +411,7 @@ $ address.split_address2
 
 The additional address fields that are part of each country's extended address format and their concatenation rules are defined in the country YAML files. For example:
 ```ruby
-# db/data/region/BR.yml
+# data/region/BR.yml
 additional_address_fields:
   - name: streetName
     required: true
