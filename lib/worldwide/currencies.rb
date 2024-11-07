@@ -6,7 +6,7 @@ module Worldwide
     extend self
 
     CURRENCY_CODES = YAML.safe_load_file(
-      File.join(Worldwide::Paths::OTHER_DATA_ROOT, "currency/codes.yml"),
+      File.join(Worldwide::Paths::CURRENCY_MAPPINGS, "codes.yml"),
       freeze: true,
     )
     private_constant :CURRENCY_CODES

@@ -12,11 +12,15 @@ module Worldwide
 
     class << self
       def digits_and_rounding
-        @digits_and_rounding ||= YAML.safe_load_file(File.join(Worldwide::Paths::OTHER_DATA_ROOT, "currency", "digits.yml")).freeze
+        @digits_and_rounding ||= YAML.safe_load_file(
+          File.join(Worldwide::Paths::CURRENCY_MAPPINGS, "digits.yml"),
+        ).freeze
       end
 
       def minor_symbols
-        @minor_symbols ||= YAML.safe_load_file(File.join(Worldwide::Paths::OTHER_DATA_ROOT, "currency", "minor_symbols.yml")).freeze
+        @minor_symbols ||= YAML.safe_load_file(
+          File.join(Worldwide::Paths::CURRENCY_MAPPINGS, "minor_symbols.yml"),
+        ).freeze
       end
     end
 

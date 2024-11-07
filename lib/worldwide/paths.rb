@@ -6,6 +6,7 @@ module Worldwide
     DATA_ROOT = File.join(GEM_ROOT, "data")
     CLDR_ROOT = File.join(GEM_ROOT, "data/cldr")
     OTHER_DATA_ROOT = File.join(GEM_ROOT, "data/other")
+    CURRENCY_MAPPINGS = File.join(OTHER_DATA_ROOT, "currency/mappings")
     GENERATED_LOCALE_ROOT = File.join(OTHER_DATA_ROOT, "generated")
     REGIONS_ROOT = File.join(DATA_ROOT, "regions")
     TIME_ZONE_ROOT = File.join(OTHER_DATA_ROOT, "timezones")
