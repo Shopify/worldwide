@@ -72,9 +72,13 @@ module Worldwide
 
     test "#configure applies changes to I18n.config by default" do
       I18n.config.expects(:enforce_available_locales=).never
-      I18n.config.expects(:load_path=).times(4)
+      load_path = I18n.config.load_path
 
-      assert_instance_of I18n::Config, Worldwide::Config.configure_i18n
+      assert_changes(-> { I18n.config.load_path }) do
+        assert_instance_of(I18n::Config, Worldwide::Config.configure_i18n)
+      end
+    ensure
+      I18n.config.load_path = load_path
     end
 
     test "#configure sets expected number of available locales on i18n config" do
