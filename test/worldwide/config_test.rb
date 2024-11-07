@@ -77,6 +77,26 @@ module Worldwide
       assert_instance_of I18n::Config, Worldwide::Config.configure_i18n
     end
 
+    test "#configure sets expected number of available locales on i18n config" do
+      config = Worldwide::RubyI18nConfig.new
+      config.available_locales = "it"
+      config.load_path = []
+
+      Worldwide::Config.configure_i18n(i18n_config: config)
+
+      assert_equal 117, config.available_locales.size
+    end
+
+    test "#configure sets expected number of load path entries on i18n config" do
+      config = Worldwide::RubyI18nConfig.new
+      config.available_locales = "it"
+      config.load_path = []
+
+      Worldwide::Config.configure_i18n(i18n_config: config)
+
+      assert_equal(629, config.load_path.size)
+    end
+
     test "#configure sets enforce_available_locales to true if not explicitly set" do
       config = Worldwide::RubyI18nConfig.new
       Worldwide::Config.configure_i18n(i18n_config: config)
