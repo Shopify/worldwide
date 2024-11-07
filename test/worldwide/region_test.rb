@@ -86,8 +86,12 @@ module Worldwide
       assert_empty region.zip_prefixes
       assert_nil region.zip_regex
       assert_nil region.example_address
+      assert_nil region.example_city
+      assert_nil region.example_city_zip
       assert_empty region.parents
       assert_empty region.zones
+      assert_nil region.tax_name
+      assert_equal 0, (region.tax_rate * 100).floor
     end
 
     test "#short_name returns values as expected" do
@@ -507,6 +511,18 @@ module Worldwide
 
     test "#priority returns values as expected" do
       assert_equal 47, Worldwide.region(code: "JP").zone(code: "JP-01").priority
+    end
+
+    test "#tax_type returns values as expected" do
+      assert_equal "harmonized", Worldwide.region(code: "CA").zone(code: "ON").tax_type
+    end
+
+    test "#tax_name returns values as expected" do
+      assert_equal "HST", Worldwide.region(code: "CA").zone(code: "ON").tax_name
+    end
+
+    test "#tax_rate returns values as expected" do
+      assert_in_delta(0.13, Worldwide.region(code: "CA").zone(code: "ON").tax_rate)
     end
   end
 end

@@ -166,6 +166,9 @@ module Worldwide
     # "generic" VAT tax rate on "most" goods
     attr_reader :tax_rate
 
+    # The type of tax for this region, e.g. "harmonized"
+    attr_accessor :tax_type
+
     # tags that help us group the region, e.g. "EU-member"
     attr_accessor :tags
 

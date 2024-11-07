@@ -26,9 +26,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Add example_city_zip and priority accessors to Regions [#298](https://github.com/Shopify/worldwide/pull/298)
+- Nil.
 
 ---
+
+## [1.14.0] - 2024-11-07
+- Add example_city_zip and priority accessors to Regions [#298](https://github.com/Shopify/worldwide/pull/298)
+- Add tax_type accessor to Regions [#299](https://github.com/Shopify/worldwide/pull/299)
 
 ## [1.13.0] - 2024-11-06
 - Add `zip_prefixes` for Spain. [#295](https://github.com/Shopify/worldwide/pull/295)

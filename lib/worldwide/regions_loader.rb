@@ -134,6 +134,7 @@ module Worldwide
       region.example_city = zone["example_city"]
       region.example_city_zip = zone["example_city_zip"]
       region.priority = zone["priority"]
+      region.tax_type = zone["tax_type"] || nil
       region.neighbours = zone["neighboring_zones"]
       region.zip_prefixes = zone["zip_prefixes"] || []
     end
