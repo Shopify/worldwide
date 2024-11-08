@@ -26,9 +26,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Improve Worldwide::Config.configure_i18n performance [#301](https://github.com/Shopify/worldwide/pull/301)
+- Nil.
 
 ---
+
+## [1.14.1] - 2024-11-08
+- Improve Worldwide::Config.configure_i18n performance [#301](https://github.com/Shopify/worldwide/pull/301)
 
 ## [1.14.0] - 2024-11-07
 - Add example_city_zip and priority accessors to Regions [#298](https://github.com/Shopify/worldwide/pull/298)
