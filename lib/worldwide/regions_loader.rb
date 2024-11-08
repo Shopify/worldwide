@@ -121,7 +121,7 @@ module Worldwide
       region.province_optional = spec["province_optional"] || false
       region.zip_autofill_enabled = spec["zip_autofill_enabled"] || false
       region.zip_example = spec["zip_example"]
-      region.zip_prefixes = spec["zip_prefixes"]
+      region.zip_prefixes = spec["zip_prefixes"] || []
       region.zip_requirement = spec["zip_requirement"]
       region.zip_regex = spec["zip_regex"]
       region.zips_crossing_provinces = spec["zips_crossing_provinces"]

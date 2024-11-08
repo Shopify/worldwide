@@ -212,6 +212,7 @@ module Worldwide
     # Regions that are sub-regions of this region.
     attr_reader :zones
 
+    attr_reader :deprecated
     # If true, then the province is optional for addresses in this region.
     attr_accessor :province_optional
 
