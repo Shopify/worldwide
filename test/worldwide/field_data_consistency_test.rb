@@ -17,7 +17,7 @@ module Worldwide
     end
 
     test "All label overrides have a matching \"optional\" version" do
-      override_file_paths = Dir.glob(File.join(["db", "data", "regions", "*", "*.yml"])).sort
+      override_file_paths = Dir.glob(File.join(["data", "regions", "*", "*.yml"])).sort
 
       override_file_paths.each do |file_path|
         overrides = flatten_hash(YAML.safe_load_file(file_path))

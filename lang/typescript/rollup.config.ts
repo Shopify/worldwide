@@ -23,7 +23,7 @@ export const mainConfig = {
   ],
   plugins: [
     regionsYaml({
-      directory: path.resolve(projectRootDir, '../../db/data/regions'),
+      directory: path.resolve(projectRootDir, '../../data/regions'),
     }),
     typescript({
       exclude: [

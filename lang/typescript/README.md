@@ -12,7 +12,7 @@ object with the country code and extended fields as defined in the region yaml.
 For example, the Brazil yaml defines the format as follows:
 
 ```yaml
-# db/data/region/BR.yml
+# data/region/BR.yml
 combined_address_format:
   address1:
     - key: streetName

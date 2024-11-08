@@ -18,6 +18,10 @@ module Worldwide
       "units",
     ].freeze
 
+    CLDR_LOCALE_PATH_REGEX = /locales#{File::SEPARATOR}(?<locale>[\w-]+)#{File::SEPARATOR}(?<component>\w+)\.(?:yml|rb)/
+    OTHER_LOCALE_PATH_REGEX = /#{File::SEPARATOR}(?<locale>[\w-]+)\.(?:yml|rb)/
+    REGIONS_LOCALE_PATH_REGEX = /#{File::SEPARATOR}(?<locale>[\w-]+)\.yml/
+
     class << self
       def configure_i18n(i18n_config: nil, additional_components: [])
         i18n_config ||= I18n.config
@@ -96,18 +100,36 @@ module Worldwide
       end
 
       def add_cldr_data(i18n_config, additional_components:)
+        locale_set = i18n_config.available_locales.map(&:to_s).to_set
         components = REQUIRED_CLDR_DATA + additional_components
-        locales = i18n_config.available_locales
-        i18n_config.load_path +=
-          Dir[File.join(Paths::CLDR_ROOT, "locales", "{#{locales.join(",")}}/{#{components.join(",")}}.{yml,rb}")]
+        i18n_config.load_path += cldr_locale_paths(locale_set, components)
+      end
+
+      def cldr_locale_paths(locale_set, components)
+        Dir[File.join(Paths::CLDR_ROOT, "locales", "*", "*.{yml,rb}")].select do |path|
+          match = path.match(CLDR_LOCALE_PATH_REGEX)
+          match && locale_set.include?(match[:locale]) && components.include?(match[:component])
+        end
       end
 
       def add_other_data(i18n_config)
-        locales = i18n_config.available_locales
-        i18n_config.load_path += Dir[File.join(Paths::OTHER_DATA_ROOT, "**", "{#{locales.join(",")}}.{yml,rb}")]
+        locale_set = i18n_config.available_locales.map(&:to_s).to_set
+        i18n_config.load_path += other_data_path(locale_set)
+        i18n_config.load_path += regions_data_path(locale_set)
+      end
 
-        i18n_config.load_path += Dir[File.join(Paths::REGIONS_ROOT, "??", "{#{locales.join(",")}}.yml")]
-        i18n_config.load_path += Dir[File.join(Paths::REGIONS_ROOT, "_default", "{#{locales.join(",")}}.yml")]
+      def other_data_path(locale_set)
+        Dir[File.join(Worldwide::Paths::OTHER_DATA_ROOT, "*", "*.{yml,rb}")].select do |path|
+          match = path.match(OTHER_LOCALE_PATH_REGEX)
+          match && locale_set.include?(match[:locale])
+        end
+      end
+
+      def regions_data_path(locale_set)
+        Dir[File.join(Worldwide::Paths::REGIONS_ROOT, "*", "*.{yml}")].select do |path|
+          match = path.match(REGIONS_LOCALE_PATH_REGEX)
+          match && locale_set.include?(match[:locale])
+        end
       end
     end
   end

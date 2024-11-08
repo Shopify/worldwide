@@ -12,7 +12,7 @@ module Worldwide
       @regions_by_cldr_code = {}
       @regions_by_iso_code = {}
 
-      # Load country/region definitions out of the db/data/regions/??.yml files
+      # Load country/region definitions out of the data/regions/??.yml files
       @regions = Dir["#{Worldwide::Paths::REGIONS_ROOT}/*.yml"].map do |filename|
         load_territory(filename)
       end.flatten
@@ -207,7 +207,7 @@ module Worldwide
 
     def country_codes
       @country_codes ||=
-        YAML.safe_load_file("#{Worldwide::Paths::DB_DATA_ROOT}/country_codes.yml")["country_codes"]
+        YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/country_codes.yml")["country_codes"]
     end
 
     def find_region(code:)
@@ -291,7 +291,7 @@ module Worldwide
     end
 
     def world_yml
-      @world_yml ||= YAML.load_file(File.join(Worldwide::Paths::DB_DATA_ROOT, "world.yml"), freeze: true)
+      @world_yml ||= YAML.load_file(File.join(Worldwide::Paths::DATA_ROOT, "world.yml"), freeze: true)
     end
   end
 end

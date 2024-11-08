@@ -24,7 +24,7 @@ module Worldwide
     end
 
     def extant
-      @extant ||= YAML.safe_load_file("#{::Worldwide::Paths::GEM_ROOT}/db/extant_outcodes.yml").dig("extant_outcodes")&.map do |key, value|
+      @extant ||= YAML.safe_load_file("#{::Worldwide::Paths::DATA_ROOT}/extant_outcodes.yml").dig("extant_outcodes")&.map do |key, value|
         [key, value.to_set]
       end&.to_h || {}
     end

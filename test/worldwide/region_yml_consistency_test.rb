@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-# Miscellaneous assertions about our files in db/data/regions/??.yml.
+# Miscellaneous assertions about our files in data/regions/??.yml.
 # This is intended to catch errors introduced when editing those files.
 
 module Worldwide
