@@ -29,6 +29,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Nil.
 
 ---
+## [1.14.2] - 2024-11-11
+- Update translations [#303](https://github.com/Shopify/worldwide/pull/303)
 
 ## [1.14.1] - 2024-11-08
 - Improve Worldwide::Config.configure_i18n performance [#301](https://github.com/Shopify/worldwide/pull/301)
