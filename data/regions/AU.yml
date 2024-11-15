@@ -8,11 +8,7 @@ tax_name: GST
 tax_inclusive: true
 group: Oceanian Countries
 group_name: Oceania
-# Some codes in the AU namespace are not in AU:
-#  - 2899 NF Norfolk Island
-#  - 6798 CX Christmas Island
-#  - 6799 CC Cocos (Keeling) Islands
-zip_regex: "^(?!2899|679[89])(\\d{4})$"
+zip_regex: "^(\\d{4})$"
 zip_example: '2060'
 phone_number_prefix: 61
 building_number_required: true

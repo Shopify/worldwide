@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Nil.
 
 ---
+## [1.14.3] - 2024-11-11
+- Remove zip exclusions for Norfolk Island, Christmas Island, and Cocos Islands in AU [#312](https://github.com/Shopify/worldwide/pull/312)
+
 ## [1.14.2] - 2024-11-11
 - Update translations [#303](https://github.com/Shopify/worldwide/pull/303)
 
