@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Nil.
+- Add street_number.missing_building_number messages [#313](https://github.com/Shopify/worldwide/pull/313)
 
 ---
 ## [1.14.2] - 2024-11-11
