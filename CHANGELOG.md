@@ -26,9 +26,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Add street_number.missing_building_number messages [#313](https://github.com/Shopify/worldwide/pull/313)
+- nil
 
 ---
+
+## [1.14.3] - 2024-12-02
+- Add street_number.missing_building_number messages [#313](https://github.com/Shopify/worldwide/pull/313)
+
 ## [1.14.2] - 2024-11-11
 - Update translations [#303](https://github.com/Shopify/worldwide/pull/303)
 
