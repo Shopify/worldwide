@@ -26,9 +26,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Configure Worldwide in railtie [#314](https://github.com/Shopify/worldwide/pull/314)
+- Nil
 
 ---
+
+## [1.15.0] - 2024-12-03
+- Configure Worldwide in railtie [#314](https://github.com/Shopify/worldwide/pull/314)
+
 ## [1.14.2] - 2024-11-11
 - Update translations [#303](https://github.com/Shopify/worldwide/pull/303)
 
