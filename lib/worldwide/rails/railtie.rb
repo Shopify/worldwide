@@ -9,6 +9,8 @@ module Worldwide
 
       initializer SETUP do |application|
         application.config.eager_load_namespaces << Worldwide
+
+        Worldwide::Config.configure_i18n(i18n_config: application.config.i18n)
       end
     end
   end
