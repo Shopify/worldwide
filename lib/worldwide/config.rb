@@ -22,9 +22,16 @@ module Worldwide
     OTHER_LOCALE_PATH_REGEX = /#{File::SEPARATOR}(?<locale>[\w-]+)\.(?:yml|rb)/
     REGIONS_LOCALE_PATH_REGEX = /#{File::SEPARATOR}(?<locale>[\w-]+)\.yml/
 
+    # Protects against multiple calls to configure_i18n with the same I18n::Config object
+    @previously_configured_i18ns = []
+
     class << self
+      attr_reader :previously_configured_i18ns
+
       def configure_i18n(i18n_config: nil, additional_components: [])
         i18n_config ||= I18n.config
+
+        return i18n_config if previously_configured_i18ns.include?(i18n_config)
 
         I18n::Backend::Simple.include(
           I18n::Backend::Fallbacks,
@@ -48,6 +55,8 @@ module Worldwide
 
         add_cldr_data(i18n_config, additional_components: additional_components)
         add_other_data(i18n_config)
+
+        previously_configured_i18ns << i18n_config
 
         i18n_config
       end
@@ -88,7 +97,7 @@ module Worldwide
 
         # Add in locales that derive from the selected locale.
         # E.g., if "fr" is selected, then include "fr-CA", "fr-CH", "fr-FR", ...
-        locales = locales.flat_map { |locale| Worldwide::Cldr.fallbacks.descendants(locale) }
+        locales = locales.flat_map { |locale| Worldwide::Cldr.fallbacks.descendants(locale).presence || [locale] }
 
         # Add in the locales needed for CLDR fallback chains
         locales = locales.flat_map { |locale| Worldwide::Cldr.fallbacks[locale.to_sym].map(&:to_s) }.uniq
