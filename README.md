@@ -28,19 +28,31 @@ Or install it yourself as:
 
     $ gem install worldwide
 
-### Usage  <!-- omit in toc -->
+### I18n configuration  <!-- omit in toc -->
 
-`worldwide` depends on `ruby-i18n` being configured in a particular way.
+`worldwide` depends on `ruby-i18n` being configured in a particular way. `Worldwide::Config.configure_i18n`
+configures the `I18n.config` singleton unless you provide your own `I18n::Config` instance as an argument.
 
-If you have opinions about how your `ruby-i18n` should be configured, you are welcome to configure it yourself.
+#### Available locales
+`worldwide` requires that you to explicitly decide which languages to service, as there is a runtime overhead
+(both CPU cycles and RAM) associated with loading translations for more langages.  `worldwide` will automatically
+extend the locales you specify to include locales that are needed for fallbacks, and specialized locales that are derived from the configured list of locales.  For example:
+  - `available_locales = [:en, :fr]` will also load support for locales like `en-GB`, `en-US`, `fr-CA` and `fr-FR`
+  - `available_locales = [:'fr-FR']` will also load support for `fr`
 
-It's easier, however, to let `worldwide` configure it for you like this:
+Here is a straightforward locale setup:
 
 ```ruby
 I18n.available_locales = Worldwide::Locales.top_25
-Worldwide::Config.configure_i18n
 ```
 
+If you want to support all locales that Unicode CLDR supports, you can achieve that with:
+
+```ruby
+I18n.available_locales = Worldwide::Locales.known
+```
+
+#### Handling unsupported locale lookups
 ⚠️ Note that, if you don't set `I18n.available_locales` before calling `configure_i18n`, `worldwide` will
 default to only loading translations for English.  If you then try to use a locale that's not loaded,
 you'll see an error like this:
@@ -50,25 +62,21 @@ irb(main):005:0> I18n.with_locale(:fr) { Worldwide.currency(code: "CAD").name }
 /Users/cejaekl/.gem/ruby/3.1.3/gems/i18n-1.12.0/lib/i18n.rb:351:in `enforce_available_locales!': :fr is not a valid locale (I18n::InvalidLocale)
 ```
 
-`worldwide` requires that you to explicitly decide which languages to service, because there is a runtime overhead
-(both CPU cycles and RAM) associated with loading translations for more langages.  `worldwide` will automatically
-extend the locales you specify to include locales that are needed for fallbacks, and specialized locales that are derived from the configured list of locales.  For example:
-  - `available_locales = [:en, :fr]` will also load support for locales like `en-GB`, `en-US`, `fr-CA` and `fr-FR`
-  - `available_locales = [:'fr-FR']` will also load support for `fr`
-
-If you want to support all locales that Unicode CLDR supports, you can achieve that with:
-
-```ruby
-I18n.available_locales = Worldwide::Locales.known
-Worldwide::Config.configure_i18n
-```
-
-Also, if you'd rather not raise an `I18n::InvalidLocale` when using a locale that's not available, you can
-change that behaviour like this:
+I you do not wish to raise `I18n::InvalidLocale` errors when using an unavailable locale, you can
+disable this behavior:
 
 ```ruby
 I18n.enforce_available_locales = false
 ```
+
+#### Worldwide i18n configuration
+Once the available locales are set, it is time to configure `worldwide`:
+
+```ruby
+Worldwide::Config.configure_i18n
+```
+
+`worldwide` includes a [railtie](lib/worldwide/rails/railtie.rb) which performs the configuration. The host application must still configure its `config.i18n.available_locales` setting before the railtie executes.
 
 ## What you will get for free  <!-- omit in toc -->
 

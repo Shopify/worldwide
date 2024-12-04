@@ -4,6 +4,10 @@ require "test_helper"
 
 module Worldwide
   class ConfigTest < ActiveSupport::TestCase
+    setup do
+      Worldwide::Config.previously_configured_i18ns.clear
+    end
+
     test ".expanded_locales_from_configuration when passing in nil" do
       locales = Worldwide::Config.send(:expanded_locales_from_configuration, Worldwide::RubyI18nConfig.new)
 
@@ -21,6 +25,18 @@ module Worldwide
       ["en", "root"].each do |locale|
         assert_includes expanded_locales, locale
       end
+    end
+
+    test ".expanded_locales_from_configuration retains input locales that have no cldr fallback descendants" do
+      config = Worldwide::RubyI18nConfig.new
+      locale = "md-UP"
+      config.available_locales = [locale]
+
+      assert_empty Worldwide::Cldr.fallbacks.descendants(locale)
+
+      expanded_locales = Worldwide::Config.send(:expanded_locales_from_configuration, config)
+
+      assert_includes expanded_locales, locale
     end
 
     test ".expanded_locales_from_configuration when they have customized I18n.available_locales" do
@@ -48,6 +64,23 @@ module Worldwide
       end
     ensure
       I18n.fallbacks = old_fallbacks
+    end
+
+    test "#configure_i18n will only modify an i18n config instance once" do
+      config = Worldwide::RubyI18nConfig.new
+      config.available_locales = [:en, :fr]
+
+      assert_changes(-> { config.available_locales }) do
+        assert_changes(-> { config.load_path }) do
+          Worldwide::Config.configure_i18n(i18n_config: config)
+        end
+      end
+
+      assert_no_changes(-> { config.available_locales }) do
+        assert_no_changes(-> { config.load_path }) do
+          Worldwide::Config.configure_i18n(i18n_config: config)
+        end
+      end
     end
 
     test "#configure_i18n extends I18n.available_locales to include derivatives of the specified locales" do
