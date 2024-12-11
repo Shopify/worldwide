@@ -106,7 +106,7 @@ module Worldwide
       end
 
       def cldr_locale_paths(locale_set, components)
-        Dir[File.join(Paths::CLDR_ROOT, "locales", "*", "*.{yml,rb}")].select do |path|
+        Paths::CLDR_LOCALE_PATHS.select do |path|
           match = path.match(CLDR_LOCALE_PATH_REGEX)
           match && locale_set.include?(match[:locale]) && components.include?(match[:component])
         end
@@ -119,14 +119,14 @@ module Worldwide
       end
 
       def other_data_path(locale_set)
-        Dir[File.join(Worldwide::Paths::OTHER_DATA_ROOT, "*", "*.{yml,rb}")].select do |path|
+        Paths::OTHER_DATA_PATHS.select do |path|
           match = path.match(OTHER_LOCALE_PATH_REGEX)
           match && locale_set.include?(match[:locale])
         end
       end
 
       def regions_data_path(locale_set)
-        Dir[File.join(Worldwide::Paths::REGIONS_ROOT, "*", "*.{yml}")].select do |path|
+        Paths::REGION_DATA_PATHS.select do |path|
           match = path.match(REGIONS_LOCALE_PATH_REGEX)
           match && locale_set.include?(match[:locale])
         end

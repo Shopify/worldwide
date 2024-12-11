@@ -139,5 +139,16 @@ module Worldwide
     ensure
       I18n.exception_handler = original_exception_handler
     end
+
+    test "paths have been precomputed with rake cldr:data:generate_paths" do
+      expected_cldr_locale_paths = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*", "*.{yml,rb}")].to_set
+      assert_equal expected_cldr_locale_paths, Worldwide::Paths::CLDR_LOCALE_PATHS.to_set
+
+      other_data_paths = Dir[File.join(Worldwide::Paths::OTHER_DATA_ROOT, "*", "*.{yml,rb}")].to_set
+      assert_equal other_data_paths, Worldwide::Paths::OTHER_DATA_PATHS.to_set
+
+      region_data_paths = Dir[File.join(Worldwide::Paths::REGIONS_ROOT, "*", "*.{yml}")].to_set
+      assert_equal region_data_paths, Worldwide::Paths::REGION_DATA_PATHS.to_set
+    end
   end
 end
