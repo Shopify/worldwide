@@ -61,9 +61,10 @@ module Worldwide
 
       def compute_all_descendants
         return if @all_descendants
+
         @all_descendants = {}
 
-        self.each do |locale, ancestors|
+        each do |locale, ancestors|
           ancestors.each do |ancestor|
             @all_descendants[ancestor] ||= []
             @all_descendants[ancestor] << locale
