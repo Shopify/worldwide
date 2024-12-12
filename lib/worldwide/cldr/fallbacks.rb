@@ -16,7 +16,8 @@ module Worldwide
 
       def descendants(locale)
         compute_all_ancestors
-        self.select { |_loc, loc_ancestors| loc_ancestors.include?(locale.to_sym) }.keys
+        compute_all_descendants
+        @all_descendants[locale.to_sym] || []
       end
 
       def defined_parent_locales
@@ -56,6 +57,19 @@ module Worldwide
         end
 
         @all_ancestors_computed = true
+      end
+
+      def compute_all_descendants
+        return if @all_descendants
+
+        @all_descendants = {}
+
+        each do |locale, ancestors|
+          ancestors.each do |ancestor|
+            @all_descendants[ancestor] ||= []
+            @all_descendants[ancestor] << locale
+          end
+        end
       end
     end
   end

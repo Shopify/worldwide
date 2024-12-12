@@ -12,6 +12,10 @@ module Worldwide
           FileUtils.mkdir_p(Worldwide::Paths::CLDR_ROOT)
           FileUtils.rm_rf(Worldwide::Paths::GENERATED_LOCALE_ROOT)
           FileUtils.mkdir_p(Worldwide::Paths::GENERATED_LOCALE_ROOT)
+
+          Dir[File.join(Worldwide::Paths::DATA_ROOT, "**", "paths.txt")].each do |path|
+            FileUtils.rm(path)
+          end
         end
       end
     end

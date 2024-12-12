@@ -4,6 +4,7 @@ require_relative "../cldr/locale_generator"
 require_relative "../cldr/patch"
 require_relative "../cldr/puller"
 require_relative "../cldr/cleaner"
+require_relative "../paths/generator"
 
 namespace :cldr do
   namespace :data do
@@ -47,6 +48,17 @@ namespace :cldr do
     DESCRIPTION
     task :patch do
       Worldwide::Cldr::Patch::Patcher.new.perform
+    end
+
+    desc <<~DESCRIPTION
+      Generate indices of files in the CLDR data
+
+      This task generates a list of all files in the CLDR data, which is used to speed up the loading of the data.
+
+      eg.: bundle exec rake cldr:data:generate_paths
+    DESCRIPTION
+    task :generate_paths do
+      Worldwide::Paths::Generator.new.perform
     end
 
     desc <<~DESCRIPTION
