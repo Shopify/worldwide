@@ -4,6 +4,7 @@ require_relative "../cldr/locale_generator"
 require_relative "../cldr/patch"
 require_relative "../cldr/puller"
 require_relative "../cldr/cleaner"
+require_relative "../paths/generator"
 
 namespace :cldr do
   namespace :data do
@@ -57,20 +58,7 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:generate_paths
     DESCRIPTION
     task :generate_paths do
-      cldr_locale_paths = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*", "*.{yml,rb}")].map do |path|
-        path.delete_prefix(Worldwide::Paths::GEM_ROOT)
-      end
-      File.write(Worldwide::Paths::CLDR_LOCALE_PATHS_FILE, cldr_locale_paths.join("\n"))
-
-      other_data_paths = Dir[File.join(Worldwide::Paths::OTHER_DATA_ROOT, "*", "*.{yml,rb}")].map do |path|
-        path.delete_prefix(Worldwide::Paths::GEM_ROOT)
-      end
-      File.write(Worldwide::Paths::OTHER_DATA_PATHS_FILE, other_data_paths.join("\n"))
-
-      region_data_paths = Dir[File.join(Worldwide::Paths::REGIONS_ROOT, "*", "*.{yml}")].map do |path|
-        path.delete_prefix(Worldwide::Paths::GEM_ROOT)
-      end
-      File.write(Worldwide::Paths::REGION_DATA_PATHS_FILE, region_data_paths.join("\n"))
+      Worldwide::Paths::Generator.new.perform
     end
 
     desc <<~DESCRIPTION
