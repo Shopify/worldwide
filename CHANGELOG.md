@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Update BV phone number prefix to 47 (Norway) [#318](https://github.com/Shopify/worldwide/pull/318)
-
+- Update Finland's (FI) tax rate [#319](https://github.com/Shopify/worldwide/pull/319)
 ---
 
 ## [1.14.3] - 2024-12-02
