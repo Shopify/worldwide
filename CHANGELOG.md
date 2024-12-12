@@ -26,9 +26,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+
+Nil.
+---
+
+## [1.14.4] - 2024-12-12
+- Speed up configure_i18n by precomputing paths and indexing descendants [#316](https://github.com/Shopify/worldwide/pull/316)
 - Update BV phone number prefix to 47 (Norway) [#318](https://github.com/Shopify/worldwide/pull/318)
 - Update Finland's (FI) tax rate [#319](https://github.com/Shopify/worldwide/pull/319)
----
 
 ## [1.14.3] - 2024-12-02
 - Add street_number.missing_building_number messages [#313](https://github.com/Shopify/worldwide/pull/313)
