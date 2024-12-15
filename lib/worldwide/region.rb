@@ -198,7 +198,7 @@ module Worldwide
     attr_accessor :zip_example
 
     # Is a zip value required in this region?  (Possible values:  "optional", "recommended", "required")
-    attr_accessor :zip_requirement
+    attr_writer :zip_requirement
 
     # A list of character sequences with which a postal code in this region may start.
     attr_accessor :zip_prefixes
@@ -435,11 +435,21 @@ module Worldwide
 
     # is a postal code required for this region?
     def zip_required?
-      if zip_requirement.nil?
+      if @zip_requirement.nil?
         !zip_regex.nil?
       else
-        REQUIRED == zip_requirement
+        REQUIRED == @zip_requirement
       end
+    end
+
+    # Returns whether (and how firmly) we require a value in the zip field
+    # Possible returns:
+    #  - "required" means a value must be supplied
+    #  - "recommended" means a value is optional, but we recommend providing one
+    #  - "optional" means a value is optional, and we say it is optional
+    # @return [String]
+    def zip_requirement
+      @zip_requirement || (zip_required? ? REQUIRED : OPTIONAL)
     end
 
     # is a neighborhood required for this region?
