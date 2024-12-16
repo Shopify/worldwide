@@ -509,6 +509,11 @@ module Worldwide
       end
     end
 
+    test "#tax_inclusive returns the configured value or false" do
+      assert Worldwide.region(code: "AD").tax_inclusive
+      refute Worldwide.region(code: "CA").tax_inclusive
+    end
+
     test "#example_city returns values as expected" do
       assert_equal "Los Angeles", Worldwide.region(code: "US").zone(code: "CA").example_city
     end

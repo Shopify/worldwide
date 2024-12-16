@@ -163,6 +163,9 @@ module Worldwide
     # Note that this should really be translated; showing this untranslated name to users is a bad idea.
     attr_reader :tax_name
 
+    # Whether the region uses tax-inclusive pricing.
+    attr_accessor :tax_inclusive
+
     # "generic" VAT tax rate on "most" goods
     attr_reader :tax_rate
 
@@ -276,6 +279,7 @@ module Worldwide
       @partial_zip_regex = nil
       @phone_number_prefix = nil
       @tags = []
+      @tax_inclusive = false
       @timezone = nil
       @timezones = {}
       @unit_system = nil
