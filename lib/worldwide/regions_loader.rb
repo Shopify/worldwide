@@ -114,6 +114,7 @@ module Worldwide
       region.partial_zip_regex = spec["partial_zip_regex"]
       region.phone_number_prefix = spec["phone_number_prefix"]
       region.tags = spec["tags"] || []
+      region.tax_inclusive = spec["tax_inclusive"] || false
       region.timezone = spec["timezone"]
       region.timezones = spec["timezones"] || {}
       region.week_start_day = spec["week_start_day"] || "sunday"

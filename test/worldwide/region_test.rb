@@ -346,6 +346,14 @@ module Worldwide
       end
     end
 
+    test "#zip_requirement returns zip requirement" do
+      assert_equal "required", Worldwide.region(code: "CN").zip_requirement # set as required
+      assert_equal "recommended", Worldwide.region(code: "AM").zip_requirement # set as recommended
+      assert_equal "optional", Worldwide.region(code: "AF").zip_requirement # set as optional
+      assert_equal "required", Worldwide.region(code: "AC").zip_requirement # not set but has potal code regex
+      assert_equal "optional", Worldwide.region(code: "TZ").zip_requirement # not set
+    end
+
     test "#neighborhood_required? returns values as expected" do
       neighborhood_not_required_countries = [:ca, :cl, :mx, :id]
       neighborhood_required_countries = [:ph, :vn, :tr]
@@ -499,6 +507,11 @@ module Worldwide
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).address1_regex
       end
+    end
+
+    test "#tax_inclusive returns the configured value or false" do
+      assert Worldwide.region(code: "AD").tax_inclusive
+      refute Worldwide.region(code: "CA").tax_inclusive
     end
 
     test "#example_city returns values as expected" do

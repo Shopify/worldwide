@@ -70,6 +70,38 @@ module Worldwide
       end
     end
 
+    test "country currencies are all 3-character strings and exist" do
+      expected_format = /\A[A-Z]{3}\z/
+
+      Regions.all.select(&:country?).each do |country|
+        currency = country.currency
+
+        assert_predicate currency, :present?, "#{country.iso_code} currency is empty"
+        assert_kind_of Currency, currency, "#{country.iso_code} currency was not a Currency"
+        assert_match expected_format, currency.currency_code, "#{country.iso_code} currency.curency_code was not a 3-character capitalized alphabetical code"
+      end
+    end
+
+    test "country phone_number_prefix attributes are all numeric and exist" do
+      expected_format = /\A0|[1-9][0-9]{0,2}\z/
+
+      Regions.all.select(&:country?).each do |country|
+        phone_number_prefix = country.phone_number_prefix
+
+        assert_predicate phone_number_prefix, :present?, "#{country.iso_code} phone_number_prefix is empty"
+        assert_match expected_format, phone_number_prefix.to_s, "#{country.iso_code} phone_number_prefix was not a 1-3 digit code"
+      end
+    end
+
+    test "country group attribute is always present and is a string" do
+      Regions.all.select(&:country?).each do |country|
+        group = country.group
+
+        assert_predicate group, :present?, "#{country.iso_code} group is empty"
+        assert_kind_of String, group, "#{country.iso_code} group was not a String"
+      end
+    end
+
     test "format keys must belong to a limited set of required and allowed keys" do
       allowed_keys = ["edit", "show"]
       required_format_keys = ["{firstName}", "{lastName}", "{company}", "{address1}", "{address2}", "{country}", "{phone}"]
@@ -340,6 +372,16 @@ module Worldwide
         valid_values = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
         assert_includes valid_values, week_start_day
+      end
+    end
+
+    test "unit_system is a valid value" do
+      Regions.all.select(&:country?).each do |country|
+        unit_system = country.unit_system
+
+        valid_values = ["metric", "imperial"]
+
+        assert_includes valid_values, unit_system
       end
     end
 
