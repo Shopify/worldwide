@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 - Add zip requirement and tax inclusive methods to country regions [#320](https://github.com/Shopify/worldwide/pull/320)
+- Set Ireland (IE) zip as a required address field [#321](https://github.com/Shopify/worldwide/pull/321)
 
 ---
 
