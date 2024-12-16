@@ -26,10 +26,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Add zip requirement and tax inclusive methods to country regions [#320](https://github.com/Shopify/worldwide/pull/320)
-- Set Ireland (IE) zip as a required address field [#321](https://github.com/Shopify/worldwide/pull/321)
+
+Nil.
 
 ---
+
+## [1.15.0] - 2024-12-16
+- Add zip requirement and tax inclusive methods to country regions [#320](https://github.com/Shopify/worldwide/pull/320)
+- Set Ireland (IE) zip as a required address field [#321](https://github.com/Shopify/worldwide/pull/321)
 
 ## [1.14.4] - 2024-12-12
 - Speed up configure_i18n by precomputing paths and indexing descendants [#316](https://github.com/Shopify/worldwide/pull/316)
