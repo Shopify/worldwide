@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Set Malaysia and Singapore as tax_inclusive [#323](https://github.com/Shopify/worldwide/pull/323)
-
+- Update or correct example zips [#324](https://github.com/Shopify/worldwide/pull/324)
 ---
 
 ## [1.15.0] - 2024-12-16
