@@ -9,8 +9,8 @@ tax_inclusive: true
 group: European Countries
 group_name: Europe
 zip_example: JE1 1AA
-zip_regex: "^JE[1-6] {0,2}\\d[A-Z]{2}$"
-partial_zip_regex: "^JE[1-6]$"
+zip_regex: "^JE\\d{1,2} {0,2}\\d[A-Z]{2}$"
+partial_zip_regex: "^JE\\d{1,2}$"
 phone_number_prefix: 44
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
