@@ -12,7 +12,7 @@ tags:
 - EU-OCT
 zip_example: '97500'
 phone_number_prefix: 508
-zip_regex: "\\A(PM-?)?((975)\\d{2,2})\\z"
+zip_regex: "^(PM-?)?((975)\\d{2,2})$"
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
