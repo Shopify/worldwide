@@ -9,8 +9,8 @@ tax_inclusive: true
 group: Asian Countries
 group_name: Asia
 zip_example: 154-0023
-zip_regex: "\\A〒?(\\d{7}|[0-9|０-９]{3}(-|ー)[0-9|０-９]{4})\\z"
-partial_zip_regex: "\\A〒?([0-9|０-９]{0,3})(-|ー?)([0-9|０-９]{0,4})\\z"
+zip_regex: "^〒?(\\d{7}|[0-9|０-９]{3}(-|ー)[0-9|０-９]{4})$"
+partial_zip_regex: "^〒?([0-9|０-９]{0,3})(-|ー?)([0-9|０-９]{0,4})$"
 phone_number_prefix: 81
 building_number_required: true
 building_number_may_be_in_address2: true
