@@ -189,6 +189,14 @@ module Worldwide
       end
     end
 
+    test "zip_example is valid if present" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.zip_example.blank?
+
+        assert country.valid_zip?(country.zip_example), "zip_example #{country.zip_example} invalid for #{country.iso_code}"
+      end
+    end
+
     test "example_address zip is valid if present" do
       Regions.all.select(&:country?).each do |country|
         next if country.example_address.blank?
