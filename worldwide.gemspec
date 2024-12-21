@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description   = "The worldwide gem internationalizes and localizes Ruby code, enhancing user experience globally. It also aids in inputting, validating, and formatting mailing addresses."
   spec.homepage      = "https://github.com/Shopify/worldwide"
 
-  spec.metadata["allowed_push_host"] = "https://rubygems.org/"
+  spec.metadata["allowed_push_host"] = "http://localhost:3000/"
   spec.metadata["changelog_uri"] = "https://github.com/Shopify/worldwide/blob/main/CHANGELOG.md"
 
   spec.files = %x(git ls-files -z).split("\x0").reject do |f|
