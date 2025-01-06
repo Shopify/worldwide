@@ -31,6 +31,9 @@ Nil.
 
 ---
 
+## [1.15.2] - 2024-12-27
+- Update Indonesia tax rate to 12%
+
 ## [1.15.1] - 2024-12-20
 - Set Malaysia and Singapore as tax_inclusive [#323](https://github.com/Shopify/worldwide/pull/323)
 - Update or correct example zips [#324](https://github.com/Shopify/worldwide/pull/324)
