@@ -939,7 +939,7 @@ Worldwide::Scripts.identify(text: "日本語がわかります。")
 
 `worldwide` will provide you 2 features for a better international experience:
 - 👨‍🔧  Fallback mechanism which will default to `english` in case of a missing translation
-- 🚀  Fire off `bugsnag` notification in case of a missing translation in `production`
+- 🚀  Fire off an exception notification in case of a missing translation in `production`
 
 It should looks like this on your development environment:
 
