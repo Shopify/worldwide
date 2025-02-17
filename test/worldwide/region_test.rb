@@ -537,5 +537,20 @@ module Worldwide
     test "#tax_rate returns values as expected" do
       assert_in_delta(0.13, Worldwide.region(code: "CA").zone(code: "ON").tax_rate)
     end
+
+    test "#ignore_provinces returns values as expected" do
+      assert Worldwide.region(code: "GB").ignore_provinces
+      refute Worldwide.region(code: "CA").ignore_provinces
+    end
+
+    test "#hide_provinces_from_addresses returns values as expected" do
+      assert Worldwide.region(code: "GB").hide_provinces_from_addresses
+      refute Worldwide.region(code: "CA").hide_provinces_from_addresses
+    end
+
+    test "#province_optional returns values as expected" do
+      assert Worldwide.region(code: "NZ").province_optional
+      refute Worldwide.region(code: "CA").province_optional
+    end
   end
 end

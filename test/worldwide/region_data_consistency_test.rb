@@ -135,12 +135,13 @@ module Worldwide
       end
     end
 
-    test "country shows provices if it has them, unless hide_provinces_from_addresses is set" do
+    test "country shows provices if it has them, unless provinces are hidden/ignored" do
       Regions.all.select(&:country?).each do |country|
         shows_provinces = country.format["show"].include?("{province}")
 
         if Worldwide::Util.present?(country.zones.select(&:province?))
           assert_equal !shows_provinces, country.hide_provinces_from_addresses, "country: #{country.iso_code}"
+          assert_equal !shows_provinces, country.ignore_provinces, "country: #{country.iso_code}"
         else
           assert_equal false, shows_provinces
         end

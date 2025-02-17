@@ -110,6 +110,7 @@ module Worldwide
       region.group = spec["group"]
       region.group_name = spec["group_name"]
       region.hide_provinces_from_addresses = spec["hide_provinces_from_addresses"] || false
+      region.ignore_provinces = spec["ignore_provinces"] || false
       region.languages = spec["languages"]
       region.partial_zip_regex = spec["partial_zip_regex"]
       region.phone_number_prefix = spec["phone_number_prefix"]
