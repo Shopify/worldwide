@@ -109,6 +109,10 @@ module Worldwide
     # based on the zip (note that this auto-inference may be wrong for some addresses near a border).
     attr_accessor :hide_provinces_from_addresses
 
+    # Returns true if provinces should be ignored
+    # Used when adding provinces to a country that has none as an intermediate step
+    attr_accessor :ignore_provinces
+
     # The CLDR code for this region.
     attr_reader :cldr_code
 
