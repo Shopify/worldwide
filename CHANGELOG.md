@@ -27,9 +27,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Add `ignore_provinces` to regions [#329](https://github.com/Shopify/worldwide/pull/329)
-
+Nil.
 ---
+
+## [1.16.0] - 2025-02-17
+- Add `ignore_provinces` to regions [#329](https://github.com/Shopify/worldwide/pull/329)
 
 ## [1.15.2] - 2024-12-27
 - Update Indonesia tax rate to 12%
