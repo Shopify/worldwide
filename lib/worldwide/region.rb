@@ -387,6 +387,11 @@ module Worldwide
       !!format["show"]&.include?("{zip}")
     end
 
+    # Does this region have cities?
+    def has_cities?
+      !!format["show"]&.include?("{city}")
+    end
+
     # Is this Region considered a "province" (political subdivision of a "country")?
     def province?
       @province

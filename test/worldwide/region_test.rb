@@ -354,6 +354,11 @@ module Worldwide
       assert_equal "optional", Worldwide.region(code: "TZ").zip_requirement # not set
     end
 
+    test "#has_cities? returns values as expected" do
+      assert_predicate(Worldwide.region(code: "CA"), :has_cities?)
+      refute_predicate(Worldwide.region(code: "SG"), :has_cities?)
+    end
+
     test "#neighborhood_required? returns values as expected" do
       neighborhood_not_required_countries = [:ca, :cl, :mx, :id]
       neighborhood_required_countries = [:ph, :vn, :tr]
