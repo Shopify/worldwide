@@ -159,6 +159,18 @@ module Worldwide
       assert_equal "CA-BC", zone.iso_code
     end
 
+    test "#zone cannot look up a zone by partial zip if country shows provinces" do
+      zone = Worldwide.region(code: "CA").zone(zip: "V6B") # Canada does not hide provinces
+
+      assert_equal Worldwide.unknown_region, zone
+    end
+
+    test "#zone can look up a zone by partial zip if country hides provinces" do
+      zone = Worldwide.region(code: "GB").zone(zip: "SW1") # UK hides provinces
+
+      assert_equal "GB-ENG", zone.iso_code
+    end
+
     test "#zone can look up zones that go by iso_code" do
       [
         ["MX", "AGU", "MXAGU", "MX-AGU", "Aguascalientes"],
@@ -556,6 +568,12 @@ module Worldwide
     test "#province_optional returns values as expected" do
       assert Worldwide.region(code: "NZ").province_optional
       refute Worldwide.region(code: "CA").province_optional
+    end
+
+    test "#has_zip_prefixes? returns values as expected" do
+      refute_predicate Worldwide.region(code: "FR"), :has_zip_prefixes? # no zones
+      refute_predicate Worldwide.region(code: "AR"), :has_zip_prefixes? # zones but no prefixes
+      assert_predicate Worldwide.region(code: "US"), :has_zip_prefixes? # zones and prefixes
     end
   end
 end

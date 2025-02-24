@@ -28,6 +28,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add has_cities? method to regions [#331](https://github.com/Shopify/worldwide/pull/331)
+- Update known PR zip prefixes and allow zone lookup by partial zip if country hides provinces [#332]https://github.com/Shopify/worldwide/pull/332
+  - Adds `has_zip_prefixes?` and `neighbors` methods to Region
+
 ---
 
 ## [1.16.0] - 2025-02-17
