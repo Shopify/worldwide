@@ -143,6 +143,8 @@ module Worldwide
     # E.g., for CA-ON, the neighbouring zones are CA-MB, CA-NU and CA-QC.
     attr_accessor :neighbours
 
+    alias_method :neighbors, :neighbours
+
     # The ISO-3166-1 three-digit code for this region (returned as a string to preserve
     # leading zeroes), e.g., "003".
     attr_reader :numeric_three
