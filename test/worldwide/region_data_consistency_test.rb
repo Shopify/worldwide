@@ -57,6 +57,56 @@ module Worldwide
       end
     end
 
+    test "If a country has zip_prefixes, then every province has at least one prefix" do
+      Regions.all.select(&:country?).each do |country|
+        next unless country.zones&.any? { |zone| zone.zip_prefixes.present? }
+
+        zones = country.zones.select do |zone|
+          zone.zip_prefixes.blank? && # zone has no prefixes
+            zone.parents.size == 1 # zone is not a shared zone, e.g. a special territory
+        end
+
+        # IT-OT (Olbia-Tempio) no longer exists, and was absorbed into IT-SS (Sassari).
+        # We need to add proper support for "deprecation" of zones.
+        # In the mean time, we have removed all prefixes from OT intentionally.
+        if country.legacy_code == "IT"
+          zones.reject! { |z| z.legacy_code == "OT" }
+        end
+
+        # IC (Canary Islands) are not defined outside of world.yml
+        # Ceuta is listed with code EA in world.yml, but may actually be CE. TBD.
+        if country.legacy_code == "ES"
+          zones.reject! { |zone| zone.iso_code == "IC" || zone.iso_code == "EA" }
+        end
+
+        assert_empty zones, "#{country.legacy_name} has no prefix(es) for #{zones.map(&:legacy_code).join(", ")}"
+      end
+    end
+
+    test "The first province listed for each of the zips_crossing_provinces must be where that prefix resolves" do
+      Regions.all.select(&:country?).each do |country|
+        country.zips_crossing_provinces&.each do |zip, province_codes|
+          mapped_province = country.zone(zip:)
+
+          assert_equal province_codes.first, mapped_province&.legacy_code, "Expected first province code for zip #{zip}"
+        end
+      end
+    end
+
+    test "If a zip has two provinces, then both must be neighbours of each other" do
+      Regions.all.select(&:country?).each do |country|
+        country.zips_crossing_provinces&.each do |zip, province_codes|
+          neighbours = province_codes.map do |zone_code|
+            country.zone(code: zone_code)&.neighbours
+          end.flatten.uniq
+
+          province_codes.each do |zone_code|
+            assert_includes neighbours, zone_code, "zip #{zip} missing neighbour #{zone_code}"
+          end
+        end
+      end
+    end
+
     test "country codes match expected formats" do
       Regions.all.select(&:country?).each do |country|
         assert_match(/^([A-Z]{2})$/, country.iso_code, "alpha2 for #{country.legacy_name}")
