@@ -365,6 +365,39 @@ module Worldwide
       end
     end
 
+    test "all neighbors are uppercase" do
+      Regions.all.select(&:province?).each do |province|
+        next if province.neighbors.blank?
+
+        assert province.neighbors.all?(&:upcase)
+      end
+    end
+
+    test "If A is a neighbor for B, then B must be a neighbor for A" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.zones.blank?
+        next unless country.zones.any? { |zone| zone.neighbours.present? }
+
+        # Fix `neighboring_zones` data in India and Thailand
+        next if country.legacy_code == "IN" || country.legacy_code == "TH"
+
+        country.zones.each do |zone_a|
+          # Just because some zones in a country have neighbours defined doesn't mean that they all do.
+          # For example, AU-TAS is an island, so it shares no land borders with any other zone.
+          next if zone_a.neighbours.blank?
+
+          zone_a.neighbours.each do |zone_code_b|
+            zone_b = country.zone(code: zone_code_b)
+            assertion_message =
+              "Region #{country.legacy_code} zone A #{zone_a.legacy_code} zone B #{zone_b.legacy_code}"
+
+            assert_predicate zone_b.neighbours, :present?, assertion_message
+            assert_includes zone_b.neighbours, zone_a.legacy_code, assertion_message
+          end
+        end
+      end
+    end
+
     test "week_start_day is a valid value" do
       Regions.all.select(&:country?).each do |country|
         week_start_day = country.week_start_day

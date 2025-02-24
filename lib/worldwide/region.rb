@@ -143,6 +143,8 @@ module Worldwide
     # E.g., for CA-ON, the neighbouring zones are CA-MB, CA-NU and CA-QC.
     attr_accessor :neighbours
 
+    alias_method :neighbors, :neighbours
+
     # The ISO-3166-1 three-digit code for this region (returned as a string to preserve
     # leading zeroes), e.g., "003".
     attr_reader :numeric_three
@@ -436,7 +438,10 @@ module Worldwide
             search_name == I18n.with_locale(:en) { region.full_name&.upcase }
         end
       else # Worldwide::Util.present?(zip)
-        zone_by_normalized_zip(Zip.normalize(country_code: iso_code, zip: zip))
+        zone_by_normalized_zip(
+          Zip.normalize(country_code: iso_code, zip: zip),
+          allow_partial_zip: hide_provinces_from_addresses,
+        )
       end || Worldwide.unknown_region
     end
 
@@ -494,6 +499,13 @@ module Worldwide
       province_optional || !@zones&.any?(&:province?)
     end
 
+    # Returns true if this country has zones defined, and has postal code prefix data for the zones
+    def has_zip_prefixes?
+      @zones&.any? do |zone|
+        Util.present?(zone.zip_prefixes)
+      end
+    end
+
     private
 
     def add_zone_to_hash(zone)
@@ -538,13 +550,6 @@ module Worldwide
       end
 
       false
-    end
-
-    # Returns true if this country has zones defined, and has postal code prefix data for the zones
-    def has_zip_prefixes?
-      @zones&.any? do |zone|
-        Util.present?(zone.zip_prefixes)
-      end
     end
 
     def inspected_fields
