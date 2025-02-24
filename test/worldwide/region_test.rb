@@ -159,6 +159,13 @@ module Worldwide
       assert_equal "CA-BC", zone.iso_code
     end
 
+    test "#zone can look up a zone by partial zip" do
+      zone = Worldwide.region(code: "CA").zone(zip: "V6B")
+
+      assert_not_nil zone
+      assert_equal "CA-BC", zone.iso_code
+    end
+
     test "#zone can look up zones that go by iso_code" do
       [
         ["MX", "AGU", "MXAGU", "MX-AGU", "Aguascalientes"],
