@@ -5,6 +5,7 @@ tax: 0.23
 currency: PLN
 unit_system: metric
 tax_name: VAT
+zone_key: administrative_division
 tax_inclusive: true
 # Polish postal codes are normally written with a hyphen after the 2nd digit.
 # EU guidance, however, implies that the hyphen is optional, and a space may be used instead.
@@ -22,8 +23,8 @@ week_start_day: monday
 format:
   address1: "{street} {building_num}"
   address1_with_unit: "{street} {building_num}/{unit}"
-  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
-  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{administrative_division}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{administrative_division}_{country}_{phone}"
 emoji: "\U0001F1F5\U0001F1F1"
 languages:
 - pl
@@ -34,3 +35,68 @@ example_address:
   zip: 00-277
   phone: "+48 22 355 51 70"
 timezone: Europe/Warsaw
+zones:
+- tax: 0
+  name: Dolnośląskie
+  tax_name: VAT
+  code: DS
+- tax: 0
+  name: Kujawsko-Pomorskie
+  tax_name: VAT
+  code: KP
+- tax: 0
+  name: Lubelskie
+  tax_name: VAT
+  code: LU
+- tax: 0
+  name: Lubuskie
+  tax_name: VAT
+  code: LB
+- tax: 0
+  name: Łódzkie
+  tax_name: VAT
+  code: LD
+- tax: 0
+  name: Małopolskie
+  tax_name: VAT
+  code: MA
+- tax: 0
+  name: Mazowieckie
+  tax_name: VAT
+  code: MZ
+- tax: 0
+  name: Opolskie
+  tax_name: VAT
+  code: OP
+- tax: 0
+  name: Podkarpackie
+  tax_name: VAT
+  code: PK
+- tax: 0
+  name: Podlaskie
+  tax_name: VAT
+  code: PD
+- tax: 0
+  name: Pomorskie
+  tax_name: VAT
+  code: PM
+- tax: 0
+  name: Śląskie
+  tax_name: VAT
+  code: SL
+- tax: 0
+  name: Świętokrzyskie
+  tax_name: VAT
+  code: SK
+- tax: 0
+  name: Warmińsko-Mazurskie
+  tax_name: VAT
+  code: WN
+- tax: 0
+  name: Wielkopolskie
+  tax_name: VAT
+  code: WP
+- tax: 0
+  name: Zachodniopomorskie
+  tax_name: VAT
+  code: ZP
