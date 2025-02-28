@@ -55,7 +55,11 @@ module Worldwide
         instance.translate_plural(key, locale: locale, count: count)
       end
 
-      assert_equal "translation data {:many=>\"One\"} can not be used with :count => #{count}. key 'other' is missing.", err.message
+      if RUBY_VERSION < "3.4"
+        assert_equal "translation data {:many=>\"One\"} can not be used with :count => #{count}. key 'other' is missing.", err.message
+      else
+        assert_equal "translation data {many: \"One\"} can not be used with :count => #{count}. key 'other' is missing.", err.message
+      end
     end
   end
 end
