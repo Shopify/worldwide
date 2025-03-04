@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.3
+
+### Patch Changes
+
+- 2de7868: Add NPM provenance statement
+
 ## 0.7.2
 
 ### Patch Changes
