@@ -12,6 +12,9 @@ For mailing addresses, `worldwide` can identify common address issues, including
   - Presence of a postal code if required
   - Plausibility of the postal code (matching expected format and known prefixes)
 
+> [!NOTE]
+> Shopify developers should consult the [`country_db`](https://github.com/Shopify/country_db) gem's readme before leveraging the Worldwide gem.
+
 ## 💻  Installation  <!-- omit in toc -->
 
 Add this line to your application's `Gemfile`:
