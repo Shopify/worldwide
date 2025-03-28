@@ -169,7 +169,9 @@ describe('splitAddressField', () => {
       {key: 'streetNumber'},
       {key: 'streetName'},
     ];
-    expect(splitAddressField(fieldDefinition, '123')).toEqual({});
+    expect(splitAddressField(fieldDefinition, '123')).toEqual({
+      streetNumber: '123\u2060',
+    });
     expect(splitAddressField(fieldDefinition, '\u2060Main')).toEqual({
       streetName: 'Main',
     });
@@ -196,9 +198,9 @@ describe('splitAddressField', () => {
       ];
       const concatenatedAddress = 'Main';
 
-      expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual(
-        {},
-      );
+      expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual({
+        streetName: 'Main\u2060',
+      });
     });
 
     test('splits address without defined decorator if leading delimiter is found', () => {
