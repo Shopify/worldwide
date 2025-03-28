@@ -10,9 +10,9 @@ describe('splitAddress2', () => {
     expect(splitAddress2('BR', '')).toEqual({});
   });
 
-  test('returns address2 as line2 when no delimiter is present', () => {
-    expect(splitAddress2('CL', 'dpto 4')).toEqual({line2: 'dpto 4'});
-    expect(splitAddress2('BR', 'dpto 4')).toEqual({line2: 'dpto 4'});
+  test('returns an empty object when no delimiter is present', () => {
+    expect(splitAddress2('CL', 'dpto 4')).toEqual({});
+    expect(splitAddress2('BR', 'dpto 4')).toEqual({});
   });
 
   test('returns neighborhood if string before delimiter is empty', () => {

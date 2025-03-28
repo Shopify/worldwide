@@ -45,6 +45,11 @@ export function splitAddressField(
   fieldDefinition: FieldConcatenationRule[],
   concatenatedAddress: string,
 ): Partial<Address> {
+  // Return empty object if no delimiter is found
+  if (!concatenatedAddress.includes(RESERVED_DELIMITER)) {
+    return {};
+  }
+
   const [firstField, ...rest] = concatenatedAddress.split(RESERVED_DELIMITER);
   const secondField = rest.join(RESERVED_DELIMITER);
   const values = [firstField, secondField];
