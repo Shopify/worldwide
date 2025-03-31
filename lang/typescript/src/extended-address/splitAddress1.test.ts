@@ -18,9 +18,11 @@ describe('splitAddress1', () => {
   test('returns address1 as street name when no delimiter is present and tryRegexFallback is false', () => {
     expect(splitAddress1('CL', '123 Main', false)).toEqual({
       streetName: '123 Main',
+      isUnsplittableField: true,
     });
     expect(splitAddress1('BR', '123 Main', false)).toEqual({
       streetName: '123 Main',
+      isUnsplittableField: true,
     });
   });
 
