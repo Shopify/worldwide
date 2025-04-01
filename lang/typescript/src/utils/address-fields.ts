@@ -1,5 +1,5 @@
 import type {FieldConcatenationRule} from '../types/region-yaml-config';
-import type {Address} from '../types/address';
+import type {Address, SplitAddress} from '../types/address';
 
 export const RESERVED_DELIMITER = '\u2060';
 
@@ -44,7 +44,7 @@ export function concatAddressField(
 export function splitAddressField(
   fieldDefinition: FieldConcatenationRule[],
   concatenatedAddress: string,
-): Partial<Address> & {isUnsplittableField?: boolean} {
+): SplitAddress {
   const [firstField, ...rest] = concatenatedAddress.split(RESERVED_DELIMITER);
   const secondField = rest.join(RESERVED_DELIMITER);
   const values = [firstField, secondField];

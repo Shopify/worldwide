@@ -1,4 +1,4 @@
-import type {Address} from '../types/address';
+import type {SplitAddress} from '../types/address';
 import {
   RESERVED_DELIMITER,
   splitAddressField,
@@ -26,7 +26,7 @@ export function splitAddress1(
   countryCode: string,
   address: string,
   tryRegexFallback = false,
-): (Partial<Address> & {isUnsplittableField?: boolean}) | null {
+): SplitAddress | null {
   const config = getRegionConfig(countryCode);
   const fieldConcatenationRules = config
     ? getConcatenationRules(config, address, 'address1')
