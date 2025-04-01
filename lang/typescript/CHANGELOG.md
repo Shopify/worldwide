@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.4
+
+### Patch Changes
+
+- 5478f09: Add the `isUnsplittableField` flag to the returned value of `splitAddress1` and `splitAddress2` when the functions were not provided with a delimiter.
+
 ## 0.7.3
 
 ### Patch Changes
