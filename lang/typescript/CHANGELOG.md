@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.5
+
+### Patch Changes
+
+- 46d1bf5: Update typing of splitAddress2 function
+
 ## 0.7.4
 
 ### Patch Changes
