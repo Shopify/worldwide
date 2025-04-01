@@ -26,7 +26,7 @@ export function splitAddress1(
   countryCode: string,
   address: string,
   tryRegexFallback = false,
-): Partial<Address> | null {
+): (Partial<Address> & {isUnsplittableField?: boolean}) | null {
   const config = getRegionConfig(countryCode);
   const fieldConcatenationRules = config
     ? getConcatenationRules(config, address, 'address1')
@@ -50,5 +50,5 @@ export function splitAddress1(
       address,
     );
   }
-  return {[fieldConcatenationRules[0].key]: address};
+  return {[fieldConcatenationRules[0].key]: address, isUnsplittableField: true};
 }
