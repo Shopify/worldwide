@@ -1,4 +1,5 @@
-import type {Address} from '../types/address';
+import type {SplitAddress} from 'src/types/address';
+
 import {splitAddressField} from '../utils/address-fields';
 import {getRegionConfig, getConcatenationRules} from '../utils/regions';
 
@@ -13,7 +14,7 @@ import {getRegionConfig, getConcatenationRules} from '../utils/regions';
 export function splitAddress2(
   countryCode: string,
   concatenatedAddress: string,
-): Partial<Address> | null {
+): SplitAddress | null {
   const config = getRegionConfig(countryCode);
   const fieldConcatenationRules = config
     ? getConcatenationRules(config, concatenatedAddress, 'address2')
