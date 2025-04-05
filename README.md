@@ -193,7 +193,7 @@ $ Worldwide.region(name: "Brazil")
 $ Worldwide.region(cldr: "caon")
 => Worldwide::Region <iso_code: 'CA-ON', full_name: 'Ontario', ...>
 $ Worldwide.region(code: "are")
-=> Worldwide::Region <iso_code: 'AE', full_name: "United Arab Emirates', ...>
+=> Worldwide::Region <iso_code: 'AE', full_name: 'United Arab Emirates', ...>
 $ Worldwide.region(cldr: "are")
 => Worldwide::Region <iso_code: 'AR-E', full_name: 'Entre Ríos', ...>
 
