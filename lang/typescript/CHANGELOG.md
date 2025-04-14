@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.6
+
+### Patch Changes
+
+- 5da5a3e: Removing occurrences of isUnsplittableField
+
 ## 0.7.5
 
 ### Patch Changes
