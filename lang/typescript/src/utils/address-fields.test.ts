@@ -171,7 +171,6 @@ describe('splitAddressField', () => {
     ];
     expect(splitAddressField(fieldDefinition, '123')).toEqual({
       streetNumber: '123',
-      isUnsplittableField: true,
     });
     expect(splitAddressField(fieldDefinition, '\u2060Main')).toEqual({
       streetName: 'Main',
@@ -201,7 +200,6 @@ describe('splitAddressField', () => {
 
       expect(splitAddressField(fieldDefinition, concatenatedAddress)).toEqual({
         streetName: 'Main',
-        isUnsplittableField: true,
       });
     });
 

@@ -11,14 +11,8 @@ describe('splitAddress2', () => {
   });
 
   test('returns address2 as line2 when no delimiter is present', () => {
-    expect(splitAddress2('CL', 'dpto 4')).toEqual({
-      line2: 'dpto 4',
-      isUnsplittableField: true,
-    });
-    expect(splitAddress2('BR', 'dpto 4')).toEqual({
-      line2: 'dpto 4',
-      isUnsplittableField: true,
-    });
+    expect(splitAddress2('CL', 'dpto 4')).toEqual({line2: 'dpto 4'});
+    expect(splitAddress2('BR', 'dpto 4')).toEqual({line2: 'dpto 4'});
   });
 
   test('returns neighborhood if string before delimiter is empty', () => {

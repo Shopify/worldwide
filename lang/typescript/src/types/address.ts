@@ -14,5 +14,3 @@ export interface Address {
   line2?: string;
   neighborhood?: string;
 }
-
-export type SplitAddress = Partial<Address> & {isUnsplittableField?: boolean};
