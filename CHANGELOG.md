@@ -27,98 +27,123 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Update South Africa to be considered Tax Inclusive
+
 ---
 
 ## [1.17.0] - 2025-02-27
+
 - Add has_cities? method to regions [#331](https://github.com/Shopify/worldwide/pull/331)
 - Update known zip prefixes for Portugal (PT) [#332]https://github.com/Shopify/worldwide/pull/332
 - Allow zone lookup by partial zip if country hides provinces [#332]https://github.com/Shopify/worldwide/pull/332
 - Add `has_zip_prefixes?` and `neighbors` methods to Region [#332]https://github.com/Shopify/worldwide/pull/332
 
 ## [1.16.0] - 2025-02-17
+
 - Add `ignore_provinces` to regions [#329](https://github.com/Shopify/worldwide/pull/329)
 
 ## [1.15.2] - 2024-12-27
+
 - Update Indonesia tax rate to 12%
 
 ## [1.15.1] - 2024-12-20
+
 - Set Malaysia and Singapore as tax_inclusive [#323](https://github.com/Shopify/worldwide/pull/323)
 - Update or correct example zips [#324](https://github.com/Shopify/worldwide/pull/324)
 - Correct zip regex patterns and make them Javascript-compatible [#325](https://github.com/Shopify/worldwide/pull/325)
+
 ---
 
 ## [1.15.0] - 2024-12-16
+
 - Add zip requirement and tax inclusive methods to country regions [#320](https://github.com/Shopify/worldwide/pull/320)
 - Set Ireland (IE) zip as a required address field [#321](https://github.com/Shopify/worldwide/pull/321)
 
 ## [1.14.4] - 2024-12-12
+
 - Speed up configure_i18n by precomputing paths and indexing descendants [#316](https://github.com/Shopify/worldwide/pull/316)
 - Update BV phone number prefix to 47 (Norway) [#318](https://github.com/Shopify/worldwide/pull/318)
 - Update Finland's (FI) tax rate [#319](https://github.com/Shopify/worldwide/pull/319)
 
 ## [1.14.3] - 2024-12-02
+
 - Add street_number.missing_building_number messages [#313](https://github.com/Shopify/worldwide/pull/313)
 
 ## [1.14.2] - 2024-11-11
+
 - Update translations [#303](https://github.com/Shopify/worldwide/pull/303)
 
 ## [1.14.1] - 2024-11-08
+
 - Improve Worldwide::Config.configure_i18n performance [#301](https://github.com/Shopify/worldwide/pull/301)
 
 ## [1.14.0] - 2024-11-07
+
 - Add example_city_zip and priority accessors to Regions [#298](https://github.com/Shopify/worldwide/pull/298)
 - Add tax_type accessor to Regions [#299](https://github.com/Shopify/worldwide/pull/299)
 
 ## [1.13.0] - 2024-11-06
+
 - Add `zip_prefixes` for Spain. [#295](https://github.com/Shopify/worldwide/pull/295)
 - Move expensive resource initialization into an explicit `eager_load!` namespace method
-[#297](https://github.com/Shopify/worldwide/pull/297)
+  [#297](https://github.com/Shopify/worldwide/pull/297)
 
 ## [1.12.1] - 2024-10-15
+
 - Update BR address1_regex to remove lookbehinds [#](https://github.com/Shopify/worldwide/pull/)
 
 ## [1.12.0] - 2024-10-11
+
 - Update Address splitting methods to split on the first delimiter [#291](https://github.com/Shopify/worldwide/pull/291)
 
 ## [1.11.1] - 2024-10-02
+
 - Configure regexp timeout in Worldwide#Phone [#290](https://github.com/Shopify/worldwide/pull/290)
 
 ## [1.11.0] - 2024-10-02
+
 - Add address1_regex to regions [#281](https://github.com/Shopify/worldwide/pull/281)
 - Add address1_regex for BE, CL, MX, ES, IL [#282](https://github.com/Shopify/worldwide/pull/282)
 - Add address1_regex for DE [#286](https://github.com/Shopify/worldwide/pull/286)
 - Update legacy timezone mappings for Europe/Kiev [#288](https://github.com/Shopify/worldwide/pull/288)
 
-
 ## [1.10.0] - 2024-09-16
+
 - Add alternate Arabic names for UAE zones [#283](https://github.com/Shopify/worldwide/pull/283)
 
 ## [1.9.0] - 2024-08-12
+
 - add support for additional address fields streetName, streetNumber in DE [#273](https://github.com/Shopify/worldwide/pull/273)
 - set additional_field neighborhood as required in BR [#279](https://github.com/Shopify/worldwide/pull/279)
 
-
 ## [1.8.0] - 2024-08-09
+
 - Bump Ruby to 3.3.1; drop support for 3.0.x [#264](https://github.com/Shopify/worldwide/pull/264)
 - Add support for partial zip matching for SG [#271](https://github.com/Shopify/worldwide/pull/271)
 
 ## [1.7.5] - 2024-08-01
+
 - Update legacy timezone mappings for America/Indianapolis and Asia/Calcutta [#267](https://github.com/Shopify/worldwide/pull/267)
 
 ## [1.7.4] - 2024-08-01
+
 - Nothing, released by mistake.
 
 ## [1.7.3] - 2024-07-30
+
 - Update NZ postcode prefixes [#265](https://github.com/Shopify/worldwide/pull/265)
 
 ## [1.7.2] - 2024-07-25
+
 - Associates Kosovo with Southern Europe [#216](https://github.com/Shopify/worldwide/pull/261)
 
 ## [1.7.1] - 2024-07-25
+
 - Update iana_to_rails_time_zone mappings for 11 tz's, add time zone data consistency tests[#259](https://github.com/Shopify/worldwide/pull/259)
 - Add consistency test for default and optional field labels [#258](https://github.com/Shopify/worldwide/pull/258)
 
 ## [1.7.0] - 2024-07-17
+
 - Introduce example_address to the worldwide region, update country ymls [#257](https://github.com/Shopify/worldwide/pull/257)
 
 ## [1.6.2] - 2024-07-10
@@ -127,24 +152,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Update Dutch translations for street_number [#236](https://github.com/Shopify/worldwide/pull/236)
 
 ## [1.6.1] - 2024-07-03
+
 - Move Units constants `SUPPORTED_HUMANIZATIONS` and `MEASUREMENT_KEYS` to `Worldwide.units.supported_humanizations` and `Worldwide.units.measurement_keys` [#240](https://github.com/Shopify/worldwide/pull/240)
 - Allow house numbers on address2 for Japan [#245](https://github.com/Shopify/worldwide/pull/245)
 
 ## [1.6.0] - 2024-06-21
+
 - Support multiple script-based address concatenation rules for each country [#224](https://github.com/Shopify/worldwide/pull/224)
 - Fixed a typo in list of supported scripts from `Latn` to `Latin`
 
 ## [1.5.0] - 2024-06-17
+
 - Make street number optional in CL [#228](https://github.com/Shopify/worldwide/pull/228)
 
 ## [1.4.1] - 2024-06-17
+
 - Add translations for neighborhood error strings in AE, CR, KW, PA, PE, SA [#220](https://github.com/Shopify/worldwide/pull/220)
 
 ## [1.4.0] - 2024-06-14
+
 - Add localized error strings for neighborhood in AE, CR, KW, PA, PE, SA [#215](https://github.com/Shopify/worldwide/pull/215)
 - Change delimiter from Non-Breaking Space to Word Joiner [#221](https://github.com/Shopify/worldwide/pull/221)
 
 ## [1.3.1] - 2024-06-11
+
 Patch release containing many non-english translation updates
 
 ## [1.3.0] - 2024-06-10
@@ -152,19 +183,19 @@ Patch release containing many non-english translation updates
 - Update translations for neighborhood too_long error message, add translations for localized neighborhood errors in MX, PH [#191](https://github.com/Shopify/worldwide/pull/191)
 - Generate concatenated address1/2 values when some additional field values are present [#199](https://github.com/Shopify/worldwide/pull/199)
 - update street_name and street_number too_long error message [#203](https://github.com/Shopify/worldwide/pull/203)
-- Additional field definitions in AE, CR, KW, PA, PE, SA, updated decorators for PH, VN  [#206](https://github.com/Shopify/worldwide/pull/206)
+- Additional field definitions in AE, CR, KW, PA, PE, SA, updated decorators for PH, VN [#206](https://github.com/Shopify/worldwide/pull/206)
 - All error messages now contain an `_instructional` and `_informative` key. If the `Worldwide::Field::error` method is called with a `code` that does not end in either `_instructional` or `_informative`, the `Worldwide::Field::error` method will append `_instructional` to the `code` and returns this error message. [#205](https://github.com/Shopify/worldwide/pull/205)
 
 ## [1.2.0] - 2024-06-05
 
 - Merge duplicate language definition on some region yaml files to restore missing languages; `NO` adds "en" and "nb", `SA` adds "en", SG does not change [#188](https://github.com/Shopify/worldwide/pull/188)
 - updated format_extended for TW VN [#187]https://github.com/Shopify/worldwide/pull/187)
--  Add IANA timezone to rails timezone mappings [#194](https://github.com/Shopify/worldwide/pull/194)
+- Add IANA timezone to rails timezone mappings [#194](https://github.com/Shopify/worldwide/pull/194)
 
 ## [1.1.0] - 2024-06-04
 
 - Add support for `_instructional` and `_informative` error message types. Fields without an `_instructional` error
-translation key, will fall back to their previous field's error message [#140](https://github.com/Shopify/worldwide/pull/140)
+  translation key, will fall back to their previous field's error message [#140](https://github.com/Shopify/worldwide/pull/140)
 
 ## [1.0.0] - 2024-05-30
 
@@ -173,7 +204,7 @@ translation key, will fall back to their previous field's error message [#140](h
 ## [0.15.0] - 2024-05-30
 
 - Created npm package `@shopify/worldwide` (see [README.md](./lang/typescript/README.md)) [#167](https://github.com/Shopify/worldwide/pull/167)
-- Update additional_address_fields and introduce combined_address_format definitions, introduce Region#{field}_required? methods for street_name, street_number, and neighborhood [#177](https://github.com/Shopify/worldwide/pull/177)
+- Update additional_address_fields and introduce combined_address_format definitions, introduce Region#{field}\_required? methods for street_name, street_number, and neighborhood [#177](https://github.com/Shopify/worldwide/pull/177)
 
 ## [0.14.0] - 2024-05-29
 
@@ -184,7 +215,7 @@ translation key, will fall back to their previous field's error message [#140](h
 
 - Add Address#split_address1 and Address#split_address2 methods [#165](https://github.com/Shopify/worldwide/pull/165)
 - Add Address#concatenated_address1 and Address#concatenated_address2 methods [#158](https://github.com/Shopify/worldwide/pull/158)
-- Updated root translation keys for regional locales `bg-BG`, `hr-HR`, `lt-LT`, `ro-RO`, `sk-SK`, `sl-SI`  to the base locale (e.g. `bg`) [#164](https://github.com/Shopify/worldwide/pull/164).
+- Updated root translation keys for regional locales `bg-BG`, `hr-HR`, `lt-LT`, `ro-RO`, `sk-SK`, `sl-SI` to the base locale (e.g. `bg`) [#164](https://github.com/Shopify/worldwide/pull/164).
 - Remove city from UAE address form and enable city autofill [#159](https://github.com/Shopify/worldwide/pull/159)
 - Support additional fields in IL, update streetNumber and neighborhood requirement for BE, CL, ES, MX [#166](https://github.com/Shopify/worldwide/pull/166)
 
@@ -193,6 +224,7 @@ translation key, will fall back to their previous field's error message [#140](h
 - Add missing `address1` and `address1_with_unit` formatting keys for GB [#160](https://github.com/Shopify/worldwide/pull/160).
 
 ## [0.12.1] - 2024-05-17
+
 - Use `>=` instead of `~>` for `activesupport` in `.gemspec` [#156](https://github.com/Shopify/worldwide/pull/156)
 
 ## [0.12.0] - 2024-05-15
