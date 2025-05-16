@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.18.0] - 2025-05-16
+- Add 194 as zip code prefix for Jammu and Kashmir, India
+
 ## [1.17.0] - 2025-02-27
 - Add has_cities? method to regions [#331](https://github.com/Shopify/worldwide/pull/331)
 - Update known zip prefixes for Portugal (PT) [#332]https://github.com/Shopify/worldwide/pull/332
