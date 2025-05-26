@@ -9,11 +9,10 @@ tax_inclusive: true
 group: European Countries
 group_name: Europe
 phone_number_prefix: 356
-zip_regex: "^(MT?-?)?[ABĊCDEFĠGHĦIJKLMNOPQRSTUVWXYŻZ]{2,3}( ?\\d{2,4})?$"
-zip_requirement: recommended
+zip_regex: "^(MT-?)?([Tt][Pp]|[A-Za-z]{3}) ?[0-9]{4}$"
 tags:
 - EU-member
-zip_example: NXR 01
+zip_example: VLT 1933
 format:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
