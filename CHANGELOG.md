@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Require postcodes and update regex in MT [#354](https://github.com/Shopify/worldwide/pull/354)
 
 ---
 
