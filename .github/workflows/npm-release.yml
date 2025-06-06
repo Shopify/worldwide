@@ -35,7 +35,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Create release Pull Request or publish to NPM
         id: changesets
-        uses: changesets/action@v1
+        # uses: changesets/action@v1
+        uses: changesets/action@v1.5.1 # workaround until fix for https://github.com/changesets/action/issues/501
         with:
           publish: pnpm release
           cwd: lang/typescript
