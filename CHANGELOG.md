@@ -26,9 +26,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Require postcodes and update regex in MT [#354](https://github.com/Shopify/worldwide/pull/354)
 
 ---
+
+## [1.17.1] - 2025-06-06
+- Require postcodes and update regex in MT [#354](https://github.com/Shopify/worldwide/pull/354)
+- Introduce name_alternates for NZ regions [#357](https://github.com/Shopify/worldwide/pull/357)
 
 ## [1.17.0] - 2025-02-27
 - Add has_cities? method to regions [#331](https://github.com/Shopify/worldwide/pull/331)
