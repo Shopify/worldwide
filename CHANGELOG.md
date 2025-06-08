@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Upgrade phonelib gem from 0.8.7 to 0.10.9 to pick up latest phone number data and bug fixes [#366](https://github.com/Shopify/worldwide/pull/366)
+
 ---
 
 ## [1.17.3] - 2025-06-23
