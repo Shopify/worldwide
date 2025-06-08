@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Upgrade phonelib gem from 0.8.7 to 0.10.15 to pick up latest phone number data and bug fixes [#366](https://github.com/Shopify/worldwide/pull/366)
+
 ---
 ## [1.21.1] - 2026-01-13
 - Fix GB postal code regex to reject invalid outward code formats (AA99A, A99A) that were incorrectly accepted (e.g., "KT11X 2JH")
