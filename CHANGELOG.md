@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Upgrade phonelib gem from 0.8.7 to 0.10.16 to pick up latest phone number data and bug fixes [#366](https://github.com/Shopify/worldwide/pull/366)
+
 ---
 ## [1.22.0] - 2026-03-09
 - Add CLDR unit formatting support for 12 new measurement categories: area, duration, electric, energy, frequency, light, power, pressure, speed, temperature, digital, and graphics (~50 new unit keys with locale-aware formatting) [#436](https://github.com/Shopify/worldwide/pull/436)
