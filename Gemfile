@@ -19,9 +19,7 @@ group :development do
   gem "rubocop-shopify", require: false
   gem "rubocop", require: false
   gem "ruby-lsp", require: false
-  gem "pry-byebug", require: false
-  gem "irb", require: false
-  gem "reline", require: false
+  gem "debug", require: false
 end
 
 group :test do
