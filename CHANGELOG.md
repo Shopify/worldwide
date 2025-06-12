@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add name formatter translations for missing languages [#367](https://github.com/Shopify/worldwide/pull/367)
+
 ---
 
 ## [1.17.1] - 2025-06-06
