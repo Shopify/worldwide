@@ -8,7 +8,7 @@ require "minitest/autorun"
 require "minitest/reporters"
 require "minitest/focus" unless ENV["CI"]
 require "mocha/minitest"
-require "pry-byebug"
+require "debug"
 
 # All the locales used in the tests
 I18n.available_locales = Worldwide::Locales.known
