@@ -18,3 +18,11 @@ updates:
     open-pull-requests-limit: 100
     insecure-external-code-execution: allow
     registries: "*"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    ignore:
+      # Can not bump past v1.5.1 until https://github.com/changesets/action/issues/501 is fixed
+      - dependency-name: "changesets/action"
+        versions: [">=1.5.1"]
