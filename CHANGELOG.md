@@ -26,9 +26,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Require postal codes in Romania [#368](https://github.com/Shopify/worldwide/pull/368)
 
 ---
+
+## [1.17.3] - 2025-06-23
+- Require postal codes in Romania [#368](https://github.com/Shopify/worldwide/pull/368)
 
 ## [1.17.2] - 2025-06-18
 - Add name formatter translations for missing languages [#367](https://github.com/Shopify/worldwide/pull/367)
