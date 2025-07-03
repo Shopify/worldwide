@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Add zip prefixes for regions in Japan [#376](https://github.com/Shopify/worldwide/pull/376)
 
 ---
 
