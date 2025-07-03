@@ -26,7 +26,8 @@ example_address:
   phone: "+81 (3) 3581-0101"
 format:
   edit: "{country}_{lastName}{firstName}_{company}_{zip}{province}_{city}_{address1}_{address2}_{phone}"
-  show: "{country} 〒{zip}_{province} {city}_{address1}_{address2}_{company}_{lastName} {firstName}様_{phone}"
+  show: "{country} 〒{zip}_{province} {city}_{address1}_{address2}_{company}_{lastName}
+    {firstName}様_{phone}"
 emoji: "\U0001F1EF\U0001F1F5"
 zones:
 - name: Hokkaidō
@@ -37,6 +38,14 @@ zones:
   iso_code: JP-01
   tax: 0.0
   priority: 47
+  zip_prefixes:
+  - '00'
+  - '04'
+  - '05'
+  - '06'
+  - '07'
+  - '08'
+  - '09'
 - name: Aomori
   name_alternates:
   - Aomori Prefecture
@@ -47,6 +56,9 @@ zones:
   iso_code: JP-02
   tax: 0.0
   priority: 46
+  zip_prefixes:
+  - '018-550'
+  - '03'
 - name: Iwate
   name_alternates:
   - Iwate Prefecture
@@ -57,6 +69,8 @@ zones:
   iso_code: JP-03
   tax: 0.0
   priority: 45
+  zip_prefixes:
+  - '02'
 - name: Miyagi
   name_alternates:
   - Miyagi Prefecture
@@ -67,6 +81,8 @@ zones:
   iso_code: JP-04
   tax: 0.0
   priority: 44
+  zip_prefixes:
+  - '98'
 - name: Akita
   name_alternates:
   - Akita Prefecture
@@ -77,6 +93,29 @@ zones:
   iso_code: JP-05
   tax: 0.0
   priority: 43
+  zip_prefixes:
+  - '010'
+  - '011'
+  - '012'
+  - '013'
+  - '014'
+  - '015'
+  - '016'
+  - '017'
+  - '018-0'
+  - '018-1'
+  - '018-2'
+  - '018-3'
+  - '018-4'
+  - '018-51'
+  - '018-52'
+  - '018-53'
+  - '018-54'
+  - '018-551'
+  - '018-56'
+  - '018-57'
+  - '018-58'
+  - '019'
 - name: Yamagata
   name_alternates:
   - Yamagata Prefecture
@@ -87,6 +126,8 @@ zones:
   iso_code: JP-06
   tax: 0.0
   priority: 42
+  zip_prefixes:
+  - '99'
 - name: Fukushima
   name_alternates:
   - Fukushima Prefecture
@@ -97,6 +138,9 @@ zones:
   iso_code: JP-07
   tax: 0.0
   priority: 41
+  zip_prefixes:
+  - '96'
+  - '97'
 - name: Ibaraki
   name_alternates:
   - Ibaraki Prefecture
@@ -107,6 +151,27 @@ zones:
   iso_code: JP-08
   tax: 0.0
   priority: 40
+  zip_prefixes:
+  - '30'
+  - '310'
+  - 311-0
+  - 311-1
+  - 311-2
+  - 311-3
+  - 311-41
+  - 311-42
+  - 311-43
+  - 311-440
+  - 311-45
+  - 311-46
+  - '312'
+  - '313'
+  - '314'
+  - '315'
+  - '316'
+  - '317'
+  - '318'
+  - '319'
 - name: Tochigi
   name_alternates:
   - Tochigi Prefecture
@@ -117,6 +182,10 @@ zones:
   iso_code: JP-09
   tax: 0.0
   priority: 39
+  zip_prefixes:
+  - 311-441
+  - '32'
+  - 349-122
 - name: Gunma
   name_alternates:
   - Gunma Prefecture
@@ -127,6 +196,38 @@ zones:
   iso_code: JP-10
   tax: 0.0
   priority: 38
+  zip_prefixes:
+  - 370-0
+  - 370-11
+  - 370-12
+  - 370-13
+  - 370-14
+  - 370-1501
+  - 370-1502
+  - 370-1503
+  - 370-1504
+  - 370-1505
+  - 370-1506
+  - 370-151
+  - 370-16
+  - 370-2
+  - 370-3
+  - 370-85
+  - 370-860
+  - 370-861
+  - 370-862
+  - 370-866
+  - '371'
+  - '372'
+  - '373'
+  - '374'
+  - '375'
+  - '376'
+  - '377'
+  - '378'
+  - '379'
+  - 384-0097
+  - 389-012
 - name: Saitama
   name_alternates:
   - Saitama Prefecture
@@ -137,6 +238,30 @@ zones:
   iso_code: JP-11
   tax: 0.0
   priority: 37
+  zip_prefixes:
+  - 100-8620
+  - 100-8639
+  - 121-872
+  - 174-8741
+  - 174-8743
+  - '33'
+  - '340'
+  - '341'
+  - '342'
+  - '343'
+  - '344'
+  - '345'
+  - '346'
+  - '347'
+  - '348'
+  - 349-0
+  - 349-11
+  - 349-120
+  - 349-121
+  - 349-129
+  - '35'
+  - '36'
+  - 370-1507
 - name: Chiba
   name_alternates:
   - Chiba Prefecture
@@ -147,6 +272,12 @@ zones:
   iso_code: JP-12
   tax: 0.0
   priority: 36
+  zip_prefixes:
+  - 100-8677
+  - '26'
+  - '27'
+  - '28'
+  - '29'
 - name: Tōkyō
   name_alternates:
   - Tokyo Prefecture
@@ -157,6 +288,76 @@ zones:
   iso_code: JP-13
   tax: 0.0
   priority: 35
+  zip_prefixes:
+  - 100-0
+  - 100-1
+  - 100-2
+  - 100-6
+  - 100-7
+  - 100-80
+  - 100-81
+  - 100-82
+  - 100-83
+  - 100-84
+  - 100-85
+  - 100-860
+  - 100-861
+  - 100-8621
+  - 100-8629
+  - 100-8631
+  - 100-864
+  - 100-865
+  - 100-866
+  - 100-8676
+  - 100-87
+  - 100-89
+  - '101'
+  - '102'
+  - '103'
+  - '104'
+  - '105'
+  - '106'
+  - '107'
+  - '108'
+  - '109'
+  - '11'
+  - '120'
+  - 121-0
+  - 121-80
+  - 121-85
+  - 121-86
+  - 121-871
+  - '123'
+  - '124'
+  - '125'
+  - '13'
+  - '14'
+  - '15'
+  - '16'
+  - '170'
+  - '171'
+  - '173'
+  - 174-0
+  - 174-85
+  - 174-86
+  - 174-870
+  - 174-871
+  - 174-873
+  - 174-8740
+  - 174-8744
+  - 174-878
+  - 174-88
+  - 174-89
+  - '175'
+  - '176'
+  - '177'
+  - '178'
+  - '179'
+  - '18'
+  - '19'
+  - '20'
+  - 220-8604
+  - 370-868
 - name: Kanagawa
   name_alternates:
   - Kanagawa Prefecture
@@ -167,6 +368,32 @@ zones:
   iso_code: JP-14
   tax: 0.0
   priority: 34
+  zip_prefixes:
+  - '21'
+  - 220-0
+  - 220-6
+  - 220-80
+  - 220-81
+  - 220-84
+  - 220-85
+  - 220-8601
+  - 220-8609
+  - 220-861
+  - 220-862
+  - 220-865
+  - 220-866
+  - 220-868
+  - 220-87
+  - '221'
+  - '222'
+  - '223'
+  - '224'
+  - '225'
+  - '226'
+  - '227'
+  - '23'
+  - '24'
+  - '25'
 - name: Niigata
   name_alternates:
   - Niigata Prefecture
@@ -177,6 +404,33 @@ zones:
   iso_code: JP-15
   tax: 0.0
   priority: 33
+  zip_prefixes:
+  - 389-226
+  - '940'
+  - '941'
+  - '942'
+  - '943'
+  - '944'
+  - '945'
+  - '946'
+  - '947'
+  - '948'
+  - 949-0
+  - 949-1
+  - 949-2
+  - 949-3
+  - 949-4
+  - 949-5
+  - 949-6
+  - 949-7
+  - 949-81
+  - 949-82
+  - 949-831
+  - 949-84
+  - 949-85
+  - 949-86
+  - 949-87
+  - '95'
 - name: Toyama
   name_alternates:
   - Toyama Prefecture
@@ -187,6 +441,34 @@ zones:
   iso_code: JP-16
   tax: 0.0
   priority: 32
+  zip_prefixes:
+  - '930'
+  - '931'
+  - '932'
+  - '933'
+  - '934'
+  - '935'
+  - '936'
+  - '937'
+  - '938'
+  - 939-00
+  - 939-010
+  - 939-011
+  - 939-012
+  - 939-013
+  - 939-014
+  - 939-015
+  - 939-019
+  - 939-02
+  - 939-03
+  - 939-04
+  - 939-05
+  - 939-06
+  - 939-07
+  - 939-1
+  - 939-2
+  - 939-3
+  - 939-8
 - name: Ishikawa
   name_alternates:
   - Ishikawa Prefecture
@@ -197,6 +479,28 @@ zones:
   iso_code: JP-17
   tax: 0.0
   priority: 31
+  zip_prefixes:
+  - '920'
+  - '921'
+  - 922-00
+  - 922-01
+  - 922-02
+  - 922-03
+  - 922-04
+  - 922-05
+  - 922-0671
+  - 922-0672
+  - 922-0673
+  - 922-08
+  - 922-8
+  - '923'
+  - '924'
+  - '925'
+  - '926'
+  - '927'
+  - '928'
+  - '929'
+  - 939-017
 - name: Fukui
   name_alternates:
   - Fukui Prefecture
@@ -207,6 +511,9 @@ zones:
   iso_code: JP-18
   tax: 0.0
   priority: 30
+  zip_prefixes:
+  - '91'
+  - 922-0679
 - name: Yamanashi
   name_alternates:
   - Yamanashi Prefecture
@@ -217,6 +524,8 @@ zones:
   iso_code: JP-19
   tax: 0.0
   priority: 29
+  zip_prefixes:
+  - '40'
 - name: Nagano
   name_alternates:
   - Nagano Prefecture
@@ -227,6 +536,61 @@ zones:
   iso_code: JP-20
   tax: 0.0
   priority: 28
+  zip_prefixes:
+  - '380'
+  - '381'
+  - '382'
+  - '383'
+  - 384-000
+  - 384-001
+  - 384-002
+  - 384-003
+  - 384-004
+  - 384-005
+  - 384-006
+  - 384-007
+  - 384-008
+  - 384-0091
+  - 384-0092
+  - 384-0093
+  - 384-0094
+  - 384-0095
+  - 384-0096
+  - 384-03
+  - 384-04
+  - 384-05
+  - 384-06
+  - 384-07
+  - 384-08
+  - 384-1
+  - 384-2
+  - 384-8
+  - '385'
+  - '386'
+  - '387'
+  - '388'
+  - 389-010
+  - 389-011
+  - 389-019
+  - 389-02
+  - 389-04
+  - 389-05
+  - 389-06
+  - 389-08
+  - 389-1
+  - 389-21
+  - 389-220
+  - 389-223
+  - 389-224
+  - 389-225
+  - 389-229
+  - 389-23
+  - 389-24
+  - 389-25
+  - 389-26
+  - 389-27
+  - '39'
+  - 949-832
 - name: Gifu
   name_alternates:
   - Gifu Prefecture
@@ -237,6 +601,8 @@ zones:
   iso_code: JP-21
   tax: 0.0
   priority: 27
+  zip_prefixes:
+  - '50'
 - name: Shizuoka
   name_alternates:
   - Shizuoka Prefecture
@@ -247,6 +613,25 @@ zones:
   iso_code: JP-22
   tax: 0.0
   priority: 26
+  zip_prefixes:
+  - '41'
+  - '42'
+  - '430'
+  - 431-0
+  - 431-1
+  - 431-2
+  - 431-3
+  - 431-410
+  - 431-411
+  - 431-419
+  - '432'
+  - '433'
+  - '434'
+  - '435'
+  - '436'
+  - '437'
+  - '438'
+  - '439'
 - name: Aichi
   name_alternates:
   - Aichi Prefecture
@@ -257,6 +642,37 @@ zones:
   iso_code: JP-23
   tax: 0.0
   priority: 25
+  zip_prefixes:
+  - 431-412
+  - '44'
+  - '45'
+  - '46'
+  - '47'
+  - '48'
+  - '490'
+  - '491'
+  - '492'
+  - '493'
+  - '494'
+  - '495'
+  - '496'
+  - '497'
+  - 498-0001
+  - 498-0002
+  - 498-0003
+  - 498-0004
+  - 498-0005
+  - 498-0006
+  - 498-0007
+  - 498-001
+  - 498-002
+  - 498-003
+  - 498-004
+  - 498-005
+  - 498-006
+  - 498-8501
+  - 498-8502
+  - 498-8505
 - name: Mie
   name_alternates:
   - Mie Prefecture
@@ -267,6 +683,11 @@ zones:
   iso_code: JP-24
   tax: 0.0
   priority: 24
+  zip_prefixes:
+  - 498-08
+  - 498-8503
+  - '51'
+  - 647-13
 - name: Shiga
   name_alternates:
   - Shiga Prefecture
@@ -277,6 +698,27 @@ zones:
   iso_code: JP-25
   tax: 0.0
   priority: 23
+  zip_prefixes:
+  - 520-00
+  - 520-01
+  - 520-02
+  - 520-03
+  - 520-047
+  - 520-05
+  - 520-08
+  - 520-1
+  - 520-2
+  - 520-3
+  - 520-8
+  - '521'
+  - '522'
+  - '523'
+  - '524'
+  - '525'
+  - '526'
+  - '527'
+  - '528'
+  - '529'
 - name: Kyōto
   name_alternates:
   - Kyoto Prefecture
@@ -287,6 +729,27 @@ zones:
   iso_code: JP-26
   tax: 0.0
   priority: 22
+  zip_prefixes:
+  - 520-046
+  - '60'
+  - '610'
+  - '611'
+  - '612'
+  - '613'
+  - '614'
+  - '615'
+  - '616'
+  - '617'
+  - 618-007
+  - 618-008
+  - 618-009
+  - 618-8501
+  - 618-8511
+  - 618-852
+  - 618-8558
+  - 618-856
+  - '619'
+  - '62'
 - name: Ōsaka
   name_alternates:
   - Osaka Prefecture
@@ -297,6 +760,48 @@ zones:
   iso_code: JP-27
   tax: 0.0
   priority: 21
+  zip_prefixes:
+  - '530'
+  - '531'
+  - '532'
+  - '533'
+  - '534'
+  - '535'
+  - '536'
+  - '537'
+  - '538'
+  - 539-0
+  - '54'
+  - '55'
+  - '560'
+  - '561'
+  - '562'
+  - 563-00
+  - 563-01
+  - 563-02
+  - 563-03
+  - 563-8
+  - '564'
+  - '565'
+  - '566'
+  - '567'
+  - '568'
+  - '569'
+  - '57'
+  - '58'
+  - '59'
+  - 618-0001
+  - 618-0002
+  - 618-0003
+  - 618-0004
+  - 618-001
+  - 618-002
+  - 618-8502
+  - 618-8518
+  - 618-8555
+  - 618-857
+  - 618-858
+  - 630-027
 - name: Hyōgo
   name_alternates:
   - Hyogo Prefecture
@@ -307,6 +812,12 @@ zones:
   iso_code: JP-28
   tax: 0.0
   priority: 20
+  zip_prefixes:
+  - 539-8
+  - 563-08
+  - '65'
+  - '66'
+  - '67'
 - name: Nara
   name_alternates:
   - Nara Prefecture
@@ -317,6 +828,33 @@ zones:
   iso_code: JP-29
   tax: 0.0
   priority: 19
+  zip_prefixes:
+  - 630-00
+  - 630-01
+  - 630-020
+  - 630-021
+  - 630-022
+  - 630-023
+  - 630-024
+  - 630-025
+  - 630-026
+  - 630-028
+  - 630-029
+  - 630-1
+  - 630-2
+  - 630-8
+  - '631'
+  - '632'
+  - '633'
+  - '634'
+  - '635'
+  - '636'
+  - '637'
+  - '638'
+  - '639'
+  - 647-127
+  - 647-15
+  - 648-03
 - name: Wakayama
   name_alternates:
   - Wakayama Prefecture
@@ -327,6 +865,30 @@ zones:
   iso_code: JP-30
   tax: 0.0
   priority: 18
+  zip_prefixes:
+  - '640'
+  - '641'
+  - '642'
+  - '643'
+  - '644'
+  - '645'
+  - '646'
+  - 647-0
+  - 647-11
+  - 647-120
+  - 647-121
+  - 647-122
+  - 647-123
+  - 647-129
+  - 647-16
+  - 647-17
+  - 647-8
+  - 648-00
+  - 648-01
+  - 648-02
+  - 648-04
+  - 648-8
+  - '649'
 - name: Tottori
   name_alternates:
   - Tottori Prefecture
@@ -337,6 +899,14 @@ zones:
   iso_code: JP-31
   tax: 0.0
   priority: 17
+  zip_prefixes:
+  - '680'
+  - '681'
+  - '682'
+  - '683'
+  - 684-00
+  - 684-8
+  - '689'
 - name: Shimane
   name_alternates:
   - Shimane Prefecture
@@ -347,6 +917,13 @@ zones:
   iso_code: JP-32
   tax: 0.0
   priority: 16
+  zip_prefixes:
+  - 684-01
+  - 684-02
+  - 684-03
+  - 684-04
+  - '685'
+  - '69'
 - name: Okayama
   name_alternates:
   - Okayama Prefecture
@@ -357,6 +934,9 @@ zones:
   iso_code: JP-33
   tax: 0.0
   priority: 15
+  zip_prefixes:
+  - '70'
+  - '71'
 - name: Hiroshima
   name_alternates:
   - Hiroshima Prefecture
@@ -367,6 +947,9 @@ zones:
   iso_code: JP-34
   tax: 0.0
   priority: 14
+  zip_prefixes:
+  - '72'
+  - '73'
 - name: Yamaguchi
   name_alternates:
   - Yamaguchi Prefecture
@@ -377,6 +960,9 @@ zones:
   iso_code: JP-35
   tax: 0.0
   priority: 13
+  zip_prefixes:
+  - '74'
+  - '75'
 - name: Tokushima
   name_alternates:
   - Tokushima Prefecture
@@ -387,6 +973,8 @@ zones:
   iso_code: JP-36
   tax: 0.0
   priority: 12
+  zip_prefixes:
+  - '77'
 - name: Kagawa
   name_alternates:
   - Kagawa Prefecture
@@ -397,6 +985,8 @@ zones:
   iso_code: JP-37
   tax: 0.0
   priority: 11
+  zip_prefixes:
+  - '76'
 - name: Ehime
   name_alternates:
   - Ehime Prefecture
@@ -407,6 +997,8 @@ zones:
   iso_code: JP-38
   tax: 0.0
   priority: 10
+  zip_prefixes:
+  - '79'
 - name: Kōchi
   name_alternates:
   - Kochi Prefecture
@@ -417,6 +1009,8 @@ zones:
   iso_code: JP-39
   tax: 0.0
   priority: 9
+  zip_prefixes:
+  - '78'
 - name: Fukuoka
   name_alternates:
   - Fukuoka Prefecture
@@ -427,6 +1021,42 @@ zones:
   iso_code: JP-40
   tax: 0.0
   priority: 8
+  zip_prefixes:
+  - '80'
+  - '810'
+  - 811-0
+  - 811-1
+  - 811-2
+  - 811-3
+  - 811-4
+  - '812'
+  - '813'
+  - '814'
+  - '815'
+  - '816'
+  - '818'
+  - '819'
+  - '82'
+  - '830'
+  - '831'
+  - '832'
+  - '833'
+  - '834'
+  - '835'
+  - '836'
+  - '837'
+  - '838'
+  - 839-0
+  - 839-12
+  - 839-13
+  - 839-140
+  - 839-141
+  - 839-149
+  - 839-8
+  - 871-022
+  - 871-08
+  - 871-09
+  - 871-858
 - name: Saga
   name_alternates:
   - Saga Prefecture
@@ -437,6 +1067,19 @@ zones:
   iso_code: JP-41
   tax: 0.0
   priority: 7
+  zip_prefixes:
+  - '840'
+  - '841'
+  - '842'
+  - '843'
+  - '844'
+  - '845'
+  - '846'
+  - '847'
+  - 848-00
+  - 848-01
+  - 848-8
+  - '849'
 - name: Nagasaki
   name_alternates:
   - Nagasaki Prefecture
@@ -447,6 +1090,11 @@ zones:
   iso_code: JP-42
   tax: 0.0
   priority: 6
+  zip_prefixes:
+  - 811-5
+  - '817'
+  - 848-04
+  - '85'
 - name: Kumamoto
   name_alternates:
   - Kumamoto Prefecture
@@ -457,6 +1105,8 @@ zones:
   iso_code: JP-43
   tax: 0.0
   priority: 5
+  zip_prefixes:
+  - '86'
 - name: Ōita
   name_alternates:
   - Oita Prefecture
@@ -467,6 +1117,47 @@ zones:
   iso_code: JP-44
   tax: 0.0
   priority: 4
+  zip_prefixes:
+  - 839-142
+  - '870'
+  - 871-0001
+  - 871-0002
+  - 871-0003
+  - 871-0004
+  - 871-0005
+  - 871-0006
+  - 871-0007
+  - 871-0008
+  - 871-0009
+  - 871-001
+  - 871-002
+  - 871-003
+  - 871-004
+  - 871-005
+  - 871-006
+  - 871-007
+  - 871-008
+  - 871-009
+  - 871-01
+  - 871-020
+  - 871-029
+  - 871-03
+  - 871-04
+  - 871-07
+  - 871-850
+  - 871-851
+  - 871-852
+  - 871-855
+  - 871-857
+  - 871-86
+  - '872'
+  - '873'
+  - '874'
+  - '875'
+  - '876'
+  - '877'
+  - '878'
+  - '879'
 - name: Miyazaki
   name_alternates:
   - Miyazaki Prefecture
@@ -477,6 +1168,8 @@ zones:
   iso_code: JP-45
   tax: 0.0
   priority: 3
+  zip_prefixes:
+  - '88'
 - name: Kagoshima
   name_alternates:
   - Kagoshima Prefecture
@@ -487,6 +1180,8 @@ zones:
   iso_code: JP-46
   tax: 0.0
   priority: 2
+  zip_prefixes:
+  - '89'
 - name: Okinawa
   name_alternates:
   - Okinawa Prefecture
@@ -497,4 +1192,6 @@ zones:
   iso_code: JP-47
   tax: 0.0
   priority: 1
+  zip_prefixes:
+  - '90'
 timezone: Asia/Tokyo

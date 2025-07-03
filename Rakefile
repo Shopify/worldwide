@@ -19,6 +19,6 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-Dir.glob("rake/tasks/*.rake").each { |r| load r }
+Dir.glob("rake/tasks/**/*.rake").each { |r| load r }
 
 task default: [:test, :rubocop]
