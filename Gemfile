@@ -20,6 +20,7 @@ group :development do
   gem "rubocop", require: false
   gem "ruby-lsp", require: false
   gem "pry-byebug", require: false
+  gem "csv"
 end
 
 group :test do
