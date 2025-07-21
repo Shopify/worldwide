@@ -91,7 +91,6 @@ module Worldwide
         zones.find_index { |zone| zone["code"] == zone_code || zone["iso_code"] == zone_code }
       end
 
-
       def apply_patch_to_content(content, patch)
         path = patch[:path]
         value = patch[:value]
@@ -126,7 +125,6 @@ module Worldwide
       end
 
       def create_path_if_not_exists(content, path, desired_type)
-        prev = nil
         path.reduce(content) do |current, key|
           return nil if current.nil?
 
@@ -297,7 +295,7 @@ module Worldwide
 
         # step 3: identify neighbouring zones
         zone_to_neighboring_zones = Hash.new { |h, k| h[k] = Set.new }
-        shared_prefixes.each do |prefix, zone_codes|
+        shared_prefixes.each do |_prefix, zone_codes|
           zone_codes.each do |zone_code|
             (zone_codes - [zone_code]).each do |neighbor_code|
               zone_to_neighboring_zones[zone_code] << neighbor_code
