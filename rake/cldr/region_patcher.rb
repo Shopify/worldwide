@@ -131,7 +131,7 @@ module Worldwide
           if current.is_a?(Array) && key.is_a?(Integer)
             current[key]
           elsif current.is_a?(Hash)
-            if current.has_key?(key.to_s)
+            if current.key?(key.to_s)
               current[key.to_s]
             else
               current[key.to_s] = desired_type.dup
