@@ -30,7 +30,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ---
 
 ## [1.17.5] - 2025-07-31
-- Update Romania VAT rate from 19% to 21%
+- Update Romania VAT rate from 19% to 21% [#379](https://github.com/Shopify/worldwide/pull/379)
+- Add iana_to_rails_time_zone mapping for America/Coyhaique [#378](https://github.com/Shopify/worldwide/pull/378)
 
 ## [1.17.4] - 2025-07-02
 - Remove postal codes requirement for Romania [#375](https://github.com/Shopify/worldwide/pull/375)
