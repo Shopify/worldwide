@@ -29,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.17.5] - 2025-07-31
+- Update Romania VAT rate from 19% to 21%
+
 ## [1.17.4] - 2025-07-02
 - Remove postal codes requirement for Romania [#375](https://github.com/Shopify/worldwide/pull/375)
 
