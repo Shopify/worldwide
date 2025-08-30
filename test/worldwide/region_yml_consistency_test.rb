@@ -485,14 +485,22 @@ module Worldwide
     end
 
     test "example_city is available for each US state" do
-      assert_predicate Worldwide.region(code: "US").zones, :all? do |state|
-        !state.example_city&.empty?
+      Worldwide.region(code: "US").zones.each do |state|
+        # Skip territories that legitimately don't have cities
+        next if state.iso_code == "UM" # United States Minor Outlying Islands
+
+        assert_kind_of String, state.example_city, "example_city should be a String for #{state.iso_code}"
+        refute_predicate state.example_city, :empty?, "example_city should not be empty for #{state.iso_code}"
       end
     end
 
     test "example_city_zip is available for each US state" do
-      assert_predicate Worldwide.region(code: "US").zones, :all? do |state|
-        !state.example_city_zip&.empty?
+      Worldwide.region(code: "US").zones.each do |state|
+        # Skip territories that legitimately don't have zip codes
+        next if state.iso_code == "UM" # United States Minor Outlying Islands
+
+        assert_kind_of String, state.example_city_zip, "example_city_zip should be a String for #{state.iso_code}"
+        refute_predicate state.example_city_zip, :empty?, "example_city_zip should not be empty for #{state.iso_code}"
       end
     end
 
