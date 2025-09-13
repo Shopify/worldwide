@@ -2,6 +2,8 @@
 
 require_relative "../cldr/locale_generator"
 require_relative "../cldr/patch"
+require_relative "../cldr/region_patcher"
+require_relative "../cldr/csv_reader"
 require_relative "../cldr/puller"
 require_relative "../cldr/cleaner"
 require_relative "../paths/generator"
@@ -71,6 +73,34 @@ namespace :cldr do
     task :generate do
       generator = Worldwide::Cldr::LocaleGenerator.new
       generator.perform
+    end
+
+    desc <<~DESCRIPTION
+      Patches Japanese region data with zip code prefixes from a CSV file.
+
+      This task reads a CSV file with Japanese address data, extracts postal
+      code prefixes for each prefecture, and updates the region data files.
+
+      eg.: bundle exec rake "cldr:data:patch_jp_zip_prefixes[path/to/your/file.csv,csv_source_type]"
+    DESCRIPTION
+    task :patch_jp_zip_prefixes, [:csv_path, :csv_source, :max_length_prefix] do |_, args|
+      csv_path = args[:csv_path]
+      csv_source_type = args[:csv_source]
+      max_length_prefix = args[:max_length_prefix]
+      unless csv_path && csv_source_type
+        raise "Usage: bundle exec rake 'cldr:data:patch_jp_zip_prefixes[path/to/file.csv,csv_source_type]'"
+      end
+
+      expanded_path = File.expand_path(csv_path)
+      unless File.exist?(expanded_path)
+        raise "File not found at '#{expanded_path}'. Please provide a valid path to the CSV file."
+      end
+
+      csv_reader = Worldwide::Cldr::CsvReaderFactory.create(csv_source_type, expanded_path)
+
+      Worldwide::Cldr::JpZipPrefixPatcher.perform(expanded_path, csv_reader, max_length_prefix.to_i)
+
+      puts "Successfully patched JP zip prefixes from #{expanded_path}"
     end
   end
 end
