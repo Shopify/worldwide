@@ -225,8 +225,6 @@ module Worldwide
       spec = YAML.safe_load_file(filename)
       code = spec["code"]
 
-      loaded_regions = []
-
       region = Region.new(
         alpha_three: country_codes.dig(code, "alpha3"),
         continent: false,

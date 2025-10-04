@@ -1001,7 +1001,7 @@ module Worldwide
           # END OF AUTO-GENERATED CONTENT
         CONTENTS
 
-        contents = contents.split("\n").map { |line| "#{line.strip.empty? ? "" : indentation_of_starting_line}#{line}" }.join("\n")
+        contents = contents.split("\n").map { |line| "#{indentation_of_starting_line unless line.strip.empty?}#{line}" }.join("\n")
 
         new_file_contents = existing_file_contents[0...start_of_auto_generated_content.begin(0)] + contents + existing_file_contents[end_of_auto_generated_content.end(0)..]
 
