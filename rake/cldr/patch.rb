@@ -35,7 +35,7 @@ module Worldwide
           # Load the existing files
           cldr_locales = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*")].map { |path| File.basename(path) }
           I18n.available_locales = cldr_locales
-          Worldwide::Config.configure_i18n
+          Worldwide::Config.configure_i18n(ignore_precomputed_paths: true)
 
           # https://unicode-org.atlassian.net/browse/CLDR-13408
           patch_file(:en, "subdivisions.yml", [:subdivisions, :nzmbh], "Marl", "Marlborough")
