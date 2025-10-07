@@ -24,17 +24,22 @@ namespace :cldr do
       The `VERSION` environment variable can be used to specify the version of CLDR to download (see the current version
       in data/cldr/versions.yml).
 
+      eg.: Download the CLDR data for the current version specified in data/cldr.yml
+        bundle exec rake cldr:data:import
+
       eg.: Download v40 of CLDR and export all components
         bundle exec rake cldr:data:import VERSION=40
 
       eg.: Download v40 of CLDR and export the `Units` and `Calendars` components
         bundle exec rake cldr:data:import VERSION=40 COMPONENTS=Units,Calendars
 
-      eg.: Download the CLDR data from latest commit of https://github.com/unicode-org/cldr-staging and export all components
-        bundle exec rake cldr:data:import
+      eg.: Download the CLDR data from the latest commit of https://github.com/unicode-org/cldr-staging and export all components
+        bundle exec rake cldr:data:import VERSION=unreleased
     DESCRIPTION
     task :import, :environment do
-      version = ENV["VERSION"]
+      version = ENV["VERSION"] || YAML.load_file("data/cldr.yml")["version"]
+      version = nil if version == "unreleased"
+
       components = ENV["COMPONENTS"]
       Worldwide::Cldr::Puller.perform(version, components)
     end
