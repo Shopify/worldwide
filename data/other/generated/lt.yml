@@ -29,13 +29,13 @@ lt:
       default: "%Y-%02m-%02d"
       billing: "%Y-%02m-%02d"
       yearless_ordinal: "%B%{ordinalized_day}"
-      today_at_time: "%02k:%M šiandien"
-      yesterday_at_time: "%02k:%M vakar"
-      tomorrow_at_time: "%02k:%M rytoj"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %02m-%02d"
+      today_at_time: Šiandien %02k:%M
+      yesterday_at_time: Vakar %02k:%M
+      tomorrow_at_time: Rytoj, %02k:%M
+      on_weekday_at_time: "%A, %02k:%M"
+      on_date_time_current_year: "%02m-%02d, %02k:%M"
       on_date: "%Y-%02m-%02d"
-      ago: "%{time} ago"
+      ago: prieš %{time}
       x_hours_ago:
         few: prieš %{count} valandas
         many: prieš %{count} valandos
@@ -132,13 +132,13 @@ lt:
       short: "%02m-%02d %02k:%M"
       billing: "%Y-%02m-%02d"
       yearless_ordinal: "%B%{ordinalized_day}"
-      today_at_time: "%02k:%M šiandien"
-      yesterday_at_time: "%02k:%M vakar"
-      tomorrow_at_time: "%02k:%M rytoj"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %02m-%02d"
+      today_at_time: Šiandien %02k:%M
+      yesterday_at_time: Vakar %02k:%M
+      tomorrow_at_time: Rytoj, %02k:%M
+      on_weekday_at_time: "%A, %02k:%M"
+      on_date_time_current_year: "%02m-%02d, %02k:%M"
       on_date: "%Y-%02m-%02d"
-      ago: "%{time} ago"
+      ago: prieš %{time}
       x_hours_ago:
         few: prieš %{count} valandas
         many: prieš %{count} valandos
@@ -150,7 +150,7 @@ lt:
         one: prieš %{count} minutę
         other: prieš %{count} minučių
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: dabar
+    am: prieš pietus
+    pm: po pietų
+    just_now: Ką tik
     yesterday: vakar

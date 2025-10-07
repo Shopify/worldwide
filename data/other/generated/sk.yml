@@ -29,13 +29,13 @@ sk:
       default: "%-d. %-m. %Y"
       billing: "%-d. %-m. %Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M dnes"
-      yesterday_at_time: "%02k:%M včera"
-      tomorrow_at_time: "%02k:%M zajtra"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %-m."
-      on_date: "%-d. %-m. %Y"
-      ago: "%{time} ago"
+      today_at_time: Dnes o %02k:%M
+      yesterday_at_time: Včera o %02k:%M
+      tomorrow_at_time: Zajtra o %02k:%M
+      on_weekday_at_time: "%A o %02k:%M"
+      on_date_time_current_year: "%-d. %-m., %02k:%M"
+      on_date: dňa %-d. %-m. %Y
+      ago: pred %{time}
       x_hours_ago:
         few: pred %{count} hodinami
         many: pred %{count} hodinou
@@ -132,13 +132,13 @@ sk:
       short: "%-d. %-m. %02k:%M"
       billing: "%-d. %-m. %Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M dnes"
-      yesterday_at_time: "%02k:%M včera"
-      tomorrow_at_time: "%02k:%M zajtra"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %-m."
-      on_date: "%-d. %-m. %Y"
-      ago: "%{time} ago"
+      today_at_time: Dnes o %02k:%M
+      yesterday_at_time: Včera o %02k:%M
+      tomorrow_at_time: Zajtra o %02k:%M
+      on_weekday_at_time: "%A o %02k:%M"
+      on_date_time_current_year: "%-d. %-m., %02k:%M"
+      on_date: dňa %-d. %-m. %Y
+      ago: pred %{time}
       x_hours_ago:
         few: pred %{count} hodinami
         many: pred %{count} hodinou
@@ -150,7 +150,7 @@ sk:
         one: pred %{count} minútou
         other: pred %{count} minútami
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: teraz
+    am: AM
+    pm: PM
+    just_now: Práve teraz
     yesterday: včera

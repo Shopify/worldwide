@@ -29,13 +29,13 @@ sl:
       default: "%-d. %-m. %Y"
       billing: "%-d. %-m. %Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M danes"
-      yesterday_at_time: "%02k:%M včeraj"
-      tomorrow_at_time: "%02k:%M jutri"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %b"
+      today_at_time: Danes ob %02k:%M
+      yesterday_at_time: Včeraj ob %02k:%M
+      tomorrow_at_time: Jutri ob %02k:%M
+      on_weekday_at_time: v %A ob %02k:%M
+      on_date_time_current_year: "%-d. %b, %02k:%M"
       on_date: "%-d. %b %Y"
-      ago: "%{time} ago"
+      ago: 'Pred toliko časa: %{time}'
       x_hours_ago:
         few: pred %{count} urami
         one: pred %{count} uro
@@ -132,13 +132,13 @@ sl:
       short: "%-d. %b, %02k:%M"
       billing: "%-d. %-m. %Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M danes"
-      yesterday_at_time: "%02k:%M včeraj"
-      tomorrow_at_time: "%02k:%M jutri"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %b"
+      today_at_time: Danes ob %02k:%M
+      yesterday_at_time: Včeraj ob %02k:%M
+      tomorrow_at_time: Jutri ob %02k:%M
+      on_weekday_at_time: v %A ob %02k:%M
+      on_date_time_current_year: "%-d. %b, %02k:%M"
       on_date: "%-d. %b %Y"
-      ago: "%{time} ago"
+      ago: 'Pred toliko časa: %{time}'
       x_hours_ago:
         few: pred %{count} urami
         one: pred %{count} uro
@@ -150,7 +150,7 @@ sl:
         other: pred %{count} minutami
         two: pred %{count} minutama
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: zdaj
+    am: dop.
+    pm: pop.
+    just_now: Pravkar
     yesterday: včeraj

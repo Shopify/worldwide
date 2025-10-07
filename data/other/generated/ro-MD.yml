@@ -29,13 +29,13 @@ ro-MD:
       default: "%02d.%02m.%Y"
       billing: "%02d.%02m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M azi"
-      yesterday_at_time: "%02k:%M ieri"
-      tomorrow_at_time: "%02k:%M mâine"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d %b"
-      on_date: "%-d %b %Y"
-      ago: "%{time} ago"
+      today_at_time: Astăzi la %02k:%M
+      yesterday_at_time: Ieri la %02k:%M
+      tomorrow_at_time: Mâine, la %02k:%M
+      on_weekday_at_time: pe %A la %02k:%M
+      on_date_time_current_year: pe %-d %b, %02k:%M
+      on_date: pe %-d %b %Y
+      ago: acum %{time}
       x_hours_ago:
         few: acum %{count} ore
         one: acum %{count} oră
@@ -130,13 +130,13 @@ ro-MD:
       short: "%-d %b, %02k:%M"
       billing: "%02d.%02m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M azi"
-      yesterday_at_time: "%02k:%M ieri"
-      tomorrow_at_time: "%02k:%M mâine"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d %b"
-      on_date: "%-d %b %Y"
-      ago: "%{time} ago"
+      today_at_time: Astăzi la %02k:%M
+      yesterday_at_time: Ieri la %02k:%M
+      tomorrow_at_time: Mâine, la %02k:%M
+      on_weekday_at_time: pe %A la %02k:%M
+      on_date_time_current_year: pe %-d %b, %02k:%M
+      on_date: pe %-d %b %Y
+      ago: acum %{time}
       x_hours_ago:
         few: acum %{count} ore
         one: acum %{count} oră
@@ -146,7 +146,7 @@ ro-MD:
         one: acum %{count} minut
         other: acum %{count} de minute
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: acum
+    am: a.m.
+    pm: p.m.
+    just_now: Chiar acum
     yesterday: ieri
