@@ -106,10 +106,13 @@ module Worldwide
       end
 
       def cldr_locale_paths(locale_set, components)
-        Paths::CLDR_LOCALE_PATHS.select do |path|
-          match = path.match(CLDR_LOCALE_PATH_REGEX)
-          match && locale_set.include?(match[:locale]) && components.include?(match[:component])
-        end
+        File.read(Paths::CLDR_LOCALE_PATHS_FILE)
+          .lines
+          .map { |path| File.join(Paths::GEM_ROOT, path.strip) }
+          .select do |path|
+            match = path.match(CLDR_LOCALE_PATH_REGEX)
+            match && locale_set.include?(match[:locale]) && components.include?(match[:component])
+          end
       end
 
       def add_other_data(i18n_config)
@@ -119,17 +122,23 @@ module Worldwide
       end
 
       def other_data_path(locale_set)
-        Paths::OTHER_DATA_PATHS.select do |path|
-          match = path.match(OTHER_LOCALE_PATH_REGEX)
-          match && locale_set.include?(match[:locale])
-        end
+        File.read(Paths::OTHER_DATA_PATHS_FILE)
+          .lines
+          .map { |path| File.join(Paths::GEM_ROOT, path.strip) }
+          .select do |path|
+            match = path.match(OTHER_LOCALE_PATH_REGEX)
+            match && locale_set.include?(match[:locale])
+          end
       end
 
       def regions_data_path(locale_set)
-        Paths::REGION_DATA_PATHS.select do |path|
-          match = path.match(REGIONS_LOCALE_PATH_REGEX)
-          match && locale_set.include?(match[:locale])
-        end
+        File.read(Paths::REGION_DATA_PATHS_FILE)
+          .lines
+          .map { |path| File.join(Paths::GEM_ROOT, path.strip) }
+          .select do |path|
+            match = path.match(REGIONS_LOCALE_PATH_REGEX)
+            match && locale_set.include?(match[:locale])
+          end
       end
     end
   end
