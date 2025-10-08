@@ -1,9 +1,16 @@
 # frozen_string_literal: false
 
+require "i18n"
 require "parser/current"
-require "worldwide"
+require "worldwide/config"
+require "worldwide/i18n_exception_handler"
+require "worldwide/cldr"
+require "worldwide/locales"
+require "worldwide/paths"
+require "worldwide/units"
 require "yaml"
 
+require_relative "puller"
 require_relative "flatten_hash"
 require_relative "unflatten_hash"
 require_relative "sort_yaml"
@@ -1210,7 +1217,7 @@ module Worldwide
 
         def patch_units
           puts("📐 Patching the units.yml CLDR files")
-          measurement_keys = Worldwide.units.measurement_keys.values.uniq.map(&:to_s)
+          measurement_keys = Worldwide::Units.measurement_keys.values.uniq.map(&:to_s)
           units_filepaths = Dir.glob(File.join(["data", "cldr", "locales", "*", "units.yml"]))
           raise NotNeededError, "No CLDR units files found to patch." if units_filepaths.empty?
 

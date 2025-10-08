@@ -1,10 +1,6 @@
 # frozen_string_literal: false
 
-require_relative "../cldr/locale_generator"
-require_relative "../cldr/patch"
-require_relative "../cldr/puller"
-require_relative "../cldr/cleaner"
-require_relative "../paths/generator"
+require "worldwide/util"
 
 namespace :cldr do
   namespace :data do
@@ -15,6 +11,8 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:clean
     DESCRIPTION
     task :clean do
+      require_relative "../cldr/cleaner"
+
       Worldwide::Cldr::Cleaner.perform
     end
 
@@ -37,6 +35,8 @@ namespace :cldr do
         bundle exec rake cldr:data:import VERSION=unreleased
     DESCRIPTION
     task :import, :environment do
+      require_relative "../cldr/puller"
+
       version = ENV["VERSION"] || YAML.load_file("data/cldr.yml")["version"]
       version = nil if version == "unreleased"
 
@@ -52,6 +52,8 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:patch
     DESCRIPTION
     task :patch do
+      require_relative "../cldr/patch"
+
       Worldwide::Cldr::Patch::Patcher.new.perform
     end
 
@@ -63,6 +65,8 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:generate_paths
     DESCRIPTION
     task :generate_paths do
+      require_relative "../paths/generator"
+
       Worldwide::Paths::Generator.new.perform
     end
 
@@ -74,6 +78,8 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:generate
     DESCRIPTION
     task :generate do
+      require_relative "../cldr/locale_generator"
+
       generator = Worldwide::Cldr::LocaleGenerator.new
       generator.perform
     end

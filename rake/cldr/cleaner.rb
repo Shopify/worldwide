@@ -1,6 +1,7 @@
 # frozen_string_literal: false
 
 require "fileutils"
+require "worldwide/paths"
 
 module Worldwide
   module Cldr

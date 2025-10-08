@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative "flatten_hash"
+require_relative "unflatten_hash"
+
 require "yaml"
 
 class PluralizationSubkeyExpander
