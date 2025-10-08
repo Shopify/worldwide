@@ -1,0 +1,110 @@
+#!/bin/bash
+set -euo pipefail
+
+# This script ensures that running all CLDR rake tasks in sequence
+# produces no unexpected changes to the working directory.
+# Only the vendor directory should be created/modified.
+
+# Get the workspace root (parent directory of bin/)
+WORKSPACE_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+
+cd "$WORKSPACE_ROOT"
+
+# Define the tasks in the order they should be run (as per cldr.rake comments)
+TASKS=(
+  "cldr:data:clean"
+  "cldr:data:import"
+  "cldr:data:patch"
+  "cldr:data:generate"
+  "cldr:data:generate_paths"
+)
+
+echo "Running CLDR rake tasks integration test..."
+echo
+
+# Run each task in order
+for task in "${TASKS[@]}"; do
+  echo "Running rake task: $task"
+  if ! bundle exec rake "$task"; then
+    echo "ERROR: Failed to run rake task $task" >&2
+    exit 1
+  fi
+done
+
+echo
+echo "Checking for unexpected changes..."
+
+# Get all modified/deleted tracked files
+MODIFIED_FILES=$(git diff --name-only HEAD || true)
+
+# Get all untracked files (excluding gitignored files)
+UNTRACKED_FILES=$(git ls-files --others --exclude-standard || true)
+
+# Combine and filter out vendor/ directory
+UNEXPECTED_CHANGES=$(
+  (echo "$MODIFIED_FILES"; echo "$UNTRACKED_FILES") | \
+  grep -v '^$' | \
+  grep -v '^vendor/' || true
+)
+
+# Check if there are any unexpected changes
+if [ -n "$UNEXPECTED_CHANGES" ]; then
+  echo "Detected file changes, checking if they are semantic differences..."
+
+  # Separate YAML files from other files
+  YAML_FILES=$(echo "$UNEXPECTED_CHANGES" | grep -E '\.ya?ml$' || true)
+  NON_YAML_FILES=$(echo "$UNEXPECTED_CHANGES" | grep -vE '\.ya?ml$' || true)
+
+  # Parse YAML files and check for differences in loaded data
+  # Required because different ruby/psych/libyaml versions can have slightly different serialization behaviours
+  # that don't change the loaded data e.g. double-quotes around strings containing certain characters.
+  # Ordinarily we would just regenerate the files using the latest dependency versions, but we're purposely
+  # testing against multiple rubies.
+  YAML_FILES_WITH_SEMANTIC_CHANGES=""
+  if [ -n "$YAML_FILES" ]; then
+    echo "  Checking YAML files for semantic differences..."
+    while IFS= read -r file; do
+      if [ -n "$file" ] && [ -f "$file" ]; then
+        # Compare YAML files semantically by normalizing them
+        OLD_NORMALIZED=$(git show HEAD:$file | bundle exec ruby -e "require 'yaml'; require 'date'; puts YAML.dump(YAML.unsafe_load(STDIN.read))" 2>/dev/null)
+        NEW_NORMALIZED=$(cat "$file" | bundle exec ruby -e "require 'yaml'; require 'date'; puts YAML.dump(YAML.unsafe_load(STDIN.read))" 2>/dev/null)
+        if [ "$OLD_NORMALIZED" != "$NEW_NORMALIZED" ]; then
+          YAML_FILES_WITH_SEMANTIC_CHANGES="${YAML_FILES_WITH_SEMANTIC_CHANGES}${file}\n"
+        fi
+      fi
+    done <<< "$YAML_FILES"
+  fi
+
+  # Combine YAML diffs with all non-YAML changes
+  REAL_CHANGES=$(echo -e "${YAML_FILES_WITH_SEMANTIC_CHANGES}${NON_YAML_FILES}" | grep -v '^$' || true)
+
+  if [ -n "$REAL_CHANGES" ]; then
+    echo "ERROR: Unexpected changes detected after running CLDR rake tasks:" >&2
+    echo >&2
+    echo "Changed files:" >&2
+    echo "$REAL_CHANGES" | sed 's/^/  /' >&2
+    echo >&2
+    echo "Diffs of unexpected changes:" >&2
+    echo "$REAL_CHANGES" | while IFS= read -r file; do
+      if [ -n "$file" ]; then
+        echo "=== $file ===" >&2
+        # Check if file is tracked (modified) or untracked
+        if git ls-files --error-unmatch "$file" >/dev/null 2>&1; then
+          # File is tracked, show regular diff
+          git --no-pager diff HEAD "$file" || true
+        else
+          # File is untracked, show it as a new file
+          git --no-pager diff --no-index /dev/null "$file" || true
+        fi
+        echo >&2
+      fi
+    done
+    echo "Only changes to the ./vendor directory are expected." >&2
+    exit 1
+  else
+    echo "✓ All file changes are formatting-only (e.g., YAML quoting differences)"
+  fi
+fi
+
+echo "✓ All CLDR rake tasks completed successfully with no unexpected changes"
+exit 0
