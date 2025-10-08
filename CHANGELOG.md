@@ -26,13 +26,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+
+---
+
+## [1.18.0] - 2025-10-08
 - Fix broken CLDR data rake tasks [#389](https://github.com/Shopify/worldwide/pull/389)
 - Read paths files in `configure_i18n` instead of at module initialization (ibid.)
 - Regenerate files to include minor translation updates from previously released changes (ibid.)
 - Add CI for CLDR data rake tasks (ibid.)
 - Add Traditional Chinese translations for Chinese provinces and subdivisions of Taiwan [#390](https://github.com/Shopify/worldwide/pull/390)
-
----
 
 ## [1.17.5] - 2025-07-31
 - Update Romania VAT rate from 19% to 21% [#379](https://github.com/Shopify/worldwide/pull/379)
