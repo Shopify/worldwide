@@ -1,10 +1,9 @@
 # frozen_string_literal: false
 
-require_relative "../cldr/locale_generator"
-require_relative "../cldr/patch"
-require_relative "../cldr/puller"
-require_relative "../cldr/cleaner"
-require_relative "../paths/generator"
+require "worldwide/util"
+
+# Use these rake tasks to perform data updates (for instance, as part of a complete CLDR upgrade
+# or after adding data patches in patch.rb). Tasks should be run in the order defined below.
 
 namespace :cldr do
   namespace :data do
@@ -15,6 +14,8 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:clean
     DESCRIPTION
     task :clean do
+      require_relative "../cldr/cleaner"
+
       Worldwide::Cldr::Cleaner.perform
     end
 
@@ -24,17 +25,24 @@ namespace :cldr do
       The `VERSION` environment variable can be used to specify the version of CLDR to download (see the current version
       in data/cldr/versions.yml).
 
+      eg.: Download the CLDR data for the current version specified in data/cldr.yml
+        bundle exec rake cldr:data:import
+
       eg.: Download v40 of CLDR and export all components
         bundle exec rake cldr:data:import VERSION=40
 
       eg.: Download v40 of CLDR and export the `Units` and `Calendars` components
         bundle exec rake cldr:data:import VERSION=40 COMPONENTS=Units,Calendars
 
-      eg.: Download the CLDR data from latest commit of https://github.com/unicode-org/cldr-staging and export all components
-        bundle exec rake cldr:data:import
+      eg.: Download the CLDR data from the latest commit of https://github.com/unicode-org/cldr-staging and export all components
+        bundle exec rake cldr:data:import VERSION=unreleased
     DESCRIPTION
     task :import, :environment do
-      version = ENV["VERSION"]
+      require_relative "../cldr/puller"
+
+      version = ENV["VERSION"] || YAML.load_file("data/cldr.yml")["version"]
+      version = nil if version == "unreleased"
+
       components = ENV["COMPONENTS"]
       Worldwide::Cldr::Puller.perform(version, components)
     end
@@ -47,18 +55,9 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:patch
     DESCRIPTION
     task :patch do
+      require_relative "../cldr/patch"
+
       Worldwide::Cldr::Patch::Patcher.new.perform
-    end
-
-    desc <<~DESCRIPTION
-      Generate indices of files in the CLDR data
-
-      This task generates a list of all files in the CLDR data, which is used to speed up the loading of the data.
-
-      eg.: bundle exec rake cldr:data:generate_paths
-    DESCRIPTION
-    task :generate_paths do
-      Worldwide::Paths::Generator.new.perform
     end
 
     desc <<~DESCRIPTION
@@ -69,8 +68,23 @@ namespace :cldr do
       eg.: bundle exec rake cldr:data:generate
     DESCRIPTION
     task :generate do
+      require_relative "../cldr/locale_generator"
+
       generator = Worldwide::Cldr::LocaleGenerator.new
       generator.perform
+    end
+
+    desc <<~DESCRIPTION
+      Generate indices of files in the CLDR data
+
+      This task generates a list of all files in the CLDR data, which is used to speed up the loading of the data.
+
+      eg.: bundle exec rake cldr:data:generate_paths
+    DESCRIPTION
+    task :generate_paths do
+      require_relative "../paths/generator"
+
+      Worldwide::Paths::Generator.new.perform
     end
   end
 end

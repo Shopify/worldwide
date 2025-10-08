@@ -26,6 +26,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Fix broken CLDR data rake tasks [#389](https://github.com/Shopify/worldwide/pull/389/)
+- Read paths files in `configure_i18n` instead of at module initialization (ibid.)
+- Regenerate files to include minor translation updates from previously released changes (ibid.)
+- Add CI for CLDR data rake tasks (ibid.)
 
 ---
 

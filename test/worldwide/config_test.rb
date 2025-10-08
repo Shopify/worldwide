@@ -145,7 +145,7 @@ module Worldwide
 
       assert_equal(
         expected_cldr_locale_paths,
-        Worldwide::Paths::CLDR_LOCALE_PATHS.to_set,
+        File.read(Worldwide::Paths::CLDR_LOCALE_PATHS_FILE).lines.map { |path| File.join(Worldwide::Paths::GEM_ROOT, path.strip) }.to_set,
         "Data files have changed since #{Worldwide::Paths::CLDR_LOCALE_PATHS_FILE} was last generated.\n\nRun `rake cldr:data:generate_paths` to update.\n",
       )
 
@@ -153,7 +153,7 @@ module Worldwide
 
       assert_equal(
         other_data_paths,
-        Worldwide::Paths::OTHER_DATA_PATHS.to_set,
+        File.read(Worldwide::Paths::OTHER_DATA_PATHS_FILE).lines.map { |path| File.join(Worldwide::Paths::GEM_ROOT, path.strip) }.to_set,
         "Data files have changed since #{Worldwide::Paths::OTHER_DATA_PATHS_FILE} was last generated.\n\nRun `rake cldr:data:generate_paths` to update.\n",
       )
 
@@ -161,7 +161,7 @@ module Worldwide
 
       assert_equal(
         region_data_paths,
-        Worldwide::Paths::REGION_DATA_PATHS.to_set,
+        File.read(Worldwide::Paths::REGION_DATA_PATHS_FILE).lines.map { |path| File.join(Worldwide::Paths::GEM_ROOT, path.strip) }.to_set,
         "Data files have changed since #{Worldwide::Paths::REGION_DATA_PATHS_FILE} was last generated.\n\nRun `rake cldr:data:generate_paths` to update.\n",
       )
     end

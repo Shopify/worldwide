@@ -23,7 +23,7 @@ module Worldwide
     REGIONS_LOCALE_PATH_REGEX = /#{File::SEPARATOR}(?<locale>[\w-]+)\.yml/
 
     class << self
-      def configure_i18n(i18n_config: nil, additional_components: [])
+      def configure_i18n(i18n_config: nil, additional_components: [], ignore_precomputed_paths: false)
         i18n_config ||= I18n.config
 
         I18n::Backend::Simple.include(
@@ -46,8 +46,8 @@ module Worldwide
 
         i18n_config.available_locales = expanded_locales_from_configuration(i18n_config)
 
-        add_cldr_data(i18n_config, additional_components: additional_components)
-        add_other_data(i18n_config)
+        add_cldr_data(i18n_config, additional_components: additional_components, ignore_precomputed_paths: ignore_precomputed_paths)
+        add_other_data(i18n_config, ignore_precomputed_paths: ignore_precomputed_paths)
 
         i18n_config
       end
@@ -99,37 +99,58 @@ module Worldwide
         locales.uniq.sort
       end
 
-      def add_cldr_data(i18n_config, additional_components:)
+      def add_cldr_data(i18n_config, additional_components:, ignore_precomputed_paths: false)
         locale_set = i18n_config.available_locales.map(&:to_s).to_set
         components = REQUIRED_CLDR_DATA + additional_components
-        i18n_config.load_path += cldr_locale_paths(locale_set, components)
-      end
 
-      def cldr_locale_paths(locale_set, components)
-        Paths::CLDR_LOCALE_PATHS.select do |path|
-          match = path.match(CLDR_LOCALE_PATH_REGEX)
-          match && locale_set.include?(match[:locale]) && components.include?(match[:component])
+        i18n_config.load_path += if ignore_precomputed_paths
+          Dir[File.join(Paths::CLDR_ROOT, "locales", "{#{locale_set.to_a.join(",")}}/{#{components.join(",")}}.{yml,rb}")]
+        else
+          cldr_precomputed_locale_paths(locale_set, components)
         end
       end
 
-      def add_other_data(i18n_config)
+      def cldr_precomputed_locale_paths(locale_set, components)
+        File.read(Paths::CLDR_LOCALE_PATHS_FILE)
+          .lines
+          .map { |path| File.join(Paths::GEM_ROOT, path.strip) }
+          .select do |path|
+            match = path.match(CLDR_LOCALE_PATH_REGEX)
+            match && locale_set.include?(match[:locale]) && components.include?(match[:component])
+          end
+      end
+
+      def add_other_data(i18n_config, ignore_precomputed_paths: false)
         locale_set = i18n_config.available_locales.map(&:to_s).to_set
-        i18n_config.load_path += other_data_path(locale_set)
-        i18n_config.load_path += regions_data_path(locale_set)
+
+        if ignore_precomputed_paths
+          locales = locale_set.to_a
+          i18n_config.load_path += Dir[File.join(Paths::OTHER_DATA_ROOT, "*", "{#{locales.join(",")}}.{yml,rb}")]
+          i18n_config.load_path += Dir[File.join(Paths::REGIONS_ROOT, "{#{locales.join(",")}}.yml")]
+        else
+          i18n_config.load_path += other_data_path(locale_set)
+          i18n_config.load_path += regions_data_path(locale_set)
+        end
       end
 
       def other_data_path(locale_set)
-        Paths::OTHER_DATA_PATHS.select do |path|
-          match = path.match(OTHER_LOCALE_PATH_REGEX)
-          match && locale_set.include?(match[:locale])
-        end
+        File.read(Paths::OTHER_DATA_PATHS_FILE)
+          .lines
+          .map { |path| File.join(Paths::GEM_ROOT, path.strip) }
+          .select do |path|
+            match = path.match(OTHER_LOCALE_PATH_REGEX)
+            match && locale_set.include?(match[:locale])
+          end
       end
 
       def regions_data_path(locale_set)
-        Paths::REGION_DATA_PATHS.select do |path|
-          match = path.match(REGIONS_LOCALE_PATH_REGEX)
-          match && locale_set.include?(match[:locale])
-        end
+        File.read(Paths::REGION_DATA_PATHS_FILE)
+          .lines
+          .map { |path| File.join(Paths::GEM_ROOT, path.strip) }
+          .select do |path|
+            match = path.match(REGIONS_LOCALE_PATH_REGEX)
+            match && locale_set.include?(match[:locale])
+          end
       end
     end
   end

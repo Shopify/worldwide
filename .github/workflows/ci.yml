@@ -1,6 +1,10 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -22,7 +26,10 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-    - name: Tests
-      run: bin/test
     - name: RuboCop
       run: bin/style
+    - name: Tests
+      run: bin/test
+    - name: CLDR Rake Tasks Integration Test
+      run: bin/test-cldr-rake-tasks
+

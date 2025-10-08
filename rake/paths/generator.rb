@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "worldwide/paths"
+
 module Worldwide
   module Paths
     class Generator

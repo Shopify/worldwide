@@ -1,9 +1,16 @@
 # frozen_string_literal: false
 
+require "i18n"
 require "parser/current"
-require "worldwide"
+require "worldwide/config"
+require "worldwide/i18n_exception_handler"
+require "worldwide/cldr"
+require "worldwide/locales"
+require "worldwide/paths"
+require "worldwide/units"
 require "yaml"
 
+require_relative "puller"
 require_relative "flatten_hash"
 require_relative "unflatten_hash"
 require_relative "sort_yaml"
@@ -35,7 +42,7 @@ module Worldwide
           # Load the existing files
           cldr_locales = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*")].map { |path| File.basename(path) }
           I18n.available_locales = cldr_locales
-          Worldwide::Config.configure_i18n
+          Worldwide::Config.configure_i18n(ignore_precomputed_paths: true)
 
           # https://unicode-org.atlassian.net/browse/CLDR-13408
           patch_file(:en, "subdivisions.yml", [:subdivisions, :nzmbh], "Marl", "Marlborough")
@@ -1210,7 +1217,7 @@ module Worldwide
 
         def patch_units
           puts("📐 Patching the units.yml CLDR files")
-          measurement_keys = Worldwide.units.measurement_keys.values.uniq.map(&:to_s)
+          measurement_keys = Worldwide::Units.measurement_keys.values.uniq.map(&:to_s)
           units_filepaths = Dir.glob(File.join(["data", "cldr", "locales", "*", "units.yml"]))
           raise NotNeededError, "No CLDR units files found to patch." if units_filepaths.empty?
 
