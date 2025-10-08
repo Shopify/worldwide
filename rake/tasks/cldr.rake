@@ -2,6 +2,9 @@
 
 require "worldwide/util"
 
+# Use these rake tasks to perform data updates (for instance, as part of a complete CLDR upgrade
+# or after adding data patches in patch.rb). Tasks should be run in the order defined below.
+
 namespace :cldr do
   namespace :data do
     desc <<~DESCRIPTION
@@ -58,19 +61,6 @@ namespace :cldr do
     end
 
     desc <<~DESCRIPTION
-      Generate indices of files in the CLDR data
-
-      This task generates a list of all files in the CLDR data, which is used to speed up the loading of the data.
-
-      eg.: bundle exec rake cldr:data:generate_paths
-    DESCRIPTION
-    task :generate_paths do
-      require_relative "../paths/generator"
-
-      Worldwide::Paths::Generator.new.perform
-    end
-
-    desc <<~DESCRIPTION
       Generate additional data from the CLDR data, including missing plurals.
 
       Run this after importing and patching data from CLDR.
@@ -82,6 +72,19 @@ namespace :cldr do
 
       generator = Worldwide::Cldr::LocaleGenerator.new
       generator.perform
+    end
+
+    desc <<~DESCRIPTION
+      Generate indices of files in the CLDR data
+
+      This task generates a list of all files in the CLDR data, which is used to speed up the loading of the data.
+
+      eg.: bundle exec rake cldr:data:generate_paths
+    DESCRIPTION
+    task :generate_paths do
+      require_relative "../paths/generator"
+
+      Worldwide::Paths::Generator.new.perform
     end
   end
 end
