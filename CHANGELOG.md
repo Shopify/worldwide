@@ -28,6 +28,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ---
+## [1.18.1] - 2025-10-14
+- Patch pt subdivisions to remove superscript market on Spanish provinces [#392](https://github.com/Shopify/worldwide/pull/392)
 
 ## [1.18.0] - 2025-10-08
 - Fix broken CLDR data rake tasks [#389](https://github.com/Shopify/worldwide/pull/389)
