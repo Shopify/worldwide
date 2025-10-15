@@ -589,5 +589,17 @@ module Worldwide
       refute_predicate Worldwide.region(code: "AR"), :has_zip_prefixes? # zones but no prefixes
       assert_predicate Worldwide.region(code: "US"), :has_zip_prefixes? # zones and prefixes
     end
+
+    test "#has_provinces? returns true when region has provinces and they are not hidden from addresses" do
+      assert_predicate Worldwide.region(code: "CA"), :has_provinces?
+    end
+
+    test "#has_provinces? returns false when region has provinces but they are hidden from addresses" do
+      refute_predicate Worldwide.region(code: "GB"), :has_provinces?
+    end
+
+    test "#has_provinces? returns false when region has no provinces" do
+      refute_predicate Worldwide.region(code: "AD"), :has_provinces?
+    end
   end
 end

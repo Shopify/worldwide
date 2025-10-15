@@ -401,6 +401,11 @@ module Worldwide
       !!format["show"]&.include?("{city}")
     end
 
+    # Does this region have provinces in their addresses?
+    def has_provinces?
+      !!format["show"]&.include?("{province}")
+    end
+
     # Is this Region considered a "province" (political subdivision of a "country")?
     def province?
       @province
