@@ -27,9 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Add has_provinces? method to Region [#396](https://github.com/Shopify/worldwide/pull/396)
-
 ---
+
+## [1.20.0] - 2025-10-15
+- Add has_provinces? method to Region [#396](https://github.com/Shopify/worldwide/pull/396)
 
 ## [1.19.0] - 2025-10-15
 - Add new method zip_type to determine if a postal code is `NUMERIC`, `ALPHANUMERIC`, or `NUMERIC_AND_PUNCTUATION`[#395](https://github.com/Shopify/worldwide/pull/395)
