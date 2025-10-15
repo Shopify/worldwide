@@ -358,6 +358,20 @@ module Worldwide
       end
     end
 
+    test "#zip_type returns values as expected" do
+      {
+        "US" => "NUMERIC_AND_PUNCTUATION",
+        "CA" => "ALPHANUMERIC",
+        "CH" => "NUMERIC",
+      }.each do |country_code, expected|
+        assert_equal expected, Worldwide.region(code: country_code).zip_type
+      end
+    end
+
+    test "#zip_type returns nil when no zip example is set" do
+      assert_nil Worldwide.region(code: "HK").zip_type
+    end
+
     test "#zip_requirement returns zip requirement" do
       assert_equal "required", Worldwide.region(code: "CN").zip_requirement # set as required
       assert_equal "recommended", Worldwide.region(code: "AM").zip_requirement # set as recommended
