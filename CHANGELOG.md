@@ -30,7 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ---
 
 ## [1.19.0] - 2025-10-15
-- Add new method zip_type to determine if a postal code is `NUMERICAL`, `ALPHANUMERICAL`, or `NUMERICAL_WITH_PUNCTUATIONS`[#395](https://github.com/Shopify/worldwide/pull/395)
+- Add new method zip_type to determine if a postal code is `NUMERIC`, `ALPHANUMERIC`, or `NUMERIC_AND_PUNCTUATION`[#395](https://github.com/Shopify/worldwide/pull/395)
 
 ## [1.18.0] - 2025-10-08
 - Fix broken CLDR data rake tasks [#389](https://github.com/Shopify/worldwide/pull/389)
