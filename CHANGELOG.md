@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add has_provinces? method to Region [#396](https://github.com/Shopify/worldwide/pull/396)
+
 ---
 
 ## [1.19.0] - 2025-10-15
