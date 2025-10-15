@@ -9,6 +9,13 @@ module Worldwide
     RECOMMENDED = "recommended"
     OPTIONAL = "optional"
 
+    # Accpetable format types of the postal code.
+    FORMAT_TYPES = {
+      ALPHANUMERIC: "ALPHANUMERIC",
+      NUMERIC: "NUMERIC",
+      NUMERIC_AND_PUNCTUATION: "NUMERIC_AND_PUNCTUATION",
+    }
+
     # The default `.inspect` isn't a good fit for Region, because it can end up dumping a lot of info
     # as it walks the hierarchy of descendants.  So, instead, we provide our own `.inspect` that
     # only shows a restricted subset of the object's fields.
@@ -457,6 +464,24 @@ module Worldwide
         !zip_regex.nil?
       else
         REQUIRED == @zip_requirement
+      end
+    end
+
+    # Returns the format type of the postal code.
+    # Analyzes the postal code example and regex pattern to determine if it contains
+    # only numbers, alphanumeric characters, or numbers with punctuation/spaces.
+    # Mainly used to determine the type of keyboard to show on mobile views.
+    #
+    # @return [String, nil] One of "ALPHANUMERIC", "NUMERIC", "NUMERIC_AND_PUNCTUATION", or nil if no zip_example
+    def zip_type
+      return nil if zip_example.nil?
+
+      if zip_example.match?(/[A-Za-z]/)
+        FORMAT_TYPES[:ALPHANUMERIC]
+      elsif zip_example.match?(/[[:punct:]\s]/) || zip_regex&.match?(/}-|\\-|-[?+*]|\(-/)
+        FORMAT_TYPES[:NUMERIC_AND_PUNCTUATION]
+      else
+        FORMAT_TYPES[:NUMERIC]
       end
     end
 
