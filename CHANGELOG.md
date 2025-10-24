@@ -28,6 +28,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ---
+## [1.20.1] - 2025-10-14
+- Patch pt subdivisions to remove superscript marker on Spanish provinces [#392](https://github.com/Shopify/worldwide/pull/392)
 
 ## [1.20.0] - 2025-10-15
 - Add has_provinces? method to Region [#396](https://github.com/Shopify/worldwide/pull/396)

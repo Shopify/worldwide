@@ -396,6 +396,14 @@ module Worldwide
             [:pt30, "Região Autónoma da Madeira", "Madeira"],
           ])
 
+          # Subdivisions of Spain in Portuguese
+          # Remove ² markers used by CLDR to distinguish duplicate names
+          patch_subdivisions(:pt, [
+            [:esna, "Navarra²", "Navarra"],
+            [:espm, "Baleares²", "Baleares"],
+            [:ess, "Cantábria²", "Cantábria"],
+          ])
+
           # Provinces of Spain in Spanish
           # CLDR uses a mix of "provincia" and "Provincia", and sometimes leaves out "Provincia" altogether.
           # This makes it hard to find a province in the checkout list, and makes us look stupid.
