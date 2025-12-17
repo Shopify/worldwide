@@ -45,8 +45,50 @@ namespace :icu4x do
   end
 
   desc <<~DESCRIPTION
+    Run Rust datagen directly (without convert step).
+
+    Useful for debugging datagen issues with existing CLDR JSON.
+
+    eg.: bundle exec rake icu4x:datagen
+  DESCRIPTION
+  task :datagen do
+    require "fileutils"
+
+    datagen_dir = File.join("lang", "rust", "worldwide-icu4x-datagen")
+    unless File.exist?(File.join(datagen_dir, "Cargo.toml"))
+      raise "Datagen crate not found at #{datagen_dir}"
+    end
+
+    puts "🦀 Running Rust datagen tool..."
+    Dir.chdir(datagen_dir) do
+      system("cargo run --release", exception: true)
+    end
+
+    puts "✅ ICU4X blob generated"
+  end
+
+  desc <<~DESCRIPTION
+    Run Rust datagen with full backtrace (for debugging).
+
+    eg.: bundle exec rake icu4x:datagen:debug
+  DESCRIPTION
+  task "datagen:debug" do
+    require "fileutils"
+
+    datagen_dir = File.join("lang", "rust", "worldwide-icu4x-datagen")
+    unless File.exist?(File.join(datagen_dir, "Cargo.toml"))
+      raise "Datagen crate not found at #{datagen_dir}"
+    end
+
+    puts "🦀 Running Rust datagen tool with full backtrace..."
+    Dir.chdir(datagen_dir) do
+      system({"RUST_BACKTRACE" => "full"}, "cargo run --release", exception: false)
+    end
+  end
+
+  desc <<~DESCRIPTION
     Full ICU4X data pipeline: convert YAML to JSON, then generate blob.
-    
+
     eg.: bundle exec rake icu4x:all
   DESCRIPTION
   task :all => [:convert, :generate]
