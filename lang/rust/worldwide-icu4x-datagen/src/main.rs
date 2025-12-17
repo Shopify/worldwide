@@ -3,8 +3,9 @@
 //! This binary generates ICU4X data blobs from worldwide's patched CLDR JSON.
 //! The generated blob can be loaded at runtime using BlobDataProvider.
 //!
-//! TODO: Implement support for loading from custom CLDR JSON path (../../vendor/cldr-json)
-//! For now, uses ICU4X's tested CLDR data. Custom CLDR support will be added in a future PR.
+//! The datagen loads CLDR data from `vendor/cldr-json/`, which is generated
+//! by running `rake icu4x:convert`. This ensures the ICU4X blob includes
+//! Shopify's custom CLDR patches.
 
 use icu_datagen::prelude::*;
 use icu_provider_blob::export::BlobExporter;
@@ -26,19 +27,29 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     let output_path = PathBuf::from("../worldwide-icu4x-data/data/icu4x.postcard");
+    let cldr_json_path = PathBuf::from("../../vendor/cldr-json");
+
+    // Validate CLDR JSON directory exists
+    if !cldr_json_path.exists() {
+        eprintln!("❌ CLDR JSON directory not found: {}", cldr_json_path.display());
+        eprintln!("   Run: bundle exec rake icu4x:convert");
+        std::process::exit(1);
+    }
 
     info!("🦀 Starting ICU4X data generation");
-    info!("Output blob: {}", output_path.display());
+    info!("📦 Loading worldwide patched CLDR data");
+    info!("📁 CLDR JSON path: {}", cldr_json_path.canonicalize()?.display());
+    info!("📁 Output blob: {}", output_path.display());
 
     // Create the output directory
     if let Some(parent) = output_path.parent() {
         std::fs::create_dir_all(parent)?;
     }
 
-    // Create datagen provider with latest tested CLDR data
-    // TODO: Switch to custom CLDR JSON from ../../vendor/cldr-json
-    info!("📦 Using ICU4X latest tested CLDR data");
-    let provider = DatagenProvider::new_latest_tested();
+    // Create datagen provider with custom CLDR path
+    info!("🔧 Creating datagen provider with custom CLDR data...");
+    let provider = DatagenProvider::new_custom()
+        .with_cldr(cldr_json_path)?;
 
     // Create output file
     let output_file = File::create(&output_path)?;
