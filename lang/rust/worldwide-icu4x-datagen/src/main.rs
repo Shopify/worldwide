@@ -15,6 +15,16 @@ use log::info;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     env_logger::init();
 
+    // In debug mode, configure Rayon to abort on panic instead of recovering
+    #[cfg(debug_assertions)]
+    {
+        std::panic::set_hook(Box::new(|panic_info| {
+            eprintln!("🛑 PANIC in datagen (aborting immediately):");
+            eprintln!("{}", panic_info);
+            std::process::abort();
+        }));
+    }
+
     let output_path = PathBuf::from("../worldwide-icu4x-data/data/icu4x.postcard");
 
     info!("🦀 Starting ICU4X data generation");

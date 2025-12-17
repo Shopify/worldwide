@@ -82,8 +82,9 @@ namespace :icu4x do
       raise "Datagen crate not found at #{datagen_dir}"
     end
 
-    puts "🦀 Running Rust datagen tool with full backtrace (single-threaded)..."
+    puts "🦀 Running Rust datagen tool in DEBUG mode (aborts on first panic)..."
     puts "📊 Debug mode: RUST_BACKTRACE=full RUST_LOG=debug RAYON_NUM_THREADS=1"
+    puts "⚠️  Using debug build (no --release) to enable panic abort"
     Dir.chdir(datagen_dir) do
       system(
         {
@@ -91,7 +92,7 @@ namespace :icu4x do
           "RUST_LOG" => "debug",
           "RAYON_NUM_THREADS" => "1"
         },
-        "cargo run --release --verbose",
+        "cargo run --verbose",
         exception: true
       )
     end
