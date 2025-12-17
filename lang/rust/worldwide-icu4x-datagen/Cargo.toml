@@ -1,0 +1,25 @@
+[package]
+name = "worldwide-icu4x-datagen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+description = "Internal tool to generate ICU4X data blobs from worldwide's patched CLDR"
+
+[[bin]]
+name = "worldwide-icu4x-datagen"
+path = "src/main.rs"
+
+[dependencies]
+icu_datagen = { version = "1.5", features = ["blob_exporter", "experimental_components"] }
+icu_provider = "1.5"
+icu_provider_blob = "1.5"
+
+env_logger = "0.10"
+log = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

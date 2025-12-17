@@ -1,0 +1,20 @@
+[package]
+name = "worldwide-icu4x-data"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "ICU4X data with Shopify's CLDR patches from the worldwide gem"
+keywords = ["icu4x", "i18n", "cldr", "localization"]
+categories = ["internationalization", "localization"]
+
+[dependencies]
+icu_provider = "1.5"
+icu_provider_blob = "1.5"
+
+[dev-dependencies]
+icu_datetime = "1.5"
+icu_locid = "1.5"
+
+[package.metadata.docs.rs]
+all-features = true

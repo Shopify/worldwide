@@ -1,0 +1,76 @@
+name: Rust CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'lang/rust/**'
+      - 'rake/tasks/icu4x.rake'
+      - 'rake/icu4x/**'
+      - 'data/cldr/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'lang/rust/**'
+      - 'rake/tasks/icu4x.rake'
+      - 'rake/icu4x/**'
+      - 'data/cldr/**'
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+    
+    - name: Install Ruby
+      uses: ruby/setup-ruby@8aeb6ff8030dd539317f8e1769a044873b56ea71 # v1.268.0
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+
+    - name: Cache Rust dependencies
+      uses: swatinem/rust-cache@v2
+      with:
+        workspaces: lang/rust
+
+    - name: Generate ICU4X data
+      run: bundle exec rake icu4x:all
+        
+    - name: Build Rust crates
+      run: |
+        cd lang/rust
+        cargo build --verbose
+        cargo build --release
+        
+    - name: Run Rust tests
+      run: |
+        cd lang/rust
+        cargo test --verbose
+        
+    - name: Run Rust linter
+      run: |
+        cd lang/rust
+        cargo fmt -- --check
+        cargo clippy -- -D warnings
+        
+    - name: Verify data blob integrity
+      run: |
+        cd lang/rust
+        cargo test -p worldwide-icu4x-data --release
+        ls -la worldwide-icu4x-data/data/icu4x.postcard
+        du -h worldwide-icu4x-data/data/icu4x.postcard
+        
+    - name: Verify crate metadata
+      run: |
+        cd lang/rust
+        cargo metadata --format-version 1 | jq '.packages[] | select(.name == "worldwide-icu4x-data") | {name, version, description}'
