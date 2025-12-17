@@ -12,14 +12,20 @@ name = "worldwide-icu4x-datagen"
 path = "src/main.rs"
 
 [dependencies]
-icu_datagen = { version = "1.5", features = ["blob_exporter", "experimental_components"] }
+icu = "1.5"
+# networking: required for with_icuexport_for_tag() which downloads ICU export data from GitHub.
+# ICU4X needs icuexport data for list formatting that isn't in CLDR JSON.
+icu_datagen = { version = "1.5", features = ["blob_exporter", "experimental_components", "networking"] }
 icu_provider = "1.5"
 icu_provider_blob = "1.5"
 
 env_logger = "0.10"
 log = "0.4"
 
-[profile.release]
-opt-level = 3
-lto = true
-codegen-units = 1
+# YAML->JSON conversion
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+serde_json = { version = "1.0", features = ["preserve_order"] }
+rayon = "1.10"
+walkdir = "2.5"
+thiserror = "2.0"

@@ -13,8 +13,11 @@ icu_provider = "1.5"
 icu_provider_blob = "1.5"
 
 [dev-dependencies]
-icu_datetime = "1.5"
+icu_datetime = { version = "1.5", features = ["serde"] }
 icu_locid = "1.5"
+icu_calendar = { version = "1.5", features = ["serde"] }
+icu_decimal = { version = "1.5", features = ["serde"] }
+icu_plurals = { version = "1.5", features = ["serde"] }
 
 [package.metadata.docs.rs]
 all-features = true

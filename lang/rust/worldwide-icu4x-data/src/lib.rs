@@ -10,30 +10,30 @@
 //!
 //! # Usage
 //!
-//! ```rust
-//! use icu_datetime::DateTimeFormatter;
+//! ```rust,ignore
+//! use icu_datetime::{DateTimeFormatterOptions, TypedDateTimeFormatter, options::length};
+//! use icu_calendar::{DateTime, Gregorian};
 //! use icu_locid::locale;
 //! use worldwide_icu4x_data::provider;
 //!
 //! let provider = provider();
-//! let dtf = DateTimeFormatter::try_new_with_length(
+//!
+//! // Create formatter options
+//! let options: DateTimeFormatterOptions =
+//!     length::Bag::from_date_time_style(length::Date::Medium, length::Time::Short).into();
+//!
+//! // Create a typed datetime formatter for Gregorian calendar
+//! let dtf = TypedDateTimeFormatter::<Gregorian>::try_new_with_buffer_provider(
 //!     &provider,
 //!     &locale!("en").into(),
-//!     icu_datetime::options::length::Bag::default(),
-//! )?;
-//! 
-//! // Format a date
-//! let date = icu_datetime::DateTime::new_date_time_auto_timezone(
-//!     icu_datetime::Iso8601::default(),
-//!     2023,
-//!     12,
-//!     25,
-//!     0,
-//!     0,
-//!     0,
-//! )?;
-//! 
-//! println!("{}", dtf.format(&date).to_string());
+//!     options,
+//! ).expect("Failed to create formatter");
+//!
+//! // Create a date (December 25, 2023)
+//! let date = DateTime::try_new_gregorian_datetime(2023, 12, 25, 12, 0, 0)
+//!     .expect("Failed to create date");
+//!
+//! println!("{}", dtf.format(&date));
 //! ```
 //!
 //! # Features
@@ -62,13 +62,12 @@ static ICU4X_DATA: &[u8] = include_bytes!("../data/icu4x.postcard");
 ///
 /// ```rust
 /// use worldwide_icu4x_data::provider;
-/// 
+///
 /// let provider = provider();
 /// // Use with ICU4X components
 /// ```
 pub fn provider() -> BlobDataProvider {
-    BlobDataProvider::try_new_from_static_blob(ICU4X_DATA)
-        .expect("valid ICU4X data blob")
+    BlobDataProvider::try_new_from_static_blob(ICU4X_DATA).expect("valid ICU4X data blob")
 }
 
 /// Returns the CLDR version this data was generated from.
@@ -89,36 +88,204 @@ pub fn data_size() -> usize {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use icu_calendar::{DateTime, Gregorian};
+    use icu_datetime::{
+        options::length, DateTimeFormatterOptions, TypedDateFormatter, TypedDateTimeFormatter,
+    };
+    use icu_decimal::FixedDecimalFormatter;
     use icu_locid::locale;
+    use icu_plurals::{PluralCategory, PluralRules};
 
     #[test]
-    fn test_provider_loads() {
+    fn test_provider_loads_successfully() {
         let provider = provider();
-        // If we get here without panicking, the blob is valid
-        assert!(true);
+        // If we get here without panicking, the provider loaded correctly
+        assert!(data_size() > 0);
+        drop(provider);
     }
 
     #[test]
-    fn test_version_info() {
+    fn test_cldr_version() {
         assert_eq!(cldr_version(), "41");
-        assert!(!patch_version().is_empty());
-        assert!(data_size() > 1_000_000); // Should be several MB
     }
 
     #[test]
-    fn test_basic_locale_support() {
-        let provider = provider();
-        let locid = locale!("en").into();
-        
-        // Test that we can create a basic formatter
-        // This tests that locale data is available
-        let _ = icu_datetime::DateTimeFormatter::try_new(
-            &provider,
-            &locid,
-            icu_datetime::options::Bag::default(),
+    fn test_patch_version() {
+        // Should return a valid semver version
+        let version = patch_version();
+        assert!(!version.is_empty());
+    }
+
+    #[test]
+    fn test_data_size_is_reasonable() {
+        // Data blob should be at least 1MB (it's comprehensive)
+        let size = data_size();
+        assert!(
+            size > 1_000_000,
+            "Data blob seems too small: {} bytes",
+            size
         );
-        
-        // If this doesn't panic, locale data is working
-        assert!(true);
+    }
+
+    #[test]
+    fn test_datetime_formatter_english() {
+        let provider = provider();
+        let options: DateTimeFormatterOptions =
+            length::Bag::from_date_time_style(length::Date::Medium, length::Time::Short).into();
+
+        let dtf = TypedDateTimeFormatter::<Gregorian>::try_new_with_buffer_provider(
+            &provider,
+            &locale!("en").into(),
+            options,
+        )
+        .expect("Failed to create English datetime formatter");
+
+        let date = DateTime::try_new_gregorian_datetime(2023, 12, 25, 14, 30, 0)
+            .expect("Failed to create date");
+
+        let formatted = dtf.format(&date).to_string();
+        assert!(
+            formatted.contains("Dec") || formatted.contains("25"),
+            "Formatted date should contain month or day: {}",
+            formatted
+        );
+    }
+
+    #[test]
+    fn test_date_formatter_french() {
+        let provider = provider();
+
+        // Use TypedDateFormatter for date-only formatting
+        let dtf = TypedDateFormatter::<Gregorian>::try_new_with_buffer_provider(
+            &provider,
+            &locale!("fr").into(),
+            length::Date::Long,
+        )
+        .expect("Failed to create French date formatter");
+
+        let date = DateTime::try_new_gregorian_datetime(2023, 12, 25, 0, 0, 0)
+            .expect("Failed to create date");
+
+        let formatted = dtf.format(&date.date).to_string();
+        assert!(
+            formatted.contains("déc") || formatted.contains("2023"),
+            "French formatted date should contain French month or year: {}",
+            formatted
+        );
+    }
+
+    #[test]
+    fn test_decimal_formatter_english() {
+        let provider = provider();
+        let fdf = FixedDecimalFormatter::try_new_with_buffer_provider(
+            &provider,
+            &locale!("en").into(),
+            Default::default(),
+        )
+        .expect("Failed to create English decimal formatter");
+
+        let decimal = 1234567.into();
+        let formatted = fdf.format(&decimal).to_string();
+        assert_eq!(formatted, "1,234,567");
+    }
+
+    #[test]
+    fn test_decimal_formatter_german() {
+        let provider = provider();
+        let fdf = FixedDecimalFormatter::try_new_with_buffer_provider(
+            &provider,
+            &locale!("de").into(),
+            Default::default(),
+        )
+        .expect("Failed to create German decimal formatter");
+
+        let decimal = 1234567.into();
+        let formatted = fdf.format(&decimal).to_string();
+        // German uses periods as thousand separators
+        assert_eq!(formatted, "1.234.567");
+    }
+
+    #[test]
+    fn test_plural_rules_english() {
+        let provider = provider();
+        let pr =
+            PluralRules::try_new_cardinal_with_buffer_provider(&provider, &locale!("en").into())
+                .expect("Failed to create English plural rules");
+
+        assert_eq!(pr.category_for(0_u32), PluralCategory::Other);
+        assert_eq!(pr.category_for(1_u32), PluralCategory::One);
+        assert_eq!(pr.category_for(2_u32), PluralCategory::Other);
+        assert_eq!(pr.category_for(5_u32), PluralCategory::Other);
+    }
+
+    #[test]
+    fn test_plural_rules_russian() {
+        let provider = provider();
+        let pr =
+            PluralRules::try_new_cardinal_with_buffer_provider(&provider, &locale!("ru").into())
+                .expect("Failed to create Russian plural rules");
+
+        // Russian has complex plural rules: one, few, many, other
+        assert_eq!(pr.category_for(1_u32), PluralCategory::One);
+        assert_eq!(pr.category_for(2_u32), PluralCategory::Few);
+        assert_eq!(pr.category_for(5_u32), PluralCategory::Many);
+        assert_eq!(pr.category_for(21_u32), PluralCategory::One);
+        assert_eq!(pr.category_for(22_u32), PluralCategory::Few);
+        assert_eq!(pr.category_for(25_u32), PluralCategory::Many);
+    }
+
+    #[test]
+    fn test_multiple_locales_supported() {
+        let provider = provider();
+        let locales = [
+            locale!("en"),
+            locale!("es"),
+            locale!("fr"),
+            locale!("de"),
+            locale!("ja"),
+            locale!("zh"),
+            locale!("ar"),
+            locale!("pt"),
+            locale!("ru"),
+            locale!("ko"),
+        ];
+
+        for loc in locales {
+            let result = FixedDecimalFormatter::try_new_with_buffer_provider(
+                &provider,
+                &loc.into(),
+                Default::default(),
+            );
+            assert!(
+                result.is_ok(),
+                "Failed to create decimal formatter for locale: {}",
+                loc
+            );
+        }
+    }
+
+    #[test]
+    fn test_provider_can_be_cloned_and_reused() {
+        let provider1 = provider();
+        let provider2 = provider();
+
+        // Both providers should work independently
+        let fdf1 = FixedDecimalFormatter::try_new_with_buffer_provider(
+            &provider1,
+            &locale!("en").into(),
+            Default::default(),
+        )
+        .expect("Failed with provider1");
+
+        let fdf2 = FixedDecimalFormatter::try_new_with_buffer_provider(
+            &provider2,
+            &locale!("de").into(),
+            Default::default(),
+        )
+        .expect("Failed with provider2");
+
+        let decimal = 1000.into();
+        assert_eq!(fdf1.format(&decimal).to_string(), "1,000");
+        assert_eq!(fdf2.format(&decimal).to_string(), "1.000");
     }
 }
