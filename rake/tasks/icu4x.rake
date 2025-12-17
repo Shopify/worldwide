@@ -92,7 +92,7 @@ namespace :icu4x do
           "RAYON_NUM_THREADS" => "1"
         },
         "cargo run --release --verbose",
-        exception: false
+        exception: true
       )
     end
   end
