@@ -71,11 +71,13 @@ namespace :icu4x do
     Run Rust datagen with full backtrace (for debugging).
 
     Runs single-threaded with verbose logging to make errors easier to trace.
+    Automatically identifies which locale caused the panic.
 
     eg.: bundle exec rake icu4x:datagen:debug
   DESCRIPTION
   task "datagen:debug" do
     require "fileutils"
+    require "open3"
 
     datagen_dir = File.join("lang", "rust", "worldwide-icu4x-datagen")
     unless File.exist?(File.join(datagen_dir, "Cargo.toml"))
@@ -85,17 +87,77 @@ namespace :icu4x do
     puts "🦀 Running Rust datagen tool in DEBUG mode (aborts on first panic)..."
     puts "📊 Debug mode: RUST_BACKTRACE=full RUST_LOG=debug RAYON_NUM_THREADS=1"
     puts "⚠️  Using debug build (no --release) to enable panic abort"
+    puts ""
+
+    last_locale_files = []
+    exit_status = nil
+
     Dir.chdir(datagen_dir) do
-      system(
+      Open3.popen3(
         {
           "RUST_BACKTRACE" => "full",
           "RUST_LOG" => "debug",
           "RAYON_NUM_THREADS" => "1"
         },
-        "cargo run --verbose",
-        exception: true
-      )
+        "cargo run --verbose"
+      ) do |stdin, stdout, stderr, wait_thr|
+        stdin.close
+
+        # Read stderr in a separate thread to capture debug logs
+        stderr_thread = Thread.new do
+          stderr.each_line do |line|
+            # Capture last few locale files being read
+            if line =~ /Reading: <zip>\/(.+?\.json)/
+              locale_file = $1
+              last_locale_files << locale_file
+              last_locale_files.shift if last_locale_files.size > 10
+            end
+            $stderr.puts line
+          end
+        end
+
+        # Forward stdout
+        stdout.each_line do |line|
+          $stdout.puts line
+        end
+
+        stderr_thread.join
+        exit_status = wait_thr.value
+      end
     end
+
+    unless exit_status.success?
+      puts ""
+      puts "=" * 80
+      puts "🛑 DATAGEN FAILED"
+      puts "=" * 80
+      puts ""
+
+      if last_locale_files.any?
+        puts "📍 Last locales/files read before panic:"
+        last_locale_files.last(5).each do |file|
+          puts "   - #{file}"
+        end
+        puts ""
+        puts "💡 The problematic locale is likely: #{last_locale_files.last}"
+        puts ""
+
+        # Extract locale from path
+        if last_locale_files.last =~ /\/main\/([^\/]+)\//
+          locale = $1
+          puts "🔍 Suggested next step:"
+          puts "   Inspect data/cldr/locales/#{locale}/calendars.yml"
+          puts "   Look for mixed hour cycle types (h vs HH, K vs k)"
+        end
+      else
+        puts "⚠️  Could not identify problematic locale from output"
+      end
+
+      puts ""
+      raise "Datagen failed - see output above for details"
+    end
+
+    puts "✅ ICU4X blob generated"
   end
 
   desc <<~DESCRIPTION
