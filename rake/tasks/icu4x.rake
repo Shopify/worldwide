@@ -70,6 +70,8 @@ namespace :icu4x do
   desc <<~DESCRIPTION
     Run Rust datagen with full backtrace (for debugging).
 
+    Runs single-threaded with verbose logging to make errors easier to trace.
+
     eg.: bundle exec rake icu4x:datagen:debug
   DESCRIPTION
   task "datagen:debug" do
@@ -80,9 +82,18 @@ namespace :icu4x do
       raise "Datagen crate not found at #{datagen_dir}"
     end
 
-    puts "🦀 Running Rust datagen tool with full backtrace..."
+    puts "🦀 Running Rust datagen tool with full backtrace (single-threaded)..."
+    puts "📊 Debug mode: RUST_BACKTRACE=full RUST_LOG=debug RAYON_NUM_THREADS=1"
     Dir.chdir(datagen_dir) do
-      system({"RUST_BACKTRACE" => "full"}, "cargo run --release", exception: false)
+      system(
+        {
+          "RUST_BACKTRACE" => "full",
+          "RUST_LOG" => "debug",
+          "RAYON_NUM_THREADS" => "1"
+        },
+        "cargo run --release --verbose",
+        exception: false
+      )
     end
   end
 
