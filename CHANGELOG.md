@@ -28,6 +28,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ---
+## [1.21.0] - 2025-10-14
+- Bulgaria to start using EUR as its official currency as of Jan 1, 2026 [#413](https://github.com/Shopify/worldwide/pull/413)
+
 ## [1.20.1] - 2025-10-14
 - Patch pt subdivisions to remove superscript marker on Spanish provinces [#392](https://github.com/Shopify/worldwide/pull/392)
 
