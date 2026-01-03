@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Upgrade phonelib gem from 0.8.7 to 0.10.12 to pick up latest phone number data and bug fixes [#366](https://github.com/Shopify/worldwide/pull/366)
+
 ---
 ## [1.21.0] - 2025-10-14
 - Bulgaria to start using EUR as its official currency as of Jan 1, 2026 [#413](https://github.com/Shopify/worldwide/pull/413)
