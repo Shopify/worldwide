@@ -1,0 +1,55 @@
+name: Publish Rust Crate
+
+on:
+  push:
+    tags:
+      - 'rust-v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    
+    steps:
+    - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+      with:
+        fetch-depth: 0
+
+    - name: Install Ruby
+      uses: ruby/setup-ruby@8aeb6ff8030dd539317f8e1769a044873b56ea71 # v1.268.0
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Cache Rust dependencies
+      uses: swatinem/rust-cache@v2
+      with:
+        workspaces: lang/rust
+      
+    - name: Generate ICU4X data
+      run: |
+        bundle exec rake icu4x:all
+        
+    - name: Verify generated data
+      run: |
+        cd lang/rust
+        cargo test -p worldwide-icu4x-data --release
+        ls -la worldwide-icu4x-data/data/icu4x.postcard
+        du -h worldwide-icu4x-data/data/icu4x.postcard
+
+    - name: Publish worldwide-icu4x-data to crates.io
+      run: |
+        cd lang/rust
+        cargo publish -p worldwide-icu4x-data --token ${{ secrets.CRATES_IO_TOKEN }}
+      env:
+        CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+
+    - name: Verify publication
+      run: |
+        sleep 30
+        cargo search worldwide-icu4x-data | head -1
