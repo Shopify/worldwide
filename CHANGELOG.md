@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Fix GB postal code regex to reject invalid outward code formats (AA99A, A99A) that were incorrectly accepted (e.g., "KT11X 2JH")
 
 ---
 ## [1.21.0] - 2025-10-14
