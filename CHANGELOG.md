@@ -26,10 +26,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+
+---
+## [1.21.1] - 2026-01-13
 - Fix GB postal code regex to reject invalid outward code formats (AA99A, A99A) that were incorrectly accepted (e.g., "KT11X 2JH")
 - Fix LU postal code regex to allow zero as first digit for packstation addresses (e.g., "0692")
 
----
 ## [1.21.0] - 2025-10-14
 - Bulgaria to start using EUR as its official currency as of Jan 1, 2026 [#413](https://github.com/Shopify/worldwide/pull/413)
 
