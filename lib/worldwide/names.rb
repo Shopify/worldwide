@@ -6,6 +6,9 @@ module Worldwide
       SURNAME_FIRST_LOCALES = ["ja", "km", "ko", "vi", "zh"]
       private_constant :SURNAME_FIRST_LOCALES
 
+      TRANSLATION_MISSING_PATTERN = /\ATranslation missing:/
+      private_constant :TRANSLATION_MISSING_PATTERN
+
       def surname_first?(locale)
         return false if locale.nil?
 
@@ -37,7 +40,10 @@ module Worldwide
 
         case parts.length
         when 2
-          Cldr.t("names.#{format}", given: given, surname: surname)
+          result = Cldr.t("names.#{format}", given: given, surname: surname)
+          return result unless TRANSLATION_MISSING_PATTERN.match?(result)
+
+          I18n.with_locale(:en) { Cldr.t("names.#{format}", given: given, surname: surname) }
         when 1
           parts[0]
         else
