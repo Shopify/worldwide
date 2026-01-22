@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Update Israel VAT rate from 17% to 18%
 
 ---
 ## [1.21.1] - 2026-01-13
