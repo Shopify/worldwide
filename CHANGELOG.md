@@ -26,9 +26,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Update Israel VAT rate from 17% to 18%
 
 ---
+## [1.21.2] - 2026-01-22
+- Update Israel VAT rate from 17% to 18%
+
 ## [1.21.1] - 2026-01-13
 - Fix GB postal code regex to reject invalid outward code formats (AA99A, A99A) that were incorrectly accepted (e.g., "KT11X 2JH")
 - Fix LU postal code regex to allow zero as first digit for packstation addresses (e.g., "0692")
