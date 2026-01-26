@@ -26,6 +26,8 @@ example_address:
   zip: 1071 DJ
   phone: "+31 20 570 5200"
 format:
+  address1: "{street} {building_num}"
+  address1_with_unit: "{street} {building_num}-{unit}"
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}"
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
 format_extended:
