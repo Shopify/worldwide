@@ -28,6 +28,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ---
+## [1.21.3] - 2026-01-26
+- Add `address1` and `address1_with_unit` formatting keys for NL [#427](https://github.com/Shopify/worldwide/pull/427)
+
 ## [1.21.2] - 2026-01-22
 - Update Israel VAT rate from 17% to 18%
 
