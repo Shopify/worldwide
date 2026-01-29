@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Upgrade phonelib gem from 0.8.7 to 0.10.15 to pick up latest phone number data and bug fixes [#366](https://github.com/Shopify/worldwide/pull/366)
+
 ---
 ## [1.21.3] - 2026-01-26
 - Add `address1` and `address1_with_unit` formatting keys for NL [#427](https://github.com/Shopify/worldwide/pull/427)
