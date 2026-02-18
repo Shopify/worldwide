@@ -1,4 +1,4 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
 require "i18n"
 require "parser/current"
@@ -1357,7 +1357,7 @@ module Worldwide
           patch_yaml_file(file_path, [locale, *key_path], existing_value, value, **options)
         end
 
-        def patch_units_file(file_path, paths_to_keep)
+        def patch_units_file(file_path, paths_to_keep) # rubocop:disable Naming/PredicateMethod
           return false unless File.exist?(file_path)
 
           source_content = File.read(file_path)

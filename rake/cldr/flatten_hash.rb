@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 module FlattenHash
-  NotHashError = Class.new(StandardError)
+  class NotHashError < StandardError
+  end
 
   class << self
     def run(hash, output = {}, parent_key = [])

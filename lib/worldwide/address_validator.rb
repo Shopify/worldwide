@@ -9,6 +9,7 @@ module Worldwide
 
     class << self
       extend Forwardable
+
       def_delegators :instance, :errors, :valid?
     end
 

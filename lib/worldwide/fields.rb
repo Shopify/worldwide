@@ -12,6 +12,7 @@ module Worldwide
 
     class << self
       extend Forwardable
+
       def_delegators :instance, :field
     end
 
