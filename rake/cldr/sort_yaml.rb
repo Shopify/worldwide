@@ -13,7 +13,7 @@ module SortYaml
       UnflattenHash.run(sorted)
     end
 
-    def sort_file(filename, output_filename: nil)
+    def sort_file(filename, output_filename: nil) # rubocop:disable Naming/PredicateMethod
       output_filename ||= begin
         extension = File.extname(filename)
         File.join(File.dirname(filename), "#{File.basename(filename, extension)}_sorted#{extension}")

@@ -117,7 +117,7 @@ module Worldwide
       raw_symbol = Worldwide::Cldr.t("currencies.#{@currency_code}.narrow_symbol", default: nil, locale: locale) ||
         Worldwide::Cldr.t("currencies.#{@currency_code}.symbol", default: nil, locale: locale)
 
-      return nil if raw_symbol.nil?
+      return if raw_symbol.nil?
 
       # For some locales (e.g., HK), in-market folks have requested that we leave the CLDR behaviour untouched
       exceptional_symbol = EXCEPTIONS.fetch(@currency_code.to_sym, nil)
@@ -154,7 +154,7 @@ module Worldwide
     private
 
     def combine(amount:, decimal_places:, humanize:, locale:, symbol:)
-      space = if has_space(locale)
+      space = if has_space?(locale)
         # This is U+00A0, the Unicode non-breaking space character
         [160].pack("U*")
       else
@@ -237,7 +237,7 @@ module Worldwide
     end
 
     # Returns true if there should be a space between the amount and the currency symbol
-    def has_space(locale)
+    def has_space?(locale)
       pattern = Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale)
 
       # Note that CLDR uses these characters in its currency formats:
@@ -250,7 +250,7 @@ module Worldwide
     def minor_symbol
       key = @currency_code
 
-      return nil unless Currency.minor_symbols.key?(key)
+      return unless Currency.minor_symbols.key?(key)
 
       Currency.minor_symbols[key]["symbol"]
     end

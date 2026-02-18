@@ -50,28 +50,28 @@ module Worldwide
         UNQUOTED_LITERAL = /[^a-zA-Z']+/
 
         def parse_field(format)
-          return nil unless format.start_with?(PATTERN_FIELD)
+          return unless format.start_with?(PATTERN_FIELD)
 
           match = PATTERN_FIELD.match(format)
           [Field.from(match[0]), match.end(0)]
         end
 
         def parse_single_quote(format)
-          return nil unless format.start_with?(SINGLE_QUOTE_LITERAL)
+          return unless format.start_with?(SINGLE_QUOTE_LITERAL)
 
           match = SINGLE_QUOTE_LITERAL.match(format)
           [Literal.new("'"), match.end(0)]
         end
 
         def parse_quoted_literal(format)
-          return nil unless format.start_with?(QUOTED_LITERAL)
+          return unless format.start_with?(QUOTED_LITERAL)
 
           match = QUOTED_LITERAL.match(format)
           [Literal.new(match[1].gsub(SINGLE_QUOTE_LITERAL, "'")), match.end(0)]
         end
 
         def parse_unquoted_literal(format)
-          return nil unless format.start_with?(UNQUOTED_LITERAL)
+          return unless format.start_with?(UNQUOTED_LITERAL)
 
           match = UNQUOTED_LITERAL.match(format)
           [Literal.new(match[0]), match.end(0)]
