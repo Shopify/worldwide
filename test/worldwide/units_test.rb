@@ -87,5 +87,137 @@ module Worldwide
     test "#measurement_keys returns supported measurement keys" do
       assert_not Worldwide.units.measurement_keys.empty?
     end
+
+    # Short format tests for new unit categories
+
+    test "#format short area: square_meters" do
+      I18n.with_locale("en") do
+        assert_equal "5 m²", Worldwide::Units.format(5, :square_meters)
+      end
+    end
+
+    test "#format short temperature: fahrenheit" do
+      I18n.with_locale("en") do
+        assert_equal "72°F", Worldwide::Units.format(72, :fahrenheit)
+      end
+    end
+
+    test "#format short power: watts" do
+      I18n.with_locale("en") do
+        assert_equal "150 W", Worldwide::Units.format(150, :watts)
+      end
+    end
+
+    test "#format short frequency: gigahertz" do
+      I18n.with_locale("en") do
+        assert_equal "2.4 GHz", Worldwide::Units.format(2.4, :gigahertz)
+      end
+    end
+
+    test "#format short digital: gigabytes" do
+      I18n.with_locale("en") do
+        assert_equal "500 GB", Worldwide::Units.format(500, :gigabytes)
+      end
+    end
+
+    test "#format short speed: miles_per_hour" do
+      I18n.with_locale("en") do
+        assert_equal "60 mph", Worldwide::Units.format(60, :miles_per_hour)
+      end
+    end
+
+    test "#format short pressure: pounds_per_square_inch" do
+      I18n.with_locale("en") do
+        assert_equal "30 psi", Worldwide::Units.format(30, :pounds_per_square_inch)
+      end
+    end
+
+    test "#format short energy: kilojoules" do
+      I18n.with_locale("en") do
+        assert_equal "100 kJ", Worldwide::Units.format(100, :kilojoules)
+      end
+    end
+
+    test "#format short duration: minutes" do
+      I18n.with_locale("en") do
+        assert_equal "30 min", Worldwide::Units.format(30, :minutes)
+      end
+    end
+
+    test "#format short electric: volts" do
+      I18n.with_locale("en") do
+        assert_equal "120 V", Worldwide::Units.format(120, :volts)
+      end
+    end
+
+    test "#format short light: lux" do
+      I18n.with_locale("en") do
+        assert_equal "500 lx", Worldwide::Units.format(500, :lux)
+      end
+    end
+
+    test "#format short graphics: megapixels" do
+      I18n.with_locale("en") do
+        assert_equal "12 MP", Worldwide::Units.format(12, :megapixels)
+      end
+    end
+
+    # Long format tests with pluralization
+
+    test "#format long power: singular watt" do
+      I18n.with_locale("en") do
+        assert_equal "1 watt", Worldwide::Units.format(1, :watt, humanize: :long)
+      end
+    end
+
+    test "#format long power: plural watts" do
+      I18n.with_locale("en") do
+        assert_equal "5 watts", Worldwide::Units.format(5, :watts, humanize: :long)
+      end
+    end
+
+    test "#format long temperature: singular celsius" do
+      I18n.with_locale("en") do
+        assert_equal "1 degree Celsius", Worldwide::Units.format(1, :celsius, humanize: :long)
+      end
+    end
+
+    test "#format long temperature: plural celsius" do
+      I18n.with_locale("en") do
+        assert_equal "100 degrees Celsius", Worldwide::Units.format(100, :celsius, humanize: :long)
+      end
+    end
+
+    test "#format long duration: singular second" do
+      I18n.with_locale("en") do
+        assert_equal "1 second", Worldwide::Units.format(1, :second, humanize: :long)
+      end
+    end
+
+    test "#format long duration: plural seconds" do
+      I18n.with_locale("en") do
+        assert_equal "30 seconds", Worldwide::Units.format(30, :seconds, humanize: :long)
+      end
+    end
+
+    # Non-English locale tests
+
+    test "#format short power: watts in French" do
+      I18n.with_locale("fr") do
+        assert_equal "5\u202FW", Worldwide::Units.format(5, :watts)
+      end
+    end
+
+    test "#format long power: watts in French" do
+      I18n.with_locale("fr") do
+        assert_equal "5\u00A0watts", Worldwide::Units.format(5, :watts, humanize: :long)
+      end
+    end
+
+    test "#format long power: watts in German via de-CH fallback" do
+      I18n.with_locale("de-CH") do
+        assert_equal "5 Watt", Worldwide::Units.format(5, :watts, humanize: :long)
+      end
+    end
   end
 end
