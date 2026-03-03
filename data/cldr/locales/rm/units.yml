@@ -3,6 +3,45 @@ rm:
   units:
     unit_length:
       long:
+        digital_byte:
+          one: "%{count} byte"
+          other: "%{count} bytes"
+        digital_gigabyte:
+          one: "%{count} gigabyte"
+          other: "%{count} gigabytes"
+        digital_kilobyte:
+          one: "%{count} kilobyte"
+          other: "%{count} kilobytes"
+        digital_megabyte:
+          one: "%{count} megabyte"
+          other: "%{count} megabytes"
+        digital_terabyte:
+          one: "%{count} terabyte"
+          other: "%{count} terabytes"
+        duration_day:
+          one: "%{count} di"
+          other: "%{count} dis"
+        duration_hour:
+          one: "%{count} ura"
+          other: "%{count} uras"
+        duration_millisecond:
+          one: "%{count} millisecunda"
+          other: "%{count} millisecundas"
+        duration_minute:
+          one: "%{count} minuta"
+          other: "%{count} minutas"
+        duration_month:
+          one: "%{count} mais"
+          other: "%{count} mais"
+        duration_second:
+          one: "%{count} secunda"
+          other: "%{count} secundas"
+        duration_year:
+          one: "%{count} onn"
+          other: "%{count} onns"
+        graphics_pixel:
+          one: "%{count} pixel"
+          other: "%{count} pixels"
         length_centimeter:
           one: "%{count} centimeter"
           other: "%{count} centimeters"
@@ -18,10 +57,55 @@ rm:
         mass_kilogram:
           one: "%{count} kilogram"
           other: "%{count} kilograms"
+        speed_kilometer_per_hour:
+          one: "%{count} kilometer per ura"
+          other: "%{count} kilometers per ura"
+        temperature_celsius:
+          one: "%{count} grad celsius"
+          other: "%{count} grads celsius"
         volume_liter:
           one: "%{count} liter"
           other: "%{count} liters"
       short:
+        digital_byte:
+          one: "%{count} byte"
+          other: "%{count} byte"
+        digital_gigabyte:
+          one: "%{count} GB"
+          other: "%{count} GB"
+        digital_kilobyte:
+          one: "%{count} kB"
+          other: "%{count} kB"
+        digital_megabyte:
+          one: "%{count} MB"
+          other: "%{count} MB"
+        digital_terabyte:
+          one: "%{count} TB"
+          other: "%{count} TB"
+        duration_day:
+          one: "%{count} di"
+          other: "%{count} dis"
+        duration_hour:
+          one: "%{count} ura"
+          other: "%{count} uras"
+        duration_millisecond:
+          one: "%{count} ms"
+          other: "%{count} ms"
+        duration_minute:
+          one: "%{count} min."
+          other: "%{count} mins."
+        duration_month:
+          one: "%{count} mais"
+          other: "%{count} mais"
+        duration_second:
+          one: "%{count} sec."
+          other: "%{count} secs."
+        duration_year:
+          one: "%{count} onn"
+          other: "%{count} onns"
+        graphics_pixel:
+          one: "%{count} px"
+          other: "%{count} px"
         length_centimeter:
           one: "%{count} cm"
           other: "%{count} cm"
@@ -37,6 +121,12 @@ rm:
         mass_kilogram:
           one: "%{count} kg"
           other: "%{count} kg"
+        speed_kilometer_per_hour:
+          one: "%{count} km/h"
+          other: "%{count} km/h"
+        temperature_celsius:
+          one: "%{count} °C"
+          other: "%{count} °C"
         volume_liter:
           one: "%{count} l"
           other: "%{count} l"

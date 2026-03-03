@@ -3,6 +3,111 @@ is:
   units:
     unit_length:
       long:
+        area_square_centimeter:
+          one: "%{count} fersentimetri"
+          other: "%{count} fersentimetrar"
+        area_square_foot:
+          one: "%{count} ferfet"
+          other: "%{count} ferfet"
+        area_square_inch:
+          one: "%{count} fertomma"
+          other: "%{count} fertommur"
+        area_square_meter:
+          one: "%{count} fermetri"
+          other: "%{count} fermetrar"
+        area_square_yard:
+          one: "%{count} feryard"
+          other: "%{count} feryardar"
+        digital_byte:
+          one: "%{count} bæti"
+          other: "%{count} bæti"
+        digital_gigabyte:
+          one: "%{count} gígabæti"
+          other: "%{count} gígabæti"
+        digital_kilobyte:
+          one: "%{count} kílóbæti"
+          other: "%{count} kílóbæti"
+        digital_megabyte:
+          one: "%{count} megabæti"
+          other: "%{count} megabæti"
+        digital_terabyte:
+          one: "%{count} terabæti"
+          other: "%{count} terabæti"
+        duration_day:
+          one: "%{count} dagur"
+          other: "%{count} dagar"
+        duration_hour:
+          one: "%{count} klukkustund"
+          other: "%{count} klukkustundir"
+        duration_microsecond:
+          one: "%{count} míkrósekúnda"
+          other: "%{count} míkrósekúndur"
+        duration_millisecond:
+          one: "%{count} millisekúnda"
+          other: "%{count} millisekúndur"
+        duration_minute:
+          one: "%{count} mínúta"
+          other: "%{count} mínútur"
+        duration_month:
+          one: "%{count} mánuður"
+          other: "%{count} mánuðir"
+        duration_nanosecond:
+          one: "%{count} nanósekúnda"
+          other: "%{count} nanósekúndur"
+        duration_second:
+          one: "%{count} sekúnda"
+          other: "%{count} sekúndur"
+        duration_year:
+          one: "%{count} ár"
+          other: "%{count} ár"
+        electric_ampere:
+          one: "%{count} amper"
+          other: "%{count} amper"
+        electric_milliampere:
+          one: "%{count} milliamper"
+          other: "%{count} milliamper"
+        electric_ohm:
+          one: "%{count} óm"
+          other: "%{count} ohm"
+        electric_volt:
+          one: "%{count} volt"
+          other: "%{count} volt"
+        energy_calorie:
+          one: "%{count} kaloría"
+          other: "%{count} kaloríur"
+        energy_joule:
+          one: "%{count} júl"
+          other: "%{count} júl"
+        energy_kilocalorie:
+          one: "%{count} kílókaloría"
+          other: "%{count} kílókaloríur"
+        energy_kilojoule:
+          one: "%{count} kílójúl"
+          other: "%{count} kílójúl"
+        frequency_gigahertz:
+          one: "%{count} gígahertz"
+          other: "%{count} gígahertz"
+        frequency_hertz:
+          one: "%{count} hertz"
+          other: "%{count} hertz"
+        frequency_kilohertz:
+          one: "%{count} kílóhertz"
+          other: "%{count} kílóhertz"
+        frequency_megahertz:
+          one: "%{count} megahertz"
+          other: "%{count} megahertz"
+        graphics_dot_per_inch:
+          one: "%{count} punktur á tommu"
+          other: "%{count} punktar á tommu"
+        graphics_megapixel:
+          one: "%{count} megapixill"
+          other: "%{count} megapixlar"
+        graphics_pixel:
+          one: "%{count} pixill"
+          other: "%{count} pixlar"
+        graphics_pixel_per_inch:
+          one: "%{count} pixill á tommu"
+          other: "%{count} pixlar á tommu"
         length_centimeter:
           one: "%{count} sentimetri"
           other: "%{count} sentimetrar"
@@ -21,6 +126,12 @@ is:
         length_yard:
           one: "%{count} yard"
           other: "%{count} yardar"
+        light_lumen:
+          one: "%{count} lúmen"
+          other: "%{count} lúmen"
+        light_lux:
+          one: "%{count} lúx"
+          other: "%{count} lúx"
         mass_gram:
           one: "%{count} gramm"
           other: "%{count} grömm"
@@ -33,6 +144,42 @@ is:
         mass_pound:
           one: "%{count} pund"
           other: "%{count} pund"
+        power_horsepower:
+          one: "%{count} hestafl"
+          other: "%{count} hestöfl"
+        power_kilowatt:
+          one: "%{count} kílóvatt"
+          other: "%{count} kílóvött"
+        power_milliwatt:
+          one: "%{count} millivatt"
+          other: "%{count} millivött"
+        power_watt:
+          one: "%{count} vatt"
+          other: "%{count} vött"
+        pressure_bar:
+          one: "%{count} bar"
+          other: "%{count} bör"
+        pressure_pound_force_per_square_inch:
+          one: "%{count} pund á fertommu"
+          other: "%{count} pund á fertommu"
+        speed_kilometer_per_hour:
+          one: "%{count} kílómetri á klukkustund"
+          other: "%{count} kílómetrar á klukkustund"
+        speed_meter_per_second:
+          one: "%{count} metri á sekúndu"
+          other: "%{count} metrar á sekúndu"
+        speed_mile_per_hour:
+          one: "%{count} míla á klukkustund"
+          other: "%{count} mílur á klukkustund"
+        temperature_celsius:
+          one: "%{count} gráða á Celsíus"
+          other: "%{count} gráður á Celsíus"
+        temperature_fahrenheit:
+          one: "%{count} gráða á Fahrenheit"
+          other: "%{count} gráður á Fahrenheit"
+        temperature_kelvin:
+          one: "%{count} kelvin"
+          other: "%{count} kelvin"
         volume_centiliter:
           one: "%{count} sentilítri"
           other: "%{count} sentilítrar"
@@ -67,6 +214,111 @@ is:
           one: "%{count} lagarmál"
           other: "%{count} lagarmál"
       short:
+        area_square_centimeter:
+          one: "%{count} cm²"
+          other: "%{count} cm²"
+        area_square_foot:
+          one: "%{count} ferfet"
+          other: "%{count} ferfet"
+        area_square_inch:
+          one: "%{count} t²"
+          other: "%{count} t²"
+        area_square_meter:
+          one: "%{count} m²"
+          other: "%{count} m²"
+        area_square_yard:
+          one: "%{count} yd²"
+          other: "%{count} yd²"
+        digital_byte:
+          one: "%{count} bæti"
+          other: "%{count} bæti"
+        digital_gigabyte:
+          one: "%{count} GB"
+          other: "%{count} GB"
+        digital_kilobyte:
+          one: "%{count} kB"
+          other: "%{count} kB"
+        digital_megabyte:
+          one: "%{count} MB"
+          other: "%{count} MB"
+        digital_terabyte:
+          one: "%{count} TB"
+          other: "%{count} TB"
+        duration_day:
+          one: "%{count} dagur"
+          other: "%{count} dagar"
+        duration_hour:
+          one: "%{count} klst."
+          other: "%{count} klst."
+        duration_microsecond:
+          one: "%{count} μs"
+          other: "%{count} μs"
+        duration_millisecond:
+          one: "%{count} ms"
+          other: "%{count} ms"
+        duration_minute:
+          one: "%{count} mín."
+          other: "%{count} mín."
+        duration_month:
+          one: "%{count} mán."
+          other: "%{count} mán."
+        duration_nanosecond:
+          one: "%{count} ns"
+          other: "%{count} ns"
+        duration_second:
+          one: "%{count} sek."
+          other: "%{count} sek."
+        duration_year:
+          one: "%{count} ár"
+          other: "%{count} ár"
+        electric_ampere:
+          one: "%{count} A"
+          other: "%{count} A"
+        electric_milliampere:
+          one: "%{count} mA"
+          other: "%{count} mA"
+        electric_ohm:
+          one: "%{count} Ω"
+          other: "%{count} Ω"
+        electric_volt:
+          one: "%{count} V"
+          other: "%{count} V"
+        energy_calorie:
+          one: "%{count} cal"
+          other: "%{count} cal"
+        energy_joule:
+          one: "%{count} J"
+          other: "%{count} J"
+        energy_kilocalorie:
+          one: "%{count} kcal"
+          other: "%{count} kcal"
+        energy_kilojoule:
+          one: "%{count} kJ"
+          other: "%{count} kJ"
+        frequency_gigahertz:
+          one: "%{count} GHz"
+          other: "%{count} GHz"
+        frequency_hertz:
+          one: "%{count} Hz"
+          other: "%{count} Hz"
+        frequency_kilohertz:
+          one: "%{count} kHz"
+          other: "%{count} kHz"
+        frequency_megahertz:
+          one: "%{count} MHz"
+          other: "%{count} MHz"
+        graphics_dot_per_inch:
+          one: "%{count} dpi"
+          other: "%{count} dpi"
+        graphics_megapixel:
+          one: "%{count} MP"
+          other: "%{count} MP"
+        graphics_pixel:
+          one: "%{count} px"
+          other: "%{count} px"
+        graphics_pixel_per_inch:
+          one: "%{count} ppi"
+          other: "%{count} ppi"
         length_centimeter:
           one: "%{count} cm"
           other: "%{count} cm"
@@ -85,6 +337,9 @@ is:
         length_yard:
           one: "%{count} yd"
           other: "%{count} yd"
+        light_lux:
+          one: "%{count} lx"
+          other: "%{count} lx"
         mass_gram:
           one: "%{count} g"
           other: "%{count} g"
@@ -97,6 +352,42 @@ is:
         mass_pound:
           one: "%{count} lb"
           other: "%{count} lb"
+        power_horsepower:
+          one: "%{count} hö"
+          other: "%{count} hö"
+        power_kilowatt:
+          one: "%{count} kW"
+          other: "%{count} kW"
+        power_milliwatt:
+          one: "%{count} mW"
+          other: "%{count} mW"
+        power_watt:
+          one: "%{count} W"
+          other: "%{count} W"
+        pressure_bar:
+          one: "%{count} bar"
+          other: "%{count} bör"
+        pressure_pound_force_per_square_inch:
+          one: "%{count} psi"
+          other: "%{count} psi"
+        speed_kilometer_per_hour:
+          one: "%{count} km/klst."
+          other: "%{count} km/klst."
+        speed_meter_per_second:
+          one: "%{count} m/s"
+          other: "%{count} m/s"
+        speed_mile_per_hour:
+          one: "%{count} míla/klst."
+          other: "%{count} mílur/klst."
+        temperature_celsius:
+          one: "%{count}°C"
+          other: "%{count}°C"
+        temperature_fahrenheit:
+          one: "%{count}°F"
+          other: "%{count}°F"
+        temperature_kelvin:
+          one: "%{count} K"
+          other: "%{count} K"
         volume_centiliter:
           one: "%{count} cl"
           other: "%{count} cl"

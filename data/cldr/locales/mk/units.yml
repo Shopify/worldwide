@@ -3,6 +3,99 @@ mk:
   units:
     unit_length:
       long:
+        area_square_centimeter:
+          one: "%{count} квадратен сантиметар"
+          other: "%{count} квадратни сантиметри"
+        area_square_foot:
+          one: "%{count} квадратна стапка"
+          other: "%{count} квадратни стапки"
+        area_square_inch:
+          one: "%{count} квадратен инч"
+          other: "%{count} квадратни инчи"
+        area_square_meter:
+          one: "%{count} квадратен метар"
+          other: "%{count} квадратни метри"
+        area_square_yard:
+          one: "%{count} квадратен јард"
+          other: "%{count} квадратни јарди"
+        digital_byte:
+          one: "%{count} бајт"
+          other: "%{count} бајти"
+        digital_gigabyte:
+          one: "%{count} гигабајт"
+          other: "%{count} гигабајти"
+        digital_kilobyte:
+          one: "%{count} килобајт"
+          other: "%{count} килобајти"
+        digital_megabyte:
+          one: "%{count} мегабајт"
+          other: "%{count} мегабајти"
+        digital_terabyte:
+          one: "%{count} терабајт"
+          other: "%{count} терабајти"
+        duration_day:
+          one: "%{count} ден"
+          other: "%{count} дена"
+        duration_hour:
+          one: "%{count} час"
+          other: "%{count} часа"
+        duration_microsecond:
+          one: "%{count} микросекунда"
+          other: "%{count} микросекунди"
+        duration_millisecond:
+          one: "%{count} милисекунда"
+          other: "%{count} милисекунди"
+        duration_minute:
+          one: "%{count} минута"
+          other: "%{count} минути"
+        duration_month:
+          one: "%{count} месец"
+          other: "%{count} месеци"
+        duration_nanosecond:
+          one: "%{count} наносекунда"
+          other: "%{count} наносекунди"
+        duration_second:
+          one: "%{count} секунда"
+          other: "%{count} секунди"
+        duration_year:
+          one: "%{count} година"
+          other: "%{count} години"
+        electric_ampere:
+          one: "%{count} ампер"
+          other: "%{count} ампери"
+        electric_milliampere:
+          one: "%{count} милиампер"
+          other: "%{count} милиампери"
+        electric_ohm:
+          one: "%{count} ом"
+          other: "%{count} оми"
+        electric_volt:
+          one: "%{count} волт"
+          other: "%{count} волти"
+        energy_calorie:
+          one: "%{count} калорија"
+          other: "%{count} калории"
+        energy_joule:
+          one: "%{count} џул"
+          other: "%{count} џули"
+        energy_kilocalorie:
+          one: "%{count} килокалорија"
+          other: "%{count} килокалории"
+        energy_kilojoule:
+          one: "%{count} килоџул"
+          other: "%{count} килоџули"
+        frequency_gigahertz:
+          one: "%{count} гигахерц"
+          other: "%{count} гигахерци"
+        frequency_hertz:
+          one: "%{count} херц"
+          other: "%{count} херци"
+        frequency_kilohertz:
+          one: "%{count} килохерц"
+          other: "%{count} килохерци"
+        frequency_megahertz:
+          one: "%{count} мегахерц"
+          other: "%{count} мегахерци"
         length_centimeter:
           one: "%{count} сантиметар"
           other: "%{count} сантиметри"
@@ -21,6 +114,12 @@ mk:
         length_yard:
           one: "%{count} јард"
           other: "%{count} јарди"
+        light_lumen:
+          one: "%{count} лумен"
+          other: "%{count} лумени"
+        light_lux:
+          one: "%{count} лукс"
+          other: "%{count} лукса"
         mass_gram:
           one: "%{count} грам"
           other: "%{count} грама"
@@ -33,6 +132,42 @@ mk:
         mass_pound:
           one: "%{count} фунта"
           other: "%{count} фунти"
+        power_horsepower:
+          one: "%{count} коњска сила"
+          other: "%{count} коњски сили"
+        power_kilowatt:
+          one: "%{count} киловат"
+          other: "%{count} киловати"
+        power_milliwatt:
+          one: "%{count} миливат"
+          other: "%{count} миливати"
+        power_watt:
+          one: "%{count} ват"
+          other: "%{count} вати"
+        pressure_bar:
+          one: "%{count} бар"
+          other: "%{count} бари"
+        pressure_pound_force_per_square_inch:
+          one: "%{count} фунта на квадратен инч"
+          other: "%{count} фунти на квадратен инч"
+        speed_kilometer_per_hour:
+          one: "%{count} километар на час"
+          other: "%{count} километри на час"
+        speed_meter_per_second:
+          one: "%{count} метар во секунда"
+          other: "%{count} метри во секунда"
+        speed_mile_per_hour:
+          one: "%{count} милја на час"
+          other: "%{count} милји на час"
+        temperature_celsius:
+          one: "%{count} целзиусов степен"
+          other: "%{count} целзиусови степени"
+        temperature_fahrenheit:
+          one: "%{count} фаренхајтов степен"
+          other: "%{count} фаренхајтови степени"
+        temperature_kelvin:
+          one: "%{count} келвин"
+          other: "%{count} келвини"
         volume_centiliter:
           one: "%{count} центилитар"
           other: "%{count} центилитри"
@@ -67,6 +202,111 @@ mk:
           one: "%{count} имп. четвртина"
           other: "%{count} имп. четвртини"
       short:
+        area_square_centimeter:
+          one: "%{count} cm²"
+          other: "%{count} cm²"
+        area_square_foot:
+          one: "%{count} sq ft"
+          other: "%{count} sq ft"
+        area_square_inch:
+          one: "%{count} in²"
+          other: "%{count} in²"
+        area_square_meter:
+          one: "%{count} m²"
+          other: "%{count} m²"
+        area_square_yard:
+          one: "%{count} yd²"
+          other: "%{count} yd²"
+        digital_byte:
+          one: "%{count} бајт"
+          other: "%{count} бајти"
+        digital_gigabyte:
+          one: "%{count} GB"
+          other: "%{count} GB"
+        digital_kilobyte:
+          one: "%{count} kB"
+          other: "%{count} kB"
+        digital_megabyte:
+          one: "%{count} MB"
+          other: "%{count} MB"
+        digital_terabyte:
+          one: "%{count} TB"
+          other: "%{count} TB"
+        duration_day:
+          one: "%{count} ден"
+          other: "%{count} дена"
+        duration_hour:
+          one: "%{count} ч."
+          other: "%{count} ч."
+        duration_microsecond:
+          one: "%{count} μs"
+          other: "%{count} μs"
+        duration_millisecond:
+          one: "%{count} мс"
+          other: "%{count} мс"
+        duration_minute:
+          one: "%{count} мин."
+          other: "%{count} мин."
+        duration_month:
+          one: "%{count} мес."
+          other: "%{count} мес."
+        duration_nanosecond:
+          one: "%{count} нс"
+          other: "%{count} нс"
+        duration_second:
+          one: "%{count} сек."
+          other: "%{count} сек."
+        duration_year:
+          one: "%{count} год."
+          other: "%{count} год."
+        electric_ampere:
+          one: "%{count} A"
+          other: "%{count} A"
+        electric_milliampere:
+          one: "%{count} mA"
+          other: "%{count} mA"
+        electric_ohm:
+          one: "%{count} Ω"
+          other: "%{count} Ω"
+        electric_volt:
+          one: "%{count} V"
+          other: "%{count} V"
+        energy_calorie:
+          one: "%{count} cal"
+          other: "%{count} cal"
+        energy_joule:
+          one: "%{count} J"
+          other: "%{count} J"
+        energy_kilocalorie:
+          one: "%{count} kcal"
+          other: "%{count} kcal"
+        energy_kilojoule:
+          one: "%{count} kJ"
+          other: "%{count} kJ"
+        frequency_gigahertz:
+          one: "%{count} GHz"
+          other: "%{count} GHz"
+        frequency_hertz:
+          one: "%{count} Hz"
+          other: "%{count} Hz"
+        frequency_kilohertz:
+          one: "%{count} kHz"
+          other: "%{count} kHz"
+        frequency_megahertz:
+          one: "%{count} MHz"
+          other: "%{count} MHz"
+        graphics_dot_per_inch:
+          one: "%{count} ppi"
+          other: "%{count} dpi"
+        graphics_megapixel:
+          one: "%{count} MP"
+          other: "%{count} MP"
+        graphics_pixel:
+          one: "%{count} px"
+          other: "%{count} px"
+        graphics_pixel_per_inch:
+          one: "%{count} ppi"
+          other: "%{count} ppi"
         length_centimeter:
           one: "%{count} cm"
           other: "%{count} cm"
@@ -85,6 +325,9 @@ mk:
         length_yard:
           one: "%{count} yd"
           other: "%{count} yd"
+        light_lux:
+          one: "%{count} lx"
+          other: "%{count} lx"
         mass_gram:
           one: "%{count} g"
           other: "%{count} g"
@@ -97,6 +340,42 @@ mk:
         mass_pound:
           one: "%{count} lb"
           other: "%{count} lb"
+        power_horsepower:
+          one: "%{count} hp"
+          other: "%{count} hp"
+        power_kilowatt:
+          one: "%{count} kW"
+          other: "%{count} kW"
+        power_milliwatt:
+          one: "%{count} mW"
+          other: "%{count} mW"
+        power_watt:
+          one: "%{count} W"
+          other: "%{count} W"
+        pressure_bar:
+          one: "%{count} bar"
+          other: "%{count} bar"
+        pressure_pound_force_per_square_inch:
+          one: "%{count} psi"
+          other: "%{count} psi"
+        speed_kilometer_per_hour:
+          one: "%{count} km/h"
+          other: "%{count} km/h"
+        speed_meter_per_second:
+          one: "%{count} m/s"
+          other: "%{count} m/s"
+        speed_mile_per_hour:
+          one: "%{count} mph"
+          other: "%{count} mph"
+        temperature_celsius:
+          one: "%{count} °C"
+          other: "%{count} °C"
+        temperature_fahrenheit:
+          one: "%{count} °F"
+          other: "%{count} °F"
+        temperature_kelvin:
+          one: "%{count} K"
+          other: "%{count} K"
         volume_centiliter:
           one: "%{count} cL"
           other: "%{count} cL"
