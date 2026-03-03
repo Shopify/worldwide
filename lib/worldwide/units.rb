@@ -66,6 +66,119 @@ module Worldwide
           imperial_quarts: :volume_quart_imperial,
           yard: :length_yard,
           yards: :length_yard,
+
+          # Area
+          square_meter: :area_square_meter,
+          square_meters: :area_square_meter,
+          square_centimeter: :area_square_centimeter,
+          square_centimeters: :area_square_centimeter,
+          square_foot: :area_square_foot,
+          square_feet: :area_square_foot,
+          square_inch: :area_square_inch,
+          square_inches: :area_square_inch,
+          square_yard: :area_square_yard,
+          square_yards: :area_square_yard,
+
+          # Duration
+          second: :duration_second,
+          seconds: :duration_second,
+          millisecond: :duration_millisecond,
+          milliseconds: :duration_millisecond,
+          microsecond: :duration_microsecond,
+          microseconds: :duration_microsecond,
+          nanosecond: :duration_nanosecond,
+          nanoseconds: :duration_nanosecond,
+          minute: :duration_minute,
+          minutes: :duration_minute,
+          hour: :duration_hour,
+          hours: :duration_hour,
+          day: :duration_day,
+          days: :duration_day,
+          month: :duration_month,
+          months: :duration_month,
+          year: :duration_year,
+          years: :duration_year,
+
+          # Electric
+          ampere: :electric_ampere,
+          amperes: :electric_ampere,
+          milliampere: :electric_milliampere,
+          milliamperes: :electric_milliampere,
+          ohm: :electric_ohm,
+          ohms: :electric_ohm,
+          volt: :electric_volt,
+          volts: :electric_volt,
+
+          # Energy
+          joule: :energy_joule,
+          joules: :energy_joule,
+          calorie: :energy_calorie,
+          calories: :energy_calorie,
+          kilojoule: :energy_kilojoule,
+          kilojoules: :energy_kilojoule,
+          kilocalorie: :energy_kilocalorie,
+          kilocalories: :energy_kilocalorie,
+
+          # Frequency
+          hertz: :frequency_hertz,
+          kilohertz: :frequency_kilohertz,
+          megahertz: :frequency_megahertz,
+          gigahertz: :frequency_gigahertz,
+
+          # Light
+          lux: :light_lux,
+          lumen: :light_lumen,
+          lumens: :light_lumen,
+
+          # Power
+          watt: :power_watt,
+          watts: :power_watt,
+          milliwatt: :power_milliwatt,
+          milliwatts: :power_milliwatt,
+          kilowatt: :power_kilowatt,
+          kilowatts: :power_kilowatt,
+          horsepower: :power_horsepower,
+
+          # Pressure
+          pound_per_square_inch: :pressure_pound_force_per_square_inch,
+          pounds_per_square_inch: :pressure_pound_force_per_square_inch,
+          bar: :pressure_bar,
+          bars: :pressure_bar,
+
+          # Speed
+          meter_per_second: :speed_meter_per_second,
+          meters_per_second: :speed_meter_per_second,
+          kilometer_per_hour: :speed_kilometer_per_hour,
+          kilometers_per_hour: :speed_kilometer_per_hour,
+          mile_per_hour: :speed_mile_per_hour,
+          miles_per_hour: :speed_mile_per_hour,
+
+          # Temperature
+          celsius: :temperature_celsius,
+          fahrenheit: :temperature_fahrenheit,
+          kelvin: :temperature_kelvin,
+
+          # Digital
+          byte: :digital_byte,
+          bytes: :digital_byte,
+          kilobyte: :digital_kilobyte,
+          kilobytes: :digital_kilobyte,
+          megabyte: :digital_megabyte,
+          megabytes: :digital_megabyte,
+          gigabyte: :digital_gigabyte,
+          gigabytes: :digital_gigabyte,
+          terabyte: :digital_terabyte,
+          terabytes: :digital_terabyte,
+
+          # Graphics
+          pixel: :graphics_pixel,
+          pixels: :graphics_pixel,
+          megapixel: :graphics_megapixel,
+          megapixels: :graphics_megapixel,
+          pixel_per_inch: :graphics_pixel_per_inch,
+          pixels_per_inch: :graphics_pixel_per_inch,
+          dot_per_inch: :graphics_dot_per_inch,
+          dots_per_inch: :graphics_dot_per_inch,
         }.freeze
       end
     end
