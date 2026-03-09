@@ -3,6 +3,68 @@ my:
   units:
     unit_length:
       long:
+        area_square_centimeter:
+          other: "%{count} စတုရန်းစင်တီမီတာ"
+        area_square_foot:
+          other: "%{count} စတုရန်းပေ"
+        area_square_inch:
+          other: "%{count} စတုရန်းလက်မ"
+        area_square_meter:
+          other: "%{count} စတုရန်းမီတာ"
+        area_square_yard:
+          other: "%{count} စတုရန်းကိုက်"
+        digital_byte:
+          other: "%{count} ဘိုက်"
+        digital_gigabyte:
+          other: "%{count} ဂစ်ဂါဘိုက်"
+        digital_kilobyte:
+          other: "%{count} ကီလိုဘိုက်"
+        digital_megabyte:
+          other: "%{count} မီဂါဘိုက်"
+        digital_terabyte:
+          other: "%{count} တယ်ရာဘိုက်"
+        duration_day:
+          other: "%{count} ရက်"
+        duration_hour:
+          other: "%{count} နာရီ"
+        duration_microsecond:
+          other: "%{count} မိုက်ခရိုစက္ကန့်"
+        duration_millisecond:
+          other: "%{count} မီလီစက္ကန့်"
+        duration_minute:
+          other: "%{count} မိနစ်"
+        duration_month:
+          other: "%{count} လ"
+        duration_nanosecond:
+          other: "%{count} နာနိုစက္ကန့်"
+        duration_second:
+          other: "%{count} စက္ကန့်"
+        duration_year:
+          other: "%{count} နှစ်"
+        electric_ampere:
+          other: "%{count} အမ်ပီယာ"
+        electric_milliampere:
+          other: "%{count} မီလီအမ်ပီယာ"
+        electric_ohm:
+          other: "%{count} အုမ်း"
+        electric_volt:
+          other: "%{count} ဗို့"
+        energy_calorie:
+          other: "%{count} ကယ်လိုရီ"
+        energy_joule:
+          other: "%{count} ဂျူးလ်"
+        energy_kilocalorie:
+          other: "%{count} ကီလိုကယ်လိုရီ"
+        energy_kilojoule:
+          other: "%{count} ကီလိုဂျူးလ်"
+        frequency_gigahertz:
+          other: "%{count} ဂီဂါဟတ်ဇ်"
+        frequency_hertz:
+          other: "%{count} ဟတ်ဇ်"
+        frequency_kilohertz:
+          other: "%{count} ကီလိုဟတ်ဇ်"
+        frequency_megahertz:
+          other: "%{count} မီဂါဟတ်ဇ်"
         length_centimeter:
           other: "%{count} စင်တီမီတာ"
         length_foot:
@@ -15,6 +77,10 @@ my:
           other: "%{count} မီလီမီတာ"
         length_yard:
           other: "%{count} ကိုက်"
+        light_lumen:
+          other: "%{count} လူမန်"
+        light_lux:
+          other: "%{count} လတ်ခ်"
         mass_gram:
           other: "%{count} ဂရမ်"
         mass_kilogram:
@@ -23,6 +89,30 @@ my:
           other: "%{count} အောင်စ"
         mass_pound:
           other: "%{count} ပေါင်"
+        power_horsepower:
+          other: "%{count} မြင်းကောင်ရေအား"
+        power_kilowatt:
+          other: "%{count} ကီလိုဝပ်"
+        power_milliwatt:
+          other: "%{count} မီလီဝပ်"
+        power_watt:
+          other: "%{count} ဝပ်"
+        pressure_bar:
+          other: "%{count} ဘား"
+        pressure_pound_force_per_square_inch:
+          other: တစ်စတုရန်းလက်မလျှင် %{count} ပေါင်
+        speed_kilometer_per_hour:
+          other: တစ်နာရီလျှင် %{count} ကီလိုမီတာ
+        speed_meter_per_second:
+          other: တစ်စက္ကန့်လျှင် %{count} မီတာ
+        speed_mile_per_hour:
+          other: တစ်နာရီလျှင် %{count} မိုင်
+        temperature_celsius:
+          other: "%{count} ဒီဂရီ စင်တီဂရိတ်"
+        temperature_fahrenheit:
+          other: "%{count} ဒီဂရီ ဖာရင်ဟိုက်"
+        temperature_kelvin:
+          other: "%{count} ကယ်လ်ဗင်"
         volume_centiliter:
           other: "%{count} စင်တီလီတာ"
         volume_cubic_meter:
@@ -46,6 +136,68 @@ my:
         volume_quart_imperial:
           other: ဗြိတိသျှသုံး %{count} ကွတ်
       short:
+        area_square_centimeter:
+          other: "%{count} cm²"
+        area_square_foot:
+          other: "%{count} ft²"
+        area_square_inch:
+          other: "%{count} in²"
+        area_square_meter:
+          other: "%{count} m²"
+        area_square_yard:
+          other: "%{count} yd²"
+        digital_byte:
+          other: "%{count} byte"
+        digital_gigabyte:
+          other: "%{count} GB"
+        digital_kilobyte:
+          other: "%{count} kB"
+        digital_megabyte:
+          other: "%{count} MB"
+        digital_terabyte:
+          other: "%{count} TB"
+        duration_day:
+          other: "%{count} ရက်"
+        duration_hour:
+          other: "%{count} နာရီ"
+        duration_microsecond:
+          other: "%{count} μs"
+        duration_millisecond:
+          other: "%{count} မီလီစက္ကန့်"
+        duration_minute:
+          other: "%{count} မိနစ်"
+        duration_month:
+          other: "%{count} လ"
+        duration_nanosecond:
+          other: "%{count} ns"
+        duration_second:
+          other: "%{count} sec"
+        duration_year:
+          other: "%{count} နှစ်"
+        electric_ampere:
+          other: "%{count} A"
+        electric_milliampere:
+          other: "%{count} mA"
+        electric_ohm:
+          other: "%{count} Ω"
+        electric_volt:
+          other: "%{count} V"
+        energy_calorie:
+          other: "%{count} cal"
+        energy_joule:
+          other: "%{count} J"
+        energy_kilocalorie:
+          other: "%{count} kcal"
+        energy_kilojoule:
+          other: "%{count} kJ"
+        frequency_gigahertz:
+          other: "%{count} GHz"
+        frequency_hertz:
+          other: "%{count} Hz"
+        frequency_kilohertz:
+          other: "%{count} kHz"
+        frequency_megahertz:
+          other: "%{count} MHz"
         length_centimeter:
           other: "%{count} cm"
         length_foot:
@@ -58,6 +210,10 @@ my:
           other: "%{count} mm"
         length_yard:
           other: "%{count} ကိုက်"
+        light_lumen:
+          other: "%{count} လူမန်"
+        light_lux:
+          other: "%{count} lx"
         mass_gram:
           other: "%{count} g"
         mass_kilogram:
@@ -66,6 +222,30 @@ my:
           other: "%{count} oz"
         mass_pound:
           other: "%{count} lb"
+        power_horsepower:
+          other: "%{count} hp"
+        power_kilowatt:
+          other: "%{count} kW"
+        power_milliwatt:
+          other: "%{count} mW"
+        power_watt:
+          other: "%{count} W"
+        pressure_bar:
+          other: "%{count} ဘား"
+        pressure_pound_force_per_square_inch:
+          other: "%{count} psi"
+        speed_kilometer_per_hour:
+          other: "%{count} km/h"
+        speed_meter_per_second:
+          other: "%{count} m/s"
+        speed_mile_per_hour:
+          other: "%{count} mi/h"
+        temperature_celsius:
+          other: "%{count}°C"
+        temperature_fahrenheit:
+          other: "%{count}°F"
+        temperature_kelvin:
+          other: "%{count} K"
         volume_centiliter:
           other: "%{count} cL"
         volume_cubic_meter:

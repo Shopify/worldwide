@@ -3,6 +3,42 @@ se:
   units:
     unit_length:
       long:
+        area_square_foot:
+          one: "%{count} neliöjuolgi"
+          other: "%{count} neliöjuolgi"
+          two: "%{count} neliöjuolgi"
+        area_square_meter:
+          one: "%{count} neliömehter"
+          other: "%{count} neliömehtera"
+          two: "%{count} neliömehtera"
+        duration_day:
+          one: "%{count} jándor"
+          other: "%{count} jándora"
+          two: "%{count} jándora"
+        duration_hour:
+          one: "%{count} diibmu"
+          other: "%{count} diibmur"
+          two: "%{count} diimmur"
+        duration_millisecond:
+          one: "%{count} millisekunda"
+          other: "%{count} millisekundda"
+          two: "%{count} millisekundda"
+        duration_minute:
+          one: "%{count} minuhta"
+          other: "%{count} minuhtta"
+          two: "%{count} minuhtta"
+        duration_month:
+          one: "%{count} mánotbadji"
+          other: "%{count} mánotbadji"
+          two: "%{count} mánotbaji"
+        duration_second:
+          one: "%{count} sekunda"
+          other: "%{count} sekundda"
+          two: "%{count} sekundda"
+        duration_year:
+          one: "%{count} jahki"
+          other: "%{count} jahkki"
+          two: "%{count} jahkki"
         length_centimeter:
           one: "%{count} sentimehter"
           other: "%{count} sentimehtera"
@@ -43,11 +79,79 @@ se:
           one: "%{count} pauna"
           other: "%{count} pauna"
           two: "%{count} pauna"
+        power_horsepower:
+          one: "%{count} hevosvoima"
+          other: "%{count} hevosvoima"
+          two: "%{count} hevosvoima"
+        power_kilowatt:
+          one: "%{count} kilowatt"
+          other: "%{count} kilowatt"
+          two: "%{count} kilowatt"
+        power_watt:
+          one: "%{count} watt"
+          other: "%{count} watt"
+          two: "%{count} watt"
+        speed_kilometer_per_hour:
+          one: "%{count} kilomehter kohti diibmu"
+          other: "%{count} kilomehtera kohti diibmu"
+          two: "%{count} kilomehtera kohti diibmu"
+        speed_meter_per_second:
+          one: "%{count} mehter kohti sekunti"
+          other: "%{count} mehtera kohti sekunti"
+          two: "%{count} mehtera kohti sekunti"
+        speed_mile_per_hour:
+          one: "%{count} eangas miil kohti diibmu"
+          other: "%{count} eangas miila kohti diibmu"
+          two: "%{count} eangas miila kohti diibmu"
+        temperature_celsius:
+          one: "%{count} grádat Celsius"
+          other: "%{count} grádat Celsius"
+          two: "%{count} grádat Celsius"
+        temperature_fahrenheit:
+          one: "%{count} grádat Fahrenheit"
+          other: "%{count} grádat Fahrenheit"
+          two: "%{count} grádat Fahrenheit"
         volume_liter:
           one: "%{count} lihtar"
           other: "%{count} lihtara"
           two: "%{count} lihtara"
       short:
+        area_square_foot:
+          one: "%{count} ft²"
+          other: "%{count} ft²"
+          two: "%{count} ft²"
+        area_square_meter:
+          one: "%{count} m²"
+          other: "%{count} m²"
+          two: "%{count} m²"
+        duration_day:
+          one: "%{count} d"
+          other: "%{count} d"
+          two: "%{count} d"
+        duration_hour:
+          one: "%{count} h"
+          other: "%{count} h"
+          two: "%{count} h"
+        duration_millisecond:
+          one: "%{count} ms"
+          other: "%{count} ms"
+          two: "%{count} ms"
+        duration_minute:
+          one: "%{count} min"
+          other: "%{count} min"
+          two: "%{count} min"
+        duration_month:
+          one: "%{count} mán"
+          other: "%{count} mán"
+          two: "%{count} mán"
+        duration_second:
+          one: "%{count} s"
+          other: "%{count} s"
+          two: "%{count} s"
+        duration_year:
+          one: "%{count} jah"
+          other: "%{count} jah"
+          two: "%{count} jah"
         length_centimeter:
           one: "%{count} cm"
           other: "%{count} cm"
@@ -88,6 +192,38 @@ se:
           one: "%{count} pauna"
           other: "%{count} pauna"
           two: "%{count} pauna"
+        power_horsepower:
+          one: "%{count} hv"
+          other: "%{count} hv"
+          two: "%{count} hv"
+        power_kilowatt:
+          one: "%{count} kW"
+          other: "%{count} kW"
+          two: "%{count} kW"
+        power_watt:
+          one: "%{count} W"
+          other: "%{count} W"
+          two: "%{count} W"
+        speed_kilometer_per_hour:
+          one: "%{count} km/h"
+          other: "%{count} km/h"
+          two: "%{count} km/h"
+        speed_meter_per_second:
+          one: "%{count} m/s"
+          other: "%{count} m/s"
+          two: "%{count} m/s"
+        speed_mile_per_hour:
+          one: "%{count} mi/h"
+          other: "%{count} mi/h"
+          two: "%{count} mi/h"
+        temperature_celsius:
+          one: "%{count}°C"
+          other: "%{count}°C"
+          two: "%{count}°C"
+        temperature_fahrenheit:
+          one: "%{count}°F"
+          other: "%{count}°F"
+          two: "%{count}°F"
         volume_liter:
           one: "%{count} l"
           other: "%{count} l"

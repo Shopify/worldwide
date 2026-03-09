@@ -3,6 +3,76 @@ kea:
   units:
     unit_length:
       long:
+        area_square_centimeter:
+          other: "%{count} sentímetru kuadradu"
+        area_square_foot:
+          other: "%{count} pe kuadradu"
+        area_square_inch:
+          other: "%{count} pulegada kuadradu"
+        area_square_meter:
+          other: "%{count} metru kuadradu"
+        area_square_yard:
+          other: "%{count} jarda kuadradu"
+        digital_byte:
+          other: "%{count} byte"
+        digital_gigabyte:
+          other: "%{count} jigabyte"
+        digital_kilobyte:
+          other: "%{count} kilobyte"
+        digital_megabyte:
+          other: "%{count} megabyte"
+        digital_terabyte:
+          other: "%{count} terabyte"
+        duration_day:
+          other: "%{count} dia"
+        duration_hour:
+          other: "%{count} ora"
+        duration_microsecond:
+          other: "%{count} mikrosigundu"
+        duration_millisecond:
+          other: "%{count} milisigundu"
+        duration_minute:
+          other: "%{count} minutu"
+        duration_month:
+          other: "%{count} mes"
+        duration_nanosecond:
+          other: "%{count} nanosigundu"
+        duration_second:
+          other: "%{count} sigundu"
+        duration_year:
+          other: "%{count} anu"
+        electric_ampere:
+          other: "%{count} amper"
+        electric_milliampere:
+          other: "%{count} miliamper"
+        electric_ohm:
+          other: "%{count} ohm"
+        electric_volt:
+          other: "%{count} volt"
+        energy_calorie:
+          other: "%{count} kaloria"
+        energy_joule:
+          other: "%{count} joule"
+        energy_kilocalorie:
+          other: "%{count} kilokaloria"
+        energy_kilojoule:
+          other: "%{count} kilojoule"
+        frequency_gigahertz:
+          other: "%{count} jigaertz"
+        frequency_hertz:
+          other: "%{count} ertz"
+        frequency_kilohertz:
+          other: "%{count} kiloertz"
+        frequency_megahertz:
+          other: "%{count} megaertz"
+        graphics_dot_per_inch:
+          other: "%{count} pontu pur pulegada"
+        graphics_megapixel:
+          other: "%{count} megapiksel"
+        graphics_pixel:
+          other: "%{count} piksel"
+        graphics_pixel_per_inch:
+          other: "%{count} piksel pur pulegada"
         length_centimeter:
           other: "%{count} sentímetru"
         length_foot:
@@ -15,6 +85,10 @@ kea:
           other: "%{count} milímetru"
         length_yard:
           other: "%{count} jarda"
+        light_lumen:
+          other: "%{count} lumen"
+        light_lux:
+          other: "%{count} lux"
         mass_gram:
           other: "%{count} grama"
         mass_kilogram:
@@ -23,6 +97,30 @@ kea:
           other: "%{count} ónsa"
         mass_pound:
           other: "%{count} libra"
+        power_horsepower:
+          other: "%{count} kabalu-vapor"
+        power_kilowatt:
+          other: "%{count} kilowatt"
+        power_milliwatt:
+          other: "%{count} miliwatt"
+        power_watt:
+          other: "%{count} watt"
+        pressure_bar:
+          other: "%{count} bar"
+        pressure_pound_force_per_square_inch:
+          other: "%{count} libra pur pulegada kuadradu"
+        speed_kilometer_per_hour:
+          other: "%{count} kilómetru pur ora"
+        speed_meter_per_second:
+          other: "%{count} metru pur sigundu"
+        speed_mile_per_hour:
+          other: "%{count} milha pur ora"
+        temperature_celsius:
+          other: "%{count} grau Celsius"
+        temperature_fahrenheit:
+          other: "%{count} grau Fahrenheit"
+        temperature_kelvin:
+          other: "%{count} kelvin"
         volume_centiliter:
           other: "%{count} sentilitru"
         volume_cubic_meter:
@@ -46,6 +144,66 @@ kea:
         volume_quart_imperial:
           other: "%{count} kuart britániku"
       short:
+        area_square_centimeter:
+          other: "%{count} cm²"
+        area_square_foot:
+          other: "%{count} ft²"
+        area_square_inch:
+          other: "%{count} in²"
+        area_square_meter:
+          other: "%{count} m²"
+        area_square_yard:
+          other: "%{count} yd²"
+        digital_byte:
+          other: "%{count} B"
+        digital_gigabyte:
+          other: "%{count} GB"
+        digital_kilobyte:
+          other: "%{count} kB"
+        digital_megabyte:
+          other: "%{count} MB"
+        digital_terabyte:
+          other: "%{count} TB"
+        duration_day:
+          other: "%{count} dia"
+        duration_hour:
+          other: "%{count} h"
+        duration_microsecond:
+          other: "%{count} μs"
+        duration_millisecond:
+          other: "%{count} ms"
+        duration_minute:
+          other: "%{count} min."
+        duration_month:
+          other: "%{count} mes"
+        duration_nanosecond:
+          other: "%{count} ns"
+        duration_second:
+          other: "%{count} sig."
+        duration_year:
+          other: "%{count} anu"
+        electric_ampere:
+          other: "%{count} A"
+        electric_milliampere:
+          other: "%{count} mA"
+        electric_ohm:
+          other: "%{count} Ω"
+        electric_volt:
+          other: "%{count} V"
+        energy_calorie:
+          other: "%{count} cal"
+        energy_kilocalorie:
+          other: "%{count} kcal"
+        energy_kilojoule:
+          other: "%{count} kJ"
+        frequency_gigahertz:
+          other: "%{count} GHz"
+        frequency_hertz:
+          other: "%{count} Hz"
+        frequency_kilohertz:
+          other: "%{count} kHz"
+        frequency_megahertz:
+          other: "%{count} MHz"
         length_centimeter:
           other: "%{count} cm"
         length_foot:
@@ -58,6 +216,20 @@ kea:
           other: "%{count} mm"
         length_yard:
           other: "%{count} yd"
+        light_lux:
+          other: "%{count} lx"
+        power_horsepower:
+          other: "%{count} cv"
+        power_kilowatt:
+          other: "%{count} kW"
+        power_milliwatt:
+          other: "%{count} mW"
+        power_watt:
+          other: "%{count} W"
+        temperature_celsius:
+          other: "%{count} °C"
+        temperature_fahrenheit:
+          other: "%{count} °F"
         volume_centiliter:
           other: "%{count} cl"
         volume_fluid_ounce:

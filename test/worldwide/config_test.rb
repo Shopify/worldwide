@@ -98,7 +98,7 @@ module Worldwide
 
       Worldwide::Config.configure_i18n(i18n_config: config)
 
-      assert_equal(629, config.load_path.size)
+      assert_equal(630, config.load_path.size)
     end
 
     test "#configure sets enforce_available_locales to true if not explicitly set" do

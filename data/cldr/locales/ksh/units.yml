@@ -3,6 +3,42 @@ ksh:
   units:
     unit_length:
       long:
+        area_square_foot:
+          one: "%{count} Quadratvoss"
+          other: "%{count} Quadratvoss"
+          zero: "%{count} Quadratvoss"
+        area_square_meter:
+          one: "%{count} Quadratmeter"
+          other: "%{count} Quadratmeter"
+          zero: "%{count} Quadratmeter"
+        duration_day:
+          one: "%{count} Dääsch"
+          other: "%{count} Dääsch"
+          zero: "%{count} Dääsch"
+        duration_hour:
+          one: "%{count} Schtunde"
+          other: "%{count} Schtunde"
+          zero: "%{count} Schtunde"
+        duration_millisecond:
+          one: "%{count} Millisekunde"
+          other: "%{count} Millisekunde"
+          zero: "%{count} Millisekunde"
+        duration_minute:
+          one: "%{count} Menutte"
+          other: "%{count} Menutte"
+          zero: "%{count} Menutte"
+        duration_month:
+          one: "%{count} Mohnde"
+          other: "%{count} Mohnde"
+          zero: "%{count} Mohnde"
+        duration_second:
+          one: "%{count} Sekunde"
+          other: "%{count} Sekunde"
+          zero: "%{count} Sekunde"
+        duration_year:
+          one: "%{count} Johre"
+          other: "%{count} Johre"
+          zero: "%{count} Johre"
         length_centimeter:
           one: "%{count} Zentimeter"
           other: "%{count} Zentimeter"
@@ -39,11 +75,71 @@ ksh:
           one: "%{count} Pfund"
           other: "%{count} Pfund"
           zero: "%{count} Pfund"
+        power_horsepower:
+          one: "%{count} Pferdestärke"
+          other: "%{count} Pferdestärken"
+          zero: "%{count} Pferdestärken"
+        power_kilowatt:
+          one: "%{count} Kilowatt"
+          other: "%{count} Kilowatt"
+          zero: "%{count} Kilowatt"
+        power_watt:
+          one: "%{count} Watt"
+          other: "%{count} Watt"
+          zero: "%{count} Watt"
+        speed_kilometer_per_hour:
+          one: "%{count} Kilometer pro Schtunde"
+          other: "%{count} Kilometer pro Schtunde"
+          zero: "%{count} Kilometer pro Schtunde"
+        speed_meter_per_second:
+          one: "%{count} Meter pro Sekunde"
+          other: "%{count} Meter pro Sekunde"
+          zero: "%{count} Meter pro Sekunde"
+        speed_mile_per_hour:
+          one: "%{count} englische Meile pro Schtunde"
+          other: "%{count} englischen Meilen pro Schtunde"
+          zero: "%{count} englischen Meilen pro Schtunde"
+        temperature_celsius:
+          one: "%{count} Graad Celsius"
+          other: "%{count} Graad Celsius"
+          zero: "%{count} Graad Celsius"
+        temperature_fahrenheit:
+          one: "%{count} Graad Fahrenheit"
+          other: "%{count} Graad Fahrenheit"
+          zero: "%{count} Graad Fahrenheit"
         volume_liter:
           one: "%{count} Liter"
           other: "%{count} Liter"
           zero: "%{count} Liter"
       short:
+        area_square_foot:
+          one: "%{count} ft²"
+          other: "%{count} ft²"
+          zero: "%{count} ft²"
+        area_square_meter:
+          one: "%{count} m²"
+          other: "%{count} m²"
+          zero: "%{count} m²"
+        duration_day:
+          one: "%{count} d"
+          other: "%{count} d"
+          zero: "%{count} d"
+        duration_hour:
+          one: "%{count} h"
+          other: "%{count} h"
+          zero: "%{count} h"
+        duration_millisecond:
+          one: "%{count} ms"
+          other: "%{count} ms"
+          zero: "%{count} ms"
+        duration_minute:
+          one: "%{count} min"
+          other: "%{count} min"
+          zero: "%{count} min"
+        duration_second:
+          one: "%{count} s"
+          other: "%{count} s"
+          zero: "%{count} s"
         length_centimeter:
           one: "%{count} cm"
           other: "%{count} cm"
@@ -80,6 +176,38 @@ ksh:
           one: "%{count} Pfund"
           other: "%{count} Pfund"
           zero: "%{count} Pfund"
+        power_horsepower:
+          one: "%{count} PS"
+          other: "%{count} PS"
+          zero: "%{count} PS"
+        power_kilowatt:
+          one: "%{count} kW"
+          other: "%{count} kW"
+          zero: "%{count} kW"
+        power_watt:
+          one: "%{count} W"
+          other: "%{count} W"
+          zero: "%{count} W"
+        speed_kilometer_per_hour:
+          one: "%{count} km/h"
+          other: "%{count} km/h"
+          zero: "%{count} km/h"
+        speed_meter_per_second:
+          one: "%{count} m/s"
+          other: "%{count} m/s"
+          zero: "%{count} m/s"
+        speed_mile_per_hour:
+          one: "%{count} mi/h"
+          other: "%{count} mi/h"
+          zero: "%{count} mi/h"
+        temperature_celsius:
+          one: "%{count}°C"
+          other: "%{count}°C"
+          zero: "%{count}°C"
+        temperature_fahrenheit:
+          one: "%{count}°F"
+          other: "%{count}°F"
+          zero: "%{count}°F"
         volume_liter:
           one: "%{count} l"
           other: "%{count} l"

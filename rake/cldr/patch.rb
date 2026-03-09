@@ -1368,7 +1368,7 @@ module Worldwide
             return true
           end
           # units.yml is malformed and should use %{count} instead of {0}
-          modified = filtered.transform_values { |value| value.gsub("{0}", "%{count}") }
+          modified = filtered.transform_values { |value| value.is_a?(String) ? value.gsub("{0}", "%{count}") : value }
           modified = modified.sort.to_h
 
           new_contents = UnflattenHash.run(modified).to_yaml
