@@ -28,6 +28,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ---
+## [1.22.0] - 2026-03-09
+- Add CLDR unit formatting support for 12 new measurement categories: area, duration, electric, energy, frequency, light, power, pressure, speed, temperature, digital, and graphics (~50 new unit keys with locale-aware formatting) [#436](https://github.com/Shopify/worldwide/pull/436)
+- Fix `patch_units_file` to handle CLDR alias references stored as Symbols in `root` locale [#436](https://github.com/Shopify/worldwide/pull/436)
+
 ## [1.21.3] - 2026-01-26
 - Add `address1` and `address1_with_unit` formatting keys for NL [#427](https://github.com/Shopify/worldwide/pull/427)
 
