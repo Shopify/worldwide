@@ -26,6 +26,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+
+---
+## [1.23.0] - 2026-03-12
 - Mark 17 countries as tax-inclusive: AR, CL, CO, EG, ID, IL, KZ, MX, PE, PH, QA, SA, KR, TW, TH, AE, VN [#438](https://github.com/Shopify/worldwide/pull/438)
 
 ---
