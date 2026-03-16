@@ -380,6 +380,20 @@ module Worldwide
       Worldwide::Fields.field(country_code: iso_code, field_key: key)
     end
 
+    # Returns the canonical English name of the region, cached after first access.
+    # This is a lightweight alternative to `full_name(locale: :en)` that avoids
+    # repeated locale lookups when the caller just wants the English name.
+    def english_name
+      @english_name ||= full_name(locale: :en)
+    end
+
+    # Returns the ISO 3166-2 subdivision code (the part after the dash in iso_code).
+    # For provinces/zones: "ON" for "CA-ON", "13" for "JP-13", "QC" for "CA-QC".
+    # For countries/territories without a dash: returns the iso_code itself (e.g., "CA", "HK").
+    def iso_subdivision_code
+      @iso_subdivision_code ||= derive_iso_subdivision_code
+    end
+
     # A user-facing name in the currently-active locale's language.
     def full_name(locale: I18n.locale)
       lookup_code = cldr_code
@@ -537,6 +551,14 @@ module Worldwide
     end
 
     private
+
+    def derive_iso_subdivision_code
+      if iso_code&.include?("-")
+        iso_code.split("-", 2).last.freeze
+      else
+        iso_code
+      end
+    end
 
     def add_zone_to_hash(zone)
       @zones_by_code[subdivision_code(zone.iso_code)] = zone if Util.present?(subdivision_code(zone.iso_code))

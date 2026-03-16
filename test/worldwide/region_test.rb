@@ -267,6 +267,69 @@ module Worldwide
       assert_equal "Legacy name", dummy.full_name
     end
 
+    test "#iso_subdivision_code returns the subdivision part for provinces" do
+      ca = Worldwide.region(code: "CA")
+      on = ca.zone(code: "ON")
+
+      assert_equal "ON", on.iso_subdivision_code
+
+      qc = ca.zone(code: "QC")
+
+      assert_equal "QC", qc.iso_subdivision_code
+    end
+
+    test "#iso_subdivision_code returns the subdivision part for numeric zone codes" do
+      jp = Worldwide.region(code: "JP")
+      tokyo = jp.zone(code: "13")
+
+      assert_equal "13", tokyo.iso_subdivision_code
+    end
+
+    test "#iso_subdivision_code returns iso_code for countries without a dash" do
+      ca = Worldwide.region(code: "CA")
+
+      assert_equal "CA", ca.iso_subdivision_code
+    end
+
+    test "#iso_subdivision_code returns territory code for zones that are also territories" do
+      hk = Worldwide.region(code: "HK")
+
+      assert_equal "HK", hk.iso_subdivision_code
+    end
+
+    test "#iso_subdivision_code caches the result" do
+      on = Worldwide.region(code: "CA").zone(code: "ON")
+      first_call = on.iso_subdivision_code
+      second_call = on.iso_subdivision_code
+
+      assert_same first_call, second_call
+    end
+
+    test "#english_name returns the English name regardless of current locale" do
+      ca = Worldwide.region(code: "CA")
+      on = ca.zone(code: "ON")
+
+      I18n.with_locale("ja") do
+        assert_equal "Ontario", on.english_name
+      end
+    end
+
+    test "#english_name returns the English name for a country" do
+      ca = Worldwide.region(code: "CA")
+
+      I18n.with_locale("ja") do
+        assert_equal "Canada", ca.english_name
+      end
+    end
+
+    test "#english_name caches the result" do
+      on = Worldwide.region(code: "CA").zone(code: "ON")
+      first_call = on.english_name
+      second_call = on.english_name
+
+      assert_same first_call, second_call
+    end
+
     test "#autofill_zip returns values as expected" do
       {
         ac: "ASCN 1ZZ",
