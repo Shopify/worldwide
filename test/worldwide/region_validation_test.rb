@@ -66,6 +66,10 @@ module Worldwide
         [:US, :NY, "10018"],
         [:US, :CA, "90210"],
         [:US, :PR, "00901"],
+        [:IE, :D, "D02 AF30"],
+        [:IE, :CO, "T12 AB34"],
+        [:IE, :G, "H91 AB12"],
+        [:IE, :KY, "V92 XY12"],
       ].each do |country_code, province_code, zip|
         assert_equal true, Worldwide.region(code: country_code).valid_zip?(zip)
         assert_equal true, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
@@ -103,6 +107,9 @@ module Worldwide
         [:US, :MA, "10018"],
         [:US, :OR, "90210"],
         [:US, :PR, "00899"],
+        [:IE, :CO, "D02 AF30"],
+        [:IE, :D, "T12 AB34"],
+        [:IE, :KY, "H91 AB12"],
       ].each do |country_code, province_code, zip|
         assert_equal true, Worldwide.region(code: country_code).valid_zip?(zip)
         assert_equal false, Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip)
