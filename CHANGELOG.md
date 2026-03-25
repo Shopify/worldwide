@@ -28,6 +28,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ---
+## [1.23.1] - 2026-03-25
+- Bump phonelib from 0.8.7 to 0.10.17, fixing phone validation for newly allocated number prefixes (e.g. Saudi Arabia `57x`)
+- Bump mocha from 2.0.2 to 3.1.0 for compatibility with newer minitest
+
+---
 ## [1.23.0] - 2026-03-12
 - Mark 17 countries as tax-inclusive: AR, CL, CO, EG, ID, IL, KZ, MX, PE, PH, QA, SA, KR, TW, TH, AE, VN [#438](https://github.com/Shopify/worldwide/pull/438)
 
