@@ -106,8 +106,11 @@ module Worldwide
         normalized = Worldwide::Zip.normalize(country_code: "IE", zip: prefix)
         mapped_province = country.send(:zone_by_normalized_zip, normalized, allow_partial_zip: true)
 
-        assert_equal province_codes.first, mapped_province&.legacy_code,
-          "Expected first province code for prefix #{prefix}"
+        assert_equal(
+          province_codes.first,
+          mapped_province&.legacy_code,
+          "Expected first province code for prefix #{prefix}",
+        )
       end
     end
 
