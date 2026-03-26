@@ -375,7 +375,7 @@ module Worldwide
     # An Worldwide::Field that can be used to ask about the field, including
     # labels, error messages, and an autofill value if there is one.
     def field(key:)
-      return nil unless country?
+      return unless country?
 
       Worldwide::Fields.field(country_code: iso_code, field_key: key)
     end
@@ -479,7 +479,7 @@ module Worldwide
     #
     # @return [String, nil] One of "ALPHANUMERIC", "NUMERIC", "NUMERIC_AND_PUNCTUATION", or nil if no zip_example
     def zip_type
-      return nil if zip_example.nil?
+      return if zip_example.nil?
 
       if zip_example.match?(/[A-Za-z]/)
         FORMAT_TYPES[:ALPHANUMERIC]
@@ -554,7 +554,7 @@ module Worldwide
       field ? !!field["required"] : false
     end
 
-    def answers_to_cldr_code(search_code)
+    def answers_to_cldr_code?(search_code)
       return false if Util.blank?(search_code) || Util.blank?(cldr_code)
       return true if search_code.casecmp(cldr_code).zero?
 
@@ -562,7 +562,7 @@ module Worldwide
       "#{pc&.cldr_code&.downcase}#{cldr_code.downcase}" == search_code.downcase
     end
 
-    def answers_to_iso_code(search_code)
+    def answers_to_iso_code?(search_code)
       return true if search_code == iso_code
 
       pc = parent_country
@@ -616,9 +616,9 @@ module Worldwide
     #
     # Returns the Region in which the zip belongs based on the prefix, or `nil` if no match is found.
     def search_prefixes_by_normalized_zip(prefixes:, zip:, allow_partial_zip: false)
-      return nil if Worldwide::Util.blank?(prefixes)
-      return nil if Worldwide::Util.blank?(zip)
-      return nil unless allow_partial_zip || passes_country_zip_regexp?(value: zip)
+      return if Worldwide::Util.blank?(prefixes)
+      return if Worldwide::Util.blank?(zip)
+      return unless allow_partial_zip || passes_country_zip_regexp?(value: zip)
 
       stripped = Zip.strip_optional_country_prefix(country_code: iso_code, zip: zip)
 

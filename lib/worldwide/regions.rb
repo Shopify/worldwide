@@ -12,6 +12,7 @@ module Worldwide
 
     class << self
       extend Forwardable
+
       def_delegators :instance, :all, :region_by_cldr_code, :region
     end
 
