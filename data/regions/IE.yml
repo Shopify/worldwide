@@ -12,7 +12,7 @@ tags:
 - EU-member
 zip_regex: "^(D6W|[AC-FHKNPRT-Z]\\d{2}) ?[0-9AC-FHKNPRT-Z]{4}$"
 partial_zip_regex: "^(D6W|[AC-FHKNPRT-Z]\\d{2})$"
-zip_example: A65 F4E2
+zip_example: D02 AF30
 phone_number_prefix: 353
 week_start_day: monday
 format:
@@ -38,6 +38,15 @@ zones:
   - County Carlow
   - Co. Carlow
   tax: 0.0
+  neighboring_zones:
+  - KE
+  - KK
+  - LS
+  - WW
+  - WX
+  zip_prefixes:
+  - R21
+  - R93
 - name: Cavan
   code: CN
   name_alternates:
@@ -46,6 +55,17 @@ zones:
   - County Cavan
   - Co. Cavan
   tax: 0.0
+  neighboring_zones:
+  - LM
+  - LD
+  - MH
+  - MN
+  - WH
+  zip_prefixes:
+  - A82
+  - H12
+  - H14
+  - H16
 - name: Clare
   code: CE
   name_alternates:
@@ -54,6 +74,14 @@ zones:
   - County Clare
   - Co. Clare
   tax: 0.0
+  neighboring_zones:
+  - G
+  - LK
+  - TA
+  zip_prefixes:
+  - V14
+  - V15
+  - V95
 - name: Cork
   code: CO
   name_alternates:
@@ -62,6 +90,35 @@ zones:
   - County Cork
   - Co. Cork
   tax: 0.0
+  neighboring_zones:
+  - KY
+  - LK
+  - TA
+  - WD
+  zip_prefixes:
+  - P12
+  - P14
+  - P17
+  - P24
+  - P25
+  - P31
+  - P32
+  - P36
+  - P43
+  - P47
+  - P51
+  - P56
+  - P61
+  - P67
+  - P72
+  - P75
+  - P81
+  - P85
+  - T12
+  - T23
+  - T34
+  - T45
+  - T56
 - name: Donegal
   code: DL
   name_alternates:
@@ -70,6 +127,12 @@ zones:
   - County Donegal
   - Co. Donegal
   tax: 0.0
+  neighboring_zones:
+  - LM
+  zip_prefixes:
+  - F92
+  - F93
+  - F94
 - name: Dublin
   code: D
   name_alternates:
@@ -77,6 +140,45 @@ zones:
   - County Dublin
   - Co. Dublin
   tax: 0.0
+  neighboring_zones:
+  - KE
+  - MH
+  - WW
+  zip_prefixes:
+  - A41
+  - A42
+  - A45
+  - A94
+  - A96
+  - D01
+  - D02
+  - D03
+  - D04
+  - D05
+  - D06
+  - D07
+  - D08
+  - D09
+  - D10
+  - D11
+  - D12
+  - D13
+  - D14
+  - D15
+  - D16
+  - D17
+  - D18
+  - D20
+  - D22
+  - D24
+  - D6W
+  - K32
+  - K34
+  - K36
+  - K45
+  - K56
+  - K67
+  - K78
 - name: Galway
   code: G
   name_alternates:
@@ -85,6 +187,19 @@ zones:
   - County Galway
   - Co. Galway
   tax: 0.0
+  neighboring_zones:
+  - CE
+  - MO
+  - OY
+  - RN
+  - TA
+  zip_prefixes:
+  - H53
+  - H54
+  - H62
+  - H65
+  - H71
+  - H91
 - name: Kerry
   code: KY
   name_alternates:
@@ -93,6 +208,14 @@ zones:
   - County Kerry
   - Co. Kerry
   tax: 0.0
+  neighboring_zones:
+  - CO
+  - LK
+  zip_prefixes:
+  - V23
+  - V31
+  - V92
+  - V93
 - name: Kildare
   code: KE
   name_alternates:
@@ -101,6 +224,21 @@ zones:
   - County Kildare
   - Co. Kildare
   tax: 0.0
+  neighboring_zones:
+  - CW
+  - D
+  - LS
+  - MH
+  - OY
+  - WW
+  zip_prefixes:
+  - R14
+  - R51
+  - R56
+  - W12
+  - W23
+  - W34
+  - W91
 - name: Kilkenny
   code: KK
   name_alternates:
@@ -109,6 +247,14 @@ zones:
   - County Kilkenny
   - Co. Kilkenny
   tax: 0.0
+  neighboring_zones:
+  - CW
+  - LS
+  - TA
+  - WD
+  - WX
+  zip_prefixes:
+  - R95
 - name: Laois
   code: LS
   name_alternates:
@@ -116,6 +262,14 @@ zones:
   - County Laois
   - Co. Laois
   tax: 0.0
+  neighboring_zones:
+  - CW
+  - KE
+  - KK
+  - OY
+  - TA
+  zip_prefixes:
+  - R32
 - name: Leitrim
   code: LM
   name_alternates:
@@ -124,6 +278,14 @@ zones:
   - County Leitrim
   - Co. Leitrim
   tax: 0.0
+  neighboring_zones:
+  - CN
+  - DL
+  - LD
+  - RN
+  - SO
+  zip_prefixes:
+  - N41
 - name: Limerick
   code: LK
   name_alternates:
@@ -132,6 +294,15 @@ zones:
   - County Limerick
   - Co. Limerick
   tax: 0.0
+  neighboring_zones:
+  - CE
+  - CO
+  - KY
+  - TA
+  zip_prefixes:
+  - V35
+  - V42
+  - V94
 - name: Longford
   code: LD
   name_alternates:
@@ -140,6 +311,13 @@ zones:
   - County Longford
   - Co. Longford
   tax: 0.0
+  neighboring_zones:
+  - CN
+  - LM
+  - RN
+  - WH
+  zip_prefixes:
+  - N39
 - name: Louth
   code: LH
   name_alternates:
@@ -148,6 +326,12 @@ zones:
   - County Louth
   - Co. Louth
   tax: 0.0
+  neighboring_zones:
+  - MH
+  - MN
+  zip_prefixes:
+  - A91
+  - A92
 - name: Mayo
   code: MO
   name_alternates:
@@ -156,6 +340,17 @@ zones:
   - County Mayo
   - Co. Mayo
   tax: 0.0
+  neighboring_zones:
+  - G
+  - RN
+  - SO
+  zip_prefixes:
+  - F12
+  - F23
+  - F26
+  - F28
+  - F31
+  - F35
 - name: Meath
   code: MH
   name_alternates:
@@ -164,6 +359,20 @@ zones:
   - County Meath
   - Co. Meath
   tax: 0.0
+  neighboring_zones:
+  - CN
+  - D
+  - KE
+  - LH
+  - MN
+  - OY
+  - WH
+  zip_prefixes:
+  - A83
+  - A84
+  - A85
+  - A86
+  - C15
 - name: Monaghan
   code: MN
   name_alternates:
@@ -172,6 +381,15 @@ zones:
   - County Monaghan
   - Co. Monaghan
   tax: 0.0
+  neighboring_zones:
+  - CN
+  - LH
+  - MH
+  zip_prefixes:
+  - A75
+  - A81
+  - H18
+  - H23
 - name: Offaly
   code: OY
   name_alternates:
@@ -180,6 +398,18 @@ zones:
   - County Offaly
   - Co. Offaly
   tax: 0.0
+  neighboring_zones:
+  - G
+  - KE
+  - LS
+  - MH
+  - RN
+  - TA
+  - WH
+  zip_prefixes:
+  - R35
+  - R42
+  - R45
 - name: Roscommon
   code: RN
   name_alternates:
@@ -188,6 +418,18 @@ zones:
   - County Roscommon
   - Co. Roscommon
   tax: 0.0
+  neighboring_zones:
+  - G
+  - LM
+  - LD
+  - MO
+  - OY
+  - SO
+  - WH
+  zip_prefixes:
+  - F42
+  - F45
+  - F52
 - name: Sligo
   code: SO
   name_alternates:
@@ -196,6 +438,13 @@ zones:
   - County Sligo
   - Co. Sligo
   tax: 0.0
+  neighboring_zones:
+  - LM
+  - MO
+  - RN
+  zip_prefixes:
+  - F56
+  - F91
 - name: Tipperary
   code: TA
   name_alternates:
@@ -204,6 +453,24 @@ zones:
   - County Tipperary
   - Co. Tipperary
   tax: 0.0
+  neighboring_zones:
+  - CE
+  - CO
+  - G
+  - KK
+  - LK
+  - LS
+  - OY
+  - WD
+  zip_prefixes:
+  - E21
+  - E25
+  - E32
+  - E34
+  - E41
+  - E45
+  - E53
+  - E91
 - name: Waterford
   code: WD
   name_alternates:
@@ -212,6 +479,15 @@ zones:
   - County Waterford
   - Co. Waterford
   tax: 0.0
+  neighboring_zones:
+  - CO
+  - KK
+  - TA
+  - WX
+  zip_prefixes:
+  - X35
+  - X42
+  - X91
 - name: Westmeath
   code: WH
   name_alternates:
@@ -220,6 +496,15 @@ zones:
   - County Westmeath
   - Co. Westmeath
   tax: 0.0
+  neighboring_zones:
+  - CN
+  - LD
+  - MH
+  - OY
+  - RN
+  zip_prefixes:
+  - N37
+  - N91
 - name: Wexford
   code: WX
   name_alternates:
@@ -228,6 +513,16 @@ zones:
   - County Wexford
   - Co. Wexford
   tax: 0.0
+  neighboring_zones:
+  - CW
+  - KK
+  - WD
+  - WW
+  zip_prefixes:
+  - Y21
+  - Y25
+  - Y34
+  - Y35
 - name: Wicklow
   code: WW
   name_alternates:
@@ -236,4 +531,173 @@ zones:
   - County Wicklow
   - Co. Wicklow
   tax: 0.0
+  neighboring_zones:
+  - CW
+  - D
+  - KE
+  - WX
+  zip_prefixes:
+  - A63
+  - A67
+  - A98
+  - Y14
+zips_crossing_provinces:
+  A42:
+  - D
+  - MH
+  A81:
+  - MN
+  - CN
+  A82:
+  - CN
+  - MH
+  A83:
+  - MH
+  - KE
+  A84:
+  - MH
+  - D
+  A91:
+  - LH
+  - MN
+  A92:
+  - LH
+  - MH
+  A98:
+  - WW
+  - D
+  C15:
+  - MH
+  - WH
+  D11:
+  - D
+  - MH
+  D15:
+  - D
+  - MH
+  D24:
+  - D
+  - KE
+  E32:
+  - TA
+  - KK
+  - WD
+  E34:
+  - TA
+  - LK
+  E41:
+  - TA
+  - KK
+  E53:
+  - TA
+  - OY
+  E91:
+  - TA
+  - WD
+  F12:
+  - MO
+  - G
+  - SO
+  F26:
+  - MO
+  - SO
+  F35:
+  - MO
+  - RN
+  F42:
+  - RN
+  - G
+  F45:
+  - RN
+  - G
+  - MO
+  - SO
+  F52:
+  - RN
+  - SO
+  F91:
+  - SO
+  - CN
+  - LM
+  H12:
+  - CN
+  - LM
+  H53:
+  - G
+  - RN
+  H91:
+  - G
+  - CE
+  - MO
+  K32:
+  - D
+  - MH
+  N37:
+  - WH
+  - OY
+  - RN
+  N39:
+  - LD
+  - CN
+  - RN
+  N41:
+  - LM
+  - CN
+  - RN
+  P36:
+  - CO
+  - WD
+  P51:
+  - CO
+  - KY
+  - WD
+  P56:
+  - CO
+  - LK
+  P67:
+  - CO
+  - LK
+  R14:
+  - KE
+  - LS
+  R42:
+  - OY
+  - TA
+  R45:
+  - OY
+  - KE
+  R51:
+  - KE
+  - OY
+  R93:
+  - CW
+  - KE
+  - KK
+  - LS
+  - WW
+  R95:
+  - KK
+  - CW
+  V94:
+  - LK
+  - CE
+  - G
+  - KY
+  - TA
+  W23:
+  - KE
+  - D
+  - MH
+  W91:
+  - KE
+  - WW
+  X91:
+  - WD
+  - KK
+  Y21:
+  - WX
+  - CW
+  Y34:
+  - WX
+  - KK
 timezone: Europe/Dublin

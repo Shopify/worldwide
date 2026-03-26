@@ -84,12 +84,33 @@ module Worldwide
     end
 
     test "The first province listed for each of the zips_crossing_provinces must be where that prefix resolves" do
+      # IE uses routing key prefixes (e.g. "A82") rather than full postal codes as
+      # zips_crossing_provinces keys. These don't pass the full zip_regex, so IE has
+      # its own dedicated test below.
+      countries_with_prefix_keys = ["IE"]
+
       Regions.all.select(&:country?).each do |country|
+        next if countries_with_prefix_keys.include?(country.iso_code)
+
         country.zips_crossing_provinces&.each do |zip, province_codes|
           mapped_province = country.zone(zip:)
 
           assert_equal province_codes.first, mapped_province&.legacy_code, "Expected first province code for zip #{zip}"
         end
+      end
+    end
+
+    test "IE zips_crossing_provinces prefixes resolve to the first listed province" do
+      country = Worldwide.region(code: "IE")
+      country.zips_crossing_provinces&.each do |prefix, province_codes|
+        normalized = Worldwide::Zip.normalize(country_code: "IE", zip: prefix)
+        mapped_province = country.send(:zone_by_normalized_zip, normalized, allow_partial_zip: true)
+
+        assert_equal(
+          province_codes.first,
+          mapped_province&.legacy_code,
+          "Expected first province code for prefix #{prefix}",
+        )
       end
     end
 
