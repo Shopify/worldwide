@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Added postal code (Eircode) prefix-to-county mapping for Ireland, including cross-county routing keys and county adjacency data [#440](https://github.com/Shopify/worldwide/pull/440)
 
 ---
 ## [1.23.0] - 2026-03-12
