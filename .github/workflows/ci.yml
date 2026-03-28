@@ -15,14 +15,14 @@ jobs:
       matrix:
         gemfile:
          - Gemfile
-        ruby: ["3.2", "3.3", "3.4"]
+        ruby: ["3.2", "3.3", "3.4", "4.0"]
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
     - name: Check out code
       uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
     - name: Set up Ruby ${{ matrix.ruby }}
-      uses: ruby/setup-ruby@8aeb6ff8030dd539317f8e1769a044873b56ea71 # v1.268.0
+      uses: ruby/setup-ruby@c984c1a20bb35a1cbda04477c816cea024418be9 # v1.294.0
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
