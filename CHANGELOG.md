@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Un-deprecate IT province OT (Gallura Nord-Est Sardegna), add name alternate and zip_prefixes[#450](https://github.com/Shopify/worldwide/pull/450)
 
 ---
 
