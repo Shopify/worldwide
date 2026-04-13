@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add support for Ruby 4.0 [#434](https://github.com/Shopify/worldwide/pull/434)
+
 ---
 
 ## [1.23.2] - 2026-03-26
