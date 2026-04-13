@@ -66,13 +66,6 @@ module Worldwide
             zone.parents.size == 1 # zone is not a shared zone, e.g. a special territory
         end
 
-        # IT-OT (Olbia-Tempio) no longer exists, and was absorbed into IT-SS (Sassari).
-        # We need to add proper support for "deprecation" of zones.
-        # In the mean time, we have removed all prefixes from OT intentionally.
-        if country.legacy_code == "IT"
-          zones.reject! { |z| z.legacy_code == "OT" }
-        end
-
         # IC (Canary Islands) are not defined outside of world.yml
         # Ceuta is listed with code EA in world.yml, but may actually be CE. TBD.
         if country.legacy_code == "ES"

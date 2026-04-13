@@ -26,8 +26,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- nil
 
 ---
+## [1.24.0] - 2026-04-13
+- Update IT Sardinian provinces and zip prefixes [#451](https://github.com/Shopify/worldwide/pull/451)
 
 ## [1.23.2] - 2026-03-26
 - Add zip code prefix support for Ireland (IE) [#440](https://github.com/Shopify/worldwide/pull/440)
