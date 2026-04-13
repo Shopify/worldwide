@@ -43,7 +43,7 @@ module Worldwide
 
           assert(
             differ_only_in_contents_of_parens(value, optional_labels[optional_key]) ||
-            differ_only_in_optionality(value, optional_labels[optional_key]),
+            differ_only_in_optionality?(value, optional_labels[optional_key]),
             "Expected that the label for `#{key[-3]}` and its optional version in `#{file_path}` would only differ by the contents of the parentheses. Instead found:\n\t default: #{value}\n\toptional: #{optional_labels[optional_key]}",
           )
         end
@@ -77,7 +77,7 @@ module Worldwide
     # For one label, our Korean translator has opted for a phrasing that already has paretheses in the core text.
     # This means that the (optional) phrasing shares the same parentheses, after a comma.
     # In order to avoid failing the test on that label, we need to explicitly search for ", optional" in Korean.
-    def differ_only_in_optionality(default, optional)
+    def differ_only_in_optionality?(default, optional)
       default == optional.gsub(/, 선택 사항/, "")
     end
 
