@@ -1,0 +1,22 @@
+[package]
+name = "worldwide-icu4x-parity"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "CLI for testing ICU4X parity with Ruby worldwide gem"
+
+[[bin]]
+name = "worldwide-icu4x-parity"
+path = "src/main.rs"
+
+[dependencies]
+worldwide-icu4x-data = { path = "../worldwide-icu4x-data" }
+fixed_decimal = "0.5"
+icu_decimal = { version = "1.5", features = ["serde"] }
+icu_locid = "1.5"
+icu_plurals = { version = "1.5", features = ["serde"] }
+icu_provider = "1.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+writeable = "0.5"
