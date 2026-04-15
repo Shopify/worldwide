@@ -280,7 +280,7 @@ zones:
   - '09032'
   - '09033'
   - '09034'
-  - '09040' # Armungia, Balao, Barrali, Burcei, Castiadas, Donori, Furtei, Gesico, Goni, Guamaggire, ... now SU
+  - '09040' # Armungia, Balao, Barrali, Burcei, Castiadas, Donori, Furtei, Gesico, Goni, Guamaggire
   - '09041'
   - '09042'
   - '09043'
@@ -291,11 +291,11 @@ zones:
   - '09049'
   - '0905' # 09050 (Pula, Villa San Pietro)
   - '09060' # Settimo San Pietro
-  - '09061' # Orroli, now in SU
-  - '09062' # Sadali, now in SU
-  - '09063' # Serri, now in SU
-  - '09065' # Seulo, now in SU
-  - '09066' # Villanova Tulo, now in SU
+  - '09061' # Orroli
+  - '09062' # Sadali
+  - '09063' # Serri
+  - '09065' # Seulo
+  - '09066' # Villanova Tulo
   - '09067' # Elmas
   - '09068' # Uta
   - '09069' # Maracalagonis
@@ -330,22 +330,6 @@ zones:
   - '8603'
   - '8604'
   - '8610'
-# IT-CI was deleted (absorbed by IT-SD) on 2019-04-09; IT-SD renamed to IT-SU in 2020
-- name: Carbonia-Iglesias
-  code: CI
-  tax: 0.0
-  tax_name: VAT
-  neighboring_zones:
-  - CA
-  - VS
-  zip_prefixes:
-  - '09010' # Buggerru, now SU
-  - '09011' # Calasetta, now SU
-  - '09013' # Carbonia, now SU
-  - '09014' # Carloforte, now SU
-  - '09015' # Domusnovas, now SU
-  - '09016' # Iglesias, now SU
-  - '09017' # Sant'Antioco, now SU
 - name: Caserta
   code: CE
   tax: 0.0
@@ -538,6 +522,21 @@ zones:
   - RM
   zip_prefixes:
   - '03'
+- name: Gallura Nord-Est Sardegna
+  code: OT
+  name_alternates:
+  - Olbia-Tempio
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - NU
+  - SS
+  zip_prefixes:
+  - '0702'
+  - '07030'
+  - '07038'
+  - '07051'
+  - '07052'
 - name: Genova
   code: GE
   tax: 0.0
@@ -732,7 +731,6 @@ zones:
   - TA
   zip_prefixes:
   - '75'
-# IT-VS was deleted on 2019-04-09, and absorbed into IT-SD, which was renamed IT-SU in 2020
 - name: Medio Campidano
   code: VS
   tax: 0.0
@@ -742,19 +740,19 @@ zones:
   - CI
   - OR
   zip_prefixes:
-  - '09020' # Collinas, Genuri, Gesturi, Las Plassas, Pauli Arbarei, Pimentel, Samatzai, Siddi, Turri, ... now SU
-  - '09021' # Barumini, now SU
-  - '09022' # Lumunatrona, now SU
-  - '09025' # Sanluri, now SU
-  - '09027' # Serrenti, now SU
-  - '09029' # Setzu, Tuili, now SU
-  - '09030' # Guspini, now SU
-  - '09031' # Arbus, now SU
-  - '09035' # Gonnosfandiga, now SU
-  - '09036' # Guspini, now SU
-  - '09037' # San Gavino Monreale, now SU
-  - '09038' # Serramanna, now SU
-  - '09039' # Villacidro, now SU
+  - '09020' # Collinas, Genuri, Gesturi, Las Plassas, Pauli Arbarei, Pimentel, Samatzai, Siddi, Turri
+  - '09021' # Barumini
+  - '09022' # Lumunatrona
+  - '09025' # Sanluri
+  - '09027' # Serrenti
+  - '09029' # Setzu, Tuili
+  - '09030' # Guspini
+  - '09031' # Arbus
+  - '09035' # Gonnosfandiga
+  - '09036' # Guspini
+  - '09037' # San Gavino Monreale
+  - '09038' # Serramanna
+  - '09039' # Villacidro
 - name: Messina
   code: ME
   tax: 0.0
@@ -857,10 +855,7 @@ zones:
   - '08037'
   - '08038'
   - '08039'
-  - '0804'
   - '081'
-# IT-OG was deleted on 2019-09-04 and absorbed into IT-NU, except for 09064 Seui which is now in IT-SU
-# We still need to add support for IT-SU.  In the mean time, we allocate the code 09064 to its former province.
 - name: Ogliastra
   code: OG
   tax: 0.0
@@ -869,15 +864,15 @@ zones:
   - CA
   - NU
   zip_prefixes:
+  - '08040'
+  - '08042'
+  - '08044'
+  - '08045'
+  - '08046'
+  - '08047'
+  - '08048'
+  - '08049'
   - '09064'
-- name: Olbia-Tempio
-  code: OT
-  deprecated: true
-  tax: 0.0
-  tax_name: VAT
-  neighboring_zones:
-  - NU
-  - SS
 - name: Oristano
   code: OR
   tax: 0.0
@@ -1191,11 +1186,17 @@ zones:
   - OR
   - OT
   zip_prefixes:
-  - '07'
-  # According to geonames.org, 08020 is in SS.
-  # Wikipedia claims it's in OT, which was dissolved recently.
-  # poste.it says that it's in NU.
-  # We consider poste.it to be the definitive source, so it's in NU, not here.
+  - '0701'
+  - '07031'
+  - '07032'
+  - '07033'
+  - '07034'
+  - '07035'
+  - '07036'
+  - '07037'
+  - '07039'
+  - '0704'
+  - '07100'
 - name: Savona
   code: SV
   tax: 0.0
@@ -1245,6 +1246,23 @@ zones:
   zip_prefixes:
   - '230'
   - '231'
+- name: Sulcis Iglesiente
+  code: CI
+  name_alternates:
+  - Carbonia-Iglesias
+  tax: 0.0
+  tax_name: VAT
+  neighboring_zones:
+  - CA
+  - VS
+  zip_prefixes:
+  - '09010'
+  - '09011'
+  - '09013'
+  - '09014'
+  - '09015'
+  - '09016'
+  - '09017'
 - name: Taranto
   code: TA
   tax: 0.0
@@ -1453,51 +1471,23 @@ zones:
   zip_prefixes:
   - '01'
 zips_crossing_provinces:
+  '07030':
+  - OT
+  - SS
   '08010':
   - OR
   - NU
   - OG
-  # Now solidly in NU, but used to be split between multiple provinces before the creation of SU
   '08020':
   - NU
   - OT
   - SS
-  # Now solidly NU, but used to be split between multiple provinces before the creation of SU
   '08030':
   - NU
   - CA
   - OG
   - OR
   - VS
-  # Lotzorai NU: This used to be in Ogliastra before the creation of SU
-  '08040':
-  - NU
-  - OG
-  '08042':
-  - NU
-  - OG
-  '08044':
-  - NU
-  - OG
-  # Used to be in OG before the creation of SU
-  '08045':
-  - NU
-  - OG
-  '08046':
-  - NU
-  - OG
-  # Tertenia NU: This used to be in OG before the creation of SU
-  '08047':
-  - NU
-  - OG
-  # Tortoli NU: This used to be in Ogliastra before the creation of SU
-  '08048':
-  - NU
-  - OG
-  '08049':
-  - NU
-  - OG
-  # Uta CA, Buggeru CI: These are now both in SU, so we should remove this once SU is supported
   '09010':
   - CI
   - CA
@@ -1512,7 +1502,6 @@ zips_crossing_provinces:
   '09017':
   - CI
   - CA
-  # Gesturi VS, Usana CA: Now in SU
   '09020':
   - VS
   - CA
@@ -1523,7 +1512,6 @@ zips_crossing_provinces:
   - VS
   - CA
   - CI
-  # Samassi CA, Guspini VS: These are now both in SU, so we should remove this once SU is supported
   '09030':
   - VS
   - CA
@@ -1542,7 +1530,6 @@ zips_crossing_provinces:
   '09038':
   - VS
   - CA
-  # Villacidro CA, now in SU
   '09039':
   - VS
   - CA
