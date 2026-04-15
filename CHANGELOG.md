@@ -29,6 +29,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - nil
 
 ---
+
+## [1.24.1] - 2026-04-15
+- Update zips_crossing_provinces in IE [#454](https://github.com/Shopify/worldwide/pull/454)
+
 ## [1.24.0] - 2026-04-13
 - Update IT Sardinian provinces and zip prefixes [#451](https://github.com/Shopify/worldwide/pull/451)
 
