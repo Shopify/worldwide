@@ -44,11 +44,6 @@ describe('splitAddress1', () => {
       address: '40 Baandersstraat',
       expected: {streetName: '40 Baandersstraat'},
     },
-    {
-      country: 'BR',
-      address: 'Main, 123, Apt 2',
-      expected: {streetName: 'Main, 123, Apt 2'},
-    },
   ])(
     'returns address1 as street name when no delimiter is present, tryRegexFallback is true, and address does not match regex',
     ({country, address, expected}) => {
@@ -386,6 +381,65 @@ describe('splitAddress1', () => {
     },
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for BR',
+    ({address, expected}) => {
+      expect(splitAddress1('BR', address, true)).toEqual(expected);
+    },
+  );
+
+  test.each([
+    {
+      address: 'Praça Ramos de Azevedo, 123, Apto 45',
+      expected: {
+        streetName: 'Praça Ramos de Azevedo',
+        streetNumber: '123',
+        line2: 'Apto 45',
+      },
+    },
+    {
+      address: 'Rua Santo Antônio, 722, Apto 4',
+      expected: {
+        streetName: 'Rua Santo Antônio',
+        streetNumber: '722',
+        line2: 'Apto 4',
+      },
+    },
+    {
+      address: 'Rua Corumbá 47A, Bloco 2',
+      expected: {
+        streetName: 'Rua Corumbá',
+        streetNumber: '47A',
+        line2: 'Bloco 2',
+      },
+    },
+    {
+      // PayPal-style: BR canonical form collected as separate inputs but
+      // returned space-concatenated by the wallet API. The regex should
+      // recover the same structure.
+      address: 'Praça Ramos de Azevedo 123 Apto 45',
+      expected: {
+        streetName: 'Praça Ramos de Azevedo',
+        streetNumber: '123',
+        line2: 'Apto 45',
+      },
+    },
+    {
+      address: 'Rua Corumbá 47 A, Apto 12',
+      expected: {
+        streetName: 'Rua Corumbá',
+        streetNumber: '47 A',
+        line2: 'Apto 12',
+      },
+    },
+    {
+      address: 'Av. de São João, 123, Apto 4 - Bloco B',
+      expected: {
+        streetName: 'Av. de São João',
+        streetNumber: '123',
+        line2: 'Apto 4 - Bloco B',
+      },
+    },
+  ])(
+    'extracts the optional line2 component from 3-component BR addresses',
     ({address, expected}) => {
       expect(splitAddress1('BR', address, true)).toEqual(expected);
     },
