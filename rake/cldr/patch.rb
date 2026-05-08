@@ -195,7 +195,7 @@ module Worldwide
             [:itcb, "provincia di Campobasso", "Campobasso"],
             [:itce, "provincia di Caserta", "Caserta"],
             [:itch, "provincia di Chieti", "Chieti"],
-            [:itci, "provincia di Carbonia-Iglesias", "Carbonia-Iglesias"],
+            [:itci, "provincia di Carbonia-Iglesias", "Sulcis Iglesiente"],
             [:itcl, "provincia di Caltanissetta", "Caltanissetta"],
             [:itcn, "Provincia di Cuneo", "Cuneo"],
             [:itco, "provincia di Como", "Como"],
@@ -235,7 +235,7 @@ module Worldwide
             [:itnu, "provincia di Nuoro", "Nuoro"],
             [:itog, "provincia dell’Ogliastra", "Ogliastra"],
             [:itor, "provincia di Oristano", "Oristano"],
-            [:itot, "provincia di Olbia-Tempio", "Olbia-Tempio"],
+            [:itot, "provincia di Olbia-Tempio", "Gallura Nord-Est Sardegna"],
             [:itpa, "provincia di Palermo", "Palermo"],
             [:itpc, "provincia di Piacenza", "Piacenza"],
             [:itpd, "provincia di Padova", "Padova"],
@@ -307,6 +307,26 @@ module Worldwide
               end
             end
           end
+
+          # Italy restored two Sardinian provinces in June 2025 with new names:
+          #   IT-OT: Olbia-Tempio       -> Gallura Nord-Est Sardegna
+          #   IT-CI: Carbonia-Iglesias  -> Sulcis Iglesiente
+          # The :it patch above already covers Italian. We also patch :en (source
+          # for downstream English UIs) and :de (largest non-en/it consumer of
+          # IT addresses). Other locales remain on the stale upstream CLDR
+          # values pending an upstream fix; Shopify's translation platform only
+          # propagates files under data/regions, data/other/hand_translated, and
+          # data/other/timezones, so it cannot fan these out automatically.
+          # TODO: report upstream at https://unicode-org.atlassian.net/ and
+          # remove these patches once CLDR ships the new names.
+          patch_subdivisions(:en, [
+            [:itot, "Olbia-Tempio", "Gallura Nord-Est Sardegna"],
+            [:itci, "Carbonia-Iglesias", "Sulcis Iglesiente"],
+          ])
+          patch_subdivisions(:de, [
+            [:itot, "Provinz Olbia-Tempio", "Provinz Gallura Nord-Est Sardegna"],
+            [:itci, "Provinz Carbonia-Iglesias", "Provinz Sulcis Iglesiente"],
+          ])
 
           # Subdivisions of Japan in English
           #

@@ -30,6 +30,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.24.2] - 2026-04-27
+- Update CLDR subdivision names for IT-OT (Gallura Nord-Est Sardegna) and IT-CI (Sulcis Iglesiente) in `:en`, `:it`, and `:de` only; other locales remain on stale upstream CLDR pending an upstream fix [#458](https://github.com/Shopify/worldwide/pull/458)
+
 ## [1.24.1] - 2026-04-15
 - Update zips_crossing_provinces in IE [#454](https://github.com/Shopify/worldwide/pull/454)
 
