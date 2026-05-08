@@ -5,11 +5,6 @@ registries:
     url: https://pkgs.shopify.io/basic/gems/ruby
     username: ${{secrets.RUBYGEMS_SERVER_PKGS_SHOPIFY_IO_USERNAME}}
     password: ${{secrets.RUBYGEMS_SERVER_PKGS_SHOPIFY_IO_PASSWORD}}
-  github-com:
-    type: git
-    url: https://github.com
-    username: ${{secrets.DEPENDENCIES_GITHUB_USER}}
-    password: ${{secrets.DEPENDENCIES_GITHUB_TOKEN}}
 updates:
   - package-ecosystem: bundler
     directory: "/"
@@ -17,7 +12,12 @@ updates:
       interval: daily
     open-pull-requests-limit: 100
     insecure-external-code-execution: allow
-    registries: "*"
+    registries:
+      - ruby-shopify
+  - package-ecosystem: npm_and_yarn
+    directory: "/lang/typescript"
+    schedule:
+      interval: weekly
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
