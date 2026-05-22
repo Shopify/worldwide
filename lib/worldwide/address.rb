@@ -17,7 +17,9 @@ module Worldwide
       :street_name,
       :street_number,
       :line2,
-      :neighborhood
+      :neighborhood,
+      :district,
+      :subdistrict
 
     def initialize(
       first_name: nil,
@@ -33,7 +35,9 @@ module Worldwide
       street_name: nil,
       street_number: nil,
       line2: nil,
-      neighborhood: nil
+      neighborhood: nil,
+      district: nil,
+      subdistrict: nil
     )
       @first_name = first_name
       @last_name = last_name
@@ -49,6 +53,8 @@ module Worldwide
       @street_number = street_number
       @line2 = line2
       @neighborhood = neighborhood
+      @district = district
+      @subdistrict = subdistrict
     end
 
     def errors
@@ -305,6 +311,8 @@ module Worldwide
         last_name: last_name,
         phone: phone,
         province: province_name,
+        district: district,
+        subdistrict: subdistrict,
         zip: zip,
       }
     end

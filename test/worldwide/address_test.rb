@@ -38,6 +38,30 @@ module Worldwide
       assert_equal zip, address.zip
     end
 
+    test "can initialize an Address with district and subdistrict and read their values" do
+      address = Address.new(
+        district: "Centro",
+        subdistrict: "Vila Madalena",
+        country_code: "BR",
+      )
+
+      assert_equal "Centro", address.district
+      assert_equal "Vila Madalena", address.subdistrict
+    end
+
+    test "format fills district and subdistrict additional lines" do
+      address = Address.new(
+        district: "Centro",
+        subdistrict: "Vila Madalena",
+        country_code: "BR",
+      )
+
+      lines = address.format(additional_lines: ["{district}", "{subdistrict}"])
+
+      assert_includes lines, "Centro"
+      assert_includes lines, "Vila Madalena"
+    end
+
     test "omitted parameters default to `nil`, except for country_code" do
       address = Address.new
 
@@ -48,6 +72,8 @@ module Worldwide
       assert_nil address.address2
       assert_nil address.city
       assert_nil address.province_code
+      assert_nil address.district
+      assert_nil address.subdistrict
       assert_nil address.zip
       assert_equal "ZZ", address.country_code
     end

@@ -126,7 +126,7 @@ module Worldwide
 
     test "format_extended keys must belong to a limited set of required and allowed keys" do
       required_format_keys = ["{firstName}", "{lastName}", "{company}", "{country}", "{phone}"]
-      allowed_format_keys = ["{address1}", "{address2}", "{streetName}", "{streetNumber}", "{line2}", "{neighborhood}", "{city}", "{zip}", "{province}"]
+      allowed_format_keys = ["{address1}", "{address2}", "{streetName}", "{streetNumber}", "{line2}", "{neighborhood}", "{district}", "{subdistrict}", "{city}", "{zip}", "{province}"]
 
       Regions.all.select(&:country?).each do |country|
         next if country.format_extended.blank?
@@ -144,7 +144,7 @@ module Worldwide
     end
 
     test "additional_address_fields names must belong to a limited set of allowed names" do
-      allowed_names = ["streetName", "streetNumber", "line2", "neighborhood"]
+      allowed_names = ["streetName", "streetNumber", "line2", "neighborhood", "district", "subdistrict"]
 
       Regions.all.select(&:country?).each do |country|
         next if country.additional_address_fields.blank?

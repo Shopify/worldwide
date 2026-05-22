@@ -10,7 +10,13 @@ module Worldwide
         [:last_name, true],
         [:company, true],
         [:address1, true],
+        [:street_name, true],
+        [:street_number, true],
         [:address2, true],
+        [:line2, true],
+        [:neighborhood, true],
+        [:district, true],
+        [:subdistrict, true],
         [:city, true],
         [:province, true],
         [:zip, true],
@@ -99,6 +105,21 @@ module Worldwide
       assert_nil Worldwide.region(code: "CA").field(key: :first_name).error(code: :bogus_code_does_not_exist)
     end
 
+    test "district and subdistrict errors return expected values" do
+      [
+        [:br, :district, :blank, "Enter a district"],
+        [:kw, :district, :blank, "Enter a block"],
+        [:pe, :district, :blank, "Enter a district"],
+        [:pe, :subdistrict, :blank, "Enter a subdistrict"],
+      ].each do |country_code, field_key, error_code, expected|
+        assert_equal(
+          expected,
+          Worldwide.region(code: country_code).field(key: field_key).error(code: error_code),
+          "Expected #{field_key} error for country #{country_code} to be #{expected}",
+        )
+      end
+    end
+
     test "warning accepts parameters" do
       [
         [:en, :ca, "Address line 1 is recommended to have less than 15 words"],
@@ -132,6 +153,11 @@ module Worldwide
         [:de, :ae, :province, "Emirat"],
         [:ja, :jp, :province, "都道府県"],
         [:en, :jp, :province, "Prefecture"],
+        [:en, :br, :district, "District"],
+        [:en, :ph, :district, "Barangay"],
+        [:en, :kw, :district, "Block"],
+        [:en, :pe, :district, "District"],
+        [:en, :br, :subdistrict, "Subdistrict"],
       ].each do |locale, country_code, field_key, expected|
         assert_equal(
           expected,
