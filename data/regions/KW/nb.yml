@@ -46,3 +46,39 @@ nb:
           warnings:
             contains_too_many_words: Vi anbefaler at blokken inneholder færre enn
               %{word_count} ord
+        district:
+          label:
+            default: Blokk
+            optional: Blokk (valgfritt)
+          errors:
+            blank_instructional: Angi en blokk
+            blank_informative: Blokk mangler
+            too_long_instructional: Blokk er for lang (maks %{limit} tegn)
+            too_long_informative: Blokk er for lang
+            contains_emojis_instructional: Blokk kan ikke inneholde emojier
+            contains_emojis_informative: Blokk kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Blokk kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Blokk kan ikke inneholde matematiske
+              symboler
+            contains_restricted_characters_instructional: Blokk kan bare inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Blokk kan ikke inneholde begrensede
+              tegn
+            contains_too_many_words_instructional: Blokk må ha færre enn %{word_count}
+              ord
+            contains_too_many_words_informative: Blokk må ha færre enn %{word_count}
+              ord
+            contains_html_tags_instructional: Blokk kan ikke inneholde HTML
+            contains_html_tags_informative: Blokk kan ikke inneholde HTML
+            contains_url_instructional: Blokk kan ikke inneholde en URL-adresse
+            contains_url_informative: Blokk kan ikke inneholde en URL-adresse
+            unknown_for_city_instructional: Angi en gyldig blokk for %{city}
+            unknown_for_city_informative: Blokk er ikke gyldig for %{city}
+            unknown_for_zip_instructional: Angi en gyldig blokk for %{zip}
+            unknown_for_zip_informative: Blokk er ikke gyldig for %{zip}
+            unknown_for_address_instructional: Blokk kan være feil
+            unknown_for_address_informative: Blokk kan være feil
+          warnings:
+            contains_too_many_words: Det anbefales at blokk har færre enn %{word_count}
+              ord

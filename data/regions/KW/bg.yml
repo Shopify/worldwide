@@ -47,3 +47,39 @@ bg:
           warnings:
             contains_too_many_words: Препоръчително е „Блок“ да не съдържа повече
               от %{word_count} думи
+        district:
+          label:
+            default: Блок
+            optional: Блок (по избор)
+          errors:
+            blank_instructional: Въведете блок
+            blank_informative: Липсва блок
+            too_long_instructional: Блокът е твърде дълъг (максимум %{limit} знака)
+            too_long_informative: Блокът е твърде дълъг
+            contains_emojis_instructional: Блокът не може да съдържа емоджита
+            contains_emojis_informative: Блокът не може да съдържа емоджита
+            contains_mathematical_symbols_instructional: Блокът не може да съдържа
+              математически символи
+            contains_mathematical_symbols_informative: Блокът не може да съдържа математически
+              символи
+            contains_restricted_characters_instructional: Блокът може да съдържа само
+              букви, цифри, локални и специални символи
+            contains_restricted_characters_informative: Блокът не може да съдържа
+              забранени символи
+            contains_too_many_words_instructional: Блокът трябва да съдържа по-малко
+              от %{word_count} думи
+            contains_too_many_words_informative: Блокът трябва да съдържа по-малко
+              от %{word_count} думи
+            contains_html_tags_instructional: Блокът не може да съдържа HTML
+            contains_html_tags_informative: Блокът не може да съдържа HTML
+            contains_url_instructional: Блокът не може да съдържа URL
+            contains_url_informative: Блокът не може да съдържа URL
+            unknown_for_city_instructional: Въведете валиден блок за %{city}
+            unknown_for_city_informative: Блокът не е валиден за %{city}
+            unknown_for_zip_instructional: Въведете валиден блок за %{zip}
+            unknown_for_zip_informative: Блокът не е валиден за %{zip}
+            unknown_for_address_instructional: Блокът може да е грешен
+            unknown_for_address_informative: Блокът може да е грешен
+          warnings:
+            contains_too_many_words: Препоръчително е блокът да съдържа по-малко от
+              %{word_count} думи

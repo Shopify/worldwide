@@ -48,3 +48,40 @@ hi:
           warnings:
             contains_too_many_words: इस बात का सुझाव दिया जाता है कि ब्लॉक के नाम
               में %{word_count} से कम शब्द होने चाहिए
+        district:
+          label:
+            default: ब्लॉक
+            optional: ब्लॉक (वैकल्पिक)
+          errors:
+            blank_instructional: कोई ब्लॉक दर्ज करें
+            blank_informative: ब्लॉक मौजूद नहीं है
+            too_long_instructional: ब्लॉक बहुत लंबा है (अधिकतम %{limit} वर्ण होने
+              चाहिए)
+            too_long_informative: ब्लॉक बहुत लंबा है
+            contains_emojis_instructional: ब्लॉक में इमोजी नहीं हो सकते
+            contains_emojis_informative: ब्लॉक में इमोजी नहीं हो सकते
+            contains_mathematical_symbols_instructional: ब्लॉक में गणितीय चिह्न नहीं
+              हो सकते
+            contains_mathematical_symbols_informative: ब्लॉक में गणितीय चिह्न नहीं
+              हो सकते
+            contains_restricted_characters_instructional: ब्लॉक में केवल अक्षर, संख्याएं,
+              स्थानीय वर्ण और विशेष वर्ण शामिल हो सकते हैं
+            contains_restricted_characters_informative: ब्लॉक में प्रतिबंधित वर्ण
+              नहीं हो सकते
+            contains_too_many_words_instructional: ब्लॉक में %{word_count} से कम शब्द
+              होने चाहिए
+            contains_too_many_words_informative: ब्लॉक में %{word_count} से कम शब्द
+              होने चाहिए
+            contains_html_tags_instructional: ब्लॉक में HTML नहीं हो सकता
+            contains_html_tags_informative: ब्लॉक में HTML नहीं हो सकता
+            contains_url_instructional: ब्लॉक में कोई URL नहीं हो सकता
+            contains_url_informative: ब्लॉक में कोई URL नहीं हो सकता
+            unknown_for_city_instructional: "%{city} के लिए एक मान्य ब्लॉक दर्ज करें"
+            unknown_for_city_informative: ब्लॉक, %{city} के लिए मान्य नहीं है
+            unknown_for_zip_instructional: "%{zip} के लिए एक मान्य ब्लॉक दर्ज करें"
+            unknown_for_zip_informative: ब्लॉक, %{zip} के लिए मान्य नहीं है
+            unknown_for_address_instructional: ब्लॉक गलत हो सकता है
+            unknown_for_address_informative: ब्लॉक गलत हो सकता है
+          warnings:
+            contains_too_many_words: यह सुझाव दिया जाता है कि ब्लॉक में %{word_count}
+              से कम शब्द हों

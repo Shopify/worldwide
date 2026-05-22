@@ -47,3 +47,39 @@ it:
           warnings:
             contains_too_many_words: Il campo Isolato deve contenere meno di %{word_count}
               parole
+        district:
+          label:
+            default: Blocco
+            optional: Blocco (facoltativo)
+          errors:
+            blank_instructional: Inserisci un blocco
+            blank_informative: Blocco mancante
+            too_long_instructional: Il blocco è troppo lungo (massimo %{limit} caratteri)
+            too_long_informative: Il blocco è troppo lungo
+            contains_emojis_instructional: Il blocco non può contenere emoji
+            contains_emojis_informative: Il blocco non può contenere emoji
+            contains_mathematical_symbols_instructional: Il blocco non può contenere
+              simboli matematici
+            contains_mathematical_symbols_informative: Il blocco non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il blocco può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il blocco non può contenere
+              caratteri non consentiti
+            contains_too_many_words_instructional: Il blocco deve contenere meno di
+              %{word_count} parole
+            contains_too_many_words_informative: Il blocco deve contenere meno di
+              %{word_count} parole
+            contains_html_tags_instructional: Il blocco non può contenere HTML
+            contains_html_tags_informative: Il blocco non può contenere HTML
+            contains_url_instructional: Il blocco non può contenere un URL
+            contains_url_informative: Il blocco non può contenere un URL
+            unknown_for_city_instructional: Inserisci un blocco valido per %{city}
+            unknown_for_city_informative: Il blocco non è valido per %{city}
+            unknown_for_zip_instructional: Inserisci un blocco valido per %{zip}
+            unknown_for_zip_informative: Il blocco non è valido per %{zip}
+            unknown_for_address_instructional: Il blocco potrebbe essere errato
+            unknown_for_address_informative: Il blocco potrebbe essere errato
+          warnings:
+            contains_too_many_words: È consigliabile che il blocco contenga meno di
+              %{word_count} parole

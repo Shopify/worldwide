@@ -47,3 +47,37 @@ tr:
           warnings:
             contains_too_many_words: Blok adında %{word_count} adetten az sözcük olması
               önerilir
+        district:
+          label:
+            default: Blok
+            optional: Blok (isteğe bağlı)
+          errors:
+            blank_instructional: Bir blok girin
+            blank_informative: Blok eksik
+            too_long_instructional: Blok çok uzun (en fazla %{limit} karakter)
+            too_long_informative: Blok çok uzun
+            contains_emojis_instructional: Blok emoji içeremez
+            contains_emojis_informative: Blok emoji içeremez
+            contains_mathematical_symbols_instructional: Blok matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Blok matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Blok yalnızca harf, sayı,
+              yerel karakter ve özel karakter içerebilir
+            contains_restricted_characters_informative: Blok kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Blok %{word_count} kelimeden az
+              olmalıdır
+            contains_too_many_words_informative: Blok %{word_count} kelimeden az olmalıdır
+            contains_html_tags_instructional: Blok HTML içeremez
+            contains_html_tags_informative: Blok HTML içeremez
+            contains_url_instructional: Blok URL içeremez
+            contains_url_informative: Blok URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir blok girin"
+            unknown_for_city_informative: Blok %{city} için geçerli değil
+            unknown_for_zip_instructional: "%{zip} için geçerli bir blok girin"
+            unknown_for_zip_informative: Blok %{zip} için geçerli değil
+            unknown_for_address_instructional: Blok yanlış olabilir
+            unknown_for_address_informative: Blok yanlış olabilir
+          warnings:
+            contains_too_many_words: Bloğun %{word_count} kelimeden az olması önerilir

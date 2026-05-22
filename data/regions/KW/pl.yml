@@ -47,3 +47,41 @@ pl:
           warnings:
             contains_too_many_words: Zaleca się, aby blok zawierał mniej niż %{word_count}
               słów (słowa)
+        district:
+          label:
+            default: Blok
+            optional: Blok (opcjonalnie)
+          errors:
+            blank_instructional: Wprowadź blok
+            blank_informative: Brakuje bloku
+            too_long_instructional: Blok jest za długi (maksymalnie %{limit} znaków)
+            too_long_informative: Blok jest za długi
+            contains_emojis_instructional: Blok nie może zawierać emoji
+            contains_emojis_informative: Blok nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Blok nie może zawierać symboli
+              matematycznych
+            contains_mathematical_symbols_informative: Blok nie może zawierać symboli
+              matematycznych
+            contains_restricted_characters_instructional: Blok może zawierać tylko
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Blok nie może zawierać niedozwolonych
+              znaków
+            contains_too_many_words_instructional: Blok musi zawierać mniej niż %{word_count}
+              słów
+            contains_too_many_words_informative: Blok musi zawierać mniej niż %{word_count}
+              słów
+            contains_html_tags_instructional: Blok nie może zawierać kodu HTML
+            contains_html_tags_informative: Blok nie może zawierać kodu HTML
+            contains_url_instructional: Blok nie może zawierać adresu URL
+            contains_url_informative: Blok nie może zawierać adresu URL
+            unknown_for_city_instructional: Wprowadź prawidłowy blok dla miasta %{city}
+            unknown_for_city_informative: Blok jest nieprawidłowy dla miasta %{city}
+            unknown_for_zip_instructional: Wprowadź prawidłowy blok dla kodu pocztowego
+              %{zip}
+            unknown_for_zip_informative: Blok jest nieprawidłowy dla kodu pocztowego
+              %{zip}
+            unknown_for_address_instructional: Blok może być nieprawidłowy
+            unknown_for_address_informative: Blok może być nieprawidłowy
+          warnings:
+            contains_too_many_words: Zaleca się, aby blok zawierał mniej niż %{word_count}
+              słów

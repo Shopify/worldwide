@@ -40,3 +40,43 @@ pl:
           warnings:
             contains_too_many_words: Zaleca się, aby barangay zawierał mniej niż %{word_count}
               słów (słowa)
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (opcjonalnie)
+          errors:
+            blank_instructional: Wprowadź barangay
+            blank_informative: Brakuje barangayu
+            too_long_instructional: Barangay jest za długi (maksymalnie %{limit} znaków)
+            too_long_informative: Barangay jest za długi
+            contains_emojis_instructional: Barangay nie może zawierać emoji
+            contains_emojis_informative: Barangay nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Barangay nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Barangay nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Barangay może zawierać tylko
+              litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Barangay nie może zawierać
+              niedozwolonych znaków
+            contains_too_many_words_instructional: Barangay musi zawierać mniej niż
+              %{word_count} słów
+            contains_too_many_words_informative: Barangay musi zawierać mniej niż
+              %{word_count} słów
+            contains_html_tags_instructional: Barangay nie może zawierać kodu HTML
+            contains_html_tags_informative: Barangay nie może zawierać kodu HTML
+            contains_url_instructional: Barangay nie może zawierać adresu URL
+            contains_url_informative: Barangay nie może zawierać adresu URL
+            unknown_for_city_instructional: Wprowadź prawidłową nazwę barangayu dla
+              miasta %{city}
+            unknown_for_city_informative: Wprowadź prawidłową nazwę barangayu dla
+              miasta %{city}
+            unknown_for_zip_instructional: Wprowadź prawidłową nazwę barangayu dla
+              kodu pocztowego %{zip}
+            unknown_for_zip_informative: Wprowadź prawidłową nazwę barangayu dla kodu
+              pocztowego %{zip}
+            unknown_for_address_instructional: Barangay może być nieprawidłowy
+            unknown_for_address_informative: Barangay może być nieprawidłowy
+          warnings:
+            contains_too_many_words: Zaleca się, aby barangay zawierał mniej niż %{word_count}
+              słów

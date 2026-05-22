@@ -46,3 +46,38 @@ id:
           warnings:
             contains_too_many_words: Nama blok sebaiknya berisi kurang dari %{word_count}
               kata
+        district:
+          label:
+            default: Blok
+            optional: Blok (opsional)
+          errors:
+            blank_instructional: Masukkan blok
+            blank_informative: Blok belum diisi
+            too_long_instructional: Blok terlalu panjang (maksimal %{limit} karakter)
+            too_long_informative: Blok terlalu panjang
+            contains_emojis_instructional: Blok tidak boleh berisi emoji
+            contains_emojis_informative: Blok tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Blok tidak boleh berisi simbol
+              matematika
+            contains_mathematical_symbols_informative: Blok tidak boleh berisi simbol
+              matematika
+            contains_restricted_characters_instructional: Blok hanya boleh berisi
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Blok tidak boleh berisi karakter
+              yang dibatasi
+            contains_too_many_words_instructional: Blok harus kurang dari %{word_count}
+              kata
+            contains_too_many_words_informative: Blok harus kurang dari %{word_count}
+              kata
+            contains_html_tags_instructional: Blok tidak boleh berisi HTML
+            contains_html_tags_informative: Blok tidak boleh berisi HTML
+            contains_url_instructional: Blok tidak boleh berisi URL
+            contains_url_informative: Blok tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan blok yang valid untuk %{city}
+            unknown_for_city_informative: Blok tidak valid untuk %{city}
+            unknown_for_zip_instructional: Masukkan blok yang valid untuk %{zip}
+            unknown_for_zip_informative: Blok tidak valid untuk %{zip}
+            unknown_for_address_instructional: Blok mungkin salah
+            unknown_for_address_informative: Blok mungkin salah
+          warnings:
+            contains_too_many_words: Blok disarankan kurang dari %{word_count} kata

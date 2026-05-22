@@ -52,3 +52,44 @@ ro:
           warnings:
             contains_too_many_words: Se recomandă ca denumirea pentru barangay să
               nu aibă mai mult de %{word_count} cuvinte
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (opțional)
+          errors:
+            blank_instructional: Introduceți un barangay
+            blank_informative: Barangay-ul lipsește
+            too_long_instructional: Barangay-ul este prea lung (maximul este de %{limit}
+              caractere)
+            too_long_informative: Barangay-ul este prea lung
+            contains_emojis_instructional: Barangay-ul nu poate conține emoji-uri
+            contains_emojis_informative: Barangay-ul nu poate conține emoji-uri
+            contains_mathematical_symbols_instructional: Barangay-ul nu poate conține
+              simboluri matematice
+            contains_mathematical_symbols_informative: Barangay-ul nu poate conține
+              simboluri matematice
+            contains_restricted_characters_instructional: Barangay-ul poate conține
+              doar litere, numere, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Barangay-ul nu poate conține
+              caractere restricționate
+            contains_too_many_words_instructional: Barangay-ul trebuie să aibă mai
+              puțin de %{word_count} cuvinte
+            contains_too_many_words_informative: Barangay-ul trebuie să aibă mai puțin
+              de %{word_count} cuvinte
+            contains_html_tags_instructional: Barangay-ul nu poate conține HTML
+            contains_html_tags_informative: Barangay-ul nu poate conține HTML
+            contains_url_instructional: Barangay-ul nu poate conține un URL
+            contains_url_informative: Barangay-ul nu poate conține un URL
+            unknown_for_city_instructional: Introduceți un nume valid de barangay
+              pentru %{city}
+            unknown_for_city_informative: Introduceți un nume valid de barangay pentru
+              %{city}
+            unknown_for_zip_instructional: Introduceți un nume valid de barangay pentru
+              %{zip}
+            unknown_for_zip_informative: Introduceți un nume valid de barangay pentru
+              %{zip}
+            unknown_for_address_instructional: Barangay-ul poate fi incorect
+            unknown_for_address_informative: Barangay-ul poate fi incorect
+          warnings:
+            contains_too_many_words: Se recomandă ca barangay-ul să aibă mai puțin
+              de %{word_count} cuvinte

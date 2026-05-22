@@ -36,3 +36,35 @@ th:
           warnings:
             contains_too_many_words: ชื่อบารังไกควรมีความยาวน้อยกว่า %{word_count}
               คำ
+        district:
+          label:
+            default: บารังไก
+            optional: บารังไก (ไม่บังคับ)
+          errors:
+            blank_instructional: โปรดระบุบารังไก
+            blank_informative: ไม่มีบารังไก
+            too_long_instructional: บารังไกยาวเกินไป (สูงสุด %{limit} อักขระ)
+            too_long_informative: บารังไกยาวเกินไป
+            contains_emojis_instructional: บารังไกต้องไม่มีอีโมจิ
+            contains_emojis_informative: บารังไกต้องไม่มีอีโมจิ
+            contains_mathematical_symbols_instructional: บารังไกต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_mathematical_symbols_informative: บารังไกต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_restricted_characters_instructional: บารังไกต้องมีเฉพาะตัวอักษร
+              ตัวเลข ตัวอักษรท้องถิ่น และอักขระพิเศษเท่านั้น
+            contains_restricted_characters_informative: บารังไกต้องไม่มีอักขระที่ถูกจำกัด
+            contains_too_many_words_instructional: บารังไกต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_too_many_words_informative: บารังไกต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_html_tags_instructional: บารังไกต้องไม่มี HTML
+            contains_html_tags_informative: บารังไกต้องไม่มี HTML
+            contains_url_instructional: บารังไกต้องไม่มี URL
+            contains_url_informative: บารังไกต้องไม่มี URL
+            unknown_for_city_instructional: โปรดระบุชื่อบารังไกที่ถูกต้องสำหรับ %{city}
+            unknown_for_city_informative: โปรดระบุชื่อบารังไกที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip_instructional: โปรดระบุชื่อบารังไกที่ถูกต้องสำหรับ %{zip}
+            unknown_for_zip_informative: โปรดระบุชื่อบารังไกที่ถูกต้องสำหรับ %{zip}
+            unknown_for_address_instructional: บารังไกอาจไม่ถูกต้อง
+            unknown_for_address_informative: บารังไกอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ขอแนะนำให้บารังไกมีน้อยกว่า %{word_count} คำ

@@ -50,3 +50,43 @@ ru:
           warnings:
             contains_too_many_words: Рекомендуем указывать в поле названия района
               не более %{word_count} сл.
+        district:
+          label:
+            default: Квартал
+            optional: Квартал (необязательно)
+          errors:
+            blank_instructional: Введите квартал
+            blank_informative: Квартал не указан
+            too_long_instructional: Название квартала слишком длинное (максимум %{limit}
+              символов)
+            too_long_informative: Название квартала слишком длинное
+            contains_emojis_instructional: Название квартала не может содержать эмодзи
+            contains_emojis_informative: Название квартала не может содержать эмодзи
+            contains_mathematical_symbols_instructional: Название квартала не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Название квартала не может
+              содержать математические символы
+            contains_restricted_characters_instructional: Название квартала может
+              содержать только буквы, цифры, символы местного алфавита и специальные
+              символы
+            contains_restricted_characters_informative: Название квартала не может
+              содержать недопустимые символы
+            contains_too_many_words_instructional: Название квартала должно содержать
+              менее %{word_count} слов
+            contains_too_many_words_informative: Название квартала должно содержать
+              менее %{word_count} слов
+            contains_html_tags_instructional: Название квартала не может содержать
+              HTML
+            contains_html_tags_informative: Название квартала не может содержать HTML
+            contains_url_instructional: Название квартала не может содержать URL
+            contains_url_informative: Название квартала не может содержать URL
+            unknown_for_city_instructional: Введите правильный квартал для %{city}
+            unknown_for_city_informative: Неверный квартал для %{city}
+            unknown_for_zip_instructional: Введите правильный квартал для почтового
+              индекса %{zip}
+            unknown_for_zip_informative: Неверный квартал для почтового индекса %{zip}
+            unknown_for_address_instructional: Возможно, квартал указан неверно
+            unknown_for_address_informative: Возможно, квартал указан неверно
+          warnings:
+            contains_too_many_words: Рекомендуется, чтобы название квартала содержало
+              менее %{word_count} слов
