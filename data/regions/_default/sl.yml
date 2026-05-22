@@ -479,3 +479,75 @@ sl:
           errors:
             may_not_exist_instructional: Naslova ni mogoče najti ali ne obstaja
             may_not_exist_informative: Naslova ni mogoče najti
+        district:
+          label:
+            default: Okrožje
+            optional: Okrožje (izbirno)
+          errors:
+            blank_instructional: Vnesite okrožje
+            blank_informative: Manjka okrožje
+            too_long_instructional: Okrožje je predolgo (največ %{limit} znakov)
+            too_long_informative: Okrožje je predolgo
+            contains_emojis_instructional: Okrožje ne sme vsebovati emodžijev
+            contains_emojis_informative: Okrožje ne sme vsebovati emodžijev
+            contains_mathematical_symbols_instructional: Okrožje ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Okrožje ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters_instructional: Okrožje lahko vsebuje samo
+              črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Okrožje ne sme vsebovati nedovoljenih
+              znakov
+            contains_too_many_words_instructional: Število besed za okrožje mora biti
+              manjše od %{word_count}
+            contains_too_many_words_informative: Število besed za okrožje mora biti
+              manjše od %{word_count}
+            contains_html_tags_instructional: Okrožje ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Okrožje ne sme vsebovati oznak HTML
+            contains_url_instructional: Okrožje ne sme vsebovati URL-naslovov
+            contains_url_informative: Okrožje ne sme vsebovati URL-naslovov
+            unknown_for_city_instructional: Vnesite veljavno ime okrožja za %{city}
+            unknown_for_city_informative: Vnesite veljavno ime okrožja za %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime okrožja za %{zip}
+            unknown_for_zip_informative: Vnesite veljavno ime okrožja za %{zip}
+            unknown_for_address_instructional: Okrožje je morda napačno
+            unknown_for_address_informative: Okrožje je morda napačno
+          warnings:
+            contains_too_many_words: Priporočljivo je, da je število besed za okrožje
+              manjše od %{word_count}
+        subdistrict:
+          label:
+            default: Podokrožje
+            optional: Podokrožje (izbirno)
+          errors:
+            blank_instructional: Vnesite podokrožje
+            blank_informative: Manjka podokrožje
+            too_long_instructional: Podokrožje je predolgo (največ %{limit} znakov)
+            too_long_informative: Podokrožje je predolgo
+            contains_emojis_instructional: Podokrožje ne sme vsebovati emodžijev
+            contains_emojis_informative: Podokrožje ne sme vsebovati emodžijev
+            contains_mathematical_symbols_instructional: Podokrožje ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Podokrožje ne sme vsebovati
+              matematičnih simbolov
+            contains_restricted_characters_instructional: Podokrožje lahko vsebuje
+              samo črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Podokrožje ne sme vsebovati
+              nedovoljenih znakov
+            contains_too_many_words_instructional: Število besed za podokrožje mora
+              biti manjše od %{word_count}
+            contains_too_many_words_informative: Število besed za podokrožje mora
+              biti manjše od %{word_count}
+            contains_html_tags_instructional: Podokrožje ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Podokrožje ne sme vsebovati oznak HTML
+            contains_url_instructional: Podokrožje ne sme vsebovati URL-naslovov
+            contains_url_informative: Podokrožje ne sme vsebovati URL-naslovov
+            unknown_for_city_instructional: Vnesite veljavno ime podokrožja za %{city}
+            unknown_for_city_informative: Vnesite veljavno ime podokrožja za %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime podokrožja za %{zip}
+            unknown_for_zip_informative: Vnesite veljavno ime podokrožja za %{zip}
+            unknown_for_address_instructional: Podokrožje je morda napačno
+            unknown_for_address_informative: Podokrožje je morda napačno
+          warnings:
+            contains_too_many_words: Priporočljivo je, da je število besed za podokrožje
+              manjše od %{word_count}

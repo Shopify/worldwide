@@ -461,3 +461,85 @@ hu:
           errors:
             may_not_exist_instructional: A cím nem található, vagy nem létezik
             may_not_exist_informative: A cím nem található
+        district:
+          label:
+            default: Kerület
+            optional: Kerület (opcionális)
+          errors:
+            blank_instructional: Adjon meg egy kerületet
+            blank_informative: A kerület hiányzik
+            too_long_instructional: A kerület túl hosszú (legfeljebb %{limit} karakter
+              lehet)
+            too_long_informative: A kerület túl hosszú
+            contains_emojis_instructional: A kerület nem tartalmazhat emojikat
+            contains_emojis_informative: A kerület nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A kerület nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A kerület nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A kerület csak betűket,
+              számokat, helyi karaktereket és speciális karaktereket tartalmazhat
+            contains_restricted_characters_informative: A kerület nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A kerület kevesebb mint %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: A kerület kevesebb mint %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: A kerület nem tartalmazhat HTML-címkéket
+            contains_html_tags_informative: A kerület nem tartalmazhat HTML-címkéket
+            contains_url_instructional: A kerület nem tartalmazhat URL-eket
+            contains_url_informative: A kerület nem tartalmazhat URL-eket
+            unknown_for_city_instructional: 'Adjon meg egy érvényes kerületnevet a
+              következőhöz: %{city}'
+            unknown_for_city_informative: 'Adjon meg egy érvényes kerületnevet a következőhöz:
+              %{city}'
+            unknown_for_zip_instructional: 'Adjon meg egy érvényes kerületnevet a
+              következőhöz: %{zip}'
+            unknown_for_zip_informative: 'Adjon meg egy érvényes kerületnevet a következőhöz:
+              %{zip}'
+            unknown_for_address_instructional: A kerület helytelen lehet
+            unknown_for_address_informative: A kerület helytelen lehet
+          warnings:
+            contains_too_many_words: Javasoljuk, hogy a kerület kevesebb mint %{word_count}
+              szóból álljon
+        subdistrict:
+          label:
+            default: Alkerület
+            optional: Alkerület (opcionális)
+          errors:
+            blank_instructional: Adjon meg egy alkerületet
+            blank_informative: Az alkerület hiányzik
+            too_long_instructional: Az alkerület túl hosszú (legfeljebb %{limit} karakter
+              lehet)
+            too_long_informative: Az alkerület túl hosszú
+            contains_emojis_instructional: Az alkerület nem tartalmazhat emojikat
+            contains_emojis_informative: Az alkerület nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: Az alkerület nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: Az alkerület nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: Az alkerület csak betűket,
+              számokat, helyi karaktereket és speciális karaktereket tartalmazhat
+            contains_restricted_characters_informative: Az alkerület nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: Az alkerület kevesebb mint %{word_count}
+              szóból állhat
+            contains_too_many_words_informative: Az alkerület kevesebb mint %{word_count}
+              szóból állhat
+            contains_html_tags_instructional: Az alkerület nem tartalmazhat HTML-címkéket
+            contains_html_tags_informative: Az alkerület nem tartalmazhat HTML-címkéket
+            contains_url_instructional: Az alkerület nem tartalmazhat URL-eket
+            contains_url_informative: Az alkerület nem tartalmazhat URL-eket
+            unknown_for_city_instructional: 'Adjon meg egy érvényes alkerületnevet
+              a következőhöz: %{city}'
+            unknown_for_city_informative: 'Adjon meg egy érvényes alkerületnevet a
+              következőhöz: %{city}'
+            unknown_for_zip_instructional: 'Adjon meg egy érvényes alkerületnevet
+              a következőhöz: %{zip}'
+            unknown_for_zip_informative: 'Adjon meg egy érvényes alkerületnevet a
+              következőhöz: %{zip}'
+            unknown_for_address_instructional: Az alkerület helytelen lehet
+            unknown_for_address_informative: Az alkerület helytelen lehet
+          warnings:
+            contains_too_many_words: Javasoljuk, hogy az alkerület kevesebb mint %{word_count}
+              szóból álljon

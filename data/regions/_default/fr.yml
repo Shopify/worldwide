@@ -497,3 +497,91 @@ fr:
           errors:
             may_not_exist_instructional: Adresse introuvable ou inexistante
             may_not_exist_informative: Adresse introuvable
+        district:
+          label:
+            default: District
+            optional: District (facultatif)
+          errors:
+            blank_instructional: Saisissez un district
+            blank_informative: Le district est manquant
+            too_long_instructional: Le district est trop long (%{limit} caractères
+              maximum)
+            too_long_informative: Le district est trop long
+            contains_emojis_instructional: Le district ne peut pas contenir d’emojis
+            contains_emojis_informative: Le district ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le district ne peut pas contenir
+              de symboles mathématiques
+            contains_mathematical_symbols_informative: Le district ne peut pas contenir
+              de symboles mathématiques
+            contains_restricted_characters_instructional: Le district ne peut contenir
+              que des lettres, des chiffres, des caractères locaux et des caractères
+              spéciaux
+            contains_restricted_characters_informative: Le district ne peut pas contenir
+              de caractères restreints
+            contains_too_many_words_instructional: Le district doit contenir moins
+              de %{word_count} mots
+            contains_too_many_words_informative: Le district doit contenir moins de
+              %{word_count} mots
+            contains_html_tags_instructional: Le district ne peut pas contenir de
+              balises HTML
+            contains_html_tags_informative: Le district ne peut pas contenir de balises
+              HTML
+            contains_url_instructional: Le district ne peut pas contenir d’URL
+            contains_url_informative: Le district ne peut pas contenir d’URL
+            unknown_for_city_instructional: Saisissez un nom de district valide pour
+              %{city}
+            unknown_for_city_informative: Saisissez un nom de district valide pour
+              %{city}
+            unknown_for_zip_instructional: Saisissez un nom de district valide pour
+              %{zip}
+            unknown_for_zip_informative: Saisissez un nom de district valide pour
+              %{zip}
+            unknown_for_address_instructional: Le district est peut-être incorrect
+            unknown_for_address_informative: Le district est peut-être incorrect
+          warnings:
+            contains_too_many_words: Il est recommandé que le district contienne moins
+              de %{word_count} mots
+        subdistrict:
+          label:
+            default: Sous-district
+            optional: Sous-district (facultatif)
+          errors:
+            blank_instructional: Saisissez un sous-district
+            blank_informative: Le sous-district est manquant
+            too_long_instructional: Le sous-district est trop long (%{limit} caractères
+              maximum)
+            too_long_informative: Le sous-district est trop long
+            contains_emojis_instructional: Le sous-district ne peut pas contenir d’emojis
+            contains_emojis_informative: Le sous-district ne peut pas contenir d’emojis
+            contains_mathematical_symbols_instructional: Le sous-district ne peut
+              pas contenir de symboles mathématiques
+            contains_mathematical_symbols_informative: Le sous-district ne peut pas
+              contenir de symboles mathématiques
+            contains_restricted_characters_instructional: Le sous-district ne peut
+              contenir que des lettres, des chiffres, des caractères locaux et des
+              caractères spéciaux
+            contains_restricted_characters_informative: Le sous-district ne peut pas
+              contenir de caractères restreints
+            contains_too_many_words_instructional: Le sous-district doit contenir
+              moins de %{word_count} mots
+            contains_too_many_words_informative: Le sous-district doit contenir moins
+              de %{word_count} mots
+            contains_html_tags_instructional: Le sous-district ne peut pas contenir
+              de balises HTML
+            contains_html_tags_informative: Le sous-district ne peut pas contenir
+              de balises HTML
+            contains_url_instructional: Le sous-district ne peut pas contenir d’URL
+            contains_url_informative: Le sous-district ne peut pas contenir d’URL
+            unknown_for_city_instructional: Saisissez un nom de sous-district valide
+              pour %{city}
+            unknown_for_city_informative: Saisissez un nom de sous-district valide
+              pour %{city}
+            unknown_for_zip_instructional: Saisissez un nom de sous-district valide
+              pour %{zip}
+            unknown_for_zip_informative: Saisissez un nom de sous-district valide
+              pour %{zip}
+            unknown_for_address_instructional: Le sous-district est peut-être incorrect
+            unknown_for_address_informative: Le sous-district est peut-être incorrect
+          warnings:
+            contains_too_many_words: Il est recommandé que le sous-district contienne
+              moins de %{word_count} mots

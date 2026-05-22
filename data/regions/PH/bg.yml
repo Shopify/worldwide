@@ -40,3 +40,39 @@ bg:
           warnings:
             contains_too_many_words: Препоръчително е „Барангай“ да не съдържа повече
               от %{word_count} думи
+        district:
+          label:
+            default: Барангай
+            optional: Барангай (по избор)
+          errors:
+            blank_instructional: Въведете барангай
+            blank_informative: Липсва барангай
+            too_long_instructional: Барангаят е твърде дълъг (максимум %{limit} знака)
+            too_long_informative: Барангаят е твърде дълъг
+            contains_emojis_instructional: Барангаят не може да съдържа емоджита
+            contains_emojis_informative: Барангаят не може да съдържа емоджита
+            contains_mathematical_symbols_instructional: Барангаят не може да съдържа
+              математически символи
+            contains_mathematical_symbols_informative: Барангаят не може да съдържа
+              математически символи
+            contains_restricted_characters_instructional: Барангаят може да съдържа
+              само букви, цифри, локални и специални символи
+            contains_restricted_characters_informative: Барангаят не може да съдържа
+              забранени символи
+            contains_too_many_words_instructional: Барангаят трябва да съдържа по-малко
+              от %{word_count} думи
+            contains_too_many_words_informative: Барангаят трябва да съдържа по-малко
+              от %{word_count} думи
+            contains_html_tags_instructional: Барангаят не може да съдържа HTML
+            contains_html_tags_informative: Барангаят не може да съдържа HTML
+            contains_url_instructional: Барангаят не може да съдържа URL
+            contains_url_informative: Барангаят не може да съдържа URL
+            unknown_for_city_instructional: Въведете валидно име на барангай за %{city}
+            unknown_for_city_informative: Въведете валидно име на барангай за %{city}
+            unknown_for_zip_instructional: Въведете валидно име на барангай за %{zip}
+            unknown_for_zip_informative: Въведете валидно име на барангай за %{zip}
+            unknown_for_address_instructional: Барангаят може да е грешен
+            unknown_for_address_informative: Барангаят може да е грешен
+          warnings:
+            contains_too_many_words: Препоръчително е барангаят да съдържа по-малко
+              от %{word_count} думи

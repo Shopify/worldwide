@@ -507,3 +507,89 @@ el:
           errors:
             may_not_exist_instructional: Η διεύθυνση δεν βρέθηκε ή δεν υπάρχει
             may_not_exist_informative: Η διεύθυνση δεν βρέθηκε
+        district:
+          label:
+            default: Περιοχή
+            optional: Περιοχή (προαιρετικό)
+          errors:
+            blank_instructional: Καταχωρίστε περιοχή
+            blank_informative: Λείπει η περιοχή
+            too_long_instructional: Η περιοχή είναι πολύ μεγάλη (το μέγιστο είναι
+              %{limit} χαρακτήρες)
+            too_long_informative: Η περιοχή είναι πολύ μεγάλη
+            contains_emojis_instructional: Η περιοχή δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Η περιοχή δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Η περιοχή δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η περιοχή δεν μπορεί να περιέχει
+              μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η περιοχή μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η περιοχή δεν μπορεί να περιέχει
+              μη επιτρεπόμενους χαρακτήρες
+            contains_too_many_words_instructional: Η περιοχή πρέπει να έχει λιγότερες
+              από %{word_count} λέξεις
+            contains_too_many_words_informative: Η περιοχή πρέπει να έχει λιγότερες
+              από %{word_count} λέξεις
+            contains_html_tags_instructional: Η περιοχή δεν μπορεί να περιέχει ετικέτες
+              HTML
+            contains_html_tags_informative: Η περιοχή δεν μπορεί να περιέχει ετικέτες
+              HTML
+            contains_url_instructional: Η περιοχή δεν μπορεί να περιέχει URL
+            contains_url_informative: Η περιοχή δεν μπορεί να περιέχει URL
+            unknown_for_city_instructional: Καταχωρίστε ένα έγκυρο όνομα περιοχής
+              για %{city}
+            unknown_for_city_informative: Καταχωρίστε ένα έγκυρο όνομα περιοχής για
+              %{city}
+            unknown_for_zip_instructional: Καταχωρίστε ένα έγκυρο όνομα περιοχής για
+              τον Τ.Κ. %{zip}
+            unknown_for_zip_informative: Καταχωρίστε ένα έγκυρο όνομα περιοχής για
+              τον Τ.Κ. %{zip}
+            unknown_for_address_instructional: Η περιοχή ενδέχεται να είναι εσφαλμένη
+            unknown_for_address_informative: Η περιοχή ενδέχεται να είναι εσφαλμένη
+          warnings:
+            contains_too_many_words: Συνιστάται η περιοχή να έχει λιγότερες από %{word_count}
+              λέξεις
+        subdistrict:
+          label:
+            default: Υποπεριοχή
+            optional: Υποπεριοχή (προαιρετικό)
+          errors:
+            blank_instructional: Καταχωρίστε υποπεριοχή
+            blank_informative: Λείπει η υποπεριοχή
+            too_long_instructional: Η υποπεριοχή είναι πολύ μεγάλη (το μέγιστο είναι
+              %{limit} χαρακτήρες)
+            too_long_informative: Η υποπεριοχή είναι πολύ μεγάλη
+            contains_emojis_instructional: Η υποπεριοχή δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Η υποπεριοχή δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Η υποπεριοχή δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Η υποπεριοχή δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Η υποπεριοχή μπορεί να περιέχει
+              μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Η υποπεριοχή δεν μπορεί να
+              περιέχει μη επιτρεπόμενους χαρακτήρες
+            contains_too_many_words_instructional: Η υποπεριοχή πρέπει να έχει λιγότερες
+              από %{word_count} λέξεις
+            contains_too_many_words_informative: Η υποπεριοχή πρέπει να έχει λιγότερες
+              από %{word_count} λέξεις
+            contains_html_tags_instructional: Η υποπεριοχή δεν μπορεί να περιέχει
+              ετικέτες HTML
+            contains_html_tags_informative: Η υποπεριοχή δεν μπορεί να περιέχει ετικέτες
+              HTML
+            contains_url_instructional: Η υποπεριοχή δεν μπορεί να περιέχει URL
+            contains_url_informative: Η υποπεριοχή δεν μπορεί να περιέχει URL
+            unknown_for_city_instructional: Καταχωρίστε ένα έγκυρο όνομα υποπεριοχής
+              για %{city}
+            unknown_for_city_informative: Καταχωρίστε ένα έγκυρο όνομα υποπεριοχής
+              για %{city}
+            unknown_for_zip_instructional: Καταχωρίστε ένα έγκυρο όνομα υποπεριοχής
+              για τον Τ.Κ. %{zip}
+            unknown_for_zip_informative: Καταχωρίστε ένα έγκυρο όνομα υποπεριοχής
+              για τον Τ.Κ. %{zip}
+            unknown_for_address_instructional: Η υποπεριοχή ενδέχεται να είναι εσφαλμένη
+            unknown_for_address_informative: Η υποπεριοχή ενδέχεται να είναι εσφαλμένη
+          warnings:
+            contains_too_many_words: Συνιστάται η υποπεριοχή να έχει λιγότερες από
+              %{word_count} λέξεις

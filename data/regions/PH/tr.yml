@@ -41,3 +41,40 @@ tr:
           warnings:
             contains_too_many_words: Barangay adında %{word_count} adetten az kelime
               olması önerilir
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (isteğe bağlı)
+          errors:
+            blank_instructional: Bir barangay girin
+            blank_informative: Barangay eksik
+            too_long_instructional: Barangay çok uzun (en fazla %{limit} karakter)
+            too_long_informative: Barangay çok uzun
+            contains_emojis_instructional: Barangay emoji içeremez
+            contains_emojis_informative: Barangay emoji içeremez
+            contains_mathematical_symbols_instructional: Barangay matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Barangay matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Barangay yalnızca harf,
+              sayı, yerel karakter ve özel karakter içerebilir
+            contains_restricted_characters_informative: Barangay kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Barangay %{word_count} kelimeden
+              az olmalıdır
+            contains_too_many_words_informative: Barangay %{word_count} kelimeden
+              az olmalıdır
+            contains_html_tags_instructional: Barangay HTML içeremez
+            contains_html_tags_informative: Barangay HTML içeremez
+            contains_url_instructional: Barangay URL içeremez
+            contains_url_informative: Barangay URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir barangay adı
+              girin"
+            unknown_for_city_informative: "%{city} için geçerli bir barangay adı girin"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir barangay adı girin"
+            unknown_for_zip_informative: "%{zip} için geçerli bir barangay adı girin"
+            unknown_for_address_instructional: Barangay yanlış olabilir
+            unknown_for_address_informative: Barangay yanlış olabilir
+          warnings:
+            contains_too_many_words: Barangayın %{word_count} kelimeden az olması
+              önerilir

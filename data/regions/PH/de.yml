@@ -43,3 +43,43 @@ de:
           warnings:
             contains_too_many_words: Es wird empfohlen, dass das Barangay weniger
               als %{word_count} Wörter enthält.
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (optional)
+          errors:
+            blank_instructional: Gib einen Barangay ein
+            blank_informative: Barangay fehlt
+            too_long_instructional: Barangay ist zu lang (maximal %{limit} Zeichen)
+            too_long_informative: Barangay ist zu lang
+            contains_emojis_instructional: Barangay darf keine Emojis enthalten
+            contains_emojis_informative: Barangay darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Barangay darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Barangay darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Barangay darf nur Buchstaben,
+              Zahlen, lokale Zeichen und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Barangay darf keine unzulässigen
+              Zeichen enthalten
+            contains_too_many_words_instructional: Barangay muss aus weniger als %{word_count}
+              Wörtern bestehen
+            contains_too_many_words_informative: Barangay muss aus weniger als %{word_count}
+              Wörtern bestehen
+            contains_html_tags_instructional: Barangay darf kein HTML enthalten
+            contains_html_tags_informative: Barangay darf kein HTML enthalten
+            contains_url_instructional: Barangay darf keine URL enthalten
+            contains_url_informative: Barangay darf keine URL enthalten
+            unknown_for_city_instructional: Gib einen gültigen Barangay-Namen für
+              %{city} ein
+            unknown_for_city_informative: Gib einen gültigen Barangay-Namen für %{city}
+              ein
+            unknown_for_zip_instructional: Gib einen gültigen Barangay-Namen für %{zip}
+              ein
+            unknown_for_zip_informative: Gib einen gültigen Barangay-Namen für %{zip}
+              ein
+            unknown_for_address_instructional: Barangay ist möglicherweise falsch
+            unknown_for_address_informative: Barangay ist möglicherweise falsch
+          warnings:
+            contains_too_many_words: Barangay sollte aus weniger als %{word_count}
+              Wörtern bestehen

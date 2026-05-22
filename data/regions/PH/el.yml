@@ -46,3 +46,45 @@ el:
           warnings:
             contains_too_many_words: Το χωριό συνιστάται να έχει λιγότερες από %{word_count}
               λέξεις
+        district:
+          label:
+            default: Μπαρανγκάι
+            optional: Μπαρανγκάι (προαιρετικό)
+          errors:
+            blank_instructional: Καταχωρίστε μπαρανγκάι
+            blank_informative: Λείπει το μπαρανγκάι
+            too_long_instructional: Το μπαρανγκάι είναι πολύ μεγάλο (το μέγιστο είναι
+              %{limit} χαρακτήρες)
+            too_long_informative: Το μπαρανγκάι είναι πολύ μεγάλο
+            contains_emojis_instructional: Το μπαρανγκάι δεν μπορεί να περιέχει emoji
+            contains_emojis_informative: Το μπαρανγκάι δεν μπορεί να περιέχει emoji
+            contains_mathematical_symbols_instructional: Το μπαρανγκάι δεν μπορεί
+              να περιέχει μαθηματικά σύμβολα
+            contains_mathematical_symbols_informative: Το μπαρανγκάι δεν μπορεί να
+              περιέχει μαθηματικά σύμβολα
+            contains_restricted_characters_instructional: Το μπαρανγκάι μπορεί να
+              περιέχει μόνο γράμματα, αριθμούς, τοπικούς και ειδικούς χαρακτήρες
+            contains_restricted_characters_informative: Το μπαρανγκάι δεν μπορεί να
+              περιέχει μη επιτρεπόμενους χαρακτήρες
+            contains_too_many_words_instructional: Το μπαρανγκάι πρέπει να έχει λιγότερες
+              από %{word_count} λέξεις
+            contains_too_many_words_informative: Το μπαρανγκάι πρέπει να έχει λιγότερες
+              από %{word_count} λέξεις
+            contains_html_tags_instructional: Το μπαρανγκάι δεν μπορεί να περιέχει
+              HTML
+            contains_html_tags_informative: Το μπαρανγκάι δεν μπορεί να περιέχει HTML
+            contains_url_instructional: Το μπαρανγκάι δεν μπορεί να περιέχει URL
+            contains_url_informative: Το μπαρανγκάι δεν μπορεί να περιέχει URL
+            unknown_for_city_instructional: Καταχωρίστε ένα έγκυρο όνομα μπαρανγκάι
+              για %{city}
+            unknown_for_city_informative: Καταχωρίστε ένα έγκυρο όνομα μπαρανγκάι
+              για %{city}
+            unknown_for_zip_instructional: Καταχωρίστε ένα έγκυρο όνομα μπαρανγκάι
+              για τον Τ.Κ. %{zip}
+            unknown_for_zip_informative: Καταχωρίστε ένα έγκυρο όνομα μπαρανγκάι για
+              τον Τ.Κ. %{zip}
+            unknown_for_address_instructional: Το μπαρανγκάι ενδέχεται να είναι εσφαλμένο
+            unknown_for_address_informative: Το μπαρανγκάι ενδέχεται να είναι εσφαλμένο
+          warnings:
+            contains_too_many_words: Συνιστάται το μπαρανγκάι να έχει λιγότερες από
+              %{word_count} λέξεις

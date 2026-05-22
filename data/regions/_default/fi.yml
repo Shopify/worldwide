@@ -456,3 +456,83 @@ fi:
           errors:
             may_not_exist_instructional: Osoitetta ei löydy tai sitä ei ole
             may_not_exist_informative: Osoitetta ei löydy
+        district:
+          label:
+            default: Alue
+            optional: Alue (valinnainen)
+          errors:
+            blank_instructional: Anna alue
+            blank_informative: Alue puuttuu
+            too_long_instructional: Alue on liian pitkä (enintään %{limit} merkkiä)
+            too_long_informative: Alue on liian pitkä
+            contains_emojis_instructional: Alue ei voi sisältää emojeita
+            contains_emojis_informative: Alue ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Alue ei voi sisältää matemaattisia
+              symboleita
+            contains_mathematical_symbols_informative: Alue ei voi sisältää matemaattisia
+              symboleita
+            contains_restricted_characters_instructional: Alue voi sisältää vain kirjaimia,
+              numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Alue ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Alueessa on oltava alle %{word_count}
+              sanaa
+            contains_too_many_words_informative: Alueessa on oltava alle %{word_count}
+              sanaa
+            contains_html_tags_instructional: Alue ei voi sisältää HTML-tunnisteita
+            contains_html_tags_informative: Alue ei voi sisältää HTML-tunnisteita
+            contains_url_instructional: Alue ei voi sisältää URL-osoitteita
+            contains_url_informative: Alue ei voi sisältää URL-osoitteita
+            unknown_for_city_instructional: Anna kelvollinen alueen nimi kaupungille
+              %{city}
+            unknown_for_city_informative: Anna kelvollinen alueen nimi kaupungille
+              %{city}
+            unknown_for_zip_instructional: Anna kelvollinen alueen nimi postinumerolle
+              %{zip}
+            unknown_for_zip_informative: Anna kelvollinen alueen nimi postinumerolle
+              %{zip}
+            unknown_for_address_instructional: Alue saattaa olla virheellinen
+            unknown_for_address_informative: Alue saattaa olla virheellinen
+          warnings:
+            contains_too_many_words: Alueessa suositellaan olevan alle %{word_count}
+              sanaa
+        subdistrict:
+          label:
+            default: Osa-alue
+            optional: Osa-alue (valinnainen)
+          errors:
+            blank_instructional: Anna osa-alue
+            blank_informative: Osa-alue puuttuu
+            too_long_instructional: Osa-alue on liian pitkä (enintään %{limit} merkkiä)
+            too_long_informative: Osa-alue on liian pitkä
+            contains_emojis_instructional: Osa-alue ei voi sisältää emojeita
+            contains_emojis_informative: Osa-alue ei voi sisältää emojeita
+            contains_mathematical_symbols_instructional: Osa-alue ei voi sisältää
+              matemaattisia symboleita
+            contains_mathematical_symbols_informative: Osa-alue ei voi sisältää matemaattisia
+              symboleita
+            contains_restricted_characters_instructional: Osa-alue voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Osa-alue ei voi sisältää rajoitettuja
+              merkkejä
+            contains_too_many_words_instructional: Osa-alueessa on oltava alle %{word_count}
+              sanaa
+            contains_too_many_words_informative: Osa-alueessa on oltava alle %{word_count}
+              sanaa
+            contains_html_tags_instructional: Osa-alue ei voi sisältää HTML-tunnisteita
+            contains_html_tags_informative: Osa-alue ei voi sisältää HTML-tunnisteita
+            contains_url_instructional: Osa-alue ei voi sisältää URL-osoitteita
+            contains_url_informative: Osa-alue ei voi sisältää URL-osoitteita
+            unknown_for_city_instructional: Anna kelvollinen osa-alueen nimi kaupungille
+              %{city}
+            unknown_for_city_informative: Anna kelvollinen osa-alueen nimi kaupungille
+              %{city}
+            unknown_for_zip_instructional: Anna kelvollinen osa-alueen nimi postinumerolle
+              %{zip}
+            unknown_for_zip_informative: Anna kelvollinen osa-alueen nimi postinumerolle
+              %{zip}
+            unknown_for_address_instructional: Osa-alue saattaa olla virheellinen
+            unknown_for_address_informative: Osa-alue saattaa olla virheellinen
+          warnings:
+            contains_too_many_words: Osa-alueessa suositellaan olevan alle %{word_count}
+              sanaa

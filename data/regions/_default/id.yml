@@ -456,3 +456,83 @@ id:
           errors:
             may_not_exist_instructional: Alamat tidak ditemukan atau tidak ada
             may_not_exist_informative: Alamat tidak ditemukan
+        district:
+          label:
+            default: Kecamatan
+            optional: Kecamatan (opsional)
+          errors:
+            blank_instructional: Masukkan kecamatan
+            blank_informative: Kecamatan belum diisi
+            too_long_instructional: Kecamatan terlalu panjang (maksimal %{limit} karakter)
+            too_long_informative: Kecamatan terlalu panjang
+            contains_emojis_instructional: Kecamatan tidak boleh berisi emoji
+            contains_emojis_informative: Kecamatan tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Kecamatan tidak boleh berisi
+              simbol matematika
+            contains_mathematical_symbols_informative: Kecamatan tidak boleh berisi
+              simbol matematika
+            contains_restricted_characters_instructional: Kecamatan hanya boleh berisi
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Kecamatan tidak boleh berisi
+              karakter yang dibatasi
+            contains_too_many_words_instructional: Kecamatan harus kurang dari %{word_count}
+              kata
+            contains_too_many_words_informative: Kecamatan harus kurang dari %{word_count}
+              kata
+            contains_html_tags_instructional: Kecamatan tidak boleh berisi tag HTML
+            contains_html_tags_informative: Kecamatan tidak boleh berisi tag HTML
+            contains_url_instructional: Kecamatan tidak boleh berisi URL
+            contains_url_informative: Kecamatan tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan nama kecamatan yang valid untuk
+              %{city}
+            unknown_for_city_informative: Masukkan nama kecamatan yang valid untuk
+              %{city}
+            unknown_for_zip_instructional: Masukkan nama kecamatan yang valid untuk
+              %{zip}
+            unknown_for_zip_informative: Masukkan nama kecamatan yang valid untuk
+              %{zip}
+            unknown_for_address_instructional: Kecamatan mungkin salah
+            unknown_for_address_informative: Kecamatan mungkin salah
+          warnings:
+            contains_too_many_words: Kecamatan disarankan kurang dari %{word_count}
+              kata
+        subdistrict:
+          label:
+            default: Kelurahan
+            optional: Kelurahan (opsional)
+          errors:
+            blank_instructional: Masukkan kelurahan
+            blank_informative: Kelurahan belum diisi
+            too_long_instructional: Kelurahan terlalu panjang (maksimal %{limit} karakter)
+            too_long_informative: Kelurahan terlalu panjang
+            contains_emojis_instructional: Kelurahan tidak boleh berisi emoji
+            contains_emojis_informative: Kelurahan tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Kelurahan tidak boleh berisi
+              simbol matematika
+            contains_mathematical_symbols_informative: Kelurahan tidak boleh berisi
+              simbol matematika
+            contains_restricted_characters_instructional: Kelurahan hanya boleh berisi
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Kelurahan tidak boleh berisi
+              karakter yang dibatasi
+            contains_too_many_words_instructional: Kelurahan harus kurang dari %{word_count}
+              kata
+            contains_too_many_words_informative: Kelurahan harus kurang dari %{word_count}
+              kata
+            contains_html_tags_instructional: Kelurahan tidak boleh berisi tag HTML
+            contains_html_tags_informative: Kelurahan tidak boleh berisi tag HTML
+            contains_url_instructional: Kelurahan tidak boleh berisi URL
+            contains_url_informative: Kelurahan tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan nama kelurahan yang valid untuk
+              %{city}
+            unknown_for_city_informative: Masukkan nama kelurahan yang valid untuk
+              %{city}
+            unknown_for_zip_instructional: Masukkan nama kelurahan yang valid untuk
+              %{zip}
+            unknown_for_zip_informative: Masukkan nama kelurahan yang valid untuk
+              %{zip}
+            unknown_for_address_instructional: Kelurahan mungkin salah
+            unknown_for_address_informative: Kelurahan mungkin salah
+          warnings:
+            contains_too_many_words: Kelurahan disarankan kurang dari %{word_count}
+              kata

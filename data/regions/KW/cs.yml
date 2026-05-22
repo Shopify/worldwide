@@ -47,3 +47,39 @@ cs:
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název bloku obsahoval méně
               než tento počet slov: %{word_count}.'
+        district:
+          label:
+            default: Blok
+            optional: Blok (nepovinné)
+          errors:
+            blank_instructional: Zadejte blok
+            blank_informative: Chybí blok
+            too_long_instructional: Blok je příliš dlouhý (maximálně %{limit} znaků)
+            too_long_informative: Blok je příliš dlouhý
+            contains_emojis_instructional: Blok nemůže obsahovat emotikony
+            contains_emojis_informative: Blok nemůže obsahovat emotikony
+            contains_mathematical_symbols_instructional: Blok nemůže obsahovat matematické
+              symboly
+            contains_mathematical_symbols_informative: Blok nemůže obsahovat matematické
+              symboly
+            contains_restricted_characters_instructional: Blok může obsahovat pouze
+              písmena, číslice, místní a speciální znaky
+            contains_restricted_characters_informative: Blok nesmí obsahovat nepovolené
+              znaky
+            contains_too_many_words_instructional: Blok musí mít méně než %{word_count}
+              slov
+            contains_too_many_words_informative: Blok musí mít méně než %{word_count}
+              slov
+            contains_html_tags_instructional: Blok nemůže obsahovat HTML
+            contains_html_tags_informative: Blok nemůže obsahovat HTML
+            contains_url_instructional: Blok nemůže obsahovat URL
+            contains_url_informative: Blok nemůže obsahovat URL
+            unknown_for_city_instructional: Zadejte platný blok pro %{city}
+            unknown_for_city_informative: Blok pro %{city} není platný
+            unknown_for_zip_instructional: Zadejte platný blok pro %{zip}
+            unknown_for_zip_informative: Blok pro %{zip} není platný
+            unknown_for_address_instructional: Blok může být nesprávný
+            unknown_for_address_informative: Blok může být nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby blok obsahoval méně než %{word_count}
+              slov

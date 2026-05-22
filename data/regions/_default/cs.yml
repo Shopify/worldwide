@@ -453,3 +453,75 @@ cs:
           errors:
             may_not_exist_instructional: Adresa nebyla nalezena nebo neexistuje.
             may_not_exist_informative: Adresu nebyla nalezena.
+        district:
+          label:
+            default: Okres
+            optional: Okres (nepovinné)
+          errors:
+            blank_instructional: Zadejte okres
+            blank_informative: Chybí okres
+            too_long_instructional: Okres je příliš dlouhý (maximálně %{limit} znaků)
+            too_long_informative: Okres je příliš dlouhý
+            contains_emojis_instructional: Okres nemůže obsahovat emotikony
+            contains_emojis_informative: Okres nemůže obsahovat emotikony
+            contains_mathematical_symbols_instructional: Okres nemůže obsahovat matematické
+              symboly
+            contains_mathematical_symbols_informative: Okres nemůže obsahovat matematické
+              symboly
+            contains_restricted_characters_instructional: Okres může obsahovat pouze
+              písmena, číslice, místní a speciální znaky
+            contains_restricted_characters_informative: Okres nesmí obsahovat nepovolené
+              znaky
+            contains_too_many_words_instructional: Okres musí mít méně než %{word_count}
+              slov
+            contains_too_many_words_informative: Okres musí mít méně než %{word_count}
+              slov
+            contains_html_tags_instructional: Okres nemůže obsahovat značky HTML
+            contains_html_tags_informative: Okres nemůže obsahovat značky HTML
+            contains_url_instructional: Okres nemůže obsahovat URL
+            contains_url_informative: Okres nemůže obsahovat URL
+            unknown_for_city_instructional: Zadejte platný název okresu pro %{city}
+            unknown_for_city_informative: Zadejte platný název okresu pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název okresu pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název okresu pro %{zip}
+            unknown_for_address_instructional: Okres může být nesprávný
+            unknown_for_address_informative: Okres může být nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby okres obsahoval méně než %{word_count}
+              slov
+        subdistrict:
+          label:
+            default: Čtvrť
+            optional: Čtvrť (nepovinné)
+          errors:
+            blank_instructional: Zadejte čtvrť
+            blank_informative: Chybí čtvrť
+            too_long_instructional: Čtvrť je příliš dlouhá (maximálně %{limit} znaků)
+            too_long_informative: Čtvrť je příliš dlouhá
+            contains_emojis_instructional: Čtvrť nemůže obsahovat emotikony
+            contains_emojis_informative: Čtvrť nemůže obsahovat emotikony
+            contains_mathematical_symbols_instructional: Čtvrť nemůže obsahovat matematické
+              symboly
+            contains_mathematical_symbols_informative: Čtvrť nemůže obsahovat matematické
+              symboly
+            contains_restricted_characters_instructional: Čtvrť může obsahovat pouze
+              písmena, číslice, místní a speciální znaky
+            contains_restricted_characters_informative: Čtvrť nesmí obsahovat nepovolené
+              znaky
+            contains_too_many_words_instructional: Čtvrť musí mít méně než %{word_count}
+              slov
+            contains_too_many_words_informative: Čtvrť musí mít méně než %{word_count}
+              slov
+            contains_html_tags_instructional: Čtvrť nemůže obsahovat značky HTML
+            contains_html_tags_informative: Čtvrť nemůže obsahovat značky HTML
+            contains_url_instructional: Čtvrť nemůže obsahovat URL
+            contains_url_informative: Čtvrť nemůže obsahovat URL
+            unknown_for_city_instructional: Zadejte platný název čtvrti pro %{city}
+            unknown_for_city_informative: Zadejte platný název čtvrti pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název čtvrti pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název čtvrti pro %{zip}
+            unknown_for_address_instructional: Čtvrť může být nesprávná
+            unknown_for_address_informative: Čtvrť může být nesprávná
+          warnings:
+            contains_too_many_words: Doporučujeme, aby čtvrť obsahovala méně než %{word_count}
+              slov

@@ -47,3 +47,46 @@ ru:
           warnings:
             contains_too_many_words: Рекомендуем указывать в поле названия барангая
               не более %{word_count} сл.
+        district:
+          label:
+            default: Барангай
+            optional: Барангай (необязательно)
+          errors:
+            blank_instructional: Введите барангай
+            blank_informative: Барангай не указан
+            too_long_instructional: Название барангая слишком длинное (максимум %{limit}
+              символов)
+            too_long_informative: Название барангая слишком длинное
+            contains_emojis_instructional: Название барангая не может содержать эмодзи
+            contains_emojis_informative: Название барангая не может содержать эмодзи
+            contains_mathematical_symbols_instructional: Название барангая не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Название барангая не может
+              содержать математические символы
+            contains_restricted_characters_instructional: Название барангая может
+              содержать только буквы, цифры, символы местного алфавита и специальные
+              символы
+            contains_restricted_characters_informative: Название барангая не может
+              содержать недопустимые символы
+            contains_too_many_words_instructional: Название барангая должно содержать
+              менее %{word_count} слов
+            contains_too_many_words_informative: Название барангая должно содержать
+              менее %{word_count} слов
+            contains_html_tags_instructional: Название барангая не может содержать
+              HTML
+            contains_html_tags_informative: Название барангая не может содержать HTML
+            contains_url_instructional: Название барангая не может содержать URL
+            contains_url_informative: Название барангая не может содержать URL
+            unknown_for_city_instructional: Введите правильное название барангая для
+              %{city}
+            unknown_for_city_informative: Введите правильное название барангая для
+              %{city}
+            unknown_for_zip_instructional: Введите правильное название барангая для
+              почтового индекса %{zip}
+            unknown_for_zip_informative: Введите правильное название барангая для
+              почтового индекса %{zip}
+            unknown_for_address_instructional: Возможно, барангай указан неверно
+            unknown_for_address_informative: Возможно, барангай указан неверно
+          warnings:
+            contains_too_many_words: Рекомендуется, чтобы название барангая содержало
+              менее %{word_count} слов

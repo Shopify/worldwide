@@ -397,3 +397,69 @@ th:
           errors:
             may_not_exist_instructional: ไม่พบหรือไม่มีที่อยู่
             may_not_exist_informative: ไม่พบที่อยู่
+        district:
+          label:
+            default: เขต/อำเภอ
+            optional: เขต/อำเภอ (ไม่บังคับ)
+          errors:
+            blank_instructional: โปรดระบุเขต/อำเภอ
+            blank_informative: ไม่มีเขต/อำเภอ
+            too_long_instructional: เขต/อำเภอยาวเกินไป (สูงสุด %{limit} อักขระ)
+            too_long_informative: เขต/อำเภอยาวเกินไป
+            contains_emojis_instructional: เขต/อำเภอต้องไม่มีอีโมจิ
+            contains_emojis_informative: เขต/อำเภอต้องไม่มีอีโมจิ
+            contains_mathematical_symbols_instructional: เขต/อำเภอต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_mathematical_symbols_informative: เขต/อำเภอต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_restricted_characters_instructional: เขต/อำเภอต้องมีเฉพาะตัวอักษร
+              ตัวเลข ตัวอักษรท้องถิ่น และอักขระพิเศษเท่านั้น
+            contains_restricted_characters_informative: เขต/อำเภอต้องไม่มีอักขระที่ถูกจำกัด
+            contains_too_many_words_instructional: เขต/อำเภอต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_too_many_words_informative: เขต/อำเภอต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_html_tags_instructional: เขต/อำเภอต้องไม่มีแท็ก HTML
+            contains_html_tags_informative: เขต/อำเภอต้องไม่มีแท็ก HTML
+            contains_url_instructional: เขต/อำเภอต้องไม่มี URL
+            contains_url_informative: เขต/อำเภอต้องไม่มี URL
+            unknown_for_city_instructional: โปรดระบุชื่อเขต/อำเภอที่ถูกต้องสำหรับ
+              %{city}
+            unknown_for_city_informative: โปรดระบุชื่อเขต/อำเภอที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip_instructional: โปรดระบุชื่อเขต/อำเภอที่ถูกต้องสำหรับ %{zip}
+            unknown_for_zip_informative: โปรดระบุชื่อเขต/อำเภอที่ถูกต้องสำหรับ %{zip}
+            unknown_for_address_instructional: เขต/อำเภออาจไม่ถูกต้อง
+            unknown_for_address_informative: เขต/อำเภออาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ขอแนะนำให้เขต/อำเภอมีน้อยกว่า %{word_count} คำ
+        subdistrict:
+          label:
+            default: แขวง/ตำบล
+            optional: แขวง/ตำบล (ไม่บังคับ)
+          errors:
+            blank_instructional: โปรดระบุแขวง/ตำบล
+            blank_informative: ไม่มีแขวง/ตำบล
+            too_long_instructional: แขวง/ตำบลยาวเกินไป (สูงสุด %{limit} อักขระ)
+            too_long_informative: แขวง/ตำบลยาวเกินไป
+            contains_emojis_instructional: แขวง/ตำบลต้องไม่มีอีโมจิ
+            contains_emojis_informative: แขวง/ตำบลต้องไม่มีอีโมจิ
+            contains_mathematical_symbols_instructional: แขวง/ตำบลต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_mathematical_symbols_informative: แขวง/ตำบลต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_restricted_characters_instructional: แขวง/ตำบลต้องมีเฉพาะตัวอักษร
+              ตัวเลข ตัวอักษรท้องถิ่น และอักขระพิเศษเท่านั้น
+            contains_restricted_characters_informative: แขวง/ตำบลต้องไม่มีอักขระที่ถูกจำกัด
+            contains_too_many_words_instructional: แขวง/ตำบลต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_too_many_words_informative: แขวง/ตำบลต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_html_tags_instructional: แขวง/ตำบลต้องไม่มีแท็ก HTML
+            contains_html_tags_informative: แขวง/ตำบลต้องไม่มีแท็ก HTML
+            contains_url_instructional: แขวง/ตำบลต้องไม่มี URL
+            contains_url_informative: แขวง/ตำบลต้องไม่มี URL
+            unknown_for_city_instructional: โปรดระบุชื่อแขวง/ตำบลที่ถูกต้องสำหรับ
+              %{city}
+            unknown_for_city_informative: โปรดระบุชื่อแขวง/ตำบลที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip_instructional: โปรดระบุชื่อแขวง/ตำบลที่ถูกต้องสำหรับ %{zip}
+            unknown_for_zip_informative: โปรดระบุชื่อแขวง/ตำบลที่ถูกต้องสำหรับ %{zip}
+            unknown_for_address_instructional: แขวง/ตำบลอาจไม่ถูกต้อง
+            unknown_for_address_informative: แขวง/ตำบลอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ขอแนะนำให้แขวง/ตำบลมีน้อยกว่า %{word_count} คำ

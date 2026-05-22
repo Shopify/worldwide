@@ -479,3 +479,88 @@ ru:
           errors:
             may_not_exist_instructional: Адрес не найден или его не существует
             may_not_exist_informative: Адрес не найден
+        district:
+          label:
+            default: Район
+            optional: Район (необязательно)
+          errors:
+            blank_instructional: Введите район
+            blank_informative: Район не указан
+            too_long_instructional: Название района слишком длинное (максимум %{limit}
+              символов)
+            too_long_informative: Название района слишком длинное
+            contains_emojis_instructional: Название района не может содержать эмодзи
+            contains_emojis_informative: Название района не может содержать эмодзи
+            contains_mathematical_symbols_instructional: Название района не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Название района не может содержать
+              математические символы
+            contains_restricted_characters_instructional: Название района может содержать
+              только буквы, цифры, символы местного алфавита и специальные символы
+            contains_restricted_characters_informative: Название района не может содержать
+              недопустимые символы
+            contains_too_many_words_instructional: Название района должно содержать
+              менее %{word_count} слов
+            contains_too_many_words_informative: Название района должно содержать
+              менее %{word_count} слов
+            contains_html_tags_instructional: Название района не может содержать HTML-теги
+            contains_html_tags_informative: Название района не может содержать HTML-теги
+            contains_url_instructional: Название района не может содержать URL
+            contains_url_informative: Название района не может содержать URL
+            unknown_for_city_instructional: Введите правильное название района для
+              %{city}
+            unknown_for_city_informative: Введите правильное название района для %{city}
+            unknown_for_zip_instructional: Введите правильное название района для
+              почтового индекса %{zip}
+            unknown_for_zip_informative: Введите правильное название района для почтового
+              индекса %{zip}
+            unknown_for_address_instructional: Возможно, район указан неверно
+            unknown_for_address_informative: Возможно, район указан неверно
+          warnings:
+            contains_too_many_words: Рекомендуется, чтобы название района содержало
+              менее %{word_count} слов
+        subdistrict:
+          label:
+            default: Микрорайон
+            optional: Микрорайон (необязательно)
+          errors:
+            blank_instructional: Введите микрорайон
+            blank_informative: Микрорайон не указан
+            too_long_instructional: Название микрорайона слишком длинное (максимум
+              %{limit} символов)
+            too_long_informative: Название микрорайона слишком длинное
+            contains_emojis_instructional: Название микрорайона не может содержать
+              эмодзи
+            contains_emojis_informative: Название микрорайона не может содержать эмодзи
+            contains_mathematical_symbols_instructional: Название микрорайона не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Название микрорайона не может
+              содержать математические символы
+            contains_restricted_characters_instructional: Название микрорайона может
+              содержать только буквы, цифры, символы местного алфавита и специальные
+              символы
+            contains_restricted_characters_informative: Название микрорайона не может
+              содержать недопустимые символы
+            contains_too_many_words_instructional: Название микрорайона должно содержать
+              менее %{word_count} слов
+            contains_too_many_words_informative: Название микрорайона должно содержать
+              менее %{word_count} слов
+            contains_html_tags_instructional: Название микрорайона не может содержать
+              HTML-теги
+            contains_html_tags_informative: Название микрорайона не может содержать
+              HTML-теги
+            contains_url_instructional: Название микрорайона не может содержать URL
+            contains_url_informative: Название микрорайона не может содержать URL
+            unknown_for_city_instructional: Введите правильное название микрорайона
+              для %{city}
+            unknown_for_city_informative: Введите правильное название микрорайона
+              для %{city}
+            unknown_for_zip_instructional: Введите правильное название микрорайона
+              для почтового индекса %{zip}
+            unknown_for_zip_informative: Введите правильное название микрорайона для
+              почтового индекса %{zip}
+            unknown_for_address_instructional: Возможно, микрорайон указан неверно
+            unknown_for_address_informative: Возможно, микрорайон указан неверно
+          warnings:
+            contains_too_many_words: Рекомендуется, чтобы название микрорайона содержало
+              менее %{word_count} слов
