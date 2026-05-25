@@ -44,7 +44,7 @@ sk:
         district:
           label:
             default: Barangay
-            optional: Barangay (nepovinné)
+            optional: Barangay (voliteľné)
           errors:
             blank_instructional: Zadajte barangay
             blank_informative: Chýba barangay
@@ -57,23 +57,23 @@ sk:
             contains_mathematical_symbols_informative: Barangay nemôže obsahovať matematické
               symboly
             contains_restricted_characters_instructional: Barangay môže obsahovať
-              iba písmená, číslice, lokálne znaky a špeciálne znaky
+              len písmená, číslice, lokálne a špeciálne znaky
             contains_restricted_characters_informative: Barangay nemôže obsahovať
               nepovolené znaky
-            contains_too_many_words_instructional: Barangay musí obsahovať menej ako
-              %{word_count} slov
-            contains_too_many_words_informative: Barangay musí obsahovať menej ako
-              %{word_count} slov
+            contains_too_many_words_instructional: Barangay musí mať menej ako %{word_count}
+              slov
+            contains_too_many_words_informative: Barangay musí mať menej ako %{word_count}
+              slov
             contains_html_tags_instructional: Barangay nemôže obsahovať HTML
             contains_html_tags_informative: Barangay nemôže obsahovať HTML
-            contains_url_instructional: Barangay nemôže obsahovať URL adresu
-            contains_url_informative: Barangay nemôže obsahovať URL adresu
-            unknown_for_city_instructional: Zadajte platný názov barangaya pre %{city}
-            unknown_for_city_informative: Zadajte platný názov barangaya pre %{city}
-            unknown_for_zip_instructional: Zadajte platný názov barangaya pre %{zip}
-            unknown_for_zip_informative: Zadajte platný názov barangaya pre %{zip}
+            contains_url_instructional: Barangay nemôže obsahovať adresu URL
+            contains_url_informative: Barangay nemôže obsahovať adresu URL
+            unknown_for_city_instructional: Zadajte platný názov barangay pre %{city}
+            unknown_for_city_informative: Zadajte platný názov barangay pre %{city}
+            unknown_for_zip_instructional: Zadajte platný názov barangay pre %{zip}
+            unknown_for_zip_informative: Zadajte platný názov barangay pre %{zip}
             unknown_for_address_instructional: Barangay môže byť nesprávny
             unknown_for_address_informative: Barangay môže byť nesprávny
           warnings:
-            contains_too_many_words: Odporúča sa, aby barangay obsahoval menej ako
-              %{word_count} slov
+            contains_too_many_words: Odporúča sa, aby barangay mal menej ako %{word_count}
+              slov

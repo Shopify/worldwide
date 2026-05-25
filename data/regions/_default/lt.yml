@@ -484,12 +484,12 @@ lt:
         district:
           label:
             default: Rajonas
-            optional: Rajonas (neprivaloma)
+            optional: Rajonas (pasirenkama)
           errors:
             blank_instructional: Įveskite rajoną
             blank_informative: Nenurodytas rajonas
             too_long_instructional: Rajono pavadinimas per ilgas (daugiausia %{limit}
-              simbolių)
+              simb.)
             too_long_informative: Rajono pavadinimas per ilgas
             contains_emojis_instructional: Rajono pavadinime negali būti jaustukų
             contains_emojis_informative: Rajono pavadinime negali būti jaustukų
@@ -502,66 +502,58 @@ lt:
             contains_restricted_characters_informative: Rajono pavadinime negali būti
               draudžiamų simbolių
             contains_too_many_words_instructional: Rajono pavadinimą turi sudaryti
-              mažiau nei %{word_count} žodžių
+              mažiau nei %{word_count} žodž.
             contains_too_many_words_informative: Rajono pavadinimą turi sudaryti mažiau
-              nei %{word_count} žodžių
+              nei %{word_count} žodž.
             contains_html_tags_instructional: Rajono pavadinime negali būti HTML žymų
             contains_html_tags_informative: Rajono pavadinime negali būti HTML žymų
             contains_url_instructional: Rajono pavadinime negali būti URL
             contains_url_informative: Rajono pavadinime negali būti URL
-            unknown_for_city_instructional: Įveskite tinkamą rajono pavadinimą miestui
-              %{city}
-            unknown_for_city_informative: Įveskite tinkamą rajono pavadinimą miestui
-              %{city}
-            unknown_for_zip_instructional: Įveskite tinkamą rajono pavadinimą pašto
-              kodui %{zip}
-            unknown_for_zip_informative: Įveskite tinkamą rajono pavadinimą pašto
-              kodui %{zip}
+            unknown_for_city_instructional: Įveskite tinkamą %{city} rajono pavadinimą
+            unknown_for_city_informative: Įveskite tinkamą %{city} rajono pavadinimą
+            unknown_for_zip_instructional: Įveskite tinkamą %{zip} rajono pavadinimą
+            unknown_for_zip_informative: Įveskite tinkamą %{zip} rajono pavadinimą
             unknown_for_address_instructional: Rajonas gali būti nurodytas neteisingai
             unknown_for_address_informative: Rajonas gali būti nurodytas neteisingai
           warnings:
             contains_too_many_words: Rekomenduojama, kad rajono pavadinimą sudarytų
-              mažiau nei %{word_count} žodžių
+              mažiau nei %{word_count} žodž.
         subdistrict:
           label:
-            default: Mikrorajonas
-            optional: Mikrorajonas (neprivaloma)
+            default: Seniūnija
+            optional: Seniūnija (pasirenkama)
           errors:
-            blank_instructional: Įveskite mikrorajoną
-            blank_informative: Nenurodytas mikrorajonas
-            too_long_instructional: Mikrorajono pavadinimas per ilgas (daugiausia
-              %{limit} simbolių)
-            too_long_informative: Mikrorajono pavadinimas per ilgas
-            contains_emojis_instructional: Mikrorajono pavadinime negali būti jaustukų
-            contains_emojis_informative: Mikrorajono pavadinime negali būti jaustukų
-            contains_mathematical_symbols_instructional: Mikrorajono pavadinime negali
+            blank_instructional: Įveskite seniūniją
+            blank_informative: Nenurodyta seniūnija
+            too_long_instructional: Seniūnijos pavadinimas per ilgas (daugiausia %{limit}
+              simb.)
+            too_long_informative: Seniūnijos pavadinimas per ilgas
+            contains_emojis_instructional: Seniūnijos pavadinime negali būti jaustukų
+            contains_emojis_informative: Seniūnijos pavadinime negali būti jaustukų
+            contains_mathematical_symbols_instructional: Seniūnijos pavadinime negali
               būti matematinių simbolių
-            contains_mathematical_symbols_informative: Mikrorajono pavadinime negali
+            contains_mathematical_symbols_informative: Seniūnijos pavadinime negali
               būti matematinių simbolių
-            contains_restricted_characters_instructional: Mikrorajono pavadinime gali
+            contains_restricted_characters_instructional: Seniūnijos pavadinime gali
               būti tik raidės, skaičiai, vietiniai ir specialieji simboliai
-            contains_restricted_characters_informative: Mikrorajono pavadinime negali
+            contains_restricted_characters_informative: Seniūnijos pavadinime negali
               būti draudžiamų simbolių
-            contains_too_many_words_instructional: Mikrorajono pavadinimą turi sudaryti
-              mažiau nei %{word_count} žodžių
-            contains_too_many_words_informative: Mikrorajono pavadinimą turi sudaryti
-              mažiau nei %{word_count} žodžių
-            contains_html_tags_instructional: Mikrorajono pavadinime negali būti HTML
+            contains_too_many_words_instructional: Seniūnijos pavadinimą turi sudaryti
+              mažiau nei %{word_count} žodž.
+            contains_too_many_words_informative: Seniūnijos pavadinimą turi sudaryti
+              mažiau nei %{word_count} žodž.
+            contains_html_tags_instructional: Seniūnijos pavadinime negali būti HTML
               žymų
-            contains_html_tags_informative: Mikrorajono pavadinime negali būti HTML
+            contains_html_tags_informative: Seniūnijos pavadinime negali būti HTML
               žymų
-            contains_url_instructional: Mikrorajono pavadinime negali būti URL
-            contains_url_informative: Mikrorajono pavadinime negali būti URL
-            unknown_for_city_instructional: Įveskite tinkamą mikrorajono pavadinimą
-              miestui %{city}
-            unknown_for_city_informative: Įveskite tinkamą mikrorajono pavadinimą
-              miestui %{city}
-            unknown_for_zip_instructional: Įveskite tinkamą mikrorajono pavadinimą
-              pašto kodui %{zip}
-            unknown_for_zip_informative: Įveskite tinkamą mikrorajono pavadinimą pašto
-              kodui %{zip}
-            unknown_for_address_instructional: Mikrorajonas gali būti nurodytas neteisingai
-            unknown_for_address_informative: Mikrorajonas gali būti nurodytas neteisingai
+            contains_url_instructional: Seniūnijos pavadinime negali būti URL
+            contains_url_informative: Seniūnijos pavadinime negali būti URL
+            unknown_for_city_instructional: Įveskite tinkamą %{city} seniūnijos pavadinimą
+            unknown_for_city_informative: Įveskite tinkamą %{city} seniūnijos pavadinimą
+            unknown_for_zip_instructional: Įveskite tinkamą %{zip} seniūnijos pavadinimą
+            unknown_for_zip_informative: Įveskite tinkamą %{zip} seniūnijos pavadinimą
+            unknown_for_address_instructional: Seniūnija gali būti nurodyta neteisingai
+            unknown_for_address_informative: Seniūnija gali būti nurodyta neteisingai
           warnings:
-            contains_too_many_words: Rekomenduojama, kad mikrorajono pavadinimą sudarytų
-              mažiau nei %{word_count} žodžių
+            contains_too_many_words: Rekomenduojama, kad seniūnijos pavadinimą sudarytų
+              mažiau nei %{word_count} žodž.

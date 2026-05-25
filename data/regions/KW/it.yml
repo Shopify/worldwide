@@ -53,7 +53,7 @@ it:
             optional: Blocco (facoltativo)
           errors:
             blank_instructional: Inserisci un blocco
-            blank_informative: Blocco mancante
+            blank_informative: Manca il blocco
             too_long_instructional: Il blocco è troppo lungo (massimo %{limit} caratteri)
             too_long_informative: Il blocco è troppo lungo
             contains_emojis_instructional: Il blocco non può contenere emoji
@@ -66,10 +66,10 @@ it:
               solo lettere, numeri, caratteri locali e caratteri speciali
             contains_restricted_characters_informative: Il blocco non può contenere
               caratteri non consentiti
-            contains_too_many_words_instructional: Il blocco deve contenere meno di
-              %{word_count} parole
-            contains_too_many_words_informative: Il blocco deve contenere meno di
-              %{word_count} parole
+            contains_too_many_words_instructional: Il blocco deve avere meno di %{word_count}
+              parole
+            contains_too_many_words_informative: Il blocco deve avere meno di %{word_count}
+              parole
             contains_html_tags_instructional: Il blocco non può contenere HTML
             contains_html_tags_informative: Il blocco non può contenere HTML
             contains_url_instructional: Il blocco non può contenere un URL
@@ -81,5 +81,5 @@ it:
             unknown_for_address_instructional: Il blocco potrebbe essere errato
             unknown_for_address_informative: Il blocco potrebbe essere errato
           warnings:
-            contains_too_many_words: È consigliabile che il blocco contenga meno di
+            contains_too_many_words: Si consiglia di inserire un blocco con meno di
               %{word_count} parole

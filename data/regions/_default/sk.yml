@@ -463,7 +463,7 @@ sk:
         district:
           label:
             default: Okres
-            optional: Okres (nepovinné)
+            optional: Okres (voliteľné)
           errors:
             blank_instructional: Zadajte okres
             blank_informative: Chýba okres
@@ -475,18 +475,18 @@ sk:
               symboly
             contains_mathematical_symbols_informative: Okres nemôže obsahovať matematické
               symboly
-            contains_restricted_characters_instructional: Okres môže obsahovať iba
-              písmená, číslice, lokálne znaky a špeciálne znaky
+            contains_restricted_characters_instructional: Okres môže obsahovať len
+              písmená, číslice, lokálne a špeciálne znaky
             contains_restricted_characters_informative: Okres nemôže obsahovať nepovolené
               znaky
-            contains_too_many_words_instructional: Okres musí obsahovať menej ako
-              %{word_count} slov
-            contains_too_many_words_informative: Okres musí obsahovať menej ako %{word_count}
+            contains_too_many_words_instructional: Okres musí mať menej ako %{word_count}
+              slov
+            contains_too_many_words_informative: Okres musí mať menej ako %{word_count}
               slov
             contains_html_tags_instructional: Okres nemôže obsahovať značky HTML
             contains_html_tags_informative: Okres nemôže obsahovať značky HTML
-            contains_url_instructional: Okres nemôže obsahovať URL adresy
-            contains_url_informative: Okres nemôže obsahovať URL adresy
+            contains_url_instructional: Okres nemôže obsahovať adresy URL
+            contains_url_informative: Okres nemôže obsahovať adresy URL
             unknown_for_city_instructional: Zadajte platný názov okresu pre %{city}
             unknown_for_city_informative: Zadajte platný názov okresu pre %{city}
             unknown_for_zip_instructional: Zadajte platný názov okresu pre %{zip}
@@ -494,46 +494,46 @@ sk:
             unknown_for_address_instructional: Okres môže byť nesprávny
             unknown_for_address_informative: Okres môže byť nesprávny
           warnings:
-            contains_too_many_words: Odporúča sa, aby okres obsahoval menej ako %{word_count}
+            contains_too_many_words: Odporúča sa, aby okres mal menej ako %{word_count}
               slov
         subdistrict:
           label:
-            default: Mestská časť
-            optional: Mestská časť (nepovinné)
+            default: Miestna časť
+            optional: Miestna časť (voliteľné)
           errors:
-            blank_instructional: Zadajte mestskú časť
-            blank_informative: Chýba mestská časť
-            too_long_instructional: Mestská časť je príliš dlhá (maximum je %{limit}
+            blank_instructional: Zadajte miestnu časť
+            blank_informative: Chýba miestna časť
+            too_long_instructional: Miestna časť je príliš dlhá (maximum je %{limit}
               znakov)
-            too_long_informative: Mestská časť je príliš dlhá
-            contains_emojis_instructional: Mestská časť nemôže obsahovať emoji
-            contains_emojis_informative: Mestská časť nemôže obsahovať emoji
-            contains_mathematical_symbols_instructional: Mestská časť nemôže obsahovať
+            too_long_informative: Miestna časť je príliš dlhá
+            contains_emojis_instructional: Miestna časť nemôže obsahovať emoji
+            contains_emojis_informative: Miestna časť nemôže obsahovať emoji
+            contains_mathematical_symbols_instructional: Miestna časť nemôže obsahovať
               matematické symboly
-            contains_mathematical_symbols_informative: Mestská časť nemôže obsahovať
+            contains_mathematical_symbols_informative: Miestna časť nemôže obsahovať
               matematické symboly
-            contains_restricted_characters_instructional: Mestská časť môže obsahovať
-              iba písmená, číslice, lokálne znaky a špeciálne znaky
-            contains_restricted_characters_informative: Mestská časť nemôže obsahovať
+            contains_restricted_characters_instructional: Miestna časť môže obsahovať
+              len písmená, číslice, lokálne a špeciálne znaky
+            contains_restricted_characters_informative: Miestna časť nemôže obsahovať
               nepovolené znaky
-            contains_too_many_words_instructional: Mestská časť musí obsahovať menej
-              ako %{word_count} slov
-            contains_too_many_words_informative: Mestská časť musí obsahovať menej
-              ako %{word_count} slov
-            contains_html_tags_instructional: Mestská časť nemôže obsahovať značky
+            contains_too_many_words_instructional: Miestna časť musí mať menej ako
+              %{word_count} slov
+            contains_too_many_words_informative: Miestna časť musí mať menej ako %{word_count}
+              slov
+            contains_html_tags_instructional: Miestna časť nemôže obsahovať značky
               HTML
-            contains_html_tags_informative: Mestská časť nemôže obsahovať značky HTML
-            contains_url_instructional: Mestská časť nemôže obsahovať URL adresy
-            contains_url_informative: Mestská časť nemôže obsahovať URL adresy
-            unknown_for_city_instructional: Zadajte platný názov mestskej časti pre
+            contains_html_tags_informative: Miestna časť nemôže obsahovať značky HTML
+            contains_url_instructional: Miestna časť nemôže obsahovať adresy URL
+            contains_url_informative: Miestna časť nemôže obsahovať adresy URL
+            unknown_for_city_instructional: Zadajte platný názov miestnej časti pre
               %{city}
-            unknown_for_city_informative: Zadajte platný názov mestskej časti pre
+            unknown_for_city_informative: Zadajte platný názov miestnej časti pre
               %{city}
-            unknown_for_zip_instructional: Zadajte platný názov mestskej časti pre
+            unknown_for_zip_instructional: Zadajte platný názov miestnej časti pre
               %{zip}
-            unknown_for_zip_informative: Zadajte platný názov mestskej časti pre %{zip}
-            unknown_for_address_instructional: Mestská časť môže byť nesprávna
-            unknown_for_address_informative: Mestská časť môže byť nesprávna
+            unknown_for_zip_informative: Zadajte platný názov miestnej časti pre %{zip}
+            unknown_for_address_instructional: Miestna časť môže byť nesprávna
+            unknown_for_address_informative: Miestna časť môže byť nesprávna
           warnings:
-            contains_too_many_words: Odporúča sa, aby mestská časť obsahovala menej
-              ako %{word_count} slov
+            contains_too_many_words: Odporúča sa, aby miestna časť mala menej ako
+              %{word_count} slov

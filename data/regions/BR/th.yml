@@ -17,3 +17,35 @@ th:
           errors:
             blank_instructional: เลือกรัฐ
             blank_informative: ไม่พบรัฐ
+        district:
+          label:
+            default: ย่าน
+            optional: ย่าน (ไม่บังคับ)
+          errors:
+            blank_instructional: โปรดป้อนย่าน
+            blank_informative: ไม่ได้ระบุย่าน
+            too_long_instructional: ย่านยาวเกินไป (สูงสุด %{limit} ตัวอักษร)
+            too_long_informative: ย่านยาวเกินไป
+            contains_emojis_instructional: ย่านต้องไม่มีอีโมจิ
+            contains_emojis_informative: ย่านต้องไม่มีอีโมจิ
+            contains_mathematical_symbols_instructional: ย่านต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_mathematical_symbols_informative: ย่านต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_restricted_characters_instructional: ย่านต้องมีเฉพาะตัวอักษร
+              ตัวเลข ตัวอักษรท้องถิ่น และอักขระพิเศษเท่านั้น
+            contains_restricted_characters_informative: ย่านต้องไม่มีอักขระที่ถูกจำกัด
+            contains_too_many_words_instructional: ย่านต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_too_many_words_informative: ย่านต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_html_tags_instructional: ย่านต้องไม่มีแท็ก HTML
+            contains_html_tags_informative: ย่านต้องไม่มีแท็ก HTML
+            contains_url_instructional: ย่านต้องไม่มี URL
+            contains_url_informative: ย่านต้องไม่มี URL
+            unknown_for_city_instructional: โปรดป้อนชื่อย่านที่ถูกต้องสำหรับ %{city}
+            unknown_for_city_informative: โปรดป้อนชื่อย่านที่ถูกต้องสำหรับ %{city}
+            unknown_for_zip_instructional: โปรดป้อนชื่อย่านที่ถูกต้องสำหรับ %{zip}
+            unknown_for_zip_informative: โปรดป้อนชื่อย่านที่ถูกต้องสำหรับ %{zip}
+            unknown_for_address_instructional: ย่านอาจไม่ถูกต้อง
+            unknown_for_address_informative: ย่านอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ขอแนะนำให้ย่านมีน้อยกว่า %{word_count} คำ

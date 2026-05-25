@@ -17,3 +17,40 @@ bg:
           errors:
             blank_instructional: Изберете щат
             blank_informative: Липсва щат
+        district:
+          label:
+            default: Квартал
+            optional: Квартал (по избор)
+          errors:
+            blank_instructional: Въведете квартал
+            blank_informative: Липсва квартал
+            too_long_instructional: Кварталът е твърде дълъг (максимумът е %{limit}
+              знака)
+            too_long_informative: Кварталът е твърде дълъг
+            contains_emojis_instructional: Кварталът не може да съдържа емоджита
+            contains_emojis_informative: Кварталът не може да съдържа емоджита
+            contains_mathematical_symbols_instructional: Кварталът не може да съдържа
+              математически символи
+            contains_mathematical_symbols_informative: Кварталът не може да съдържа
+              математически символи
+            contains_restricted_characters_instructional: Кварталът може да съдържа
+              само букви, цифри, локални и специални знаци
+            contains_restricted_characters_informative: Кварталът не може да съдържа
+              неразрешени знаци
+            contains_too_many_words_instructional: Кварталът трябва да съдържа по-малко
+              от %{word_count} думи
+            contains_too_many_words_informative: Кварталът трябва да съдържа по-малко
+              от %{word_count} думи
+            contains_html_tags_instructional: Кварталът не може да съдържа HTML тагове
+            contains_html_tags_informative: Кварталът не може да съдържа HTML тагове
+            contains_url_instructional: Кварталът не може да съдържа URL адреси
+            contains_url_informative: Кварталът не може да съдържа URL адреси
+            unknown_for_city_instructional: Въведете валидно име на квартал за %{city}
+            unknown_for_city_informative: Въведете валидно име на квартал за %{city}
+            unknown_for_zip_instructional: Въведете валидно име на квартал за %{zip}
+            unknown_for_zip_informative: Въведете валидно име на квартал за %{zip}
+            unknown_for_address_instructional: Кварталът може да е грешен
+            unknown_for_address_informative: Кварталът може да е грешен
+          warnings:
+            contains_too_many_words: Препоръчително е кварталът да съдържа по-малко
+              от %{word_count} думи

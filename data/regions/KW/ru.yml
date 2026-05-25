@@ -52,41 +52,38 @@ ru:
               не более %{word_count} сл.
         district:
           label:
-            default: Квартал
-            optional: Квартал (необязательно)
+            default: Блок
+            optional: Блок (необязательно)
           errors:
-            blank_instructional: Введите квартал
-            blank_informative: Квартал не указан
-            too_long_instructional: Название квартала слишком длинное (максимум %{limit}
+            blank_instructional: Введите блок
+            blank_informative: Не указан блок
+            too_long_instructional: Название блока слишком длинное (максимум %{limit}
               символов)
-            too_long_informative: Название квартала слишком длинное
-            contains_emojis_instructional: Название квартала не может содержать эмодзи
-            contains_emojis_informative: Название квартала не может содержать эмодзи
-            contains_mathematical_symbols_instructional: Название квартала не может
-              содержать математические символы
-            contains_mathematical_symbols_informative: Название квартала не может
-              содержать математические символы
-            contains_restricted_characters_instructional: Название квартала может
-              содержать только буквы, цифры, символы местного алфавита и специальные
-              символы
-            contains_restricted_characters_informative: Название квартала не может
-              содержать недопустимые символы
-            contains_too_many_words_instructional: Название квартала должно содержать
+            too_long_informative: Название блока слишком длинное
+            contains_emojis_instructional: Название блока не может содержать эмодзи
+            contains_emojis_informative: Название блока не может содержать эмодзи
+            contains_mathematical_symbols_instructional: Название блока не может содержать
+              математические символы
+            contains_mathematical_symbols_informative: Название блока не может содержать
+              математические символы
+            contains_restricted_characters_instructional: Название блока может содержать
+              только буквы, цифры, местные и специальные символы
+            contains_restricted_characters_informative: Название блока не может содержать
+              запрещенные символы
+            contains_too_many_words_instructional: Название блока должно содержать
               менее %{word_count} слов
-            contains_too_many_words_informative: Название квартала должно содержать
-              менее %{word_count} слов
-            contains_html_tags_instructional: Название квартала не может содержать
-              HTML
-            contains_html_tags_informative: Название квартала не может содержать HTML
-            contains_url_instructional: Название квартала не может содержать URL
-            contains_url_informative: Название квартала не может содержать URL
-            unknown_for_city_instructional: Введите правильный квартал для %{city}
-            unknown_for_city_informative: Неверный квартал для %{city}
-            unknown_for_zip_instructional: Введите правильный квартал для почтового
-              индекса %{zip}
-            unknown_for_zip_informative: Неверный квартал для почтового индекса %{zip}
-            unknown_for_address_instructional: Возможно, квартал указан неверно
-            unknown_for_address_informative: Возможно, квартал указан неверно
+            contains_too_many_words_informative: Название блока должно содержать менее
+              %{word_count} слов
+            contains_html_tags_instructional: Название блока не может содержать HTML
+            contains_html_tags_informative: Название блока не может содержать HTML
+            contains_url_instructional: Название блока не может содержать URL
+            contains_url_informative: Название блока не может содержать URL
+            unknown_for_city_instructional: Введите правильный блок для города %{city}
+            unknown_for_city_informative: Недействительный блок для города %{city}
+            unknown_for_zip_instructional: Введите правильный блок для индекса %{zip}
+            unknown_for_zip_informative: Недействительный блок для индекса %{zip}
+            unknown_for_address_instructional: Возможно, блок указан неверно
+            unknown_for_address_informative: Возможно, блок указан неверно
           warnings:
-            contains_too_many_words: Рекомендуется, чтобы название квартала содержало
+            contains_too_many_words: Рекомендуется, чтобы название блока содержало
               менее %{word_count} слов

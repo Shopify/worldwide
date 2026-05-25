@@ -374,65 +374,61 @@ ko:
             may_not_exist_informative: 주소를 찾을 수 없습니다
         district:
           label:
-            default: 구역
-            optional: 구역(선택 사항)
+            default: 구/군
+            optional: 구/군(선택 사항)
           errors:
-            blank_instructional: 구역을 입력하십시오.
-            blank_informative: 구역이 누락되었습니다.
-            too_long_instructional: 구역이 너무 깁니다(최대 %{limit}자).
-            too_long_informative: 구역이 너무 깁니다.
-            contains_emojis_instructional: 구역에는 이모티콘을 포함할 수 없습니다.
-            contains_emojis_informative: 구역에는 이모티콘을 포함할 수 없습니다.
-            contains_mathematical_symbols_instructional: 구역에는 수학 기호를 포함할 수 없습니다.
-            contains_mathematical_symbols_informative: 구역에는 수학 기호를 포함할 수 없습니다.
-            contains_restricted_characters_instructional: 구역에는 문자, 숫자, 현지 문자, 특수 문자만
-              포함할 수 있습니다.
-            contains_restricted_characters_informative: 구역에는 제한된 문자를 포함할 수 없습니다.
-            contains_too_many_words_instructional: 구역은 %{word_count}개 미만의 단어로 구성되어야
-              합니다.
-            contains_too_many_words_informative: 구역은 %{word_count}개 미만의 단어로 구성되어야
-              합니다.
-            contains_html_tags_instructional: 구역에는 HTML 태그를 포함할 수 없습니다.
-            contains_html_tags_informative: 구역에는 HTML 태그를 포함할 수 없습니다.
-            contains_url_instructional: 구역에는 URL을 포함할 수 없습니다.
-            contains_url_informative: 구역에는 URL을 포함할 수 없습니다.
-            unknown_for_city_instructional: "%{city}의 유효한 구역 이름을 입력하십시오."
-            unknown_for_city_informative: "%{city}의 유효한 구역 이름을 입력하십시오."
-            unknown_for_zip_instructional: "%{zip}의 유효한 구역 이름을 입력하십시오."
-            unknown_for_zip_informative: "%{zip}의 유효한 구역 이름을 입력하십시오."
-            unknown_for_address_instructional: 구역이 올바르지 않을 수 있습니다.
-            unknown_for_address_informative: 구역이 올바르지 않을 수 있습니다.
+            blank_instructional: 구/군을 입력하십시오.
+            blank_informative: 구/군이 누락되었습니다.
+            too_long_instructional: 구/군이 너무 깁니다(최대 %{limit}자).
+            too_long_informative: 구/군이 너무 깁니다.
+            contains_emojis_instructional: 구/군에는 이모지를 포함할 수 없습니다.
+            contains_emojis_informative: 구/군에는 이모지를 포함할 수 없습니다.
+            contains_mathematical_symbols_instructional: 구/군에는 수학 기호를 포함할 수 없습니다.
+            contains_mathematical_symbols_informative: 구/군에는 수학 기호를 포함할 수 없습니다.
+            contains_restricted_characters_instructional: 구/군에는 문자, 숫자, 현지 문자 및 특수
+              문자만 포함할 수 있습니다.
+            contains_restricted_characters_informative: 구/군에는 제한된 문자를 포함할 수 없습니다.
+            contains_too_many_words_instructional: 구/군은 %{word_count}단어 미만이어야 합니다.
+            contains_too_many_words_informative: 구/군은 %{word_count}단어 미만이어야 합니다.
+            contains_html_tags_instructional: 구/군에는 HTML 태그를 포함할 수 없습니다.
+            contains_html_tags_informative: 구/군에는 HTML 태그를 포함할 수 없습니다.
+            contains_url_instructional: 구/군에는 URL을 포함할 수 없습니다.
+            contains_url_informative: 구/군에는 URL을 포함할 수 없습니다.
+            unknown_for_city_instructional: "%{city}의 유효한 구/군 이름을 입력하십시오."
+            unknown_for_city_informative: "%{city}의 유효한 구/군 이름을 입력하십시오."
+            unknown_for_zip_instructional: "%{zip}의 유효한 구/군 이름을 입력하십시오."
+            unknown_for_zip_informative: "%{zip}의 유효한 구/군 이름을 입력하십시오."
+            unknown_for_address_instructional: 구/군이 올바르지 않을 수 있습니다.
+            unknown_for_address_informative: 구/군이 올바르지 않을 수 있습니다.
           warnings:
-            contains_too_many_words: 구역은 %{word_count}개 미만의 단어로 구성하는 것이 좋습니다.
+            contains_too_many_words: 구/군은 %{word_count}단어 미만으로 입력하는 것이 좋습니다.
         subdistrict:
           label:
-            default: 하위 구역
-            optional: 하위 구역(선택 사항)
+            default: 동/면/읍
+            optional: 동/면/읍(선택 사항)
           errors:
-            blank_instructional: 하위 구역을 입력하십시오.
-            blank_informative: 하위 구역이 누락되었습니다.
-            too_long_instructional: 하위 구역이 너무 깁니다(최대 %{limit}자).
-            too_long_informative: 하위 구역이 너무 깁니다.
-            contains_emojis_instructional: 하위 구역에는 이모티콘을 포함할 수 없습니다.
-            contains_emojis_informative: 하위 구역에는 이모티콘을 포함할 수 없습니다.
-            contains_mathematical_symbols_instructional: 하위 구역에는 수학 기호를 포함할 수 없습니다.
-            contains_mathematical_symbols_informative: 하위 구역에는 수학 기호를 포함할 수 없습니다.
-            contains_restricted_characters_instructional: 하위 구역에는 문자, 숫자, 현지 문자, 특수
-              문자만 포함할 수 있습니다.
-            contains_restricted_characters_informative: 하위 구역에는 제한된 문자를 포함할 수 없습니다.
-            contains_too_many_words_instructional: 하위 구역은 %{word_count}개 미만의 단어로 구성되어야
-              합니다.
-            contains_too_many_words_informative: 하위 구역은 %{word_count}개 미만의 단어로 구성되어야
-              합니다.
-            contains_html_tags_instructional: 하위 구역에는 HTML 태그를 포함할 수 없습니다.
-            contains_html_tags_informative: 하위 구역에는 HTML 태그를 포함할 수 없습니다.
-            contains_url_instructional: 하위 구역에는 URL을 포함할 수 없습니다.
-            contains_url_informative: 하위 구역에는 URL을 포함할 수 없습니다.
-            unknown_for_city_instructional: "%{city}의 유효한 하위 구역 이름을 입력하십시오."
-            unknown_for_city_informative: "%{city}의 유효한 하위 구역 이름을 입력하십시오."
-            unknown_for_zip_instructional: "%{zip}의 유효한 하위 구역 이름을 입력하십시오."
-            unknown_for_zip_informative: "%{zip}의 유효한 하위 구역 이름을 입력하십시오."
-            unknown_for_address_instructional: 하위 구역이 올바르지 않을 수 있습니다.
-            unknown_for_address_informative: 하위 구역이 올바르지 않을 수 있습니다.
+            blank_instructional: 동/면/읍을 입력하십시오.
+            blank_informative: 동/면/읍이 누락되었습니다.
+            too_long_instructional: 동/면/읍이 너무 깁니다(최대 %{limit}자).
+            too_long_informative: 동/면/읍이 너무 깁니다.
+            contains_emojis_instructional: 동/면/읍에는 이모지를 포함할 수 없습니다.
+            contains_emojis_informative: 동/면/읍에는 이모지를 포함할 수 없습니다.
+            contains_mathematical_symbols_instructional: 동/면/읍에는 수학 기호를 포함할 수 없습니다.
+            contains_mathematical_symbols_informative: 동/면/읍에는 수학 기호를 포함할 수 없습니다.
+            contains_restricted_characters_instructional: 동/면/읍에는 문자, 숫자, 현지 문자 및
+              특수 문자만 포함할 수 있습니다.
+            contains_restricted_characters_informative: 동/면/읍에는 제한된 문자를 포함할 수 없습니다.
+            contains_too_many_words_instructional: 동/면/읍은 %{word_count}단어 미만이어야 합니다.
+            contains_too_many_words_informative: 동/면/읍은 %{word_count}단어 미만이어야 합니다.
+            contains_html_tags_instructional: 동/면/읍에는 HTML 태그를 포함할 수 없습니다.
+            contains_html_tags_informative: 동/면/읍에는 HTML 태그를 포함할 수 없습니다.
+            contains_url_instructional: 동/면/읍에는 URL을 포함할 수 없습니다.
+            contains_url_informative: 동/면/읍에는 URL을 포함할 수 없습니다.
+            unknown_for_city_instructional: "%{city}의 유효한 동/면/읍 이름을 입력하십시오."
+            unknown_for_city_informative: "%{city}의 유효한 동/면/읍 이름을 입력하십시오."
+            unknown_for_zip_instructional: "%{zip}의 유효한 동/면/읍 이름을 입력하십시오."
+            unknown_for_zip_informative: "%{zip}의 유효한 동/면/읍 이름을 입력하십시오."
+            unknown_for_address_instructional: 동/면/읍이 올바르지 않을 수 있습니다.
+            unknown_for_address_informative: 동/면/읍이 올바르지 않을 수 있습니다.
           warnings:
-            contains_too_many_words: 하위 구역은 %{word_count}개 미만의 단어로 구성하는 것이 좋습니다.
+            contains_too_many_words: 동/면/읍은 %{word_count}단어 미만으로 입력하는 것이 좋습니다.

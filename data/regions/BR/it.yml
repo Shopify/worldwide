@@ -17,3 +17,44 @@ it:
           errors:
             blank_instructional: Seleziona uno stato
             blank_informative: Stato mancante
+        district:
+          label:
+            default: Quartiere
+            optional: Quartiere (facoltativo)
+          errors:
+            blank_instructional: Inserisci un quartiere
+            blank_informative: Manca il quartiere
+            too_long_instructional: Il quartiere è troppo lungo (massimo %{limit}
+              caratteri)
+            too_long_informative: Il quartiere è troppo lungo
+            contains_emojis_instructional: Il quartiere non può contenere emoji
+            contains_emojis_informative: Il quartiere non può contenere emoji
+            contains_mathematical_symbols_instructional: Il quartiere non può contenere
+              simboli matematici
+            contains_mathematical_symbols_informative: Il quartiere non può contenere
+              simboli matematici
+            contains_restricted_characters_instructional: Il quartiere può contenere
+              solo lettere, numeri, caratteri locali e caratteri speciali
+            contains_restricted_characters_informative: Il quartiere non può contenere
+              caratteri non consentiti
+            contains_too_many_words_instructional: Il quartiere deve avere meno di
+              %{word_count} parole
+            contains_too_many_words_informative: Il quartiere deve avere meno di %{word_count}
+              parole
+            contains_html_tags_instructional: Il quartiere non può contenere tag HTML
+            contains_html_tags_informative: Il quartiere non può contenere tag HTML
+            contains_url_instructional: Il quartiere non può contenere URL
+            contains_url_informative: Il quartiere non può contenere URL
+            unknown_for_city_instructional: Inserisci un nome di quartiere valido
+              per %{city}
+            unknown_for_city_informative: Inserisci un nome di quartiere valido per
+              %{city}
+            unknown_for_zip_instructional: Inserisci un nome di quartiere valido per
+              %{zip}
+            unknown_for_zip_informative: Inserisci un nome di quartiere valido per
+              %{zip}
+            unknown_for_address_instructional: Il quartiere potrebbe essere errato
+            unknown_for_address_informative: Il quartiere potrebbe essere errato
+          warnings:
+            contains_too_many_words: Si consiglia di inserire un quartiere con meno
+              di %{word_count} parole

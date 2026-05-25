@@ -17,3 +17,44 @@ ru:
           errors:
             blank_instructional: Выберите штат
             blank_informative: Штат отсутствует
+        district:
+          label:
+            default: Район
+            optional: Район (необязательно)
+          errors:
+            blank_instructional: Введите район
+            blank_informative: Не указан район
+            too_long_instructional: Название района слишком длинное (максимум %{limit}
+              символов)
+            too_long_informative: Название района слишком длинное
+            contains_emojis_instructional: Название района не может содержать эмодзи
+            contains_emojis_informative: Название района не может содержать эмодзи
+            contains_mathematical_symbols_instructional: Название района не может
+              содержать математические символы
+            contains_mathematical_symbols_informative: Название района не может содержать
+              математические символы
+            contains_restricted_characters_instructional: Название района может содержать
+              только буквы, цифры, местные и специальные символы
+            contains_restricted_characters_informative: Название района не может содержать
+              запрещенные символы
+            contains_too_many_words_instructional: Название района должно содержать
+              менее %{word_count} слов
+            contains_too_many_words_informative: Название района должно содержать
+              менее %{word_count} слов
+            contains_html_tags_instructional: Название района не может содержать HTML-теги
+            contains_html_tags_informative: Название района не может содержать HTML-теги
+            contains_url_instructional: Название района не может содержать URL
+            contains_url_informative: Название района не может содержать URL
+            unknown_for_city_instructional: Введите правильное название района для
+              города %{city}
+            unknown_for_city_informative: Введите правильное название района для города
+              %{city}
+            unknown_for_zip_instructional: Введите правильное название района для
+              индекса %{zip}
+            unknown_for_zip_informative: Введите правильное название района для индекса
+              %{zip}
+            unknown_for_address_instructional: Возможно, район указан неверно
+            unknown_for_address_informative: Возможно, район указан неверно
+          warnings:
+            contains_too_many_words: Рекомендуется, чтобы название района содержало
+              менее %{word_count} слов

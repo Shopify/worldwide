@@ -518,9 +518,9 @@ ro:
             default: District
             optional: District (opțional)
           errors:
-            blank_instructional: Introduceți un district
-            blank_informative: Districtul lipsește
-            too_long_instructional: Districtul este prea lung (maximul este de %{limit}
+            blank_instructional: Introdu un district
+            blank_informative: Lipsește districtul
+            too_long_instructional: Districtul este prea lung (maximum este de %{limit}
               caractere)
             too_long_informative: Districtul este prea lung
             contains_emojis_instructional: Districtul nu poate conține emoji-uri
@@ -530,7 +530,7 @@ ro:
             contains_mathematical_symbols_informative: Districtul nu poate conține
               simboluri matematice
             contains_restricted_characters_instructional: Districtul poate conține
-              doar litere, numere, caractere locale și caractere speciale
+              doar litere, cifre, caractere locale și caractere speciale
             contains_restricted_characters_informative: Districtul nu poate conține
               caractere restricționate
             contains_too_many_words_instructional: Districtul trebuie să aibă mai
@@ -542,16 +542,16 @@ ro:
             contains_html_tags_informative: Districtul nu poate conține etichete HTML
             contains_url_instructional: Districtul nu poate conține URL-uri
             contains_url_informative: Districtul nu poate conține URL-uri
-            unknown_for_city_instructional: Introduceți un nume valid de district
-              pentru %{city}
-            unknown_for_city_informative: Introduceți un nume valid de district pentru
+            unknown_for_city_instructional: Introdu un nume de district valid pentru
               %{city}
-            unknown_for_zip_instructional: Introduceți un nume valid de district pentru
+            unknown_for_city_informative: Introdu un nume de district valid pentru
+              %{city}
+            unknown_for_zip_instructional: Introdu un nume de district valid pentru
               %{zip}
-            unknown_for_zip_informative: Introduceți un nume valid de district pentru
+            unknown_for_zip_informative: Introdu un nume de district valid pentru
               %{zip}
-            unknown_for_address_instructional: Districtul poate fi incorect
-            unknown_for_address_informative: Districtul poate fi incorect
+            unknown_for_address_instructional: Este posibil ca districtul să fie incorect
+            unknown_for_address_informative: Este posibil ca districtul să fie incorect
           warnings:
             contains_too_many_words: Se recomandă ca districtul să aibă mai puțin
               de %{word_count} cuvinte
@@ -560,9 +560,9 @@ ro:
             default: Subdistrict
             optional: Subdistrict (opțional)
           errors:
-            blank_instructional: Introduceți un subdistrict
-            blank_informative: Subdistrictul lipsește
-            too_long_instructional: Subdistrictul este prea lung (maximul este de
+            blank_instructional: Introdu un subdistrict
+            blank_informative: Lipsește subdistrictul
+            too_long_instructional: Subdistrictul este prea lung (maximum este de
               %{limit} caractere)
             too_long_informative: Subdistrictul este prea lung
             contains_emojis_instructional: Subdistrictul nu poate conține emoji-uri
@@ -572,7 +572,7 @@ ro:
             contains_mathematical_symbols_informative: Subdistrictul nu poate conține
               simboluri matematice
             contains_restricted_characters_instructional: Subdistrictul poate conține
-              doar litere, numere, caractere locale și caractere speciale
+              doar litere, cifre, caractere locale și caractere speciale
             contains_restricted_characters_informative: Subdistrictul nu poate conține
               caractere restricționate
             contains_too_many_words_instructional: Subdistrictul trebuie să aibă mai
@@ -585,16 +585,18 @@ ro:
               HTML
             contains_url_instructional: Subdistrictul nu poate conține URL-uri
             contains_url_informative: Subdistrictul nu poate conține URL-uri
-            unknown_for_city_instructional: Introduceți un nume valid de subdistrict
-              pentru %{city}
-            unknown_for_city_informative: Introduceți un nume valid de subdistrict
-              pentru %{city}
-            unknown_for_zip_instructional: Introduceți un nume valid de subdistrict
-              pentru %{zip}
-            unknown_for_zip_informative: Introduceți un nume valid de subdistrict
-              pentru %{zip}
-            unknown_for_address_instructional: Subdistrictul poate fi incorect
-            unknown_for_address_informative: Subdistrictul poate fi incorect
+            unknown_for_city_instructional: Introdu un nume de subdistrict valid pentru
+              %{city}
+            unknown_for_city_informative: Introdu un nume de subdistrict valid pentru
+              %{city}
+            unknown_for_zip_instructional: Introdu un nume de subdistrict valid pentru
+              %{zip}
+            unknown_for_zip_informative: Introdu un nume de subdistrict valid pentru
+              %{zip}
+            unknown_for_address_instructional: Este posibil ca subdistrictul să fie
+              incorect
+            unknown_for_address_informative: Este posibil ca subdistrictul să fie
+              incorect
           warnings:
             contains_too_many_words: Se recomandă ca subdistrictul să aibă mai puțin
               de %{word_count} cuvinte

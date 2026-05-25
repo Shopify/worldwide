@@ -463,8 +463,8 @@ nb:
           errors:
             blank_instructional: Angi et distrikt
             blank_informative: Distrikt mangler
-            too_long_instructional: Distrikt er for langt (maks %{limit} tegn)
-            too_long_informative: Distrikt er for langt
+            too_long_instructional: Distriktet er for langt (maksimalt %{limit} tegn)
+            too_long_informative: Distriktet er for langt
             contains_emojis_instructional: Distrikt kan ikke inneholde emojier
             contains_emojis_informative: Distrikt kan ikke inneholde emojier
             contains_mathematical_symbols_instructional: Distrikt kan ikke inneholde
@@ -474,7 +474,7 @@ nb:
             contains_restricted_characters_instructional: Distrikt kan bare inneholde
               bokstaver, tall, lokale tegn og spesialtegn
             contains_restricted_characters_informative: Distrikt kan ikke inneholde
-              begrensede tegn
+              ikke-tillatte tegn
             contains_too_many_words_instructional: Distrikt må ha færre enn %{word_count}
               ord
             contains_too_many_words_informative: Distrikt må ha færre enn %{word_count}
@@ -487,10 +487,10 @@ nb:
             unknown_for_city_informative: Angi et gyldig distriktsnavn for %{city}
             unknown_for_zip_instructional: Angi et gyldig distriktsnavn for %{zip}
             unknown_for_zip_informative: Angi et gyldig distriktsnavn for %{zip}
-            unknown_for_address_instructional: Distrikt kan være feil
-            unknown_for_address_informative: Distrikt kan være feil
+            unknown_for_address_instructional: Distriktet kan være feil
+            unknown_for_address_informative: Distriktet kan være feil
           warnings:
-            contains_too_many_words: Det anbefales at distrikt har færre enn %{word_count}
+            contains_too_many_words: Det anbefales at distriktet har færre enn %{word_count}
               ord
         subdistrict:
           label:
@@ -499,8 +499,9 @@ nb:
           errors:
             blank_instructional: Angi et underdistrikt
             blank_informative: Underdistrikt mangler
-            too_long_instructional: Underdistrikt er for langt (maks %{limit} tegn)
-            too_long_informative: Underdistrikt er for langt
+            too_long_instructional: Underdistriktet er for langt (maksimalt %{limit}
+              tegn)
+            too_long_informative: Underdistriktet er for langt
             contains_emojis_instructional: Underdistrikt kan ikke inneholde emojier
             contains_emojis_informative: Underdistrikt kan ikke inneholde emojier
             contains_mathematical_symbols_instructional: Underdistrikt kan ikke inneholde
@@ -510,7 +511,7 @@ nb:
             contains_restricted_characters_instructional: Underdistrikt kan bare inneholde
               bokstaver, tall, lokale tegn og spesialtegn
             contains_restricted_characters_informative: Underdistrikt kan ikke inneholde
-              begrensede tegn
+              ikke-tillatte tegn
             contains_too_many_words_instructional: Underdistrikt må ha færre enn %{word_count}
               ord
             contains_too_many_words_informative: Underdistrikt må ha færre enn %{word_count}
@@ -519,13 +520,16 @@ nb:
             contains_html_tags_informative: Underdistrikt kan ikke inneholde HTML-tagger
             contains_url_instructional: Underdistrikt kan ikke inneholde URL-adresser
             contains_url_informative: Underdistrikt kan ikke inneholde URL-adresser
-            unknown_for_city_instructional: Angi et gyldig underdistriktsnavn for
+            unknown_for_city_instructional: Angi et gyldig navn på underdistrikt for
               %{city}
-            unknown_for_city_informative: Angi et gyldig underdistriktsnavn for %{city}
-            unknown_for_zip_instructional: Angi et gyldig underdistriktsnavn for %{zip}
-            unknown_for_zip_informative: Angi et gyldig underdistriktsnavn for %{zip}
-            unknown_for_address_instructional: Underdistrikt kan være feil
-            unknown_for_address_informative: Underdistrikt kan være feil
+            unknown_for_city_informative: Angi et gyldig navn på underdistrikt for
+              %{city}
+            unknown_for_zip_instructional: Angi et gyldig navn på underdistrikt for
+              %{zip}
+            unknown_for_zip_informative: Angi et gyldig navn på underdistrikt for
+              %{zip}
+            unknown_for_address_instructional: Underdistriktet kan være feil
+            unknown_for_address_informative: Underdistriktet kan være feil
           warnings:
-            contains_too_many_words: Det anbefales at underdistrikt har færre enn
+            contains_too_many_words: Det anbefales at underdistriktet har færre enn
               %{word_count} ord

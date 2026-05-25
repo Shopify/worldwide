@@ -49,7 +49,7 @@ sk:
         district:
           label:
             default: Blok
-            optional: Blok (nepovinné)
+            optional: Blok (voliteľné)
           errors:
             blank_instructional: Zadajte blok
             blank_informative: Chýba blok
@@ -61,18 +61,18 @@ sk:
               symboly
             contains_mathematical_symbols_informative: Blok nemôže obsahovať matematické
               symboly
-            contains_restricted_characters_instructional: Blok môže obsahovať iba
-              písmená, číslice, lokálne znaky a špeciálne znaky
+            contains_restricted_characters_instructional: Blok môže obsahovať len
+              písmená, číslice, lokálne a špeciálne znaky
             contains_restricted_characters_informative: Blok nemôže obsahovať nepovolené
               znaky
-            contains_too_many_words_instructional: Blok musí obsahovať menej ako %{word_count}
+            contains_too_many_words_instructional: Blok musí mať menej ako %{word_count}
               slov
-            contains_too_many_words_informative: Blok musí obsahovať menej ako %{word_count}
+            contains_too_many_words_informative: Blok musí mať menej ako %{word_count}
               slov
             contains_html_tags_instructional: Blok nemôže obsahovať HTML
             contains_html_tags_informative: Blok nemôže obsahovať HTML
-            contains_url_instructional: Blok nemôže obsahovať URL adresu
-            contains_url_informative: Blok nemôže obsahovať URL adresu
+            contains_url_instructional: Blok nemôže obsahovať adresu URL
+            contains_url_informative: Blok nemôže obsahovať adresu URL
             unknown_for_city_instructional: Zadajte platný blok pre %{city}
             unknown_for_city_informative: Blok nie je platný pre %{city}
             unknown_for_zip_instructional: Zadajte platný blok pre %{zip}
@@ -80,5 +80,5 @@ sk:
             unknown_for_address_instructional: Blok môže byť nesprávny
             unknown_for_address_informative: Blok môže byť nesprávny
           warnings:
-            contains_too_many_words: Odporúča sa, aby blok obsahoval menej ako %{word_count}
+            contains_too_many_words: Odporúča sa, aby blok mal menej ako %{word_count}
               slov

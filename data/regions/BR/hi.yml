@@ -17,3 +17,41 @@ hi:
           errors:
             blank_instructional: कोई राज्य चुनें
             blank_informative: राज्य का नाम गुम है
+        district:
+          label:
+            default: मोहल्ला
+            optional: मोहल्ला (वैकल्पिक)
+          errors:
+            blank_instructional: कोई मोहल्ला दर्ज करें.
+            blank_informative: मोहल्ला मौजूद नहीं है.
+            too_long_instructional: मोहल्ला बहुत लंबा है (अधिकतम %{limit} वर्ण होने
+              चाहिए).
+            too_long_informative: मोहल्ला बहुत लंबा है.
+            contains_emojis_instructional: मोहल्ले में इमोजी नहीं हो सकते.
+            contains_emojis_informative: मोहल्ले में इमोजी नहीं हो सकते.
+            contains_mathematical_symbols_instructional: मोहल्ले में गणितीय चिह्न
+              नहीं हो सकते.
+            contains_mathematical_symbols_informative: मोहल्ले में गणितीय चिह्न नहीं
+              हो सकते.
+            contains_restricted_characters_instructional: मोहल्ले में केवल अक्षर,
+              अंक, स्थानीय वर्ण और विशेष वर्ण हो सकते हैं.
+            contains_restricted_characters_informative: मोहल्ले में प्रतिबंधित वर्ण
+              नहीं हो सकते.
+            contains_too_many_words_instructional: मोहल्ले में %{word_count} से कम
+              शब्द होने चाहिए.
+            contains_too_many_words_informative: मोहल्ले में %{word_count} से कम शब्द
+              होने चाहिए.
+            contains_html_tags_instructional: मोहल्ले में HTML टैग नहीं हो सकते.
+            contains_html_tags_informative: मोहल्ले में HTML टैग नहीं हो सकते.
+            contains_url_instructional: मोहल्ले में URL नहीं हो सकते.
+            contains_url_informative: मोहल्ले में URL नहीं हो सकते.
+            unknown_for_city_instructional: "%{city} के लिए कोई मान्य मोहल्ला दर्ज
+              करें."
+            unknown_for_city_informative: "%{city} के लिए कोई मान्य मोहल्ला दर्ज करें."
+            unknown_for_zip_instructional: "%{zip} के लिए कोई मान्य मोहल्ला दर्ज करें."
+            unknown_for_zip_informative: "%{zip} के लिए कोई मान्य मोहल्ला दर्ज करें."
+            unknown_for_address_instructional: मोहल्ला गलत हो सकता है.
+            unknown_for_address_informative: मोहल्ला गलत हो सकता है.
+          warnings:
+            contains_too_many_words: सुझाव है कि मोहल्ले में %{word_count} से कम शब्द
+              हों.

@@ -57,25 +57,26 @@ fr:
           errors:
             blank_instructional: Saisissez un bloc
             blank_informative: Le bloc est manquant
-            too_long_instructional: Le bloc est trop long (%{limit} caractères maximum)
+            too_long_instructional: Le bloc est trop long (maximum de %{limit} caractères)
             too_long_informative: Le bloc est trop long
-            contains_emojis_instructional: Le bloc ne peut pas contenir d’emojis
-            contains_emojis_informative: Le bloc ne peut pas contenir d’emojis
+            contains_emojis_instructional: Le bloc ne peut pas contenir d’émojis
+            contains_emojis_informative: Le bloc ne peut pas contenir d’émojis
             contains_mathematical_symbols_instructional: Le bloc ne peut pas contenir
               de symboles mathématiques
             contains_mathematical_symbols_informative: Le bloc ne peut pas contenir
               de symboles mathématiques
-            contains_restricted_characters_instructional: Le bloc ne peut contenir
-              que des lettres, des chiffres, des caractères locaux et des caractères
+            contains_restricted_characters_instructional: Le bloc peut uniquement
+              contenir des lettres, des chiffres, des caractères locaux et des caractères
               spéciaux
             contains_restricted_characters_informative: Le bloc ne peut pas contenir
               de caractères restreints
-            contains_too_many_words_instructional: Le bloc doit contenir moins de
+            contains_too_many_words_instructional: Le bloc doit comporter moins de
               %{word_count} mots
-            contains_too_many_words_informative: Le bloc doit contenir moins de %{word_count}
+            contains_too_many_words_informative: Le bloc doit comporter moins de %{word_count}
               mots
-            contains_html_tags_instructional: Le bloc ne peut pas contenir de HTML
-            contains_html_tags_informative: Le bloc ne peut pas contenir de HTML
+            contains_html_tags_instructional: Le bloc ne peut pas contenir de code
+              HTML
+            contains_html_tags_informative: Le bloc ne peut pas contenir de code HTML
             contains_url_instructional: Le bloc ne peut pas contenir d’URL
             contains_url_informative: Le bloc ne peut pas contenir d’URL
             unknown_for_city_instructional: Saisissez un bloc valide pour %{city}
@@ -85,5 +86,5 @@ fr:
             unknown_for_address_instructional: Le bloc est peut-être incorrect
             unknown_for_address_informative: Le bloc est peut-être incorrect
           warnings:
-            contains_too_many_words: Il est recommandé que le bloc contienne moins
+            contains_too_many_words: Il est recommandé que le bloc comporte moins
               de %{word_count} mots

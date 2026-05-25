@@ -446,72 +446,74 @@ da:
             default: Distrikt
             optional: Distrikt (valgfrit)
           errors:
-            blank_instructional: Angiv et distrikt
+            blank_instructional: Indtast et distrikt
             blank_informative: Distrikt mangler
-            too_long_instructional: Distrikt er for langt (maks. %{limit} tegn)
-            too_long_informative: Distrikt er for langt
-            contains_emojis_instructional: Distrikt kan ikke indeholde emojis
-            contains_emojis_informative: Distrikt kan ikke indeholde emojis
-            contains_mathematical_symbols_instructional: Distrikt kan ikke indeholde
+            too_long_instructional: Distriktet er for langt (maks. %{limit} tegn)
+            too_long_informative: Distriktet er for langt
+            contains_emojis_instructional: Distriktet kan ikke indeholde emojis
+            contains_emojis_informative: Distriktet kan ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Distriktet kan ikke indeholde
               matematiske symboler
-            contains_mathematical_symbols_informative: Distrikt kan ikke indeholde
+            contains_mathematical_symbols_informative: Distriktet kan ikke indeholde
               matematiske symboler
-            contains_restricted_characters_instructional: Distrikt kan kun indeholde
+            contains_restricted_characters_instructional: Distriktet kan kun indeholde
               bogstaver, tal, lokale tegn og specialtegn
-            contains_restricted_characters_informative: Distrikt kan ikke indeholde
+            contains_restricted_characters_informative: Distriktet kan ikke indeholde
               ikke-tilladte tegn
-            contains_too_many_words_instructional: Distrikt skal have færre end %{word_count}
+            contains_too_many_words_instructional: Distriktet skal have færre end
+              %{word_count} ord
+            contains_too_many_words_informative: Distriktet skal have færre end %{word_count}
               ord
-            contains_too_many_words_informative: Distrikt skal have færre end %{word_count}
-              ord
-            contains_html_tags_instructional: Distrikt kan ikke indeholde HTML-tags
-            contains_html_tags_informative: Distrikt kan ikke indeholde HTML-tags
-            contains_url_instructional: Distrikt kan ikke indeholde webadresser
-            contains_url_informative: Distrikt kan ikke indeholde webadresser
-            unknown_for_city_instructional: Angiv et gyldigt distriktsnavn for %{city}
-            unknown_for_city_informative: Angiv et gyldigt distriktsnavn for %{city}
-            unknown_for_zip_instructional: Angiv et gyldigt distriktsnavn for %{zip}
-            unknown_for_zip_informative: Angiv et gyldigt distriktsnavn for %{zip}
-            unknown_for_address_instructional: Distrikt kan være forkert
-            unknown_for_address_informative: Distrikt kan være forkert
+            contains_html_tags_instructional: Distriktet kan ikke indeholde HTML-tags
+            contains_html_tags_informative: Distriktet kan ikke indeholde HTML-tags
+            contains_url_instructional: Distriktet kan ikke indeholde webadresser
+            contains_url_informative: Distriktet kan ikke indeholde webadresser
+            unknown_for_city_instructional: Indtast et gyldigt distriktsnavn for %{city}
+            unknown_for_city_informative: Indtast et gyldigt distriktsnavn for %{city}
+            unknown_for_zip_instructional: Indtast et gyldigt distriktsnavn for %{zip}
+            unknown_for_zip_informative: Indtast et gyldigt distriktsnavn for %{zip}
+            unknown_for_address_instructional: Distriktet er muligvis forkert
+            unknown_for_address_informative: Distriktet er muligvis forkert
           warnings:
-            contains_too_many_words: Distrikt bør have færre end %{word_count} ord
+            contains_too_many_words: Det anbefales, at distriktet har færre end %{word_count}
+              ord
         subdistrict:
           label:
             default: Underdistrikt
             optional: Underdistrikt (valgfrit)
           errors:
-            blank_instructional: Angiv et underdistrikt
+            blank_instructional: Indtast et underdistrikt
             blank_informative: Underdistrikt mangler
-            too_long_instructional: Underdistrikt er for langt (maks. %{limit} tegn)
-            too_long_informative: Underdistrikt er for langt
-            contains_emojis_instructional: Underdistrikt kan ikke indeholde emojis
-            contains_emojis_informative: Underdistrikt kan ikke indeholde emojis
-            contains_mathematical_symbols_instructional: Underdistrikt kan ikke indeholde
+            too_long_instructional: Underdistriktet er for langt (maks. %{limit} tegn)
+            too_long_informative: Underdistriktet er for langt
+            contains_emojis_instructional: Underdistriktet kan ikke indeholde emojis
+            contains_emojis_informative: Underdistriktet kan ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Underdistriktet kan ikke
+              indeholde matematiske symboler
+            contains_mathematical_symbols_informative: Underdistriktet kan ikke indeholde
               matematiske symboler
-            contains_mathematical_symbols_informative: Underdistrikt kan ikke indeholde
-              matematiske symboler
-            contains_restricted_characters_instructional: Underdistrikt kan kun indeholde
-              bogstaver, tal, lokale tegn og specialtegn
-            contains_restricted_characters_informative: Underdistrikt kan ikke indeholde
+            contains_restricted_characters_instructional: Underdistriktet kan kun
+              indeholde bogstaver, tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Underdistriktet kan ikke indeholde
               ikke-tilladte tegn
-            contains_too_many_words_instructional: Underdistrikt skal have færre end
+            contains_too_many_words_instructional: Underdistriktet skal have færre
+              end %{word_count} ord
+            contains_too_many_words_informative: Underdistriktet skal have færre end
               %{word_count} ord
-            contains_too_many_words_informative: Underdistrikt skal have færre end
-              %{word_count} ord
-            contains_html_tags_instructional: Underdistrikt kan ikke indeholde HTML-tags
-            contains_html_tags_informative: Underdistrikt kan ikke indeholde HTML-tags
-            contains_url_instructional: Underdistrikt kan ikke indeholde webadresser
-            contains_url_informative: Underdistrikt kan ikke indeholde webadresser
-            unknown_for_city_instructional: Angiv et gyldigt underdistriktsnavn for
+            contains_html_tags_instructional: Underdistriktet kan ikke indeholde HTML-tags
+            contains_html_tags_informative: Underdistriktet kan ikke indeholde HTML-tags
+            contains_url_instructional: Underdistriktet kan ikke indeholde webadresser
+            contains_url_informative: Underdistriktet kan ikke indeholde webadresser
+            unknown_for_city_instructional: Indtast et gyldigt underdistriktsnavn
+              for %{city}
+            unknown_for_city_informative: Indtast et gyldigt underdistriktsnavn for
               %{city}
-            unknown_for_city_informative: Angiv et gyldigt underdistriktsnavn for
-              %{city}
-            unknown_for_zip_instructional: Angiv et gyldigt underdistriktsnavn for
+            unknown_for_zip_instructional: Indtast et gyldigt underdistriktsnavn for
               %{zip}
-            unknown_for_zip_informative: Angiv et gyldigt underdistriktsnavn for %{zip}
-            unknown_for_address_instructional: Underdistrikt kan være forkert
-            unknown_for_address_informative: Underdistrikt kan være forkert
+            unknown_for_zip_informative: Indtast et gyldigt underdistriktsnavn for
+              %{zip}
+            unknown_for_address_instructional: Underdistriktet er muligvis forkert
+            unknown_for_address_informative: Underdistriktet er muligvis forkert
           warnings:
-            contains_too_many_words: Underdistrikt bør have færre end %{word_count}
-              ord
+            contains_too_many_words: Det anbefales, at underdistriktet har færre end
+              %{word_count} ord

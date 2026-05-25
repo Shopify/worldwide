@@ -17,3 +17,41 @@ cs:
           errors:
             blank_instructional: Vyberte stát.
             blank_informative: Stát chybí.
+        district:
+          label:
+            default: Čtvrť
+            optional: Čtvrť (volitelné)
+          errors:
+            blank_instructional: Zadejte čtvrť
+            blank_informative: Chybí čtvrť
+            too_long_instructional: Název čtvrti je příliš dlouhý (maximum je %{limit}
+              znaků)
+            too_long_informative: Název čtvrti je příliš dlouhý
+            contains_emojis_instructional: Název čtvrti nesmí obsahovat emodži
+            contains_emojis_informative: Název čtvrti nesmí obsahovat emodži
+            contains_mathematical_symbols_instructional: Název čtvrti nesmí obsahovat
+              matematické symboly
+            contains_mathematical_symbols_informative: Název čtvrti nesmí obsahovat
+              matematické symboly
+            contains_restricted_characters_instructional: Název čtvrti smí obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky
+            contains_restricted_characters_informative: Název čtvrti nesmí obsahovat
+              nepovolené znaky
+            contains_too_many_words_instructional: Název čtvrti musí mít méně než
+              %{word_count} slov
+            contains_too_many_words_informative: Název čtvrti musí mít méně než %{word_count}
+              slov
+            contains_html_tags_instructional: Název čtvrti nesmí obsahovat značky
+              HTML
+            contains_html_tags_informative: Název čtvrti nesmí obsahovat značky HTML
+            contains_url_instructional: Název čtvrti nesmí obsahovat adresy URL
+            contains_url_informative: Název čtvrti nesmí obsahovat adresy URL
+            unknown_for_city_instructional: Zadejte platný název čtvrti pro %{city}
+            unknown_for_city_informative: Zadejte platný název čtvrti pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název čtvrti pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název čtvrti pro %{zip}
+            unknown_for_address_instructional: Název čtvrti je možná nesprávný
+            unknown_for_address_informative: Název čtvrti je možná nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby název čtvrti obsahoval méně
+              než %{word_count} slov

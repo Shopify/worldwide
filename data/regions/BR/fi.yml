@@ -17,3 +17,44 @@ fi:
           errors:
             blank_instructional: Valitse osavaltio
             blank_informative: Osavaltio puuttuu
+        district:
+          label:
+            default: Kaupunginosa
+            optional: Kaupunginosa (valinnainen)
+          errors:
+            blank_instructional: Anna kaupunginosa
+            blank_informative: Kaupunginosa puuttuu
+            too_long_instructional: Kaupunginosa on liian pitkä (enintään %{limit}
+              merkkiä)
+            too_long_informative: Kaupunginosa on liian pitkä
+            contains_emojis_instructional: Kaupunginosa ei voi sisältää emojeja
+            contains_emojis_informative: Kaupunginosa ei voi sisältää emojeja
+            contains_mathematical_symbols_instructional: Kaupunginosa ei voi sisältää
+              matemaattisia symboleja
+            contains_mathematical_symbols_informative: Kaupunginosa ei voi sisältää
+              matemaattisia symboleja
+            contains_restricted_characters_instructional: Kaupunginosa voi sisältää
+              vain kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Kaupunginosa ei voi sisältää
+              kiellettyjä merkkejä
+            contains_too_many_words_instructional: Kaupunginosassa on oltava alle
+              %{word_count} sanaa
+            contains_too_many_words_informative: Kaupunginosassa on oltava alle %{word_count}
+              sanaa
+            contains_html_tags_instructional: Kaupunginosa ei voi sisältää HTML-tunnisteita
+            contains_html_tags_informative: Kaupunginosa ei voi sisältää HTML-tunnisteita
+            contains_url_instructional: Kaupunginosa ei voi sisältää URL-osoitteita
+            contains_url_informative: Kaupunginosa ei voi sisältää URL-osoitteita
+            unknown_for_city_instructional: Anna kelvollinen kaupunginosa kaupungille
+              %{city}
+            unknown_for_city_informative: Anna kelvollinen kaupunginosa kaupungille
+              %{city}
+            unknown_for_zip_instructional: Anna kelvollinen kaupunginosa postinumerolle
+              %{zip}
+            unknown_for_zip_informative: Anna kelvollinen kaupunginosa postinumerolle
+              %{zip}
+            unknown_for_address_instructional: Kaupunginosa saattaa olla virheellinen
+            unknown_for_address_informative: Kaupunginosa saattaa olla virheellinen
+          warnings:
+            contains_too_many_words: Kaupunginosassa suositellaan olevan alle %{word_count}
+              sanaa

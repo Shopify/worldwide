@@ -17,3 +17,46 @@ ro:
           errors:
             blank_instructional: Selectează un stat
             blank_informative: Statul lipsește
+        district:
+          label:
+            default: Cartier
+            optional: Cartier (opțional)
+          errors:
+            blank_instructional: Introdu un cartier
+            blank_informative: Lipsește cartierul
+            too_long_instructional: Cartierul este prea lung (maximum este de %{limit}
+              caractere)
+            too_long_informative: Cartierul este prea lung
+            contains_emojis_instructional: Cartierul nu poate conține emoji-uri
+            contains_emojis_informative: Cartierul nu poate conține emoji-uri
+            contains_mathematical_symbols_instructional: Cartierul nu poate conține
+              simboluri matematice
+            contains_mathematical_symbols_informative: Cartierul nu poate conține
+              simboluri matematice
+            contains_restricted_characters_instructional: Cartierul poate conține
+              doar litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Cartierul nu poate conține
+              caractere restricționate
+            contains_too_many_words_instructional: Cartierul trebuie să aibă mai puțin
+              de %{word_count} cuvinte
+            contains_too_many_words_informative: Cartierul trebuie să aibă mai puțin
+              de %{word_count} cuvinte
+            contains_html_tags_instructional: Cartierul nu poate conține etichete
+              HTML
+            contains_html_tags_informative: Cartierul nu poate conține etichete HTML
+            contains_url_instructional: Cartierul nu poate conține URL-uri
+            contains_url_informative: Cartierul nu poate conține URL-uri
+            unknown_for_city_instructional: Introdu un nume de cartier valid pentru
+              %{city}
+            unknown_for_city_informative: Introdu un nume de cartier valid pentru
+              %{city}
+            unknown_for_zip_instructional: Introdu un nume de cartier valid pentru
+              %{zip}
+            unknown_for_zip_informative: Introdu un nume de cartier valid pentru %{zip}
+            unknown_for_address_instructional: Este posibil ca acest cartier să fie
+              incorect
+            unknown_for_address_informative: Este posibil ca acest cartier să fie
+              incorect
+          warnings:
+            contains_too_many_words: Se recomandă ca acest cartier să aibă mai puțin
+              de %{word_count} cuvinte

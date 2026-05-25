@@ -17,3 +17,39 @@ sk:
           errors:
             blank_instructional: Vyberte štát
             blank_informative: Chýba štát
+        district:
+          label:
+            default: Štvrť
+            optional: Štvrť (voliteľné)
+          errors:
+            blank_instructional: Zadajte štvrť
+            blank_informative: Chýba štvrť
+            too_long_instructional: Štvrť je príliš dlhá (maximum je %{limit} znakov)
+            too_long_informative: Štvrť je príliš dlhá
+            contains_emojis_instructional: Štvrť nemôže obsahovať emoji
+            contains_emojis_informative: Štvrť nemôže obsahovať emoji
+            contains_mathematical_symbols_instructional: Štvrť nemôže obsahovať matematické
+              symboly
+            contains_mathematical_symbols_informative: Štvrť nemôže obsahovať matematické
+              symboly
+            contains_restricted_characters_instructional: Štvrť môže obsahovať len
+              písmená, číslice, lokálne a špeciálne znaky
+            contains_restricted_characters_informative: Štvrť nemôže obsahovať nepovolené
+              znaky
+            contains_too_many_words_instructional: Štvrť musí mať menej ako %{word_count}
+              slov
+            contains_too_many_words_informative: Štvrť musí mať menej ako %{word_count}
+              slov
+            contains_html_tags_instructional: Štvrť nemôže obsahovať značky HTML
+            contains_html_tags_informative: Štvrť nemôže obsahovať značky HTML
+            contains_url_instructional: Štvrť nemôže obsahovať adresy URL
+            contains_url_informative: Štvrť nemôže obsahovať adresy URL
+            unknown_for_city_instructional: Zadajte platný názov štvrte pre %{city}
+            unknown_for_city_informative: Zadajte platný názov štvrte pre %{city}
+            unknown_for_zip_instructional: Zadajte platný názov štvrte pre %{zip}
+            unknown_for_zip_informative: Zadajte platný názov štvrte pre %{zip}
+            unknown_for_address_instructional: Štvrť môže byť nesprávna
+            unknown_for_address_informative: Štvrť môže byť nesprávna
+          warnings:
+            contains_too_many_words: Odporúča sa, aby štvrť mala menej ako %{word_count}
+              slov

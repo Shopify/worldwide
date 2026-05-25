@@ -56,7 +56,8 @@ sl:
           errors:
             blank_instructional: Vnesite blok
             blank_informative: Manjka blok
-            too_long_instructional: Blok je predolg (največ %{limit} znakov)
+            too_long_instructional: Blok je predolg (dovoljenih je največ %{limit}
+              znakov)
             too_long_informative: Blok je predolg
             contains_emojis_instructional: Blok ne sme vsebovati emodžijev
             contains_emojis_informative: Blok ne sme vsebovati emodžijev
@@ -64,24 +65,25 @@ sl:
               simbolov
             contains_mathematical_symbols_informative: Blok ne sme vsebovati matematičnih
               simbolov
-            contains_restricted_characters_instructional: Blok lahko vsebuje samo
-              črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_instructional: Blok lahko vsebuje le črke,
+              številke, lokalne znake in posebne znake
             contains_restricted_characters_informative: Blok ne sme vsebovati nedovoljenih
               znakov
-            contains_too_many_words_instructional: Število besed za blok mora biti
-              manjše od %{word_count}
-            contains_too_many_words_informative: Število besed za blok mora biti manjše
-              od %{word_count}
+            contains_too_many_words_instructional: Blok mora vsebovati manj kot %{word_count}
+              besed
+            contains_too_many_words_informative: Blok mora vsebovati manj kot %{word_count}
+              besed
             contains_html_tags_instructional: Blok ne sme vsebovati kode HTML
             contains_html_tags_informative: Blok ne sme vsebovati kode HTML
             contains_url_instructional: Blok ne sme vsebovati URL-naslova
             contains_url_informative: Blok ne sme vsebovati URL-naslova
-            unknown_for_city_instructional: Vnesite veljaven blok za %{city}
-            unknown_for_city_informative: Blok ni veljaven za %{city}
-            unknown_for_zip_instructional: Vnesite veljaven blok za %{zip}
-            unknown_for_zip_informative: Blok ni veljaven za %{zip}
+            unknown_for_city_instructional: Vnesite veljaven blok za mesto %{city}
+            unknown_for_city_informative: Blok ni veljaven za mesto %{city}
+            unknown_for_zip_instructional: Vnesite veljaven blok za poštno številko
+              %{zip}
+            unknown_for_zip_informative: Blok ni veljaven za poštno številko %{zip}
             unknown_for_address_instructional: Blok je morda napačen
             unknown_for_address_informative: Blok je morda napačen
           warnings:
-            contains_too_many_words: Priporočljivo je, da je število besed za blok
-              manjše od %{word_count}
+            contains_too_many_words: Priporočamo, da blok vsebuje manj kot %{word_count}
+              besed

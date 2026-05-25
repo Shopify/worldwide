@@ -485,7 +485,7 @@ ru:
             optional: Район (необязательно)
           errors:
             blank_instructional: Введите район
-            blank_informative: Район не указан
+            blank_informative: Не указан район
             too_long_instructional: Название района слишком длинное (максимум %{limit}
               символов)
             too_long_informative: Название района слишком длинное
@@ -496,9 +496,9 @@ ru:
             contains_mathematical_symbols_informative: Название района не может содержать
               математические символы
             contains_restricted_characters_instructional: Название района может содержать
-              только буквы, цифры, символы местного алфавита и специальные символы
+              только буквы, цифры, местные и специальные символы
             contains_restricted_characters_informative: Название района не может содержать
-              недопустимые символы
+              запрещенные символы
             contains_too_many_words_instructional: Название района должно содержать
               менее %{word_count} слов
             contains_too_many_words_informative: Название района должно содержать
@@ -508,12 +508,13 @@ ru:
             contains_url_instructional: Название района не может содержать URL
             contains_url_informative: Название района не может содержать URL
             unknown_for_city_instructional: Введите правильное название района для
+              города %{city}
+            unknown_for_city_informative: Введите правильное название района для города
               %{city}
-            unknown_for_city_informative: Введите правильное название района для %{city}
             unknown_for_zip_instructional: Введите правильное название района для
-              почтового индекса %{zip}
-            unknown_for_zip_informative: Введите правильное название района для почтового
               индекса %{zip}
+            unknown_for_zip_informative: Введите правильное название района для индекса
+              %{zip}
             unknown_for_address_instructional: Возможно, район указан неверно
             unknown_for_address_informative: Возможно, район указан неверно
           warnings:
@@ -525,7 +526,7 @@ ru:
             optional: Микрорайон (необязательно)
           errors:
             blank_instructional: Введите микрорайон
-            blank_informative: Микрорайон не указан
+            blank_informative: Не указан микрорайон
             too_long_instructional: Название микрорайона слишком длинное (максимум
               %{limit} символов)
             too_long_informative: Название микрорайона слишком длинное
@@ -537,10 +538,9 @@ ru:
             contains_mathematical_symbols_informative: Название микрорайона не может
               содержать математические символы
             contains_restricted_characters_instructional: Название микрорайона может
-              содержать только буквы, цифры, символы местного алфавита и специальные
-              символы
+              содержать только буквы, цифры, местные и специальные символы
             contains_restricted_characters_informative: Название микрорайона не может
-              содержать недопустимые символы
+              содержать запрещенные символы
             contains_too_many_words_instructional: Название микрорайона должно содержать
               менее %{word_count} слов
             contains_too_many_words_informative: Название микрорайона должно содержать
@@ -552,13 +552,13 @@ ru:
             contains_url_instructional: Название микрорайона не может содержать URL
             contains_url_informative: Название микрорайона не может содержать URL
             unknown_for_city_instructional: Введите правильное название микрорайона
-              для %{city}
+              для города %{city}
             unknown_for_city_informative: Введите правильное название микрорайона
-              для %{city}
+              для города %{city}
             unknown_for_zip_instructional: Введите правильное название микрорайона
-              для почтового индекса %{zip}
+              для индекса %{zip}
             unknown_for_zip_informative: Введите правильное название микрорайона для
-              почтового индекса %{zip}
+              индекса %{zip}
             unknown_for_address_instructional: Возможно, микрорайон указан неверно
             unknown_for_address_informative: Возможно, микрорайон указан неверно
           warnings:

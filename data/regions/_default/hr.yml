@@ -463,11 +463,11 @@ hr:
         district:
           label:
             default: Okrug
-            optional: Okrug (neobavezno)
+            optional: Okrug (nije obavezno)
           errors:
             blank_instructional: Unesite okrug
             blank_informative: Nedostaje okrug
-            too_long_instructional: 'Okrug je predug (najviše znakova: %{limit})'
+            too_long_instructional: 'Okrug je predug (maksimalan broj znakova: %{limit})'
             too_long_informative: Okrug je predug
             contains_emojis_instructional: Okrug ne može sadržavati emojije
             contains_emojis_informative: Okrug ne može sadržavati emojije
@@ -477,7 +477,7 @@ hr:
               simbole
             contains_restricted_characters_instructional: Okrug može sadržavati samo
               slova, brojeve, lokalne znakove i posebne znakove
-            contains_restricted_characters_informative: Okrug ne može sadržavati nedopuštene
+            contains_restricted_characters_informative: Okrug ne može sadržavati zabranjene
               znakove
             contains_too_many_words_instructional: Okrug mora imati manje od %{word_count}
               riječi
@@ -487,25 +487,24 @@ hr:
             contains_html_tags_informative: Okrug ne može sadržavati HTML oznake
             contains_url_instructional: Okrug ne može sadržavati URL-ove
             contains_url_informative: Okrug ne može sadržavati URL-ove
-            unknown_for_city_instructional: Unesite važeći naziv okruga za grad %{city}
-            unknown_for_city_informative: Unesite važeći naziv okruga za grad %{city}
-            unknown_for_zip_instructional: Unesite važeći naziv okruga za poštanski
-              broj %{zip}
-            unknown_for_zip_informative: Unesite važeći naziv okruga za poštanski
-              broj %{zip}
+            unknown_for_city_instructional: Unesite važeći naziv okruga za %{city}
+            unknown_for_city_informative: Unesite važeći naziv okruga za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv okruga za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv okruga za %{zip}
             unknown_for_address_instructional: Okrug je možda netočan
             unknown_for_address_informative: Okrug je možda netočan
           warnings:
-            contains_too_many_words: Preporučuje se da okrug ima manje od %{word_count}
+            contains_too_many_words: Preporučuje se da naziv okruga ima manje od %{word_count}
               riječi
         subdistrict:
           label:
             default: Podokrug
-            optional: Podokrug (neobavezno)
+            optional: Podokrug (nije obavezno)
           errors:
             blank_instructional: Unesite podokrug
             blank_informative: Nedostaje podokrug
-            too_long_instructional: 'Podokrug je predug (najviše znakova: %{limit})'
+            too_long_instructional: 'Podokrug je predug (maksimalan broj znakova:
+              %{limit})'
             too_long_informative: Podokrug je predug
             contains_emojis_instructional: Podokrug ne može sadržavati emojije
             contains_emojis_informative: Podokrug ne može sadržavati emojije
@@ -516,7 +515,7 @@ hr:
             contains_restricted_characters_instructional: Podokrug može sadržavati
               samo slova, brojeve, lokalne znakove i posebne znakove
             contains_restricted_characters_informative: Podokrug ne može sadržavati
-              nedopuštene znakove
+              zabranjene znakove
             contains_too_many_words_instructional: Podokrug mora imati manje od %{word_count}
               riječi
             contains_too_many_words_informative: Podokrug mora imati manje od %{word_count}
@@ -525,15 +524,12 @@ hr:
             contains_html_tags_informative: Podokrug ne može sadržavati HTML oznake
             contains_url_instructional: Podokrug ne može sadržavati URL-ove
             contains_url_informative: Podokrug ne može sadržavati URL-ove
-            unknown_for_city_instructional: Unesite važeći naziv podokruga za grad
-              %{city}
-            unknown_for_city_informative: Unesite važeći naziv podokruga za grad %{city}
-            unknown_for_zip_instructional: Unesite važeći naziv podokruga za poštanski
-              broj %{zip}
-            unknown_for_zip_informative: Unesite važeći naziv podokruga za poštanski
-              broj %{zip}
+            unknown_for_city_instructional: Unesite važeći naziv podokruga za %{city}
+            unknown_for_city_informative: Unesite važeći naziv podokruga za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv podokruga za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv podokruga za %{zip}
             unknown_for_address_instructional: Podokrug je možda netočan
             unknown_for_address_informative: Podokrug je možda netočan
           warnings:
-            contains_too_many_words: Preporučuje se da podokrug ima manje od %{word_count}
-              riječi
+            contains_too_many_words: Preporučuje se da naziv podokruga ima manje od
+              %{word_count} riječi

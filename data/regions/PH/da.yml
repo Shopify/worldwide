@@ -43,33 +43,34 @@ da:
             default: Barangay
             optional: Barangay (valgfrit)
           errors:
-            blank_instructional: Angiv en barangay
+            blank_instructional: Indtast en barangay
             blank_informative: Barangay mangler
-            too_long_instructional: Barangay er for lang (maks. %{limit} tegn)
-            too_long_informative: Barangay er for lang
-            contains_emojis_instructional: Barangay kan ikke indeholde emojis
-            contains_emojis_informative: Barangay kan ikke indeholde emojis
-            contains_mathematical_symbols_instructional: Barangay kan ikke indeholde
+            too_long_instructional: Barangayen er for lang (maks. %{limit} tegn)
+            too_long_informative: Barangayen er for lang
+            contains_emojis_instructional: Barangayen kan ikke indeholde emojis
+            contains_emojis_informative: Barangayen kan ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Barangayen kan ikke indeholde
               matematiske symboler
-            contains_mathematical_symbols_informative: Barangay kan ikke indeholde
+            contains_mathematical_symbols_informative: Barangayen kan ikke indeholde
               matematiske symboler
-            contains_restricted_characters_instructional: Barangay kan kun indeholde
+            contains_restricted_characters_instructional: Barangayen kan kun indeholde
               bogstaver, tal, lokale tegn og specialtegn
-            contains_restricted_characters_informative: Barangay kan ikke indeholde
+            contains_restricted_characters_informative: Barangayen kan ikke indeholde
               ikke-tilladte tegn
-            contains_too_many_words_instructional: Barangay skal have færre end %{word_count}
+            contains_too_many_words_instructional: Barangayen skal have færre end
+              %{word_count} ord
+            contains_too_many_words_informative: Barangayen skal have færre end %{word_count}
               ord
-            contains_too_many_words_informative: Barangay skal have færre end %{word_count}
-              ord
-            contains_html_tags_instructional: Barangay kan ikke indeholde HTML
-            contains_html_tags_informative: Barangay kan ikke indeholde HTML
-            contains_url_instructional: Barangay kan ikke indeholde en webadresse
-            contains_url_informative: Barangay kan ikke indeholde en webadresse
-            unknown_for_city_instructional: Angiv et gyldigt barangay-navn for %{city}
-            unknown_for_city_informative: Angiv et gyldigt barangay-navn for %{city}
-            unknown_for_zip_instructional: Angiv et gyldigt barangay-navn for %{zip}
-            unknown_for_zip_informative: Angiv et gyldigt barangay-navn for %{zip}
-            unknown_for_address_instructional: Barangay kan være forkert
-            unknown_for_address_informative: Barangay kan være forkert
+            contains_html_tags_instructional: Barangayen kan ikke indeholde HTML
+            contains_html_tags_informative: Barangayen kan ikke indeholde HTML
+            contains_url_instructional: Barangayen kan ikke indeholde en webadresse
+            contains_url_informative: Barangayen kan ikke indeholde en webadresse
+            unknown_for_city_instructional: Indtast et gyldigt barangay-navn for %{city}
+            unknown_for_city_informative: Indtast et gyldigt barangay-navn for %{city}
+            unknown_for_zip_instructional: Indtast et gyldigt barangay-navn for %{zip}
+            unknown_for_zip_informative: Indtast et gyldigt barangay-navn for %{zip}
+            unknown_for_address_instructional: Barangayen er muligvis forkert
+            unknown_for_address_informative: Barangayen er muligvis forkert
           warnings:
-            contains_too_many_words: Barangay bør have færre end %{word_count} ord
+            contains_too_many_words: Det anbefales, at barangayen har færre end %{word_count}
+              ord

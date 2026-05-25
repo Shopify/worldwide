@@ -43,37 +43,37 @@ cs:
         district:
           label:
             default: Barangay
-            optional: Barangay (nepovinné)
+            optional: Barangay (volitelné)
           errors:
             blank_instructional: Zadejte barangay
             blank_informative: Chybí barangay
-            too_long_instructional: Barangay je příliš dlouhý (maximálně %{limit}
+            too_long_instructional: Název barangaye je příliš dlouhý (maximum je %{limit}
               znaků)
-            too_long_informative: Barangay je příliš dlouhý
-            contains_emojis_instructional: Barangay nemůže obsahovat emotikony
-            contains_emojis_informative: Barangay nemůže obsahovat emotikony
-            contains_mathematical_symbols_instructional: Barangay nemůže obsahovat
+            too_long_informative: Název barangaye je příliš dlouhý
+            contains_emojis_instructional: Název barangaye nesmí obsahovat emodži
+            contains_emojis_informative: Název barangaye nesmí obsahovat emodži
+            contains_mathematical_symbols_instructional: Název barangaye nesmí obsahovat
               matematické symboly
-            contains_mathematical_symbols_informative: Barangay nemůže obsahovat matematické
-              symboly
-            contains_restricted_characters_instructional: Barangay může obsahovat
-              pouze písmena, číslice, místní a speciální znaky
-            contains_restricted_characters_informative: Barangay nesmí obsahovat nepovolené
-              znaky
-            contains_too_many_words_instructional: Barangay musí mít méně než %{word_count}
-              slov
-            contains_too_many_words_informative: Barangay musí mít méně než %{word_count}
-              slov
-            contains_html_tags_instructional: Barangay nemůže obsahovat HTML
-            contains_html_tags_informative: Barangay nemůže obsahovat HTML
-            contains_url_instructional: Barangay nemůže obsahovat URL
-            contains_url_informative: Barangay nemůže obsahovat URL
-            unknown_for_city_instructional: Zadejte platný název barangay pro %{city}
-            unknown_for_city_informative: Zadejte platný název barangay pro %{city}
-            unknown_for_zip_instructional: Zadejte platný název barangay pro %{zip}
-            unknown_for_zip_informative: Zadejte platný název barangay pro %{zip}
-            unknown_for_address_instructional: Barangay může být nesprávný
-            unknown_for_address_informative: Barangay může být nesprávný
-          warnings:
-            contains_too_many_words: Doporučujeme, aby barangay obsahoval méně než
+            contains_mathematical_symbols_informative: Název barangaye nesmí obsahovat
+              matematické symboly
+            contains_restricted_characters_instructional: Název barangaye smí obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky
+            contains_restricted_characters_informative: Název barangaye nesmí obsahovat
+              nepovolené znaky
+            contains_too_many_words_instructional: Název barangaye musí mít méně než
               %{word_count} slov
+            contains_too_many_words_informative: Název barangaye musí mít méně než
+              %{word_count} slov
+            contains_html_tags_instructional: Název barangaye nesmí obsahovat HTML
+            contains_html_tags_informative: Název barangaye nesmí obsahovat HTML
+            contains_url_instructional: Název barangaye nesmí obsahovat adresu URL
+            contains_url_informative: Název barangaye nesmí obsahovat adresu URL
+            unknown_for_city_instructional: Zadejte platný název barangaye pro %{city}
+            unknown_for_city_informative: Zadejte platný název barangaye pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název barangaye pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název barangaye pro %{zip}
+            unknown_for_address_instructional: Název barangaye je možná nesprávný
+            unknown_for_address_informative: Název barangaye je možná nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby název barangaye obsahoval méně
+              než %{word_count} slov

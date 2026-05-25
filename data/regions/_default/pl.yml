@@ -458,77 +458,81 @@ pl:
             optional: Okręg (opcjonalnie)
           errors:
             blank_instructional: Wprowadź okręg
-            blank_informative: Brakuje okręgu
-            too_long_instructional: Okręg jest za długi (maksymalnie %{limit} znaków)
-            too_long_informative: Okręg jest za długi
-            contains_emojis_instructional: Okręg nie może zawierać emoji
-            contains_emojis_informative: Okręg nie może zawierać emoji
-            contains_mathematical_symbols_instructional: Okręg nie może zawierać symboli
-              matematycznych
-            contains_mathematical_symbols_informative: Okręg nie może zawierać symboli
-              matematycznych
-            contains_restricted_characters_instructional: Okręg może zawierać tylko
-              litery, cyfry, znaki lokalne i znaki specjalne
-            contains_restricted_characters_informative: Okręg nie może zawierać niedozwolonych
-              znaków
-            contains_too_many_words_instructional: Okręg musi zawierać mniej niż %{word_count}
-              słów
-            contains_too_many_words_informative: Okręg musi zawierać mniej niż %{word_count}
-              słów
-            contains_html_tags_instructional: Okręg nie może zawierać tagów HTML
-            contains_html_tags_informative: Okręg nie może zawierać tagów HTML
-            contains_url_instructional: Okręg nie może zawierać adresów URL
-            contains_url_informative: Okręg nie może zawierać adresów URL
-            unknown_for_city_instructional: Wprowadź prawidłową nazwę okręgu dla miasta
-              %{city}
-            unknown_for_city_informative: Wprowadź prawidłową nazwę okręgu dla miasta
-              %{city}
-            unknown_for_zip_instructional: Wprowadź prawidłową nazwę okręgu dla kodu
-              pocztowego %{zip}
-            unknown_for_zip_informative: Wprowadź prawidłową nazwę okręgu dla kodu
-              pocztowego %{zip}
-            unknown_for_address_instructional: Okręg może być nieprawidłowy
-            unknown_for_address_informative: Okręg może być nieprawidłowy
+            blank_informative: Brak okręgu
+            too_long_instructional: Nazwa okręgu jest za długa (maksymalnie %{limit}
+              znaków)
+            too_long_informative: Nazwa okręgu jest za długa
+            contains_emojis_instructional: Nazwa okręgu nie może zawierać emoji
+            contains_emojis_informative: Nazwa okręgu nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Nazwa okręgu nie może zawierać
+              symboli matematycznych
+            contains_mathematical_symbols_informative: Nazwa okręgu nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Nazwa okręgu może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Nazwa okręgu nie może zawierać
+              niedozwolonych znaków
+            contains_too_many_words_instructional: Liczba słów w nazwie okręgu musi
+              być mniejsza niż %{word_count}
+            contains_too_many_words_informative: Liczba słów w nazwie okręgu musi
+              być mniejsza niż %{word_count}
+            contains_html_tags_instructional: Nazwa okręgu nie może zawierać tagów
+              HTML
+            contains_html_tags_informative: Nazwa okręgu nie może zawierać tagów HTML
+            contains_url_instructional: Nazwa okręgu nie może zawierać adresów URL
+            contains_url_informative: Nazwa okręgu nie może zawierać adresów URL
+            unknown_for_city_instructional: 'Wprowadź prawidłową nazwę okręgu dla:
+              %{city}'
+            unknown_for_city_informative: 'Wprowadź prawidłową nazwę okręgu dla: %{city}'
+            unknown_for_zip_instructional: 'Wprowadź prawidłową nazwę okręgu dla:
+              %{zip}'
+            unknown_for_zip_informative: 'Wprowadź prawidłową nazwę okręgu dla: %{zip}'
+            unknown_for_address_instructional: Nazwa okręgu może być nieprawidłowa
+            unknown_for_address_informative: Nazwa okręgu może być nieprawidłowa
           warnings:
-            contains_too_many_words: Zaleca się, aby okręg zawierał mniej niż %{word_count}
-              słów
+            contains_too_many_words: Zaleca się, aby liczba słów w nazwie okręgu była
+              mniejsza niż %{word_count}
         subdistrict:
           label:
             default: Podokręg
             optional: Podokręg (opcjonalnie)
           errors:
             blank_instructional: Wprowadź podokręg
-            blank_informative: Brakuje podokręgu
-            too_long_instructional: Podokręg jest za długi (maksymalnie %{limit} znaków)
-            too_long_informative: Podokręg jest za długi
-            contains_emojis_instructional: Podokręg nie może zawierać emoji
-            contains_emojis_informative: Podokręg nie może zawierać emoji
-            contains_mathematical_symbols_instructional: Podokręg nie może zawierać
+            blank_informative: Brak podokręgu
+            too_long_instructional: Nazwa podokręgu jest za długa (maksymalnie %{limit}
+              znaków)
+            too_long_informative: Nazwa podokręgu jest za długa
+            contains_emojis_instructional: Nazwa podokręgu nie może zawierać emoji
+            contains_emojis_informative: Nazwa podokręgu nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Nazwa podokręgu nie może
+              zawierać symboli matematycznych
+            contains_mathematical_symbols_informative: Nazwa podokręgu nie może zawierać
               symboli matematycznych
-            contains_mathematical_symbols_informative: Podokręg nie może zawierać
-              symboli matematycznych
-            contains_restricted_characters_instructional: Podokręg może zawierać tylko
-              litery, cyfry, znaki lokalne i znaki specjalne
-            contains_restricted_characters_informative: Podokręg nie może zawierać
+            contains_restricted_characters_instructional: Nazwa podokręgu może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Nazwa podokręgu nie może zawierać
               niedozwolonych znaków
-            contains_too_many_words_instructional: Podokręg musi zawierać mniej niż
-              %{word_count} słów
-            contains_too_many_words_informative: Podokręg musi zawierać mniej niż
-              %{word_count} słów
-            contains_html_tags_instructional: Podokręg nie może zawierać tagów HTML
-            contains_html_tags_informative: Podokręg nie może zawierać tagów HTML
-            contains_url_instructional: Podokręg nie może zawierać adresów URL
-            contains_url_informative: Podokręg nie może zawierać adresów URL
-            unknown_for_city_instructional: Wprowadź prawidłową nazwę podokręgu dla
-              miasta %{city}
-            unknown_for_city_informative: Wprowadź prawidłową nazwę podokręgu dla
-              miasta %{city}
-            unknown_for_zip_instructional: Wprowadź prawidłową nazwę podokręgu dla
-              kodu pocztowego %{zip}
-            unknown_for_zip_informative: Wprowadź prawidłową nazwę podokręgu dla kodu
-              pocztowego %{zip}
-            unknown_for_address_instructional: Podokręg może być nieprawidłowy
-            unknown_for_address_informative: Podokręg może być nieprawidłowy
+            contains_too_many_words_instructional: Liczba słów w nazwie podokręgu
+              musi być mniejsza niż %{word_count}
+            contains_too_many_words_informative: Liczba słów w nazwie podokręgu musi
+              być mniejsza niż %{word_count}
+            contains_html_tags_instructional: Nazwa podokręgu nie może zawierać tagów
+              HTML
+            contains_html_tags_informative: Nazwa podokręgu nie może zawierać tagów
+              HTML
+            contains_url_instructional: Nazwa podokręgu nie może zawierać adresów
+              URL
+            contains_url_informative: Nazwa podokręgu nie może zawierać adresów URL
+            unknown_for_city_instructional: 'Wprowadź prawidłową nazwę podokręgu dla:
+              %{city}'
+            unknown_for_city_informative: 'Wprowadź prawidłową nazwę podokręgu dla:
+              %{city}'
+            unknown_for_zip_instructional: 'Wprowadź prawidłową nazwę podokręgu dla:
+              %{zip}'
+            unknown_for_zip_informative: 'Wprowadź prawidłową nazwę podokręgu dla:
+              %{zip}'
+            unknown_for_address_instructional: Nazwa podokręgu może być nieprawidłowa
+            unknown_for_address_informative: Nazwa podokręgu może być nieprawidłowa
           warnings:
-            contains_too_many_words: Zaleca się, aby podokręg zawierał mniej niż %{word_count}
-              słów
+            contains_too_many_words: Zaleca się, aby liczba słów w nazwie podokręgu
+              była mniejsza niż %{word_count}
