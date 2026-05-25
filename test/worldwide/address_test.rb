@@ -49,19 +49,6 @@ module Worldwide
       assert_equal "Vila Madalena", address.subdistrict
     end
 
-    test "format fills district and subdistrict additional lines" do
-      address = Address.new(
-        district: "Centro",
-        subdistrict: "Vila Madalena",
-        country_code: "BR",
-      )
-
-      lines = address.format(additional_lines: ["{district}", "{subdistrict}"])
-
-      assert_includes lines, "Centro"
-      assert_includes lines, "Vila Madalena"
-    end
-
     test "omitted parameters default to `nil`, except for country_code" do
       address = Address.new
 

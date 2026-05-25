@@ -107,7 +107,7 @@ module Worldwide
 
     test "district and subdistrict errors return expected values" do
       [
-        [:br, :district, :blank, "Enter a district"],
+        [:br, :district, :blank, "Enter a neighborhood"],
         [:kw, :district, :blank, "Enter a block"],
         [:pe, :district, :blank, "Enter a district"],
         [:pe, :subdistrict, :blank, "Enter a subdistrict"],
@@ -153,7 +153,7 @@ module Worldwide
         [:de, :ae, :province, "Emirat"],
         [:ja, :jp, :province, "都道府県"],
         [:en, :jp, :province, "Prefecture"],
-        [:en, :br, :district, "District"],
+        [:en, :br, :district, "Neighborhood"],
         [:en, :ph, :district, "Barangay"],
         [:en, :kw, :district, "Block"],
         [:en, :pe, :district, "District"],

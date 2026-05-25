@@ -311,8 +311,6 @@ module Worldwide
         last_name: last_name,
         phone: phone,
         province: province_name,
-        district: district,
-        subdistrict: subdistrict,
         zip: zip,
       }
     end
