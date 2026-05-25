@@ -17,3 +17,39 @@ vi:
           errors:
             blank_instructional: Chọn tiểu bang
             blank_informative: Thiếu tiểu bang
+        district:
+          label:
+            default: Khu phố
+            optional: Khu phố (tùy chọn)
+          errors:
+            blank_instructional: Nhập khu phố
+            blank_informative: Thiếu khu phố
+            too_long_instructional: Khu phố quá dài (tối đa %{limit} ký tự)
+            too_long_informative: Khu phố quá dài
+            contains_emojis_instructional: Khu phố không được chứa biểu tượng cảm
+              xúc
+            contains_emojis_informative: Khu phố không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols_instructional: Khu phố không được chứa ký
+              hiệu toán học
+            contains_mathematical_symbols_informative: Khu phố không được chứa ký
+              hiệu toán học
+            contains_restricted_characters_instructional: Khu phố chỉ có thể chứa
+              chữ cái, số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Khu phố không được chứa ký
+              tự bị hạn chế
+            contains_too_many_words_instructional: Khu phố phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Khu phố phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Khu phố không được chứa thẻ HTML
+            contains_html_tags_informative: Khu phố không được chứa thẻ HTML
+            contains_url_instructional: Khu phố không được chứa URL
+            contains_url_informative: Khu phố không được chứa URL
+            unknown_for_city_instructional: Nhập tên khu phố hợp lệ cho %{city}
+            unknown_for_city_informative: Nhập tên khu phố hợp lệ cho %{city}
+            unknown_for_zip_instructional: Nhập tên khu phố hợp lệ cho %{zip}
+            unknown_for_zip_informative: Nhập tên khu phố hợp lệ cho %{zip}
+            unknown_for_address_instructional: Khu phố có thể không chính xác
+            unknown_for_address_informative: Khu phố có thể không chính xác
+          warnings:
+            contains_too_many_words: Khu phố nên có ít hơn %{word_count} từ

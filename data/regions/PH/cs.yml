@@ -40,3 +40,40 @@ cs:
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název barangay obsahoval
               méně než tento počet slov: %{word_count}.'
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (volitelné)
+          errors:
+            blank_instructional: Zadejte barangay
+            blank_informative: Chybí barangay
+            too_long_instructional: Název barangaye je příliš dlouhý (maximum je %{limit}
+              znaků)
+            too_long_informative: Název barangaye je příliš dlouhý
+            contains_emojis_instructional: Název barangaye nesmí obsahovat emodži
+            contains_emojis_informative: Název barangaye nesmí obsahovat emodži
+            contains_mathematical_symbols_instructional: Název barangaye nesmí obsahovat
+              matematické symboly
+            contains_mathematical_symbols_informative: Název barangaye nesmí obsahovat
+              matematické symboly
+            contains_restricted_characters_instructional: Název barangaye smí obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky
+            contains_restricted_characters_informative: Název barangaye nesmí obsahovat
+              nepovolené znaky
+            contains_too_many_words_instructional: Název barangaye musí mít méně než
+              %{word_count} slov
+            contains_too_many_words_informative: Název barangaye musí mít méně než
+              %{word_count} slov
+            contains_html_tags_instructional: Název barangaye nesmí obsahovat HTML
+            contains_html_tags_informative: Název barangaye nesmí obsahovat HTML
+            contains_url_instructional: Název barangaye nesmí obsahovat adresu URL
+            contains_url_informative: Název barangaye nesmí obsahovat adresu URL
+            unknown_for_city_instructional: Zadejte platný název barangaye pro %{city}
+            unknown_for_city_informative: Zadejte platný název barangaye pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název barangaye pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název barangaye pro %{zip}
+            unknown_for_address_instructional: Název barangaye je možná nesprávný
+            unknown_for_address_informative: Název barangaye je možná nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby název barangaye obsahoval méně
+              než %{word_count} slov

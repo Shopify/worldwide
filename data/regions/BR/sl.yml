@@ -17,3 +17,43 @@ sl:
           errors:
             blank_instructional: Izberite državo
             blank_informative: Manjka država
+        district:
+          label:
+            default: Soseska
+            optional: Soseska (izbirno)
+          errors:
+            blank_instructional: Vnesite sosesko
+            blank_informative: Manjka soseska
+            too_long_instructional: Soseska je predolga (dovoljenih je največ %{limit}
+              znakov)
+            too_long_informative: Soseska je predolga
+            contains_emojis_instructional: Soseska ne sme vsebovati emodžijev
+            contains_emojis_informative: Soseska ne sme vsebovati emodžijev
+            contains_mathematical_symbols_instructional: Soseska ne sme vsebovati
+              matematičnih simbolov
+            contains_mathematical_symbols_informative: Soseska ne sme vsebovati matematičnih
+              simbolov
+            contains_restricted_characters_instructional: Soseska lahko vsebuje le
+              črke, številke, lokalne znake in posebne znake
+            contains_restricted_characters_informative: Soseska ne sme vsebovati nedovoljenih
+              znakov
+            contains_too_many_words_instructional: Soseska mora vsebovati manj kot
+              %{word_count} besed
+            contains_too_many_words_informative: Soseska mora vsebovati manj kot %{word_count}
+              besed
+            contains_html_tags_instructional: Soseska ne sme vsebovati oznak HTML
+            contains_html_tags_informative: Soseska ne sme vsebovati oznak HTML
+            contains_url_instructional: Soseska ne sme vsebovati URL-naslovov
+            contains_url_informative: Soseska ne sme vsebovati URL-naslovov
+            unknown_for_city_instructional: Vnesite veljavno ime soseske za mesto
+              %{city}
+            unknown_for_city_informative: Vnesite veljavno ime soseske za mesto %{city}
+            unknown_for_zip_instructional: Vnesite veljavno ime soseske za poštno
+              številko %{zip}
+            unknown_for_zip_informative: Vnesite veljavno ime soseske za poštno številko
+              %{zip}
+            unknown_for_address_instructional: Soseska je morda napačna
+            unknown_for_address_informative: Soseska je morda napačna
+          warnings:
+            contains_too_many_words: Priporočamo, da soseska vsebuje manj kot %{word_count}
+              besed

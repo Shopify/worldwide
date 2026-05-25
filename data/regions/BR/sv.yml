@@ -17,3 +17,39 @@ sv:
           errors:
             blank_instructional: Välj en stat
             blank_informative: Stat saknas
+        district:
+          label:
+            default: Stadsdel
+            optional: Stadsdel (valfritt)
+          errors:
+            blank_instructional: Ange en stadsdel
+            blank_informative: Stadsdel saknas
+            too_long_instructional: Stadsdelen är för lång (max %{limit} tecken)
+            too_long_informative: Stadsdelen är för lång
+            contains_emojis_instructional: Stadsdelen kan inte innehålla emojis
+            contains_emojis_informative: Stadsdelen kan inte innehålla emojis
+            contains_mathematical_symbols_instructional: Stadsdelen kan inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Stadsdelen kan inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Stadsdelen kan endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Stadsdelen kan inte innehålla
+              otillåtna tecken
+            contains_too_many_words_instructional: Stadsdelen måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Stadsdelen måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Stadsdelen kan inte innehålla HTML-taggar
+            contains_html_tags_informative: Stadsdelen kan inte innehålla HTML-taggar
+            contains_url_instructional: Stadsdelen kan inte innehålla URL:er
+            contains_url_informative: Stadsdelen kan inte innehålla URL:er
+            unknown_for_city_instructional: Ange en giltig stadsdel för %{city}
+            unknown_for_city_informative: Ange en giltig stadsdel för %{city}
+            unknown_for_zip_instructional: Ange en giltig stadsdel för %{zip}
+            unknown_for_zip_informative: Ange en giltig stadsdel för %{zip}
+            unknown_for_address_instructional: Stadsdelen kan vara felaktig
+            unknown_for_address_informative: Stadsdelen kan vara felaktig
+          warnings:
+            contains_too_many_words: Stadsdelen rekommenderas ha färre än %{word_count}
+              ord

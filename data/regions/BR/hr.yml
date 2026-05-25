@@ -17,3 +17,39 @@ hr:
           errors:
             blank_instructional: Odaberite saveznu državu
             blank_informative: Nedostaje savezna država
+        district:
+          label:
+            default: Četvrt
+            optional: Četvrt (nije obavezno)
+          errors:
+            blank_instructional: Unesite četvrt
+            blank_informative: Nedostaje četvrt
+            too_long_instructional: 'Četvrt je preduga (maksimalan broj znakova: %{limit})'
+            too_long_informative: Četvrt je preduga
+            contains_emojis_instructional: Četvrt ne može sadržavati emojije
+            contains_emojis_informative: Četvrt ne može sadržavati emojije
+            contains_mathematical_symbols_instructional: Četvrt ne može sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Četvrt ne može sadržavati matematičke
+              simbole
+            contains_restricted_characters_instructional: Četvrt može sadržavati samo
+              slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Četvrt ne može sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: Četvrt mora imati manje od %{word_count}
+              riječi
+            contains_too_many_words_informative: Četvrt mora imati manje od %{word_count}
+              riječi
+            contains_html_tags_instructional: Četvrt ne može sadržavati HTML oznake
+            contains_html_tags_informative: Četvrt ne može sadržavati HTML oznake
+            contains_url_instructional: Četvrt ne može sadržavati URL-ove
+            contains_url_informative: Četvrt ne može sadržavati URL-ove
+            unknown_for_city_instructional: Unesite važeći naziv četvrti za %{city}
+            unknown_for_city_informative: Unesite važeći naziv četvrti za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv četvrti za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv četvrti za %{zip}
+            unknown_for_address_instructional: Četvrt je možda netočna
+            unknown_for_address_informative: Četvrt je možda netočna
+          warnings:
+            contains_too_many_words: Preporučuje se da naziv četvrti ima manje od
+              %{word_count} riječi

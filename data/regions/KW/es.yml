@@ -53,3 +53,40 @@ es:
           warnings:
             contains_too_many_words: Se recomienda que el nombre del bloque tenga
               menos de %{word_count} palabras.
+        district:
+          label:
+            default: Bloque
+            optional: Bloque (opcional)
+          errors:
+            blank_instructional: Ingresa un bloque
+            blank_informative: Falta el bloque
+            too_long_instructional: El bloque es demasiado largo (el máximo es de
+              %{limit} caracteres)
+            too_long_informative: El bloque es demasiado largo
+            contains_emojis_instructional: El bloque no puede contener emojis
+            contains_emojis_informative: El bloque no puede contener emojis
+            contains_mathematical_symbols_instructional: El bloque no puede contener
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: El bloque no puede contener
+              símbolos matemáticos
+            contains_restricted_characters_instructional: El bloque solo puede contener
+              letras, números, caracteres locales y caracteres especiales
+            contains_restricted_characters_informative: El bloque no puede contener
+              caracteres restringidos
+            contains_too_many_words_instructional: El bloque debe tener menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: El bloque debe tener menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: El bloque no puede contener HTML
+            contains_html_tags_informative: El bloque no puede contener HTML
+            contains_url_instructional: El bloque no puede contener una URL
+            contains_url_informative: El bloque no puede contener una URL
+            unknown_for_city_instructional: Ingresa un bloque válido para %{city}
+            unknown_for_city_informative: El bloque no es válido para %{city}
+            unknown_for_zip_instructional: Ingresa un bloque válido para %{zip}
+            unknown_for_zip_informative: El bloque no es válido para %{zip}
+            unknown_for_address_instructional: El bloque podría ser incorrecto
+            unknown_for_address_informative: El bloque podría ser incorrecto
+          warnings:
+            contains_too_many_words: Se recomienda que el bloque tenga menos de %{word_count}
+              palabras

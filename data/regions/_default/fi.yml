@@ -456,3 +456,78 @@ fi:
           errors:
             may_not_exist_instructional: Osoitetta ei löydy tai sitä ei ole
             may_not_exist_informative: Osoitetta ei löydy
+        district:
+          label:
+            default: Piiri
+            optional: Piiri (valinnainen)
+          errors:
+            blank_instructional: Anna piiri
+            blank_informative: Piiri puuttuu
+            too_long_instructional: Piiri on liian pitkä (enintään %{limit} merkkiä)
+            too_long_informative: Piiri on liian pitkä
+            contains_emojis_instructional: Piiri ei voi sisältää emojeja
+            contains_emojis_informative: Piiri ei voi sisältää emojeja
+            contains_mathematical_symbols_instructional: Piiri ei voi sisältää matemaattisia
+              symboleja
+            contains_mathematical_symbols_informative: Piiri ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Piiri voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Piiri ei voi sisältää kiellettyjä
+              merkkejä
+            contains_too_many_words_instructional: Piirissä on oltava alle %{word_count}
+              sanaa
+            contains_too_many_words_informative: Piirissä on oltava alle %{word_count}
+              sanaa
+            contains_html_tags_instructional: Piiri ei voi sisältää HTML-tunnisteita
+            contains_html_tags_informative: Piiri ei voi sisältää HTML-tunnisteita
+            contains_url_instructional: Piiri ei voi sisältää URL-osoitteita
+            contains_url_informative: Piiri ei voi sisältää URL-osoitteita
+            unknown_for_city_instructional: Anna kelvollinen piiri kaupungille %{city}
+            unknown_for_city_informative: Anna kelvollinen piiri kaupungille %{city}
+            unknown_for_zip_instructional: Anna kelvollinen piiri postinumerolle %{zip}
+            unknown_for_zip_informative: Anna kelvollinen piiri postinumerolle %{zip}
+            unknown_for_address_instructional: Piiri saattaa olla virheellinen
+            unknown_for_address_informative: Piiri saattaa olla virheellinen
+          warnings:
+            contains_too_many_words: Piirissä suositellaan olevan alle %{word_count}
+              sanaa
+        subdistrict:
+          label:
+            default: Alapiiri
+            optional: Alapiiri (valinnainen)
+          errors:
+            blank_instructional: Anna alapiiri
+            blank_informative: Alapiiri puuttuu
+            too_long_instructional: Alapiiri on liian pitkä (enintään %{limit} merkkiä)
+            too_long_informative: Alapiiri on liian pitkä
+            contains_emojis_instructional: Alapiiri ei voi sisältää emojeja
+            contains_emojis_informative: Alapiiri ei voi sisältää emojeja
+            contains_mathematical_symbols_instructional: Alapiiri ei voi sisältää
+              matemaattisia symboleja
+            contains_mathematical_symbols_informative: Alapiiri ei voi sisältää matemaattisia
+              symboleja
+            contains_restricted_characters_instructional: Alapiiri voi sisältää vain
+              kirjaimia, numeroita, paikallisia merkkejä ja erikoismerkkejä
+            contains_restricted_characters_informative: Alapiiri ei voi sisältää kiellettyjä
+              merkkejä
+            contains_too_many_words_instructional: Alapiirissä on oltava alle %{word_count}
+              sanaa
+            contains_too_many_words_informative: Alapiirissä on oltava alle %{word_count}
+              sanaa
+            contains_html_tags_instructional: Alapiiri ei voi sisältää HTML-tunnisteita
+            contains_html_tags_informative: Alapiiri ei voi sisältää HTML-tunnisteita
+            contains_url_instructional: Alapiiri ei voi sisältää URL-osoitteita
+            contains_url_informative: Alapiiri ei voi sisältää URL-osoitteita
+            unknown_for_city_instructional: Anna kelvollinen alapiiri kaupungille
+              %{city}
+            unknown_for_city_informative: Anna kelvollinen alapiiri kaupungille %{city}
+            unknown_for_zip_instructional: Anna kelvollinen alapiiri postinumerolle
+              %{zip}
+            unknown_for_zip_informative: Anna kelvollinen alapiiri postinumerolle
+              %{zip}
+            unknown_for_address_instructional: Alapiiri saattaa olla virheellinen
+            unknown_for_address_informative: Alapiiri saattaa olla virheellinen
+          warnings:
+            contains_too_many_words: Alapiirissä suositellaan olevan alle %{word_count}
+              sanaa

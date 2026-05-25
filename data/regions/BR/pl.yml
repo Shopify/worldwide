@@ -17,3 +17,47 @@ pl:
           errors:
             blank_instructional: Wybierz stan
             blank_informative: Brakuje stanu
+        district:
+          label:
+            default: Dzielnica
+            optional: Dzielnica (opcjonalnie)
+          errors:
+            blank_instructional: Wprowadź dzielnicę
+            blank_informative: Brak dzielnicy
+            too_long_instructional: Nazwa dzielnicy jest za długa (maksymalnie %{limit}
+              znaków)
+            too_long_informative: Nazwa dzielnicy jest za długa
+            contains_emojis_instructional: Nazwa dzielnicy nie może zawierać emoji
+            contains_emojis_informative: Nazwa dzielnicy nie może zawierać emoji
+            contains_mathematical_symbols_instructional: Nazwa dzielnicy nie może
+              zawierać symboli matematycznych
+            contains_mathematical_symbols_informative: Nazwa dzielnicy nie może zawierać
+              symboli matematycznych
+            contains_restricted_characters_instructional: Nazwa dzielnicy może zawierać
+              tylko litery, cyfry, znaki lokalne i znaki specjalne
+            contains_restricted_characters_informative: Nazwa dzielnicy nie może zawierać
+              niedozwolonych znaków
+            contains_too_many_words_instructional: Liczba słów w nazwie dzielnicy
+              musi być mniejsza niż %{word_count}
+            contains_too_many_words_informative: Liczba słów w nazwie dzielnicy musi
+              być mniejsza niż %{word_count}
+            contains_html_tags_instructional: Nazwa dzielnicy nie może zawierać tagów
+              HTML
+            contains_html_tags_informative: Nazwa dzielnicy nie może zawierać tagów
+              HTML
+            contains_url_instructional: Nazwa dzielnicy nie może zawierać adresów
+              URL
+            contains_url_informative: Nazwa dzielnicy nie może zawierać adresów URL
+            unknown_for_city_instructional: 'Wprowadź prawidłową nazwę dzielnicy dla:
+              %{city}'
+            unknown_for_city_informative: 'Wprowadź prawidłową nazwę dzielnicy dla:
+              %{city}'
+            unknown_for_zip_instructional: 'Wprowadź prawidłową nazwę dzielnicy dla:
+              %{zip}'
+            unknown_for_zip_informative: 'Wprowadź prawidłową nazwę dzielnicy dla:
+              %{zip}'
+            unknown_for_address_instructional: Nazwa dzielnicy może być nieprawidłowa
+            unknown_for_address_informative: Nazwa dzielnicy może być nieprawidłowa
+          warnings:
+            contains_too_many_words: Zaleca się, aby liczba słów w nazwie dzielnicy
+              była mniejsza niż %{word_count}

@@ -30,6 +30,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+ ## [1.25.0] - 2026-05-22
+  - Add district and subdistrict address fields, labels, and validation messages.
+
 ## [1.24.2] - 2026-04-27
 - Update CLDR subdivision names for IT-OT (Gallura Nord-Est Sardegna) and IT-CI (Sulcis Iglesiente) in `:en`, `:it`, and `:de` only; other locales remain on stale upstream CLDR pending an upstream fix [#458](https://github.com/Shopify/worldwide/pull/458)
 

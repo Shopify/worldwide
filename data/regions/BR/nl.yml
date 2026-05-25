@@ -17,3 +17,39 @@ nl:
           errors:
             blank_instructional: Selecteer een staat
             blank_informative: Staat ontbreekt
+        district:
+          label:
+            default: Wijk
+            optional: Wijk (optioneel)
+          errors:
+            blank_instructional: Voer een wijk in
+            blank_informative: Wijk ontbreekt
+            too_long_instructional: Wijk is te lang (maximaal %{limit} tekens)
+            too_long_informative: Wijk is te lang
+            contains_emojis_instructional: Wijk mag geen emoji's bevatten
+            contains_emojis_informative: Wijk mag geen emoji's bevatten
+            contains_mathematical_symbols_instructional: Wijk mag geen wiskundige
+              symbolen bevatten
+            contains_mathematical_symbols_informative: Wijk mag geen wiskundige symbolen
+              bevatten
+            contains_restricted_characters_instructional: Wijk mag alleen letters,
+              cijfers, lokale tekens en speciale tekens bevatten
+            contains_restricted_characters_informative: Wijk mag geen beperkte tekens
+              bevatten
+            contains_too_many_words_instructional: Wijk moet uit minder dan %{word_count}
+              woorden bestaan
+            contains_too_many_words_informative: Wijk moet uit minder dan %{word_count}
+              woorden bestaan
+            contains_html_tags_instructional: Wijk mag geen HTML-tags bevatten
+            contains_html_tags_informative: Wijk mag geen HTML-tags bevatten
+            contains_url_instructional: Wijk mag geen URL's bevatten
+            contains_url_informative: Wijk mag geen URL's bevatten
+            unknown_for_city_instructional: Voer een geldige wijknaam in voor %{city}
+            unknown_for_city_informative: Voer een geldige wijknaam in voor %{city}
+            unknown_for_zip_instructional: Voer een geldige wijknaam in voor %{zip}
+            unknown_for_zip_informative: Voer een geldige wijknaam in voor %{zip}
+            unknown_for_address_instructional: Wijk is mogelijk onjuist
+            unknown_for_address_informative: Wijk is mogelijk onjuist
+          warnings:
+            contains_too_many_words: Wijk bevat bij voorkeur minder dan %{word_count}
+              woorden

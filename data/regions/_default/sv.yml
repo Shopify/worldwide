@@ -441,3 +441,75 @@ sv:
           warnings:
             contains_too_many_words: Vi rekommenderar att den andra adressraden består
               av färre än %{word_count} ord
+        district:
+          label:
+            default: Distrikt
+            optional: Distrikt (valfritt)
+          errors:
+            blank_instructional: Ange ett distrikt
+            blank_informative: Distrikt saknas
+            too_long_instructional: Distriktet är för långt (max %{limit} tecken)
+            too_long_informative: Distriktet är för långt
+            contains_emojis_instructional: Distriktet kan inte innehålla emojis
+            contains_emojis_informative: Distriktet kan inte innehålla emojis
+            contains_mathematical_symbols_instructional: Distriktet kan inte innehålla
+              matematiska symboler
+            contains_mathematical_symbols_informative: Distriktet kan inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Distriktet kan endast innehålla
+              bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Distriktet kan inte innehålla
+              otillåtna tecken
+            contains_too_many_words_instructional: Distriktet måste ha färre än %{word_count}
+              ord
+            contains_too_many_words_informative: Distriktet måste ha färre än %{word_count}
+              ord
+            contains_html_tags_instructional: Distriktet kan inte innehålla HTML-taggar
+            contains_html_tags_informative: Distriktet kan inte innehålla HTML-taggar
+            contains_url_instructional: Distriktet kan inte innehålla URL:er
+            contains_url_informative: Distriktet kan inte innehålla URL:er
+            unknown_for_city_instructional: Ange ett giltigt distrikt för %{city}
+            unknown_for_city_informative: Ange ett giltigt distrikt för %{city}
+            unknown_for_zip_instructional: Ange ett giltigt distrikt för %{zip}
+            unknown_for_zip_informative: Ange ett giltigt distrikt för %{zip}
+            unknown_for_address_instructional: Distriktet kan vara felaktigt
+            unknown_for_address_informative: Distriktet kan vara felaktigt
+          warnings:
+            contains_too_many_words: Distriktet rekommenderas ha färre än %{word_count}
+              ord
+        subdistrict:
+          label:
+            default: Underdistrikt
+            optional: Underdistrikt (valfritt)
+          errors:
+            blank_instructional: Ange ett underdistrikt
+            blank_informative: Underdistrikt saknas
+            too_long_instructional: Underdistriktet är för långt (max %{limit} tecken)
+            too_long_informative: Underdistriktet är för långt
+            contains_emojis_instructional: Underdistriktet kan inte innehålla emojis
+            contains_emojis_informative: Underdistriktet kan inte innehålla emojis
+            contains_mathematical_symbols_instructional: Underdistriktet kan inte
+              innehålla matematiska symboler
+            contains_mathematical_symbols_informative: Underdistriktet kan inte innehålla
+              matematiska symboler
+            contains_restricted_characters_instructional: Underdistriktet kan endast
+              innehålla bokstäver, siffror, lokala tecken och specialtecken
+            contains_restricted_characters_informative: Underdistriktet kan inte innehålla
+              otillåtna tecken
+            contains_too_many_words_instructional: Underdistriktet måste ha färre
+              än %{word_count} ord
+            contains_too_many_words_informative: Underdistriktet måste ha färre än
+              %{word_count} ord
+            contains_html_tags_instructional: Underdistriktet kan inte innehålla HTML-taggar
+            contains_html_tags_informative: Underdistriktet kan inte innehålla HTML-taggar
+            contains_url_instructional: Underdistriktet kan inte innehålla URL:er
+            contains_url_informative: Underdistriktet kan inte innehålla URL:er
+            unknown_for_city_instructional: Ange ett giltigt underdistrikt för %{city}
+            unknown_for_city_informative: Ange ett giltigt underdistrikt för %{city}
+            unknown_for_zip_instructional: Ange ett giltigt underdistrikt för %{zip}
+            unknown_for_zip_informative: Ange ett giltigt underdistrikt för %{zip}
+            unknown_for_address_instructional: Underdistriktet kan vara felaktigt
+            unknown_for_address_informative: Underdistriktet kan vara felaktigt
+          warnings:
+            contains_too_many_words: Underdistriktet rekommenderas ha färre än %{word_count}
+              ord

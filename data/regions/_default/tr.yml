@@ -447,3 +447,71 @@ tr:
           errors:
             may_not_exist_instructional: Adres bulunamadı veya mevcut değil
             may_not_exist_informative: Adres bulunamadı
+        district:
+          label:
+            default: İlçe
+            optional: İlçe (isteğe bağlı)
+          errors:
+            blank_instructional: Bir ilçe girin
+            blank_informative: İlçe eksik
+            too_long_instructional: İlçe çok uzun (maksimum %{limit} karakter)
+            too_long_informative: İlçe çok uzun
+            contains_emojis_instructional: İlçe emoji içeremez
+            contains_emojis_informative: İlçe emoji içeremez
+            contains_mathematical_symbols_instructional: İlçe matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: İlçe matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: İlçe yalnızca harf, sayı,
+              yerel karakter ve özel karakter içerebilir
+            contains_restricted_characters_informative: İlçe kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: İlçe %{word_count} kelimeden az
+              olmalıdır
+            contains_too_many_words_informative: İlçe %{word_count} kelimeden az olmalıdır
+            contains_html_tags_instructional: İlçe HTML etiketleri içeremez
+            contains_html_tags_informative: İlçe HTML etiketleri içeremez
+            contains_url_instructional: İlçe URL içeremez
+            contains_url_informative: İlçe URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir ilçe adı girin"
+            unknown_for_city_informative: "%{city} için geçerli bir ilçe adı girin"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir ilçe adı girin"
+            unknown_for_zip_informative: "%{zip} için geçerli bir ilçe adı girin"
+            unknown_for_address_instructional: İlçe yanlış olabilir
+            unknown_for_address_informative: İlçe yanlış olabilir
+          warnings:
+            contains_too_many_words: İlçenin %{word_count} kelimeden az olması önerilir
+        subdistrict:
+          label:
+            default: Semt
+            optional: Semt (isteğe bağlı)
+          errors:
+            blank_instructional: Bir semt girin
+            blank_informative: Semt eksik
+            too_long_instructional: Semt çok uzun (maksimum %{limit} karakter)
+            too_long_informative: Semt çok uzun
+            contains_emojis_instructional: Semt emoji içeremez
+            contains_emojis_informative: Semt emoji içeremez
+            contains_mathematical_symbols_instructional: Semt matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Semt matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Semt yalnızca harf, sayı,
+              yerel karakter ve özel karakter içerebilir
+            contains_restricted_characters_informative: Semt kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Semt %{word_count} kelimeden az
+              olmalıdır
+            contains_too_many_words_informative: Semt %{word_count} kelimeden az olmalıdır
+            contains_html_tags_instructional: Semt HTML etiketleri içeremez
+            contains_html_tags_informative: Semt HTML etiketleri içeremez
+            contains_url_instructional: Semt URL içeremez
+            contains_url_informative: Semt URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir semt adı girin"
+            unknown_for_city_informative: "%{city} için geçerli bir semt adı girin"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir semt adı girin"
+            unknown_for_zip_informative: "%{zip} için geçerli bir semt adı girin"
+            unknown_for_address_instructional: Semt yanlış olabilir
+            unknown_for_address_informative: Semt yanlış olabilir
+          warnings:
+            contains_too_many_words: Semtin %{word_count} kelimeden az olması önerilir

@@ -17,3 +17,44 @@ id:
           errors:
             blank_instructional: Pilih negara bagian
             blank_informative: Nama negara bagian belum diisi
+        district:
+          label:
+            default: Lingkungan
+            optional: Lingkungan (opsional)
+          errors:
+            blank_instructional: Masukkan lingkungan
+            blank_informative: Lingkungan belum diisi
+            too_long_instructional: Lingkungan terlalu panjang (maksimal %{limit}
+              karakter)
+            too_long_informative: Lingkungan terlalu panjang
+            contains_emojis_instructional: Lingkungan tidak boleh berisi emoji
+            contains_emojis_informative: Lingkungan tidak boleh berisi emoji
+            contains_mathematical_symbols_instructional: Lingkungan tidak boleh berisi
+              simbol matematika
+            contains_mathematical_symbols_informative: Lingkungan tidak boleh berisi
+              simbol matematika
+            contains_restricted_characters_instructional: Lingkungan hanya boleh berisi
+              huruf, angka, karakter lokal, dan karakter khusus
+            contains_restricted_characters_informative: Lingkungan tidak boleh berisi
+              karakter yang dilarang
+            contains_too_many_words_instructional: Lingkungan harus kurang dari %{word_count}
+              kata
+            contains_too_many_words_informative: Lingkungan harus kurang dari %{word_count}
+              kata
+            contains_html_tags_instructional: Lingkungan tidak boleh berisi tag HTML
+            contains_html_tags_informative: Lingkungan tidak boleh berisi tag HTML
+            contains_url_instructional: Lingkungan tidak boleh berisi URL
+            contains_url_informative: Lingkungan tidak boleh berisi URL
+            unknown_for_city_instructional: Masukkan nama lingkungan yang valid untuk
+              %{city}
+            unknown_for_city_informative: Masukkan nama lingkungan yang valid untuk
+              %{city}
+            unknown_for_zip_instructional: Masukkan nama lingkungan yang valid untuk
+              %{zip}
+            unknown_for_zip_informative: Masukkan nama lingkungan yang valid untuk
+              %{zip}
+            unknown_for_address_instructional: Lingkungan mungkin salah
+            unknown_for_address_informative: Lingkungan mungkin salah
+          warnings:
+            contains_too_many_words: Lingkungan disarankan kurang dari %{word_count}
+              kata

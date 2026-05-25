@@ -17,3 +17,40 @@ lt:
           errors:
             blank_instructional: Pasirinkite valstiją
             blank_informative: Trūksta valstijos
+        district:
+          label:
+            default: Rajonas
+            optional: Rajonas (pasirenkama)
+          errors:
+            blank_instructional: Įveskite rajoną
+            blank_informative: Nenurodytas rajonas
+            too_long_instructional: Rajono pavadinimas per ilgas (daugiausia %{limit}
+              simb.)
+            too_long_informative: Rajono pavadinimas per ilgas
+            contains_emojis_instructional: Rajono pavadinime negali būti jaustukų
+            contains_emojis_informative: Rajono pavadinime negali būti jaustukų
+            contains_mathematical_symbols_instructional: Rajono pavadinime negali
+              būti matematinių simbolių
+            contains_mathematical_symbols_informative: Rajono pavadinime negali būti
+              matematinių simbolių
+            contains_restricted_characters_instructional: Rajono pavadinime gali būti
+              tik raidės, skaičiai, vietiniai ir specialieji simboliai
+            contains_restricted_characters_informative: Rajono pavadinime negali būti
+              draudžiamų simbolių
+            contains_too_many_words_instructional: Rajono pavadinimą turi sudaryti
+              mažiau nei %{word_count} žodž.
+            contains_too_many_words_informative: Rajono pavadinimą turi sudaryti mažiau
+              nei %{word_count} žodž.
+            contains_html_tags_instructional: Rajono pavadinime negali būti HTML žymų
+            contains_html_tags_informative: Rajono pavadinime negali būti HTML žymų
+            contains_url_instructional: Rajono pavadinime negali būti URL
+            contains_url_informative: Rajono pavadinime negali būti URL
+            unknown_for_city_instructional: Įveskite tinkamą %{city} rajono pavadinimą
+            unknown_for_city_informative: Įveskite tinkamą %{city} rajono pavadinimą
+            unknown_for_zip_instructional: Įveskite tinkamą %{zip} rajono pavadinimą
+            unknown_for_zip_informative: Įveskite tinkamą %{zip} rajono pavadinimą
+            unknown_for_address_instructional: Rajonas gali būti nurodytas neteisingai
+            unknown_for_address_informative: Rajonas gali būti nurodytas neteisingai
+          warnings:
+            contains_too_many_words: Rekomenduojama, kad rajono pavadinimą sudarytų
+              mažiau nei %{word_count} žodž.

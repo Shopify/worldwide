@@ -17,3 +17,43 @@ pt-PT:
           errors:
             blank_instructional: Selecione um estado
             blank_informative: O estado está em falta
+        district:
+          label:
+            default: Bairro
+            optional: Bairro (opcional)
+          errors:
+            blank_instructional: Introduza um bairro
+            blank_informative: O bairro está em falta
+            too_long_instructional: O bairro é demasiado longo (o máximo é %{limit}
+              carateres)
+            too_long_informative: O bairro é demasiado longo
+            contains_emojis_instructional: O bairro não pode conter emojis
+            contains_emojis_informative: O bairro não pode conter emojis
+            contains_mathematical_symbols_instructional: O bairro não pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O bairro não pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O bairro só pode conter
+              letras, números, carateres locais e carateres especiais
+            contains_restricted_characters_informative: O bairro não pode conter carateres
+              restritos
+            contains_too_many_words_instructional: O bairro tem de ter menos de %{word_count}
+              palavras
+            contains_too_many_words_informative: O bairro tem de ter menos de %{word_count}
+              palavras
+            contains_html_tags_instructional: O bairro não pode conter etiquetas HTML
+            contains_html_tags_informative: O bairro não pode conter etiquetas HTML
+            contains_url_instructional: O bairro não pode conter URL
+            contains_url_informative: O bairro não pode conter URL
+            unknown_for_city_instructional: Introduza um nome de bairro válido para
+              %{city}
+            unknown_for_city_informative: Introduza um nome de bairro válido para
+              %{city}
+            unknown_for_zip_instructional: Introduza um nome de bairro válido para
+              %{zip}
+            unknown_for_zip_informative: Introduza um nome de bairro válido para %{zip}
+            unknown_for_address_instructional: O bairro pode estar incorreto
+            unknown_for_address_informative: O bairro pode estar incorreto
+          warnings:
+            contains_too_many_words: Recomenda-se que o bairro tenha menos de %{word_count}
+              palavras

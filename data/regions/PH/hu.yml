@@ -44,3 +44,44 @@ hu:
           warnings:
             contains_too_many_words: A barangay nevének javasolt hossza kevesebb mint
               %{word_count} szó
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (opcionális)
+          errors:
+            blank_instructional: Adjon meg egy barangayt
+            blank_informative: A barangay hiányzik
+            too_long_instructional: A barangay túl hosszú (legfeljebb %{limit} karakter
+              lehet)
+            too_long_informative: A barangay túl hosszú
+            contains_emojis_instructional: A barangay nem tartalmazhat emojikat
+            contains_emojis_informative: A barangay nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A barangay nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A barangay nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A barangay csak betűket,
+              számokat, helyi karaktereket és speciális karaktereket tartalmazhat
+            contains_restricted_characters_informative: A barangay nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A barangay nevének kevesebb mint
+              %{word_count} szóból kell állnia
+            contains_too_many_words_informative: A barangay nevének kevesebb mint
+              %{word_count} szóból kell állnia
+            contains_html_tags_instructional: A barangay nem tartalmazhat HTML-t
+            contains_html_tags_informative: A barangay nem tartalmazhat HTML-t
+            contains_url_instructional: A barangay nem tartalmazhat URL-t
+            contains_url_informative: A barangay nem tartalmazhat URL-t
+            unknown_for_city_instructional: 'Adjon meg egy érvényes barangaynevet
+              itt: %{city}'
+            unknown_for_city_informative: 'Adjon meg egy érvényes barangaynevet itt:
+              %{city}'
+            unknown_for_zip_instructional: 'Adjon meg egy érvényes barangaynevet ehhez
+              az irányítószámhoz: %{zip}'
+            unknown_for_zip_informative: 'Adjon meg egy érvényes barangaynevet ehhez
+              az irányítószámhoz: %{zip}'
+            unknown_for_address_instructional: Lehet, hogy a barangay hibás
+            unknown_for_address_informative: Lehet, hogy a barangay hibás
+          warnings:
+            contains_too_many_words: Javasoljuk, hogy a barangay neve kevesebb mint
+              %{word_count} szóból álljon

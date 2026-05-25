@@ -45,3 +45,38 @@ vi:
             unknown_for_address_informative: Khối có thể không chính xác
           warnings:
             contains_too_many_words: Khối nên có tối đa %{word_count} từ
+        district:
+          label:
+            default: Khu
+            optional: Khu (tùy chọn)
+          errors:
+            blank_instructional: Nhập khu
+            blank_informative: Thiếu khu
+            too_long_instructional: Khu quá dài (tối đa %{limit} ký tự)
+            too_long_informative: Khu quá dài
+            contains_emojis_instructional: Khu không được chứa biểu tượng cảm xúc
+            contains_emojis_informative: Khu không được chứa biểu tượng cảm xúc
+            contains_mathematical_symbols_instructional: Khu không được chứa ký hiệu
+              toán học
+            contains_mathematical_symbols_informative: Khu không được chứa ký hiệu
+              toán học
+            contains_restricted_characters_instructional: Khu chỉ có thể chứa chữ
+              cái, số, ký tự địa phương và ký tự đặc biệt
+            contains_restricted_characters_informative: Khu không được chứa ký tự
+              bị hạn chế
+            contains_too_many_words_instructional: Khu phải có ít hơn %{word_count}
+              từ
+            contains_too_many_words_informative: Khu phải có ít hơn %{word_count}
+              từ
+            contains_html_tags_instructional: Khu không được chứa HTML
+            contains_html_tags_informative: Khu không được chứa HTML
+            contains_url_instructional: Khu không được chứa URL
+            contains_url_informative: Khu không được chứa URL
+            unknown_for_city_instructional: Nhập khu hợp lệ cho %{city}
+            unknown_for_city_informative: Khu không hợp lệ cho %{city}
+            unknown_for_zip_instructional: Nhập khu hợp lệ cho %{zip}
+            unknown_for_zip_informative: Khu không hợp lệ cho %{zip}
+            unknown_for_address_instructional: Khu có thể không chính xác
+            unknown_for_address_informative: Khu có thể không chính xác
+          warnings:
+            contains_too_many_words: Khu nên có ít hơn %{word_count} từ

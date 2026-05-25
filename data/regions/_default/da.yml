@@ -441,3 +441,79 @@ da:
           errors:
             may_not_exist_instructional: Adressen blev ikke fundet eller findes ikke
             may_not_exist_informative: Adressen blev ikke fundet
+        district:
+          label:
+            default: Distrikt
+            optional: Distrikt (valgfrit)
+          errors:
+            blank_instructional: Indtast et distrikt
+            blank_informative: Distrikt mangler
+            too_long_instructional: Distriktet er for langt (maks. %{limit} tegn)
+            too_long_informative: Distriktet er for langt
+            contains_emojis_instructional: Distriktet kan ikke indeholde emojis
+            contains_emojis_informative: Distriktet kan ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Distriktet kan ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Distriktet kan ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Distriktet kan kun indeholde
+              bogstaver, tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Distriktet kan ikke indeholde
+              ikke-tilladte tegn
+            contains_too_many_words_instructional: Distriktet skal have færre end
+              %{word_count} ord
+            contains_too_many_words_informative: Distriktet skal have færre end %{word_count}
+              ord
+            contains_html_tags_instructional: Distriktet kan ikke indeholde HTML-tags
+            contains_html_tags_informative: Distriktet kan ikke indeholde HTML-tags
+            contains_url_instructional: Distriktet kan ikke indeholde webadresser
+            contains_url_informative: Distriktet kan ikke indeholde webadresser
+            unknown_for_city_instructional: Indtast et gyldigt distriktsnavn for %{city}
+            unknown_for_city_informative: Indtast et gyldigt distriktsnavn for %{city}
+            unknown_for_zip_instructional: Indtast et gyldigt distriktsnavn for %{zip}
+            unknown_for_zip_informative: Indtast et gyldigt distriktsnavn for %{zip}
+            unknown_for_address_instructional: Distriktet er muligvis forkert
+            unknown_for_address_informative: Distriktet er muligvis forkert
+          warnings:
+            contains_too_many_words: Det anbefales, at distriktet har færre end %{word_count}
+              ord
+        subdistrict:
+          label:
+            default: Underdistrikt
+            optional: Underdistrikt (valgfrit)
+          errors:
+            blank_instructional: Indtast et underdistrikt
+            blank_informative: Underdistrikt mangler
+            too_long_instructional: Underdistriktet er for langt (maks. %{limit} tegn)
+            too_long_informative: Underdistriktet er for langt
+            contains_emojis_instructional: Underdistriktet kan ikke indeholde emojis
+            contains_emojis_informative: Underdistriktet kan ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Underdistriktet kan ikke
+              indeholde matematiske symboler
+            contains_mathematical_symbols_informative: Underdistriktet kan ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Underdistriktet kan kun
+              indeholde bogstaver, tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Underdistriktet kan ikke indeholde
+              ikke-tilladte tegn
+            contains_too_many_words_instructional: Underdistriktet skal have færre
+              end %{word_count} ord
+            contains_too_many_words_informative: Underdistriktet skal have færre end
+              %{word_count} ord
+            contains_html_tags_instructional: Underdistriktet kan ikke indeholde HTML-tags
+            contains_html_tags_informative: Underdistriktet kan ikke indeholde HTML-tags
+            contains_url_instructional: Underdistriktet kan ikke indeholde webadresser
+            contains_url_informative: Underdistriktet kan ikke indeholde webadresser
+            unknown_for_city_instructional: Indtast et gyldigt underdistriktsnavn
+              for %{city}
+            unknown_for_city_informative: Indtast et gyldigt underdistriktsnavn for
+              %{city}
+            unknown_for_zip_instructional: Indtast et gyldigt underdistriktsnavn for
+              %{zip}
+            unknown_for_zip_informative: Indtast et gyldigt underdistriktsnavn for
+              %{zip}
+            unknown_for_address_instructional: Underdistriktet er muligvis forkert
+            unknown_for_address_informative: Underdistriktet er muligvis forkert
+          warnings:
+            contains_too_many_words: Det anbefales, at underdistriktet har færre end
+              %{word_count} ord

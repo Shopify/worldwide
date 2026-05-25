@@ -453,3 +453,82 @@ cs:
           errors:
             may_not_exist_instructional: Adresa nebyla nalezena nebo neexistuje.
             may_not_exist_informative: Adresu nebyla nalezena.
+        district:
+          label:
+            default: Okres
+            optional: Okres (volitelné)
+          errors:
+            blank_instructional: Zadejte okres
+            blank_informative: Chybí okres
+            too_long_instructional: Název okresu je příliš dlouhý (maximum je %{limit}
+              znaků)
+            too_long_informative: Název okresu je příliš dlouhý
+            contains_emojis_instructional: Název okresu nesmí obsahovat emodži
+            contains_emojis_informative: Název okresu nesmí obsahovat emodži
+            contains_mathematical_symbols_instructional: Název okresu nesmí obsahovat
+              matematické symboly
+            contains_mathematical_symbols_informative: Název okresu nesmí obsahovat
+              matematické symboly
+            contains_restricted_characters_instructional: Název okresu smí obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky
+            contains_restricted_characters_informative: Název okresu nesmí obsahovat
+              nepovolené znaky
+            contains_too_many_words_instructional: Název okresu musí mít méně než
+              %{word_count} slov
+            contains_too_many_words_informative: Název okresu musí mít méně než %{word_count}
+              slov
+            contains_html_tags_instructional: Název okresu nesmí obsahovat značky
+              HTML
+            contains_html_tags_informative: Název okresu nesmí obsahovat značky HTML
+            contains_url_instructional: Název okresu nesmí obsahovat adresy URL
+            contains_url_informative: Název okresu nesmí obsahovat adresy URL
+            unknown_for_city_instructional: Zadejte platný název okresu pro %{city}
+            unknown_for_city_informative: Zadejte platný název okresu pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název okresu pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název okresu pro %{zip}
+            unknown_for_address_instructional: Název okresu je možná nesprávný
+            unknown_for_address_informative: Název okresu je možná nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby název okresu obsahoval méně
+              než %{word_count} slov
+        subdistrict:
+          label:
+            default: Místní část
+            optional: Místní část (volitelné)
+          errors:
+            blank_instructional: Zadejte místní část
+            blank_informative: Chybí místní část
+            too_long_instructional: Název místní části je příliš dlouhý (maximum je
+              %{limit} znaků)
+            too_long_informative: Název místní části je příliš dlouhý
+            contains_emojis_instructional: Název místní části nesmí obsahovat emodži
+            contains_emojis_informative: Název místní části nesmí obsahovat emodži
+            contains_mathematical_symbols_instructional: Název místní části nesmí
+              obsahovat matematické symboly
+            contains_mathematical_symbols_informative: Název místní části nesmí obsahovat
+              matematické symboly
+            contains_restricted_characters_instructional: Název místní části smí obsahovat
+              pouze písmena, číslice, místní znaky a speciální znaky
+            contains_restricted_characters_informative: Název místní části nesmí obsahovat
+              nepovolené znaky
+            contains_too_many_words_instructional: Název místní části musí mít méně
+              než %{word_count} slov
+            contains_too_many_words_informative: Název místní části musí mít méně
+              než %{word_count} slov
+            contains_html_tags_instructional: Název místní části nesmí obsahovat značky
+              HTML
+            contains_html_tags_informative: Název místní části nesmí obsahovat značky
+              HTML
+            contains_url_instructional: Název místní části nesmí obsahovat adresy
+              URL
+            contains_url_informative: Název místní části nesmí obsahovat adresy URL
+            unknown_for_city_instructional: Zadejte platný název místní části pro
+              %{city}
+            unknown_for_city_informative: Zadejte platný název místní části pro %{city}
+            unknown_for_zip_instructional: Zadejte platný název místní části pro %{zip}
+            unknown_for_zip_informative: Zadejte platný název místní části pro %{zip}
+            unknown_for_address_instructional: Název místní části je možná nesprávný
+            unknown_for_address_informative: Název místní části je možná nesprávný
+          warnings:
+            contains_too_many_words: Doporučujeme, aby název místní části obsahoval
+              méně než %{word_count} slov

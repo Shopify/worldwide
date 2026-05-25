@@ -42,3 +42,35 @@ th:
             unknown_for_address_informative: ชื่อบล็อกอาจไม่ถูกต้อง
           warnings:
             contains_too_many_words: ชื่อบล็อกควรมีความยาวน้อยกว่า %{word_count} คำ
+        district:
+          label:
+            default: บล็อก
+            optional: บล็อก (ไม่บังคับ)
+          errors:
+            blank_instructional: โปรดป้อนบล็อก
+            blank_informative: ไม่ได้ระบุบล็อก
+            too_long_instructional: บล็อกยาวเกินไป (สูงสุด %{limit} ตัวอักษร)
+            too_long_informative: บล็อกยาวเกินไป
+            contains_emojis_instructional: บล็อกต้องไม่มีอีโมจิ
+            contains_emojis_informative: บล็อกต้องไม่มีอีโมจิ
+            contains_mathematical_symbols_instructional: บล็อกต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_mathematical_symbols_informative: บล็อกต้องไม่มีสัญลักษณ์ทางคณิตศาสตร์
+            contains_restricted_characters_instructional: บล็อกต้องมีเฉพาะตัวอักษร
+              ตัวเลข ตัวอักษรท้องถิ่น และอักขระพิเศษเท่านั้น
+            contains_restricted_characters_informative: บล็อกต้องไม่มีอักขระที่ถูกจำกัด
+            contains_too_many_words_instructional: บล็อกต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_too_many_words_informative: บล็อกต้องมีน้อยกว่า %{word_count}
+              คำ
+            contains_html_tags_instructional: บล็อกต้องไม่มี HTML
+            contains_html_tags_informative: บล็อกต้องไม่มี HTML
+            contains_url_instructional: บล็อกต้องไม่มี URL
+            contains_url_informative: บล็อกต้องไม่มี URL
+            unknown_for_city_instructional: โปรดป้อนบล็อกที่ถูกต้องสำหรับ %{city}
+            unknown_for_city_informative: บล็อกไม่ถูกต้องสำหรับ %{city}
+            unknown_for_zip_instructional: โปรดป้อนบล็อกที่ถูกต้องสำหรับ %{zip}
+            unknown_for_zip_informative: บล็อกไม่ถูกต้องสำหรับ %{zip}
+            unknown_for_address_instructional: บล็อกอาจไม่ถูกต้อง
+            unknown_for_address_informative: บล็อกอาจไม่ถูกต้อง
+          warnings:
+            contains_too_many_words: ขอแนะนำให้บล็อกมีน้อยกว่า %{word_count} คำ
