@@ -17,3 +17,33 @@ ko:
           errors:
             blank_instructional: 주 선택
             blank_informative: 주가 누락되었습니다
+        district:
+          label:
+            default: 동/마을
+            optional: 동/마을(선택 사항)
+          errors:
+            blank_instructional: 동/마을을 입력하십시오.
+            blank_informative: 동/마을이 누락되었습니다.
+            too_long_instructional: 동/마을이 너무 깁니다(최대 %{limit}자).
+            too_long_informative: 동/마을이 너무 깁니다.
+            contains_emojis_instructional: 동/마을에는 이모지를 포함할 수 없습니다.
+            contains_emojis_informative: 동/마을에는 이모지를 포함할 수 없습니다.
+            contains_mathematical_symbols_instructional: 동/마을에는 수학 기호를 포함할 수 없습니다.
+            contains_mathematical_symbols_informative: 동/마을에는 수학 기호를 포함할 수 없습니다.
+            contains_restricted_characters_instructional: 동/마을에는 문자, 숫자, 현지 문자 및 특수
+              문자만 포함할 수 있습니다.
+            contains_restricted_characters_informative: 동/마을에는 제한된 문자를 포함할 수 없습니다.
+            contains_too_many_words_instructional: 동/마을은 %{word_count}단어 미만이어야 합니다.
+            contains_too_many_words_informative: 동/마을은 %{word_count}단어 미만이어야 합니다.
+            contains_html_tags_instructional: 동/마을에는 HTML 태그를 포함할 수 없습니다.
+            contains_html_tags_informative: 동/마을에는 HTML 태그를 포함할 수 없습니다.
+            contains_url_instructional: 동/마을에는 URL을 포함할 수 없습니다.
+            contains_url_informative: 동/마을에는 URL을 포함할 수 없습니다.
+            unknown_for_city_instructional: "%{city}의 유효한 동/마을 이름을 입력하십시오."
+            unknown_for_city_informative: "%{city}의 유효한 동/마을 이름을 입력하십시오."
+            unknown_for_zip_instructional: "%{zip}의 유효한 동/마을 이름을 입력하십시오."
+            unknown_for_zip_informative: "%{zip}의 유효한 동/마을 이름을 입력하십시오."
+            unknown_for_address_instructional: 동/마을이 올바르지 않을 수 있습니다.
+            unknown_for_address_informative: 동/마을이 올바르지 않을 수 있습니다.
+          warnings:
+            contains_too_many_words: 동/마을은 %{word_count}단어 미만으로 입력하는 것이 좋습니다.

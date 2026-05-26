@@ -17,3 +17,41 @@ da:
           errors:
             blank_instructional: Vælg en stat
             blank_informative: Stat mangler
+        district:
+          label:
+            default: Kvarter
+            optional: Kvarter (valgfrit)
+          errors:
+            blank_instructional: Indtast et kvarter
+            blank_informative: Kvarter mangler
+            too_long_instructional: Kvarteret er for langt (maks. %{limit} tegn)
+            too_long_informative: Kvarteret er for langt
+            contains_emojis_instructional: Kvarteret kan ikke indeholde emojis
+            contains_emojis_informative: Kvarteret kan ikke indeholde emojis
+            contains_mathematical_symbols_instructional: Kvarteret kan ikke indeholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Kvarteret kan ikke indeholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Kvarteret kan kun indeholde
+              bogstaver, tal, lokale tegn og specialtegn
+            contains_restricted_characters_informative: Kvarteret kan ikke indeholde
+              ikke-tilladte tegn
+            contains_too_many_words_instructional: Kvarteret skal have færre end %{word_count}
+              ord
+            contains_too_many_words_informative: Kvarteret skal have færre end %{word_count}
+              ord
+            contains_html_tags_instructional: Kvarteret kan ikke indeholde HTML-tags
+            contains_html_tags_informative: Kvarteret kan ikke indeholde HTML-tags
+            contains_url_instructional: Kvarteret kan ikke indeholde webadresser
+            contains_url_informative: Kvarteret kan ikke indeholde webadresser
+            unknown_for_city_instructional: Indtast et gyldigt navn på kvarter for
+              %{city}
+            unknown_for_city_informative: Indtast et gyldigt navn på kvarter for %{city}
+            unknown_for_zip_instructional: Indtast et gyldigt navn på kvarter for
+              %{zip}
+            unknown_for_zip_informative: Indtast et gyldigt navn på kvarter for %{zip}
+            unknown_for_address_instructional: Kvarteret er muligvis forkert
+            unknown_for_address_informative: Kvarteret er muligvis forkert
+          warnings:
+            contains_too_many_words: Det anbefales, at kvarteret har færre end %{word_count}
+              ord

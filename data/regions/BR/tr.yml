@@ -17,3 +17,40 @@ tr:
           errors:
             blank_instructional: Eyalet seçin
             blank_informative: Eyalet eksik
+        district:
+          label:
+            default: Mahalle
+            optional: Mahalle (isteğe bağlı)
+          errors:
+            blank_instructional: Bir mahalle girin
+            blank_informative: Mahalle eksik
+            too_long_instructional: Mahalle çok uzun (maksimum %{limit} karakter)
+            too_long_informative: Mahalle çok uzun
+            contains_emojis_instructional: Mahalle emoji içeremez
+            contains_emojis_informative: Mahalle emoji içeremez
+            contains_mathematical_symbols_instructional: Mahalle matematiksel semboller
+              içeremez
+            contains_mathematical_symbols_informative: Mahalle matematiksel semboller
+              içeremez
+            contains_restricted_characters_instructional: Mahalle yalnızca harf, sayı,
+              yerel karakter ve özel karakter içerebilir
+            contains_restricted_characters_informative: Mahalle kısıtlanmış karakterler
+              içeremez
+            contains_too_many_words_instructional: Mahalle %{word_count} kelimeden
+              az olmalıdır
+            contains_too_many_words_informative: Mahalle %{word_count} kelimeden az
+              olmalıdır
+            contains_html_tags_instructional: Mahalle HTML etiketleri içeremez
+            contains_html_tags_informative: Mahalle HTML etiketleri içeremez
+            contains_url_instructional: Mahalle URL içeremez
+            contains_url_informative: Mahalle URL içeremez
+            unknown_for_city_instructional: "%{city} için geçerli bir mahalle adı
+              girin"
+            unknown_for_city_informative: "%{city} için geçerli bir mahalle adı girin"
+            unknown_for_zip_instructional: "%{zip} için geçerli bir mahalle adı girin"
+            unknown_for_zip_informative: "%{zip} için geçerli bir mahalle adı girin"
+            unknown_for_address_instructional: Mahalle yanlış olabilir
+            unknown_for_address_informative: Mahalle yanlış olabilir
+          warnings:
+            contains_too_many_words: Mahallenin %{word_count} kelimeden az olması
+              önerilir

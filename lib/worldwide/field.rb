@@ -16,6 +16,8 @@ module Worldwide
       :address2,
       :line2,
       :neighborhood,
+      :district,
+      :subdistrict,
       :city,
       :province,
       :zip,

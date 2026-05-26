@@ -41,3 +41,40 @@ hr:
           warnings:
             contains_too_many_words: Preporučujemo da naziv barangaja sadrži manje
               od %{word_count} riječ/i
+        district:
+          label:
+            default: Barangay
+            optional: Barangay (nije obavezno)
+          errors:
+            blank_instructional: Unesite barangay
+            blank_informative: Nedostaje barangay
+            too_long_instructional: 'Naziv barangaya je predug (maksimalan broj znakova:
+              %{limit})'
+            too_long_informative: Naziv barangaya je predug
+            contains_emojis_instructional: Barangay ne može sadržavati emojije
+            contains_emojis_informative: Barangay ne može sadržavati emojije
+            contains_mathematical_symbols_instructional: Barangay ne može sadržavati
+              matematičke simbole
+            contains_mathematical_symbols_informative: Barangay ne može sadržavati
+              matematičke simbole
+            contains_restricted_characters_instructional: Barangay može sadržavati
+              samo slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Barangay ne može sadržavati
+              zabranjene znakove
+            contains_too_many_words_instructional: Naziv barangaya mora imati manje
+              od %{word_count} riječi
+            contains_too_many_words_informative: Naziv barangaya mora imati manje
+              od %{word_count} riječi
+            contains_html_tags_instructional: Barangay ne može sadržavati HTML
+            contains_html_tags_informative: Barangay ne može sadržavati HTML
+            contains_url_instructional: Barangay ne može sadržavati URL
+            contains_url_informative: Barangay ne može sadržavati URL
+            unknown_for_city_instructional: Unesite važeći naziv barangaya za %{city}
+            unknown_for_city_informative: Unesite važeći naziv barangaya za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv barangaya za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv barangaya za %{zip}
+            unknown_for_address_instructional: Barangay je možda netočan
+            unknown_for_address_informative: Barangay je možda netočan
+          warnings:
+            contains_too_many_words: Preporučuje se da naziv barangaya ima manje od
+              %{word_count} riječi

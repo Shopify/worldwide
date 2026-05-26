@@ -17,3 +17,44 @@ ms:
           errors:
             blank_instructional: Pilih negeri
             blank_informative: Negeri tiada
+        district:
+          label:
+            default: Kejiranan
+            optional: Kejiranan (pilihan)
+          errors:
+            blank_instructional: Masukkan kejiranan
+            blank_informative: Kejiranan tiada
+            too_long_instructional: Kejiranan terlalu panjang (maksimum ialah %{limit}
+              aksara)
+            too_long_informative: Kejiranan terlalu panjang
+            contains_emojis_instructional: Kejiranan tidak boleh mengandungi emoji
+            contains_emojis_informative: Kejiranan tidak boleh mengandungi emoji
+            contains_mathematical_symbols_instructional: Kejiranan tidak boleh mengandungi
+              simbol matematik
+            contains_mathematical_symbols_informative: Kejiranan tidak boleh mengandungi
+              simbol matematik
+            contains_restricted_characters_instructional: Kejiranan hanya boleh mengandungi
+              huruf, nombor, aksara tempatan dan aksara khas
+            contains_restricted_characters_informative: Kejiranan tidak boleh mengandungi
+              aksara terhad
+            contains_too_many_words_instructional: Kejiranan mesti kurang daripada
+              %{word_count} perkataan
+            contains_too_many_words_informative: Kejiranan mesti kurang daripada %{word_count}
+              perkataan
+            contains_html_tags_instructional: Kejiranan tidak boleh mengandungi tag
+              HTML
+            contains_html_tags_informative: Kejiranan tidak boleh mengandungi tag
+              HTML
+            contains_url_instructional: Kejiranan tidak boleh mengandungi URL
+            contains_url_informative: Kejiranan tidak boleh mengandungi URL
+            unknown_for_city_instructional: Masukkan nama kejiranan yang sah untuk
+              %{city}
+            unknown_for_city_informative: Masukkan nama kejiranan yang sah untuk %{city}
+            unknown_for_zip_instructional: Masukkan nama kejiranan yang sah untuk
+              %{zip}
+            unknown_for_zip_informative: Masukkan nama kejiranan yang sah untuk %{zip}
+            unknown_for_address_instructional: Kejiranan mungkin tidak betul
+            unknown_for_address_informative: Kejiranan mungkin tidak betul
+          warnings:
+            contains_too_many_words: Kejiranan disyorkan mempunyai kurang daripada
+              %{word_count} perkataan

@@ -17,3 +17,43 @@ de:
           errors:
             blank_instructional: Staat auswählen
             blank_informative: Staat fehlt
+        district:
+          label:
+            default: Stadtteil
+            optional: Stadtteil (optional)
+          errors:
+            blank_instructional: Gib einen Stadtteil ein
+            blank_informative: Stadtteil fehlt
+            too_long_instructional: Stadtteil ist zu lang (maximal %{limit} Zeichen)
+            too_long_informative: Stadtteil ist zu lang
+            contains_emojis_instructional: Stadtteil darf keine Emojis enthalten
+            contains_emojis_informative: Stadtteil darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Stadtteil darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Stadtteil darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Stadtteil darf nur Buchstaben,
+              Zahlen, lokale Zeichen und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Stadtteil darf keine unzulässigen
+              Zeichen enthalten
+            contains_too_many_words_instructional: Stadtteil muss aus weniger als
+              %{word_count} Wörtern bestehen
+            contains_too_many_words_informative: Stadtteil muss aus weniger als %{word_count}
+              Wörtern bestehen
+            contains_html_tags_instructional: Stadtteil darf keine HTML-Tags enthalten
+            contains_html_tags_informative: Stadtteil darf keine HTML-Tags enthalten
+            contains_url_instructional: Stadtteil darf keine URLs enthalten
+            contains_url_informative: Stadtteil darf keine URLs enthalten
+            unknown_for_city_instructional: Gib einen gültigen Stadtteilnamen für
+              %{city} ein
+            unknown_for_city_informative: Gib einen gültigen Stadtteilnamen für %{city}
+              ein
+            unknown_for_zip_instructional: Gib einen gültigen Stadtteilnamen für %{zip}
+              ein
+            unknown_for_zip_informative: Gib einen gültigen Stadtteilnamen für %{zip}
+              ein
+            unknown_for_address_instructional: Stadtteil ist möglicherweise falsch
+            unknown_for_address_informative: Stadtteil ist möglicherweise falsch
+          warnings:
+            contains_too_many_words: Stadtteil sollte aus weniger als %{word_count}
+              Wörtern bestehen

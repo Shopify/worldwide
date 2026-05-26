@@ -17,3 +17,44 @@ hu:
           errors:
             blank_instructional: Válassz államot
             blank_informative: Az állam nincs megadva
+        district:
+          label:
+            default: Városrész
+            optional: Városrész (opcionális)
+          errors:
+            blank_instructional: Adjon meg egy városrészt
+            blank_informative: A városrész hiányzik
+            too_long_instructional: A városrész túl hosszú (legfeljebb %{limit} karakter
+              lehet)
+            too_long_informative: A városrész túl hosszú
+            contains_emojis_instructional: A városrész nem tartalmazhat emojikat
+            contains_emojis_informative: A városrész nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A városrész nem tartalmazhat
+              matematikai szimbólumokat
+            contains_mathematical_symbols_informative: A városrész nem tartalmazhat
+              matematikai szimbólumokat
+            contains_restricted_characters_instructional: A városrész csak betűket,
+              számokat, helyi karaktereket és speciális karaktereket tartalmazhat
+            contains_restricted_characters_informative: A városrész nem tartalmazhat
+              tiltott karaktereket
+            contains_too_many_words_instructional: A városrész nevének kevesebb mint
+              %{word_count} szóból kell állnia
+            contains_too_many_words_informative: A városrész nevének kevesebb mint
+              %{word_count} szóból kell állnia
+            contains_html_tags_instructional: A városrész nem tartalmazhat HTML-címkéket
+            contains_html_tags_informative: A városrész nem tartalmazhat HTML-címkéket
+            contains_url_instructional: A városrész nem tartalmazhat URL-eket
+            contains_url_informative: A városrész nem tartalmazhat URL-eket
+            unknown_for_city_instructional: 'Adjon meg egy érvényes városrésznevet
+              itt: %{city}'
+            unknown_for_city_informative: 'Adjon meg egy érvényes városrésznevet itt:
+              %{city}'
+            unknown_for_zip_instructional: 'Adjon meg egy érvényes városrésznevet
+              ehhez az irányítószámhoz: %{zip}'
+            unknown_for_zip_informative: 'Adjon meg egy érvényes városrésznevet ehhez
+              az irányítószámhoz: %{zip}'
+            unknown_for_address_instructional: Lehet, hogy a városrész hibás
+            unknown_for_address_informative: Lehet, hogy a városrész hibás
+          warnings:
+            contains_too_many_words: Javasoljuk, hogy a városrész neve kevesebb mint
+              %{word_count} szóból álljon

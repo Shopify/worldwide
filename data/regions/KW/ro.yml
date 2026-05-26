@@ -58,3 +58,40 @@ ro:
           warnings:
             contains_too_many_words: Se recomandă ca denumirea cvartalului să nu aibă
               mai mult de %{word_count} cuvinte
+        district:
+          label:
+            default: Bloc
+            optional: Bloc (opțional)
+          errors:
+            blank_instructional: Introdu un bloc
+            blank_informative: Lipsește blocul
+            too_long_instructional: Blocul este prea lung (maximum este de %{limit}
+              caractere)
+            too_long_informative: Blocul este prea lung
+            contains_emojis_instructional: Blocul nu poate conține emoji-uri
+            contains_emojis_informative: Blocul nu poate conține emoji-uri
+            contains_mathematical_symbols_instructional: Blocul nu poate conține simboluri
+              matematice
+            contains_mathematical_symbols_informative: Blocul nu poate conține simboluri
+              matematice
+            contains_restricted_characters_instructional: Blocul poate conține doar
+              litere, cifre, caractere locale și caractere speciale
+            contains_restricted_characters_informative: Blocul nu poate conține caractere
+              restricționate
+            contains_too_many_words_instructional: Blocul trebuie să aibă mai puțin
+              de %{word_count} cuvinte
+            contains_too_many_words_informative: Blocul trebuie să aibă mai puțin
+              de %{word_count} cuvinte
+            contains_html_tags_instructional: Blocul nu poate conține HTML
+            contains_html_tags_informative: Blocul nu poate conține HTML
+            contains_url_instructional: Blocul nu poate conține un URL
+            contains_url_informative: Blocul nu poate conține un URL
+            unknown_for_city_instructional: Introdu un bloc valid pentru %{city}
+            unknown_for_city_informative: Blocul nu este valid pentru %{city}
+            unknown_for_zip_instructional: Introdu un bloc valid pentru %{zip}
+            unknown_for_zip_informative: Blocul nu este valid pentru %{zip}
+            unknown_for_address_instructional: Este posibil ca blocul să fie incorect
+            unknown_for_address_informative: Este posibil ca blocul să fie incorect
+          warnings:
+            contains_too_many_words: Se recomandă ca blocul să aibă mai puțin de %{word_count}
+              cuvinte

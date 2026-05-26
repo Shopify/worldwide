@@ -248,6 +248,66 @@ en:
             unknown_for_address_informative: Neighborhood may be incorrect
           warnings:
             contains_too_many_words: Neighborhood is recommended to have less than %{word_count} words
+        district:
+          label:
+            default: District
+            optional: District (optional)
+          errors:
+            blank_instructional: Enter a district
+            blank_informative: District is missing
+            too_long_instructional: District is too long (maximum is %{limit} characters)
+            too_long_informative: District is too long
+            contains_emojis_instructional: District can't contain emojis
+            contains_emojis_informative: District can't contain emojis
+            contains_mathematical_symbols_instructional: District can't contain mathematical symbols
+            contains_mathematical_symbols_informative: District can't contain mathematical symbols
+            contains_restricted_characters_instructional: District can only contain letters, numbers,
+              local characters, and special characters
+            contains_restricted_characters_informative: District can't contain restricted characters
+            contains_too_many_words_instructional: District must have fewer than %{word_count} words
+            contains_too_many_words_informative: District must have fewer than %{word_count} words
+            contains_html_tags_instructional: District can't contain HTML tags
+            contains_html_tags_informative: District can't contain HTML tags
+            contains_url_instructional: District can't contain URLs
+            contains_url_informative: District can't contain URLs
+            unknown_for_city_instructional: Enter a valid district name for %{city}
+            unknown_for_city_informative: Enter a valid district name for %{city}
+            unknown_for_zip_instructional: Enter a valid district name for %{zip}
+            unknown_for_zip_informative: Enter a valid district name for %{zip}
+            unknown_for_address_instructional: District may be incorrect
+            unknown_for_address_informative: District may be incorrect
+          warnings:
+            contains_too_many_words: District is recommended to have less than %{word_count} words
+        subdistrict:
+          label:
+            default: Subdistrict
+            optional: Subdistrict (optional)
+          errors:
+            blank_instructional: Enter a subdistrict
+            blank_informative: Subdistrict is missing
+            too_long_instructional: Subdistrict is too long (maximum is %{limit} characters)
+            too_long_informative: Subdistrict is too long
+            contains_emojis_instructional: Subdistrict can't contain emojis
+            contains_emojis_informative: Subdistrict can't contain emojis
+            contains_mathematical_symbols_instructional: Subdistrict can't contain mathematical symbols
+            contains_mathematical_symbols_informative: Subdistrict can't contain mathematical symbols
+            contains_restricted_characters_instructional: Subdistrict can only contain letters, numbers,
+              local characters, and special characters
+            contains_restricted_characters_informative: Subdistrict can't contain restricted characters
+            contains_too_many_words_instructional: Subdistrict must have fewer than %{word_count} words
+            contains_too_many_words_informative: Subdistrict must have fewer than %{word_count} words
+            contains_html_tags_instructional: Subdistrict can't contain HTML tags
+            contains_html_tags_informative: Subdistrict can't contain HTML tags
+            contains_url_instructional: Subdistrict can't contain URLs
+            contains_url_informative: Subdistrict can't contain URLs
+            unknown_for_city_instructional: Enter a valid subdistrict name for %{city}
+            unknown_for_city_informative: Enter a valid subdistrict name for %{city}
+            unknown_for_zip_instructional: Enter a valid subdistrict name for %{zip}
+            unknown_for_zip_informative: Enter a valid subdistrict name for %{zip}
+            unknown_for_address_instructional: Subdistrict may be incorrect
+            unknown_for_address_informative: Subdistrict may be incorrect
+          warnings:
+            contains_too_many_words: Subdistrict is recommended to have less than %{word_count} words
         city:
           label:
             default: City

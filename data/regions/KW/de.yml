@@ -46,3 +46,39 @@ de:
           warnings:
             contains_too_many_words: Es wird empfohlen, dass der Block weniger als
               %{word_count} Wörter enthält
+        district:
+          label:
+            default: Block
+            optional: Block (optional)
+          errors:
+            blank_instructional: Gib einen Block ein
+            blank_informative: Block fehlt
+            too_long_instructional: Block ist zu lang (maximal %{limit} Zeichen)
+            too_long_informative: Block ist zu lang
+            contains_emojis_instructional: Block darf keine Emojis enthalten
+            contains_emojis_informative: Block darf keine Emojis enthalten
+            contains_mathematical_symbols_instructional: Block darf keine mathematischen
+              Symbole enthalten
+            contains_mathematical_symbols_informative: Block darf keine mathematischen
+              Symbole enthalten
+            contains_restricted_characters_instructional: Block darf nur Buchstaben,
+              Zahlen, lokale Zeichen und Sonderzeichen enthalten
+            contains_restricted_characters_informative: Block darf keine unzulässigen
+              Zeichen enthalten
+            contains_too_many_words_instructional: Block muss aus weniger als %{word_count}
+              Wörtern bestehen
+            contains_too_many_words_informative: Block muss aus weniger als %{word_count}
+              Wörtern bestehen
+            contains_html_tags_instructional: Block darf kein HTML enthalten
+            contains_html_tags_informative: Block darf kein HTML enthalten
+            contains_url_instructional: Block darf keine URL enthalten
+            contains_url_informative: Block darf keine URL enthalten
+            unknown_for_city_instructional: Gib einen gültigen Block für %{city} ein
+            unknown_for_city_informative: Block ist für %{city} ungültig
+            unknown_for_zip_instructional: Gib einen gültigen Block für %{zip} ein
+            unknown_for_zip_informative: Block ist für %{zip} ungültig
+            unknown_for_address_instructional: Block ist möglicherweise falsch
+            unknown_for_address_informative: Block ist möglicherweise falsch
+          warnings:
+            contains_too_many_words: Block sollte aus weniger als %{word_count} Wörtern
+              bestehen

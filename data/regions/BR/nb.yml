@@ -17,3 +17,39 @@ nb:
           errors:
             blank_instructional: Velg en stat
             blank_informative: Stat mangler
+        district:
+          label:
+            default: Nabolag
+            optional: Nabolag (valgfritt)
+          errors:
+            blank_instructional: Angi et nabolag
+            blank_informative: Nabolag mangler
+            too_long_instructional: Nabolaget er for langt (maksimalt %{limit} tegn)
+            too_long_informative: Nabolaget er for langt
+            contains_emojis_instructional: Nabolag kan ikke inneholde emojier
+            contains_emojis_informative: Nabolag kan ikke inneholde emojier
+            contains_mathematical_symbols_instructional: Nabolag kan ikke inneholde
+              matematiske symboler
+            contains_mathematical_symbols_informative: Nabolag kan ikke inneholde
+              matematiske symboler
+            contains_restricted_characters_instructional: Nabolag kan bare inneholde
+              bokstaver, tall, lokale tegn og spesialtegn
+            contains_restricted_characters_informative: Nabolag kan ikke inneholde
+              ikke-tillatte tegn
+            contains_too_many_words_instructional: Nabolag må ha færre enn %{word_count}
+              ord
+            contains_too_many_words_informative: Nabolag må ha færre enn %{word_count}
+              ord
+            contains_html_tags_instructional: Nabolag kan ikke inneholde HTML-tagger
+            contains_html_tags_informative: Nabolag kan ikke inneholde HTML-tagger
+            contains_url_instructional: Nabolag kan ikke inneholde URL-adresser
+            contains_url_informative: Nabolag kan ikke inneholde URL-adresser
+            unknown_for_city_instructional: Angi et gyldig nabolag for %{city}
+            unknown_for_city_informative: Angi et gyldig nabolag for %{city}
+            unknown_for_zip_instructional: Angi et gyldig nabolag for %{zip}
+            unknown_for_zip_informative: Angi et gyldig nabolag for %{zip}
+            unknown_for_address_instructional: Nabolaget kan være feil
+            unknown_for_address_informative: Nabolaget kan være feil
+          warnings:
+            contains_too_many_words: Det anbefales at nabolaget har færre enn %{word_count}
+              ord

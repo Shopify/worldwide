@@ -518,3 +518,89 @@ es:
           errors:
             may_not_exist_instructional: La dirección no se ha encontrado o no existe.
             may_not_exist_informative: La dirección no se ha encontrado.
+        district:
+          label:
+            default: Distrito
+            optional: Distrito (opcional)
+          errors:
+            blank_instructional: Ingresa un distrito
+            blank_informative: Falta el distrito
+            too_long_instructional: El distrito es demasiado largo (el máximo es de
+              %{limit} caracteres)
+            too_long_informative: El distrito es demasiado largo
+            contains_emojis_instructional: El distrito no puede contener emojis
+            contains_emojis_informative: El distrito no puede contener emojis
+            contains_mathematical_symbols_instructional: El distrito no puede contener
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: El distrito no puede contener
+              símbolos matemáticos
+            contains_restricted_characters_instructional: El distrito solo puede contener
+              letras, números, caracteres locales y caracteres especiales
+            contains_restricted_characters_informative: El distrito no puede contener
+              caracteres restringidos
+            contains_too_many_words_instructional: El distrito debe tener menos de
+              %{word_count} palabras
+            contains_too_many_words_informative: El distrito debe tener menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: El distrito no puede contener etiquetas
+              HTML
+            contains_html_tags_informative: El distrito no puede contener etiquetas
+              HTML
+            contains_url_instructional: El distrito no puede contener URL
+            contains_url_informative: El distrito no puede contener URL
+            unknown_for_city_instructional: Ingresa un nombre de distrito válido para
+              %{city}
+            unknown_for_city_informative: Ingresa un nombre de distrito válido para
+              %{city}
+            unknown_for_zip_instructional: Ingresa un nombre de distrito válido para
+              %{zip}
+            unknown_for_zip_informative: Ingresa un nombre de distrito válido para
+              %{zip}
+            unknown_for_address_instructional: El distrito podría ser incorrecto
+            unknown_for_address_informative: El distrito podría ser incorrecto
+          warnings:
+            contains_too_many_words: Se recomienda que el distrito tenga menos de
+              %{word_count} palabras
+        subdistrict:
+          label:
+            default: Subdistrito
+            optional: Subdistrito (opcional)
+          errors:
+            blank_instructional: Ingresa un subdistrito
+            blank_informative: Falta el subdistrito
+            too_long_instructional: El subdistrito es demasiado largo (el máximo es
+              de %{limit} caracteres)
+            too_long_informative: El subdistrito es demasiado largo
+            contains_emojis_instructional: El subdistrito no puede contener emojis
+            contains_emojis_informative: El subdistrito no puede contener emojis
+            contains_mathematical_symbols_instructional: El subdistrito no puede contener
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: El subdistrito no puede contener
+              símbolos matemáticos
+            contains_restricted_characters_instructional: El subdistrito solo puede
+              contener letras, números, caracteres locales y caracteres especiales
+            contains_restricted_characters_informative: El subdistrito no puede contener
+              caracteres restringidos
+            contains_too_many_words_instructional: El subdistrito debe tener menos
+              de %{word_count} palabras
+            contains_too_many_words_informative: El subdistrito debe tener menos de
+              %{word_count} palabras
+            contains_html_tags_instructional: El subdistrito no puede contener etiquetas
+              HTML
+            contains_html_tags_informative: El subdistrito no puede contener etiquetas
+              HTML
+            contains_url_instructional: El subdistrito no puede contener URL
+            contains_url_informative: El subdistrito no puede contener URL
+            unknown_for_city_instructional: Ingresa un nombre de subdistrito válido
+              para %{city}
+            unknown_for_city_informative: Ingresa un nombre de subdistrito válido
+              para %{city}
+            unknown_for_zip_instructional: Ingresa un nombre de subdistrito válido
+              para %{zip}
+            unknown_for_zip_informative: Ingresa un nombre de subdistrito válido para
+              %{zip}
+            unknown_for_address_instructional: El subdistrito podría ser incorrecto
+            unknown_for_address_informative: El subdistrito podría ser incorrecto
+          warnings:
+            contains_too_many_words: Se recomienda que el subdistrito tenga menos
+              de %{word_count} palabras

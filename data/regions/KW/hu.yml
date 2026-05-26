@@ -49,3 +49,42 @@ hu:
           warnings:
             contains_too_many_words: A tömb nevének javasolt hossza kevesebb mint
               %{word_count} szó
+        district:
+          label:
+            default: Tömb
+            optional: Tömb (opcionális)
+          errors:
+            blank_instructional: Adjon meg egy tömböt
+            blank_informative: A tömb hiányzik
+            too_long_instructional: A tömb túl hosszú (legfeljebb %{limit} karakter
+              lehet)
+            too_long_informative: A tömb túl hosszú
+            contains_emojis_instructional: A tömb nem tartalmazhat emojikat
+            contains_emojis_informative: A tömb nem tartalmazhat emojikat
+            contains_mathematical_symbols_instructional: A tömb nem tartalmazhat matematikai
+              szimbólumokat
+            contains_mathematical_symbols_informative: A tömb nem tartalmazhat matematikai
+              szimbólumokat
+            contains_restricted_characters_instructional: A tömb csak betűket, számokat,
+              helyi karaktereket és speciális karaktereket tartalmazhat
+            contains_restricted_characters_informative: A tömb nem tartalmazhat tiltott
+              karaktereket
+            contains_too_many_words_instructional: A tömb nevének kevesebb mint %{word_count}
+              szóból kell állnia
+            contains_too_many_words_informative: A tömb nevének kevesebb mint %{word_count}
+              szóból kell állnia
+            contains_html_tags_instructional: A tömb nem tartalmazhat HTML-t
+            contains_html_tags_informative: A tömb nem tartalmazhat HTML-t
+            contains_url_instructional: A tömb nem tartalmazhat URL-t
+            contains_url_informative: A tömb nem tartalmazhat URL-t
+            unknown_for_city_instructional: 'Adjon meg egy érvényes tömböt itt: %{city}'
+            unknown_for_city_informative: 'A tömb nem érvényes itt: %{city}'
+            unknown_for_zip_instructional: 'Adjon meg egy érvényes tömböt ehhez az
+              irányítószámhoz: %{zip}'
+            unknown_for_zip_informative: 'A tömb nem érvényes ehhez az irányítószámhoz:
+              %{zip}'
+            unknown_for_address_instructional: Lehet, hogy a tömb hibás
+            unknown_for_address_informative: Lehet, hogy a tömb hibás
+          warnings:
+            contains_too_many_words: Javasoljuk, hogy a tömb neve kevesebb mint %{word_count}
+              szóból álljon

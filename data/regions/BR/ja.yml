@@ -17,3 +17,32 @@ ja:
           errors:
             blank_instructional: 州を選択してください
             blank_informative: 州がありません
+        district:
+          label:
+            default: 地区
+            optional: 地区（オプション）
+          errors:
+            blank_instructional: 地区を入力してください
+            blank_informative: 地区が入力されていません
+            too_long_instructional: 地区が長すぎます（最大 %{limit} 文字）
+            too_long_informative: 地区が長すぎます
+            contains_emojis_instructional: 地区に絵文字を含めることはできません
+            contains_emojis_informative: 地区に絵文字を含めることはできません
+            contains_mathematical_symbols_instructional: 地区に算術記号を含めることはできません
+            contains_mathematical_symbols_informative: 地区に算術記号を含めることはできません
+            contains_restricted_characters_instructional: 地区には、文字、数字、現地の文字、特殊文字のみを使用できます
+            contains_restricted_characters_informative: 地区に制限された文字を含めることはできません
+            contains_too_many_words_instructional: 地区は %{word_count} 語未満にする必要があります
+            contains_too_many_words_informative: 地区は %{word_count} 語未満にする必要があります
+            contains_html_tags_instructional: 地区に HTML タグを含めることはできません
+            contains_html_tags_informative: 地区に HTML タグを含めることはできません
+            contains_url_instructional: 地区に URL を含めることはできません
+            contains_url_informative: 地区に URL を含めることはできません
+            unknown_for_city_instructional: "%{city} の有効な地区名を入力してください"
+            unknown_for_city_informative: "%{city} の有効な地区名を入力してください"
+            unknown_for_zip_instructional: "%{zip} の有効な地区名を入力してください"
+            unknown_for_zip_informative: "%{zip} の有効な地区名を入力してください"
+            unknown_for_address_instructional: 地区に誤りがある可能性があります
+            unknown_for_address_informative: 地区に誤りがある可能性があります
+          warnings:
+            contains_too_many_words: 地区は %{word_count} 語未満にすることをおすすめします

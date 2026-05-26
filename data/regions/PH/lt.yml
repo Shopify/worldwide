@@ -49,3 +49,40 @@ lt:
           warnings:
             contains_too_many_words: Patartina, kad bario pavadinimą sudarytų mažiau
               nei %{word_count} žodžiai (-ių, -is)
+        district:
+          label:
+            default: Barangajus
+            optional: Barangajus (pasirenkama)
+          errors:
+            blank_instructional: Įveskite barangajų
+            blank_informative: Nenurodytas barangajus
+            too_long_instructional: Barangajaus pavadinimas per ilgas (daugiausia
+              %{limit} simb.)
+            too_long_informative: Barangajaus pavadinimas per ilgas
+            contains_emojis_instructional: Barangajaus pavadinime negali būti jaustukų
+            contains_emojis_informative: Barangajaus pavadinime negali būti jaustukų
+            contains_mathematical_symbols_instructional: Barangajaus pavadinime negali
+              būti matematinių simbolių
+            contains_mathematical_symbols_informative: Barangajaus pavadinime negali
+              būti matematinių simbolių
+            contains_restricted_characters_instructional: Barangajaus pavadinime gali
+              būti tik raidės, skaičiai, vietiniai ir specialieji simboliai
+            contains_restricted_characters_informative: Barangajaus pavadinime negali
+              būti draudžiamų simbolių
+            contains_too_many_words_instructional: Barangajaus pavadinimą turi sudaryti
+              mažiau nei %{word_count} žodž.
+            contains_too_many_words_informative: Barangajaus pavadinimą turi sudaryti
+              mažiau nei %{word_count} žodž.
+            contains_html_tags_instructional: Barangajaus pavadinime negali būti HTML
+            contains_html_tags_informative: Barangajaus pavadinime negali būti HTML
+            contains_url_instructional: Barangajaus pavadinime negali būti URL
+            contains_url_informative: Barangajaus pavadinime negali būti URL
+            unknown_for_city_instructional: Įveskite tinkamą %{city} barangajaus pavadinimą
+            unknown_for_city_informative: Įveskite tinkamą %{city} barangajaus pavadinimą
+            unknown_for_zip_instructional: Įveskite tinkamą %{zip} barangajaus pavadinimą
+            unknown_for_zip_informative: Įveskite tinkamą %{zip} barangajaus pavadinimą
+            unknown_for_address_instructional: Barangajus gali būti nurodytas neteisingai
+            unknown_for_address_informative: Barangajus gali būti nurodytas neteisingai
+          warnings:
+            contains_too_many_words: Rekomenduojama, kad barangajaus pavadinimą sudarytų
+              mažiau nei %{word_count} žodž.

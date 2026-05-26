@@ -47,3 +47,39 @@ hr:
           warnings:
             contains_too_many_words: Preporučujemo da naziv bloka sadrži manje od
               %{word_count} riječ/i
+        district:
+          label:
+            default: Blok
+            optional: Blok (nije obavezno)
+          errors:
+            blank_instructional: Unesite blok
+            blank_informative: Nedostaje blok
+            too_long_instructional: 'Blok je predug (maksimalan broj znakova: %{limit})'
+            too_long_informative: Blok je predug
+            contains_emojis_instructional: Blok ne može sadržavati emojije
+            contains_emojis_informative: Blok ne može sadržavati emojije
+            contains_mathematical_symbols_instructional: Blok ne može sadržavati matematičke
+              simbole
+            contains_mathematical_symbols_informative: Blok ne može sadržavati matematičke
+              simbole
+            contains_restricted_characters_instructional: Blok može sadržavati samo
+              slova, brojeve, lokalne znakove i posebne znakove
+            contains_restricted_characters_informative: Blok ne može sadržavati zabranjene
+              znakove
+            contains_too_many_words_instructional: Blok mora imati manje od %{word_count}
+              riječi
+            contains_too_many_words_informative: Blok mora imati manje od %{word_count}
+              riječi
+            contains_html_tags_instructional: Blok ne može sadržavati HTML
+            contains_html_tags_informative: Blok ne može sadržavati HTML
+            contains_url_instructional: Blok ne može sadržavati URL
+            contains_url_informative: Blok ne može sadržavati URL
+            unknown_for_city_instructional: Unesite važeći blok za %{city}
+            unknown_for_city_informative: Blok nije važeći za %{city}
+            unknown_for_zip_instructional: Unesite važeći blok za %{zip}
+            unknown_for_zip_informative: Blok nije važeći za %{zip}
+            unknown_for_address_instructional: Blok je možda netočan
+            unknown_for_address_informative: Blok je možda netočan
+          warnings:
+            contains_too_many_words: Preporučuje se da naziv bloka ima manje od %{word_count}
+              riječi
