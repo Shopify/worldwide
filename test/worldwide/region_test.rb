@@ -563,6 +563,7 @@ module Worldwide
 
     test "#tax_name returns values as expected" do
       assert_equal "HST", Worldwide.region(code: "CA").zone(code: "ON").tax_name
+      assert_equal "ПДВ", Worldwide.region(code: "UA").tax_name
     end
 
     test "#tax_rate returns values as expected" do
