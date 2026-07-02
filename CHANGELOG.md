@@ -30,6 +30,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.25.2] - 2026-07-02
+- Bump phonelib from 0.10.17 to 0.10.22 to pick up updated libphonenumber metadata.
+
 ## [1.25.1] - 2026-05-26
 - Update postal code expectations in Portugal to require seven digit postal code (XXXX-XXX) [#493](https://github.com/Shopify/worldwide/pull/493)
 
