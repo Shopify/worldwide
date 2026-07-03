@@ -272,6 +272,8 @@ module Worldwide
         ["he", 0.75, "75%"],
         ["ku", 0.1, "%10"],
         ["tr", 1, "%100"],
+        ["ur", 0.02, "2%"],
+        ["ur-PK", 0.02, "2%"],
         ["zh-CN", 0.22, "22%"],
       ].each do |locale, amount, expected|
         nf = Worldwide::Numbers.new(locale: locale)

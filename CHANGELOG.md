@@ -26,9 +26,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Add `ar`, `he`, and `ur` to `translation.yml` target languages so the Translation Platform generates RTL localizations of the region address data [#519](https://github.com/Shopify/worldwide/pull/519)
+- nil
 
 ---
+
+## [1.25.3] - 2026-07-08
+- Add `ar`, `he`, and `ur` to `translation.yml` target languages so the Translation Platform generates RTL localizations of the region address data [#519](https://github.com/Shopify/worldwide/pull/519)
+- Fixed: format Urdu (`ur`) percentages with a trailing % sign in numeric layout order (e.g. `2%` instead of `%2`), matching the existing Hebrew behaviour. [#518](https://github.com/Shopify/worldwide/pull/518)
 
 ## [1.25.2] - 2026-07-02
 - Bump phonelib from 0.10.17 to 0.10.22 to pick up updated libphonenumber metadata.
