@@ -8,9 +8,8 @@ module Worldwide
     COMPACT_DECIMAL_BASE_KEY = "numbers.latn.formats.decimal.patterns"
     DEFAULT_COMPACT_PATTERN = "0"
 
-    # Right-to-left locales that CLDR records with a trailing % sign in character order
-    # (implying a leading % sign in numeric layout order) but which actually use a
-    # trailing % sign in numeric layout order (e.g. "75%", "2%").
+    # RTL locales that CLDR marks as leading % in numeric layout order, but which
+    # actually use a trailing % (e.g. "75%", "2%"). We override the placement for these.
     TRAILING_PERCENT_SIGN_LOCALES = ["he", "ur"].freeze
 
     def initialize(locale: I18n.locale)
@@ -297,10 +296,6 @@ module Worldwide
 
       spacing = format[(first + 1)..(second - 1)]
       trailing = if TRAILING_PERCENT_SIGN_LOCALES.include?(locale.to_s.downcase.split("-").first)
-        # CLDR records these right-to-left locales with a trailing % sign in character
-        # order, which would imply a prefix % sign in numeric layout order.  In practice
-        # these locales use a trailing % sign when considered in numeric layout order
-        # (e.g. Hebrew "75%", Urdu "2%"), so we override here.
         true
       elsif character_order == "right-to-left"
         digit_pos > percent_pos
