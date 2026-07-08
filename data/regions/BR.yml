@@ -29,6 +29,10 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{neighborhood}_{city}{province}_{phone}"
 address1_regex:
+  - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))$"
+  - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))\\s*,\\s*(?<line2>.+)$"
+  - "^(?<streetName>(?:[^\\d,\\s]+\\s)*[^\\d,\\s]+)\\s+(?<streetNumber>\\d+(?: ?[a-z])?)\\s+(?<line2>(?:apt(?:o|\\.)?|apartamento|bloco|casa|sala|fundos|loja)\\b.+)$"
+  - "^(?<streetName>(?:[^\\d,\\s]+\\s)*[^\\d,\\s]+)(?:,? ?)(?<streetNumber>\\d+(?: ?[a-z])?)\\s*,\\s*(?<line2>.+)$"
   - "^(?<streetName>(?:[^\\d,\\s]+\\s)*[^\\d,\\s]+)(?:,? ?)(?<streetNumber>\\d+(?: ?[a-z])?)$"
 additional_address_fields:
   - name: streetName
