@@ -1,0 +1,49 @@
+---
+ur:
+  worldwide:
+    AE:
+      addresses:
+        province:
+          label:
+            default: امارت
+            optional: امارت (اختیاری)
+          errors:
+            blank_instructional: کوئی امارت منتخب کریں
+            blank_informative: امارت غائب ہے
+        neighborhood:
+          label:
+            default: علاقہ
+            optional: علاقہ (اختیاری)
+          errors:
+            blank_instructional: کوئی علاقہ درج کریں
+            blank_informative: علاقہ غائب ہے
+            too_long_instructional: علاقہ بہت طویل ہے (زیادہ سے زیادہ %{limit} کریکٹرز
+              کی اجازت ہے)
+            too_long_informative: علاقہ بہت طویل ہے
+            contains_emojis_instructional: علاقے میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: علاقے میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: علاقے میں ریاضیاتی علامات
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: علاقے میں ریاضیاتی علامات شامل
+              نہیں ہو سکتیں
+            contains_restricted_characters_instructional: علاقے میں صرف حروف، نمبرز،
+              مقامی کریکٹرز اور خصوصی کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: علاقے میں ممنوعہ کریکٹرز شامل
+              نہیں ہو سکتے
+            contains_too_many_words_instructional: علاقے میں الفاظ کی تعداد %{word_count}
+              سے کم ہونی چاہیے
+            contains_too_many_words_informative: علاقے میں الفاظ کی تعداد %{word_count}
+              سے کم ہونی چاہیے
+            contains_html_tags_instructional: علاقے میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: علاقے میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: علاقے میں URL شامل نہیں ہو سکتا
+            contains_url_informative: علاقے میں URL شامل نہیں ہو سکتا
+            unknown_for_city_instructional: "%{city} کے لیے کوئی درست علاقہ درج کریں"
+            unknown_for_city_informative: علاقہ %{city} کے لیے درست نہیں ہے
+            unknown_for_zip_instructional: "%{zip} کے لیے کوئی درست علاقہ درج کریں"
+            unknown_for_zip_informative: علاقہ %{zip} کے لیے درست نہیں ہے
+            unknown_for_address_instructional: ہو سکتا ہے کہ علاقہ غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے کہ علاقہ غلط ہو
+          warnings:
+            contains_too_many_words: یہ تجویز کی جاتی ہے کہ علاقے میں %{word_count}
+              سے کم الفاظ ہوں

@@ -1,0 +1,52 @@
+---
+he:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: פרבר
+            optional: פרבר (אופציונלי)
+          errors:
+            blank_instructional: יש להזין פרבר
+            blank_informative: חסר פרבר
+            too_long_instructional: הפרבר ארוך מדי (עד 255 תווים)
+            too_long_informative: הפרבר ארוך מדי
+            contains_emojis_instructional: הפרבר לא יכול להכיל אימוג'י
+            contains_emojis_informative: הפרבר לא יכול להכיל אימוג'י
+            contains_restricted_characters_instructional: הפרבר יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: הפרבר לא יכול להכיל תווים
+              אסורים
+            contains_html_tags_instructional: הפרבר לא יכול להכיל HTML
+            contains_html_tags_informative: הפרבר לא יכול להכיל HTML
+        province:
+          label:
+            default: מדינה/טריטוריה
+            optional: מדינה/טריטוריה (אופציונלי)
+          errors:
+            blank_instructional: יש לבחור מדינה/טריטוריה
+            blank_informative: חסרה מדינה/טריטוריה
+        zip:
+          label:
+            default: מיקוד
+            optional: מיקוד (אופציונלי)
+          errors:
+            blank_instructional: יש להזין מיקוד
+            blank_informative: חסר מיקוד
+            invalid_for_country_instructional: יש להזין מיקוד חוקי עבור %{country}
+            invalid_for_country_informative: המיקוד אינו חוקי עבור %{country}
+            invalid_for_country_and_province_instructional: יש להזין מיקוד חוקי עבור
+              %{province}, %{country}
+            invalid_for_country_and_province_informative: המיקוד אינו חוקי עבור %{province},
+              %{country}
+            too_long_instructional: המיקוד ארוך מדי
+            too_long_informative: המיקוד ארוך מדי
+            contains_emojis_instructional: המיקוד לא יכול להכיל אימוג'י
+            contains_emojis_informative: המיקוד לא יכול להכיל אימוג'י
+            contains_restricted_characters_instructional: המיקוד יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: המיקוד לא יכול להכיל תווים
+              אסורים
+            contains_html_tags_instructional: המיקוד לא יכול להכיל HTML
+            contains_html_tags_informative: המיקוד לא יכול להכיל HTML
