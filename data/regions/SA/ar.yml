@@ -1,0 +1,40 @@
+---
+ar:
+  worldwide:
+    SA:
+      addresses:
+        neighborhood:
+          label:
+            default: حي
+            optional: حي (اختياري)
+          errors:
+            blank_instructional: أدخل حيًا
+            blank_informative: الحي مفقود
+            too_long_instructional: الحي طويل جدًا (الحد الأقصى %{limit} حرفًا)
+            too_long_informative: الحي طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الحي على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الحي على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الحي على
+              رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الحي على رموز
+              رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الحي فقط على
+              أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الحي على
+              أحرف مقيدة
+            contains_too_many_words_instructional: يجب أن يتكون الحي من عدد كلمات
+              أقل من %{word_count}
+            contains_too_many_words_informative: يجب أن يتكون الحي من عدد كلمات أقل
+              من %{word_count}
+            contains_html_tags_instructional: لا يمكن أن يحتوي الحي على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الحي على HTML
+            contains_url_instructional: لا يمكن أن يحتوي الحي على رابط URL
+            contains_url_informative: لا يمكن أن يحتوي الحي على رابط URL
+            unknown_for_city_instructional: أدخل حيًا صالحًا لـ %{city}
+            unknown_for_city_informative: الحي غير صالح لـ %{city}
+            unknown_for_zip_instructional: أدخل حيًا صالحًا لـ %{zip}
+            unknown_for_zip_informative: الحي غير صالح لـ %{zip}
+            unknown_for_address_instructional: قد يكون الحي غير صحيح
+            unknown_for_address_informative: قد يكون الحي غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يتكون الحي من عدد كلمات أقل من %{word_count}
