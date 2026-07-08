@@ -1,0 +1,34 @@
+---
+ar:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: الولاية
+            optional: الولاية (اختياري)
+          errors:
+            blank_instructional: اختر ولاية
+            blank_informative: الولاية مفقودة
+        zip:
+          label:
+            default: رمز PIN
+            optional: رمز PIN (اختياري)
+          errors:
+            blank_instructional: أدخل رمز PIN
+            blank_informative: رمز PIN مفقود
+            invalid_for_country_instructional: أدخل رمز PIN صحيحًا لـ %{country}
+            invalid_for_country_informative: رمز PIN غير صحيح
+            invalid_for_country_and_province_instructional: أدخل رمز PIN صحيحًا لـ
+              %{province}، %{country}
+            invalid_for_country_and_province_informative: رمز PIN غير صحيح
+            too_long_instructional: رمز PIN طويل جدًا
+            too_long_informative: رمز PIN طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي رمز PIN على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي رمز PIN على رموز تعبيرية
+            contains_restricted_characters_instructional: لا يمكن أن يحتوي رمز PIN
+              على رموز مقيدة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي رمز PIN على
+              رموز مقيدة
+            contains_html_tags_instructional: لا يمكن أن يحتوي رمز PIN على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي رمز PIN على HTML

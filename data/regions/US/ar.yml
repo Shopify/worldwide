@@ -1,0 +1,50 @@
+---
+ar:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: ولاية
+            optional: ولاية (اختياري)
+          errors:
+            blank_instructional: اختر ولاية
+            blank_informative: أدخل ولاية
+            invalid_for_country_instructional: أدخل ولاية صالحة لـ %{city}، %{zip}
+            invalid_for_country_informative: الولاية غير صالحة
+            unknown_for_city_and_zip_instructional: أدخل ولاية صالحة لـ %{city}، %{zip}
+            unknown_for_city_and_zip_informative: الولاية غير صالحة لـ %{city}، %{zip}
+            unknown_for_city_instructional: اختر ولاية صالحة لـ %{city}
+            unknown_for_city_informative: الولاية غير صالحة لـ %{city}
+            unknown_for_zip_instructional: اختر ولاية صالحة لـ %{zip}
+            unknown_for_zip_informative: الولاية غير صالحة لـ %{zip}
+            unknown_for_address_instructional: قد تكون الولاية غير صحيحة
+            unknown_for_address_informative: قد تكون الولاية غير صحيحة
+        zip:
+          label:
+            default: الرمز البريدي
+            optional: الرمز البريدي (اختياري)
+          errors:
+            blank_instructional: أدخل رمزًا بريديًا
+            blank_informative: الرمز البريدي مفقود
+            invalid_for_country_instructional: أدخل رمزًا بريديًا صالحًا لـ %{country}
+            invalid_for_country_informative: الرمز البريدي غير صالح لـ %{country}
+            invalid_for_province_instructional: أدخل رمزًا بريديًا صالحًا لـ %{province}
+            invalid_for_province_informative: الرمز البريدي غير صالح لـ %{province}
+            invalid_for_country_and_province_instructional: أدخل رمزًا بريديًا صالحًا
+              لـ %{province}، %{country}
+            invalid_for_country_and_province_informative: الرمز البريدي غير صالح لـ
+              %{province}، %{country}
+            too_long_instructional: الرمز البريدي طويل جدًا
+            too_long_informative: الرمز البريدي طويل جدًا (الحد الأقصى 255 حرفًا)
+            contains_emojis_instructional: لا يمكن أن يحتوي الرمز البريدي على رموز
+              تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الرمز البريدي على رموز تعبيرية
+            contains_restricted_characters_instructional: لا يمكن أن يحتوي الرمز البريدي
+              على أحرف مقيدة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الرمز البريدي
+              على أحرف مقيدة
+            contains_html_tags_instructional: لا يمكن أن يحتوي الرمز البريدي على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الرمز البريدي على HTML
+            unknown_for_address_instructional: قد يكون الرمز البريدي غير صحيح
+            unknown_for_address_informative: قد يكون الرمز البريدي غير صحيح

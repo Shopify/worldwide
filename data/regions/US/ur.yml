@@ -1,0 +1,56 @@
+---
+ur:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: ریاست
+            optional: ریاست (اختیاری)
+          errors:
+            blank_instructional: ریاست منتخب کریں
+            blank_informative: ریاست درج کریں
+            invalid_for_country_instructional: "%{city}، %{zip} کے لیے ایک درست ریاست
+              درج کریں"
+            invalid_for_country_informative: ریاست درست نہیں ہے
+            unknown_for_city_and_zip_instructional: "%{city}، %{zip} کے لیے ایک درست
+              ریاست درج کریں"
+            unknown_for_city_and_zip_informative: ریاست %{city}، %{zip} کے لیے درست
+              نہیں ہے
+            unknown_for_city_instructional: "%{city} کے لیے ایک درست ریاست منتخب کریں"
+            unknown_for_city_informative: ریاست %{city} کے لیے درست نہیں ہے
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست ریاست منتخب کریں"
+            unknown_for_zip_informative: ریاست %{zip} کے لیے درست نہیں ہے
+            unknown_for_address_instructional: ریاست غلط ہو سکتی ہے
+            unknown_for_address_informative: ریاست غلط ہو سکتی ہے
+        zip:
+          label:
+            default: زپ کوڈ
+            optional: زپ کوڈ (اختیاری)
+          errors:
+            blank_instructional: زپ کوڈ درج کریں
+            blank_informative: زپ کوڈ درج نہیں ہے
+            invalid_for_country_instructional: "%{country} کے لیے ایک درست زپ کوڈ
+              درج کریں"
+            invalid_for_country_informative: زپ کوڈ %{country} کے لیے درست نہیں ہے
+            invalid_for_province_instructional: "%{province} کے لیے ایک درست زپ کوڈ
+              درج کریں"
+            invalid_for_province_informative: زپ کوڈ %{province} کے لیے درست نہیں
+              ہے
+            invalid_for_country_and_province_instructional: "%{province}، %{country}
+              کے لیے ایک درست زپ کوڈ درج کریں"
+            invalid_for_country_and_province_informative: زپ کوڈ %{province}، %{country}
+              کے لیے درست نہیں ہے
+            too_long_instructional: زپ کوڈ بہت طویل ہے
+            too_long_informative: زپ کوڈ بہت طویل ہے (زیادہ سے زیادہ 255 کیریکٹر کی
+              اجازت ہے)
+            contains_emojis_instructional: زپ کوڈ میں ایموجی شامل نہیں ہو سکتے
+            contains_emojis_informative: زپ کوڈ میں ایموجی شامل نہیں ہو سکتے
+            contains_restricted_characters_instructional: زپ کوڈ میں ممنوعہ کیریکٹر
+              شامل نہیں ہو سکتے
+            contains_restricted_characters_informative: زپ کوڈ میں ممنوعہ کیریکٹر
+              شامل نہیں ہو سکتے
+            contains_html_tags_instructional: زپ کوڈ میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: زپ کوڈ میں HTML شامل نہیں ہو سکتا
+            unknown_for_address_instructional: زپ کوڈ غلط ہو سکتا ہے
+            unknown_for_address_informative: زپ کوڈ غلط ہو سکتا ہے

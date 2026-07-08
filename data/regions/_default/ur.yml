@@ -1,0 +1,551 @@
+---
+ur:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: کمپنی
+            optional: کمپنی (اختیاری)
+          errors:
+            blank_instructional: کمپنی درج کریں
+            blank_informative: کمپنی درج نہیں ہے
+            too_long_instructional: کمپنی بہت طویل ہے (زیادہ سے زیادہ 255 کیریکٹر
+              کی اجازت ہے)
+            too_long_informative: کمپنی بہت طویل ہے
+            contains_emojis_instructional: کمپنی میں ایموجی شامل نہیں ہو سکتے
+            contains_emojis_informative: کمپنی میں ایموجی شامل نہیں ہو سکتے
+            contains_mathematical_symbols_instructional: کمپنی میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: کمپنی میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: کمپنی میں صرف حروف، نمبر،
+              مقامی کیریکٹر اور خصوصی کیریکٹر شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: کمپنی میں ممنوعہ کیریکٹر شامل
+              نہیں ہو سکتے
+            contains_html_tags_instructional: کمپنی میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: کمپنی میں HTML شامل نہیں ہو سکتا
+        first_name:
+          label:
+            default: پہلا نام
+            optional: پہلا نام (اختیاری)
+          errors:
+            blank_instructional: پہلا نام درج کریں
+            blank_informative: پہلا نام درج نہیں ہے
+            too_long_instructional: پہلا نام بہت طویل ہے (زیادہ سے زیادہ 255 کیریکٹر
+              کی اجازت ہے)
+            too_long_informative: پہلا نام بہت طویل ہے
+            contains_emojis_instructional: پہلے نام میں ایموجی شامل نہیں ہو سکتے
+            contains_emojis_informative: پہلے نام میں ایموجی شامل نہیں ہو سکتے
+            contains_mathematical_symbols_instructional: پہلے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: پہلے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: پہلے نام میں صرف حروف، نمبر،
+              مقامی کیریکٹر اور خصوصی کیریکٹر شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: پہلے نام میں ممنوعہ کیریکٹر
+              شامل نہیں ہو سکتے
+            contains_html_tags_instructional: پہلے نام میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: پہلے نام میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: پہلے نام میں کوئی URL شامل نہیں ہو سکتا
+            contains_url_informative: پہلے نام میں کوئی URL شامل نہیں ہو سکتا
+        last_name:
+          label:
+            default: آخری نام
+            optional: آخری نام (اختیاری)
+          errors:
+            blank_instructional: آخری نام درج کریں
+            blank_informative: آخری نام درج نہیں ہے
+            too_long_instructional: آخری نام بہت طویل ہے (زیادہ سے زیادہ 255 کریکٹرز
+              کی اجازت ہے)
+            too_long_informative: آخری نام بہت طویل ہے
+            contains_emojis_instructional: آخری نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: آخری نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: آخری نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: آخری نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: آخری نام میں صرف حروف، نمبرز،
+              مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: آخری نام میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_html_tags_instructional: آخری نام میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: آخری نام میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: آخری نام میں URL شامل نہیں ہو سکتا
+            contains_url_informative: آخری نام میں URL شامل نہیں ہو سکتا
+        address1:
+          label:
+            default: پتہ
+            optional: پتہ (اختیاری)
+          errors:
+            blank_instructional: ایک پتہ درج کریں
+            blank_informative: پتہ درج نہیں ہے
+            too_long_instructional: پتہ کی پہلی لائن بہت طویل ہے (زیادہ سے زیادہ 255
+              کریکٹرز کی اجازت ہے)
+            too_long_informative: پتہ کی پہلی لائن بہت طویل ہے
+            contains_emojis_instructional: پتہ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: پتہ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: پتہ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: پتہ میں ریاضیاتی علامتیں شامل
+              نہیں ہو سکتیں
+            contains_restricted_characters_instructional: پتہ میں صرف حروف، نمبرز،
+              مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: پتہ میں ممنوعہ کریکٹرز شامل
+              نہیں ہو سکتے
+            contains_too_many_words_instructional: پتہ میں %{word_count} سے کم الفاظ
+              ہونے چاہئیں
+            contains_too_many_words_informative: پتہ میں %{word_count} سے کم الفاظ
+              ہونے چاہئیں
+            contains_html_tags_instructional: پتہ میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: پتہ میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: پتہ میں URL شامل نہیں ہو سکتا
+            contains_url_informative: پتہ میں URL شامل نہیں ہو سکتا
+            missing_building_number_instructional: اگر آپ کے پاس بلڈنگ نمبر ہے تو
+              اسے شامل کریں
+            missing_building_number_informative: ہو سکتا ہے بلڈنگ نمبر درج نہ ہو
+            street_unknown_for_zip_instructional: "%{zip} کے لیے ایک درست سٹریٹ کا
+              نام درج کریں"
+            street_unknown_for_zip_informative: سٹریٹ کا نام %{zip} سے مماثل نہیں
+              ہے
+            building_number_invalid_instructional: "%{street}, %{zip} کے لیے بلڈنگ
+              نمبر نہیں مل سکا"
+            building_number_invalid_informative: "%{street}, %{zip} کے لیے بلڈنگ نمبر
+              نہیں مل سکا"
+            unknown_for_address_instructional: ہو سکتا ہے پتہ لائن 1 غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے پتہ لائن 1 غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ پتہ لائن 1 میں %{word_count}
+              سے کم الفاظ ہوں
+        street_name:
+          label:
+            default: سٹریٹ
+            optional: سٹریٹ (اختیاری)
+          errors:
+            blank_instructional: سٹریٹ درج کریں
+            blank_informative: سٹریٹ درج نہیں ہے
+            too_long_instructional: سٹریٹ بہت طویل ہے (زیادہ سے زیادہ %{limit} کریکٹرز
+              کی اجازت ہے)
+            too_long_informative: سٹریٹ بہت طویل ہے
+            contains_emojis_instructional: سٹریٹ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: سٹریٹ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: سٹریٹ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: سٹریٹ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: سٹریٹ میں صرف حروف، نمبرز،
+              مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: سٹریٹ میں ممنوعہ کریکٹرز شامل
+              نہیں ہو سکتے
+            contains_too_many_words_instructional: سٹریٹ میں %{word_count} سے زیادہ
+              الفاظ نہیں ہو سکتے
+            contains_too_many_words_informative: سٹریٹ میں %{word_count} سے زیادہ
+              الفاظ نہیں ہو سکتے
+            contains_html_tags_instructional: سٹریٹ میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: سٹریٹ میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: سٹریٹ میں URL شامل نہیں ہو سکتا
+            contains_url_informative: سٹریٹ میں URL شامل نہیں ہو سکتا
+            street_unknown_for_zip_instructional: "%{zip} کے لیے ایک درست سٹریٹ درج
+              کریں"
+            street_unknown_for_zip_informative: سٹریٹ %{zip} کے لیے درست نہیں ہے
+            unknown_for_address_instructional: ہو سکتا ہے سٹریٹ غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے سٹریٹ غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ سٹریٹ میں %{word_count} سے
+              کم الفاظ ہوں
+        street_number:
+          label:
+            default: بلڈنگ نمبر
+            optional: بلڈنگ نمبر (اختیاری)
+          errors:
+            blank_instructional: بلڈنگ نمبر درج کریں
+            blank_informative: بلڈنگ نمبر درج نہیں ہے
+            too_long_instructional: بلڈنگ نمبر بہت طویل ہے (زیادہ سے زیادہ %{limit}
+              کریکٹرز کی اجازت ہے)
+            too_long_informative: بلڈنگ نمبر بہت طویل ہے
+            contains_emojis_instructional: بلڈنگ نمبر میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: بلڈنگ نمبر میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: بلڈنگ نمبر میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: بلڈنگ نمبر میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: بلڈنگ نمبر میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: بلڈنگ نمبر میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_html_tags_instructional: بلڈنگ نمبر میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: بلڈنگ نمبر میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: بلڈنگ نمبر میں URL شامل نہیں ہو سکتا
+            contains_url_informative: بلڈنگ نمبر میں URL شامل نہیں ہو سکتا
+            missing_building_number_instructional: اگر آپ کے پاس بلڈنگ نمبر ہے تو
+              اسے شامل کریں
+            missing_building_number_informative: ہو سکتا ہے بلڈنگ نمبر درج نہ ہو
+            building_number_invalid_instructional: "%{street}, %{zip} کے لیے بلڈنگ
+              نمبر نہیں مل سکا"
+            building_number_invalid_informative: "%{street}, %{zip} کے لیے بلڈنگ نمبر
+              نہیں مل سکا"
+            unknown_for_address_instructional: درست بلڈنگ نمبر درج کریں
+            unknown_for_address_informative: بلڈنگ نمبر درست نہیں ہے
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ بلڈنگ نمبر میں %{word_count}
+              سے کم الفاظ ہوں
+        address2:
+          label:
+            default: اپارٹمنٹ، سویٹ وغیرہ
+            optional: اپارٹمنٹ، سویٹ وغیرہ (اختیاری)
+          errors:
+            blank_instructional: کوئی اپارٹمنٹ، سویٹ وغیرہ درج کریں
+            blank_informative: اپارٹمنٹ یا سویٹ درج نہیں ہے
+            too_long_instructional: پتہ لائن 2 بہت طویل ہے (زیادہ سے زیادہ 255 کریکٹرز
+              کی اجازت ہے)
+            too_long_informative: پتہ لائن 2 بہت طویل ہے
+            contains_emojis_instructional: پتہ لائن 2 میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: پتہ لائن 2 میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: پتہ لائن 2 میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: پتہ لائن 2 میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: پتہ لائن 2 میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: پتہ لائن 2 میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: پتہ لائن 2 میں %{word_count} سے
+              کم الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: پتہ لائن 2 میں %{word_count} سے کم
+              الفاظ ہونے چاہئیں
+            contains_html_tags_instructional: پتہ لائن 2 میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: پتہ لائن 2 میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: پتہ لائن 2 میں URL شامل نہیں ہو سکتا
+            contains_url_informative: پتہ لائن 2 میں URL شامل نہیں ہو سکتا
+            missing_building_number_instructional: اگر آپ کے پاس بلڈنگ نمبر ہے تو
+              اسے شامل کریں
+            missing_building_number_informative: ہو سکتا ہے بلڈنگ نمبر درج نہ ہو
+            street_unknown_for_zip_instructional: "%{zip} کے لیے ایک درست سٹریٹ کا
+              نام درج کریں"
+            street_unknown_for_zip_informative: سٹریٹ کا نام %{zip} کے لیے درست نہیں
+              ہے
+            building_number_invalid_instructional: "%{street}, %{zip} کے لیے بلڈنگ
+              نمبر نہیں مل سکا"
+            building_number_invalid_informative: "%{street}, %{zip} کے لیے بلڈنگ نمبر
+              نہیں مل سکا"
+            unknown_for_address_instructional: ہو سکتا ہے پتہ لائن 2 غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے پتہ لائن 2 غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ پتہ لائن 2 میں %{word_count}
+              سے کم الفاظ ہوں
+        line2:
+          label:
+            default: اپارٹمنٹ، سویٹ وغیرہ
+            optional: اپارٹمنٹ، سویٹ وغیرہ (اختیاری)
+          errors:
+            blank_instructional: کوئی اپارٹمنٹ، سویٹ وغیرہ درج کریں
+            blank_informative: اپارٹمنٹ یا سویٹ درج نہیں ہے
+            too_long_instructional: پتہ کی دوسری لائن بہت طویل ہے (زیادہ سے زیادہ
+              %{limit} کریکٹرز کی اجازت ہے)
+            too_long_informative: پتہ کی دوسری لائن بہت طویل ہے
+            contains_emojis_instructional: پتہ کی دوسری لائن میں ایموجیز شامل نہیں
+              ہو سکتیں
+            contains_emojis_informative: پتہ کی دوسری لائن میں ایموجیز شامل نہیں ہو
+              سکتیں
+            contains_mathematical_symbols_instructional: پتہ کی دوسری لائن میں ریاضیاتی
+              علامتیں شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: پتہ کی دوسری لائن میں ریاضیاتی
+              علامتیں شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: پتہ کی دوسری لائن میں صرف
+              حروف، نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: پتہ کی دوسری لائن میں ممنوعہ
+              کریکٹرز شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: پتہ کی دوسری لائن میں %{word_count}
+              سے کم الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: پتہ کی دوسری لائن میں %{word_count}
+              سے کم الفاظ ہونے چاہئیں
+            contains_html_tags_instructional: پتہ کی دوسری لائن میں HTML ٹیگز شامل
+              نہیں ہو سکتے
+            contains_html_tags_informative: پتہ کی دوسری لائن میں HTML ٹیگز شامل نہیں
+              ہو سکتے
+            contains_url_instructional: پتہ کی دوسری لائن میں URL شامل نہیں ہو سکتا
+            contains_url_informative: پتہ کی دوسری لائن میں URL شامل نہیں ہو سکتا
+            missing_building_number_instructional: اگر آپ کے پاس بلڈنگ نمبر ہے تو
+              اسے شامل کریں
+            missing_building_number_informative: اگر آپ کے پاس بلڈنگ نمبر ہے تو اسے
+              شامل کریں
+            street_unknown_for_zip_instructional: "%{zip} کے لیے ایک درست سٹریٹ کا
+              نام درج کریں"
+            street_unknown_for_zip_informative: "%{zip} کے لیے ایک درست سٹریٹ کا نام
+              درج کریں"
+            building_number_invalid_instructional: "%{street}, %{zip} کے لیے بلڈنگ
+              نمبر نہیں مل سکا"
+            building_number_invalid_informative: "%{street}, %{zip} کے لیے بلڈنگ نمبر
+              نہیں مل سکا"
+            unknown_for_address_instructional: ہو سکتا ہے پتہ کی دوسری لائن غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے پتہ کی دوسری لائن غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ پتہ کی دوسری لائن میں %{word_count}
+              سے کم الفاظ ہوں
+        neighborhood:
+          label:
+            default: محلہ
+            optional: محلہ (اختیاری)
+          errors:
+            blank_instructional: ایک محلہ درج کریں
+            blank_informative: محلہ درج نہیں ہے
+            too_long_instructional: محلہ کا نام بہت طویل ہے (زیادہ سے زیادہ %{limit}
+              کریکٹرز کی اجازت ہے)
+            too_long_informative: محلہ کا نام بہت طویل ہے
+            contains_emojis_instructional: محلے کے نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: محلے کے نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: محلے کے نام میں ریاضیاتی
+              علامتیں شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: محلے کے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: محلے کے نام میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: محلے کے نام میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: محلے کے نام میں %{word_count} سے
+              کم الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: محلے کے نام میں %{word_count} سے
+              کم الفاظ ہونے چاہئیں
+            contains_html_tags_instructional: محلے کے نام میں HTML ٹیگز شامل نہیں
+              ہو سکتے
+            contains_html_tags_informative: محلے کے نام میں HTML ٹیگز شامل نہیں ہو
+              سکتے
+            contains_url_instructional: محلے کے نام میں URLs شامل نہیں ہو سکتے
+            contains_url_informative: محلے کے نام میں URLs شامل نہیں ہو سکتے
+            unknown_for_city_instructional: "%{city} کے لیے ایک درست محلے کا نام درج
+              کریں"
+            unknown_for_city_informative: "%{city} کے لیے ایک درست محلے کا نام درج
+              کریں"
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست محلے کا نام درج
+              کریں"
+            unknown_for_zip_informative: "%{zip} کے لیے ایک درست محلے کا نام درج کریں"
+            unknown_for_address_instructional: ہو سکتا ہے محلہ غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے محلہ غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ محلے کے نام میں %{word_count}
+              سے کم الفاظ ہوں
+        district:
+          label:
+            default: ضلع
+            optional: ضلع (اختیاری)
+          errors:
+            blank_instructional: ایک ضلع درج کریں
+            blank_informative: ضلع درج نہیں ہے
+            too_long_instructional: ضلع کا نام بہت طویل ہے (زیادہ سے زیادہ %{limit}
+              کریکٹرز کی اجازت ہے)
+            too_long_informative: ضلع کا نام بہت طویل ہے
+            contains_emojis_instructional: ضلع کے نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: ضلع کے نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: ضلع کے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: ضلع کے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: ضلع کے نام میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: ضلع کے نام میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: ضلع کے نام میں %{word_count} سے
+              کم الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: ضلع کے نام میں %{word_count} سے کم
+              الفاظ ہونے چاہئیں
+            contains_html_tags_instructional: ضلع کے نام میں HTML ٹیگز شامل نہیں ہو
+              سکتے
+            contains_html_tags_informative: ضلع کے نام میں HTML ٹیگز شامل نہیں ہو
+              سکتے
+            contains_url_instructional: ضلع کے نام میں URLs شامل نہیں ہو سکتے
+            contains_url_informative: ضلع کے نام میں URLs شامل نہیں ہو سکتے
+            unknown_for_city_instructional: "%{city} کے لیے ایک درست ضلع کا نام درج
+              کریں"
+            unknown_for_city_informative: "%{city} کے لیے ایک درست ضلع کا نام درج
+              کریں"
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست ضلع کا نام درج
+              کریں"
+            unknown_for_zip_informative: "%{zip} کے لیے ایک درست ضلع کا نام درج کریں"
+            unknown_for_address_instructional: ہو سکتا ہے ضلع غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے ضلع غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ ضلع کے نام میں %{word_count}
+              سے کم الفاظ ہوں
+        subdistrict:
+          label:
+            default: سب ڈسٹرکٹ
+            optional: سب ڈسٹرکٹ (اختیاری)
+          errors:
+            blank_instructional: ایک سب ڈسٹرکٹ درج کریں
+            blank_informative: سب ڈسٹرکٹ درج نہیں ہے
+            too_long_instructional: سب ڈسٹرکٹ بہت طویل ہے (زیادہ سے زیادہ %{limit}
+              کریکٹرز کی اجازت ہے)
+            too_long_informative: سب ڈسٹرکٹ بہت طویل ہے
+            contains_emojis_instructional: سب ڈسٹرکٹ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: سب ڈسٹرکٹ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: سب ڈسٹرکٹ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: سب ڈسٹرکٹ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: سب ڈسٹرکٹ میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: سب ڈسٹرکٹ میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: سب ڈسٹرکٹ میں %{word_count} سے
+              کم الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: سب ڈسٹرکٹ میں %{word_count} سے کم
+              الفاظ ہونے چاہئیں
+            contains_html_tags_instructional: سب ڈسٹرکٹ میں HTML ٹیگز شامل نہیں ہو
+              سکتے
+            contains_html_tags_informative: سب ڈسٹرکٹ میں HTML ٹیگز شامل نہیں ہو سکتے
+            contains_url_instructional: سب ڈسٹرکٹ میں URLs شامل نہیں ہو سکتے
+            contains_url_informative: سب ڈسٹرکٹ میں URLs شامل نہیں ہو سکتے
+            unknown_for_city_instructional: "%{city} کے لیے ایک درست سب ڈسٹرکٹ درج
+              کریں"
+            unknown_for_city_informative: "%{city} کے لیے ایک درست سب ڈسٹرکٹ درج کریں"
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست سب ڈسٹرکٹ درج کریں"
+            unknown_for_zip_informative: "%{zip} کے لیے ایک درست سب ڈسٹرکٹ درج کریں"
+            unknown_for_address_instructional: ہو سکتا ہے سب ڈسٹرکٹ غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے سب ڈسٹرکٹ غلط ہو
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ سب ڈسٹرکٹ میں %{word_count}
+              سے کم الفاظ ہوں
+        city:
+          label:
+            default: شہر
+            optional: شہر (اختیاری)
+          errors:
+            blank_instructional: ایک شہر درج کریں
+            blank_informative: شہر درج نہیں ہے
+            too_long_instructional: شہر کا نام بہت طویل ہے (زیادہ سے زیادہ 255 کریکٹرز
+              کی اجازت ہے)
+            too_long_informative: شہر کا نام بہت طویل ہے
+            contains_emojis_instructional: شہر کے نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: شہر کے نام میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: شہر کے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: شہر کے نام میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: شہر کے نام میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: شہر کے نام میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: شہر کے نام میں %{word_count} سے
+              کم الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: شہر کے نام میں %{word_count} سے کم
+              الفاظ ہونے چاہئیں
+            contains_html_tags_instructional: شہر کے نام میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: شہر کے نام میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: شہر کے نام میں URL شامل نہیں ہو سکتا
+            contains_url_informative: شہر کے نام میں URL شامل نہیں ہو سکتا
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست شہر درج کریں"
+            unknown_for_zip_informative: شہر %{zip} سے مماثل نہیں ہے
+            unknown_for_province_instructional: "%{province} کے لیے ایک درست شہر درج
+              کریں"
+            unknown_for_province_informative: شہر %{province} سے مماثل نہیں ہے
+            unknown_for_zip_and_province_instructional: "%{zip}, %{province} کے لیے
+              ایک درست شہر درج کریں"
+            unknown_for_zip_and_province_informative: ہو سکتا ہے شہر غلط ہو
+            unknown_for_address_instructional: ہو سکتا ہے شہر غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے شہر غلط ہو
+        province:
+          label:
+            default: علاقہ
+            optional: علاقہ (اختیاری)
+          errors:
+            blank_instructional: ایک علاقہ منتخب کریں
+            blank_informative: علاقہ درج نہیں ہے
+            invalid_instructional: ایک علاقہ منتخب کریں
+            invalid_informative: علاقہ درج نہیں ہے
+            invalid_for_country_instructional: "%{country} کے لیے ایک درست علاقہ درج
+              کریں"
+            invalid_for_country_informative: علاقہ %{country} سے مماثل نہیں ہے
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} کے لیے ایک درست
+              علاقہ منتخب کریں"
+            unknown_for_city_and_zip_informative: علاقہ %{city}, %{zip} سے مماثل نہیں
+              ہے
+            unknown_for_city_informative: "%{city} کے لیے ایک درست علاقہ منتخب کریں"
+            unknown_for_city_instructional: علاقہ %{city} سے مماثل نہیں ہے
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست علاقہ منتخب کریں"
+            unknown_for_zip_informative: علاقہ %{zip} سے مماثل نہیں ہے
+            unknown_for_address_instructional: ہو سکتا ہے علاقہ غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے علاقہ غلط ہو
+        country:
+          label:
+            default: ملک/علاقہ
+            optional: ملک/علاقہ (اختیاری)
+          errors:
+            blank_instructional: ملک/علاقہ منتخب کریں
+            blank_informative: ملک/علاقہ درج نہیں ہے
+            not_supported_instructional: ملک/علاقہ تعاون یافتہ نہیں ہے
+            not_supported_informative: ملک/علاقہ تعاون یافتہ نہیں ہے
+            invalid_instructional: ایک درست ملک/علاقہ درج کریں
+            invalid_informative: ملک/علاقہ درست نہیں ہے
+            invalid_for_zip_instructional: اس پوسٹل کوڈ کے لیے ایک درست ملک/علاقہ
+              درج کریں
+            invalid_for_zip_informative: "%{country} ملک/علاقہ سے مماثل نہیں ہے"
+        zip:
+          label:
+            default: پوسٹل کوڈ
+            optional: پوسٹل کوڈ (اختیاری)
+          errors:
+            blank_instructional: ایک پوسٹل کوڈ درج کریں
+            blank_informative: پوسٹل کوڈ درج نہیں ہے
+            blocked_address_instructional: یہ لوکیشن تعاون یافتہ نہیں ہے
+            blocked_address_informative: یہ لوکیشن تعاون یافتہ نہیں ہے
+            invalid_instructional: ایک درست پوسٹل کوڈ درج کریں
+            invalid_informative: پوسٹل کوڈ درست نہیں ہے
+            invalid_for_country_instructional: "%{country} کے لیے ایک درست پوسٹل کوڈ
+              درج کریں"
+            invalid_for_country_informative: پوسٹل کوڈ %{country} سے مماثل نہیں ہے
+            invalid_for_province_instructional: "%{province} کے لیے ایک درست پوسٹل
+              کوڈ درج کریں"
+            invalid_for_province_informative: پوسٹل کوڈ %{province} سے مماثل نہیں
+              ہے
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              کے لیے ایک درست پوسٹل کوڈ درج کریں"
+            invalid_for_country_and_province_informative: پوسٹل کوڈ %{province}, %{country}
+              سے مماثل نہیں ہے
+            too_long_instructional: پوسٹل کوڈ بہت طویل ہے
+            too_long_informative: پوسٹل کوڈ بہت طویل ہے
+            contains_emojis_instructional: پوسٹل کوڈ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: پوسٹل کوڈ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: پوسٹل کوڈ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: پوسٹل کوڈ میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: پوسٹل کوڈ میں صرف حروف،
+              نمبرز، مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: پوسٹل کوڈ میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            not_supported_instructional: پوسٹل کوڈ تعاون یافتہ نہیں ہے۔ ایک نیا پتہ
+              درج کریں اور دوبارہ کوشش کریں
+            not_supported_informative: پوسٹل کوڈ تعاون یافتہ نہیں ہے
+            contains_html_tags_instructional: پوسٹل کوڈ میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: پوسٹل کوڈ میں HTML شامل نہیں ہو سکتا
+            unknown_for_province_instructional: "%{province} کے لیے ایک درست پوسٹل
+              کوڈ درج کریں"
+            unknown_for_province_informative: پوسٹل کوڈ %{province} کے لیے درست نہیں
+              ہے
+            unknown_for_address_instructional: ہو سکتا ہے پوسٹل کوڈ غلط ہو
+            unknown_for_address_informative: ہو سکتا ہے پوسٹل کوڈ غلط ہو
+        phone:
+          label:
+            default: فون
+            optional: فون (اختیاری)
+          errors:
+            blank_instructional: ایک فون نمبر درج کریں
+            blank_informative: فون نمبر درج نہیں ہے
+            invalid_instructional: ایک درست فون نمبر درج کریں
+            invalid_informative: فون نمبر درست نہیں ہے
+            too_long_instructional: فون نمبر بہت طویل ہے
+            too_long_informative: فون نمبر بہت طویل ہے
+            contains_emojis_instructional: فون نمبر میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: فون نمبر میں ایموجیز شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_instructional: فون نمبر میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: فون نمبر میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: فون نمبر میں صرف حروف، نمبرز،
+              مقامی کریکٹرز اور خاص کریکٹرز شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: فون نمبر میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+        address:
+          errors:
+            may_not_exist_instructional: پتہ نہیں ملا یا موجود نہیں ہے
+            may_not_exist_informative: پتہ نہیں ملا

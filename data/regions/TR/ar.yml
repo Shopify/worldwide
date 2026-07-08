@@ -1,0 +1,40 @@
+---
+ar:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: منطقة
+            optional: منطقة (اختياري)
+          errors:
+            blank_instructional: أدخل منطقة
+            blank_informative: المنطقة مفقودة
+            too_long_instructional: المنطقة طويلة جدًا (الحد الأقصى %{limit} حرفًا)
+            too_long_informative: المنطقة طويلة جدًا
+            contains_emojis_instructional: لا يمكن أن تحتوي المنطقة على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن تحتوي المنطقة على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن تحتوي المنطقة
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن تحتوي المنطقة على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن تحتوي المنطقة فقط
+              على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن تحتوي المنطقة على
+              أحرف مقيدة
+            contains_too_many_words_instructional: يجب أن تتكون المنطقة من عدد كلمات
+              أقل من %{word_count}
+            contains_too_many_words_informative: يجب أن تتكون المنطقة من عدد كلمات
+              أقل من %{word_count}
+            contains_html_tags_instructional: لا يمكن أن تحتوي المنطقة على HTML
+            contains_html_tags_informative: لا يمكن أن تحتوي المنطقة على HTML
+            contains_url_instructional: لا يمكن أن تحتوي المنطقة على رابط URL
+            contains_url_informative: لا يمكن أن تحتوي المنطقة على رابط URL
+            unknown_for_city_instructional: أدخل منطقة صالحة لـ %{city}
+            unknown_for_city_informative: المنطقة غير صالحة لـ %{city}
+            unknown_for_zip_instructional: أدخل منطقة صالحة لـ %{zip}
+            unknown_for_zip_informative: المنطقة غير صالحة لـ %{zip}
+            unknown_for_address_instructional: قد تكون المنطقة غير صحيحة
+            unknown_for_address_informative: قد تكون المنطقة غير صحيحة
+          warnings:
+            contains_too_many_words: يُوصى بأن تتكون المنطقة من عدد كلمات أقل من %{word_count}

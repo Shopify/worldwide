@@ -29,13 +29,13 @@ he-IL:
       default: "%-d.%-m.%Y"
       billing: "%-d.%-m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M היום"
-      yesterday_at_time: "%02k:%M אתמול"
-      tomorrow_at_time: "%02k:%M מחר"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d ב%b"
-      on_date: "%-d ב%b %Y"
-      ago: "%{time} ago"
+      today_at_time: היום ב-%02k:%M
+      yesterday_at_time: אתמול ב-%02k:%M
+      tomorrow_at_time: מחר ב-%02k:%M
+      on_weekday_at_time: ביום %A ב-%02k:%M
+      on_date_time_current_year: ב-%-d ב%b, %02k:%M
+      on_date: ב-%-d ב%b %Y
+      ago: לפני %{time}
       x_hours_ago:
         many: לפני %{count} שעות
         one: לפני שעה
@@ -132,13 +132,13 @@ he-IL:
       short: "%-d ב%b, %02k:%M"
       billing: "%-d.%-m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M היום"
-      yesterday_at_time: "%02k:%M אתמול"
-      tomorrow_at_time: "%02k:%M מחר"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d ב%b"
-      on_date: "%-d ב%b %Y"
-      ago: "%{time} ago"
+      today_at_time: היום ב-%02k:%M
+      yesterday_at_time: אתמול ב-%02k:%M
+      tomorrow_at_time: מחר ב-%02k:%M
+      on_weekday_at_time: ביום %A ב-%02k:%M
+      on_date_time_current_year: ב-%-d ב%b, %02k:%M
+      on_date: ב-%-d ב%b %Y
+      ago: לפני %{time}
       x_hours_ago:
         many: לפני %{count} שעות
         one: לפני שעה
@@ -150,7 +150,7 @@ he-IL:
         other: לפני %{count} דקות
         two: לפני שתי דקות
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: עכשיו
+    am: לפנה״צ
+    pm: אחה״צ
+    just_now: ממש עכשיו
     yesterday: אתמול

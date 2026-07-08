@@ -29,13 +29,13 @@ ur-IN:
       default: "%-d/%-m/%Y"
       billing: "%-d/%-m/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%-l:%M %P آج"
-      yesterday_at_time: "%-l:%M %P گزشتہ کل"
-      tomorrow_at_time: "%-l:%M %P آئندہ کل"
-      on_weekday_at_time: "%-l:%M %P %A"
-      on_date_time_current_year: "%-l:%M %P %-d %b"
-      on_date: "%-d %b، %Y"
-      ago: "%{time} ago"
+      today_at_time: آج %-l:%M %P پر
+      yesterday_at_time: گزشتہ کل %-l:%M %P پر
+      tomorrow_at_time: آنے والے کل %-l:%M %P پر
+      on_weekday_at_time: "%A کو %-l:%M %P پر"
+      on_date_time_current_year: "%-d %b کو، %-l:%M %P پر"
+      on_date: "%-d %b، %Y کو"
+      ago: "%{time} قبل"
       x_hours_ago:
         one: "%{count} گھنٹہ پہلے"
         other: "%{count} گھنٹے پہلے"
@@ -88,8 +88,8 @@ ur-IN:
     - نومبر
     - دسمبر
     relative_day_names:
-      this_week: اس ہفتہ
-      this_month: اس ماہ
+      this_week: اس ہفتے
+      this_month: اس مہینے
       day_before_yesterday: گزشتہ پرسوں
       yesterday: گزشتہ کل
       today: آج
@@ -128,13 +128,13 @@ ur-IN:
       short: "%-d %b %-l:%M %P"
       billing: "%-d/%-m/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%-l:%M %P آج"
-      yesterday_at_time: "%-l:%M %P گزشتہ کل"
-      tomorrow_at_time: "%-l:%M %P آئندہ کل"
-      on_weekday_at_time: "%-l:%M %P %A"
-      on_date_time_current_year: "%-l:%M %P %-d %b"
-      on_date: "%-d %b، %Y"
-      ago: "%{time} ago"
+      today_at_time: آج %-l:%M %P پر
+      yesterday_at_time: گزشتہ کل %-l:%M %P پر
+      tomorrow_at_time: آنے والے کل %-l:%M %P پر
+      on_weekday_at_time: "%A کو %-l:%M %P پر"
+      on_date_time_current_year: "%-d %b کو، %-l:%M %P پر"
+      on_date: "%-d %b، %Y کو"
+      ago: "%{time} قبل"
       x_hours_ago:
         one: "%{count} گھنٹہ پہلے"
         other: "%{count} گھنٹے پہلے"
@@ -144,5 +144,5 @@ ur-IN:
       cc_expiry_date: "%m/%Y"
     am: am
     pm: pm
-    just_now: اب
+    just_now: ابھی ابھی
     yesterday: گزشتہ کل

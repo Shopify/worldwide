@@ -1,0 +1,34 @@
+---
+he:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: מדינה
+            optional: מדינה (אופציונלי)
+          errors:
+            blank_instructional: יש לבחור מדינה
+            blank_informative: חסרה מדינה
+        zip:
+          label:
+            default: קוד PIN
+            optional: קוד PIN (אופציונלי)
+          errors:
+            blank_instructional: יש להזין קוד PIN
+            blank_informative: חסר קוד PIN
+            invalid_for_country_instructional: יש להזין קוד PIN חוקי עבור %{country}
+            invalid_for_country_informative: קוד ה-PIN אינו חוקי
+            invalid_for_country_and_province_instructional: יש להזין קוד PIN חוקי
+              עבור %{province}, %{country}
+            invalid_for_country_and_province_informative: קוד ה-PIN אינו חוקי
+            too_long_instructional: קוד ה-PIN ארוך מדי
+            too_long_informative: קוד ה-PIN ארוך מדי
+            contains_emojis_instructional: קוד ה-PIN לא יכול להכיל אימוג'י
+            contains_emojis_informative: קוד ה-PIN לא יכול להכיל אימוג'י
+            contains_restricted_characters_instructional: קוד ה-PIN לא יכול להכיל
+              תווים אסורים
+            contains_restricted_characters_informative: קוד ה-PIN לא יכול להכיל תווים
+              אסורים
+            contains_html_tags_instructional: קוד ה-PIN לא יכול להכיל HTML
+            contains_html_tags_informative: קוד ה-PIN לא יכול להכיל HTML
