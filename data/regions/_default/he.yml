@@ -1,0 +1,503 @@
+---
+he:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: חברה
+            optional: חברה (אופציונלית)
+          errors:
+            blank_instructional: יש להזין חברה
+            blank_informative: חברה חסרה
+            too_long_instructional: שם החברה ארוך מדי (האורך המרבי הוא 255 תווים)
+            too_long_informative: שם החברה ארוך מדי
+            contains_emojis_instructional: שם החברה לא יכול להכיל אימוג'י
+            contains_emojis_informative: שם החברה לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שם החברה לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: שם החברה לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: שם החברה יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שם החברה לא יכול להכיל תווים
+              אסורים
+            contains_html_tags_instructional: שם החברה לא יכול להכיל HTML
+            contains_html_tags_informative: שם החברה לא יכול להכיל HTML
+        first_name:
+          label:
+            default: שם פרטי
+            optional: שם פרטי (אופציונלי)
+          errors:
+            blank_instructional: יש להזין שם פרטי
+            blank_informative: שם פרטי חסר
+            too_long_instructional: השם הפרטי ארוך מדי (האורך המרבי הוא 255 תווים)
+            too_long_informative: השם הפרטי ארוך מדי
+            contains_emojis_instructional: שם פרטי לא יכול להכיל אימוג'י
+            contains_emojis_informative: שם פרטי לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שם פרטי לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: שם פרטי לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: שם פרטי יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שם פרטי לא יכול להכיל תווים
+              אסורים
+            contains_html_tags_instructional: שם פרטי לא יכול להכיל HTML
+            contains_html_tags_informative: שם פרטי לא יכול להכיל HTML
+            contains_url_instructional: שם פרטי לא יכול להכיל כתובת URL
+            contains_url_informative: שם פרטי לא יכול להכיל כתובת URL
+        last_name:
+          label:
+            default: שם משפחה
+            optional: שם משפחה (אופציונלי)
+          errors:
+            blank_instructional: יש להזין שם משפחה
+            blank_informative: חסר שם משפחה
+            too_long_instructional: שם המשפחה ארוך מדי (עד 255 תווים)
+            too_long_informative: שם המשפחה ארוך מדי
+            contains_emojis_instructional: שם המשפחה לא יכול להכיל אימוג'י
+            contains_emojis_informative: שם המשפחה לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שם המשפחה לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: שם המשפחה לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: שם המשפחה יכול להכיל רק
+              אותיות, מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שם המשפחה לא יכול להכיל תווים
+              אסורים
+            contains_html_tags_instructional: שם המשפחה לא יכול להכיל HTML
+            contains_html_tags_informative: שם המשפחה לא יכול להכיל HTML
+            contains_url_instructional: שם המשפחה לא יכול להכיל כתובת URL
+            contains_url_informative: שם המשפחה לא יכול להכיל כתובת URL
+        address1:
+          label:
+            default: כתובת
+            optional: כתובת (אופציונלי)
+          errors:
+            blank_instructional: יש להזין כתובת
+            blank_informative: הכתובת חסרה
+            too_long_instructional: שורת הכתובת הראשונה ארוכה מדי (עד 255 תווים)
+            too_long_informative: שורת הכתובת הראשונה ארוכה מדי
+            contains_emojis_instructional: הכתובת לא יכולה להכיל אימוג'י
+            contains_emojis_informative: הכתובת לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: הכתובת לא יכולה להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: הכתובת לא יכולה להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: הכתובת יכולה להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: הכתובת לא יכולה להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: הכתובת חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: הכתובת חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: הכתובת לא יכולה להכיל HTML
+            contains_html_tags_informative: הכתובת לא יכולה להכיל HTML
+            contains_url_instructional: הכתובת לא יכולה להכיל כתובת URL
+            contains_url_informative: הכתובת לא יכולה להכיל כתובת URL
+            missing_building_number_instructional: יש להוסיף מספר בניין אם יש כזה
+            missing_building_number_informative: ייתכן שמספר הבניין חסר
+            street_unknown_for_zip_instructional: יש להזין שם רחוב חוקי עבור המיקוד
+              %{zip}
+            street_unknown_for_zip_informative: שם הרחוב לא תואם למיקוד %{zip}
+            building_number_invalid_instructional: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            building_number_invalid_informative: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            unknown_for_address_instructional: ייתכן ששורת הכתובת 1 שגויה
+            unknown_for_address_informative: ייתכן ששורת הכתובת 1 שגויה
+          warnings:
+            contains_too_many_words: מומלץ ששורת הכתובת 1 תכיל פחות מ-%{word_count}
+              מילים
+        street_name:
+          label:
+            default: רחוב
+            optional: רחוב (אופציונלי)
+          errors:
+            blank_instructional: יש להזין רחוב
+            blank_informative: הרחוב חסר
+            too_long_instructional: שם הרחוב ארוך מדי (עד %{limit} תווים)
+            too_long_informative: שם הרחוב ארוך מדי
+            contains_emojis_instructional: שם הרחוב לא יכול להכיל אימוג'י
+            contains_emojis_informative: שם הרחוב לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שם הרחוב לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: שם הרחוב לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: שם הרחוב יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שם הרחוב לא יכול להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: שם הרחוב לא יכול להכיל יותר מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: שם הרחוב לא יכול להכיל יותר מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: שם הרחוב לא יכול להכיל HTML
+            contains_html_tags_informative: שם הרחוב לא יכול להכיל HTML
+            contains_url_instructional: שם הרחוב לא יכול להכיל כתובת URL
+            contains_url_informative: שם הרחוב לא יכול להכיל כתובת URL
+            street_unknown_for_zip_instructional: יש להזין רחוב חוקי עבור המיקוד %{zip}
+            street_unknown_for_zip_informative: הרחוב לא חוקי עבור המיקוד %{zip}
+            unknown_for_address_instructional: ייתכן שהרחוב שגוי
+            unknown_for_address_informative: ייתכן שהרחוב שגוי
+          warnings:
+            contains_too_many_words: מומלץ שהרחוב יכיל פחות מ-%{word_count} מילים
+        street_number:
+          label:
+            default: מספר בניין
+            optional: מספר בניין (אופציונלי)
+          errors:
+            blank_instructional: יש להזין מספר בניין
+            blank_informative: מספר הבניין חסר
+            too_long_instructional: מספר הבניין ארוך מדי (עד %{limit} תווים)
+            too_long_informative: מספר הבניין ארוך מדי
+            contains_emojis_instructional: מספר הבניין לא יכול להכיל אימוג'י
+            contains_emojis_informative: מספר הבניין לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: מספר הבניין לא יכול להכיל
+              סמלים מתמטיים
+            contains_mathematical_symbols_informative: מספר הבניין לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: מספר הבניין יכול להכיל רק
+              אותיות, מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: מספר הבניין לא יכול להכיל
+              תווים אסורים
+            contains_html_tags_instructional: מספר הבניין לא יכול להכיל HTML
+            contains_html_tags_informative: מספר הבניין לא יכול להכיל HTML
+            contains_url_instructional: מספר הבניין לא יכול להכיל כתובת URL
+            contains_url_informative: מספר הבניין לא יכול להכיל כתובת URL
+            missing_building_number_instructional: יש להוסיף מספר בניין אם יש כזה
+            missing_building_number_informative: ייתכן שמספר הבניין חסר
+            building_number_invalid_instructional: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            building_number_invalid_informative: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            unknown_for_address_instructional: יש להזין מספר בניין חוקי
+            unknown_for_address_informative: מספר הבניין אינו חוקי
+          warnings:
+            contains_too_many_words: מומלץ שמספר הבניין יכיל פחות מ-%{word_count}
+              מילים
+        address2:
+          label:
+            default: דירה, סוויטה וכו'
+            optional: דירה, סוויטה וכו' (אופציונלי)
+          errors:
+            blank_instructional: יש להזין דירה, סוויטה וכו'
+            blank_informative: חסרה דירה או סוויטה
+            too_long_instructional: שורת הכתובת 2 ארוכה מדי (עד 255 תווים)
+            too_long_informative: שורת הכתובת 2 ארוכה מדי
+            contains_emojis_instructional: שורת הכתובת 2 לא יכולה להכיל אימוג'י
+            contains_emojis_informative: שורת הכתובת 2 לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שורת הכתובת 2 לא יכולה להכיל
+              סמלים מתמטיים
+            contains_mathematical_symbols_informative: שורת הכתובת 2 לא יכולה להכיל
+              סמלים מתמטיים
+            contains_restricted_characters_instructional: שורת הכתובת 2 יכולה להכיל
+              רק אותיות, מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שורת הכתובת 2 לא יכולה להכיל
+              תווים אסורים
+            contains_too_many_words_instructional: שורת הכתובת 2 חייבת להכיל פחות
+              מ-%{word_count} מילים
+            contains_too_many_words_informative: שורת הכתובת 2 חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: שורת הכתובת 2 לא יכולה להכיל HTML
+            contains_html_tags_informative: שורת הכתובת 2 לא יכולה להכיל HTML
+            contains_url_instructional: שורת הכתובת 2 לא יכולה להכיל כתובת URL
+            contains_url_informative: שורת הכתובת 2 לא יכולה להכיל כתובת URL
+            missing_building_number_instructional: יש להוסיף מספר בניין אם יש כזה
+            missing_building_number_informative: ייתכן שמספר הבניין חסר
+            street_unknown_for_zip_instructional: יש להזין שם רחוב חוקי עבור המיקוד
+              %{zip}
+            street_unknown_for_zip_informative: שם הרחוב אינו חוקי עבור המיקוד %{zip}
+            building_number_invalid_instructional: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            building_number_invalid_informative: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            unknown_for_address_instructional: ייתכן ששורת הכתובת 2 שגויה
+            unknown_for_address_informative: ייתכן ששורת הכתובת 2 שגויה
+          warnings:
+            contains_too_many_words: מומלץ ששורת הכתובת 2 תכיל פחות מ-%{word_count}
+              מילים
+        line2:
+          label:
+            default: דירה, סוויטה וכו'.
+            optional: דירה, סוויטה וכו'. (אופציונלי)
+          errors:
+            blank_instructional: יש להזין דירה, סוויטה וכו'.
+            blank_informative: חסרה דירה או סוויטה
+            too_long_instructional: שורת הכתובת השנייה ארוכה מדי (עד %{limit} תווים)
+            too_long_informative: שורת הכתובת השנייה ארוכה מדי
+            contains_emojis_instructional: שורת הכתובת השנייה לא יכולה להכיל אימוג'י
+            contains_emojis_informative: שורת הכתובת השנייה לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שורת הכתובת השנייה לא יכולה
+              להכיל סמלים מתמטיים
+            contains_mathematical_symbols_informative: שורת הכתובת השנייה לא יכולה
+              להכיל סמלים מתמטיים
+            contains_restricted_characters_instructional: שורת הכתובת השנייה יכולה
+              להכיל רק אותיות, מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שורת הכתובת השנייה לא יכולה
+              להכיל תווים אסורים
+            contains_too_many_words_instructional: שורת הכתובת השנייה חייבת להכיל
+              פחות מ-%{word_count} מילים
+            contains_too_many_words_informative: שורת הכתובת השנייה חייבת להכיל פחות
+              מ-%{word_count} מילים
+            contains_html_tags_instructional: שורת הכתובת השנייה לא יכולה להכיל תגי
+              HTML
+            contains_html_tags_informative: שורת הכתובת השנייה לא יכולה להכיל תגי
+              HTML
+            contains_url_instructional: שורת הכתובת השנייה לא יכולה להכיל כתובת URL
+            contains_url_informative: שורת הכתובת השנייה לא יכולה להכיל כתובת URL
+            missing_building_number_instructional: יש להוסיף מספר בניין אם יש כזה
+            missing_building_number_informative: יש להוסיף מספר בניין אם יש כזה
+            street_unknown_for_zip_instructional: יש להזין שם רחוב חוקי עבור המיקוד
+              %{zip}
+            street_unknown_for_zip_informative: יש להזין שם רחוב חוקי עבור המיקוד
+              %{zip}
+            building_number_invalid_instructional: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            building_number_invalid_informative: לא ניתן לאתר את מספר הבניין עבור
+              הרחוב %{street}, והמיקוד %{zip}
+            unknown_for_address_instructional: ייתכן ששורת הכתובת השנייה שגויה
+            unknown_for_address_informative: ייתכן ששורת הכתובת השנייה שגויה
+          warnings:
+            contains_too_many_words: מומלץ ששורת הכתובת השנייה תכיל פחות מ-%{word_count}
+              מילים
+        neighborhood:
+          label:
+            default: שכונה
+            optional: שכונה (אופציונלי)
+          errors:
+            blank_instructional: יש להזין שכונה
+            blank_informative: השכונה חסרה
+            too_long_instructional: שם השכונה ארוך מדי (עד %{limit} תווים)
+            too_long_informative: שם השכונה ארוך מדי
+            contains_emojis_instructional: השכונה לא יכולה להכיל אימוג'י
+            contains_emojis_informative: השכונה לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: השכונה לא יכולה להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: השכונה לא יכולה להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: השכונה יכולה להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: השכונה לא יכולה להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: השכונה חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: השכונה חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: השכונה לא יכולה להכיל תגי HTML
+            contains_html_tags_informative: השכונה לא יכולה להכיל תגי HTML
+            contains_url_instructional: השכונה לא יכולה להכיל כתובות URL
+            contains_url_informative: השכונה לא יכולה להכיל כתובות URL
+            unknown_for_city_instructional: יש להזין שם שכונה חוקי עבור העיר %{city}
+            unknown_for_city_informative: יש להזין שם שכונה חוקי עבור העיר %{city}
+            unknown_for_zip_instructional: יש להזין שם שכונה חוקי עבור המיקוד %{zip}
+            unknown_for_zip_informative: יש להזין שם שכונה חוקי עבור המיקוד %{zip}
+            unknown_for_address_instructional: ייתכן שהשכונה שגויה
+            unknown_for_address_informative: ייתכן שהשכונה שגויה
+          warnings:
+            contains_too_many_words: מומלץ שהשכונה תכיל פחות מ-%{word_count} מילים
+        district:
+          label:
+            default: מחוז
+            optional: מחוז (אופציונלי)
+          errors:
+            blank_instructional: יש להזין מחוז
+            blank_informative: המחוז חסר
+            too_long_instructional: שם המחוז ארוך מדי (עד %{limit} תווים)
+            too_long_informative: שם המחוז ארוך מדי
+            contains_emojis_instructional: המחוז לא יכול להכיל אימוג'י
+            contains_emojis_informative: המחוז לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: המחוז לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: המחוז לא יכול להכיל סמלים מתמטיים
+            contains_restricted_characters_instructional: המחוז יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: המחוז לא יכול להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: המחוז חייב להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: המחוז חייב להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: המחוז לא יכול להכיל תגי HTML
+            contains_html_tags_informative: המחוז לא יכול להכיל תגי HTML
+            contains_url_instructional: המחוז לא יכול להכיל כתובות URL
+            contains_url_informative: המחוז לא יכול להכיל כתובות URL
+            unknown_for_city_instructional: יש להזין שם מחוז חוקי עבור העיר %{city}
+            unknown_for_city_informative: יש להזין שם מחוז חוקי עבור העיר %{city}
+            unknown_for_zip_instructional: יש להזין שם מחוז חוקי עבור המיקוד %{zip}
+            unknown_for_zip_informative: יש להזין שם מחוז חוקי עבור המיקוד %{zip}
+            unknown_for_address_instructional: ייתכן שהמחוז שגוי
+            unknown_for_address_informative: ייתכן שהמחוז שגוי
+          warnings:
+            contains_too_many_words: מומלץ שהמחוז יכיל פחות מ-%{word_count} מילים
+        subdistrict:
+          label:
+            default: תת-מחוז
+            optional: תת-מחוז (אופציונלי)
+          errors:
+            blank_instructional: יש להזין תת-מחוז
+            blank_informative: תת-המחוז חסר
+            too_long_instructional: שם תת-המחוז ארוך מדי (עד %{limit} תווים)
+            too_long_informative: שם תת-המחוז ארוך מדי
+            contains_emojis_instructional: תת-המחוז לא יכול להכיל אימוג'י
+            contains_emojis_informative: תת-המחוז לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: תת-המחוז לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: תת-המחוז לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: תת-המחוז יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: תת-המחוז לא יכול להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: תת-המחוז חייב להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: תת-המחוז חייב להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: תת-המחוז לא יכול להכיל תגי HTML
+            contains_html_tags_informative: תת-המחוז לא יכול להכיל תגי HTML
+            contains_url_instructional: תת-המחוז לא יכול להכיל כתובות URL
+            contains_url_informative: תת-המחוז לא יכול להכיל כתובות URL
+            unknown_for_city_instructional: יש להזין שם תת-מחוז חוקי עבור העיר %{city}
+            unknown_for_city_informative: יש להזין שם תת-מחוז חוקי עבור העיר %{city}
+            unknown_for_zip_instructional: יש להזין שם תת-מחוז חוקי עבור המיקוד %{zip}
+            unknown_for_zip_informative: יש להזין שם תת-מחוז חוקי עבור המיקוד %{zip}
+            unknown_for_address_instructional: ייתכן שתת-המחוז שגוי
+            unknown_for_address_informative: ייתכן שתת-המחוז שגוי
+          warnings:
+            contains_too_many_words: מומלץ שתת-המחוז יכיל פחות מ-%{word_count} מילים
+        city:
+          label:
+            default: עיר
+            optional: עיר (אופציונלי)
+          errors:
+            blank_instructional: יש להזין עיר
+            blank_informative: העיר חסרה
+            too_long_instructional: שם העיר ארוך מדי (עד 255 תווים)
+            too_long_informative: שם העיר ארוך מדי
+            contains_emojis_instructional: העיר לא יכולה להכיל אימוג'י
+            contains_emojis_informative: העיר לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: העיר לא יכולה להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: העיר לא יכולה להכיל סמלים מתמטיים
+            contains_restricted_characters_instructional: העיר יכולה להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: העיר לא יכולה להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: העיר חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: העיר חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: העיר לא יכולה להכיל HTML
+            contains_html_tags_informative: העיר לא יכולה להכיל HTML
+            contains_url_instructional: העיר לא יכולה להכיל כתובת URL
+            contains_url_informative: העיר לא יכולה להכיל כתובת URL
+            unknown_for_zip_instructional: יש להזין עיר חוקית עבור המיקוד %{zip}
+            unknown_for_zip_informative: העיר לא תואמת למיקוד %{zip}
+            unknown_for_province_instructional: יש להזין עיר חוקית עבור האזור %{province}
+            unknown_for_province_informative: העיר לא תואמת לאזור %{province}
+            unknown_for_zip_and_province_instructional: יש להזין עיר חוקית עבור המיקוד
+              %{zip}, האזור %{province}
+            unknown_for_zip_and_province_informative: ייתכן שהעיר שגויה
+            unknown_for_address_instructional: ייתכן שהעיר שגויה
+            unknown_for_address_informative: ייתכן שהעיר שגויה
+        province:
+          label:
+            default: אזור
+            optional: אזור (אופציונלי)
+          errors:
+            blank_instructional: יש לבחור אזור
+            blank_informative: האזור חסר
+            invalid_instructional: יש לבחור אזור
+            invalid_informative: האזור חסר
+            invalid_for_country_instructional: יש להזין אזור חוקי עבור %{country}
+            invalid_for_country_informative: האזור לא תואם ל-%{country}
+            unknown_for_city_and_zip_instructional: יש לבחור אזור חוקי עבור העיר %{city},
+              והמיקוד %{zip}
+            unknown_for_city_and_zip_informative: האזור לא תואם לעיר %{city}, ולמיקוד
+              %{zip}
+            unknown_for_city_informative: יש לבחור אזור חוקי עבור העיר %{city}
+            unknown_for_city_instructional: האזור לא תואם לעיר %{city}
+            unknown_for_zip_instructional: יש לבחור אזור חוקי עבור המיקוד %{zip}
+            unknown_for_zip_informative: האזור לא תואם למיקוד %{zip}
+            unknown_for_address_instructional: ייתכן שהאזור שגוי
+            unknown_for_address_informative: ייתכן שהאזור שגוי
+        country:
+          label:
+            default: מדינה/אזור
+            optional: מדינה/אזור (אופציונלי)
+          errors:
+            blank_instructional: יש לבחור מדינה/אזור
+            blank_informative: המדינה/אזור חסרים
+            not_supported_instructional: המדינה/אזור לא נתמכים
+            not_supported_informative: המדינה/אזור לא נתמכים
+            invalid_instructional: יש להזין מדינה/אזור חוקי
+            invalid_informative: המדינה/אזור אינם חוקיים
+            invalid_for_zip_instructional: יש להזין מדינה/אזור חוקי עבור מיקוד זה
+            invalid_for_zip_informative: הערך %{country} לא תואם למדינה/אזור
+        zip:
+          label:
+            default: מיקוד
+            optional: מיקוד (אופציונלי)
+          errors:
+            blank_instructional: יש להזין מיקוד
+            blank_informative: המיקוד חסר
+            blocked_address_instructional: מיקום זה אינו נתמך
+            blocked_address_informative: מיקום זה אינו נתמך
+            invalid_instructional: יש להזין מיקוד חוקי
+            invalid_informative: המיקוד אינו חוקי
+            invalid_for_country_instructional: יש להזין מיקוד חוקי עבור %{country}
+            invalid_for_country_informative: המיקוד לא תואם ל-%{country}
+            invalid_for_province_instructional: יש להזין מיקוד חוקי עבור האזור %{province}
+            invalid_for_province_informative: המיקוד לא תואם לאזור %{province}
+            invalid_for_country_and_province_instructional: יש להזין מיקוד חוקי עבור
+              האזור %{province}, %{country}
+            invalid_for_country_and_province_informative: המיקוד לא תואם לאזור %{province},
+              %{country}
+            too_long_instructional: המיקוד ארוך מדי
+            too_long_informative: המיקוד ארוך מדי
+            contains_emojis_instructional: המיקוד לא יכול להכיל אימוג'י
+            contains_emojis_informative: המיקוד לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: המיקוד לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: המיקוד לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: המיקוד יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: המיקוד לא יכול להכיל תווים
+              אסורים
+            not_supported_instructional: המיקוד לא נתמך. יש להזין כתובת חדשה ולנסות
+              שוב
+            not_supported_informative: המיקוד לא נתמך
+            contains_html_tags_instructional: המיקוד לא יכול להכיל HTML
+            contains_html_tags_informative: המיקוד לא יכול להכיל HTML
+            unknown_for_province_instructional: יש להזין מיקוד חוקי עבור האזור %{province}
+            unknown_for_province_informative: המיקוד אינו חוקי עבור האזור %{province}
+            unknown_for_address_instructional: ייתכן שהמיקוד שגוי
+            unknown_for_address_informative: ייתכן שהמיקוד שגוי
+        phone:
+          label:
+            default: טלפון
+            optional: טלפון (אופציונלי)
+          errors:
+            blank_instructional: יש להזין מספר טלפון
+            blank_informative: מספר הטלפון חסר
+            invalid_instructional: יש להזין מספר טלפון חוקי
+            invalid_informative: מספר הטלפון אינו חוקי
+            too_long_instructional: מספר הטלפון ארוך מדי
+            too_long_informative: מספר הטלפון ארוך מדי
+            contains_emojis_instructional: מספר הטלפון לא יכול להכיל אימוג'י
+            contains_emojis_informative: מספר הטלפון לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: מספר הטלפון לא יכול להכיל
+              סמלים מתמטיים
+            contains_mathematical_symbols_informative: מספר הטלפון לא יכול להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: מספר הטלפון יכול להכיל רק
+              אותיות, מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: מספר הטלפון לא יכול להכיל
+              תווים אסורים
+        address:
+          errors:
+            may_not_exist_instructional: הכתובת לא נמצאה או שאינה קיימת
+            may_not_exist_informative: הכתובת לא נמצאה

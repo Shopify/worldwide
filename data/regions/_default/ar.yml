@@ -1,0 +1,522 @@
+---
+ar:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: الشركة
+            optional: الشركة (اختياري)
+          errors:
+            blank_instructional: أدخل شركة
+            blank_informative: الشركة مفقودة
+            too_long_instructional: الشركة طويلة جدًا (الحد الأقصى 255 حرفًا)
+            too_long_informative: الشركة طويلة جدًا
+            contains_emojis_instructional: لا يمكن أن تحتوي الشركة على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن تحتوي الشركة على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن تحتوي الشركة على
+              رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن تحتوي الشركة على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن تحتوي الشركة فقط
+              على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن تحتوي الشركة على
+              أحرف مقيدة
+            contains_html_tags_instructional: لا يمكن أن تحتوي الشركة على HTML
+            contains_html_tags_informative: لا يمكن أن تحتوي الشركة على HTML
+        first_name:
+          label:
+            default: الاسم الأول
+            optional: الاسم الأول (اختياري)
+          errors:
+            blank_instructional: أدخل اسمًا أول
+            blank_informative: الاسم الأول مفقود
+            too_long_instructional: الاسم الأول طويل جدًا (الحد الأقصى 255 حرفًا)
+            too_long_informative: الاسم الأول طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الاسم الأول على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الاسم الأول على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الاسم الأول
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الاسم الأول
+              على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الاسم الأول
+              فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الاسم الأول
+              على أحرف مقيدة
+            contains_html_tags_instructional: لا يمكن أن يحتوي الاسم الأول على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الاسم الأول على HTML
+            contains_url_instructional: لا يمكن أن يحتوي الاسم الأول على رابط URL
+            contains_url_informative: لا يمكن أن يحتوي الاسم الأول على رابط URL
+        last_name:
+          label:
+            default: الاسم الأخير
+            optional: الاسم الأخير (اختياري)
+          errors:
+            blank_instructional: أدخل الاسم الأخير
+            blank_informative: الاسم الأخير مفقود
+            too_long_instructional: الاسم الأخير طويل جدًا (الحد الأقصى هو 255 حرفًا)
+            too_long_informative: الاسم الأخير طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الاسم الأخير على رموز
+              تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الاسم الأخير على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الاسم الأخير
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الاسم الأخير
+              على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الاسم الأخير
+              فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الاسم الأخير
+              على أحرف محظورة
+            contains_html_tags_instructional: لا يمكن أن يحتوي الاسم الأخير على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الاسم الأخير على HTML
+            contains_url_instructional: لا يمكن أن يحتوي الاسم الأخير على عنوان URL
+            contains_url_informative: لا يمكن أن يحتوي الاسم الأخير على عنوان URL
+        address1:
+          label:
+            default: العنوان
+            optional: العنوان (اختياري)
+          errors:
+            blank_instructional: أدخل عنوانًا
+            blank_informative: العنوان مفقود
+            too_long_instructional: السطر الأول من العنوان طويل جدًا (الحد الأقصى
+              هو 255 حرفًا)
+            too_long_informative: السطر الأول من العنوان طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي العنوان على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي العنوان على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي العنوان
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي العنوان على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي العنوان فقط
+              على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي العنوان على
+              أحرف محظورة
+            contains_too_many_words_instructional: يجب أن يحتوي العنوان على أقل من
+              %{word_count} كلمة
+            contains_too_many_words_informative: يجب أن يحتوي العنوان على أقل من %{word_count}
+              كلمة
+            contains_html_tags_instructional: لا يمكن أن يحتوي العنوان على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي العنوان على HTML
+            contains_url_instructional: لا يمكن أن يحتوي العنوان على عنوان URL
+            contains_url_informative: لا يمكن أن يحتوي العنوان على عنوان URL
+            missing_building_number_instructional: أضف رقم المبنى إن وُجد
+            missing_building_number_informative: قد يكون رقم المبنى مفقودًا
+            street_unknown_for_zip_instructional: أدخل اسم شارع صحيحًا لـ %{zip}
+            street_unknown_for_zip_informative: اسم الشارع لا يتطابق مع %{zip}
+            building_number_invalid_instructional: تعذّر العثور على رقم المبنى لـ
+              %{street}، %{zip}
+            building_number_invalid_informative: تعذّر العثور على رقم المبنى لـ %{street}،
+              %{zip}
+            unknown_for_address_instructional: قد يكون سطر العنوان 1 غير صحيح
+            unknown_for_address_informative: قد يكون سطر العنوان 1 غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يحتوي سطر العنوان 1 على أقل من %{word_count}
+              كلمة
+        street_name:
+          label:
+            default: الشارع
+            optional: الشارع (اختياري)
+          errors:
+            blank_instructional: أدخل شارعًا
+            blank_informative: الشارع مفقود
+            too_long_instructional: الشارع طويل جدًا (الحد الأقصى هو %{limit} حرفًا)
+            too_long_informative: الشارع طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الشارع على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الشارع على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الشارع على
+              رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الشارع على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الشارع فقط
+              على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الشارع على
+              أحرف محظورة
+            contains_too_many_words_instructional: لا يمكن أن يحتوي الشارع على أكثر
+              من %{word_count} كلمة
+            contains_too_many_words_informative: لا يمكن أن يحتوي الشارع على أكثر
+              من %{word_count} كلمة
+            contains_html_tags_instructional: لا يمكن أن يحتوي الشارع على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الشارع على HTML
+            contains_url_instructional: لا يمكن أن يحتوي الشارع على عنوان URL
+            contains_url_informative: لا يمكن أن يحتوي الشارع على عنوان URL
+            street_unknown_for_zip_instructional: أدخل شارعًا صحيحًا لـ %{zip}
+            street_unknown_for_zip_informative: الشارع غير صحيح لـ %{zip}
+            unknown_for_address_instructional: قد يكون الشارع غير صحيح
+            unknown_for_address_informative: قد يكون الشارع غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يحتوي الشارع على أقل من %{word_count}
+              كلمة
+        street_number:
+          label:
+            default: رقم المبنى
+            optional: رقم المبنى (اختياري)
+          errors:
+            blank_instructional: أدخل رقم المبنى
+            blank_informative: رقم المبنى مفقود
+            too_long_instructional: رقم المبنى طويل جدًا (الحد الأقصى هو %{limit}
+              حرفًا)
+            too_long_informative: رقم المبنى طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي رقم المبنى على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي رقم المبنى على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي رقم المبنى
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي رقم المبنى
+              على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي رقم المبنى
+              فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي رقم المبنى
+              على أحرف محظورة
+            contains_html_tags_instructional: لا يمكن أن يحتوي رقم المبنى على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي رقم المبنى على HTML
+            contains_url_instructional: لا يمكن أن يحتوي رقم المبنى على عنوان URL
+            contains_url_informative: لا يمكن أن يحتوي رقم المبنى على عنوان URL
+            missing_building_number_instructional: أضف رقم المبنى إن وُجد
+            missing_building_number_informative: قد يكون رقم المبنى مفقودًا
+            building_number_invalid_instructional: تعذّر العثور على رقم المبنى لـ
+              %{street}، %{zip}
+            building_number_invalid_informative: تعذّر العثور على رقم المبنى لـ %{street}،
+              %{zip}
+            unknown_for_address_instructional: أدخل رقم مبنى صحيحًا
+            unknown_for_address_informative: رقم المبنى غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يحتوي رقم المبنى على أقل من %{word_count}
+              كلمة
+        address2:
+          label:
+            default: شقة، جناح، إلخ
+            optional: شقة، جناح، إلخ (اختياري)
+          errors:
+            blank_instructional: أدخل شقة، جناح، إلخ
+            blank_informative: الشقة أو الجناح مفقود
+            too_long_instructional: سطر العنوان 2 طويل جدًا (الحد الأقصى هو 255 حرفًا)
+            too_long_informative: سطر العنوان 2 طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي سطر العنوان 2 على رموز
+              تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي سطر العنوان 2 على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي سطر العنوان
+              2 على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي سطر العنوان
+              2 على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي سطر العنوان
+              2 فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي سطر العنوان
+              2 على أحرف محظورة
+            contains_too_many_words_instructional: يجب أن يحتوي سطر العنوان 2 على
+              أقل من %{word_count} كلمة
+            contains_too_many_words_informative: يجب أن يحتوي سطر العنوان 2 على أقل
+              من %{word_count} كلمة
+            contains_html_tags_instructional: لا يمكن أن يحتوي سطر العنوان 2 على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي سطر العنوان 2 على HTML
+            contains_url_instructional: لا يمكن أن يحتوي سطر العنوان 2 على عنوان URL
+            contains_url_informative: لا يمكن أن يحتوي سطر العنوان 2 على عنوان URL
+            missing_building_number_instructional: أضف رقم المبنى إن وُجد
+            missing_building_number_informative: قد يكون رقم المبنى مفقودًا
+            street_unknown_for_zip_instructional: أدخل اسم شارع صحيحًا لـ %{zip}
+            street_unknown_for_zip_informative: اسم الشارع غير صحيح لـ %{zip}
+            building_number_invalid_instructional: تعذّر العثور على رقم المبنى لـ
+              %{street}، %{zip}
+            building_number_invalid_informative: تعذّر العثور على رقم المبنى لـ %{street}،
+              %{zip}
+            unknown_for_address_instructional: قد يكون سطر العنوان 2 غير صحيح
+            unknown_for_address_informative: قد يكون سطر العنوان 2 غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يحتوي سطر العنوان 2 على أقل من %{word_count}
+              كلمة
+        line2:
+          label:
+            default: شقة، جناح، إلخ.
+            optional: شقة، جناح، إلخ. (اختياري)
+          errors:
+            blank_instructional: أدخل شقة، جناح، إلخ.
+            blank_informative: الشقة أو الجناح مفقود
+            too_long_instructional: السطر الثاني من العنوان طويل جدًا (الحد الأقصى
+              هو %{limit} حرفًا)
+            too_long_informative: السطر الثاني من العنوان طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي السطر الثاني من العنوان
+              على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي السطر الثاني من العنوان
+              على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي السطر الثاني
+              من العنوان على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي السطر الثاني
+              من العنوان على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي السطر الثاني
+              من العنوان فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي السطر الثاني
+              من العنوان على أحرف محظورة
+            contains_too_many_words_instructional: يجب أن يحتوي السطر الثاني من العنوان
+              على أقل من %{word_count} كلمة
+            contains_too_many_words_informative: يجب أن يحتوي السطر الثاني من العنوان
+              على أقل من %{word_count} كلمة
+            contains_html_tags_instructional: لا يمكن أن يحتوي السطر الثاني من العنوان
+              على علامات HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي السطر الثاني من العنوان
+              على علامات HTML
+            contains_url_instructional: لا يمكن أن يحتوي السطر الثاني من العنوان على
+              عنوان URL
+            contains_url_informative: لا يمكن أن يحتوي السطر الثاني من العنوان على
+              عنوان URL
+            missing_building_number_instructional: أضف رقم المبنى إن وُجد
+            missing_building_number_informative: أضف رقم المبنى إن وُجد
+            street_unknown_for_zip_instructional: أدخل اسم شارع صحيحًا لـ %{zip}
+            street_unknown_for_zip_informative: أدخل اسم شارع صحيحًا لـ %{zip}
+            building_number_invalid_instructional: تعذّر العثور على رقم المبنى لـ
+              %{street}، %{zip}
+            building_number_invalid_informative: تعذّر العثور على رقم المبنى لـ %{street}،
+              %{zip}
+            unknown_for_address_instructional: قد يكون السطر الثاني من العنوان غير
+              صحيح
+            unknown_for_address_informative: قد يكون السطر الثاني من العنوان غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يحتوي السطر الثاني من العنوان على أقل
+              من %{word_count} كلمة
+        neighborhood:
+          label:
+            default: الحي
+            optional: الحي (اختياري)
+          errors:
+            blank_instructional: أدخل حيًا
+            blank_informative: الحي مفقود
+            too_long_instructional: الحي طويل جدًا (الحد الأقصى هو %{limit} حرفًا)
+            too_long_informative: الحي طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الحي على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الحي على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الحي على
+              رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الحي على رموز
+              رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الحي فقط على
+              أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الحي على
+              أحرف محظورة
+            contains_too_many_words_instructional: يجب أن يحتوي الحي على أقل من %{word_count}
+              كلمة
+            contains_too_many_words_informative: يجب أن يحتوي الحي على أقل من %{word_count}
+              كلمة
+            contains_html_tags_instructional: لا يمكن أن يحتوي الحي على علامات HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الحي على علامات HTML
+            contains_url_instructional: لا يمكن أن يحتوي الحي على عناوين URL
+            contains_url_informative: لا يمكن أن يحتوي الحي على عناوين URL
+            unknown_for_city_instructional: أدخل اسم حي صحيحًا لـ %{city}
+            unknown_for_city_informative: أدخل اسم حي صحيحًا لـ %{city}
+            unknown_for_zip_instructional: أدخل اسم حي صحيحًا لـ %{zip}
+            unknown_for_zip_informative: أدخل اسم حي صحيحًا لـ %{zip}
+            unknown_for_address_instructional: قد يكون الحي غير صحيح
+            unknown_for_address_informative: قد يكون الحي غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يحتوي الحي على أقل من %{word_count}
+              كلمة
+        district:
+          label:
+            default: المقاطعة
+            optional: المقاطعة (اختياري)
+          errors:
+            blank_instructional: أدخل مقاطعة
+            blank_informative: المقاطعة مفقودة
+            too_long_instructional: المقاطعة طويلة جدًا (الحد الأقصى هو %{limit} حرفًا)
+            too_long_informative: المقاطعة طويلة جدًا
+            contains_emojis_instructional: لا يمكن أن تحتوي المقاطعة على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن تحتوي المقاطعة على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن تحتوي المقاطعة
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن تحتوي المقاطعة على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن تحتوي المقاطعة فقط
+              على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن تحتوي المقاطعة
+              على أحرف محظورة
+            contains_too_many_words_instructional: يجب أن تحتوي المقاطعة على أقل من
+              %{word_count} كلمة
+            contains_too_many_words_informative: يجب أن تحتوي المقاطعة على أقل من
+              %{word_count} كلمة
+            contains_html_tags_instructional: لا يمكن أن تحتوي المقاطعة على علامات
+              HTML
+            contains_html_tags_informative: لا يمكن أن تحتوي المقاطعة على علامات HTML
+            contains_url_instructional: لا يمكن أن تحتوي المقاطعة على عناوين URL
+            contains_url_informative: لا يمكن أن تحتوي المقاطعة على عناوين URL
+            unknown_for_city_instructional: أدخل اسم مقاطعة صحيحًا لـ %{city}
+            unknown_for_city_informative: أدخل اسم مقاطعة صحيحًا لـ %{city}
+            unknown_for_zip_instructional: أدخل اسم مقاطعة صحيحًا لـ %{zip}
+            unknown_for_zip_informative: أدخل اسم مقاطعة صحيحًا لـ %{zip}
+            unknown_for_address_instructional: قد تكون المقاطعة غير صحيحة
+            unknown_for_address_informative: قد تكون المقاطعة غير صحيحة
+          warnings:
+            contains_too_many_words: يُوصى بأن تحتوي المقاطعة على أقل من %{word_count}
+              كلمة
+        subdistrict:
+          label:
+            default: المنطقة الفرعية
+            optional: المنطقة الفرعية (اختياري)
+          errors:
+            blank_instructional: أدخل منطقة فرعية
+            blank_informative: المنطقة الفرعية مفقودة
+            too_long_instructional: المنطقة الفرعية طويلة جدًا (الحد الأقصى هو %{limit}
+              حرفًا)
+            too_long_informative: المنطقة الفرعية طويلة جدًا
+            contains_emojis_instructional: لا يمكن أن تحتوي المنطقة الفرعية على رموز
+              تعبيرية
+            contains_emojis_informative: لا يمكن أن تحتوي المنطقة الفرعية على رموز
+              تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن تحتوي المنطقة
+              الفرعية على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن تحتوي المنطقة الفرعية
+              على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن تحتوي المنطقة الفرعية
+              فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن تحتوي المنطقة الفرعية
+              على أحرف محظورة
+            contains_too_many_words_instructional: يجب أن تحتوي المنطقة الفرعية على
+              أقل من %{word_count} كلمة
+            contains_too_many_words_informative: يجب أن تحتوي المنطقة الفرعية على
+              أقل من %{word_count} كلمة
+            contains_html_tags_instructional: لا يمكن أن تحتوي المنطقة الفرعية على
+              علامات HTML
+            contains_html_tags_informative: لا يمكن أن تحتوي المنطقة الفرعية على علامات
+              HTML
+            contains_url_instructional: لا يمكن أن تحتوي المنطقة الفرعية على عناوين
+              URL
+            contains_url_informative: لا يمكن أن تحتوي المنطقة الفرعية على عناوين
+              URL
+            unknown_for_city_instructional: أدخل اسم منطقة فرعية صحيحًا لـ %{city}
+            unknown_for_city_informative: أدخل اسم منطقة فرعية صحيحًا لـ %{city}
+            unknown_for_zip_instructional: أدخل اسم منطقة فرعية صحيحًا لـ %{zip}
+            unknown_for_zip_informative: أدخل اسم منطقة فرعية صحيحًا لـ %{zip}
+            unknown_for_address_instructional: قد تكون المنطقة الفرعية غير صحيحة
+            unknown_for_address_informative: قد تكون المنطقة الفرعية غير صحيحة
+          warnings:
+            contains_too_many_words: يُوصى بأن تحتوي المنطقة الفرعية على أقل من %{word_count}
+              كلمة
+        city:
+          label:
+            default: المدينة
+            optional: المدينة (اختياري)
+          errors:
+            blank_instructional: أدخل مدينة
+            blank_informative: المدينة مفقودة
+            too_long_instructional: المدينة طويلة جدًا (الحد الأقصى هو 255 حرفًا)
+            too_long_informative: المدينة طويلة جدًا
+            contains_emojis_instructional: لا يمكن أن تحتوي المدينة على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن تحتوي المدينة على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن تحتوي المدينة
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن تحتوي المدينة على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن تحتوي المدينة فقط
+              على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن تحتوي المدينة على
+              أحرف محظورة
+            contains_too_many_words_instructional: يجب أن تحتوي المدينة على أقل من
+              %{word_count} كلمة
+            contains_too_many_words_informative: يجب أن تحتوي المدينة على أقل من %{word_count}
+              كلمة
+            contains_html_tags_instructional: لا يمكن أن تحتوي المدينة على HTML
+            contains_html_tags_informative: لا يمكن أن تحتوي المدينة على HTML
+            contains_url_instructional: لا يمكن أن تحتوي المدينة على عنوان URL
+            contains_url_informative: لا يمكن أن تحتوي المدينة على عنوان URL
+            unknown_for_zip_instructional: أدخل مدينة صحيحة لـ %{zip}
+            unknown_for_zip_informative: المدينة لا تتطابق مع %{zip}
+            unknown_for_province_instructional: أدخل مدينة صحيحة لـ %{province}
+            unknown_for_province_informative: المدينة لا تتطابق مع %{province}
+            unknown_for_zip_and_province_instructional: أدخل مدينة صحيحة لـ %{zip}،
+              %{province}
+            unknown_for_zip_and_province_informative: قد تكون المدينة غير صحيحة
+            unknown_for_address_instructional: قد تكون المدينة غير صحيحة
+            unknown_for_address_informative: قد تكون المدينة غير صحيحة
+        province:
+          label:
+            default: المنطقة
+            optional: المنطقة (اختياري)
+          errors:
+            blank_instructional: حدد منطقة
+            blank_informative: المنطقة مفقودة
+            invalid_instructional: حدد منطقة
+            invalid_informative: المنطقة مفقودة
+            invalid_for_country_instructional: أدخل منطقة صحيحة لـ %{country}
+            invalid_for_country_informative: المنطقة لا تتطابق مع %{country}
+            unknown_for_city_and_zip_instructional: حدد منطقة صحيحة لـ %{city}، %{zip}
+            unknown_for_city_and_zip_informative: المنطقة لا تتطابق مع %{city}، %{zip}
+            unknown_for_city_informative: حدد منطقة صحيحة لـ %{city}
+            unknown_for_city_instructional: المنطقة لا تتطابق مع %{city}
+            unknown_for_zip_instructional: حدد منطقة صحيحة لـ %{zip}
+            unknown_for_zip_informative: المنطقة لا تتطابق مع %{zip}
+            unknown_for_address_instructional: قد تكون المنطقة غير صحيحة
+            unknown_for_address_informative: قد تكون المنطقة غير صحيحة
+        country:
+          label:
+            default: البلد/المنطقة
+            optional: البلد/المنطقة (اختياري)
+          errors:
+            blank_instructional: حدد بلدًا/منطقة
+            blank_informative: البلد/المنطقة مفقود
+            not_supported_instructional: البلد/المنطقة غير مدعوم
+            not_supported_informative: البلد/المنطقة غير مدعوم
+            invalid_instructional: أدخل بلدًا/منطقة صحيحًا
+            invalid_informative: البلد/المنطقة غير صحيح
+            invalid_for_zip_instructional: أدخل بلدًا/منطقة صحيحًا لهذا الرمز البريدي
+            invalid_for_zip_informative: لا يتطابق %{country} مع البلد/المنطقة
+        zip:
+          label:
+            default: الرمز البريدي
+            optional: الرمز البريدي (اختياري)
+          errors:
+            blank_instructional: أدخل رمزًا بريديًا
+            blank_informative: الرمز البريدي مفقود
+            blocked_address_instructional: هذا الموقع غير مدعوم
+            blocked_address_informative: هذا الموقع غير مدعوم
+            invalid_instructional: أدخل رمزًا بريديًا صحيحًا
+            invalid_informative: الرمز البريدي غير صحيح
+            invalid_for_country_instructional: أدخل رمزًا بريديًا صحيحًا لـ %{country}
+            invalid_for_country_informative: الرمز البريدي لا يتطابق مع %{country}
+            invalid_for_province_instructional: أدخل رمزًا بريديًا صحيحًا لـ %{province}
+            invalid_for_province_informative: الرمز البريدي لا يتطابق مع %{province}
+            invalid_for_country_and_province_instructional: أدخل رمزًا بريديًا صحيحًا
+              لـ %{province}، %{country}
+            invalid_for_country_and_province_informative: الرمز البريدي لا يتطابق
+              مع %{province}، %{country}
+            too_long_instructional: الرمز البريدي طويل جدًا
+            too_long_informative: الرمز البريدي طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الرمز البريدي على رموز
+              تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الرمز البريدي على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الرمز البريدي
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الرمز البريدي
+              على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الرمز البريدي
+              فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الرمز البريدي
+              على أحرف محظورة
+            not_supported_instructional: الرمز البريدي غير مدعوم. أدخل عنوانًا جديدًا
+              وحاول مجددًا
+            not_supported_informative: الرمز البريدي غير مدعوم
+            contains_html_tags_instructional: لا يمكن أن يحتوي الرمز البريدي على HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الرمز البريدي على HTML
+            unknown_for_province_instructional: أدخل رمزًا بريديًا صحيحًا لـ %{province}
+            unknown_for_province_informative: الرمز البريدي غير صحيح لـ %{province}
+            unknown_for_address_instructional: قد يكون الرمز البريدي غير صحيح
+            unknown_for_address_informative: قد يكون الرمز البريدي غير صحيح
+        phone:
+          label:
+            default: الهاتف
+            optional: الهاتف (اختياري)
+          errors:
+            blank_instructional: أدخل رقم هاتف
+            blank_informative: رقم الهاتف مفقود
+            invalid_instructional: أدخل رقم هاتف صحيحًا
+            invalid_informative: رقم الهاتف غير صحيح
+            too_long_instructional: رقم الهاتف طويل جدًا
+            too_long_informative: رقم الهاتف طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي رقم الهاتف على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي رقم الهاتف على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي رقم الهاتف
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي رقم الهاتف
+              على رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي رقم الهاتف
+              فقط على أحرف، وأرقام، وأحرف محلية، ورموز خاصة
+            contains_restricted_characters_informative: لا يمكن أن يحتوي رقم الهاتف
+              على أحرف محظورة
+        address:
+          errors:
+            may_not_exist_instructional: لم يتم العثور على العنوان أو أنه غير موجود
+            may_not_exist_informative: لم يتم العثور على العنوان
