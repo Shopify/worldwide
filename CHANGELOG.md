@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- nil
+- Add `ar`, `he`, and `ur` to `translation.yml` target languages so the Translation Platform generates RTL localizations of the region address data [#519](https://github.com/Shopify/worldwide/pull/519)
 
 ---
 
