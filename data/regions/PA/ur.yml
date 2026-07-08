@@ -1,0 +1,42 @@
+---
+ur:
+  worldwide:
+    PA:
+      addresses:
+        neighborhood:
+          label:
+            default: ضلع
+            optional: ضلع (اختیاری)
+          errors:
+            blank_instructional: ضلع درج کریں
+            blank_informative: ضلع درج نہیں ہے
+            too_long_instructional: ضلع بہت طویل ہے (زیادہ سے زیادہ %{limit} کیریکٹر
+              کی اجازت ہے)
+            too_long_informative: ضلع بہت طویل ہے
+            contains_emojis_instructional: ضلع میں ایموجی شامل نہیں ہو سکتے
+            contains_emojis_informative: ضلع میں ایموجی شامل نہیں ہو سکتے
+            contains_mathematical_symbols_instructional: ضلع میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: ضلع میں ریاضیاتی علامتیں شامل
+              نہیں ہو سکتیں
+            contains_restricted_characters_instructional: ضلع میں صرف حروف، نمبر،
+              مقامی کیریکٹر اور خصوصی کیریکٹر شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: ضلع میں ممنوعہ کیریکٹر شامل
+              نہیں ہو سکتے
+            contains_too_many_words_instructional: ضلع میں %{word_count} سے کم الفاظ
+              ہونے چاہئیں
+            contains_too_many_words_informative: ضلع میں %{word_count} سے کم الفاظ
+              ہونے چاہئیں
+            contains_html_tags_instructional: ضلع میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: ضلع میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: ضلع میں کوئی URL شامل نہیں ہو سکتا
+            contains_url_informative: ضلع میں کوئی URL شامل نہیں ہو سکتا
+            unknown_for_city_instructional: "%{city} کے لیے ایک درست ضلع درج کریں"
+            unknown_for_city_informative: ضلع %{city} کے لیے درست نہیں ہے
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست ضلع درج کریں"
+            unknown_for_zip_informative: ضلع %{zip} کے لیے درست نہیں ہے
+            unknown_for_address_instructional: ضلع غلط ہو سکتا ہے
+            unknown_for_address_informative: ضلع غلط ہو سکتا ہے
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ ضلع میں %{word_count} سے
+              کم الفاظ ہوں
