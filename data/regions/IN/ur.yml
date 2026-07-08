@@ -1,0 +1,35 @@
+---
+ur:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: ریاست
+            optional: ریاست (اختیاری)
+          errors:
+            blank_instructional: کوئی ریاست منتخب کریں
+            blank_informative: ریاست غائب ہے
+        zip:
+          label:
+            default: PIN کوڈ
+            optional: PIN کوڈ (اختیاری)
+          errors:
+            blank_instructional: کوئی PIN کوڈ درج کریں
+            blank_informative: PIN کوڈ غائب ہے
+            invalid_for_country_instructional: "%{country} کے لیے درست PIN کوڈ درج
+              کریں"
+            invalid_for_country_informative: PIN کوڈ درست نہیں ہے
+            invalid_for_country_and_province_instructional: "%{province}، %{country}
+              کے لیے درست PIN کوڈ درج کریں"
+            invalid_for_country_and_province_informative: PIN کوڈ درست نہیں ہے
+            too_long_instructional: PIN کوڈ بہت طویل ہے
+            too_long_informative: PIN کوڈ بہت طویل ہے
+            contains_emojis_instructional: PIN کوڈ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_emojis_informative: PIN کوڈ میں ایموجیز شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: PIN کوڈ میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_restricted_characters_informative: PIN کوڈ میں ممنوعہ کریکٹرز
+              شامل نہیں ہو سکتے
+            contains_html_tags_instructional: PIN کوڈ میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_informative: PIN کوڈ میں HTML شامل نہیں ہو سکتا
