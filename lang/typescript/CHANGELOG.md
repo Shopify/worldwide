@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.7
+
+### Patch Changes
+
+- a09874c: Tighten Brazilian address1 parsing for apartment complements.
+
 ## 0.7.6
 
 ### Patch Changes
