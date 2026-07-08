@@ -30,6 +30,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.25.4] - 2026-07-08
+- Update translations: buyer [#523](https://github.com/Shopify/worldwide/pull/523)
+
 ## [1.25.3] - 2026-07-08
 - Add `ar`, `he`, and `ur` to `translation.yml` target languages so the Translation Platform generates RTL localizations of the region address data [#519](https://github.com/Shopify/worldwide/pull/519)
 - Fixed: format Urdu (`ur`) percentages with a trailing % sign in numeric layout order (e.g. `2%` instead of `%2`), matching the existing Hebrew behaviour. [#518](https://github.com/Shopify/worldwide/pull/518)
