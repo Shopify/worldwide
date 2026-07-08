@@ -1,0 +1,54 @@
+---
+he:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: רחוב ומספר בית
+            optional: רחוב ומספר בית (אופציונלי)
+          errors:
+            blank_instructional: יש להזין רחוב ומספר בית
+            blank_informative: חסרים רחוב ומספר בית
+        province:
+          label:
+            default: מדינה
+            optional: מדינה (אופציונלית)
+          errors:
+            blank_instructional: יש לבחור מדינה
+            blank_informative: מדינה חסרה
+        neighborhood:
+          label:
+            default: שכונה
+            optional: שכונה (אופציונלית)
+          errors:
+            blank_instructional: יש להזין שכונה
+            blank_informative: שכונה חסרה
+            too_long_instructional: השכונה ארוכה מדי (האורך המרבי הוא %{limit} תווים)
+            too_long_informative: השכונה ארוכה מדי
+            contains_emojis_instructional: שכונה לא יכולה להכיל אימוג'י
+            contains_emojis_informative: שכונה לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: שכונה לא יכולה להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: שכונה לא יכולה להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: שכונה יכולה להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: שכונה לא יכולה להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: שכונה חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: שכונה חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_informative: שכונה לא יכולה להכיל HTML
+            contains_html_tags_instructional: שכונה לא יכולה להכיל HTML
+            contains_url_instructional: שכונה לא יכולה להכיל כתובת URL
+            contains_url_informative: שכונה לא יכולה להכיל כתובת URL
+            unknown_for_city_instructional: יש להזין שכונה חוקית עבור %{city}
+            unknown_for_city_informative: יש להזין שכונה חוקית עבור %{city}
+            unknown_for_zip_instructional: יש להזין שכונה חוקית עבור %{zip}
+            unknown_for_zip_informative: יש להזין שכונה חוקית עבור %{zip}
+            unknown_for_address_instructional: ייתכן שהשכונה שגויה
+            unknown_for_address_informative: ייתכן שהשכונה שגויה
+          warnings:
+            contains_too_many_words: מומלץ שהשכונה תכיל פחות מ-%{word_count} מילים

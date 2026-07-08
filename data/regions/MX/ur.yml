@@ -1,0 +1,56 @@
+---
+ur:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: سٹریٹ اور مکان کا نمبر
+            optional: سٹریٹ اور مکان کا نمبر (اختیاری)
+          errors:
+            blank_instructional: سٹریٹ اور مکان کا نمبر درج کریں
+            blank_informative: سٹریٹ اور مکان کا نمبر درج نہیں ہے
+        province:
+          label:
+            default: ریاست
+            optional: ریاست (اختیاری)
+          errors:
+            blank_instructional: ریاست منتخب کریں
+            blank_informative: ریاست درج نہیں ہے
+        neighborhood:
+          label:
+            default: کالونی
+            optional: کالونی (اختیاری)
+          errors:
+            blank_instructional: کالونی درج کریں
+            blank_informative: کالونی درج نہیں ہے
+            too_long_instructional: کالونی بہت طویل ہے (زیادہ سے زیادہ %{limit} کیریکٹر
+              کی اجازت ہے)
+            too_long_informative: کالونی بہت طویل ہے
+            contains_emojis_instructional: کالونی میں ایموجی شامل نہیں ہو سکتے
+            contains_emojis_informative: کالونی میں ایموجی شامل نہیں ہو سکتے
+            contains_mathematical_symbols_instructional: کالونی میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_mathematical_symbols_informative: کالونی میں ریاضیاتی علامتیں
+              شامل نہیں ہو سکتیں
+            contains_restricted_characters_instructional: کالونی میں صرف حروف، نمبر،
+              مقامی کیریکٹر اور خصوصی کیریکٹر شامل ہو سکتے ہیں
+            contains_restricted_characters_informative: کالونی میں ممنوعہ کیریکٹر
+              شامل نہیں ہو سکتے
+            contains_too_many_words_instructional: کالونی میں %{word_count} سے کم
+              الفاظ ہونے چاہئیں
+            contains_too_many_words_informative: کالونی میں %{word_count} سے کم الفاظ
+              ہونے چاہئیں
+            contains_html_tags_informative: کالونی میں HTML شامل نہیں ہو سکتا
+            contains_html_tags_instructional: کالونی میں HTML شامل نہیں ہو سکتا
+            contains_url_instructional: کالونی میں کوئی URL شامل نہیں ہو سکتا
+            contains_url_informative: کالونی میں کوئی URL شامل نہیں ہو سکتا
+            unknown_for_city_instructional: "%{city} کے لیے ایک درست کالونی درج کریں"
+            unknown_for_city_informative: "%{city} کے لیے ایک درست کالونی درج کریں"
+            unknown_for_zip_instructional: "%{zip} کے لیے ایک درست کالونی درج کریں"
+            unknown_for_zip_informative: "%{zip} کے لیے ایک درست کالونی درج کریں"
+            unknown_for_address_instructional: کالونی غلط ہو سکتی ہے
+            unknown_for_address_informative: کالونی غلط ہو سکتی ہے
+          warnings:
+            contains_too_many_words: تجویز کی جاتی ہے کہ کالونی میں %{word_count}
+              سے کم الفاظ ہوں
