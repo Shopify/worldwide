@@ -1,0 +1,54 @@
+---
+ar:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: الشارع ورقم المنزل
+            optional: الشارع ورقم المنزل (اختياري)
+          errors:
+            blank_instructional: أدخل اسم الشارع ورقم المنزل
+            blank_informative: الشارع ورقم المنزل مفقودان
+        province:
+          label:
+            default: الولاية
+            optional: الولاية (اختياري)
+          errors:
+            blank_instructional: اختر ولاية
+            blank_informative: الولاية مفقودة
+        district:
+          label:
+            default: الحي
+            optional: الحي (اختياري)
+          errors:
+            blank_instructional: أدخل حيًا
+            blank_informative: الحي مفقود
+            too_long_instructional: الحي طويل جدًا (الحد الأقصى %{limit} من الأحرف)
+            too_long_informative: الحي طويل جدًا
+            contains_emojis_instructional: لا يمكن أن يحتوي الحي على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن يحتوي الحي على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن يحتوي الحي على
+              رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن يحتوي الحي على رموز
+              رياضية
+            contains_restricted_characters_instructional: يمكن أن يحتوي الحي على حروف،
+              وأرقام، ورموز محلية، ورموز خاصة فقط
+            contains_restricted_characters_informative: لا يمكن أن يحتوي الحي على
+              رموز مقيدة
+            contains_too_many_words_instructional: يجب أن يتكون الحي من عدد كلمات
+              أقل من %{word_count}
+            contains_too_many_words_informative: يجب أن يتكون الحي من عدد كلمات أقل
+              من %{word_count}
+            contains_html_tags_instructional: لا يمكن أن يحتوي الحي على علامات HTML
+            contains_html_tags_informative: لا يمكن أن يحتوي الحي على علامات HTML
+            contains_url_instructional: لا يمكن أن يحتوي الحي على روابط URL
+            contains_url_informative: لا يمكن أن يحتوي الحي على روابط URL
+            unknown_for_city_instructional: أدخل اسم حي صحيح لـ %{city}
+            unknown_for_city_informative: أدخل اسم حي صحيح لـ %{city}
+            unknown_for_zip_instructional: أدخل اسم حي صحيح لـ %{zip}
+            unknown_for_zip_informative: أدخل اسم حي صحيح لـ %{zip}
+            unknown_for_address_instructional: قد يكون الحي غير صحيح
+            unknown_for_address_informative: قد يكون الحي غير صحيح
+          warnings:
+            contains_too_many_words: يُوصى بأن يتكون الحي من عدد كلمات أقل من %{word_count}

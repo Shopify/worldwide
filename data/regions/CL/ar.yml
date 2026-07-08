@@ -1,0 +1,41 @@
+---
+ar:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: البلدية
+            optional: البلدية (اختياري)
+          errors:
+            blank_instructional: أدخل بلدية
+            blank_informative: البلدية مفقودة
+            too_long_instructional: البلدية طويلة جدًا (الحد الأقصى %{limit} من الأحرف)
+            too_long_informative: البلدية طويلة جدًا
+            contains_emojis_instructional: لا يمكن أن تحتوي البلدية على رموز تعبيرية
+            contains_emojis_informative: لا يمكن أن تحتوي البلدية على رموز تعبيرية
+            contains_mathematical_symbols_instructional: لا يمكن أن تحتوي البلدية
+              على رموز رياضية
+            contains_mathematical_symbols_informative: لا يمكن أن تحتوي البلدية على
+              رموز رياضية
+            contains_restricted_characters_instructional: يمكن أن تحتوي البلدية على
+              حروف، وأرقام، ورموز محلية، ورموز خاصة فقط
+            contains_restricted_characters_informative: لا يمكن أن تحتوي البلدية على
+              رموز مقيدة
+            contains_too_many_words_instructional: يجب أن تتكون البلدية من عدد كلمات
+              أقل من %{word_count}
+            contains_too_many_words_informative: يجب أن تتكون البلدية من عدد كلمات
+              أقل من %{word_count}
+            contains_html_tags_instructional: لا يمكن أن تحتوي البلدية على علامات
+              HTML
+            contains_html_tags_informative: لا يمكن أن تحتوي البلدية على علامات HTML
+            contains_url_instructional: لا يمكن أن تحتوي البلدية على روابط URL
+            contains_url_informative: لا يمكن أن تحتوي البلدية على روابط URL
+            unknown_for_city_instructional: أدخل بلدية صحيحة لـ %{city}
+            unknown_for_city_informative: أدخل بلدية صحيحة لـ %{city}
+            unknown_for_zip_instructional: أدخل بلدية صحيحة لـ %{zip}
+            unknown_for_zip_informative: أدخل بلدية صحيحة لـ %{zip}
+            unknown_for_address_instructional: قد تكون البلدية غير صحيحة
+            unknown_for_address_informative: قد تكون البلدية غير صحيحة
+          warnings:
+            contains_too_many_words: يُوصى بأن تتكون البلدية من عدد كلمات أقل من %{word_count}

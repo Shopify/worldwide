@@ -1,0 +1,40 @@
+---
+he:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: קומונה
+            optional: קומונה (אופציונלי)
+          errors:
+            blank_instructional: יש להזין קומונה
+            blank_informative: חסרה קומונה
+            too_long_instructional: הקומונה ארוכה מדי (עד %{limit} תווים)
+            too_long_informative: הקומונה ארוכה מדי
+            contains_emojis_instructional: הקומונה לא יכולה להכיל אימוג'י
+            contains_emojis_informative: הקומונה לא יכולה להכיל אימוג'י
+            contains_mathematical_symbols_instructional: הקומונה לא יכולה להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: הקומונה לא יכולה להכיל סמלים
+              מתמטיים
+            contains_restricted_characters_instructional: הקומונה יכולה להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: הקומונה לא יכולה להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: הקומונה חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: הקומונה חייבת להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: הקומונה לא יכולה להכיל תגי HTML
+            contains_html_tags_informative: הקומונה לא יכולה להכיל תגי HTML
+            contains_url_instructional: הקומונה לא יכולה להכיל כתובות URL
+            contains_url_informative: הקומונה לא יכולה להכיל כתובות URL
+            unknown_for_city_instructional: יש להזין קומונה חוקית עבור %{city}
+            unknown_for_city_informative: יש להזין קומונה חוקית עבור %{city}
+            unknown_for_zip_instructional: יש להזין קומונה חוקית עבור המיקוד %{zip}
+            unknown_for_zip_informative: יש להזין קומונה חוקית עבור המיקוד %{zip}
+            unknown_for_address_instructional: הקומונה עשויה להיות שגויה
+            unknown_for_address_informative: הקומונה עשויה להיות שגויה
+          warnings:
+            contains_too_many_words: מומלץ שהקומונה תכיל פחות מ-%{word_count} מילים
