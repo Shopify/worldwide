@@ -1,0 +1,46 @@
+---
+he:
+  worldwide:
+    CR:
+      addresses:
+        province:
+          label:
+            default: מחוז
+            optional: מחוז (אופציונלי)
+          errors:
+            blank_instructional: יש לבחור מחוז
+            blank_informative: חסר מחוז
+        neighborhood:
+          label:
+            default: אזור
+            optional: אזור (אופציונלי)
+          errors:
+            blank_instructional: יש להזין אזור
+            blank_informative: חסר אזור
+            too_long_instructional: האזור ארוך מדי (עד %{limit} תווים)
+            too_long_informative: האזור ארוך מדי
+            contains_emojis_instructional: האזור לא יכול להכיל אימוג'י
+            contains_emojis_informative: האזור לא יכול להכיל אימוג'י
+            contains_mathematical_symbols_instructional: האזור לא יכול להכיל סמלים
+              מתמטיים
+            contains_mathematical_symbols_informative: האזור לא יכול להכיל סמלים מתמטיים
+            contains_restricted_characters_instructional: האזור יכול להכיל רק אותיות,
+              מספרים, תווים מקומיים ותווים מיוחדים
+            contains_restricted_characters_informative: האזור לא יכול להכיל תווים
+              אסורים
+            contains_too_many_words_instructional: האזור חייב להכיל פחות מ-%{word_count}
+              מילים
+            contains_too_many_words_informative: האזור חייב להכיל פחות מ-%{word_count}
+              מילים
+            contains_html_tags_instructional: האזור לא יכול להכיל HTML
+            contains_html_tags_informative: האזור לא יכול להכיל HTML
+            contains_url_instructional: האזור לא יכול להכיל כתובת URL
+            contains_url_informative: האזור לא יכול להכיל כתובת URL
+            unknown_for_city_instructional: יש להזין אזור חוקי עבור %{city}
+            unknown_for_city_informative: האזור אינו חוקי עבור %{city}
+            unknown_for_zip_instructional: יש להזין אזור חוקי עבור המיקוד %{zip}
+            unknown_for_zip_informative: האזור אינו חוקי עבור המיקוד %{zip}
+            unknown_for_address_instructional: האזור עשוי להיות שגוי
+            unknown_for_address_informative: האזור עשוי להיות שגוי
+          warnings:
+            contains_too_many_words: מומלץ שהאזור יכיל פחות מ-%{word_count} מילים
