@@ -29,13 +29,13 @@ ar-EG:
       default: "%-d‏/%-m‏/%Y"
       billing: "%-d‏/%-m‏/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%-l:%M %P اليوم"
-      yesterday_at_time: "%-l:%M %P أمس"
-      tomorrow_at_time: "%-l:%M %P غدًا"
-      on_weekday_at_time: "%-l:%M %P %A"
-      on_date_time_current_year: "%-l:%M %P %-d %b"
-      on_date: "%-d %b %Y"
-      ago: "%{time} ago"
+      today_at_time: اليوم في %-l:%M %P
+      yesterday_at_time: أمس في %-l:%M %P
+      tomorrow_at_time: غدًا في %-l:%M %P
+      on_weekday_at_time: يوم %A في %-l:%M %P
+      on_date_time_current_year: يوم %-d %b، %-l:%M %P
+      on_date: في %-d %b %Y
+      ago: منذ %{time}
       x_hours_ago:
         few: قبل %{count} ساعات
         many: قبل %{count} ساعة
@@ -136,13 +136,13 @@ ar-EG:
       short: "%-d %b, %-l:%M %P"
       billing: "%-d‏/%-m‏/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%-l:%M %P اليوم"
-      yesterday_at_time: "%-l:%M %P أمس"
-      tomorrow_at_time: "%-l:%M %P غدًا"
-      on_weekday_at_time: "%-l:%M %P %A"
-      on_date_time_current_year: "%-l:%M %P %-d %b"
-      on_date: "%-d %b %Y"
-      ago: "%{time} ago"
+      today_at_time: اليوم في %-l:%M %P
+      yesterday_at_time: أمس في %-l:%M %P
+      tomorrow_at_time: غدًا في %-l:%M %P
+      on_weekday_at_time: يوم %A في %-l:%M %P
+      on_date_time_current_year: يوم %-d %b، %-l:%M %P
+      on_date: في %-d %b %Y
+      ago: منذ %{time}
       x_hours_ago:
         few: قبل %{count} ساعات
         many: قبل %{count} ساعة
@@ -158,7 +158,7 @@ ar-EG:
         two: قبل دقيقتين
         zero: قبل %{count} دقيقة
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
+    am: ص
+    pm: م
     just_now: الآن
     yesterday: أمس
