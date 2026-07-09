@@ -38,7 +38,7 @@
     "format": "prettier src rollup-plugin-regions-yaml *.config.ts --write",
     "test": "vitest run --config vitest.config.ts",
     "test:watch": "vitest",
-    "release": "pnpm build && changeset publish --no-git-tag",
+    "release": "pnpm build && node scripts/publish-if-unpublished.mjs",
     "package:publint": "npx publint",
     "package:attw": "attw $(npm pack) && rimraf shopify-worldwide-*.tgz"
   },
