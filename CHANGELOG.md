@@ -26,9 +26,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Fix Nova Scotia HST rate from 15% to 14% [#529](https://github.com/Shopify/worldwide/pull/529)
 
 ---
+
+## [1.25.5] - 2026-07-14
+- Fix Nova Scotia HST rate from 15% to 14% [#529](https://github.com/Shopify/worldwide/pull/529)
 
 ## [1.25.4] - 2026-07-08
 - Update translations: buyer [#523](https://github.com/Shopify/worldwide/pull/523)
