@@ -43,8 +43,7 @@ module Worldwide
 
         set_unless_explicitly_set(i18n_config, :default_locale, :en)
         set_unless_explicitly_set(i18n_config, :exception_handler, exception_handler)
-
-        i18n_config.available_locales = expanded_locales_from_configuration(i18n_config)
+        set_unless_explicitly_set(i18n_config, :available_locales, expanded_locales_from_configuration(i18n_config))
 
         add_cldr_data(i18n_config, additional_components: additional_components, ignore_precomputed_paths: ignore_precomputed_paths)
         add_other_data(i18n_config, ignore_precomputed_paths: ignore_precomputed_paths)
