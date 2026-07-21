@@ -143,5 +143,77 @@ module Worldwide
         assert_equal "Dillon", Worldwide::Names.greeting(given: "", surname: @surname)
       end
     end
+
+    test ".abbreviated ignores leading and trailing whitespace" do
+      assert_equal "MG", Worldwide::Names.abbreviated(given: " Michael ", surname: " Garfinkle ")
+    end
+
+    test ".abbreviated returns nil when given or surname contains punctuation or whitespace" do
+      assert_nil Worldwide::Names.abbreviated(given: "Michael", surname: "Garfinkle-Smith")
+      assert_nil Worldwide::Names.abbreviated(given: "Mr.", surname: "Garfinkle")
+      assert_nil Worldwide::Names.abbreviated(given: "Michael", surname: "van der Garfinkle")
+    end
+
+    test ".abbreviated returns nil for mixed scripts" do
+      assert_nil Worldwide::Names.abbreviated(given: "คEวง", surname: "อภัADSยวงศ์")
+      assert_nil Worldwide::Names.abbreviated(given: "アイ", surname: "Garfinkle")
+    end
+
+    test ".abbreviated returns nil when both given and surname are blank" do
+      assert_nil Worldwide::Names.abbreviated(given: "", surname: "")
+      assert_nil Worldwide::Names.abbreviated(given: nil, surname: nil)
+    end
+
+    test ".abbreviated Latin script returns first letter of surname when given is blank" do
+      assert_equal "G", Worldwide::Names.abbreviated(given: "", surname: "Garfinkle")
+      assert_equal "G", Worldwide::Names.abbreviated(given: nil, surname: "Garfinkle")
+    end
+
+    test ".abbreviated Latin script returns first letter of given when surname is blank" do
+      assert_equal "M", Worldwide::Names.abbreviated(given: "Michael", surname: "")
+      assert_equal "M", Worldwide::Names.abbreviated(given: "Michael", surname: nil)
+    end
+
+    test ".abbreviated Latin script returns first letter of given and surname when both present" do
+      assert_equal "MG", Worldwide::Names.abbreviated(given: "Michael", surname: "Garfinkle")
+    end
+
+    test ".abbreviated Han/Katakana/Hiragana returns surname regardless of given" do
+      assert_equal "愛莉", Worldwide::Names.abbreviated(given: "", surname: "愛莉")
+      assert_equal "アイ", Worldwide::Names.abbreviated(given: nil, surname: "アイ")
+      assert_equal "エリ", Worldwide::Names.abbreviated(given: "エ", surname: "エリ")
+    end
+
+    test ".abbreviated Han/Katakana/Hiragana returns nil when surname is blank" do
+      assert_nil Worldwide::Names.abbreviated(given: "愛莉", surname: "")
+      assert_nil Worldwide::Names.abbreviated(given: "アイ", surname: nil)
+    end
+
+    test ".abbreviated Hangul returns given when within ideal_max_length" do
+      assert_equal "이슬", Worldwide::Names.abbreviated(given: "이슬", surname: "재현")
+      assert_equal "하야나", Worldwide::Names.abbreviated(given: "하야나", surname: "재현")
+    end
+
+    test ".abbreviated Hangul returns first cluster of given when it exceeds default ideal_max_length" do
+      assert_equal "이", Worldwide::Names.abbreviated(given: "이슬슬슬", surname: "재현")
+    end
+
+    test ".abbreviated Hangul returns first cluster of given when it exceeds supplied ideal_max_length" do
+      assert_equal "이", Worldwide::Names.abbreviated(given: "이슬", surname: "재현", ideal_max_length: 1)
+    end
+
+    test ".abbreviated Hangul returns surname when given is blank" do
+      assert_equal "재현", Worldwide::Names.abbreviated(given: nil, surname: "재현")
+      assert_equal "재현", Worldwide::Names.abbreviated(given: "", surname: "재현")
+    end
+
+    test ".abbreviated Thai returns first cluster of given" do
+      assert_equal "ค", Worldwide::Names.abbreviated(given: "ควง", surname: "อภัยวงศ์")
+    end
+
+    test ".abbreviated Thai returns first cluster of surname when given is blank" do
+      assert_equal "อ", Worldwide::Names.abbreviated(given: "", surname: "อภัยวงศ์")
+      assert_equal "อ", Worldwide::Names.abbreviated(given: nil, surname: "อภัยวงศ์")
+    end
   end
 end

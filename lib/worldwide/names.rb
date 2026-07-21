@@ -30,6 +30,43 @@ module Worldwide
         names.map { |name| name[0] }
       end
 
+      def abbreviated(given:, surname:, ideal_max_length: 3)
+        given_stripped = given&.strip
+        surname_stripped = surname&.strip
+
+        combined_name = given_stripped.to_s + surname_stripped.to_s
+        return if combined_name.blank? || combined_name.match?(/[\p{Punctuation}\s]/)
+
+        scripts = Scripts.identify(text: combined_name)
+        return unless scripts.length == 1
+
+        given_clusters = given_stripped&.grapheme_clusters
+        surname_clusters = surname_stripped&.grapheme_clusters
+
+        # Scripts that Scripts.identify recognizes but that have no abbreviation rule
+        # here (e.g. Arabic) intentionally return nil so callers fall back to a greeting.
+        case scripts.first
+        when :Latin
+          [given_stripped, surname_stripped].reject(&:blank?).map { |name| name[0] }.join
+        when :Han, :Katakana, :Hiragana
+          surname_stripped.presence
+        when :Hangul
+          if given_stripped.blank?
+            surname_stripped
+          elsif given_clusters.length > ideal_max_length
+            given_clusters[0]
+          else
+            given_stripped
+          end
+        when :Thai
+          if given_stripped.present?
+            given_clusters[0]
+          elsif surname_stripped.present?
+            surname_clusters[0]
+          end
+        end
+      end
+
       private
 
       def format_name(format, given, surname)
