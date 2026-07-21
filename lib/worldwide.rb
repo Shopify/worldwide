@@ -14,6 +14,7 @@ require "worldwide/extant_outcodes"
 
 require "worldwide/address"
 require "worldwide/address_validator"
+require "worldwide/business_names"
 require "worldwide/calendar"
 require "worldwide/cldr"
 require "worldwide/cldr/context_transforms"
@@ -52,6 +53,10 @@ module Worldwide
 
     def address(**kwargs)
       Address.new(**kwargs)
+    end
+
+    def business_names
+      BusinessNames
     end
 
     def currency(code:)
