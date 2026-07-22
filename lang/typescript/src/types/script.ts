@@ -7,10 +7,4 @@
  * @see https://github.com/Shopify/worldwide/blob/main/lib/worldwide/scripts.rb
  */
 export type Script =
-  | 'Arabic'
-  | 'Han'
-  | 'Hangul'
-  | 'Hiragana'
-  | 'Katakana'
-  | 'Latin'
-  | 'Thai';
+  'Arabic' | 'Han' | 'Hangul' | 'Hiragana' | 'Katakana' | 'Latin' | 'Thai';
