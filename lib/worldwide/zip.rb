@@ -50,7 +50,7 @@ module Worldwide
     # @param min_confidence [Integer] The minimum confidence level (between 0-100) that is accepted from a suggestion (optional)
     # @return [Region] which is a "country" if we have a suggestion, or `nil` if we do not.
     def find_country(country_code: nil, zip:, min_confidence: 0)
-      return nil unless Util.present?(zip)
+      return unless Util.present?(zip)
 
       country = Worldwide.region(code: country_code) unless country_code.nil?
       return country if country&.valid_zip?(zip)
@@ -62,7 +62,7 @@ module Worldwide
       return suggestion unless suggestion.nil? || confidence.nil? || confidence < min_confidence
 
       # If our postal code is wholly numeric, we can't make an intelligent suggestion without an alleged country.
-      return nil unless adjusted_zip.match?(/[A-Z]/)
+      return unless adjusted_zip.match?(/[A-Z]/)
 
       # Try a broader-ranging match without considering the alleged country
       # We'll see if we have only a single suggestion and, if so, return it.
@@ -95,7 +95,7 @@ module Worldwide
         return autofill if Util.present?(autofill)
       end
 
-      return nil if zip.nil?
+      return if zip.nil?
 
       # Convert to uppercase
       # Convert numeric and romaji full-width to half-width

@@ -117,7 +117,7 @@ module Worldwide
       raw_symbol = Worldwide::Cldr.t("currencies.#{@currency_code}.narrow_symbol", default: nil, locale: locale) ||
         Worldwide::Cldr.t("currencies.#{@currency_code}.symbol", default: nil, locale: locale)
 
-      return nil if raw_symbol.nil?
+      return if raw_symbol.nil?
 
       # For some locales (e.g., HK), in-market folks have requested that we leave the CLDR behaviour untouched
       exceptional_symbol = EXCEPTIONS.fetch(@currency_code.to_sym, nil)
@@ -250,7 +250,7 @@ module Worldwide
     def minor_symbol
       key = @currency_code
 
-      return nil unless Currency.minor_symbols.key?(key)
+      return unless Currency.minor_symbols.key?(key)
 
       Currency.minor_symbols[key]["symbol"]
     end
