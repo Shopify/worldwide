@@ -9,7 +9,7 @@ gem "ruby-cldr", git: "https://github.com/ruby-i18n/ruby-cldr.git", ref: "86a5d7
 # Specify your gem's dependencies in worldwide.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "rake", "~> 13.4"
 
 group :development do
   gem "minitest-focus", require: false
