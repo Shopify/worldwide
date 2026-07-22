@@ -28,6 +28,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 - Fixed: `Address#format` no longer drops backslash sequences (e.g. `\2`) in field values [#533](https://github.com/Shopify/worldwide/pull/533)
 
+- Fix trailing whitespace in formatted Japanese addresses when the postal code is blank or excluded. [#548](https://github.com/Shopify/worldwide/pull/548)
+
 ---
 
 ## [1.25.6] - 2026-07-21
