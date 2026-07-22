@@ -446,13 +446,11 @@ module Worldwide
     def strip_extra_chars(lines:, excluded_fields:)
       result = []
       lines.each do |components|
-        line = components.filter_map do |component|
-          component unless component.empty?
-        end
+        line = strip_extra_japanese_chars(line: components, excluded_fields: excluded_fields)
+        line.map!(&:strip)
+        line.reject!(&:empty?)
 
-        line = strip_extra_japanese_chars(line: line, excluded_fields: excluded_fields)
-
-        result << line.map(&:strip) unless blank?(line.join(""))
+        result << line unless blank?(line.join(""))
       end
       result
     end

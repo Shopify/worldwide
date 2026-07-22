@@ -155,6 +155,45 @@ module Worldwide
       assert_equal expected, Worldwide.address(**japan_address).format
     end
 
+    test "format_address removes Japanese postal mark spacing when zip is blank" do
+      japan_address = {
+        first_name: "Chocolate",
+        last_name: "Brownie",
+        address1: "東京 1",
+        province_code: "JP-01",
+        country_code: "JP",
+      }
+
+      expected = [
+        "Japan",
+        "Hokkaido",
+        "東京 1",
+        "Brownie Chocolate様",
+      ]
+
+      assert_equal expected, Worldwide.address(**japan_address).format
+    end
+
+    test "format_address removes Japanese postal mark spacing when zip is excluded" do
+      japan_address = {
+        first_name: "Chocolate",
+        last_name: "Brownie",
+        address1: "東京 1",
+        province_code: "JP-01",
+        country_code: "JP",
+        zip: "097-0005",
+      }
+
+      expected = [
+        "Japan",
+        "Hokkaido",
+        "東京 1",
+        "Brownie Chocolate様",
+      ]
+
+      assert_equal expected, Worldwide.address(**japan_address).format(excluded_fields: [:zip])
+    end
+
     test "format_address has specified excluded fields excluded" do
       bobs_home = {
         first_name: "Bob",
@@ -474,6 +513,21 @@ module Worldwide
           assert_equal expected, actual
         end
       end
+    end
+
+    test "single_line removes the Japanese postal mark when zip is excluded" do
+      address = {
+        city: "Yokohama",
+        address1: "Hodogaya Bukkocho",
+        province_code: "JP-14",
+        zip: "240-0044",
+        country_code: "JP",
+      }
+
+      expected = "Hodogaya Bukkocho, Yokohama, Kanagawa, Japan"
+      actual = Worldwide.address(**address).single_line(excluded_fields: [:zip])
+
+      assert_equal expected, actual
     end
 
     test "japan formats single_line differently for japanese" do
