@@ -654,17 +654,17 @@ Worldwide.names.surname_first?("ja")
 `Worldwide::BusinessNames` abbreviates a single business name according to its detected script. The default `ideal_max_length` is 3. The method returns `nil` when the input is blank, uses multiple or unsupported scripts, or cannot be abbreviated by the script's rules. It is also available through `Worldwide.business_names`.
 
 ```ruby
-Worldwide::BusinessNames.abbreviate(name: "Shopify")
+Worldwide.business_names.abbreviated(name: "Shopify")
 => "Sho"
-Worldwide::BusinessNames.abbreviate(name: "A Better Shop")
+Worldwide::BusinessNames.abbreviated(name: "A Better Shop")
 => "ABS"
-Worldwide::BusinessNames.abbreviate(name: "A Better Looking Shop")
+Worldwide::BusinessNames.abbreviated(name: "A Better Looking Shop")
 => "AS"
-Worldwide::BusinessNames.abbreviate(name: "삼성 한국어", ideal_max_length: 2)
+Worldwide::BusinessNames.abbreviated(name: "삼성 한국어", ideal_max_length: 2)
 => "삼성"
-Worldwide::BusinessNames.abbreviate(name: "任天堂")
+Worldwide::BusinessNames.abbreviated(name: "任天堂")
 => "任天堂"
-Worldwide::BusinessNames.abbreviate(name: "อภัADSยวงศ์")
+Worldwide::BusinessNames.abbreviated(name: "อภัADSยวงศ์")
 => nil
 ```
 
