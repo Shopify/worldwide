@@ -296,7 +296,7 @@ module Worldwide
         result << line unless blank?(line.join)
       end
 
-      result + additional_lines.map { |x| [x] }
+      result + additional_lines.zip
     end
 
     # Returns a hash containing the values for each address field
