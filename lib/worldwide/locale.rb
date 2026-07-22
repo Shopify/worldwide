@@ -71,7 +71,7 @@ module Worldwide
       if @name_cache[context].is_a?(I18n::MissingTranslation)
         raise @name_cache[context] if throw
 
-        return nil
+        return
       end
 
       @name_cache[context]
@@ -93,7 +93,7 @@ module Worldwide
       if @endonym.is_a?(I18n::MissingTranslation)
         raise @endonym if throw
 
-        return nil
+        return
       end
 
       @endonym

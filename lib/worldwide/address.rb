@@ -463,7 +463,7 @@ module Worldwide
     #   - `〒` ("yuubin" mark) is a prefix that's prepended to the postal code (zip)
     # If the associated field is excluded/empty, we need to suppress the associated special character.
     def strip_extra_japanese_chars(line:, excluded_fields:)
-      return nil if line.nil?
+      return if line.nil?
 
       line.map do |field|
         stripped = field
