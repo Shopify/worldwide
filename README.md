@@ -91,6 +91,7 @@ Here the list of the features we currently support:
 - [🕰  Localized Timezone](#--localized-timezone)
   - [➡🕰  Map Deprecated Timezone Name to Modern Name](#--map-deprecated-timezone-name-to-modern-name)
 - [👥  Names](#--names)
+- [🏢 Business names](#-business-names)
 - [👥  Lists](#--lists)
 - [❣️   Punctuation](#️---punctuation)
 - [🤑  Currency support](#--currency-support)
@@ -647,6 +648,27 @@ Worldwide.names.surname_first?("en")
 Worldwide.names.surname_first?("ja")
 => true
 ```
+
+### 🏢 Business names
+
+`Worldwide::BusinessNames` abbreviates a single business name according to its detected script. The default `ideal_max_length` is 3. The method returns `nil` when the input is blank, uses multiple or unsupported scripts, or cannot be abbreviated by the script's rules. It is also available through `Worldwide.business_names`.
+
+```ruby
+Worldwide::BusinessNames.abbreviate(name: "Shopify")
+=> "Sho"
+Worldwide::BusinessNames.abbreviate(name: "A Better Shop")
+=> "ABS"
+Worldwide::BusinessNames.abbreviate(name: "A Better Looking Shop")
+=> "AS"
+Worldwide::BusinessNames.abbreviate(name: "삼성 한국어", ideal_max_length: 2)
+=> "삼성"
+Worldwide::BusinessNames.abbreviate(name: "任天堂")
+=> "任天堂"
+Worldwide::BusinessNames.abbreviate(name: "อภัADSยวงศ์")
+=> nil
+```
+
+Latin names use the first grapheme clusters of one word, the initials of up to `ideal_max_length` words, or the initials of the first and last words when there are more words. Hangul names use the first `ideal_max_length` grapheme clusters of the first word. Thai names without spaces use the first grapheme cluster. Han, Katakana, and Hiragana names without spaces are returned in full. Thai, Han, Katakana, and Hiragana names with spaces return `nil`.
 
 ### 👥  Lists
 
