@@ -625,6 +625,8 @@ Say, for example, your customer has the given name "Ken" and surname "Tanaka".  
 
 `Names.surname_first?` will let you know if the current locale places the surname (family name, last name) before the given name ("first name", forename).
 
+`Names.abbreviated` returns a short form of a personal name based on its writing script. Latin names use the first letters of the given name and surname. Han, Hiragana, and Katakana names use the surname. Hangul names use the given name when it is within `ideal_max_length`, or its first grapheme cluster when it is longer. Thai names use the first grapheme cluster of the given name. The Hangul and Thai rules fall back to the surname when the given name is blank. The method returns `nil` when it cannot abbreviate the name, allowing the caller to fall back to `Names.greeting`.
+
 ```ruby
 I18n.with_locale(:en) { Worldwide.names.full(given: "John", surname: "Smith") }
 => "John Smith"
@@ -636,6 +638,10 @@ I18n.with_locale(:en) { Worldwide.names.greeting(given: "John", surname: "Smith"
 => "John"
 I18n.with_locale(:ja) { Worldwide.names.greeting(given: "John", surname: "Smith") }
 => "Smith様"
+Worldwide.names.abbreviated(given: "John", surname: "Smith")
+=> "JS"
+Worldwide.names.abbreviated(given: "이슬", surname: "재현", ideal_max_length: 1)
+=> "이"
 Worldwide.names.surname_first?("en")
 => false
 Worldwide.names.surname_first?("ja")
