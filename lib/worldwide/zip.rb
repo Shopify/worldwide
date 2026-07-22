@@ -261,8 +261,6 @@ module Worldwide
       end
     end
 
-    private
-
     # Countries that use GB-style postal code spacing, and should normalize the same way as GB
     GB_STYLE_ZIP_COUNTRIES = ["GB", "GG", "GI", "IM", "JE"]
     private_constant :GB_STYLE_ZIP_COUNTRIES
@@ -354,6 +352,8 @@ module Worldwide
       VA: "V",
     }
     private_constant :OPTIONAL_PREFIX_COUNTRIES
+
+    private
 
     REQUIRED_PREFIX_COUNTRIES = {
       VG: "VG",

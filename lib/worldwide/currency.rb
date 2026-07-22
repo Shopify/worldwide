@@ -154,7 +154,7 @@ module Worldwide
     private
 
     def combine(amount:, decimal_places:, humanize:, locale:, symbol:)
-      space = if has_space(locale)
+      space = if has_space?(locale)
         # This is U+00A0, the Unicode non-breaking space character
         [160].pack("U*")
       else
@@ -237,7 +237,7 @@ module Worldwide
     end
 
     # Returns true if there should be a space between the amount and the currency symbol
-    def has_space(locale)
+    def has_space?(locale)
       pattern = Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale)
 
       # Note that CLDR uses these characters in its currency formats:

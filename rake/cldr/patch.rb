@@ -1263,7 +1263,7 @@ module Worldwide
           end
           if parent_override
             patch_cldr_level_file("parent_locales.yml", [target], nil, parent_override)
-            SortYaml.sort_file(parent_locales_path, output_filename: parent_locales_path)
+            SortYaml.sort_file?(parent_locales_path, output_filename: parent_locales_path)
           end
         end
 
@@ -1278,7 +1278,7 @@ module Worldwide
             next 0 if filepath.end_with?("delimiters.yml")
             next 0 if filepath.end_with?("lists.yml")
 
-            file_changed = SortYaml.sort_file(filepath, output_filename: filepath)
+            file_changed = SortYaml.sort_file?(filepath, output_filename: filepath)
             file_changed ? 1 : 0
           end
         end
@@ -1319,7 +1319,7 @@ module Worldwide
             ].flat_map { |path| [path].product(measurement_keys).map(&:flatten) }
 
             file_path = "data/cldr/locales/#{locale}/units.yml"
-            file_changed = patch_units_file(file_path, paths_to_keep)
+            file_changed = patch_units_file?(file_path, paths_to_keep)
             file_changed ? 1 : 0
           end
           raise NotNeededError, "Patching the unit CLDR files made no changes." if files_changed == 0
@@ -1377,7 +1377,7 @@ module Worldwide
           patch_yaml_file(file_path, [locale, *key_path], existing_value, value, **options)
         end
 
-        def patch_units_file(file_path, paths_to_keep)
+        def patch_units_file?(file_path, paths_to_keep)
           return false unless File.exist?(file_path)
 
           source_content = File.read(file_path)

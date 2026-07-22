@@ -113,7 +113,7 @@ module Worldwide
         result = lookup(language, locale: target_locale)
         if result
           transformed = Worldwide::Cldr::ContextTransforms.transform(result, :languages, context, locale: target_locale)
-          break "#{transformed}#{i > 0 ? territories_suffix(code.to_s) : ""}"
+          break "#{transformed}#{territories_suffix(code.to_s) if i > 0}"
         end
       end
     end

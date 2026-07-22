@@ -38,7 +38,7 @@ module Worldwide
         loop do
           if cldr_defined_parents[ancestors.last]
             ancestors << cldr_defined_parents[ancestors.last]
-          elsif I18n::Locale::Tag.tag(ancestors.last).parents.count > 0
+          elsif I18n::Locale::Tag.tag(ancestors.last).parents.any?
             ancestors << I18n::Locale::Tag.tag(ancestors.last).parents.first.to_sym
           else
             break
