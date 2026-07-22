@@ -741,6 +741,27 @@ module Worldwide
       end
     end
 
+    test "format_address preserves backslash sequences in field values" do
+      address = {
+        first_name: "Test",
+        last_name: "Customer",
+        address1: "10 1\\2 California Ave",
+        city: "Los Angeles",
+        province_code: "CA",
+        country_code: "US",
+        zip: "90001",
+      }
+
+      expected = [
+        "Test Customer",
+        "10 1\\2 California Ave",
+        "Los Angeles CA 90001",
+        "United States",
+      ]
+
+      assert_equal expected, Worldwide.address(**address).format
+    end
+
     private
 
     def try_formatting_single_line(locale, country_code, city_name, expected)

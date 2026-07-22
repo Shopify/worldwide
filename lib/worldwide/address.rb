@@ -343,7 +343,7 @@ module Worldwide
 
           replacement ||= ""
 
-          mapped = mapped.gsub("{#{snake_to_camel_case(key)}}", replacement)
+          mapped = mapped.gsub("{#{snake_to_camel_case(key)}}") { replacement }
         end
         mapped
       end
