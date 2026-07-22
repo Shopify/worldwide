@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 module UnflattenHash
-  NotHashError = Class.new(StandardError)
+  class NotHashError < StandardError
+  end
 
   class << self
     def run(hash)

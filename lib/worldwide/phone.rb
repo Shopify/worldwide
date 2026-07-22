@@ -15,7 +15,6 @@ module Worldwide
 
     def initialize(number:, country_code: nil)
       @number = number
-      @country_code = country_code&.to_s&.downcase&.to_sym
       @parsed_number, @extension, @country_code = parse_number(number: @number, country_code: country_code)
     end
 

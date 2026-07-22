@@ -70,7 +70,7 @@ module Worldwide
           # we don't want to trigger the backend resolution until after we've determined whether they have set it explicitly.
           class_variable = "@@#{key}".to_sym
           instance_variable = "@#{key}".to_sym
-          i18n_config.class.class_variables.include?(class_variable) || i18n_config.instance_variables.include?(instance_variable)
+          i18n_config.class.class_variable_defined?(class_variable) || i18n_config.instance_variables.include?(instance_variable)
         else
           i18n_config.key?(key)
         end

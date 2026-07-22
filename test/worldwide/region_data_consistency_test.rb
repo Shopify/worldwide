@@ -187,7 +187,7 @@ module Worldwide
       Regions.all.select(&:country?).each do |country|
         country_tags = country.tags&.to_set
         next if country_tags.nil?
-        next if eu_tags.intersection(country_tags).empty?
+        next unless eu_tags.intersect?(country_tags)
 
         assert_includes eu.zones.map(&:iso_code), country.iso_code
       end

@@ -145,8 +145,6 @@ module Worldwide
         formatted.join("")
       end
 
-      private
-
       CLDR_DAYS_OF_WEEK = [:sun, :mon, :tue, :wed, :thu, :fri, :sat]
 
       CLDR_MONTHS_OF_YEAR = [nil, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -238,6 +236,8 @@ module Worldwide
         time: {},
       }
 
+      private
+
       def sort_cldr_files
         puts("🔀 Sorting the keys in the CLDR files")
         Dir.glob(File.join(["data", "cldr", "**", "*.yml"])).each do |filepath|
@@ -249,7 +249,7 @@ module Worldwide
           next 0 if filepath.end_with?("delimiters.yml")
           next 0 if filepath.end_with?("lists.yml")
 
-          SortYaml.sort_file(filepath, output_filename: filepath)
+          SortYaml.sort_file?(filepath, output_filename: filepath)
         end
       end
 
@@ -1001,7 +1001,7 @@ module Worldwide
           # END OF AUTO-GENERATED CONTENT
         CONTENTS
 
-        contents = contents.split("\n").map { |line| "#{line.strip.empty? ? "" : indentation_of_starting_line}#{line}" }.join("\n")
+        contents = contents.split("\n").map { |line| "#{indentation_of_starting_line unless line.strip.empty?}#{line}" }.join("\n")
 
         new_file_contents = existing_file_contents[0...start_of_auto_generated_content.begin(0)] + contents + existing_file_contents[end_of_auto_generated_content.end(0)..]
 

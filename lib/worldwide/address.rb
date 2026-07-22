@@ -354,7 +354,7 @@ module Worldwide
     def japan_with_non_japanese_script?
       text = build_formatted_address_data.values.join
 
-      country_code == "JP" && Worldwide::Scripts.identify(text: text).intersection(JAPANESE_SCRIPTS).empty?
+      country_code == "JP" && !Worldwide::Scripts.identify(text: text).intersect?(JAPANESE_SCRIPTS)
     end
 
     def normalize_city

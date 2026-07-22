@@ -554,7 +554,7 @@ module Worldwide
       field ? !!field["required"] : false
     end
 
-    def answers_to_cldr_code(search_code)
+    def answers_to_cldr_code?(search_code)
       return false if Util.blank?(search_code) || Util.blank?(cldr_code)
       return true if search_code.casecmp(cldr_code).zero?
 
@@ -562,7 +562,7 @@ module Worldwide
       "#{pc&.cldr_code&.downcase}#{cldr_code.downcase}" == search_code.downcase
     end
 
-    def answers_to_iso_code(search_code)
+    def answers_to_iso_code?(search_code)
       return true if search_code == iso_code
 
       pc = parent_country

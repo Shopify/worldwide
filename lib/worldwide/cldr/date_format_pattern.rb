@@ -42,12 +42,12 @@ module Worldwide
           tokens
         end
 
-        private
-
         PATTERN_FIELD = /([a-zA-Z])\1*/
         SINGLE_QUOTE_LITERAL = /''/
         QUOTED_LITERAL = /'(([^']|#{SINGLE_QUOTE_LITERAL})*[^'])'/
         UNQUOTED_LITERAL = /[^a-zA-Z']+/
+
+        private
 
         def parse_field(format)
           return nil unless format.start_with?(PATTERN_FIELD)
