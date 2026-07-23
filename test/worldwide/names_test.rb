@@ -159,6 +159,12 @@ module Worldwide
       assert_nil Worldwide::Names.abbreviated(given: "アイ", surname: "Garfinkle")
     end
 
+    test ".abbreviated returns nil for a non-positive or non-integer ideal_max_length" do
+      assert_nil Worldwide::Names.abbreviated(given: "Michael", surname: "Garfinkle", ideal_max_length: 0)
+      assert_nil Worldwide::Names.abbreviated(given: "Michael", surname: "Garfinkle", ideal_max_length: -1)
+      assert_nil Worldwide::Names.abbreviated(given: "Michael", surname: "Garfinkle", ideal_max_length: "3")
+    end
+
     test ".abbreviated returns nil when both given and surname are blank" do
       assert_nil Worldwide::Names.abbreviated(given: "", surname: "")
       assert_nil Worldwide::Names.abbreviated(given: nil, surname: nil)

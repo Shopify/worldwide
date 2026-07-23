@@ -36,6 +36,7 @@ module Worldwide
 
         combined_name = given_stripped.to_s + surname_stripped.to_s
         return if combined_name.blank? || combined_name.match?(/[\p{Punctuation}\s]/)
+        return unless ideal_max_length.is_a?(Integer) && ideal_max_length.positive?
 
         scripts = Scripts.identify(text: combined_name)
         return unless scripts.length == 1

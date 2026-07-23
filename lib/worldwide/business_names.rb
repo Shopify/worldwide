@@ -4,7 +4,7 @@ module Worldwide
   class BusinessNames
     class << self
       # Returns a script aware abbreviation, or nil when the name cannot be abbreviated.
-      def abbreviate(name:, ideal_max_length: 3)
+      def abbreviated(name:, ideal_max_length: 3)
         name_stripped = name&.strip
 
         return if Util.blank?(name_stripped)
