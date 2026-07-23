@@ -26,13 +26,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Fixed: `Address#format` no longer drops backslash sequences (e.g. `\2`) in field values [#533](https://github.com/Shopify/worldwide/pull/533)
-- Add `Worldwide::Names.abbreviated` to abbreviate personal names by script [#539](https://github.com/Shopify/worldwide/pull/539)
-- Add `Worldwide::BusinessNames.abbreviated` to abbreviate a single business name string based on its script.
-
-- Fix trailing whitespace in formatted Japanese addresses when the postal code is blank or excluded. [#548](https://github.com/Shopify/worldwide/pull/548)
 
 ---
+
+## [1.26.0] - 2026-07-22
+- Add `Worldwide::BusinessNames.abbreviated` for script-aware abbreviation of a single business name string. [#538](https://github.com/Shopify/worldwide/pull/538) [#553](https://github.com/Shopify/worldwide/pull/553)
+- Add `Worldwide::Names.abbreviated` to abbreviate personal names by script. [#539](https://github.com/Shopify/worldwide/pull/539)
+- Fix trailing whitespace in formatted Japanese addresses when the postal code is blank or excluded. [#548](https://github.com/Shopify/worldwide/pull/548)
+- Fix `Address#format` dropping backslash sequences (e.g. `\2`) in field values. [#533](https://github.com/Shopify/worldwide/pull/533)
 
 ## [1.25.6] - 2026-07-21
 - Bump i18n from 1.14.1 to 1.15.2 (now required as `>= 1.15`) and update `Cldr.with_cldr` to mirror i18n's fiber-aware config and fallbacks storage so the CLDR config still applies on Ruby 3.2+. [#540](https://github.com/Shopify/worldwide/pull/540)
