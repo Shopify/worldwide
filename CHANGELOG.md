@@ -26,9 +26,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
-- Add IE Eircode routing key `H16` (Cootehill) to `zips_crossing_provinces` so it is valid for both Cavan and Monaghan
 
 ---
+
+## [1.26.1] - 2026-07-29
+- Add IE Eircode routing key `H16` (Cootehill) to `zips_crossing_provinces` so it is valid for both Cavan and Monaghan. [#562](https://github.com/Shopify/worldwide/pull/562)
 
 ## [1.26.0] - 2026-07-22
 - Add `Worldwide::BusinessNames.abbreviated` for script-aware abbreviation of a single business name string. [#538](https://github.com/Shopify/worldwide/pull/538) [#553](https://github.com/Shopify/worldwide/pull/553)
