@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Add IE Eircode routing key `H16` (Cootehill) to `zips_crossing_provinces` so it is valid for both Cavan and Monaghan
 
 ---
 
