@@ -116,6 +116,31 @@ module Worldwide
       end
     end
 
+    test "validity of zips whose prefix crosses a province boundary" do
+      [
+        # 42223 (Fort Campbell) straddles the KY/TN border
+        [:US, [:KY, :TN], "42223"],
+        # Eircode routing key H16 (Cootehill) serves addresses in both Cavan and Monaghan
+        [:IE, [:CN, :MN], "H16 A440"],
+        # Eircode routing key A81 (Carrickmacross) serves addresses in both Monaghan and Cavan
+        [:IE, [:MN, :CN], "A81 AB12"],
+      ].each do |country_code, province_codes, zip|
+        assert_equal(
+          true,
+          Worldwide.region(code: country_code).valid_zip?(zip),
+          "Expected zip #{zip.inspect} to be valid for country #{country_code}",
+        )
+
+        province_codes.each do |province_code|
+          assert_equal(
+            true,
+            Worldwide.region(code: country_code).zone(code: province_code).valid_zip?(zip),
+            "Expected cross-border zip #{zip.inspect} to be valid for province #{country_code}-#{province_code}",
+          )
+        end
+      end
+    end
+
     test "#valid_zip? with valid partial postal codes" do
       [
         [:CA, "T1Y"],
