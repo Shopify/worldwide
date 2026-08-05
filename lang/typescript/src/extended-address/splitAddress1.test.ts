@@ -135,7 +135,6 @@ describe('splitAddress1', () => {
       address: '2e Jan Steenstraat 123',
       expected: {streetName: '2e Jan Steenstraat', streetNumber: '123'},
     },
-
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for NL',
     ({address, expected}) => {
