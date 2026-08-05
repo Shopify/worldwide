@@ -533,7 +533,7 @@ module Worldwide
     test "#address1_regex returns values as expected" do
       [
         [:us, []],
-        [:nl, ["^(?<streetName>(?:\\d+[a-z]+\\s+)?[^\\d]+)\\s+(?<streetNumber>\\d+(?:-\\d+[A-Z]*)?(?: ?[A-Za-z])?)$"]],
+        [:nl, ["^(?<streetName>(?:\\d+[a-z]+\\s+)?[^\\d]+)\\s+(?<streetNumber>\\d+(?:-[A-Za-z0-9]+)?(?: ?[A-Za-z])?)$"]],
         [:be, ["^(?<streetName>[^\\d,]+),? (?<streetNumber>\\d+(?:-\\d+)?(?: ?[A-Za-z])?)$", "^(?<streetNumber>\\d+(?:-\\d+)?(?: ?[A-Za-z])?),? (?<streetName>[^\\d,]+)$"]],
       ].each do |region_code, expected_value|
         assert_equal expected_value, Worldwide.region(code: region_code).address1_regex

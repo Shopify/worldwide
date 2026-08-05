@@ -126,6 +126,10 @@ describe('splitAddress1', () => {
       address: 'Philippusweg 3-5',
       expected: {streetName: 'Philippusweg', streetNumber: '3-5'},
     },
+    {
+      address: 'Kerkstraat 12-II',
+      expected: {streetName: 'Kerkstraat', streetNumber: '12-II'},
+    },
     // Streets starting with digits (shop/issues-checkout#13795)
     {
       address: '1e Helmersstraat 5',
