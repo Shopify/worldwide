@@ -112,6 +112,33 @@ describe('splitAddress1', () => {
       address: 'Meester Arendstraat 48 B',
       expected: {streetName: 'Meester Arendstraat', streetNumber: '48 B'},
     },
+    // Uppercase suffix support (shop/issues-checkout#13795)
+    {
+      address: 'Voltastraat 2 A',
+      expected: {streetName: 'Voltastraat', streetNumber: '2 A'},
+    },
+    {
+      address: 'Loswal 12 B',
+      expected: {streetName: 'Loswal', streetNumber: '12 B'},
+    },
+    // Hyphenated house numbers (shop/issues-checkout#13795)
+    {
+      address: 'Philippusweg 3-5',
+      expected: {streetName: 'Philippusweg', streetNumber: '3-5'},
+    },
+    {
+      address: 'Kerkstraat 12-II',
+      expected: {streetName: 'Kerkstraat', streetNumber: '12-II'},
+    },
+    // Streets starting with digits (shop/issues-checkout#13795)
+    {
+      address: '1e Helmersstraat 5',
+      expected: {streetName: '1e Helmersstraat', streetNumber: '5'},
+    },
+    {
+      address: '2e Jan Steenstraat 123',
+      expected: {streetName: '2e Jan Steenstraat', streetNumber: '123'},
+    },
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for NL',
     ({address, expected}) => {
@@ -151,6 +178,11 @@ describe('splitAddress1', () => {
     {
       address: 'Lorbeerstr., 25',
       expected: {streetName: 'Lorbeerstr.', streetNumber: '25'},
+    },
+    // Hyphenated house numbers
+    {
+      address: 'Hauptstraße 12-14',
+      expected: {streetName: 'Hauptstraße', streetNumber: '12-14'},
     },
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for DE',
@@ -195,6 +227,11 @@ describe('splitAddress1', () => {
     {
       address: '84A Rue du merlo',
       expected: {streetName: 'Rue du merlo', streetNumber: '84A'},
+    },
+    // Hyphenated house numbers
+    {
+      address: 'Avenue Louise 12-14',
+      expected: {streetName: 'Avenue Louise', streetNumber: '12-14'},
     },
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for BE',

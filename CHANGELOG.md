@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Fix `address1_regex` for NL/BE/DE so house numbers with uppercase unit letters (`Voltastraat 2 A`), hyphenated ranges (`Philippusweg 3-5`), and NL streets starting with an ordinal (`1e Helmersstraat 5`) split correctly instead of dumping the whole value into `streetName`. [#565](https://github.com/Shopify/worldwide/pull/565)
 
 ---
 

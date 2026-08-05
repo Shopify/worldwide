@@ -30,8 +30,8 @@ format:
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{streetName}{streetNumber}_{address2}_{zip}{city}_{phone}"
 address1_regex:
-- "^(?<streetName>[^\\d,]+?\\.?)[, ]{1,2}(?<streetNumber>\\d+(?: ?[a-z])?)$"
-- "^(?<streetName>[^\\d,]+\\.)(?<streetNumber>\\d+(?: ?[a-z])?)$"
+- "^(?<streetName>[^\\d,]+?\\.?)[, ]{1,2}(?<streetNumber>\\d+(?:-\\d+)?(?: ?[A-Za-z])?)$"
+- "^(?<streetName>[^\\d,]+\\.)(?<streetNumber>\\d+(?:-\\d+)?(?: ?[A-Za-z])?)$"
 additional_address_fields:
   - name: streetName
     required: true
