@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.9
+
+### Patch Changes
+
+- 8e937d1: Parse Brazilian addresses with a comma-delimited building number followed by a recognized complement.
+
 ## 0.7.8
 
 ### Patch Changes
