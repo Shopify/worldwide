@@ -495,6 +495,38 @@ describe('splitAddress1', () => {
         line2: 'Apto 4 - Bloco B',
       },
     },
+    {
+      address: 'Avenida Felipe Wandscheer, 7335 Condominio Reserva IguaÇu',
+      expected: {
+        streetName: 'Avenida Felipe Wandscheer',
+        streetNumber: '7335',
+        line2: 'Condominio Reserva IguaÇu',
+      },
+    },
+    {
+      address: 'Rua 25 de Março, 100 Condomínio Edifício X',
+      expected: {
+        streetName: 'Rua 25 de Março',
+        streetNumber: '100',
+        line2: 'Condomínio Edifício X',
+      },
+    },
+    {
+      address: 'Praça Ramos de Azevedo, 123 Apto 45',
+      expected: {
+        streetName: 'Praça Ramos de Azevedo',
+        streetNumber: '123',
+        line2: 'Apto 45',
+      },
+    },
+    {
+      address: 'Rua Santo Antônio, 722 Casa 2',
+      expected: {
+        streetName: 'Rua Santo Antônio',
+        streetNumber: '722',
+        line2: 'Casa 2',
+      },
+    },
   ])(
     'extracts the optional line2 component from 3-component BR addresses',
     ({address, expected}) => {
@@ -502,7 +534,15 @@ describe('splitAddress1', () => {
     },
   );
 
-  test.each(['Avenida Normando Tedesco, 1400 - Centro', 'Rua 25 de Março 100'])(
+  test.each([
+    'Avenida Normando Tedesco, 1400 - Centro',
+    'Avenida Felipe Wandscheer, 7335 Centro',
+    'Rua 25 de Março 100',
+    'Rua 4 Condominio X',
+    'Rua das Flores, 100 Condominio',
+    'Rua das Flores, 100 Condominios Verdes',
+    'Rua das Flores, 100 Apto',
+  ])(
     'returns address1 as street name when BR address is ambiguous for regex fallback',
     (address) => {
       expect(splitAddress1('BR', address, true)).toEqual({

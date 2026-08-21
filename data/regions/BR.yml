@@ -31,6 +31,7 @@ format_extended:
 address1_regex:
   - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))$"
   - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))\\s*,\\s*(?<line2>.+)$"
+  - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))\\s+(?<line2>(?:apt(?:o|\\.)?|apartamento|bloco|casa|sala|fundos|loja|condom[ií]nio)\\b.+)$"
   - "^(?<streetName>(?:[^\\d,\\s]+\\s)*[^\\d,\\s]+)\\s+(?<streetNumber>\\d+(?: ?[a-z])?)\\s+(?<line2>(?:apt(?:o|\\.)?|apartamento|bloco|casa|sala|fundos|loja)\\b.+)$"
   - "^(?<streetName>(?:[^\\d,\\s]+\\s)*[^\\d,\\s]+)(?:,? ?)(?<streetNumber>\\d+(?: ?[a-z])?)\\s*,\\s*(?<line2>.+)$"
   - "^(?<streetName>(?:[^\\d,\\s]+\\s)*[^\\d,\\s]+)(?:,? ?)(?<streetNumber>\\d+(?: ?[a-z])?)$"
