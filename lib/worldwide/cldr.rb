@@ -68,7 +68,63 @@ module Worldwide
         CONFIG
       end
 
+      # Look up a structural (hash-valued) CLDR key with CLDR's own inheritance rules.
+      #
+      # CLDR resolves locale data item by item: the effective data for a locale is the
+      # union of its own data with each of its ancestors', the more specific locale
+      # winning per item, and `<alias>` elements resolved against the locale originally
+      # requested (UTS #35 §4.1 "Multiple Inheritance" and §4.4 "Alias Elements").
+      #
+      # `I18n`'s fallback backend instead returns the first non-nil node it finds in the
+      # chain, which is correct for leaves but wrong for whole nodes: a locale that
+      # overrides a single entry hides every sibling entry it should inherit. `en-CA`
+      # only overrides September ("Sept" rather than "Sep"), so a plain `t` of the
+      # abbreviated month names returns a one-entry hash instead of all twelve.
+      #
+      # Leaf lookups should keep using `t`; only whole-node lookups need this.
+      def resolved_hash(key, locale: I18n.locale)
+        with_cldr do
+          merge_ancestors(key.to_s, locale.to_sym, Set.new)
+        end
+      end
+
       private
+
+      # Walks the CLDR fallback chain from the least specific ancestor to the most
+      # specific, so that descendants overwrite what they inherit.
+      def merge_ancestors(key, locale, seen)
+        # Guards against a cycle between two aliases pointing at each other.
+        return {} unless seen.add?([key, locale])
+
+        fallbacks[locale].reverse_each.with_object({}) do |ancestor, merged|
+          case (node = unresolved_node(key, ancestor))
+          when ::Symbol # A CLDR `<alias>`, resolved against the requested locale rather than the ancestor.
+            deep_merge!(merged, merge_ancestors(node.to_s, locale, seen))
+          when ::Hash
+            deep_merge!(merged, node)
+          end
+        end
+      end
+
+      # A single locale's own contribution: no fallbacks, no alias resolution, and no
+      # exception handler (`default: nil` makes a miss return nil instead of degrading).
+      def unresolved_node(key, locale)
+        I18n.t(key, locale: locale, default: nil, fallback: false, resolve: false)
+      rescue ::I18n::InvalidLocale
+        nil
+      end
+
+      def deep_merge!(target, source)
+        source.each do |key, value|
+          target[key] = if target[key].is_a?(::Hash) && value.is_a?(::Hash)
+            deep_merge!(target[key], value)
+          else
+            value
+          end
+        end
+
+        target
+      end
 
       def respond_to_missing?(method_name, include_private = false)
         I18n.respond_to?(method_name, include_private)
