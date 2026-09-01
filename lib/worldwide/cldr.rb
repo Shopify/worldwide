@@ -11,11 +11,7 @@ module Worldwide
       cldr_config.exception_handler = Worldwide::Config.exception_handler
     end
 
-    # i18n 1.15 keeps the active config and fallbacks in Fiber storage on Ruby
-    # 3.2+ and in thread-local storage otherwise. We must write the same slots
-    # i18n reads back, so a Thread.current[:i18n_config] write is not silently
-    # ignored on Ruby 3.2+. These strategies mirror i18n's own storage; the one
-    # matching the runtime is selected once into STORAGE.
+    # Match i18n's config storage behavior, not Ruby's Fiber API.
     module FiberStorage
       class << self
         def config
@@ -57,7 +53,7 @@ module Worldwide
       end
     end
 
-    STORAGE = Fiber.respond_to?(:[]) ? FiberStorage : ThreadStorage
+    STORAGE = I18n::Config.method_defined?(:owned_by?) ? FiberStorage : ThreadStorage
 
     class << self
       def fallbacks

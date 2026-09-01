@@ -4,6 +4,12 @@ require "test_helper"
 
 module Worldwide
   class CldrTest < ActiveSupport::TestCase
+    test "selects storage based on i18n config behavior" do
+      expected_storage = I18n::Config.method_defined?(:owned_by?) ? Cldr::FiberStorage : Cldr::ThreadStorage
+
+      assert_same expected_storage, Cldr::STORAGE
+    end
+
     test "applies the CLDR config and fallbacks while translating" do
       # Regression guard: on i18n 1.15 the config and fallbacks live in fiber
       # storage, so a Thread.current[:i18n_config] write is silently ignored and

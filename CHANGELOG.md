@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Select CLDR storage based on i18n's config behavior instead of Ruby's Fiber API.
 - No longer require building number for Chile [#585](https://github.com/Shopify/worldwide/pull/585)
 
 ---
