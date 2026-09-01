@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- No longer require building number for Chile [#585](https://github.com/Shopify/worldwide/pull/585)
+
 ---
 
 ## [1.26.2] - 2026-08-05
