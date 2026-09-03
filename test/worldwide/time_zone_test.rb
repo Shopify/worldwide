@@ -22,6 +22,22 @@ module Worldwide
       assert_equal "(GMT-12:00) International Date Line West", zone.to_s
     end
 
+    test "#to_s returns translations ported from ShopifyI18n" do
+      translations = {
+        ar: ["Africa/Algiers", "(GMT+01:00) غرب وسط أفريقيا"],
+        he: ["Africa/Algiers", "(GMT+01:00) מערב מרכז אפריקה"],
+        ko: ["Africa/Algiers", "(GMT + 01 : 00) 서부 중앙 아프리카"],
+        sv: ["Australia/Canberra", "(GMT + 10:00) Canberra, Melbourne"],
+        ur: ["Africa/Casablanca", "(GMT+01:00) کاسابلانکا"],
+      }
+
+      translations.each do |locale, (name, expected)|
+        I18n.with_locale(locale) do
+          assert_equal expected, Worldwide::TimeZone.new(name).to_s
+        end
+      end
+    end
+
     test "#to_s display for zone America/Mexico_City" do
       zone = Worldwide::TimeZone.new("America/Mexico_City")
 

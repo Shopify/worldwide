@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Port ShopifyI18n time zone translations to preserve localized output during migration. [#588](https://github.com/Shopify/worldwide/pull/588)
+
 ---
 
 ## [1.26.3] - 2026-09-01
