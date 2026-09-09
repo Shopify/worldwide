@@ -185,6 +185,14 @@ module Worldwide
       }
 
       DATETIME_FORMAT_MAP = {
+        # Compact date + 24-hour time-with-seconds, year omitted, for log/event correlation.
+        # Uses the locale's datetime.short combiner (so e.g. Vietnamese renders time-first) and the
+        # Hms skeleton (24-hour clock) so timestamps stay unambiguous across systems regardless of locale.
+        "date_at_time_with_seconds" => [
+          "calendars.gregorian.formats.datetime.short.pattern",
+          "calendars.gregorian.additional_formats.MMMd",
+          "calendars.gregorian.additional_formats.Hms",
+        ],
         "date_time_current_year" => [
           "calendars.gregorian.formats.datetime.short.pattern",
           "calendars.gregorian.additional_formats.MMMd",
@@ -881,6 +889,7 @@ module Worldwide
           :cc_expiry_date,
           :date,
           :date_at_time,
+          :date_at_time_with_seconds,
           :date_time_current_year,
           :day_only,
           :default_long_with_zone,

@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Add `:date_at_time_with_seconds` — a compact, 24-hour, second-precision date/time format (abbreviated month + day, year omitted) whose ordering and separators are controlled by each locale, for cross-system log/event correlation. [#592](https://github.com/Shopify/worldwide/pull/592)
 
 ---
 
