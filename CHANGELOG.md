@@ -27,6 +27,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+- Add the 81 province (il) zones for Türkiye (`TR-01`..`TR-81`), staged behind `ignore_provinces` and `hide_provinces_from_addresses`. Each zone carries its plaka number as a `zip_prefix`, so a province can be inferred from the postal code. Address forms and validation are unchanged until the flags are removed.
+
 ---
 
 ## [1.26.3] - 2026-09-01

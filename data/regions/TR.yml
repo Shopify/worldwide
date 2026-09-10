@@ -6,6 +6,8 @@ currency: TRY
 unit_system: metric
 tax_name: KDV
 tax_inclusive: true
+ignore_provinces: true
+hide_provinces_from_addresses: true
 group: European Countries
 group_name: Europe
 zip_example: '01960'
@@ -34,7 +36,497 @@ languages:
 example_address:
   address1: Küçük Ayasofya Mahallesi
   address2: Camii Sokagi No:20 ⁠Küçük Ayasofya
-  city: Fatih/İstanbul
+  city: Fatih
   zip: '34122'
+  province_code: TR-34
   phone: "+90 212 491 16 63"
 timezone: Europe/Istanbul
+zones:
+- name: Adana
+  code: TR-01
+  iso_code: TR-01
+  tax: 0.0
+  zip_prefixes:
+  - '01'
+- name: Adıyaman
+  code: TR-02
+  iso_code: TR-02
+  tax: 0.0
+  zip_prefixes:
+  - '02'
+- name: Afyonkarahisar
+  code: TR-03
+  iso_code: TR-03
+  tax: 0.0
+  zip_prefixes:
+  - '03'
+- name: Ağrı
+  code: TR-04
+  iso_code: TR-04
+  tax: 0.0
+  zip_prefixes:
+  - '04'
+- name: Aksaray
+  code: TR-68
+  iso_code: TR-68
+  tax: 0.0
+  zip_prefixes:
+  - '68'
+- name: Amasya
+  code: TR-05
+  iso_code: TR-05
+  tax: 0.0
+  zip_prefixes:
+  - '05'
+- name: Ankara
+  code: TR-06
+  iso_code: TR-06
+  tax: 0.0
+  zip_prefixes:
+  - '06'
+- name: Antalya
+  code: TR-07
+  iso_code: TR-07
+  tax: 0.0
+  zip_prefixes:
+  - '07'
+- name: Ardahan
+  code: TR-75
+  iso_code: TR-75
+  tax: 0.0
+  zip_prefixes:
+  - '75'
+- name: Artvin
+  code: TR-08
+  iso_code: TR-08
+  tax: 0.0
+  zip_prefixes:
+  - '08'
+- name: Aydın
+  code: TR-09
+  iso_code: TR-09
+  tax: 0.0
+  zip_prefixes:
+  - '09'
+- name: Balıkesir
+  code: TR-10
+  iso_code: TR-10
+  tax: 0.0
+  zip_prefixes:
+  - '10'
+- name: Bartın
+  code: TR-74
+  iso_code: TR-74
+  tax: 0.0
+  zip_prefixes:
+  - '74'
+- name: Batman
+  code: TR-72
+  iso_code: TR-72
+  tax: 0.0
+  zip_prefixes:
+  - '72'
+- name: Bayburt
+  code: TR-69
+  iso_code: TR-69
+  tax: 0.0
+  zip_prefixes:
+  - '69'
+- name: Bilecik
+  code: TR-11
+  iso_code: TR-11
+  tax: 0.0
+  zip_prefixes:
+  - '11'
+- name: Bingöl
+  code: TR-12
+  iso_code: TR-12
+  tax: 0.0
+  zip_prefixes:
+  - '12'
+- name: Bitlis
+  code: TR-13
+  iso_code: TR-13
+  tax: 0.0
+  zip_prefixes:
+  - '13'
+- name: Bolu
+  code: TR-14
+  iso_code: TR-14
+  tax: 0.0
+  zip_prefixes:
+  - '14'
+- name: Burdur
+  code: TR-15
+  iso_code: TR-15
+  tax: 0.0
+  zip_prefixes:
+  - '15'
+- name: Bursa
+  code: TR-16
+  iso_code: TR-16
+  tax: 0.0
+  zip_prefixes:
+  - '16'
+- name: Çanakkale
+  code: TR-17
+  iso_code: TR-17
+  tax: 0.0
+  zip_prefixes:
+  - '17'
+- name: Çankırı
+  code: TR-18
+  iso_code: TR-18
+  tax: 0.0
+  zip_prefixes:
+  - '18'
+- name: Çorum
+  code: TR-19
+  iso_code: TR-19
+  tax: 0.0
+  zip_prefixes:
+  - '19'
+- name: Denizli
+  code: TR-20
+  iso_code: TR-20
+  tax: 0.0
+  zip_prefixes:
+  - '20'
+- name: Diyarbakır
+  code: TR-21
+  iso_code: TR-21
+  tax: 0.0
+  zip_prefixes:
+  - '21'
+- name: Düzce
+  code: TR-81
+  iso_code: TR-81
+  tax: 0.0
+  zip_prefixes:
+  - '81'
+- name: Edirne
+  code: TR-22
+  iso_code: TR-22
+  tax: 0.0
+  zip_prefixes:
+  - '22'
+- name: Elazığ
+  code: TR-23
+  iso_code: TR-23
+  tax: 0.0
+  zip_prefixes:
+  - '23'
+- name: Erzincan
+  code: TR-24
+  iso_code: TR-24
+  tax: 0.0
+  zip_prefixes:
+  - '24'
+- name: Erzurum
+  code: TR-25
+  iso_code: TR-25
+  tax: 0.0
+  zip_prefixes:
+  - '25'
+- name: Eskişehir
+  code: TR-26
+  iso_code: TR-26
+  tax: 0.0
+  zip_prefixes:
+  - '26'
+- name: Gaziantep
+  code: TR-27
+  iso_code: TR-27
+  tax: 0.0
+  zip_prefixes:
+  - '27'
+- name: Giresun
+  code: TR-28
+  iso_code: TR-28
+  tax: 0.0
+  zip_prefixes:
+  - '28'
+- name: Gümüşhane
+  code: TR-29
+  iso_code: TR-29
+  tax: 0.0
+  zip_prefixes:
+  - '29'
+- name: Hakkâri
+  code: TR-30
+  iso_code: TR-30
+  tax: 0.0
+  zip_prefixes:
+  - '30'
+- name: Hatay
+  code: TR-31
+  iso_code: TR-31
+  tax: 0.0
+  zip_prefixes:
+  - '31'
+- name: Iğdır
+  code: TR-76
+  iso_code: TR-76
+  tax: 0.0
+  zip_prefixes:
+  - '76'
+- name: Isparta
+  code: TR-32
+  iso_code: TR-32
+  tax: 0.0
+  zip_prefixes:
+  - '32'
+- name: Istanbul
+  code: TR-34
+  iso_code: TR-34
+  tax: 0.0
+  zip_prefixes:
+  - '34'
+- name: Izmir
+  code: TR-35
+  iso_code: TR-35
+  tax: 0.0
+  zip_prefixes:
+  - '35'
+- name: Kahramanmaraş
+  code: TR-46
+  iso_code: TR-46
+  tax: 0.0
+  zip_prefixes:
+  - '46'
+- name: Karabük
+  code: TR-78
+  iso_code: TR-78
+  tax: 0.0
+  zip_prefixes:
+  - '78'
+- name: Karaman
+  code: TR-70
+  iso_code: TR-70
+  tax: 0.0
+  zip_prefixes:
+  - '70'
+- name: Kars
+  code: TR-36
+  iso_code: TR-36
+  tax: 0.0
+  zip_prefixes:
+  - '36'
+- name: Kastamonu
+  code: TR-37
+  iso_code: TR-37
+  tax: 0.0
+  zip_prefixes:
+  - '37'
+- name: Kayseri
+  code: TR-38
+  iso_code: TR-38
+  tax: 0.0
+  zip_prefixes:
+  - '38'
+- name: Kilis
+  code: TR-79
+  iso_code: TR-79
+  tax: 0.0
+  zip_prefixes:
+  - '79'
+- name: Kırıkkale
+  code: TR-71
+  iso_code: TR-71
+  tax: 0.0
+  zip_prefixes:
+  - '71'
+- name: Kırklareli
+  code: TR-39
+  iso_code: TR-39
+  tax: 0.0
+  zip_prefixes:
+  - '39'
+- name: Kırşehir
+  code: TR-40
+  iso_code: TR-40
+  tax: 0.0
+  zip_prefixes:
+  - '40'
+- name: Kocaeli
+  code: TR-41
+  iso_code: TR-41
+  tax: 0.0
+  zip_prefixes:
+  - '41'
+- name: Konya
+  code: TR-42
+  iso_code: TR-42
+  tax: 0.0
+  zip_prefixes:
+  - '42'
+- name: Kütahya
+  code: TR-43
+  iso_code: TR-43
+  tax: 0.0
+  zip_prefixes:
+  - '43'
+- name: Malatya
+  code: TR-44
+  iso_code: TR-44
+  tax: 0.0
+  zip_prefixes:
+  - '44'
+- name: Manisa
+  code: TR-45
+  iso_code: TR-45
+  tax: 0.0
+  zip_prefixes:
+  - '45'
+- name: Mardin
+  code: TR-47
+  iso_code: TR-47
+  tax: 0.0
+  zip_prefixes:
+  - '47'
+- name: Mersin
+  code: TR-33
+  iso_code: TR-33
+  tax: 0.0
+  zip_prefixes:
+  - '33'
+  # Northern Cyprus is addressed via Türkiye as "Mersin 10" and uses the 99xxx postal code range
+  - '99'
+- name: Muğla
+  code: TR-48
+  iso_code: TR-48
+  tax: 0.0
+  zip_prefixes:
+  - '48'
+- name: Muş
+  code: TR-49
+  iso_code: TR-49
+  tax: 0.0
+  zip_prefixes:
+  - '49'
+- name: Nevşehir
+  code: TR-50
+  iso_code: TR-50
+  tax: 0.0
+  zip_prefixes:
+  - '50'
+- name: Niğde
+  code: TR-51
+  iso_code: TR-51
+  tax: 0.0
+  zip_prefixes:
+  - '51'
+- name: Ordu
+  code: TR-52
+  iso_code: TR-52
+  tax: 0.0
+  zip_prefixes:
+  - '52'
+- name: Osmaniye
+  code: TR-80
+  iso_code: TR-80
+  tax: 0.0
+  zip_prefixes:
+  - '80'
+- name: Rize
+  code: TR-53
+  iso_code: TR-53
+  tax: 0.0
+  zip_prefixes:
+  - '53'
+- name: Sakarya
+  code: TR-54
+  iso_code: TR-54
+  tax: 0.0
+  zip_prefixes:
+  - '54'
+- name: Samsun
+  code: TR-55
+  iso_code: TR-55
+  tax: 0.0
+  zip_prefixes:
+  - '55'
+- name: Şanlıurfa
+  code: TR-63
+  iso_code: TR-63
+  tax: 0.0
+  zip_prefixes:
+  - '63'
+- name: Siirt
+  code: TR-56
+  iso_code: TR-56
+  tax: 0.0
+  zip_prefixes:
+  - '56'
+- name: Sinop
+  code: TR-57
+  iso_code: TR-57
+  tax: 0.0
+  zip_prefixes:
+  - '57'
+- name: Şırnak
+  code: TR-73
+  iso_code: TR-73
+  tax: 0.0
+  zip_prefixes:
+  - '73'
+- name: Sivas
+  code: TR-58
+  iso_code: TR-58
+  tax: 0.0
+  zip_prefixes:
+  - '58'
+- name: Tekirdağ
+  code: TR-59
+  iso_code: TR-59
+  tax: 0.0
+  zip_prefixes:
+  - '59'
+- name: Tokat
+  code: TR-60
+  iso_code: TR-60
+  tax: 0.0
+  zip_prefixes:
+  - '60'
+- name: Trabzon
+  code: TR-61
+  iso_code: TR-61
+  tax: 0.0
+  zip_prefixes:
+  - '61'
+- name: Tunceli
+  code: TR-62
+  iso_code: TR-62
+  tax: 0.0
+  zip_prefixes:
+  - '62'
+- name: Uşak
+  code: TR-64
+  iso_code: TR-64
+  tax: 0.0
+  zip_prefixes:
+  - '64'
+- name: Van
+  code: TR-65
+  iso_code: TR-65
+  tax: 0.0
+  zip_prefixes:
+  - '65'
+- name: Yalova
+  code: TR-77
+  iso_code: TR-77
+  tax: 0.0
+  zip_prefixes:
+  - '77'
+- name: Yozgat
+  code: TR-66
+  iso_code: TR-66
+  tax: 0.0
+  zip_prefixes:
+  - '66'
+- name: Zonguldak
+  code: TR-67
+  iso_code: TR-67
+  tax: 0.0
+  zip_prefixes:
+  - '67'
