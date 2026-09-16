@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Fix `Worldwide::Calendar::Gregorian.weekday_names` and `.month_names` returning partial results for 104 locales, including `en-CA`, `en-GB`, `en-IN` and every other `en-001` descendant. CLDR inheritance is item by item, but `I18n` returns the first node it finds in the fallback chain, so a locale that overrides a single entry (`en-CA` overrides only `Sept`) hid the rest of the entries it inherits: `month_names(locale: "en-CA", width: :abbreviated)` returned `["Sept"]` instead of all twelve names. Both methods now resolve names with CLDR's inheritance rules and raise `MissingCalendarDataError` instead of silently returning a degraded key. [#582](https://github.com/Shopify/worldwide/pull/582)
 
 ---
 
