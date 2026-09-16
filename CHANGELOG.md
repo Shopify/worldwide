@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Reject malformed currency codes before caching.
+
 ---
 
 ## [1.27.0] - 2026-09-11

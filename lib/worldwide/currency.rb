@@ -28,10 +28,10 @@ module Worldwide
 
     def initialize(code:)
       adjusted_code = code.to_s.upcase.rjust(3, "0")
-      if adjusted_code.match?(/[A-Z][A-Z][A-Z]/)
+      if adjusted_code.match?(/\A[A-Z]{3}\z/)
         @currency_code = adjusted_code
         @numeric_code = Currencies.numeric_code_for(adjusted_code)
-      elsif adjusted_code.match?(/[0-9]+/)
+      elsif adjusted_code.match?(/\A[0-9]{3}\z/)
         @currency_code = Currencies.alpha_code_for(adjusted_code)
         @numeric_code = adjusted_code
       else

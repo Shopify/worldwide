@@ -14,6 +14,13 @@ module Worldwide
       assert_equal "USD", @usd_currency.currency_code
     end
 
+    test "Currency rejects malformed codes" do
+      ["USD-1", "1USD", "USDX", "USD\n", "840x", "x840", "0840", "840\n", "!"].each do |code|
+        assert_raises(ArgumentError, code.inspect) { Worldwide.currency(code: code) }
+        assert_raises(ArgumentError, code.inspect) { Currency.new(code: code) }
+      end
+    end
+
     test "#symbol returns a symbol for a given currency iso code if it exists" do
       assert_equal "$", @usd_currency.symbol
     end
