@@ -230,6 +230,7 @@ and also answer questions about its status:
   - `continent?`: is this region a continent?
   - `country?`: is this region a "country"?  (Note that, for backward compatibility with legacy code in Shopify's ecosystem,  we do not consider dependent territories of Spain and the United States to be countries, but we do consider dependencies of Australia, Britain, Denmark, Finland, France and Norway to be "countries")
   - `deprecated?`: has this territory ceased to exist? (e.g. `AN` which dissolved in 2010)
+  - `iso_3166_code_assigned?`: is this region's own code currently assigned in ISO 3166-1 alpha-2? Returns false for reserved, withdrawn, user-assigned, unknown, subdivision, and numeric region codes. This checks the resolved region's code, not the original lookup input.
 
 ```ruby
 $ ca = Worldwide.region(code: "CA")

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "set"
+
 module Worldwide
   class Region
     # When faced with the question, "Is a postal code required in this country?", we treat the answer
@@ -8,6 +10,12 @@ module Worldwide
     REQUIRED = "required"
     RECOMMENDED = "recommended"
     OPTIONAL = "optional"
+
+    ISO_3166_ASSIGNED_COUNTRY_CODES = YAML.safe_load_file(
+      File.join(Worldwide::Paths::DATA_ROOT, "iso_3166_assigned_country_codes.yml"),
+      freeze: true,
+    ).to_set.freeze
+    private_constant :ISO_3166_ASSIGNED_COUNTRY_CODES
 
     # Accpetable format types of the postal code.
     FORMAT_TYPES = {
@@ -370,6 +378,11 @@ module Worldwide
 
     def deprecated?
       @deprecated
+    end
+
+    # Is this region's own code currently assigned in ISO 3166-1 alpha-2?
+    def iso_3166_code_assigned?
+      ISO_3166_ASSIGNED_COUNTRY_CODES.include?(iso_code)
     end
 
     # An Worldwide::Field that can be used to ask about the field, including
