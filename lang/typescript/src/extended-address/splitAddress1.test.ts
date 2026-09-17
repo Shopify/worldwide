@@ -139,6 +139,18 @@ describe('splitAddress1', () => {
       address: '2e Jan Steenstraat 123',
       expected: {streetName: '2e Jan Steenstraat', streetNumber: '123'},
     },
+    {
+      address: '1e  Helmersstraat  5',
+      expected: {streetName: '1e  Helmersstraat ', streetNumber: '5'},
+    },
+    {
+      address: 'Meester\tArendstraat\t48 B',
+      expected: {streetName: 'Meester\tArendstraat', streetNumber: '48 B'},
+    },
+    {
+      address: '1e\u00a0Helmersstraat\u00a05',
+      expected: {streetName: '1e\u00a0Helmersstraat', streetNumber: '5'},
+    },
   ])(
     'returns full address object when not separated by delimiter, tryRegexFallback is true and address matches regex for NL',
     ({address, expected}) => {

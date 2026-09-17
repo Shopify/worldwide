@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Reject malformed currency codes before caching.
 - Avoid retaining unknown locale codes in the global locale cache.
+- Avoid excessive backtracking in Dutch address fallback parsing.
 
 ---
 
