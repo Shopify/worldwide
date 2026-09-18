@@ -69,7 +69,11 @@ module Worldwide
     end
 
     def locale(code:)
-      @locales_cache[code] ||= Locale.new(code)
+      @locales_cache.fetch(code) do
+        locale = Locale.new(code)
+        @locales_cache[code] = locale if locales.include?(locale.code)
+        locale
+      end
     end
 
     def locales
