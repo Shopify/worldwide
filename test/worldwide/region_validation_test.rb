@@ -124,6 +124,11 @@ module Worldwide
         [:IE, [:CN, :MN], "H16 A440"],
         # Eircode routing key A81 (Carrickmacross) serves addresses in both Monaghan and Cavan
         [:IE, [:MN, :CN], "A81 AB12"],
+        # The Longford/Leitrim border splits both routing keys: N41 (Carrick-on-Shannon)
+        # covers the Bornacoola townlands in Co. Longford, and N39 (Longford) covers the
+        # Cloone townlands in Co. Leitrim
+        [:IE, [:LM, :LD], "N41 F224"],
+        [:IE, [:LD, :LM], "N39 WN23"],
       ].each do |country_code, province_codes, zip|
         assert_equal(
           true,
