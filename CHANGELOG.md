@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add `Region#iso_3166_code_assigned?` to distinguish currently assigned ISO 3166-1 alpha-2 codes from other region codes. [#598](https://github.com/Shopify/worldwide/pull/598)
 - Reject malformed currency codes before caching.
 
 ---
