@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Reject malformed currency codes before caching.
+- Add IE Eircode routing keys `N39` (Longford) and `N41` (Carrick-on-Shannon) to each other's `zips_crossing_provinces` entries, so both are valid for Longford and Leitrim. [#601](https://github.com/Shopify/worldwide/pull/601)
 - Avoid retaining unknown locale codes in the global locale cache.
 - Avoid excessive backtracking in Dutch address fallback parsing.
 
