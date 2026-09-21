@@ -2,6 +2,17 @@
 
 module Worldwide
   class TimeZone
+    # Rails 8.1 renamed America/Godthab to America/Nuuk. Reuse the existing translation.
+    TRANSLATION_KEYS = {
+      "America/Nuuk" => "America/Godthab",
+    }.freeze
+    private_constant :TRANSLATION_KEYS
+
+    DEFAULT_LABELS = {
+      "America/Asuncion" => "(GMT-04:00) Asuncion",
+    }.freeze
+    private_constant :DEFAULT_LABELS
+
     class << self
       def all
         @all ||= uniq_zone_names.map { |zone_name| new(zone_name) }
@@ -29,7 +40,14 @@ module Worldwide
     private
 
     def translated_name
-      Cldr.t(name, scope: :timezones)
+      key = TRANSLATION_KEYS.fetch(name, name)
+      default = DEFAULT_LABELS[name]
+
+      if default
+        Cldr.t(key, scope: :timezones, default: default)
+      else
+        Cldr.t(key, scope: :timezones)
+      end
     end
   end
 end
