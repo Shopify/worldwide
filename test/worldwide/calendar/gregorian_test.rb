@@ -7,6 +7,8 @@ module Worldwide
     class GregorianTest < ActiveSupport::TestCase
       include PluralizationHelper
 
+      WIDTHS = [:abbreviated, :narrow, :wide].freeze
+
       setup do
         @calendar = Worldwide::Calendar::Gregorian
       end
@@ -64,9 +66,64 @@ module Worldwide
         assert_equal "Q4 2016", Worldwide::Calendar::Gregorian.quarter(Date.new(2016, 12, 1))
       end
 
+      # `stand_alone` is an alias to `format` in CLDR for these locales, so the names only
+      # resolve if the alias in `root` is followed and then read back in the requested locale.
+      test "#weekday_names resolves the CLDR stand-alone alias" do
+        expected = { sun: "Sunday", mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday" }
+
+        assert_equal expected, @calendar.weekday_names(locale: :en)
+
+        expected = { sun: "søndag", mon: "mandag", tue: "tirsdag", wed: "onsdag", thu: "torsdag", fri: "fredag", sat: "lørdag" }
+
+        # `nb` holds no calendar data of its own; it inherits everything from `no`.
+        assert_equal expected, @calendar.weekday_names(locale: :nb)
+      end
+
+      test "#month_names resolves the CLDR stand-alone alias" do
+        assert_equal ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], @calendar.month_names(locale: :en)
+        assert_equal ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"], @calendar.month_names(locale: :nb)
+      end
+
+      # CLDR inheritance is item by item, so a locale that overrides one entry still
+      # inherits its siblings. `en-CA` only overrides September.
+      test "#month_names inherits the entries a locale does not override" do
+        expected = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+
+        assert_equal expected, @calendar.month_names(locale: :"en-CA", width: :abbreviated)
+        assert_equal expected, @calendar.month_names(locale: :"en-GB", width: :abbreviated)
+
+        # `ar-MA` overrides 7 of the 12 wide month names.
+        expected = ["يناير", "فبراير", "مارس", "أبريل", "ماي", "يونيو", "يوليوز", "غشت", "شتنبر", "أكتوبر", "نونبر", "دجنبر"]
+
+        assert_equal expected, @calendar.month_names(locale: :"ar-MA")
+      end
+
+      test "#weekday_names inherits the entries a locale does not override" do
+        # `se-FI` overrides 4 of the 7 wide weekday names.
+        expected = { sun: "sotnabeaivi", mon: "mánnodat", tue: "disdat", wed: "gaskavahkku", thu: "duorastat", fri: "bearjadat", sat: "lávvordat" }
+
+        assert_equal expected, @calendar.weekday_names(locale: :"se-FI")
+      end
+
       Worldwide::Locales.each do |locale|
         test "#quarter formatting doesn't fail (i.e., rely on date fields that have not been implemented) in #{locale}" do
           Worldwide::Calendar::Gregorian.quarter(Date.new(2016, 1, 1), locale: locale)
+        end
+
+        # Guards the whole class of bug: a missing key degrades into a humanized copy of its
+        # last segment, so an unresolved lookup hands back the string "wide" rather than raising.
+        test "#weekday_names and #month_names return complete data in #{locale}" do
+          WIDTHS.each do |width|
+            weekdays = Worldwide::Calendar::Gregorian.weekday_names(width: width, locale: locale)
+
+            assert_equal [:sun, :mon, :tue, :wed, :thu, :fri, :sat], weekdays.keys, "#{locale} #{width} weekday names"
+            assert_empty weekdays.values.select { |name| name.nil? || name.empty? }, "#{locale} #{width} weekday names"
+
+            months = Worldwide::Calendar::Gregorian.month_names(width: width, locale: locale)
+
+            assert_equal 12, months.size, "#{locale} #{width} month names"
+            assert_empty months.select { |name| name.nil? || name.empty? }, "#{locale} #{width} month names"
+          end
         end
       end
     end
