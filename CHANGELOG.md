@@ -27,11 +27,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [1.28.0] - 2026-09-21
+
 - Add `Region#iso_3166_code_assigned?` to distinguish currently assigned ISO 3166-1 alpha-2 codes from other region codes. [#598](https://github.com/Shopify/worldwide/pull/598)
-- Reject malformed currency codes before caching.
+- Reject malformed currency codes before caching. [#596](https://github.com/Shopify/worldwide/pull/596)
 - Add IE Eircode routing keys `N39` (Longford) and `N41` (Carrick-on-Shannon) to each other's `zips_crossing_provinces` entries, so both are valid for Longford and Leitrim. [#601](https://github.com/Shopify/worldwide/pull/601)
-- Avoid retaining unknown locale codes in the global locale cache.
-- Avoid excessive backtracking in Dutch address fallback parsing.
+- Avoid retaining unknown locale codes in the global locale cache. [#597](https://github.com/Shopify/worldwide/pull/597)
+- Avoid excessive backtracking in Dutch address fallback parsing. [#599](https://github.com/Shopify/worldwide/pull/599)
 
 ---
 
