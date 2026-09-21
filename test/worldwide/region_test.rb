@@ -94,6 +94,60 @@ module Worldwide
       assert_equal 0, (region.tax_rate * 100).floor
     end
 
+    test "#iso_3166_code_assigned? returns true for assigned country codes" do
+      ["CA", "GB", "RO", "SH", "IR", "NO"].each do |code|
+        region = Worldwide.region(code: code)
+
+        assert_equal(code, region.iso_code)
+        assert_predicate(region, :iso_3166_code_assigned?, code)
+      end
+    end
+
+    test "#iso_3166_code_assigned? returns false for reserved, withdrawn, and user-assigned codes" do
+      ["AC", "AN", "TA", "XK", "EU", "IC"].each do |code|
+        region = Worldwide.region(code: code)
+
+        assert_equal(code, region.iso_code)
+        refute_predicate(region, :iso_3166_code_assigned?, code)
+      end
+    end
+
+    test "#iso_3166_code_assigned? returns true for assigned codes on non-country regions" do
+      ["AS", "PR", "AQ"].each do |code|
+        region = Worldwide.region(code: code)
+
+        assert_equal(code, region.iso_code)
+        refute_predicate(region, :country?)
+        assert_predicate(region, :iso_3166_code_assigned?, code)
+      end
+    end
+
+    test "#iso_3166_code_assigned? returns false for California reached through the US region" do
+      california = Worldwide.region(code: "US").zone(code: "CA")
+
+      assert_equal("US-CA", california.iso_code)
+      refute_predicate(california, :country?)
+      refute_predicate(california, :iso_3166_code_assigned?)
+    end
+
+    test "#iso_3166_code_assigned? returns false for subdivisions, numeric regions, and unknown regions" do
+      ["CA-ON", "001", "ZZ", "not-a-region"].each do |code|
+        refute_predicate(Worldwide.region(code: code), :iso_3166_code_assigned?, code)
+      end
+    end
+
+    test "#iso_3166_code_assigned? uses the resolved region code for alternate lookup formats" do
+      ["ca", :ca, "CAN", "124"].each do |code|
+        assert_predicate(Worldwide.region(code: code), :iso_3166_code_assigned?, code.inspect)
+      end
+    end
+
+    test "#iso_3166_code_assigned? returns false for an unassigned code on a constructed country" do
+      region = Region.new(iso_code: "XX", country: true)
+
+      refute_predicate(region, :iso_3166_code_assigned?)
+    end
+
     test "#short_name returns values as expected" do
       data = {
         "AU-NSW": "NSW",

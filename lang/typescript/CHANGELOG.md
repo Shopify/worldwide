@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.10
+
+### Patch Changes
+
+- 8776602: Avoid excessive backtracking when parsing malformed Dutch addresses with regex fallback enabled.
+
 ## 0.7.9
 
 ### Patch Changes
