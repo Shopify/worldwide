@@ -6,9 +6,11 @@ module Worldwide
     include PluralizationHelper
 
     EXCEPTIONS = { HKD: "HK$" }
+    # Extended codes must be explicit so the process cache remains bounded.
+    SUPPORTED_NON_ISO_CODES = ["USDC"].freeze
     SUPPORTED_ALTERNATE_FORMATS = [:japan]
     TEXT_ENCLOSED_BY_PARENTHESES = /\((.)+\)/
-    private_constant :TEXT_ENCLOSED_BY_PARENTHESES
+    private_constant :SUPPORTED_NON_ISO_CODES, :TEXT_ENCLOSED_BY_PARENTHESES
 
     class << self
       def digits_and_rounding
@@ -28,7 +30,7 @@ module Worldwide
 
     def initialize(code:)
       adjusted_code = code.to_s.upcase.rjust(3, "0")
-      if adjusted_code.match?(/\A[A-Z]{3}\z/)
+      if adjusted_code.match?(/\A[A-Z]{3}\z/) || SUPPORTED_NON_ISO_CODES.include?(adjusted_code)
         @currency_code = adjusted_code
         @numeric_code = Currencies.numeric_code_for(adjusted_code)
       elsif adjusted_code.match?(/\A[0-9]{3}\z/)

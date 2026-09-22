@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Accept `USDC` as the only supported non-ISO currency code, while malformed and other unknown codes stay out of the currency cache.
+
 ---
 
 ## [1.28.0] - 2026-09-21
