@@ -27,8 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Accept `USDC` as the only supported non-ISO currency code, while malformed and other unknown codes stay out of the currency cache.
-- Apply CLDR fallbacks for hosts that read `I18n.fallbacks` from `Thread.current`, which stopped seeing them in 1.25.6.
+- Accept `USDC` as the only supported non-ISO currency code, while malformed and other unknown codes stay out of the currency cache. [#607](https://github.com/Shopify/worldwide/pull/607)
+- Apply CLDR fallbacks for hosts that read `I18n.fallbacks` from `Thread.current`, which stopped seeing them in 1.25.6. [#607](https://github.com/Shopify/worldwide/pull/607)
 
 ---
 
