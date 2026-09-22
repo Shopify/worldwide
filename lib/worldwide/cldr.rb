@@ -82,15 +82,20 @@ module Worldwide
         # application's global fallbacks.
         original_config = STORAGE.config
         original_fallbacks = STORAGE.fallbacks
+        # Some hosts patch I18n.fallbacks to keep reading Thread.current, the slot
+        # used before i18n 1.15, so they must also see the CLDR fallbacks.
+        original_thread_fallbacks = Thread.current[:i18n_fallbacks]
         locale = I18n.locale
 
         STORAGE.config = config
         STORAGE.fallbacks = fallbacks
+        Thread.current[:i18n_fallbacks] = fallbacks
 
         I18n.with_locale(locale, &block)
       ensure
         STORAGE.config = original_config
         STORAGE.fallbacks = original_fallbacks
+        Thread.current[:i18n_fallbacks] = original_thread_fallbacks
       end
     end
   end

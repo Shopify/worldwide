@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "minitest/mock"
 
 module Worldwide
   class CldrTest < ActiveSupport::TestCase
@@ -49,6 +50,22 @@ module Worldwide
       assert_same(custom_fallbacks, I18n.fallbacks)
     ensure
       I18n.fallbacks = old_fallbacks
+    end
+
+    test "applies the CLDR fallbacks for hosts that read fallbacks from Thread.current" do
+      # Mirrors hosts that patch I18n.fallbacks to read the slot used before i18n 1.15.
+      # English short lumens only exist in root, so the lookup needs the CLDR chain.
+      original_thread_fallbacks = Thread.current[:i18n_fallbacks]
+      host_fallbacks = I18n::Locale::Fallbacks.new([:en])
+      Thread.current[:i18n_fallbacks] = host_fallbacks
+
+      I18n.stub(:fallbacks, -> { Thread.current[:i18n_fallbacks] }) do
+        assert_equal("800 lm", Worldwide.units.format(800, :lumens))
+      end
+
+      assert_same(host_fallbacks, Thread.current[:i18n_fallbacks])
+    ensure
+      Thread.current[:i18n_fallbacks] = original_thread_fallbacks
     end
   end
 end
