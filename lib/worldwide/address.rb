@@ -334,18 +334,18 @@ module Worldwide
       end
     end
 
+    TOKEN_PATTERN = /\{[A-Za-z0-9]+\}/
+    private_constant :TOKEN_PATTERN
+
     def fill_in_fields(fields:, address_data:)
+      replacements = address_data.each_with_object({}) do |(key, value), hash|
+        token = "{#{snake_to_camel_case(key)}}"
+        replacement = key == :phone ? "\u200e#{value}" : value
+        hash[token] = replacement || ""
+      end
+
       fields.map do |field|
-        mapped = field
-        address_data.each do |key, value|
-          # Forcibly prefix the Unicode left-to-right mark to the phone number
-          replacement = key == :phone ? "\u200e#{value}" : value
-
-          replacement ||= ""
-
-          mapped = mapped.gsub("{#{snake_to_camel_case(key)}}") { replacement }
-        end
-        mapped
+        field.gsub(TOKEN_PATTERN) { |token| replacements.fetch(token, token) }
       end
     end
 
