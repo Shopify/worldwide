@@ -15,10 +15,24 @@ module Worldwide
     end
 
     test "Currency rejects malformed codes" do
-      ["USD-1", "1USD", "USDX", "USD\n", "840x", "x840", "0840", "840\n", "!"].each do |code|
+      cache = Worldwide.instance_variable_get(:@currencies_cache)
+      original_keys = cache.keys
+
+      ["USD-1", "1USD", "USDX", "USDT", "USD\n", "840x", "x840", "0840", "840\n", "!"].each do |code|
         assert_raises(ArgumentError, code.inspect) { Worldwide.currency(code: code) }
         assert_raises(ArgumentError, code.inspect) { Currency.new(code: code) }
       end
+
+      assert_equal original_keys, cache.keys
+    end
+
+    test "Currency accepts explicitly supported non-ISO codes" do
+      currency = Worldwide.currency(code: "usdc")
+
+      assert_equal "USDC", currency.currency_code
+      assert_nil currency.numeric_code
+      assert_same currency, Worldwide.currency(code: :USDC)
+      assert_equal "USDC", Currency.new(code: "USDC").currency_code
     end
 
     test "#symbol returns a symbol for a given currency iso code if it exists" do
