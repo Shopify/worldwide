@@ -262,12 +262,16 @@ module Worldwide
       end
     end
 
-    test "example_address zip is valid if present" do
+    test "example_address zip is present if required and valid if present" do
       Regions.all.select(&:country?).each do |country|
         next if country.example_address.blank?
 
         zip = country.example_address["zip"]
         province_code = country.example_address["province_code"]
+
+        if country.zip_required?
+          assert_predicate zip, :present?, "Example address for #{country.iso_code} should have a zip."
+        end
 
         next if zip.blank?
 
