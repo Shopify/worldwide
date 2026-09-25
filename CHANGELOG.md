@@ -29,6 +29,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.28.2] - 2026-09-25
+
+- Add the missing `2061` postcode to Australia's example address and correct its suburb to Kirribilli. [#606](https://github.com/Shopify/worldwide/pull/606)
+- Remove the Brazilian `address1_regex` pattern that split a comma-delimited building number followed by a complement keyword, added in 1.26.3. [#613](https://github.com/Shopify/worldwide/pull/613)
+
+---
+
 ## [1.28.1] - 2026-09-23
 
 - Accept `USDC` as the only supported non-ISO currency code, while malformed and other unknown codes stay out of the currency cache. [#607](https://github.com/Shopify/worldwide/pull/607)
