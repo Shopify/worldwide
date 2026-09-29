@@ -94,6 +94,8 @@ ko:
             building_number_invalid_informative: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다"
             unknown_for_address_instructional: 주소란 1이 잘못되었을 수 있습니다
             unknown_for_address_informative: 주소란 1이 잘못되었을 수 있습니다
+            contains_email_instructional: 주소에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 주소에는 이메일 주소를 포함할 수 없습니다.
         address2:
           label:
             default: 아파트, 동/호수 등
@@ -125,6 +127,8 @@ ko:
             contains_url_informative: 주소란 2에 URL을 포함할 수 없습니다
             unknown_for_address_instructional: 주소란 2가 잘못되었을 수 있습니다
             unknown_for_address_informative: 주소란 2가 잘못되었을 수 있습니다
+            contains_email_instructional: 주소 입력란 2에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 주소 입력란 2에는 이메일 주소를 포함할 수 없습니다.
           warnings:
             contains_too_many_words: 주소 입력란 2는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다.
         city:
@@ -158,6 +162,8 @@ ko:
             contains_url_informative: 구/군/시에 URL을 포함할 수 없습니다
             unknown_for_address_instructional: 구/군/시가 잘못되었을 수 있습니다
             unknown_for_address_informative: 구/군/시가 잘못되었을 수 있습니다
+            contains_email_instructional: 도시에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 도시에는 이메일 주소를 포함할 수 없습니다.
         country:
           label:
             default: 국가/지역
@@ -272,6 +278,8 @@ ko:
             unknown_for_address_informative: 도로명이 잘못되었을 수 있습니다
             contains_too_many_words_informative: 도로명은 %{word_count}단어 이하여야 합니다
             contains_html_tags_informative: 도로명에 HTML을 포함할 수 없습니다
+            contains_email_instructional: 거리에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 거리에는 이메일 주소를 포함할 수 없습니다.
         street_number:
           label:
             default: 건물 번호
@@ -301,6 +309,8 @@ ko:
             unknown_for_address_informative: 건물 번호가 잘못되었습니다
             missing_building_number_instructional: 건물 번호가 있는 경우 건물 번호를 추가하세요.
             missing_building_number_informative: 건물 번호가 누락되었을 수 있습니다.
+            contains_email_instructional: 건물 번호에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 건물 번호에는 이메일 주소를 포함할 수 없습니다.
         neighborhood:
           label:
             default: 이웃
@@ -329,6 +339,8 @@ ko:
             unknown_for_zip_informative: "%{zip}의 올바른 이웃 이름을 입력하세요"
             unknown_for_address_instructional: 이웃이 잘못되었을 수 있습니다
             unknown_for_address_informative: 이웃이 잘못되었을 수 있습니다
+            contains_email_instructional: 지역에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 지역에는 이메일 주소를 포함할 수 없습니다.
           warnings:
             contains_too_many_words: 이웃에는 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다
         line2:
@@ -366,6 +378,8 @@ ko:
             building_number_invalid_informative: "%{zip}, %{street}의 건물 번호를 찾을 수 없습니다"
             unknown_for_address_instructional: 주소의 두 번째 줄이 잘못되었을 수 있습니다
             unknown_for_address_informative: 주소의 두 번째 줄이 잘못되었을 수 있습니다
+            contains_email_instructional: 두 번째 주소 입력란에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 두 번째 주소 입력란에는 이메일 주소를 포함할 수 없습니다.
           warnings:
             contains_too_many_words: 주소의 두 번째 줄은 %{word_count}개 미만의 단어를 사용하는 것이 좋습니다
         address:
@@ -400,6 +414,8 @@ ko:
             unknown_for_zip_informative: "%{zip}의 유효한 구/군 이름을 입력하십시오."
             unknown_for_address_instructional: 구/군이 올바르지 않을 수 있습니다.
             unknown_for_address_informative: 구/군이 올바르지 않을 수 있습니다.
+            contains_email_instructional: 구/군에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 구/군에는 이메일 주소를 포함할 수 없습니다.
           warnings:
             contains_too_many_words: 구/군은 %{word_count}단어 미만으로 입력하는 것이 좋습니다.
         subdistrict:
@@ -430,5 +446,7 @@ ko:
             unknown_for_zip_informative: "%{zip}의 유효한 동/면/읍 이름을 입력하십시오."
             unknown_for_address_instructional: 동/면/읍이 올바르지 않을 수 있습니다.
             unknown_for_address_informative: 동/면/읍이 올바르지 않을 수 있습니다.
+            contains_email_instructional: 하위 지역에는 이메일 주소를 포함할 수 없습니다.
+            contains_email_informative: 하위 지역에는 이메일 주소를 포함할 수 없습니다.
           warnings:
             contains_too_many_words: 동/면/읍은 %{word_count}단어 미만으로 입력하는 것이 좋습니다.

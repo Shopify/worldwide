@@ -113,6 +113,8 @@ cs:
               pro: %{street}, %{zip}.'
             unknown_for_address_instructional: Řádek 1 adresy může být nesprávný.
             unknown_for_address_informative: Řádek 1 adresy může být nesprávný.
+            contains_email_instructional: Adresa nesmí obsahovat e-mailovou adresu
+            contains_email_informative: Adresa nesmí obsahovat e-mailovou adresu
         address2:
           label:
             default: Byt, jednotka apod.
@@ -151,6 +153,10 @@ cs:
             contains_url_informative: Řádek 2 adresy nemůže obsahovat adresu URL.
             unknown_for_address_instructional: Řádek 2 adresy může být nesprávný.
             unknown_for_address_informative: Řádek 2 adresy může být nesprávný.
+            contains_email_instructional: 2. řádek adresy nesmí obsahovat e-mailovou
+              adresu
+            contains_email_informative: 2. řádek adresy nesmí obsahovat e-mailovou
+              adresu
           warnings:
             contains_too_many_words: 'Doporučuje se, aby 2. řádek adresy měl méně
               než tento počet slov: %{word_count}'
@@ -190,6 +196,8 @@ cs:
             contains_url_informative: Název města nemůže obsahovat adresu URL.
             unknown_for_address_instructional: Město může být nesprávné.
             unknown_for_address_informative: Město může být nesprávné.
+            contains_email_instructional: Město nesmí obsahovat e-mailovou adresu
+            contains_email_informative: Město nesmí obsahovat e-mailovou adresu
         country:
           label:
             default: Země/oblast
@@ -320,6 +328,8 @@ cs:
             contains_too_many_words_informative: 'Název ulice nemůže obsahovat více
               než tento počet slov: %{word_count}.'
             contains_html_tags_informative: Název ulice nemůže obsahovat HTML.
+            contains_email_instructional: Ulice nesmí obsahovat e-mailovou adresu
+            contains_email_informative: Ulice nesmí obsahovat e-mailovou adresu
         street_number:
           label:
             default: Číslo budovy
@@ -355,6 +365,9 @@ cs:
             unknown_for_address_informative: Číslo budovy není platné.
             missing_building_number_instructional: Zadejte číslo budovy, pokud existuje
             missing_building_number_informative: Chybí číslo budovy
+            contains_email_instructional: Číslo budovy nesmí obsahovat e-mailovou
+              adresu
+            contains_email_informative: Číslo budovy nesmí obsahovat e-mailovou adresu
         neighborhood:
           label:
             default: Samosprávná jednotka města
@@ -401,6 +414,8 @@ cs:
             unknown_for_address_instructional: Samosprávná jednotka města může být
               nesprávná.
             unknown_for_address_informative: Samosprávná jednotka města může být nesprávná.
+            contains_email_instructional: Čtvrť nesmí obsahovat e-mailové adresy
+            contains_email_informative: Čtvrť nesmí obsahovat e-mailové adresy
           warnings:
             contains_too_many_words: 'Doporučuje se, aby název samosprávné jednotky
               města obsahoval méně než tento počet slov: %{word_count}.'
@@ -446,6 +461,10 @@ cs:
               pro: %{street}, %{zip}.'
             unknown_for_address_instructional: Druhý řádek adresy může být nesprávný.
             unknown_for_address_informative: Druhý řádek adresy může být nesprávný.
+            contains_email_instructional: Druhý řádek adresy nesmí obsahovat e-mailovou
+              adresu
+            contains_email_informative: Druhý řádek adresy nesmí obsahovat e-mailovou
+              adresu
           warnings:
             contains_too_many_words: 'Doporučuje se, aby druhý název adresy obsahoval
               méně než tento počet slov: %{word_count}.'
@@ -488,6 +507,8 @@ cs:
             unknown_for_zip_informative: Zadejte platný název okresu pro %{zip}
             unknown_for_address_instructional: Název okresu je možná nesprávný
             unknown_for_address_informative: Název okresu je možná nesprávný
+            contains_email_instructional: Okres nesmí obsahovat e-mailové adresy
+            contains_email_informative: Okres nesmí obsahovat e-mailové adresy
           warnings:
             contains_too_many_words: Doporučujeme, aby název okresu obsahoval méně
               než %{word_count} slov
@@ -529,6 +550,8 @@ cs:
             unknown_for_zip_informative: Zadejte platný název místní části pro %{zip}
             unknown_for_address_instructional: Název místní části je možná nesprávný
             unknown_for_address_informative: Název místní části je možná nesprávný
+            contains_email_instructional: Okrsek nesmí obsahovat e-mailové adresy
+            contains_email_informative: Okrsek nesmí obsahovat e-mailové adresy
           warnings:
             contains_too_many_words: Doporučujeme, aby název místní části obsahoval
               méně než %{word_count} slov

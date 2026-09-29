@@ -111,6 +111,8 @@ vi:
               %{street}, %{zip}
             unknown_for_address_instructional: Dòng địa chỉ 1 có thể không chính xác
             unknown_for_address_informative: Dòng địa chỉ 1 có thể không chính xác
+            contains_email_instructional: Địa chỉ không được chứa địa chỉ email
+            contains_email_informative: Địa chỉ không được chứa địa chỉ email
         address2:
           label:
             default: Căn hộ, dãy, v.v.
@@ -150,6 +152,8 @@ vi:
             contains_url_informative: Dòng địa chỉ 2 không được chứa URL
             unknown_for_address_instructional: Dòng địa chỉ 2 có thể không chính xác
             unknown_for_address_informative: Dòng địa chỉ 2 có thể không chính xác
+            contains_email_instructional: Dòng địa chỉ 2 không được chứa địa chỉ email
+            contains_email_informative: Dòng địa chỉ 2 không được chứa địa chỉ email
           warnings:
             contains_too_many_words: Dòng địa chỉ 2 nên có tối đa %{word_count} từ
         city:
@@ -191,6 +195,8 @@ vi:
             contains_url_informative: Thành phố không được chứa URL
             unknown_for_address_instructional: Thành phố có thể không chính xác
             unknown_for_address_informative: Thành phố có thể không chính xác
+            contains_email_instructional: Thành phố không được chứa địa chỉ email
+            contains_email_informative: Thành phố không được chứa địa chỉ email
         country:
           label:
             default: Quốc gia/khu vực
@@ -325,6 +331,8 @@ vi:
             contains_too_many_words_informative: Đường không được có nhiều hơn %{word_count}
               từ
             contains_html_tags_informative: Đường không được chứa HTML
+            contains_email_instructional: Đường không được chứa địa chỉ email
+            contains_email_informative: Đường không được chứa địa chỉ email
         street_number:
           label:
             default: Số tòa nhà
@@ -360,6 +368,8 @@ vi:
             unknown_for_address_informative: Số tòa nhà không hợp lệ
             missing_building_number_instructional: Thêm số tòa nhà nếu có
             missing_building_number_informative: Có thể thiếu số tòa nhà
+            contains_email_instructional: Số nhà không được chứa địa chỉ email
+            contains_email_informative: Số nhà không được chứa địa chỉ email
         neighborhood:
           label:
             default: Khu phố
@@ -394,6 +404,8 @@ vi:
             unknown_for_zip_informative: Nhập tên khu phố hợp lệ cho %{zip}
             unknown_for_address_instructional: Khu phố có thể không chính xác
             unknown_for_address_informative: Khu phố có thể không chính xác
+            contains_email_instructional: Khu vực không được chứa địa chỉ email
+            contains_email_informative: Khu vực không được chứa địa chỉ email
           warnings:
             contains_too_many_words: Khu phố nên có tối đa %{word_count} từ
         line2:
@@ -440,6 +452,10 @@ vi:
               xác
             unknown_for_address_informative: Dòng địa chỉ thứ hai có thể không chính
               xác
+            contains_email_instructional: Dòng địa chỉ thứ hai không được chứa địa
+              chỉ email
+            contains_email_informative: Dòng địa chỉ thứ hai không được chứa địa chỉ
+              email
           warnings:
             contains_too_many_words: Dòng địa chỉ thứ hai nên có tối đa %{word_count}
               từ
@@ -483,6 +499,8 @@ vi:
             unknown_for_zip_informative: Nhập tên quận/huyện hợp lệ cho %{zip}
             unknown_for_address_instructional: Quận/huyện có thể không chính xác
             unknown_for_address_informative: Quận/huyện có thể không chính xác
+            contains_email_instructional: Quận/huyện không được chứa địa chỉ email
+            contains_email_informative: Quận/huyện không được chứa địa chỉ email
           warnings:
             contains_too_many_words: Quận/huyện nên có ít hơn %{word_count} từ
         subdistrict:
@@ -520,5 +538,7 @@ vi:
             unknown_for_zip_informative: Nhập tên phường/xã hợp lệ cho %{zip}
             unknown_for_address_instructional: Phường/xã có thể không chính xác
             unknown_for_address_informative: Phường/xã có thể không chính xác
+            contains_email_instructional: Phường/xã không được chứa địa chỉ email
+            contains_email_informative: Phường/xã không được chứa địa chỉ email
           warnings:
             contains_too_many_words: Phường/xã nên có ít hơn %{word_count} từ
