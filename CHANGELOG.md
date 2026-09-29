@@ -27,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [1.29.0] - 2026-09-29
+
 - Add `contains_email` error messages to every address field that has a `contains_url` message, including the country-specific overrides for relabeled neighborhood and district fields, so address validators can tell buyers a field can't hold an email address.
 
 ---
