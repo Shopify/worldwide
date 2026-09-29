@@ -113,6 +113,8 @@ sk:
               PSČ %{zip} sa nepodarilo nájsť
             unknown_for_address_instructional: Riadok adresy 1 môže byť nesprávny
             unknown_for_address_informative: Riadok adresy 1 môže byť nesprávny
+            contains_email_instructional: Adresa nemôže obsahovať e‑mailovú adresu
+            contains_email_informative: Adresa nemôže obsahovať e‑mailovú adresu
         address2:
           label:
             default: Apartmán, byt atď.
@@ -155,6 +157,10 @@ sk:
             contains_url_informative: Druhý riadok adresy nemôže obsahovať URL adresu
             unknown_for_address_instructional: Druhý riadok adresy môže byť nesprávny
             unknown_for_address_informative: Druhý riadok adresy môže byť nesprávny
+            contains_email_instructional: 2. riadok adresy nemôže obsahovať e‑mailovú
+              adresu
+            contains_email_informative: 2. riadok adresy nemôže obsahovať e‑mailovú
+              adresu
           warnings:
             contains_too_many_words: 'Riadok adresy 2 by nemal mať viac ako tento
               počet slov: %{word_count}'
@@ -195,6 +201,8 @@ sk:
             contains_url_informative: Mesto nemôže obsahovať URL adresu
             unknown_for_address_instructional: Mesto môže byť nesprávne
             unknown_for_address_informative: Mesto môže byť nesprávne
+            contains_email_instructional: Mesto nemôže obsahovať e‑mailovú adresu
+            contains_email_informative: Mesto nemôže obsahovať e‑mailovú adresu
         country:
           label:
             default: Krajina/oblasť
@@ -336,6 +344,8 @@ sk:
             contains_too_many_words_informative: 'Ulica nemôže mať viac ako tento
               počet slov: %{word_count}'
             contains_html_tags_informative: Ulica nemôže obsahovať HTML
+            contains_email_instructional: Ulica nemôže obsahovať e‑mailovú adresu
+            contains_email_informative: Ulica nemôže obsahovať e‑mailovú adresu
         street_number:
           label:
             default: Číslo budovy
@@ -372,6 +382,9 @@ sk:
             missing_building_number_instructional: Ak máte číslo budovy, pridajte
               ho
             missing_building_number_informative: Číslo budovy možno chýba
+            contains_email_instructional: Číslo budovy nemôže obsahovať e‑mailovú
+              adresu
+            contains_email_informative: Číslo budovy nemôže obsahovať e‑mailovú adresu
         neighborhood:
           label:
             default: Sídlisko
@@ -407,6 +420,8 @@ sk:
             unknown_for_zip_informative: Zadajte platný názov sídliska pre PSČ %{zip}
             unknown_for_address_instructional: Sídlisko môže byť nesprávne
             unknown_for_address_informative: Sídlisko môže byť nesprávne
+            contains_email_instructional: Štvrť nemôže obsahovať e‑mailové adresy
+            contains_email_informative: Štvrť nemôže obsahovať e‑mailové adresy
           warnings:
             contains_too_many_words: 'Sídlisko by nemalo mať viac ako tento počet
               slov: %{word_count}'
@@ -453,6 +468,10 @@ sk:
               PSČ %{zip} sa nepodarilo nájsť
             unknown_for_address_instructional: Druhý riadok adresy môže byť nesprávny
             unknown_for_address_informative: Druhý riadok adresy môže byť nesprávny
+            contains_email_instructional: Druhý riadok adresy nemôže obsahovať e‑mailovú
+              adresu
+            contains_email_informative: Druhý riadok adresy nemôže obsahovať e‑mailovú
+              adresu
           warnings:
             contains_too_many_words: 'Druhý riadok adresy by nemal mať viac ako tento
               počet slov: %{word_count}'
@@ -493,6 +512,8 @@ sk:
             unknown_for_zip_informative: Zadajte platný názov okresu pre %{zip}
             unknown_for_address_instructional: Okres môže byť nesprávny
             unknown_for_address_informative: Okres môže byť nesprávny
+            contains_email_instructional: Okres nemôže obsahovať e‑mailové adresy
+            contains_email_informative: Okres nemôže obsahovať e‑mailové adresy
           warnings:
             contains_too_many_words: Odporúča sa, aby okres mal menej ako %{word_count}
               slov
@@ -534,6 +555,8 @@ sk:
             unknown_for_zip_informative: Zadajte platný názov miestnej časti pre %{zip}
             unknown_for_address_instructional: Miestna časť môže byť nesprávna
             unknown_for_address_informative: Miestna časť môže byť nesprávna
+            contains_email_instructional: Podokres nemôže obsahovať e‑mailové adresy
+            contains_email_informative: Podokres nemôže obsahovať e‑mailové adresy
           warnings:
             contains_too_many_words: Odporúča sa, aby miestna časť mala menej ako
               %{word_count} slov
