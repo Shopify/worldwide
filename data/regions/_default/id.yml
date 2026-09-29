@@ -115,6 +115,8 @@ id:
               ditemukan di %{street}, %{zip}
             unknown_for_address_instructional: Baris 1 alamat mungkin salah
             unknown_for_address_informative: Baris 1 alamat mungkin salah
+            contains_email_instructional: Alamat tidak boleh berisi alamat email
+            contains_email_informative: Alamat tidak boleh berisi alamat email
         address2:
           label:
             default: Apartemen, suite, dsb
@@ -154,6 +156,9 @@ id:
             contains_url_informative: Baris 2 alamat tidak boleh berisi URL
             unknown_for_address_instructional: Baris 2 alamat mungkin salah
             unknown_for_address_informative: Baris 2 alamat mungkin salah
+            contains_email_instructional: Baris alamat 2 tidak boleh berisi alamat
+              email
+            contains_email_informative: Baris alamat 2 tidak boleh berisi alamat email
           warnings:
             contains_too_many_words: Alamat baris 2 sebaiknya diisi tidak lebih dari
               %{word_count} kata
@@ -194,6 +199,8 @@ id:
             contains_url_informative: Nama kota tidak boleh berisi URL
             unknown_for_address_instructional: Nama kota mungkin salah
             unknown_for_address_informative: Nama kota mungkin salah
+            contains_email_instructional: Kota tidak boleh berisi alamat email
+            contains_email_informative: Kota tidak boleh berisi alamat email
         country:
           label:
             default: Negara/wilayah
@@ -329,6 +336,8 @@ id:
             contains_too_many_words_informative: Nama jalan tidak boleh memuat lebih
               dari %{word_count} kata
             contains_html_tags_informative: Nama jalan tidak boleh berisi HTML
+            contains_email_instructional: Jalan tidak boleh berisi alamat email
+            contains_email_informative: Jalan tidak boleh berisi alamat email
         street_number:
           label:
             default: Nomor gedung
@@ -364,6 +373,9 @@ id:
             unknown_for_address_informative: Nomor gedung tidak valid
             missing_building_number_instructional: Tambahkan nomor gedung jika ada
             missing_building_number_informative: Nomor gedung mungkin belum diisi
+            contains_email_instructional: Nomor bangunan tidak boleh berisi alamat
+              email
+            contains_email_informative: Nomor bangunan tidak boleh berisi alamat email
         neighborhood:
           label:
             default: Perumahan
@@ -404,6 +416,8 @@ id:
               %{zip}
             unknown_for_address_instructional: Nama perumahan mungkin salah
             unknown_for_address_informative: Nama perumahan mungkin salah
+            contains_email_instructional: Lingkungan tidak boleh berisi alamat email
+            contains_email_informative: Lingkungan tidak boleh berisi alamat email
           warnings:
             contains_too_many_words: Perumahan sebaiknya berisi kurang dari %{word_count}
               kata
@@ -449,6 +463,10 @@ id:
               di %{street}, %{zip}
             unknown_for_address_instructional: Baris kedua alamat mungkin salah
             unknown_for_address_informative: Baris kedua alamat mungkin salah
+            contains_email_instructional: Baris alamat kedua tidak boleh berisi alamat
+              email
+            contains_email_informative: Baris alamat kedua tidak boleh berisi alamat
+              email
           warnings:
             contains_too_many_words: Baris kedua alamat sebaiknya berisi kurang dari
               %{word_count} kata
@@ -491,6 +509,8 @@ id:
             unknown_for_zip_informative: Masukkan nama distrik yang valid untuk %{zip}
             unknown_for_address_instructional: Distrik mungkin salah
             unknown_for_address_informative: Distrik mungkin salah
+            contains_email_instructional: Distrik tidak boleh berisi alamat email
+            contains_email_informative: Distrik tidak boleh berisi alamat email
           warnings:
             contains_too_many_words: Distrik disarankan kurang dari %{word_count}
               kata
@@ -532,6 +552,8 @@ id:
               %{zip}
             unknown_for_address_instructional: Subdistrik mungkin salah
             unknown_for_address_informative: Subdistrik mungkin salah
+            contains_email_instructional: Subdistrik tidak boleh berisi alamat email
+            contains_email_informative: Subdistrik tidak boleh berisi alamat email
           warnings:
             contains_too_many_words: Subdistrik disarankan kurang dari %{word_count}
               kata

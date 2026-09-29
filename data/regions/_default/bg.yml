@@ -119,6 +119,8 @@ bg:
               %{zip}
             unknown_for_address_instructional: Възможно е ред 1 от адреса да е неправилен.
             unknown_for_address_informative: Възможно е ред 1 от адреса да е неправилен.
+            contains_email_instructional: Адресът не може да съдържа имейл адрес
+            contains_email_informative: Адресът не може да съдържа имейл адрес
         address2:
           label:
             default: Етаж, апартамент и т.н.
@@ -159,6 +161,9 @@ bg:
             contains_url_informative: Ред 2 от адреса не може да съдържа URL адрес
             unknown_for_address_instructional: Възможно е ред 2 от адреса да е неправилен
             unknown_for_address_informative: Възможно е ред 2 от адреса да е неправилен
+            contains_email_instructional: Ред 2 на адреса не може да съдържа имейл
+              адрес
+            contains_email_informative: Ред 2 на адреса не може да съдържа имейл адрес
           warnings:
             contains_too_many_words: Препоръчително е редът за адрес 2 да не съдържа
               повече от %{word_count} думи
@@ -199,6 +204,8 @@ bg:
             contains_url_informative: "„Град“ не може да съдържа URL адрес"
             unknown_for_address_instructional: Възможно е градът да е неправилен
             unknown_for_address_informative: Възможно е градът да е неправилен
+            contains_email_instructional: Градът не може да съдържа имейл адрес
+            contains_email_informative: Градът не може да съдържа имейл адрес
         country:
           label:
             default: Държава/регион
@@ -330,6 +337,8 @@ bg:
             contains_too_many_words_informative: "„Улица“ не може да съдържа повече
               от %{word_count} думи"
             contains_html_tags_informative: "„Улица“ не може да съдържа HTML"
+            contains_email_instructional: Улицата не може да съдържа имейл адрес
+            contains_email_informative: Улицата не може да съдържа имейл адрес
         street_number:
           label:
             default: Номер на сграда
@@ -369,6 +378,10 @@ bg:
             missing_building_number_instructional: Добавете номер на сграда, ако има
               такъв
             missing_building_number_informative: Възможно е номерът на сграда да липсва
+            contains_email_instructional: Номерът на сградата не може да съдържа имейл
+              адрес
+            contains_email_informative: Номерът на сградата не може да съдържа имейл
+              адрес
         neighborhood:
           label:
             default: Квартал
@@ -403,6 +416,8 @@ bg:
             unknown_for_zip_informative: Въведете валидно име на квартал за %{zip}
             unknown_for_address_instructional: Възможно е кварталът да е неправилен.
             unknown_for_address_informative: Възможно е кварталът да е неправилен.
+            contains_email_instructional: Кварталът не може да съдържа имейл адреси
+            contains_email_informative: Кварталът не може да съдържа имейл адреси
           warnings:
             contains_too_many_words: Препоръчително е „Квартал“ да не съдържа повече
               от %{word_count} думи
@@ -455,6 +470,10 @@ bg:
               е неправилен
             unknown_for_address_informative: Възможно е вторият ред от адреса да е
               неправилен
+            contains_email_instructional: Вторият ред на адреса не може да съдържа
+              имейл адрес
+            contains_email_informative: Вторият ред на адреса не може да съдържа имейл
+              адрес
           warnings:
             contains_too_many_words: Препоръчително е вторият ред от адреса да не
               съдържа повече от %{word_count} думи
@@ -496,6 +515,8 @@ bg:
             unknown_for_zip_informative: Въведете валидно име на район за %{zip}
             unknown_for_address_instructional: Районът може да е грешен
             unknown_for_address_informative: Районът може да е грешен
+            contains_email_instructional: Районът не може да съдържа имейл адреси
+            contains_email_informative: Районът не може да съдържа имейл адреси
           warnings:
             contains_too_many_words: Препоръчително е районът да съдържа по-малко
               от %{word_count} думи
@@ -533,6 +554,8 @@ bg:
             unknown_for_zip_informative: Въведете валидно име на подрайон за %{zip}
             unknown_for_address_instructional: Подрайонът може да е грешен
             unknown_for_address_informative: Подрайонът може да е грешен
+            contains_email_instructional: Подрайонът не може да съдържа имейл адреси
+            contains_email_informative: Подрайонът не може да съдържа имейл адреси
           warnings:
             contains_too_many_words: Препоръчително е подрайонът да съдържа по-малко
               от %{word_count} думи

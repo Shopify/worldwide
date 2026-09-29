@@ -98,6 +98,8 @@ th:
               %{street}, %{zip} ได้
             unknown_for_address_instructional: ที่อยู่บรรทัดที่ 1 อาจไม่ถูกต้อง
             unknown_for_address_informative: ที่อยู่บรรทัดที่ 1 อาจไม่ถูกต้อง
+            contains_email_instructional: ที่อยู่ต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: ที่อยู่ต้องไม่มีที่อยู่อีเมล
         address2:
           label:
             default: อะพาร์ตเมนต์ ห้องชุด ฯลฯ
@@ -135,6 +137,8 @@ th:
             contains_url_informative: ห้ามใส่ URL ในที่อยู่บรรทัดที่ 2
             unknown_for_address_instructional: ที่อยู่บรรทัดที่ 2 อาจไม่ถูกต้อง
             unknown_for_address_informative: ที่อยู่บรรทัดที่ 2 อาจไม่ถูกต้อง
+            contains_email_instructional: ที่อยู่บรรทัดที่ 2 ต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: ที่อยู่บรรทัดที่ 2 ต้องไม่มีที่อยู่อีเมล
           warnings:
             contains_too_many_words: ที่อยู่บรรทัดที่ 2 ไม่ควรมีความยาวเกิน %{word_count}
               คำ
@@ -171,6 +175,8 @@ th:
             contains_url_informative: ห้ามใส่ URL ในชื่อเมือง
             unknown_for_address_instructional: ชื่อเมืองอาจไม่ถูกต้อง
             unknown_for_address_informative: ชื่อเมืองอาจไม่ถูกต้อง
+            contains_email_instructional: เมืองต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: เมืองต้องไม่มีที่อยู่อีเมล
         country:
           label:
             default: ประเทศ/ภูมิภาค
@@ -286,6 +292,8 @@ th:
             contains_too_many_words_informative: ชื่อถนนต้องไม่เกิน %{word_count}
               คำ
             contains_html_tags_informative: ห้ามใส่ HTML ในชื่อถนน
+            contains_email_instructional: ถนนต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: ถนนต้องไม่มีที่อยู่อีเมล
         street_number:
           label:
             default: หมายเลขอาคาร
@@ -317,6 +325,8 @@ th:
             unknown_for_address_informative: หมายเลขอาคารไม่ถูกต้อง
             missing_building_number_instructional: เพิ่มหมายเลขอาคาร หากมี
             missing_building_number_informative: หมายเลขอาคารอาจขาดหายไป
+            contains_email_instructional: หมายเลขอาคารต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: หมายเลขอาคารต้องไม่มีที่อยู่อีเมล
         neighborhood:
           label:
             default: สถานที่ใกล้เคียง
@@ -352,6 +362,8 @@ th:
               %{zip}
             unknown_for_address_instructional: ชื่อสถานที่ใกล้เคียงอาจไม่ถูกต้อง
             unknown_for_address_informative: ชื่อสถานที่ใกล้เคียงอาจไม่ถูกต้อง
+            contains_email_instructional: ละแวกบ้านต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: ละแวกบ้านต้องไม่มีที่อยู่อีเมล
           warnings:
             contains_too_many_words: ชื่อสถานที่ใกล้เคียงควรมีความยาวน้อยกว่า %{word_count}
               คำ
@@ -390,6 +402,8 @@ th:
               %{street}, %{zip} ได้
             unknown_for_address_instructional: ที่อยู่บรรทัดที่ 2 อาจไม่ถูกต้อง
             unknown_for_address_informative: ที่อยู่บรรทัดที่ 2 อาจไม่ถูกต้อง
+            contains_email_instructional: ที่อยู่บรรทัดที่สองต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: ที่อยู่บรรทัดที่สองต้องไม่มีที่อยู่อีเมล
           warnings:
             contains_too_many_words: ที่อยู่บรรทัดที่สองไม่ควรมีความยาวเกิน %{word_count}
               คำ
@@ -428,6 +442,8 @@ th:
             unknown_for_zip_informative: โปรดป้อนชื่อเขต/อำเภอที่ถูกต้องสำหรับ %{zip}
             unknown_for_address_instructional: เขต/อำเภออาจไม่ถูกต้อง
             unknown_for_address_informative: เขต/อำเภออาจไม่ถูกต้อง
+            contains_email_instructional: เขต/อำเภอต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: เขต/อำเภอต้องไม่มีที่อยู่อีเมล
           warnings:
             contains_too_many_words: ขอแนะนำให้เขต/อำเภอมีน้อยกว่า %{word_count} คำ
         subdistrict:
@@ -461,5 +477,7 @@ th:
             unknown_for_zip_informative: โปรดป้อนชื่อแขวง/ตำบลที่ถูกต้องสำหรับ %{zip}
             unknown_for_address_instructional: แขวง/ตำบลอาจไม่ถูกต้อง
             unknown_for_address_informative: แขวง/ตำบลอาจไม่ถูกต้อง
+            contains_email_instructional: แขวง/ตำบลต้องไม่มีที่อยู่อีเมล
+            contains_email_informative: แขวง/ตำบลต้องไม่มีที่อยู่อีเมล
           warnings:
             contains_too_many_words: ขอแนะนำให้แขวง/ตำบลมีน้อยกว่า %{word_count} คำ

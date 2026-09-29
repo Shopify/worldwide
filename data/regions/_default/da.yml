@@ -112,6 +112,8 @@ da:
               for %{street}, %{zip}
             unknown_for_address_instructional: Adresselinje 1 kan være forkert
             unknown_for_address_informative: Adresselinje 1 kan være forkert
+            contains_email_instructional: Adresse kan ikke indeholde en mailadresse
+            contains_email_informative: Adresse kan ikke indeholde en mailadresse
         address2:
           label:
             default: Lejlighed, etage osv.
@@ -151,6 +153,8 @@ da:
             contains_url_informative: Adresselinje 2 må ikke indeholde en webadresse
             unknown_for_address_instructional: Adresselinje 2 kan være forkert
             unknown_for_address_informative: Adresselinje 2 kan være forkert
+            contains_email_instructional: Adresselinje 2 kan ikke indeholde en mailadresse
+            contains_email_informative: Adresselinje 2 kan ikke indeholde en mailadresse
           warnings:
             contains_too_many_words: Det anbefales, at adresselinje 2 har færre end
               %{word_count} ord
@@ -188,6 +192,8 @@ da:
             contains_url_informative: By må ikke indeholde en webadresse
             unknown_for_address_instructional: By kan være forkert
             unknown_for_address_informative: By kan være forkert
+            contains_email_instructional: By kan ikke indeholde en mailadresse
+            contains_email_informative: By kan ikke indeholde en mailadresse
         country:
           label:
             default: Land/område
@@ -317,6 +323,8 @@ da:
             contains_too_many_words_informative: Gade må ikke indeholde flere end
               %{word_count} ord
             contains_html_tags_informative: Gade må ikke indeholde HTML
+            contains_email_instructional: Gade kan ikke indeholde en mailadresse
+            contains_email_informative: Gade kan ikke indeholde en mailadresse
         street_number:
           label:
             default: Bygningsnummer
@@ -352,6 +360,8 @@ da:
             missing_building_number_instructional: Tilføj et bygningsnummer, hvis
               du har et
             missing_building_number_informative: Bygningsnummer mangler muligvis
+            contains_email_instructional: Bygningsnummer kan ikke indeholde en mailadresse
+            contains_email_informative: Bygningsnummer kan ikke indeholde en mailadresse
         neighborhood:
           label:
             default: Bydel
@@ -384,6 +394,8 @@ da:
             unknown_for_zip_informative: Angiv et gyldigt bydelsnavn for %{zip}
             unknown_for_address_instructional: Bydel kan være forkert
             unknown_for_address_informative: Bydel kan være forkert
+            contains_email_instructional: Kvarter kan ikke indeholde mailadresser
+            contains_email_informative: Kvarter kan ikke indeholde mailadresser
           warnings:
             contains_too_many_words: Det anbefales, at bydel indeholder færre end
               %{word_count} ord
@@ -434,6 +446,10 @@ da:
             unknown_for_address_instructional: Anden linje i adressen er muligvis
               forkert
             unknown_for_address_informative: Anden linje i adressen er muligvis forkert
+            contains_email_instructional: Den anden adresselinje kan ikke indeholde
+              en mailadresse
+            contains_email_informative: Den anden adresselinje kan ikke indeholde
+              en mailadresse
           warnings:
             contains_too_many_words: Det anbefales, at den anden linje i adressen
               har under %{word_count} ord
@@ -474,6 +490,8 @@ da:
             unknown_for_zip_informative: Indtast et gyldigt distriktsnavn for %{zip}
             unknown_for_address_instructional: Distriktet er muligvis forkert
             unknown_for_address_informative: Distriktet er muligvis forkert
+            contains_email_instructional: Distrikt kan ikke indeholde mailadresser
+            contains_email_informative: Distrikt kan ikke indeholde mailadresser
           warnings:
             contains_too_many_words: Det anbefales, at distriktet har færre end %{word_count}
               ord
@@ -514,6 +532,8 @@ da:
               %{zip}
             unknown_for_address_instructional: Underdistriktet er muligvis forkert
             unknown_for_address_informative: Underdistriktet er muligvis forkert
+            contains_email_instructional: Underdistrikt kan ikke indeholde mailadresser
+            contains_email_informative: Underdistrikt kan ikke indeholde mailadresser
           warnings:
             contains_too_many_words: Det anbefales, at underdistriktet har færre end
               %{word_count} ord
