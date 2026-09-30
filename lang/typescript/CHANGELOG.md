@@ -1,5 +1,11 @@
 # @shopify/worldwide
 
+## 0.7.11
+
+### Patch Changes
+
+- b64477f: Revert parsing of Brazilian addresses with a comma-delimited building number followed by a recognized complement.
+
 ## 0.7.10
 
 ### Patch Changes
