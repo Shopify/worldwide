@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Add `:date_time_current_year_with_seconds` — `:date_time_current_year` (a compact, year-omitted "MMM d + time" timestamp) with the time upgraded to second precision, for cross-system log/event correlation. Each locale keeps its own field order, separators, and 12h/24h clock (e.g. Vietnamese renders time-first, Danish uses "." separators, en stays 12-hour). [#592](https://github.com/Shopify/worldwide/pull/592)
 
 ---
 
