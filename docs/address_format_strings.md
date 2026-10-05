@@ -4,6 +4,14 @@
 
 Worldwide defines different address format strings that control the layout of address elements for each country region.
 
+Each country region can carry up to three sets of format strings:
+
+- `format` — the standard layout, built from `address1` / `address2`. Every country has one.
+- `format_extended` — the legacy extended layout (`edit` only), which adds `{streetName}`, `{streetNumber}`, `{line2}` and `{neighborhood}`. Retained for existing consumers; not the vocabulary going forward.
+- `format_extended_v2` — the structured layout (`edit` and `show`), which uses the extended address field vocabulary: `{streetName}`, `{streetNumber}`, `{line2}`, `{district}`, `{subdistrict}`. Only countries with a modelled structured layout define it, and the components it uses are declared in that country's `extended_address_fields`.
+
+All three use the same `edit` / `show` syntaxes described below.
+
 Each format string has a different syntax, and is meant for use in different scenarios.
 
 This page aims to document these syntaxes, their usage and limitations for those who need to create/edit them.

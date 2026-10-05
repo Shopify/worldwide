@@ -19,6 +19,15 @@ format:
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}"
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{streetName}{streetNumber}_{address2}_{zip}{city}_{phone}"
+format_extended_v2:
+  edit: "{country}_{firstName}{lastName}_{company}_{streetNumber}{streetName}_{address2}_{zip}{city}_{phone}"
+  show: "{firstName} {lastName}_{company}_{streetNumber} {streetName}_{address2}_{zip} {city}_{country}_{phone}"
+extended_address_fields:
+  - name: streetName
+    required: true
+  - name: streetNumber
+    required: true
+street_number_position: leading
 address1_regex:
   - "^(?<streetName>[^\\d,]+),? (?<streetNumber>\\d+(?:\/\\d+)?)$"
   - "^(?<streetNumber>\\d+(?:\/\\d+)?),? (?<streetName>[^\\d,]+)$"

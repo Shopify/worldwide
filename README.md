@@ -436,6 +436,39 @@ combined_address_format:
 ```
 If a country does not have additional address fields, concatenation will simply return `address1`, and splitting will return `nil`.
 
+#### Structured address layouts (extended address fields)
+
+`format_extended` / `additional_address_fields` above describe the legacy extended layout, which keeps `{neighborhood}` as its only sub-city component. Countries that have a structured address layout also carry a `format_extended_v2`, which uses the extended address field vocabulary (`streetName`, `streetNumber`, `line2`, `district`, `subdistrict`), and an `extended_address_fields` list declaring which of those components the country uses and which are required:
+
+```ruby
+# data/regions/BR.yml
+format_extended_v2:
+  edit: "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{district}_{city}{province}_{phone}"
+  show: "{firstName} {lastName}_{company}_{streetName} {streetNumber}_{line2} {district}_{zip} {city} {province}_{country}_{phone}"
+extended_address_fields:
+  - name: streetName
+    required: true
+  - name: streetNumber
+    required: true
+  - name: line2
+  - name: district
+    required: true
+```
+
+```ruby
+$ region = Worldwide.region(code: "BR")
+$ region.format_extended_v2["edit"]
+=> "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{district}_{city}{province}_{phone}"
+$ region.extended_address_fields.map { |field| field["name"] }
+=> ["streetName", "streetNumber", "line2", "district"]
+$ region.district_required?
+=> true
+$ Worldwide.region(code: "CA").format_extended_v2
+=> {}
+```
+
+A country having a `format_extended_v2` means a structured layout is modelled for it; it says nothing about whether a given Shopify store or API currently collects those fields. The labels for every field, including the structured ones, come from `Worldwide::Field` (`region.field(key: :district).label`).
+
 #### Validation
 
 ```ruby

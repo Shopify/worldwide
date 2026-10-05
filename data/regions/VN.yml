@@ -16,6 +16,14 @@ format:
   show: "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}"
 format_extended:
   edit: "{country}_{firstName}{lastName}_{company}_{address1}_{line2}{neighborhood}_{city}{zip}_{phone}"
+format_extended_v2:
+  edit: "{country}_{firstName}{lastName}_{company}_{address1}_{line2}{district}_{city}{zip}_{phone}"
+  show: "{firstName} {lastName}_{company}_{address1}_{line2} {district}_{city} {zip}_{country}_{phone}"
+extended_address_fields:
+  - name: line2
+  - name: district
+    required: true
+street_number_position: leading
 additional_address_fields:
   - name: line2
   - name: neighborhood

@@ -17,6 +17,8 @@ module Worldwide
       assert_nil region.legacy_name
       assert_empty(region.format)
       assert_empty(region.format_extended)
+      assert_empty(region.format_extended_v2)
+      assert_nil region.street_number_position
       assert_empty(region.name_alternates)
       assert_nil region.numeric_three
       assert_equal false, region.province?
@@ -61,6 +63,7 @@ module Worldwide
       region = Region.new(iso_code: "ZZ")
 
       assert_empty region.additional_address_fields
+      assert_empty region.extended_address_fields
       assert_empty(region.combined_address_format)
       refute region.building_number_required
       refute region.building_number_may_be_in_address2
@@ -449,6 +452,90 @@ module Worldwide
 
       neighborhood_required_countries.each do |country_code|
         assert_predicate Worldwide.region(code: country_code), :neighborhood_required?
+      end
+    end
+
+    test "#format_extended_v2 returns the structured layout for regions that define one" do
+      br = Worldwide.region(code: "BR")
+
+      assert_equal(
+        "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{district}_{city}{province}_{phone}",
+        br.format_extended_v2["edit"],
+      )
+      assert_equal(
+        "{firstName} {lastName}_{company}_{streetName} {streetNumber}_{line2} {district}_{zip} {city} {province}_{country}_{phone}",
+        br.format_extended_v2["show"],
+      )
+    end
+
+    test "#format_extended_v2 is empty for regions without a structured layout" do
+      [:ca, :hk, :us, :mx].each do |country_code|
+        assert_empty Worldwide.region(code: country_code).format_extended_v2, "#{country_code} should have no format_extended_v2"
+      end
+    end
+
+    test "#extended_address_fields returns the declared structured fields" do
+      assert_equal(
+        [
+          { "name" => "streetName", "required" => true },
+          { "name" => "streetNumber", "required" => true },
+          { "name" => "line2" },
+          { "name" => "district", "required" => true },
+        ],
+        Worldwide.region(code: "BR").extended_address_fields,
+      )
+      assert_equal(
+        [{ "name" => "line2" }, { "name" => "district", "required" => true }],
+        Worldwide.region(code: "VN").extended_address_fields,
+      )
+      assert_empty Worldwide.region(code: "CA").extended_address_fields
+      assert_empty Worldwide.region(code: "HK").extended_address_fields
+    end
+
+    test "#street_name_required_v2? returns values as expected" do
+      [:ca, :us, :hk, :vn, :co].each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).street_name_required_v2?, "#{country_code} should not require this field"
+      end
+
+      [:br, :be, :de, :es, :il, :nl, :cl, :mx].each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :street_name_required_v2?
+      end
+    end
+
+    test "#street_number_required_v2? returns values as expected" do
+      [:ca, :us, :hk, :cl, :vn].each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).street_number_required_v2?, "#{country_code} should not require this field"
+      end
+
+      [:br, :be, :de, :es, :il, :nl, :mx].each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :street_number_required_v2?
+      end
+    end
+
+    test "#district_required? returns values as expected" do
+      [:ca, :us, :hk, :be, :co, :mx].each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).district_required?, "#{country_code} should not require this field"
+      end
+
+      [:br, :cr, :kw, :pa, :pe, :ph, :tw, :vn].each do |country_code|
+        assert_predicate Worldwide.region(code: country_code), :district_required?
+      end
+    end
+
+    test "#street_number_position returns the conventional position of the street number" do
+      { us: "leading", ca: "leading", gb: "leading", il: "leading", br: "trailing", de: "trailing", nl: "trailing", es: "trailing" }.each do |country_code, expected|
+        assert_equal expected, Worldwide.region(code: country_code).street_number_position, country_code.to_s
+      end
+    end
+
+    test "#street_number_position is nil for regions that are not countries" do
+      assert_nil Worldwide.region(code: "CA-ON").street_number_position
+      assert_nil Worldwide.region(code: "001").street_number_position
+    end
+
+    test "#subdistrict_required? returns false while no region declares a subdistrict" do
+      [:ca, :br, :vn, :ph].each do |country_code|
+        assert_equal false, Worldwide.region(code: country_code).subdistrict_required?, "#{country_code} should not require this field"
       end
     end
 

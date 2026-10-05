@@ -154,9 +154,14 @@ module Worldwide
         [:ja, :jp, :province, "都道府県"],
         [:en, :jp, :province, "Prefecture"],
         [:en, :br, :district, "Neighborhood"],
+        [:en, :co, :district, "Neighborhood"],
         [:en, :ph, :district, "Barangay"],
         [:en, :kw, :district, "Block"],
+        [:en, :vn, :district, "Ward"],
+        [:en, :cr, :district, "District"],
+        [:en, :pa, :district, "District"],
         [:en, :pe, :district, "District"],
+        [:en, :tw, :district, "District"],
         [:en, :br, :subdistrict, "Subdistrict"],
       ].each do |locale, country_code, field_key, expected|
         assert_equal(
