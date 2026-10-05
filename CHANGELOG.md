@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add English `district` label overrides for Colombia ("Neighborhood") and Vietnam ("Ward") so `Worldwide::Field` matches the labels checkout shows for those countries' structured district field. [#TBD](https://github.com/Shopify/worldwide/pull/TBD)
 - Add `street_number_position` (`leading` or `trailing`) to every country's `Worldwide::Region`, upstreamed from `country_db`. [#TBD](https://github.com/Shopify/worldwide/pull/TBD)
 - Add `format_extended_v2` and `extended_address_fields` to `Worldwide::Region`, upstreaming the structured (extended address fields) layouts and declared components for BE, BR, CL, CO, CR, DE, ES, IL, KW, NL, PA, PE, PH, TW and VN (plus MX's declared components) from `country_db`, with `street_name_required_v2?`, `street_number_required_v2?`, `district_required?` and `subdistrict_required?` helpers. [#TBD](https://github.com/Shopify/worldwide/pull/TBD)
 

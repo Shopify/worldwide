@@ -237,6 +237,19 @@ module Worldwide
       end
     end
 
+    test "a country that relabels the legacy neighborhood field relabels the structured district field the same way" do
+      Regions.all.select(&:country?).each do |country|
+        next unless country.extended_address_fields.any? { |field| field["name"] == "district" }
+
+        neighborhood_label = I18n.t("worldwide.#{country.iso_code}.addresses.neighborhood.label.default", locale: :en, default: nil)
+        next if neighborhood_label.nil?
+
+        district_label = country.field(key: :district).label(locale: :en)
+
+        assert_equal neighborhood_label, district_label, "#{country.iso_code} relabels neighborhood as #{neighborhood_label.inspect} but its district field is labelled #{district_label.inspect}"
+      end
+    end
+
     test "additional_address_fields names must belong to a limited set of allowed names" do
       allowed_names = ["streetName", "streetNumber", "line2", "neighborhood"]
 
