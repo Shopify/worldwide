@@ -143,6 +143,94 @@ module Worldwide
       end
     end
 
+    test "format_extended_v2 keys must belong to a limited set of required and allowed keys" do
+      allowed_keys = ["edit", "show"]
+      required_format_keys = ["{firstName}", "{lastName}", "{company}", "{country}", "{phone}"]
+      allowed_format_keys = [
+        "{address1}",
+        "{address2}",
+        "{streetName}",
+        "{streetNumber}",
+        "{line2}",
+        "{district}",
+        "{subdistrict}",
+        "{city}",
+        "{zip}",
+        "{province}",
+      ]
+
+      Regions.all.select(&:country?).each do |country|
+        formats = country.format_extended_v2
+        next if formats.blank?
+
+        assert_empty formats.keys - allowed_keys, "#{country.iso_code} format_extended_v2 has unknown keys: #{formats.keys - allowed_keys}"
+        assert_includes formats.keys, "edit", "#{country.iso_code} format_extended_v2 is missing the edit format"
+
+        formats.each do |format_key, format|
+          keys = format.scan(/{[^}]+}/)
+          missing_required_keys = required_format_keys - keys
+
+          assert_empty missing_required_keys, "#{country.iso_code} #{format_key} format_extended_v2 is missing required keys #{missing_required_keys}"
+
+          unknown_keys = keys - required_format_keys - allowed_format_keys
+
+          assert_empty unknown_keys, "#{country.iso_code} #{format_key} format_extended_v2 has unknown keys: #{unknown_keys}"
+          assert_empty keys - keys.uniq, "#{country.iso_code} #{format_key} format_extended_v2 repeats keys: #{keys - keys.uniq}"
+        end
+      end
+    end
+
+    test "format_extended_v2 does not use the legacy neighborhood token" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_extended_v2.blank?
+
+        country.format_extended_v2.each do |format_key, format|
+          refute_includes format, "{neighborhood}", "#{country.iso_code} #{format_key} format_extended_v2 must use {district}, not the legacy {neighborhood}"
+        end
+      end
+    end
+
+    test "extended_address_fields names must belong to a limited set of allowed names" do
+      allowed_names = ["streetName", "streetNumber", "line2", "district", "subdistrict"]
+
+      Regions.all.select(&:country?).each do |country|
+        next if country.extended_address_fields.blank?
+
+        country.extended_address_fields.each do |field|
+          assert_equal ["name", "required"], (field.keys | ["name", "required"]), "#{country.iso_code} extended_address_field #{field} has unknown keys"
+          assert_includes allowed_names, field["name"], "#{country.iso_code} extended_address_field #{field["name"]} is not an allowed name"
+          assert_includes [true, false, nil], field["required"], "#{country.iso_code} extended_address_field #{field["name"]} required must be a boolean"
+        end
+
+        names = country.extended_address_fields.map { |field| field["name"] }
+
+        assert_equal names.uniq, names, "#{country.iso_code} extended_address_fields declares a field twice"
+      end
+    end
+
+    test "extended_address_fields are present in the format_extended_v2 edit layout when one is defined" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_extended_v2.blank?
+
+        edit_keys = country.format_extended_v2["edit"].scan(/{([^}]+)}/).flatten
+        declared = country.extended_address_fields.map { |field| field["name"] }
+
+        assert_empty declared - edit_keys, "#{country.iso_code} declares extended_address_fields absent from its format_extended_v2 edit layout: #{declared - edit_keys}"
+
+        structured_tokens_in_layout = edit_keys & ["streetName", "streetNumber", "line2", "district", "subdistrict"]
+
+        assert_empty structured_tokens_in_layout - declared, "#{country.iso_code} format_extended_v2 edit layout uses undeclared extended fields: #{structured_tokens_in_layout - declared}"
+      end
+    end
+
+    test "regions with a format_extended_v2 layout declare at least one extended address field" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_extended_v2.blank?
+
+        refute_empty country.extended_address_fields, "#{country.iso_code} has a format_extended_v2 layout but no extended_address_fields"
+      end
+    end
+
     test "additional_address_fields names must belong to a limited set of allowed names" do
       allowed_names = ["streetName", "streetNumber", "line2", "neighborhood"]
 

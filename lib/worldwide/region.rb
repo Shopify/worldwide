@@ -109,7 +109,18 @@ module Worldwide
     # The format is described in https://shopify.engineering/handling-addresses-from-all-around-the-world
     #   - edit: the fields to present on an address input form
     #   - show: how to arrange the fields when formatting an address for display
+    #
+    # This is the legacy "mode 2" extended layout, retained for existing consumers. It uses the
+    # `{neighborhood}` token and pairs with `additional_address_fields` and `combined_address_format`.
+    # New consumers should read `format_extended_v2` and `extended_address_fields` instead.
     attr_accessor :format_extended
+
+    # Hash of strings denoting how to format a structured (extended address fields) address in this region.
+    # Uses the extended address field vocabulary: `{streetName}`, `{streetNumber}`, `{line2}`, `{district}`,
+    # `{subdistrict}`, alongside the standard fields. Empty when the region has no structured layout.
+    #   - edit: the fields to present on an address input form
+    #   - show: how to arrange the fields when formatting an address for display
+    attr_accessor :format_extended_v2
 
     # The string that results from appending " Countries" to the adjectival form of the {group_name}
     # @example
@@ -239,8 +250,14 @@ module Worldwide
     # If true, then the province is optional for addresses in this region.
     attr_accessor :province_optional
 
-    # An array of the additional address fields that are defined for this region
+    # An array of the additional address fields that are defined for this region.
+    # Legacy "mode 2" counterpart of `extended_address_fields`; uses the `neighborhood` name.
     attr_accessor :additional_address_fields
+
+    # An array of the extended address fields (structured address components) declared for this region,
+    # each a Hash with a "name" (e.g. "streetName", "streetNumber", "line2", "district", "subdistrict")
+    # and an optional "required" flag. Empty when the region declares none.
+    attr_accessor :extended_address_fields
 
     # A hash of the rules for concatening the additional address fields into the standard fields
     attr_accessor :combined_address_format
@@ -284,6 +301,7 @@ module Worldwide
       @use_zone_code_as_short_name = use_zone_code_as_short_name
 
       @additional_address_fields = []
+      @extended_address_fields = []
       @combined_address_format = {}
       @address1_regex = []
       @building_number_required = false
@@ -292,6 +310,7 @@ module Worldwide
       @flag = nil
       @format = {}
       @format_extended = {}
+      @format_extended_v2 = {}
       @name_alternates = []
       @group = nil
       @group_name = nil
@@ -528,6 +547,26 @@ module Worldwide
       additional_field_required?("streetNumber")
     end
 
+    # is a street name required for this region's structured (extended address fields) layout?
+    def street_name_required_v2?
+      extended_address_field_required?("streetName")
+    end
+
+    # is a street number required for this region's structured (extended address fields) layout?
+    def street_number_required_v2?
+      extended_address_field_required?("streetNumber")
+    end
+
+    # is a district required for this region's structured (extended address fields) layout?
+    def district_required?
+      extended_address_field_required?("district")
+    end
+
+    # is a subdistrict required for this region's structured (extended address fields) layout?
+    def subdistrict_required?
+      extended_address_field_required?("subdistrict")
+    end
+
     # is the given postal code value valid for this region?
     def valid_zip?(zip, partial_match: false)
       normalized = Zip.normalize(
@@ -564,6 +603,11 @@ module Worldwide
 
     def additional_field_required?(field_name)
       field = additional_address_fields.find { |f| f["name"] == field_name }
+      field ? !!field["required"] : false
+    end
+
+    def extended_address_field_required?(field_name)
+      field = extended_address_fields.find { |f| f["name"] == field_name }
       field ? !!field["required"] : false
     end
 

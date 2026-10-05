@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add `format_extended_v2` and `extended_address_fields` to `Worldwide::Region`, upstreaming the structured (extended address fields) layouts and declared components for BE, BR, CL, CO, CR, DE, ES, IL, KW, NL, PA, PE, PH, TW and VN (plus MX's declared components) from `country_db`, with `street_name_required_v2?`, `street_number_required_v2?`, `district_required?` and `subdistrict_required?` helpers. [#TBD](https://github.com/Shopify/worldwide/pull/TBD)
+
 ---
 
 ## [1.29.0] - 2026-09-29
