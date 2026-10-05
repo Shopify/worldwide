@@ -39,6 +39,7 @@ extended_address_fields:
     required: true
   - name: streetNumber
     required: true
+street_number_position: trailing
 address1_regex:
   - "^(?<streetName>[^\\d,]+),? (?<streetNumber>\\d+(?:-\\d+)?(?: ?[A-Za-z])?)$"
   - "^(?<streetNumber>\\d+(?:-\\d+)?(?: ?[A-Za-z])?),? (?<streetName>[^\\d,]+)$"

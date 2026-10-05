@@ -127,6 +127,11 @@ module Worldwide
     #   Worldwide.region(code: "CA").group == "North American Countries"
     attr_accessor :group
 
+    # Whether the building/street number conventionally comes before ("leading", e.g. "123 Main St")
+    # or after ("trailing", e.g. "Hauptstr. 12") the street name in this region's addresses.
+    # Nil for regions that are not countries.
+    attr_accessor :street_number_position
+
     # The continent that this region is part of.
     attr_accessor :group_name
 
@@ -311,6 +316,7 @@ module Worldwide
       @format = {}
       @format_extended = {}
       @format_extended_v2 = {}
+      @street_number_position = nil
       @name_alternates = []
       @group = nil
       @group_name = nil

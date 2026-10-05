@@ -39,6 +39,7 @@ extended_address_fields:
   - name: line2
   - name: district
     required: true
+street_number_position: trailing
 address1_regex:
   - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))$"
   - "^(?<streetName>.+?),\\s*(?<streetNumber>(?:\\d+[a-zà-öø-ÿ]?|\\d+(?:[-/]\\d+[a-zà-öø-ÿ]?)+|\\d+(?:\\s+\\d+)+|s\\/?n|sem n[úu]mero))\\s*,\\s*(?<line2>.+)$"

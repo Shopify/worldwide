@@ -40,6 +40,7 @@ extended_address_fields:
     required: true
   - name: streetNumber
     required: true
+street_number_position: trailing
 address1_regex:
   # streetName already consumes extra whitespace; repeated separators cause backtracking.
   - "^(?<streetName>(?:\\d+[a-z]+\\s)?[^\\d]+)\\s(?<streetNumber>\\d+(?:-[A-Za-z0-9]+)?(?: ?[A-Za-z])?)$"

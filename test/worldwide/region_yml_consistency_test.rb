@@ -231,6 +231,12 @@ module Worldwide
       end
     end
 
+    test "street_number_position is set on every country and is leading or trailing" do
+      Regions.all.select(&:country?).each do |country|
+        assert_includes ["leading", "trailing"], country.street_number_position, "#{country.iso_code} street_number_position must be leading or trailing"
+      end
+    end
+
     test "additional_address_fields names must belong to a limited set of allowed names" do
       allowed_names = ["streetName", "streetNumber", "line2", "neighborhood"]
 

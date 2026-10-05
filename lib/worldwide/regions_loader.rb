@@ -108,6 +108,7 @@ module Worldwide
       region.format = spec["format"]
       region.format_extended = spec["format_extended"] || {}
       region.format_extended_v2 = spec["format_extended_v2"] || {}
+      region.street_number_position = spec["street_number_position"]
       region.example_address = spec["example_address"] || nil
       region.group = spec["group"]
       region.group_name = spec["group_name"]

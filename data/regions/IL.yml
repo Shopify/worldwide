@@ -27,6 +27,7 @@ extended_address_fields:
     required: true
   - name: streetNumber
     required: true
+street_number_position: leading
 address1_regex:
   - "^(?<streetName>[^\\d,]+),? (?<streetNumber>\\d+(?:\/\\d+)?)$"
   - "^(?<streetNumber>\\d+(?:\/\\d+)?),? (?<streetName>[^\\d,]+)$"

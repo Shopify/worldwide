@@ -18,6 +18,7 @@ module Worldwide
       assert_empty(region.format)
       assert_empty(region.format_extended)
       assert_empty(region.format_extended_v2)
+      assert_nil region.street_number_position
       assert_empty(region.name_alternates)
       assert_nil region.numeric_three
       assert_equal false, region.province?
@@ -519,6 +520,17 @@ module Worldwide
       [:br, :cr, :kw, :pa, :pe, :ph, :tw, :vn].each do |country_code|
         assert_predicate Worldwide.region(code: country_code), :district_required?
       end
+    end
+
+    test "#street_number_position returns the conventional position of the street number" do
+      { us: "leading", ca: "leading", gb: "leading", il: "leading", br: "trailing", de: "trailing", nl: "trailing", es: "trailing" }.each do |country_code, expected|
+        assert_equal expected, Worldwide.region(code: country_code).street_number_position, country_code.to_s
+      end
+    end
+
+    test "#street_number_position is nil for regions that are not countries" do
+      assert_nil Worldwide.region(code: "CA-ON").street_number_position
+      assert_nil Worldwide.region(code: "001").street_number_position
     end
 
     test "#subdistrict_required? returns false while no region declares a subdistrict" do
