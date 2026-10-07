@@ -99,5 +99,16 @@ module Worldwide
 
       assert_equal "(GMT+12:00) Auckland, Wellington", zone.to_s
     end
+
+    test "#to_s display for Rails 8.1 zones America/Nuuk and America/Asuncion" do
+      assert_equal "(GMT-03:00) Greenland", Worldwide::TimeZone.new("America/Nuuk").to_s
+      assert_equal "(GMT-04:00) Asuncion", Worldwide::TimeZone.new("America/Asuncion").to_s
+    end
+
+    test "#to_s reuses America/Godthab translations for America/Nuuk" do
+      I18n.with_locale(:fr) do
+        assert_equal Worldwide::TimeZone.new("America/Godthab").to_s, Worldwide::TimeZone.new("America/Nuuk").to_s
+      end
+    end
   end
 end
