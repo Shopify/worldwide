@@ -51,6 +51,12 @@ module Worldwide
       end
     end
 
+    test "all returned time zones resolve through Rails" do
+      Worldwide::TimeZone.all.each do |zone|
+        assert_not_nil ActiveSupport::TimeZone[zone.name], "#{zone.name} timezone is not supported by Rails"
+      end
+    end
+
     def iana_timezones
       @iana_timezones ||= YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/iana_to_rails_time_zone.yml")
     end
