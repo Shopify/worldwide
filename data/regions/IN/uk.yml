@@ -1,0 +1,35 @@
+---
+uk:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Штат
+            optional: Штат (необов'язково)
+          errors:
+            blank_instructional: Виберіть штат
+            blank_informative: Не вказано штат
+        zip:
+          label:
+            default: PIN-код
+            optional: PIN-код (необов'язково)
+          errors:
+            blank_instructional: Введіть PIN-код
+            blank_informative: Не вказано PIN-код
+            invalid_for_country_instructional: 'Введіть дійсний PIN-код для такої
+              країни: %{country}'
+            invalid_for_country_informative: Недійсний PIN-код
+            invalid_for_country_and_province_instructional: 'Введіть дійсний PIN-код
+              для такого регіону: %{province}, %{country}'
+            invalid_for_country_and_province_informative: Недійсний PIN-код
+            too_long_instructional: PIN-код задовгий
+            too_long_informative: PIN-код задовгий
+            contains_emojis_instructional: PIN-код не може містити емодзі
+            contains_emojis_informative: PIN-код не може містити емодзі
+            contains_restricted_characters_instructional: PIN-код не може містити
+              заборонені символи
+            contains_restricted_characters_informative: PIN-код не може містити заборонені
+              символи
+            contains_html_tags_instructional: PIN-код не може містити HTML-теги
+            contains_html_tags_informative: PIN-код не може містити HTML-теги

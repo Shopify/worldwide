@@ -1,0 +1,54 @@
+---
+lv:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Priekšpilsēta
+            optional: Priekšpilsēta (neobligāti)
+          errors:
+            blank_instructional: Ievadi priekšpilsētu
+            blank_informative: Nav norādīta priekšpilsēta
+            too_long_instructional: Priekšpilsētas nosaukums ir pārāk garš (maksimums
+              ir 255 rakstzīmes)
+            too_long_informative: Priekšpilsētas nosaukums ir pārāk garš
+            contains_emojis_instructional: Priekšpilsētas nosaukumā nevar būt emocijzīmes
+            contains_emojis_informative: Priekšpilsētas nosaukumā nevar būt emocijzīmes
+            contains_restricted_characters_instructional: Priekšpilsētas nosaukumā
+              var būt tikai burti, cipari, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Priekšpilsētas nosaukumā nevar
+              būt neatļautas rakstzīmes
+            contains_html_tags_instructional: Priekšpilsētas nosaukumā nevar būt HTML
+            contains_html_tags_informative: Priekšpilsētas nosaukumā nevar būt HTML
+        province:
+          label:
+            default: Štats/teritorija
+            optional: Štats/teritorija (neobligāti)
+          errors:
+            blank_instructional: Atlasi štatu/teritoriju
+            blank_informative: Nav norādīts štats/teritorija
+        zip:
+          label:
+            default: Pasta indekss
+            optional: Pasta indekss (neobligāti)
+          errors:
+            blank_instructional: Ievadi pasta indeksu
+            blank_informative: Nav norādīts pasta indekss
+            invalid_for_country_instructional: 'Ievadi derīgu pasta indeksu valstij:
+              %{country}'
+            invalid_for_country_informative: 'Pasta indekss nav derīgs valstij: %{country}'
+            invalid_for_country_and_province_instructional: Ievadi derīgu pasta indeksu
+              reģionam %{province}, %{country}
+            invalid_for_country_and_province_informative: Pasta indekss nav derīgs
+              reģionam %{province}, %{country}
+            too_long_instructional: Pasta indekss ir pārāk garš
+            too_long_informative: Pasta indekss ir pārāk garš
+            contains_emojis_instructional: Pasta indeksā nevar būt emocijzīmes
+            contains_emojis_informative: Pasta indeksā nevar būt emocijzīmes
+            contains_restricted_characters_instructional: Pasta indeksā var būt tikai
+              burti, cipari, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Pasta indeksā nevar būt neatļautas
+              rakstzīmes
+            contains_html_tags_instructional: Pasta indeksā nevar būt HTML
+            contains_html_tags_informative: Pasta indeksā nevar būt HTML

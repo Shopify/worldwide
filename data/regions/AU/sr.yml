@@ -1,0 +1,52 @@
+---
+sr:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Predgrađe
+            optional: Predgrađe (opcionalno)
+          errors:
+            blank_instructional: Unesite predgrađe
+            blank_informative: Predgrađe nedostaje
+            too_long_instructional: Predgrađe je predugačko (maksimum je 255 znakova)
+            too_long_informative: Predgrađe je predugačko
+            contains_emojis_instructional: Predgrađe ne može da sadrži emodžije
+            contains_emojis_informative: Predgrađe ne može da sadrži emodžije
+            contains_restricted_characters_instructional: Predgrađe može da sadrži
+              samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Predgrađe ne može da sadrži
+              zabranjene znakove
+            contains_html_tags_instructional: Predgrađe ne može da sadrži HTML
+            contains_html_tags_informative: Predgrađe ne može da sadrži HTML
+        province:
+          label:
+            default: Država/teritorija
+            optional: Država/teritorija (opcionalno)
+          errors:
+            blank_instructional: Izaberite državu/teritoriju
+            blank_informative: Država/teritorija nedostaje
+        zip:
+          label:
+            default: Poštanski broj
+            optional: Poštanski broj (opcionalno)
+          errors:
+            blank_instructional: Unesite poštanski broj
+            blank_informative: Poštanski broj nedostaje
+            invalid_for_country_instructional: Unesite važeći poštanski broj za %{country}
+            invalid_for_country_informative: Poštanski broj nije važeći za %{country}
+            invalid_for_country_and_province_instructional: Unesite važeći poštanski
+              broj za %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštanski broj nije važeći
+              za %{province}, %{country}
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
+            contains_emojis_instructional: Poštanski broj ne može da sadrži emodžije
+            contains_emojis_informative: Poštanski broj ne može da sadrži emodžije
+            contains_restricted_characters_instructional: Poštanski broj može da sadrži
+              samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Poštanski broj ne može da
+              sadrži zabranjene znakove
+            contains_html_tags_instructional: Poštanski broj ne može da sadrži HTML
+            contains_html_tags_informative: Poštanski broj ne može da sadrži HTML
