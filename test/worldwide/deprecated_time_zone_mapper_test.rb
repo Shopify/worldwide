@@ -27,6 +27,25 @@ module Worldwide
       end
     end
 
+    test "#to_supported keeps Rainy River on Central Time without changing Winnipeg" do
+      actual = Worldwide::DeprecatedTimeZoneMapper.to_supported("America/Rainy_River")
+
+      assert_equal "America/Chicago", actual
+      assert_equal "America/Winnipeg", Worldwide::DeprecatedTimeZoneMapper.to_supported("America/Winnipeg")
+
+      zone = ActiveSupport::TimeZone.new(actual)
+
+      {
+        Time.utc(2026, 7, 15) => -5 * 3600,
+        Time.utc(2026, 11, 1, 6, 59, 59) => -5 * 3600,
+        Time.utc(2026, 11, 1, 7) => -6 * 3600,
+        Time.utc(2026, 12, 15) => -6 * 3600,
+        Time.utc(2027, 7, 15) => -5 * 3600,
+      }.each do |time, expected_offset|
+        assert_equal expected_offset, zone.tzinfo.period_for_utc(time).utc_total_offset, "Rainy River has the wrong offset at #{time}"
+      end
+    end
+
     test "#to_rails converts as expected" do
       iana_data_input_expected.each do |input, expected|
         actual = Worldwide::DeprecatedTimeZoneMapper.to_rails(input)

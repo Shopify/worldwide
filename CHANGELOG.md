@@ -29,6 +29,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.30.1] - 2026-10-08
+
+- Normalize `America/Rainy_River` to `America/Chicago` to preserve Central Time clock changes.
+
 ## [1.30.0] - 2026-10-07
 
 - Add Vancouver, Whitehorse, Edmonton, and Winnipeg to `Worldwide::TimeZone.all` with localized labels, permanent-offset ordering, and Rails-compatible legacy mappings. [#625](https://github.com/Shopify/worldwide/pull/625)

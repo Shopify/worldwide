@@ -24,6 +24,8 @@ module Worldwide
       "America/Indiana": "America/Indiana/Indianapolis",
       "America/Indianapolis": "America/Indiana/Indianapolis",
       "America/Argentina": "America/Argentina/Buenos_Aires",
+      # Override tzdb's Winnipeg link so Rainy River keeps Central Time's clock changes.
+      "America/Rainy_River": "America/Chicago",
       "Asia/Calcutta": "Asia/Kolkata",
       "Asia/Chongqing": "Asia/Shanghai",
       "Asia/Istanbul": "Europe/Istanbul",
