@@ -1,0 +1,53 @@
+---
+mr:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: राज्य
+            optional: राज्य (पर्यायी)
+          errors:
+            blank_instructional: राज्य निवडा
+            blank_informative: राज्य एंटर करा
+            invalid_for_country_instructional: "%{city}, %{zip} साठी वैध राज्य एंटर
+              करा"
+            invalid_for_country_informative: राज्य वैध नाही
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} साठी वैध राज्य
+              एंटर करा"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip} साठी राज्य वैध
+              नाही"
+            unknown_for_city_instructional: "%{city} साठी वैध राज्य निवडा"
+            unknown_for_city_informative: "%{city} साठी राज्य वैध नाही"
+            unknown_for_zip_instructional: "%{zip} साठी वैध राज्य निवडा"
+            unknown_for_zip_informative: "%{zip} साठी राज्य वैध नाही"
+            unknown_for_address_instructional: राज्य चुकीचे असू शकते
+            unknown_for_address_informative: राज्य चुकीचे असू शकते
+        zip:
+          label:
+            default: ZIP कोड
+            optional: ZIP कोड (पर्यायी)
+          errors:
+            blank_instructional: ZIP कोड एंटर करा
+            blank_informative: ZIP कोड गहाळ आहे
+            invalid_for_country_instructional: "%{country} साठी वैध ZIP कोड एंटर करा"
+            invalid_for_country_informative: "%{country} साठी ZIP कोड वैध नाही"
+            invalid_for_province_instructional: "%{province} साठी वैध ZIP कोड एंटर
+              करा"
+            invalid_for_province_informative: "%{province} साठी ZIP कोड वैध नाही"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              साठी वैध ZIP कोड एंटर करा"
+            invalid_for_country_and_province_informative: "%{province}, %{country}
+              साठी ZIP कोड वैध नाही"
+            too_long_instructional: ZIP कोड खूप लांब आहे
+            too_long_informative: ZIP कोड खूप लांब आहे (कमाल मर्यादा 255 अक्षरे आहे)
+            contains_emojis_instructional: ZIP कोडमध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: ZIP कोडमध्ये इमोजी असू शकत नाहीत
+            contains_restricted_characters_instructional: ZIP कोडमध्ये प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            contains_restricted_characters_informative: ZIP कोडमध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_html_tags_instructional: ZIP कोडमध्ये HTML असू शकत नाही
+            contains_html_tags_informative: ZIP कोडमध्ये HTML असू शकत नाही
+            unknown_for_address_instructional: ZIP कोड चुकीचा असू शकतो
+            unknown_for_address_informative: ZIP कोड चुकीचा असू शकतो

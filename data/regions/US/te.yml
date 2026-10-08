@@ -1,0 +1,55 @@
+---
+te:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: రాష్ట్రం
+            optional: రాష్ట్రం (ఆప్షనల్)
+          errors:
+            blank_instructional: రాష్ట్రాన్ని ఎంచుకోండి
+            blank_informative: రాష్ట్రాన్ని ఎంటర్ చేయండి
+            invalid_for_country_instructional: "%{city}, %{zip} కోసం చెల్లుబాటు అయ్యే
+              రాష్ట్రాన్ని ఎంటర్ చేయండి"
+            invalid_for_country_informative: రాష్ట్రం చెల్లదు
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} కోసం చెల్లుబాటు
+              అయ్యే రాష్ట్రాన్ని ఎంటర్ చేయండి"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip}కి రాష్ట్రం చెల్లదు"
+            unknown_for_city_instructional: "%{city} కోసం చెల్లుబాటు అయ్యే రాష్ట్రాన్ని
+              ఎంచుకోండి"
+            unknown_for_city_informative: "%{city}కి రాష్ట్రం చెల్లదు"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే రాష్ట్రాన్ని
+              ఎంచుకోండి"
+            unknown_for_zip_informative: "%{zip}కి రాష్ట్రం చెల్లదు"
+            unknown_for_address_instructional: రాష్ట్రం తప్పు కావచ్చు
+            unknown_for_address_informative: రాష్ట్రం తప్పు కావచ్చు
+        zip:
+          label:
+            default: ZIP కోడ్
+            optional: ZIP కోడ్ (ఆప్షనల్)
+          errors:
+            blank_instructional: ZIP కోడ్‌ను ఎంటర్ చేయండి
+            blank_informative: ZIP కోడ్ లేదు
+            invalid_for_country_instructional: "%{country} కోసం చెల్లుబాటు అయ్యే ZIP
+              కోడ్‌ను ఎంటర్ చేయండి"
+            invalid_for_country_informative: "%{country}కి ZIP కోడ్ చెల్లదు"
+            invalid_for_province_instructional: "%{province} కోసం చెల్లుబాటు అయ్యే
+              ZIP కోడ్‌ను ఎంటర్ చేయండి"
+            invalid_for_province_informative: "%{province}కి ZIP కోడ్ చెల్లదు"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              కోసం చెల్లుబాటు అయ్యే ZIP కోడ్‌ను ఎంటర్ చేయండి"
+            invalid_for_country_and_province_informative: "%{province}, %{country}కి
+              ZIP కోడ్ చెల్లదు"
+            too_long_instructional: ZIP కోడ్ చాలా పొడవుగా ఉంది
+            too_long_informative: ZIP కోడ్ చాలా పొడవుగా ఉంది (గరిష్టంగా 255 అక్షరాలు)
+            contains_emojis_instructional: ZIP కోడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: ZIP కోడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_restricted_characters_instructional: ZIP కోడ్‌లో పరిమితం చేయబడిన
+              అక్షరాలు ఉండకూడదు
+            contains_restricted_characters_informative: ZIP కోడ్‌లో పరిమితం చేయబడిన
+              అక్షరాలు ఉండకూడదు
+            contains_html_tags_instructional: ZIP కోడ్‌లో HTML ఉండకూడదు
+            contains_html_tags_informative: ZIP కోడ్‌లో HTML ఉండకూడదు
+            unknown_for_address_instructional: ZIP కోడ్ తప్పు కావచ్చు
+            unknown_for_address_informative: ZIP కోడ్ తప్పు కావచ్చు
