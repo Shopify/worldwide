@@ -1,0 +1,18 @@
+[workspace]
+members = [
+    "lang/rust/worldwide-icu4x-datagen",
+    "lang/rust/worldwide-icu4x-data",
+    "lang/rust/worldwide-icu4x-parity",
+]
+resolver = "2"
+
+[workspace.package]
+version = "41.0.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/Shopify/worldwide"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
