@@ -1,0 +1,35 @@
+---
+bn:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: রাজ্য
+            optional: রাজ্য (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি রাজ্য নির্বাচন করুন
+            blank_informative: রাজ্য বাদ পড়েছে
+        zip:
+          label:
+            default: PIN কোড
+            optional: PIN কোড (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি PIN কোড লিখুন
+            blank_informative: PIN কোড বাদ পড়েছে
+            invalid_for_country_instructional: "%{country}-এর জন্য একটি বৈধ PIN কোড
+              লিখুন"
+            invalid_for_country_informative: PIN কোডটি বৈধ নয়
+            invalid_for_country_and_province_instructional: "%{province}, %{country}-এর
+              জন্য একটি বৈধ PIN কোড লিখুন"
+            invalid_for_country_and_province_informative: PIN কোডটি বৈধ নয়
+            too_long_instructional: PIN কোড অনেক বড়
+            too_long_informative: PIN কোড অনেক বড়
+            contains_emojis_instructional: PIN কোডে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: PIN কোডে ইমোজি থাকতে পারবে না
+            contains_restricted_characters_instructional: PIN কোডে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+            contains_restricted_characters_informative: PIN কোডে সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_html_tags_instructional: PIN কোডে HTML থাকতে পারবে না
+            contains_html_tags_informative: PIN কোডে HTML থাকতে পারবে না

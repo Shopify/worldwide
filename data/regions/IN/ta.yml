@@ -1,0 +1,35 @@
+---
+ta:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: மாநிலம்
+            optional: மாநிலம் (விருப்பத்தேர்வு)
+          errors:
+            blank_instructional: மாநிலத்தைத் தேர்ந்தெடுக்கவும்
+            blank_informative: மாநிலம் விடுபட்டுள்ளது
+        zip:
+          label:
+            default: PIN குறியீடு
+            optional: PIN குறியீடு (விருப்பத்தேர்வு)
+          errors:
+            blank_instructional: PIN குறியீட்டை உள்ளிடவும்
+            blank_informative: PIN குறியீடு விடுபட்டுள்ளது
+            invalid_for_country_instructional: "%{country}-க்கான சரியான PIN குறியீட்டை
+              உள்ளிடவும்"
+            invalid_for_country_informative: PIN குறியீடு சரியானதல்ல
+            invalid_for_country_and_province_instructional: "%{province}, %{country}-க்கான
+              சரியான PIN குறியீட்டை உள்ளிடவும்"
+            invalid_for_country_and_province_informative: PIN குறியீடு சரியானதல்ல
+            too_long_instructional: PIN குறியீடு மிக நீளமாக உள்ளது
+            too_long_informative: PIN குறியீடு மிக நீளமாக உள்ளது
+            contains_emojis_instructional: PIN குறியீட்டில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: PIN குறியீட்டில் எமோஜிகள் இருக்கக்கூடாது
+            contains_restricted_characters_instructional: PIN குறியீட்டில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக்கூடாது
+            contains_restricted_characters_informative: PIN குறியீட்டில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: PIN குறியீட்டில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: PIN குறியீட்டில் HTML இருக்கக்கூடாது
