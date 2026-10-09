@@ -29,13 +29,13 @@ uk-UA:
       default: "%02d.%02m.%Y"
       billing: "%02d.%02m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M сьогодні"
-      yesterday_at_time: "%02k:%M учора"
-      tomorrow_at_time: "%02k:%M завтра"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d %b"
+      today_at_time: Сьогодні о %02k:%M
+      yesterday_at_time: Учора о %02k:%M
+      tomorrow_at_time: Завтра о %02k:%M
+      on_weekday_at_time: у %A о %02k:%M
+      on_date_time_current_year: "%-d %b, %02k:%M"
       on_date: "%-d %b %Y р."
-      ago: "%{time} ago"
+      ago: "%{time} тому"
       x_hours_ago:
         few: "%{count} години тому"
         many: "%{count} годин тому"
@@ -132,13 +132,13 @@ uk-UA:
       short: "%-d %b, %02k:%M"
       billing: "%02d.%02m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M сьогодні"
-      yesterday_at_time: "%02k:%M учора"
-      tomorrow_at_time: "%02k:%M завтра"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d %b"
+      today_at_time: Сьогодні о %02k:%M
+      yesterday_at_time: Учора о %02k:%M
+      tomorrow_at_time: Завтра о %02k:%M
+      on_weekday_at_time: у %A о %02k:%M
+      on_date_time_current_year: "%-d %b, %02k:%M"
       on_date: "%-d %b %Y р."
-      ago: "%{time} ago"
+      ago: "%{time} тому"
       x_hours_ago:
         few: "%{count} години тому"
         many: "%{count} годин тому"
@@ -150,7 +150,7 @@ uk-UA:
         one: "%{count} хвилину тому"
         other: "%{count} хвилини тому"
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: зараз
+    am: дп
+    pm: пп
+    just_now: Щойно
     yesterday: учора

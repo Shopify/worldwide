@@ -29,13 +29,13 @@ eu:
       default: "%Y/%-m/%-d"
       billing: "%Y/%-m/%-d"
       yearless_ordinal: "%B %{ordinalized_day}"
-      today_at_time: "%02k:%M gaur"
-      yesterday_at_time: "%02k:%M atzo"
-      tomorrow_at_time: "%02k:%M bihar"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %b %-d"
+      today_at_time: Gaur, %02k:%M
+      yesterday_at_time: Atzo, %02k:%M
+      tomorrow_at_time: Bihar, %02k:%M
+      on_weekday_at_time: "%A, %02k:%M"
+      on_date_time_current_year: "%b %-d, %02k:%M"
       on_date: "%Y %b %-d"
-      ago: "%{time} ago"
+      ago: Duela %{time}
       x_hours_ago:
         one: Duela %{count} ordu
         other: Duela %{count} ordu
@@ -128,13 +128,13 @@ eu:
       short: "%b %-d %02k:%M"
       billing: "%Y/%-m/%-d"
       yearless_ordinal: "%B %{ordinalized_day}"
-      today_at_time: "%02k:%M gaur"
-      yesterday_at_time: "%02k:%M atzo"
-      tomorrow_at_time: "%02k:%M bihar"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %b %-d"
+      today_at_time: Gaur, %02k:%M
+      yesterday_at_time: Atzo, %02k:%M
+      tomorrow_at_time: Bihar, %02k:%M
+      on_weekday_at_time: "%A, %02k:%M"
+      on_date_time_current_year: "%b %-d, %02k:%M"
       on_date: "%Y %b %-d"
-      ago: "%{time} ago"
+      ago: Duela %{time}
       x_hours_ago:
         one: Duela %{count} ordu
         other: Duela %{count} ordu
@@ -142,7 +142,7 @@ eu:
         one: Duela %{count} minutu
         other: Duela %{count} minutu
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: orain
+    am: AM
+    pm: PM
+    just_now: Oraintxe
     yesterday: atzo
