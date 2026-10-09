@@ -29,13 +29,13 @@ et-EE:
       default: "%-d.%-m.%Y"
       billing: "%-d.%-m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M täna"
-      yesterday_at_time: "%02k:%M eile"
-      tomorrow_at_time: "%02k:%M homme"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %b"
+      today_at_time: Täna kell %02k:%M
+      yesterday_at_time: Eile kell %02k:%M
+      tomorrow_at_time: Homme kell %02k:%M
+      on_weekday_at_time: "%A kell %02k:%M"
+      on_date_time_current_year: "%-d. %b, kell %02k:%M"
       on_date: "%-d. %b %Y"
-      ago: "%{time} ago"
+      ago: "%{time} tagasi"
       x_hours_ago:
         one: "%{count} tunni eest"
         other: "%{count} tunni eest"
@@ -88,8 +88,8 @@ et-EE:
     - november
     - detsember
     relative_day_names:
-      this_week: käesolev nädal
-      this_month: käesolev kuu
+      this_week: sel nädalal
+      this_month: sel kuul
       day_before_yesterday: üleeile
       yesterday: eile
       today: täna
@@ -128,13 +128,13 @@ et-EE:
       short: "%-d. %b %02k:%M"
       billing: "%-d.%-m.%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M täna"
-      yesterday_at_time: "%02k:%M eile"
-      tomorrow_at_time: "%02k:%M homme"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %b"
+      today_at_time: Täna kell %02k:%M
+      yesterday_at_time: Eile kell %02k:%M
+      tomorrow_at_time: Homme kell %02k:%M
+      on_weekday_at_time: "%A kell %02k:%M"
+      on_date_time_current_year: "%-d. %b, kell %02k:%M"
       on_date: "%-d. %b %Y"
-      ago: "%{time} ago"
+      ago: "%{time} tagasi"
       x_hours_ago:
         one: "%{count} tunni eest"
         other: "%{count} tunni eest"
@@ -142,7 +142,7 @@ et-EE:
         one: "%{count} minuti eest"
         other: "%{count} minuti eest"
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: nüüd
+    am: e.l.
+    pm: p.l.
+    just_now: Just praegu
     yesterday: eile

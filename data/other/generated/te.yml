@@ -29,13 +29,13 @@ te:
       default: "%-d/%-m/%Y"
       billing: "%-d/%-m/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%-l:%M %P ఈ రోజు"
-      yesterday_at_time: "%-l:%M %P నిన్న"
-      tomorrow_at_time: "%-l:%M %P రేపు"
-      on_weekday_at_time: "%-l:%M %P %A"
-      on_date_time_current_year: "%-l:%M %P %-d %b"
-      on_date: "%-d, %b %Y"
-      ago: "%{time} ago"
+      today_at_time: ఈ రోజు %-l:%M %Pకి
+      yesterday_at_time: నిన్న %-l:%M %Pకి
+      tomorrow_at_time: రేపు %-l:%M %Pకి
+      on_weekday_at_time: "%A రోజున %-l:%M %Pకి"
+      on_date_time_current_year: "%-d %bన, %-l:%M %Pకి"
+      on_date: "%-d, %b %Yన"
+      ago: "%{time} క్రితం"
       x_hours_ago:
         one: "%{count} గంట క్రితం"
         other: "%{count} గంటల క్రితం"
@@ -128,13 +128,13 @@ te:
       short: "%-d %b %-l:%M %P"
       billing: "%-d/%-m/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%-l:%M %P ఈ రోజు"
-      yesterday_at_time: "%-l:%M %P నిన్న"
-      tomorrow_at_time: "%-l:%M %P రేపు"
-      on_weekday_at_time: "%-l:%M %P %A"
-      on_date_time_current_year: "%-l:%M %P %-d %b"
-      on_date: "%-d, %b %Y"
-      ago: "%{time} ago"
+      today_at_time: ఈ రోజు %-l:%M %Pకి
+      yesterday_at_time: నిన్న %-l:%M %Pకి
+      tomorrow_at_time: రేపు %-l:%M %Pకి
+      on_weekday_at_time: "%A రోజున %-l:%M %Pకి"
+      on_date_time_current_year: "%-d %bన, %-l:%M %Pకి"
+      on_date: "%-d, %b %Yన"
+      ago: "%{time} క్రితం"
       x_hours_ago:
         one: "%{count} గంట క్రితం"
         other: "%{count} గంటల క్రితం"
@@ -144,5 +144,5 @@ te:
       cc_expiry_date: "%m/%Y"
     am: am
     pm: pm
-    just_now: ప్రస్తుతం
+    just_now: ఇప్పుడే
     yesterday: నిన్న
