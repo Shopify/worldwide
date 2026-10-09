@@ -1,0 +1,34 @@
+---
+gl:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank_instructional: Selecciona un estado
+            blank_informative: Falta o estado
+        zip:
+          label:
+            default: Código PIN
+            optional: Código PIN (opcional)
+          errors:
+            blank_instructional: Escribe un código PIN
+            blank_informative: Falta o código PIN
+            invalid_for_country_instructional: Escribe un código PIN válido para %{country}
+            invalid_for_country_informative: O código PIN non é válido
+            invalid_for_country_and_province_instructional: Escribe un código PIN
+              válido para %{province}, %{country}
+            invalid_for_country_and_province_informative: O código PIN non é válido
+            too_long_instructional: O código PIN é demasiado longo
+            too_long_informative: O código PIN é demasiado longo
+            contains_emojis_instructional: O código PIN non pode conter emojis
+            contains_emojis_informative: O código PIN non pode conter emojis
+            contains_restricted_characters_instructional: O código PIN non pode conter
+              caracteres restrinxidos
+            contains_restricted_characters_informative: O código PIN non pode conter
+              caracteres restrinxidos
+            contains_html_tags_instructional: O código PIN non pode conter HTML
+            contains_html_tags_informative: O código PIN non pode conter HTML

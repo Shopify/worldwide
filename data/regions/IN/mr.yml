@@ -1,0 +1,34 @@
+---
+mr:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: राज्य
+            optional: राज्य (पर्यायी)
+          errors:
+            blank_instructional: राज्य निवडा
+            blank_informative: राज्य गहाळ आहे
+        zip:
+          label:
+            default: PIN कोड
+            optional: PIN कोड (पर्यायी)
+          errors:
+            blank_instructional: PIN कोड टाका
+            blank_informative: PIN कोड गहाळ आहे
+            invalid_for_country_instructional: "%{country} साठी वैध PIN कोड टाका"
+            invalid_for_country_informative: PIN कोड वैध नाही
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              साठी वैध PIN कोड टाका"
+            invalid_for_country_and_province_informative: PIN कोड वैध नाही
+            too_long_instructional: PIN कोड खूप मोठा आहे
+            too_long_informative: PIN कोड खूप मोठा आहे
+            contains_emojis_instructional: PIN कोडमध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: PIN कोडमध्ये इमोजी असू शकत नाहीत
+            contains_restricted_characters_instructional: PIN कोडमध्ये प्रतिबंधित
+              अक्षरे असू शकत नाहीत
+            contains_restricted_characters_informative: PIN कोडमध्ये प्रतिबंधित अक्षरे
+              असू शकत नाहीत
+            contains_html_tags_instructional: PIN कोडमध्ये HTML असू शकत नाही
+            contains_html_tags_informative: PIN कोडमध्ये HTML असू शकत नाही

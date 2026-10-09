@@ -1,0 +1,54 @@
+---
+ca:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Població
+            optional: Població (opcional)
+          errors:
+            blank_instructional: Introdueix una població
+            blank_informative: Falta la població
+            too_long_instructional: La població és massa llarga (el màxim és de 255
+              caràcters)
+            too_long_informative: La població és massa llarga
+            contains_emojis_instructional: La població no pot contenir emojis
+            contains_emojis_informative: La població no pot contenir emojis
+            contains_restricted_characters_instructional: La població només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: La població no pot contenir
+              caràcters restringits
+            contains_html_tags_instructional: La població no pot contenir HTML
+            contains_html_tags_informative: La població no pot contenir HTML
+        province:
+          label:
+            default: Estat/territori
+            optional: Estat/territori (opcional)
+          errors:
+            blank_instructional: Selecciona un estat/territori
+            blank_informative: Falta l'estat/territori
+        zip:
+          label:
+            default: Codi postal
+            optional: Codi postal (opcional)
+          errors:
+            blank_instructional: Introdueix un codi postal
+            blank_informative: Falta el codi postal
+            invalid_for_country_instructional: Introdueix un codi postal vàlid per
+              a %{country}
+            invalid_for_country_informative: El codi postal no és vàlid per a %{country}
+            invalid_for_country_and_province_instructional: Introdueix un codi postal
+              vàlid per a %{province}, %{country}
+            invalid_for_country_and_province_informative: El codi postal no és vàlid
+              per a %{province}, %{country}
+            too_long_instructional: El codi postal és massa llarg
+            too_long_informative: El codi postal és massa llarg
+            contains_emojis_instructional: El codi postal no pot contenir emojis
+            contains_emojis_informative: El codi postal no pot contenir emojis
+            contains_restricted_characters_instructional: El codi postal només pot
+              contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El codi postal no pot contenir
+              caràcters restringits
+            contains_html_tags_instructional: El codi postal no pot contenir HTML
+            contains_html_tags_informative: El codi postal no pot contenir HTML

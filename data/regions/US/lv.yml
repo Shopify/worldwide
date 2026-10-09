@@ -1,0 +1,50 @@
+---
+lv:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Štats
+            optional: Štats (neobligāti)
+          errors:
+            blank_instructional: Atlasi štatu
+            blank_informative: Ievadi štatu
+            invalid_for_country_instructional: "%{city}, %{zip}: ievadi derīgu štatu"
+            invalid_for_country_informative: Štats nav derīgs
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip}: ievadi derīgu
+              štatu"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip}: štats nav derīgs"
+            unknown_for_city_instructional: "%{city}: atlasi derīgu štatu"
+            unknown_for_city_informative: "%{city}: štats nav derīgs"
+            unknown_for_zip_instructional: "%{zip}: atlasi derīgu štatu"
+            unknown_for_zip_informative: "%{zip}: štats nav derīgs"
+            unknown_for_address_instructional: Štats var būt nepareizs
+            unknown_for_address_informative: Štats var būt nepareizs
+        zip:
+          label:
+            default: ZIP kods
+            optional: ZIP kods (neobligāti)
+          errors:
+            blank_instructional: Ievadi ZIP kodu
+            blank_informative: Trūkst ZIP koda
+            invalid_for_country_instructional: "%{country}: ievadi derīgu ZIP kodu"
+            invalid_for_country_informative: "%{country}: ZIP kods nav derīgs"
+            invalid_for_province_instructional: "%{province}: ievadi derīgu ZIP kodu"
+            invalid_for_province_informative: "%{province}: ZIP kods nav derīgs"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}:
+              ievadi derīgu ZIP kodu"
+            invalid_for_country_and_province_informative: "%{province}, %{country}:
+              ZIP kods nav derīgs"
+            too_long_instructional: ZIP kods ir pārāk garš
+            too_long_informative: ZIP kods ir pārāk garš (maksimums ir 255 rakstzīmes)
+            contains_emojis_instructional: ZIP kods nedrīkst saturēt emocijzīmes
+            contains_emojis_informative: ZIP kods nedrīkst saturēt emocijzīmes
+            contains_restricted_characters_instructional: ZIP kods nedrīkst saturēt
+              neatļautas rakstzīmes
+            contains_restricted_characters_informative: ZIP kods nedrīkst saturēt
+              neatļautas rakstzīmes
+            contains_html_tags_instructional: ZIP kods nedrīkst saturēt HTML
+            contains_html_tags_informative: ZIP kods nedrīkst saturēt HTML
+            unknown_for_address_instructional: ZIP kods var būt nepareizs
+            unknown_for_address_informative: ZIP kods var būt nepareizs

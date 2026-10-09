@@ -1,0 +1,55 @@
+---
+ta:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: புறநகர்
+            optional: புறநகர் (விருப்பத்தேர்வு)
+          errors:
+            blank_instructional: புறநகர்ப்பகுதியை உள்ளிடவும்
+            blank_informative: புறநகர் விடுபட்டுள்ளது
+            too_long_instructional: புறநகர் மிக நீளமாக உள்ளது (அதிகபட்சம் 255 எழுத்துகள்)
+            too_long_informative: புறநகர் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: புறநகர்ப்பகுதியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: புறநகர்ப்பகுதியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_restricted_characters_instructional: புறநகர்ப்பகுதியில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்பு எழுத்துகள் மட்டுமே இருக்க
+              முடியும்
+            contains_restricted_characters_informative: புறநகர்ப்பகுதியில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: புறநகர்ப்பகுதியில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: புறநகர்ப்பகுதியில் HTML இருக்கக்கூடாது
+        province:
+          label:
+            default: மாநிலம்/யூனியன் பிரதேசம்
+            optional: மாநிலம்/யூனியன் பிரதேசம் (விருப்பத்தேர்வு)
+          errors:
+            blank_instructional: மாநிலம்/யூனியன் பிரதேசத்தைத் தேர்ந்தெடுக்கவும்
+            blank_informative: மாநிலம்/யூனியன் பிரதேசம் விடுபட்டுள்ளது
+        zip:
+          label:
+            default: அஞ்சல் குறியீடு
+            optional: அஞ்சல் குறியீடு (விருப்பத்தேர்வு)
+          errors:
+            blank_instructional: அஞ்சல் குறியீட்டை உள்ளிடவும்
+            blank_informative: அஞ்சல் குறியீடு விடுபட்டுள்ளது
+            invalid_for_country_instructional: "%{country}-க்கான சரியான அஞ்சல் குறியீட்டை
+              உள்ளிடவும்"
+            invalid_for_country_informative: "%{country}-க்கு அஞ்சல் குறியீடு சரியானதல்ல"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}-க்கான
+              சரியான அஞ்சல் குறியீட்டை உள்ளிடவும்"
+            invalid_for_country_and_province_informative: "%{province}, %{country}-க்கு
+              அஞ்சல் குறியீடு சரியானதல்ல"
+            too_long_instructional: அஞ்சல் குறியீடு மிக நீளமாக உள்ளது
+            too_long_informative: அஞ்சல் குறியீடு மிக நீளமாக உள்ளது
+            contains_emojis_instructional: அஞ்சல் குறியீட்டில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: அஞ்சல் குறியீட்டில் எமோஜிகள் இருக்கக்கூடாது
+            contains_restricted_characters_instructional: அஞ்சல் குறியீட்டில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்பு எழுத்துகள் மட்டுமே இருக்க
+              முடியும்
+            contains_restricted_characters_informative: அஞ்சல் குறியீட்டில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: அஞ்சல் குறியீட்டில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: அஞ்சல் குறியீட்டில் HTML இருக்கக்கூடாது

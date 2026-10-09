@@ -1,0 +1,29 @@
+---
+eu:
+  worldwide:
+    GB:
+      addresses:
+        zip:
+          label:
+            default: Posta-kodea
+            optional: Posta-kodea (aukerakoa)
+          errors:
+            blank_instructional: Sartu posta-kode bat
+            blank_informative: Posta-kodea falta da
+            invalid_for_country_instructional: Sartu baliozko posta-kode bat Erresuma
+              Baturako
+            invalid_for_country_informative: Posta-kodeak ez du balio Erresuma Baturako
+            invalid_for_country_and_province_instructional: 'Sartu baliozko posta-kode
+              bat honentzat: %{province}, Erresuma Batua'
+            invalid_for_country_and_province_informative: 'Posta-kodeak ez du balio
+              honentzat: %{province}, Erresuma Batua'
+            too_long_instructional: Posta-kodea luzeegia da
+            too_long_informative: Posta-kodea luzeegia da
+            contains_emojis_instructional: Posta-kodeak ezin du emojirik izan
+            contains_emojis_informative: Posta-kodeak ezin du emojirik izan
+            contains_restricted_characters_instructional: Posta-kodeak ezin du karaktere
+              mugaturik izan
+            contains_restricted_characters_informative: Posta-kodeak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_html_tags_instructional: Posta-kodeak ezin du HTML koderik izan
+            contains_html_tags_informative: Posta-kodeak ezin du HTML koderik izan
