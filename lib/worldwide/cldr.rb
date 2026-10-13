@@ -71,9 +71,18 @@ module Worldwide
       end
 
       def method_missing(method_name, *args, **kwargs, &block)
+        kwargs[:locale] = buyer_cldr_locale(kwargs[:locale]) if kwargs.key?(:locale)
+
         with_cldr do
           I18n.send(method_name, *args, **kwargs, &block)
         end
+      end
+
+      # Translation Platform and buyer surfaces use `sr` for Serbian Latin,
+      # while Unicode CLDR assigns bare `sr` to Cyrillic. Keep explicit script
+      # locales unchanged, but resolve the buyer locale through Latin CLDR data.
+      def buyer_cldr_locale(locale)
+        locale.to_s == "sr" ? :"sr-Latn" : locale
       end
 
       def with_cldr(&block)
@@ -85,7 +94,7 @@ module Worldwide
         # Some hosts patch I18n.fallbacks to keep reading Thread.current, the slot
         # used before i18n 1.15, so they must also see the CLDR fallbacks.
         original_thread_fallbacks = Thread.current[:i18n_fallbacks]
-        locale = I18n.locale
+        locale = buyer_cldr_locale(I18n.locale)
 
         STORAGE.config = config
         STORAGE.fallbacks = fallbacks
