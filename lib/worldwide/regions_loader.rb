@@ -96,6 +96,7 @@ module Worldwide
 
     def apply_territory_attributes(region, spec)
       region.additional_address_fields = spec["additional_address_fields"] || []
+      region.address_line_components = spec["address_line_components"] || []
       region.combined_address_format = spec["combined_address_format"] || {}
       region.address1_regex = spec["address1_regex"] || []
       region.building_number_required = spec["building_number_required"] || false
@@ -106,6 +107,7 @@ module Worldwide
       region.flag = spec["emoji"]
       region.format = spec["format"]
       region.format_extended = spec["format_extended"] || {}
+      region.format_structured = spec["format_structured"] || {}
       region.example_address = spec["example_address"] || nil
       region.group = spec["group"]
       region.group_name = spec["group_name"]

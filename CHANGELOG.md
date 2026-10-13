@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add `bn`, `ca`, `et`, `eu`, `gl`, `gu`, `ka`, `lv`, `mr`, `sr`, `ta`, `te`, and `uk` to `translation.yml` target languages so the Translation Platform generates localizations of the region address data [#611](https://github.com/Shopify/worldwide/pull/611)
+- Add `format_structured` and `address_line_components` to `Worldwide::Region`: the structured address layout (`edit`/`show`, using the `{streetName}` `{streetNumber}` `{line2}` `{district}` `{subdistrict}` tokens) and the declared components with their `required` flags, for BR, KW, PA, PE and PH. [#623](https://github.com/Shopify/worldwide/pull/623)
 
 ---
 
