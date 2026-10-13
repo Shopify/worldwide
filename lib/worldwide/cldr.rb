@@ -6,6 +6,10 @@ require_relative "ruby_i18n_config"
 
 module Worldwide
   module Cldr
+    BUYER_LOCALE_ALIASES = {
+      sr: :"sr-Latn",
+    }.freeze
+
     FALLBACKS = Worldwide::Cldr::Fallbacks.new
     CONFIG = Worldwide::RubyI18nConfig.new.tap do |cldr_config|
       cldr_config.exception_handler = Worldwide::Config.exception_handler
@@ -82,7 +86,7 @@ module Worldwide
       # while Unicode CLDR assigns bare `sr` to Cyrillic. Keep explicit script
       # locales unchanged, but resolve the buyer locale through Latin CLDR data.
       def buyer_cldr_locale(locale)
-        locale.to_s == "sr" ? :"sr-Latn" : locale
+        BUYER_LOCALE_ALIASES.fetch(locale&.to_sym, locale)
       end
 
       def with_cldr(&block)

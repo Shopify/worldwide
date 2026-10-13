@@ -85,6 +85,7 @@ module Worldwide
 
       def expanded_locales_from_configuration(i18n_config)
         locales = ((i18n_config&.available_locales || []) + Array(i18n_config.default_locale)).uniq
+        locales += locales.filter_map { |locale| Worldwide::Cldr::BUYER_LOCALE_ALIASES[locale.to_sym] }
 
         # Add in locales that derive from the selected locale.
         # E.g., if "fr" is selected, then include "fr-CA", "fr-CH", "fr-FR", ...
