@@ -1207,9 +1207,10 @@ module Worldwide
           # Add missing '%{count}' in IT
           patch_file(:it, "units.yml", [:units, :unit_length, :long, :volume_fluid_ounce, :one], "oncia liquida", "%{count} oncia liquida")
 
-          sort_cldr_files
-
           copy_zh_locales
+          copy_sr_locales
+
+          sort_cldr_files
         end
 
         private
@@ -1225,46 +1226,52 @@ module Worldwide
           copy_locale("zh-Hant", "zh-TW")
         end
 
+        # Shopify's 'sr' is Serbian Latin; CLDR's is Cyrillic, with 'sr-Cyrl' an empty locale
+        # inheriting from it. Copy the Cyrillic data out before 'sr' is replaced.
+        def copy_sr_locales
+          copy_locale("sr", "sr-Cyrl")
+          copy_locale("sr-Latn", "sr")
+          patch_cldr_level_file("parent_locales.yml", ["sr-Latn"], "root", "sr")
+        end
+
         def copy_locale(source, target)
           puts "Copy locale #{source} to #{target}..."
-          FileUtils.mkdir_p(File.join(Worldwide::Paths::CLDR_ROOT, "locales", target.to_s))
+          source_dir = File.join(Worldwide::Paths::CLDR_ROOT, "locales", source)
+          target_dir = File.join(Worldwide::Paths::CLDR_ROOT, "locales", target)
+          FileUtils.mkdir_p(target_dir)
 
-          files_to_patch = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", source, "*.yml")]
+          files_to_patch = Dir[File.join(source_dir, "*.yml")]
           raise "No CLDR files found for #{source}" if files_to_patch.empty?
 
           files_to_patch.each do |source_file_name|
-            target_file_name = source_file_name.sub(source, target) # TODO: Fix this bug; It could replace the parent directory names
+            target_file_name = File.join(target_dir, File.basename(source_file_name))
             data = YAML.safe_load(File.open(source_file_name), permitted_classes: [Symbol])
             data[target] = data[source]
             data.delete(source)
             File.write(target_file_name, data.to_yaml)
           end
 
-          files_to_patch = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", source, "plurals.rb")]
+          files_to_patch = Dir[File.join(source_dir, "plurals.rb")]
           files_to_patch.each do |source_file_name|
-            target_file_name = source_file_name.sub(source, target) # TODO: Fix this bug; It could replace the parent directory names
-            content = File.read(source_file_name).gsub(
-              ":'#{source.tr("-", "_")}'",
-              ":'#{target.tr("-", "_")}'",
-            )
+            target_file_name = File.join(target_dir, File.basename(source_file_name))
+            content = File.read(source_file_name).sub(/\A\{\s*:(?:"[^"]*"|'[^']*'|\w+)\s*=>/, "{ :#{target.tr("-", "_")} =>")
             File.write(target_file_name, content)
           end
 
           # The copied locale should have the same ancestors / fallback chain that the source locale has.
           # The source locale might have an overidden parent locale. If so, we want to copy that override.
           # Otherwise, we want the parent of the source locale to be the parent of this new locale.
-          parent_locales_path = File.join(Worldwide::Paths::CLDR_ROOT, "parent_locales.yml")
-          contents = YAML.load_file(parent_locales_path)
-          parent_override = contents[source]
-          parent_override ||= begin
-            chopped_source_locale = I18n::Locale::Tag.tag(source).parents.first.to_s
-            chopped_target_locale = I18n::Locale::Tag.tag(target).parents.first.to_s
-            chopped_source_locale if chopped_source_locale != chopped_target_locale
-          end
-          if parent_override
-            patch_cldr_level_file("parent_locales.yml", [target], nil, parent_override)
-            SortYaml.sort_file?(parent_locales_path, output_filename: parent_locales_path)
-          end
+          source_parent = parent_locale(source)
+          target_parent = I18n::Locale::Tag.tag(target).parents.first&.to_s || "root"
+          patch_cldr_level_file("parent_locales.yml", [target], nil, source_parent) if source_parent != target_parent
+        end
+
+        def parent_locale(locale)
+          YAML.load_file(parent_locales_path)[locale] || I18n::Locale::Tag.tag(locale).parents.first&.to_s || "root"
+        end
+
+        def parent_locales_path
+          File.join(Worldwide::Paths::CLDR_ROOT, "parent_locales.yml")
         end
 
         def sort_cldr_files

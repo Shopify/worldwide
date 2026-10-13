@@ -57,9 +57,7 @@ namespace :cldr do
     task :patch do
       require_relative "../cldr/patch"
 
-      Worldwide::Cldr.with_standard_locale_semantics do
-        Worldwide::Cldr::Patch::Patcher.new.perform
-      end
+      Worldwide::Cldr::Patch::Patcher.new.perform
     end
 
     desc <<~DESCRIPTION

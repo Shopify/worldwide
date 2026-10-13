@@ -16,7 +16,6 @@ module Worldwide
       end
 
       def perform
-        generate_buyer_locale_alias_data
         initialize_i18n
 
         generate_plural_keys_lookup
@@ -270,8 +269,6 @@ module Worldwide
       # TODO: Make this data / patch.rb driven
       def cldr_locale(locale)
         case locale.to_s
-        when "sr"
-          "sr-Latn"
         when "zh-CN"
           "zh-Hans"
         when "zh-HK"
@@ -789,33 +786,13 @@ module Worldwide
         ret
       end
 
-      def generate_buyer_locale_alias_data
-        source_path = File.join(Worldwide::Paths::TIME_ZONE_ROOT, "sr.yml")
-        return unless File.exist?(source_path)
-
-        source = YAML.safe_load_file(source_path).fetch("sr")
-        target_path = File.join(Worldwide::Paths::TIME_ZONE_ROOT, "sr-Latn.yml")
-        File.write(target_path, { "sr-Latn" => source }.to_yaml)
-      end
-
       # Load all locales and add some pseudo entries
       def initialize_i18n
         I18n.reload!
-        generated_paths = Dir[File.join(Worldwide::Paths::GEM_ROOT, "data/other/generated/*.yml")]
-        serbian_generated_path = File.join(Worldwide::Paths::GENERATED_LOCALE_ROOT, "sr.yml")
-        I18n.load_path += generated_paths - [serbian_generated_path]
-
-        hand_translated_paths = Dir[File.join(Worldwide::Paths::GEM_ROOT, "data/other/hand_translated/*.yml")]
-        serbian_buyer_path = File.join(Worldwide::Paths::GEM_ROOT, "data/other/hand_translated/sr.yml")
-        I18n.load_path += hand_translated_paths - [serbian_buyer_path]
-
+        I18n.load_path += Dir[File.join(Worldwide::Paths::GEM_ROOT, "data/other/generated/*.yml")]
+        I18n.load_path += Dir[File.join(Worldwide::Paths::GEM_ROOT, "data/other/hand_translated/*.yml")]
         I18n.load_path += Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*/calendars.yml")]
         I18n.load_path += Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*/fields.yml")]
-
-        if File.exist?(serbian_buyer_path)
-          translations = YAML.safe_load_file(serbian_buyer_path).fetch("sr")
-          I18n.backend.store_translations(:"sr-Latn", translations)
-        end
 
         load("lib/worldwide/plurals.rb")
 
@@ -879,9 +856,7 @@ module Worldwide
       end
 
       def generate_locale(locale)
-        source_locale = locale == "sr" ? "sr-Latn" : locale
-
-        I18n.with_locale(source_locale) do
+        I18n.with_locale(locale) do
           shopify_dotted = map_cldr_to_shopify(FORMAT_FROM_CLDR_MAP)
           @cache[locale] = shopify_dotted
 

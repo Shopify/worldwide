@@ -24,6 +24,11 @@ module Worldwide
         [:"pt-BR", 1, :one],
         [:"pt-PT", 0, :other],
         [:"pt-PT", 1, :one],
+        [:sr, 1, :one],
+        [:sr, 2, :few],
+        [:"sr-Cyrl", 2, :few],
+        [:"sr-Cyrl", 5, :other],
+        [:"sr-Latn", 2, :few],
       ]
 
       data.each do |input_locale, count, expected_key|
