@@ -68,6 +68,17 @@ module Worldwide
         CONFIG
       end
 
+      # CLDR maintenance tasks must operate on Unicode's standard locale
+      # semantics, where bare `sr` is Cyrillic, rather than Shopify's buyer
+      # alias for Serbian Latin.
+      def with_standard_locale_semantics
+        previous = Thread.current.thread_variable_get(:worldwide_standard_locale_semantics)
+        Thread.current.thread_variable_set(:worldwide_standard_locale_semantics, true)
+        yield
+      ensure
+        Thread.current.thread_variable_set(:worldwide_standard_locale_semantics, previous)
+      end
+
       private
 
       def respond_to_missing?(method_name, include_private = false)
@@ -86,6 +97,8 @@ module Worldwide
       # while Unicode CLDR assigns bare `sr` to Cyrillic. Keep explicit script
       # locales unchanged, but resolve the buyer locale through Latin CLDR data.
       def buyer_cldr_locale(locale)
+        return locale if Thread.current.thread_variable_get(:worldwide_standard_locale_semantics)
+
         BUYER_LOCALE_ALIASES.fetch(locale&.to_sym, locale)
       end
 

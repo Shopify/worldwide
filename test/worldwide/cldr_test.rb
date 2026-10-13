@@ -35,6 +35,14 @@ module Worldwide
       assert_equal "Сједињене Државе", Worldwide::Cldr.t("territories.US", locale: :"sr-Cyrl")
     end
 
+    test "can temporarily use standard CLDR semantics for maintenance tasks" do
+      Worldwide::Cldr.with_standard_locale_semantics do
+        assert_equal "Сједињене Државе", Worldwide::Cldr.t("territories.US", locale: :sr)
+      end
+
+      assert_equal "Sjedinjene Države", Worldwide::Cldr.t("territories.US", locale: :sr)
+    end
+
     test "restores the previous config and fallbacks after translating" do
       before_config = I18n.config
       before_fallbacks = I18n.fallbacks
