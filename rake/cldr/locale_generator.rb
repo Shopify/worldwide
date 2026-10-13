@@ -190,6 +190,15 @@ module Worldwide
           "calendars.gregorian.additional_formats.MMMd",
           "calendars.gregorian.formats.time.short.pattern",
         ],
+        # date_time_current_year with the time upgraded to the medium (seconds-bearing) time
+        # format, for second-precision log/event correlation. Each locale keeps its own field
+        # order, separators, and 12h/24h clock (e.g. Vietnamese renders time-first, Danish uses
+        # "." separators, en stays 12-hour). The year is omitted, matching date_time_current_year.
+        "date_time_current_year_with_seconds" => [
+          "calendars.gregorian.formats.datetime.short.pattern",
+          "calendars.gregorian.additional_formats.MMMd",
+          "calendars.gregorian.formats.time.medium.pattern",
+        ],
         "default_long_with_zone" => [
           "calendars.gregorian.formats.datetime.medium.pattern",
           "calendars.gregorian.formats.date.full.pattern",
@@ -882,6 +891,7 @@ module Worldwide
           :date,
           :date_at_time,
           :date_time_current_year,
+          :date_time_current_year_with_seconds,
           :day_only,
           :default_long_with_zone,
           :friendly_date_time,
