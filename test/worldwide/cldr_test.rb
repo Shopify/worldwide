@@ -18,6 +18,15 @@ module Worldwide
       assert_equal "€1,234.50 EUR", Worldwide.currency(code: :EUR).format_explicit(1234.5, locale: :"en-IE")
     end
 
+    test "keeps buyer Serbian Latin separate from explicit Cyrillic locales" do
+      assert_equal "januar", Worldwide::Cldr.t("date.month_names", locale: :sr).fetch(1)
+      assert_equal "Danas u %02k:%M", Worldwide::Cldr.t("date.formats.today_at_time", locale: :sr)
+      assert_equal "Danas u %02k:%M", Worldwide::Cldr.t("date.formats.today_at_time", locale: :"sr-Latn")
+
+      assert_equal "јануар", Worldwide::Cldr.t("date.month_names", locale: :"sr-Cyrl").fetch(1)
+      assert_equal "%02k:%M данас", Worldwide::Cldr.t("date.formats.today_at_time", locale: :"sr-Cyrl")
+    end
+
     test "restores the previous config and fallbacks after translating" do
       before_config = I18n.config
       before_fallbacks = I18n.fallbacks
