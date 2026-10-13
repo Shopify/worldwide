@@ -16,6 +16,7 @@ module Worldwide
       end
 
       def perform
+        generate_buyer_locale_alias_data
         initialize_i18n
 
         generate_plural_keys_lookup
@@ -786,6 +787,15 @@ module Worldwide
         end
 
         ret
+      end
+
+      def generate_buyer_locale_alias_data
+        source_path = File.join(Worldwide::Paths::TIME_ZONE_ROOT, "sr.yml")
+        return unless File.exist?(source_path)
+
+        source = YAML.safe_load_file(source_path).fetch("sr")
+        target_path = File.join(Worldwide::Paths::TIME_ZONE_ROOT, "sr-Latn.yml")
+        File.write(target_path, { "sr-Latn" => source }.to_yaml)
       end
 
       # Load all locales and add some pseudo entries

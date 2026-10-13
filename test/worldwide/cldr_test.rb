@@ -24,6 +24,10 @@ module Worldwide
       assert_equal "Sjedinjene Države", Worldwide::Cldr.t("territories.US", locale: :sr)
       assert_equal "Evro", Worldwide::Cldr.t("currencies.EUR.name", locale: :sr)
       assert_equal "engleski", Worldwide::Cldr.t("languages.en", locale: :sr)
+      assert_equal(
+        "(GMT-07:00) Britanska Kolumbija",
+        Worldwide::Cldr.t("timezones.America/Vancouver", locale: :sr),
+      )
 
       I18n.with_locale(:sr) do
         assert_equal "Sjedinjene Države", Worldwide::Cldr.t("territories.US")
