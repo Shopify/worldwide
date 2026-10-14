@@ -27,6 +27,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [1.30.2] - 2026-10-14
+
+- Remove the `America/Rainy_River` override to Chicago so TZInfo follows IANA timezone data, which aligns northwestern Ontario with Manitoba on permanent UTC-5 from November 1, 2026. Map its Rails-compatible fallback to `America/Bogota`, matching Winnipeg.
+- Add translations for the four Canadian time zones in 13 more languages. [#628](https://github.com/Shopify/worldwide/pull/628)
 - Add `bn`, `ca`, `et`, `eu`, `gl`, `gu`, `ka`, `lv`, `mr`, `sr`, `ta`, `te`, and `uk` to `translation.yml` target languages so the Translation Platform generates localizations of the region address data [#611](https://github.com/Shopify/worldwide/pull/611)
 
 ---
