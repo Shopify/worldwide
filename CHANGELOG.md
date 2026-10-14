@@ -27,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Use "Región Metropolitana de Santiago" instead of "Santiago" for Chile's Metropolitan Region (CL-RM) in Spanish.
+
 ---
 
 ## [1.30.2] - 2026-10-14
