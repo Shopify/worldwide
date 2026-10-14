@@ -199,6 +199,28 @@ module Worldwide
       end
     end
 
+    test "#zone resolves New York State as a country-scoped whole-name alias" do
+      us = Worldwide.region(code: "US")
+      names = ["New York State", "new york state", "NEW YORK STATE"]
+
+      [:en, :fr].each do |locale|
+        I18n.with_locale(locale) do
+          names.each do |name|
+            assert_equal("US-NY", us.zone(name: name).iso_code)
+          end
+        end
+      end
+
+      assert_equal(["US-NY"], us.zones.select { |zone| zone.name_alternates.include?("New York State") }.map(&:iso_code))
+      assert_equal("ZZ", Worldwide.region(code: "CA").zone(name: "New York State").iso_code)
+    end
+
+    test "#zone does not infer a region from conflicting or partial alias text" do
+      ["Not New York State", "New York State or New Jersey", "York State"].each do |name|
+        assert_equal("ZZ", Worldwide.region(code: "US").zone(name: name).iso_code)
+      end
+    end
+
     test "#zone can look up a zone by CLDR code" do
       zone = Worldwide.region(code: "MY").zone(code: "my14")
 
