@@ -29,6 +29,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - **Breaking:** The bare `sr` locale is now Serbian in Latin script across all CLDR data (dates, numbers, lists, region and time zone names, plural rules). Upstream CLDR treats `sr` as Cyrillic; the data patch step now copies CLDR's `sr` to `sr-Cyrl` and `sr-Latn` to `sr`, and reparents so `sr-Latn` falls back to `sr` and `sr-Cyrl` falls back to `root`. Callers who relied on `sr` producing Cyrillic output must request `sr-Cyrl` explicitly. [#631](https://github.com/Shopify/worldwide/pull/631)
 - Add buyer translations of region address data, hand-translated strings, and time zone names for `bn`, `ca`, `et`, `eu`, `gl`, `gu`, `ka`, `lv`, `mr`, `sr`, `ta`, `te`, and `uk`. [#629](https://github.com/Shopify/worldwide/pull/629)
+
+---
+
+## [1.30.2] - 2026-10-14
+
+- Remove the `America/Rainy_River` override to Chicago so TZInfo follows IANA timezone data, which aligns northwestern Ontario with Manitoba on permanent UTC-5 from November 1, 2026. Map its Rails-compatible fallback to `America/Bogota`, matching Winnipeg.
+- Add translations for the four Canadian time zones in 13 more languages. [#628](https://github.com/Shopify/worldwide/pull/628)
 - Add `bn`, `ca`, `et`, `eu`, `gl`, `gu`, `ka`, `lv`, `mr`, `sr`, `ta`, `te`, and `uk` to `translation.yml` target languages so the Translation Platform generates localizations of the region address data [#611](https://github.com/Shopify/worldwide/pull/611)
 
 ---

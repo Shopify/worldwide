@@ -27,23 +27,9 @@ module Worldwide
       end
     end
 
-    test "#to_supported keeps Rainy River on Central Time without changing Winnipeg" do
-      actual = Worldwide::DeprecatedTimeZoneMapper.to_supported("America/Rainy_River")
-
-      assert_equal "America/Chicago", actual
+    test "#to_supported leaves Rainy River and Winnipeg unchanged to follow IANA timezone data" do
+      assert_equal "America/Rainy_River", Worldwide::DeprecatedTimeZoneMapper.to_supported("America/Rainy_River")
       assert_equal "America/Winnipeg", Worldwide::DeprecatedTimeZoneMapper.to_supported("America/Winnipeg")
-
-      zone = ActiveSupport::TimeZone.new(actual)
-
-      {
-        Time.utc(2026, 7, 15) => -5 * 3600,
-        Time.utc(2026, 11, 1, 6, 59, 59) => -5 * 3600,
-        Time.utc(2026, 11, 1, 7) => -6 * 3600,
-        Time.utc(2026, 12, 15) => -6 * 3600,
-        Time.utc(2027, 7, 15) => -5 * 3600,
-      }.each do |time, expected_offset|
-        assert_equal expected_offset, zone.tzinfo.period_for_utc(time).utc_total_offset, "Rainy River has the wrong offset at #{time}"
-      end
     end
 
     test "#to_rails converts as expected" do
@@ -63,6 +49,7 @@ module Worldwide
         "America/Yellowknife" => "America/Regina",
         "America/Inuvik" => "America/Regina",
         "America/Winnipeg" => "America/Bogota",
+        "America/Rainy_River" => "America/Bogota",
       }.each do |name, expected|
         actual = Worldwide::DeprecatedTimeZoneMapper.to_rails(name)
 
@@ -82,8 +69,10 @@ module Worldwide
       end
     end
 
-    test "#to_rails keeps the Ontario Central-time fallback for Rainy River" do
-      assert_equal "America/Chicago", Worldwide::DeprecatedTimeZoneMapper.to_rails("America/Rainy_River")
+    test "#to_rails gives Rainy River the same fallback as Winnipeg" do
+      assert_equal "America/Bogota", Worldwide::DeprecatedTimeZoneMapper.to_rails("America/Rainy_River")
+      assert_equal Worldwide::DeprecatedTimeZoneMapper.to_rails("America/Winnipeg"),
+        Worldwide::DeprecatedTimeZoneMapper.to_rails("America/Rainy_River")
     end
 
     test "#to_rails keeps permanent Canadian fallback offsets in winter and summer" do
@@ -94,6 +83,7 @@ module Worldwide
         "America/Yellowknife" => -6 * 3600,
         "America/Inuvik" => -6 * 3600,
         "America/Winnipeg" => -5 * 3600,
+        "America/Rainy_River" => -5 * 3600,
       }.each do |name, expected_offset|
         zone = ActiveSupport::TimeZone[Worldwide::DeprecatedTimeZoneMapper.to_rails(name)]
 
