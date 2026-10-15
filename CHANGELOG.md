@@ -36,6 +36,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.30.3] - 2026-10-14
+
+- Add Germany's street-first `address1` format so street addresses follow the country's `street + house number` convention.
+
+---
+
 ## [1.30.2] - 2026-10-14
 
 - Remove the `America/Rainy_River` override to Chicago so TZInfo follows IANA timezone data, which aligns northwestern Ontario with Manitoba on permanent UTC-5 from November 1, 2026. Map its Rails-compatible fallback to `America/Bogota`, matching Winnipeg.
