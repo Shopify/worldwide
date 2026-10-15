@@ -1,0 +1,46 @@
+---
+et:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Ringkond
+            optional: Ringkond (valikuline)
+          errors:
+            blank_instructional: Sisesta ringkond
+            blank_informative: Ringkond on puudu
+            too_long_instructional: Ringkond on liiga pikk (maksimaalselt %{limit}
+              tähemärki)
+            too_long_informative: Ringkond on liiga pikk
+            contains_emojis_instructional: Ringkond ei tohi sisaldada emotikone
+            contains_emojis_informative: Ringkond ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Ringkond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Ringkond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Ringkond tohib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erisümboleid
+            contains_restricted_characters_informative: Ringkond ei tohi sisaldada
+              keelatud tähemärke
+            contains_too_many_words_instructional: Ringkond peab sisaldama vähem kui
+              %{word_count} sõna
+            contains_too_many_words_informative: Ringkond peab sisaldama vähem kui
+              %{word_count} sõna
+            contains_html_tags_instructional: Ringkond ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Ringkond ei tohi sisaldada HTML-i
+            contains_url_instructional: Ringkond ei tohi sisaldada URL-i
+            contains_url_informative: Ringkond ei tohi sisaldada URL-i
+            contains_email_instructional: Ringkond ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Ringkond ei tohi sisaldada e-posti aadressi
+            unknown_for_city_instructional: Sisesta kehtiv ringkond linna %{city}
+              jaoks
+            unknown_for_city_informative: Ringkond ei kehti linna %{city} jaoks
+            unknown_for_zip_instructional: Sisesta kehtiv ringkond postiindeksi %{zip}
+              jaoks
+            unknown_for_zip_informative: Ringkond ei kehti postiindeksi %{zip} jaoks
+            unknown_for_address_instructional: Ringkond võib olla vale
+            unknown_for_address_informative: Ringkond võib olla vale
+          warnings:
+            contains_too_many_words: Ringkond peaks soovituslikult sisaldama vähem
+              kui %{word_count} sõna

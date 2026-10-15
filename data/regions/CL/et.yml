@@ -1,0 +1,43 @@
+---
+et:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Vald
+            optional: Vald (valikuline)
+          errors:
+            blank_instructional: Sisesta vald
+            blank_informative: Vald on puudu
+            too_long_instructional: Vald on liiga pikk (kuni %{limit} tähemärki)
+            too_long_informative: Vald on liiga pikk
+            contains_emojis_instructional: Vald ei tohi sisaldada emotikone
+            contains_emojis_informative: Vald ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Vald ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_mathematical_symbols_informative: Vald ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Vald võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Vald ei tohi sisaldada keelatud
+              tähemärke
+            contains_too_many_words_instructional: Vald peab sisaldama vähem kui %{word_count}
+              sõna
+            contains_too_many_words_informative: Vald peab sisaldama vähem kui %{word_count}
+              sõna
+            contains_html_tags_instructional: Vald ei tohi sisaldada HTML-i tähiseid
+            contains_html_tags_informative: Vald ei tohi sisaldada HTML-i tähiseid
+            contains_url_instructional: Vald ei tohi sisaldada URL-e
+            contains_url_informative: Vald ei tohi sisaldada URL-e
+            contains_email_instructional: Vald ei tohi sisaldada e-posti aadresse
+            contains_email_informative: Vald ei tohi sisaldada e-posti aadresse
+            unknown_for_city_instructional: Sisesta linnale %{city} kehtiv vald
+            unknown_for_city_informative: Sisesta linnale %{city} kehtiv vald
+            unknown_for_zip_instructional: Sisesta postiindeksile %{zip} kehtiv vald
+            unknown_for_zip_informative: Sisesta postiindeksile %{zip} kehtiv vald
+            unknown_for_address_instructional: Vald võib olla vale
+            unknown_for_address_informative: Vald võib olla vale
+          warnings:
+            contains_too_many_words: Soovitatav on, et vald sisaldaks vähem kui %{word_count}
+              sõna

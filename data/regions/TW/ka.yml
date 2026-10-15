@@ -1,0 +1,43 @@
+---
+ka:
+  worldwide:
+    TW:
+      addresses:
+        neighborhood:
+          label:
+            default: რაიონი
+            optional: რაიონი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე რაიონი
+            blank_informative: რაიონი მითითებული არ არის
+            too_long_instructional: რაიონი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: რაიონი ძალიან გრძელია
+            contains_emojis_instructional: რაიონი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_emojis_informative: რაიონი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_mathematical_symbols_instructional: რაიონი არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: რაიონი არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: რაიონი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: რაიონი არ შეიძლება შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: რაიონი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: რაიონი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: რაიონი არ შეიძლება შეიცავდეს HTML-ს
+            contains_html_tags_informative: რაიონი არ შეიძლება შეიცავდეს HTML-ს
+            contains_url_instructional: რაიონი არ შეიძლება შეიცავდეს URL-ს
+            contains_url_informative: რაიონი არ შეიძლება შეიცავდეს URL-ს
+            contains_email_instructional: რაიონი არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: რაიონი არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე სწორი რაიონი ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'რაიონი არასწორია ქალაქისთვის: %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე სწორი რაიონი ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'რაიონი არასწორია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: რაიონი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: რაიონი შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, რაიონი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

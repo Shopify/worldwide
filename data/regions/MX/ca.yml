@@ -1,0 +1,60 @@
+---
+ca:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: Carrer i número
+            optional: Carrer i número (opcional)
+          errors:
+            blank_instructional: Escriu el carrer i el número
+            blank_informative: Falta el carrer i el número
+        province:
+          label:
+            default: Estat
+            optional: Estat (opcional)
+          errors:
+            blank_instructional: Selecciona un estat
+            blank_informative: Falta l'estat
+        neighborhood:
+          label:
+            default: Colònia
+            optional: Colònia (opcional)
+          errors:
+            blank_instructional: Escriu una colònia
+            blank_informative: Falta la colònia
+            too_long_instructional: La colònia és massa llarga (el màxim són %{limit}
+              caràcters)
+            too_long_informative: La colònia és massa llarga
+            contains_emojis_instructional: La colònia no pot contenir emojis
+            contains_emojis_informative: La colònia no pot contenir emojis
+            contains_mathematical_symbols_instructional: La colònia no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: La colònia no pot contenir
+              símbols matemàtics
+            contains_restricted_characters_instructional: La colònia només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: La colònia no pot contenir
+              caràcters restringits
+            contains_too_many_words_instructional: La colònia ha de tenir menys de
+              %{word_count} paraules
+            contains_too_many_words_informative: La colònia ha de tenir menys de %{word_count}
+              paraules
+            contains_html_tags_informative: La colònia no pot contenir HTML
+            contains_html_tags_instructional: La colònia no pot contenir HTML
+            contains_url_instructional: La colònia no pot contenir cap URL
+            contains_url_informative: La colònia no pot contenir cap URL
+            contains_email_instructional: La colònia no pot contenir cap adreça de
+              correu electrònic
+            contains_email_informative: La colònia no pot contenir cap adreça de correu
+              electrònic
+            unknown_for_city_instructional: Escriu una colònia vàlida per a %{city}
+            unknown_for_city_informative: Escriu una colònia vàlida per a %{city}
+            unknown_for_zip_instructional: Escriu una colònia vàlida per a %{zip}
+            unknown_for_zip_informative: Escriu una colònia vàlida per a %{zip}
+            unknown_for_address_instructional: És possible que la colònia sigui incorrecta
+            unknown_for_address_informative: És possible que la colònia sigui incorrecte
+          warnings:
+            contains_too_many_words: Es recomana que la colònia tingui menys de %{word_count}
+              paraules

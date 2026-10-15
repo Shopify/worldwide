@@ -1,0 +1,51 @@
+---
+et:
+  worldwide:
+    AE:
+      addresses:
+        province:
+          label:
+            default: Emiraat
+            optional: Emiraat (valikuline)
+          errors:
+            blank_instructional: Vali emiraat
+            blank_informative: Emiraat on puudu
+        neighborhood:
+          label:
+            default: Piirkond
+            optional: Piirkond (valikuline)
+          errors:
+            blank_instructional: Sisesta piirkond
+            blank_informative: Piirkond on puudu
+            too_long_instructional: Piirkond on liiga pikk (kuni %{limit} tähemärki)
+            too_long_informative: Piirkond on liiga pikk
+            contains_emojis_instructional: Piirkond ei tohi sisaldada emotikone
+            contains_emojis_informative: Piirkond ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Piirkond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Piirkond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Piirkond võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Piirkond ei tohi sisaldada
+              keelatud tähemärke
+            contains_too_many_words_instructional: Piirkond peab sisaldama vähem kui
+              %{word_count} sõna
+            contains_too_many_words_informative: Piirkond peab sisaldama vähem kui
+              %{word_count} sõna
+            contains_html_tags_instructional: Piirkond ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Piirkond ei tohi sisaldada HTML-i
+            contains_url_instructional: Piirkond ei tohi sisaldada URL-i
+            contains_url_informative: Piirkond ei tohi sisaldada URL-i
+            contains_email_instructional: Piirkond ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Piirkond ei tohi sisaldada e-posti aadressi
+            unknown_for_city_instructional: Sisesta asukoha %{city} jaoks kehtiv piirkond
+            unknown_for_city_informative: Piirkond pole asukoha %{city} jaoks kehtiv
+            unknown_for_zip_instructional: Sisesta postiindeksi %{zip} jaoks kehtiv
+              piirkond
+            unknown_for_zip_informative: Piirkond pole postiindeksi %{zip} jaoks kehtiv
+            unknown_for_address_instructional: Piirkond võib olla vale
+            unknown_for_address_informative: Piirkond võib olla vale
+          warnings:
+            contains_too_many_words: Soovitatav on, et piirkond sisaldaks vähem kui
+              %{word_count} sõna

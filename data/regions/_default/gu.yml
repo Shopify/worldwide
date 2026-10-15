@@ -1,0 +1,550 @@
+---
+gu:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: કંપની
+            optional: કંપની (વૈકલ્પિક)
+          errors:
+            blank_instructional: કંપની દાખલ કરો
+            blank_informative: કંપની ખૂટે છે
+            too_long_instructional: કંપની ખૂબ લાંબી છે (મહત્તમ 255 અક્ષરો)
+            too_long_informative: કંપની ખૂબ લાંબી છે
+            contains_emojis_instructional: કંપનીમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: કંપનીમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: કંપનીમાં ગાણિતિક ચિહ્નો ન
+              હોઈ શકે
+            contains_mathematical_symbols_informative: કંપનીમાં ગાણિતિક ચિહ્નો ન હોઈ
+              શકે
+            contains_restricted_characters_instructional: કંપનીમાં ફક્ત અક્ષરો, નંબરો,
+              સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: કંપનીમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_html_tags_instructional: કંપનીમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: કંપનીમાં HTML ન હોઈ શકે
+        first_name:
+          label:
+            default: પ્રથમ નામ
+            optional: પ્રથમ નામ (વૈકલ્પિક)
+          errors:
+            blank_instructional: પ્રથમ નામ દાખલ કરો
+            blank_informative: પ્રથમ નામ ખૂટે છે
+            too_long_instructional: પ્રથમ નામ ખૂબ લાંબું છે (મહત્તમ 255 અક્ષરો)
+            too_long_informative: પ્રથમ નામ ખૂબ લાંબું છે
+            contains_emojis_instructional: પ્રથમ નામમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: પ્રથમ નામમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: પ્રથમ નામમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: પ્રથમ નામમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_restricted_characters_instructional: પ્રથમ નામમાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: પ્રથમ નામમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_html_tags_instructional: પ્રથમ નામમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: પ્રથમ નામમાં HTML ન હોઈ શકે
+            contains_url_instructional: પ્રથમ નામમાં URL ન હોઈ શકે
+            contains_url_informative: પ્રથમ નામમાં URL ન હોઈ શકે
+        last_name:
+          label:
+            default: છેલ્લું નામ
+            optional: છેલ્લું નામ (વૈકલ્પિક)
+          errors:
+            blank_instructional: છેલ્લું નામ દાખલ કરો
+            blank_informative: છેલ્લું નામ ખૂટે છે
+            too_long_instructional: છેલ્લું નામ ખૂબ લાંબું છે (મહત્તમ 255 અક્ષરો)
+            too_long_informative: છેલ્લું નામ ખૂબ લાંબું છે
+            contains_emojis_instructional: છેલ્લા નામમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: છેલ્લા નામમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: છેલ્લા નામમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: છેલ્લા નામમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_restricted_characters_instructional: છેલ્લા નામમાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: છેલ્લા નામમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_html_tags_instructional: છેલ્લા નામમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: છેલ્લા નામમાં HTML ન હોઈ શકે
+            contains_url_instructional: છેલ્લા નામમાં URL ન હોઈ શકે
+            contains_url_informative: છેલ્લા નામમાં URL ન હોઈ શકે
+        address1:
+          label:
+            default: સરનામું
+            optional: સરનામું (વૈકલ્પિક)
+          errors:
+            blank_instructional: સરનામું દાખલ કરો
+            blank_informative: સરનામું ખૂટે છે
+            too_long_instructional: સરનામાની પ્રથમ લાઇન ખૂબ લાંબી છે (મહત્તમ 255 અક્ષરો)
+            too_long_informative: સરનામાની પ્રથમ લાઇન ખૂબ લાંબી છે
+            contains_emojis_instructional: સરનામામાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: સરનામામાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: સરનામામાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: સરનામામાં ગાણિતિક ચિહ્નો ન
+              હોઈ શકે
+            contains_restricted_characters_instructional: સરનામામાં ફક્ત અક્ષરો, નંબરો,
+              સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: સરનામામાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_too_many_words_instructional: સરનામામાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: સરનામામાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: સરનામામાં HTML ન હોઈ શકે
+            contains_html_tags_informative: સરનામામાં HTML ન હોઈ શકે
+            contains_url_instructional: સરનામામાં URL ન હોઈ શકે
+            contains_url_informative: સરનામામાં URL ન હોઈ શકે
+            contains_email_instructional: સરનામામાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: સરનામામાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            missing_building_number_instructional: જો તમારી પાસે બિલ્ડિંગ નંબર હોય,
+              તો ઉમેરો
+            missing_building_number_informative: બિલ્ડિંગ નંબર ખૂટતો હોઈ શકે છે
+            street_unknown_for_zip_instructional: "%{zip} માટે માન્ય શેરીનું નામ દાખલ
+              કરો"
+            street_unknown_for_zip_informative: શેરીનું નામ %{zip} સાથે મેળ ખાતું
+              નથી
+            building_number_invalid_instructional: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            building_number_invalid_informative: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            unknown_for_address_instructional: સરનામાની લાઇન 1 ખોટી હોઈ શકે છે
+            unknown_for_address_informative: સરનામાની લાઇન 1 ખોટી હોઈ શકે છે
+          warnings:
+            contains_too_many_words: સરનામાની લાઇન 1 માં %{word_count} કરતાં ઓછા શબ્દો
+              હોવાની ભલામણ કરવામાં આવે છે
+        street_name:
+          label:
+            default: શેરી
+            optional: શેરી (વૈકલ્પિક)
+          errors:
+            blank_instructional: શેરી દાખલ કરો
+            blank_informative: શેરી ખૂટે છે
+            too_long_instructional: શેરી ખૂબ લાંબી છે (મહત્તમ %{limit} અક્ષરો)
+            too_long_informative: શેરી ખૂબ લાંબી છે
+            contains_emojis_instructional: શેરીમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: શેરીમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: શેરીમાં ગાણિતિક ચિહ્નો ન
+              હોઈ શકે
+            contains_mathematical_symbols_informative: શેરીમાં ગાણિતિક ચિહ્નો ન હોઈ
+              શકે
+            contains_restricted_characters_instructional: શેરીમાં ફક્ત અક્ષરો, નંબરો,
+              સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: શેરીમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_too_many_words_instructional: શેરીમાં %{word_count} કરતાં વધુ
+              શબ્દો ન હોઈ શકે
+            contains_too_many_words_informative: શેરીમાં %{word_count} કરતાં વધુ શબ્દો
+              ન હોઈ શકે
+            contains_html_tags_instructional: શેરીમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: શેરીમાં HTML ન હોઈ શકે
+            contains_url_instructional: શેરીમાં URL ન હોઈ શકે
+            contains_url_informative: શેરીમાં URL ન હોઈ શકે
+            contains_email_instructional: શેરીમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: શેરીમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            street_unknown_for_zip_instructional: "%{zip} માટે માન્ય શેરી દાખલ કરો"
+            street_unknown_for_zip_informative: "%{zip} માટે શેરી અમાન્ય છે"
+            unknown_for_address_instructional: શેરી ખોટી હોઈ શકે છે
+            unknown_for_address_informative: શેરી ખોટી હોઈ શકે છે
+          warnings:
+            contains_too_many_words: શેરીમાં %{word_count} કરતાં ઓછા શબ્દો હોવાની
+              ભલામણ કરવામાં આવે છે
+        street_number:
+          label:
+            default: બિલ્ડિંગ નંબર
+            optional: બિલ્ડિંગ નંબર (વૈકલ્પિક)
+          errors:
+            blank_instructional: બિલ્ડિંગ નંબર દાખલ કરો
+            blank_informative: બિલ્ડિંગ નંબર ખૂટે છે
+            too_long_instructional: બિલ્ડિંગ નંબર ખૂબ લાંબો છે (મહત્તમ %{limit} અક્ષરો)
+            too_long_informative: બિલ્ડિંગ નંબર ખૂબ લાંબો છે
+            contains_emojis_instructional: બિલ્ડિંગ નંબરમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: બિલ્ડિંગ નંબરમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: બિલ્ડિંગ નંબરમાં ગાણિતિક
+              ચિહ્નો ન હોઈ શકે
+            contains_mathematical_symbols_informative: બિલ્ડિંગ નંબરમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_restricted_characters_instructional: બિલ્ડિંગ નંબરમાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: બિલ્ડિંગ નંબરમાં પ્રતિબંધિત
+              અક્ષરો ન હોઈ શકે
+            contains_html_tags_instructional: બિલ્ડિંગ નંબરમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: બિલ્ડિંગ નંબરમાં HTML ન હોઈ શકે
+            contains_url_instructional: બિલ્ડિંગ નંબરમાં URL ન હોઈ શકે
+            contains_url_informative: બિલ્ડિંગ નંબરમાં URL ન હોઈ શકે
+            contains_email_instructional: બિલ્ડિંગ નંબરમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: બિલ્ડિંગ નંબરમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            missing_building_number_instructional: જો તમારી પાસે બિલ્ડિંગ નંબર હોય,
+              તો ઉમેરો
+            missing_building_number_informative: બિલ્ડિંગ નંબર ખૂટતો હોઈ શકે છે
+            building_number_invalid_instructional: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            building_number_invalid_informative: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            unknown_for_address_instructional: માન્ય બિલ્ડિંગ નંબર દાખલ કરો
+            unknown_for_address_informative: બિલ્ડિંગ નંબર માન્ય નથી
+          warnings:
+            contains_too_many_words: બિલ્ડિંગ નંબરમાં %{word_count} કરતાં ઓછા શબ્દો
+              હોવાની ભલામણ કરવામાં આવે છે
+        address2:
+          label:
+            default: ઍપાર્ટમેન્ટ, સ્યૂટ વગેરે
+            optional: ઍપાર્ટમેન્ટ, સ્યૂટ વગેરે (વૈકલ્પિક)
+          errors:
+            blank_instructional: ઍપાર્ટમેન્ટ, સ્યૂટ વગેરે દાખલ કરો
+            blank_informative: ઍપાર્ટમેન્ટ અથવા સ્યૂટ ખૂટે છે
+            too_long_instructional: સરનામાની લાઇન 2 ખૂબ લાંબી છે (મહત્તમ 255 અક્ષરો)
+            too_long_informative: સરનામાની લાઇન 2 ખૂબ લાંબી છે
+            contains_emojis_instructional: સરનામાની લાઇન 2 માં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: સરનામાની લાઇન 2 માં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: સરનામાની લાઇન 2 માં ગાણિતિક
+              ચિહ્નો ન હોઈ શકે
+            contains_mathematical_symbols_informative: સરનામાની લાઇન 2 માં ગાણિતિક
+              ચિહ્નો ન હોઈ શકે
+            contains_restricted_characters_instructional: સરનામાની લાઇન 2 માં ફક્ત
+              અક્ષરો, નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: સરનામાની લાઇન 2 માં પ્રતિબંધિત
+              અક્ષરો ન હોઈ શકે
+            contains_too_many_words_instructional: સરનામાની લાઇન 2 માં %{word_count}
+              કરતાં ઓછા શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: સરનામાની લાઇન 2 માં %{word_count}
+              કરતાં ઓછા શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: સરનામાની લાઇન 2 માં HTML ન હોઈ શકે
+            contains_html_tags_informative: સરનામાની લાઇન 2 માં HTML ન હોઈ શકે
+            contains_url_instructional: સરનામાની લાઇન 2 માં URL ન હોઈ શકે
+            contains_url_informative: સરનામાની લાઇન 2 માં URL ન હોઈ શકે
+            contains_email_instructional: સરનામાની લાઇન 2 માં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: સરનામાની લાઇન 2 માં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            missing_building_number_instructional: જો તમારી પાસે બિલ્ડિંગ નંબર હોય,
+              તો ઉમેરો
+            missing_building_number_informative: બિલ્ડિંગ નંબર ખૂટતો હોઈ શકે છે
+            street_unknown_for_zip_instructional: "%{zip} માટે માન્ય શેરીનું નામ દાખલ
+              કરો"
+            street_unknown_for_zip_informative: "%{zip} માટે શેરીનું નામ માન્ય નથી"
+            building_number_invalid_instructional: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            building_number_invalid_informative: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            unknown_for_address_instructional: સરનામાની લાઇન 2 ખોટી હોઈ શકે છે
+            unknown_for_address_informative: સરનામાની લાઇન 2 ખોટી હોઈ શકે છે
+          warnings:
+            contains_too_many_words: સરનામાની લાઇન 2 માં %{word_count} કરતાં ઓછા શબ્દો
+              હોવાની ભલામણ કરવામાં આવે છે
+        line2:
+          label:
+            default: ઍપાર્ટમેન્ટ, સ્યૂટ, વગેરે.
+            optional: ઍપાર્ટમેન્ટ, સ્યૂટ, વગેરે. (વૈકલ્પિક)
+          errors:
+            blank_instructional: ઍપાર્ટમેન્ટ, સ્યૂટ, વગેરે દાખલ કરો.
+            blank_informative: ઍપાર્ટમેન્ટ અથવા સ્યૂટ ખૂટે છે
+            too_long_instructional: સરનામાની બીજી લાઇન ખૂબ લાંબી છે (મહત્તમ %{limit}
+              અક્ષરો)
+            too_long_informative: સરનામાની બીજી લાઇન ખૂબ લાંબી છે
+            contains_emojis_instructional: સરનામાની બીજી લાઇનમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: સરનામાની બીજી લાઇનમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: સરનામાની બીજી લાઇનમાં ગાણિતિક
+              ચિહ્નો ન હોઈ શકે
+            contains_mathematical_symbols_informative: સરનામાની બીજી લાઇનમાં ગાણિતિક
+              ચિહ્નો ન હોઈ શકે
+            contains_restricted_characters_instructional: સરનામાની બીજી લાઇનમાં ફક્ત
+              અક્ષરો, નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: સરનામાની બીજી લાઇનમાં પ્રતિબંધિત
+              અક્ષરો ન હોઈ શકે
+            contains_too_many_words_instructional: સરનામાની બીજી લાઇનમાં %{word_count}
+              કરતાં ઓછા શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: સરનામાની બીજી લાઇનમાં %{word_count}
+              કરતાં ઓછા શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: સરનામાની બીજી લાઇનમાં HTML ટૅગ ન હોઈ
+              શકે
+            contains_html_tags_informative: સરનામાની બીજી લાઇનમાં HTML ટૅગ ન હોઈ શકે
+            contains_url_instructional: સરનામાની બીજી લાઇનમાં URL ન હોઈ શકે
+            contains_url_informative: સરનામાની બીજી લાઇનમાં URL ન હોઈ શકે
+            contains_email_instructional: સરનામાની બીજી લાઇનમાં ઇમેઇલ ઍડ્રેસ ન હોઈ
+              શકે
+            contains_email_informative: સરનામાની બીજી લાઇનમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            missing_building_number_instructional: જો તમારી પાસે બિલ્ડિંગ નંબર હોય,
+              તો ઉમેરો
+            missing_building_number_informative: જો તમારી પાસે બિલ્ડિંગ નંબર હોય,
+              તો ઉમેરો
+            street_unknown_for_zip_instructional: "%{zip} માટે માન્ય શેરીનું નામ દાખલ
+              કરો"
+            street_unknown_for_zip_informative: "%{zip} માટે માન્ય શેરીનું નામ દાખલ
+              કરો"
+            building_number_invalid_instructional: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            building_number_invalid_informative: "%{street}, %{zip} માટે બિલ્ડિંગ
+              નંબર શોધી શકાયો નથી"
+            unknown_for_address_instructional: સરનામાની બીજી લાઇન ખોટી હોઈ શકે છે
+            unknown_for_address_informative: સરનામાની બીજી લાઇન ખોટી હોઈ શકે છે
+          warnings:
+            contains_too_many_words: સરનામાની બીજી લાઇનમાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવાની ભલામણ કરવામાં આવે છે
+        neighborhood:
+          label:
+            default: વિસ્તાર
+            optional: વિસ્તાર (વૈકલ્પિક)
+          errors:
+            blank_instructional: વિસ્તાર દાખલ કરો
+            blank_informative: વિસ્તાર ખૂટે છે
+            too_long_instructional: વિસ્તાર ખૂબ લાંબો છે (મહત્તમ %{limit} અક્ષરો)
+            too_long_informative: વિસ્તાર ખૂબ લાંબો છે
+            contains_emojis_instructional: વિસ્તારમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: વિસ્તારમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: વિસ્તારમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: વિસ્તારમાં ગાણિતિક ચિહ્નો ન
+              હોઈ શકે
+            contains_restricted_characters_instructional: વિસ્તારમાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: વિસ્તારમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_too_many_words_instructional: વિસ્તારમાં %{word_count} કરતાં
+              ઓછા શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: વિસ્તારમાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: વિસ્તારમાં HTML ટૅગ ન હોઈ શકે
+            contains_html_tags_informative: વિસ્તારમાં HTML ટૅગ ન હોઈ શકે
+            contains_url_instructional: વિસ્તારમાં URL ન હોઈ શકે
+            contains_url_informative: વિસ્તારમાં URL ન હોઈ શકે
+            contains_email_instructional: વિસ્તારમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: વિસ્તારમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            unknown_for_city_instructional: "%{city} માટે માન્ય વિસ્તારનું નામ દાખલ
+              કરો"
+            unknown_for_city_informative: "%{city} માટે માન્ય વિસ્તારનું નામ દાખલ
+              કરો"
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય વિસ્તારનું નામ દાખલ
+              કરો"
+            unknown_for_zip_informative: "%{zip} માટે માન્ય વિસ્તારનું નામ દાખલ કરો"
+            unknown_for_address_instructional: વિસ્તાર ખોટો હોઈ શકે છે
+            unknown_for_address_informative: વિસ્તાર ખોટો હોઈ શકે છે
+          warnings:
+            contains_too_many_words: વિસ્તારમાં %{word_count} કરતાં ઓછા શબ્દો હોવાની
+              ભલામણ કરવામાં આવે છે
+        district:
+          label:
+            default: જિલ્લો
+            optional: જિલ્લો (વૈકલ્પિક)
+          errors:
+            blank_instructional: જિલ્લો દાખલ કરો
+            blank_informative: જિલ્લો ખૂટે છે
+            too_long_instructional: જિલ્લો ખૂબ લાંબો છે (મહત્તમ %{limit} અક્ષરો)
+            too_long_informative: જિલ્લો ખૂબ લાંબો છે
+            contains_emojis_instructional: જિલ્લામાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: જિલ્લામાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: જિલ્લામાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: જિલ્લામાં ગાણિતિક ચિહ્નો ન
+              હોઈ શકે
+            contains_restricted_characters_instructional: જિલ્લામાં ફક્ત અક્ષરો, નંબરો,
+              સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: જિલ્લામાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_too_many_words_instructional: જિલ્લામાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: જિલ્લામાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: જિલ્લામાં HTML ટૅગ ન હોઈ શકે
+            contains_html_tags_informative: જિલ્લામાં HTML ટૅગ ન હોઈ શકે
+            contains_url_instructional: જિલ્લામાં URL ન હોઈ શકે
+            contains_url_informative: જિલ્લામાં URL ન હોઈ શકે
+            contains_email_instructional: જિલ્લામાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: જિલ્લામાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            unknown_for_city_instructional: "%{city} માટે માન્ય જિલ્લાનું નામ દાખલ
+              કરો"
+            unknown_for_city_informative: "%{city} માટે માન્ય જિલ્લાનું નામ દાખલ કરો"
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય જિલ્લાનું નામ દાખલ કરો"
+            unknown_for_zip_informative: "%{zip} માટે માન્ય જિલ્લાનું નામ દાખલ કરો"
+            unknown_for_address_instructional: જિલ્લો ખોટો હોઈ શકે છે
+            unknown_for_address_informative: જિલ્લો ખોટો હોઈ શકે છે
+          warnings:
+            contains_too_many_words: જિલ્લામાં %{word_count} કરતાં ઓછા શબ્દો હોવાની
+              ભલામણ કરવામાં આવે છે
+        subdistrict:
+          label:
+            default: પેટા-જિલ્લો
+            optional: પેટા-જિલ્લો (વૈકલ્પિક)
+          errors:
+            blank_instructional: પેટા-જિલ્લો દાખલ કરો
+            blank_informative: પેટા-જિલ્લો ખૂટે છે
+            too_long_instructional: પેટા-જિલ્લો ખૂબ લાંબો છે (મહત્તમ %{limit} અક્ષરો)
+            too_long_informative: પેટા-જિલ્લો ખૂબ લાંબો છે
+            contains_emojis_instructional: પેટા-જિલ્લામાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: પેટા-જિલ્લામાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: પેટા-જિલ્લામાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: પેટા-જિલ્લામાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_restricted_characters_instructional: પેટા-જિલ્લામાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: પેટા-જિલ્લામાં પ્રતિબંધિત
+              અક્ષરો ન હોઈ શકે
+            contains_too_many_words_instructional: પેટા-જિલ્લામાં %{word_count} કરતાં
+              ઓછા શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: પેટા-જિલ્લામાં %{word_count} કરતાં
+              ઓછા શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: પેટા-જિલ્લામાં HTML ટૅગ ન હોઈ શકે
+            contains_html_tags_informative: પેટા-જિલ્લામાં HTML ટૅગ ન હોઈ શકે
+            contains_url_instructional: પેટા-જિલ્લામાં URL ન હોઈ શકે
+            contains_url_informative: પેટા-જિલ્લામાં URL ન હોઈ શકે
+            contains_email_instructional: પેટા-જિલ્લામાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: પેટા-જિલ્લામાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            unknown_for_city_instructional: "%{city} માટે માન્ય પેટા-જિલ્લાનું નામ
+              દાખલ કરો"
+            unknown_for_city_informative: "%{city} માટે માન્ય પેટા-જિલ્લાનું નામ દાખલ
+              કરો"
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય પેટા-જિલ્લાનું નામ દાખલ
+              કરો"
+            unknown_for_zip_informative: "%{zip} માટે માન્ય પેટા-જિલ્લાનું નામ દાખલ
+              કરો"
+            unknown_for_address_instructional: પેટા-જિલ્લો ખોટો હોઈ શકે છે
+            unknown_for_address_informative: પેટા-જિલ્લો ખોટો હોઈ શકે છે
+          warnings:
+            contains_too_many_words: પેટા-જિલ્લામાં %{word_count} કરતાં ઓછા શબ્દો
+              હોવાની ભલામણ કરવામાં આવે છે
+        city:
+          label:
+            default: શહેર
+            optional: શહેર (વૈકલ્પિક)
+          errors:
+            blank_instructional: શહેર દાખલ કરો
+            blank_informative: શહેર ખૂટે છે
+            too_long_instructional: શહેર ખૂબ લાંબું છે (મહત્તમ 255 અક્ષરો)
+            too_long_informative: શહેર ખૂબ લાંબું છે
+            contains_emojis_instructional: શહેરમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: શહેરમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: શહેરમાં ગાણિતિક ચિહ્નો ન
+              હોઈ શકે
+            contains_mathematical_symbols_informative: શહેરમાં ગાણિતિક ચિહ્નો ન હોઈ
+              શકે
+            contains_restricted_characters_instructional: શહેરમાં ફક્ત અક્ષરો, નંબરો,
+              સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: શહેરમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_too_many_words_instructional: શહેરમાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: શહેરમાં %{word_count} કરતાં ઓછા શબ્દો
+              હોવા જોઈએ
+            contains_html_tags_instructional: શહેરમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: શહેરમાં HTML ન હોઈ શકે
+            contains_url_instructional: શહેરમાં URL ન હોઈ શકે
+            contains_url_informative: શહેરમાં URL ન હોઈ શકે
+            contains_email_instructional: શહેરમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: શહેરમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય શહેર દાખલ કરો"
+            unknown_for_zip_informative: શહેર %{zip} સાથે મેળ ખાતું નથી
+            unknown_for_province_instructional: "%{province} માટે માન્ય શહેર દાખલ
+              કરો"
+            unknown_for_province_informative: શહેર %{province} સાથે મેળ ખાતું નથી
+            unknown_for_zip_and_province_instructional: "%{zip}, %{province} માટે
+              માન્ય શહેર દાખલ કરો"
+            unknown_for_zip_and_province_informative: શહેર ખોટું હોઈ શકે છે
+            unknown_for_address_instructional: શહેર ખોટું હોઈ શકે છે
+            unknown_for_address_informative: શહેર ખોટું હોઈ શકે છે
+        province:
+          label:
+            default: પ્રદેશ
+            optional: પ્રદેશ (વૈકલ્પિક)
+          errors:
+            blank_instructional: પ્રદેશ પસંદ કરો
+            blank_informative: પ્રદેશ ખૂટે છે
+            invalid_instructional: પ્રદેશ પસંદ કરો
+            invalid_informative: પ્રદેશ ખૂટે છે
+            invalid_for_country_instructional: "%{country} માટે માન્ય પ્રદેશ દાખલ
+              કરો"
+            invalid_for_country_informative: પ્રદેશ %{country} સાથે મેળ ખાતો નથી
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} માટે માન્ય પ્રદેશ
+              પસંદ કરો"
+            unknown_for_city_and_zip_informative: પ્રદેશ %{city}, %{zip} સાથે મેળ
+              ખાતો નથી
+            unknown_for_city_informative: "%{city} માટે માન્ય પ્રદેશ પસંદ કરો"
+            unknown_for_city_instructional: પ્રદેશ %{city} સાથે મેળ ખાતો નથી
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય પ્રદેશ પસંદ કરો"
+            unknown_for_zip_informative: પ્રદેશ %{zip} સાથે મેળ ખાતો નથી
+            unknown_for_address_instructional: પ્રદેશ ખોટો હોઈ શકે છે
+            unknown_for_address_informative: પ્રદેશ ખોટો હોઈ શકે છે
+        country:
+          label:
+            default: દેશ/પ્રદેશ
+            optional: દેશ/પ્રદેશ (વૈકલ્પિક)
+          errors:
+            blank_instructional: દેશ/પ્રદેશ પસંદ કરો
+            blank_informative: દેશ/પ્રદેશ ખૂટે છે
+            not_supported_instructional: દેશ/પ્રદેશ સમર્થિત નથી
+            not_supported_informative: દેશ/પ્રદેશ સમર્થિત નથી
+            invalid_instructional: માન્ય દેશ/પ્રદેશ દાખલ કરો
+            invalid_informative: દેશ/પ્રદેશ માન્ય નથી
+            invalid_for_zip_instructional: આ પોસ્ટલ કોડ માટે માન્ય દેશ/પ્રદેશ દાખલ
+              કરો
+            invalid_for_zip_informative: "%{country} દેશ/પ્રદેશ સાથે મેળ ખાતું નથી"
+        zip:
+          label:
+            default: પોસ્ટલ કોડ
+            optional: પોસ્ટલ કોડ (વૈકલ્પિક)
+          errors:
+            blank_instructional: પોસ્ટલ કોડ દાખલ કરો
+            blank_informative: પોસ્ટલ કોડ ખૂટે છે
+            blocked_address_instructional: આ સ્થાન સમર્થિત નથી
+            blocked_address_informative: આ સ્થાન સમર્થિત નથી
+            invalid_instructional: માન્ય પોસ્ટલ કોડ દાખલ કરો
+            invalid_informative: પોસ્ટલ કોડ માન્ય નથી
+            invalid_for_country_instructional: "%{country} માટે માન્ય પોસ્ટલ કોડ દાખલ
+              કરો"
+            invalid_for_country_informative: પોસ્ટલ કોડ %{country} સાથે મેળ ખાતો નથી
+            invalid_for_province_instructional: "%{province} માટે માન્ય પોસ્ટલ કોડ
+              દાખલ કરો"
+            invalid_for_province_informative: પોસ્ટલ કોડ %{province} સાથે મેળ ખાતો
+              નથી
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              માટે માન્ય પોસ્ટલ કોડ દાખલ કરો"
+            invalid_for_country_and_province_informative: પોસ્ટલ કોડ %{province},
+              %{country} સાથે મેળ ખાતો નથી
+            too_long_instructional: પોસ્ટલ કોડ ખૂબ લાંબો છે
+            too_long_informative: પોસ્ટલ કોડ ખૂબ લાંબો છે
+            contains_emojis_instructional: પોસ્ટલ કોડમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: પોસ્ટલ કોડમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: પોસ્ટલ કોડમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: પોસ્ટલ કોડમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_restricted_characters_instructional: પોસ્ટલ કોડમાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: પોસ્ટલ કોડમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            not_supported_instructional: પોસ્ટલ કોડ સમર્થિત નથી. નવું સરનામું દાખલ
+              કરો અને ફરી પ્રયાસ કરો
+            not_supported_informative: પોસ્ટલ કોડ સમર્થિત નથી
+            contains_html_tags_instructional: પોસ્ટલ કોડમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: પોસ્ટલ કોડમાં HTML ન હોઈ શકે
+            unknown_for_province_instructional: "%{province} માટે માન્ય પોસ્ટલ કોડ
+              દાખલ કરો"
+            unknown_for_province_informative: "%{province} માટે પોસ્ટલ કોડ અમાન્ય
+              છે"
+            unknown_for_address_instructional: પોસ્ટલ કોડ ખોટો હોઈ શકે છે
+            unknown_for_address_informative: પોસ્ટલ કોડ ખોટો હોઈ શકે છે
+        phone:
+          label:
+            default: ફોન
+            optional: ફોન (વૈકલ્પિક)
+          errors:
+            blank_instructional: ફોન નંબર દાખલ કરો
+            blank_informative: ફોન નંબર ખૂટે છે
+            invalid_instructional: માન્ય ફોન નંબર દાખલ કરો
+            invalid_informative: ફોન નંબર માન્ય નથી
+            too_long_instructional: ફોન નંબર ખૂબ લાંબો છે
+            too_long_informative: ફોન નંબર ખૂબ લાંબો છે
+            contains_emojis_instructional: ફોન નંબરમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: ફોન નંબરમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: ફોન નંબરમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: ફોન નંબરમાં ગાણિતિક ચિહ્નો
+              ન હોઈ શકે
+            contains_restricted_characters_instructional: ફોન નંબરમાં ફક્ત અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: ફોન નંબરમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+        address:
+          errors:
+            may_not_exist_instructional: સરનામું મળ્યું નથી અથવા અસ્તિત્વમાં નથી
+            may_not_exist_informative: સરનામું મળ્યું નથી

@@ -1,0 +1,575 @@
+---
+gl:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Empresa
+            optional: Empresa (opcional)
+          errors:
+            blank_instructional: Escribe unha empresa
+            blank_informative: Falta a empresa
+            too_long_instructional: A empresa é longa demais (o máximo é de 255 caracteres)
+            too_long_informative: A empresa é longa demais
+            contains_emojis_instructional: A empresa non pode conter emojis
+            contains_emojis_informative: A empresa non pode conter emojis
+            contains_mathematical_symbols_instructional: A empresa non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: A empresa non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A empresa só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A empresa non pode conter
+              caracteres restrinxidos
+            contains_html_tags_instructional: A empresa non pode conter HTML
+            contains_html_tags_informative: A empresa non pode conter HTML
+        first_name:
+          label:
+            default: Nome
+            optional: Nome (opcional)
+          errors:
+            blank_instructional: Escribe un nome
+            blank_informative: Falta o nome
+            too_long_instructional: O nome é longo demais (o máximo é de 255 caracteres)
+            too_long_informative: O nome é longo demais
+            contains_emojis_instructional: O nome non pode conter emojis
+            contains_emojis_informative: O nome non pode conter emojis
+            contains_mathematical_symbols_instructional: O nome non pode conter símbolos
+              matemáticos
+            contains_mathematical_symbols_informative: O nome non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O nome só pode conter letras,
+              números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O nome non pode conter caracteres
+              restrinxidos
+            contains_html_tags_instructional: O nome non pode conter HTML
+            contains_html_tags_informative: O nome non pode conter HTML
+            contains_url_instructional: O nome non pode conter un URL
+            contains_url_informative: O nome non pode conter un URL
+        last_name:
+          label:
+            default: Apelidos
+            optional: Apelidos (opcional)
+          errors:
+            blank_instructional: Escribe os apelidos
+            blank_informative: Faltan os apelidos
+            too_long_instructional: Os apelidos son longos demais (o máximo é de 255
+              caracteres)
+            too_long_informative: Os apelidos son longos demais
+            contains_emojis_instructional: Os apelidos non poden conter emojis
+            contains_emojis_informative: Os apelidos non poden conter emojis
+            contains_mathematical_symbols_instructional: Os apelidos non poden conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: Os apelidos non poden conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: Os apelidos só poden conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: Os apelidos non poden conter
+              caracteres restrinxidos
+            contains_html_tags_instructional: Os apelidos non poden conter HTML
+            contains_html_tags_informative: Os apelidos non poden conter HTML
+            contains_url_instructional: Os apelidos non poden conter un URL
+            contains_url_informative: Os apelidos non poden conter un URL
+        address1:
+          label:
+            default: Enderezo
+            optional: Enderezo (opcional)
+          errors:
+            blank_instructional: Escribe un enderezo
+            blank_informative: Falta o enderezo
+            too_long_instructional: A primeira liña do enderezo é longa demais (o
+              máximo é de 255 caracteres)
+            too_long_informative: A primeira liña do enderezo é longa demais
+            contains_emojis_instructional: O enderezo non pode conter emojis
+            contains_emojis_informative: O enderezo non pode conter emojis
+            contains_mathematical_symbols_instructional: O enderezo non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O enderezo non pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O enderezo só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O enderezo non pode conter
+              caracteres restrinxidos
+            contains_too_many_words_instructional: O enderezo debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: O enderezo debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: O enderezo non pode conter HTML
+            contains_html_tags_informative: O enderezo non pode conter HTML
+            contains_url_instructional: O enderezo non pode conter un URL
+            contains_url_informative: O enderezo non pode conter un URL
+            contains_email_instructional: O enderezo non pode conter un correo electrónico
+            contains_email_informative: O enderezo non pode conter un correo electrónico
+            missing_building_number_instructional: Engade un número de edificio se
+              tes un
+            missing_building_number_informative: Pode que falte o número de edificio
+            street_unknown_for_zip_instructional: Escribe un nome de rúa válido para
+              %{zip}
+            street_unknown_for_zip_informative: O nome da rúa non coincide con %{zip}
+            building_number_invalid_instructional: Non foi posible atopar o número
+              de edificio para %{street}, %{zip}
+            building_number_invalid_informative: Non foi posible atopar o número de
+              edificio para %{street}, %{zip}
+            unknown_for_address_instructional: A liña 1 do enderezo podería ser incorrecta
+            unknown_for_address_informative: A liña 1 do enderezo podería ser incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a liña 1 do enderezo teña menos
+              de %{word_count} palabras
+        street_name:
+          label:
+            default: Rúa
+            optional: Rúa (opcional)
+          errors:
+            blank_instructional: Escribe unha rúa
+            blank_informative: Falta a rúa
+            too_long_instructional: A rúa é longa demais (o máximo é de %{limit} caracteres)
+            too_long_informative: A rúa é longa demais
+            contains_emojis_instructional: A rúa non pode conter emojis
+            contains_emojis_informative: A rúa non pode conter emojis
+            contains_mathematical_symbols_instructional: A rúa non pode conter símbolos
+              matemáticos
+            contains_mathematical_symbols_informative: A rúa non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A rúa só pode conter letras,
+              números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A rúa non pode conter caracteres
+              restrinxidos
+            contains_too_many_words_instructional: A rúa non pode ter máis de %{word_count}
+              palabras
+            contains_too_many_words_informative: A rúa non pode ter máis de %{word_count}
+              palabras
+            contains_html_tags_instructional: A rúa non pode conter HTML
+            contains_html_tags_informative: A rúa non pode conter HTML
+            contains_url_instructional: A rúa non pode conter un URL
+            contains_url_informative: A rúa non pode conter un URL
+            contains_email_instructional: A rúa non pode conter un correo electrónico
+            contains_email_informative: A rúa non pode conter un correo electrónico
+            street_unknown_for_zip_instructional: Escribe unha rúa válida para %{zip}
+            street_unknown_for_zip_informative: A rúa non é válida para %{zip}
+            unknown_for_address_instructional: A rúa podería ser incorrecta
+            unknown_for_address_informative: A rúa podería ser incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a rúa teña menos de %{word_count}
+              palabras
+        street_number:
+          label:
+            default: Número do edificio
+            optional: Número do edificio (opcional)
+          errors:
+            blank_instructional: Escribe un número de edificio
+            blank_informative: Falta o número de edificio
+            too_long_instructional: O número de edificio é longo demais (o máximo
+              é de %{limit} caracteres)
+            too_long_informative: O número de edificio é longo demais
+            contains_emojis_instructional: O número de edificio non pode conter emojis
+            contains_emojis_informative: O número de edificio non pode conter emojis
+            contains_mathematical_symbols_instructional: O número de edificio non
+              pode conter símbolos matemáticos
+            contains_mathematical_symbols_informative: O número de edificio non pode
+              conter símbolos matemáticos
+            contains_restricted_characters_instructional: O número de edificio só
+              pode conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O número de edificio non pode
+              conter caracteres restrinxidos
+            contains_html_tags_instructional: O número de edificio non pode conter
+              HTML
+            contains_html_tags_informative: O número de edificio non pode conter HTML
+            contains_url_instructional: O número de edificio non pode conter un URL
+            contains_url_informative: O número de edificio non pode conter un URL
+            contains_email_instructional: O número de edificio non pode conter un
+              correo electrónico
+            contains_email_informative: O número de edificio non pode conter un correo
+              electrónico
+            missing_building_number_instructional: Engade un número de edificio se
+              tes un
+            missing_building_number_informative: Pode que falte o número de edificio
+            building_number_invalid_instructional: Non foi posible atopar o número
+              de edificio para %{street}, %{zip}
+            building_number_invalid_informative: Non foi posible atopar o número de
+              edificio para %{street}, %{zip}
+            unknown_for_address_instructional: Escribe un número de edificio válido
+            unknown_for_address_informative: O número de edificio non é válido
+          warnings:
+            contains_too_many_words: Recoméndase que o número de edificio teña menos
+              de %{word_count} palabras
+        address2:
+          label:
+            default: Piso, local, etc.
+            optional: Piso, local, etc. (opcional)
+          errors:
+            blank_instructional: Escribe un piso, local, etc.
+            blank_informative: Falta o piso ou local
+            too_long_instructional: A liña 2 do enderezo é longa demais (o máximo
+              é de 255 caracteres)
+            too_long_informative: A liña 2 do enderezo é longa demais
+            contains_emojis_instructional: A liña 2 do enderezo non pode conter emojis
+            contains_emojis_informative: A liña 2 do enderezo non pode conter emojis
+            contains_mathematical_symbols_instructional: A liña 2 do enderezo non
+              pode conter símbolos matemáticos
+            contains_mathematical_symbols_informative: A liña 2 do enderezo non pode
+              conter símbolos matemáticos
+            contains_restricted_characters_instructional: A liña 2 do enderezo só
+              pode conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A liña 2 do enderezo non pode
+              conter caracteres restrinxidos
+            contains_too_many_words_instructional: A liña 2 do enderezo debe ter menos
+              de %{word_count} palabras
+            contains_too_many_words_informative: A liña 2 do enderezo debe ter menos
+              de %{word_count} palabras
+            contains_html_tags_instructional: A liña 2 do enderezo non pode conter
+              HTML
+            contains_html_tags_informative: A liña 2 do enderezo non pode conter HTML
+            contains_url_instructional: A liña 2 do enderezo non pode conter un URL
+            contains_url_informative: A liña 2 do enderezo non pode conter un URL
+            contains_email_instructional: A liña 2 do enderezo non pode conter un
+              correo electrónico
+            contains_email_informative: A liña 2 do enderezo non pode conter un correo
+              electrónico
+            missing_building_number_instructional: Engade un número de edificio se
+              tes un
+            missing_building_number_informative: Pode que falte o número de edificio
+            street_unknown_for_zip_instructional: Escribe un nome de rúa válido para
+              %{zip}
+            street_unknown_for_zip_informative: O nome da rúa non é válido para %{zip}
+            building_number_invalid_instructional: Non foi posible atopar o número
+              de edificio para %{street}, %{zip}
+            building_number_invalid_informative: Non foi posible atopar o número de
+              edificio para %{street}, %{zip}
+            unknown_for_address_instructional: A liña 2 do enderezo podería ser incorrecta
+            unknown_for_address_informative: A liña 2 do enderezo podería ser incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a liña 2 do enderezo teña menos
+              de %{word_count} palabras
+        line2:
+          label:
+            default: Piso, local, etc.
+            optional: Piso, local, etc. (opcional)
+          errors:
+            blank_instructional: Escribe un piso, local, etc.
+            blank_informative: Falta o piso ou local
+            too_long_instructional: A segunda liña do enderezo é longa demais (o máximo
+              é de %{limit} caracteres)
+            too_long_informative: A segunda liña do enderezo é longa demais
+            contains_emojis_instructional: A segunda liña do enderezo non pode conter
+              emojis
+            contains_emojis_informative: A segunda liña do enderezo non pode conter
+              emojis
+            contains_mathematical_symbols_instructional: A segunda liña do enderezo
+              non pode conter símbolos matemáticos
+            contains_mathematical_symbols_informative: A segunda liña do enderezo
+              non pode conter símbolos matemáticos
+            contains_restricted_characters_instructional: A segunda liña do enderezo
+              só pode conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A segunda liña do enderezo
+              non pode conter caracteres restrinxidos
+            contains_too_many_words_instructional: A segunda liña do enderezo debe
+              ter menos de %{word_count} palabras
+            contains_too_many_words_informative: A segunda liña do enderezo debe ter
+              menos de %{word_count} palabras
+            contains_html_tags_instructional: A segunda liña do enderezo non pode
+              conter etiquetas HTML
+            contains_html_tags_informative: A segunda liña do enderezo non pode conter
+              etiquetas HTML
+            contains_url_instructional: A segunda liña do enderezo non pode conter
+              un URL
+            contains_url_informative: A segunda liña do enderezo non pode conter un
+              URL
+            contains_email_instructional: A segunda liña do enderezo non pode conter
+              un correo electrónico
+            contains_email_informative: A segunda liña do enderezo non pode conter
+              un correo electrónico
+            missing_building_number_instructional: Engade un número de edificio se
+              tes un
+            missing_building_number_informative: Engade un número de edificio se tes
+              un
+            street_unknown_for_zip_instructional: Escribe un nome de rúa válido para
+              %{zip}
+            street_unknown_for_zip_informative: Escribe un nome de rúa válido para
+              %{zip}
+            building_number_invalid_instructional: Non foi posible atopar o número
+              de edificio para %{street}, %{zip}
+            building_number_invalid_informative: Non foi posible atopar o número de
+              edificio para %{street}, %{zip}
+            unknown_for_address_instructional: A segunda liña do enderezo podería
+              ser incorrecta
+            unknown_for_address_informative: A segunda liña do enderezo podería ser
+              incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a segunda liña do enderezo teña
+              menos de %{word_count} palabras
+        neighborhood:
+          label:
+            default: Barrio
+            optional: Barrio (opcional)
+          errors:
+            blank_instructional: Escribe un barrio
+            blank_informative: Falta o barrio
+            too_long_instructional: O barrio é longo demais (o máximo é de %{limit}
+              caracteres)
+            too_long_informative: O barrio é longo demais
+            contains_emojis_instructional: O barrio non pode conter emojis
+            contains_emojis_informative: O barrio non pode conter emojis
+            contains_mathematical_symbols_instructional: O barrio non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O barrio non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O barrio só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O barrio non pode conter caracteres
+              restrinxidos
+            contains_too_many_words_instructional: O barrio debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: O barrio debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: O barrio non pode conter etiquetas HTML
+            contains_html_tags_informative: O barrio non pode conter etiquetas HTML
+            contains_url_instructional: O barrio non pode conter URL
+            contains_url_informative: O barrio non pode conter URL
+            contains_email_instructional: O barrio non pode conter enderezos de correo
+              electrónico
+            contains_email_informative: O barrio non pode conter enderezos de correo
+              electrónico
+            unknown_for_city_instructional: Escribe un nome de barrio válido para
+              %{city}
+            unknown_for_city_informative: Escribe un nome de barrio válido para %{city}
+            unknown_for_zip_instructional: Escribe un nome de barrio válido para %{zip}
+            unknown_for_zip_informative: Escribe un nome de barrio válido para %{zip}
+            unknown_for_address_instructional: O barrio podería ser incorrecto
+            unknown_for_address_informative: O barrio podería ser incorrecto
+          warnings:
+            contains_too_many_words: Recoméndase que o barrio teña menos de %{word_count}
+              palabras
+        district:
+          label:
+            default: Distrito
+            optional: Distrito (opcional)
+          errors:
+            blank_instructional: Escribe un distrito
+            blank_informative: Falta o distrito
+            too_long_instructional: O distrito é longo demais (o máximo é de %{limit}
+              caracteres)
+            too_long_informative: O distrito é longo demais
+            contains_emojis_instructional: O distrito non pode conter emojis
+            contains_emojis_informative: O distrito non pode conter emojis
+            contains_mathematical_symbols_instructional: O distrito non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O distrito non pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O distrito só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O distrito non pode conter
+              caracteres restrinxidos
+            contains_too_many_words_instructional: O distrito debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: O distrito debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: O distrito non pode conter etiquetas
+              HTML
+            contains_html_tags_informative: O distrito non pode conter etiquetas HTML
+            contains_url_instructional: O distrito non pode conter URL
+            contains_url_informative: O distrito non pode conter URL
+            contains_email_instructional: O distrito non pode conter enderezos de
+              correo electrónico
+            contains_email_informative: O distrito non pode conter enderezos de correo
+              electrónico
+            unknown_for_city_instructional: Escribe un nome de distrito válido para
+              %{city}
+            unknown_for_city_informative: Escribe un nome de distrito válido para
+              %{city}
+            unknown_for_zip_instructional: Escribe un nome de distrito válido para
+              %{zip}
+            unknown_for_zip_informative: Escribe un nome de distrito válido para %{zip}
+            unknown_for_address_instructional: O distrito podería ser incorrecto
+            unknown_for_address_informative: O distrito podería ser incorrecto
+          warnings:
+            contains_too_many_words: Recoméndase que o distrito teña menos de %{word_count}
+              palabras
+        subdistrict:
+          label:
+            default: Subdistrito
+            optional: Subdistrito (opcional)
+          errors:
+            blank_instructional: Escribe un subdistrito
+            blank_informative: Falta o subdistrito
+            too_long_instructional: O subdistrito é longo demais (o máximo é de %{limit}
+              caracteres)
+            too_long_informative: O subdistrito é longo demais
+            contains_emojis_instructional: O subdistrito non pode conter emojis
+            contains_emojis_informative: O subdistrito non pode conter emojis
+            contains_mathematical_symbols_instructional: O subdistrito non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O subdistrito non pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O subdistrito só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O subdistrito non pode conter
+              caracteres restrinxidos
+            contains_too_many_words_instructional: O subdistrito debe ter menos de
+              %{word_count} palabras
+            contains_too_many_words_informative: O subdistrito debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: O subdistrito non pode conter etiquetas
+              HTML
+            contains_html_tags_informative: O subdistrito non pode conter etiquetas
+              HTML
+            contains_url_instructional: O subdistrito non pode conter URL
+            contains_url_informative: O subdistrito non pode conter URL
+            contains_email_instructional: O subdistrito non pode conter enderezos
+              de correo electrónico
+            contains_email_informative: O subdistrito non pode conter enderezos de
+              correo electrónico
+            unknown_for_city_instructional: Escribe un nome de subdistrito válido
+              para %{city}
+            unknown_for_city_informative: Escribe un nome de subdistrito válido para
+              %{city}
+            unknown_for_zip_instructional: Escribe un nome de subdistrito válido para
+              %{zip}
+            unknown_for_zip_informative: Escribe un nome de subdistrito válido para
+              %{zip}
+            unknown_for_address_instructional: O subdistrito podería ser incorrecto
+            unknown_for_address_informative: O subdistrito podería ser incorrecto
+          warnings:
+            contains_too_many_words: Recoméndase que o subdistrito teña menos de %{word_count}
+              palabras
+        city:
+          label:
+            default: Cidade
+            optional: Cidade (opcional)
+          errors:
+            blank_instructional: Escribe unha cidade
+            blank_informative: Falta a cidade
+            too_long_instructional: A cidade é longa demais (o máximo é de 255 caracteres)
+            too_long_informative: A cidade é longa demais
+            contains_emojis_instructional: A cidade non pode conter emojis
+            contains_emojis_informative: A cidade non pode conter emojis
+            contains_mathematical_symbols_instructional: A cidade non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: A cidade non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A cidade só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A cidade non pode conter caracteres
+              restrinxidos
+            contains_too_many_words_instructional: A cidade debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: A cidade debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: A cidade non pode conter HTML
+            contains_html_tags_informative: A cidade non pode conter HTML
+            contains_url_instructional: A cidade non pode conter un URL
+            contains_url_informative: A cidade non pode conter un URL
+            contains_email_instructional: A cidade non pode conter un correo electrónico
+            contains_email_informative: A cidade non pode conter un correo electrónico
+            unknown_for_zip_instructional: Escribe unha cidade válida para %{zip}
+            unknown_for_zip_informative: A cidade non coincide con %{zip}
+            unknown_for_province_instructional: Escribe unha cidade válida para %{province}
+            unknown_for_province_informative: A cidade non coincide con %{province}
+            unknown_for_zip_and_province_instructional: Escribe unha cidade válida
+              para %{zip}, %{province}
+            unknown_for_zip_and_province_informative: A cidade podería ser incorrecta
+            unknown_for_address_instructional: A cidade podería ser incorrecta
+            unknown_for_address_informative: A cidade podería ser incorrecta
+        province:
+          label:
+            default: Rexión
+            optional: Rexión (opcional)
+          errors:
+            blank_instructional: Selecciona unha rexión
+            blank_informative: Falta a rexión
+            invalid_instructional: Selecciona unha rexión
+            invalid_informative: Falta a rexión
+            invalid_for_country_instructional: Escribe unha rexión válida para %{country}
+            invalid_for_country_informative: A rexión non coincide con %{country}
+            unknown_for_city_and_zip_instructional: Selecciona unha rexión válida
+              para %{city}, %{zip}
+            unknown_for_city_and_zip_informative: A rexión non coincide con %{city},
+              %{zip}
+            unknown_for_city_informative: Selecciona unha rexión válida para %{city}
+            unknown_for_city_instructional: A rexión non coincide con %{city}
+            unknown_for_zip_instructional: Selecciona unha rexión válida para %{zip}
+            unknown_for_zip_informative: A rexión non coincide con %{zip}
+            unknown_for_address_instructional: A rexión podería ser incorrecta
+            unknown_for_address_informative: A rexión podería ser incorrecta
+        country:
+          label:
+            default: País/rexión
+            optional: País/rexión (opcional)
+          errors:
+            blank_instructional: Selecciona un país/rexión
+            blank_informative: Falta o país/rexión
+            not_supported_instructional: País/rexión non compatible
+            not_supported_informative: País/rexión non compatible
+            invalid_instructional: Escribe un país/rexión válido
+            invalid_informative: O país/rexión non é válido
+            invalid_for_zip_instructional: Escribe un país/rexión válido para este
+              código postal
+            invalid_for_zip_informative: "%{country} non coincide co país/rexión"
+        zip:
+          label:
+            default: Código postal
+            optional: Código postal (opcional)
+          errors:
+            blank_instructional: Escribe un código postal
+            blank_informative: Falta o código postal
+            blocked_address_instructional: Esta localización non é compatible
+            blocked_address_informative: Esta localización non é compatible
+            invalid_instructional: Escribe un código postal válido
+            invalid_informative: O código postal non é válido
+            invalid_for_country_instructional: Escribe un código postal válido para
+              %{country}
+            invalid_for_country_informative: O código postal non coincide con %{country}
+            invalid_for_province_instructional: Escribe un código postal válido para
+              %{province}
+            invalid_for_province_informative: O código postal non coincide con %{province}
+            invalid_for_country_and_province_instructional: Escribe un código postal
+              válido para %{province}, %{country}
+            invalid_for_country_and_province_informative: O código postal non coincide
+              con %{province}, %{country}
+            too_long_instructional: O código postal é longo demais
+            too_long_informative: O código postal é longo demais
+            contains_emojis_instructional: O código postal non pode conter emojis
+            contains_emojis_informative: O código postal non pode conter emojis
+            contains_mathematical_symbols_instructional: O código postal non pode
+              conter símbolos matemáticos
+            contains_mathematical_symbols_informative: O código postal non pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O código postal só pode
+              conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O código postal non pode conter
+              caracteres restrinxidos
+            not_supported_instructional: Código postal non compatible. Escribe un
+              novo enderezo e téntao de novo
+            not_supported_informative: Código postal non compatible
+            contains_html_tags_instructional: O código postal non pode conter HTML
+            contains_html_tags_informative: O código postal non pode conter HTML
+            unknown_for_province_instructional: Escribe un código postal válido para
+              %{province}
+            unknown_for_province_informative: O código postal non é válido para %{province}
+            unknown_for_address_instructional: O código postal podería ser incorrecto
+            unknown_for_address_informative: O código postal podería ser incorrecto
+        phone:
+          label:
+            default: Teléfono
+            optional: Teléfono (opcional)
+          errors:
+            blank_instructional: Escribe un número de teléfono
+            blank_informative: Falta o número de teléfono
+            invalid_instructional: Escribe un número de teléfono válido
+            invalid_informative: O número de teléfono non é válido
+            too_long_instructional: O número de teléfono é longo demais
+            too_long_informative: O número de teléfono é longo demais
+            contains_emojis_instructional: O número de teléfono non pode conter emojis
+            contains_emojis_informative: O número de teléfono non pode conter emojis
+            contains_mathematical_symbols_instructional: O número de teléfono non
+              pode conter símbolos matemáticos
+            contains_mathematical_symbols_informative: O número de teléfono non pode
+              conter símbolos matemáticos
+            contains_restricted_characters_instructional: O número de teléfono só
+              pode conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O número de teléfono non pode
+              conter caracteres restrinxidos
+        address:
+          errors:
+            may_not_exist_instructional: O enderezo non se atopou ou non existe
+            may_not_exist_informative: Enderezo non atopado

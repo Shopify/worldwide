@@ -1,0 +1,43 @@
+---
+ka:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: კომუნა
+            optional: კომუნა (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე კომუნა
+            blank_informative: მითითებული არ არის კომუნა
+            too_long_instructional: კომუნა ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: კომუნა ძალიან გრძელია
+            contains_emojis_instructional: კომუნა არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: კომუნა არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: კომუნა არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: კომუნა არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: კომუნა უნდა შეიცავდეს მხოლოდ
+              ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: კომუნა არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: კომუნა უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: კომუნა უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: კომუნა არ უნდა შეიცავდეს HTML თეგებს
+            contains_html_tags_informative: კომუნა არ უნდა შეიცავდეს HTML თეგებს
+            contains_url_instructional: კომუნა არ უნდა შეიცავდეს URL-ებს
+            contains_url_informative: კომუნა არ უნდა შეიცავდეს URL-ებს
+            contains_email_instructional: კომუნა არ უნდა შეიცავდეს ელფოსტის მისამართებს
+            contains_email_informative: კომუნა არ უნდა შეიცავდეს ელფოსტის მისამართებს
+            unknown_for_city_instructional: შეიყვანე სწორი კომუნა %{city}-სთვის
+            unknown_for_city_informative: შეიყვანე სწორი კომუნა %{city}-სთვის
+            unknown_for_zip_instructional: 'შეიყვანე სწორი კომუნა ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'შეიყვანე სწორი კომუნა ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: კომუნა შესაძლოა არასწორი იყოს
+            unknown_for_address_informative: კომუნა შესაძლოა არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია კომუნა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

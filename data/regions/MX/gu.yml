@@ -1,0 +1,57 @@
+---
+gu:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: શેરી અને ઘરનો નંબર
+            optional: શેરી અને ઘરનો નંબર (વૈકલ્પિક)
+          errors:
+            blank_instructional: શેરી અને ઘરનો નંબર દાખલ કરો
+            blank_informative: શેરી અને ઘરનો નંબર ખૂટે છે
+        province:
+          label:
+            default: રાજ્ય
+            optional: રાજ્ય (વૈકલ્પિક)
+          errors:
+            blank_instructional: રાજ્ય પસંદ કરો
+            blank_informative: રાજ્ય ખૂટે છે
+        neighborhood:
+          label:
+            default: કૉલોની
+            optional: કૉલોની (વૈકલ્પિક)
+          errors:
+            blank_instructional: કૉલોની દાખલ કરો
+            blank_informative: કૉલોની ખૂટે છે
+            too_long_instructional: કૉલોની બહુ લાંબી છે (મહત્તમ %{limit} અક્ષરો)
+            too_long_informative: કૉલોની બહુ લાંબી છે
+            contains_emojis_instructional: કૉલોનીમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: કૉલોનીમાં ઇમોજી ન હોઈ શકે
+            contains_mathematical_symbols_instructional: કૉલોનીમાં ગાણિતિક પ્રતીકો
+              ન હોઈ શકે
+            contains_mathematical_symbols_informative: કૉલોનીમાં ગાણિતિક પ્રતીકો ન
+              હોઈ શકે
+            contains_restricted_characters_instructional: કૉલોનીમાં માત્ર અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશેષ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: કૉલોનીમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_too_many_words_instructional: કૉલોનીમાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: કૉલોનીમાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_html_tags_informative: કૉલોનીમાં HTML ન હોઈ શકે
+            contains_html_tags_instructional: કૉલોનીમાં HTML ન હોઈ શકે
+            contains_url_instructional: કૉલોનીમાં URL ન હોઈ શકે
+            contains_url_informative: કૉલોનીમાં URL ન હોઈ શકે
+            contains_email_instructional: કૉલોનીમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            contains_email_informative: કૉલોનીમાં ઇમેઇલ ઍડ્રેસ ન હોઈ શકે
+            unknown_for_city_instructional: "%{city} માટે માન્ય કૉલોની દાખલ કરો"
+            unknown_for_city_informative: "%{city} માટે માન્ય કૉલોની દાખલ કરો"
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય કૉલોની દાખલ કરો"
+            unknown_for_zip_informative: "%{zip} માટે માન્ય કૉલોની દાખલ કરો"
+            unknown_for_address_instructional: કૉલોની ખોટી હોઈ શકે છે
+            unknown_for_address_informative: કૉલોની ખોટી હોઈ શકે છે
+          warnings:
+            contains_too_many_words: કૉલોનીમાં %{word_count} કરતાં ઓછા શબ્દો હોવાની
+              ભલામણ કરવામાં આવે છે

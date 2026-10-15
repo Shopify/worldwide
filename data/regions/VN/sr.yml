@@ -1,0 +1,43 @@
+---
+sr:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Kvart
+            optional: Kvart (opcionalno)
+          errors:
+            blank_instructional: Unesite kvart
+            blank_informative: Kvart nedostaje
+            too_long_instructional: Kvart je predugačak
+            too_long_informative: Kvart je predugačak (maksimalno 255 znakova)
+            contains_emojis_instructional: Kvart ne može da sadrži emodžije
+            contains_emojis_informative: Kvart ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Kvart ne može da sadrži matematičke
+              simbole
+            contains_mathematical_symbols_informative: Kvart ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Kvart može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Kvart ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Kvart mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Kvart mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Kvart ne može da sadrži HTML
+            contains_html_tags_informative: Kvart ne može da sadrži HTML
+            contains_url_instructional: Kvart ne može da sadrži URL
+            contains_url_informative: Kvart ne može da sadrži URL
+            contains_email_instructional: Kvart ne može da sadrži imejl adresu
+            contains_email_informative: Kvart ne može da sadrži imejl adresu
+            unknown_for_city_instructional: Unesite važeći kvart za %{city}
+            unknown_for_city_informative: Kvart se ne podudara sa %{city}
+            unknown_for_zip_instructional: Unesite važeći kvart za %{zip}
+            unknown_for_zip_informative: Kvart se ne podudara sa %{zip}
+            unknown_for_address_instructional: Kvart je možda netačan
+            unknown_for_address_informative: Kvart je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da kvart ima manje od %{word_count}
+              reči

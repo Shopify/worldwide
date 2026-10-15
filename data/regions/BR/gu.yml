@@ -1,0 +1,61 @@
+---
+gu:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: શેરી અને મકાનનો નંબર
+            optional: શેરી અને મકાનનો નંબર (વૈકલ્પિક)
+          errors:
+            blank_instructional: શેરી અને મકાનનો નંબર દાખલ કરો
+            blank_informative: શેરી અને મકાનનો નંબર ખૂટે છે
+        province:
+          label:
+            default: રાજ્ય
+            optional: રાજ્ય (વૈકલ્પિક)
+          errors:
+            blank_instructional: રાજ્ય પસંદ કરો
+            blank_informative: રાજ્ય ખૂટે છે
+        district:
+          label:
+            default: વિસ્તાર
+            optional: વિસ્તાર (વૈકલ્પિક)
+          errors:
+            blank_instructional: વિસ્તાર દાખલ કરો
+            blank_informative: વિસ્તાર ખૂટે છે
+            too_long_instructional: વિસ્તાર ઘણો લાંબો છે (મહત્તમ %{limit} અક્ષરો માન્ય
+              છે)
+            too_long_informative: વિસ્તાર ઘણો લાંબો છે
+            contains_emojis_instructional: વિસ્તારમાં ઇમોજી હોઈ શકતા નથી
+            contains_emojis_informative: વિસ્તારમાં ઇમોજી હોઈ શકતા નથી
+            contains_mathematical_symbols_instructional: વિસ્તારમાં ગાણિતિક ચિહ્નો
+              હોઈ શકતા નથી
+            contains_mathematical_symbols_informative: વિસ્તારમાં ગાણિતિક ચિહ્નો હોઈ
+              શકતા નથી
+            contains_restricted_characters_instructional: વિસ્તારમાં માત્ર અક્ષરો,
+              નંબરો, સ્થાનિક અક્ષરો અને વિશિષ્ટ અક્ષરો હોઈ શકે છે
+            contains_restricted_characters_informative: વિસ્તારમાં પ્રતિબંધિત અક્ષરો
+              હોઈ શકતા નથી
+            contains_too_many_words_instructional: વિસ્તારમાં %{word_count} કરતાં
+              ઓછા શબ્દો હોવા જોઈએ
+            contains_too_many_words_informative: વિસ્તારમાં %{word_count} કરતાં ઓછા
+              શબ્દો હોવા જોઈએ
+            contains_html_tags_instructional: વિસ્તારમાં HTML ટૅગ હોઈ શકે નહીં
+            contains_html_tags_informative: વિસ્તારમાં HTML ટૅગ હોઈ શકે નહીં
+            contains_url_instructional: વિસ્તારમાં URL હોઈ શકે નહીં
+            contains_url_informative: વિસ્તારમાં URL હોઈ શકે નહીં
+            contains_email_instructional: વિસ્તારમાં ઇમેઇલ ઍડ્રેસ હોઈ શકે નહીં
+            contains_email_informative: વિસ્તારમાં ઇમેઇલ ઍડ્રેસ હોઈ શકે નહીં
+            unknown_for_city_instructional: "%{city} માટે માન્ય વિસ્તારનું નામ દાખલ
+              કરો"
+            unknown_for_city_informative: "%{city} માટે માન્ય વિસ્તારનું નામ દાખલ
+              કરો"
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય વિસ્તારનું નામ દાખલ
+              કરો"
+            unknown_for_zip_informative: "%{zip} માટે માન્ય વિસ્તારનું નામ દાખલ કરો"
+            unknown_for_address_instructional: વિસ્તાર ખોટો હોઈ શકે છે
+            unknown_for_address_informative: વિસ્તાર ખોટો હોઈ શકે છે
+          warnings:
+            contains_too_many_words: વિસ્તારમાં %{word_count} કરતાં ઓછા શબ્દો હોવાની
+              ભલામણ કરવામાં આવે છે

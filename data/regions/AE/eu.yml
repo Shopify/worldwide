@@ -1,0 +1,50 @@
+---
+eu:
+  worldwide:
+    AE:
+      addresses:
+        province:
+          label:
+            default: Emirerria
+            optional: Emirerria (aukerakoa)
+          errors:
+            blank_instructional: Hautatu emirerri bat
+            blank_informative: Emirerria falta da
+        neighborhood:
+          label:
+            default: Eremua
+            optional: Eremua (aukerakoa)
+          errors:
+            blank_instructional: Sartu eremu bat
+            blank_informative: Eremua falta da
+            too_long_instructional: Eremua luzeegia da (gehienez %{limit} karaktere)
+            too_long_informative: Eremua luzeegia da
+            contains_emojis_instructional: Eremuak ezin du emojirik izan
+            contains_emojis_informative: Eremuak ezin du emojirik izan
+            contains_mathematical_symbols_instructional: Eremuak ezin du sinbolo matematikorik
+              izan
+            contains_mathematical_symbols_informative: Eremuak ezin du sinbolo matematikorik
+              izan
+            contains_restricted_characters_instructional: Eremuak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_restricted_characters_informative: Eremuak ezin du karaktere
+              mugaturik izan
+            contains_too_many_words_instructional: Eremuak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_too_many_words_informative: Eremuak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_html_tags_instructional: Eremuak ezin du HTML koderik izan
+            contains_html_tags_informative: Eremuak ezin du HTML koderik izan
+            contains_url_instructional: Eremuak ezin du URLrik izan
+            contains_url_informative: Eremuak ezin du URLrik izan
+            contains_email_instructional: Eremuak ezin du helbide elektronikorik izan
+            contains_email_informative: Eremuak ezin du helbide elektronikorik izan
+            unknown_for_city_instructional: 'Sartu baliozko eremu bat honentzat: %{city}'
+            unknown_for_city_informative: 'Eremuak ez du balio honentzat: %{city}'
+            unknown_for_zip_instructional: 'Sartu baliozko eremu bat honentzat: %{zip}'
+            unknown_for_zip_informative: 'Eremuak ez du balio honentzat: %{zip}'
+            unknown_for_address_instructional: Eremua agian ez da zuzena
+            unknown_for_address_informative: Eremua agian ez da zuzena
+          warnings:
+            contains_too_many_words: Eremuak %{word_count} hitz baino gutxiago izatea
+              gomendatzen da

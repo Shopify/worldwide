@@ -1,0 +1,61 @@
+---
+uk:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: Вулиця та номер будинку
+            optional: Вулиця та номер будинку (необов'язково)
+          errors:
+            blank_instructional: Введіть вулицю та номер будинку
+            blank_informative: Не вказано вулицю та номер будинку
+        province:
+          label:
+            default: Штат
+            optional: Штат (необов'язково)
+          errors:
+            blank_instructional: Виберіть штат
+            blank_informative: Не вказано штат
+        district:
+          label:
+            default: Район
+            optional: Район (необов'язково)
+          errors:
+            blank_instructional: Введіть назву району
+            blank_informative: Не вказано район
+            too_long_instructional: Назва району задовга (максимум %{limit} символів)
+            too_long_informative: Назва району задовга
+            contains_emojis_instructional: Назва району не може містити емодзі
+            contains_emojis_informative: Назва району не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва району не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва району не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва району може містити
+              лише літери, цифри, локальні та спеціальні символи
+            contains_restricted_characters_informative: Назва району не може містити
+              заборонені символи
+            contains_too_many_words_instructional: Назва району має містити менше
+              ніж %{word_count} слів
+            contains_too_many_words_informative: Назва району має містити менше ніж
+              %{word_count} слів
+            contains_html_tags_instructional: Назва району не може містити HTML-теги
+            contains_html_tags_informative: Назва району не може містити HTML-теги
+            contains_url_instructional: Назва району не може містити URL-адреси
+            contains_url_informative: Назва району не може містити URL-адреси
+            contains_email_instructional: Назва району не може містити адреси електронної
+              пошти
+            contains_email_informative: Назва району не може містити адреси електронної
+              пошти
+            unknown_for_city_instructional: Введіть дійсну назву району для міста
+              %{city}
+            unknown_for_city_informative: Введіть дійсну назву району для міста %{city}
+            unknown_for_zip_instructional: Введіть дійсну назву району для індексу
+              %{zip}
+            unknown_for_zip_informative: Введіть дійсну назву району для індексу %{zip}
+            unknown_for_address_instructional: Назва району може бути неправильною
+            unknown_for_address_informative: Назва району може бути неправильною
+          warnings:
+            contains_too_many_words: Рекомендується, щоб назва району містила менше
+              ніж %{word_count} слів

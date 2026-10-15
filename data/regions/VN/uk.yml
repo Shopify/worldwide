@@ -1,0 +1,47 @@
+---
+uk:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Квартал
+            optional: Квартал (необов’язково)
+          errors:
+            blank_instructional: Введіть квартал
+            blank_informative: Відсутній квартал
+            too_long_instructional: Назва кварталу задовга
+            too_long_informative: Назва кварталу задовга (максимум 255 символів)
+            contains_emojis_instructional: Квартал не може містити емодзі
+            contains_emojis_informative: Квартал не може містити емодзі
+            contains_mathematical_symbols_instructional: Квартал не може містити математичні
+              символи
+            contains_mathematical_symbols_informative: Квартал не може містити математичні
+              символи
+            contains_restricted_characters_instructional: Квартал може містити лише
+              літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Квартал не може містити заборонені
+              символи
+            contains_too_many_words_instructional: Квартал має містити менше ніж %{word_count}
+              слів
+            contains_too_many_words_informative: Квартал має містити менше ніж %{word_count}
+              слів
+            contains_html_tags_instructional: Квартал не може містити HTML
+            contains_html_tags_informative: Квартал не може містити HTML
+            contains_url_instructional: Квартал не може містити URL-адресу
+            contains_url_informative: Квартал не може містити URL-адресу
+            contains_email_instructional: Квартал не може містити адресу електронної
+              пошти
+            contains_email_informative: Квартал не може містити адресу електронної
+              пошти
+            unknown_for_city_instructional: Введіть дійсну назву кварталу для міста
+              %{city}
+            unknown_for_city_informative: Квартал не відповідає місту %{city}
+            unknown_for_zip_instructional: Введіть дійсну назву кварталу для поштового
+              індексу %{zip}
+            unknown_for_zip_informative: Квартал не відповідає поштовому індексу %{zip}
+            unknown_for_address_instructional: Квартал може бути введено неправильно
+            unknown_for_address_informative: Квартал може бути введено неправильно
+          warnings:
+            contains_too_many_words: Рекомендується, щоб назва кварталу містила менше
+              ніж %{word_count} слів

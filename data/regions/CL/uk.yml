@@ -1,0 +1,45 @@
+---
+uk:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Комуна
+            optional: Комуна (необов'язково)
+          errors:
+            blank_instructional: Введіть назву комуни
+            blank_informative: Не вказано комуну
+            too_long_instructional: Назва комуни задовга (максимум %{limit} символів)
+            too_long_informative: Назва комуни задовга
+            contains_emojis_instructional: Назва комуни не може містити емодзі
+            contains_emojis_informative: Назва комуни не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва комуни не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва комуни не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва комуни може містити
+              лише літери, цифри, локальні та спеціальні символи
+            contains_restricted_characters_informative: Назва комуни не може містити
+              заборонені символи
+            contains_too_many_words_instructional: Назва комуни має містити менше
+              ніж %{word_count} слів
+            contains_too_many_words_informative: Назва комуни має містити менше ніж
+              %{word_count} слів
+            contains_html_tags_instructional: Назва комуни не може містити HTML-теги
+            contains_html_tags_informative: Назва комуни не може містити HTML-теги
+            contains_url_instructional: Назва комуни не може містити URL-адреси
+            contains_url_informative: Назва комуни не може містити URL-адреси
+            contains_email_instructional: Назва комуни не може містити адреси електронної
+              пошти
+            contains_email_informative: Назва комуни не може містити адреси електронної
+              пошти
+            unknown_for_city_instructional: Введіть дійсну комуну для міста %{city}
+            unknown_for_city_informative: Введіть дійсну комуну для міста %{city}
+            unknown_for_zip_instructional: Введіть дійсну комуну для індексу %{zip}
+            unknown_for_zip_informative: Введіть дійсну комуну для індексу %{zip}
+            unknown_for_address_instructional: Назва комуни може бути неправильною
+            unknown_for_address_informative: Назва комуни може бути неправильною
+          warnings:
+            contains_too_many_words: Рекомендується, щоб назва комуни містила менше
+              ніж %{word_count} слів

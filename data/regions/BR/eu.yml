@@ -1,0 +1,61 @@
+---
+eu:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: Kalea eta etxearen zenbakia
+            optional: Kalea eta etxearen zenbakia (aukerakoa)
+          errors:
+            blank_instructional: Sartu kalea eta etxearen zenbakia
+            blank_informative: Kalea eta etxearen zenbakia falta dira
+        province:
+          label:
+            default: Estatua
+            optional: Estatua (aukerakoa)
+          errors:
+            blank_instructional: Hautatu estatu bat
+            blank_informative: Estatua falta da
+        district:
+          label:
+            default: Auzoa
+            optional: Auzoa (aukerakoa)
+          errors:
+            blank_instructional: Sartu auzo bat
+            blank_informative: Auzoa falta da
+            too_long_instructional: Auzoa luzeegia da (gehienez %{limit} karaktere)
+            too_long_informative: Auzoa luzeegia da
+            contains_emojis_instructional: Auzoak ezin du emojirik izan
+            contains_emojis_informative: Auzoak ezin du emojirik izan
+            contains_mathematical_symbols_instructional: Auzoak ezin du sinbolo matematikorik
+              izan
+            contains_mathematical_symbols_informative: Auzoak ezin du sinbolo matematikorik
+              izan
+            contains_restricted_characters_instructional: Auzoak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_restricted_characters_informative: Auzoak ezin du karaktere mugaturik
+              izan
+            contains_too_many_words_instructional: Auzoak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_too_many_words_informative: Auzoak %{word_count} hitz baino gutxiago
+              izan behar ditu
+            contains_html_tags_instructional: Auzoak ezin du HTML etiketarik izan
+            contains_html_tags_informative: Auzoak ezin du HTML etiketarik izan
+            contains_url_instructional: Auzoak ezin du URLrik izan
+            contains_url_informative: Auzoak ezin du URLrik izan
+            contains_email_instructional: Auzoak ezin du helbide elektronikorik izan
+            contains_email_informative: Auzoak ezin du helbide elektronikorik izan
+            unknown_for_city_instructional: 'Sartu baliozko auzo-izen bat honentzat:
+              %{city}'
+            unknown_for_city_informative: 'Sartu baliozko auzo-izen bat honentzat:
+              %{city}'
+            unknown_for_zip_instructional: 'Sartu baliozko auzo-izen bat honentzat:
+              %{zip}'
+            unknown_for_zip_informative: 'Sartu baliozko auzo-izen bat honentzat:
+              %{zip}'
+            unknown_for_address_instructional: Auzoa agian ez da zuzena
+            unknown_for_address_informative: Auzoa agian ez da zuzena
+          warnings:
+            contains_too_many_words: Auzoak %{word_count} hitz baino gutxiago izatea
+              gomendatzen da

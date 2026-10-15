@@ -1,0 +1,51 @@
+---
+ka:
+  worldwide:
+    AE:
+      addresses:
+        province:
+          label:
+            default: საამირო
+            optional: საამირო (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე საამირო
+            blank_informative: მითითებული არ არის საამირო
+        neighborhood:
+          label:
+            default: ტერიტორია
+            optional: ტერიტორია (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ტერიტორია
+            blank_informative: მითითებული არ არის ტერიტორია
+            too_long_instructional: ტერიტორია ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: ტერიტორია ძალიან გრძელია
+            contains_emojis_instructional: ტერიტორია არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: ტერიტორია არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: ტერიტორია არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: ტერიტორია არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: ტერიტორია უნდა შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ტერიტორია არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: ტერიტორია უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: ტერიტორია უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: ტერიტორია არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: ტერიტორია არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: ტერიტორია არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: ტერიტორია არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: ტერიტორია არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: ტერიტორია არ უნდა შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: შეიყვანე სწორი ტერიტორია %{city}-სთვის
+            unknown_for_city_informative: ტერიტორია არასწორია %{city}-სთვის
+            unknown_for_zip_instructional: 'შეიყვანე სწორი ტერიტორია ინდექსისთვის:
+              %{zip}'
+            unknown_for_zip_informative: 'ტერიტორია არასწორია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: ტერიტორია შესაძლოა არასწორი იყოს
+            unknown_for_address_informative: ტერიტორია შესაძლოა არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია ტერიტორია შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

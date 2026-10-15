@@ -1,0 +1,60 @@
+---
+gl:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: Rúa e número
+            optional: Rúa e número (opcional)
+          errors:
+            blank_instructional: Escribe a rúa e o número
+            blank_informative: Faltan a rúa e o número
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank_instructional: Selecciona un estado
+            blank_informative: Falta o estado
+        neighborhood:
+          label:
+            default: Colonia
+            optional: Colonia (opcional)
+          errors:
+            blank_instructional: Escribe unha colonia
+            blank_informative: Falta a colonia
+            too_long_instructional: A colonia é longa de máis (o máximo son %{limit}
+              caracteres)
+            too_long_informative: A colonia é longa de máis
+            contains_emojis_instructional: A colonia non pode conter emojis
+            contains_emojis_informative: A colonia non pode conter emojis
+            contains_mathematical_symbols_instructional: A colonia non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: A colonia non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A colonia só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A colonia non pode conter
+              caracteres restrinxidos
+            contains_too_many_words_instructional: A colonia debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: A colonia debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_informative: A colonia non pode conter HTML
+            contains_html_tags_instructional: A colonia non pode conter HTML
+            contains_url_instructional: A colonia non pode conter un URL
+            contains_url_informative: A colonia non pode conter un URL
+            contains_email_instructional: A colonia non pode conter un enderezo de
+              correo electrónico
+            contains_email_informative: A colonia non pode conter un enderezo de correo
+              electrónico
+            unknown_for_city_instructional: Escribe unha colonia válida para %{city}
+            unknown_for_city_informative: Escribe unha colonia válida para %{city}
+            unknown_for_zip_instructional: Escribe unha colonia válida para o %{zip}
+            unknown_for_zip_informative: Escribe unha colonia válida para o %{zip}
+            unknown_for_address_instructional: A colonia podería ser incorrecta
+            unknown_for_address_informative: A colonia podería ser incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a colonia teña menos de %{word_count}
+              palabras

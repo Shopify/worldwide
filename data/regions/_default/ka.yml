@@ -1,0 +1,579 @@
+---
+ka:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: კომპანია
+            optional: კომპანია (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე კომპანია
+            blank_informative: კომპანია მითითებული არ არის
+            too_long_instructional: კომპანია ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)
+            too_long_informative: კომპანია ძალიან გრძელია
+            contains_emojis_instructional: კომპანია არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: კომპანია არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: კომპანია არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: კომპანია არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: კომპანია შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: კომპანია არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_html_tags_instructional: კომპანია არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: კომპანია არ უნდა შეიცავდეს HTML-ს
+        first_name:
+          label:
+            default: სახელი
+            optional: სახელი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე სახელი
+            blank_informative: სახელი მითითებული არ არის
+            too_long_instructional: სახელი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)
+            too_long_informative: სახელი ძალიან გრძელია
+            contains_emojis_instructional: სახელი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: სახელი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: სახელი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: სახელი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: სახელი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: სახელი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_html_tags_instructional: სახელი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: სახელი არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: სახელი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: სახელი არ უნდა შეიცავდეს URL-ს
+        last_name:
+          label:
+            default: გვარი
+            optional: გვარი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე გვარი
+            blank_informative: გვარი მითითებული არ არის
+            too_long_instructional: გვარი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)
+            too_long_informative: გვარი ძალიან გრძელია
+            contains_emojis_instructional: გვარი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: გვარი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: გვარი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_mathematical_symbols_informative: გვარი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: გვარი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: გვარი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_html_tags_instructional: გვარი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: გვარი არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: გვარი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: გვარი არ უნდა შეიცავდეს URL-ს
+        address1:
+          label:
+            default: მისამართი
+            optional: მისამართი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე მისამართი
+            blank_informative: მისამართი მითითებული არ არის
+            too_long_instructional: მისამართის 1-ლი ხაზი ძალიან გრძელია (მაქსიმუმ
+              255 სიმბოლო)
+            too_long_informative: მისამართის 1-ლი ხაზი ძალიან გრძელია
+            contains_emojis_instructional: მისამართი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: მისამართი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: მისამართი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: მისამართი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: მისამართი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: მისამართი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: მისამართი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: მისამართი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: მისამართი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: მისამართი არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: მისამართი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: მისამართი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: მისამართი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: მისამართი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            missing_building_number_instructional: თუ გაქვს, დაამატე შენობის ნომერი
+            missing_building_number_informative: შენობის ნომერი შეიძლება გამოტოვებული
+              იყოს
+            street_unknown_for_zip_instructional: 'შეიყვანე ქუჩის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            street_unknown_for_zip_informative: 'ქუჩის სახელი არ ემთხვევა შემდეგს:
+              %{zip}'
+            building_number_invalid_instructional: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            building_number_invalid_informative: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            unknown_for_address_instructional: მისამართის 1-ლი ხაზი შეიძლება არასწორი
+              იყოს
+            unknown_for_address_informative: მისამართის 1-ლი ხაზი შეიძლება არასწორი
+              იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, მისამართის 1-ლი ხაზი შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+        street_name:
+          label:
+            default: ქუჩა
+            optional: ქუჩა (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ქუჩა
+            blank_informative: ქუჩა მითითებული არ არის
+            too_long_instructional: ქუჩა ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: ქუჩა ძალიან გრძელია
+            contains_emojis_instructional: ქუჩა არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: ქუჩა არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: ქუჩა არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_mathematical_symbols_informative: ქუჩა არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: ქუჩა შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ქუჩა არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: ქუჩა არ უნდა შეიცავდეს %{word_count}-ზე
+              მეტ სიტყვას
+            contains_too_many_words_informative: ქუჩა არ უნდა შეიცავდეს %{word_count}-ზე
+              მეტ სიტყვას
+            contains_html_tags_instructional: ქუჩა არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: ქუჩა არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: ქუჩა არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: ქუჩა არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: ქუჩა არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: ქუჩა არ უნდა შეიცავდეს ელფოსტის მისამართს
+            street_unknown_for_zip_instructional: 'შეიყვანე სწორი ქუჩა შემდეგი ინდექსისთვის:
+              %{zip}'
+            street_unknown_for_zip_informative: 'ქუჩა არასწორია შემდეგი ინდექსისთვის:
+              %{zip}'
+            unknown_for_address_instructional: ქუჩა შეიძლება არასწორი იყოს
+            unknown_for_address_informative: ქუჩა შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, ქუჩა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+        street_number:
+          label:
+            default: შენობის ნომერი
+            optional: შენობის ნომერი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე შენობის ნომერი
+            blank_informative: შენობის ნომერი მითითებული არ არის
+            too_long_instructional: შენობის ნომერი ძალიან გრძელია (მაქსიმუმ %{limit}
+              სიმბოლო)
+            too_long_informative: შენობის ნომერი ძალიან გრძელია
+            contains_emojis_instructional: შენობის ნომერი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: შენობის ნომერი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: შენობის ნომერი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: შენობის ნომერი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: შენობის ნომერი შეიძლება
+              შეიცავდეს მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: შენობის ნომერი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_html_tags_instructional: შენობის ნომერი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: შენობის ნომერი არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: შენობის ნომერი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: შენობის ნომერი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: შენობის ნომერი არ უნდა შეიცავდეს ელფოსტის
+              მისამართს
+            contains_email_informative: შენობის ნომერი არ უნდა შეიცავდეს ელფოსტის
+              მისამართს
+            missing_building_number_instructional: თუ გაქვს, დაამატე შენობის ნომერი
+            missing_building_number_informative: შენობის ნომერი შეიძლება გამოტოვებული
+              იყოს
+            building_number_invalid_instructional: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            building_number_invalid_informative: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            unknown_for_address_instructional: შეიყვანე შენობის სწორი ნომერი
+            unknown_for_address_informative: შენობის ნომერი არასწორია
+          warnings:
+            contains_too_many_words: რეკომენდებულია, შენობის ნომერი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+        address2:
+          label:
+            default: ბინა, აპარტამენტი და ა.შ.
+            optional: ბინა, აპარტამენტი და ა.შ. (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ბინა, აპარტამენტი და ა.შ.
+            blank_informative: ბინა ან აპარტამენტი მითითებული არ არის
+            too_long_instructional: მისამართის მე-2 ხაზი ძალიან გრძელია (მაქსიმუმ
+              255 სიმბოლო)
+            too_long_informative: მისამართის მე-2 ხაზი ძალიან გრძელია
+            contains_emojis_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს
+              ემოჯებს
+            contains_emojis_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: მისამართის მე-2 ხაზი არ უნდა
+              შეიცავდეს მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: მისამართის მე-2 ხაზი არ უნდა
+              შეიცავდეს მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: მისამართის მე-2 ხაზი შეიძლება
+              შეიცავდეს მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: მისამართის მე-2 ხაზი არ უნდა
+              შეიცავდეს შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: მისამართის მე-2 ხაზი უნდა შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+            contains_too_many_words_informative: მისამართის მე-2 ხაზი უნდა შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+            contains_html_tags_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს
+              HTML-ს
+            contains_html_tags_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს
+              HTML-ს
+            contains_url_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს ელფოსტის
+              მისამართს
+            contains_email_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს ელფოსტის
+              მისამართს
+            missing_building_number_instructional: თუ გაქვს, დაამატე შენობის ნომერი
+            missing_building_number_informative: შენობის ნომერი შეიძლება გამოტოვებული
+              იყოს
+            street_unknown_for_zip_instructional: 'შეიყვანე ქუჩის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            street_unknown_for_zip_informative: 'ქუჩის სახელი არასწორია შემდეგი ინდექსისთვის:
+              %{zip}'
+            building_number_invalid_instructional: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            building_number_invalid_informative: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            unknown_for_address_instructional: მისამართის მე-2 ხაზი შეიძლება არასწორი
+              იყოს
+            unknown_for_address_informative: მისამართის მე-2 ხაზი შეიძლება არასწორი
+              იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, მისამართის მე-2 ხაზი შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+        line2:
+          label:
+            default: ბინა, აპარტამენტი და ა.შ.
+            optional: ბინა, აპარტამენტი და ა.შ. (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ბინა, აპარტამენტი და ა.შ.
+            blank_informative: ბინა ან აპარტამენტი მითითებული არ არის
+            too_long_instructional: მისამართის მე-2 ხაზი ძალიან გრძელია (მაქსიმუმ
+              %{limit} სიმბოლო)
+            too_long_informative: მისამართის მე-2 ხაზი ძალიან გრძელია
+            contains_emojis_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს
+              ემოჯებს
+            contains_emojis_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: მისამართის მე-2 ხაზი არ უნდა
+              შეიცავდეს მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: მისამართის მე-2 ხაზი არ უნდა
+              შეიცავდეს მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: მისამართის მე-2 ხაზი შეიძლება
+              შეიცავდეს მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: მისამართის მე-2 ხაზი არ უნდა
+              შეიცავდეს შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: მისამართის მე-2 ხაზი უნდა შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+            contains_too_many_words_informative: მისამართის მე-2 ხაზი უნდა შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+            contains_html_tags_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს
+              HTML თეგებს
+            contains_html_tags_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს
+              HTML თეგებს
+            contains_url_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს ელფოსტის
+              მისამართს
+            contains_email_informative: მისამართის მე-2 ხაზი არ უნდა შეიცავდეს ელფოსტის
+              მისამართს
+            missing_building_number_instructional: თუ გაქვს, დაამატე შენობის ნომერი
+            missing_building_number_informative: თუ გაქვს, დაამატე შენობის ნომერი
+            street_unknown_for_zip_instructional: 'შეიყვანე ქუჩის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            street_unknown_for_zip_informative: 'შეიყვანე ქუჩის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            building_number_invalid_instructional: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            building_number_invalid_informative: 'შენობის ნომერი ვერ მოიძებნა შემდეგი
+              მისამართისთვის: %{street}, %{zip}'
+            unknown_for_address_instructional: მისამართის მე-2 ხაზი შეიძლება არასწორი
+              იყოს
+            unknown_for_address_informative: მისამართის მე-2 ხაზი შეიძლება არასწორი
+              იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, მისამართის მე-2 ხაზი შეიცავდეს
+              %{word_count}-ზე ნაკლებ სიტყვას
+        neighborhood:
+          label:
+            default: უბანი
+            optional: უბანი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე უბანი
+            blank_informative: უბანი მითითებული არ არის
+            too_long_instructional: უბანი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: უბანი ძალიან გრძელია
+            contains_emojis_instructional: უბანი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: უბანი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: უბანი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_mathematical_symbols_informative: უბანი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: უბანი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: უბანი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: უბანი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: უბანი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: უბანი არ უნდა შეიცავდეს HTML თეგებს
+            contains_html_tags_informative: უბანი არ უნდა შეიცავდეს HTML თეგებს
+            contains_url_instructional: უბანი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: უბანი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: უბანი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: უბანი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე უბნის სწორი სახელი შემდეგი ქალაქისთვის:
+              %{city}'
+            unknown_for_city_informative: 'შეიყვანე უბნის სწორი სახელი შემდეგი ქალაქისთვის:
+              %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე უბნის სწორი სახელი შემდეგი ინდექსისთვის:
+              %{zip}'
+            unknown_for_zip_informative: 'შეიყვანე უბნის სწორი სახელი შემდეგი ინდექსისთვის:
+              %{zip}'
+            unknown_for_address_instructional: უბანი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: უბანი შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, უბანი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+        district:
+          label:
+            default: რაიონი
+            optional: რაიონი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე რაიონი
+            blank_informative: რაიონი მითითებული არ არის
+            too_long_instructional: რაიონი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: რაიონი ძალიან გრძელია
+            contains_emojis_instructional: რაიონი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: რაიონი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: რაიონი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: რაიონი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: რაიონი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: რაიონი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: რაიონი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: რაიონი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: რაიონი არ უნდა შეიცავდეს HTML თეგებს
+            contains_html_tags_informative: რაიონი არ უნდა შეიცავდეს HTML თეგებს
+            contains_url_instructional: რაიონი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: რაიონი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: რაიონი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: რაიონი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე რაიონის სწორი სახელი შემდეგი
+              ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'შეიყვანე რაიონის სწორი სახელი შემდეგი ქალაქისთვის:
+              %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე რაიონის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'შეიყვანე რაიონის სწორი სახელი შემდეგი ინდექსისთვის:
+              %{zip}'
+            unknown_for_address_instructional: რაიონი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: რაიონი შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, რაიონი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+        subdistrict:
+          label:
+            default: მიკრორაიონი
+            optional: მიკრორაიონი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე მიკრორაიონი
+            blank_informative: მიკრორაიონი მითითებული არ არის
+            too_long_instructional: მიკრორაიონი ძალიან გრძელია (მაქსიმუმ %{limit}
+              სიმბოლო)
+            too_long_informative: მიკრორაიონი ძალიან გრძელია
+            contains_emojis_instructional: მიკრორაიონი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: მიკრორაიონი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: მიკრორაიონი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: მიკრორაიონი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: მიკრორაიონი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: მიკრორაიონი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: მიკრორაიონი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: მიკრორაიონი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: მიკრორაიონი არ უნდა შეიცავდეს HTML თეგებს
+            contains_html_tags_informative: მიკრორაიონი არ უნდა შეიცავდეს HTML თეგებს
+            contains_url_instructional: მიკრორაიონი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: მიკრორაიონი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: მიკრორაიონი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: მიკრორაიონი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე მიკრორაიონის სწორი სახელი შემდეგი
+              ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'შეიყვანე მიკრორაიონის სწორი სახელი შემდეგი
+              ქალაქისთვის: %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე მიკრორაიონის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'შეიყვანე მიკრორაიონის სწორი სახელი შემდეგი
+              ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: მიკრორაიონი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: მიკრორაიონი შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, მიკრორაიონი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+        city:
+          label:
+            default: ქალაქი
+            optional: ქალაქი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ქალაქი
+            blank_informative: ქალაქი მითითებული არ არის
+            too_long_instructional: ქალაქი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)
+            too_long_informative: ქალაქი ძალიან გრძელია
+            contains_emojis_instructional: ქალაქი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: ქალაქი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: ქალაქი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: ქალაქი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: ქალაქი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ქალაქი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: ქალაქი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: ქალაქი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: ქალაქი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: ქალაქი არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: ქალაქი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: ქალაქი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: ქალაქი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: ქალაქი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            unknown_for_zip_instructional: 'შეიყვანე სწორი ქალაქი შემდეგი ინდექსისთვის:
+              %{zip}'
+            unknown_for_zip_informative: 'ქალაქი არ ემთხვევა შემდეგს: %{zip}'
+            unknown_for_province_instructional: 'შეიყვანე სწორი ქალაქი შემდეგი რეგიონისთვის:
+              %{province}'
+            unknown_for_province_informative: 'ქალაქი არ ემთხვევა შემდეგს: %{province}'
+            unknown_for_zip_and_province_instructional: 'შეიყვანე სწორი ქალაქი შემდეგისთვის:
+              %{zip}, %{province}'
+            unknown_for_zip_and_province_informative: ქალაქი შეიძლება არასწორი იყოს
+            unknown_for_address_instructional: ქალაქი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: ქალაქი შეიძლება არასწორი იყოს
+        province:
+          label:
+            default: რეგიონი
+            optional: რეგიონი (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე რეგიონი
+            blank_informative: რეგიონი მითითებული არ არის
+            invalid_instructional: აირჩიე რეგიონი
+            invalid_informative: რეგიონი მითითებული არ არის
+            invalid_for_country_instructional: 'შეიყვანე სწორი რეგიონი შემდეგი ქვეყნისთვის:
+              %{country}'
+            invalid_for_country_informative: 'რეგიონი არ ემთხვევა შემდეგს: %{country}'
+            unknown_for_city_and_zip_instructional: 'აირჩიე სწორი რეგიონი შემდეგისთვის:
+              %{city}, %{zip}'
+            unknown_for_city_and_zip_informative: 'რეგიონი არ ემთხვევა შემდეგს: %{city},
+              %{zip}'
+            unknown_for_city_informative: 'აირჩიე სწორი რეგიონი შემდეგი ქალაქისთვის:
+              %{city}'
+            unknown_for_city_instructional: 'რეგიონი არ ემთხვევა შემდეგს: %{city}'
+            unknown_for_zip_instructional: 'აირჩიე სწორი რეგიონი შემდეგი ინდექსისთვის:
+              %{zip}'
+            unknown_for_zip_informative: 'რეგიონი არ ემთხვევა შემდეგს: %{zip}'
+            unknown_for_address_instructional: რეგიონი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: რეგიონი შეიძლება არასწორი იყოს
+        country:
+          label:
+            default: ქვეყანა/რეგიონი
+            optional: ქვეყანა/რეგიონი (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე ქვეყანა/რეგიონი
+            blank_informative: ქვეყანა/რეგიონი მითითებული არ არის
+            not_supported_instructional: ქვეყანა/რეგიონი მხარდაჭერილი არ არის
+            not_supported_informative: ქვეყანა/რეგიონი მხარდაჭერილი არ არის
+            invalid_instructional: შეიყვანე სწორი ქვეყანა/რეგიონი
+            invalid_informative: ქვეყანა/რეგიონი არასწორია
+            invalid_for_zip_instructional: შეიყვანე სწორი ქვეყანა/რეგიონი ამ საფოსტო
+              ინდექსისთვის
+            invalid_for_zip_informative: "%{country} არ ემთხვევა ქვეყანას/რეგიონს"
+        zip:
+          label:
+            default: საფოსტო ინდექსი
+            optional: საფოსტო ინდექსი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე საფოსტო ინდექსი
+            blank_informative: საფოსტო ინდექსი მითითებული არ არის
+            blocked_address_instructional: ეს ლოკაცია მხარდაჭერილი არ არის
+            blocked_address_informative: ეს ლოკაცია მხარდაჭერილი არ არის
+            invalid_instructional: შეიყვანე სწორი საფოსტო ინდექსი
+            invalid_informative: საფოსტო ინდექსი არასწორია
+            invalid_for_country_instructional: 'შეიყვანე სწორი საფოსტო ინდექსი შემდეგი
+              ქვეყნისთვის: %{country}'
+            invalid_for_country_informative: 'საფოსტო ინდექსი არ ემთხვევა შემდეგს:
+              %{country}'
+            invalid_for_province_instructional: 'შეიყვანე სწორი საფოსტო ინდექსი შემდეგი
+              რეგიონისთვის: %{province}'
+            invalid_for_province_informative: 'საფოსტო ინდექსი არ ემთხვევა შემდეგს:
+              %{province}'
+            invalid_for_country_and_province_instructional: 'შეიყვანე სწორი საფოსტო
+              ინდექსი შემდეგისთვის: %{province}, %{country}'
+            invalid_for_country_and_province_informative: 'საფოსტო ინდექსი არ ემთხვევა
+              შემდეგს: %{province}, %{country}'
+            too_long_instructional: საფოსტო ინდექსი ძალიან გრძელია
+            too_long_informative: საფოსტო ინდექსი ძალიან გრძელია
+            contains_emojis_instructional: საფოსტო ინდექსი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: საფოსტო ინდექსი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: საფოსტო ინდექსი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: საფოსტო ინდექსი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: საფოსტო ინდექსი შეიძლება
+              შეიცავდეს მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: საფოსტო ინდექსი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            not_supported_instructional: საფოსტო ინდექსი მხარდაჭერილი არ არის. შეიყვანე
+              ახალი მისამართი და სცადე თავიდან
+            not_supported_informative: საფოსტო ინდექსი მხარდაჭერილი არ არის
+            contains_html_tags_instructional: საფოსტო ინდექსი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: საფოსტო ინდექსი არ უნდა შეიცავდეს HTML-ს
+            unknown_for_province_instructional: 'შეიყვანე სწორი საფოსტო ინდექსი შემდეგი
+              რეგიონისთვის: %{province}'
+            unknown_for_province_informative: 'საფოსტო ინდექსი არასწორია შემდეგი რეგიონისთვის:
+              %{province}'
+            unknown_for_address_instructional: საფოსტო ინდექსი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: საფოსტო ინდექსი შეიძლება არასწორი იყოს
+        phone:
+          label:
+            default: ტელეფონი
+            optional: ტელეფონი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ტელეფონის ნომერი
+            blank_informative: ტელეფონის ნომერი მითითებული არ არის
+            invalid_instructional: შეიყვანე ტელეფონის სწორი ნომერი
+            invalid_informative: ტელეფონის ნომერი არასწორია
+            too_long_instructional: ტელეფონის ნომერი ძალიან გრძელია
+            too_long_informative: ტელეფონის ნომერი ძალიან გრძელია
+            contains_emojis_instructional: ტელეფონის ნომერი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: ტელეფონის ნომერი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: ტელეფონის ნომერი არ უნდა
+              შეიცავდეს მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: ტელეფონის ნომერი არ უნდა შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: ტელეფონის ნომერი შეიძლება
+              შეიცავდეს მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ტელეფონის ნომერი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+        address:
+          errors:
+            may_not_exist_instructional: მისამართი ვერ მოიძებნა ან არ არსებობს
+            may_not_exist_informative: მისამართი ვერ მოიძებნა

@@ -1,0 +1,53 @@
+---
+te:
+  worldwide:
+    CR:
+      addresses:
+        province:
+          label:
+            default: ప్రావిన్స్
+            optional: ప్రావిన్స్ (ఐచ్ఛికం)
+          errors:
+            blank_instructional: ప్రావిన్స్‌ను ఎంచుకోండి
+            blank_informative: ప్రావిన్స్ లేదు
+        neighborhood:
+          label:
+            default: జిల్లా
+            optional: జిల్లా (ఐచ్ఛికం)
+          errors:
+            blank_instructional: జిల్లాను నమోదు చేయండి
+            blank_informative: జిల్లా లేదు
+            too_long_instructional: జిల్లా చాలా పొడవుగా ఉంది (గరిష్టంగా %{limit} అక్షరాలు
+              ఉండాలి)
+            too_long_informative: జిల్లా చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: జిల్లాలో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: జిల్లాలో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: జిల్లాలో గణిత సంబంధిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: జిల్లాలో గణిత సంబంధిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: జిల్లాలో అక్షరాలు, నంబర్‌లు,
+              స్థానిక అక్షరాలు మరియు ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: జిల్లాలో నియంత్రిత అక్షరాలు
+              ఉండకూడదు
+            contains_too_many_words_instructional: జిల్లాలో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_too_many_words_informative: జిల్లాలో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_html_tags_instructional: జిల్లాలో HTML ఉండకూడదు
+            contains_html_tags_informative: జిల్లాలో HTML ఉండకూడదు
+            contains_url_instructional: జిల్లాలో URL ఉండకూడదు
+            contains_url_informative: జిల్లాలో URL ఉండకూడదు
+            contains_email_instructional: జిల్లాలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: జిల్లాలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            unknown_for_city_instructional: "%{city} కోసం చెల్లుబాటు అయ్యే జిల్లాను
+              నమోదు చేయండి"
+            unknown_for_city_informative: "%{city} కోసం జిల్లా చెల్లదు"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే జిల్లాను
+              నమోదు చేయండి"
+            unknown_for_zip_informative: "%{zip} కోసం జిల్లా చెల్లదు"
+            unknown_for_address_instructional: జిల్లా తప్పు కావచ్చు
+            unknown_for_address_informative: జిల్లా తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: జిల్లాలో %{word_count} పదాల కంటే తక్కువ ఉండాలని
+              సిఫార్సు చేయబడింది

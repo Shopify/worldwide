@@ -1,0 +1,58 @@
+---
+et:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: Tänav ja majanumber
+            optional: Tänav ja majanumber (valikuline)
+          errors:
+            blank_instructional: Sisesta tänav ja majanumber
+            blank_informative: Tänav ja majanumber on puudu
+        province:
+          label:
+            default: Osariik
+            optional: Osariik (valikuline)
+          errors:
+            blank_instructional: Vali osariik
+            blank_informative: Osariik on puudu
+        neighborhood:
+          label:
+            default: Asum
+            optional: Asum (valikuline)
+          errors:
+            blank_instructional: Sisesta asum
+            blank_informative: Asum on puudu
+            too_long_instructional: Asum on liiga pikk (maksimaalselt %{limit} tähemärki)
+            too_long_informative: Asum on liiga pikk
+            contains_emojis_instructional: Asum ei tohi sisaldada emotikone
+            contains_emojis_informative: Asum ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Asum ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_mathematical_symbols_informative: Asum ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Asum tohib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erisümboleid
+            contains_restricted_characters_informative: Asum ei tohi sisaldada keelatud
+              tähemärke
+            contains_too_many_words_instructional: Asum peab sisaldama vähem kui %{word_count}
+              sõna
+            contains_too_many_words_informative: Asum peab sisaldama vähem kui %{word_count}
+              sõna
+            contains_html_tags_informative: Asum ei tohi sisaldada HTML-i
+            contains_html_tags_instructional: Asum ei tohi sisaldada HTML-i
+            contains_url_instructional: Asum ei tohi sisaldada URL-i
+            contains_url_informative: Asum ei tohi sisaldada URL-i
+            contains_email_instructional: Asum ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Asum ei tohi sisaldada e-posti aadressi
+            unknown_for_city_instructional: Sisesta kehtiv asum linna %{city} jaoks
+            unknown_for_city_informative: Sisesta kehtiv asum linna %{city} jaoks
+            unknown_for_zip_instructional: Sisesta kehtiv asum postiindeksi %{zip}
+              jaoks
+            unknown_for_zip_informative: Sisesta kehtiv asum postiindeksi %{zip} jaoks
+            unknown_for_address_instructional: Asum võib olla vale
+            unknown_for_address_informative: Asum võib olla vale
+          warnings:
+            contains_too_many_words: Asum peaks soovituslikult sisaldama vähem kui
+              %{word_count} sõna

@@ -1,0 +1,44 @@
+---
+et:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: Rajoon
+            optional: Rajoon (valikuline)
+          errors:
+            blank_instructional: Sisesta rajoon
+            blank_informative: Rajoon on puudu
+            too_long_instructional: Rajoon on liiga pikk
+            too_long_informative: Rajoon on liiga pikk (maksimaalselt 255 tähemärki)
+            contains_emojis_instructional: Rajoon ei tohi sisaldada emotikone
+            contains_emojis_informative: Rajoon ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Rajoon ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Rajoon ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Rajoon tohib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erisümboleid
+            contains_restricted_characters_informative: Rajoon ei tohi sisaldada keelatud
+              tähemärke
+            contains_too_many_words_instructional: Rajoon peab sisaldama vähem kui
+              %{word_count} sõna
+            contains_too_many_words_informative: Rajoon peab sisaldama vähem kui %{word_count}
+              sõna
+            contains_html_tags_instructional: Rajoon ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Rajoon ei tohi sisaldada HTML-i
+            contains_url_instructional: Rajoon ei tohi sisaldada URL-i
+            contains_url_informative: Rajoon ei tohi sisaldada URL-i
+            contains_email_instructional: Rajoon ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Rajoon ei tohi sisaldada e-posti aadressi
+            unknown_for_city_instructional: Sisesta kehtiv rajoon linna %{city} jaoks
+            unknown_for_city_informative: Rajoon ei ühti linnaga %{city}
+            unknown_for_zip_instructional: Sisesta kehtiv rajoon postiindeksi %{zip}
+              jaoks
+            unknown_for_zip_informative: Rajoon ei ühti postiindeksiga %{zip}
+            unknown_for_address_instructional: Rajoon võib olla vale
+            unknown_for_address_informative: Rajoon võib olla vale
+          warnings:
+            contains_too_many_words: Rajoon peaks soovituslikult sisaldama vähem kui
+              %{word_count} sõna

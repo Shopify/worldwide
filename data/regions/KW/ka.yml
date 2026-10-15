@@ -1,0 +1,88 @@
+---
+ka:
+  worldwide:
+    KW:
+      addresses:
+        province:
+          label:
+            default: გუბერნია
+            optional: გუბერნია (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე გუბერნია
+            blank_informative: გუბერნია მითითებული არ არის
+        neighborhood:
+          label:
+            default: ბლოკი
+            optional: ბლოკი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ბლოკი
+            blank_informative: ბლოკი მითითებული არ არის
+            too_long_instructional: ბლოკი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: ბლოკი ძალიან გრძელია
+            contains_emojis_instructional: ბლოკი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_emojis_informative: ბლოკი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_mathematical_symbols_instructional: ბლოკი არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: ბლოკი არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: ბლოკი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ბლოკი არ შეიძლება შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: ბლოკი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: ბლოკი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: ბლოკი არ შეიძლება შეიცავდეს HTML-ს
+            contains_html_tags_informative: ბლოკი არ შეიძლება შეიცავდეს HTML-ს
+            contains_url_instructional: ბლოკი არ შეიძლება შეიცავდეს URL-ს
+            contains_url_informative: ბლოკი არ შეიძლება შეიცავდეს URL-ს
+            contains_email_instructional: ბლოკი არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: ბლოკი არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე სწორი ბლოკი ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'ბლოკი არასწორია ქალაქისთვის: %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე სწორი ბლოკი ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'ბლოკი არასწორია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: ბლოკი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: ბლოკი შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, ბლოკი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+        district:
+          label:
+            default: ბლოკი
+            optional: ბლოკი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ბლოკი
+            blank_informative: ბლოკი მითითებული არ არის
+            too_long_instructional: ბლოკი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: ბლოკი ძალიან გრძელია
+            contains_emojis_instructional: ბლოკი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_emojis_informative: ბლოკი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_mathematical_symbols_instructional: ბლოკი არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: ბლოკი არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: ბლოკი შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ბლოკი არ შეიძლება შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: ბლოკი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: ბლოკი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: ბლოკი არ შეიძლება შეიცავდეს HTML-ს
+            contains_html_tags_informative: ბლოკი არ შეიძლება შეიცავდეს HTML-ს
+            contains_url_instructional: ბლოკი არ შეიძლება შეიცავდეს URL-ს
+            contains_url_informative: ბლოკი არ შეიძლება შეიცავდეს URL-ს
+            contains_email_instructional: ბლოკი არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: ბლოკი არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე სწორი ბლოკი ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'ბლოკი არასწორია ქალაქისთვის: %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე სწორი ბლოკი ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'ბლოკი არასწორია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: ბლოკი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: ბლოკი შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, ბლოკი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

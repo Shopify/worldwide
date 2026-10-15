@@ -1,0 +1,553 @@
+---
+lv:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Uzņēmums
+            optional: Uzņēmums (neobligāti)
+          errors:
+            blank_instructional: Ievadi uzņēmumu
+            blank_informative: Trūkst uzņēmuma
+            too_long_instructional: Uzņēmums ir pārāk garš (maksimums ir 255 rakstzīmes)
+            too_long_informative: Uzņēmums ir pārāk garš
+            contains_emojis_instructional: Uzņēmums nevar saturēt emocijzīmes
+            contains_emojis_informative: Uzņēmums nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Uzņēmums nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Uzņēmums nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Uzņēmums var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Uzņēmums nevar saturēt neatļautas
+              rakstzīmes
+            contains_html_tags_instructional: Uzņēmums nevar saturēt HTML
+            contains_html_tags_informative: Uzņēmums nevar saturēt HTML
+        first_name:
+          label:
+            default: Vārds
+            optional: Vārds (neobligāti)
+          errors:
+            blank_instructional: Ievadi vārdu
+            blank_informative: Trūkst vārda
+            too_long_instructional: Vārds ir pārāk garš (maksimums ir 255 rakstzīmes)
+            too_long_informative: Vārds ir pārāk garš
+            contains_emojis_instructional: Vārds nevar saturēt emocijzīmes
+            contains_emojis_informative: Vārds nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Vārds nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Vārds nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Vārds var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Vārds nevar saturēt neatļautas
+              rakstzīmes
+            contains_html_tags_instructional: Vārds nevar saturēt HTML
+            contains_html_tags_informative: Vārds nevar saturēt HTML
+            contains_url_instructional: Vārds nevar saturēt URL
+            contains_url_informative: Vārds nevar saturēt URL
+        last_name:
+          label:
+            default: Uzvārds
+            optional: Uzvārds (neobligāti)
+          errors:
+            blank_instructional: Ievadi uzvārdu
+            blank_informative: Trūkst uzvārda
+            too_long_instructional: Uzvārds ir pārāk garš (maksimums ir 255 rakstzīmes)
+            too_long_informative: Uzvārds ir pārāk garš
+            contains_emojis_instructional: Uzvārds nevar saturēt emocijzīmes
+            contains_emojis_informative: Uzvārds nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Uzvārds nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Uzvārds nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Uzvārds var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Uzvārds nevar saturēt neatļautas
+              rakstzīmes
+            contains_html_tags_instructional: Uzvārds nevar saturēt HTML
+            contains_html_tags_informative: Uzvārds nevar saturēt HTML
+            contains_url_instructional: Uzvārds nevar saturēt URL
+            contains_url_informative: Uzvārds nevar saturēt URL
+        address1:
+          label:
+            default: Adrese
+            optional: Adrese (neobligāti)
+          errors:
+            blank_instructional: Ievadi adresi
+            blank_informative: Trūkst adreses
+            too_long_instructional: Pirmā adreses rindiņa ir pārāk gara (maksimums
+              ir 255 rakstzīmes)
+            too_long_informative: Pirmā adreses rindiņa ir pārāk gara
+            contains_emojis_instructional: Adrese nevar saturēt emocijzīmes
+            contains_emojis_informative: Adrese nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Adrese nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Adrese nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Adrese var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Adrese nevar saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Adresē jābūt mazāk par %{word_count}
+              vārdiem
+            contains_too_many_words_informative: Adresē jābūt mazāk par %{word_count}
+              vārdiem
+            contains_html_tags_instructional: Adrese nevar saturēt HTML
+            contains_html_tags_informative: Adrese nevar saturēt HTML
+            contains_url_instructional: Adrese nevar saturēt URL
+            contains_url_informative: Adrese nevar saturēt URL
+            contains_email_instructional: Adrese nevar saturēt e-pasta adresi
+            contains_email_informative: Adrese nevar saturēt e-pasta adresi
+            missing_building_number_instructional: Pievieno ēkas numuru, ja tāds ir
+            missing_building_number_informative: Iespējams, trūkst ēkas numura
+            street_unknown_for_zip_instructional: Ievadi derīgu ielas nosaukumu indeksam
+              %{zip}
+            street_unknown_for_zip_informative: Ielas nosaukums neatbilst indeksam
+              %{zip}
+            building_number_invalid_instructional: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            unknown_for_address_instructional: Iespējams, 1. adreses rindiņa ir nepareiza
+            unknown_for_address_informative: Iespējams, 1. adreses rindiņa ir nepareiza
+          warnings:
+            contains_too_many_words: Ieteicams, lai 1. adreses rindiņā būtu mazāk
+              par %{word_count} vārdiem
+        street_name:
+          label:
+            default: Iela
+            optional: Iela (neobligāti)
+          errors:
+            blank_instructional: Ievadi ielu
+            blank_informative: Trūkst ielas
+            too_long_instructional: Iela ir pārāk gara (maksimums ir %{limit} rakstzīmes)
+            too_long_informative: Iela ir pārāk gara
+            contains_emojis_instructional: Iela nevar saturēt emocijzīmes
+            contains_emojis_informative: Iela nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Iela nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Iela nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Iela var saturēt tikai burtus,
+              ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Iela nevar saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Iela nevar saturēt vairāk par %{word_count}
+              vārdiem
+            contains_too_many_words_informative: Iela nevar saturēt vairāk par %{word_count}
+              vārdiem
+            contains_html_tags_instructional: Iela nevar saturēt HTML
+            contains_html_tags_informative: Iela nevar saturēt HTML
+            contains_url_instructional: Iela nevar saturēt URL
+            contains_url_informative: Iela nevar saturēt URL
+            contains_email_instructional: Iela nevar saturēt e-pasta adresi
+            contains_email_informative: Iela nevar saturēt e-pasta adresi
+            street_unknown_for_zip_instructional: Ievadi derīgu ielu indeksam %{zip}
+            street_unknown_for_zip_informative: Iela nav derīga indeksam %{zip}
+            unknown_for_address_instructional: Iespējams, iela ir nepareiza
+            unknown_for_address_informative: Iespējams, iela ir nepareiza
+          warnings:
+            contains_too_many_words: Ieteicams, lai ielas nosaukumā būtu mazāk par
+              %{word_count} vārdiem
+        street_number:
+          label:
+            default: Ēkas numurs
+            optional: Ēkas numurs (neobligāti)
+          errors:
+            blank_instructional: Ievadi ēkas numuru
+            blank_informative: Trūkst ēkas numura
+            too_long_instructional: Ēkas numurs ir pārāk garš (maksimums ir %{limit}
+              rakstzīmes)
+            too_long_informative: Ēkas numurs ir pārāk garš
+            contains_emojis_instructional: Ēkas numurs nevar saturēt emocijzīmes
+            contains_emojis_informative: Ēkas numurs nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Ēkas numurs nevar saturēt
+              matemātiskos simbolus
+            contains_mathematical_symbols_informative: Ēkas numurs nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Ēkas numurs var saturēt
+              tikai burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Ēkas numurs nevar saturēt
+              neatļautas rakstzīmes
+            contains_html_tags_instructional: Ēkas numurs nevar saturēt HTML
+            contains_html_tags_informative: Ēkas numurs nevar saturēt HTML
+            contains_url_instructional: Ēkas numurs nevar saturēt URL
+            contains_url_informative: Ēkas numurs nevar saturēt URL
+            contains_email_instructional: Ēkas numurs nevar saturēt e-pasta adresi
+            contains_email_informative: Ēkas numurs nevar saturēt e-pasta adresi
+            missing_building_number_instructional: Pievieno ēkas numuru, ja tāds ir
+            missing_building_number_informative: Iespējams, trūkst ēkas numura
+            building_number_invalid_instructional: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            unknown_for_address_instructional: Ievadi derīgu ēkas numuru
+            unknown_for_address_informative: Ēkas numurs nav derīgs
+          warnings:
+            contains_too_many_words: Ieteicams, lai ēkas numurā būtu mazāk par %{word_count}
+              vārdiem
+        address2:
+          label:
+            default: Dzīvoklis, korpuss utt.
+            optional: Dzīvoklis, korpuss utt. (neobligāti)
+          errors:
+            blank_instructional: Ievadi dzīvokli, korpusu utt.
+            blank_informative: Trūkst dzīvokļa vai korpusa
+            too_long_instructional: 2. adreses rindiņa ir pārāk gara (maksimums ir
+              255 rakstzīmes)
+            too_long_informative: 2. adreses rindiņa ir pārāk gara
+            contains_emojis_instructional: 2. adreses rindiņa nevar saturēt emocijzīmes
+            contains_emojis_informative: 2. adreses rindiņa nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: 2. adreses rindiņa nevar
+              saturēt matemātiskos simbolus
+            contains_mathematical_symbols_informative: 2. adreses rindiņa nevar saturēt
+              matemātiskos simbolus
+            contains_restricted_characters_instructional: 2. adreses rindiņa var saturēt
+              tikai burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: 2. adreses rindiņa nevar saturēt
+              neatļautas rakstzīmes
+            contains_too_many_words_instructional: 2. adreses rindiņā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_too_many_words_informative: 2. adreses rindiņā jābūt mazāk par
+              %{word_count} vārdiem
+            contains_html_tags_instructional: 2. adreses rindiņa nevar saturēt HTML
+            contains_html_tags_informative: 2. adreses rindiņa nevar saturēt HTML
+            contains_url_instructional: 2. adreses rindiņa nevar saturēt URL
+            contains_url_informative: 2. adreses rindiņa nevar saturēt URL
+            contains_email_instructional: 2. adreses rindiņa nevar saturēt e-pasta
+              adresi
+            contains_email_informative: 2. adreses rindiņa nevar saturēt e-pasta adresi
+            missing_building_number_instructional: Pievieno ēkas numuru, ja tāds ir
+            missing_building_number_informative: Iespējams, trūkst ēkas numura
+            street_unknown_for_zip_instructional: Ievadi derīgu ielas nosaukumu indeksam
+              %{zip}
+            street_unknown_for_zip_informative: Ielas nosaukums nav derīgs indeksam
+              %{zip}
+            building_number_invalid_instructional: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            unknown_for_address_instructional: Iespējams, 2. adreses rindiņa ir nepareiza
+            unknown_for_address_informative: Iespējams, 2. adreses rindiņa ir nepareiza
+          warnings:
+            contains_too_many_words: Ieteicams, lai 2. adreses rindiņā būtu mazāk
+              par %{word_count} vārdiem
+        line2:
+          label:
+            default: Dzīvoklis, korpuss utt.
+            optional: Dzīvoklis, korpuss utt. (neobligāti)
+          errors:
+            blank_instructional: Ievadi dzīvokli, korpusu utt.
+            blank_informative: Trūkst dzīvokļa vai korpusa
+            too_long_instructional: Otrā adreses rindiņa ir pārāk gara (maksimums
+              ir %{limit} rakstzīmes)
+            too_long_informative: Otrā adreses rindiņa ir pārāk gara
+            contains_emojis_instructional: Otrā adreses rindiņa nevar saturēt emocijzīmes
+            contains_emojis_informative: Otrā adreses rindiņa nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Otrā adreses rindiņa nevar
+              saturēt matemātiskos simbolus
+            contains_mathematical_symbols_informative: Otrā adreses rindiņa nevar
+              saturēt matemātiskos simbolus
+            contains_restricted_characters_instructional: Otrā adreses rindiņa var
+              saturēt tikai burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Otrā adreses rindiņa nevar
+              saturēt neatļautas rakstzīmes
+            contains_too_many_words_instructional: Otrajā adreses rindiņā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_too_many_words_informative: Otrajā adreses rindiņā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_html_tags_instructional: Otrā adreses rindiņa nevar saturēt HTML
+              tagus
+            contains_html_tags_informative: Otrā adreses rindiņa nevar saturēt HTML
+              tagus
+            contains_url_instructional: Otrā adreses rindiņa nevar saturēt URL
+            contains_url_informative: Otrā adreses rindiņa nevar saturēt URL
+            contains_email_instructional: Otrā adreses rindiņa nevar saturēt e-pasta
+              adresi
+            contains_email_informative: Otrā adreses rindiņa nevar saturēt e-pasta
+              adresi
+            missing_building_number_instructional: Pievieno ēkas numuru, ja tāds ir
+            missing_building_number_informative: Pievieno ēkas numuru, ja tāds ir
+            street_unknown_for_zip_instructional: Ievadi derīgu ielas nosaukumu indeksam
+              %{zip}
+            street_unknown_for_zip_informative: Ievadi derīgu ielas nosaukumu indeksam
+              %{zip}
+            building_number_invalid_instructional: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            building_number_invalid_informative: 'Ēkas numurs nav atrodams adresei:
+              %{street}, %{zip}'
+            unknown_for_address_instructional: Iespējams, otrā adreses rindiņa ir
+              nepareiza
+            unknown_for_address_informative: Iespējams, otrā adreses rindiņa ir nepareiza
+          warnings:
+            contains_too_many_words: Ieteicams, lai otrajā adreses rindiņā būtu mazāk
+              par %{word_count} vārdiem
+        neighborhood:
+          label:
+            default: Apkaime
+            optional: Apkaime (neobligāti)
+          errors:
+            blank_instructional: Ievadi apkaimi
+            blank_informative: Trūkst apkaimes
+            too_long_instructional: Apkaime ir pārāk gara (maksimums ir %{limit} rakstzīmes)
+            too_long_informative: Apkaime ir pārāk gara
+            contains_emojis_instructional: Apkaime nevar saturēt emocijzīmes
+            contains_emojis_informative: Apkaime nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Apkaime nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Apkaime nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Apkaime var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Apkaime nevar saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Apkaimes nosaukumā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_too_many_words_informative: Apkaimes nosaukumā jābūt mazāk par
+              %{word_count} vārdiem
+            contains_html_tags_instructional: Apkaime nevar saturēt HTML tagus
+            contains_html_tags_informative: Apkaime nevar saturēt HTML tagus
+            contains_url_instructional: Apkaime nevar saturēt URL
+            contains_url_informative: Apkaime nevar saturēt URL
+            contains_email_instructional: Apkaime nevar saturēt e-pasta adreses
+            contains_email_informative: Apkaime nevar saturēt e-pasta adreses
+            unknown_for_city_instructional: Ievadi derīgu apkaimes nosaukumu pilsētai
+              %{city}
+            unknown_for_city_informative: Ievadi derīgu apkaimes nosaukumu pilsētai
+              %{city}
+            unknown_for_zip_instructional: Ievadi derīgu apkaimes nosaukumu indeksam
+              %{zip}
+            unknown_for_zip_informative: Ievadi derīgu apkaimes nosaukumu indeksam
+              %{zip}
+            unknown_for_address_instructional: Iespējams, apkaime ir nepareiza
+            unknown_for_address_informative: Iespējams, apkaime ir nepareiza
+          warnings:
+            contains_too_many_words: Ieteicams, lai apkaimes nosaukumā būtu mazāk
+              par %{word_count} vārdiem
+        district:
+          label:
+            default: Rajons
+            optional: Rajons (neobligāti)
+          errors:
+            blank_instructional: Ievadi rajonu
+            blank_informative: Trūkst rajona
+            too_long_instructional: Rajons ir pārāk garš (maksimums ir %{limit} rakstzīmes)
+            too_long_informative: Rajons ir pārāk garš
+            contains_emojis_instructional: Rajons nevar saturēt emocijzīmes
+            contains_emojis_informative: Rajons nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Rajons nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Rajons nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Rajons var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Rajons nevar saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Rajona nosaukumā jābūt mazāk par
+              %{word_count} vārdiem
+            contains_too_many_words_informative: Rajona nosaukumā jābūt mazāk par
+              %{word_count} vārdiem
+            contains_html_tags_instructional: Rajons nevar saturēt HTML tagus
+            contains_html_tags_informative: Rajons nevar saturēt HTML tagus
+            contains_url_instructional: Rajons nevar saturēt URL
+            contains_url_informative: Rajons nevar saturēt URL
+            contains_email_instructional: Rajons nevar saturēt e-pasta adreses
+            contains_email_informative: Rajons nevar saturēt e-pasta adreses
+            unknown_for_city_instructional: Ievadi derīgu rajona nosaukumu pilsētai
+              %{city}
+            unknown_for_city_informative: Ievadi derīgu rajona nosaukumu pilsētai
+              %{city}
+            unknown_for_zip_instructional: Ievadi derīgu rajona nosaukumu indeksam
+              %{zip}
+            unknown_for_zip_informative: Ievadi derīgu rajona nosaukumu indeksam %{zip}
+            unknown_for_address_instructional: Iespējams, rajons ir nepareizs
+            unknown_for_address_informative: Iespējams, rajons ir nepareizs
+          warnings:
+            contains_too_many_words: Ieteicams, lai rajona nosaukumā būtu mazāk par
+              %{word_count} vārdiem
+        subdistrict:
+          label:
+            default: Apakšrajons
+            optional: Apakšrajons (neobligāti)
+          errors:
+            blank_instructional: Ievadi apakšrajonu
+            blank_informative: Trūkst apakšrajona
+            too_long_instructional: Apakšrajons ir pārāk garš (maksimums ir %{limit}
+              rakstzīmes)
+            too_long_informative: Apakšrajons ir pārāk garš
+            contains_emojis_instructional: Apakšrajons nevar saturēt emocijzīmes
+            contains_emojis_informative: Apakšrajons nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Apakšrajons nevar saturēt
+              matemātiskos simbolus
+            contains_mathematical_symbols_informative: Apakšrajons nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Apakšrajons var saturēt
+              tikai burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Apakšrajons nevar saturēt
+              neatļautas rakstzīmes
+            contains_too_many_words_instructional: Apakšrajona nosaukumā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_too_many_words_informative: Apakšrajona nosaukumā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_html_tags_instructional: Apakšrajons nevar saturēt HTML tagus
+            contains_html_tags_informative: Apakšrajons nevar saturēt HTML tagus
+            contains_url_instructional: Apakšrajons nevar saturēt URL
+            contains_url_informative: Apakšrajons nevar saturēt URL
+            contains_email_instructional: Apakšrajons nevar saturēt e-pasta adreses
+            contains_email_informative: Apakšrajons nevar saturēt e-pasta adreses
+            unknown_for_city_instructional: Ievadi derīgu apakšrajona nosaukumu pilsētai
+              %{city}
+            unknown_for_city_informative: Ievadi derīgu apakšrajona nosaukumu pilsētai
+              %{city}
+            unknown_for_zip_instructional: Ievadi derīgu apakšrajona nosaukumu indeksam
+              %{zip}
+            unknown_for_zip_informative: Ievadi derīgu apakšrajona nosaukumu indeksam
+              %{zip}
+            unknown_for_address_instructional: Iespējams, apakšrajons ir nepareizs
+            unknown_for_address_informative: Iespējams, apakšrajons ir nepareizs
+          warnings:
+            contains_too_many_words: Ieteicams, lai apakšrajona nosaukumā būtu mazāk
+              par %{word_count} vārdiem
+        city:
+          label:
+            default: Pilsēta
+            optional: Pilsēta (neobligāti)
+          errors:
+            blank_instructional: Ievadi pilsētu
+            blank_informative: Trūkst pilsētas
+            too_long_instructional: Pilsēta ir pārāk gara (maksimums ir 255 rakstzīmes)
+            too_long_informative: Pilsēta ir pārāk gara
+            contains_emojis_instructional: Pilsēta nevar saturēt emocijzīmes
+            contains_emojis_informative: Pilsēta nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Pilsēta nevar saturēt matemātiskos
+              simbolus
+            contains_mathematical_symbols_informative: Pilsēta nevar saturēt matemātiskos
+              simbolus
+            contains_restricted_characters_instructional: Pilsēta var saturēt tikai
+              burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Pilsēta nevar saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Pilsētas nosaukumā jābūt mazāk
+              par %{word_count} vārdiem
+            contains_too_many_words_informative: Pilsētas nosaukumā jābūt mazāk par
+              %{word_count} vārdiem
+            contains_html_tags_instructional: Pilsēta nevar saturēt HTML
+            contains_html_tags_informative: Pilsēta nevar saturēt HTML
+            contains_url_instructional: Pilsēta nevar saturēt URL
+            contains_url_informative: Pilsēta nevar saturēt URL
+            contains_email_instructional: Pilsēta nevar saturēt e-pasta adresi
+            contains_email_informative: Pilsēta nevar saturēt e-pasta adresi
+            unknown_for_zip_instructional: Ievadi derīgu pilsētu indeksam %{zip}
+            unknown_for_zip_informative: Pilsēta neatbilst indeksam %{zip}
+            unknown_for_province_instructional: 'Ievadi derīgu pilsētu reģionam: %{province}'
+            unknown_for_province_informative: 'Pilsēta neatbilst: %{province}'
+            unknown_for_zip_and_province_instructional: 'Ievadi derīgu pilsētu šai
+              adresei: %{zip}, %{province}'
+            unknown_for_zip_and_province_informative: Iespējams, pilsēta ir nepareiza
+            unknown_for_address_instructional: Iespējams, pilsēta ir nepareiza
+            unknown_for_address_informative: Iespējams, pilsēta ir nepareiza
+        province:
+          label:
+            default: Reģions
+            optional: Reģions (neobligāti)
+          errors:
+            blank_instructional: Atlasi reģionu
+            blank_informative: Trūkst reģiona
+            invalid_instructional: Atlasi reģionu
+            invalid_informative: Trūkst reģiona
+            invalid_for_country_instructional: Ievadi derīgu reģionu (%{country})
+            invalid_for_country_informative: Reģions neatbilst (%{country})
+            unknown_for_city_and_zip_instructional: 'Atlasi derīgu reģionu adresei:
+              %{city}, %{zip}'
+            unknown_for_city_and_zip_informative: 'Reģions neatbilst: %{city}, %{zip}'
+            unknown_for_city_informative: 'Atlasi derīgu reģionu pilsētai: %{city}'
+            unknown_for_city_instructional: 'Reģions neatbilst pilsētai: %{city}'
+            unknown_for_zip_instructional: Atlasi derīgu reģionu indeksam %{zip}
+            unknown_for_zip_informative: Reģions neatbilst indeksam %{zip}
+            unknown_for_address_instructional: Iespējams, reģions ir nepareizs
+            unknown_for_address_informative: Iespējams, reģions ir nepareizs
+        country:
+          label:
+            default: Valsts/reģions
+            optional: Valsts/reģions (neobligāti)
+          errors:
+            blank_instructional: Atlasi valsti/reģionu
+            blank_informative: Trūkst valsts/reģiona
+            not_supported_instructional: Valsts/reģions netiek atbalstīts
+            not_supported_informative: Valsts/reģions netiek atbalstīts
+            invalid_instructional: Ievadi derīgu valsti/reģionu
+            invalid_informative: Valsts/reģions nav derīgs
+            invalid_for_zip_instructional: Ievadi derīgu valsti/reģionu šim pasta
+              indeksam
+            invalid_for_zip_informative: "%{country} neatbilst valstij/reģionam"
+        zip:
+          label:
+            default: Pasta indekss
+            optional: Pasta indekss (neobligāti)
+          errors:
+            blank_instructional: Ievadi pasta indeksu
+            blank_informative: Trūkst pasta indeksa
+            blocked_address_instructional: Šī atrašanās vieta netiek atbalstīta
+            blocked_address_informative: Šī atrašanās vieta netiek atbalstīta
+            invalid_instructional: Ievadi derīgu pasta indeksu
+            invalid_informative: Pasta indekss nav derīgs
+            invalid_for_country_instructional: 'Ievadi derīgu pasta indeksu valstī:
+              %{country}'
+            invalid_for_country_informative: 'Pasta indekss neatbilst valstij: %{country}'
+            invalid_for_province_instructional: 'Ievadi derīgu pasta indeksu reģionā:
+              %{province}'
+            invalid_for_province_informative: 'Pasta indekss neatbilst reģionam: %{province}'
+            invalid_for_country_and_province_instructional: Ievadi derīgu pasta indeksu
+              (%{province}, %{country})
+            invalid_for_country_and_province_informative: Pasta indekss neatbilst
+              (%{province}, %{country})
+            too_long_instructional: Pasta indekss ir pārāk garš
+            too_long_informative: Pasta indekss ir pārāk garš
+            contains_emojis_instructional: Pasta indekss nevar saturēt emocijzīmes
+            contains_emojis_informative: Pasta indekss nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Pasta indekss nevar saturēt
+              matemātiskos simbolus
+            contains_mathematical_symbols_informative: Pasta indekss nevar saturēt
+              matemātiskos simbolus
+            contains_restricted_characters_instructional: Pasta indekss var saturēt
+              tikai burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Pasta indekss nevar saturēt
+              neatļautas rakstzīmes
+            not_supported_instructional: Pasta indekss netiek atbalstīts. Ievadi jaunu
+              adresi un mēģini vēlreiz
+            not_supported_informative: Pasta indekss netiek atbalstīts
+            contains_html_tags_instructional: Pasta indekss nevar saturēt HTML
+            contains_html_tags_informative: Pasta indekss nevar saturēt HTML
+            unknown_for_province_instructional: 'Ievadi derīgu pasta indeksu reģionam:
+              %{province}'
+            unknown_for_province_informative: 'Pasta indekss nav derīgs reģionam:
+              %{province}'
+            unknown_for_address_instructional: Iespējams, pasta indekss ir nepareizs
+            unknown_for_address_informative: Iespējams, pasta indekss ir nepareizs
+        phone:
+          label:
+            default: Tālrunis
+            optional: Tālrunis (neobligāti)
+          errors:
+            blank_instructional: Ievadi tālruņa numuru
+            blank_informative: Trūkst tālruņa numura
+            invalid_instructional: Ievadi derīgu tālruņa numuru
+            invalid_informative: Tālruņa numurs nav derīgs
+            too_long_instructional: Tālruņa numurs ir pārāk garš
+            too_long_informative: Tālruņa numurs ir pārāk garš
+            contains_emojis_instructional: Tālruņa numurs nevar saturēt emocijzīmes
+            contains_emojis_informative: Tālruņa numurs nevar saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Tālruņa numurs nevar saturēt
+              matemātiskos simbolus
+            contains_mathematical_symbols_informative: Tālruņa numurs nevar saturēt
+              matemātiskos simbolus
+            contains_restricted_characters_instructional: Tālruņa numurs var saturēt
+              tikai burtus, ciparus, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Tālruņa numurs nevar saturēt
+              neatļautas rakstzīmes
+        address:
+          errors:
+            may_not_exist_instructional: Adrese nav atrasta vai nepastāv
+            may_not_exist_informative: Adrese nav atrasta

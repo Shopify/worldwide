@@ -1,0 +1,569 @@
+---
+ta:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: நிறுவனம்
+            optional: நிறுவனம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: நிறுவனத்தை உள்ளிடவும்
+            blank_informative: நிறுவனம் விடுபட்டுள்ளது
+            too_long_instructional: நிறுவனத்தின் பெயர் மிக நீளமாக உள்ளது (அதிகபட்சம்
+              255 எழுத்துகள் இருக்கலாம்)
+            too_long_informative: நிறுவனத்தின் பெயர் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: நிறுவனத்தின் பெயரில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: நிறுவனத்தின் பெயரில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: நிறுவனத்தின் பெயரில் கணிதக்
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: நிறுவனத்தின் பெயரில் கணிதக்
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_restricted_characters_instructional: நிறுவனத்தின் பெயரில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: நிறுவனத்தின் பெயரில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: நிறுவனத்தின் பெயரில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: நிறுவனத்தின் பெயரில் HTML இருக்கக்கூடாது
+        first_name:
+          label:
+            default: முதல் பெயர்
+            optional: முதல் பெயர் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: முதல் பெயரை உள்ளிடவும்
+            blank_informative: முதல் பெயர் விடுபட்டுள்ளது
+            too_long_instructional: முதல் பெயர் மிக நீளமாக உள்ளது (அதிகபட்சம் 255
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: முதல் பெயர் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: முதல் பெயரில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: முதல் பெயரில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: முதல் பெயரில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: முதல் பெயரில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: முதல் பெயரில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: முதல் பெயரில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: முதல் பெயரில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: முதல் பெயரில் HTML இருக்கக்கூடாது
+            contains_url_instructional: முதல் பெயரில் URL இருக்கக்கூடாது
+            contains_url_informative: முதல் பெயரில் URL இருக்கக்கூடாது
+        last_name:
+          label:
+            default: கடைசி பெயர்
+            optional: கடைசி பெயர் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: கடைசி பெயரை உள்ளிடவும்
+            blank_informative: கடைசி பெயர் விடுபட்டுள்ளது
+            too_long_instructional: கடைசி பெயர் மிக நீளமாக உள்ளது (அதிகபட்சம் 255
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: கடைசி பெயர் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: கடைசி பெயரில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: கடைசி பெயரில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: கடைசி பெயரில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: கடைசி பெயரில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: கடைசி பெயரில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: கடைசி பெயரில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: கடைசி பெயரில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: கடைசி பெயரில் HTML இருக்கக்கூடாது
+            contains_url_instructional: கடைசி பெயரில் URL இருக்கக்கூடாது
+            contains_url_informative: கடைசி பெயரில் URL இருக்கக்கூடாது
+        address1:
+          label:
+            default: முகவரி
+            optional: முகவரி (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: முகவரியை உள்ளிடவும்
+            blank_informative: முகவரி விடுபட்டுள்ளது
+            too_long_instructional: முதல் முகவரி வரி மிக நீளமாக உள்ளது (அதிகபட்சம்
+              255 எழுத்துகள் இருக்கலாம்)
+            too_long_informative: முதல் முகவரி வரி மிக நீளமாக உள்ளது
+            contains_emojis_instructional: முகவரியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: முகவரியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: முகவரியில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: முகவரியில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: முகவரியில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: முகவரியில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_too_many_words_instructional: முகவரியில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: முகவரியில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: முகவரியில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: முகவரியில் HTML இருக்கக்கூடாது
+            contains_url_instructional: முகவரியில் URL இருக்கக்கூடாது
+            contains_url_informative: முகவரியில் URL இருக்கக்கூடாது
+            contains_email_instructional: முகவரியில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            contains_email_informative: முகவரியில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            missing_building_number_instructional: கட்டட எண் இருந்தால் அதைச் சேர்க்கவும்
+            missing_building_number_informative: கட்டட எண் விடுபட்டிருக்கலாம்
+            street_unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான தெருப்
+              பெயரை உள்ளிடவும்"
+            street_unknown_for_zip_informative: தெருப் பெயர், %{zip} என்பதுடன் பொருந்தவில்லை
+            building_number_invalid_instructional: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            building_number_invalid_informative: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            unknown_for_address_instructional: முகவரி வரி 1 தவறாக இருக்கலாம்
+            unknown_for_address_informative: முகவரி வரி 1 தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: முகவரி வரி 1 இல் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது
+        street_name:
+          label:
+            default: தெரு
+            optional: தெரு (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: தெருவை உள்ளிடவும்
+            blank_informative: தெரு விடுபட்டுள்ளது
+            too_long_instructional: தெரு பெயர் மிக நீளமாக உள்ளது (அதிகபட்சம் %{limit}
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: தெரு பெயர் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: தெருவில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: தெருவில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: தெருவில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: தெருவில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: தெருவில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: தெருவில் தடைசெய்யப்பட்ட குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_too_many_words_instructional: தெருவில் %{word_count} வார்த்தைகளுக்கு
+              மேல் இருக்கக்கூடாது
+            contains_too_many_words_informative: தெருவில் %{word_count} வார்த்தைகளுக்கு
+              மேல் இருக்கக்கூடாது
+            contains_html_tags_instructional: தெருவில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: தெருவில் HTML இருக்கக்கூடாது
+            contains_url_instructional: தெருவில் URL இருக்கக்கூடாது
+            contains_url_informative: தெருவில் URL இருக்கக்கூடாது
+            contains_email_instructional: தெருவில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            contains_email_informative: தெருவில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            street_unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான தெருவை
+              உள்ளிடவும்"
+            street_unknown_for_zip_informative: "%{zip} என்பதற்குத் தெரு செல்லாது"
+            unknown_for_address_instructional: தெரு தவறாக இருக்கலாம்
+            unknown_for_address_informative: தெரு தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: தெருவில் %{word_count} வார்த்தைகளுக்குக் குறைவாக
+              இருக்கப் பரிந்துரைக்கப்படுகிறது
+        street_number:
+          label:
+            default: கட்டட எண்
+            optional: கட்டட எண் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: கட்டட எண்ணை உள்ளிடவும்
+            blank_informative: கட்டட எண் விடுபட்டுள்ளது
+            too_long_instructional: கட்டட எண் மிக நீளமாக உள்ளது (அதிகபட்சம் %{limit}
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: கட்டட எண் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: கட்டட எண்ணில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: கட்டட எண்ணில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: கட்டட எண்ணில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: கட்டட எண்ணில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: கட்டட எண்ணில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: கட்டட எண்ணில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_html_tags_instructional: கட்டட எண்ணில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: கட்டட எண்ணில் HTML இருக்கக்கூடாது
+            contains_url_instructional: கட்டட எண்ணில் URL இருக்கக்கூடாது
+            contains_url_informative: கட்டட எண்ணில் URL இருக்கக்கூடாது
+            contains_email_instructional: கட்டட எண்ணில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            contains_email_informative: கட்டட எண்ணில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            missing_building_number_instructional: கட்டட எண் இருந்தால் அதைச் சேர்க்கவும்
+            missing_building_number_informative: கட்டட எண் விடுபட்டிருக்கலாம்
+            building_number_invalid_instructional: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            building_number_invalid_informative: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            unknown_for_address_instructional: சரியான கட்டட எண்ணை உள்ளிடவும்
+            unknown_for_address_informative: கட்டட எண் செல்லாது
+          warnings:
+            contains_too_many_words: கட்டட எண்ணில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது
+        address2:
+          label:
+            default: அப்பார்ட்மெண்ட், சூட் போன்றவை
+            optional: அப்பார்ட்மெண்ட், சூட் போன்றவை (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு அப்பார்ட்மெண்ட், சூட் போன்றவற்றை உள்ளிடவும்
+            blank_informative: அப்பார்ட்மெண்ட் அல்லது சூட் விடுபட்டுள்ளது
+            too_long_instructional: முகவரி வரி 2 மிக நீளமாக உள்ளது (அதிகபட்சம் 255
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: முகவரி வரி 2 மிக நீளமாக உள்ளது
+            contains_emojis_instructional: முகவரி வரி 2 இல் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: முகவரி வரி 2 இல் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: முகவரி வரி 2 இல் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: முகவரி வரி 2 இல் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: முகவரி வரி 2 இல் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: முகவரி வரி 2 இல் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_too_many_words_instructional: முகவரி வரி 2 இல் %{word_count}
+              வார்த்தைகளுக்குக் குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: முகவரி வரி 2 இல் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: முகவரி வரி 2 இல் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: முகவரி வரி 2 இல் HTML இருக்கக்கூடாது
+            contains_url_instructional: முகவரி வரி 2 இல் URL இருக்கக்கூடாது
+            contains_url_informative: முகவரி வரி 2 இல் URL இருக்கக்கூடாது
+            contains_email_instructional: முகவரி வரி 2 இல் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            contains_email_informative: முகவரி வரி 2 இல் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            missing_building_number_instructional: கட்டட எண் இருந்தால் அதைச் சேர்க்கவும்
+            missing_building_number_informative: கட்டட எண் விடுபட்டிருக்கலாம்
+            street_unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான தெருப்
+              பெயரை உள்ளிடவும்"
+            street_unknown_for_zip_informative: தெருப் பெயர் %{zip} என்பதற்குச் செல்லாது
+            building_number_invalid_instructional: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            building_number_invalid_informative: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            unknown_for_address_instructional: முகவரி வரி 2 தவறாக இருக்கலாம்
+            unknown_for_address_informative: முகவரி வரி 2 தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: முகவரி வரி 2 இல் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது
+        line2:
+          label:
+            default: அப்பார்ட்மெண்ட், சூட் போன்றவை.
+            optional: அப்பார்ட்மெண்ட், சூட் போன்றவை (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு அப்பார்ட்மெண்ட், சூட் போன்றவற்றை உள்ளிடவும்
+            blank_informative: அப்பார்ட்மெண்ட் அல்லது சூட் விடுபட்டுள்ளது
+            too_long_instructional: இரண்டாவது முகவரி வரி மிக நீளமாக உள்ளது (அதிகபட்சம்
+              %{limit} எழுத்துகள் இருக்கலாம்)
+            too_long_informative: இரண்டாவது முகவரி வரி மிக நீளமாக உள்ளது
+            contains_emojis_instructional: இரண்டாவது முகவரி வரியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: இரண்டாவது முகவரி வரியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: இரண்டாவது முகவரி வரியில்
+              கணிதக் குறியீடுகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: இரண்டாவது முகவரி வரியில் கணிதக்
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_restricted_characters_instructional: இரண்டாவது முகவரி வரியில்
+              எழுத்துகள், எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள்
+              மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: இரண்டாவது முகவரி வரியில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_too_many_words_instructional: இரண்டாவது முகவரி வரியில் %{word_count}
+              வார்த்தைகளுக்குக் குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: இரண்டாவது முகவரி வரியில் %{word_count}
+              வார்த்தைகளுக்குக் குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: இரண்டாவது முகவரி வரியில் HTML குறிச்சொற்கள்
+              இருக்கக்கூடாது
+            contains_html_tags_informative: இரண்டாவது முகவரி வரியில் HTML குறிச்சொற்கள்
+              இருக்கக்கூடாது
+            contains_url_instructional: இரண்டாவது முகவரி வரியில் URL இருக்கக்கூடாது
+            contains_url_informative: இரண்டாவது முகவரி வரியில் URL இருக்கக்கூடாது
+            contains_email_instructional: இரண்டாவது முகவரி வரியில் மின்னஞ்சல் முகவரி
+              இருக்கக்கூடாது
+            contains_email_informative: இரண்டாவது முகவரி வரியில் மின்னஞ்சல் முகவரி
+              இருக்கக்கூடாது
+            missing_building_number_instructional: கட்டட எண் இருந்தால் அதைச் சேர்க்கவும்
+            missing_building_number_informative: கட்டட எண் இருந்தால் அதைச் சேர்க்கவும்
+            street_unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான தெருப்
+              பெயரை உள்ளிடவும்"
+            street_unknown_for_zip_informative: "%{zip} என்பதற்குச் சரியான தெருப்
+              பெயரை உள்ளிடவும்"
+            building_number_invalid_instructional: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            building_number_invalid_informative: "%{street}, %{zip} ஆகியவற்றுக்கான
+              கட்டட எண்ணைக் கண்டறிய முடியவில்லை"
+            unknown_for_address_instructional: இரண்டாவது முகவரி வரி தவறாக இருக்கலாம்
+            unknown_for_address_informative: இரண்டாவது முகவரி வரி தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: இரண்டாவது முகவரி வரியில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது
+        neighborhood:
+          label:
+            default: பகுதி
+            optional: பகுதி (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: பகுதியை உள்ளிடவும்
+            blank_informative: பகுதி விடுபட்டுள்ளது
+            too_long_instructional: பகுதி மிக நீளமாக உள்ளது (அதிகபட்சம் %{limit} எழுத்துகள்
+              இருக்கலாம்)
+            too_long_informative: பகுதி மிக நீளமாக உள்ளது
+            contains_emojis_instructional: பகுதியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: பகுதியில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: பகுதியில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: பகுதியில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: பகுதியில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: பகுதியில் தடைசெய்யப்பட்ட குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_too_many_words_instructional: பகுதியில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: பகுதியில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: பகுதியில் HTML குறிச்சொற்கள் இருக்கக்கூடாது
+            contains_html_tags_informative: பகுதியில் HTML குறிச்சொற்கள் இருக்கக்கூடாது
+            contains_url_instructional: பகுதியில் URLகள் இருக்கக்கூடாது
+            contains_url_informative: பகுதியில் URLகள் இருக்கக்கூடாது
+            contains_email_instructional: பகுதியில் மின்னஞ்சல் முகவரிகள் இருக்கக்கூடாது
+            contains_email_informative: பகுதியில் மின்னஞ்சல் முகவரிகள் இருக்கக்கூடாது
+            unknown_for_city_instructional: "%{city} என்பதற்குச் சரியான பகுதிப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_city_informative: "%{city} என்பதற்குச் சரியான பகுதிப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான பகுதிப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip} என்பதற்குச் சரியான பகுதிப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_address_instructional: பகுதி தவறாக இருக்கலாம்
+            unknown_for_address_informative: பகுதி தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: பகுதியில் %{word_count} வார்த்தைகளுக்குக் குறைவாக
+              இருக்கப் பரிந்துரைக்கப்படுகிறது
+        district:
+          label:
+            default: மாவட்டம்
+            optional: மாவட்டம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: மாவட்டத்தை உள்ளிடவும்
+            blank_informative: மாவட்டம் விடுபட்டுள்ளது
+            too_long_instructional: மாவட்டம் மிக நீளமாக உள்ளது (அதிகபட்சம் %{limit}
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: மாவட்டம் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: மாவட்டத்தில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: மாவட்டத்தில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: மாவட்டத்தில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: மாவட்டத்தில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: மாவட்டத்தில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: மாவட்டத்தில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_too_many_words_instructional: மாவட்டத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: மாவட்டத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: மாவட்டத்தில் HTML குறிச்சொற்கள் இருக்கக்கூடாது
+            contains_html_tags_informative: மாவட்டத்தில் HTML குறிச்சொற்கள் இருக்கக்கூடாது
+            contains_url_instructional: மாவட்டத்தில் URLகள் இருக்கக்கூடாது
+            contains_url_informative: மாவட்டத்தில் URLகள் இருக்கக்கூடாது
+            contains_email_instructional: மாவட்டத்தில் மின்னஞ்சல் முகவரிகள் இருக்கக்கூடாது
+            contains_email_informative: மாவட்டத்தில் மின்னஞ்சல் முகவரிகள் இருக்கக்கூடாது
+            unknown_for_city_instructional: "%{city} என்பதற்குச் சரியான மாவட்டப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_city_informative: "%{city} என்பதற்குச் சரியான மாவட்டப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான மாவட்டப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip} என்பதற்குச் சரியான மாவட்டப் பெயரை
+              உள்ளிடவும்"
+            unknown_for_address_instructional: மாவட்டம் தவறாக இருக்கலாம்
+            unknown_for_address_informative: மாவட்டம் தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: மாவட்டத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது
+        subdistrict:
+          label:
+            default: துணை மாவட்டம்
+            optional: துணை மாவட்டம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: துணை மாவட்டத்தை உள்ளிடவும்
+            blank_informative: துணை மாவட்டம் விடுபட்டுள்ளது
+            too_long_instructional: துணை மாவட்டம் மிக நீளமாக உள்ளது (அதிகபட்சம் %{limit}
+              எழுத்துகள் இருக்கலாம்)
+            too_long_informative: துணை மாவட்டம் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: துணை மாவட்டத்தில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: துணை மாவட்டத்தில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: துணை மாவட்டத்தில் கணிதக்
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: துணை மாவட்டத்தில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: துணை மாவட்டத்தில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: துணை மாவட்டத்தில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_too_many_words_instructional: துணை மாவட்டத்தில் %{word_count}
+              வார்த்தைகளுக்குக் குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: துணை மாவட்டத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: துணை மாவட்டத்தில் HTML குறிச்சொற்கள்
+              இருக்கக்கூடாது
+            contains_html_tags_informative: துணை மாவட்டத்தில் HTML குறிச்சொற்கள் இருக்கக்கூடாது
+            contains_url_instructional: துணை மாவட்டத்தில் URLகள் இருக்கக்கூடாது
+            contains_url_informative: துணை மாவட்டத்தில் URLகள் இருக்கக்கூடாது
+            contains_email_instructional: துணை மாவட்டத்தில் மின்னஞ்சல் முகவரிகள் இருக்கக்கூடாது
+            contains_email_informative: துணை மாவட்டத்தில் மின்னஞ்சல் முகவரிகள் இருக்கக்கூடாது
+            unknown_for_city_instructional: "%{city} என்பதற்குச் சரியான துணை மாவட்டப்
+              பெயரை உள்ளிடவும்"
+            unknown_for_city_informative: "%{city} என்பதற்குச் சரியான துணை மாவட்டப்
+              பெயரை உள்ளிடவும்"
+            unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான துணை மாவட்டப்
+              பெயரை உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip} என்பதற்குச் சரியான துணை மாவட்டப்
+              பெயரை உள்ளிடவும்"
+            unknown_for_address_instructional: துணை மாவட்டம் தவறாக இருக்கலாம்
+            unknown_for_address_informative: துணை மாவட்டம் தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: துணை மாவட்டத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது
+        city:
+          label:
+            default: நகரம்
+            optional: நகரம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: நகரத்தை உள்ளிடவும்
+            blank_informative: நகரம் விடுபட்டுள்ளது
+            too_long_instructional: நகரம் மிக நீளமாக உள்ளது (அதிகபட்சம் 255 எழுத்துகள்
+              இருக்கலாம்)
+            too_long_informative: நகரம் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: நகரத்தில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: நகரத்தில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: நகரத்தில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: நகரத்தில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: நகரத்தில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: நகரத்தில் தடைசெய்யப்பட்ட குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_too_many_words_instructional: நகரத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: நகரத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: நகரத்தில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: நகரத்தில் HTML இருக்கக்கூடாது
+            contains_url_instructional: நகரத்தில் URL இருக்கக்கூடாது
+            contains_url_informative: நகரத்தில் URL இருக்கக்கூடாது
+            contains_email_instructional: நகரத்தில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            contains_email_informative: நகரத்தில் மின்னஞ்சல் முகவரி இருக்கக்கூடாது
+            unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான நகரத்தை உள்ளிடவும்"
+            unknown_for_zip_informative: நகரம், %{zip} என்ற அஞ்சல் குறியீட்டுடன் பொருந்தவில்லை
+            unknown_for_province_instructional: "%{province} என்பதற்குச் சரியான நகரத்தை
+              உள்ளிடவும்"
+            unknown_for_province_informative: நகரம், %{province} என்பதுடன் பொருந்தவில்லை
+            unknown_for_zip_and_province_instructional: "%{zip}, %{province} ஆகியவற்றுக்குச்
+              சரியான நகரத்தை உள்ளிடவும்"
+            unknown_for_zip_and_province_informative: நகரம் தவறாக இருக்கலாம்
+            unknown_for_address_instructional: நகரம் தவறாக இருக்கலாம்
+            unknown_for_address_informative: நகரம் தவறாக இருக்கலாம்
+        province:
+          label:
+            default: பிராந்தியம்
+            optional: பிராந்தியம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு பிராந்தியத்தைத் தேர்ந்தெடுக்கவும்
+            blank_informative: பிராந்தியம் விடுபட்டுள்ளது
+            invalid_instructional: ஒரு பிராந்தியத்தைத் தேர்ந்தெடுக்கவும்
+            invalid_informative: பிராந்தியம் விடுபட்டுள்ளது
+            invalid_for_country_instructional: "%{country} என்பதற்குச் சரியான பிராந்தியத்தை
+              உள்ளிடவும்"
+            invalid_for_country_informative: பிராந்தியம், %{country} என்பதுடன் பொருந்தவில்லை
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} ஆகியவற்றுக்குச்
+              சரியான பிராந்தியத்தைத் தேர்ந்தெடுக்கவும்"
+            unknown_for_city_and_zip_informative: பிராந்தியம், %{city}, %{zip} ஆகியவற்றுடன்
+              பொருந்தவில்லை
+            unknown_for_city_informative: "%{city} என்பதற்குச் சரியான பிராந்தியத்தைத்
+              தேர்ந்தெடுக்கவும்"
+            unknown_for_city_instructional: பிராந்தியம், %{city} என்பதுடன் பொருந்தவில்லை
+            unknown_for_zip_instructional: "%{zip} என்பதற்குச் சரியான பிராந்தியத்தைத்
+              தேர்ந்தெடுக்கவும்"
+            unknown_for_zip_informative: பிராந்தியம், %{zip} என்ற அஞ்சல் குறியீட்டுடன்
+              பொருந்தவில்லை
+            unknown_for_address_instructional: பிராந்தியம் தவறாக இருக்கலாம்
+            unknown_for_address_informative: பிராந்தியம் தவறாக இருக்கலாம்
+        country:
+          label:
+            default: நாடு/பிராந்தியம்
+            optional: நாடு/பிராந்தியம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு நாடு/பிராந்தியத்தைத் தேர்ந்தெடுக்கவும்
+            blank_informative: நாடு/பிராந்தியம் விடுபட்டுள்ளது
+            not_supported_instructional: நாடு/பிராந்தியத்திற்கு ஆதரவில்லை
+            not_supported_informative: நாடு/பிராந்தியத்திற்கு ஆதரவில்லை
+            invalid_instructional: சரியான நாடு/பிராந்தியத்தை உள்ளிடவும்
+            invalid_informative: நாடு/பிராந்தியம் செல்லாது
+            invalid_for_zip_instructional: இந்த அஞ்சல் குறியீட்டுக்குச் சரியான நாடு/பிராந்தியத்தை
+              உள்ளிடவும்
+            invalid_for_zip_informative: "%{country} என்பது நாடு/பிராந்தியத்துடன்
+              பொருந்தவில்லை"
+        zip:
+          label:
+            default: அஞ்சல் குறியீடு
+            optional: அஞ்சல் குறியீடு (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: அஞ்சல் குறியீட்டை உள்ளிடவும்
+            blank_informative: அஞ்சல் குறியீடு விடுபட்டுள்ளது
+            blocked_address_instructional: இந்த இடத்திற்கு ஆதரவில்லை
+            blocked_address_informative: இந்த இடத்திற்கு ஆதரவில்லை
+            invalid_instructional: சரியான அஞ்சல் குறியீட்டை உள்ளிடவும்
+            invalid_informative: அஞ்சல் குறியீடு செல்லாது
+            invalid_for_country_instructional: "%{country} என்பதற்குச் சரியான அஞ்சல்
+              குறியீட்டை உள்ளிடவும்"
+            invalid_for_country_informative: அஞ்சல் குறியீடு, %{country} என்பதுடன்
+              பொருந்தவில்லை
+            invalid_for_province_instructional: "%{province} என்பதற்குச் சரியான அஞ்சல்
+              குறியீட்டை உள்ளிடவும்"
+            invalid_for_province_informative: அஞ்சல் குறியீடு, %{province} என்பதுடன்
+              பொருந்தவில்லை
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              ஆகியவற்றுக்குச் சரியான அஞ்சல் குறியீட்டை உள்ளிடவும்"
+            invalid_for_country_and_province_informative: அஞ்சல் குறியீடு, %{province},
+              %{country} ஆகியவற்றுடன் பொருந்தவில்லை
+            too_long_instructional: அஞ்சல் குறியீடு மிக நீளமாக உள்ளது
+            too_long_informative: அஞ்சல் குறியீடு மிக நீளமாக உள்ளது
+            contains_emojis_instructional: அஞ்சல் குறியீட்டில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: அஞ்சல் குறியீட்டில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: அஞ்சல் குறியீட்டில் கணிதக்
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: அஞ்சல் குறியீட்டில் கணிதக்
+              குறியீடுகள் இருக்கக்கூடாது
+            contains_restricted_characters_instructional: அஞ்சல் குறியீட்டில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: அஞ்சல் குறியீட்டில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+            not_supported_instructional: அஞ்சல் குறியீட்டிற்கு ஆதரவில்லை. புதிய முகவரியை
+              உள்ளிட்டு மீண்டும் முயலவும்
+            not_supported_informative: அஞ்சல் குறியீட்டிற்கு ஆதரவில்லை
+            contains_html_tags_instructional: அஞ்சல் குறியீட்டில் HTML இருக்கக்கூடாது
+            contains_html_tags_informative: அஞ்சல் குறியீட்டில் HTML இருக்கக்கூடாது
+            unknown_for_province_instructional: "%{province} என்பதற்குச் சரியான அஞ்சல்
+              குறியீட்டை உள்ளிடவும்"
+            unknown_for_province_informative: "%{province} என்பதற்கு அஞ்சல் குறியீடு
+              செல்லாது"
+            unknown_for_address_instructional: அஞ்சல் குறியீடு தவறாக இருக்கலாம்
+            unknown_for_address_informative: அஞ்சல் குறியீடு தவறாக இருக்கலாம்
+        phone:
+          label:
+            default: தொலைபேசி
+            optional: தொலைபேசி (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: தொலைபேசி எண்ணை உள்ளிடவும்
+            blank_informative: தொலைபேசி எண் விடுபட்டுள்ளது
+            invalid_instructional: சரியான தொலைபேசி எண்ணை உள்ளிடவும்
+            invalid_informative: தொலைபேசி எண் செல்லாது
+            too_long_instructional: தொலைபேசி எண் மிக நீளமாக உள்ளது
+            too_long_informative: தொலைபேசி எண் மிக நீளமாக உள்ளது
+            contains_emojis_instructional: தொலைபேசி எண்ணில் எமோஜிகள் இருக்கக்கூடாது
+            contains_emojis_informative: தொலைபேசி எண்ணில் எமோஜிகள் இருக்கக்கூடாது
+            contains_mathematical_symbols_instructional: தொலைபேசி எண்ணில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_mathematical_symbols_informative: தொலைபேசி எண்ணில் கணிதக் குறியீடுகள்
+              இருக்கக்கூடாது
+            contains_restricted_characters_instructional: தொலைபேசி எண்ணில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்புக் குறியீடுகள் மட்டுமே இருக்கலாம்
+            contains_restricted_characters_informative: தொலைபேசி எண்ணில் தடைசெய்யப்பட்ட
+              குறியீடுகள் இருக்கக்கூடாது
+        address:
+          errors:
+            may_not_exist_instructional: முகவரி கண்டறியப்படவில்லை அல்லது இல்லை
+            may_not_exist_informative: முகவரி கண்டறியப்படவில்லை

@@ -1,0 +1,43 @@
+---
+sr:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Okrug
+            optional: Okrug (opcionalno)
+          errors:
+            blank_instructional: Unesite okrug
+            blank_informative: Okrug nedostaje
+            too_long_instructional: Okrug je predugačak (maksimalno %{limit} znakova)
+            too_long_informative: Okrug je predugačak
+            contains_emojis_instructional: Okrug ne može da sadrži emodžije
+            contains_emojis_informative: Okrug ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Okrug ne može da sadrži matematičke
+              simbole
+            contains_mathematical_symbols_informative: Okrug ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Okrug može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Okrug ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Okrug mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Okrug mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Okrug ne može da sadrži HTML
+            contains_html_tags_informative: Okrug ne može da sadrži HTML
+            contains_url_instructional: Okrug ne može da sadrži URL
+            contains_url_informative: Okrug ne može da sadrži URL
+            contains_email_instructional: Okrug ne može da sadrži imejl adresu
+            contains_email_informative: Okrug ne može da sadrži imejl adresu
+            unknown_for_city_instructional: Unesite važeći okrug za %{city}
+            unknown_for_city_informative: Okrug nije važeći za %{city}
+            unknown_for_zip_instructional: Unesite važeći okrug za %{zip}
+            unknown_for_zip_informative: Okrug nije važeći za %{zip}
+            unknown_for_address_instructional: Okrug je možda netačan
+            unknown_for_address_informative: Okrug je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da okrug ima manje od %{word_count}
+              reči
