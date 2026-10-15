@@ -165,7 +165,6 @@ module Worldwide
             [:clma, "Región de Magallanes y de la Antártica Chilena", "Magallanes"],
             [:clml, "Región del Maule", "Maule"],
             [:clnb, "Región de Ñuble", "Ñuble"],
-            [:clrm, "Región Metropolitana de Santiago", "Santiago"],
             [:clta, "Región de Tarapacá", "Tarapacá"],
             [:clvs, "Región de Valparaíso", "Valparaíso"],
           ])

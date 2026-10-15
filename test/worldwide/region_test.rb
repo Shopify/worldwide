@@ -311,6 +311,14 @@ module Worldwide
       end
     end
 
+    test "#full_name identifies Chile's Metropolitan Region in Spanish" do
+      region = Worldwide.region(code: "CL").zone(code: "RM")
+
+      assert_equal "Región Metropolitana de Santiago", region.full_name(locale: :es)
+      assert_equal "Región Metropolitana de Santiago", region.full_name(locale: :"es-CL")
+      assert_equal "Santiago Metropolitan", region.full_name(locale: :en)
+    end
+
     test "#full_name falls back to legacy_name when CLDR has no name available" do
       dummy = Worldwide::Region.new(
         legacy_name: "Legacy name",
