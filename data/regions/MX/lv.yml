@@ -1,0 +1,57 @@
+---
+lv:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: Iela un mājas numurs
+            optional: Iela un mājas numurs (neobligāti)
+          errors:
+            blank_instructional: Ievadi ielu un mājas numuru
+            blank_informative: Trūkst ielas un mājas numura
+        province:
+          label:
+            default: Štats
+            optional: Štats (neobligāti)
+          errors:
+            blank_instructional: Atlasi štatu
+            blank_informative: Trūkst štata
+        neighborhood:
+          label:
+            default: Apkaime
+            optional: Apkaime (neobligāti)
+          errors:
+            blank_instructional: Ievadi apkaimi
+            blank_informative: Trūkst apkaimes
+            too_long_instructional: Apkaime ir pārāk gara (maksimums ir %{limit} rakstzīmes)
+            too_long_informative: Apkaime ir pārāk gara
+            contains_emojis_instructional: Apkaime nedrīkst saturēt emocijzīmes
+            contains_emojis_informative: Apkaime nedrīkst saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Apkaime nedrīkst saturēt
+              matemātiskus simbolus
+            contains_mathematical_symbols_informative: Apkaime nedrīkst saturēt matemātiskus
+              simbolus
+            contains_restricted_characters_instructional: Apkaime drīkst saturēt tikai
+              burtus, ciparus, vietējās rakstzīmes un speciālās rakstzīmes
+            contains_restricted_characters_informative: Apkaime nedrīkst saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Apkaimes nosaukumā jābūt mazāk
+              nekā %{word_count} vārdiem
+            contains_too_many_words_informative: Apkaimes nosaukumā jābūt mazāk nekā
+              %{word_count} vārdiem
+            contains_html_tags_informative: Apkaime nedrīkst saturēt HTML
+            contains_html_tags_instructional: Apkaime nedrīkst saturēt HTML
+            contains_url_instructional: Apkaime nedrīkst saturēt URL
+            contains_url_informative: Apkaime nedrīkst saturēt URL
+            contains_email_instructional: Apkaime nedrīkst saturēt e-pasta adresi
+            contains_email_informative: Apkaime nedrīkst saturēt e-pasta adresi
+            unknown_for_city_instructional: "%{city}: ievadi derīgu apkaimi"
+            unknown_for_city_informative: "%{city}: ievadi derīgu apkaimi"
+            unknown_for_zip_instructional: "%{zip}: ievadi derīgu apkaimi"
+            unknown_for_zip_informative: "%{zip}: ievadi derīgu apkaimi"
+            unknown_for_address_instructional: Apkaime var būt nepareiza
+            unknown_for_address_informative: Apkaime var būt nepareiza
+          warnings:
+            contains_too_many_words: Apkaimes nosaukumā ieteicams izmantot mazāk nekā
+              %{word_count} vārdus

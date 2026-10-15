@@ -1,0 +1,552 @@
+---
+te:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: కంపెనీ
+            optional: కంపెనీ (ఆప్షనల్)
+          errors:
+            blank_instructional: కంపెనీని ఎంటర్ చేయండి
+            blank_informative: కంపెనీ లేదు
+            too_long_instructional: కంపెనీ చాలా పొడవుగా ఉంది (గరిష్టంగా 255 అక్షరాలు)
+            too_long_informative: కంపెనీ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: కంపెనీలో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: కంపెనీలో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: కంపెనీలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: కంపెనీలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_restricted_characters_instructional: కంపెనీలో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: కంపెనీలో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_html_tags_instructional: కంపెనీలో HTML ఉండకూడదు
+            contains_html_tags_informative: కంపెనీలో HTML ఉండకూడదు
+        first_name:
+          label:
+            default: మొదటి పేరు
+            optional: మొదటి పేరు (ఆప్షనల్)
+          errors:
+            blank_instructional: మొదటి పేరును ఎంటర్ చేయండి
+            blank_informative: మొదటి పేరు లేదు
+            too_long_instructional: మొదటి పేరు చాలా పొడవుగా ఉంది (గరిష్టంగా 255 అక్షరాలు)
+            too_long_informative: మొదటి పేరు చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: మొదటి పేరులో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: మొదటి పేరులో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: మొదటి పేరులో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: మొదటి పేరులో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: మొదటి పేరులో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: మొదటి పేరులో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_html_tags_instructional: మొదటి పేరులో HTML ఉండకూడదు
+            contains_html_tags_informative: మొదటి పేరులో HTML ఉండకూడదు
+            contains_url_instructional: మొదటి పేరులో URL ఉండకూడదు
+            contains_url_informative: మొదటి పేరులో URL ఉండకూడదు
+        last_name:
+          label:
+            default: చివరి పేరు
+            optional: చివరి పేరు (ఆప్షనల్)
+          errors:
+            blank_instructional: చివరి పేరును ఎంటర్ చేయండి
+            blank_informative: చివరి పేరు లేదు
+            too_long_instructional: చివరి పేరు చాలా పొడవుగా ఉంది (గరిష్టంగా 255 అక్షరాలు)
+            too_long_informative: చివరి పేరు చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: చివరి పేరులో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: చివరి పేరులో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: చివరి పేరులో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: చివరి పేరులో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: చివరి పేరులో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: చివరి పేరులో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_html_tags_instructional: చివరి పేరులో HTML ఉండకూడదు
+            contains_html_tags_informative: చివరి పేరులో HTML ఉండకూడదు
+            contains_url_instructional: చివరి పేరులో URL ఉండకూడదు
+            contains_url_informative: చివరి పేరులో URL ఉండకూడదు
+        address1:
+          label:
+            default: అడ్రస్
+            optional: అడ్రస్ (ఆప్షనల్)
+          errors:
+            blank_instructional: అడ్రస్‌ను ఎంటర్ చేయండి
+            blank_informative: అడ్రస్ లేదు
+            too_long_instructional: మొదటి అడ్రస్ లైన్ చాలా పొడవుగా ఉంది (గరిష్టంగా
+              255 అక్షరాలు)
+            too_long_informative: మొదటి అడ్రస్ లైన్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: అడ్రస్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: అడ్రస్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: అడ్రస్‌లో గణిత చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: అడ్రస్‌లో గణిత చిహ్నాలు ఉండకూడదు
+            contains_restricted_characters_instructional: అడ్రస్‌లో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: అడ్రస్‌లో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_too_many_words_instructional: అడ్రస్‌లో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_too_many_words_informative: అడ్రస్‌లో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_html_tags_instructional: అడ్రస్‌లో HTML ఉండకూడదు
+            contains_html_tags_informative: అడ్రస్‌లో HTML ఉండకూడదు
+            contains_url_instructional: అడ్రస్‌లో URL ఉండకూడదు
+            contains_url_informative: అడ్రస్‌లో URL ఉండకూడదు
+            contains_email_instructional: అడ్రస్‌లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: అడ్రస్‌లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            missing_building_number_instructional: మీకు బిల్డింగ్ నంబర్ ఉంటే, దాన్ని
+              జోడించండి
+            missing_building_number_informative: బిల్డింగ్ నంబర్ లేకపోవచ్చు
+            street_unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే వీధి
+              పేరును ఎంటర్ చేయండి"
+            street_unknown_for_zip_informative: "%{zip}కి వీధి పేరు సరిపోలడం లేదు"
+            building_number_invalid_instructional: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            building_number_invalid_informative: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            unknown_for_address_instructional: అడ్రస్ లైన్ 1 తప్పు కావచ్చు
+            unknown_for_address_informative: అడ్రస్ లైన్ 1 తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: అడ్రస్ లైన్ 1లో %{word_count} పదాల కంటే తక్కువ
+              ఉండటం సిఫార్సు చేయబడింది
+        street_name:
+          label:
+            default: వీధి
+            optional: వీధి (ఆప్షనల్)
+          errors:
+            blank_instructional: వీధిని ఎంటర్ చేయండి
+            blank_informative: వీధి లేదు
+            too_long_instructional: వీధి చాలా పొడవుగా ఉంది (గరిష్టంగా %{limit} అక్షరాలు)
+            too_long_informative: వీధి చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: వీధిలో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: వీధిలో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: వీధిలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: వీధిలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_restricted_characters_instructional: వీధిలో కేవలం అక్షరాలు, నంబర్‌లు,
+              స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: వీధిలో నిషేధిత అక్షరాలు ఉండకూడదు
+            contains_too_many_words_instructional: వీధిలో %{word_count} పదాల కంటే
+              ఎక్కువ ఉండకూడదు
+            contains_too_many_words_informative: వీధిలో %{word_count} పదాల కంటే ఎక్కువ
+              ఉండకూడదు
+            contains_html_tags_instructional: వీధిలో HTML ఉండకూడదు
+            contains_html_tags_informative: వీధిలో HTML ఉండకూడదు
+            contains_url_instructional: వీధిలో URL ఉండకూడదు
+            contains_url_informative: వీధిలో URL ఉండకూడదు
+            contains_email_instructional: వీధిలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: వీధిలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            street_unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే వీధిని
+              ఎంటర్ చేయండి"
+            street_unknown_for_zip_informative: "%{zip} కోసం వీధి చెల్లదు"
+            unknown_for_address_instructional: వీధి తప్పు కావచ్చు
+            unknown_for_address_informative: వీధి తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: వీధిలో %{word_count} పదాల కంటే తక్కువ ఉండటం సిఫార్సు
+              చేయబడింది
+        street_number:
+          label:
+            default: బిల్డింగ్ నంబర్
+            optional: బిల్డింగ్ నంబర్ (ఆప్షనల్)
+          errors:
+            blank_instructional: బిల్డింగ్ నంబర్‌ను ఎంటర్ చేయండి
+            blank_informative: బిల్డింగ్ నంబర్ లేదు
+            too_long_instructional: బిల్డింగ్ నంబర్ చాలా పొడవుగా ఉంది (గరిష్టంగా %{limit}
+              అక్షరాలు)
+            too_long_informative: బిల్డింగ్ నంబర్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: బిల్డింగ్ నంబర్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: బిల్డింగ్ నంబర్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: బిల్డింగ్ నంబర్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: బిల్డింగ్ నంబర్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: బిల్డింగ్ నంబర్‌లో కేవలం
+              అక్షరాలు, నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే
+              ఉండాలి
+            contains_restricted_characters_informative: బిల్డింగ్ నంబర్‌లో నిషేధిత
+              అక్షరాలు ఉండకూడదు
+            contains_html_tags_instructional: బిల్డింగ్ నంబర్‌లో HTML ఉండకూడదు
+            contains_html_tags_informative: బిల్డింగ్ నంబర్‌లో HTML ఉండకూడదు
+            contains_url_instructional: బిల్డింగ్ నంబర్‌లో URL ఉండకూడదు
+            contains_url_informative: బిల్డింగ్ నంబర్‌లో URL ఉండకూడదు
+            contains_email_instructional: బిల్డింగ్ నంబర్‌లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: బిల్డింగ్ నంబర్‌లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            missing_building_number_instructional: మీకు బిల్డింగ్ నంబర్ ఉంటే, దాన్ని
+              జోడించండి
+            missing_building_number_informative: బిల్డింగ్ నంబర్ లేకపోవచ్చు
+            building_number_invalid_instructional: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            building_number_invalid_informative: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            unknown_for_address_instructional: చెల్లుబాటు అయ్యే బిల్డింగ్ నంబర్‌ను
+              ఎంటర్ చేయండి
+            unknown_for_address_informative: బిల్డింగ్ నంబర్ చెల్లదు
+          warnings:
+            contains_too_many_words: బిల్డింగ్ నంబర్‌లో %{word_count} పదాల కంటే తక్కువ
+              ఉండటం సిఫార్సు చేయబడింది
+        address2:
+          label:
+            default: అపార్ట్‌మెంట్, సూట్ మొదలైనవి
+            optional: అపార్ట్‌మెంట్, సూట్ మొదలైనవి (ఆప్షనల్)
+          errors:
+            blank_instructional: అపార్ట్‌మెంట్, సూట్ మొదలైన వాటిని ఎంటర్ చేయండి
+            blank_informative: అపార్ట్‌మెంట్ లేదా సూట్ లేదు
+            too_long_instructional: అడ్రస్ లైన్ 2 చాలా పొడవుగా ఉంది (గరిష్టంగా 255
+              అక్షరాలు)
+            too_long_informative: అడ్రస్ లైన్ 2 చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: అడ్రస్ లైన్ 2లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: అడ్రస్ లైన్ 2లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: అడ్రస్ లైన్ 2లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: అడ్రస్ లైన్ 2లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: అడ్రస్ లైన్ 2లో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: అడ్రస్ లైన్ 2లో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_too_many_words_instructional: అడ్రస్ లైన్ 2లో %{word_count} పదాల
+              కంటే తక్కువ ఉండాలి
+            contains_too_many_words_informative: అడ్రస్ లైన్ 2లో %{word_count} పదాల
+              కంటే తక్కువ ఉండాలి
+            contains_html_tags_instructional: అడ్రస్ లైన్ 2లో HTML ఉండకూడదు
+            contains_html_tags_informative: అడ్రస్ లైన్ 2లో HTML ఉండకూడదు
+            contains_url_instructional: అడ్రస్ లైన్ 2లో URL ఉండకూడదు
+            contains_url_informative: అడ్రస్ లైన్ 2లో URL ఉండకూడదు
+            contains_email_instructional: అడ్రస్ లైన్ 2లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: అడ్రస్ లైన్ 2లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            missing_building_number_instructional: మీకు బిల్డింగ్ నంబర్ ఉంటే, దాన్ని
+              జోడించండి
+            missing_building_number_informative: బిల్డింగ్ నంబర్ లేకపోవచ్చు
+            street_unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే వీధి
+              పేరును ఎంటర్ చేయండి"
+            street_unknown_for_zip_informative: "%{zip} కోసం వీధి పేరు చెల్లదు"
+            building_number_invalid_instructional: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            building_number_invalid_informative: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            unknown_for_address_instructional: అడ్రస్ లైన్ 2 తప్పు కావచ్చు
+            unknown_for_address_informative: అడ్రస్ లైన్ 2 తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: అడ్రస్ లైన్ 2లో %{word_count} పదాల కంటే తక్కువ
+              ఉండటం సిఫార్సు చేయబడింది
+        line2:
+          label:
+            default: అపార్ట్‌మెంట్, సూట్ మొదలైనవి.
+            optional: అపార్ట్‌మెంట్, సూట్ మొదలైనవి. (ఆప్షనల్)
+          errors:
+            blank_instructional: అపార్ట్‌మెంట్, సూట్ మొదలైన వాటిని ఎంటర్ చేయండి.
+            blank_informative: అపార్ట్‌మెంట్ లేదా సూట్ లేదు
+            too_long_instructional: రెండవ అడ్రస్ లైన్ చాలా పొడవుగా ఉంది (గరిష్టంగా
+              %{limit} అక్షరాలు)
+            too_long_informative: రెండవ అడ్రస్ లైన్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: రెండవ అడ్రస్ లైన్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: రెండవ అడ్రస్ లైన్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: రెండవ అడ్రస్ లైన్‌లో గణిత
+              చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: రెండవ అడ్రస్ లైన్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: రెండవ అడ్రస్ లైన్‌లో కేవలం
+              అక్షరాలు, నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే
+              ఉండాలి
+            contains_restricted_characters_informative: రెండవ అడ్రస్ లైన్‌లో నిషేధిత
+              అక్షరాలు ఉండకూడదు
+            contains_too_many_words_instructional: రెండవ అడ్రస్ లైన్‌లో %{word_count}
+              పదాల కంటే తక్కువ ఉండాలి
+            contains_too_many_words_informative: రెండవ అడ్రస్ లైన్‌లో %{word_count}
+              పదాల కంటే తక్కువ ఉండాలి
+            contains_html_tags_instructional: రెండవ అడ్రస్ లైన్‌లో HTML ట్యాగ్‌లు
+              ఉండకూడదు
+            contains_html_tags_informative: రెండవ అడ్రస్ లైన్‌లో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_url_instructional: రెండవ అడ్రస్ లైన్‌లో URL ఉండకూడదు
+            contains_url_informative: రెండవ అడ్రస్ లైన్‌లో URL ఉండకూడదు
+            contains_email_instructional: రెండవ అడ్రస్ లైన్‌లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: రెండవ అడ్రస్ లైన్‌లో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            missing_building_number_instructional: మీకు బిల్డింగ్ నంబర్ ఉంటే, దాన్ని
+              జోడించండి
+            missing_building_number_informative: మీకు బిల్డింగ్ నంబర్ ఉంటే, దాన్ని
+              జోడించండి
+            street_unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే వీధి
+              పేరును ఎంటర్ చేయండి"
+            street_unknown_for_zip_informative: "%{zip} కోసం చెల్లుబాటు అయ్యే వీధి
+              పేరును ఎంటర్ చేయండి"
+            building_number_invalid_instructional: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            building_number_invalid_informative: "%{street}, %{zip} కోసం బిల్డింగ్
+              నంబర్ కనుగొనబడలేదు"
+            unknown_for_address_instructional: రెండవ అడ్రస్ లైన్ తప్పు కావచ్చు
+            unknown_for_address_informative: రెండవ అడ్రస్ లైన్ తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: రెండవ అడ్రస్ లైన్‌లో %{word_count} పదాల కంటే
+              తక్కువ ఉండటం సిఫార్సు చేయబడింది
+        neighborhood:
+          label:
+            default: నైబర్‌హుడ్
+            optional: నైబర్‌హుడ్ (ఆప్షనల్)
+          errors:
+            blank_instructional: నైబర్‌హుడ్‌ను ఎంటర్ చేయండి
+            blank_informative: నైబర్‌హుడ్ లేదు
+            too_long_instructional: నైబర్‌హుడ్ చాలా పొడవుగా ఉంది (గరిష్టంగా %{limit}
+              అక్షరాలు)
+            too_long_informative: నైబర్‌హుడ్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: నైబర్‌హుడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: నైబర్‌హుడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: నైబర్‌హుడ్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: నైబర్‌హుడ్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: నైబర్‌హుడ్‌లో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: నైబర్‌హుడ్‌లో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_too_many_words_instructional: నైబర్‌హుడ్‌లో %{word_count} పదాల
+              కంటే తక్కువ ఉండాలి
+            contains_too_many_words_informative: నైబర్‌హుడ్‌లో %{word_count} పదాల
+              కంటే తక్కువ ఉండాలి
+            contains_html_tags_instructional: నైబర్‌హుడ్‌లో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_html_tags_informative: నైబర్‌హుడ్‌లో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_url_instructional: నైబర్‌హుడ్‌లో URLలు ఉండకూడదు
+            contains_url_informative: నైబర్‌హుడ్‌లో URLలు ఉండకూడదు
+            contains_email_instructional: నైబర్‌హుడ్‌లో ఇమెయిల్ అడ్రస్‌లు ఉండకూడదు
+            contains_email_informative: నైబర్‌హుడ్‌లో ఇమెయిల్ అడ్రస్‌లు ఉండకూడదు
+            unknown_for_city_instructional: "%{city} కోసం చెల్లుబాటు అయ్యే నైబర్‌హుడ్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_city_informative: "%{city} కోసం చెల్లుబాటు అయ్యే నైబర్‌హుడ్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే నైబర్‌హుడ్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_zip_informative: "%{zip} కోసం చెల్లుబాటు అయ్యే నైబర్‌హుడ్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_address_instructional: నైబర్‌హుడ్ తప్పు కావచ్చు
+            unknown_for_address_informative: నైబర్‌హుడ్ తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: నైబర్‌హుడ్‌లో %{word_count} పదాల కంటే తక్కువ
+              ఉండటం సిఫార్సు చేయబడింది
+        district:
+          label:
+            default: జిల్లా
+            optional: జిల్లా (ఆప్షనల్)
+          errors:
+            blank_instructional: జిల్లాను ఎంటర్ చేయండి
+            blank_informative: జిల్లా లేదు
+            too_long_instructional: జిల్లా చాలా పొడవుగా ఉంది (గరిష్టంగా %{limit} అక్షరాలు)
+            too_long_informative: జిల్లా చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: జిల్లాలో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: జిల్లాలో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: జిల్లాలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: జిల్లాలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_restricted_characters_instructional: జిల్లాలో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: జిల్లాలో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            contains_too_many_words_instructional: జిల్లాలో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_too_many_words_informative: జిల్లాలో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_html_tags_instructional: జిల్లాలో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_html_tags_informative: జిల్లాలో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_url_instructional: జిల్లాలో URLలు ఉండకూడదు
+            contains_url_informative: జిల్లాలో URLలు ఉండకూడదు
+            contains_email_instructional: జిల్లాలో ఇమెయిల్ అడ్రస్‌లు ఉండకూడదు
+            contains_email_informative: జిల్లాలో ఇమెయిల్ అడ్రస్‌లు ఉండకూడదు
+            unknown_for_city_instructional: "%{city} కోసం చెల్లుబాటు అయ్యే జిల్లా
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_city_informative: "%{city} కోసం చెల్లుబాటు అయ్యే జిల్లా పేరును
+              ఎంటర్ చేయండి"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే జిల్లా పేరును
+              ఎంటర్ చేయండి"
+            unknown_for_zip_informative: "%{zip} కోసం చెల్లుబాటు అయ్యే జిల్లా పేరును
+              ఎంటర్ చేయండి"
+            unknown_for_address_instructional: జిల్లా తప్పు కావచ్చు
+            unknown_for_address_informative: జిల్లా తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: జిల్లాలో %{word_count} పదాల కంటే తక్కువ ఉండటం
+              సిఫార్సు చేయబడింది
+        subdistrict:
+          label:
+            default: సబ్-డిస్ట్రిక్ట్
+            optional: సబ్-డిస్ట్రిక్ట్ (ఆప్షనల్)
+          errors:
+            blank_instructional: సబ్-డిస్ట్రిక్ట్‌ను ఎంటర్ చేయండి
+            blank_informative: సబ్-డిస్ట్రిక్ట్ లేదు
+            too_long_instructional: సబ్-డిస్ట్రిక్ట్ చాలా పొడవుగా ఉంది (గరిష్టంగా
+              %{limit} అక్షరాలు)
+            too_long_informative: సబ్-డిస్ట్రిక్ట్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: సబ్-డిస్ట్రిక్ట్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: సబ్-డిస్ట్రిక్ట్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: సబ్-డిస్ట్రిక్ట్‌లో గణిత
+              చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: సబ్-డిస్ట్రిక్ట్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: సబ్-డిస్ట్రిక్ట్‌లో కేవలం
+              అక్షరాలు, నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే
+              ఉండాలి
+            contains_restricted_characters_informative: సబ్-డిస్ట్రిక్ట్‌లో నిషేధిత
+              అక్షరాలు ఉండకూడదు
+            contains_too_many_words_instructional: సబ్-డిస్ట్రిక్ట్‌లో %{word_count}
+              పదాల కంటే తక్కువ ఉండాలి
+            contains_too_many_words_informative: సబ్-డిస్ట్రిక్ట్‌లో %{word_count}
+              పదాల కంటే తక్కువ ఉండాలి
+            contains_html_tags_instructional: సబ్-డిస్ట్రిక్ట్‌లో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_html_tags_informative: సబ్-డిస్ట్రిక్ట్‌లో HTML ట్యాగ్‌లు ఉండకూడదు
+            contains_url_instructional: సబ్-డిస్ట్రిక్ట్‌లో URLలు ఉండకూడదు
+            contains_url_informative: సబ్-డిస్ట్రిక్ట్‌లో URLలు ఉండకూడదు
+            contains_email_instructional: సబ్-డిస్ట్రిక్ట్‌లో ఇమెయిల్ అడ్రస్‌లు ఉండకూడదు
+            contains_email_informative: సబ్-డిస్ట్రిక్ట్‌లో ఇమెయిల్ అడ్రస్‌లు ఉండకూడదు
+            unknown_for_city_instructional: "%{city} కోసం చెల్లుబాటు అయ్యే సబ్-డిస్ట్రిక్ట్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_city_informative: "%{city} కోసం చెల్లుబాటు అయ్యే సబ్-డిస్ట్రిక్ట్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే సబ్-డిస్ట్రిక్ట్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_zip_informative: "%{zip} కోసం చెల్లుబాటు అయ్యే సబ్-డిస్ట్రిక్ట్
+              పేరును ఎంటర్ చేయండి"
+            unknown_for_address_instructional: సబ్-డిస్ట్రిక్ట్ తప్పు కావచ్చు
+            unknown_for_address_informative: సబ్-డిస్ట్రిక్ట్ తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: సబ్-డిస్ట్రిక్ట్‌లో %{word_count} పదాల కంటే తక్కువ
+              ఉండటం సిఫార్సు చేయబడింది
+        city:
+          label:
+            default: నగరం
+            optional: నగరం (ఆప్షనల్)
+          errors:
+            blank_instructional: నగరాన్ని ఎంటర్ చేయండి
+            blank_informative: నగరం లేదు
+            too_long_instructional: నగరం చాలా పొడవుగా ఉంది (గరిష్టంగా 255 అక్షరాలు)
+            too_long_informative: నగరం చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: నగరంలో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: నగరంలో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: నగరంలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_mathematical_symbols_informative: నగరంలో గణిత చిహ్నాలు ఉండకూడదు
+            contains_restricted_characters_instructional: నగరంలో కేవలం అక్షరాలు, నంబర్‌లు,
+              స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: నగరంలో నిషేధిత అక్షరాలు ఉండకూడదు
+            contains_too_many_words_instructional: నగరంలో %{word_count} పదాల కంటే
+              తక్కువ ఉండాలి
+            contains_too_many_words_informative: నగరంలో %{word_count} పదాల కంటే తక్కువ
+              ఉండాలి
+            contains_html_tags_instructional: నగరంలో HTML ఉండకూడదు
+            contains_html_tags_informative: నగరంలో HTML ఉండకూడదు
+            contains_url_instructional: నగరంలో URL ఉండకూడదు
+            contains_url_informative: నగరంలో URL ఉండకూడదు
+            contains_email_instructional: నగరంలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: నగరంలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే నగరాన్ని
+              ఎంటర్ చేయండి"
+            unknown_for_zip_informative: "%{zip}కి నగరం సరిపోలడం లేదు"
+            unknown_for_province_instructional: "%{province} కోసం చెల్లుబాటు అయ్యే
+              నగరాన్ని ఎంటర్ చేయండి"
+            unknown_for_province_informative: "%{province}కి నగరం సరిపోలడం లేదు"
+            unknown_for_zip_and_province_instructional: "%{zip}, %{province} కోసం
+              చెల్లుబాటు అయ్యే నగరాన్ని ఎంటర్ చేయండి"
+            unknown_for_zip_and_province_informative: నగరం తప్పు కావచ్చు
+            unknown_for_address_instructional: నగరం తప్పు కావచ్చు
+            unknown_for_address_informative: నగరం తప్పు కావచ్చు
+        province:
+          label:
+            default: ప్రాంతం
+            optional: ప్రాంతం (ఆప్షనల్)
+          errors:
+            blank_instructional: ప్రాంతాన్ని ఎంచుకోండి
+            blank_informative: ప్రాంతం లేదు
+            invalid_instructional: ప్రాంతాన్ని ఎంచుకోండి
+            invalid_informative: ప్రాంతం లేదు
+            invalid_for_country_instructional: "%{country} కోసం చెల్లుబాటు అయ్యే ప్రాంతాన్ని
+              ఎంటర్ చేయండి"
+            invalid_for_country_informative: "%{country}కి ప్రాంతం సరిపోలడం లేదు"
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} కోసం చెల్లుబాటు
+              అయ్యే ప్రాంతాన్ని ఎంచుకోండి"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip}కి ప్రాంతం సరిపోలడం
+              లేదు"
+            unknown_for_city_informative: "%{city} కోసం చెల్లుబాటు అయ్యే ప్రాంతాన్ని
+              ఎంచుకోండి"
+            unknown_for_city_instructional: "%{city}కి ప్రాంతం సరిపోలడం లేదు"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే ప్రాంతాన్ని
+              ఎంచుకోండి"
+            unknown_for_zip_informative: "%{zip}కి ప్రాంతం సరిపోలడం లేదు"
+            unknown_for_address_instructional: ప్రాంతం తప్పు కావచ్చు
+            unknown_for_address_informative: ప్రాంతం తప్పు కావచ్చు
+        country:
+          label:
+            default: దేశం/ప్రాంతం
+            optional: దేశం/ప్రాంతం (ఆప్షనల్)
+          errors:
+            blank_instructional: దేశం/ప్రాంతాన్ని ఎంచుకోండి
+            blank_informative: దేశం/ప్రాంతం లేదు
+            not_supported_instructional: దేశం/ప్రాంతం సపోర్ట్ చేయబడదు
+            not_supported_informative: దేశం/ప్రాంతం సపోర్ట్ చేయబడదు
+            invalid_instructional: చెల్లుబాటు అయ్యే దేశం/ప్రాంతాన్ని ఎంటర్ చేయండి
+            invalid_informative: దేశం/ప్రాంతం చెల్లదు
+            invalid_for_zip_instructional: ఈ పోస్టల్ కోడ్ కోసం చెల్లుబాటు అయ్యే దేశం/ప్రాంతాన్ని
+              ఎంటర్ చేయండి
+            invalid_for_zip_informative: దేశం/ప్రాంతానికి %{country} సరిపోలడం లేదు
+        zip:
+          label:
+            default: పోస్టల్ కోడ్
+            optional: పోస్టల్ కోడ్ (ఆప్షనల్)
+          errors:
+            blank_instructional: పోస్టల్ కోడ్‌ను ఎంటర్ చేయండి
+            blank_informative: పోస్టల్ కోడ్ లేదు
+            blocked_address_instructional: ఈ లొకేషన్ సపోర్ట్ చేయబడదు
+            blocked_address_informative: ఈ లొకేషన్ సపోర్ట్ చేయబడదు
+            invalid_instructional: చెల్లుబాటు అయ్యే పోస్టల్ కోడ్‌ను ఎంటర్ చేయండి
+            invalid_informative: పోస్టల్ కోడ్ చెల్లదు
+            invalid_for_country_instructional: "%{country} కోసం చెల్లుబాటు అయ్యే పోస్టల్
+              కోడ్‌ను ఎంటర్ చేయండి"
+            invalid_for_country_informative: "%{country}కి పోస్టల్ కోడ్ సరిపోలడం లేదు"
+            invalid_for_province_instructional: "%{province} కోసం చెల్లుబాటు అయ్యే
+              పోస్టల్ కోడ్‌ను ఎంటర్ చేయండి"
+            invalid_for_province_informative: "%{province}కి పోస్టల్ కోడ్ సరిపోలడం
+              లేదు"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              కోసం చెల్లుబాటు అయ్యే పోస్టల్ కోడ్‌ను ఎంటర్ చేయండి"
+            invalid_for_country_and_province_informative: "%{province}, %{country}కి
+              పోస్టల్ కోడ్ సరిపోలడం లేదు"
+            too_long_instructional: పోస్టల్ కోడ్ చాలా పొడవుగా ఉంది
+            too_long_informative: పోస్టల్ కోడ్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: పోస్టల్ కోడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: పోస్టల్ కోడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: పోస్టల్ కోడ్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: పోస్టల్ కోడ్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: పోస్టల్ కోడ్‌లో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: పోస్టల్ కోడ్‌లో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+            not_supported_instructional: పోస్టల్ కోడ్ సపోర్ట్ చేయబడదు. కొత్త అడ్రస్‌ను
+              ఎంటర్ చేసి, మళ్లీ ట్రై చేయండి
+            not_supported_informative: పోస్టల్ కోడ్ సపోర్ట్ చేయబడదు
+            contains_html_tags_instructional: పోస్టల్ కోడ్‌లో HTML ఉండకూడదు
+            contains_html_tags_informative: పోస్టల్ కోడ్‌లో HTML ఉండకూడదు
+            unknown_for_province_instructional: "%{province} కోసం చెల్లుబాటు అయ్యే
+              పోస్టల్ కోడ్‌ను ఎంటర్ చేయండి"
+            unknown_for_province_informative: "%{province} కోసం పోస్టల్ కోడ్ చెల్లదు"
+            unknown_for_address_instructional: పోస్టల్ కోడ్ తప్పు కావచ్చు
+            unknown_for_address_informative: పోస్టల్ కోడ్ తప్పు కావచ్చు
+        phone:
+          label:
+            default: ఫోన్
+            optional: ఫోన్ (ఆప్షనల్)
+          errors:
+            blank_instructional: ఫోన్ నంబర్‌ను ఎంటర్ చేయండి
+            blank_informative: ఫోన్ నంబర్ లేదు
+            invalid_instructional: చెల్లుబాటు అయ్యే ఫోన్ నంబర్‌ను ఎంటర్ చేయండి
+            invalid_informative: ఫోన్ నంబర్ చెల్లదు
+            too_long_instructional: ఫోన్ నంబర్ చాలా పొడవుగా ఉంది
+            too_long_informative: ఫోన్ నంబర్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: ఫోన్ నంబర్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: ఫోన్ నంబర్‌లో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: ఫోన్ నంబర్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: ఫోన్ నంబర్‌లో గణిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: ఫోన్ నంబర్‌లో కేవలం అక్షరాలు,
+              నంబర్‌లు, స్థానిక అక్షరాలు, అలాగే ప్రత్యేక అక్షరాలు మాత్రమే ఉండాలి
+            contains_restricted_characters_informative: ఫోన్ నంబర్‌లో నిషేధిత అక్షరాలు
+              ఉండకూడదు
+        address:
+          errors:
+            may_not_exist_instructional: అడ్రస్ కనుగొనబడలేదు లేదా ఉనికిలో లేదు
+            may_not_exist_informative: అడ్రస్ కనుగొనబడలేదు

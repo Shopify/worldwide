@@ -29,13 +29,13 @@ ca-IT:
       default: "%-d/%-m/%Y"
       billing: "%-d/%-m/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M avui"
-      yesterday_at_time: "%02k:%M ahir"
-      tomorrow_at_time: "%02k:%M demà"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d %b"
-      on_date: "%-d %b de %Y"
-      ago: "%{time} ago"
+      today_at_time: Avui a les %02k:%M
+      yesterday_at_time: Ahir a les %02k:%M
+      tomorrow_at_time: Demà a les %02k:%M
+      on_weekday_at_time: el %A a les %02k:%M
+      on_date_time_current_year: el %-d %b a les %02k:%M
+      on_date: el %-d %b de %Y
+      ago: fa %{time}
       x_hours_ago:
         one: fa %{count} hora
         other: fa %{count} hores
@@ -128,13 +128,13 @@ ca-IT:
       short: "%-d %b %02k:%M"
       billing: "%-d/%-m/%Y"
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M avui"
-      yesterday_at_time: "%02k:%M ahir"
-      tomorrow_at_time: "%02k:%M demà"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d %b"
-      on_date: "%-d %b de %Y"
-      ago: "%{time} ago"
+      today_at_time: Avui a les %02k:%M
+      yesterday_at_time: Ahir a les %02k:%M
+      tomorrow_at_time: Demà a les %02k:%M
+      on_weekday_at_time: el %A a les %02k:%M
+      on_date_time_current_year: el %-d %b a les %02k:%M
+      on_date: el %-d %b de %Y
+      ago: fa %{time}
       x_hours_ago:
         one: fa %{count} hora
         other: fa %{count} hores
@@ -142,7 +142,7 @@ ca-IT:
         one: fa %{count} minut
         other: fa %{count} minuts
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: ara
+    am: a. m.
+    pm: p. m.
+    just_now: Ara mateix
     yesterday: ahir

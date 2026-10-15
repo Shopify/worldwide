@@ -1,0 +1,534 @@
+---
+mr:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: कंपनी
+            optional: कंपनी (पर्यायी)
+          errors:
+            blank_instructional: कंपनी टाका
+            blank_informative: कंपनी गहाळ आहे
+            too_long_instructional: कंपनी खूप लांब आहे (कमाल 255 वर्ण)
+            too_long_informative: कंपनी खूप लांब आहे
+            contains_emojis_instructional: कंपनीमध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: कंपनीमध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: कंपनीमध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: कंपनीमध्ये गणितीय चिन्हे असू
+              शकत नाहीत
+            contains_restricted_characters_instructional: कंपनीमध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: कंपनीमध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_html_tags_instructional: कंपनीमध्ये HTML असू शकत नाही
+            contains_html_tags_informative: कंपनीमध्ये HTML असू शकत नाही
+        first_name:
+          label:
+            default: पहिले नाव
+            optional: पहिले नाव (पर्यायी)
+          errors:
+            blank_instructional: पहिले नाव टाका
+            blank_informative: पहिले नाव गहाळ आहे
+            too_long_instructional: पहिले नाव खूप लांब आहे (कमाल 255 वर्ण)
+            too_long_informative: पहिले नाव खूप लांब आहे
+            contains_emojis_instructional: पहिल्या नावामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: पहिल्या नावामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: पहिल्या नावामध्ये गणितीय
+              चिन्हे असू शकत नाहीत
+            contains_mathematical_symbols_informative: पहिल्या नावामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: पहिल्या नावामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: पहिल्या नावामध्ये प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            contains_html_tags_instructional: पहिल्या नावामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: पहिल्या नावामध्ये HTML असू शकत नाही
+            contains_url_instructional: पहिल्या नावामध्ये URL असू शकत नाही
+            contains_url_informative: पहिल्या नावामध्ये URL असू शकत नाही
+        last_name:
+          label:
+            default: आडनाव
+            optional: आडनाव (पर्यायी)
+          errors:
+            blank_instructional: आडनाव टाका
+            blank_informative: आडनाव गहाळ आहे
+            too_long_instructional: आडनाव खूप लांब आहे (कमाल 255 वर्ण)
+            too_long_informative: आडनाव खूप लांब आहे
+            contains_emojis_instructional: आडनावामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: आडनावामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: आडनावामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: आडनावामध्ये गणितीय चिन्हे असू
+              शकत नाहीत
+            contains_restricted_characters_instructional: आडनावामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: आडनावामध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_html_tags_instructional: आडनावामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: आडनावामध्ये HTML असू शकत नाही
+            contains_url_instructional: आडनावामध्ये URL असू शकत नाही
+            contains_url_informative: आडनावामध्ये URL असू शकत नाही
+        address1:
+          label:
+            default: पत्ता
+            optional: पत्ता (पर्यायी)
+          errors:
+            blank_instructional: पत्ता टाका
+            blank_informative: पत्ता गहाळ आहे
+            too_long_instructional: पत्त्याची पहिली ओळ खूप लांब आहे (कमाल 255 वर्ण)
+            too_long_informative: पत्त्याची पहिली ओळ खूप लांब आहे
+            contains_emojis_instructional: पत्त्यामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: पत्त्यामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: पत्त्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: पत्त्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: पत्त्यामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: पत्त्यामध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_too_many_words_instructional: पत्त्यामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: पत्त्यामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: पत्त्यामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: पत्त्यामध्ये HTML असू शकत नाही
+            contains_url_instructional: पत्त्यामध्ये URL असू शकत नाही
+            contains_url_informative: पत्त्यामध्ये URL असू शकत नाही
+            contains_email_instructional: पत्त्यामध्ये ईमेल पत्ता असू शकत नाही
+            contains_email_informative: पत्त्यामध्ये ईमेल पत्ता असू शकत नाही
+            missing_building_number_instructional: तुमच्याकडे असल्यास इमारत क्रमांक
+              जोडा
+            missing_building_number_informative: इमारत क्रमांक गहाळ असू शकतो
+            street_unknown_for_zip_instructional: "%{zip} साठी वैध रस्त्याचे नाव टाका"
+            street_unknown_for_zip_informative: रस्त्याचे नाव %{zip} शी जुळत नाही
+            building_number_invalid_instructional: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            building_number_invalid_informative: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            unknown_for_address_instructional: पत्त्याची ओळ 1 चुकीची असू शकते
+            unknown_for_address_informative: पत्त्याची ओळ 1 चुकीची असू शकते
+          warnings:
+            contains_too_many_words: पत्त्याच्या ओळ 1 मध्ये %{word_count} पेक्षा कमी
+              शब्द असण्याची शिफारस केली जाते
+        street_name:
+          label:
+            default: रस्ता
+            optional: रस्ता (पर्यायी)
+          errors:
+            blank_instructional: रस्ता टाका
+            blank_informative: रस्ता गहाळ आहे
+            too_long_instructional: रस्ता खूप लांब आहे (कमाल %{limit} वर्ण)
+            too_long_informative: रस्ता खूप लांब आहे
+            contains_emojis_instructional: रस्त्यामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: रस्त्यामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: रस्त्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: रस्त्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: रस्त्यामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: रस्त्यामध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_too_many_words_instructional: रस्त्यामध्ये %{word_count} पेक्षा
+              जास्त शब्द असू शकत नाहीत
+            contains_too_many_words_informative: रस्त्यामध्ये %{word_count} पेक्षा
+              जास्त शब्द असू शकत नाहीत
+            contains_html_tags_instructional: रस्त्यामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: रस्त्यामध्ये HTML असू शकत नाही
+            contains_url_instructional: रस्त्यामध्ये URL असू शकत नाही
+            contains_url_informative: रस्त्यामध्ये URL असू शकत नाही
+            contains_email_instructional: रस्त्यामध्ये ईमेल पत्ता असू शकत नाही
+            contains_email_informative: रस्त्यामध्ये ईमेल पत्ता असू शकत नाही
+            street_unknown_for_zip_instructional: "%{zip} साठी वैध रस्ता टाका"
+            street_unknown_for_zip_informative: "%{zip} साठी रस्ता अवैध आहे"
+            unknown_for_address_instructional: रस्ता चुकीचा असू शकतो
+            unknown_for_address_informative: रस्ता चुकीचा असू शकतो
+          warnings:
+            contains_too_many_words: रस्त्यामध्ये %{word_count} पेक्षा कमी शब्द असण्याची
+              शिफारस केली जाते
+        street_number:
+          label:
+            default: इमारत क्रमांक
+            optional: इमारत क्रमांक (पर्यायी)
+          errors:
+            blank_instructional: इमारत क्रमांक टाका
+            blank_informative: इमारत क्रमांक गहाळ आहे
+            too_long_instructional: इमारत क्रमांक खूप लांब आहे (कमाल %{limit} वर्ण)
+            too_long_informative: इमारत क्रमांक खूप लांब आहे
+            contains_emojis_instructional: इमारत क्रमांकामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: इमारत क्रमांकामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: इमारत क्रमांकामध्ये गणितीय
+              चिन्हे असू शकत नाहीत
+            contains_mathematical_symbols_informative: इमारत क्रमांकामध्ये गणितीय
+              चिन्हे असू शकत नाहीत
+            contains_restricted_characters_instructional: इमारत क्रमांकामध्ये फक्त
+              अक्षरे, अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: इमारत क्रमांकामध्ये प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            contains_html_tags_instructional: इमारत क्रमांकामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: इमारत क्रमांकामध्ये HTML असू शकत नाही
+            contains_url_instructional: इमारत क्रमांकामध्ये URL असू शकत नाही
+            contains_url_informative: इमारत क्रमांकामध्ये URL असू शकत नाही
+            contains_email_instructional: इमारत क्रमांकामध्ये ईमेल पत्ता असू शकत नाही
+            contains_email_informative: इमारत क्रमांकामध्ये ईमेल पत्ता असू शकत नाही
+            missing_building_number_instructional: तुमच्याकडे असल्यास इमारत क्रमांक
+              जोडा
+            missing_building_number_informative: इमारत क्रमांक गहाळ असू शकतो
+            building_number_invalid_instructional: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            building_number_invalid_informative: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            unknown_for_address_instructional: वैध इमारत क्रमांक टाका
+            unknown_for_address_informative: इमारत क्रमांक वैध नाही
+          warnings:
+            contains_too_many_words: इमारत क्रमांकामध्ये %{word_count} पेक्षा कमी
+              शब्द असण्याची शिफारस केली जाते
+        address2:
+          label:
+            default: अपार्टमेंट, सूट इत्यादी
+            optional: अपार्टमेंट, सूट इत्यादी (पर्यायी)
+          errors:
+            blank_instructional: अपार्टमेंट, सूट इत्यादी टाका
+            blank_informative: अपार्टमेंट किंवा सूट गहाळ आहे
+            too_long_instructional: पत्त्याची ओळ 2 खूप लांब आहे (कमाल 255 वर्ण)
+            too_long_informative: पत्त्याची ओळ 2 खूप लांब आहे
+            contains_emojis_instructional: पत्त्याच्या ओळ 2 मध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: पत्त्याच्या ओळ 2 मध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: पत्त्याच्या ओळ 2 मध्ये गणितीय
+              चिन्हे असू शकत नाहीत
+            contains_mathematical_symbols_informative: पत्त्याच्या ओळ 2 मध्ये गणितीय
+              चिन्हे असू शकत नाहीत
+            contains_restricted_characters_instructional: पत्त्याच्या ओळ 2 मध्ये फक्त
+              अक्षरे, अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: पत्त्याच्या ओळ 2 मध्ये प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            contains_too_many_words_instructional: पत्त्याच्या ओळ 2 मध्ये %{word_count}
+              पेक्षा कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: पत्त्याच्या ओळ 2 मध्ये %{word_count}
+              पेक्षा कमी शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: पत्त्याच्या ओळ 2 मध्ये HTML असू शकत
+              नाही
+            contains_html_tags_informative: पत्त्याच्या ओळ 2 मध्ये HTML असू शकत नाही
+            contains_url_instructional: पत्त्याच्या ओळ 2 मध्ये URL असू शकत नाही
+            contains_url_informative: पत्त्याच्या ओळ 2 मध्ये URL असू शकत नाही
+            contains_email_instructional: पत्त्याच्या ओळ 2 मध्ये ईमेल पत्ता असू शकत
+              नाही
+            contains_email_informative: पत्त्याच्या ओळ 2 मध्ये ईमेल पत्ता असू शकत
+              नाही
+            missing_building_number_instructional: तुमच्याकडे असल्यास इमारत क्रमांक
+              जोडा
+            missing_building_number_informative: इमारत क्रमांक गहाळ असू शकतो
+            street_unknown_for_zip_instructional: "%{zip} साठी वैध रस्त्याचे नाव टाका"
+            street_unknown_for_zip_informative: रस्त्याचे नाव %{zip} साठी वैध नाही
+            building_number_invalid_instructional: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            building_number_invalid_informative: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            unknown_for_address_instructional: पत्त्याची ओळ 2 चुकीची असू शकते
+            unknown_for_address_informative: पत्त्याची ओळ 2 चुकीची असू शकते
+          warnings:
+            contains_too_many_words: पत्त्याच्या ओळ 2 मध्ये %{word_count} पेक्षा कमी
+              शब्द असण्याची शिफारस केली जाते
+        line2:
+          label:
+            default: अपार्टमेंट, सूट इत्यादी
+            optional: अपार्टमेंट, सूट इत्यादी (पर्यायी)
+          errors:
+            blank_instructional: अपार्टमेंट, सूट इत्यादी टाका
+            blank_informative: अपार्टमेंट किंवा सूट गहाळ आहे
+            too_long_instructional: पत्त्याची दुसरी ओळ खूप लांब आहे (कमाल %{limit}
+              वर्ण)
+            too_long_informative: पत्त्याची दुसरी ओळ खूप लांब आहे
+            contains_emojis_instructional: पत्त्याच्या दुसऱ्या ओळीत इमोजी असू शकत
+              नाहीत
+            contains_emojis_informative: पत्त्याच्या दुसऱ्या ओळीत इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: पत्त्याच्या दुसऱ्या ओळीत
+              गणितीय चिन्हे असू शकत नाहीत
+            contains_mathematical_symbols_informative: पत्त्याच्या दुसऱ्या ओळीत गणितीय
+              चिन्हे असू शकत नाहीत
+            contains_restricted_characters_instructional: पत्त्याच्या दुसऱ्या ओळीत
+              फक्त अक्षरे, अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: पत्त्याच्या दुसऱ्या ओळीत प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            contains_too_many_words_instructional: पत्त्याच्या दुसऱ्या ओळीत %{word_count}
+              पेक्षा कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: पत्त्याच्या दुसऱ्या ओळीत %{word_count}
+              पेक्षा कमी शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: पत्त्याच्या दुसऱ्या ओळीत HTML टॅग असू
+              शकत नाहीत
+            contains_html_tags_informative: पत्त्याच्या दुसऱ्या ओळीत HTML टॅग असू
+              शकत नाहीत
+            contains_url_instructional: पत्त्याच्या दुसऱ्या ओळीत URL असू शकत नाही
+            contains_url_informative: पत्त्याच्या दुसऱ्या ओळीत URL असू शकत नाही
+            contains_email_instructional: पत्त्याच्या दुसऱ्या ओळीत ईमेल पत्ता असू
+              शकत नाही
+            contains_email_informative: पत्त्याच्या दुसऱ्या ओळीत ईमेल पत्ता असू शकत
+              नाही
+            missing_building_number_instructional: तुमच्याकडे असल्यास इमारत क्रमांक
+              जोडा
+            missing_building_number_informative: तुमच्याकडे असल्यास इमारत क्रमांक
+              जोडा
+            street_unknown_for_zip_instructional: "%{zip} साठी वैध रस्त्याचे नाव टाका"
+            street_unknown_for_zip_informative: "%{zip} साठी वैध रस्त्याचे नाव टाका"
+            building_number_invalid_instructional: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            building_number_invalid_informative: "%{street}, %{zip} साठी इमारत क्रमांक
+              शोधला जाऊ शकला नाही"
+            unknown_for_address_instructional: पत्त्याची दुसरी ओळ चुकीची असू शकते
+            unknown_for_address_informative: पत्त्याची दुसरी ओळ चुकीची असू शकते
+          warnings:
+            contains_too_many_words: पत्त्याच्या दुसऱ्या ओळीत %{word_count} पेक्षा
+              कमी शब्द असण्याची शिफारस केली जाते
+        neighborhood:
+          label:
+            default: परिसर
+            optional: परिसर (पर्यायी)
+          errors:
+            blank_instructional: परिसर टाका
+            blank_informative: परिसर गहाळ आहे
+            too_long_instructional: परिसर खूप लांब आहे (कमाल %{limit} वर्ण)
+            too_long_informative: परिसर खूप लांब आहे
+            contains_emojis_instructional: परिसरामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: परिसरामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: परिसरामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: परिसरामध्ये गणितीय चिन्हे असू
+              शकत नाहीत
+            contains_restricted_characters_instructional: परिसरामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: परिसरामध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_too_many_words_instructional: परिसरामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: परिसरामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: परिसरामध्ये HTML टॅग असू शकत नाहीत
+            contains_html_tags_informative: परिसरामध्ये HTML टॅग असू शकत नाहीत
+            contains_url_instructional: परिसरामध्ये URL असू शकत नाहीत
+            contains_url_informative: परिसरामध्ये URL असू शकत नाहीत
+            contains_email_instructional: परिसरामध्ये ईमेल पत्ते असू शकत नाहीत
+            contains_email_informative: परिसरामध्ये ईमेल पत्ते असू शकत नाहीत
+            unknown_for_city_instructional: "%{city} साठी वैध परिसराचे नाव टाका"
+            unknown_for_city_informative: "%{city} साठी वैध परिसराचे नाव टाका"
+            unknown_for_zip_instructional: "%{zip} साठी वैध परिसराचे नाव टाका"
+            unknown_for_zip_informative: "%{zip} साठी वैध परिसराचे नाव टाका"
+            unknown_for_address_instructional: परिसर चुकीचा असू शकतो
+            unknown_for_address_informative: परिसर चुकीचा असू शकतो
+          warnings:
+            contains_too_many_words: परिसरामध्ये %{word_count} पेक्षा कमी शब्द असण्याची
+              शिफारस केली जाते
+        district:
+          label:
+            default: जिल्हा
+            optional: जिल्हा (पर्यायी)
+          errors:
+            blank_instructional: जिल्हा टाका
+            blank_informative: जिल्हा गहाळ आहे
+            too_long_instructional: जिल्हा खूप लांब आहे (कमाल %{limit} वर्ण)
+            too_long_informative: जिल्हा खूप लांब आहे
+            contains_emojis_instructional: जिल्ह्यामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: जिल्ह्यामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: जिल्ह्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: जिल्ह्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: जिल्ह्यामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: जिल्ह्यामध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_too_many_words_instructional: जिल्ह्यामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: जिल्ह्यामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: जिल्ह्यामध्ये HTML टॅग असू शकत नाहीत
+            contains_html_tags_informative: जिल्ह्यामध्ये HTML टॅग असू शकत नाहीत
+            contains_url_instructional: जिल्ह्यामध्ये URL असू शकत नाहीत
+            contains_url_informative: जिल्ह्यामध्ये URL असू शकत नाहीत
+            contains_email_instructional: जिल्ह्यामध्ये ईमेल पत्ते असू शकत नाहीत
+            contains_email_informative: जिल्ह्यामध्ये ईमेल पत्ते असू शकत नाहीत
+            unknown_for_city_instructional: "%{city} साठी वैध जिल्ह्याचे नाव टाका"
+            unknown_for_city_informative: "%{city} साठी वैध जिल्ह्याचे नाव टाका"
+            unknown_for_zip_instructional: "%{zip} साठी वैध जिल्ह्याचे नाव टाका"
+            unknown_for_zip_informative: "%{zip} साठी वैध जिल्ह्याचे नाव टाका"
+            unknown_for_address_instructional: जिल्हा चुकीचा असू शकतो
+            unknown_for_address_informative: जिल्हा चुकीचा असू शकतो
+          warnings:
+            contains_too_many_words: जिल्ह्यामध्ये %{word_count} पेक्षा कमी शब्द असण्याची
+              शिफारस केली जाते
+        subdistrict:
+          label:
+            default: उपजिल्हा
+            optional: उपजिल्हा (पर्यायी)
+          errors:
+            blank_instructional: उपजिल्हा टाका
+            blank_informative: उपजिल्हा गहाळ आहे
+            too_long_instructional: उपजिल्हा खूप लांब आहे (कमाल %{limit} वर्ण)
+            too_long_informative: उपजिल्हा खूप लांब आहे
+            contains_emojis_instructional: उपजिल्ह्यामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: उपजिल्ह्यामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: उपजिल्ह्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: उपजिल्ह्यामध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: उपजिल्ह्यामध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: उपजिल्ह्यामध्ये प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            contains_too_many_words_instructional: उपजिल्ह्यामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: उपजिल्ह्यामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: उपजिल्ह्यामध्ये HTML टॅग असू शकत नाहीत
+            contains_html_tags_informative: उपजिल्ह्यामध्ये HTML टॅग असू शकत नाहीत
+            contains_url_instructional: उपजिल्ह्यामध्ये URL असू शकत नाहीत
+            contains_url_informative: उपजिल्ह्यामध्ये URL असू शकत नाहीत
+            contains_email_instructional: उपजिल्ह्यामध्ये ईमेल पत्ते असू शकत नाहीत
+            contains_email_informative: उपजिल्ह्यामध्ये ईमेल पत्ते असू शकत नाहीत
+            unknown_for_city_instructional: "%{city} साठी वैध उपजिल्ह्याचे नाव टाका"
+            unknown_for_city_informative: "%{city} साठी वैध उपजिल्ह्याचे नाव टाका"
+            unknown_for_zip_instructional: "%{zip} साठी वैध उपजिल्ह्याचे नाव टाका"
+            unknown_for_zip_informative: "%{zip} साठी वैध उपजिल्ह्याचे नाव टाका"
+            unknown_for_address_instructional: उपजिल्हा चुकीचा असू शकतो
+            unknown_for_address_informative: उपजिल्हा चुकीचा असू शकतो
+          warnings:
+            contains_too_many_words: उपजिल्ह्यामध्ये %{word_count} पेक्षा कमी शब्द
+              असण्याची शिफारस केली जाते
+        city:
+          label:
+            default: शहर
+            optional: शहर (पर्यायी)
+          errors:
+            blank_instructional: शहर टाका
+            blank_informative: शहर गहाळ आहे
+            too_long_instructional: शहर खूप लांब आहे (कमाल 255 वर्ण)
+            too_long_informative: शहर खूप लांब आहे
+            contains_emojis_instructional: शहरामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: शहरामध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: शहरामध्ये गणितीय चिन्हे असू
+              शकत नाहीत
+            contains_mathematical_symbols_informative: शहरामध्ये गणितीय चिन्हे असू
+              शकत नाहीत
+            contains_restricted_characters_instructional: शहरामध्ये फक्त अक्षरे, अंक,
+              स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: शहरामध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+            contains_too_many_words_instructional: शहरामध्ये %{word_count} पेक्षा
+              कमी शब्द असणे आवश्यक आहे
+            contains_too_many_words_informative: शहरामध्ये %{word_count} पेक्षा कमी
+              शब्द असणे आवश्यक आहे
+            contains_html_tags_instructional: शहरामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: शहरामध्ये HTML असू शकत नाही
+            contains_url_instructional: शहरामध्ये URL असू शकत नाही
+            contains_url_informative: शहरामध्ये URL असू शकत नाही
+            contains_email_instructional: शहरामध्ये ईमेल पत्ता असू शकत नाही
+            contains_email_informative: शहरामध्ये ईमेल पत्ता असू शकत नाही
+            unknown_for_zip_instructional: "%{zip} साठी वैध शहर टाका"
+            unknown_for_zip_informative: शहर %{zip} शी जुळत नाही
+            unknown_for_province_instructional: "%{province} साठी वैध शहर टाका"
+            unknown_for_province_informative: शहर %{province} शी जुळत नाही
+            unknown_for_zip_and_province_instructional: "%{zip}, %{province} साठी
+              वैध शहर टाका"
+            unknown_for_zip_and_province_informative: शहर चुकीचे असू शकते
+            unknown_for_address_instructional: शहर चुकीचे असू शकते
+            unknown_for_address_informative: शहर चुकीचे असू शकते
+        province:
+          label:
+            default: प्रदेश
+            optional: प्रदेश (पर्यायी)
+          errors:
+            blank_instructional: प्रदेश निवडा
+            blank_informative: प्रदेश गहाळ आहे
+            invalid_instructional: प्रदेश निवडा
+            invalid_informative: प्रदेश गहाळ आहे
+            invalid_for_country_instructional: "%{country} साठी वैध प्रदेश टाका"
+            invalid_for_country_informative: प्रदेश %{country} शी जुळत नाही
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} साठी वैध प्रदेश
+              निवडा"
+            unknown_for_city_and_zip_informative: प्रदेश %{city}, %{zip} शी जुळत नाही
+            unknown_for_city_informative: "%{city} साठी वैध प्रदेश निवडा"
+            unknown_for_city_instructional: प्रदेश %{city} शी जुळत नाही
+            unknown_for_zip_instructional: "%{zip} साठी वैध प्रदेश निवडा"
+            unknown_for_zip_informative: प्रदेश %{zip} शी जुळत नाही
+            unknown_for_address_instructional: प्रदेश चुकीचा असू शकतो
+            unknown_for_address_informative: प्रदेश चुकीचा असू शकतो
+        country:
+          label:
+            default: देश/प्रदेश
+            optional: देश/प्रदेश (पर्यायी)
+          errors:
+            blank_instructional: देश/प्रदेश निवडा
+            blank_informative: देश/प्रदेश गहाळ आहे
+            not_supported_instructional: देश/प्रदेश समर्थित नाही
+            not_supported_informative: देश/प्रदेश समर्थित नाही
+            invalid_instructional: वैध देश/प्रदेश टाका
+            invalid_informative: देश/प्रदेश वैध नाही
+            invalid_for_zip_instructional: या पोस्टल कोडसाठी वैध देश/प्रदेश टाका
+            invalid_for_zip_informative: "%{country} देश/प्रदेशाशी जुळत नाही"
+        zip:
+          label:
+            default: पोस्टल कोड
+            optional: पोस्टल कोड (पर्यायी)
+          errors:
+            blank_instructional: पोस्टल कोड टाका
+            blank_informative: पोस्टल कोड गहाळ आहे
+            blocked_address_instructional: हे ठिकाण समर्थित नाही
+            blocked_address_informative: हे ठिकाण समर्थित नाही
+            invalid_instructional: वैध पोस्टल कोड टाका
+            invalid_informative: पोस्टल कोड वैध नाही
+            invalid_for_country_instructional: "%{country} साठी वैध पोस्टल कोड टाका"
+            invalid_for_country_informative: पोस्टल कोड %{country} शी जुळत नाही
+            invalid_for_province_instructional: "%{province} साठी वैध पोस्टल कोड टाका"
+            invalid_for_province_informative: पोस्टल कोड %{province} शी जुळत नाही
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              साठी वैध पोस्टल कोड टाका"
+            invalid_for_country_and_province_informative: पोस्टल कोड %{province},
+              %{country} शी जुळत नाही
+            too_long_instructional: पोस्टल कोड खूप लांब आहे
+            too_long_informative: पोस्टल कोड खूप लांब आहे
+            contains_emojis_instructional: पोस्टल कोडमध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: पोस्टल कोडमध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: पोस्टल कोडमध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: पोस्टल कोडमध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: पोस्टल कोडमध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: पोस्टल कोडमध्ये प्रतिबंधित
+              वर्ण असू शकत नाहीत
+            not_supported_instructional: पोस्टल कोड समर्थित नाही. नवीन पत्ता टाका
+              आणि पुन्हा प्रयत्न करा
+            not_supported_informative: पोस्टल कोड समर्थित नाही
+            contains_html_tags_instructional: पोस्टल कोडमध्ये HTML असू शकत नाही
+            contains_html_tags_informative: पोस्टल कोडमध्ये HTML असू शकत नाही
+            unknown_for_province_instructional: "%{province} साठी वैध पोस्टल कोड टाका"
+            unknown_for_province_informative: पोस्टल कोड %{province} साठी अवैध आहे
+            unknown_for_address_instructional: पोस्टल कोड चुकीचा असू शकतो
+            unknown_for_address_informative: पोस्टल कोड चुकीचा असू शकतो
+        phone:
+          label:
+            default: फोन
+            optional: फोन (पर्यायी)
+          errors:
+            blank_instructional: फोन नंबर टाका
+            blank_informative: फोन नंबर गहाळ आहे
+            invalid_instructional: वैध फोन नंबर टाका
+            invalid_informative: फोन नंबर वैध नाही
+            too_long_instructional: फोन नंबर खूप लांब आहे
+            too_long_informative: फोन नंबर खूप लांब आहे
+            contains_emojis_instructional: फोन नंबरमध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: फोन नंबरमध्ये इमोजी असू शकत नाहीत
+            contains_mathematical_symbols_instructional: फोन नंबरमध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_mathematical_symbols_informative: फोन नंबरमध्ये गणितीय चिन्हे
+              असू शकत नाहीत
+            contains_restricted_characters_instructional: फोन नंबरमध्ये फक्त अक्षरे,
+              अंक, स्थानिक वर्ण आणि विशेष वर्ण असू शकतात
+            contains_restricted_characters_informative: फोन नंबरमध्ये प्रतिबंधित वर्ण
+              असू शकत नाहीत
+        address:
+          errors:
+            may_not_exist_instructional: पत्ता सापडला नाही किंवा अस्तित्वात नाही
+            may_not_exist_informative: पत्ता सापडला नाही

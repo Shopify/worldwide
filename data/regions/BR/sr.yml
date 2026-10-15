@@ -1,0 +1,57 @@
+---
+sr:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: Ulica i kućni broj
+            optional: Ulica i kućni broj (opcionalno)
+          errors:
+            blank_instructional: Unesite ulicu i kućni broj
+            blank_informative: Ulica i kućni broj nedostaju
+        province:
+          label:
+            default: Država
+            optional: Država (opcionalno)
+          errors:
+            blank_instructional: Izaberite državu
+            blank_informative: Država nedostaje
+        district:
+          label:
+            default: Naselje
+            optional: Naselje (opcionalno)
+          errors:
+            blank_instructional: Unesite naselje
+            blank_informative: Naselje nedostaje
+            too_long_instructional: Naselje je predugačko (maksimum je %{limit} znakova)
+            too_long_informative: Naselje je predugačko
+            contains_emojis_instructional: Naselje ne može da sadrži emodžije
+            contains_emojis_informative: Naselje ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Naselje ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naselje ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Naselje može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Naselje ne može da sadrži
+              zabranjene znakove
+            contains_too_many_words_instructional: Naselje mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Naselje mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Naselje ne može da sadrži HTML
+            contains_html_tags_informative: Naselje ne može da sadrži HTML
+            contains_url_instructional: Naselje ne može da sadrži URL-ove
+            contains_url_informative: Naselje ne može da sadrži URL-ove
+            contains_email_instructional: Naselje ne može da sadrži imejl adrese
+            contains_email_informative: Naselje ne može da sadrži imejl adrese
+            unknown_for_city_instructional: Unesite važeće ime naselja za %{city}
+            unknown_for_city_informative: Unesite važeće ime naselja za %{city}
+            unknown_for_zip_instructional: Unesite važeće ime naselja za %{zip}
+            unknown_for_zip_informative: Unesite važeće ime naselja za %{zip}
+            unknown_for_address_instructional: Naselje je možda netačno
+            unknown_for_address_informative: Naselje je možda netačno
+          warnings:
+            contains_too_many_words: Preporučuje se da naselje ima manje od %{word_count}
+              reči

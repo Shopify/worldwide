@@ -1,0 +1,27 @@
+---
+gl:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Estado/territorio
+            optional: Estado/territorio (opcional)
+          errors:
+            blank_instructional: Selecciona un estado/territorio
+            blank_informative: Falta o estado/territorio
+        zip:
+          label:
+            default: Código postal
+            optional: Código postal (opcional)
+          errors:
+            too_long_instructional: O código postal é longo de máis
+            too_long_informative: O código postal é longo de máis
+            contains_emojis_instructional: O código postal non pode conter emojis
+            contains_emojis_informative: O código postal non pode conter emojis
+            contains_restricted_characters_instructional: O código postal non pode
+              conter caracteres restrinxidos
+            contains_restricted_characters_informative: O código postal non pode conter
+              caracteres restrinxidos
+            contains_html_tags_instructional: O código postal non pode conter HTML
+            contains_html_tags_informative: O código postal non pode conter HTML

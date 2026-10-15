@@ -1,0 +1,35 @@
+---
+ka:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: შტატი
+            optional: შტატი (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე შტატი
+            blank_informative: მითითებული არ არის შტატი
+        zip:
+          label:
+            default: PIN-კოდი
+            optional: PIN-კოდი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე PIN-კოდი
+            blank_informative: მითითებული არ არის PIN-კოდი
+            invalid_for_country_instructional: შეიყვანე სწორი PIN-კოდი ქვეყნისთვის
+              (%{country})
+            invalid_for_country_informative: PIN-კოდი არასწორია
+            invalid_for_country_and_province_instructional: 'შეიყვანე სწორი PIN-კოდი
+              შემდეგისთვის: %{province}, %{country}'
+            invalid_for_country_and_province_informative: PIN-კოდი არასწორია
+            too_long_instructional: PIN-კოდი ძალიან გრძელია
+            too_long_informative: PIN-კოდი ძალიან გრძელია
+            contains_emojis_instructional: PIN-კოდი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: PIN-კოდი არ უნდა შეიცავდეს ემოჯებს
+            contains_restricted_characters_instructional: PIN-კოდი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_restricted_characters_informative: PIN-კოდი არ უნდა შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_html_tags_instructional: PIN-კოდი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: PIN-კოდი არ უნდა შეიცავდეს HTML-ს

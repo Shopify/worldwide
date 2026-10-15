@@ -1,0 +1,601 @@
+---
+ca:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Empresa
+            optional: Empresa (opcional)
+          errors:
+            blank_instructional: Introdueix una empresa
+            blank_informative: Falta l'empresa
+            too_long_instructional: L'empresa és massa llarga (el màxim és de 255
+              caràcters)
+            too_long_informative: L'empresa és massa llarga
+            contains_emojis_instructional: L'empresa no pot contenir emojis
+            contains_emojis_informative: L'empresa no pot contenir emojis
+            contains_mathematical_symbols_instructional: L'empresa no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: L'empresa no pot contenir símbols
+              matemàtics
+            contains_restricted_characters_instructional: L'empresa només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: L'empresa no pot contenir
+              caràcters restringits
+            contains_html_tags_instructional: L'empresa no pot contenir HTML
+            contains_html_tags_informative: L'empresa no pot contenir HTML
+        first_name:
+          label:
+            default: Nom
+            optional: Nom (opcional)
+          errors:
+            blank_instructional: Introdueix un nom
+            blank_informative: Falta el nom
+            too_long_instructional: El nom és massa llarg (el màxim és de 255 caràcters)
+            too_long_informative: El nom és massa llarg
+            contains_emojis_instructional: El nom no pot contenir emojis
+            contains_emojis_informative: El nom no pot contenir emojis
+            contains_mathematical_symbols_instructional: El nom no pot contenir símbols
+              matemàtics
+            contains_mathematical_symbols_informative: El nom no pot contenir símbols
+              matemàtics
+            contains_restricted_characters_instructional: El nom només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El nom no pot contenir caràcters
+              restringits
+            contains_html_tags_instructional: El nom no pot contenir HTML
+            contains_html_tags_informative: El nom no pot contenir HTML
+            contains_url_instructional: El nom no pot contenir cap URL
+            contains_url_informative: El nom no pot contenir cap URL
+        last_name:
+          label:
+            default: Cognoms
+            optional: Cognoms (opcional)
+          errors:
+            blank_instructional: Introdueix els cognoms
+            blank_informative: Falten els cognoms
+            too_long_instructional: Els cognoms són massa llargs (el màxim és de 255
+              caràcters)
+            too_long_informative: Els cognoms són massa llargs
+            contains_emojis_instructional: Els cognoms no poden contenir emojis
+            contains_emojis_informative: Els cognoms no poden contenir emojis
+            contains_mathematical_symbols_instructional: Els cognoms no poden contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: Els cognoms no poden contenir
+              símbols matemàtics
+            contains_restricted_characters_instructional: Els cognoms només poden
+              contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: Els cognoms no poden contenir
+              caràcters restringits
+            contains_html_tags_instructional: Els cognoms no poden contenir HTML
+            contains_html_tags_informative: Els cognoms no poden contenir HTML
+            contains_url_instructional: Els cognoms no poden contenir cap URL
+            contains_url_informative: Els cognoms no poden contenir cap URL
+        address1:
+          label:
+            default: Adreça
+            optional: Adreça (opcional)
+          errors:
+            blank_instructional: Introdueix una adreça
+            blank_informative: Falta l'adreça
+            too_long_instructional: La primera línia de l'adreça és massa llarga (el
+              màxim és de 255 caràcters)
+            too_long_informative: La primera línia de l'adreça és massa llarga
+            contains_emojis_instructional: L'adreça no pot contenir emojis
+            contains_emojis_informative: L'adreça no pot contenir emojis
+            contains_mathematical_symbols_instructional: L'adreça no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: L'adreça no pot contenir símbols
+              matemàtics
+            contains_restricted_characters_instructional: L'adreça només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: L'adreça no pot contenir caràcters
+              restringits
+            contains_too_many_words_instructional: L'adreça ha de tenir menys de %{word_count}
+              paraules
+            contains_too_many_words_informative: L'adreça ha de tenir menys de %{word_count}
+              paraules
+            contains_html_tags_instructional: L'adreça no pot contenir HTML
+            contains_html_tags_informative: L'adreça no pot contenir HTML
+            contains_url_instructional: L'adreça no pot contenir cap URL
+            contains_url_informative: L'adreça no pot contenir cap URL
+            contains_email_instructional: L'adreça no pot contenir cap correu electrònic
+            contains_email_informative: L'adreça no pot contenir cap correu electrònic
+            missing_building_number_instructional: Afegeix el número de l'edifici
+              si en tens un
+            missing_building_number_informative: És possible que falti el número de
+              l'edifici
+            street_unknown_for_zip_instructional: Introdueix un nom de carrer vàlid
+              per a %{zip}
+            street_unknown_for_zip_informative: El nom del carrer no coincideix amb
+              %{zip}
+            building_number_invalid_instructional: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            building_number_invalid_informative: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            unknown_for_address_instructional: És possible que la línia 1 de l'adreça
+              sigui incorrecta
+            unknown_for_address_informative: És possible que la línia 1 de l'adreça
+              sigui incorrecta
+          warnings:
+            contains_too_many_words: Es recomana que la línia 1 de l'adreça tingui
+              menys de %{word_count} paraules
+        street_name:
+          label:
+            default: Carrer
+            optional: Carrer (opcional)
+          errors:
+            blank_instructional: Introdueix un carrer
+            blank_informative: Falta el carrer
+            too_long_instructional: El carrer és massa llarg (el màxim és de %{limit}
+              caràcters)
+            too_long_informative: El carrer és massa llarg
+            contains_emojis_instructional: El carrer no pot contenir emojis
+            contains_emojis_informative: El carrer no pot contenir emojis
+            contains_mathematical_symbols_instructional: El carrer no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: El carrer no pot contenir símbols
+              matemàtics
+            contains_restricted_characters_instructional: El carrer només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El carrer no pot contenir
+              caràcters restringits
+            contains_too_many_words_instructional: El carrer no pot tenir més de %{word_count}
+              paraules
+            contains_too_many_words_informative: El carrer no pot tenir més de %{word_count}
+              paraules
+            contains_html_tags_instructional: El carrer no pot contenir HTML
+            contains_html_tags_informative: El carrer no pot contenir HTML
+            contains_url_instructional: El carrer no pot contenir cap URL
+            contains_url_informative: El carrer no pot contenir cap URL
+            contains_email_instructional: El carrer no pot contenir cap correu electrònic
+            contains_email_informative: El carrer no pot contenir cap correu electrònic
+            street_unknown_for_zip_instructional: Introdueix un carrer vàlid per a
+              %{zip}
+            street_unknown_for_zip_informative: Carrer no vàlid per a %{zip}
+            unknown_for_address_instructional: És possible que el carrer sigui incorrecte
+            unknown_for_address_informative: És possible que el carrer sigui incorrecte
+          warnings:
+            contains_too_many_words: Es recomana que el carrer tingui menys de %{word_count}
+              paraules
+        street_number:
+          label:
+            default: Número de l'edifici
+            optional: Número de l'edifici (opcional)
+          errors:
+            blank_instructional: Introdueix un número d'edifici
+            blank_informative: Falta el número de l'edifici
+            too_long_instructional: El número de l'edifici és massa llarg (el màxim
+              és de %{limit} caràcters)
+            too_long_informative: El número de l'edifici és massa llarg
+            contains_emojis_instructional: El número de l'edifici no pot contenir
+              emojis
+            contains_emojis_informative: El número de l'edifici no pot contenir emojis
+            contains_mathematical_symbols_instructional: El número de l'edifici no
+              pot contenir símbols matemàtics
+            contains_mathematical_symbols_informative: El número de l'edifici no pot
+              contenir símbols matemàtics
+            contains_restricted_characters_instructional: El número de l'edifici només
+              pot contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El número de l'edifici no
+              pot contenir caràcters restringits
+            contains_html_tags_instructional: El número de l'edifici no pot contenir
+              HTML
+            contains_html_tags_informative: El número de l'edifici no pot contenir
+              HTML
+            contains_url_instructional: El número de l'edifici no pot contenir cap
+              URL
+            contains_url_informative: El número de l'edifici no pot contenir cap URL
+            contains_email_instructional: El número de l'edifici no pot contenir cap
+              correu electrònic
+            contains_email_informative: El número de l'edifici no pot contenir cap
+              correu electrònic
+            missing_building_number_instructional: Afegeix el número de l'edifici
+              si en tens un
+            missing_building_number_informative: És possible que falti el número de
+              l'edifici
+            building_number_invalid_instructional: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            building_number_invalid_informative: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            unknown_for_address_instructional: Introdueix un número d'edifici vàlid
+            unknown_for_address_informative: El número de l'edifici no és vàlid
+          warnings:
+            contains_too_many_words: Es recomana que el número de l'edifici tingui
+              menys de %{word_count} paraules
+        address2:
+          label:
+            default: Apartament, suite, etc.
+            optional: Apartament, suite, etc. (opcional)
+          errors:
+            blank_instructional: Introdueix un apartament, suite, etc.
+            blank_informative: Falta l'apartament o la suite
+            too_long_instructional: La línia 2 de l'adreça és massa llarga (el màxim
+              és de 255 caràcters)
+            too_long_informative: La línia 2 de l'adreça és massa llarga
+            contains_emojis_instructional: La línia 2 de l'adreça no pot contenir
+              emojis
+            contains_emojis_informative: La línia 2 de l'adreça no pot contenir emojis
+            contains_mathematical_symbols_instructional: La línia 2 de l'adreça no
+              pot contenir símbols matemàtics
+            contains_mathematical_symbols_informative: La línia 2 de l'adreça no pot
+              contenir símbols matemàtics
+            contains_restricted_characters_instructional: La línia 2 de l'adreça només
+              pot contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: La línia 2 de l'adreça no
+              pot contenir caràcters restringits
+            contains_too_many_words_instructional: La línia 2 de l'adreça ha de tenir
+              menys de %{word_count} paraules
+            contains_too_many_words_informative: La línia 2 de l'adreça ha de tenir
+              menys de %{word_count} paraules
+            contains_html_tags_instructional: La línia 2 de l'adreça no pot contenir
+              HTML
+            contains_html_tags_informative: La línia 2 de l'adreça no pot contenir
+              HTML
+            contains_url_instructional: La línia 2 de l'adreça no pot contenir cap
+              URL
+            contains_url_informative: La línia 2 de l'adreça no pot contenir cap URL
+            contains_email_instructional: La línia 2 de l'adreça no pot contenir cap
+              correu electrònic
+            contains_email_informative: La línia 2 de l'adreça no pot contenir cap
+              correu electrònic
+            missing_building_number_instructional: Afegeix el número de l'edifici
+              si en tens un
+            missing_building_number_informative: És possible que falti el número de
+              l'edifici
+            street_unknown_for_zip_instructional: Introdueix un nom de carrer vàlid
+              per a %{zip}
+            street_unknown_for_zip_informative: El nom del carrer no és vàlid per
+              a %{zip}
+            building_number_invalid_instructional: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            building_number_invalid_informative: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            unknown_for_address_instructional: És possible que la línia 2 de l'adreça
+              sigui incorrecta
+            unknown_for_address_informative: És possible que la línia 2 de l'adreça
+              sigui incorrecta
+          warnings:
+            contains_too_many_words: Es recomana que la línia 2 de l'adreça tingui
+              menys de %{word_count} paraules
+        line2:
+          label:
+            default: Apartament, suite, etc.
+            optional: Apartament, suite, etc. (opcional)
+          errors:
+            blank_instructional: Introdueix un apartament, suite, etc.
+            blank_informative: Falta l'apartament o la suite
+            too_long_instructional: La segona línia de l'adreça és massa llarga (el
+              màxim és de %{limit} caràcters)
+            too_long_informative: La segona línia de l'adreça és massa llarga
+            contains_emojis_instructional: La segona línia de l'adreça no pot contenir
+              emojis
+            contains_emojis_informative: La segona línia de l'adreça no pot contenir
+              emojis
+            contains_mathematical_symbols_instructional: La segona línia de l'adreça
+              no pot contenir símbols matemàtics
+            contains_mathematical_symbols_informative: La segona línia de l'adreça
+              no pot contenir símbols matemàtics
+            contains_restricted_characters_instructional: La segona línia de l'adreça
+              només pot contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: La segona línia de l'adreça
+              no pot contenir caràcters restringits
+            contains_too_many_words_instructional: La segona línia de l'adreça ha
+              de tenir menys de %{word_count} paraules
+            contains_too_many_words_informative: La segona línia de l'adreça ha de
+              tenir menys de %{word_count} paraules
+            contains_html_tags_instructional: La segona línia de l'adreça no pot contenir
+              etiquetes HTML
+            contains_html_tags_informative: La segona línia de l'adreça no pot contenir
+              etiquetes HTML
+            contains_url_instructional: La segona línia de l'adreça no pot contenir
+              cap URL
+            contains_url_informative: La segona línia de l'adreça no pot contenir
+              cap URL
+            contains_email_instructional: La segona línia de l'adreça no pot contenir
+              cap correu electrònic
+            contains_email_informative: La segona línia de l'adreça no pot contenir
+              cap correu electrònic
+            missing_building_number_instructional: Afegeix el número de l'edifici
+              si en tens un
+            missing_building_number_informative: Afegeix el número de l'edifici si
+              en tens un
+            street_unknown_for_zip_instructional: Introdueix un nom de carrer vàlid
+              per a %{zip}
+            street_unknown_for_zip_informative: Introdueix un nom de carrer vàlid
+              per a %{zip}
+            building_number_invalid_instructional: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            building_number_invalid_informative: No s'ha pogut localitzar el número
+              de l'edifici per a %{street}, %{zip}
+            unknown_for_address_instructional: És possible que la segona línia de
+              l'adreça sigui incorrecta
+            unknown_for_address_informative: És possible que la segona línia de l'adreça
+              sigui incorrecta
+          warnings:
+            contains_too_many_words: Es recomana que la segona línia de l'adreça tingui
+              menys de %{word_count} paraules
+        neighborhood:
+          label:
+            default: Barri
+            optional: Barri (opcional)
+          errors:
+            blank_instructional: Introdueix un barri
+            blank_informative: Falta el barri
+            too_long_instructional: El barri és massa llarg (el màxim és de %{limit}
+              caràcters)
+            too_long_informative: El barri és massa llarg
+            contains_emojis_instructional: El barri no pot contenir emojis
+            contains_emojis_informative: El barri no pot contenir emojis
+            contains_mathematical_symbols_instructional: El barri no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: El barri no pot contenir símbols
+              matemàtics
+            contains_restricted_characters_instructional: El barri només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El barri no pot contenir caràcters
+              restringits
+            contains_too_many_words_instructional: El barri ha de tenir menys de %{word_count}
+              paraules
+            contains_too_many_words_informative: El barri ha de tenir menys de %{word_count}
+              paraules
+            contains_html_tags_instructional: El barri no pot contenir etiquetes HTML
+            contains_html_tags_informative: El barri no pot contenir etiquetes HTML
+            contains_url_instructional: El barri no pot contenir cap URL
+            contains_url_informative: El barri no pot contenir cap URL
+            contains_email_instructional: El barri no pot contenir cap correu electrònic
+            contains_email_informative: El barri no pot contenir cap correu electrònic
+            unknown_for_city_instructional: Introdueix un nom de barri vàlid per a
+              %{city}
+            unknown_for_city_informative: Introdueix un nom de barri vàlid per a %{city}
+            unknown_for_zip_instructional: Introdueix un nom de barri vàlid per a
+              %{zip}
+            unknown_for_zip_informative: Introdueix un nom de barri vàlid per a %{zip}
+            unknown_for_address_instructional: És possible que el barri sigui incorrecte
+            unknown_for_address_informative: És possible que el barri sigui incorrecte
+          warnings:
+            contains_too_many_words: Es recomana que el barri tingui menys de %{word_count}
+              paraules
+        district:
+          label:
+            default: Districte
+            optional: Districte (opcional)
+          errors:
+            blank_instructional: Introdueix un districte
+            blank_informative: Falta el districte
+            too_long_instructional: El districte és massa llarg (el màxim és de %{limit}
+              caràcters)
+            too_long_informative: El districte és massa llarg
+            contains_emojis_instructional: El districte no pot contenir emojis
+            contains_emojis_informative: El districte no pot contenir emojis
+            contains_mathematical_symbols_instructional: El districte no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: El districte no pot contenir
+              símbols matemàtics
+            contains_restricted_characters_instructional: El districte només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El districte no pot contenir
+              caràcters restringits
+            contains_too_many_words_instructional: El districte ha de tenir menys
+              de %{word_count} paraules
+            contains_too_many_words_informative: El districte ha de tenir menys de
+              %{word_count} paraules
+            contains_html_tags_instructional: El districte no pot contenir etiquetes
+              HTML
+            contains_html_tags_informative: El districte no pot contenir etiquetes
+              HTML
+            contains_url_instructional: El districte no pot contenir cap URL
+            contains_url_informative: El districte no pot contenir cap URL
+            contains_email_instructional: El districte no pot contenir cap correu
+              electrònic
+            contains_email_informative: El districte no pot contenir cap correu electrònic
+            unknown_for_city_instructional: Introdueix un nom de districte vàlid per
+              a %{city}
+            unknown_for_city_informative: Introdueix un nom de districte vàlid per
+              a %{city}
+            unknown_for_zip_instructional: Introdueix un nom de districte vàlid per
+              a %{zip}
+            unknown_for_zip_informative: Introdueix un nom de districte vàlid per
+              a %{zip}
+            unknown_for_address_instructional: És possible que el districte sigui
+              incorrecte
+            unknown_for_address_informative: És possible que el districte sigui incorrecte
+          warnings:
+            contains_too_many_words: Es recomana que el districte tingui menys de
+              %{word_count} paraules
+        subdistrict:
+          label:
+            default: Subdistricte
+            optional: Subdistricte (opcional)
+          errors:
+            blank_instructional: Introdueix un subdistricte
+            blank_informative: Falta el subdistricte
+            too_long_instructional: El subdistricte és massa llarg (el màxim és de
+              %{limit} caràcters)
+            too_long_informative: El subdistricte és massa llarg
+            contains_emojis_instructional: El subdistricte no pot contenir emojis
+            contains_emojis_informative: El subdistricte no pot contenir emojis
+            contains_mathematical_symbols_instructional: El subdistricte no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: El subdistricte no pot contenir
+              símbols matemàtics
+            contains_restricted_characters_instructional: El subdistricte només pot
+              contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El subdistricte no pot contenir
+              caràcters restringits
+            contains_too_many_words_instructional: El subdistricte ha de tenir menys
+              de %{word_count} paraules
+            contains_too_many_words_informative: El subdistricte ha de tenir menys
+              de %{word_count} paraules
+            contains_html_tags_instructional: El subdistricte no pot contenir etiquetes
+              HTML
+            contains_html_tags_informative: El subdistricte no pot contenir etiquetes
+              HTML
+            contains_url_instructional: El subdistricte no pot contenir cap URL
+            contains_url_informative: El subdistricte no pot contenir cap URL
+            contains_email_instructional: El subdistricte no pot contenir cap correu
+              electrònic
+            contains_email_informative: El subdistricte no pot contenir cap correu
+              electrònic
+            unknown_for_city_instructional: Introdueix un nom de subdistricte vàlid
+              per a %{city}
+            unknown_for_city_informative: Introdueix un nom de subdistricte vàlid
+              per a %{city}
+            unknown_for_zip_instructional: Introdueix un nom de subdistricte vàlid
+              per a %{zip}
+            unknown_for_zip_informative: Introdueix un nom de subdistricte vàlid per
+              a %{zip}
+            unknown_for_address_instructional: És possible que el subdistricte sigui
+              incorrecte
+            unknown_for_address_informative: És possible que el subdistricte sigui
+              incorrecte
+          warnings:
+            contains_too_many_words: Es recomana que el subdistricte tingui menys
+              de %{word_count} paraules
+        city:
+          label:
+            default: Ciutat
+            optional: Ciutat (opcional)
+          errors:
+            blank_instructional: Introdueix una ciutat
+            blank_informative: Falta la ciutat
+            too_long_instructional: La ciutat és massa llarga (el màxim és de 255
+              caràcters)
+            too_long_informative: La ciutat és massa llarga
+            contains_emojis_instructional: La ciutat no pot contenir emojis
+            contains_emojis_informative: La ciutat no pot contenir emojis
+            contains_mathematical_symbols_instructional: La ciutat no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: La ciutat no pot contenir símbols
+              matemàtics
+            contains_restricted_characters_instructional: La ciutat només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: La ciutat no pot contenir
+              caràcters restringits
+            contains_too_many_words_instructional: La ciutat ha de tenir menys de
+              %{word_count} paraules
+            contains_too_many_words_informative: La ciutat ha de tenir menys de %{word_count}
+              paraules
+            contains_html_tags_instructional: La ciutat no pot contenir HTML
+            contains_html_tags_informative: La ciutat no pot contenir HTML
+            contains_url_instructional: La ciutat no pot contenir cap URL
+            contains_url_informative: La ciutat no pot contenir cap URL
+            contains_email_instructional: La ciutat no pot contenir cap correu electrònic
+            contains_email_informative: La ciutat no pot contenir cap correu electrònic
+            unknown_for_zip_instructional: Introdueix una ciutat vàlida per a %{zip}
+            unknown_for_zip_informative: La ciutat no coincideix amb %{zip}
+            unknown_for_province_instructional: Introdueix una ciutat vàlida per a
+              %{province}
+            unknown_for_province_informative: La ciutat no coincideix amb %{province}
+            unknown_for_zip_and_province_instructional: Introdueix una ciutat vàlida
+              per a %{zip}, %{province}
+            unknown_for_zip_and_province_informative: És possible que la ciutat sigui
+              incorrecta
+            unknown_for_address_instructional: És possible que la ciutat sigui incorrecta
+            unknown_for_address_informative: És possible que la ciutat sigui incorrecta
+        province:
+          label:
+            default: Regió
+            optional: Regió (opcional)
+          errors:
+            blank_instructional: Selecciona una regió
+            blank_informative: Falta la regió
+            invalid_instructional: Selecciona una regió
+            invalid_informative: Falta la regió
+            invalid_for_country_instructional: Introdueix una regió vàlida per a %{country}
+            invalid_for_country_informative: La regió no coincideix amb %{country}
+            unknown_for_city_and_zip_instructional: Selecciona una regió vàlida per
+              a %{city}, %{zip}
+            unknown_for_city_and_zip_informative: La regió no coincideix amb %{city},
+              %{zip}
+            unknown_for_city_informative: Selecciona una regió vàlida per a %{city}
+            unknown_for_city_instructional: La regió no coincideix amb %{city}
+            unknown_for_zip_instructional: Selecciona una regió vàlida per a %{zip}
+            unknown_for_zip_informative: La regió no coincideix amb %{zip}
+            unknown_for_address_instructional: És possible que la regió sigui incorrecta
+            unknown_for_address_informative: És possible que la regió sigui incorrecta
+        country:
+          label:
+            default: País/regió
+            optional: País/regió (opcional)
+          errors:
+            blank_instructional: Selecciona un país/regió
+            blank_informative: Falta el país/regió
+            not_supported_instructional: El país/regió no és compatible
+            not_supported_informative: El país/regió no és compatible
+            invalid_instructional: Introdueix un país/regió vàlid
+            invalid_informative: El país/regió no és vàlid
+            invalid_for_zip_instructional: Introdueix un país/regió vàlid per a aquest
+              codi postal
+            invalid_for_zip_informative: "%{country} no coincideix amb el país/regió"
+        zip:
+          label:
+            default: Codi postal
+            optional: Codi postal (opcional)
+          errors:
+            blank_instructional: Introdueix un codi postal
+            blank_informative: Falta el codi postal
+            blocked_address_instructional: Aquesta ubicació no és compatible
+            blocked_address_informative: Aquesta ubicació no és compatible
+            invalid_instructional: Introdueix un codi postal vàlid
+            invalid_informative: El codi postal no és vàlid
+            invalid_for_country_instructional: Introdueix un codi postal vàlid per
+              a %{country}
+            invalid_for_country_informative: El codi postal no coincideix amb %{country}
+            invalid_for_province_instructional: Introdueix un codi postal vàlid per
+              a %{province}
+            invalid_for_province_informative: El codi postal no coincideix amb %{province}
+            invalid_for_country_and_province_instructional: Introdueix un codi postal
+              vàlid per a %{province}, %{country}
+            invalid_for_country_and_province_informative: El codi postal no coincideix
+              amb %{province}, %{country}
+            too_long_instructional: El codi postal és massa llarg
+            too_long_informative: El codi postal és massa llarg
+            contains_emojis_instructional: El codi postal no pot contenir emojis
+            contains_emojis_informative: El codi postal no pot contenir emojis
+            contains_mathematical_symbols_instructional: El codi postal no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: El codi postal no pot contenir
+              símbols matemàtics
+            contains_restricted_characters_instructional: El codi postal només pot
+              contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El codi postal no pot contenir
+              caràcters restringits
+            not_supported_instructional: El codi postal no és compatible. Introdueix
+              una adreça nova i torna-ho a provar
+            not_supported_informative: El codi postal no és compatible
+            contains_html_tags_instructional: El codi postal no pot contenir HTML
+            contains_html_tags_informative: El codi postal no pot contenir HTML
+            unknown_for_province_instructional: Introdueix un codi postal vàlid per
+              a %{province}
+            unknown_for_province_informative: El codi postal no és vàlid per a %{province}
+            unknown_for_address_instructional: És possible que el codi postal sigui
+              incorrecte
+            unknown_for_address_informative: És possible que el codi postal sigui
+              incorrecte
+        phone:
+          label:
+            default: Telèfon
+            optional: Telèfon (opcional)
+          errors:
+            blank_instructional: Introdueix un número de telèfon
+            blank_informative: Falta el número de telèfon
+            invalid_instructional: Introdueix un número de telèfon vàlid
+            invalid_informative: El número de telèfon no és vàlid
+            too_long_instructional: El número de telèfon és massa llarg
+            too_long_informative: El número de telèfon és massa llarg
+            contains_emojis_instructional: El número de telèfon no pot contenir emojis
+            contains_emojis_informative: El número de telèfon no pot contenir emojis
+            contains_mathematical_symbols_instructional: El número de telèfon no pot
+              contenir símbols matemàtics
+            contains_mathematical_symbols_informative: El número de telèfon no pot
+              contenir símbols matemàtics
+            contains_restricted_characters_instructional: El número de telèfon només
+              pot contenir lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El número de telèfon no pot
+              contenir caràcters restringits
+        address:
+          errors:
+            may_not_exist_instructional: No s'ha trobat l'adreça o no existeix
+            may_not_exist_informative: No s'ha trobat l'adreça

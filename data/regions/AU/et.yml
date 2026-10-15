@@ -1,0 +1,54 @@
+---
+et:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Eeslinn
+            optional: Eeslinn (valikuline)
+          errors:
+            blank_instructional: Sisesta eeslinn
+            blank_informative: Eeslinn on puudu
+            too_long_instructional: Eeslinn on liiga pikk (kuni 255 tähemärki)
+            too_long_informative: Eeslinn on liiga pikk
+            contains_emojis_instructional: Eeslinn ei tohi sisaldada emotikone
+            contains_emojis_informative: Eeslinn ei tohi sisaldada emotikone
+            contains_restricted_characters_instructional: Eeslinn võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Eeslinn ei tohi sisaldada
+              keelatud tähemärke
+            contains_html_tags_instructional: Eeslinn ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Eeslinn ei tohi sisaldada HTML-i
+        province:
+          label:
+            default: Osariik/territoorium
+            optional: Osariik/territoorium (valikuline)
+          errors:
+            blank_instructional: Vali osariik/territoorium
+            blank_informative: Osariik/territoorium on puudu
+        zip:
+          label:
+            default: Postiindeks
+            optional: Postiindeks (valikuline)
+          errors:
+            blank_instructional: Sisesta postiindeks
+            blank_informative: Postiindeks on puudu
+            invalid_for_country_instructional: Sisesta riigi %{country} jaoks kehtiv
+              postiindeks
+            invalid_for_country_informative: Postiindeks ei kehti riigi %{country}
+              jaoks
+            invalid_for_country_and_province_instructional: Sisesta asukoha %{province},
+              %{country} jaoks kehtiv postiindeks
+            invalid_for_country_and_province_informative: Postiindeks ei kehti asukoha
+              %{province}, %{country} jaoks
+            too_long_instructional: Postiindeks on liiga pikk
+            too_long_informative: Postiindeks on liiga pikk
+            contains_emojis_instructional: Postiindeks ei tohi sisaldada emotikone
+            contains_emojis_informative: Postiindeks ei tohi sisaldada emotikone
+            contains_restricted_characters_instructional: Postiindeks võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Postiindeks ei tohi sisaldada
+              keelatud tähemärke
+            contains_html_tags_instructional: Postiindeks ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Postiindeks ei tohi sisaldada HTML-i

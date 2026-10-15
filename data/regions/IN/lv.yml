@@ -1,0 +1,34 @@
+---
+lv:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Štats
+            optional: Štats (neobligāti)
+          errors:
+            blank_instructional: Atlasi štatu
+            blank_informative: Nav norādīts štats
+        zip:
+          label:
+            default: PIN kods
+            optional: PIN kods (neobligāti)
+          errors:
+            blank_instructional: Ievadi PIN kodu
+            blank_informative: Nav norādīts PIN kods
+            invalid_for_country_instructional: 'Ievadi derīgu PIN kodu valstij: %{country}'
+            invalid_for_country_informative: PIN kods nav derīgs
+            invalid_for_country_and_province_instructional: Ievadi derīgu PIN kodu
+              reģionam %{province}, %{country}
+            invalid_for_country_and_province_informative: PIN kods nav derīgs
+            too_long_instructional: PIN kods ir pārāk garš
+            too_long_informative: PIN kods ir pārāk garš
+            contains_emojis_instructional: PIN kodā nevar būt emocijzīmes
+            contains_emojis_informative: PIN kodā nevar būt emocijzīmes
+            contains_restricted_characters_instructional: PIN kodā nevar būt neatļautas
+              rakstzīmes
+            contains_restricted_characters_informative: PIN kodā nevar būt neatļautas
+              rakstzīmes
+            contains_html_tags_instructional: PIN kodā nevar būt HTML
+            contains_html_tags_informative: PIN kodā nevar būt HTML

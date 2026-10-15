@@ -1,0 +1,44 @@
+---
+lv:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Komūna
+            optional: Komūna (neobligāti)
+          errors:
+            blank_instructional: Ievadi komūnu
+            blank_informative: Nav norādīta komūna
+            too_long_instructional: Komūnas nosaukums ir pārāk garš (maksimums ir
+              %{limit} rakstzīmes)
+            too_long_informative: Komūnas nosaukums ir pārāk garš
+            contains_emojis_instructional: Komūnas nosaukumā nevar būt emocijzīmes
+            contains_emojis_informative: Komūnas nosaukumā nevar būt emocijzīmes
+            contains_mathematical_symbols_instructional: Komūnas nosaukumā nevar būt
+              matemātiski simboli
+            contains_mathematical_symbols_informative: Komūnas nosaukumā nevar būt
+              matemātiski simboli
+            contains_restricted_characters_instructional: Komūnas nosaukumā var būt
+              tikai burti, cipari, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Komūnas nosaukumā nevar būt
+              neatļautas rakstzīmes
+            contains_too_many_words_instructional: Komūnas nosaukumā jābūt mazāk nekā
+              %{word_count} vārdiem
+            contains_too_many_words_informative: Komūnas nosaukumā jābūt mazāk nekā
+              %{word_count} vārdiem
+            contains_html_tags_instructional: Komūnas nosaukumā nevar būt HTML atzīmes
+            contains_html_tags_informative: Komūnas nosaukumā nevar būt HTML atzīmes
+            contains_url_instructional: Komūnas nosaukumā nevar būt URL
+            contains_url_informative: Komūnas nosaukumā nevar būt URL
+            contains_email_instructional: Komūnas nosaukumā nevar būt e-pasta adreses
+            contains_email_informative: Komūnas nosaukumā nevar būt e-pasta adreses
+            unknown_for_city_instructional: Ievadi derīgu komūnu pilsētai %{city}
+            unknown_for_city_informative: Ievadi derīgu komūnu pilsētai %{city}
+            unknown_for_zip_instructional: Ievadi derīgu komūnu pasta indeksam %{zip}
+            unknown_for_zip_informative: Ievadi derīgu komūnu pasta indeksam %{zip}
+            unknown_for_address_instructional: Iespējams, komūna ir norādīta nepareizi
+            unknown_for_address_informative: Iespējams, komūna ir norādīta nepareizi
+          warnings:
+            contains_too_many_words: Komūnas nosaukumā ieteicams izmantot mazāk nekā
+              %{word_count} vārdus

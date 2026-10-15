@@ -1,0 +1,61 @@
+---
+te:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: వీధి, ఇంటి నంబర్
+            optional: వీధి, ఇంటి నంబర్ (ఆప్షనల్)
+          errors:
+            blank_instructional: వీధి, ఇంటి నంబర్‌ను ఎంటర్ చేయండి
+            blank_informative: వీధి, ఇంటి నంబర్ లేవు
+        province:
+          label:
+            default: రాష్ట్రం
+            optional: రాష్ట్రం (ఆప్షనల్)
+          errors:
+            blank_instructional: రాష్ట్రాన్ని ఎంచుకోండి
+            blank_informative: రాష్ట్రం లేదు
+        neighborhood:
+          label:
+            default: కాలనీ
+            optional: కాలనీ (ఆప్షనల్)
+          errors:
+            blank_instructional: కాలనీని ఎంటర్ చేయండి
+            blank_informative: కాలనీ లేదు
+            too_long_instructional: కాలనీ చాలా పొడవుగా ఉంది (గరిష్టంగా %{limit} అక్షరాలు)
+            too_long_informative: కాలనీ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: కాలనీలో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: కాలనీలో ఎమోజీలు ఉండకూడదు
+            contains_mathematical_symbols_instructional: కాలనీలో గణిత సంబంధిత చిహ్నాలు
+              ఉండకూడదు
+            contains_mathematical_symbols_informative: కాలనీలో గణిత సంబంధిత చిహ్నాలు
+              ఉండకూడదు
+            contains_restricted_characters_instructional: కాలనీ అక్షరాలు, సంఖ్యలు,
+              స్థానిక అక్షరాలు, ప్రత్యేక అక్షరాలను మాత్రమే కలిగి ఉండాలి
+            contains_restricted_characters_informative: కాలనీలో పరిమితం చేయబడిన అక్షరాలు
+              ఉండకూడదు
+            contains_too_many_words_instructional: కాలనీ %{word_count} పదాల కంటే తక్కువగా
+              ఉండాలి
+            contains_too_many_words_informative: కాలనీ %{word_count} పదాల కంటే తక్కువగా
+              ఉండాలి
+            contains_html_tags_informative: కాలనీలో HTML ఉండకూడదు
+            contains_html_tags_instructional: కాలనీలో HTML ఉండకూడదు
+            contains_url_instructional: కాలనీలో URL ఉండకూడదు
+            contains_url_informative: కాలనీలో URL ఉండకూడదు
+            contains_email_instructional: కాలనీలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            contains_email_informative: కాలనీలో ఇమెయిల్ అడ్రస్ ఉండకూడదు
+            unknown_for_city_instructional: "%{city} కోసం చెల్లుబాటు అయ్యే కాలనీని
+              ఎంటర్ చేయండి"
+            unknown_for_city_informative: "%{city} కోసం చెల్లుబాటు అయ్యే కాలనీని ఎంటర్
+              చేయండి"
+            unknown_for_zip_instructional: "%{zip} కోసం చెల్లుబాటు అయ్యే కాలనీని ఎంటర్
+              చేయండి"
+            unknown_for_zip_informative: "%{zip} కోసం చెల్లుబాటు అయ్యే కాలనీని ఎంటర్
+              చేయండి"
+            unknown_for_address_instructional: కాలనీ తప్పు కావచ్చు
+            unknown_for_address_informative: కాలనీ తప్పు కావచ్చు
+          warnings:
+            contains_too_many_words: కాలనీ %{word_count} పదాల కంటే తక్కువగా ఉండాలని
+              సిఫార్సు చేయబడింది

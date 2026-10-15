@@ -1,0 +1,35 @@
+---
+et:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Osariik
+            optional: Osariik (valikuline)
+          errors:
+            blank_instructional: Vali osariik
+            blank_informative: Osariik on puudu
+        zip:
+          label:
+            default: PIN-kood
+            optional: PIN-kood (valikuline)
+          errors:
+            blank_instructional: Sisesta PIN-kood
+            blank_informative: PIN-kood on puudu
+            invalid_for_country_instructional: Sisesta riigi %{country} jaoks kehtiv
+              PIN-kood
+            invalid_for_country_informative: PIN-kood pole kehtiv
+            invalid_for_country_and_province_instructional: Sisesta asukoha %{province},
+              %{country} jaoks kehtiv PIN-kood
+            invalid_for_country_and_province_informative: PIN-kood pole kehtiv
+            too_long_instructional: PIN-kood on liiga pikk
+            too_long_informative: PIN-kood on liiga pikk
+            contains_emojis_instructional: PIN-kood ei tohi sisaldada emotikone
+            contains_emojis_informative: PIN-kood ei tohi sisaldada emotikone
+            contains_restricted_characters_instructional: PIN-kood ei tohi sisaldada
+              keelatud tähemärke
+            contains_restricted_characters_informative: PIN-kood ei tohi sisaldada
+              keelatud tähemärke
+            contains_html_tags_instructional: PIN-kood ei tohi sisaldada HTML-i
+            contains_html_tags_informative: PIN-kood ei tohi sisaldada HTML-i

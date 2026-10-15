@@ -1,0 +1,57 @@
+---
+ka:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: ქუჩა და სახლის ნომერი
+            optional: ქუჩა და სახლის ნომერი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ქუჩა და სახლის ნომერი
+            blank_informative: მითითებული არ არის ქუჩა და სახლის ნომერი
+        province:
+          label:
+            default: შტატი
+            optional: შტატი (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე შტატი
+            blank_informative: მითითებული არ არის შტატი
+        district:
+          label:
+            default: უბანი
+            optional: უბანი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე უბანი
+            blank_informative: მითითებული არ არის უბანი
+            too_long_instructional: უბანი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: უბანი ძალიან გრძელია
+            contains_emojis_instructional: უბანი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: უბანი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: უბანი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_mathematical_symbols_informative: უბანი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: უბანი უნდა შეიცავდეს მხოლოდ
+              ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: უბანი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: უბანი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: უბანი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: უბანი არ უნდა შეიცავდეს HTML თეგებს
+            contains_html_tags_informative: უბანი არ უნდა შეიცავდეს HTML თეგებს
+            contains_url_instructional: უბანი არ უნდა შეიცავდეს URL-ებს
+            contains_url_informative: უბანი არ უნდა შეიცავდეს URL-ებს
+            contains_email_instructional: უბანი არ უნდა შეიცავდეს ელფოსტის მისამართებს
+            contains_email_informative: უბანი არ უნდა შეიცავდეს ელფოსტის მისამართებს
+            unknown_for_city_instructional: შეიყვანე სწორი უბანი %{city}-სთვის
+            unknown_for_city_informative: შეიყვანე სწორი უბანი %{city}-სთვის
+            unknown_for_zip_instructional: 'შეიყვანე სწორი უბანი ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'შეიყვანე სწორი უბანი ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: უბანი შესაძლოა არასწორი იყოს
+            unknown_for_address_informative: უბანი შესაძლოა არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია უბანი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

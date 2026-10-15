@@ -1,0 +1,57 @@
+---
+ka:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: ქუჩა და სახლის ნომერი
+            optional: ქუჩა და სახლის ნომერი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ქუჩა და სახლის ნომერი
+            blank_informative: ქუჩა და სახლის ნომერი მითითებული არ არის
+        province:
+          label:
+            default: შტატი
+            optional: შტატი (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე შტატი
+            blank_informative: შტატი მითითებული არ არის
+        neighborhood:
+          label:
+            default: კოლონია
+            optional: კოლონია (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე კოლონია
+            blank_informative: კოლონია მითითებული არ არის
+            too_long_instructional: კოლონია ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: კოლონია ძალიან გრძელია
+            contains_emojis_instructional: კოლონია არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_emojis_informative: კოლონია არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_mathematical_symbols_instructional: კოლონია არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_mathematical_symbols_informative: კოლონია არ შეიძლება შეიცავდეს
+              მათემატიკურ სიმბოლოებს
+            contains_restricted_characters_instructional: კოლონია შეიძლება შეიცავდეს
+              მხოლოდ ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: კოლონია არ შეიძლება შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_too_many_words_instructional: კოლონია უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: კოლონია უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_informative: კოლონია არ შეიძლება შეიცავდეს HTML-ს
+            contains_html_tags_instructional: კოლონია არ შეიძლება შეიცავდეს HTML-ს
+            contains_url_instructional: კოლონია არ შეიძლება შეიცავდეს URL-ს
+            contains_url_informative: კოლონია არ შეიძლება შეიცავდეს URL-ს
+            contains_email_instructional: კოლონია არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: კოლონია არ შეიძლება შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: 'შეიყვანე სწორი კოლონია ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'შეიყვანე სწორი კოლონია ქალაქისთვის: %{city}'
+            unknown_for_zip_instructional: 'შეიყვანე სწორი კოლონია ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'შეიყვანე სწორი კოლონია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: კოლონია შეიძლება არასწორი იყოს
+            unknown_for_address_informative: კოლონია შეიძლება არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია, კოლონია შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

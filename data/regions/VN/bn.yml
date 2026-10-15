@@ -1,0 +1,44 @@
+---
+bn:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: ওয়ার্ড
+            optional: ওয়ার্ড (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি ওয়ার্ড লিখুন
+            blank_informative: ওয়ার্ড দেওয়া হয়নি
+            too_long_instructional: ওয়ার্ড অনেক বড়
+            too_long_informative: ওয়ার্ড অনেক বড় (সর্বোচ্চ 255টি অক্ষর হতে পারে)
+            contains_emojis_instructional: ওয়ার্ডে কোনো ইমোজি থাকতে পারে না
+            contains_emojis_informative: ওয়ার্ডে কোনো ইমোজি থাকতে পারে না
+            contains_mathematical_symbols_instructional: ওয়ার্ডে কোনো গাণিতিক প্রতীক
+              থাকতে পারে না
+            contains_mathematical_symbols_informative: ওয়ার্ডে কোনো গাণিতিক প্রতীক
+              থাকতে পারে না
+            contains_restricted_characters_instructional: ওয়ার্ডে কেবল অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর ও বিশেষ অক্ষর থাকতে পারে
+            contains_restricted_characters_informative: ওয়ার্ডে কোনো সীমাবদ্ধ অক্ষর
+              থাকতে পারে না
+            contains_too_many_words_instructional: ওয়ার্ডে %{word_count}-টির কম শব্দ
+              থাকতে হবে
+            contains_too_many_words_informative: ওয়ার্ডে %{word_count}-টির কম শব্দ
+              থাকতে হবে
+            contains_html_tags_instructional: ওয়ার্ডে কোনো HTML থাকতে পারে না
+            contains_html_tags_informative: ওয়ার্ডে কোনো HTML থাকতে পারে না
+            contains_url_instructional: ওয়ার্ডে কোনো URL থাকতে পারে না
+            contains_url_informative: ওয়ার্ডে কোনো URL থাকতে পারে না
+            contains_email_instructional: ওয়ার্ডে কোনো ইমেইল ঠিকানা থাকতে পারে না
+            contains_email_informative: ওয়ার্ডে কোনো ইমেইল ঠিকানা থাকতে পারে না
+            unknown_for_city_instructional: "%{city}-এর জন্য একটি সঠিক ওয়ার্ডের নাম
+              লিখুন"
+            unknown_for_city_informative: ওয়ার্ড %{city}-এর সাথে মেলে না
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি সঠিক ওয়ার্ডের নাম
+              লিখুন"
+            unknown_for_zip_informative: ওয়ার্ড %{zip}-এর সাথে মেলে না
+            unknown_for_address_instructional: ওয়ার্ড বেঠিক হতে পারে
+            unknown_for_address_informative: ওয়ার্ড বেঠিক হতে পারে
+          warnings:
+            contains_too_many_words: ওয়ার্ডে %{word_count}-টির কম শব্দ থাকা বাঞ্ছনীয়

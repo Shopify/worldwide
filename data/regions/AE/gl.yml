@@ -1,0 +1,53 @@
+---
+gl:
+  worldwide:
+    AE:
+      addresses:
+        province:
+          label:
+            default: Emirato
+            optional: Emirato (opcional)
+          errors:
+            blank_instructional: Selecciona un emirato
+            blank_informative: Falta o emirato
+        neighborhood:
+          label:
+            default: Área
+            optional: Área (opcional)
+          errors:
+            blank_instructional: Escribe unha área
+            blank_informative: Falta a área
+            too_long_instructional: A área é demasiado longa (o máximo son %{limit}
+              caracteres)
+            too_long_informative: A área é demasiado longa
+            contains_emojis_instructional: A área non pode conter emojis
+            contains_emojis_informative: A área non pode conter emojis
+            contains_mathematical_symbols_instructional: A área non pode conter símbolos
+              matemáticos
+            contains_mathematical_symbols_informative: A área non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A área só pode conter letras,
+              números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A área non pode conter caracteres
+              restrinxidos
+            contains_too_many_words_instructional: A área debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: A área debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: A área non pode conter HTML
+            contains_html_tags_informative: A área non pode conter HTML
+            contains_url_instructional: A área non pode conter un URL
+            contains_url_informative: A área non pode conter un URL
+            contains_email_instructional: A área non pode conter un enderezo de correo
+              electrónico
+            contains_email_informative: A área non pode conter un enderezo de correo
+              electrónico
+            unknown_for_city_instructional: Escribe unha área válida para %{city}
+            unknown_for_city_informative: A área non é válida para %{city}
+            unknown_for_zip_instructional: Escribe unha área válida para %{zip}
+            unknown_for_zip_informative: A área non é válida para %{zip}
+            unknown_for_address_instructional: A área pode ser incorrecta
+            unknown_for_address_informative: A área pode ser incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a área teña menos de %{word_count}
+              palabras

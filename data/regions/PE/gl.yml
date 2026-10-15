@@ -1,0 +1,46 @@
+---
+gl:
+  worldwide:
+    PE:
+      addresses:
+        neighborhood:
+          label:
+            default: Distrito
+            optional: Distrito (opcional)
+          errors:
+            blank_instructional: Escribe un distrito
+            blank_informative: Falta o distrito
+            too_long_instructional: O distrito é longo de máis (o máximo son %{limit}
+              caracteres)
+            too_long_informative: O distrito é longo de máis
+            contains_emojis_instructional: O distrito non pode conter emojis
+            contains_emojis_informative: O distrito non pode conter emojis
+            contains_mathematical_symbols_instructional: O distrito non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O distrito non pode conter
+              símbolos matemáticos
+            contains_restricted_characters_instructional: O distrito só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O distrito non pode conter
+              caracteres restrinxidos
+            contains_too_many_words_instructional: O distrito debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: O distrito debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: O distrito non pode conter HTML
+            contains_html_tags_informative: O distrito non pode conter HTML
+            contains_url_instructional: O distrito non pode conter un URL
+            contains_url_informative: O distrito non pode conter un URL
+            contains_email_instructional: O distrito non pode conter un enderezo de
+              correo electrónico
+            contains_email_informative: O distrito non pode conter un enderezo de
+              correo electrónico
+            unknown_for_city_instructional: Escribe un distrito válido para %{city}
+            unknown_for_city_informative: O distrito non é válido para %{city}
+            unknown_for_zip_instructional: Escribe un distrito válido para o %{zip}
+            unknown_for_zip_informative: O distrito non é válido para o %{zip}
+            unknown_for_address_instructional: O distrito podería ser incorrecto
+            unknown_for_address_informative: O distrito podería ser incorrecto
+          warnings:
+            contains_too_many_words: Recoméndase que o distrito teña menos de %{word_count}
+              palabras

@@ -1,0 +1,53 @@
+---
+gl:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Barrio
+            optional: Barrio (opcional)
+          errors:
+            blank_instructional: Escribe un barrio
+            blank_informative: Falta o barrio
+            too_long_instructional: O barrio é demasiado longo (o máximo son 255 caracteres)
+            too_long_informative: O barrio é demasiado longo
+            contains_emojis_instructional: O barrio non pode conter emojis
+            contains_emojis_informative: O barrio non pode conter emojis
+            contains_restricted_characters_instructional: O barrio só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O barrio non pode conter caracteres
+              restrinxidos
+            contains_html_tags_instructional: O barrio non pode conter HTML
+            contains_html_tags_informative: O barrio non pode conter HTML
+        province:
+          label:
+            default: Estado/territorio
+            optional: Estado/territorio (opcional)
+          errors:
+            blank_instructional: Selecciona un estado/territorio
+            blank_informative: Falta o estado/territorio
+        zip:
+          label:
+            default: Código postal
+            optional: Código postal (opcional)
+          errors:
+            blank_instructional: Escribe un código postal
+            blank_informative: Falta o código postal
+            invalid_for_country_instructional: Escribe un código postal válido para
+              %{country}
+            invalid_for_country_informative: O código postal non é válido para %{country}
+            invalid_for_country_and_province_instructional: Escribe un código postal
+              válido para %{province}, %{country}
+            invalid_for_country_and_province_informative: O código postal non é válido
+              para %{province}, %{country}
+            too_long_instructional: O código postal é demasiado longo
+            too_long_informative: O código postal é demasiado longo
+            contains_emojis_instructional: O código postal non pode conter emojis
+            contains_emojis_informative: O código postal non pode conter emojis
+            contains_restricted_characters_instructional: O código postal só pode
+              conter letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O código postal non pode conter
+              caracteres restrinxidos
+            contains_html_tags_instructional: O código postal non pode conter HTML
+            contains_html_tags_informative: O código postal non pode conter HTML

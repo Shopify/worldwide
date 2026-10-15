@@ -1,0 +1,54 @@
+---
+eu:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Auzoa
+            optional: Auzoa (aukerakoa)
+          errors:
+            blank_instructional: Sartu auzo bat
+            blank_informative: Auzoa falta da
+            too_long_instructional: Auzoa luzeegia da (gehienez 255 karaktere)
+            too_long_informative: Auzoa luzeegia da
+            contains_emojis_instructional: Auzoak ezin du emojirik izan
+            contains_emojis_informative: Auzoak ezin du emojirik izan
+            contains_restricted_characters_instructional: Auzoak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_restricted_characters_informative: Auzoak ezin du karaktere mugaturik
+              izan
+            contains_html_tags_instructional: Auzoak ezin du HTML koderik izan
+            contains_html_tags_informative: Auzoak ezin du HTML koderik izan
+        province:
+          label:
+            default: Estatua/lurraldea
+            optional: Estatua/lurraldea (aukerakoa)
+          errors:
+            blank_instructional: Hautatu estatu/lurralde bat
+            blank_informative: Estatua/lurraldea falta da
+        zip:
+          label:
+            default: Posta-kodea
+            optional: Posta-kodea (aukerakoa)
+          errors:
+            blank_instructional: Sartu posta-kode bat
+            blank_informative: Posta-kodea falta da
+            invalid_for_country_instructional: 'Sartu baliozko posta-kode bat honentzat:
+              %{country}'
+            invalid_for_country_informative: 'Posta-kodeak ez du balio honentzat:
+              %{country}'
+            invalid_for_country_and_province_instructional: 'Sartu baliozko posta-kode
+              bat honentzat: %{province}, %{country}'
+            invalid_for_country_and_province_informative: 'Posta-kodeak ez du balio
+              honentzat: %{province}, %{country}'
+            too_long_instructional: Posta-kodea luzeegia da
+            too_long_informative: Posta-kodea luzeegia da
+            contains_emojis_instructional: Posta-kodeak ezin du emojirik izan
+            contains_emojis_informative: Posta-kodeak ezin du emojirik izan
+            contains_restricted_characters_instructional: Posta-kodeak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_restricted_characters_informative: Posta-kodeak ezin du karaktere
+              mugaturik izan
+            contains_html_tags_instructional: Posta-kodeak ezin du HTML koderik izan
+            contains_html_tags_informative: Posta-kodeak ezin du HTML koderik izan

@@ -1,0 +1,35 @@
+---
+ca:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Estat
+            optional: Estat (opcional)
+          errors:
+            blank_instructional: Selecciona un estat
+            blank_informative: Falta l'estat
+        zip:
+          label:
+            default: Codi PIN
+            optional: Codi PIN (opcional)
+          errors:
+            blank_instructional: Introdueix un codi PIN
+            blank_informative: Falta el codi PIN
+            invalid_for_country_instructional: Introdueix un codi PIN vàlid per a
+              %{country}
+            invalid_for_country_informative: El codi PIN no és vàlid
+            invalid_for_country_and_province_instructional: Introdueix un codi PIN
+              vàlid per a %{province}, %{country}
+            invalid_for_country_and_province_informative: El codi PIN no és vàlid
+            too_long_instructional: El codi PIN és massa llarg
+            too_long_informative: El codi PIN és massa llarg
+            contains_emojis_instructional: El codi PIN no pot contenir emojis
+            contains_emojis_informative: El codi PIN no pot contenir emojis
+            contains_restricted_characters_instructional: El codi PIN no pot contenir
+              caràcters restringits
+            contains_restricted_characters_informative: El codi PIN no pot contenir
+              caràcters restringits
+            contains_html_tags_instructional: El codi PIN no pot contenir HTML
+            contains_html_tags_informative: El codi PIN no pot contenir HTML

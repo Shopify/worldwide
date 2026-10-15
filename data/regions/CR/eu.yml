@@ -1,0 +1,53 @@
+---
+eu:
+  worldwide:
+    CR:
+      addresses:
+        province:
+          label:
+            default: Probintzia
+            optional: Probintzia (aukerakoa)
+          errors:
+            blank_instructional: Hautatu probintzia bat
+            blank_informative: Probintzia falta da
+        neighborhood:
+          label:
+            default: Barrutia
+            optional: Barrutia (aukerakoa)
+          errors:
+            blank_instructional: Sartu barruti bat
+            blank_informative: Barrutia falta da
+            too_long_instructional: Barrutia luzeegia da (gehienez %{limit} karaktere)
+            too_long_informative: Barrutia luzeegia da
+            contains_emojis_instructional: Barrutiak ezin du emojirik izan
+            contains_emojis_informative: Barrutiak ezin du emojirik izan
+            contains_mathematical_symbols_instructional: Barrutiak ezin du sinbolo
+              matematikorik izan
+            contains_mathematical_symbols_informative: Barrutiak ezin du sinbolo matematikorik
+              izan
+            contains_restricted_characters_instructional: Barrutiak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_restricted_characters_informative: Barrutiak ezin du karaktere
+              mugaturik izan
+            contains_too_many_words_instructional: Barrutiak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_too_many_words_informative: Barrutiak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_html_tags_instructional: Barrutiak ezin du HTML koderik izan
+            contains_html_tags_informative: Barrutiak ezin du HTML koderik izan
+            contains_url_instructional: Barrutiak ezin du URLrik izan
+            contains_url_informative: Barrutiak ezin du URLrik izan
+            contains_email_instructional: Barrutiak ezin du helbide elektronikorik
+              izan
+            contains_email_informative: Barrutiak ezin du helbide elektronikorik izan
+            unknown_for_city_instructional: 'Sartu baliozko barruti bat honentzat:
+              %{city}'
+            unknown_for_city_informative: 'Barrutiak ez du balio honentzat: %{city}'
+            unknown_for_zip_instructional: 'Sartu baliozko barruti bat honentzat:
+              %{zip}'
+            unknown_for_zip_informative: 'Barrutiak ez du balio honentzat: %{zip}'
+            unknown_for_address_instructional: Barrutia agian ez da zuzena
+            unknown_for_address_informative: Barrutia agian ez da zuzena
+          warnings:
+            contains_too_many_words: Barrutiak %{word_count} hitz baino gutxiago izatea
+              gomendatzen da

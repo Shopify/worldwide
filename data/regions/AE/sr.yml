@@ -1,0 +1,50 @@
+---
+sr:
+  worldwide:
+    AE:
+      addresses:
+        province:
+          label:
+            default: Emirat
+            optional: Emirat (opcionalno)
+          errors:
+            blank_instructional: Izaberite emirat
+            blank_informative: Emirat nedostaje
+        neighborhood:
+          label:
+            default: Oblast
+            optional: Oblast (opcionalno)
+          errors:
+            blank_instructional: Unesite oblast
+            blank_informative: Oblast nedostaje
+            too_long_instructional: Oblast je predugačka (maksimum je %{limit} znakova)
+            too_long_informative: Oblast je predugačka
+            contains_emojis_instructional: Oblast ne može da sadrži emodžije
+            contains_emojis_informative: Oblast ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Oblast ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Oblast ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Oblast može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Oblast ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Oblast mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Oblast mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Oblast ne može da sadrži HTML
+            contains_html_tags_informative: Oblast ne može da sadrži HTML
+            contains_url_instructional: Oblast ne može da sadrži URL
+            contains_url_informative: Oblast ne može da sadrži URL
+            contains_email_instructional: Oblast ne može da sadrži imejl adresu
+            contains_email_informative: Oblast ne može da sadrži imejl adresu
+            unknown_for_city_instructional: Unesite važeću oblast za %{city}
+            unknown_for_city_informative: Oblast nije važeća za %{city}
+            unknown_for_zip_instructional: Unesite važeću oblast za %{zip}
+            unknown_for_zip_informative: Oblast nije važeća za %{zip}
+            unknown_for_address_instructional: Oblast je možda netačna
+            unknown_for_address_informative: Oblast je možda netačna
+          warnings:
+            contains_too_many_words: Preporučuje se da oblast ima manje od %{word_count}
+              reči

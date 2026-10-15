@@ -1,0 +1,54 @@
+---
+gl:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank_instructional: Selecciona un estado
+            blank_informative: Escribe un estado
+            invalid_for_country_instructional: Escribe un estado válido para %{city},
+              %{zip}
+            invalid_for_country_informative: O estado non é válido
+            unknown_for_city_and_zip_instructional: Escribe un estado válido para
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: O estado non é válido para %{city},
+              %{zip}
+            unknown_for_city_instructional: Selecciona un estado válido para %{city}
+            unknown_for_city_informative: O estado non é válido para %{city}
+            unknown_for_zip_instructional: Selecciona un estado válido para o %{zip}
+            unknown_for_zip_informative: O estado non é válido para o %{zip}
+            unknown_for_address_instructional: O estado podería ser incorrecto
+            unknown_for_address_informative: O estado podería ser incorrecto
+        zip:
+          label:
+            default: código ZIP
+            optional: código ZIP (opcional)
+          errors:
+            blank_instructional: Escribe un código ZIP
+            blank_informative: Falta o código ZIP
+            invalid_for_country_instructional: Escribe un código ZIP válido para o/a
+              %{country}
+            invalid_for_country_informative: O código ZIP non é válido para o/a %{country}
+            invalid_for_province_instructional: Escribe un código ZIP válido para
+              %{province}
+            invalid_for_province_informative: O código ZIP non é válido para %{province}
+            invalid_for_country_and_province_instructional: Escribe un código ZIP
+              válido para %{province}, %{country}
+            invalid_for_country_and_province_informative: O código ZIP non é válido
+              para %{province}, %{country}
+            too_long_instructional: O código ZIP é longo de máis
+            too_long_informative: O código ZIP é longo de máis (o máximo son 255 caracteres)
+            contains_emojis_instructional: O código ZIP non pode conter emojis
+            contains_emojis_informative: O código ZIP non pode conter emojis
+            contains_restricted_characters_instructional: O código ZIP non pode conter
+              caracteres restrinxidos
+            contains_restricted_characters_informative: O código ZIP non pode conter
+              caracteres restrinxidos
+            contains_html_tags_instructional: O código ZIP non pode conter HTML
+            contains_html_tags_informative: O código ZIP non pode conter HTML
+            unknown_for_address_instructional: O código ZIP podería ser incorrecto
+            unknown_for_address_informative: O código ZIP podería ser incorrecto

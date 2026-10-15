@@ -1,0 +1,45 @@
+---
+ta:
+  worldwide:
+    SA:
+      addresses:
+        neighborhood:
+          label:
+            default: மாவட்டம்
+            optional: மாவட்டம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு மாவட்டத்தை உள்ளிடவும்
+            blank_informative: மாவட்டம் இல்லை
+            too_long_instructional: மாவட்டம் நீளமாக உள்ளது (அதிகபட்சம் %{limit} எழுத்துகள்)
+            too_long_informative: மாவட்டம் நீளமாக உள்ளது
+            contains_emojis_instructional: மாவட்டத்தில் எமோஜிகள் இருக்கக் கூடாது
+            contains_emojis_informative: மாவட்டத்தில் எமோஜிகள் இருக்கக் கூடாது
+            contains_mathematical_symbols_instructional: மாவட்டத்தில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_mathematical_symbols_informative: மாவட்டத்தில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_restricted_characters_instructional: மாவட்டத்தில் எழுத்துகள்,
+              எண்கள், உள்ளூர் எழுத்துகள் மற்றும் சிறப்பு எழுத்துகள் மட்டுமே இருக்க
+              முடியும்
+            contains_restricted_characters_informative: மாவட்டத்தில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக் கூடாது
+            contains_too_many_words_instructional: மாவட்டம் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: மாவட்டம் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: மாவட்டத்தில் HTML இருக்கக் கூடாது
+            contains_html_tags_informative: மாவட்டத்தில் HTML இருக்கக் கூடாது
+            contains_url_instructional: மாவட்டத்தில் URL இருக்கக் கூடாது
+            contains_url_informative: மாவட்டத்தில் URL இருக்கக் கூடாது
+            contains_email_instructional: மாவட்டத்தில் மின்னஞ்சல் முகவரி இருக்கக்
+              கூடாது
+            contains_email_informative: மாவட்டத்தில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            unknown_for_city_instructional: "%{city}-க்கான சரியான மாவட்டத்தை உள்ளிடவும்"
+            unknown_for_city_informative: "%{city}-க்கு மாவட்டம் செல்லுபடியாகாது"
+            unknown_for_zip_instructional: "%{zip}-க்கான சரியான மாவட்டத்தை உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip}-க்கு மாவட்டம் செல்லுபடியாகாது"
+            unknown_for_address_instructional: மாவட்டம் தவறாக இருக்கலாம்
+            unknown_for_address_informative: மாவட்டம் தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: மாவட்டத்தில் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்கப் பரிந்துரைக்கப்படுகிறது

@@ -1,0 +1,35 @@
+---
+eu:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Estatua
+            optional: Estatua (aukerakoa)
+          errors:
+            blank_instructional: Hautatu estatu bat
+            blank_informative: Estatua falta da
+        zip:
+          label:
+            default: PIN kodea
+            optional: PIN kodea (aukerakoa)
+          errors:
+            blank_instructional: Sartu PIN kode bat
+            blank_informative: PIN kodea falta da
+            invalid_for_country_instructional: 'Sartu baliozko PIN kode bat honentzat:
+              %{country}'
+            invalid_for_country_informative: PIN kodeak ez du balio
+            invalid_for_country_and_province_instructional: 'Sartu baliozko PIN kode
+              bat honentzat: %{province}, %{country}'
+            invalid_for_country_and_province_informative: PIN kodeak ez du balio
+            too_long_instructional: PIN kodea luzeegia da
+            too_long_informative: PIN kodea luzeegia da
+            contains_emojis_instructional: PIN kodeak ezin du emojirik izan
+            contains_emojis_informative: PIN kodeak ezin du emojirik izan
+            contains_restricted_characters_instructional: PIN kodeak ezin du karaktere
+              mugaturik izan
+            contains_restricted_characters_informative: PIN kodeak ezin du karaktere
+              mugaturik izan
+            contains_html_tags_instructional: PIN kodeak ezin du HTML koderik izan
+            contains_html_tags_informative: PIN kodeak ezin du HTML koderik izan

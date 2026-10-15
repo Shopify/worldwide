@@ -1,0 +1,53 @@
+---
+bn:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: শহরতলি
+            optional: শহরতলি (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি শহরতলি লিখুন
+            blank_informative: শহরতলি বাদ পড়েছে
+            too_long_instructional: শহরতলি অনেক বড় (সর্বোচ্চ 255টি অক্ষর হতে পারবে)
+            too_long_informative: শহরতলি অনেক বড়
+            contains_emojis_instructional: শহরতলিতে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: শহরতলিতে ইমোজি থাকতে পারবে না
+            contains_restricted_characters_instructional: শহরতলিতে শুধুমাত্র অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: শহরতলিতে সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_html_tags_instructional: শহরতলিতে HTML থাকতে পারবে না
+            contains_html_tags_informative: শহরতলিতে HTML থাকতে পারবে না
+        province:
+          label:
+            default: রাজ্য/অঞ্চল
+            optional: রাজ্য/অঞ্চল (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি রাজ্য/অঞ্চল নির্বাচন করুন
+            blank_informative: রাজ্য/অঞ্চল বাদ পড়েছে
+        zip:
+          label:
+            default: পোস্টকোড
+            optional: পোস্টকোড (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি পোস্টকোড লিখুন
+            blank_informative: পোস্টকোড বাদ পড়েছে
+            invalid_for_country_instructional: "%{country}-এর জন্য একটি বৈধ পোস্টকোড
+              লিখুন"
+            invalid_for_country_informative: "%{country}-এর জন্য পোস্টকোডটি বৈধ নয়"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}-এর
+              জন্য একটি বৈধ পোস্টকোড লিখুন"
+            invalid_for_country_and_province_informative: "%{province}, %{country}-এর
+              জন্য পোস্টকোডটি বৈধ নয়"
+            too_long_instructional: পোস্টকোড অনেক বড়
+            too_long_informative: পোস্টকোড অনেক বড়
+            contains_emojis_instructional: পোস্টকোডে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: পোস্টকোডে ইমোজি থাকতে পারবে না
+            contains_restricted_characters_instructional: পোস্টকোডে শুধুমাত্র অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: পোস্টকোডে সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_html_tags_instructional: পোস্টকোডে HTML থাকতে পারবে না
+            contains_html_tags_informative: পোস্টকোডে HTML থাকতে পারবে না

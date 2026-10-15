@@ -1,0 +1,51 @@
+---
+lv:
+  worldwide:
+    CR:
+      addresses:
+        province:
+          label:
+            default: Province
+            optional: Province (neobligāti)
+          errors:
+            blank_instructional: Atlasi provinci
+            blank_informative: Nav norādīta province
+        neighborhood:
+          label:
+            default: Apgabals
+            optional: Apgabals (neobligāti)
+          errors:
+            blank_instructional: Ievadi apgabalu
+            blank_informative: Nav norādīts apgabals
+            too_long_instructional: Apgabala nosaukums ir pārāk garš (maksimums ir
+              %{limit} rakstzīmes)
+            too_long_informative: Apgabala nosaukums ir pārāk garš
+            contains_emojis_instructional: Apgabala nosaukumā nevar būt emocijzīmes
+            contains_emojis_informative: Apgabala nosaukumā nevar būt emocijzīmes
+            contains_mathematical_symbols_instructional: Apgabala nosaukumā nevar
+              būt matemātiski simboli
+            contains_mathematical_symbols_informative: Apgabala nosaukumā nevar būt
+              matemātiski simboli
+            contains_restricted_characters_instructional: Apgabala nosaukumā var būt
+              tikai burti, cipari, vietējās un īpašās rakstzīmes
+            contains_restricted_characters_informative: Apgabala nosaukumā nevar būt
+              neatļautas rakstzīmes
+            contains_too_many_words_instructional: Apgabala nosaukumā jābūt mazāk
+              nekā %{word_count} vārdiem
+            contains_too_many_words_informative: Apgabala nosaukumā jābūt mazāk nekā
+              %{word_count} vārdiem
+            contains_html_tags_instructional: Apgabala nosaukumā nevar būt HTML
+            contains_html_tags_informative: Apgabala nosaukumā nevar būt HTML
+            contains_url_instructional: Apgabala nosaukumā nevar būt URL
+            contains_url_informative: Apgabala nosaukumā nevar būt URL
+            contains_email_instructional: Apgabala nosaukumā nevar būt e-pasta adrese
+            contains_email_informative: Apgabala nosaukumā nevar būt e-pasta adrese
+            unknown_for_city_instructional: Ievadi derīgu apgabalu pilsētai %{city}
+            unknown_for_city_informative: Apgabals nav derīgs pilsētai %{city}
+            unknown_for_zip_instructional: Ievadi derīgu apgabalu pasta indeksam %{zip}
+            unknown_for_zip_informative: Apgabals nav derīgs pasta indeksam %{zip}
+            unknown_for_address_instructional: Iespējams, apgabals ir norādīts nepareizi
+            unknown_for_address_informative: Iespējams, apgabals ir norādīta nepareizi
+          warnings:
+            contains_too_many_words: Apgabala nosaukumā ieteicams izmantot mazāk nekā
+              %{word_count} vārdus

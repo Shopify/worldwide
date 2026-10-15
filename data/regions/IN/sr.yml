@@ -1,0 +1,34 @@
+---
+sr:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: Država
+            optional: Država (opcionalno)
+          errors:
+            blank_instructional: Izaberite državu
+            blank_informative: Država nedostaje
+        zip:
+          label:
+            default: PIN kôd
+            optional: PIN kôd (opcionalno)
+          errors:
+            blank_instructional: Unesite PIN kôd
+            blank_informative: PIN kôd nedostaje
+            invalid_for_country_instructional: Unesite važeći PIN kôd za %{country}
+            invalid_for_country_informative: PIN kôd nije važeći
+            invalid_for_country_and_province_instructional: Unesite važeći PIN kôd
+              za %{province}, %{country}
+            invalid_for_country_and_province_informative: PIN kôd nije važeći
+            too_long_instructional: PIN kôd je predugačak
+            too_long_informative: PIN kôd je predugačak
+            contains_emojis_instructional: PIN kôd ne može da sadrži emodžije
+            contains_emojis_informative: PIN kôd ne može da sadrži emodžije
+            contains_restricted_characters_instructional: PIN kôd ne može da sadrži
+              zabranjene znakove
+            contains_restricted_characters_informative: PIN kôd ne može da sadrži
+              zabranjene znakove
+            contains_html_tags_instructional: PIN kôd ne može da sadrži HTML
+            contains_html_tags_informative: PIN kôd ne može da sadrži HTML

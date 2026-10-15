@@ -1,0 +1,55 @@
+---
+eu:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Estatua
+            optional: Estatua (aukerakoa)
+          errors:
+            blank_instructional: Hautatu estatu bat
+            blank_informative: Idatzi estatu bat
+            invalid_for_country_instructional: Idatzi baliozko estatu bat %{city}
+              hirirako eta %{zip} posta-koderako
+            invalid_for_country_informative: Estatuak ez du balio
+            unknown_for_city_and_zip_instructional: Idatzi baliozko estatu bat %{city}
+              hirirako eta %{zip} posta-koderako
+            unknown_for_city_and_zip_informative: Estatuak ez du balio %{city} hirirako
+              eta %{zip} posta-koderako
+            unknown_for_city_instructional: Hautatu baliozko estatu bat %{city} hirirako
+            unknown_for_city_informative: Estatuak ez du balio %{city} hirirako
+            unknown_for_zip_instructional: Hautatu baliozko estatu bat %{zip} posta-koderako
+            unknown_for_zip_informative: Estatuak ez du balio %{zip} posta-koderako
+            unknown_for_address_instructional: Baliteke estatua okerra izatea
+            unknown_for_address_informative: Baliteke estatua okerra izatea
+        zip:
+          label:
+            default: Posta-kodea
+            optional: Posta-kodea (aukerakoa)
+          errors:
+            blank_instructional: Idatzi posta-kode bat
+            blank_informative: Posta-kodea falta da
+            invalid_for_country_instructional: Idatzi baliozko posta-kode bat %{country}
+              herrialderako
+            invalid_for_country_informative: Posta-kodeak ez du balio %{country} herrialderako
+            invalid_for_province_instructional: Idatzi baliozko posta-kode bat %{province}
+              eskualderako
+            invalid_for_province_informative: Posta-kodeak ez du balio %{province}
+              eskualderako
+            invalid_for_country_and_province_instructional: Idatzi baliozko posta-kode
+              bat %{province} eskualderako (%{country})
+            invalid_for_country_and_province_informative: Posta-kodeak ez du balio
+              %{province} eskualderako (%{country})
+            too_long_instructional: Posta-kodea luzeegia da
+            too_long_informative: Posta-kodea luzeegia da (gehienez 255 karaktere)
+            contains_emojis_instructional: Posta-kodeak ezin du emojirik izan
+            contains_emojis_informative: Posta-kodeak ezin du emojirik izan
+            contains_restricted_characters_instructional: Posta-kodeak ezin du karaktere
+              murrizturik izan
+            contains_restricted_characters_informative: Posta-kodeak ezin du karaktere
+              murrizturik izan
+            contains_html_tags_instructional: Posta-kodeak ezin du HTMLrik izan
+            contains_html_tags_informative: Posta-kodeak ezin du HTMLrik izan
+            unknown_for_address_instructional: Baliteke posta-kodea okerra izatea
+            unknown_for_address_informative: Baliteke posta-kodea okerra izatea

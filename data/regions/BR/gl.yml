@@ -1,0 +1,61 @@
+---
+gl:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: Rúa e número
+            optional: Rúa e número (opcional)
+          errors:
+            blank_instructional: Escribe unha rúa e un número
+            blank_informative: Faltan a rúa e o número
+        province:
+          label:
+            default: Estado
+            optional: Estado (opcional)
+          errors:
+            blank_instructional: Selecciona un estado
+            blank_informative: Falta o estado
+        district:
+          label:
+            default: Barrio
+            optional: Barrio (opcional)
+          errors:
+            blank_instructional: Escribe un barrio
+            blank_informative: Falta o barrio
+            too_long_instructional: O barrio é demasiado longo (o máximo son %{limit}
+              caracteres)
+            too_long_informative: O barrio é demasiado longo
+            contains_emojis_instructional: O barrio non pode conter emojis
+            contains_emojis_informative: O barrio non pode conter emojis
+            contains_mathematical_symbols_instructional: O barrio non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: O barrio non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: O barrio só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: O barrio non pode conter caracteres
+              restrinxidos
+            contains_too_many_words_instructional: O barrio debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: O barrio debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: O barrio non pode conter etiquetas HTML
+            contains_html_tags_informative: O barrio non pode conter etiquetas HTML
+            contains_url_instructional: O barrio non pode conter URL
+            contains_url_informative: O barrio non pode conter URL
+            contains_email_instructional: O barrio non pode conter enderezos de correo
+              electrónico
+            contains_email_informative: O barrio non pode conter enderezos de correo
+              electrónico
+            unknown_for_city_instructional: Escribe un nome de barrio válido para
+              %{city}
+            unknown_for_city_informative: Escribe un nome de barrio válido para %{city}
+            unknown_for_zip_instructional: Escribe un nome de barrio válido para %{zip}
+            unknown_for_zip_informative: Escribe un nome de barrio válido para %{zip}
+            unknown_for_address_instructional: O barrio pode ser incorrecto
+            unknown_for_address_informative: O barrio pode ser incorrecto
+          warnings:
+            contains_too_many_words: Recoméndase que o barrio teña menos de %{word_count}
+              palabras

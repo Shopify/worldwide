@@ -1,0 +1,531 @@
+---
+sr:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Kompanija
+            optional: Kompanija (opcionalno)
+          errors:
+            blank_instructional: Unesite kompaniju
+            blank_informative: Kompanija nedostaje
+            too_long_instructional: Naziv kompanije je predugačak (maksimalno 255
+              znakova)
+            too_long_informative: Naziv kompanije je predugačak
+            contains_emojis_instructional: Naziv kompanije ne može da sadrži emodžije
+            contains_emojis_informative: Naziv kompanije ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Naziv kompanije ne može da
+              sadrži matematičke simbole
+            contains_mathematical_symbols_informative: Naziv kompanije ne može da
+              sadrži matematičke simbole
+            contains_restricted_characters_instructional: Naziv kompanije može da
+              sadrži samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Naziv kompanije ne može da
+              sadrži zabranjene znakove
+            contains_html_tags_instructional: Naziv kompanije ne može da sadrži HTML
+            contains_html_tags_informative: Naziv kompanije ne može da sadrži HTML
+        first_name:
+          label:
+            default: Ime
+            optional: Ime (opcionalno)
+          errors:
+            blank_instructional: Unesite ime
+            blank_informative: Ime nedostaje
+            too_long_instructional: Ime je predugačko (maksimalno 255 znakova)
+            too_long_informative: Ime je predugačko
+            contains_emojis_instructional: Ime ne može da sadrži emodžije
+            contains_emojis_informative: Ime ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Ime ne može da sadrži matematičke
+              simbole
+            contains_mathematical_symbols_informative: Ime ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Ime može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Ime ne može da sadrži zabranjene
+              znakove
+            contains_html_tags_instructional: Ime ne može da sadrži HTML
+            contains_html_tags_informative: Ime ne može da sadrži HTML
+            contains_url_instructional: Ime ne može da sadrži URL
+            contains_url_informative: Ime ne može da sadrži URL
+        last_name:
+          label:
+            default: Prezime
+            optional: Prezime (opcionalno)
+          errors:
+            blank_instructional: Unesite prezime
+            blank_informative: Prezime nedostaje
+            too_long_instructional: Prezime je predugačko (maksimalno 255 znakova)
+            too_long_informative: Prezime je predugačko
+            contains_emojis_instructional: Prezime ne može da sadrži emodžije
+            contains_emojis_informative: Prezime ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Prezime ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Prezime ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Prezime može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Prezime ne može da sadrži
+              zabranjene znakove
+            contains_html_tags_instructional: Prezime ne može da sadrži HTML
+            contains_html_tags_informative: Prezime ne može da sadrži HTML
+            contains_url_instructional: Prezime ne može da sadrži URL
+            contains_url_informative: Prezime ne može da sadrži URL
+        address1:
+          label:
+            default: Adresa
+            optional: Adresa (opcionalno)
+          errors:
+            blank_instructional: Unesite adresu
+            blank_informative: Adresa nedostaje
+            too_long_instructional: Prvi red adrese je predugačak (maksimalno 255
+              znakova)
+            too_long_informative: Prvi red adrese je predugačak
+            contains_emojis_instructional: Adresa ne može da sadrži emodžije
+            contains_emojis_informative: Adresa ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Adresa ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Adresa ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Adresa može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Adresa ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Adresa mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Adresa mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Adresa ne može da sadrži HTML
+            contains_html_tags_informative: Adresa ne može da sadrži HTML
+            contains_url_instructional: Adresa ne može da sadrži URL
+            contains_url_informative: Adresa ne može da sadrži URL
+            contains_email_instructional: Adresa ne može da sadrži imejl adresu
+            contains_email_informative: Adresa ne može da sadrži imejl adresu
+            missing_building_number_instructional: Dodajte broj zgrade ako ga imate
+            missing_building_number_informative: Broj zgrade možda nedostaje
+            street_unknown_for_zip_instructional: Unesite važeći naziv ulice za %{zip}
+            street_unknown_for_zip_informative: Naziv ulice se ne podudara sa %{zip}
+            building_number_invalid_instructional: Nije moguće pronaći broj zgrade
+              za %{street}, %{zip}
+            building_number_invalid_informative: Nije moguće pronaći broj zgrade za
+              %{street}, %{zip}
+            unknown_for_address_instructional: Prvi red adrese je možda netačan
+            unknown_for_address_informative: Prvi red adrese je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da prvi red adrese ima manje od
+              %{word_count} reči
+        street_name:
+          label:
+            default: Ulica
+            optional: Ulica (opcionalno)
+          errors:
+            blank_instructional: Unesite ulicu
+            blank_informative: Ulica nedostaje
+            too_long_instructional: Ulica je predugačka (maksimalno %{limit} znakova)
+            too_long_informative: Ulica je predugačka
+            contains_emojis_instructional: Ulica ne može da sadrži emodžije
+            contains_emojis_informative: Ulica ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Ulica ne može da sadrži matematičke
+              simbole
+            contains_mathematical_symbols_informative: Ulica ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Ulica može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Ulica ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Ulica ne može da ima više od %{word_count}
+              reči
+            contains_too_many_words_informative: Ulica ne može da ima više od %{word_count}
+              reči
+            contains_html_tags_instructional: Ulica ne može da sadrži HTML
+            contains_html_tags_informative: Ulica ne može da sadrži HTML
+            contains_url_instructional: Ulica ne može da sadrži URL
+            contains_url_informative: Ulica ne može da sadrži URL
+            contains_email_instructional: Ulica ne može da sadrži imejl adresu
+            contains_email_informative: Ulica ne može da sadrži imejl adresu
+            street_unknown_for_zip_instructional: Unesite važeću ulicu za %{zip}
+            street_unknown_for_zip_informative: Ulica nije važeća za %{zip}
+            unknown_for_address_instructional: Ulica je možda netačna
+            unknown_for_address_informative: Ulica je možda netačna
+          warnings:
+            contains_too_many_words: Preporučuje se da ulica ima manje od %{word_count}
+              reči
+        street_number:
+          label:
+            default: Broj zgrade
+            optional: Broj zgrade (opcionalno)
+          errors:
+            blank_instructional: Unesite broj zgrade
+            blank_informative: Broj zgrade nedostaje
+            too_long_instructional: Broj zgrade je predugačak (maksimalno %{limit}
+              znakova)
+            too_long_informative: Broj zgrade je predugačak
+            contains_emojis_instructional: Broj zgrade ne može da sadrži emodžije
+            contains_emojis_informative: Broj zgrade ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Broj zgrade ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Broj zgrade ne može da sadrži
+              matematičke simbole
+            contains_restricted_characters_instructional: Broj zgrade može da sadrži
+              samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Broj zgrade ne može da sadrži
+              zabranjene znakove
+            contains_html_tags_instructional: Broj zgrade ne može da sadrži HTML
+            contains_html_tags_informative: Broj zgrade ne može da sadrži HTML
+            contains_url_instructional: Broj zgrade ne može da sadrži URL
+            contains_url_informative: Broj zgrade ne može da sadrži URL
+            contains_email_instructional: Broj zgrade ne može da sadrži imejl adresu
+            contains_email_informative: Broj zgrade ne može da sadrži imejl adresu
+            missing_building_number_instructional: Dodajte broj zgrade ako ga imate
+            missing_building_number_informative: Broj zgrade možda nedostaje
+            building_number_invalid_instructional: Nije moguće pronaći broj zgrade
+              za %{street}, %{zip}
+            building_number_invalid_informative: Nije moguće pronaći broj zgrade za
+              %{street}, %{zip}
+            unknown_for_address_instructional: Unesite važeći broj zgrade
+            unknown_for_address_informative: Broj zgrade nije važeći
+          warnings:
+            contains_too_many_words: Preporučuje se da broj zgrade ima manje od %{word_count}
+              reči
+        address2:
+          label:
+            default: Stan, apartman itd.
+            optional: Stan, apartman itd. (opcionalno)
+          errors:
+            blank_instructional: Unesite stan, apartman itd.
+            blank_informative: Stan ili apartman nedostaje
+            too_long_instructional: Drugi red adrese je predugačak (maksimalno 255
+              znakova)
+            too_long_informative: Drugi red adrese je predugačak
+            contains_emojis_instructional: Drugi red adrese ne može da sadrži emodžije
+            contains_emojis_informative: Drugi red adrese ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Drugi red adrese ne može
+              da sadrži matematičke simbole
+            contains_mathematical_symbols_informative: Drugi red adrese ne može da
+              sadrži matematičke simbole
+            contains_restricted_characters_instructional: Drugi red adrese može da
+              sadrži samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Drugi red adrese ne može da
+              sadrži zabranjene znakove
+            contains_too_many_words_instructional: Drugi red adrese mora da ima manje
+              od %{word_count} reči
+            contains_too_many_words_informative: Drugi red adrese mora da ima manje
+              od %{word_count} reči
+            contains_html_tags_instructional: Drugi red adrese ne može da sadrži HTML
+            contains_html_tags_informative: Drugi red adrese ne može da sadrži HTML
+            contains_url_instructional: Drugi red adrese ne može da sadrži URL
+            contains_url_informative: Drugi red adrese ne može da sadrži URL
+            contains_email_instructional: Drugi red adrese ne može da sadrži imejl
+              adresu
+            contains_email_informative: Drugi red adrese ne može da sadrži imejl adresu
+            missing_building_number_instructional: Dodajte broj zgrade ako ga imate
+            missing_building_number_informative: Broj zgrade možda nedostaje
+            street_unknown_for_zip_instructional: Unesite važeći naziv ulice za %{zip}
+            street_unknown_for_zip_informative: Naziv ulice nije važeći za %{zip}
+            building_number_invalid_instructional: Nije moguće pronaći broj zgrade
+              za %{street}, %{zip}
+            building_number_invalid_informative: Nije moguće pronaći broj zgrade za
+              %{street}, %{zip}
+            unknown_for_address_instructional: Drugi red adrese je možda netačan
+            unknown_for_address_informative: Drugi red adrese je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da drugi red adrese ima manje
+              od %{word_count} reči
+        line2:
+          label:
+            default: Stan, apartman itd.
+            optional: Stan, apartman itd. (opcionalno)
+          errors:
+            blank_instructional: Unesite stan, apartman itd.
+            blank_informative: Stan ili apartman nedostaje
+            too_long_instructional: Drugi red adrese je predugačak (maksimalno %{limit}
+              znakova)
+            too_long_informative: Drugi red adrese je predugačak
+            contains_emojis_instructional: Drugi red adrese ne može da sadrži emodžije
+            contains_emojis_informative: Drugi red adrese ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Drugi red adrese ne može
+              da sadrži matematičke simbole
+            contains_mathematical_symbols_informative: Drugi red adrese ne može da
+              sadrži matematičke simbole
+            contains_restricted_characters_instructional: Drugi red adrese može da
+              sadrži samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Drugi red adrese ne može da
+              sadrži zabranjene znakove
+            contains_too_many_words_instructional: Drugi red adrese mora da ima manje
+              od %{word_count} reči
+            contains_too_many_words_informative: Drugi red adrese mora da ima manje
+              od %{word_count} reči
+            contains_html_tags_instructional: Drugi red adrese ne može da sadrži HTML
+              oznake
+            contains_html_tags_informative: Drugi red adrese ne može da sadrži HTML
+              oznake
+            contains_url_instructional: Drugi red adrese ne može da sadrži URL
+            contains_url_informative: Drugi red adrese ne može da sadrži URL
+            contains_email_instructional: Drugi red adrese ne može da sadrži imejl
+              adresu
+            contains_email_informative: Drugi red adrese ne može da sadrži imejl adresu
+            missing_building_number_instructional: Dodajte broj zgrade ako ga imate
+            missing_building_number_informative: Dodajte broj zgrade ako ga imate
+            street_unknown_for_zip_instructional: Unesite važeći naziv ulice za %{zip}
+            street_unknown_for_zip_informative: Unesite važeći naziv ulice za %{zip}
+            building_number_invalid_instructional: Nije moguće pronaći broj zgrade
+              za %{street}, %{zip}
+            building_number_invalid_informative: Nije moguće pronaći broj zgrade za
+              %{street}, %{zip}
+            unknown_for_address_instructional: Drugi red adrese je možda netačan
+            unknown_for_address_informative: Drugi red adrese je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da drugi red adrese ima manje
+              od %{word_count} reči
+        neighborhood:
+          label:
+            default: Naselje
+            optional: Naselje (opcionalno)
+          errors:
+            blank_instructional: Unesite naselje
+            blank_informative: Naselje nedostaje
+            too_long_instructional: Naselje je predugačko (maksimalno %{limit} znakova)
+            too_long_informative: Naselje je predugačko
+            contains_emojis_instructional: Naselje ne može da sadrži emodžije
+            contains_emojis_informative: Naselje ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Naselje ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Naselje ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Naselje može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Naselje ne može da sadrži
+              zabranjene znakove
+            contains_too_many_words_instructional: Naselje mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Naselje mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Naselje ne može da sadrži HTML oznake
+            contains_html_tags_informative: Naselje ne može da sadrži HTML oznake
+            contains_url_instructional: Naselje ne može da sadrži URL-ove
+            contains_url_informative: Naselje ne može da sadrži URL-ove
+            contains_email_instructional: Naselje ne može da sadrži imejl adrese
+            contains_email_informative: Naselje ne može da sadrži imejl adrese
+            unknown_for_city_instructional: Unesite važeći naziv naselja za %{city}
+            unknown_for_city_informative: Unesite važeći naziv naselja za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv naselja za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv naselja za %{zip}
+            unknown_for_address_instructional: Naselje je možda netačno
+            unknown_for_address_informative: Naselje je možda netačno
+          warnings:
+            contains_too_many_words: Preporučuje se da naselje ima manje od %{word_count}
+              reči
+        district:
+          label:
+            default: Okrug
+            optional: Okrug (opcionalno)
+          errors:
+            blank_instructional: Unesite okrug
+            blank_informative: Okrug nedostaje
+            too_long_instructional: Okrug je predugačak (maksimalno %{limit} znakova)
+            too_long_informative: Okrug je predugačak
+            contains_emojis_instructional: Okrug ne može da sadrži emodžije
+            contains_emojis_informative: Okrug ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Okrug ne može da sadrži matematičke
+              simbole
+            contains_mathematical_symbols_informative: Okrug ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Okrug može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Okrug ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Okrug mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Okrug mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Okrug ne može da sadrži HTML oznake
+            contains_html_tags_informative: Okrug ne može da sadrži HTML oznake
+            contains_url_instructional: Okrug ne može da sadrži URL-ove
+            contains_url_informative: Okrug ne može da sadrži URL-ove
+            contains_email_instructional: Okrug ne može da sadrži imejl adrese
+            contains_email_informative: Okrug ne može da sadrži imejl adrese
+            unknown_for_city_instructional: Unesite važeći naziv okruga za %{city}
+            unknown_for_city_informative: Unesite važeći naziv okruga za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv okruga za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv okruga za %{zip}
+            unknown_for_address_instructional: Okrug je možda netačan
+            unknown_for_address_informative: Okrug je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da okrug ima manje od %{word_count}
+              reči
+        subdistrict:
+          label:
+            default: Podokrug
+            optional: Podokrug (opcionalno)
+          errors:
+            blank_instructional: Unesite podokrug
+            blank_informative: Podokrug nedostaje
+            too_long_instructional: Podokrug je predugačak (maksimalno %{limit} znakova)
+            too_long_informative: Podokrug je predugačak
+            contains_emojis_instructional: Podokrug ne može da sadrži emodžije
+            contains_emojis_informative: Podokrug ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Podokrug ne može da sadrži
+              matematičke simbole
+            contains_mathematical_symbols_informative: Podokrug ne može da sadrži
+              matematičke simbole
+            contains_restricted_characters_instructional: Podokrug može da sadrži
+              samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Podokrug ne može da sadrži
+              zabranjene znakove
+            contains_too_many_words_instructional: Podokrug mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Podokrug mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Podokrug ne može da sadrži HTML oznake
+            contains_html_tags_informative: Podokrug ne može da sadrži HTML oznake
+            contains_url_instructional: Podokrug ne može da sadrži URL-ove
+            contains_url_informative: Podokrug ne može da sadrži URL-ove
+            contains_email_instructional: Podokrug ne može da sadrži imejl adrese
+            contains_email_informative: Podokrug ne može da sadrži imejl adrese
+            unknown_for_city_instructional: Unesite važeći naziv podokruga za %{city}
+            unknown_for_city_informative: Unesite važeći naziv podokruga za %{city}
+            unknown_for_zip_instructional: Unesite važeći naziv podokruga za %{zip}
+            unknown_for_zip_informative: Unesite važeći naziv podokruga za %{zip}
+            unknown_for_address_instructional: Podokrug je možda netačan
+            unknown_for_address_informative: Podokrug je možda netačan
+          warnings:
+            contains_too_many_words: Preporučuje se da podokrug ima manje od %{word_count}
+              reči
+        city:
+          label:
+            default: Grad
+            optional: Grad (opcionalno)
+          errors:
+            blank_instructional: Unesite grad
+            blank_informative: Grad nedostaje
+            too_long_instructional: Grad je predugačak (maksimalno 255 znakova)
+            too_long_informative: Grad je predugačak
+            contains_emojis_instructional: Grad ne može da sadrži emodžije
+            contains_emojis_informative: Grad ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Grad ne može da sadrži matematičke
+              simbole
+            contains_mathematical_symbols_informative: Grad ne može da sadrži matematičke
+              simbole
+            contains_restricted_characters_instructional: Grad može da sadrži samo
+              slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Grad ne može da sadrži zabranjene
+              znakove
+            contains_too_many_words_instructional: Grad mora da ima manje od %{word_count}
+              reči
+            contains_too_many_words_informative: Grad mora da ima manje od %{word_count}
+              reči
+            contains_html_tags_instructional: Grad ne može da sadrži HTML
+            contains_html_tags_informative: Grad ne može da sadrži HTML
+            contains_url_instructional: Grad ne može da sadrži URL
+            contains_url_informative: Grad ne može da sadrži URL
+            contains_email_instructional: Grad ne može da sadrži imejl adresu
+            contains_email_informative: Grad ne može da sadrži imejl adresu
+            unknown_for_zip_instructional: Unesite važeći grad za %{zip}
+            unknown_for_zip_informative: Grad se ne podudara sa %{zip}
+            unknown_for_province_instructional: Unesite važeći grad za %{province}
+            unknown_for_province_informative: Grad se ne podudara sa %{province}
+            unknown_for_zip_and_province_instructional: Unesite važeći grad za %{zip},
+              %{province}
+            unknown_for_zip_and_province_informative: Grad je možda netačan
+            unknown_for_address_instructional: Grad je možda netačan
+            unknown_for_address_informative: Grad je možda netačan
+        province:
+          label:
+            default: Region
+            optional: Region (opcionalno)
+          errors:
+            blank_instructional: Izaberite region
+            blank_informative: Region nedostaje
+            invalid_instructional: Izaberite region
+            invalid_informative: Region nedostaje
+            invalid_for_country_instructional: Unesite važeći region za %{country}
+            invalid_for_country_informative: Region se ne podudara sa %{country}
+            unknown_for_city_and_zip_instructional: Izaberite važeći region za %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Region se ne podudara sa %{city},
+              %{zip}
+            unknown_for_city_informative: Izaberite važeći region za %{city}
+            unknown_for_city_instructional: Region se ne podudara sa %{city}
+            unknown_for_zip_instructional: Izaberite važeći region za %{zip}
+            unknown_for_zip_informative: Region se ne podudara sa %{zip}
+            unknown_for_address_instructional: Region je možda netačan
+            unknown_for_address_informative: Region je možda netačan
+        country:
+          label:
+            default: Zemlja/region
+            optional: Zemlja/region (opcionalno)
+          errors:
+            blank_instructional: Izaberite zemlju/region
+            blank_informative: Zemlja/region nedostaje
+            not_supported_instructional: Zemlja/region nije podržana
+            not_supported_informative: Zemlja/region nije podržana
+            invalid_instructional: Unesite važeću zemlju/region
+            invalid_informative: Zemlja/region nije važeća
+            invalid_for_zip_instructional: Unesite važeću zemlju/region za ovaj poštanski
+              broj
+            invalid_for_zip_informative: "%{country} se ne podudara sa zemljom/regionom"
+        zip:
+          label:
+            default: Poštanski broj
+            optional: Poštanski broj (opcionalno)
+          errors:
+            blank_instructional: Unesite poštanski broj
+            blank_informative: Poštanski broj nedostaje
+            blocked_address_instructional: Ova lokacija nije podržana
+            blocked_address_informative: Ova lokacija nije podržana
+            invalid_instructional: Unesite važeći poštanski broj
+            invalid_informative: Poštanski broj nije važeći
+            invalid_for_country_instructional: Unesite važeći poštanski broj za %{country}
+            invalid_for_country_informative: Poštanski broj se ne podudara sa %{country}
+            invalid_for_province_instructional: Unesite važeći poštanski broj za %{province}
+            invalid_for_province_informative: Poštanski broj se ne podudara sa %{province}
+            invalid_for_country_and_province_instructional: Unesite važeći poštanski
+              broj za %{province}, %{country}
+            invalid_for_country_and_province_informative: Poštanski broj se ne podudara
+              sa %{province}, %{country}
+            too_long_instructional: Poštanski broj je predugačak
+            too_long_informative: Poštanski broj je predugačak
+            contains_emojis_instructional: Poštanski broj ne može da sadrži emodžije
+            contains_emojis_informative: Poštanski broj ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Poštanski broj ne može da
+              sadrži matematičke simbole
+            contains_mathematical_symbols_informative: Poštanski broj ne može da sadrži
+              matematičke simbole
+            contains_restricted_characters_instructional: Poštanski broj može da sadrži
+              samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Poštanski broj ne može da
+              sadrži zabranjene znakove
+            not_supported_instructional: Poštanski broj nije podržan. Unesite novu
+              adresu i pokušajte ponovo
+            not_supported_informative: Poštanski broj nije podržan
+            contains_html_tags_instructional: Poštanski broj ne može da sadrži HTML
+            contains_html_tags_informative: Poštanski broj ne može da sadrži HTML
+            unknown_for_province_instructional: Unesite važeći poštanski broj za %{province}
+            unknown_for_province_informative: Poštanski broj nije važeći za %{province}
+            unknown_for_address_instructional: Poštanski broj je možda netačan
+            unknown_for_address_informative: Poštanski broj je možda netačan
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (opcionalno)
+          errors:
+            blank_instructional: Unesite broj telefona
+            blank_informative: Broj telefona nedostaje
+            invalid_instructional: Unesite važeći broj telefona
+            invalid_informative: Broj telefona nije važeći
+            too_long_instructional: Broj telefona je predugačak
+            too_long_informative: Broj telefona je predugačak
+            contains_emojis_instructional: Broj telefona ne može da sadrži emodžije
+            contains_emojis_informative: Broj telefona ne može da sadrži emodžije
+            contains_mathematical_symbols_instructional: Broj telefona ne može da
+              sadrži matematičke simbole
+            contains_mathematical_symbols_informative: Broj telefona ne može da sadrži
+              matematičke simbole
+            contains_restricted_characters_instructional: Broj telefona može da sadrži
+              samo slova, brojeve, lokalne znakove i specijalne znakove
+            contains_restricted_characters_informative: Broj telefona ne može da sadrži
+              zabranjene znakove
+        address:
+          errors:
+            may_not_exist_instructional: Adresa nije pronađena ili ne postoji
+            may_not_exist_informative: Adresa nije pronađena

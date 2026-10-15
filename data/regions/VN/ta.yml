@@ -1,0 +1,43 @@
+---
+ta:
+  worldwide:
+    VN:
+      addresses:
+        neighborhood:
+          label:
+            default: வார்டு
+            optional: வார்டு (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு வார்டை உள்ளிடவும்
+            blank_informative: வார்டு இல்லை
+            too_long_instructional: வார்டு நீளமாக உள்ளது
+            too_long_informative: வார்டு நீளமாக உள்ளது (அதிகபட்சம் 255 எழுத்துகள்)
+            contains_emojis_instructional: வார்டில் எமோஜிகள் இருக்கக் கூடாது
+            contains_emojis_informative: வார்டில் எமோஜிகள் இருக்கக் கூடாது
+            contains_mathematical_symbols_instructional: வார்டில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_mathematical_symbols_informative: வார்டில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_restricted_characters_instructional: வார்டில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்பு எழுத்துகள் மட்டுமே இருக்க முடியும்
+            contains_restricted_characters_informative: வார்டில் தடைசெய்யப்பட்ட எழுத்துகள்
+              இருக்கக் கூடாது
+            contains_too_many_words_instructional: வார்டு %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: வார்டு %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: வார்டில் HTML இருக்கக் கூடாது
+            contains_html_tags_informative: வார்டில் HTML இருக்கக் கூடாது
+            contains_url_instructional: வார்டில் URL இருக்கக் கூடாது
+            contains_url_informative: வார்டில் URL இருக்கக் கூடாது
+            contains_email_instructional: வார்டில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            contains_email_informative: வார்டில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            unknown_for_city_instructional: "%{city}-க்கான சரியான வார்டு பெயரை உள்ளிடவும்"
+            unknown_for_city_informative: "%{city} உடன் வார்டு பொருந்தவில்லை"
+            unknown_for_zip_instructional: "%{zip}-க்கான சரியான வார்டு பெயரை உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip} உடன் வார்டு பொருந்தவில்லை"
+            unknown_for_address_instructional: வார்டு தவறாக இருக்கலாம்
+            unknown_for_address_informative: வார்டு தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: வார்டில் %{word_count} வார்த்தைகளுக்குக் குறைவாக
+              இருக்கப் பரிந்துரைக்கப்படுகிறது

@@ -1,0 +1,52 @@
+---
+mr:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: उपनगर
+            optional: उपनगर (पर्यायी)
+          errors:
+            blank_instructional: उपनगर टाका
+            blank_informative: उपनगर गहाळ आहे
+            too_long_instructional: उपनगर खूप मोठे आहे (जास्तीत जास्त 255 अक्षरे)
+            too_long_informative: उपनगर खूप मोठे आहे
+            contains_emojis_instructional: उपनगरामध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: उपनगरामध्ये इमोजी असू शकत नाहीत
+            contains_restricted_characters_instructional: उपनगरामध्ये फक्त अक्षरे,
+              अंक, स्थानिक अक्षरे आणि विशेष अक्षरे असू शकतात
+            contains_restricted_characters_informative: उपनगरामध्ये प्रतिबंधित अक्षरे
+              असू शकत नाहीत
+            contains_html_tags_instructional: उपनगरामध्ये HTML असू शकत नाही
+            contains_html_tags_informative: उपनगरामध्ये HTML असू शकत नाही
+        province:
+          label:
+            default: राज्य/प्रदेश
+            optional: राज्य/प्रदेश (पर्यायी)
+          errors:
+            blank_instructional: राज्य/प्रदेश निवडा
+            blank_informative: राज्य/प्रदेश गहाळ आहे
+        zip:
+          label:
+            default: पोस्टल कोड
+            optional: पोस्टल कोड (पर्यायी)
+          errors:
+            blank_instructional: पोस्टल कोड टाका
+            blank_informative: पोस्टल कोड गहाळ आहे
+            invalid_for_country_instructional: "%{country} साठी वैध पोस्टल कोड टाका"
+            invalid_for_country_informative: पोस्टल कोड %{country} साठी वैध नाही
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              साठी वैध पोस्टल कोड टाका"
+            invalid_for_country_and_province_informative: पोस्टल कोड %{province},
+              %{country} साठी वैध नाही
+            too_long_instructional: पोस्टल कोड खूप मोठा आहे
+            too_long_informative: पोस्टल कोड खूप मोठा आहे
+            contains_emojis_instructional: पोस्टल कोडमध्ये इमोजी असू शकत नाहीत
+            contains_emojis_informative: पोस्टल कोडमध्ये इमोजी असू शकत नाहीत
+            contains_restricted_characters_instructional: पोस्टल कोडमध्ये फक्त अक्षरे,
+              अंक, स्थानिक अक्षरे आणि विशेष अक्षरे असू शकतात
+            contains_restricted_characters_informative: पोस्टल कोडमध्ये प्रतिबंधित
+              अक्षरे असू शकत नाहीत
+            contains_html_tags_instructional: पोस्टल कोडमध्ये HTML असू शकत नाही
+            contains_html_tags_informative: पोस्टल कोडमध्ये HTML असू शकत नाही

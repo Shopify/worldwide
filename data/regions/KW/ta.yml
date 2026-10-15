@@ -1,0 +1,88 @@
+---
+ta:
+  worldwide:
+    KW:
+      addresses:
+        province:
+          label:
+            default: ஆளுநரகம்
+            optional: ஆளுநரகம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு ஆளுநரகத்தைத் தேர்ந்தெடுக்கவும்
+            blank_informative: ஆளுநரகம் இல்லை
+        neighborhood:
+          label:
+            default: பிளாக்
+            optional: பிளாக் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு பிளாக்கை உள்ளிடவும்
+            blank_informative: பிளாக் இல்லை
+            too_long_instructional: பிளாக் நீளமாக உள்ளது (அதிகபட்சம் %{limit} எழுத்துகள்)
+            too_long_informative: பிளாக் நீளமாக உள்ளது
+            contains_emojis_instructional: பிளாக்கில் எமோஜிகள் இருக்கக் கூடாது
+            contains_emojis_informative: பிளாக்கில் எமோஜிகள் இருக்கக் கூடாது
+            contains_mathematical_symbols_instructional: பிளாக்கில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_mathematical_symbols_informative: பிளாக்கில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_restricted_characters_instructional: பிளாக்கில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்பு எழுத்துகள் மட்டுமே இருக்க முடியும்
+            contains_restricted_characters_informative: பிளாக்கில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக் கூடாது
+            contains_too_many_words_instructional: பிளாக் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: பிளாக் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: பிளாக்கில் HTML இருக்கக் கூடாது
+            contains_html_tags_informative: பிளாக்கில் HTML இருக்கக் கூடாது
+            contains_url_instructional: பிளாக்கில் URL இருக்கக் கூடாது
+            contains_url_informative: பிளாக்கில் URL இருக்கக் கூடாது
+            contains_email_instructional: பிளாக்கில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            contains_email_informative: பிளாக்கில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            unknown_for_city_instructional: "%{city}-க்கான சரியான பிளாக்கை உள்ளிடவும்"
+            unknown_for_city_informative: "%{city}-க்கு பிளாக் செல்லுபடியாகாது"
+            unknown_for_zip_instructional: "%{zip}-க்கான சரியான பிளாக்கை உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip}-க்கு பிளாக் செல்லுபடியாகாது"
+            unknown_for_address_instructional: பிளாக் தவறாக இருக்கலாம்
+            unknown_for_address_informative: பிளாக் தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: பிளாக்கில் %{word_count} வார்த்தைகளுக்குக் குறைவாக
+              இருக்கப் பரிந்துரைக்கப்படுகிறது
+        district:
+          label:
+            default: பிளாக்
+            optional: பிளாக் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு பிளாக்கை உள்ளிடவும்
+            blank_informative: பிளாக் இல்லை
+            too_long_instructional: பிளாக் நீளமாக உள்ளது (அதிகபட்சம் %{limit} எழுத்துகள்)
+            too_long_informative: பிளாக் நீளமாக உள்ளது
+            contains_emojis_instructional: பிளாக்கில் எமோஜிகள் இருக்கக் கூடாது
+            contains_emojis_informative: பிளாக்கில் எமோஜிகள் இருக்கக் கூடாது
+            contains_mathematical_symbols_instructional: பிளாக்கில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_mathematical_symbols_informative: பிளாக்கில் கணிதக் குறியீடுகள்
+              இருக்கக் கூடாது
+            contains_restricted_characters_instructional: பிளாக்கில் எழுத்துகள், எண்கள்,
+              உள்ளூர் எழுத்துகள் மற்றும் சிறப்பு எழுத்துகள் மட்டுமே இருக்க முடியும்
+            contains_restricted_characters_informative: பிளாக்கில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக் கூடாது
+            contains_too_many_words_instructional: பிளாக் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_too_many_words_informative: பிளாக் %{word_count} வார்த்தைகளுக்குக்
+              குறைவாக இருக்க வேண்டும்
+            contains_html_tags_instructional: பிளாக்கில் HTML இருக்கக் கூடாது
+            contains_html_tags_informative: பிளாக்கில் HTML இருக்கக் கூடாது
+            contains_url_instructional: பிளாக்கில் URL இருக்கக் கூடாது
+            contains_url_informative: பிளாக்கில் URL இருக்கக் கூடாது
+            contains_email_instructional: பிளாக்கில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            contains_email_informative: பிளாக்கில் மின்னஞ்சல் முகவரி இருக்கக் கூடாது
+            unknown_for_city_instructional: "%{city}-க்கான சரியான பிளாக்கை உள்ளிடவும்"
+            unknown_for_city_informative: "%{city}-க்கு பிளாக் செல்லுபடியாகாது"
+            unknown_for_zip_instructional: "%{zip}-க்கான சரியான பிளாக்கை உள்ளிடவும்"
+            unknown_for_zip_informative: "%{zip}-க்கு பிளாக் செல்லுபடியாகாது"
+            unknown_for_address_instructional: பிளாக் தவறாக இருக்கலாம்
+            unknown_for_address_informative: பிளாக் தவறாக இருக்கலாம்
+          warnings:
+            contains_too_many_words: பிளாக்கில் %{word_count} வார்த்தைகளுக்குக் குறைவாக
+              இருக்கப் பரிந்துரைக்கப்படுகிறது

@@ -1,0 +1,54 @@
+---
+ka:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: შტატი
+            optional: შტატი (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე შტატი
+            blank_informative: შეიყვანე შტატი
+            invalid_for_country_instructional: 'შეიყვანე სწორი შტატი შემდეგისთვის:
+              %{city}, %{zip}'
+            invalid_for_country_informative: შტატი არასწორია
+            unknown_for_city_and_zip_instructional: 'შეიყვანე სწორი შტატი შემდეგისთვის:
+              %{city}, %{zip}'
+            unknown_for_city_and_zip_informative: 'შტატი არასწორია შემდეგისთვის: %{city},
+              %{zip}'
+            unknown_for_city_instructional: 'აირჩიე სწორი შტატი ქალაქისთვის: %{city}'
+            unknown_for_city_informative: 'შტატი არასწორია ქალაქისთვის: %{city}'
+            unknown_for_zip_instructional: 'აირჩიე სწორი შტატი ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'შტატი არასწორია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: შტატი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: შტატი შეიძლება არასწორი იყოს
+        zip:
+          label:
+            default: ZIP კოდი
+            optional: ZIP კოდი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ZIP კოდი
+            blank_informative: ZIP კოდი მითითებული არ არის
+            invalid_for_country_instructional: 'შეიყვანე სწორი ZIP კოდი ქვეყნისთვის:
+              %{country}'
+            invalid_for_country_informative: 'ZIP კოდი არასწორია ქვეყნისთვის: %{country}'
+            invalid_for_province_instructional: 'შეიყვანე სწორი ZIP კოდი შემდეგისთვის:
+              %{province}'
+            invalid_for_province_informative: 'ZIP კოდი არასწორია შემდეგისთვის: %{province}'
+            invalid_for_country_and_province_instructional: 'შეიყვანე სწორი ZIP კოდი
+              შემდეგისთვის: %{province}, %{country}'
+            invalid_for_country_and_province_informative: 'ZIP კოდი არასწორია შემდეგისთვის:
+              %{province}, %{country}'
+            too_long_instructional: ZIP კოდი ძალიან გრძელია
+            too_long_informative: ZIP კოდი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)
+            contains_emojis_instructional: ZIP კოდი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_emojis_informative: ZIP კოდი არ შეიძლება შეიცავდეს ემოჯიებს
+            contains_restricted_characters_instructional: ZIP კოდი არ შეიძლება შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_restricted_characters_informative: ZIP კოდი არ შეიძლება შეიცავდეს
+              შეზღუდულ სიმბოლოებს
+            contains_html_tags_instructional: ZIP კოდი არ შეიძლება შეიცავდეს HTML-ს
+            contains_html_tags_informative: ZIP კოდი არ შეიძლება შეიცავდეს HTML-ს
+            unknown_for_address_instructional: ZIP კოდი შეიძლება არასწორი იყოს
+            unknown_for_address_informative: ZIP კოდი შეიძლება არასწორი იყოს

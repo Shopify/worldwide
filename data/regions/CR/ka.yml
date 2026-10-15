@@ -1,0 +1,50 @@
+---
+ka:
+  worldwide:
+    CR:
+      addresses:
+        province:
+          label:
+            default: პროვინცია
+            optional: პროვინცია (არასავალდებულო)
+          errors:
+            blank_instructional: აირჩიე პროვინცია
+            blank_informative: მითითებული არ არის პროვინცია
+        neighborhood:
+          label:
+            default: ოლქი
+            optional: ოლქი (არასავალდებულო)
+          errors:
+            blank_instructional: შეიყვანე ოლქი
+            blank_informative: მითითებული არ არის ოლქი
+            too_long_instructional: ოლქი ძალიან გრძელია (მაქსიმუმ %{limit} სიმბოლო)
+            too_long_informative: ოლქი ძალიან გრძელია
+            contains_emojis_instructional: ოლქი არ უნდა შეიცავდეს ემოჯებს
+            contains_emojis_informative: ოლქი არ უნდა შეიცავდეს ემოჯებს
+            contains_mathematical_symbols_instructional: ოლქი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_mathematical_symbols_informative: ოლქი არ უნდა შეიცავდეს მათემატიკურ
+              სიმბოლოებს
+            contains_restricted_characters_instructional: ოლქი უნდა შეიცავდეს მხოლოდ
+              ასოებს, ციფრებს, ლოკალურ და სპეციალურ სიმბოლოებს
+            contains_restricted_characters_informative: ოლქი არ უნდა შეიცავდეს შეზღუდულ
+              სიმბოლოებს
+            contains_too_many_words_instructional: ოლქი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_too_many_words_informative: ოლქი უნდა შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას
+            contains_html_tags_instructional: ოლქი არ უნდა შეიცავდეს HTML-ს
+            contains_html_tags_informative: ოლქი არ უნდა შეიცავდეს HTML-ს
+            contains_url_instructional: ოლქი არ უნდა შეიცავდეს URL-ს
+            contains_url_informative: ოლქი არ უნდა შეიცავდეს URL-ს
+            contains_email_instructional: ოლქი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            contains_email_informative: ოლქი არ უნდა შეიცავდეს ელფოსტის მისამართს
+            unknown_for_city_instructional: შეიყვანე სწორი ოლქი %{city}-სთვის
+            unknown_for_city_informative: ოლქი არასწორია %{city}-სთვის
+            unknown_for_zip_instructional: 'შეიყვანე სწორი ოლქი ინდექსისთვის: %{zip}'
+            unknown_for_zip_informative: 'ოლქი არასწორია ინდექსისთვის: %{zip}'
+            unknown_for_address_instructional: ოლქი შესაძლოა არასწორი იყოს
+            unknown_for_address_informative: ოლქი შესაძლოა არასწორი იყოს
+          warnings:
+            contains_too_many_words: რეკომენდებულია ოლქი შეიცავდეს %{word_count}-ზე
+              ნაკლებ სიტყვას

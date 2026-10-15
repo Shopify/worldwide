@@ -29,13 +29,13 @@ lv:
       default: "%-d.%02m.%Y."
       billing: "%-d.%02m.%Y."
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M šodien"
-      yesterday_at_time: "%02k:%M vakar"
-      tomorrow_at_time: "%02k:%M rīt"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %b"
+      today_at_time: Šodien plkst. %02k:%M
+      yesterday_at_time: Vakar plkst. %02k:%M
+      tomorrow_at_time: Rīt plkst. %02k:%M
+      on_weekday_at_time: "%A plkst. %02k:%M"
+      on_date_time_current_year: "%-d. %b, plkst. %02k:%M"
       on_date: "%Y. g. %-d. %b"
-      ago: "%{time} ago"
+      ago: Pirms %{time}
       x_hours_ago:
         one: pirms %{count} stundas
         other: pirms %{count} stundām
@@ -90,8 +90,8 @@ lv:
     - novembris
     - decembris
     relative_day_names:
-      this_week: šajā nedēļā
-      this_month: šajā mēnesī
+      this_week: šonedēļ
+      this_month: šomēnes
       day_before_yesterday: aizvakar
       yesterday: vakar
       today: šodien
@@ -130,13 +130,13 @@ lv:
       short: "%-d. %b %02k:%M"
       billing: "%-d.%02m.%Y."
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: "%02k:%M šodien"
-      yesterday_at_time: "%02k:%M vakar"
-      tomorrow_at_time: "%02k:%M rīt"
-      on_weekday_at_time: "%02k:%M %A"
-      on_date_time_current_year: "%02k:%M %-d. %b"
+      today_at_time: Šodien plkst. %02k:%M
+      yesterday_at_time: Vakar plkst. %02k:%M
+      tomorrow_at_time: Rīt plkst. %02k:%M
+      on_weekday_at_time: "%A plkst. %02k:%M"
+      on_date_time_current_year: "%-d. %b, plkst. %02k:%M"
       on_date: "%Y. g. %-d. %b"
-      ago: "%{time} ago"
+      ago: Pirms %{time}
       x_hours_ago:
         one: pirms %{count} stundas
         other: pirms %{count} stundām
@@ -146,7 +146,7 @@ lv:
         other: pirms %{count} minūtēm
         zero: pirms %{count} minūtēm
       cc_expiry_date: "%m/%Y"
-    am: am
-    pm: pm
-    just_now: tagad
+    am: AM
+    pm: PM
+    just_now: Nupat
     yesterday: vakar

@@ -1,0 +1,46 @@
+---
+gl:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Comuna
+            optional: Comuna (opcional)
+          errors:
+            blank_instructional: Escribe unha comuna
+            blank_informative: Falta a comuna
+            too_long_instructional: A comuna é demasiado longa (o máximo son %{limit}
+              caracteres)
+            too_long_informative: A comuna é demasiado longa
+            contains_emojis_instructional: A comuna non pode conter emojis
+            contains_emojis_informative: A comuna non pode conter emojis
+            contains_mathematical_symbols_instructional: A comuna non pode conter
+              símbolos matemáticos
+            contains_mathematical_symbols_informative: A comuna non pode conter símbolos
+              matemáticos
+            contains_restricted_characters_instructional: A comuna só pode conter
+              letras, números, caracteres locais e caracteres especiais
+            contains_restricted_characters_informative: A comuna non pode conter caracteres
+              restrinxidos
+            contains_too_many_words_instructional: A comuna debe ter menos de %{word_count}
+              palabras
+            contains_too_many_words_informative: A comuna debe ter menos de %{word_count}
+              palabras
+            contains_html_tags_instructional: A comuna non pode conter etiquetas HTML
+            contains_html_tags_informative: A comuna non pode conter etiquetas HTML
+            contains_url_instructional: A comuna non pode conter URL
+            contains_url_informative: A comuna non pode conter URL
+            contains_email_instructional: A comuna non pode conter enderezos de correo
+              electrónico
+            contains_email_informative: A comuna non pode conter enderezos de correo
+              electrónico
+            unknown_for_city_instructional: Escribe unha comuna válida para %{city}
+            unknown_for_city_informative: Escribe unha comuna válida para %{city}
+            unknown_for_zip_instructional: Escribe unha comuna válida para %{zip}
+            unknown_for_zip_informative: Escribe unha comuna válida para %{zip}
+            unknown_for_address_instructional: A comuna pode ser incorrecta
+            unknown_for_address_informative: A comuna pode ser incorrecta
+          warnings:
+            contains_too_many_words: Recoméndase que a comuna teña menos de %{word_count}
+              palabras

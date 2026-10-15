@@ -1,0 +1,50 @@
+---
+sr:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Država
+            optional: Država (opcionalno)
+          errors:
+            blank_instructional: Izaberite državu
+            blank_informative: Unesite državu
+            invalid_for_country_instructional: Unesite važeću državu za %{city}, %{zip}
+            invalid_for_country_informative: Država nije važeća
+            unknown_for_city_and_zip_instructional: Unesite važeću državu za %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Država nije važeća za %{city}, %{zip}
+            unknown_for_city_instructional: Izaberite važeću državu za %{city}
+            unknown_for_city_informative: Država nije važeća za %{city}
+            unknown_for_zip_instructional: Izaberite važeću državu za %{zip}
+            unknown_for_zip_informative: Država nije važeća za %{zip}
+            unknown_for_address_instructional: Država je možda netačna
+            unknown_for_address_informative: Država je možda netačna
+        zip:
+          label:
+            default: ZIP kod
+            optional: ZIP kod (opcionalno)
+          errors:
+            blank_instructional: Unesite ZIP kod
+            blank_informative: ZIP kod nedostaje
+            invalid_for_country_instructional: Unesite važeći ZIP kod za %{country}
+            invalid_for_country_informative: ZIP kod nije važeći za %{country}
+            invalid_for_province_instructional: Unesite važeći ZIP kod za %{province}
+            invalid_for_province_informative: ZIP kod nije važeći za %{province}
+            invalid_for_country_and_province_instructional: Unesite važeći ZIP kod
+              za %{province}, %{country}
+            invalid_for_country_and_province_informative: ZIP kod nije važeći za %{province},
+              %{country}
+            too_long_instructional: ZIP kod je predugačak
+            too_long_informative: ZIP kod je predugačak (maksimalno 255 znakova)
+            contains_emojis_instructional: ZIP kod ne može da sadrži emodžije
+            contains_emojis_informative: ZIP kod ne može da sadrži emodžije
+            contains_restricted_characters_instructional: ZIP kod ne može da sadrži
+              zabranjene znakove
+            contains_restricted_characters_informative: ZIP kod ne može da sadrži
+              zabranjene znakove
+            contains_html_tags_instructional: ZIP kod ne može da sadrži HTML
+            contains_html_tags_informative: ZIP kod ne može da sadrži HTML
+            unknown_for_address_instructional: ZIP kod je možda netačan
+            unknown_for_address_informative: ZIP kod je možda netačan

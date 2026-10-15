@@ -1,0 +1,54 @@
+---
+gu:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: રાજ્ય
+            optional: રાજ્ય (વૈકલ્પિક)
+          errors:
+            blank_instructional: રાજ્ય પસંદ કરો
+            blank_informative: રાજ્ય દાખલ કરો
+            invalid_for_country_instructional: "%{city}, %{zip} માટે માન્ય રાજ્ય દાખલ
+              કરો"
+            invalid_for_country_informative: રાજ્ય માન્ય નથી
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip} માટે માન્ય રાજ્ય
+              દાખલ કરો"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip} માટે રાજ્ય માન્ય
+              નથી"
+            unknown_for_city_instructional: "%{city} માટે માન્ય રાજ્ય પસંદ કરો"
+            unknown_for_city_informative: "%{city} માટે રાજ્ય માન્ય નથી"
+            unknown_for_zip_instructional: "%{zip} માટે માન્ય રાજ્ય પસંદ કરો"
+            unknown_for_zip_informative: "%{zip} માટે રાજ્ય માન્ય નથી"
+            unknown_for_address_instructional: રાજ્ય ખોટું હોઈ શકે છે
+            unknown_for_address_informative: રાજ્ય ખોટું હોઈ શકે છે
+        zip:
+          label:
+            default: ZIP કોડ
+            optional: ZIP કોડ (વૈકલ્પિક)
+          errors:
+            blank_instructional: ZIP કોડ દાખલ કરો
+            blank_informative: ZIP કોડ ખૂટે છે
+            invalid_for_country_instructional: "%{country} માટે માન્ય ZIP કોડ દાખલ
+              કરો"
+            invalid_for_country_informative: "%{country} માટે ZIP કોડ માન્ય નથી"
+            invalid_for_province_instructional: "%{province} માટે માન્ય ZIP કોડ દાખલ
+              કરો"
+            invalid_for_province_informative: "%{province} માટે ZIP કોડ માન્ય નથી"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              માટે માન્ય ZIP કોડ દાખલ કરો"
+            invalid_for_country_and_province_informative: "%{province}, %{country}
+              માટે ZIP કોડ માન્ય નથી"
+            too_long_instructional: ZIP કોડ બહુ લાંબો છે
+            too_long_informative: ZIP કોડ બહુ લાંબો છે (મહત્તમ 255 અક્ષરો)
+            contains_emojis_instructional: ZIP કોડમાં ઇમોજી ન હોઈ શકે
+            contains_emojis_informative: ZIP કોડમાં ઇમોજી ન હોઈ શકે
+            contains_restricted_characters_instructional: ZIP કોડમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_restricted_characters_informative: ZIP કોડમાં પ્રતિબંધિત અક્ષરો
+              ન હોઈ શકે
+            contains_html_tags_instructional: ZIP કોડમાં HTML ન હોઈ શકે
+            contains_html_tags_informative: ZIP કોડમાં HTML ન હોઈ શકે
+            unknown_for_address_instructional: ZIP કોડ ખોટો હોઈ શકે છે
+            unknown_for_address_informative: ZIP કોડ ખોટો હોઈ શકે છે

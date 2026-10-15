@@ -1,0 +1,27 @@
+---
+et:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Osariik/territoorium
+            optional: Osariik/territoorium (valikuline)
+          errors:
+            blank_instructional: Vali osariik/territoorium
+            blank_informative: Osariik/territoorium on puudu
+        zip:
+          label:
+            default: Postiindeks
+            optional: Postiindeks (valikuline)
+          errors:
+            too_long_instructional: Postiindeks on liiga pikk
+            too_long_informative: Postiindeks on liiga pikk
+            contains_emojis_instructional: Postiindeks ei tohi sisaldada emotikone
+            contains_emojis_informative: Postiindeks ei tohi sisaldada emotikone
+            contains_restricted_characters_instructional: Postiindeks ei tohi sisaldada
+              keelatud tähemärke
+            contains_restricted_characters_informative: Postiindeks ei tohi sisaldada
+              keelatud tähemärke
+            contains_html_tags_instructional: Postiindeks ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Postiindeks ei tohi sisaldada HTML-i

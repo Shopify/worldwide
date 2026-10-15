@@ -1,0 +1,27 @@
+---
+uk:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Штат/територія
+            optional: Штат/територія (необов’язково)
+          errors:
+            blank_instructional: Виберіть штат/територію
+            blank_informative: Відсутній штат/територія
+        zip:
+          label:
+            default: Поштовий індекс
+            optional: Поштовий індекс (необов’язково)
+          errors:
+            too_long_instructional: Поштовий індекс задовгий
+            too_long_informative: Поштовий індекс задовгий
+            contains_emojis_instructional: Поштовий індекс не може містити емодзі
+            contains_emojis_informative: Поштовий індекс не може містити емодзі
+            contains_restricted_characters_instructional: Поштовий індекс не може
+              містити заборонені символи
+            contains_restricted_characters_informative: Поштовий індекс не може містити
+              заборонені символи
+            contains_html_tags_instructional: Поштовий індекс не може містити HTML
+            contains_html_tags_informative: Поштовий індекс не може містити HTML

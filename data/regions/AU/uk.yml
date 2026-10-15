@@ -1,0 +1,54 @@
+---
+uk:
+  worldwide:
+    AU:
+      addresses:
+        city:
+          label:
+            default: Передмістя
+            optional: Передмістя (необов'язково)
+          errors:
+            blank_instructional: Введіть назву передмістя
+            blank_informative: Не вказано передмістя
+            too_long_instructional: Назва передмістя задовга (максимум 255 символів)
+            too_long_informative: Назва передмістя задовга
+            contains_emojis_instructional: Назва передмістя не може містити емодзі
+            contains_emojis_informative: Назва передмістя не може містити емодзі
+            contains_restricted_characters_instructional: Назва передмістя може містити
+              лише літери, цифри, локальні та спеціальні символи
+            contains_restricted_characters_informative: Назва передмістя не може містити
+              заборонені символи
+            contains_html_tags_instructional: Назва передмістя не може містити HTML-теги
+            contains_html_tags_informative: Назва передмістя не може містити HTML-теги
+        province:
+          label:
+            default: Штат/територія
+            optional: Штат/територія (необов'язково)
+          errors:
+            blank_instructional: Виберіть штат/територію
+            blank_informative: Не вказано штат/територію
+        zip:
+          label:
+            default: Поштовий індекс
+            optional: Поштовий індекс (необов'язково)
+          errors:
+            blank_instructional: Введіть поштовий індекс
+            blank_informative: Не вказано поштовий індекс
+            invalid_for_country_instructional: 'Введіть дійсний поштовий індекс для
+              такої країни: %{country}'
+            invalid_for_country_informative: 'Недійсний поштовий індекс для такої
+              країни: %{country}'
+            invalid_for_country_and_province_instructional: 'Введіть дійсний поштовий
+              індекс для такого регіону: %{province}, %{country}'
+            invalid_for_country_and_province_informative: 'Недійсний поштовий індекс
+              для такого регіону: %{province}, %{country}'
+            too_long_instructional: Поштовий індекс задовгий
+            too_long_informative: Поштовий індекс задовгий
+            contains_emojis_instructional: Поштовий індекс не може містити емодзі
+            contains_emojis_informative: Поштовий індекс не може містити емодзі
+            contains_restricted_characters_instructional: Поштовий індекс може містити
+              лише літери, цифри, локальні та спеціальні символи
+            contains_restricted_characters_informative: Поштовий індекс не може містити
+              заборонені символи
+            contains_html_tags_instructional: Поштовий індекс не може містити HTML-теги
+            contains_html_tags_informative: Поштовий індекс не може містити HTML-теги

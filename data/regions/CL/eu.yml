@@ -1,0 +1,44 @@
+---
+eu:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: Komuna
+            optional: Komuna (aukerakoa)
+          errors:
+            blank_instructional: Sartu komuna bat
+            blank_informative: Komuna falta da
+            too_long_instructional: Komuna luzeegia da (gehienez %{limit} karaktere)
+            too_long_informative: Komuna luzeegia da
+            contains_emojis_instructional: Komunak ezin du emojirik izan
+            contains_emojis_informative: Komunak ezin du emojirik izan
+            contains_mathematical_symbols_instructional: Komunak ezin du sinbolo matematikorik
+              izan
+            contains_mathematical_symbols_informative: Komunak ezin du sinbolo matematikorik
+              izan
+            contains_restricted_characters_instructional: Komunak letrak, zenbakiak,
+              karaktere lokalak eta karaktere bereziak soilik izan ditzake
+            contains_restricted_characters_informative: Komunak ezin du karaktere
+              mugaturik izan
+            contains_too_many_words_instructional: Komunak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_too_many_words_informative: Komunak %{word_count} hitz baino
+              gutxiago izan behar ditu
+            contains_html_tags_instructional: Komunak ezin du HTML etiketarik izan
+            contains_html_tags_informative: Komunak ezin du HTML etiketarik izan
+            contains_url_instructional: Komunak ezin du URLrik izan
+            contains_url_informative: Komunak ezin du URLrik izan
+            contains_email_instructional: Komunak ezin du helbide elektronikorik izan
+            contains_email_informative: Komunak ezin du helbide elektronikorik izan
+            unknown_for_city_instructional: 'Sartu baliozko komuna bat honentzat:
+              %{city}'
+            unknown_for_city_informative: 'Sartu baliozko komuna bat honentzat: %{city}'
+            unknown_for_zip_instructional: 'Sartu baliozko komuna bat honentzat: %{zip}'
+            unknown_for_zip_informative: 'Sartu baliozko komuna bat honentzat: %{zip}'
+            unknown_for_address_instructional: Komuna agian ez da zuzena
+            unknown_for_address_informative: Komuna agian ez da zuzena
+          warnings:
+            contains_too_many_words: Komunak %{word_count} hitz baino gutxiago izatea
+              gomendatzen da

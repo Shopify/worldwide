@@ -1,0 +1,62 @@
+---
+et:
+  worldwide:
+    BR:
+      addresses:
+        address1:
+          label:
+            default: Tänav ja majanumber
+            optional: Tänav ja majanumber (valikuline)
+          errors:
+            blank_instructional: Sisesta tänav ja majanumber
+            blank_informative: Tänav ja majanumber on puudu
+        province:
+          label:
+            default: Osariik
+            optional: Osariik (valikuline)
+          errors:
+            blank_instructional: Vali osariik
+            blank_informative: Osariik on puudu
+        district:
+          label:
+            default: Naabruskond
+            optional: Naabruskond (valikuline)
+          errors:
+            blank_instructional: Sisesta naabruskond
+            blank_informative: Naabruskond on puudu
+            too_long_instructional: Naabruskond on liiga pikk (kuni %{limit} tähemärki)
+            too_long_informative: Naabruskond on liiga pikk
+            contains_emojis_instructional: Naabruskond ei tohi sisaldada emotikone
+            contains_emojis_informative: Naabruskond ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Naabruskond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Naabruskond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Naabruskond võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Naabruskond ei tohi sisaldada
+              keelatud tähemärke
+            contains_too_many_words_instructional: Naabruskond peab sisaldama vähem
+              kui %{word_count} sõna
+            contains_too_many_words_informative: Naabruskond peab sisaldama vähem
+              kui %{word_count} sõna
+            contains_html_tags_instructional: Naabruskond ei tohi sisaldada HTML-i
+              tähiseid
+            contains_html_tags_informative: Naabruskond ei tohi sisaldada HTML-i tähiseid
+            contains_url_instructional: Naabruskond ei tohi sisaldada URL-e
+            contains_url_informative: Naabruskond ei tohi sisaldada URL-e
+            contains_email_instructional: Naabruskond ei tohi sisaldada e-posti aadresse
+            contains_email_informative: Naabruskond ei tohi sisaldada e-posti aadresse
+            unknown_for_city_instructional: Sisesta kehtiv naabruskonna nimi asukohale
+              %{city}
+            unknown_for_city_informative: Sisesta kehtiv naabruskonna nimi asukohale
+              %{city}
+            unknown_for_zip_instructional: Sisesta kehtiv naabruskonna nimi postiindeksile
+              %{zip}
+            unknown_for_zip_informative: Sisesta kehtiv naabruskonna nimi postiindeksile
+              %{zip}
+            unknown_for_address_instructional: Naabruskond võib olla vale
+            unknown_for_address_informative: Naabruskond võib olla vale
+          warnings:
+            contains_too_many_words: Soovitatav on, et naabruskond sisaldaks vähem
+              kui %{word_count} sõna

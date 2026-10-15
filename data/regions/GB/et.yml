@@ -1,0 +1,29 @@
+---
+et:
+  worldwide:
+    GB:
+      addresses:
+        zip:
+          label:
+            default: Postiindeks
+            optional: Postiindeks (valikuline)
+          errors:
+            blank_instructional: Sisesta postiindeks
+            blank_informative: Postiindeks on puudu
+            invalid_for_country_instructional: Sisesta Ühendkuningriigi kehtiv postiindeks
+            invalid_for_country_informative: Postiindeks on Ühendkuningriigi jaoks
+              kehtetu
+            invalid_for_country_and_province_instructional: Sisesta piirkonnale %{province},
+              UK kehtiv postiindeks
+            invalid_for_country_and_province_informative: Postiindeks on piirkonna
+              %{province}, UK jaoks kehtetu
+            too_long_instructional: Postiindeks on liiga pikk
+            too_long_informative: Postiindeks on liiga pikk
+            contains_emojis_instructional: Postiindeks ei tohi sisaldada emotikone
+            contains_emojis_informative: Postiindeks ei tohi sisaldada emotikone
+            contains_restricted_characters_instructional: Postiindeks ei tohi sisaldada
+              keelatud tähemärke
+            contains_restricted_characters_informative: Postiindeks võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_html_tags_instructional: Postiindeks ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Postiindeks ei tohi sisaldada HTML-i

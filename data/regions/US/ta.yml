@@ -1,0 +1,53 @@
+---
+ta:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: மாநிலம்
+            optional: மாநிலம் (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு மாநிலத்தைத் தேர்ந்தெடுக்கவும்
+            blank_informative: ஒரு மாநிலத்தை உள்ளிடவும்
+            invalid_for_country_instructional: "%{city}, %{zip}-க்கான சரியான மாநிலத்தை
+              உள்ளிடவும்"
+            invalid_for_country_informative: மாநிலம் செல்லுபடியாகாது
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip}-க்கான சரியான
+              மாநிலத்தை உள்ளிடவும்"
+            unknown_for_city_and_zip_informative: "%{city}, %{zip}-க்கு மாநிலம் செல்லுபடியாகாது"
+            unknown_for_city_instructional: "%{city}-க்கான சரியான மாநிலத்தைத் தேர்ந்தெடுக்கவும்"
+            unknown_for_city_informative: "%{city}-க்கு மாநிலம் செல்லுபடியாகாது"
+            unknown_for_zip_instructional: "%{zip}-க்கான சரியான மாநிலத்தைத் தேர்ந்தெடுக்கவும்"
+            unknown_for_zip_informative: "%{zip}-க்கு மாநிலம் செல்லுபடியாகாது"
+            unknown_for_address_instructional: மாநிலம் தவறாக இருக்கலாம்
+            unknown_for_address_informative: மாநிலம் தவறாக இருக்கலாம்
+        zip:
+          label:
+            default: ZIP குறியீடு
+            optional: ZIP குறியீடு (விருப்பத்திற்குரியது)
+          errors:
+            blank_instructional: ஒரு ZIP குறியீட்டை உள்ளிடவும்
+            blank_informative: ZIP குறியீடு இல்லை
+            invalid_for_country_instructional: "%{country}-க்கான சரியான ZIP குறியீட்டை
+              உள்ளிடவும்"
+            invalid_for_country_informative: "%{country}-க்கு ZIP குறியீடு செல்லுபடியாகாது"
+            invalid_for_province_instructional: "%{province}-க்கான சரியான ZIP குறியீட்டை
+              உள்ளிடவும்"
+            invalid_for_province_informative: "%{province}-க்கு ZIP குறியீடு செல்லுபடியாகாது"
+            invalid_for_country_and_province_instructional: "%{province}, %{country}-க்கான
+              சரியான ZIP குறியீட்டை உள்ளிடவும்"
+            invalid_for_country_and_province_informative: "%{province}, %{country}-க்கு
+              ZIP குறியீடு செல்லுபடியாகாது"
+            too_long_instructional: ZIP குறியீடு நீளமாக உள்ளது
+            too_long_informative: ZIP குறியீடு நீளமாக உள்ளது (அதிகபட்சம் 255 எழுத்துகள்)
+            contains_emojis_instructional: ZIP குறியீட்டில் எமோஜிகள் இருக்கக் கூடாது
+            contains_emojis_informative: ZIP குறியீட்டில் எமோஜிகள் இருக்கக் கூடாது
+            contains_restricted_characters_instructional: ZIP குறியீட்டில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக் கூடாது
+            contains_restricted_characters_informative: ZIP குறியீட்டில் தடைசெய்யப்பட்ட
+              எழுத்துகள் இருக்கக் கூடாது
+            contains_html_tags_instructional: ZIP குறியீட்டில் HTML இருக்கக் கூடாது
+            contains_html_tags_informative: ZIP குறியீட்டில் HTML இருக்கக் கூடாது
+            unknown_for_address_instructional: ZIP குறியீடு தவறாக இருக்கலாம்
+            unknown_for_address_informative: ZIP குறியீடு தவறாக இருக்கலாம்

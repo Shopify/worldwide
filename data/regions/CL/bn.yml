@@ -1,0 +1,43 @@
+---
+bn:
+  worldwide:
+    CL:
+      addresses:
+        neighborhood:
+          label:
+            default: কমিউন
+            optional: কমিউন (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি কমিউন লিখুন
+            blank_informative: কমিউন বাদ পড়েছে
+            too_long_instructional: কমিউন অনেক বড় (সর্বোচ্চ %{limit}টি অক্ষর হতে পারবে)
+            too_long_informative: কমিউন অনেক বড়
+            contains_emojis_instructional: কমিউনে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: কমিউনে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: কমিউনে গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: কমিউনে গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: কমিউনে শুধুমাত্র অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: কমিউনে সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: কমিউনে অবশ্যই %{word_count}-এর
+              কম শব্দ থাকতে হবে
+            contains_too_many_words_informative: কমিউনে অবশ্যই %{word_count}-এর কম
+              শব্দ থাকতে হবে
+            contains_html_tags_instructional: কমিউনে HTML ট্যাগ থাকতে পারবে না
+            contains_html_tags_informative: কমিউনে HTML ট্যাগ থাকতে পারবে না
+            contains_url_instructional: কমিউনে কোনো URL থাকতে পারবে না
+            contains_url_informative: কমিউনে কোনো URL থাকতে পারবে না
+            contains_email_instructional: কমিউনে ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: কমিউনে ইমেইল ঠিকানা থাকতে পারবে না
+            unknown_for_city_instructional: "%{city}-এর জন্য একটি বৈধ কমিউন লিখুন"
+            unknown_for_city_informative: "%{city}-এর জন্য একটি বৈধ কমিউন লিখুন"
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ কমিউন লিখুন"
+            unknown_for_zip_informative: "%{zip}-এর জন্য একটি বৈধ কমিউন লিখুন"
+            unknown_for_address_instructional: কমিউন ভুল হতে পারে
+            unknown_for_address_informative: কমিউন ভুল হতে পারে
+          warnings:
+            contains_too_many_words: কমিউনে %{word_count}-এর কম শব্দ রাখার পরামর্শ
+              দেওয়া হচ্ছে

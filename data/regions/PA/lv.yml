@@ -1,0 +1,43 @@
+---
+lv:
+  worldwide:
+    PA:
+      addresses:
+        neighborhood:
+          label:
+            default: Rajons
+            optional: Rajons (neobligāti)
+          errors:
+            blank_instructional: Ievadi rajonu
+            blank_informative: Trūkst rajona
+            too_long_instructional: Rajons ir pārāk garš (maksimums ir %{limit} rakstzīmes)
+            too_long_informative: Rajons ir pārāk garš
+            contains_emojis_instructional: Rajons nedrīkst saturēt emocijzīmes
+            contains_emojis_informative: Rajons nedrīkst saturēt emocijzīmes
+            contains_mathematical_symbols_instructional: Rajons nedrīkst saturēt matemātiskus
+              simbolus
+            contains_mathematical_symbols_informative: Rajons nedrīkst saturēt matemātiskus
+              simbolus
+            contains_restricted_characters_instructional: Rajons drīkst saturēt tikai
+              burtus, ciparus, vietējās rakstzīmes un speciālās rakstzīmes
+            contains_restricted_characters_informative: Rajons nedrīkst saturēt neatļautas
+              rakstzīmes
+            contains_too_many_words_instructional: Rajona nosaukumā jābūt mazāk nekā
+              %{word_count} vārdiem
+            contains_too_many_words_informative: Rajona nosaukumā jābūt mazāk nekā
+              %{word_count} vārdiem
+            contains_html_tags_instructional: Rajons nedrīkst saturēt HTML
+            contains_html_tags_informative: Rajons nedrīkst saturēt HTML
+            contains_url_instructional: Rajons nedrīkst saturēt URL
+            contains_url_informative: Rajons nedrīkst saturēt URL
+            contains_email_instructional: Rajons nedrīkst saturēt e-pasta adresi
+            contains_email_informative: Rajons nedrīkst saturēt e-pasta adresi
+            unknown_for_city_instructional: "%{city}: ievadi derīgu rajonu"
+            unknown_for_city_informative: "%{city}: rajons nav derīgs"
+            unknown_for_zip_instructional: "%{zip}: ievadi derīgu rajonu"
+            unknown_for_zip_informative: "%{zip}: rajons nav derīgs"
+            unknown_for_address_instructional: Rajons var būt nepareizs
+            unknown_for_address_informative: Rajons var būt nepareizs
+          warnings:
+            contains_too_many_words: Rajona nosaukumā ieteicams izmantot mazāk nekā
+              %{word_count} vārdus

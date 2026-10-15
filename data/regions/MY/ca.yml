@@ -1,0 +1,27 @@
+---
+ca:
+  worldwide:
+    MY:
+      addresses:
+        province:
+          label:
+            default: Estat/territori
+            optional: Estat/territori (opcional)
+          errors:
+            blank_instructional: Selecciona un estat/territori
+            blank_informative: Falta l'estat/territori
+        zip:
+          label:
+            default: Codi postal
+            optional: Codi postal (opcional)
+          errors:
+            too_long_instructional: El codi postal és massa llarg
+            too_long_informative: El codi postal és massa llarg
+            contains_emojis_instructional: El codi postal no pot contenir emojis
+            contains_emojis_informative: El codi postal no pot contenir emojis
+            contains_restricted_characters_instructional: El codi postal no pot contenir
+              caràcters restringits
+            contains_restricted_characters_informative: El codi postal no pot contenir
+              caràcters restringits
+            contains_html_tags_instructional: El codi postal no pot contenir HTML
+            contains_html_tags_informative: El codi postal no pot contenir HTML

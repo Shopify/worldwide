@@ -1,0 +1,558 @@
+---
+uk:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Компанія
+            optional: Компанія (необов’язково)
+          errors:
+            blank_instructional: Введіть назву компанії
+            blank_informative: Не вказано компанію
+            too_long_instructional: Назва компанії задовга (не більше 255 символів)
+            too_long_informative: Назва компанії задовга
+            contains_emojis_instructional: Назва компанії не може містити емодзі
+            contains_emojis_informative: Назва компанії не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва компанії не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва компанії не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва компанії може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Назва компанії не може містити
+              заборонені символи
+            contains_html_tags_instructional: Назва компанії не може містити HTML
+            contains_html_tags_informative: Назва компанії не може містити HTML
+        first_name:
+          label:
+            default: Ім’я
+            optional: Ім’я (необов’язково)
+          errors:
+            blank_instructional: Введіть ім’я
+            blank_informative: Не вказано ім’я
+            too_long_instructional: Ім’я задовге (не більше 255 символів)
+            too_long_informative: Ім’я задовге
+            contains_emojis_instructional: Ім’я не може містити емодзі
+            contains_emojis_informative: Ім’я не може містити емодзі
+            contains_mathematical_symbols_instructional: Ім’я не може містити математичні
+              символи
+            contains_mathematical_symbols_informative: Ім’я не може містити математичні
+              символи
+            contains_restricted_characters_instructional: Ім’я може містити лише літери,
+              цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Ім’я не може містити заборонені
+              символи
+            contains_html_tags_instructional: Ім’я не може містити HTML
+            contains_html_tags_informative: Ім’я не може містити HTML
+            contains_url_instructional: Ім’я не може містити URL-адресу
+            contains_url_informative: Ім’я не може містити URL-адресу
+        last_name:
+          label:
+            default: Прізвище
+            optional: Прізвище (необов’язково)
+          errors:
+            blank_instructional: Введіть прізвище
+            blank_informative: Не вказано прізвище
+            too_long_instructional: Прізвище задовге (не більше 255 символів)
+            too_long_informative: Прізвище задовге
+            contains_emojis_instructional: Прізвище не може містити емодзі
+            contains_emojis_informative: Прізвище не може містити емодзі
+            contains_mathematical_symbols_instructional: Прізвище не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Прізвище не може містити математичні
+              символи
+            contains_restricted_characters_instructional: Прізвище може містити лише
+              літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Прізвище не може містити заборонені
+              символи
+            contains_html_tags_instructional: Прізвище не може містити HTML
+            contains_html_tags_informative: Прізвище не може містити HTML
+            contains_url_instructional: Прізвище не може містити URL-адресу
+            contains_url_informative: Прізвище не може містити URL-адресу
+        address1:
+          label:
+            default: Адреса
+            optional: Адреса (необов’язково)
+          errors:
+            blank_instructional: Введіть адресу
+            blank_informative: Не вказано адресу
+            too_long_instructional: Перший рядок адреси задовгий (не більше 255 символів)
+            too_long_informative: Перший рядок адреси задовгий
+            contains_emojis_instructional: Адреса не може містити емодзі
+            contains_emojis_informative: Адреса не може містити емодзі
+            contains_mathematical_symbols_instructional: Адреса не може містити математичні
+              символи
+            contains_mathematical_symbols_informative: Адреса не може містити математичні
+              символи
+            contains_restricted_characters_instructional: Адреса може містити лише
+              літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Адреса не може містити заборонені
+              символи
+            contains_too_many_words_instructional: Адреса має містити менше ніж %{word_count}
+              слів
+            contains_too_many_words_informative: Адреса має містити менше ніж %{word_count}
+              слів
+            contains_html_tags_instructional: Адреса не може містити HTML
+            contains_html_tags_informative: Адреса не може містити HTML
+            contains_url_instructional: Адреса не може містити URL-адресу
+            contains_url_informative: Адреса не може містити URL-адресу
+            contains_email_instructional: Адреса не може містити адресу електронної
+              пошти
+            contains_email_informative: Адреса не може містити адресу електронної
+              пошти
+            missing_building_number_instructional: Додайте номер будинку, якщо він
+              є
+            missing_building_number_informative: Можливо, не вказано номер будинку
+            street_unknown_for_zip_instructional: Введіть дійсну назву вулиці для
+              %{zip}
+            street_unknown_for_zip_informative: Назва вулиці не відповідає %{zip}
+            building_number_invalid_instructional: Не вдалося знайти номер будинку
+              для %{street}, %{zip}
+            building_number_invalid_informative: Не вдалося знайти номер будинку для
+              %{street}, %{zip}
+            unknown_for_address_instructional: Перший рядок адреси може бути неправильним
+            unknown_for_address_informative: Перший рядок адреси може бути неправильним
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб перший рядок адреси містив
+              менше ніж %{word_count} слів
+        street_name:
+          label:
+            default: Вулиця
+            optional: Вулиця (необов’язково)
+          errors:
+            blank_instructional: Введіть назву вулиці
+            blank_informative: Не вказано вулицю
+            too_long_instructional: Назва вулиці задовга (не більше %{limit} символів)
+            too_long_informative: Назва вулиці задовга
+            contains_emojis_instructional: Назва вулиці не може містити емодзі
+            contains_emojis_informative: Назва вулиці не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва вулиці не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва вулиці не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва вулиці може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Назва вулиці не може містити
+              заборонені символи
+            contains_too_many_words_instructional: Назва вулиці не може містити більше
+              ніж %{word_count} слів
+            contains_too_many_words_informative: Назва вулиці не може містити більше
+              ніж %{word_count} слів
+            contains_html_tags_instructional: Назва вулиці не може містити HTML
+            contains_html_tags_informative: Назва вулиці не може містити HTML
+            contains_url_instructional: Назва вулиці не може містити URL-адресу
+            contains_url_informative: Назва вулиці не може містити URL-адресу
+            contains_email_instructional: Назва вулиці не може містити адресу електронної
+              пошти
+            contains_email_informative: Назва вулиці не може містити адресу електронної
+              пошти
+            street_unknown_for_zip_instructional: Введіть дійсну назву вулиці для
+              %{zip}
+            street_unknown_for_zip_informative: Вулиця недійсна для %{zip}
+            unknown_for_address_instructional: Назва вулиці може бути неправильною
+            unknown_for_address_informative: Назва вулиці може бути неправильною
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб назва вулиці містила менше
+              ніж %{word_count} слів
+        street_number:
+          label:
+            default: Номер будинку
+            optional: Номер будинку (необов’язково)
+          errors:
+            blank_instructional: Введіть номер будинку
+            blank_informative: Не вказано номер будинку
+            too_long_instructional: Номер будинку задовгий (не більше %{limit} символів)
+            too_long_informative: Номер будинку задовгий
+            contains_emojis_instructional: Номер будинку не може містити емодзі
+            contains_emojis_informative: Номер будинку не може містити емодзі
+            contains_mathematical_symbols_instructional: Номер будинку не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Номер будинку не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Номер будинку може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Номер будинку не може містити
+              заборонені символи
+            contains_html_tags_instructional: Номер будинку не може містити HTML
+            contains_html_tags_informative: Номер будинку не може містити HTML
+            contains_url_instructional: Номер будинку не може містити URL-адресу
+            contains_url_informative: Номер будинку не може містити URL-адресу
+            contains_email_instructional: Номер будинку не може містити адресу електронної
+              пошти
+            contains_email_informative: Номер будинку не може містити адресу електронної
+              пошти
+            missing_building_number_instructional: Додайте номер будинку, якщо він
+              є
+            missing_building_number_informative: Можливо, не вказано номер будинку
+            building_number_invalid_instructional: Не вдалося знайти номер будинку
+              для %{street}, %{zip}
+            building_number_invalid_informative: Не вдалося знайти номер будинку для
+              %{street}, %{zip}
+            unknown_for_address_instructional: Введіть дійсний номер будинку
+            unknown_for_address_informative: Номер будинку недійсний
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб номер будинку містив менше
+              ніж %{word_count} слів
+        address2:
+          label:
+            default: Квартира, приміщення тощо
+            optional: Квартира, приміщення тощо (необов’язково)
+          errors:
+            blank_instructional: Введіть квартиру, приміщення тощо
+            blank_informative: Не вказано квартиру або приміщення
+            too_long_instructional: Другий рядок адреси задовгий (не більше 255 символів)
+            too_long_informative: Другий рядок адреси задовгий
+            contains_emojis_instructional: Другий рядок адреси не може містити емодзі
+            contains_emojis_informative: Другий рядок адреси не може містити емодзі
+            contains_mathematical_symbols_instructional: Другий рядок адреси не може
+              містити математичні символи
+            contains_mathematical_symbols_informative: Другий рядок адреси не може
+              містити математичні символи
+            contains_restricted_characters_instructional: Другий рядок адреси може
+              містити лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Другий рядок адреси не може
+              містити заборонені символи
+            contains_too_many_words_instructional: Другий рядок адреси має містити
+              менше ніж %{word_count} слів
+            contains_too_many_words_informative: Другий рядок адреси має містити менше
+              ніж %{word_count} слів
+            contains_html_tags_instructional: Другий рядок адреси не може містити
+              HTML
+            contains_html_tags_informative: Другий рядок адреси не може містити HTML
+            contains_url_instructional: Другий рядок адреси не може містити URL-адресу
+            contains_url_informative: Другий рядок адреси не може містити URL-адресу
+            contains_email_instructional: Другий рядок адреси не може містити адресу
+              електронної пошти
+            contains_email_informative: Другий рядок адреси не може містити адресу
+              електронної пошти
+            missing_building_number_instructional: Додайте номер будинку, якщо він
+              є
+            missing_building_number_informative: Можливо, не вказано номер будинку
+            street_unknown_for_zip_instructional: Введіть дійсну назву вулиці для
+              %{zip}
+            street_unknown_for_zip_informative: Назва вулиці недійсна для %{zip}
+            building_number_invalid_instructional: Не вдалося знайти номер будинку
+              для %{street}, %{zip}
+            building_number_invalid_informative: Не вдалося знайти номер будинку для
+              %{street}, %{zip}
+            unknown_for_address_instructional: Другий рядок адреси може бути неправильним
+            unknown_for_address_informative: Другий рядок адреси може бути неправильним
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб другий рядок адреси містив
+              менше ніж %{word_count} слів
+        line2:
+          label:
+            default: Квартира, приміщення тощо.
+            optional: Квартира, приміщення тощо. (необов’язково)
+          errors:
+            blank_instructional: Введіть квартиру, приміщення тощо.
+            blank_informative: Не вказано квартиру або приміщення
+            too_long_instructional: Другий рядок адреси задовгий (не більше %{limit}
+              символів)
+            too_long_informative: Другий рядок адреси задовгий
+            contains_emojis_instructional: Другий рядок адреси не може містити емодзі
+            contains_emojis_informative: Другий рядок адреси не може містити емодзі
+            contains_mathematical_symbols_instructional: Другий рядок адреси не може
+              містити математичні символи
+            contains_mathematical_symbols_informative: Другий рядок адреси не може
+              містити математичні символи
+            contains_restricted_characters_instructional: Другий рядок адреси може
+              містити лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Другий рядок адреси не може
+              містити заборонені символи
+            contains_too_many_words_instructional: Другий рядок адреси має містити
+              менше ніж %{word_count} слів
+            contains_too_many_words_informative: Другий рядок адреси має містити менше
+              ніж %{word_count} слів
+            contains_html_tags_instructional: Другий рядок адреси не може містити
+              теги HTML
+            contains_html_tags_informative: Другий рядок адреси не може містити теги
+              HTML
+            contains_url_instructional: Другий рядок адреси не може містити URL-адресу
+            contains_url_informative: Другий рядок адреси не може містити URL-адресу
+            contains_email_instructional: Другий рядок адреси не може містити адресу
+              електронної пошти
+            contains_email_informative: Другий рядок адреси не може містити адресу
+              електронної пошти
+            missing_building_number_instructional: Додайте номер будинку, якщо він
+              є
+            missing_building_number_informative: Додайте номер будинку, якщо він є
+            street_unknown_for_zip_instructional: Введіть дійсну назву вулиці для
+              %{zip}
+            street_unknown_for_zip_informative: Введіть дійсну назву вулиці для %{zip}
+            building_number_invalid_instructional: Не вдалося знайти номер будинку
+              для %{street}, %{zip}
+            building_number_invalid_informative: Не вдалося знайти номер будинку для
+              %{street}, %{zip}
+            unknown_for_address_instructional: Другий рядок адреси може бути неправильним
+            unknown_for_address_informative: Другий рядок адреси може бути неправильним
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб другий рядок адреси містив
+              менше ніж %{word_count} слів
+        neighborhood:
+          label:
+            default: Мікрорайон
+            optional: Мікрорайон (необов’язково)
+          errors:
+            blank_instructional: Введіть мікрорайон
+            blank_informative: Не вказано мікрорайон
+            too_long_instructional: Назва мікрорайону задовга (не більше %{limit}
+              символів)
+            too_long_informative: Назва мікрорайону задовга
+            contains_emojis_instructional: Назва мікрорайону не може містити емодзі
+            contains_emojis_informative: Назва мікрорайону не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва мікрорайону не може
+              містити математичні символи
+            contains_mathematical_symbols_informative: Назва мікрорайону не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва мікрорайону може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Назва мікрорайону не може
+              містити заборонені символи
+            contains_too_many_words_instructional: Назва мікрорайону має містити менше
+              ніж %{word_count} слів
+            contains_too_many_words_informative: Назва мікрорайону має містити менше
+              ніж %{word_count} слів
+            contains_html_tags_instructional: Назва мікрорайону не може містити теги
+              HTML
+            contains_html_tags_informative: Назва мікрорайону не може містити теги
+              HTML
+            contains_url_instructional: Назва мікрорайону не може містити URL-адреси
+            contains_url_informative: Назва мікрорайону не може містити URL-адреси
+            contains_email_instructional: Назва мікрорайону не може містити адреси
+              електронної пошти
+            contains_email_informative: Назва мікрорайону не може містити адреси електронної
+              пошти
+            unknown_for_city_instructional: Введіть дійсну назву мікрорайону для %{city}
+            unknown_for_city_informative: Введіть дійсну назву мікрорайону для %{city}
+            unknown_for_zip_instructional: Введіть дійсну назву мікрорайону для %{zip}
+            unknown_for_zip_informative: Введіть дійсну назву мікрорайону для %{zip}
+            unknown_for_address_instructional: Назва мікрорайону може бути неправильною
+            unknown_for_address_informative: Назва мікрорайону може бути неправильною
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб назва мікрорайону містила
+              менше ніж %{word_count} слів
+        district:
+          label:
+            default: Район
+            optional: Район (необов’язково)
+          errors:
+            blank_instructional: Введіть район
+            blank_informative: Не вказано район
+            too_long_instructional: Назва району задовга (не більше %{limit} символів)
+            too_long_informative: Назва району задовга
+            contains_emojis_instructional: Назва району не може містити емодзі
+            contains_emojis_informative: Назва району не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва району не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва району не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва району може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Назва району не може містити
+              заборонені символи
+            contains_too_many_words_instructional: Назва району має містити менше
+              ніж %{word_count} слів
+            contains_too_many_words_informative: Назва району має містити менше ніж
+              %{word_count} слів
+            contains_html_tags_instructional: Назва району не може містити теги HTML
+            contains_html_tags_informative: Назва району не може містити теги HTML
+            contains_url_instructional: Назва району не може містити URL-адреси
+            contains_url_informative: Назва району не може містити URL-адреси
+            contains_email_instructional: Назва району не може містити адреси електронної
+              пошти
+            contains_email_informative: Назва району не може містити адреси електронної
+              пошти
+            unknown_for_city_instructional: Введіть дійсну назву району для %{city}
+            unknown_for_city_informative: Введіть дійсну назву району для %{city}
+            unknown_for_zip_instructional: Введіть дійсну назву району для %{zip}
+            unknown_for_zip_informative: Введіть дійсну назву району для %{zip}
+            unknown_for_address_instructional: Назва району може бути неправильною
+            unknown_for_address_informative: Назва району може бути неправильною
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб назва району містила менше
+              ніж %{word_count} слів
+        subdistrict:
+          label:
+            default: Підрайон
+            optional: Підрайон (необов’язково)
+          errors:
+            blank_instructional: Введіть підрайон
+            blank_informative: Не вказано підрайон
+            too_long_instructional: Назва підрайону задовга (не більше %{limit} символів)
+            too_long_informative: Назва підрайону задовга
+            contains_emojis_instructional: Назва підрайону не може містити емодзі
+            contains_emojis_informative: Назва підрайону не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва підрайону не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва підрайону не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва підрайону може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Назва підрайону не може містити
+              заборонені символи
+            contains_too_many_words_instructional: Назва підрайону має містити менше
+              ніж %{word_count} слів
+            contains_too_many_words_informative: Назва підрайону має містити менше
+              ніж %{word_count} слів
+            contains_html_tags_instructional: Назва підрайону не може містити теги
+              HTML
+            contains_html_tags_informative: Назва підрайону не може містити теги HTML
+            contains_url_instructional: Назва підрайону не може містити URL-адреси
+            contains_url_informative: Назва підрайону не може містити URL-адреси
+            contains_email_instructional: Назва підрайону не може містити адреси електронної
+              пошти
+            contains_email_informative: Назва підрайону не може містити адреси електронної
+              пошти
+            unknown_for_city_instructional: Введіть дійсну назву підрайону для %{city}
+            unknown_for_city_informative: Введіть дійсну назву підрайону для %{city}
+            unknown_for_zip_instructional: Введіть дійсну назву підрайону для %{zip}
+            unknown_for_zip_informative: Введіть дійсну назву підрайону для %{zip}
+            unknown_for_address_instructional: Назва підрайону може бути неправильною
+            unknown_for_address_informative: Назва підрайону може бути неправильною
+          warnings:
+            contains_too_many_words: Рекомендовано, щоб назва підрайону містила менше
+              ніж %{word_count} слів
+        city:
+          label:
+            default: Місто
+            optional: Місто (необов’язково)
+          errors:
+            blank_instructional: Введіть назву міста
+            blank_informative: Не вказано місто
+            too_long_instructional: Назва міста задовга (не більше 255 символів)
+            too_long_informative: Назва міста задовга
+            contains_emojis_instructional: Назва міста не може містити емодзі
+            contains_emojis_informative: Назва міста не може містити емодзі
+            contains_mathematical_symbols_instructional: Назва міста не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Назва міста не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Назва міста може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Назва міста не може містити
+              заборонені символи
+            contains_too_many_words_instructional: Назва міста має містити менше ніж
+              %{word_count} слів
+            contains_too_many_words_informative: Назва міста має містити менше ніж
+              %{word_count} слів
+            contains_html_tags_instructional: Назва міста не може містити HTML
+            contains_html_tags_informative: Назва міста не може містити HTML
+            contains_url_instructional: Назва міста не може містити URL-адресу
+            contains_url_informative: Назва міста не може містити URL-адресу
+            contains_email_instructional: Назва міста не може містити адресу електронної
+              пошти
+            contains_email_informative: Назва міста не може містити адресу електронної
+              пошти
+            unknown_for_zip_instructional: Введіть дійсну назву міста для %{zip}
+            unknown_for_zip_informative: Місто не відповідає %{zip}
+            unknown_for_province_instructional: Введіть дійсну назву міста для %{province}
+            unknown_for_province_informative: Місто не відповідає %{province}
+            unknown_for_zip_and_province_instructional: Введіть дійсну назву міста
+              для %{zip}, %{province}
+            unknown_for_zip_and_province_informative: Назва міста може бути неправильною
+            unknown_for_address_instructional: Назва міста може бути неправильною
+            unknown_for_address_informative: Назва міста може бути неправильною
+        province:
+          label:
+            default: Регіон
+            optional: Регіон (необов’язково)
+          errors:
+            blank_instructional: Виберіть регіон
+            blank_informative: Не вказано регіон
+            invalid_instructional: Виберіть регіон
+            invalid_informative: Не вказано регіон
+            invalid_for_country_instructional: Введіть дійсний регіон для %{country}
+            invalid_for_country_informative: Регіон не відповідає %{country}
+            unknown_for_city_and_zip_instructional: Виберіть дійсний регіон для %{city},
+              %{zip}
+            unknown_for_city_and_zip_informative: Регіон не відповідає %{city}, %{zip}
+            unknown_for_city_informative: Виберіть дійсний регіон для %{city}
+            unknown_for_city_instructional: Регіон не відповідає %{city}
+            unknown_for_zip_instructional: Виберіть дійсний регіон для %{zip}
+            unknown_for_zip_informative: Регіон не відповідає %{zip}
+            unknown_for_address_instructional: Регіон може бути неправильним
+            unknown_for_address_informative: Регіон може бути неправильним
+        country:
+          label:
+            default: Країна/регіон
+            optional: Країна/регіон (необов’язково)
+          errors:
+            blank_instructional: Виберіть країну чи регіон
+            blank_informative: Не вказано країну чи регіон
+            not_supported_instructional: Країна або регіон не підтримується
+            not_supported_informative: Країна або регіон не підтримується
+            invalid_instructional: Введіть дійсну країну чи регіон
+            invalid_informative: Країна або регіон недійсні
+            invalid_for_zip_instructional: Введіть дійсну країну чи регіон для цього
+              поштового індексу
+            invalid_for_zip_informative: "%{country} не відповідає країні чи регіону"
+        zip:
+          label:
+            default: Поштовий індекс
+            optional: Поштовий індекс (необов’язково)
+          errors:
+            blank_instructional: Введіть поштовий індекс
+            blank_informative: Не вказано поштовий індекс
+            blocked_address_instructional: Це розташування не підтримується
+            blocked_address_informative: Це розташування не підтримується
+            invalid_instructional: Введіть дійсний поштовий індекс
+            invalid_informative: Поштовий індекс недійсний
+            invalid_for_country_instructional: Введіть дійсний поштовий індекс для
+              %{country}
+            invalid_for_country_informative: Поштовий індекс не відповідає %{country}
+            invalid_for_province_instructional: Введіть дійсний поштовий індекс для
+              %{province}
+            invalid_for_province_informative: Поштовий індекс не відповідає %{province}
+            invalid_for_country_and_province_instructional: Введіть дійсний поштовий
+              індекс для %{province}, %{country}
+            invalid_for_country_and_province_informative: Поштовий індекс не відповідає
+              %{province}, %{country}
+            too_long_instructional: Поштовий індекс задовгий
+            too_long_informative: Поштовий індекс задовгий
+            contains_emojis_instructional: Поштовий індекс не може містити емодзі
+            contains_emojis_informative: Поштовий індекс не може містити емодзі
+            contains_mathematical_symbols_instructional: Поштовий індекс не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Поштовий індекс не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Поштовий індекс може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Поштовий індекс не може містити
+              заборонені символи
+            not_supported_instructional: Поштовий індекс не підтримується. Введіть
+              нову адресу та повторіть спробу
+            not_supported_informative: Поштовий індекс не підтримується
+            contains_html_tags_instructional: Поштовий індекс не може містити HTML
+            contains_html_tags_informative: Поштовий індекс не може містити HTML
+            unknown_for_province_instructional: Введіть дійсний поштовий індекс для
+              %{province}
+            unknown_for_province_informative: Поштовий індекс недійсний для %{province}
+            unknown_for_address_instructional: Поштовий індекс може бути неправильним
+            unknown_for_address_informative: Поштовий індекс може бути неправильним
+        phone:
+          label:
+            default: Телефон
+            optional: Телефон (необов’язково)
+          errors:
+            blank_instructional: Введіть номер телефону
+            blank_informative: Не вказано номер телефону
+            invalid_instructional: Введіть дійсний номер телефону
+            invalid_informative: Номер телефону недійсний
+            too_long_instructional: Номер телефону задовгий
+            too_long_informative: Номер телефону задовгий
+            contains_emojis_instructional: Номер телефону не може містити емодзі
+            contains_emojis_informative: Номер телефону не може містити емодзі
+            contains_mathematical_symbols_instructional: Номер телефону не може містити
+              математичні символи
+            contains_mathematical_symbols_informative: Номер телефону не може містити
+              математичні символи
+            contains_restricted_characters_instructional: Номер телефону може містити
+              лише літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Номер телефону не може містити
+              заборонені символи
+        address:
+          errors:
+            may_not_exist_instructional: Адресу не знайдено або вона не існує
+            may_not_exist_informative: Адресу не знайдено

@@ -1,0 +1,35 @@
+---
+te:
+  worldwide:
+    IN:
+      addresses:
+        province:
+          label:
+            default: రాష్ట్రం
+            optional: రాష్ట్రం (ఐచ్ఛికం)
+          errors:
+            blank_instructional: రాష్ట్రాన్ని ఎంచుకోండి
+            blank_informative: రాష్ట్రం లేదు
+        zip:
+          label:
+            default: PIN కోడ్
+            optional: PIN కోడ్ (ఐచ్ఛికం)
+          errors:
+            blank_instructional: PIN కోడ్‌ను నమోదు చేయండి
+            blank_informative: PIN కోడ్ లేదు
+            invalid_for_country_instructional: "%{country} కోసం చెల్లుబాటు అయ్యే PIN
+              కోడ్‌ను నమోదు చేయండి"
+            invalid_for_country_informative: PIN కోడ్ చెల్లదు
+            invalid_for_country_and_province_instructional: "%{province}, %{country}
+              కోసం చెల్లుబాటు అయ్యే PIN కోడ్‌ను నమోదు చేయండి"
+            invalid_for_country_and_province_informative: PIN కోడ్ చెల్లదు
+            too_long_instructional: PIN కోడ్ చాలా పొడవుగా ఉంది
+            too_long_informative: PIN కోడ్ చాలా పొడవుగా ఉంది
+            contains_emojis_instructional: PIN కోడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_emojis_informative: PIN కోడ్‌లో ఎమోజీలు ఉండకూడదు
+            contains_restricted_characters_instructional: PIN కోడ్‌లో నియంత్రిత అక్షరాలు
+              ఉండకూడదు
+            contains_restricted_characters_informative: PIN కోడ్‌లో నియంత్రిత అక్షరాలు
+              ఉండకూడదు
+            contains_html_tags_instructional: PIN కోడ్‌లో HTML ఉండకూడదు
+            contains_html_tags_informative: PIN కోడ్‌లో HTML ఉండకూడదు

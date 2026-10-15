@@ -1,0 +1,57 @@
+---
+uk:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Штат
+            optional: Штат (необов’язково)
+          errors:
+            blank_instructional: Виберіть штат
+            blank_informative: Введіть штат
+            invalid_for_country_instructional: 'Введіть дійсний штат для такого міста
+              й індексу: %{city}, %{zip}'
+            invalid_for_country_informative: Недійсний штат
+            unknown_for_city_and_zip_instructional: 'Введіть дійсний штат для такого
+              міста й індексу: %{city}, %{zip}'
+            unknown_for_city_and_zip_informative: 'Штат недійсний для такого міста
+              й індексу: %{city}, %{zip}'
+            unknown_for_city_instructional: Виберіть дійсний штат для міста %{city}
+            unknown_for_city_informative: Штат недійсний для міста %{city}
+            unknown_for_zip_instructional: Виберіть дійсний штат для поштового індексу
+              %{zip}
+            unknown_for_zip_informative: Штат недійсний для поштового індексу %{zip}
+            unknown_for_address_instructional: Штат може бути введено неправильно
+            unknown_for_address_informative: Штат може бути введено неправильно
+        zip:
+          label:
+            default: Поштовий індекс
+            optional: Поштовий індекс (необов’язково)
+          errors:
+            blank_instructional: Введіть поштовий індекс
+            blank_informative: Відсутній поштовий індекс
+            invalid_for_country_instructional: 'Введіть дійсний поштовий індекс для
+              такої країни: %{country}'
+            invalid_for_country_informative: 'Поштовий індекс недійсний для такої
+              країни: %{country}'
+            invalid_for_province_instructional: 'Введіть дійсний поштовий індекс для
+              такого штату: %{province}'
+            invalid_for_province_informative: 'Поштовий індекс недійсний для такого
+              штату: %{province}'
+            invalid_for_country_and_province_instructional: 'Введіть дійсний поштовий
+              індекс для такого штату та країни: %{province}, %{country}'
+            invalid_for_country_and_province_informative: 'Поштовий індекс недійсний
+              для такого штату та країни: %{province}, %{country}'
+            too_long_instructional: Поштовий індекс задовгий
+            too_long_informative: Поштовий індекс задовгий (максимум 255 символів)
+            contains_emojis_instructional: Поштовий індекс не може містити емодзі
+            contains_emojis_informative: Поштовий індекс не може містити емодзі
+            contains_restricted_characters_instructional: Поштовий індекс не може
+              містити заборонені символи
+            contains_restricted_characters_informative: Поштовий індекс не може містити
+              заборонені символи
+            contains_html_tags_instructional: Поштовий індекс не може містити HTML
+            contains_html_tags_informative: Поштовий індекс не може містити HTML
+            unknown_for_address_instructional: Поштовий індекс може бути введено неправильно
+            unknown_for_address_informative: Поштовий індекс може бути введено неправильно

@@ -1,0 +1,549 @@
+---
+et:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: Ettevõte
+            optional: Ettevõte (valikuline)
+          errors:
+            blank_instructional: Sisesta ettevõte
+            blank_informative: Ettevõte puudub
+            too_long_instructional: Ettevõte on liiga pikk (enim 255 tähemärki)
+            too_long_informative: Ettevõte on liiga pikk
+            contains_emojis_instructional: Ettevõte ei tohi sisaldada emotikone
+            contains_emojis_informative: Ettevõte ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Ettevõte ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Ettevõte ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Ettevõte võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Ettevõte ei tohi sisaldada
+              keelatud märke
+            contains_html_tags_instructional: Ettevõte ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Ettevõte ei tohi sisaldada HTML-i
+        first_name:
+          label:
+            default: Eesnimi
+            optional: Eesnimi (valikuline)
+          errors:
+            blank_instructional: Sisesta eesnimi
+            blank_informative: Eesnimi puudub
+            too_long_instructional: Eesnimi on liiga pikk (enim 255 tähemärki)
+            too_long_informative: Eesnimi on liiga pikk
+            contains_emojis_instructional: Eesnimi ei tohi sisaldada emotikone
+            contains_emojis_informative: Eesnimi ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Eesnimi ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Eesnimi ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Eesnimi võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Eesnimi ei tohi sisaldada
+              keelatud märke
+            contains_html_tags_instructional: Eesnimi ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Eesnimi ei tohi sisaldada HTML-i
+            contains_url_instructional: Eesnimi ei tohi sisaldada URL-i
+            contains_url_informative: Eesnimi ei tohi sisaldada URL-i
+        last_name:
+          label:
+            default: Perekonnanimi
+            optional: Perekonnanimi (valikuline)
+          errors:
+            blank_instructional: Sisesta perekonnanimi
+            blank_informative: Perekonnanimi puudub
+            too_long_instructional: Perekonnanimi on liiga pikk (enim 255 tähemärki)
+            too_long_informative: Perekonnanimi on liiga pikk
+            contains_emojis_instructional: Perekonnanimi ei tohi sisaldada emotikone
+            contains_emojis_informative: Perekonnanimi ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Perekonnanimi ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Perekonnanimi ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Perekonnanimi võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Perekonnanimi ei tohi sisaldada
+              keelatud märke
+            contains_html_tags_instructional: Perekonnanimi ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Perekonnanimi ei tohi sisaldada HTML-i
+            contains_url_instructional: Perekonnanimi ei tohi sisaldada URL-i
+            contains_url_informative: Perekonnanimi ei tohi sisaldada URL-i
+        address1:
+          label:
+            default: Aadress
+            optional: Aadress (valikuline)
+          errors:
+            blank_instructional: Sisesta aadress
+            blank_informative: Aadress puudub
+            too_long_instructional: Esimene aadressirida on liiga pikk (enim 255 tähemärki)
+            too_long_informative: Esimene aadressirida on liiga pikk
+            contains_emojis_instructional: Aadress ei tohi sisaldada emotikone
+            contains_emojis_informative: Aadress ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Aadress ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Aadress ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Aadress võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Aadress ei tohi sisaldada
+              keelatud märke
+            contains_too_many_words_instructional: Aadressis peab olema vähem kui
+              %{word_count} sõna
+            contains_too_many_words_informative: Aadressis peab olema vähem kui %{word_count}
+              sõna
+            contains_html_tags_instructional: Aadress ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Aadress ei tohi sisaldada HTML-i
+            contains_url_instructional: Aadress ei tohi sisaldada URL-i
+            contains_url_informative: Aadress ei tohi sisaldada URL-i
+            contains_email_instructional: Aadress ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Aadress ei tohi sisaldada e-posti aadressi
+            missing_building_number_instructional: Lisa majanumber, kui see on olemas
+            missing_building_number_informative: Majanumber võib puududa
+            street_unknown_for_zip_instructional: Sisesta kehtiv tänavanimi postiindeksile
+              %{zip}
+            street_unknown_for_zip_informative: Tänavanimi ei sobi postiindeksiga
+              %{zip}
+            building_number_invalid_instructional: Majanumbrit ei leitud aadressil
+              %{street}, %{zip}
+            building_number_invalid_informative: Majanumbrit ei leitud aadressil %{street},
+              %{zip}
+            unknown_for_address_instructional: 1. aadressirida võib olla vale
+            unknown_for_address_informative: 1. aadressirida võib olla vale
+          warnings:
+            contains_too_many_words: 1. aadressireal on soovitatav kasutada vähem
+              kui %{word_count} sõna
+        street_name:
+          label:
+            default: Tänav
+            optional: Tänav (valikuline)
+          errors:
+            blank_instructional: Sisesta tänav
+            blank_informative: Tänav puudub
+            too_long_instructional: Tänav on liiga pikk (enim %{limit} tähemärki)
+            too_long_informative: Tänav on liiga pikk
+            contains_emojis_instructional: Tänav ei tohi sisaldada emotikone
+            contains_emojis_informative: Tänav ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Tänav ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_mathematical_symbols_informative: Tänav ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Tänav võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Tänav ei tohi sisaldada keelatud
+              märke
+            contains_too_many_words_instructional: Tänavas ei tohi olla üle %{word_count}
+              sõna
+            contains_too_many_words_informative: Tänavas ei tohi olla üle %{word_count}
+              sõna
+            contains_html_tags_instructional: Tänav ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Tänav ei tohi sisaldada HTML-i
+            contains_url_instructional: Tänav ei tohi sisaldada URL-i
+            contains_url_informative: Tänav ei tohi sisaldada URL-i
+            contains_email_instructional: Tänav ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Tänav ei tohi sisaldada e-posti aadressi
+            street_unknown_for_zip_instructional: Sisesta kehtiv tänav postiindeksile
+              %{zip}
+            street_unknown_for_zip_informative: Tänav ei kehti postiindeksi %{zip}
+              puhul
+            unknown_for_address_instructional: Tänav võib olla vale
+            unknown_for_address_informative: Tänav võib olla vale
+          warnings:
+            contains_too_many_words: Tänava nimes on soovitatav kasutada vähem kui
+              %{word_count} sõna
+        street_number:
+          label:
+            default: Majanumber
+            optional: Majanumber (valikuline)
+          errors:
+            blank_instructional: Sisesta majanumber
+            blank_informative: Majanumber puudub
+            too_long_instructional: Majanumber on liiga pikk (enim %{limit} tähemärki)
+            too_long_informative: Majanumber on liiga pikk
+            contains_emojis_instructional: Majanumber ei tohi sisaldada emotikone
+            contains_emojis_informative: Majanumber ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Majanumber ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Majanumber ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Majanumber võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Majanumber ei tohi sisaldada
+              keelatud märke
+            contains_html_tags_instructional: Majanumber ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Majanumber ei tohi sisaldada HTML-i
+            contains_url_instructional: Majanumber ei tohi sisaldada URL-i
+            contains_url_informative: Majanumber ei tohi sisaldada URL-i
+            contains_email_instructional: Majanumber ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Majanumber ei tohi sisaldada e-posti aadressi
+            missing_building_number_instructional: Lisa majanumber, kui see on olemas
+            missing_building_number_informative: Majanumber võib puududa
+            building_number_invalid_instructional: Majanumbrit ei leitud aadressil
+              %{street}, %{zip}
+            building_number_invalid_informative: Majanumbrit ei leitud aadressil %{street},
+              %{zip}
+            unknown_for_address_instructional: Sisesta kehtiv majanumber
+            unknown_for_address_informative: Majanumber ei ole kehtiv
+          warnings:
+            contains_too_many_words: Majanumbri puhul on soovitatav kasutada vähem
+              kui %{word_count} sõna
+        address2:
+          label:
+            default: Korter, kontor vms
+            optional: Korter, kontor vms (valikuline)
+          errors:
+            blank_instructional: Sisesta korter, kontor vms
+            blank_informative: Korter või kontor puudub
+            too_long_instructional: 2. aadressirida on liiga pikk (enim 255 tähemärki)
+            too_long_informative: 2. aadressirida on liiga pikk
+            contains_emojis_instructional: 2. aadressirida ei tohi sisaldada emotikone
+            contains_emojis_informative: 2. aadressirida ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: 2. aadressirida ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: 2. aadressirida ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: 2. aadressirida võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: 2. aadressirida ei tohi sisaldada
+              keelatud märke
+            contains_too_many_words_instructional: 2. aadressireal peab olema vähem
+              kui %{word_count} sõna
+            contains_too_many_words_informative: 2. aadressireal peab olema vähem
+              kui %{word_count} sõna
+            contains_html_tags_instructional: 2. aadressirida ei tohi sisaldada HTML-i
+            contains_html_tags_informative: 2. aadressirida ei tohi sisaldada HTML-i
+            contains_url_instructional: 2. aadressirida ei tohi sisaldada URL-i
+            contains_url_informative: 2. aadressirida ei tohi sisaldada URL-i
+            contains_email_instructional: 2. aadressirida ei tohi sisaldada e-posti
+              aadressi
+            contains_email_informative: 2. aadressirida ei tohi sisaldada e-posti
+              aadressi
+            missing_building_number_instructional: Lisa majanumber, kui see on olemas
+            missing_building_number_informative: Majanumber võib puududa
+            street_unknown_for_zip_instructional: Sisesta kehtiv tänavanimi postiindeksile
+              %{zip}
+            street_unknown_for_zip_informative: Tänavanimi ei ole postiindeksi %{zip}
+              jaoks kehtiv
+            building_number_invalid_instructional: Majanumbrit ei leitud aadressil
+              %{street}, %{zip}
+            building_number_invalid_informative: Majanumbrit ei leitud aadressil %{street},
+              %{zip}
+            unknown_for_address_instructional: 2. aadressirida võib olla vale
+            unknown_for_address_informative: 2. aadressirida võib olla vale
+          warnings:
+            contains_too_many_words: 2. aadressireal on soovitatav kasutada vähem
+              kui %{word_count} sõna
+        line2:
+          label:
+            default: Korter, kontor vms
+            optional: Korter, kontor vms (valikuline)
+          errors:
+            blank_instructional: Sisesta korter, kontor vms
+            blank_informative: Korter või kontor puudub
+            too_long_instructional: Teine aadressirida on liiga pikk (enim %{limit}
+              tähemärki)
+            too_long_informative: Teine aadressirida on liiga pikk
+            contains_emojis_instructional: Teine aadressirida ei tohi sisaldada emotikone
+            contains_emojis_informative: Teine aadressirida ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Teine aadressirida ei tohi
+              sisaldada matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Teine aadressirida ei tohi
+              sisaldada matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Teine aadressirida võib
+              sisaldada ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Teine aadressirida ei tohi
+              sisaldada keelatud märke
+            contains_too_many_words_instructional: Teisel aadressireal peab olema
+              vähem kui %{word_count} sõna
+            contains_too_many_words_informative: Teisel aadressireal peab olema vähem
+              kui %{word_count} sõna
+            contains_html_tags_instructional: Teine aadressirida ei tohi sisaldada
+              HTML-märgendeid
+            contains_html_tags_informative: Teine aadressirida ei tohi sisaldada HTML-märgendeid
+            contains_url_instructional: Teine aadressirida ei tohi sisaldada URL-i
+            contains_url_informative: Teine aadressirida ei tohi sisaldada URL-i
+            contains_email_instructional: Teine aadressirida ei tohi sisaldada e-posti
+              aadressi
+            contains_email_informative: Teine aadressirida ei tohi sisaldada e-posti
+              aadressi
+            missing_building_number_instructional: Lisa majanumber, kui see on olemas
+            missing_building_number_informative: Lisa majanumber, kui see on olemas
+            street_unknown_for_zip_instructional: Sisesta kehtiv tänavanimi postiindeksile
+              %{zip}
+            street_unknown_for_zip_informative: Sisesta kehtiv tänavanimi postiindeksile
+              %{zip}
+            building_number_invalid_instructional: Majanumbrit ei leitud aadressil
+              %{street}, %{zip}
+            building_number_invalid_informative: Majanumbrit ei leitud aadressil %{street},
+              %{zip}
+            unknown_for_address_instructional: Teine aadressirida võib olla vale
+            unknown_for_address_informative: Teine aadressirida võib olla vale
+          warnings:
+            contains_too_many_words: Teisel aadressireal on soovitatav kasutada vähem
+              kui %{word_count} sõna
+        neighborhood:
+          label:
+            default: Naabruskond
+            optional: Naabruskond (valikuline)
+          errors:
+            blank_instructional: Sisesta naabruskond
+            blank_informative: Naabruskond puudub
+            too_long_instructional: Naabruskond on liiga pikk (enim %{limit} tähemärki)
+            too_long_informative: Naabruskond on liiga pikk
+            contains_emojis_instructional: Naabruskond ei tohi sisaldada emotikone
+            contains_emojis_informative: Naabruskond ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Naabruskond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Naabruskond ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Naabruskond võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Naabruskond ei tohi sisaldada
+              keelatud märke
+            contains_too_many_words_instructional: Naabruskonna nimes peab olema vähem
+              kui %{word_count} sõna
+            contains_too_many_words_informative: Naabruskonna nimes peab olema vähem
+              kui %{word_count} sõna
+            contains_html_tags_instructional: Naabruskond ei tohi sisaldada HTML-märgendeid
+            contains_html_tags_informative: Naabruskond ei tohi sisaldada HTML-märgendeid
+            contains_url_instructional: Naabruskond ei tohi sisaldada URL-e
+            contains_url_informative: Naabruskond ei tohi sisaldada URL-e
+            contains_email_instructional: Naabruskond ei tohi sisaldada e-posti aadresse
+            contains_email_informative: Naabruskond ei tohi sisaldada e-posti aadresse
+            unknown_for_city_instructional: Sisesta kehtiv naabruskonna nimi linnas
+              %{city}
+            unknown_for_city_informative: Sisesta kehtiv naabruskonna nimi linnas
+              %{city}
+            unknown_for_zip_instructional: Sisesta kehtiv naabruskonna nimi postiindeksile
+              %{zip}
+            unknown_for_zip_informative: Sisesta kehtiv naabruskonna nimi postiindeksile
+              %{zip}
+            unknown_for_address_instructional: Naabruskond võib olla vale
+            unknown_for_address_informative: Naabruskond võib olla vale
+          warnings:
+            contains_too_many_words: Naabruskonna nimes on soovitatav kasutada vähem
+              kui %{word_count} sõna
+        district:
+          label:
+            default: Linnaosa
+            optional: Linnaosa (valikuline)
+          errors:
+            blank_instructional: Sisesta linnaosa
+            blank_informative: Linnaosa puudub
+            too_long_instructional: Linnaosa on liiga pikk (enim %{limit} tähemärki)
+            too_long_informative: Linnaosa on liiga pikk
+            contains_emojis_instructional: Linnaosa ei tohi sisaldada emotikone
+            contains_emojis_informative: Linnaosa ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Linnaosa ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Linnaosa ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Linnaosa võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Linnaosa ei tohi sisaldada
+              keelatud märke
+            contains_too_many_words_instructional: Linnaosa nimes peab olema vähem
+              kui %{word_count} sõna
+            contains_too_many_words_informative: Linnaosa nimes peab olema vähem kui
+              %{word_count} sõna
+            contains_html_tags_instructional: Linnaosa ei tohi sisaldada HTML-märgendeid
+            contains_html_tags_informative: Linnaosa ei tohi sisaldada HTML-märgendeid
+            contains_url_instructional: Linnaosa ei tohi sisaldada URL-e
+            contains_url_informative: Linnaosa ei tohi sisaldada URL-e
+            contains_email_instructional: Linnaosa ei tohi sisaldada e-posti aadresse
+            contains_email_informative: Linnaosa ei tohi sisaldada e-posti aadresse
+            unknown_for_city_instructional: Sisesta kehtiv linnaosa nimi linnas %{city}
+            unknown_for_city_informative: Sisesta kehtiv linnaosa nimi linnas %{city}
+            unknown_for_zip_instructional: Sisesta kehtiv linnaosa nimi postiindeksile
+              %{zip}
+            unknown_for_zip_informative: Sisesta kehtiv linnaosa nimi postiindeksile
+              %{zip}
+            unknown_for_address_instructional: Linnaosa võib olla vale
+            unknown_for_address_informative: Linnaosa võib olla vale
+          warnings:
+            contains_too_many_words: Linnaosa nimes on soovitatav kasutada vähem kui
+              %{word_count} sõna
+        subdistrict:
+          label:
+            default: Asum
+            optional: Asum (valikuline)
+          errors:
+            blank_instructional: Sisesta asum
+            blank_informative: Asum puudub
+            too_long_instructional: Asum on liiga pikk (enim %{limit} tähemärki)
+            too_long_informative: Asum on liiga pikk
+            contains_emojis_instructional: Asum ei tohi sisaldada emotikone
+            contains_emojis_informative: Asum ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Asum ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_mathematical_symbols_informative: Asum ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Asum võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Asum ei tohi sisaldada keelatud
+              märke
+            contains_too_many_words_instructional: Asumi nimes peab olema vähem kui
+              %{word_count} sõna
+            contains_too_many_words_informative: Asumi nimes peab olema vähem kui
+              %{word_count} sõna
+            contains_html_tags_instructional: Asum ei tohi sisaldada HTML-märgendeid
+            contains_html_tags_informative: Asum ei tohi sisaldada HTML-märgendeid
+            contains_url_instructional: Asum ei tohi sisaldada URL-e
+            contains_url_informative: Asum ei tohi sisaldada URL-e
+            contains_email_instructional: Asum ei tohi sisaldada e-posti aadresse
+            contains_email_informative: Asum ei tohi sisaldada e-posti aadresse
+            unknown_for_city_instructional: Sisesta kehtiv asumi nimi linnas %{city}
+            unknown_for_city_informative: Sisesta kehtiv asumi nimi linnas %{city}
+            unknown_for_zip_instructional: Sisesta kehtiv asumi nimi postiindeksile
+              %{zip}
+            unknown_for_zip_informative: Sisesta kehtiv asumi nimi postiindeksile
+              %{zip}
+            unknown_for_address_instructional: Asum võib olla vale
+            unknown_for_address_informative: Asum võib olla vale
+          warnings:
+            contains_too_many_words: Asumi nimes on soovitatav kasutada vähem kui
+              %{word_count} sõna
+        city:
+          label:
+            default: Linn
+            optional: Linn (valikuline)
+          errors:
+            blank_instructional: Sisesta linn
+            blank_informative: Linn puudub
+            too_long_instructional: Linn on liiga pikk (enim 255 tähemärki)
+            too_long_informative: Linn on liiga pikk
+            contains_emojis_instructional: Linn ei tohi sisaldada emotikone
+            contains_emojis_informative: Linn ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Linn ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_mathematical_symbols_informative: Linn ei tohi sisaldada matemaatilisi
+              sümboleid
+            contains_restricted_characters_instructional: Linn võib sisaldada ainult
+              tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Linn ei tohi sisaldada keelatud
+              märke
+            contains_too_many_words_instructional: Linna nimes peab olema vähem kui
+              %{word_count} sõna
+            contains_too_many_words_informative: Linna nimes peab olema vähem kui
+              %{word_count} sõna
+            contains_html_tags_instructional: Linn ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Linn ei tohi sisaldada HTML-i
+            contains_url_instructional: Linn ei tohi sisaldada URL-i
+            contains_url_informative: Linn ei tohi sisaldada URL-i
+            contains_email_instructional: Linn ei tohi sisaldada e-posti aadressi
+            contains_email_informative: Linn ei tohi sisaldada e-posti aadressi
+            unknown_for_zip_instructional: Sisesta kehtiv linn postiindeksi %{zip}
+              jaoks
+            unknown_for_zip_informative: Linn ei sobi postiindeksiga %{zip}
+            unknown_for_province_instructional: Sisesta kehtiv linn piirkonnale %{province}
+            unknown_for_province_informative: Linn ei sobi piirkonnaga %{province}
+            unknown_for_zip_and_province_instructional: Sisesta kehtiv linn asukohale
+              %{zip}, %{province}
+            unknown_for_zip_and_province_informative: Linn võib olla vale
+            unknown_for_address_instructional: Linn võib olla vale
+            unknown_for_address_informative: Linn võib olla vale
+        province:
+          label:
+            default: Piirkond
+            optional: Piirkond (valikuline)
+          errors:
+            blank_instructional: Vali piirkond
+            blank_informative: Piirkond puudub
+            invalid_instructional: Vali piirkond
+            invalid_informative: Piirkond puudub
+            invalid_for_country_instructional: Sisesta kehtiv piirkond riigile %{country}
+            invalid_for_country_informative: Piirkond ei sobi riigiga %{country}
+            unknown_for_city_and_zip_instructional: Vali kehtiv piirkond asukohale
+              %{city}, %{zip}
+            unknown_for_city_and_zip_informative: Piirkond ei sobi asukohaga %{city},
+              %{zip}
+            unknown_for_city_informative: Vali kehtiv piirkond linnale %{city}
+            unknown_for_city_instructional: Piirkond ei sobi linnaga %{city}
+            unknown_for_zip_instructional: Vali kehtiv piirkond postiindeksile %{zip}
+            unknown_for_zip_informative: Piirkond ei sobi postiindeksiga %{zip}
+            unknown_for_address_instructional: Piirkond võib olla vale
+            unknown_for_address_informative: Piirkond võib olla vale
+        country:
+          label:
+            default: Riik/piirkond
+            optional: Riik/piirkond (valikuline)
+          errors:
+            blank_instructional: Vali riik/piirkond
+            blank_informative: Riik/piirkond puudub
+            not_supported_instructional: Riiki/piirkonda ei toetata
+            not_supported_informative: Riiki/piirkonda ei toetata
+            invalid_instructional: Sisesta kehtiv riik/piirkond
+            invalid_informative: Riik/piirkond ei ole kehtiv
+            invalid_for_zip_instructional: Sisesta selle postiindeksi jaoks kehtiv
+              riik/piirkond
+            invalid_for_zip_informative: "%{country} ei sobi riigi/piirkonnaga"
+        zip:
+          label:
+            default: Postiindeks
+            optional: Postiindeks (valikuline)
+          errors:
+            blank_instructional: Sisesta postiindeks
+            blank_informative: Postiindeks puudub
+            blocked_address_instructional: Seda asukohta ei toetata
+            blocked_address_informative: Seda asukohta ei toetata
+            invalid_instructional: Sisesta kehtiv postiindeks
+            invalid_informative: Postiindeks ei ole kehtiv
+            invalid_for_country_instructional: Sisesta kehtiv postiindeks riigile
+              %{country}
+            invalid_for_country_informative: Postiindeks ei sobi riigiga %{country}
+            invalid_for_province_instructional: Sisesta kehtiv postiindeks piirkonnale
+              %{province}
+            invalid_for_province_informative: Postiindeks ei sobi piirkonnaga %{province}
+            invalid_for_country_and_province_instructional: Sisesta kehtiv postiindeks
+              asukohale %{province}, %{country}
+            invalid_for_country_and_province_informative: Postiindeks ei sobi asukohaga
+              %{province}, %{country}
+            too_long_instructional: Postiindeks on liiga pikk
+            too_long_informative: Postiindeks on liiga pikk
+            contains_emojis_instructional: Postiindeks ei tohi sisaldada emotikone
+            contains_emojis_informative: Postiindeks ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Postiindeks ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Postiindeks ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Postiindeks võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Postiindeks ei tohi sisaldada
+              keelatud märke
+            not_supported_instructional: Postiindeksit ei toetata. Sisesta uus aadress
+              ja proovi uuesti
+            not_supported_informative: Postiindeksit ei toetata
+            contains_html_tags_instructional: Postiindeks ei tohi sisaldada HTML-i
+            contains_html_tags_informative: Postiindeks ei tohi sisaldada HTML-i
+            unknown_for_province_instructional: Sisesta kehtiv postiindeks piirkonnale
+              %{province}
+            unknown_for_province_informative: Postiindeks on piirkonna %{province}
+              puhul kehtetu
+            unknown_for_address_instructional: Postiindeks võib olla vale
+            unknown_for_address_informative: Postiindeks võib olla vale
+        phone:
+          label:
+            default: Telefon
+            optional: Telefon (valikuline)
+          errors:
+            blank_instructional: Sisesta telefoninumber
+            blank_informative: Telefoninumber puudub
+            invalid_instructional: Sisesta kehtiv telefoninumber
+            invalid_informative: Telefoninumber ei ole kehtiv
+            too_long_instructional: Telefoninumber on liiga pikk
+            too_long_informative: Telefoninumber on liiga pikk
+            contains_emojis_instructional: Telefoninumber ei tohi sisaldada emotikone
+            contains_emojis_informative: Telefoninumber ei tohi sisaldada emotikone
+            contains_mathematical_symbols_instructional: Telefoninumber ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_mathematical_symbols_informative: Telefoninumber ei tohi sisaldada
+              matemaatilisi sümboleid
+            contains_restricted_characters_instructional: Telefoninumber võib sisaldada
+              ainult tähti, numbreid, kohalikke tähemärke ja erimärke
+            contains_restricted_characters_informative: Telefoninumber ei tohi sisaldada
+              keelatud märke
+        address:
+          errors:
+            may_not_exist_instructional: Aadressi ei leitud või seda pole olemas
+            may_not_exist_informative: Aadressi ei leitud

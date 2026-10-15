@@ -1,0 +1,551 @@
+---
+bn:
+  worldwide:
+    _default:
+      addresses:
+        company:
+          label:
+            default: কোম্পানি
+            optional: কোম্পানি (ঐচ্ছিক)
+          errors:
+            blank_instructional: কোম্পানির নাম লিখুন
+            blank_informative: কোম্পানি দেওয়া হয়নি
+            too_long_instructional: কোম্পানি খুব বড় (সর্বোচ্চ 255টি অক্ষর)
+            too_long_informative: কোম্পানি খুব বড়
+            contains_emojis_instructional: কোম্পানিতে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: কোম্পানিতে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: কোম্পানিতে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_mathematical_symbols_informative: কোম্পানিতে গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: কোম্পানিতে শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: কোম্পানিতে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+            contains_html_tags_instructional: কোম্পানিতে HTML থাকতে পারবে না
+            contains_html_tags_informative: কোম্পানিতে HTML থাকতে পারবে না
+        first_name:
+          label:
+            default: নামের প্রথমাংশ
+            optional: নামের প্রথমাংশ (ঐচ্ছিক)
+          errors:
+            blank_instructional: নামের প্রথমাংশ লিখুন
+            blank_informative: নামের প্রথমাংশ দেওয়া হয়নি
+            too_long_instructional: নামের প্রথমাংশ খুব বড় (সর্বোচ্চ 255টি অক্ষর)
+            too_long_informative: নামের প্রথমাংশ খুব বড়
+            contains_emojis_instructional: নামের প্রথমাংশে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: নামের প্রথমাংশে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: নামের প্রথমাংশে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_mathematical_symbols_informative: নামের প্রথমাংশে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_restricted_characters_instructional: নামের প্রথমাংশে শুধু অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: নামের প্রথমাংশে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+            contains_html_tags_instructional: নামের প্রথমাংশে HTML থাকতে পারবে না
+            contains_html_tags_informative: নামের প্রথমাংশে HTML থাকতে পারবে না
+            contains_url_instructional: নামের প্রথমাংশে কোনো URL থাকতে পারবে না
+            contains_url_informative: নামের প্রথমাংশে কোনো URL থাকতে পারবে না
+        last_name:
+          label:
+            default: নামের শেষাংশ
+            optional: নামের শেষাংশ (ঐচ্ছিক)
+          errors:
+            blank_instructional: নামের শেষাংশ লিখুন
+            blank_informative: নামের শেষাংশ দেওয়া হয়নি
+            too_long_instructional: নামের শেষাংশ খুব বড় (সর্বোচ্চ 255টি অক্ষর)
+            too_long_informative: নামের শেষাংশ খুব বড়
+            contains_emojis_instructional: নামের শেষাংশে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: নামের শেষাংশে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: নামের শেষাংশে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_mathematical_symbols_informative: নামের শেষাংশে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_restricted_characters_instructional: নামের শেষাংশে শুধু অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: নামের শেষাংশে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+            contains_html_tags_instructional: নামের শেষাংশে HTML থাকতে পারবে না
+            contains_html_tags_informative: নামের শেষাংশে HTML থাকতে পারবে না
+            contains_url_instructional: নামের শেষাংশে কোনো URL থাকতে পারবে না
+            contains_url_informative: নামের শেষাংশে কোনো URL থাকতে পারবে না
+        address1:
+          label:
+            default: ঠিকানা
+            optional: ঠিকানা (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি ঠিকানা লিখুন
+            blank_informative: ঠিকানা দেওয়া হয়নি
+            too_long_instructional: ঠিকানার প্রথম লাইনটি খুব বড় (সর্বোচ্চ 255টি অক্ষর)
+            too_long_informative: ঠিকানার প্রথম লাইনটি খুব বড়
+            contains_emojis_instructional: ঠিকানায় ইমোজি থাকতে পারবে না
+            contains_emojis_informative: ঠিকানায় ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: ঠিকানায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: ঠিকানায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: ঠিকানায় শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: ঠিকানায় সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: ঠিকানায় %{word_count}টি শব্দের
+              কম থাকতে হবে
+            contains_too_many_words_informative: ঠিকানায় %{word_count}টি শব্দের কম
+              থাকতে হবে
+            contains_html_tags_instructional: ঠিকানায় HTML থাকতে পারবে না
+            contains_html_tags_informative: ঠিকানায় HTML থাকতে পারবে না
+            contains_url_instructional: ঠিকানায় কোনো URL থাকতে পারবে না
+            contains_url_informative: ঠিকানায় কোনো URL থাকতে পারবে না
+            contains_email_instructional: ঠিকানায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: ঠিকানায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            missing_building_number_instructional: আপনার কোনো ভবনের নম্বর থাকলে তা
+              যোগ করুন
+            missing_building_number_informative: ভবনের নম্বরটি হয়তো দেওয়া হয়নি
+            street_unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ রাস্তার
+              নাম লিখুন"
+            street_unknown_for_zip_informative: রাস্তার নামটি %{zip}-এর সাথে মিলছে
+              না
+            building_number_invalid_instructional: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            building_number_invalid_informative: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            unknown_for_address_instructional: ঠিকানার 1ম লাইনটি ভুল হতে পারে
+            unknown_for_address_informative: ঠিকানার 1ম লাইনটি ভুল হতে পারে
+          warnings:
+            contains_too_many_words: ঠিকানার 1ম লাইনে %{word_count}টির কম শব্দ থাকা
+              বাঞ্ছনীয়
+        street_name:
+          label:
+            default: রাস্তা
+            optional: রাস্তা (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি রাস্তা লিখুন
+            blank_informative: রাস্তা দেওয়া হয়নি
+            too_long_instructional: রাস্তা খুব বড় (সর্বোচ্চ %{limit}টি অক্ষর)
+            too_long_informative: রাস্তা খুব বড়
+            contains_emojis_instructional: রাস্তায় ইমোজি থাকতে পারবে না
+            contains_emojis_informative: রাস্তায় ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: রাস্তায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: রাস্তায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: রাস্তায় শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: রাস্তায় সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: রাস্তায় %{word_count}টির বেশি শব্দ
+              থাকতে পারবে না
+            contains_too_many_words_informative: রাস্তায় %{word_count}টির বেশি শব্দ
+              থাকতে পারবে না
+            contains_html_tags_instructional: রাস্তায় HTML থাকতে পারবে না
+            contains_html_tags_informative: রাস্তায় HTML থাকতে পারবে না
+            contains_url_instructional: রাস্তায় কোনো URL থাকতে পারবে না
+            contains_url_informative: রাস্তায় কোনো URL থাকতে পারবে না
+            contains_email_instructional: রাস্তায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: রাস্তায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            street_unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ রাস্তা
+              লিখুন"
+            street_unknown_for_zip_informative: "%{zip}-এর জন্য রাস্তাটি অবৈধ"
+            unknown_for_address_instructional: রাস্তাটি ভুল হতে পারে
+            unknown_for_address_informative: রাস্তাটি ভুল হতে পারে
+          warnings:
+            contains_too_many_words: রাস্তায় %{word_count}টির কম শব্দ থাকা বাঞ্ছনীয়
+        street_number:
+          label:
+            default: ভবনের নম্বর
+            optional: ভবনের নম্বর (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি ভবনের নম্বর লিখুন
+            blank_informative: ভবনের নম্বর দেওয়া হয়নি
+            too_long_instructional: ভবনের নম্বর খুব বড় (সর্বোচ্চ %{limit}টি অক্ষর)
+            too_long_informative: ভবনের নম্বর খুব বড়
+            contains_emojis_instructional: ভবনের নম্বরে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: ভবনের নম্বরে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: ভবনের নম্বরে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_mathematical_symbols_informative: ভবনের নম্বরে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_restricted_characters_instructional: ভবনের নম্বরে শুধু অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: ভবনের নম্বরে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+            contains_html_tags_instructional: ভবনের নম্বরে HTML থাকতে পারবে না
+            contains_html_tags_informative: ভবনের নম্বরে HTML থাকতে পারবে না
+            contains_url_instructional: ভবনের নম্বরে কোনো URL থাকতে পারবে না
+            contains_url_informative: ভবনের নম্বরে কোনো URL থাকতে পারবে না
+            contains_email_instructional: ভবনের নম্বরে কোনো ইমেইল ঠিকানা থাকতে পারবে
+              না
+            contains_email_informative: ভবনের নম্বরে কোনো ইমেইল ঠিকানা থাকতে পারবে
+              না
+            missing_building_number_instructional: আপনার কোনো ভবনের নম্বর থাকলে তা
+              যোগ করুন
+            missing_building_number_informative: ভবনের নম্বরটি হয়তো দেওয়া হয়নি
+            building_number_invalid_instructional: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            building_number_invalid_informative: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            unknown_for_address_instructional: একটি বৈধ ভবনের নম্বর লিখুন
+            unknown_for_address_informative: ভবনের নম্বরটি বৈধ নয়
+          warnings:
+            contains_too_many_words: ভবনের নম্বরে %{word_count}টির কম শব্দ থাকা বাঞ্ছনীয়
+        address2:
+          label:
+            default: অ্যাপার্টমেন্ট, স্যুট ইত্যাদি
+            optional: অ্যাপার্টমেন্ট, স্যুট ইত্যাদি (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি অ্যাপার্টমেন্ট, স্যুট ইত্যাদি লিখুন
+            blank_informative: অ্যাপার্টমেন্ট বা স্যুট দেওয়া হয়নি
+            too_long_instructional: ঠিকানার 2য় লাইনটি খুব বড় (সর্বোচ্চ 255টি অক্ষর)
+            too_long_informative: ঠিকানার 2য় লাইনটি খুব বড়
+            contains_emojis_instructional: ঠিকানার 2য় লাইনে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: ঠিকানার 2য় লাইনে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: ঠিকানার 2য় লাইনে গাণিতিক
+              চিহ্ন থাকতে পারবে না
+            contains_mathematical_symbols_informative: ঠিকানার 2য় লাইনে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_restricted_characters_instructional: ঠিকানার 2য় লাইনে শুধু অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: ঠিকানার 2য় লাইনে সীমাবদ্ধ
+              অক্ষর থাকতে পারবে না
+            contains_too_many_words_instructional: ঠিকানার 2য় লাইনে %{word_count}টি
+              শব্দের কম থাকতে হবে
+            contains_too_many_words_informative: ঠিকানার 2য় লাইনে %{word_count}টি
+              শব্দের কম থাকতে হবে
+            contains_html_tags_instructional: ঠিকানার 2য় লাইনে HTML থাকতে পারবে না
+            contains_html_tags_informative: ঠিকানার 2য় লাইনে HTML থাকতে পারবে না
+            contains_url_instructional: ঠিকানার 2য় লাইনে কোনো URL থাকতে পারবে না
+            contains_url_informative: ঠিকানার 2য় লাইনে কোনো URL থাকতে পারবে না
+            contains_email_instructional: ঠিকানার 2য় লাইনে কোনো ইমেইল ঠিকানা থাকতে
+              পারবে না
+            contains_email_informative: ঠিকানার 2য় লাইনে কোনো ইমেইল ঠিকানা থাকতে পারবে
+              না
+            missing_building_number_instructional: আপনার কোনো ভবনের নম্বর থাকলে তা
+              যোগ করুন
+            missing_building_number_informative: ভবনের নম্বরটি হয়তো দেওয়া হয়নি
+            street_unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ রাস্তার
+              নাম লিখুন"
+            street_unknown_for_zip_informative: "%{zip}-এর জন্য রাস্তার নামটি বৈধ
+              নয়"
+            building_number_invalid_instructional: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            building_number_invalid_informative: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            unknown_for_address_instructional: ঠিকানার 2য় লাইনটি ভুল হতে পারে
+            unknown_for_address_informative: ঠিকানার 2য় লাইনটি ভুল হতে পারে
+          warnings:
+            contains_too_many_words: ঠিকানার 2য় লাইনে %{word_count}টির কম শব্দ থাকা
+              বাঞ্ছনীয়
+        line2:
+          label:
+            default: অ্যাপার্টমেন্ট, স্যুট ইত্যাদি
+            optional: অ্যাপার্টমেন্ট, স্যুট ইত্যাদি (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি অ্যাপার্টমেন্ট, স্যুট ইত্যাদি লিখুন
+            blank_informative: অ্যাপার্টমেন্ট বা স্যুট দেওয়া হয়নি
+            too_long_instructional: ঠিকানার দ্বিতীয় লাইনটি খুব বড় (সর্বোচ্চ %{limit}টি
+              অক্ষর)
+            too_long_informative: ঠিকানার দ্বিতীয় লাইনটি খুব বড়
+            contains_emojis_instructional: ঠিকানার দ্বিতীয় লাইনে ইমোজি থাকতে পারবে
+              না
+            contains_emojis_informative: ঠিকানার দ্বিতীয় লাইনে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: ঠিকানার দ্বিতীয় লাইনে গাণিতিক
+              চিহ্ন থাকতে পারবে না
+            contains_mathematical_symbols_informative: ঠিকানার দ্বিতীয় লাইনে গাণিতিক
+              চিহ্ন থাকতে পারবে না
+            contains_restricted_characters_instructional: ঠিকানার দ্বিতীয় লাইনে শুধু
+              অক্ষর, সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: ঠিকানার দ্বিতীয় লাইনে সীমাবদ্ধ
+              অক্ষর থাকতে পারবে না
+            contains_too_many_words_instructional: ঠিকানার দ্বিতীয় লাইনে %{word_count}টি
+              শব্দের কম থাকতে হবে
+            contains_too_many_words_informative: ঠিকানার দ্বিতীয় লাইনে %{word_count}টি
+              শব্দের কম থাকতে হবে
+            contains_html_tags_instructional: ঠিকানার দ্বিতীয় লাইনে HTML ট্যাগ থাকতে
+              পারবে না
+            contains_html_tags_informative: ঠিকানার দ্বিতীয় লাইনে HTML ট্যাগ থাকতে
+              পারবে না
+            contains_url_instructional: ঠিকানার দ্বিতীয় লাইনে কোনো URL থাকতে পারবে
+              না
+            contains_url_informative: ঠিকানার দ্বিতীয় লাইনে কোনো URL থাকতে পারবে না
+            contains_email_instructional: ঠিকানার দ্বিতীয় লাইনে কোনো ইমেইল ঠিকানা
+              থাকতে পারবে না
+            contains_email_informative: ঠিকানার দ্বিতীয় লাইনে কোনো ইমেইল ঠিকানা থাকতে
+              পারবে না
+            missing_building_number_instructional: আপনার কোনো ভবনের নম্বর থাকলে তা
+              যোগ করুন
+            missing_building_number_informative: আপনার কোনো ভবনের নম্বর থাকলে তা যোগ
+              করুন
+            street_unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ রাস্তার
+              নাম লিখুন"
+            street_unknown_for_zip_informative: "%{zip}-এর জন্য একটি বৈধ রাস্তার নাম
+              লিখুন"
+            building_number_invalid_instructional: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            building_number_invalid_informative: "%{street}, %{zip}-এর জন্য ভবনের
+              নম্বর খুঁজে পাওয়া যায়নি"
+            unknown_for_address_instructional: ঠিকানার দ্বিতীয় লাইনটি ভুল হতে পারে
+            unknown_for_address_informative: ঠিকানার দ্বিতীয় লাইনটি ভুল হতে পারে
+          warnings:
+            contains_too_many_words: ঠিকানার দ্বিতীয় লাইনে %{word_count}টির কম শব্দ
+              থাকা বাঞ্ছনীয়
+        neighborhood:
+          label:
+            default: এলাকা
+            optional: এলাকা (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি এলাকা লিখুন
+            blank_informative: এলাকা দেওয়া হয়নি
+            too_long_instructional: এলাকা খুব বড় (সর্বোচ্চ %{limit}টি অক্ষর)
+            too_long_informative: এলাকা খুব বড়
+            contains_emojis_instructional: এলাকায় ইমোজি থাকতে পারবে না
+            contains_emojis_informative: এলাকায় ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: এলাকায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: এলাকায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: এলাকায় শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: এলাকায় সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: এলাকায় %{word_count}টি শব্দের কম
+              থাকতে হবে
+            contains_too_many_words_informative: এলাকায় %{word_count}টি শব্দের কম
+              থাকতে হবে
+            contains_html_tags_instructional: এলাকায় HTML ট্যাগ থাকতে পারবে না
+            contains_html_tags_informative: এলাকায় HTML ট্যাগ থাকতে পারবে না
+            contains_url_instructional: এলাকায় কোনো URL থাকতে পারবে না
+            contains_url_informative: এলাকায় কোনো URL থাকতে পারবে না
+            contains_email_instructional: এলাকায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: এলাকায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            unknown_for_city_instructional: "%{city}-এর জন্য একটি বৈধ এলাকার নাম লিখুন"
+            unknown_for_city_informative: "%{city}-এর জন্য একটি বৈধ এলাকার নাম লিখুন"
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ এলাকার নাম লিখুন"
+            unknown_for_zip_informative: "%{zip}-এর জন্য একটি বৈধ এলাকার নাম লিখুন"
+            unknown_for_address_instructional: এলাকা ভুল হতে পারে
+            unknown_for_address_informative: এলাকা ভুল হতে পারে
+          warnings:
+            contains_too_many_words: এলাকায় %{word_count}টির কম শব্দ থাকা বাঞ্ছনীয়
+        district:
+          label:
+            default: জেলা
+            optional: জেলা (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি জেলা লিখুন
+            blank_informative: জেলা দেওয়া হয়নি
+            too_long_instructional: জেলা খুব বড় (সর্বোচ্চ %{limit}টি অক্ষর)
+            too_long_informative: জেলা খুব বড়
+            contains_emojis_instructional: জেলায় ইমোজি থাকতে পারবে না
+            contains_emojis_informative: জেলায় ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: জেলায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: জেলায় গাণিতিক চিহ্ন থাকতে পারবে
+              না
+            contains_restricted_characters_instructional: জেলায় শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: জেলায় সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: জেলায় %{word_count}টি শব্দের কম
+              থাকতে হবে
+            contains_too_many_words_informative: জেলায় %{word_count}টি শব্দের কম থাকতে
+              হবে
+            contains_html_tags_instructional: জেলায় HTML ট্যাগ থাকতে পারবে না
+            contains_html_tags_informative: জেলায় HTML ট্যাগ থাকতে পারবে না
+            contains_url_instructional: জেলায় কোনো URL থাকতে পারবে না
+            contains_url_informative: জেলায় কোনো URL থাকতে পারবে না
+            contains_email_instructional: জেলায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: জেলায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            unknown_for_city_instructional: "%{city}-এর জন্য একটি বৈধ জেলার নাম লিখুন"
+            unknown_for_city_informative: "%{city}-এর জন্য একটি বৈধ জেলার নাম লিখুন"
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ জেলার নাম লিখুন"
+            unknown_for_zip_informative: "%{zip}-এর জন্য একটি বৈধ জেলার নাম লিখুন"
+            unknown_for_address_instructional: জেলা ভুল হতে পারে
+            unknown_for_address_informative: জেলা ভুল হতে পারে
+          warnings:
+            contains_too_many_words: জেলায় %{word_count}টির কম শব্দ থাকা বাঞ্ছনীয়
+        subdistrict:
+          label:
+            default: উপজেলা
+            optional: উপজেলা (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি উপজেলা লিখুন
+            blank_informative: উপজেলা দেওয়া হয়নি
+            too_long_instructional: উপজেলা খুব বড় (সর্বোচ্চ %{limit}টি অক্ষর)
+            too_long_informative: উপজেলা খুব বড়
+            contains_emojis_instructional: উপজেলায় ইমোজি থাকতে পারবে না
+            contains_emojis_informative: উপজেলায় ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: উপজেলায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: উপজেলায় গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: উপজেলায় শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: উপজেলায় সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: উপজেলায় %{word_count}টি শব্দের
+              কম থাকতে হবে
+            contains_too_many_words_informative: উপজেলায় %{word_count}টি শব্দের কম
+              থাকতে হবে
+            contains_html_tags_instructional: উপজেলায় HTML ট্যাগ থাকতে পারবে না
+            contains_html_tags_informative: উপজেলায় HTML ট্যাগ থাকতে পারবে না
+            contains_url_instructional: উপজেলায় কোনো URL থাকতে পারবে না
+            contains_url_informative: উপজেলায় কোনো URL থাকতে পারবে না
+            contains_email_instructional: উপজেলায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: উপজেলায় কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            unknown_for_city_instructional: "%{city}-এর জন্য একটি বৈধ উপজেলার নাম
+              লিখুন"
+            unknown_for_city_informative: "%{city}-এর জন্য একটি বৈধ উপজেলার নাম লিখুন"
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ উপজেলার নাম লিখুন"
+            unknown_for_zip_informative: "%{zip}-এর জন্য একটি বৈধ উপজেলার নাম লিখুন"
+            unknown_for_address_instructional: উপজেলা ভুল হতে পারে
+            unknown_for_address_informative: উপজেলা ভুল হতে পারে
+          warnings:
+            contains_too_many_words: উপজেলায় %{word_count}টির কম শব্দ থাকা বাঞ্ছনীয়
+        city:
+          label:
+            default: শহর
+            optional: শহর (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি শহর লিখুন
+            blank_informative: শহর দেওয়া হয়নি
+            too_long_instructional: শহর খুব বড় (সর্বোচ্চ 255টি অক্ষর)
+            too_long_informative: শহর খুব বড়
+            contains_emojis_instructional: শহরে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: শহরে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: শহরে গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_mathematical_symbols_informative: শহরে গাণিতিক চিহ্ন থাকতে পারবে
+              না
+            contains_restricted_characters_instructional: শহরে শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: শহরে সীমাবদ্ধ অক্ষর থাকতে
+              পারবে না
+            contains_too_many_words_instructional: শহরে %{word_count}টি শব্দের কম
+              থাকতে হবে
+            contains_too_many_words_informative: শহরে %{word_count}টি শব্দের কম থাকতে
+              হবে
+            contains_html_tags_instructional: শহরে HTML থাকতে পারবে না
+            contains_html_tags_informative: শহরে HTML থাকতে পারবে না
+            contains_url_instructional: শহরে কোনো URL থাকতে পারবে না
+            contains_url_informative: শহরে কোনো URL থাকতে পারবে না
+            contains_email_instructional: শহরে কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            contains_email_informative: শহরে কোনো ইমেইল ঠিকানা থাকতে পারবে না
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ শহর লিখুন"
+            unknown_for_zip_informative: শহরটি %{zip}-এর সাথে মিলছে না
+            unknown_for_province_instructional: "%{province}-এর জন্য একটি বৈধ শহর
+              লিখুন"
+            unknown_for_province_informative: শহরটি %{province}-এর সাথে মিলছে না
+            unknown_for_zip_and_province_instructional: "%{zip}, %{province}-এর জন্য
+              একটি বৈধ শহর লিখুন"
+            unknown_for_zip_and_province_informative: শহর ভুল হতে পারে
+            unknown_for_address_instructional: শহর ভুল হতে পারে
+            unknown_for_address_informative: শহর ভুল হতে পারে
+        province:
+          label:
+            default: অঞ্চল
+            optional: অঞ্চল (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি অঞ্চল নির্বাচন করুন
+            blank_informative: অঞ্চল দেওয়া হয়নি
+            invalid_instructional: একটি অঞ্চল নির্বাচন করুন
+            invalid_informative: অঞ্চল দেওয়া হয়নি
+            invalid_for_country_instructional: "%{country}-এর জন্য একটি বৈধ অঞ্চল
+              লিখুন"
+            invalid_for_country_informative: অঞ্চলটি %{country}-এর সাথে মিলছে না
+            unknown_for_city_and_zip_instructional: "%{city}, %{zip}-এর জন্য একটি
+              বৈধ অঞ্চল নির্বাচন করুন"
+            unknown_for_city_and_zip_informative: অঞ্চলটি %{city}, %{zip}-এর সাথে
+              মিলছে না
+            unknown_for_city_informative: "%{city}-এর জন্য একটি বৈধ অঞ্চল নির্বাচন
+              করুন"
+            unknown_for_city_instructional: অঞ্চলটি %{city}-এর সাথে মিলছে না
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি বৈধ অঞ্চল নির্বাচন
+              করুন"
+            unknown_for_zip_informative: অঞ্চলটি %{zip}-এর সাথে মিলছে না
+            unknown_for_address_instructional: অঞ্চল ভুল হতে পারে
+            unknown_for_address_informative: অঞ্চল ভুল হতে পারে
+        country:
+          label:
+            default: দেশ/অঞ্চল
+            optional: দেশ/অঞ্চল (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি দেশ/অঞ্চল নির্বাচন করুন
+            blank_informative: দেশ/অঞ্চল দেওয়া হয়নি
+            not_supported_instructional: দেশ/অঞ্চল সমর্থিত নয়
+            not_supported_informative: দেশ/অঞ্চল সমর্থিত নয়
+            invalid_instructional: একটি বৈধ দেশ/অঞ্চল লিখুন
+            invalid_informative: দেশ/অঞ্চলটি বৈধ নয়
+            invalid_for_zip_instructional: এই পোস্টাল কোডের জন্য একটি বৈধ দেশ/অঞ্চল
+              লিখুন
+            invalid_for_zip_informative: "%{country}-এর সাথে দেশ/অঞ্চলের মিল নেই"
+        zip:
+          label:
+            default: পোস্টাল কোড
+            optional: পোস্টাল কোড (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি পোস্টাল কোড লিখুন
+            blank_informative: পোস্টাল কোড দেওয়া হয়নি
+            blocked_address_instructional: এই লোকেশনটি সমর্থিত নয়
+            blocked_address_informative: এই লোকেশনটি সমর্থিত নয়
+            invalid_instructional: একটি বৈধ পোস্টাল কোড লিখুন
+            invalid_informative: পোস্টাল কোড বৈধ নয়
+            invalid_for_country_instructional: "%{country}-এর জন্য একটি বৈধ পোস্টাল
+              কোড লিখুন"
+            invalid_for_country_informative: পোস্টাল কোডটি %{country}-এর সাথে মিলছে
+              না
+            invalid_for_province_instructional: "%{province}-এর জন্য একটি বৈধ পোস্টাল
+              কোড লিখুন"
+            invalid_for_province_informative: পোস্টাল কোডটি %{province}-এর সাথে মিলছে
+              না
+            invalid_for_country_and_province_instructional: "%{province}, %{country}-এর
+              জন্য একটি বৈধ পোস্টাল কোড লিখুন"
+            invalid_for_country_and_province_informative: পোস্টাল কোডটি %{province},
+              %{country}-এর সাথে মিলছে না
+            too_long_instructional: পোস্টাল কোড খুব বড়
+            too_long_informative: পোস্টাল কোড খুব বড়
+            contains_emojis_instructional: পোস্টাল কোডে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: পোস্টাল কোডে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: পোস্টাল কোডে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_mathematical_symbols_informative: পোস্টাল কোডে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_restricted_characters_instructional: পোস্টাল কোডে শুধু অক্ষর,
+              সংখ্যা, স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: পোস্টাল কোডে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+            not_supported_instructional: পোস্টাল কোড সমর্থিত নয়। নতুন একটি ঠিকানা
+              লিখে আবার চেষ্টা করুন
+            not_supported_informative: পোস্টাল কোড সমর্থিত নয়
+            contains_html_tags_instructional: পোস্টাল কোডে HTML থাকতে পারবে না
+            contains_html_tags_informative: পোস্টাল কোডে HTML থাকতে পারবে না
+            unknown_for_province_instructional: "%{province}-এর জন্য একটি বৈধ পোস্টাল
+              কোড লিখুন"
+            unknown_for_province_informative: "%{province}-এর জন্য পোস্টাল কোডটি অবৈধ"
+            unknown_for_address_instructional: পোস্টাল কোডটি ভুল হতে পারে
+            unknown_for_address_informative: পোস্টাল কোডটি ভুল হতে পারে
+        phone:
+          label:
+            default: ফোন
+            optional: ফোন (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি ফোন নম্বর লিখুন
+            blank_informative: ফোন নম্বর দেওয়া হয়নি
+            invalid_instructional: একটি বৈধ ফোন নম্বর লিখুন
+            invalid_informative: ফোন নম্বরটি বৈধ নয়
+            too_long_instructional: ফোন নম্বর খুব বড়
+            too_long_informative: ফোন নম্বর খুব বড়
+            contains_emojis_instructional: ফোন নম্বরে ইমোজি থাকতে পারবে না
+            contains_emojis_informative: ফোন নম্বরে ইমোজি থাকতে পারবে না
+            contains_mathematical_symbols_instructional: ফোন নম্বরে গাণিতিক চিহ্ন
+              থাকতে পারবে না
+            contains_mathematical_symbols_informative: ফোন নম্বরে গাণিতিক চিহ্ন থাকতে
+              পারবে না
+            contains_restricted_characters_instructional: ফোন নম্বরে শুধু অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর এবং বিশেষ অক্ষর থাকতে পারবে
+            contains_restricted_characters_informative: ফোন নম্বরে সীমাবদ্ধ অক্ষর
+              থাকতে পারবে না
+        address:
+          errors:
+            may_not_exist_instructional: ঠিকানাটি পাওয়া যায়নি বা এর কোনো অস্তিত্ব
+              নেই
+            may_not_exist_informative: ঠিকানাটি পাওয়া যায়নি

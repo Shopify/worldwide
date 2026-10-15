@@ -1,0 +1,55 @@
+---
+et:
+  worldwide:
+    US:
+      addresses:
+        province:
+          label:
+            default: Osariik
+            optional: Osariik (valikuline)
+          errors:
+            blank_instructional: Vali osariik
+            blank_informative: Sisesta osariik
+            invalid_for_country_instructional: Sisesta kehtiv osariik asukoha %{city},
+              %{zip} jaoks
+            invalid_for_country_informative: Osariik ei ole kehtiv
+            unknown_for_city_and_zip_instructional: Sisesta kehtiv osariik asukoha
+              %{city}, %{zip} jaoks
+            unknown_for_city_and_zip_informative: Osariik ei kehti asukoha %{city},
+              %{zip} jaoks
+            unknown_for_city_instructional: Vali kehtiv osariik linna %{city} jaoks
+            unknown_for_city_informative: Osariik ei kehti linna %{city} jaoks
+            unknown_for_zip_instructional: Vali kehtiv osariik ZIP-koodi %{zip} jaoks
+            unknown_for_zip_informative: Osariik ei kehti ZIP-koodi %{zip} jaoks
+            unknown_for_address_instructional: Osariik võib olla vale
+            unknown_for_address_informative: Osariik võib olla vale
+        zip:
+          label:
+            default: ZIP-kood
+            optional: ZIP-kood (valikuline)
+          errors:
+            blank_instructional: Sisesta ZIP-kood
+            blank_informative: ZIP-kood on puudu
+            invalid_for_country_instructional: Sisesta kehtiv ZIP-kood riigi %{country}
+              jaoks
+            invalid_for_country_informative: ZIP-kood ei kehti riigi %{country} jaoks
+            invalid_for_province_instructional: Sisesta kehtiv ZIP-kood osariigi %{province}
+              jaoks
+            invalid_for_province_informative: ZIP-kood ei kehti osariigi %{province}
+              jaoks
+            invalid_for_country_and_province_instructional: Sisesta kehtiv ZIP-kood
+              asukoha %{province}, %{country} jaoks
+            invalid_for_country_and_province_informative: ZIP-kood ei kehti asukoha
+              %{province}, %{country} jaoks
+            too_long_instructional: ZIP-kood on liiga pikk
+            too_long_informative: ZIP-kood on liiga pikk (maksimaalselt 255 tähemärki)
+            contains_emojis_instructional: ZIP-kood ei tohi sisaldada emotikone
+            contains_emojis_informative: ZIP-kood ei tohi sisaldada emotikone
+            contains_restricted_characters_instructional: ZIP-kood ei tohi sisaldada
+              keelatud tähemärke
+            contains_restricted_characters_informative: ZIP-kood ei tohi sisaldada
+              keelatud tähemärke
+            contains_html_tags_instructional: ZIP-kood ei tohi sisaldada HTML-i
+            contains_html_tags_informative: ZIP-kood ei tohi sisaldada HTML-i
+            unknown_for_address_instructional: ZIP-kood võib olla vale
+            unknown_for_address_informative: ZIP-kood võib olla vale

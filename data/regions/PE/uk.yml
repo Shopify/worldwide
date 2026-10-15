@@ -1,0 +1,45 @@
+---
+uk:
+  worldwide:
+    PE:
+      addresses:
+        neighborhood:
+          label:
+            default: Район
+            optional: Район (необов’язково)
+          errors:
+            blank_instructional: Введіть район
+            blank_informative: Відсутній район
+            too_long_instructional: Назва району задовга (максимум %{limit} символів)
+            too_long_informative: Назва району задовга
+            contains_emojis_instructional: Район не може містити емодзі
+            contains_emojis_informative: Район не може містити емодзі
+            contains_mathematical_symbols_instructional: Район не може містити математичні
+              символи
+            contains_mathematical_symbols_informative: Район не може містити математичні
+              символи
+            contains_restricted_characters_instructional: Район може містити лише
+              літери, цифри, місцеві та спеціальні символи
+            contains_restricted_characters_informative: Район не може містити заборонені
+              символи
+            contains_too_many_words_instructional: Район має містити менше ніж %{word_count}
+              слів
+            contains_too_many_words_informative: Район має містити менше ніж %{word_count}
+              слів
+            contains_html_tags_instructional: Район не може містити HTML
+            contains_html_tags_informative: Район не може містити HTML
+            contains_url_instructional: Район не може містити URL-адресу
+            contains_url_informative: Район не може містити URL-адресу
+            contains_email_instructional: Район не може містити адресу електронної
+              пошти
+            contains_email_informative: Район не може містити адресу електронної пошти
+            unknown_for_city_instructional: Введіть дійсний район для міста %{city}
+            unknown_for_city_informative: Район недійсний для міста %{city}
+            unknown_for_zip_instructional: Введіть дійсний район для поштового індексу
+              %{zip}
+            unknown_for_zip_informative: Район недійсний для поштового індексу %{zip}
+            unknown_for_address_instructional: Район може бути введено неправильно
+            unknown_for_address_informative: Район може бути введено неправильно
+          warnings:
+            contains_too_many_words: Рекомендується, щоб назва району містила менше
+              ніж %{word_count} слів

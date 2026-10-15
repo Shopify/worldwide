@@ -1,0 +1,47 @@
+---
+ca:
+  worldwide:
+    TR:
+      addresses:
+        neighborhood:
+          label:
+            default: Districte
+            optional: Districte (opcional)
+          errors:
+            blank_instructional: Escriu un districte
+            blank_informative: Falta el districte
+            too_long_instructional: El districte és massa llarg (el màxim són %{limit}
+              caràcters)
+            too_long_informative: El districte és massa llarg
+            contains_emojis_instructional: El districte no pot contenir emojis
+            contains_emojis_informative: El districte no pot contenir emojis
+            contains_mathematical_symbols_instructional: El districte no pot contenir
+              símbols matemàtics
+            contains_mathematical_symbols_informative: El districte no pot contenir
+              símbols matemàtics
+            contains_restricted_characters_instructional: El districte només pot contenir
+              lletres, números, caràcters locals i caràcters especials
+            contains_restricted_characters_informative: El districte no pot contenir
+              caràcters restringits
+            contains_too_many_words_instructional: El districte ha de tenir menys
+              de %{word_count} paraules
+            contains_too_many_words_informative: El districte ha de tenir menys de
+              %{word_count} paraules
+            contains_html_tags_instructional: El districte no pot contenir HTML
+            contains_html_tags_informative: El districte no pot contenir HTML
+            contains_url_instructional: El districte no pot contenir cap URL
+            contains_url_informative: El districte no pot contenir cap URL
+            contains_email_instructional: El districte no pot contenir cap adreça
+              de correu electrònic
+            contains_email_informative: El districte no pot contenir cap adreça de
+              correu electrònic
+            unknown_for_city_instructional: Escriu un districte vàlid per a %{city}
+            unknown_for_city_informative: El districte no és vàlid per a %{city}
+            unknown_for_zip_instructional: Escriu un districte vàlid per a %{zip}
+            unknown_for_zip_informative: El districte no és vàlid per a %{zip}
+            unknown_for_address_instructional: És possible que el districte sigui
+              incorrecte
+            unknown_for_address_informative: És possible que el districte sigui incorrecte
+          warnings:
+            contains_too_many_words: Es recomana que el districte tingui menys de
+              %{word_count} paraules

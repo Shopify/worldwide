@@ -1,0 +1,56 @@
+---
+bn:
+  worldwide:
+    MX:
+      addresses:
+        address1:
+          label:
+            default: রাস্তা ও বাড়ির নম্বর
+            optional: রাস্তা ও বাড়ির নম্বর (ঐচ্ছিক)
+          errors:
+            blank_instructional: রাস্তা ও বাড়ির নম্বর লিখুন
+            blank_informative: রাস্তা ও বাড়ির নম্বর দেওয়া হয়নি
+        province:
+          label:
+            default: স্টেট
+            optional: স্টেট (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি স্টেট নির্বাচন করুন
+            blank_informative: স্টেট দেওয়া হয়নি
+        neighborhood:
+          label:
+            default: কলোনি
+            optional: কলোনি (ঐচ্ছিক)
+          errors:
+            blank_instructional: একটি কলোনি লিখুন
+            blank_informative: কলোনি দেওয়া হয়নি
+            too_long_instructional: কলোনি অনেক বড় (সর্বোচ্চ %{limit}টি অক্ষর হতে পারে)
+            too_long_informative: কলোনি অনেক বড়
+            contains_emojis_instructional: কলোনিতে কোনো ইমোজি থাকতে পারে না
+            contains_emojis_informative: কলোনিতে কোনো ইমোজি থাকতে পারে না
+            contains_mathematical_symbols_instructional: কলোনিতে কোনো গাণিতিক প্রতীক
+              থাকতে পারে না
+            contains_mathematical_symbols_informative: কলোনিতে কোনো গাণিতিক প্রতীক
+              থাকতে পারে না
+            contains_restricted_characters_instructional: কলোনিতে কেবল অক্ষর, সংখ্যা,
+              স্থানীয় অক্ষর ও বিশেষ অক্ষর থাকতে পারে
+            contains_restricted_characters_informative: কলোনিতে কোনো সীমাবদ্ধ অক্ষর
+              থাকতে পারে না
+            contains_too_many_words_instructional: কলোনিতে %{word_count}-টির কম শব্দ
+              থাকতে হবে
+            contains_too_many_words_informative: কলোনিতে %{word_count}-টির কম শব্দ
+              থাকতে হবে
+            contains_html_tags_informative: কলোনিতে কোনো HTML থাকতে পারে না
+            contains_html_tags_instructional: কলোনিতে কোনো HTML থাকতে পারে না
+            contains_url_instructional: কলোনিতে কোনো URL থাকতে পারে না
+            contains_url_informative: কলোনিতে কোনো URL থাকতে পারে না
+            contains_email_instructional: কলোনিতে কোনো ইমেইল ঠিকানা থাকতে পারে না
+            contains_email_informative: কলোনিতে কোনো ইমেইল ঠিকানা থাকতে পারে না
+            unknown_for_city_instructional: "%{city}-এর জন্য একটি সঠিক কলোনি লিখুন"
+            unknown_for_city_informative: "%{city}-এর জন্য একটি সঠিক কলোনি লিখুন"
+            unknown_for_zip_instructional: "%{zip}-এর জন্য একটি সঠিক কলোনি লিখুন"
+            unknown_for_zip_informative: "%{zip}-এর জন্য একটি সঠিক কলোনি লিখুন"
+            unknown_for_address_instructional: কলোনি বেঠিক হতে পারে
+            unknown_for_address_informative: কলোনি বেঠিক হতে পারে
+          warnings:
+            contains_too_many_words: কলোনিতে %{word_count}-টির কম শব্দ থাকা বাঞ্ছনীয়
