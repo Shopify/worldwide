@@ -29,13 +29,13 @@ sr-Latn-BA:
       default: "%-d.%-m.%Y."
       billing: "%-d.%-m.%Y."
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: Danas u %02k:%M
-      yesterday_at_time: Juče u %02k:%M
-      tomorrow_at_time: Sutra u %02k:%M
-      on_weekday_at_time: u %A u %02k:%M
-      on_date_time_current_year: "%-d. %b u %02k:%M"
+      today_at_time: "%02k:%M danas"
+      yesterday_at_time: "%02k:%M juče"
+      tomorrow_at_time: "%02k:%M sutra"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %-d. %b"
       on_date: "%-d. %b %Y."
-      ago: Pre %{time}
+      ago: "%{time} ago"
       x_hours_ago:
         few: prije %{count} sata
         one: prije %{count} sata
@@ -90,8 +90,8 @@ sr-Latn-BA:
     - novembar
     - decembar
     relative_day_names:
-      this_week: ove nedelje
-      this_month: ovog meseca
+      this_week: ove nedjelje
+      this_month: ovog mjeseca
       day_before_yesterday: prekjuče
       yesterday: juče
       today: danas
@@ -130,13 +130,13 @@ sr-Latn-BA:
       short: "%-d. %b %02k:%M"
       billing: "%-d.%-m.%Y."
       yearless_ordinal: "%{ordinalized_day} %B"
-      today_at_time: Danas u %02k:%M
-      yesterday_at_time: Juče u %02k:%M
-      tomorrow_at_time: Sutra u %02k:%M
-      on_weekday_at_time: u %A u %02k:%M
-      on_date_time_current_year: "%-d. %b u %02k:%M"
+      today_at_time: "%02k:%M danas"
+      yesterday_at_time: "%02k:%M juče"
+      tomorrow_at_time: "%02k:%M sutra"
+      on_weekday_at_time: "%02k:%M %A"
+      on_date_time_current_year: "%02k:%M %-d. %b"
       on_date: "%-d. %b %Y."
-      ago: Pre %{time}
+      ago: "%{time} ago"
       x_hours_ago:
         few: prije %{count} sata
         one: prije %{count} sata
@@ -146,7 +146,7 @@ sr-Latn-BA:
         one: prije %{count} minuta
         other: prije %{count} minuta
       cc_expiry_date: "%m/%Y"
-    am: pre podne
-    pm: po podne
-    just_now: Upravo sada
+    am: am
+    pm: pm
+    just_now: sada
     yesterday: juče
