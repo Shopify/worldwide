@@ -110,7 +110,7 @@ module Worldwide
     #   - edit: the fields to present on an address input form
     #   - show: how to arrange the fields when formatting an address for display
     #
-    # This is the legacy "mode 2" extended layout, retained for existing consumers. It uses the
+    # This is the legacy extended layout, retained for existing consumers. It uses the
     # `{neighborhood}` token and pairs with `additional_address_fields` and `combined_address_format`.
     # New consumers should read `format_structured` and `address_line_components` instead.
     attr_accessor :format_extended
@@ -252,7 +252,7 @@ module Worldwide
     attr_accessor :province_optional
 
     # An array of the additional address fields that are defined for this region.
-    # Legacy "mode 2" counterpart of `address_line_components`; uses the `neighborhood` name.
+    # Legacy counterpart of `address_line_components`; uses the `neighborhood` name.
     attr_accessor :additional_address_fields
 
     # An array of the address line components declared for this region, each a Hash with a "name"
