@@ -436,6 +436,39 @@ combined_address_format:
 ```
 If a country does not have additional address fields, concatenation will simply return `address1`, and splitting will return `nil`.
 
+#### Structured address layouts (address line components)
+
+`format_extended` / `additional_address_fields` above describe the legacy extended layout, which keeps `{neighborhood}` as its only sub-city component. Countries that have a structured address layout also carry a `format_structured`, which uses the address line component tokens (`streetName`, `streetNumber`, `line2`, `district`, `subdistrict`), and an `address_line_components` list declaring which of those components the country uses and which are required:
+
+```ruby
+# data/regions/BR.yml
+format_structured:
+  edit: "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{district}_{city}{province}_{phone}"
+  show: "{firstName} {lastName}_{company}_{streetName} {streetNumber}_{line2} {district}_{zip} {city} {province}_{country}_{phone}"
+address_line_components:
+  - name: streetName
+    required: true
+  - name: streetNumber
+    required: true
+  - name: line2
+  - name: district
+    required: true
+```
+
+```ruby
+$ region = Worldwide.region(code: "BR")
+$ region.format_structured["edit"]
+=> "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{district}_{city}{province}_{phone}"
+$ region.address_line_components.map { |component| component["name"] }
+=> ["streetName", "streetNumber", "line2", "district"]
+$ region.address_line_components.find { |component| component["name"] == "district" }["required"]
+=> true
+$ Worldwide.region(code: "CA").format_structured
+=> {}
+```
+
+Not every country has a `format_structured`; those without one use `format` only. Whether a given store or API surface exposes the structured fields is that surface's decision. The labels for every field, including the structured ones, come from `Worldwide::Field` (`region.field(key: :district).label`).
+
 #### Validation
 
 ```ruby

@@ -109,7 +109,19 @@ module Worldwide
     # The format is described in https://shopify.engineering/handling-addresses-from-all-around-the-world
     #   - edit: the fields to present on an address input form
     #   - show: how to arrange the fields when formatting an address for display
+    #
+    # This is the legacy extended layout, retained for existing consumers. It uses the
+    # `{neighborhood}` token and pairs with `additional_address_fields` and `combined_address_format`.
+    # New consumers should read `format_structured` and `address_line_components` instead.
     attr_accessor :format_extended
+
+    # Hash of strings denoting how to format a structured address in this region, using the
+    # address line component tokens `{streetName}`, `{streetNumber}`, `{line2}`,
+    # `{district}` and `{subdistrict}` alongside the standard fields. Empty when the region has no
+    # structured layout.
+    #   - edit: the fields to present on an address input form
+    #   - show: how to arrange the fields when formatting an address for display
+    attr_accessor :format_structured
 
     # The string that results from appending " Countries" to the adjectival form of the {group_name}
     # @example
@@ -239,8 +251,14 @@ module Worldwide
     # If true, then the province is optional for addresses in this region.
     attr_accessor :province_optional
 
-    # An array of the additional address fields that are defined for this region
+    # An array of the additional address fields that are defined for this region.
+    # Legacy counterpart of `address_line_components`; uses the `neighborhood` name.
     attr_accessor :additional_address_fields
+
+    # An array of the address line components declared for this region, each a Hash with a "name"
+    # (one of "streetName", "streetNumber", "line2", "district", "subdistrict")
+    # and an optional "required" flag. Empty when the region declares none.
+    attr_accessor :address_line_components
 
     # A hash of the rules for concatening the additional address fields into the standard fields
     attr_accessor :combined_address_format
@@ -284,6 +302,7 @@ module Worldwide
       @use_zone_code_as_short_name = use_zone_code_as_short_name
 
       @additional_address_fields = []
+      @address_line_components = []
       @combined_address_format = {}
       @address1_regex = []
       @building_number_required = false
@@ -292,6 +311,7 @@ module Worldwide
       @flag = nil
       @format = {}
       @format_extended = {}
+      @format_structured = {}
       @name_alternates = []
       @group = nil
       @group_name = nil

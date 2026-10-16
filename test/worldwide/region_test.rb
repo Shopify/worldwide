@@ -17,6 +17,7 @@ module Worldwide
       assert_nil region.legacy_name
       assert_empty(region.format)
       assert_empty(region.format_extended)
+      assert_empty(region.format_structured)
       assert_empty(region.name_alternates)
       assert_nil region.numeric_three
       assert_equal false, region.province?
@@ -61,6 +62,7 @@ module Worldwide
       region = Region.new(iso_code: "ZZ")
 
       assert_empty region.additional_address_fields
+      assert_empty region.address_line_components
       assert_empty(region.combined_address_format)
       refute region.building_number_required
       refute region.building_number_may_be_in_address2
@@ -458,6 +460,43 @@ module Worldwide
       neighborhood_required_countries.each do |country_code|
         assert_predicate Worldwide.region(code: country_code), :neighborhood_required?
       end
+    end
+
+    test "#format_structured returns the structured layout for regions that define one" do
+      br = Worldwide.region(code: "BR")
+
+      assert_equal(
+        "{country}_{firstName}{lastName}_{company}_{zip}_{streetName}{streetNumber}_{line2}{district}_{city}{province}_{phone}",
+        br.format_structured["edit"],
+      )
+      assert_equal(
+        "{firstName} {lastName}_{company}_{streetName} {streetNumber}_{line2} {district}_{zip} {city} {province}_{country}_{phone}",
+        br.format_structured["show"],
+      )
+    end
+
+    test "#format_structured is empty for regions without a structured layout" do
+      [:ca, :de, :hk, :mx, :us].each do |country_code|
+        assert_empty Worldwide.region(code: country_code).format_structured, "#{country_code} should have no format_structured"
+      end
+    end
+
+    test "#address_line_components returns the declared components" do
+      assert_equal(
+        [
+          { "name" => "streetName", "required" => true },
+          { "name" => "streetNumber", "required" => true },
+          { "name" => "line2" },
+          { "name" => "district", "required" => true },
+        ],
+        Worldwide.region(code: "BR").address_line_components,
+      )
+      assert_equal(
+        [{ "name" => "line2" }, { "name" => "district", "required" => true }],
+        Worldwide.region(code: "KW").address_line_components,
+      )
+      assert_empty Worldwide.region(code: "CA").address_line_components
+      assert_empty Worldwide.region(code: "HK").address_line_components
     end
 
     test "#associated_country returns the expected country" do

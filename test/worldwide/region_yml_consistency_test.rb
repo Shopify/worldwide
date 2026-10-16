@@ -143,6 +143,94 @@ module Worldwide
       end
     end
 
+    test "format_structured keys must belong to a limited set of required and allowed keys" do
+      allowed_keys = ["edit", "show"]
+      required_format_keys = ["{firstName}", "{lastName}", "{company}", "{country}", "{phone}"]
+      allowed_format_keys = [
+        "{address1}",
+        "{address2}",
+        "{streetName}",
+        "{streetNumber}",
+        "{line2}",
+        "{district}",
+        "{subdistrict}",
+        "{city}",
+        "{zip}",
+        "{province}",
+      ]
+
+      Regions.all.select(&:country?).each do |country|
+        formats = country.format_structured
+        next if formats.blank?
+
+        assert_empty formats.keys - allowed_keys, "#{country.iso_code} format_structured has unknown keys: #{formats.keys - allowed_keys}"
+        assert_includes formats.keys, "edit", "#{country.iso_code} format_structured is missing the edit format"
+
+        formats.each do |format_key, format|
+          keys = format.scan(/{[^}]+}/)
+          missing_required_keys = required_format_keys - keys
+
+          assert_empty missing_required_keys, "#{country.iso_code} #{format_key} format_structured is missing required keys #{missing_required_keys}"
+
+          unknown_keys = keys - required_format_keys - allowed_format_keys
+
+          assert_empty unknown_keys, "#{country.iso_code} #{format_key} format_structured has unknown keys: #{unknown_keys}"
+          assert_empty keys - keys.uniq, "#{country.iso_code} #{format_key} format_structured repeats keys: #{keys - keys.uniq}"
+        end
+      end
+    end
+
+    test "format_structured does not use the legacy neighborhood token" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_structured.blank?
+
+        country.format_structured.each do |format_key, format|
+          refute_includes format, "{neighborhood}", "#{country.iso_code} #{format_key} format_structured must use {district}, not the legacy {neighborhood}"
+        end
+      end
+    end
+
+    test "address_line_components names must belong to a limited set of allowed names" do
+      allowed_names = ["streetName", "streetNumber", "line2", "district", "subdistrict"]
+
+      Regions.all.select(&:country?).each do |country|
+        next if country.address_line_components.blank?
+
+        country.address_line_components.each do |field|
+          assert_equal ["name", "required"], (field.keys | ["name", "required"]), "#{country.iso_code} address_line_component #{field} has unknown keys"
+          assert_includes allowed_names, field["name"], "#{country.iso_code} address_line_component #{field["name"]} is not an allowed name"
+          assert_includes [true, false, nil], field["required"], "#{country.iso_code} address_line_component #{field["name"]} required must be a boolean"
+        end
+
+        names = country.address_line_components.map { |field| field["name"] }
+
+        assert_equal names.uniq, names, "#{country.iso_code} address_line_components declares a component twice"
+      end
+    end
+
+    test "address_line_components are present in the format_structured edit layout when one is defined" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_structured.blank?
+
+        edit_keys = country.format_structured["edit"].scan(/{([^}]+)}/).flatten
+        declared = country.address_line_components.map { |field| field["name"] }
+
+        assert_empty declared - edit_keys, "#{country.iso_code} declares address line components absent from its format_structured edit layout: #{declared - edit_keys}"
+
+        structured_tokens_in_layout = edit_keys & ["streetName", "streetNumber", "line2", "district", "subdistrict"]
+
+        assert_empty structured_tokens_in_layout - declared, "#{country.iso_code} format_structured edit layout uses undeclared address line components: #{structured_tokens_in_layout - declared}"
+      end
+    end
+
+    test "regions with a format_structured layout declare at least one address line component" do
+      Regions.all.select(&:country?).each do |country|
+        next if country.format_structured.blank?
+
+        refute_empty country.address_line_components, "#{country.iso_code} has a format_structured layout but no address_line_components"
+      end
+    end
+
     test "additional_address_fields names must belong to a limited set of allowed names" do
       allowed_names = ["streetName", "streetNumber", "line2", "neighborhood"]
 
