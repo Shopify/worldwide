@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module Worldwide
-  VERSION = "1.30.3"
+  VERSION = "2.0.0"
 end
