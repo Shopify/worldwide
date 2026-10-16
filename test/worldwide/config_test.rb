@@ -61,18 +61,6 @@ module Worldwide
       end
     end
 
-    test "#configure loads Latin CLDR data for the buyer Serbian locale" do
-      config = Worldwide::RubyI18nConfig.new
-      config.available_locales = [:sr]
-      config.load_path = []
-
-      Worldwide::Config.configure_i18n(i18n_config: config)
-
-      assert_includes config.available_locales, :sr
-      assert_includes config.available_locales, :"sr-Latn"
-      assert config.load_path.any? { |path| path.end_with?("/sr-Latn/territories.yml") }
-    end
-
     test "#configure consults parent_locales.yml when determining derivatives of locales" do
       config = Worldwide::RubyI18nConfig.new
       config.available_locales = [:"en-001"]

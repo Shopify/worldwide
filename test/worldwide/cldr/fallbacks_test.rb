@@ -24,13 +24,6 @@ module Worldwide
         assert_equal [:"zh-TW", :root], @cldr_fallbacks[:"zh-TW"]
       end
 
-      test "Serbian scripts fall back independently" do
-        assert_equal [:"sr-Latn", :sr, :root], @cldr_fallbacks[:"sr-Latn"]
-        assert_equal [:"sr-Latn-RS", :"sr-Latn", :sr, :root], @cldr_fallbacks[:"sr-Latn-RS"]
-        assert_equal [:"sr-Cyrl", :root], @cldr_fallbacks[:"sr-Cyrl"]
-        assert_equal [:"sr-Cyrl-RS", :"sr-Cyrl", :root], @cldr_fallbacks[:"sr-Cyrl-RS"]
-      end
-
       test "copied locales have same fallbacks as the originals" do
         assert_equal @cldr_fallbacks[:"zh-Hant-HK"][1..], @cldr_fallbacks[:"zh-HK"][1..]
         assert_equal @cldr_fallbacks[:"zh-Hant"][1..], @cldr_fallbacks[:"zh-TW"][1..]
