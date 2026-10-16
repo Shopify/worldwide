@@ -18,9 +18,25 @@ module Worldwide
       assert_equal "€1,234.50 EUR", Worldwide.currency(code: :EUR).format_explicit(1234.5, locale: :"en-IE")
     end
 
-    test "bare sr is Serbian Cyrillic" do
-      assert_equal "Сједињене Државе", Worldwide::Cldr.t("territories.US", locale: :sr)
-      assert_equal "Sjedinjene Države", Worldwide::Cldr.t("territories.US", locale: :"sr-Latn")
+    test "keeps buyer Serbian Latin separate from explicit Cyrillic locales" do
+      assert_equal "januar", Worldwide::Cldr.t("date.month_names", locale: :sr).fetch(1)
+      assert_equal "Danas u %02k:%M", Worldwide::Cldr.t("date.formats.today_at_time", locale: :sr)
+      assert_equal "Sjedinjene Države", Worldwide::Cldr.t("territories.US", locale: :sr)
+      assert_equal "Evro", Worldwide::Cldr.t("currencies.EUR.name", locale: :sr)
+      assert_equal "engleski", Worldwide::Cldr.t("languages.en", locale: :sr)
+      assert_equal(
+        "(GMT-07:00) Britanska Kolumbija",
+        Worldwide::Cldr.t("timezones.America/Vancouver", locale: :sr),
+      )
+
+      I18n.with_locale(:sr) do
+        assert_equal "Sjedinjene Države", Worldwide::Cldr.t("territories.US")
+      end
+
+      assert_equal "Danas u %02k:%M", Worldwide::Cldr.t("date.formats.today_at_time", locale: :"sr-Latn")
+      assert_equal "јануар", Worldwide::Cldr.t("date.month_names", locale: :"sr-Cyrl").fetch(1)
+      assert_equal "%02k:%M данас", Worldwide::Cldr.t("date.formats.today_at_time", locale: :"sr-Cyrl")
+      assert_equal "Сједињене Државе", Worldwide::Cldr.t("territories.US", locale: :"sr-Cyrl")
     end
 
     test "restores the previous config and fallbacks after translating" do

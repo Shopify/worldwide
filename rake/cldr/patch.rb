@@ -1259,6 +1259,7 @@ module Worldwide
           patch_file(:it, "units.yml", [:units, :unit_length, :long, :volume_fluid_ounce, :one], "oncia liquida", "%{count} oncia liquida")
 
           copy_zh_locales
+          copy_sr_locales
 
           sort_cldr_files
         end
@@ -1274,6 +1275,14 @@ module Worldwide
           copy_locale("zh-Hans", "zh-CN")
           copy_locale("zh-Hant-HK", "zh-HK")
           copy_locale("zh-Hant", "zh-TW")
+        end
+
+        # Shopify's 'sr' is Serbian Latin; CLDR's is Cyrillic, with 'sr-Cyrl' an empty locale
+        # inheriting from it. Copy the Cyrillic data out before 'sr' is replaced.
+        def copy_sr_locales
+          copy_locale("sr", "sr-Cyrl")
+          copy_locale("sr-Latn", "sr")
+          patch_cldr_level_file("parent_locales.yml", ["sr-Latn"], "root", "sr")
         end
 
         def copy_locale(source, target)
