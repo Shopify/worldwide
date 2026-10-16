@@ -27,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [1.31.0] - 2026-10-16
+
 - Revert the bare `sr` locale to Serbian Cyrillic, as it was before 1.30.3. 1.30.3 made `sr` Latin by mistake, which is a breaking change; it will return in 2.0.0. `sr-Latn` and `sr-Cyrl` are unchanged. The `sr` address labels and time zone names added in 1.30.3 stay; they are in Latin script and replace English fallbacks. [#645](https://github.com/Shopify/worldwide/pull/645)
 - Add `format_structured` and `address_line_components` to `Worldwide::Region`: the structured address layout (`edit`/`show`, using the `{streetName}` `{streetNumber}` `{line2}` `{district}` `{subdistrict}` tokens) and the declared components with their `required` flags, for BR, KW, PA, PE and PH. [#623](https://github.com/Shopify/worldwide/pull/623)
 
