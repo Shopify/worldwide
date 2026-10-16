@@ -27,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- **Breaking:** The bare `sr` locale now uses Serbian Latin instead of Cyrillic for CLDR data and date/time formats. Use `sr-Cyrl` to retain Cyrillic output; `sr-Latn` remains Latin. This reintroduces [#631](https://github.com/Shopify/worldwide/pull/631) for the 2.0.0 release after the 1.x compatibility restoration in [#645](https://github.com/Shopify/worldwide/pull/645).
+
 ---
 
 ## [1.31.0] - 2026-10-16
