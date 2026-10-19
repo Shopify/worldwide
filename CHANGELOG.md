@@ -29,6 +29,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.31.1] - 2026-10-19
+
+- Add name alternates for Malaysian states and federal territories, so that zone lookup recognizes forms like `Wilayah Persekutuan Kuala Lumpur`, `W.P. Labuan` and `Selangor Darul Ehsan`. [#649](https://github.com/Shopify/worldwide/pull/649)
+
+---
+
 ## [1.31.0] - 2026-10-16
 
 - Revert the bare `sr` locale to Serbian Cyrillic, as it was before 1.30.3. 1.30.3 made `sr` Latin by mistake, which is a breaking change; it will return in 2.0.0. `sr-Latn` and `sr-Cyrl` are unchanged. The `sr` address labels and time zone names added in 1.30.3 stay; they are in Latin script and replace English fallbacks. [#645](https://github.com/Shopify/worldwide/pull/645)
