@@ -201,6 +201,34 @@ module Worldwide
       end
     end
 
+    test "#zone can look up Malaysian zones by their alternate names" do
+      my = Worldwide.region(code: "MY")
+
+      {
+        "Johor Darul Ta'zim" => "MY-01",
+        "Kedah Darul Aman" => "MY-02",
+        "Kelantan Darul Naim" => "MY-03",
+        "Malacca" => "MY-04",
+        "Negri Sembilan" => "MY-05",
+        "Pahang Darul Makmur" => "MY-06",
+        "Pulau Pinang" => "MY-07",
+        "Perak Darul Ridzuan" => "MY-08",
+        "Perlis Indera Kayangan" => "MY-09",
+        "Selangor Darul Ehsan" => "MY-10",
+        "Terengganu Darul Iman" => "MY-11",
+        "Wilayah Persekutuan Kuala Lumpur" => "MY-14",
+        "Federal Territory of Kuala Lumpur" => "MY-14",
+        "WP Kuala Lumpur" => "MY-14",
+        "Labuan Federal Territory" => "MY-15",
+        "Wilayah Persekutuan Labuan" => "MY-15",
+        "W.P. Labuan" => "MY-15",
+        "Wilayah Persekutuan Putrajaya" => "MY-16",
+        "Federal Territory of Putrajaya" => "MY-16",
+      }.each do |name, iso_code|
+        assert_equal iso_code, my.zone(name: name).iso_code, "name #{name}"
+      end
+    end
+
     test "#zone can look up a zone by CLDR code" do
       zone = Worldwide.region(code: "MY").zone(code: "my14")
 
