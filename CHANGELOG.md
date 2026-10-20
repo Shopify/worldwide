@@ -27,7 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Fix Catalan names of Spain's provinces. They now drop the inconsistently capitalized "província de" prefix and the `²` markers CLDR uses for duplicate names, e.g. `Alacant` instead of `província d’Alacant` and `Illes Balears` instead of `Illes Balears²`.
+- Fix Catalan names of Spain's provinces. They now drop the inconsistently capitalized "província de" prefix and the `²` markers CLDR uses for duplicate names, e.g. `Alacant` instead of `província d’Alacant` and `Illes Balears` instead of `Illes Balears²`. [#651](https://github.com/Shopify/worldwide/pull/651)
 
 ---
 
