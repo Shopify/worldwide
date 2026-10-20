@@ -349,6 +349,17 @@ module Worldwide
       assert_equal "Santiago Metropolitan", region.full_name(locale: :en)
     end
 
+    test "#full_name gives plain Catalan names for the provinces of Spain" do
+      spain = Worldwide.region(code: "ES")
+
+      spain.zones.each do |zone|
+        assert_no_match(/província|²/i, zone.full_name(locale: :ca), zone.iso_code)
+      end
+      assert_equal "Alacant", spain.zone(code: "A").full_name(locale: :ca)
+      assert_equal "Illes Balears", spain.zone(code: "PM").full_name(locale: :ca)
+      assert_equal "La Corunya", spain.zone(code: "C").full_name(locale: :ca)
+    end
+
     test "#full_name falls back to legacy_name when CLDR has no name available" do
       dummy = Worldwide::Region.new(
         legacy_name: "Legacy name",
