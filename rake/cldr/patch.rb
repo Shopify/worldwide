@@ -478,6 +478,58 @@ module Worldwide
             [:esza, "Provincia de Zamora", "Zamora"],
           ])
 
+          # Provinces of Spain in Catalan
+          # Same problem as in Spanish: CLDR mixes "província" and "Província", and uses ² markers
+          # to distinguish provinces from the autonomous communities of the same name.
+          patch_subdivisions(:ca, [
+            [:esa, "província d’Alacant", "Alacant"],
+            [:esab, "Província d’Albacete", "Albacete"],
+            [:esal, "Província d’Almeria", "Almeria"],
+            [:esav, "província d’Àvila", "Àvila"],
+            [:esb, "província de Barcelona", "Barcelona"],
+            [:esba, "Província de Badajoz", "Badajoz"],
+            [:esbu, "província de Burgos", "Burgos"],
+            [:esc, "província de la Corunya", "La Corunya"],
+            [:esca, "província de Cadis", "Cadis"],
+            [:escc, "Província de Càceres", "Càceres"],
+            [:esco, "província de Còrdova", "Còrdova"],
+            [:escr, "Província de Ciudad Real", "Ciudad Real"],
+            [:escs, "província de Castelló", "Castelló"],
+            [:escu, "Província de Conca", "Conca"],
+            [:esgc, "província de Las Palmas", "Las Palmas"],
+            [:esgi, "província de Girona", "Girona"],
+            [:esgr, "província de Granada", "Granada"],
+            [:esgu, "Província de Guadalajara", "Guadalajara"],
+            [:esh, "província de Huelva", "Huelva"],
+            [:eshu, "província d’Osca", "Osca"],
+            [:esj, "província de Jaén", "Jaén"],
+            [:esl, "província de Lleida", "Lleida"],
+            [:esle, "província de Lleó", "Lleó"],
+            [:eslu, "província de Lugo", "Lugo"],
+            [:esm, "província de Madrid", "Madrid"],
+            [:esma, "província de Màlaga", "Màlaga"],
+            [:esmu, "província de Múrcia", "Múrcia"],
+            [:esna, "Navarra²", "Navarra"],
+            [:eso, "província d’Astúries", "Astúries"],
+            [:esor, "província d’Ourense", "Ourense"],
+            [:esp, "província de Palència", "Palència"],
+            [:espm, "Illes Balears²", "Illes Balears"],
+            [:espo, "província de Pontevedra", "Pontevedra"],
+            [:ess, "Cantàbria²", "Cantàbria"],
+            [:essa, "província de Salamanca", "Salamanca"],
+            [:esse, "província de Sevilla", "Sevilla"],
+            [:essg, "província de Segòvia", "Segòvia"],
+            [:esso, "província de Sòria", "Sòria"],
+            [:est, "província de Tarragona", "Tarragona"],
+            [:este, "província de Terol", "Terol"],
+            [:esto, "Província de Toledo", "Toledo"],
+            [:estf, "província de Santa Cruz de Tenerife", "Santa Cruz de Tenerife"],
+            [:esv, "Província de València", "València"],
+            [:esva, "província de Valladolid", "Valladolid"],
+            [:esz, "província de Saragossa", "Saragossa"],
+            [:esza, "província de Zamora", "Zamora"],
+          ])
+
           # Washington, DC has no Japanese translation in CLDR
           patch_subdivisions(:ja, [
             [:usdc, nil, "コロンビア特別区"],
