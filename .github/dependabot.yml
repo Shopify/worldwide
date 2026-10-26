@@ -6,14 +6,35 @@ updates:
       interval: daily
     open-pull-requests-limit: 100
     insecure-external-code-execution: allow
+    groups:
+      bundler-minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
   - package-ecosystem: npm
     directory: "/lang/typescript"
     schedule:
       interval: daily
+    groups:
+      npm-minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
+    groups:
+      github-actions-minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
     ignore:
       # Can not bump past v1.5.1 until https://github.com/changesets/action/issues/501 is fixed
       - dependency-name: "changesets/action"
