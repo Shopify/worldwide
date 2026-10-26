@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Dependabot now groups minor and patch updates into one pull request per ecosystem (bundler, npm, GitHub Actions) and limits open pull requests to 5. [#655](https://github.com/Shopify/worldwide/pull/655)
+
 ---
 
 ## [1.31.2] - 2026-10-22
