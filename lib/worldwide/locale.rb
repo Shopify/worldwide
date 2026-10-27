@@ -11,6 +11,7 @@ module Worldwide
 
       @code = code.to_sym
       @name_cache = {}
+      @endonym_cache = {}
     end
 
     # Special CLDR value
@@ -47,7 +48,8 @@ module Worldwide
     end
 
     def name(locale: I18n.locale, context: :middle_of_sentence, throw: true)
-      @name_cache[context] ||= I18n.with_locale(locale) do
+      cache_key = [locale&.to_sym, context]
+      @name_cache[cache_key] ||= I18n.with_locale(locale) do
         # Try to find a language name as specific as possible in the locale we wanted.
         exonym(target_locale: locale, context: context) ||
 
@@ -68,48 +70,46 @@ module Worldwide
           I18n::MissingTranslation.new(locale, "languages.#{code}")
       end
 
-      if @name_cache[context].is_a?(I18n::MissingTranslation)
-        raise @name_cache[context] if throw
+      if @name_cache[cache_key].is_a?(I18n::MissingTranslation)
+        raise @name_cache[cache_key] if throw
 
         return
       end
 
-      @name_cache[context]
+      @name_cache[cache_key]
     end
 
     # The language's name in that language ("endonym").
     def endonym(context: :middle_of_sentence, throw: true)
-      return @endonym if defined?(@endonym)
+      @endonym_cache[context] ||= begin
+        result = begin
+          lookup(code, locale: code)
+        rescue I18n::InvalidLocale => e
+          raise e if throw
+        end
 
-      begin
-        @endonym = lookup(code, locale: code)
-      rescue I18n::InvalidLocale => e
-        raise e if throw
+        result = Worldwide::Cldr::ContextTransforms.transform(result, :languages, context, locale: code) unless result.nil?
+        result || I18n::MissingTranslation.new(code, "languages.#{code}")
       end
 
-      @endonym = Worldwide::Cldr::ContextTransforms.transform(@endonym, :languages, context, locale: code) unless @endonym.nil?
-      @endonym ||= I18n::MissingTranslation.new(code, "languages.#{code}")
-
-      if @endonym.is_a?(I18n::MissingTranslation)
-        raise @endonym if throw
+      if @endonym_cache[context].is_a?(I18n::MissingTranslation)
+        raise @endonym_cache[context] if throw
 
         return
       end
 
-      @endonym
+      @endonym_cache[context]
     end
 
     private
 
     def exonym(target_locale:, context:)
-      return @exonym if defined?(@exonym)
-
       # Try to find a language name as specific as possible in the locale we wanted.
       # We chop the hyphens to get more and more general language names
       # (e.g., "Traditional Chinese as spoken in Hong Kong" (zh-Hant-HK) -> "Traditional Chinese" (zh-Hant) -> "Chinese" (zh))
       # and rely on `territories_suffix` to add in additional details after.
       # It's just a heuristic and definitely not perfect (for the really important ones, we can manually patch the data)
-      @exonym = chop(code.to_s, "-").each_with_index do |language, i|
+      chop(code.to_s, "-").each_with_index do |language, i|
         result = lookup(language, locale: target_locale)
         if result
           transformed = Worldwide::Cldr::ContextTransforms.transform(result, :languages, context, locale: target_locale)
@@ -119,11 +119,8 @@ module Worldwide
     end
 
     def name_in_default_locale(context:)
-      return @name_in_default_locale if defined?(@name_in_default_locale)
-
-      @name_in_default_locale = lookup(code, locale: I18n.default_locale)
-      @name_in_default_locale = Worldwide::Cldr::ContextTransforms.transform(@name_in_default_locale, :languages, context, locale: I18n.default_locale) unless @name_in_default_locale.nil?
-      @name_in_default_locale
+      result = lookup(code, locale: I18n.default_locale)
+      Worldwide::Cldr::ContextTransforms.transform(result, :languages, context, locale: I18n.default_locale) unless result.nil?
     end
 
     def lookup(key, locale:)

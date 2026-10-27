@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Fix `Worldwide::Locale#name` and `#endonym` returning the result of their first call on the same object, even when later calls asked for a different `locale:` or `context:`. Because `Worldwide.locale(code:)` reuses objects, `Worldwide.locale(code: "de").name(locale: :en)` could return `allemand` after an earlier French call. [#658](https://github.com/Shopify/worldwide/pull/658)
+
 ---
 
 ## [2.0.0] - 2026-10-27
