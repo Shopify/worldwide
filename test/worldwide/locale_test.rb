@@ -107,6 +107,30 @@ module Worldwide
       end
     end
 
+    test "name returns the name in each requested locale when called repeatedly on the same object" do
+      locale = Locale.new("de")
+
+      assert_equal "allemand", locale.name(locale: :fr)
+      assert_equal "German", locale.name(locale: :en)
+      assert_equal "allemand", locale.name(locale: "fr")
+    end
+
+    test "name applies each requested context when called repeatedly on the same object" do
+      locale = Locale.new(:"cs-CZ")
+
+      I18n.with_locale(:"cs-CZ") do
+        assert_equal "čeština (Česko)", locale.name(context: :middle_of_sentence)
+        assert_equal "Čeština (Česko)", locale.name(context: :start_of_sentence)
+      end
+    end
+
+    test "endonym applies each requested context when called repeatedly on the same object" do
+      locale = Locale.new(:cs)
+
+      assert_equal "čeština", locale.endonym(context: :middle_of_sentence)
+      assert_equal "Čeština", locale.endonym(context: :start_of_sentence)
+    end
+
     test "name can generate locale names for unknown script" do
       assert_equal "ouzbek (Arab)", Locale.new("uz-Arab").name(locale: :fr)
     end
