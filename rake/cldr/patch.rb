@@ -1283,6 +1283,7 @@ module Worldwide
           copy_locale("sr", "sr-Cyrl")
           copy_locale("sr-Latn", "sr")
           patch_cldr_level_file("parent_locales.yml", ["sr-Latn"], "root", "sr")
+          patch_cldr_level_file("likely_subtags.yml", ["subtags", "sr"], "sr_Cyrl_RS", "sr_Latn_RS")
         end
 
         def copy_locale(source, target)
