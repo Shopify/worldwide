@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add street-first `address1` formats for AR, AT, BE, BR, CH, CL, CZ, ES, FI, HU, MX, NO, PT, SE, and UY.
+
 ---
 
 ## [2.0.1] - 2026-10-27
