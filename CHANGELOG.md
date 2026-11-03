@@ -29,10 +29,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## [3.0.0] - 2026-11-03
+## [2.1.0] - 2026-11-03
 
 - Add street-first `address1` formats for AR, AT, BE, BR, CH, CL, CZ, ES, FI, HU, MX, NO, PT, SE, and UY.
-- **Breaking:** The Italian province of Sulcis Iglesiente now uses its current official code `SU`. `CI` stays as a code alternate, so lookups by `CI` still resolve, but `zone.code` now returns `SU`. Its ISO code stays `IT-CI` to keep CLDR's Sulcis Iglesiente names (CLDR's `itsu` is the former Sud Sardegna).
+- The Italian province of Sulcis Iglesiente now uses its current official code `SU`. `CI` stays as a code alternate, so lookups by `CI` still resolve, but `zone.code` now returns `SU`. Its ISO code stays `IT-CI` to keep CLDR's Sulcis Iglesiente names (CLDR's `itsu` is the former Sud Sardegna).
 
 ---
 
