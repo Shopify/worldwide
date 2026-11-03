@@ -27,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [2.1.0] - 2026-11-02
+
 - Add street-first `address1` formats for AR, AT, BE, BR, CH, CL, CZ, ES, FI, HU, MX, NO, PT, SE, and UY.
 - Add `SU` as a code alternate for the Italian province of Sulcis Iglesiente (`CI`), the province's current official code.
 
