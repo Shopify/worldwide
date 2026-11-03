@@ -294,7 +294,7 @@ module Worldwide
     test "#zone can look up a zone by alternate code" do
       assert_equal "CA-QC", Worldwide.region(code: "CA").zone(code: "PQ").iso_code
       assert_equal "MX-CMX", Worldwide.region(code: "MX").zone(code: "CDMX").iso_code
-      assert_equal "IT-CI", Worldwide.region(code: "IT").zone(code: "SU").iso_code
+      assert_equal "SU", Worldwide.region(code: "IT").zone(code: "CI").legacy_code
     end
 
     test "#zone raises when both name and zip are provided" do
