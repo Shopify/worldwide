@@ -1,0 +1,6 @@
+# Dependabot runs in GitHub Actions against the tip of main and reports its
+# result as a check on that commit. It has nothing to do with the gem, so it
+# must not make Shipit treat a commit as undeployable.
+ci:
+  hide:
+    - Dependabot
