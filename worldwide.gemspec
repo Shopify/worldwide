@@ -24,6 +24,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  # Dependabot resolves the bundle with the lowest Ruby this allows. Some dev
+  # gems need a newer Ruby and are held back for that reason. When you raise
+  # this floor, also remove:
+  #   - the pry-byebug `ignore` rule in .github/dependabot.yml
+  #   - the pry-byebug "< 3.12" cap in Gemfile
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.add_dependency("activesupport", ">= 7.0")

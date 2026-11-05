@@ -17,6 +17,8 @@ updates:
       # Dependabot resolves the bundle with Ruby 3.1.7, the lowest version
       # worldwide.gemspec allows. pry-byebug >= 3.12 requires Ruby >= 3.2, so
       # every attempt to update it fails. The Gemfile also caps it at < 3.12.
+      # Remove this rule when required_ruby_version in worldwide.gemspec
+      # reaches >= 3.2.
       - dependency-name: "pry-byebug"
         versions: [">= 3.12"]
   - package-ecosystem: npm

@@ -22,7 +22,8 @@ group :development do
   gem "ruby-lsp", require: false
   # pry-byebug >= 3.12 requires Ruby >= 3.2, but the gemspec still supports Ruby 3.1.
   # Keep the lockfile installable on Ruby 3.1. Dependabot ignores newer versions
-  # via .github/dependabot.yml.
+  # via .github/dependabot.yml. Remove both when required_ruby_version in
+  # worldwide.gemspec reaches >= 3.2.
   gem "pry-byebug", "< 3.12", require: false
 end
 
