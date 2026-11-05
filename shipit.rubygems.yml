@@ -1,0 +1,8 @@
+# Dependabot runs in GitHub Actions against the tip of main and reports its
+# result as a "Dependabot" check on that commit. The check is about this repo's
+# development dependencies, not about the gem, so it must not block a release.
+# allow_failures keeps the check visible in Shipit but stops it from turning
+# the deploy button off.
+ci:
+  allow_failures:
+    - Dependabot
