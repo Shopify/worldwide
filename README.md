@@ -296,6 +296,14 @@ $ Worldwide.region(code: "CA").zone(code: "MB").valid_zip?("K1A 1A1")
 
 #### Phone Validations
 
+Phone parsing uses [phonelib](https://github.com/daddyz/phonelib), an optional dependency loaded when a `Worldwide::Phone` is created. To use phone parsing, add this to your application's Gemfile:
+
+```ruby
+gem "phonelib", "~> 0.8"
+```
+
+Address normalization and validation (`Worldwide::Address#normalize`, `#errors`, `#valid?` and `Worldwide::AddressValidator`) also use phone parsing and require phonelib. Other features, including address formatting, work without it. Calling a feature that requires phonelib when it is missing raises a `LoadError` explaining how to install it.
+
 ```
 $ Worldwide::Phone.new(number: "(613) 555-1212", country_code: "CA").valid?
 => true
