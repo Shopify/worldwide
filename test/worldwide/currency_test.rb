@@ -66,6 +66,46 @@ module Worldwide
       assert_equal "Jersey pounds", Worldwide.currency(code: "JEP").label(count: 2)
     end
 
+    test "XCG (Caribbean guilder) is recognized" do
+      xcg = Worldwide.currency(code: "xcg")
+
+      assert_equal "XCG", xcg.currency_code
+      assert_nil xcg.numeric_code
+      assert_equal 2, xcg.decimals
+      assert_equal "Cg", xcg.symbol(locale: :en)
+      assert_equal "Cg12.50", xcg.format_short(12.5, locale: :en)
+      assert_equal "Cg12.50 XCG", xcg.format_explicit(12.5, locale: :en)
+
+      I18n.with_locale(:en) do
+        assert_equal "Caribbean Guilder", xcg.name
+        assert_equal "Caribbean guilder", xcg.label(count: 1)
+        assert_equal "Caribbean guilders", xcg.label(count: 2)
+      end
+
+      I18n.with_locale(:nl) do
+        assert_equal "Caribische gulden", xcg.name
+        assert_equal "Caribische gulden", xcg.label(count: 2)
+      end
+
+      assert_equal "Cg", xcg.symbol(locale: :nl)
+      assert_equal "Cg 12,50", xcg.format_short(12.5, locale: :nl)
+    end
+
+    test "ANG (Netherlands Antillean guilder) is still recognized alongside XCG" do
+      ang = Worldwide.currency(code: "ang")
+
+      assert_equal "ANG", ang.currency_code
+      assert_equal 532, ang.numeric_code
+      assert_equal 2, ang.decimals
+      assert_nil ang.symbol(locale: :en)
+      assert_equal "ANG12.50", ang.format_short(12.5, locale: :en)
+
+      I18n.with_locale(:en) do
+        assert_equal "Netherlands Antillean Guilder", ang.name
+        assert_equal "Netherlands Antillean guilders", ang.label(count: 2)
+      end
+    end
+
     test "#label uses the region pluralization keys over the parent's when officially supported" do
       I18n.with_locale(:en) do
         assert_equal "British pound", Worldwide.currency(code: "GBP").label
