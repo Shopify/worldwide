@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- **Breaking:** Make phonelib an optional dependency, loaded when a `Worldwide::Phone` is created. Applications using phone parsing or address normalization/validation must add `gem "phonelib", "~> 0.8"` to their Gemfile. Other features, including address formatting, no longer require phonelib.
 - Add street-first `address1` formats for AR, AT, BE, BR, CH, CL, CZ, ES, FI, HU, MX, NO, PT, SE, and UY.
 
 ---

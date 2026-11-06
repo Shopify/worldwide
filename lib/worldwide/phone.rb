@@ -2,8 +2,6 @@
 
 require "set"
 
-require "phonelib"
-
 module Worldwide
   class Phone
     @shared_codes_cache = nil
@@ -14,6 +12,7 @@ module Worldwide
     attr_reader :extension
 
     def initialize(number:, country_code: nil)
+      require_phonelib
       @number = number
       @parsed_number, @extension, @country_code = parse_number(number: @number, country_code: country_code)
     end
@@ -53,6 +52,14 @@ module Worldwide
     end
 
     private
+
+    def require_phonelib
+      require "phonelib"
+    rescue LoadError => error
+      raise unless error.path == "phonelib"
+
+      raise LoadError, 'Worldwide::Phone requires phonelib. Add gem "phonelib", "~> 0.8" to your Gemfile.'
+    end
 
     # For various reasons, Worldwide considers these territories to be zones inside the USA
     # Because libphonenumber considers them to be "countries" in their own right, we must
