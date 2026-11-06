@@ -1255,6 +1255,17 @@ module Worldwide
           end
           patch_file_delete_keys(:ig, "currencies.yml", [:currencies], [:LSL])
 
+          # XCG (Caribbean guilder) replaced ANG in Curaçao and Sint Maarten on 2025-03-31. CLDR added it in version 45.
+          # Until we upgrade to that, add it in the source locale (:en), Dutch (:nl, an official language in both territories)
+          # and :root (the symbol, taken from CLDR 45).
+          patch_file(:en, "currencies.yml", [:currencies, :XCG, :name], nil, "Caribbean Guilder")
+          patch_file(:en, "currencies.yml", [:currencies, :XCG, :one], nil, "Caribbean guilder")
+          patch_file(:en, "currencies.yml", [:currencies, :XCG, :other], nil, "Caribbean guilders")
+          patch_file(:nl, "currencies.yml", [:currencies, :XCG, :name], nil, "Caribische gulden")
+          patch_file(:nl, "currencies.yml", [:currencies, :XCG, :one], nil, "Caribische gulden")
+          patch_file(:nl, "currencies.yml", [:currencies, :XCG, :other], nil, "Caribische gulden")
+          patch_file(:root, "currencies.yml", [:currencies, :XCG, :symbol], nil, "Cg.")
+
           # Add missing '%{count}' in IT
           patch_file(:it, "units.yml", [:units, :unit_length, :long, :volume_fluid_ounce, :one], "oncia liquida", "%{count} oncia liquida")
 
