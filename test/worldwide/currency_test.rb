@@ -72,9 +72,9 @@ module Worldwide
       assert_equal "XCG", xcg.currency_code
       assert_nil xcg.numeric_code
       assert_equal 2, xcg.decimals
-      assert_equal "Cg.", xcg.symbol(locale: :en)
-      assert_equal "Cg.12.50", xcg.format_short(12.5, locale: :en)
-      assert_equal "Cg.12.50 XCG", xcg.format_explicit(12.5, locale: :en)
+      assert_equal "Cg", xcg.symbol(locale: :en)
+      assert_equal "Cg12.50", xcg.format_short(12.5, locale: :en)
+      assert_equal "Cg12.50 XCG", xcg.format_explicit(12.5, locale: :en)
 
       I18n.with_locale(:en) do
         assert_equal "Caribbean Guilder", xcg.name
@@ -86,6 +86,9 @@ module Worldwide
         assert_equal "Caribische gulden", xcg.name
         assert_equal "Caribische gulden", xcg.label(count: 2)
       end
+
+      assert_equal "Cg", xcg.symbol(locale: :nl)
+      assert_equal "Cg 12,50", xcg.format_short(12.5, locale: :nl)
     end
 
     test "ANG (Netherlands Antillean guilder) is still recognized alongside XCG" do
