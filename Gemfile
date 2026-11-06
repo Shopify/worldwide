@@ -30,4 +30,5 @@ group :test do
   gem "minitest", "~> 5.27"
   gem "minitest-reporters"
   gem "mocha"
+  gem "phonelib", "~> 0.8"
 end
