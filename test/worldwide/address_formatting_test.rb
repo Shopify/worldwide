@@ -339,6 +339,22 @@ module Worldwide
       assert_equal expected, result
     end
 
+    test "format treats address values containing tokens as literal data" do
+      address = Worldwide.address(
+        first_name: "{lastName}",
+        last_name: "Smith",
+        address1: "{phone}",
+        country_code: "US",
+        phone: "secret",
+      )
+
+      result = address.format(excluded_fields: [:phone])
+
+      assert_includes result, "{lastName} Smith"
+      assert_includes result, "{phone}"
+      refute_includes result.join, "secret"
+    end
+
     test "format_address translates the country and province" do
       japan_address = {
         first_name: "賢",
