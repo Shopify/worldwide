@@ -16,6 +16,10 @@ module Worldwide
         false,
         Zip.numeric_only_zip?(country_code: "CA"),
       )
+      assert_equal(
+        false,
+        Zip.numeric_only_zip?(country_code: "PA"),
+      )
     end
 
     test "pure_numeric_only_zip? returns true if country has numeric only zip code without any special chars" do
@@ -760,6 +764,12 @@ module Worldwide
         [:MT, "PTA 1226", "PTA1226"], # Modern format (since 2007): 3 letters and 4 digits
         [:NL, "1071 LN", "1071LN"], # Concertgebouw, Amsterdam
         [:NL, "1071 LN", "1071 LN"], # Concertgebouw, Amsterdam
+        [:PA, "0815", "0815"], # Four-digit code, Correos y Telégrafos, Avenida Central y Calle 34
+        [:PA, "ADC96-M8H44", "ADC96M8H44"], # Ten-character code, Municipio de Panamá
+        [:PA, "ADC96-M8H44", "adc96 m8h44"], # Ten-character code, lowercase with a space
+        [:PA, "ADC96-M8H44", "ADC96M-8H44"], # Ten-character code, hyphen in the wrong place
+        [:PA, "ADC96-M8H44", "ADC96\u2013M8H44"], # Ten-character code, en dash
+        [:PA, "ACC9B-EJS3W", "ACC9BEJS3W"], # Biomuseo, Amador: letters are not changed into digits
         [:PL, "81-451", "81451"], # Experyment Science Centre, Gdynia
         [:PN, "PCRN 1ZZ", "PCRN1ZZ"],
         [:PT, "4050-253", "4050253"], # Bolsa Palace, Porto
