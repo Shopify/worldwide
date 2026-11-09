@@ -1256,14 +1256,17 @@ module Worldwide
           patch_file_delete_keys(:ig, "currencies.yml", [:currencies], [:LSL])
 
           # XCG (Caribbean guilder) replaced ANG in Curaçao and Sint Maarten on 2025-03-31. CLDR added it in version 45.
-          # Until we upgrade to that, add it in the source locale (:en), Dutch (:nl, an official language in both territories)
-          # and :root (the symbol, written Cg here; CLDR 45 has "Cg.").
+          # Until we upgrade to that, add it in the source locale (:en), Dutch (:nl, an official language in both territories),
+          # Spanish (:es, names taken from CLDR 45) and :root (the symbol, written Cg here; CLDR 45 has "Cg.").
           patch_file(:en, "currencies.yml", [:currencies, :XCG, :name], nil, "Caribbean Guilder")
           patch_file(:en, "currencies.yml", [:currencies, :XCG, :one], nil, "Caribbean guilder")
           patch_file(:en, "currencies.yml", [:currencies, :XCG, :other], nil, "Caribbean guilders")
           patch_file(:nl, "currencies.yml", [:currencies, :XCG, :name], nil, "Caribische gulden")
           patch_file(:nl, "currencies.yml", [:currencies, :XCG, :one], nil, "Caribische gulden")
           patch_file(:nl, "currencies.yml", [:currencies, :XCG, :other], nil, "Caribische gulden")
+          patch_file(:es, "currencies.yml", [:currencies, :XCG, :name], nil, "florín caribeño")
+          patch_file(:es, "currencies.yml", [:currencies, :XCG, :one], nil, "florín caribeño")
+          patch_file(:es, "currencies.yml", [:currencies, :XCG, :other], nil, "florines caribeños")
           patch_file(:root, "currencies.yml", [:currencies, :XCG, :symbol], nil, "Cg")
 
           # Add missing '%{count}' in IT

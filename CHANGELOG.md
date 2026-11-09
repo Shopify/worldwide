@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Add street-first `address1` formats for AR, AT, BE, BR, CH, CL, CZ, ES, FI, HU, MX, NO, PT, SE, and UY.
-- Add the XCG (Caribbean guilder) currency, which replaced ANG in Curaçao and Sint Maarten on 2025-03-31. XCG has English and Dutch names, the symbol `Cg` and 2 decimal places. ANG is unchanged and still available. XCG has no numeric code yet, because ISO gives it 532, the code ANG uses, so `Worldwide::Currencies.alpha_code_for(532)` still returns `"ANG"`.
+- Add the XCG (Caribbean guilder) currency, which replaced ANG in Curaçao and Sint Maarten on 2025-03-31. XCG has English, Dutch and Spanish names, the symbol `Cg` and 2 decimal places. ANG is unchanged and still available. XCG has no numeric code yet, because ISO gives it 532, the code ANG uses, so `Worldwide::Currencies.alpha_code_for(532)` still returns `"ANG"`.
 
 ---
 

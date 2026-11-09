@@ -87,6 +87,15 @@ module Worldwide
         assert_equal "Caribische gulden", xcg.label(count: 2)
       end
 
+      [:es, :"es-419", :"es-MX"].each do |locale|
+        I18n.with_locale(locale) do
+          assert_equal "florín caribeño", xcg.name
+          assert_equal "florín caribeño", xcg.label(count: 1)
+          assert_equal "florines caribeños", xcg.label(count: 2)
+          assert_equal "florines caribeños", xcg.label(count: 1_000_000)
+        end
+      end
+
       assert_equal "Cg", xcg.symbol(locale: :nl)
       assert_equal "Cg 12,50", xcg.format_short(12.5, locale: :nl)
     end
