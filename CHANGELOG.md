@@ -29,6 +29,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [2.2.0] - 2026-11-12
+
+- The Italian province of Sulcis Iglesiente now uses its current official code `SU`. `CI` stays as a code alternate, so lookups by `CI` still resolve, but `zone.code` now returns `SU`. Its ISO code stays `IT-CI` to keep CLDR's Sulcis Iglesiente names (CLDR's `itsu` is the former Sud Sardegna). [#667](https://github.com/Shopify/worldwide/pull/667)
+
+---
+
 ## [2.1.0] - 2026-11-10
 
 - Accept Panama's 10-character postal codes (`XXXXX-XXXXX`, for example `ADC96-M8H44`), as well as the 4-digit codes. `Zip.normalize` puts the hyphen after the 5th character. [#678](https://github.com/Shopify/worldwide/pull/678)
