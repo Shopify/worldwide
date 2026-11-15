@@ -262,10 +262,10 @@ zones:
   tax: 0.0
   tax_name: VAT
   neighboring_zones:
-  - CI
   - NU
   - OG
   - OR
+  - SU
   - VS
   zip_prefixes:
   - '08033'
@@ -737,8 +737,8 @@ zones:
   tax_name: VAT
   neighboring_zones:
   - CA
-  - CI
   - OR
+  - SU
   zip_prefixes:
   - '09020' # Collinas, Genuri, Gesturi, Las Plassas, Pauli Arbarei, Pimentel, Samatzai, Siddi, Turri
   - '09021' # Barumini
@@ -1247,7 +1247,10 @@ zones:
   - '230'
   - '231'
 - name: Sulcis Iglesiente
-  code: CI
+  code: SU
+  code_alternates:
+  - CI
+  iso_code: IT-CI
   name_alternates:
   - Carbonia-Iglesias
   tax: 0.0
@@ -1489,18 +1492,18 @@ zips_crossing_provinces:
   - OR
   - VS
   '09010':
-  - CI
+  - SU
   - CA
   '09013':
-  - CI
+  - SU
   - CA
   - VS
   '09016':
-  - CI
+  - SU
   - CA
   - VS
   '09017':
-  - CI
+  - SU
   - CA
   '09020':
   - VS
@@ -1511,7 +1514,7 @@ zips_crossing_provinces:
   '09027':
   - VS
   - CA
-  - CI
+  - SU
   '09030':
   - VS
   - CA
