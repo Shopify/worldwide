@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "bigdecimal"
 require "test_helper"
 
 module Worldwide
@@ -319,6 +320,436 @@ module Worldwide
         nf = Numbers.new
 
         assert_equal "1,0 Mrd.", nf.format(1_000_000_000, humanize: :short)
+      end
+    end
+
+    # The option sets used by the legacy output matrix below, in column order.
+    LEGACY_OPTION_SETS = [
+      {},
+      { decimal_places: 0 },
+      { decimal_places: 2 },
+      { decimal_places: 3 },
+      { humanize: :short },
+      { humanize: :long },
+      { humanize: :japan },
+      { percent: true },
+      { relative: true },
+      { percent: true, relative: true },
+    ].freeze
+
+    # A value that is not Numeric but converts with to_f, as some money types do.
+    class FloatConvertible
+      def initialize(value)
+        @value = value
+      end
+
+      def to_f
+        @value
+      end
+    end
+
+    # A money-like value that also supports arithmetic and converts with to_d.
+    class DecimalConvertible < FloatConvertible
+      def to_d
+        BigDecimal(@value.to_s)
+      end
+
+      def *(other)
+        DecimalConvertible.new(@value * other)
+      end
+
+      def <(other)
+        @value < other
+      end
+
+      def abs
+        DecimalConvertible.new(@value.abs)
+      end
+
+      def to_s
+        @value.to_s
+      end
+    end
+
+    test "#format keeps the legacy output for Float, Integer, Rational and String amounts" do
+      # Output before rounding_mode: and sign_display: were added, one column per LEGACY_OPTION_SETS entry.
+      # nil marks a combination that raised.
+      [
+        [0.0, "0", "0", "0.00", "0.000", "0", "0", "0", "0%", "+0", "+0%"],
+        [-0.0, "-0", "-0", "-0.00", "-0.000", "-0", "-0", "-0", "-0%", "+-0", "+-0%"],
+        [0.34, "0.34", "0", "0.34", "0.340", "0.34", "0.34", "0.34", "34%", "+0.34", "+34%"],
+        [0.125, "0.125", "0", "0.12", "0.125", "0.125", "0.125", "0.125", "12.5%", "+0.125", "+12.5%"],
+        [1.005, "1.005", "1", "1.00", "1.005", "1.005", "1.005", "1.005", "100.49999999999999%", "+1.005", "+100.49999999999999%"],
+        [1.015, "1.015", "1", "1.02", "1.015", "1.015", "1.015", "1.015", "101.49999999999999%", "+1.015", "+101.49999999999999%"],
+        [2.5, "2.5", "2", "2.50", "2.500", "2.5", "2.5", "2.5", "250%", "+2.5", "+250%"],
+        [-0.004, "-0.004", "-0", "-0.00", "-0.004", "-0.004", "-0.004", "-0.004", "-0.4%", "-0.004", "-0.4%"],
+        [-0.005, "-0.005", "-0", "-0.01", "-0.005", "-0.005", "-0.005", "-0.005", "-0.5%", "-0.005", "-0.5%"],
+        [1234.5, "1,234.5", "1,234", "1,234.50", "1,234.500", "1.2K", "1.2 thousand", "1234.5", "123,450%", "+1,234.5", "+123,450%"],
+        [-1234.56, "-1,234.56", "-1,235", "-1,234.56", "-1,234.560", "-1K", "-1 thousand", "-万1234.56", "-123,456%", "-1,234.56", "-123,456%"],
+        [1234567.891, "1,234,567.891", "1,234,568", "1,234,567.89", "1,234,567.891", "1.2M", "1.2 million", "123万4567.891", "123,456,789.10000001%", "+1,234,567.891", "+123,456,789.10000001%"],
+        [31_500_000.0, "31,500,000", "31,500,000", "31,500,000.00", "31,500,000.000", "32M", "32 million", "3150万", "3,150,000,000%", "+31,500,000", "+3,150,000,000%"],
+        [123456789012.21, "123,456,789,012.21", "123,456,789,012", "123,456,789,012.21", "123,456,789,012.210", "123B", "123 billion", "1234億5678万9012.21", "12,345,678,901,221%", "+123,456,789,012.21", "+12,345,678,901,221%"],
+        [1.0e20, "100,000,000,000,000,000,000.00000", "100,000,000,000,000,000,000", "100,000,000,000,000,000,000.00", "100,000,000,000,000,000,000.000", "100,000,000T", "100,000,000 trillion", "1垓.00000", "10,000,000,000,000,000,000,000.00000%", "+100,000,000,000,000,000,000.00000", "+10,000,000,000,000,000,000,000.00000%"],
+        [99.00101, "99.00101", "99", "99.00", "99.001", "99.00101", "99.00101", "99.00101", "9,900.100999999999%", "+99.00101", "+9,900.100999999999%"],
+        [Float::NAN, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN%", "+NaN", "+NaN%"],
+        [Float::INFINITY, "Inf", "Inf", "Inf", "Inf", nil, nil, "Inf", "Inf%", "+Inf", "+Inf%"],
+        [-Float::INFINITY, "-Inf", "-Inf", "-Inf", "-Inf", nil, nil, "-Inf", "-Inf%", "-Inf", "-Inf%"],
+        [0, "0", "0", "0.00", "0.000", "0", "0", "0", "0%", "+0", "+0%"],
+        [7, "7", "7", "7.00", "7.000", "7", "7", "7", "700%", "+7", "+700%"],
+        [-1234, "-1,234", "-1,234", "-1,234.00", "-1,234.000", "-1K", "-1 thousand", "-万1234", "-123,400%", "-1,234", "-123,400%"],
+        [1_234_567, "1,234,567", "1,234,567", "1,234,567.00", "1,234,567.000", "1.2M", "1.2 million", "123万4567", "123,456,700%", "+1,234,567", "+123,456,700%"],
+        [-31_500_000_000, "-31,500,000,000", "-31,500,000,000", "-31,500,000,000.00", "-31,500,000,000.000", "-32B", "-32 billion", "-315億", "-3,150,000,000,000%", "-31,500,000,000", "-3,150,000,000,000%"],
+        [12_345_678_901_234_567_890_123, "12,345,678,901,234,567,890,123", "12,345,678,901,234,567,890,123", "12,345,678,901,234,567,890,123.00", "12,345,678,901,234,567,890,123.000", "12,345,678,901T", "12,345,678,901 trillion", "123垓4567京8901兆2345億6789万123", "1,234,567,890,123,456,789,012,300%", "+12,345,678,901,234,567,890,123", "+1,234,567,890,123,456,789,012,300%"],
+        [5/2r, "3", "3", "2.50", "2.500", "3", "3", "3", "250%", "+3", "+250%"],
+        [-5/2r, "-3", "-3", "-2.50", "-2.500", "-3", "-3", "-3", "-250%", "-3", "-250%"],
+        [1/8r, "0", "0", "0.13", "0.125", "0", "0", "0", "13%", "+0", "+13%"],
+        [1/3r, "0", "0", "0.33", "0.333", "0", "0", "0", "33%", "+0", "+33%"],
+        [1234567/100r, "12,346", "12,346", "12,345.67", "12,345.670", "12K", "12 thousand", "1万2346", "1,234,567%", "+12,346", "+1,234,567%"],
+        ["1234.5", "1,234.5", "1,234", "1,234.50", "1,234.500", nil, nil, "1234.5", nil, nil, nil],
+        ["-1.0", "-1", "-1", "-1.00", "-1.000", nil, nil, "-1", nil, nil, nil],
+        ["12.00", "12", "12", "12.00", "12.000", nil, nil, "12", nil, nil, nil],
+      ].each do |amount, *expected_outputs|
+        LEGACY_OPTION_SETS.zip(expected_outputs).each do |options, expected|
+          next if expected.nil?
+
+          formatter = Worldwide::Numbers.new(locale: :en)
+
+          assert_equal expected, formatter.format(amount, **options), "#{amount.inspect} #{options.inspect}"
+          assert_equal expected, formatter.format(amount, **options, rounding_mode: nil, sign_display: :auto), "#{amount.inspect} #{options.inspect}"
+        end
+      end
+    end
+
+    test "#format keeps the legacy output for each locale's symbols and grouping" do
+      locales = [:de, :fr, :"en-IN", :es, :pl, :ar, :"de-CH"]
+      [
+        [1234.5, { decimal_places: 2 }, "1.234,50", "1\u202F234,50", "1,234.50", "1.234,50", "1\u00A0234,50", "1,234.50", "1\u2019234.50"],
+        [1234.5, {}, "1.234,5", "1\u202F234,5", "1,234.5", "1.234,5", "1\u00A0234,5", "1,234.5", "1\u2019234.5"],
+        [-1234567.891, { decimal_places: 2 }, "-1.234.567,89", "-1\u202F234\u202F567,89", "-12,34,567.89", "-1.234.567,89", "-1\u00A0234\u00A0567,89", "-1,234,567.89", "-1\u2019234\u2019567.89"],
+        [-1234567.891, {}, "-1.234.567,891", "-1\u202F234\u202F567,891", "-12,34,567.891", "-1.234.567,891", "-1\u00A0234\u00A0567,891", "-1,234,567.891", "-1\u2019234\u2019567.891"],
+        [1_234_567, { decimal_places: 2 }, "1.234.567,00", "1\u202F234\u202F567,00", "12,34,567.00", "1.234.567,00", "1\u00A0234\u00A0567,00", "1,234,567.00", "1\u2019234\u2019567.00"],
+        [1_234_567, {}, "1.234.567", "1\u202F234\u202F567", "12,34,567", "1.234.567", "1\u00A0234\u00A0567", "1,234,567", "1\u2019234\u2019567"],
+        [12345.678, { decimal_places: 2 }, "12.345,68", "12\u202F345,68", "12,345.68", "12.345,68", "12\u00A0345,68", "12,345.68", "12\u2019345.68"],
+        [12345.678, {}, "12.345,678", "12\u202F345,678", "12,345.678", "12.345,678", "12\u00A0345,678", "12,345.678", "12\u2019345.678"],
+        [-0.004, { decimal_places: 2 }, "-0,00", "-0,00", "-0.00", "-0,00", "-0,00", "-0.00", "-0.00"],
+        [-0.004, {}, "-0,004", "-0,004", "-0.004", "-0,004", "-0,004", "-0.004", "-0.004"],
+        [5/2r, { decimal_places: 2 }, "2,50", "2,50", "2.50", "2,50", "2,50", "2.50", "2.50"],
+        [5/2r, {}, "3", "3", "3", "3", "3", "3", "3"],
+        ["1234.5", { decimal_places: 2 }, "1.234,50", "1\u202F234,50", "1,234.50", "1.234,50", "1\u00A0234,50", "1,234.50", "1\u2019234.50"],
+        ["1234.5", {}, "1.234,5", "1\u202F234,5", "1,234.5", "1.234,5", "1\u00A0234,5", "1,234.5", "1\u2019234.5"],
+      ].each do |amount, options, *expected_outputs|
+        locales.zip(expected_outputs).each do |locale, expected|
+          actual = Worldwide::Numbers.new(locale: locale).format(amount, **options)
+
+          assert_equal expected, actual, "#{locale} #{amount.inspect} #{options.inspect}"
+        end
+      end
+    end
+
+    test "#format renders BigDecimal amounts with decimal arithmetic" do
+      # [amount, options, expected, output before this change if it differed, reason for the difference]
+      [
+        ["1234.56", { decimal_places: 2 }, "1,234.56"],
+        ["0.125", { decimal_places: 2 }, "0.12"],
+        ["1.015", { decimal_places: 2 }, "1.02"],
+        ["2.5", { decimal_places: 0 }, "2"],
+        ["-0.004", { decimal_places: 2 }, "-0.00"],
+        ["-0", { decimal_places: 2 }, "-0.00"],
+        ["0", {}, "0"],
+        ["1500", { humanize: :long }, "1.5 thousand"],
+        ["31500000", { humanize: :short }, "31.5M"],
+        ["12345.675", { humanize: :japan, decimal_places: 2 }, "1万2345.68"],
+        ["NaN", {}, "NaN"],
+        ["-Infinity", { decimal_places: 2 }, "-Inf"],
+        ["123456789012345.01", { decimal_places: 2 }, "123,456,789,012,345.01", "123,456,789,012,345.02", :beyond_double_precision],
+        ["9007199254740992.01", { decimal_places: 2 }, "9,007,199,254,740,992.01", "9,007,199,254,740,992.00", :beyond_double_precision],
+        ["0.005", { decimal_places: 2 }, "0.00", "0.01", :decimal_tie],
+        ["1234.56", {}, "1,234.56", "1,234.56000000", :natural_decimal_places],
+        ["100", {}, "100", "100.000", :natural_decimal_places],
+        ["-1.50", {}, "-1.5", "-1.5000", :natural_decimal_places],
+        ["1e-7", {}, "0.0000001", "0.0000", :natural_decimal_places],
+        ["0.25", { percent: true }, "25%", "25.0000%", :natural_decimal_places],
+        ["-0.6", { relative: true }, "-0.6", "-0.600", :natural_decimal_places],
+      ].each do |amount, options, expected, _previous_output, _reason|
+        actual = Worldwide::Numbers.new(locale: :en).format(BigDecimal(amount), **options)
+
+        assert_equal expected, actual, "#{amount} #{options.inspect}"
+      end
+    end
+
+    test "#format renders a 50-digit BigDecimal exactly" do
+      integer_part = "12345678901234567890123456789012345678901234567890"
+      expected = "#{integer_part.reverse.scan(/\d{1,3}/).join(",").reverse}.01"
+
+      assert_equal expected, Worldwide::Numbers.new(locale: :en).format(BigDecimal("#{integer_part}.005"), decimal_places: 2, rounding_mode: :half_up)
+      assert_equal expected, Worldwide::Numbers.new(locale: :en).format(BigDecimal("#{integer_part}.01"), decimal_places: 2)
+      assert_equal expected, Worldwide::Numbers.new(locale: :en).format(Rational("#{integer_part}.01"), decimal_places: 2, rounding_mode: :half_even)
+    end
+
+    test "#format with BigDecimal keeps every digit in de" do
+      formatter = Worldwide::Numbers.new(locale: :de)
+
+      assert_equal "123.456.789.012.345,01", formatter.format(BigDecimal("123456789012345.01"), decimal_places: 2)
+      assert_equal "9.007.199.254.740.992,01", formatter.format(BigDecimal("9007199254740992.01"), decimal_places: 2)
+    end
+
+    test "#format accepts the same decimal_places: values as Kernel.format for a BigDecimal" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      [2, "2", "02", "", "2f", 2.0, -1, " 2", "2 "].each do |decimal_places|
+        expected = begin
+          Kernel.format("%.#{decimal_places}f", 1.25)
+        rescue ArgumentError => error
+          error.class
+        end
+
+        [1.25, BigDecimal("1.25")].each do |amount|
+          actual = begin
+            formatter.format(amount, decimal_places: decimal_places)
+          rescue ArgumentError => error
+            error.class
+          end
+
+          assert_equal expected, actual, "#{amount.inspect} #{decimal_places.inspect}"
+        end
+      end
+    end
+
+    test "#format with rounding_mode: accepts an Integer or a String of digits as decimal_places:" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_equal "1.3", formatter.format(BigDecimal("1.25"), decimal_places: 1, rounding_mode: :half_up)
+      assert_equal "1.3", formatter.format(1.25, decimal_places: "1", rounding_mode: :half_up)
+      assert_equal "1.30", formatter.format(BigDecimal("1.3"), decimal_places: "02", rounding_mode: :half_up)
+
+      ["", "2f", 2.0, -1, " 2", "2 "].each do |decimal_places|
+        assert_raises(ArgumentError, decimal_places.inspect) do
+          formatter.format(BigDecimal("1.25"), decimal_places: decimal_places, rounding_mode: :half_up)
+        end
+      end
+    end
+
+    test "#format bounds the digits that decimal arithmetic renders" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+      huge = BigDecimal("1e100000000")
+      tiny = BigDecimal("-1e-100000000")
+
+      assert_equal "Inf", formatter.format(huge)
+      assert_equal "Inf", formatter.format(huge, decimal_places: 2)
+      assert_equal legacy_format(tiny, nil), formatter.format(tiny)
+      assert_equal "-0.00", formatter.format(tiny, decimal_places: 2)
+      assert_equal "-0.01", formatter.format(tiny, decimal_places: 2, rounding_mode: :floor)
+      assert_equal "9" * 999, formatter.format(BigDecimal("9" * 999), decimal_places: 0).delete(",")
+      assert_equal "Inf", formatter.format(BigDecimal("1e999"), decimal_places: 0)
+      assert_equal "179,769,313,486,231,570,#{(["000"] * 97).join(",")}", formatter.format(Float::MAX, rounding_mode: :half_even)
+
+      assert_raises(ArgumentError) { formatter.format(huge, rounding_mode: :half_even) }
+      assert_raises(ArgumentError) { formatter.format(tiny, rounding_mode: :half_even) }
+      assert_raises(ArgumentError) { formatter.format(BigDecimal("1.5"), decimal_places: 1_000, rounding_mode: :half_even) }
+      assert_raises(ArgumentError) { formatter.format(Rational(1, 2**1_000), rounding_mode: :half_even) }
+      assert_equal 999, formatter.format(Rational(1, 2**999), rounding_mode: :half_even).length - 2
+    end
+
+    test "#format rounds in every rounding mode at zero and three decimal places" do
+      modes = [:half_even, :half_up, :half_down, :up, :down, :ceiling, :floor]
+      [
+        ["2.5", 0, ["2", "3", "2", "3", "2", "3", "2"]],
+        ["-2.5", 0, ["-2", "-3", "-2", "-3", "-2", "-2", "-3"]],
+        ["3.5", 0, ["4", "4", "3", "4", "3", "4", "3"]],
+        ["2.4", 0, ["2", "2", "2", "3", "2", "3", "2"]],
+        ["-2.6", 0, ["-3", "-3", "-3", "-3", "-2", "-2", "-3"]],
+        ["-0.4", 0, ["-0", "-0", "-0", "-1", "-0", "-0", "-1"]],
+        ["7", 0, ["7", "7", "7", "7", "7", "7", "7"]],
+        ["1.0005", 3, ["1.000", "1.001", "1.000", "1.001", "1.000", "1.001", "1.000"]],
+        ["1.0015", 3, ["1.002", "1.002", "1.001", "1.002", "1.001", "1.002", "1.001"]],
+        ["-1.0015", 3, ["-1.002", "-1.002", "-1.001", "-1.002", "-1.001", "-1.001", "-1.002"]],
+        ["1.23456", 3, ["1.235", "1.235", "1.235", "1.235", "1.234", "1.235", "1.234"]],
+        ["-1.23449", 3, ["-1.234", "-1.234", "-1.234", "-1.235", "-1.234", "-1.234", "-1.235"]],
+        ["1234.5", 3, ["1,234.500", "1,234.500", "1,234.500", "1,234.500", "1,234.500", "1,234.500", "1,234.500"]],
+      ].each do |amount, decimal_places, expected_outputs|
+        formatter = Worldwide::Numbers.new(locale: :en)
+        amounts = [BigDecimal(amount), Rational(amount), Float(amount)]
+        amounts << Integer(amount) if amount.match?(/\A-?\d+\z/)
+
+        modes.zip(expected_outputs).each do |mode, expected|
+          amounts.each do |typed_amount|
+            actual = formatter.format(typed_amount, decimal_places: decimal_places, rounding_mode: mode)
+
+            assert_equal expected, actual, "#{typed_amount.inspect} #{mode}"
+          end
+        end
+      end
+    end
+
+    test "#format with rounding_mode: rounds a Float through its shortest decimal form" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      # 1.015 is stored as 1.01499999999999990230, and 0.07 * 100 as 7.000000000000001.
+      assert_equal "1.02", formatter.format(1.015, decimal_places: 2, rounding_mode: :half_up)
+      assert_equal "-0.01", formatter.format(-0.005, decimal_places: 2, rounding_mode: :half_up)
+      assert_equal "7%", formatter.format(0.07, percent: true, rounding_mode: :half_even)
+      assert_equal "100,000,000,000,000,000,000", formatter.format(1.0e20, rounding_mode: :half_even)
+      assert_equal "0.0000001", formatter.format(1.0e-7, rounding_mode: :half_even)
+      assert_equal "-0.00", formatter.format(-0.0, decimal_places: 2, rounding_mode: :half_even)
+      assert_equal "NaN", formatter.format(Float::NAN, decimal_places: 2, rounding_mode: :half_even)
+      assert_equal "-Inf", formatter.format(-Float::INFINITY, rounding_mode: :half_even)
+    end
+
+    test "#format with rounding_mode: and no decimal_places: uses every decimal of a terminating Rational" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_equal "0.125", formatter.format(1/8r, rounding_mode: :half_even)
+      assert_equal "-2.5", formatter.format(-5/2r, rounding_mode: :half_even)
+      assert_equal "12,345.67", formatter.format(1234567/100r, rounding_mode: :half_even)
+      assert_equal "0.33", formatter.format(1/3r, decimal_places: 2, rounding_mode: :half_even)
+
+      error = assert_raises(ArgumentError) { formatter.format(1/3r, rounding_mode: :half_even) }
+      assert_match(/decimal_places:/, error.message)
+    end
+
+    test "#format with sign_display: :negative drops the minus sign from a zero result" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_equal "-0.00", formatter.format(BigDecimal("-0.004"), decimal_places: 2)
+      assert_equal "0.00", formatter.format(BigDecimal("-0.004"), decimal_places: 2, sign_display: :negative)
+      assert_equal "0.00", formatter.format(-0.004, decimal_places: 2, sign_display: :negative)
+      assert_equal "0", formatter.format(-0.0, sign_display: :negative)
+      assert_equal "0.00", formatter.format("-0.001", decimal_places: 2, sign_display: :negative)
+      assert_equal "0", formatter.format(-1/3r, decimal_places: 0, sign_display: :negative)
+      assert_equal "-0.01", formatter.format(BigDecimal("-0.005"), decimal_places: 2, rounding_mode: :half_up, sign_display: :negative)
+      assert_equal "-0.01", formatter.format(-0.005, decimal_places: 2, rounding_mode: :half_up)
+      assert_equal "-0.004", formatter.format(-0.004, sign_display: :negative)
+      assert_equal "-1,234.50", formatter.format(-1234.5, decimal_places: 2, sign_display: :negative)
+      assert_equal "-Inf", formatter.format(-Float::INFINITY, sign_display: :negative)
+      assert_equal "0,00", Worldwide::Numbers.new(locale: :de).format(-0.004, decimal_places: 2, sign_display: :negative)
+    end
+
+    test "#format combines the new options with percent: and humanize:" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_equal "13%", formatter.format(0.125, percent: true, decimal_places: 0, rounding_mode: :half_up)
+      assert_equal "12%", formatter.format(0.125, percent: true, decimal_places: 0, rounding_mode: :half_even)
+      assert_equal "0.00%", formatter.format(-0.00004, percent: true, decimal_places: 2, sign_display: :negative)
+      assert_equal "1万2345.67", formatter.format(BigDecimal("12345.675"), humanize: :japan, decimal_places: 2, rounding_mode: :down)
+      assert_equal "0", formatter.format(-0.4, humanize: :short, decimal_places: 0, sign_display: :negative)
+      assert_equal "-32M", formatter.format(-31_500_000, humanize: :short, sign_display: :negative)
+      assert_equal "+0.13", formatter.format(0.125, relative: true, decimal_places: 2, rounding_mode: :half_up)
+      assert_equal "-0.13", formatter.format(-0.125, relative: true, decimal_places: 2, rounding_mode: :half_up)
+    end
+
+    test "#format raises ArgumentError for unsupported option values and combinations" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_raises(ArgumentError) { formatter.format(1, rounding_mode: :banker) }
+      assert_raises(ArgumentError) { formatter.format(1, rounding_mode: "half_up") }
+      assert_raises(ArgumentError) { formatter.format(1, sign_display: :never) }
+      assert_raises(ArgumentError) { formatter.format(1, sign_display: nil) }
+      assert_raises(ArgumentError) { formatter.format(1_500_000, humanize: :short, rounding_mode: :half_up) }
+      assert_raises(ArgumentError) { formatter.format(1_500_000, humanize: :long, rounding_mode: :half_even) }
+      assert_raises(ArgumentError) { formatter.format(-0.004, relative: true, sign_display: :negative) }
+      assert_raises(ArgumentError) { formatter.format("1.5", rounding_mode: :half_up) }
+      assert_raises(ArgumentError) { formatter.format(FloatConvertible.new(1.5), rounding_mode: :half_up) }
+      assert_raises(ArgumentError) { formatter.format(BigDecimal("1.5"), decimal_places: -1) }
+      assert_raises(ArgumentError) { formatter.format(1.5, decimal_places: 1.0, rounding_mode: :half_up) }
+    end
+
+    test "#format keeps the legacy output for objects that only convert to Float" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_equal "1,234.56", formatter.format(FloatConvertible.new(1234.565), decimal_places: 2)
+      assert_equal "0.01", formatter.format(FloatConvertible.new(0.005), decimal_places: 2)
+      assert_equal "0.00", formatter.format(FloatConvertible.new(-0.004), decimal_places: 2, sign_display: :negative)
+      assert_equal "0.01", formatter.format(DecimalConvertible.new(0.005), decimal_places: 2)
+      assert_equal "1,234.56", formatter.format(DecimalConvertible.new(1234.565), decimal_places: 2)
+      assert_equal "12%", formatter.format(DecimalConvertible.new(0.125), percent: true, decimal_places: 0)
+      assert_equal "-1.50", formatter.format(DecimalConvertible.new(-1.5), relative: true, decimal_places: 2)
+    end
+
+    test "#format with rounding_mode: uses to_d for other objects" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_equal "0.00", formatter.format(DecimalConvertible.new(0.005), decimal_places: 2, rounding_mode: :half_even)
+      assert_equal "1,234.57", formatter.format(DecimalConvertible.new(1234.565), decimal_places: 2, rounding_mode: :half_up)
+      assert_equal "13%", formatter.format(DecimalConvertible.new(0.125), percent: true, decimal_places: 0, rounding_mode: :half_up)
+    end
+
+    test "#format matches the legacy %f formula, except where a BigDecimal is now rendered exactly" do
+      random = Random.new(20261116)
+      formatter = Worldwide::Numbers.new(locale: :en)
+      differences = Hash.new(0)
+
+      2_000.times do
+        decimal_places = [nil, 0, 1, 2, 3, 4].sample(random: random)
+        significant_digits = random.rand(1..22)
+        unscaled = random.rand(10**significant_digits)
+        decimal = if decimal_places && random.rand(4).zero?
+          # A tie halfway between two values at decimal_places
+          BigDecimal("#{unscaled / 10}5e-#{decimal_places + 1}")
+        else
+          BigDecimal("#{unscaled}e-#{random.rand(0..12)}")
+        end
+        decimal = -decimal if random.rand(2).zero?
+        float = decimal.to_f
+        rational = Rational(random.rand(-10**8..10**8), random.rand(1..10**4))
+
+        [float, float.to_s, unscaled, rational].each do |amount|
+          actual = formatter.format(amount, decimal_places: decimal_places).delete(",")
+
+          assert_equal legacy_format(amount, decimal_places), actual, "#{amount.inspect} #{decimal_places.inspect}"
+        end
+
+        actual = formatter.format(decimal, decimal_places: decimal_places).delete(",")
+
+        assert_equal exact_format(decimal, decimal_places), actual, "#{decimal} #{decimal_places.inspect}"
+
+        legacy = legacy_format(decimal, decimal_places)
+        next if actual == legacy
+
+        reason = difference_reason(decimal, decimal_places)
+
+        refute_nil reason, "#{decimal} #{decimal_places.inspect}: #{legacy} became #{actual}"
+        differences[reason] += 1
+      end
+
+      assert_equal [:beyond_double_precision, :decimal_tie, :natural_decimal_places], differences.keys.sort
+    end
+
+    private
+
+    # The formatting before rounding_mode: was added, without grouping, for the en locale.
+    def legacy_format(amount, decimal_places)
+      decimal_places ||= legacy_natural_decimal_places(amount)
+      Kernel.format("%.#{decimal_places}f", amount)
+    end
+
+    def legacy_natural_decimal_places(amount)
+      natural = amount.to_s.sub(/\.0+\Z/, "")
+      position = natural.index(".")
+      position ? natural.length - position - 1 : 0
+    end
+
+    # Half-even rounding by BigDecimal itself, without grouping.
+    def exact_format(decimal, decimal_places)
+      decimal_places ||= decimal.scale
+      integer, fraction = decimal.round(decimal_places, BigDecimal::ROUND_HALF_EVEN).abs.to_s("F").split(".")
+      sign = decimal.sign.negative? ? "-" : ""
+      return "#{sign}#{integer}" if decimal_places.zero?
+
+      "#{sign}#{integer}.#{fraction.ljust(decimal_places, "0")}"
+    end
+
+    def difference_reason(decimal, decimal_places)
+      if decimal_places.nil?
+        return :natural_decimal_places if legacy_natural_decimal_places(decimal) != decimal.scale
+
+        decimal_places = decimal.scale
+      end
+
+      if ((decimal.abs * (10**decimal_places)) % 1) == BigDecimal("0.5")
+        :decimal_tie
+      elsif decimal.n_significant_digits > 15 || decimal.exponent + decimal_places > 15
+        # A Float holds 15 to 17 significant digits, so "%f" showed binary noise past them.
+        :beyond_double_precision
       end
     end
   end

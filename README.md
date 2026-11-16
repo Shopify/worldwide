@@ -871,6 +871,12 @@ Optional keyword arguments:
   - `decimal_places:` force a certain number of decimal places to be used.
   - `humanize:` can be `:short` or `:long` to produce a human-friendly display for large numbers, or `:japan` to use Japanese-style alternative formatting (see examples below)
   - `percent: true` format the number as a percentage. (Note: in this case, `0.1` is `10%`, not `0.1%`).
+  - `rounding_mode:` how to round to `decimal_places:`. One of `:half_even`, `:half_up`, `:half_down`, `:up`, `:down`, `:ceiling` or `:floor`. `:half_up` and `:half_down` round ties away from and towards zero.
+    - Without `rounding_mode:`, a `BigDecimal` is rounded half-even with decimal arithmetic, so every digit is kept. Other amounts are formatted as in earlier versions, through Ruby's `"%f"` format.
+    - With `rounding_mode:`, any finite `Integer`, `Float`, `Rational` or `BigDecimal` is rounded with decimal arithmetic, as is any other object that converts to a finite `BigDecimal` with `to_d`. A `Float` is first converted to its shortest decimal form, so `1.015` rounds as `1.015`. Without `decimal_places:`, every decimal of the amount is shown, so a `Rational` such as `1/3r` raises `ArgumentError`. A `String` amount raises `ArgumentError`.
+    - `rounding_mode:` can't be combined with `humanize: :short` or `humanize: :long`.
+    - Decimal arithmetic renders at most 999 decimal places, and a `BigDecimal` with at most 999 integer digits. Without `rounding_mode:`, a larger `BigDecimal` is formatted as in earlier versions. With `rounding_mode:`, it raises `ArgumentError`.
+  - `sign_display:` is `:auto` (the default), which shows a minus sign for every negative amount, or `:negative`, which drops the minus sign when every displayed digit is zero. `:negative` can't be combined with `relative: true`, which always shows a sign.
 
 ```ruby
 $ Worldwide.numbers.format(12345.67)
@@ -897,6 +903,14 @@ $ Worldwide.numbers(locale: 'tr').format(0.75, percent: true)
 ==> "%75"
 $ Worldwide.numbers(locale: 'en').format(0.6, percent: true, relative: true)
 ==> "+60%"
+$ Worldwide::Numbers.new(locale: :de).format(BigDecimal("9007199254740992.01"), decimal_places: 2)
+==> "9.007.199.254.740.992,01"
+$ Worldwide::Numbers.new(locale: :en).format(2.5, decimal_places: 0, rounding_mode: :half_up)
+==> "3"
+$ Worldwide::Numbers.new(locale: :en).format(-0.004, decimal_places: 2)
+==> "-0.00"
+$ Worldwide::Numbers.new(locale: :en).format(-0.004, decimal_places: 2, sign_display: :negative)
+==> "0.00"
 ```
 
 Note: If you want to display a discount off a price (e.g. "Now 20% off"), then a percentage may not be

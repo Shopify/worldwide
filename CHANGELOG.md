@@ -27,6 +27,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- `Worldwide::Numbers#format` now rounds a `BigDecimal` amount half-even with decimal arithmetic, instead of converting it to a `Float`. Digits beyond a `Float`'s precision are kept, so `BigDecimal("9007199254740992.01")` formats as `9,007,199,254,740,992.01` in `en` instead of `9,007,199,254,740,992.00`. Without `decimal_places:`, a `BigDecimal` shows only its own decimals (`BigDecimal("100")` formats as `100`, not `100.000`). A tie at `0.005` and two decimal places now rounds to `0.00`. `Float`, `Integer`, `Rational` and `String` amounts format as before.
+- Add `rounding_mode:` and `sign_display:` to `Worldwide::Numbers#format`. `rounding_mode:` (`:half_even`, `:half_up`, `:half_down`, `:up`, `:down`, `:ceiling` or `:floor`) rounds any finite numeric amount with decimal arithmetic, converting a `Float` through its shortest decimal form. `sign_display: :negative` drops the minus sign from a result whose digits are all zero.
+
 ---
 
 ## [2.3.0] - 2026-11-18

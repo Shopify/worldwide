@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "bigdecimal"
 require "test_helper"
 
 module Worldwide
@@ -274,6 +275,15 @@ module Worldwide
           assert_equal expected_explicit, actual
         end
       end
+    end
+
+    test "#format_short and #format_explicit keep every digit of a large BigDecimal amount" do
+      eur = Worldwide.currency(code: "EUR")
+
+      assert_equal "123.456.789.012.345,01\u00A0€", eur.format_short(BigDecimal("123456789012345.01"), locale: :"de-DE")
+      assert_equal "9.007.199.254.740.992,01\u00A0€", eur.format_short(BigDecimal("9007199254740992.01"), locale: :"de-DE")
+      assert_equal "9.007.199.254.740.992,01\u00A0€ EUR", eur.format_explicit(BigDecimal("9007199254740992.01"), locale: :"de-DE")
+      assert_equal "-0,00\u00A0€", eur.format_short(BigDecimal("-0.004"), locale: :"de-DE")
     end
 
     test "#format_short and #format_explicit have sane default decimal places" do

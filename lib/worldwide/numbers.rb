@@ -12,21 +12,55 @@ module Worldwide
     # actually use a trailing % (e.g. "75%", "2%"). We override the placement for these.
     TRAILING_PERCENT_SIGN_LOCALES = ["he", "ur"].freeze
 
+    ROUNDING_MODES = [:half_even, :half_up, :half_down, :up, :down, :ceiling, :floor].freeze
+    SIGN_DISPLAYS = [:auto, :negative].freeze
+    # The most integer digits of a BigDecimal, or decimal places of any amount, that decimal arithmetic renders.
+    # ICU has the same limit on fraction digits.
+    MAX_EXACT_DIGITS = 999
+    private_constant :MAX_EXACT_DIGITS
+
     def initialize(locale: I18n.locale)
       @locale = locale.to_sym
     end
 
-    def format(amount, decimal_places: nil, humanize: nil, percent: false, relative: false)
+    # Formats amount as a locale-appropriate string.
+    #
+    # rounding_mode: nil (the default) rounds BigDecimal amounts half-even with decimal arithmetic,
+    # and formats every other amount as before, through Kernel.format's "%f".
+    # A mode (:half_even, :half_up, :half_down, :up, :down, :ceiling or :floor) rounds any finite
+    # Integer, Float, Rational or BigDecimal amount with decimal arithmetic, and any other object
+    # that converts to a finite BigDecimal with to_d. A Float is first converted to its shortest
+    # round-trip decimal, so 1.015 rounds as 1.015. :half_up and :half_down round ties away from
+    # and towards zero. Without decimal_places:, every decimal of the exact value is shown, so a
+    # Rational that has no finite decimal expansion raises ArgumentError.
+    # rounding_mode: is not supported with humanize: :short or :long.
+    #
+    # Decimal arithmetic renders at most 999 decimal places, and a BigDecimal with at most 999
+    # integer digits. Without rounding_mode:, a BigDecimal beyond that keeps the "%f" formatting.
+    # With rounding_mode:, it raises ArgumentError.
+    #
+    # sign_display: :auto (the default) shows the minus sign of every negative amount, even when it
+    # rounds to zero. :negative drops the minus sign when every displayed digit is zero.
+    # sign_display: :negative is not supported with relative: true, which always shows a sign.
+    def format(amount, decimal_places: nil, humanize: nil, percent: false, relative: false, rounding_mode: nil, sign_display: :auto)
+      validate_options(humanize: humanize, relative: relative, rounding_mode: rounding_mode, sign_display: sign_display)
+
       number = if percent
-        amount * 100
+        percentage_amount(amount, rounding_mode)
       else
         amount
       end
 
       result = if CLDR_COMPACT_STYLE.include?(humanize)
-        format_compact(number, decimal_places: decimal_places, style: humanize)
+        format_compact(number, decimal_places: decimal_places, style: humanize, sign_display: sign_display)
       else
-        format_default(number, decimal_places: decimal_places, humanize: humanize)
+        format_default(
+          number,
+          decimal_places: decimal_places,
+          humanize: humanize,
+          rounding_mode: rounding_mode,
+          sign_display: sign_display,
+        )
       end
 
       result = add_percent_sign(result) if percent
@@ -38,11 +72,49 @@ module Worldwide
 
     attr_reader :locale
 
-    def format_default(number, decimal_places:, humanize:)
-      decimal_places = natural_decimal_places(number) if decimal_places.nil?
+    def validate_options(humanize:, relative:, rounding_mode:, sign_display:)
+      unless rounding_mode.nil? || ROUNDING_MODES.include?(rounding_mode)
+        raise ArgumentError, "Unsupported value for rounding_mode: #{rounding_mode.inspect}"
+      end
+
+      unless SIGN_DISPLAYS.include?(sign_display)
+        raise ArgumentError, "Unsupported value for sign_display: #{sign_display.inspect}"
+      end
+
+      if rounding_mode && CLDR_COMPACT_STYLE.include?(humanize)
+        raise ArgumentError, "rounding_mode: is not supported with humanize: #{humanize.inspect}"
+      end
+
+      if relative && sign_display != :auto
+        raise ArgumentError, "sign_display: #{sign_display.inspect} is not supported with relative: true, which always shows a sign"
+      end
+    end
+
+    # With a rounding mode, scale a Float's shortest decimal form, so that 0.07 gives 7 rather than 7.000000000000001.
+    # Zero keeps its Float sign.
+    def percentage_amount(amount, rounding_mode)
+      if rounding_mode && amount.is_a?(Float) && amount.finite? && !amount.zero?
+        Rational(amount.to_s) * 100
+      else
+        amount * 100
+      end
+    end
+
+    def format_default(number, decimal_places:, humanize:, rounding_mode: nil, sign_display: :auto)
+      exact_places = exact_decimal_places(decimal_places)
+      exact_amount = exact_amount(number, exact_places, rounding_mode)
 
       # Format the number with no grouping and with a '.' decimal point
-      result = Kernel.format("%.#{decimal_places}f", number)
+      result = if exact_amount.nil?
+        decimal_places = natural_decimal_places(number) if decimal_places.nil?
+        Kernel.format("%.#{decimal_places}f", number)
+      elsif exact_places == false
+        raise ArgumentError, "decimal_places: must be an Integer or a String of digits, got #{decimal_places.inspect}"
+      else
+        format_exact(exact_amount, decimal_places: exact_places, rounding_mode: rounding_mode || :half_even)
+      end
+
+      result = result.delete_prefix("-") if sign_display == :negative && result.match?(/\A-0+(\.0+)?\z/)
 
       # Change the decimal marker to comma (or something else) if the locale expects it
       result.sub!(".", decimal_marker)
@@ -175,13 +247,14 @@ module Worldwide
     # This approximately implements compact number formatting as described in CLDR
     # https://unicode.org/reports/tr35/tr35-numbers.html#Compact_Number_Formats
     # It's not quite right, since it relies on format_default, which doesn't quite follow CLDR's spec.
-    def format_compact(number, decimal_places: nil, style:)
+    def format_compact(number, decimal_places: nil, style:, sign_display: :auto)
       matched_type = compact_format_type(number, style: style)
       if matched_type.nil?
         return format_default(
           number,
           decimal_places: decimal_places,
           humanize: nil,
+          sign_display: sign_display,
         )
       end
 
@@ -215,7 +288,8 @@ module Worldwide
       end
 
       decimals = decimal_places.nil? ? natural_decimal_places(scaled_number) : decimal_places
-      value = compact_number_format.sub(/0+/, format_default(scaled_number, decimal_places: decimals, humanize: nil))
+      formatted_number = format_default(scaled_number, decimal_places: decimals, humanize: nil, sign_display: sign_display)
+      value = compact_number_format.sub(/0+/, formatted_number)
 
       # Remove single quotes surrounding string literals in the compact number format.
       value.gsub!(/'([^']+)'/, '\1')
@@ -256,6 +330,131 @@ module Worldwide
 
       divisor = Integer(digits_to_remove.zero? ? matched_type.to_s : matched_type.to_s[0..-(digits_to_remove + 1)])
       divisor.to_f
+    end
+
+    # Kernel.format reads "%.2f" and "%.#{"2"}f" alike, so a String of digits is a number of decimal places too.
+    # Returns the number of decimal places, nil for the amount's own decimals, or false for any other value.
+    def exact_decimal_places(decimal_places)
+      if decimal_places.nil? || (decimal_places.is_a?(Integer) && !decimal_places.negative?)
+        decimal_places
+      elsif decimal_places.is_a?(String) && decimal_places.match?(/\A[0-9]+\z/)
+        Integer(decimal_places, 10)
+      else
+        false
+      end
+    end
+
+    # Returns the amount to format with decimal arithmetic, or nil to keep the "%f" formatting.
+    # Without a rounding mode, only a finite BigDecimal takes decimal arithmetic, and only when
+    # decimal_places is a number of decimal places and the result is within MAX_EXACT_DIGITS.
+    # Kernel.format then decides what any other decimal_places value means, as it did before.
+    def exact_amount(number, decimal_places, rounding_mode)
+      if bigdecimal?(number)
+        return unless number.finite?
+        return if rounding_mode.nil? && (decimal_places == false || !within_exact_digits?(number, decimal_places))
+
+        return number
+      end
+      return if rounding_mode.nil?
+
+      case number
+      when Integer, Rational
+        number
+      when Float
+        number if number.finite?
+      when String
+        raise ArgumentError, "rounding_mode: is not supported with a String amount"
+      else
+        decimal = number.to_d if number.respond_to?(:to_d)
+        unless bigdecimal?(decimal) && decimal.finite?
+          raise ArgumentError, "rounding_mode: needs an amount that converts to a finite BigDecimal with to_d, got #{number.class}"
+        end
+
+        decimal
+      end
+    end
+
+    def bigdecimal?(number)
+      defined?(BigDecimal) && number.is_a?(BigDecimal)
+    end
+
+    # BigDecimal("1e100000000") is small, but has 100,000,001 integer digits.
+    def within_exact_digits?(decimal, decimal_places)
+      decimal_places = decimal.scale if decimal_places.nil?
+      decimal.exponent <= MAX_EXACT_DIGITS && decimal_places <= MAX_EXACT_DIGITS
+    end
+
+    # Rounds and renders amount with no grouping and with a '.' decimal point.
+    # amount is an Integer, Rational, finite Float or finite BigDecimal, and decimal_places a non-negative Integer or nil.
+    def format_exact(amount, decimal_places:, rounding_mode:)
+      if decimal_places && decimal_places > MAX_EXACT_DIGITS
+        raise ArgumentError, "decimal_places: must be at most #{MAX_EXACT_DIGITS}, got #{decimal_places}"
+      end
+
+      if bigdecimal?(amount)
+        unless within_exact_digits?(amount, decimal_places)
+          raise ArgumentError, "#{amount.inspect} needs more than #{MAX_EXACT_DIGITS} integer digits or decimal places"
+        end
+
+        decimal_places = amount.scale if decimal_places.nil?
+        # Round before converting, so the Rational stays as small as the result.
+        value = amount.round(decimal_places, bigdecimal_rounding_mode(rounding_mode)).to_r
+      else
+        # Float#to_s is the shortest decimal that reads back as the same Float.
+        value = amount.is_a?(Float) ? Rational(amount.to_s) : amount.to_r
+        decimal_places = terminating_decimal_places(value) if decimal_places.nil?
+        if decimal_places.nil?
+          raise ArgumentError, "decimal_places: is required to format #{amount.inspect}, which has no decimal expansion of at most #{MAX_EXACT_DIGITS} places"
+        end
+      end
+
+      digits = round_to_integer(value * (10**decimal_places), rounding_mode).abs.to_s.rjust(decimal_places + 1, "0")
+
+      result = +""
+      # value loses the sign of a negative zero, which amount keeps (-0.0, BigDecimal("-0")).
+      result << "-" if value.negative? || (value.zero? && amount.to_s.start_with?("-"))
+      result << digits[0, digits.length - decimal_places]
+      result << "." << digits[-decimal_places, decimal_places] if decimal_places.positive?
+      result
+    end
+
+    def round_to_integer(value, rounding_mode)
+      case rounding_mode
+      when :half_even then value.round(half: :even)
+      when :half_up then value.round(half: :up)
+      when :half_down then value.round(half: :down)
+      when :up then value.negative? ? value.floor : value.ceil
+      when :down then value.truncate
+      when :ceiling then value.ceil
+      when :floor then value.floor
+      end
+    end
+
+    def bigdecimal_rounding_mode(rounding_mode)
+      case rounding_mode
+      when :half_even then BigDecimal::ROUND_HALF_EVEN
+      when :half_up then BigDecimal::ROUND_HALF_UP
+      when :half_down then BigDecimal::ROUND_HALF_DOWN
+      when :up then BigDecimal::ROUND_UP
+      when :down then BigDecimal::ROUND_DOWN
+      when :ceiling then BigDecimal::ROUND_CEILING
+      when :floor then BigDecimal::ROUND_FLOOR
+      end
+    end
+
+    # Returns the number of decimal places in the decimal expansion of a Rational,
+    # or nil if the expansion does not terminate within MAX_EXACT_DIGITS places.
+    def terminating_decimal_places(value)
+      denominator = value.denominator
+      places = 0
+      until denominator == 1
+        divisor = denominator.gcd(10)
+        return if divisor == 1 || places == MAX_EXACT_DIGITS
+
+        denominator /= divisor
+        places += 1
+      end
+      places
     end
 
     # Figure out how many decimal places would naturally be required to display the given number.
