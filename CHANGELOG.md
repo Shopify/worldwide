@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add the `postal:codes:import`, `postal:codes:check` and `postal:codes:zone_check` rake tasks, which build and check the `zip_prefixes` and `zips_crossing_provinces` data. They move here from CountryDb. [#680](https://github.com/Shopify/worldwide/pull/680)
+
 ---
 
 ## [2.2.0] - 2026-11-12
