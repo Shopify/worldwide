@@ -12,6 +12,7 @@ require "yaml"
 
 require_relative "puller"
 require_relative "flatten_hash"
+require_relative "minimum_grouping_digits"
 require_relative "unflatten_hash"
 require_relative "sort_yaml"
 
@@ -38,6 +39,9 @@ module Worldwide
 
           # Copy all the files from the exported CLDR data
           FileUtils.cp_r("#{Worldwide::Cldr::Puller::EXPORTED_CLDR_DIR}/.", Worldwide::Paths::CLDR_ROOT)
+
+          # Add the CLDR data that ruby-cldr doesn't export
+          import_minimum_grouping_digits
 
           # Load the existing files
           cldr_locales = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*")].map { |path| File.basename(path) }
@@ -1279,6 +1283,15 @@ module Worldwide
         end
 
         private
+
+        def import_minimum_grouping_digits
+          puts("🔢 Importing minimum grouping digits from the CLDR locale XML")
+          MinimumGroupingDigits.import(
+            main_dir: File.join(Worldwide::Cldr::Puller::VENDORED_CLDR_DIR, "common", "main"),
+            locales_dir: File.join(Worldwide::Paths::CLDR_ROOT, "locales"),
+            minimum_draft_status: Worldwide::Cldr::Puller::MINIMUM_DRAFT_STATUS,
+          )
+        end
 
         # Smartling doesn't support locale names 'zh-Hans', 'zh-Hant', and 'zh-Hant-HK'.
         # To be compatible with Smartling, we use 'zh-CN' where we mean 'zh-Hans',
