@@ -47,16 +47,27 @@ module Worldwide
     end
 
     # returns the amount formatted using the short-form symbol in the given locale
+    #
+    # rounding_mode:, grouping: and sign_display: are passed to Numbers#format, with the same defaults and the
+    # same meaning, on every path: with the symbol, with humanize:, with as_minor_units: and with use_symbol: false.
+    # Numbers#format raises ArgumentError for the combinations it does not support, such as rounding_mode: with
+    # humanize: :short or :long, and grouping: :auto with humanize: :japan.
+    # With as_minor_units: and rounding_mode:, a Float amount is scaled to the minor unit through its shortest
+    # decimal form, so 0.29 rounds as 29 cents rather than as 28.999999999999996.
     def format_short(
       amount,
       as_minor_units: false,
       decimal_places: nil,
       humanize: nil,
       locale: I18n.locale,
-      use_symbol: true
+      use_symbol: true,
+      rounding_mode: nil,
+      grouping: :always,
+      sign_display: :auto
     )
       decimal_places = humanize ? nil : decimals if decimal_places.nil?
       use_symbol = true if as_minor_units
+      number_options = { rounding_mode: rounding_mode, grouping: grouping, sign_display: sign_display }
 
       if SUPPORTED_ALTERNATE_FORMATS.include?(humanize)
         return format_alternate(
@@ -65,6 +76,7 @@ module Worldwide
           humanize: humanize,
           locale: locale,
           use_symbol: use_symbol,
+          **number_options,
         )
       end
 
@@ -74,31 +86,40 @@ module Worldwide
           decimal_places: decimal_places,
           humanize: humanize,
           locale: locale,
+          **number_options,
         )
       end
 
-      if use_symbol
-        currency_symbol = symbol(locale: locale) || @currency_code
+      unless use_symbol
+        return formatted_amount(amount, decimal_places: decimal_places, humanize: humanize, locale: locale, **number_options)
+      end
+
+      if humanize
         combine(
           amount: amount,
           decimal_places: decimal_places,
           humanize: humanize,
           locale: locale,
-          symbol: currency_symbol,
+          symbol: symbol(locale: locale) || @currency_code,
+          **number_options,
         )
       else
-        formatted_amount(amount, decimal_places: decimal_places, humanize: humanize, locale: locale)
+        format_to_parts(amount, decimal_places: decimal_places, locale: locale, **number_options).map { |part| part[:value] }.join
       end
     end
 
     # returns the amount formatted using the explicit currency code in the given locale
+    # It takes the same keyword arguments as format_short.
     def format_explicit(
       amount,
       as_minor_units: false,
       decimal_places: nil,
       humanize: nil,
       locale: I18n.locale,
-      use_symbol: true
+      use_symbol: true,
+      rounding_mode: nil,
+      grouping: :always,
+      sign_display: :auto
     )
       short_version = format_short(
         amount,
@@ -107,12 +128,54 @@ module Worldwide
         humanize: humanize,
         locale: locale,
         use_symbol: use_symbol,
+        rounding_mode: rounding_mode,
+        grouping: grouping,
+        sign_display: sign_display,
       )
       if short_version.include?(@currency_code)
         short_version
       else
         "#{short_version} #{@currency_code}"
       end
+    end
+
+    # Returns the amount formatted with the currency's symbol, as format_short formats it without humanize:,
+    # as_minor_units: or use_symbol: false, split into parts. Each part is a Hash with a :type and a String :value,
+    # in display order:
+    #
+    # - :minus_sign, the "-" of a negative amount. It comes first, before the symbol or the number.
+    # - :currency, the symbol, or the currency code if the locale has no symbol for the currency.
+    # - :literal, the no-break space between the symbol and the number, in locales that have one.
+    # - :number, the localized number, without its sign.
+    #
+    # A part that would be empty is left out, and joining the values gives the result of format_short.
+    # decimal_places:, rounding_mode:, grouping: and sign_display: work as they do for format_short.
+    # Every call returns new objects, which the caller can change.
+    #
+    #   Worldwide.currency(code: "EUR").format_to_parts(-1234.5, locale: :fr)
+    #   # => [{ type: :minus_sign, value: "-" }, { type: :number, value: "1\u202F234,50" },
+    #   #     { type: :literal, value: "\u00A0" }, { type: :currency, value: "€" }]
+    def format_to_parts(
+      amount,
+      decimal_places: nil,
+      locale: I18n.locale,
+      rounding_mode: nil,
+      grouping: :always,
+      sign_display: :auto
+    )
+      decimal_places = decimals if decimal_places.nil?
+      currency_symbol = symbol(locale: locale) || @currency_code
+      spaced = has_space?(locale)
+      negative, number = Numbers.new(locale: locale).send(
+        :sign_and_digits,
+        amount,
+        decimal_places: decimal_places,
+        rounding_mode: rounding_mode,
+        grouping: grouping,
+        sign_display: sign_display,
+      )
+
+      arrange_parts(negative: negative, number: number, symbol: currency_symbol, spaced: spaced, prefix: prefix?(locale))
     end
 
     def symbol(locale: I18n.locale)
@@ -155,35 +218,45 @@ module Worldwide
 
     private
 
-    def combine(amount:, decimal_places:, humanize:, locale:, symbol:)
-      space = if has_space?(locale)
-        # This is U+00A0, the Unicode non-breaking space character
-        [160].pack("U*")
-      else
-        ""
-      end
+    # Formats a humanize: :short or :long amount with the symbol. The amount is written inside a CLDR compact
+    # pattern, which can hold a minus sign of its own, so the sign is found in the text: it moves in front of a
+    # leading symbol, and stays where it is when the symbol follows the number.
+    def combine(amount:, decimal_places:, humanize:, locale:, symbol:, **number_options)
+      spaced = has_space?(locale)
 
       formatted = formatted_amount(
         amount,
         decimal_places: decimal_places,
         humanize: humanize,
         locale: locale,
+        **number_options,
       )
 
-      if prefix?(locale)
-        if formatted.include?("-")
-          "-#{symbol}#{space}#{formatted.sub("-", "")}"
-        else
-          "#{symbol}#{space}#{formatted}"
-        end
-      else
-        "#{formatted}#{space}#{symbol}"
-      end
+      prefix = prefix?(locale)
+      negative = prefix && formatted.include?("-")
+      number = negative ? formatted.sub("-", "") : formatted
+
+      arrange_parts(negative: negative, number: number, symbol: symbol, spaced: spaced, prefix: prefix).map { |part| part[:value] }.join
+    end
+
+    # Returns the parts of a formatted amount in display order: the minus sign if negative, then the symbol
+    # and the number in the locale's order, separated by a no-break space if the locale's currency pattern has one.
+    def arrange_parts(negative:, number:, symbol:, spaced:, prefix:)
+      currency = { type: :currency, value: symbol.dup }
+      digits = { type: :number, value: number }
+
+      parts = []
+      parts << { type: :minus_sign, value: +"-" } if negative
+      parts << (prefix ? currency : digits)
+      # This is U+00A0, the Unicode non-breaking space character
+      parts << { type: :literal, value: +"\u00A0" } if spaced
+      parts << (prefix ? digits : currency)
+      parts
     end
 
     # Supports alternative formatting, specified in the humanize: keyword argument.
     # Currently, only :japan is available, which will use the 円 style for JPY.
-    def format_alternate(amount, decimal_places:, humanize:, locale:, use_symbol:)
+    def format_alternate(amount, decimal_places:, humanize:, locale:, use_symbol:, **number_options)
       case humanize
       when :japan
         formatted = formatted_amount(
@@ -191,6 +264,7 @@ module Worldwide
           decimal_places: decimal_places,
           humanize: humanize,
           locale: locale,
+          **number_options,
         )
 
         symbol = if use_symbol
@@ -213,24 +287,35 @@ module Worldwide
       label.sub(TEXT_ENCLOSED_BY_PARENTHESES, "").strip
     end
 
-    def format_minor_units(amount, decimal_places:, humanize:, locale:)
+    def format_minor_units(amount, decimal_places:, humanize:, locale:, **number_options)
       # number of decimal places (relative to the major unit) that we've been asked to display
       specified_decimals = decimal_places.nil? ? decimals : decimal_places
 
       # number of decimal places needed to show the minor units in full detail
       exponent = decimals
 
-      amount_in_minor_units = amount * (10**exponent)
+      amount_in_minor_units = minor_units_amount(amount, exponent, number_options[:rounding_mode])
       minor_decimal_places = [0, specified_decimals - exponent].max
 
-      "#{formatted_amount(amount_in_minor_units, decimal_places: minor_decimal_places, humanize: humanize, locale: locale)}#{minor_symbol}"
+      "#{formatted_amount(amount_in_minor_units, decimal_places: minor_decimal_places, humanize: humanize, locale: locale, **number_options)}#{minor_symbol}"
     end
 
-    def formatted_amount(amount, decimal_places:, humanize:, locale:)
+    # With a rounding mode, scale a Float's shortest decimal form, as Numbers#format does for percent:,
+    # so that 0.29 gives 29 rather than 28.999999999999996. Zero keeps its Float sign.
+    def minor_units_amount(amount, exponent, rounding_mode)
+      if rounding_mode && amount.is_a?(Float) && amount.finite? && !amount.zero?
+        Rational(amount.to_s) * (10**exponent)
+      else
+        amount * (10**exponent)
+      end
+    end
+
+    def formatted_amount(amount, decimal_places:, humanize:, locale:, **number_options)
       Numbers.new(locale: locale).format(
         amount,
         decimal_places: decimal_places,
         humanize: humanize,
+        **number_options,
       )
     end
 
