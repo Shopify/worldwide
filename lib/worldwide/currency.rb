@@ -302,7 +302,11 @@ module Worldwide
 
     # With a rounding mode, scale a Float's shortest decimal form, as Numbers#format does for percent:,
     # so that 0.29 gives 29 rather than 28.999999999999996. Zero keeps its Float sign.
+    # With a rounding mode, a nil or String amount raises ArgumentError before it is scaled, through the private
+    # check that Numbers#format uses for percent:. Without one, every amount is scaled as before.
     def minor_units_amount(amount, exponent, rounding_mode)
+      Numbers.new.send(:validate_exact_amount, amount) if rounding_mode
+
       if rounding_mode && amount.is_a?(Float) && amount.finite? && !amount.zero?
         Rational(amount.to_s) * (10**exponent)
       else
