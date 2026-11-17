@@ -50,6 +50,27 @@ module Worldwide
       I18n.backend = original_backend
     end
 
+    # Changes the host's I18n settings while the block runs.
+    def with_host_i18n(available_locales: nil, enforce_available_locales: nil, default_locale: nil)
+      original = [I18n.available_locales, I18n.enforce_available_locales, I18n.default_locale]
+      I18n.available_locales = available_locales if available_locales
+      I18n.enforce_available_locales = enforce_available_locales unless enforce_available_locales.nil?
+      I18n.default_locale = default_locale if default_locale
+      yield
+    ensure
+      I18n.available_locales, I18n.enforce_available_locales, I18n.default_locale = original if original
+    end
+
+    # Runs the block with the host's interpolation settings changed, and restores them afterwards.
+    def with_host_interpolation(patterns:, missing_argument_handler:)
+      original = [I18n.config.interpolation_patterns, I18n.config.missing_interpolation_argument_handler]
+      I18n.config.interpolation_patterns = patterns
+      I18n.config.missing_interpolation_argument_handler = missing_argument_handler
+      yield
+    ensure
+      I18n.config.interpolation_patterns, I18n.config.missing_interpolation_argument_handler = original
+    end
+
     # Runs the block with a fresh bundled data source in place of the process-wide one, so that a test
     # can register files and inspect what was loaded without affecting other tests.
     def with_fresh_bundled_data(**options)
@@ -59,13 +80,13 @@ module Worldwide
     end
 
     # Writes YAML files into a temporary directory and yields their paths.
-    # files maps a file name to the data it holds, with String keys.
+    # files maps a file name to the data it holds, with String keys, or to the YAML text to write.
     def with_yaml_files(files)
       Dir.mktmpdir("worldwide-bundled-data") do |directory|
         paths = files.map do |name, data|
           path = File.join(directory, name)
           FileUtils.mkdir_p(File.dirname(path))
-          File.write(path, YAML.dump(data))
+          File.write(path, data.is_a?(String) ? data : YAML.dump(data))
           path
         end
         yield paths, directory

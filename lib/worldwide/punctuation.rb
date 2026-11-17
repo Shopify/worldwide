@@ -4,13 +4,13 @@ module Worldwide
   class Punctuation
     class << self
       def to_paragraph(sentences, locale: I18n.locale)
-        I18n.with_locale(locale) do
+        with_locale(locale) do
           sentences.map { |sentence| end_sentence(sentence) }.join(terminal_space)
         end
       end
 
       def end_sentence(input, locale: I18n.locale)
-        I18n.with_locale(locale) do
+        with_locale(locale) do
           result = strip_terminal_spaces(input)
           return result if result.end_with?(full_stop)
 
@@ -34,6 +34,16 @@ module Worldwide
         zh: "",
       }
       private_constant :FULL_STOP, :TERMINAL_SPACE
+
+      # Runs the block with locale as the current locale. Inside Worldwide::Cldr.with_bundled_data, the locale
+      # is checked against the locales that bundled data has, not against the host's.
+      def with_locale(locale, &block)
+        if Worldwide::Cldr.bundled_data?
+          Worldwide::Cldr.with_locale(locale, &block)
+        else
+          I18n.with_locale(locale, &block)
+        end
+      end
 
       def base_locale
         I18n.locale.to_s.downcase.tr("_", "-").split("-").first

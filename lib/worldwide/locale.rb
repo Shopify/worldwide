@@ -49,7 +49,7 @@ module Worldwide
 
     def name(locale: I18n.locale, context: :middle_of_sentence, throw: true)
       cache_key = [locale&.to_sym, context, Worldwide::Cldr.bundled_data?]
-      @name_cache[cache_key] ||= I18n.with_locale(locale) do
+      @name_cache[cache_key] ||= with_locale(locale) do
         # Try to find a language name as specific as possible in the locale we wanted.
         exonym(target_locale: locale, context: context) ||
 
@@ -125,10 +125,20 @@ module Worldwide
     end
 
     def lookup(key, locale:)
-      I18n.with_locale(locale) do
+      with_locale(locale) do
         if Worldwide::Cldr.exists?("languages.#{key}", locale: locale) # Avoid the exception handler
           Worldwide::Cldr.t("languages.#{key}", locale: locale)
         end
+      end
+    end
+
+    # Runs the block with locale as the current locale. Inside Worldwide::Cldr.with_bundled_data, the locale
+    # is checked against the locales that bundled data has, not against the host's.
+    def with_locale(locale, &block)
+      if Worldwide::Cldr.bundled_data?
+        Worldwide::Cldr.with_locale(locale, &block)
+      else
+        I18n.with_locale(locale, &block)
       end
     end
 

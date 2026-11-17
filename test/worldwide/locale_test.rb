@@ -286,5 +286,26 @@ module Worldwide
         assert_equal "HOST français", french.endonym
       end
     end
+
+    test "names inside with_bundled_data can use a locale that the host does not make available" do
+      with_host_i18n(available_locales: [:en, :de, :fr], enforce_available_locales: true) do
+        assert_raises(I18n::InvalidLocale) { Worldwide::Locale.new("fr").name(locale: :ja) }
+        assert_raises(I18n::InvalidLocale) { Worldwide::Locale.new("ja").endonym }
+
+        Worldwide::Cldr.with_bundled_data do
+          assert_equal "フランス語", Worldwide::Locale.new("fr").name(locale: :ja)
+          assert_equal "フランス語 (カナダ)", Worldwide::Locale.new("fr-CA").name(locale: :ja)
+          assert_equal "日本語", Worldwide::Locale.new("ja").endonym
+          assert_equal :en, I18n.locale
+        end
+      end
+    end
+
+    test "inside with_bundled_data, a name missing in the requested locale is read in English, whatever the host's default locale" do
+      with_host_i18n(default_locale: :fr) do
+        assert_equal "bas-allemand", Worldwide::Locale.new("nds").name(locale: :nds, throw: false)
+        assert_equal "Low German", Worldwide::Cldr.with_bundled_data { Worldwide::Locale.new("nds").name(locale: :nds, throw: false) }
+      end
+    end
   end
 end

@@ -71,7 +71,7 @@ module Worldwide
       end
 
       # Adds YAML files to apply after Worldwide's data and after the files registered before them.
-      # A path that is already registered keeps its place.
+      # A path that is already registered is ignored, so it keeps its place.
       def add_paths(paths)
         @mutex.synchronize do
           paths = (@paths + paths).uniq

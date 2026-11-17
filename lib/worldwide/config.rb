@@ -57,18 +57,28 @@ module Worldwide
       end
 
       # Registers YAML files for lookups inside Worldwide::Cldr.with_bundled_data, for libraries that add
-      # data on top of Worldwide's. Each file is named after its locale (for example "ja.yml") and holds that
-      # locale's data under a top-level key of the same name. Other top-level keys are ignored.
+      # data on top of Worldwide's. Each file is named after its locale (for example "ja.yml" or
+      # "pt-BR.yml") and holds that locale's data under a top-level key of the same name. Other top-level
+      # keys are ignored. A file whose name is not a well-formed locale identifier, such as "en.rails.yml",
+      # raises ArgumentError, and none of the paths given are registered then.
       #
       # The files apply after Worldwide's own data, and files registered later apply after files registered
-      # earlier. They are read on the first lookup that needs them, with the same YAML loader as I18n's
-      # simple backend, which can build arbitrary Ruby objects, so register only files that your own code
-      # ships. Registering does not change I18n.load_path or any host backend, so lookups outside the
-      # block do not see the files.
+      # earlier. A path that is already registered is ignored. Registering does not change I18n.load_path
+      # or any host backend, so lookups outside the block do not see the files.
+      #
+      # The files are read on the first lookup that needs them. They may hold hashes, arrays, strings,
+      # numbers, booleans, nil and symbols, with anchors and aliases. A file that is not valid YAML, or that
+      # holds other Ruby objects, raises I18n::InvalidLocaleData naming the file on each lookup that needs it.
+      # Register only files that your own code ships.
       def add_bundled_data_paths(paths)
         paths = Array(paths).map { |path| File.expand_path(path) }
         not_yaml = paths.reject { |path| File.extname(path) == ".yml" }
         raise ArgumentError, "Bundled data paths must be .yml files: #{not_yaml.join(", ")}" unless not_yaml.empty?
+
+        not_locales = paths.reject { |path| I18n::Locale::Tag::Rfc4646.tag(File.basename(path, ".yml")) }
+        unless not_locales.empty?
+          raise ArgumentError, "Bundled data files must be named after a locale, such as ja.yml: #{not_locales.join(", ")}"
+        end
 
         missing = paths.reject { |path| File.file?(path) }
         raise ArgumentError, "Bundled data files not found: #{missing.join(", ")}" unless missing.empty?

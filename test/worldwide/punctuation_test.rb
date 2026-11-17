@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class PunctuationTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test "end_sentence appends a language-appropriate full stop character (and space if appropriate), if it's not already present" do
       [
         [:en, "The quick brown fox jumped", "The quick brown fox jumped."],
@@ -82,6 +85,20 @@ module Worldwide
           actual = Worldwide::Punctuation.to_paragraph(input)
 
           assert_equal expected, actual, "#{locale.inspect} using #{input.inspect} should yield #{expected.inspect}"
+        end
+      end
+    end
+
+    test "inside with_bundled_data, the locale can be one that the host does not make available" do
+      with_host_i18n(available_locales: [:en, :de], enforce_available_locales: true) do
+        assert_raises(I18n::InvalidLocale) { Worldwide::Punctuation.end_sentence("x", locale: :ja) }
+        assert_raises(I18n::InvalidLocale) { Worldwide::Punctuation.to_paragraph(["a", "b"], locale: :ja) }
+
+        Worldwide::Cldr.with_bundled_data do
+          assert_equal "x。", Worldwide::Punctuation.end_sentence("x", locale: :ja)
+          assert_equal "a。b。", Worldwide::Punctuation.to_paragraph(["a", "b"], locale: :ja)
+          assert_equal "a. b.", Worldwide::Punctuation.to_paragraph(["a", "b"], locale: :de)
+          assert_raises(I18n::InvalidLocale) { Worldwide::Punctuation.end_sentence("x", locale: :"en-XX") }
         end
       end
     end

@@ -3,6 +3,7 @@
 require "concurrent/hash"
 require "concurrent/map"
 require "set"
+require "yaml"
 
 module Worldwide
   module Cldr
@@ -12,7 +13,8 @@ module Worldwide
     # so modules that a host includes into I18n::Backend::Simple do not change it, and it never reads
     # I18n.load_path. The first lookup of a key in a locale reads the files of that locale that can hold
     # the key's first segment (such as "numbers"), then the registered files of that locale. Only the
-    # data under that locale is kept from each file.
+    # data under that locale is kept from each file, and it is frozen, so that a caller cannot change it
+    # through a value that a lookup returns.
     class BundledBackend
       include I18n::Backend::Simple::Implementation
       include I18n::Backend::Pluralization
@@ -184,29 +186,59 @@ module Worldwide
         state.mark_loaded(locale, segments, whole_locale: true)
       end
 
-      # Registered files are always read as YAML, whatever their name.
       def overlay_trees(state, locale)
         state.overlay_paths(locale).map do |path|
-          state.overlay_tree(path) { read_file(path, locale, ruby: false) }
+          state.overlay_tree(path) { read_file(path, locale, registered: true) }
         end
       end
 
-      # Returns the data under locale in the file at path. Data under other locales is ignored,
+      # Returns the data under locale in the file at path, frozen. Data under other locales is ignored,
       # because some files are named after one locale and hold another.
-      def read_file(path, locale, ruby: path.end_with?(".rb"))
-        data, keys_symbolized = ruby ? load_rb(path) : load_yml(path)
+      def read_file(path, locale, registered: false)
+        data, keys_symbolized = if registered
+          load_registered_yml(path)
+        elsif path.end_with?(".rb")
+          load_rb(path)
+        else
+          load_yml(path)
+        end
         raise I18n::InvalidLocaleData.new(path, "expects it to return a hash, but does not") unless data.is_a?(Hash)
 
         data = I18n::Utils.deep_symbolize_keys(data) unless keys_symbolized
         tree = data[locale]
-        tree.is_a?(Hash) ? tree : {}
+        tree.is_a?(Hash) ? deep_freeze(tree) : {}
       end
 
+      # Reads a registered file as YAML, whatever its name. Unlike load_yml, it builds only hashes, arrays,
+      # strings, numbers, booleans, nil and symbols, so a file cannot create other Ruby objects.
+      def load_registered_yml(path)
+        [YAML.safe_load_file(path, permitted_classes: [Symbol], aliases: true, symbolize_names: true, freeze: true), true]
+      rescue StandardError => e
+        raise I18n::InvalidLocaleData.new(path, e.inspect)
+      end
+
+      # Replaces the locale's data with a frozen copy that holds data on top of it, so that a lookup that is
+      # reading the locale's data meanwhile is not affected.
       def store(state, locale, data)
         return if data.empty?
 
-        translations = (state.translations[locale] ||= Concurrent::Hash.new)
-        I18n::Utils.deep_merge!(translations, data)
+        translations = state.translations
+        translations[locale] = deep_freeze(I18n::Utils.deep_merge(translations[locale] || {}, data))
+      end
+
+      # Freezes data and the hashes, arrays and strings in it. Procs, such as plural rules, stay as they are.
+      # A frozen hash or array is not walked: file data is frozen throughout, by the YAML loader's freeze:
+      # option or by this method, and so is everything stored, so only the hashes that a merge copies are not.
+      def deep_freeze(data)
+        return data if data.frozen?
+
+        case data
+        when Hash then data.each_value { |value| deep_freeze(value) }
+        when Array then data.each { |value| deep_freeze(value) }
+        when String then nil
+        else return data
+        end
+        data.freeze
       end
     end
   end

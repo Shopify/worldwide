@@ -191,6 +191,38 @@ module Worldwide
       end
     end
 
+    test ".add_bundled_data_paths rejects files that are not named after a locale, and registers none of the paths given" do
+      with_fresh_bundled_data do |source|
+        files = { "ja.yml" => { "ja" => {} }, "en.rails.yml" => { "en" => {} }, "en_US.yml" => { "en_US" => {} }, "ja.yml.yml" => { "ja" => {} } }
+        with_yaml_files(files) do |paths|
+          paths.drop(1).each do |invalid|
+            error = assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths([paths[0], invalid]) }
+
+            assert_includes error.message, invalid
+          end
+
+          assert_empty source.paths
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths accepts files named after any locale, without reading them" do
+      locales = Worldwide::Cldr::BundledData.new.backend.available_locales + [:"en-XX", :zz]
+      files = locales.to_h { |locale| ["#{locale}.yml", { locale.to_s => {} }] }
+      files["en-XX.yml"] = { "en-XX" => { "currencies" => { "JEP" => { "symbol" => "XX-£" } } } }
+      files["zz.yml"] = "not: [valid YAML"
+
+      with_fresh_bundled_data do |source|
+        with_yaml_files(files) do |paths|
+          Worldwide::Config.add_bundled_data_paths(paths)
+
+          assert_equal paths, source.paths
+          assert_equal false, source.built?
+          assert_equal "XX-£", Worldwide::Cldr.with_bundled_data { Worldwide::Cldr.t("currencies.JEP.symbol", locale: :"en-XX") }
+        end
+      end
+    end
+
     test "paths have been precomputed with rake cldr:data:generate_paths" do
       expected_cldr_locale_paths = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*", "*.{yml,rb}")].to_set
 

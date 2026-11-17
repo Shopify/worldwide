@@ -2,24 +2,29 @@
 
 module Worldwide
   module Cldr
-    # Marks the code that runs inside one Worldwide::Cldr.with_bundled_data block.
-    # The block closes its scope when it returns, so a thread or fiber that inherited
-    # the scope stops reading bundled data at that point, even if it outlives the block.
+    # Marks the code that runs inside one Worldwide::Cldr.with_bundled_data block. The block closes
+    # its scope when it returns. A closed scope stays active while the scope that was current when
+    # its block started is active, so a thread or fiber that inherited it reads bundled data until
+    # every block around the code that created it has returned, even if it outlives those blocks.
+    # Closing is not synchronized with those threads: a lookup that one of them is making at that
+    # moment may still read bundled data.
     class BundledDataScope
-      def initialize
-        @active = true
+      # enclosing is the scope that was current when the block started, or nil.
+      def initialize(enclosing = nil)
+        @enclosing = enclosing
+        @open = true
       end
 
       def active?
-        @active
+        @open || (!@enclosing.nil? && @enclosing.active?)
       end
 
       def close
-        @active = false
+        @open = false
       end
 
       # Fiber storage (Ruby 3.2 and later). Threads and fibers created inside the block inherit the scope,
-      # so they read bundled data until the block returns.
+      # so they read bundled data while it is active.
       module FiberStorage
         class << self
           def scope
@@ -32,7 +37,7 @@ module Worldwide
         end
       end
 
-      # Fiber-local variables (Ruby 3.1, which has no fiber storage). Threads and fibers do not inherit them,
+      # Fiber-local variables, for Rubies without fiber storage. Threads and fibers do not inherit them,
       # so threads and fibers created inside the block read the host's data.
       module FiberLocalStorage
         class << self
