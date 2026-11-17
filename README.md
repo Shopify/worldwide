@@ -877,6 +877,9 @@ Optional keyword arguments:
     - `rounding_mode:` can't be combined with `humanize: :short` or `humanize: :long`.
     - Decimal arithmetic renders at most 999 decimal places, and a `BigDecimal` with at most 999 integer digits, counted after `percent:` or `humanize: :short` or `:long` has scaled the amount. Without `rounding_mode:`, a larger `BigDecimal` is formatted as in earlier versions. With `rounding_mode:`, it raises `ArgumentError`.
     - `humanize: :japan` has units for 28 integer digits, or 27 and a minus sign. Without `rounding_mode:`, a `BigDecimal` that rounds to more is formatted as in earlier versions. With `rounding_mode:`, an amount that rounds to more raises `ArgumentError`.
+  - `grouping:` is `:always` (the default), which groups the integer digits of every amount, or `:auto`, which follows the locale's CLDR minimum grouping digits. With `:auto`, the integer digits are grouped only when there are at least as many as the primary group size plus the minimum grouping digits. In `pl` and `es`, whose minimum is 2, `1234` stays `1234` and `12345` becomes `12 345` or `12.345`. In a locale whose minimum is 1, such as `en`, `:auto` and `:always` give the same result.
+    - The rule applies to the digits that are shown: after rounding, and after `humanize: :short` or `:long` scales the amount. `percent: true` and `relative: true` add their signs to the grouped digits.
+    - `grouping: :auto` can't be combined with `humanize: :japan`, which writes myriad units instead of grouping separators.
   - `sign_display:` is `:auto` (the default), which shows a minus sign for every negative amount, or `:negative`, which drops the minus sign when every displayed digit is zero. `:negative` can't be combined with `relative: true`, which always shows a sign.
 
 ```ruby
@@ -912,6 +915,12 @@ $ Worldwide::Numbers.new(locale: :en).format(-0.004, decimal_places: 2)
 ==> "-0.00"
 $ Worldwide::Numbers.new(locale: :en).format(-0.004, decimal_places: 2, sign_display: :negative)
 ==> "0.00"
+$ Worldwide::Numbers.new(locale: :pl).format(1234.5, decimal_places: 2)
+==> "1 234,50"
+$ Worldwide::Numbers.new(locale: :pl).format(1234.5, decimal_places: 2, grouping: :auto)
+==> "1234,50"
+$ Worldwide::Numbers.new(locale: :pl).format(12345.5, decimal_places: 2, grouping: :auto)
+==> "12 345,50"
 ```
 
 Note: If you want to display a discount off a price (e.g. "Now 20% off"), then a percentage may not be

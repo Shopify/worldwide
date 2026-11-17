@@ -417,7 +417,7 @@ module Worldwide
           formatter = Worldwide::Numbers.new(locale: :en)
 
           assert_equal expected, formatter.format(amount, **options), "#{amount.inspect} #{options.inspect}"
-          assert_equal expected, formatter.format(amount, **options, rounding_mode: nil, sign_display: :auto), "#{amount.inspect} #{options.inspect}"
+          assert_equal expected, formatter.format(amount, **options, rounding_mode: nil, grouping: :always, sign_display: :auto), "#{amount.inspect} #{options.inspect}"
         end
       end
     end
@@ -441,9 +441,10 @@ module Worldwide
         ["1234.5", {}, "1.234,5", "1\u202F234,5", "1,234.5", "1.234,5", "1\u00A0234,5", "1,234.5", "1\u2019234.5"],
       ].each do |amount, options, *expected_outputs|
         locales.zip(expected_outputs).each do |locale, expected|
-          actual = Worldwide::Numbers.new(locale: locale).format(amount, **options)
+          formatter = Worldwide::Numbers.new(locale: locale)
 
-          assert_equal expected, actual, "#{locale} #{amount.inspect} #{options.inspect}"
+          assert_equal expected, formatter.format(amount, **options), "#{locale} #{amount.inspect} #{options.inspect}"
+          assert_equal expected, formatter.format(amount, **options, grouping: :always), "#{locale} #{amount.inspect} #{options.inspect}"
         end
       end
     end
@@ -771,6 +772,154 @@ module Worldwide
       assert_raises(ArgumentError) { formatter.format(FloatConvertible.new(1.5), rounding_mode: :half_up) }
       assert_raises(ArgumentError) { formatter.format(BigDecimal("1.5"), decimal_places: -1) }
       assert_raises(ArgumentError) { formatter.format(1.5, decimal_places: 1.0, rounding_mode: :half_up) }
+    end
+
+    test "#format with grouping: :auto groups from the locale's minimum grouping digits" do
+      amounts = [1234, 12345, 123456]
+      # [locale, CLDR minimum grouping digits, expected with :auto, expected with :always], one string per amount.
+      [
+        [:en, 1, ["1,234", "12,345", "123,456"], ["1,234", "12,345", "123,456"]],
+        [:de, 1, ["1.234", "12.345", "123.456"], ["1.234", "12.345", "123.456"]],
+        [:pl, 2, ["1234", "12\u00A0345", "123\u00A0456"], ["1\u00A0234", "12\u00A0345", "123\u00A0456"]],
+        [:es, 2, ["1234", "12.345", "123.456"], ["1.234", "12.345", "123.456"]],
+        [:ee, 3, ["1234", "12345", "123,456"], ["1,234", "12,345", "123,456"]],
+      ].each do |locale, minimum, auto, always|
+        formatter = Worldwide::Numbers.new(locale: locale)
+
+        assert_equal minimum, formatter.send(:minimum_grouping_digits), locale
+        assert_equal auto, amounts.map { |amount| formatter.format(amount, grouping: :auto) }, locale
+        assert_equal always, amounts.map { |amount| formatter.format(amount, grouping: :always) }, locale
+        assert_equal always, amounts.map { |amount| formatter.format(amount) }, locale
+      end
+    end
+
+    test "#format with grouping: :auto uses the minimum grouping digits that a regional locale inherits or overrides" do
+      [
+        # es-ES inherits 2 from es. es-419 overrides it with 1, and es-MX and es-AR inherit 1 from es-419.
+        [:"es-ES", "1234"],
+        [:"es-419", "1,234"],
+        [:"es-MX", "1,234"],
+        [:"es-AR", "1.234"],
+        # pt-PT overrides pt's 1 with 2, and pt-MZ inherits it. pt-AO, a child of pt-PT, overrides it with 1.
+        [:pt, "1.234"],
+        [:"pt-BR", "1.234"],
+        [:"pt-PT", "1234"],
+        [:"pt-MZ", "1234"],
+        [:"pt-AO", "1\u00A0234"],
+        # ru-UA overrides ru's 1 with 2.
+        [:ru, "1\u00A0234"],
+        [:"ru-UA", "1234"],
+        [:"pl-PL", "1234"],
+      ].each do |locale, expected|
+        formatter = Worldwide::Numbers.new(locale: locale)
+
+        assert_equal expected, formatter.format(1234, grouping: :auto), locale
+        assert_equal formatter.format(12345), formatter.format(12345, grouping: :auto), locale
+      end
+    end
+
+    test "#format with grouping: :auto groups every locale from its primary group size plus minimum grouping digits" do
+      Worldwide::Locales.known.each do |locale|
+        # en-US-POSIX has no grouping separator in its pattern.
+        next if locale == :"en-US-POSIX"
+
+        formatter = Worldwide::Numbers.new(locale: locale)
+        grouped_digits = formatter.send(:group_positions).first + formatter.send(:minimum_grouping_digits)
+        largest_ungrouped = (10**(grouped_digits - 1)) - 1
+
+        assert_equal largest_ungrouped.to_s, formatter.format(largest_ungrouped, grouping: :auto), locale
+        assert_equal formatter.format(largest_ungrouped + 1), formatter.format(largest_ungrouped + 1, grouping: :auto), locale
+      end
+    end
+
+    test "#format with grouping: :auto keeps en-IN's 3/2 grouping" do
+      formatter = Worldwide::Numbers.new(locale: :"en-IN")
+
+      [:always, :auto].each do |grouping|
+        assert_equal "1,234", formatter.format(1234, grouping: grouping)
+        assert_equal "12,34,567.89", formatter.format(1234567.891, decimal_places: 2, grouping: grouping)
+        assert_equal "-1,23,45,67,890", formatter.format(BigDecimal("-1234567890"), grouping: grouping)
+      end
+    end
+
+    test "#format with grouping: :auto counts the integer digits after rounding, on either rounding path" do
+      formatter = Worldwide::Numbers.new(locale: :pl)
+
+      [
+        [9999, {}, "9999"],
+        [10000, {}, "10\u00A0000"],
+        [-9999, {}, "-9999"],
+        [-10000, {}, "-10\u00A0000"],
+        [1234.56, { decimal_places: 2 }, "1234,56"],
+        [-12345.675, { decimal_places: 2 }, "-12\u00A0345,68"],
+        [1234567.891, {}, "1\u00A0234\u00A0567,891"],
+        ["1234.5", {}, "1234,5"],
+        [12345/10r, { decimal_places: 1 }, "1234,5"],
+        [1234567/100r, {}, "12\u00A0346"],
+        [9999.999, { decimal_places: 2 }, "10\u00A0000,00"],
+        [999.5, { decimal_places: 0 }, "1000"],
+        [-Float::INFINITY, {}, "-Inf"],
+        [Float::NAN, {}, "NaN"],
+        [BigDecimal("1234.565"), { decimal_places: 2 }, "1234,56"],
+        [BigDecimal("-12345.675"), { decimal_places: 2 }, "-12\u00A0345,68"],
+        [BigDecimal("9999.999"), { decimal_places: 2 }, "10\u00A0000,00"],
+        [BigDecimal("-9999.995"), { decimal_places: 2, rounding_mode: :half_up }, "-10\u00A0000,00"],
+        [BigDecimal("-9999.995"), { decimal_places: 2, rounding_mode: :down }, "-9999,99"],
+        [1234.565, { decimal_places: 2, rounding_mode: :half_up }, "1234,57"],
+        [9999.5, { decimal_places: 0, rounding_mode: :half_even }, "10\u00A0000"],
+        [BigDecimal("-0.004"), { decimal_places: 2, sign_display: :negative }, "0,00"],
+      ].each do |amount, options, expected|
+        assert_equal expected, formatter.format(amount, **options, grouping: :auto), "#{amount.inspect} #{options.inspect}"
+      end
+    end
+
+    test "#format with grouping: :auto groups the digits shown by humanize:, percent: and relative:" do
+      es = Worldwide::Numbers.new(locale: :es)
+      pl = Worldwide::Numbers.new(locale: :pl)
+
+      # humanize: :short and :long scale the amount first, so the rule applies to the scaled digits.
+      assert_equal "1.235\u00A0M", es.format(1_234_567_890, humanize: :short)
+      assert_equal "1235\u00A0M", es.format(1_234_567_890, humanize: :short, grouping: :auto)
+      assert_equal "1234 biliona", pl.format(1_234_000_000_000_000, humanize: :long, grouping: :auto)
+      assert_equal "12\u00A0345\u00A0bln", pl.format(12_345_000_000_000_000, humanize: :short, grouping: :auto)
+      assert_equal "1,2 mil millones", es.format(1_234_567_890, humanize: :long, grouping: :auto)
+      assert_equal "999", pl.format(999, humanize: :short, grouping: :auto)
+
+      # percent: groups the percentage, and percent: and relative: add their signs after grouping.
+      assert_equal "1234%", pl.format(12.34, percent: true, grouping: :auto)
+      assert_equal "12\u00A0345%", pl.format(123.45, percent: true, grouping: :auto)
+      assert_equal "1234\u00A0%", es.format(12.34, percent: true, grouping: :auto)
+      assert_equal "+1234", pl.format(1234, relative: true, grouping: :auto)
+      assert_equal "-1234,5", pl.format(-1234.5, relative: true, grouping: :auto)
+      assert_equal "+12\u00A0345", pl.format(12345, relative: true, grouping: :auto)
+      assert_equal "+1234%", pl.format(12.34, percent: true, relative: true, grouping: :auto)
+    end
+
+    test "#format raises ArgumentError for unsupported grouping values and combinations" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_raises(ArgumentError) { formatter.format(1234, grouping: :min2) }
+      assert_raises(ArgumentError) { formatter.format(1234, grouping: "auto") }
+      assert_raises(ArgumentError) { formatter.format(1234, grouping: nil) }
+      assert_raises(ArgumentError) { formatter.format(1234, grouping: false) }
+
+      error = assert_raises(ArgumentError) { formatter.format(12345, humanize: :japan, grouping: :auto) }
+      assert_match(/humanize: :japan/, error.message)
+      assert_equal "1万2345", formatter.format(12345, humanize: :japan, grouping: :always)
+    end
+
+    test "#format with grouping: :always does not look up the minimum grouping digits" do
+      formatter = Worldwide::Numbers.new(locale: :pl)
+      formatter.expects(:minimum_grouping_digits).never
+
+      assert_equal "1\u00A0234", formatter.format(1234)
+      assert_equal "1\u00A0234,57", formatter.format(BigDecimal("1234.565"), decimal_places: 2, rounding_mode: :half_up, grouping: :always)
+      assert_equal "1,2\u00A0tys.", formatter.format(1234, humanize: :short, grouping: :always)
+
+      formatter = Worldwide::Numbers.new(locale: :pl)
+      formatter.expects(:minimum_grouping_digits).once.returns(2)
+
+      assert_equal "1234", formatter.format(1234, grouping: :auto)
     end
 
     test "#format keeps the legacy output for objects that only convert to Float" do
