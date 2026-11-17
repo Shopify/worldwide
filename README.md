@@ -106,6 +106,7 @@ Each file is named after its locale, such as `ja.yml` or `pt-BR.yml`, and holds 
 A file whose name is not a locale identifier, such as `en.rails.yml`, raises `ArgumentError`, and none of the paths given are registered.
 The files apply after Worldwide's data, in the order they were registered, and don't change `I18n.load_path`.
 A path that is already registered is ignored.
+Lookups made after a registration read the new files.
 
 The files are read the first time a lookup needs them.
 They may hold hashes, arrays, strings, numbers, booleans, `nil` and Symbols, with anchors and aliases.

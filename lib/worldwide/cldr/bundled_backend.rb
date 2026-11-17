@@ -24,9 +24,10 @@ module Worldwide
       # as read only after its data is stored. Registering files replaces the whole state at once, so that
       # a lookup never finds a segment marked as read while its translations are missing.
       class State
-        attr_reader :translations, :available_locales, :available_locales_set
+        attr_reader :translations, :available_locales, :available_locales_set, :version
 
         def initialize(locales, overlay_paths)
+          @version = Object.new.freeze
           @translations = Concurrent::Hash.new
           @loaded_segments = Concurrent::Map.new
           @whole_locales = Concurrent::Map.new
@@ -74,6 +75,13 @@ module Worldwide
         @overlay_paths = overlay_paths.dup.freeze
         @mutex = Mutex.new
         @state = new_state
+      end
+
+      # Identifies the current state. It changes when files are registered, so a value derived from lookups
+      # can be kept for as long as the version it was read under is current. Holding it does not keep the
+      # state's data in memory.
+      def version
+        @state.version
       end
 
       # Files registered later win over files registered earlier. Data already read is dropped,
