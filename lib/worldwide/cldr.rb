@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "cldr/bundled_data"
+require_relative "cldr/bundled_data_scope"
 require_relative "cldr/date_format_pattern"
 require_relative "cldr/fallbacks"
 require_relative "ruby_i18n_config"
@@ -55,16 +57,55 @@ module Worldwide
 
     STORAGE = I18n::Config.method_defined?(:owned_by?) ? FiberStorage : ThreadStorage
 
+    # Set by the first with_bundled_data block, so that a process that never enters one
+    # skips the scope lookup in bundled_data?.
+    @bundled_data_used = false
+
     class << self
       def fallbacks
         FALLBACKS
       end
 
       def config
-        CONFIG
+        bundled_data? ? BundledData.instance.config.dup : CONFIG
+      end
+
+      # Runs the block with every Worldwide::Cldr lookup in the current fiber reading Worldwide's bundled
+      # data and the files registered with Worldwide::Config.add_bundled_data_paths. Those lookups ignore the
+      # host's I18n backend, load path, available locales, default locale and key separator. Lookups outside
+      # the block are unchanged. Returns the block's value.
+      #
+      # On Ruby 3.2 and later, threads and fibers created inside the block also read bundled data, until
+      # the block returns. On Ruby 3.1, they read the host's data.
+      def with_bundled_data
+        raise ArgumentError, "with_bundled_data requires a block" unless block_given?
+
+        @bundled_data_used = true
+        storage = bundled_data_storage
+        previous_scope = storage.scope
+        scope = BundledDataScope.new
+        storage.scope = scope
+        begin
+          yield
+        ensure
+          scope.close
+          storage.scope = previous_scope
+        end
+      end
+
+      # Whether Worldwide::Cldr lookups in the current fiber read bundled data.
+      def bundled_data?
+        return false unless @bundled_data_used
+
+        scope = bundled_data_storage.scope
+        !scope.nil? && scope.active?
       end
 
       private
+
+      def bundled_data_storage
+        BundledDataScope::STORAGE
+      end
 
       def respond_to_missing?(method_name, include_private = false)
         I18n.respond_to?(method_name, include_private)

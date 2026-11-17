@@ -4,9 +4,12 @@ require "bigdecimal"
 # Rails loads bigdecimal/util, which gives String and nil a to_d.
 require "bigdecimal/util"
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class NumbersTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test "number format for en-US" do
       data = [
         [12, "12.00"],
@@ -1000,6 +1003,32 @@ module Worldwide
       end
 
       assert_equal [:beyond_double_precision, :decimal_tie, :natural_decimal_places], differences.keys.sort
+    end
+
+    test "an instance used inside and outside with_bundled_data reads each mode's symbols and grouping" do
+      host_polish = {
+        numbers: {
+          latn: {
+            symbols: { decimal: "D", group: "G", percent_sign: "P" },
+            formats: { decimal: { patterns: { default: { standard: "#,##,##0.###" } } } },
+          },
+          minimum_grouping_digits: 1,
+        },
+      }
+
+      with_host_overrides(pl: host_polish) do
+        polish = Worldwide::Numbers.new(locale: :pl)
+        formats = -> { [polish.format(1234567.5, decimal_places: 2, grouping: :auto), polish.format(0.5, percent: true)] }
+
+        assert_equal ["12G34G567D50", "50P"], formats.call
+        assert_equal ["1\u00A0234\u00A0567,50", "50%"], Worldwide::Cldr.with_bundled_data { formats.call }
+        assert_equal ["12G34G567D50", "50P"], formats.call
+
+        polish = Worldwide::Numbers.new(locale: :pl)
+
+        assert_equal "1234,50", Worldwide::Cldr.with_bundled_data { polish.format(1234.5, decimal_places: 2, grouping: :auto) }
+        assert_equal "1G234D50", polish.format(1234.5, decimal_places: 2, grouping: :auto)
+      end
     end
 
     private

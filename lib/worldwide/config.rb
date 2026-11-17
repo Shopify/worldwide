@@ -56,6 +56,26 @@ module Worldwide
         Worldwide::I18nExceptionHandler.new
       end
 
+      # Registers YAML files for lookups inside Worldwide::Cldr.with_bundled_data, for libraries that add
+      # data on top of Worldwide's. Each file is named after its locale (for example "ja.yml") and holds that
+      # locale's data under a top-level key of the same name. Other top-level keys are ignored.
+      #
+      # The files apply after Worldwide's own data, and files registered later apply after files registered
+      # earlier. They are read on the first lookup that needs them, with the same YAML loader as I18n's
+      # simple backend, which can build arbitrary Ruby objects, so register only files that your own code
+      # ships. Registering does not change I18n.load_path or any host backend, so lookups outside the
+      # block do not see the files.
+      def add_bundled_data_paths(paths)
+        paths = Array(paths).map { |path| File.expand_path(path) }
+        not_yaml = paths.reject { |path| File.extname(path) == ".yml" }
+        raise ArgumentError, "Bundled data paths must be .yml files: #{not_yaml.join(", ")}" unless not_yaml.empty?
+
+        missing = paths.reject { |path| File.file?(path) }
+        raise ArgumentError, "Bundled data files not found: #{missing.join(", ")}" unless missing.empty?
+
+        Worldwide::Cldr::BundledData.instance.add_paths(paths)
+      end
+
       private
 
       def i18n_defined?(i18n_config, key)

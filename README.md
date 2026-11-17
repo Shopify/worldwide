@@ -73,6 +73,41 @@ change that behaviour like this:
 I18n.enforce_available_locales = false
 ```
 
+#### Reading only Worldwide's data  <!-- omit in toc -->
+
+`worldwide` reads its data through `ruby-i18n`, so the host application's I18n setup can change the results.
+For example, a translation file that defines `de.numbers.latn.symbols.decimal` changes how numbers and money are formatted in German.
+
+Inside a `Worldwide::Cldr.with_bundled_data` block, lookups read Worldwide's own data files instead.
+They ignore the host's I18n backend, load path, available locales, default locale and key separator.
+The data is read from the gem's files the first time a lookup needs it, one locale and one group of keys at a time.
+A process that never enters the block reads nothing extra.
+
+```ruby
+$ Worldwide::Cldr.with_bundled_data do
+    Worldwide.currency(code: "EUR").format_short(1234.5, locale: :de)
+  end
+==> "1.234,50\u00A0€"
+$ Worldwide::Cldr.bundled_data?
+==> false
+```
+
+- The block covers lookups made through `Worldwide::Cldr`, which include numbers, currencies, lists, units, dates, plurals and locale names. Address field labels are read through `I18n` directly, so they are not covered.
+- `I18n.enforce_available_locales` still applies. Inside the block, every locale that Worldwide has data for is available.
+- A missing translation falls back through Worldwide's CLDR fallbacks, then to `:en`.
+- Lookups outside the block, including lookups in other threads and fibers, are unchanged.
+- On Ruby 3.2 and later, threads and fibers started inside the block also read Worldwide's data until the block returns. On Ruby 3.1, they read the host's data.
+
+A library that adds data on top of Worldwide's can register YAML files for the block with `Worldwide::Config.add_bundled_data_paths`.
+Each file is named after its locale, such as `ja.yml`, and holds that locale's data under a top-level key of the same name.
+The files apply after Worldwide's data, in the order they were registered, and don't change `I18n.load_path`.
+Only `.yml` files are accepted.
+They are loaded with the same YAML loader as `ruby-i18n`, which can create arbitrary Ruby objects, so only register files that your own code ships.
+
+```ruby
+Worldwide::Config.add_bundled_data_paths(Dir[File.join(__dir__, "config/locales/cldr/*.yml")])
+```
+
 ## What you will get for free  <!-- omit in toc -->
 
 Here the list of the features we currently support:

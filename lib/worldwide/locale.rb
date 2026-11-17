@@ -48,7 +48,7 @@ module Worldwide
     end
 
     def name(locale: I18n.locale, context: :middle_of_sentence, throw: true)
-      cache_key = [locale&.to_sym, context]
+      cache_key = [locale&.to_sym, context, Worldwide::Cldr.bundled_data?]
       @name_cache[cache_key] ||= I18n.with_locale(locale) do
         # Try to find a language name as specific as possible in the locale we wanted.
         exonym(target_locale: locale, context: context) ||
@@ -81,7 +81,8 @@ module Worldwide
 
     # The language's name in that language ("endonym").
     def endonym(context: :middle_of_sentence, throw: true)
-      @endonym_cache[context] ||= begin
+      cache_key = [context, Worldwide::Cldr.bundled_data?]
+      @endonym_cache[cache_key] ||= begin
         result = begin
           lookup(code, locale: code)
         rescue I18n::InvalidLocale => e
@@ -92,13 +93,13 @@ module Worldwide
         result || I18n::MissingTranslation.new(code, "languages.#{code}")
       end
 
-      if @endonym_cache[context].is_a?(I18n::MissingTranslation)
-        raise @endonym_cache[context] if throw
+      if @endonym_cache[cache_key].is_a?(I18n::MissingTranslation)
+        raise @endonym_cache[cache_key] if throw
 
         return
       end
 
-      @endonym_cache[context]
+      @endonym_cache[cache_key]
     end
 
     private
