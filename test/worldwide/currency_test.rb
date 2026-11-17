@@ -549,5 +549,121 @@ module Worldwide
         end
       end
     end
+
+    test "#format_short and #format_explicit output across layouts, signs and options" do
+      [
+        # Symbol before the number, no space
+        ["USD", :en, 1234.5, {}, ["$1,234.50", "$1,234.50 USD"]],
+        ["USD", :en, -1234.5, {}, ["-$1,234.50", "-$1,234.50 USD"]],
+        ["USD", :en, 0, {}, ["$0.00", "$0.00 USD"]],
+        ["USD", :en, -0.004, {}, ["-$0.00", "-$0.00 USD"]],
+        ["USD", :en, BigDecimal("-1234.565"), {}, ["-$1,234.56", "-$1,234.56 USD"]],
+        ["USD", :en, 1234567, {}, ["$1,234,567.00", "$1,234,567.00 USD"]],
+        # Symbol before the number, with a space
+        ["EUR", :"de-AT", 1234.5, {}, ["€\u00A01\u00A0234,50", "€\u00A01\u00A0234,50 EUR"]],
+        ["EUR", :"de-AT", -1234.5, {}, ["-€\u00A01\u00A0234,50", "-€\u00A01\u00A0234,50 EUR"]],
+        ["EUR", :"de-AT", 0, {}, ["€\u00A00,00", "€\u00A00,00 EUR"]],
+        ["EUR", :"de-AT", -0.004, {}, ["-€\u00A00,00", "-€\u00A00,00 EUR"]],
+        ["EUR", :"de-AT", BigDecimal("-1234.565"), {}, ["-€\u00A01\u00A0234,56", "-€\u00A01\u00A0234,56 EUR"]],
+        ["EUR", :"de-AT", 1234567, {}, ["€\u00A01\u00A0234\u00A0567,00", "€\u00A01\u00A0234\u00A0567,00 EUR"]],
+        # Symbol after the number, with a space
+        ["EUR", :fr, 1234.5, {}, ["1\u202F234,50\u00A0€", "1\u202F234,50\u00A0€ EUR"]],
+        ["EUR", :fr, -1234.5, {}, ["-1\u202F234,50\u00A0€", "-1\u202F234,50\u00A0€ EUR"]],
+        ["EUR", :fr, 0, {}, ["0,00\u00A0€", "0,00\u00A0€ EUR"]],
+        ["EUR", :fr, -0.004, {}, ["-0,00\u00A0€", "-0,00\u00A0€ EUR"]],
+        ["EUR", :fr, BigDecimal("-1234.565"), {}, ["-1\u202F234,56\u00A0€", "-1\u202F234,56\u00A0€ EUR"]],
+        ["EUR", :fr, 1234567, {}, ["1\u202F234\u202F567,00\u00A0€", "1\u202F234\u202F567,00\u00A0€ EUR"]],
+        # Symbol after the number, no space, with 3/2 grouping
+        ["USD", :bn, 1234.5, {}, ["1,234.50$", "1,234.50$ USD"]],
+        ["USD", :bn, -1234.5, {}, ["-1,234.50$", "-1,234.50$ USD"]],
+        ["USD", :bn, 0, {}, ["0.00$", "0.00$ USD"]],
+        ["USD", :bn, -0.004, {}, ["-0.00$", "-0.00$ USD"]],
+        ["USD", :bn, BigDecimal("-1234.565"), {}, ["-1,234.56$", "-1,234.56$ USD"]],
+        ["USD", :bn, 1234567, {}, ["12,34,567.00$", "12,34,567.00$ USD"]],
+        # Currencies with 0 and 3 decimals
+        ["JPY", :ja, 1234.5, {}, ["￥1,234", "￥1,234 JPY"]],
+        ["JPY", :ja, -1234.5, {}, ["-￥1,234", "-￥1,234 JPY"]],
+        ["JPY", :ja, 0.5, {}, ["￥0", "￥0 JPY"]],
+        ["KWD", :en, 1234.5, {}, ["KWD1,234.500", "KWD1,234.500"]],
+        ["KWD", :en, -1234.5, {}, ["-KWD1,234.500", "-KWD1,234.500"]],
+        ["KWD", :ar, 1234.5, {}, ["د.ك.\u200F\u00A01,234.500", "د.ك.\u200F\u00A01,234.500 KWD"]],
+        ["KWD", :ar, -1234.5, {}, ["-د.ك.\u200F\u00A01,234.500", "-د.ك.\u200F\u00A01,234.500 KWD"]],
+        ["EUR", :en, 0.5, {}, ["€0.50", "€0.50 EUR"]],
+        # HKD keeps its HK$ symbol
+        ["HKD", :en, 1234.5, {}, ["HK$1,234.50", "HK$1,234.50 HKD"]],
+        ["HKD", :"zh-HK", -1234.5, {}, ["-HK$1,234.50", "-HK$1,234.50 HKD"]],
+        ["HKD", :fr, 1234.5, {}, ["1\u202F234,50\u00A0HK$", "1\u202F234,50\u00A0HK$ HKD"]],
+        # The currency code stands in for a missing symbol, and is not repeated
+        ["ANG", :en, -1234.5, {}, ["-ANG1,234.50", "-ANG1,234.50"]],
+        ["ANG", :fr, 1234.5, {}, ["1\u202F234,50\u00A0ANG", "1\u202F234,50\u00A0ANG"]],
+        ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01’234.50", "-CHF\u00A01’234.50"]],
+        # Right-to-left locales
+        ["ILS", :he, 1234.5, {}, ["1,234.50\u00A0₪", "1,234.50\u00A0₪ ILS"]],
+        ["ILS", :he, -1234.5, {}, ["-1,234.50\u00A0₪", "-1,234.50\u00A0₪ ILS"]],
+        ["SAR", :ar, 1234.5, {}, ["ر.س.\u200F\u00A01,234.50", "ر.س.\u200F\u00A01,234.50 SAR"]],
+        ["SAR", :ar, -1234.5, {}, ["-ر.س.\u200F\u00A01,234.50", "-ر.س.\u200F\u00A01,234.50 SAR"]],
+        ["USD", :ar, -1234.5, {}, ["-$\u00A01,234.50", "-$\u00A01,234.50 USD"]],
+        ["IRR", :fa, -1234.5, {}, ["-1,234.50ریال", "-1,234.50ریال IRR"]],
+        # 3/2 grouping
+        ["INR", :"en-IN", 1234567.891, {}, ["₹12,34,567.89", "₹12,34,567.89 INR"]],
+        ["INR", :"en-IN", -1234567.891, {}, ["-₹12,34,567.89", "-₹12,34,567.89 INR"]],
+        ["INR", :"en-IN", BigDecimal("123456789.5"), {}, ["₹12,34,56,789.50", "₹12,34,56,789.50 INR"]],
+        ["INR", :hi, 1234567.891, {}, ["₹12,34,567.89", "₹12,34,567.89 INR"]],
+        # decimal_places:
+        ["USD", :en, 1234.5678, { decimal_places: 0 }, ["$1,235", "$1,235 USD"]],
+        ["EUR", :fr, -1234.5678, { decimal_places: 3 }, ["-1\u202F234,568\u00A0€", "-1\u202F234,568\u00A0€ EUR"]],
+        # humanize: :short and :long
+        ["USD", :en, 1234567, { humanize: :short }, ["$1.2M", "$1.2M USD"]],
+        ["USD", :en, 1234567, { humanize: :long }, ["$1.2 million", "$1.2 million USD"]],
+        ["USD", :en, -1234567, { humanize: :short }, ["-$1M", "-$1M USD"]],
+        ["USD", :en, -1234567, { humanize: :long }, ["-$1 million", "-$1 million USD"]],
+        ["USD", :en, -999, { humanize: :short }, ["-$999", "-$999 USD"]],
+        ["EUR", :"fr-FR", 1234567, { humanize: :short }, ["1,2\u00A0M\u00A0€", "1,2\u00A0M\u00A0€ EUR"]],
+        ["EUR", :"fr-FR", 1234567, { humanize: :long }, ["1,2 million\u00A0€", "1,2 million\u00A0€ EUR"]],
+        ["EUR", :"fr-FR", -1234567, { humanize: :short }, ["-1\u00A0M\u00A0€", "-1\u00A0M\u00A0€ EUR"]],
+        ["EUR", :"de-AT", -1234567, { humanize: :short }, ["-€\u00A01\u00A0Mio.", "-€\u00A01\u00A0Mio. EUR"]],
+        ["EUR", :"de-AT", -1234567, { humanize: :long }, ["-€\u00A01 Millionen", "-€\u00A01 Millionen EUR"]],
+        ["USD", :sw, 1234567, { humanize: :short }, ["$\u00A01.2M", "$\u00A01.2M USD"]],
+        # The sw compact pattern has a negative subpattern, which is kept, and its minus sign moves before the symbol
+        ["USD", :sw, 1234567, { humanize: :long }, ["-$\u00A0milioni 1.2;milioni 0", "-$\u00A0milioni 1.2;milioni 0 USD"]],
+        # humanize: :japan
+        ["JPY", :ja, 12345, { humanize: :japan }, ["1万2345円", "1万2345円 JPY"]],
+        ["JPY", :ja, -12345, { humanize: :japan }, ["-1万2345円", "-1万2345円 JPY"]],
+        ["JPY", :ja, 0, { humanize: :japan }, ["0円", "0円 JPY"]],
+        ["JPY", :ja, 1234.5, { humanize: :japan }, ["1234.5円", "1234.5円 JPY"]],
+        ["USD", :en, 12345, { humanize: :japan }, ["1万2345$", "1万2345$ USD"]],
+        ["EUR", :fr, 1234.5, { humanize: :japan }, ["1234,5€", "1234,5€ EUR"]],
+        ["JPY", :ja, 12345, { humanize: :japan, use_symbol: false }, ["1万2345", "1万2345 JPY"]],
+        # as_minor_units: true, with and without a minor unit symbol
+        ["USD", :en, 0.75, { as_minor_units: true }, ["75¢", "75¢ USD"]],
+        ["USD", :en, -0.75, { as_minor_units: true }, ["-75¢", "-75¢ USD"]],
+        ["USD", :en, 1.219, { as_minor_units: true }, ["122¢", "122¢ USD"]],
+        ["USD", :en, 0, { as_minor_units: true }, ["0¢", "0¢ USD"]],
+        ["USD", :en, 0.29, { as_minor_units: true }, ["29¢", "29¢ USD"]],
+        ["USD", :en, BigDecimal("0.295"), { as_minor_units: true }, ["30¢", "30¢ USD"]],
+        ["USD", :en, 1.219, { as_minor_units: true, decimal_places: 3 }, ["121.9¢", "121.9¢ USD"]],
+        ["USD", :en, 0.75, { as_minor_units: true, use_symbol: false }, ["75¢", "75¢ USD"]],
+        ["GBP", :en, -0.75, { as_minor_units: true }, ["-75p", "-75p GBP"]],
+        ["CAD", :"fr-CA", 0.75, { as_minor_units: true }, ["75¢", "75¢ CAD"]],
+        ["EUR", :fr, 0.75, { as_minor_units: true }, ["0,75\u00A0€", "0,75\u00A0€ EUR"]],
+        ["EUR", :fr, -0.75, { as_minor_units: true }, ["-0,75\u00A0€", "-0,75\u00A0€ EUR"]],
+        ["EUR", :en, 1.219, { as_minor_units: true }, ["€1.22", "€1.22 EUR"]],
+        ["JPY", :ja, 0.75, { as_minor_units: true }, ["￥1", "￥1 JPY"]],
+        # use_symbol: false
+        ["USD", :en, -1234.5, { use_symbol: false }, ["-1,234.50", "-1,234.50 USD"]],
+        ["EUR", :fr, 1234.5, { use_symbol: false }, ["1\u202F234,50", "1\u202F234,50 EUR"]],
+        ["EUR", :"de-AT", -1234.5, { use_symbol: false }, ["-1\u00A0234,50", "-1\u00A0234,50 EUR"]],
+        # Amounts that are not finite
+        ["USD", :en, Float::NAN, {}, ["$NaN", "$NaN USD"]],
+        ["USD", :en, -Float::INFINITY, {}, ["-$Inf", "-$Inf USD"]],
+        ["EUR", :fr, -Float::INFINITY, {}, ["-Inf\u00A0€", "-Inf\u00A0€ EUR"]],
+      ].each do |code, locale, amount, options, expected|
+        currency = Worldwide.currency(code: code)
+        message = "#{code} #{locale} #{amount.inspect} #{options.inspect}"
+
+        assert_equal expected[0], currency.format_short(amount, locale: locale, **options), message
+        assert_equal expected[1], currency.format_explicit(amount, locale: locale, **options), message
+      end
+    end
   end
 end
