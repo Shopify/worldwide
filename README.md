@@ -823,6 +823,7 @@ Both `format_short` and `format_explicit` support the following keyword argument
   - `humanize:` can be `:short` or `:long` to produce a human-friendly display for large numbers, or `:japan` to use Japanese-style alternative formatting (see examples below)
   - `locale:` the locale to use when formatting (default is the active `I18n.locale`)
   - `use_symbol:` use the currency's symbol or, if it has no symbol, its ISO code where the symbol would be (default is `true`).  Note that, if `as_minor_units` is true, then `use_symbol` will be forced to `true`, even if `use_symbol: false` is passed.
+  - `rounding_mode:`, `grouping:` and `sign_display:` work as they do for `Worldwide::Numbers#format` (see the Numbers section below), with the same defaults. They apply with or without the symbol, and with `humanize:` and `as_minor_units:`. The combinations that `Worldwide::Numbers#format` doesn't support, such as `rounding_mode:` with `humanize: :short` or `:long`, and `grouping: :auto` with `humanize: :japan`, raise `ArgumentError`. With `as_minor_units:` and `rounding_mode:`, a `Float` amount is converted to minor units through its shortest decimal form, so `0.29` rounds as 29 cents, not as `28.999999999999996`.
 
 ```ruby
 $ eur = Worldwide.currency(code: "EUR")
@@ -861,6 +862,52 @@ $ usd.format_explicit(0.75, as_minor_units: true)
 ==> "75¢ USD"
 $ eur.format_short(0.75, as_minor_units: true)
 ==> "€0.75"
+
+$ usd.format_short(BigDecimal("0.125"), locale: :en)
+==> "$0.12"
+$ usd.format_short(BigDecimal("0.125"), locale: :en, rounding_mode: :half_up)
+==> "$0.13"
+$ usd.format_short(-0.004, locale: :en)
+==> "-$0.00"
+$ usd.format_short(-0.004, locale: :en, sign_display: :negative)
+==> "$0.00"
+$ pln = Worldwide.currency(code: "PLN")
+$ pln.format_short(1234.5, locale: :pl)
+==> "1\u00A0234,50\u00A0zł"
+$ pln.format_short(1234.5, locale: :pl, grouping: :auto)
+==> "1234,50\u00A0zł"
+```
+
+`format_to_parts` returns the result of `format_short` split into parts, so that you can change how each part is displayed.
+It takes `decimal_places:`, `locale:`, `rounding_mode:`, `grouping:` and `sign_display:`, which work as they do for `format_short`.
+It covers the format with the currency's symbol only, so it doesn't take `humanize:`, `as_minor_units:` or `use_symbol:`.
+Each part is a `Hash` with a `:type` and a `String` `:value`, in display order:
+  - `:minus_sign`: the `-` of a negative amount. It comes first, before the symbol or the number.
+  - `:currency`: the currency's symbol, or its ISO code if the locale has no symbol for it.
+  - `:literal`: the no-break space (U+00A0) between the symbol and the number, in locales that have one.
+  - `:number`: the localized number, without its sign.
+
+A part that would be empty is left out, and joining the values gives the result of `format_short`.
+Each call returns new arrays, hashes and strings, which you can change.
+
+```ruby
+$ usd.format_to_parts(-12.5, locale: :en)
+==> [{ type: :minus_sign, value: "-" }, { type: :currency, value: "$" }, { type: :number, value: "12.50" }]
+$ eur.format_to_parts(-1234.5, locale: :de)
+==> [{ type: :minus_sign, value: "-" }, { type: :number, value: "1.234,50" }, { type: :literal, value: "\u00A0" }, { type: :currency, value: "€" }]
+$ eur.format_to_parts(-1234.5, locale: :de).map { |part| part[:value] }.join
+==> "-1.234,50\u00A0€"
+
+# Show the ISO code instead of the symbol, with a regular space, and without the minus sign
+$ eur.format_to_parts(-1234.5, locale: :de).filter_map do |part|
+    case part[:type]
+    when :minus_sign then nil
+    when :currency then "EUR"
+    when :literal then " "
+    else part[:value]
+    end
+  end.join
+==> "1.234,50 EUR"
 ```
 
 ### 🔢  Numbers

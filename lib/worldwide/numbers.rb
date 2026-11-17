@@ -131,7 +131,34 @@ module Worldwide
       end
     end
 
+    # Formats amount as format does without humanize:, percent: or relative:, but returns the minus sign apart
+    # from the localized digits, as [negative, digits]. Currency#format_to_parts uses it to place the sign itself.
+    def sign_and_digits(amount, decimal_places:, rounding_mode:, grouping:, sign_display:)
+      validate_options(humanize: nil, relative: false, rounding_mode: rounding_mode, grouping: grouping, sign_display: sign_display)
+
+      digits = plain_digits(amount, decimal_places: decimal_places, rounding_mode: rounding_mode, sign_display: sign_display)
+      negative = digits.start_with?("-")
+      [negative, localize_digits(digits.delete_prefix("-"), humanize: nil, grouping: grouping)]
+    end
+
     def format_default(number, decimal_places:, humanize:, rounding_mode: nil, grouping: :always, sign_display: :auto)
+      result = plain_digits(number, decimal_places: decimal_places, rounding_mode: rounding_mode, sign_display: sign_display)
+
+      if humanize == :japan && (result.index(".") || result.length) > JAPAN_MAX_INTEGER_CHARACTERS
+        if rounding_mode
+          raise ArgumentError, "humanize: :japan has units for #{JAPAN_MAX_INTEGER_CHARACTERS} integer digits, " \
+            "or #{JAPAN_MAX_INTEGER_CHARACTERS - 1} and a minus sign, and #{number.inspect} rounds to more"
+        end
+
+        # Without rounding_mode:, keep the "%f" formatting that the amount had before decimal arithmetic was used.
+        result = legacy_digits(number, decimal_places)
+      end
+
+      localize_digits(result, humanize: humanize, grouping: grouping)
+    end
+
+    # Rounds number and renders it with no grouping, with a '.' decimal point, and with a leading "-" if it is negative.
+    def plain_digits(number, decimal_places:, rounding_mode:, sign_display:)
       # Without rounding_mode:, a Float or an Integer keeps the "%f" formatting, so the usual amounts skip these checks.
       unless rounding_mode.nil? && (number.is_a?(Float) || number.is_a?(Integer))
         exact_places = exact_decimal_places(decimal_places)
@@ -148,17 +175,10 @@ module Worldwide
       end
 
       result = result.delete_prefix("-") if sign_display == :negative && result.match?(/\A-0+(\.0+)?\z/)
+      result
+    end
 
-      if humanize == :japan && (result.index(".") || result.length) > JAPAN_MAX_INTEGER_CHARACTERS
-        if rounding_mode
-          raise ArgumentError, "humanize: :japan has units for #{JAPAN_MAX_INTEGER_CHARACTERS} integer digits, " \
-            "or #{JAPAN_MAX_INTEGER_CHARACTERS - 1} and a minus sign, and #{number.inspect} rounds to more"
-        end
-
-        # Without rounding_mode:, keep the "%f" formatting that the amount had before decimal arithmetic was used.
-        result = legacy_digits(number, decimal_places)
-      end
-
+    def localize_digits(result, humanize:, grouping:)
       # Change the decimal marker to comma (or something else) if the locale expects it
       result.sub!(".", decimal_marker)
 
