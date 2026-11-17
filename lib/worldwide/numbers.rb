@@ -3,6 +3,9 @@
 module Worldwide
   class Numbers
     JAPAN_MYRIAD_UNITS = ["", "万", "億", "兆", "京", "垓", "秭"].freeze
+    # add_japan_group_markers writes one unit for every four characters before the decimal marker, a minus sign included.
+    JAPAN_MAX_INTEGER_CHARACTERS = JAPAN_MYRIAD_UNITS.length * 4
+    private_constant :JAPAN_MAX_INTEGER_CHARACTERS
 
     CLDR_COMPACT_STYLE = [:short, :long].freeze
     COMPACT_DECIMAL_BASE_KEY = "numbers.latn.formats.decimal.patterns"
@@ -32,12 +35,18 @@ module Worldwide
     # that converts to a finite BigDecimal with to_d. A Float is first converted to its shortest
     # round-trip decimal, so 1.015 rounds as 1.015. :half_up and :half_down round ties away from
     # and towards zero. Without decimal_places:, every decimal of the exact value is shown, so a
-    # Rational that has no finite decimal expansion raises ArgumentError.
+    # Rational that has no finite decimal expansion raises ArgumentError. A String or nil amount
+    # raises ArgumentError, even when bigdecimal/util gives it a to_d.
     # rounding_mode: is not supported with humanize: :short or :long.
     #
     # Decimal arithmetic renders at most 999 decimal places, and a BigDecimal with at most 999
-    # integer digits. Without rounding_mode:, a BigDecimal beyond that keeps the "%f" formatting.
+    # integer digits, counted after percent: or humanize: :short or :long has scaled the amount.
+    # Without rounding_mode:, a BigDecimal beyond that keeps the "%f" formatting.
     # With rounding_mode:, it raises ArgumentError.
+    #
+    # humanize: :japan has units for 28 integer digits, or 27 and a minus sign. Without rounding_mode:,
+    # a BigDecimal that rounds to more keeps the "%f" formatting. With rounding_mode:, an amount that
+    # rounds to more raises ArgumentError.
     #
     # sign_display: :auto (the default) shows the minus sign of every negative amount, even when it
     # rounds to zero. :negative drops the minus sign when every displayed digit is zero.
@@ -93,6 +102,8 @@ module Worldwide
     # With a rounding mode, scale a Float's shortest decimal form, so that 0.07 gives 7 rather than 7.000000000000001.
     # Zero keeps its Float sign.
     def percentage_amount(amount, rounding_mode)
+      validate_exact_amount(amount) if rounding_mode
+
       if rounding_mode && amount.is_a?(Float) && amount.finite? && !amount.zero?
         Rational(amount.to_s) * 100
       else
@@ -106,8 +117,7 @@ module Worldwide
 
       # Format the number with no grouping and with a '.' decimal point
       result = if exact_amount.nil?
-        decimal_places = natural_decimal_places(number) if decimal_places.nil?
-        Kernel.format("%.#{decimal_places}f", number)
+        legacy_digits(number, decimal_places)
       elsif exact_places == false
         raise ArgumentError, "decimal_places: must be an Integer or a String of digits, got #{decimal_places.inspect}"
       else
@@ -115,6 +125,16 @@ module Worldwide
       end
 
       result = result.delete_prefix("-") if sign_display == :negative && result.match?(/\A-0+(\.0+)?\z/)
+
+      if humanize == :japan && (result.index(".") || result.length) > JAPAN_MAX_INTEGER_CHARACTERS
+        if rounding_mode
+          raise ArgumentError, "humanize: :japan has units for #{JAPAN_MAX_INTEGER_CHARACTERS} integer digits, " \
+            "or #{JAPAN_MAX_INTEGER_CHARACTERS - 1} and a minus sign, and #{number.inspect} rounds to more"
+        end
+
+        # Without rounding_mode:, keep the "%f" formatting that the amount had before decimal arithmetic was used.
+        result = legacy_digits(number, decimal_places)
+      end
 
       # Change the decimal marker to comma (or something else) if the locale expects it
       result.sub!(".", decimal_marker)
@@ -357,13 +377,12 @@ module Worldwide
       end
       return if rounding_mode.nil?
 
+      validate_exact_amount(number)
       case number
       when Integer, Rational
         number
       when Float
         number if number.finite?
-      when String
-        raise ArgumentError, "rounding_mode: is not supported with a String amount"
       else
         decimal = number.to_d if number.respond_to?(:to_d)
         unless bigdecimal?(decimal) && decimal.finite?
@@ -374,8 +393,22 @@ module Worldwide
       end
     end
 
+    # Kernel.format reads a String through Float() and raises for nil, but bigdecimal/util, which Rails loads,
+    # gives both a to_d that returns zero for nil and for text it can't read. Decimal arithmetic takes neither.
+    def validate_exact_amount(amount)
+      if amount.nil? || amount.is_a?(String)
+        raise ArgumentError, "rounding_mode: is not supported with a #{amount.nil? ? "nil" : "String"} amount"
+      end
+    end
+
     def bigdecimal?(number)
       defined?(BigDecimal) && number.is_a?(BigDecimal)
+    end
+
+    # The "%f" formatting that every amount had before decimal arithmetic was used.
+    def legacy_digits(number, decimal_places)
+      decimal_places = natural_decimal_places(number) if decimal_places.nil?
+      Kernel.format("%.#{decimal_places}f", number)
     end
 
     # BigDecimal("1e100000000") is small, but has 100,000,001 integer digits.
@@ -398,7 +431,7 @@ module Worldwide
 
         decimal_places = amount.scale if decimal_places.nil?
         # Round before converting, so the Rational stays as small as the result.
-        value = amount.round(decimal_places, bigdecimal_rounding_mode(rounding_mode)).to_r
+        value = amount.round(decimal_places, bigdecimal_rounding_mode(rounding_mode, amount)).to_r
       else
         # Float#to_s is the shortest decimal that reads back as the same Float.
         value = amount.is_a?(Float) ? Rational(amount.to_s) : amount.to_r
@@ -430,12 +463,14 @@ module Worldwide
       end
     end
 
-    def bigdecimal_rounding_mode(rounding_mode)
+    # BigDecimal#round with ROUND_UP returns zero for some amounts far below the last place, such as
+    # BigDecimal("1e-10").round(2, BigDecimal::ROUND_UP), so :up rounds towards the infinity on the amount's side.
+    def bigdecimal_rounding_mode(rounding_mode, amount)
       case rounding_mode
       when :half_even then BigDecimal::ROUND_HALF_EVEN
       when :half_up then BigDecimal::ROUND_HALF_UP
       when :half_down then BigDecimal::ROUND_HALF_DOWN
-      when :up then BigDecimal::ROUND_UP
+      when :up then amount.negative? ? BigDecimal::ROUND_FLOOR : BigDecimal::ROUND_CEILING
       when :down then BigDecimal::ROUND_DOWN
       when :ceiling then BigDecimal::ROUND_CEILING
       when :floor then BigDecimal::ROUND_FLOOR

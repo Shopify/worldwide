@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "bigdecimal"
+# Rails loads bigdecimal/util, which gives String and nil a to_d.
+require "bigdecimal/util"
 require "test_helper"
 
 module Worldwide
@@ -566,6 +568,12 @@ module Worldwide
         ["1.23456", 3, ["1.235", "1.235", "1.235", "1.235", "1.234", "1.235", "1.234"]],
         ["-1.23449", 3, ["-1.234", "-1.234", "-1.234", "-1.235", "-1.234", "-1.234", "-1.235"]],
         ["1234.5", 3, ["1,234.500", "1,234.500", "1,234.500", "1,234.500", "1,234.500", "1,234.500", "1,234.500"]],
+        ["0.0000000001", 0, ["0", "0", "0", "1", "0", "1", "0"]],
+        ["-0.0000000001", 0, ["-0", "-0", "-0", "-1", "-0", "-0", "-1"]],
+        ["0.0000000001", 3, ["0.000", "0.000", "0.000", "0.001", "0.000", "0.001", "0.000"]],
+        ["-0.0000000001", 3, ["-0.000", "-0.000", "-0.000", "-0.001", "-0.000", "-0.000", "-0.001"]],
+        ["2.5000000000001", 0, ["3", "3", "3", "3", "2", "3", "2"]],
+        ["-1.0004999999999", 3, ["-1.000", "-1.000", "-1.000", "-1.001", "-1.000", "-1.000", "-1.001"]],
       ].each do |amount, decimal_places, expected_outputs|
         formatter = Worldwide::Numbers.new(locale: :en)
         amounts = [BigDecimal(amount), Rational(amount), Float(amount)]
@@ -579,6 +587,45 @@ module Worldwide
           end
         end
       end
+    end
+
+    test "#format rounds as exact arithmetic does in every rounding mode, also far below the last decimal place" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+      modes = [:half_even, :half_up, :half_down, :up, :down, :ceiling, :floor]
+      integer_parts = [0, 1, 12_345, 10**20]
+      # A nudge of one unit at 1, 9, 10, 18 or 40 places past the last decimal place, up or down.
+      nudge_shapes = [1, 9, 10, 18, 40].product([1, -1])
+      checked_types = Hash.new(0)
+
+      [0, 2, 3].each do |decimal_places|
+        last_place = Rational(1, 10**decimal_places)
+        nudges = nudge_shapes.map { |places, direction| direction * last_place / 10**places } << 0
+
+        # Exact amounts and ties, each nudged
+        integer_parts.product([0, last_place / 2], nudges).each do |integer_part, fraction, nudge|
+          magnitude = integer_part + fraction + nudge
+          next if magnitude.negative?
+
+          [magnitude, -magnitude].each do |value|
+            text = decimal_text(value)
+            amounts = [BigDecimal(text), value]
+            amounts << value.to_i if value.denominator == 1
+            # A Float is rounded through its shortest decimal form, so it is checked when that form is the value.
+            amounts << Float(text) if Rational(Float(text).to_s) == value
+
+            amounts.each do |amount|
+              checked_types[amount.class] += 1
+              modes.each do |mode|
+                actual = formatter.format(amount, decimal_places: decimal_places, rounding_mode: mode).delete(",")
+
+                assert_equal oracle_format(value, decimal_places, mode), actual, "#{amount.inspect} #{decimal_places} #{mode}"
+              end
+            end
+          end
+        end
+      end
+
+      assert_equal [BigDecimal, Float, Integer, Rational], checked_types.keys.sort_by(&:name)
     end
 
     test "#format with rounding_mode: rounds a Float through its shortest decimal form" do
@@ -635,6 +682,79 @@ module Worldwide
       assert_equal "-32M", formatter.format(-31_500_000, humanize: :short, sign_display: :negative)
       assert_equal "+0.13", formatter.format(0.125, relative: true, decimal_places: 2, rounding_mode: :half_up)
       assert_equal "-0.13", formatter.format(-0.125, relative: true, decimal_places: 2, rounding_mode: :half_up)
+    end
+
+    test "#format with humanize: :japan keeps the earlier output for a BigDecimal with more integer digits than it has units for" do
+      formatter = Worldwide::Numbers.new(locale: :ja)
+
+      # The output, or the error, before BigDecimal amounts were rounded with decimal arithmetic.
+      [
+        [10**27, nil, "1000秭"],
+        [10**28, nil, NoMethodError],
+        [1.0e28, nil, "9999秭9999垓9999京9999兆5831億1973万6832.00000"],
+        [1.0e30, nil, NoMethodError],
+        [BigDecimal("1e28"), nil, "9999秭9999垓9999京9999兆5831億1973万6832.0000"],
+        [BigDecimal("1e28"), 2, "9999秭9999垓9999京9999兆5831億1973万6832.00"],
+        # 28 integer digits that round up to 29
+        [BigDecimal("#{"9" * 28}.5"), 0, "9999秭9999垓9999京9999兆5831億1973万6832"],
+        # 28 integer digits and a minus sign
+        [BigDecimal("-1e27"), 0, NoMethodError],
+        [BigDecimal("1e30"), nil, NoMethodError],
+        [BigDecimal("1e308"), nil, NoMethodError],
+        [BigDecimal("1e309"), nil, "Inf"],
+        [BigDecimal("1e400"), 2, "Inf"],
+        [BigDecimal("1e1000"), nil, "Inf"],
+      ].each do |amount, decimal_places, expected|
+        actual = begin
+          formatter.format(amount, decimal_places: decimal_places, humanize: :japan)
+        rescue NoMethodError => error
+          error.class
+        end
+
+        assert_equal expected, actual, "#{amount.inspect} #{decimal_places.inspect}"
+      end
+
+      # Up to 28 integer digits, or 27 and a minus sign, a BigDecimal is rendered exactly.
+      assert_equal "9999秭9999垓9999京9999兆9999億9999万9999", formatter.format(BigDecimal("9" * 28), humanize: :japan)
+      assert_equal "-999秭9999垓9999京9999兆9999億9999万9999", formatter.format(BigDecimal("-#{"9" * 27}"), humanize: :japan)
+      assert_equal "1000秭", formatter.format(BigDecimal("1e27"), humanize: :japan)
+    end
+
+    test "#format with humanize: :japan and rounding_mode: raises ArgumentError for more integer digits than it has units for" do
+      formatter = Worldwide::Numbers.new(locale: :ja)
+
+      assert_equal "9999秭9999垓9999京9999兆9999億9999万9999", formatter.format(BigDecimal("#{"9" * 28}.5"), decimal_places: 0, humanize: :japan, rounding_mode: :down)
+      assert_equal "-999秭9999垓9999京9999兆9999億9999万9999", formatter.format(-(10**27 - 1), humanize: :japan, rounding_mode: :half_even)
+
+      [
+        [BigDecimal("#{"9" * 28}.5"), 0],
+        [BigDecimal("1e28"), nil],
+        [10**28, nil],
+        # 1.0e28 is 9999999999999999583119736832, but its shortest decimal form is 10**28.
+        [1.0e28, 0],
+        [-(10**27), nil],
+        [BigDecimal("1e309"), 2],
+      ].each do |amount, decimal_places|
+        error = assert_raises(ArgumentError, amount.inspect) do
+          formatter.format(amount, decimal_places: decimal_places, humanize: :japan, rounding_mode: :half_up)
+        end
+        assert_match(/humanize: :japan/, error.message)
+      end
+    end
+
+    test "#format with rounding_mode: raises ArgumentError for a nil amount, which bigdecimal/util converts to zero" do
+      formatter = Worldwide::Numbers.new(locale: :en)
+
+      assert_respond_to nil, :to_d
+      [{}, { decimal_places: 2 }, { percent: true }, { humanize: :japan }, { relative: true }].each do |options|
+        error = assert_raises(ArgumentError, options.inspect) { formatter.format(nil, **options, rounding_mode: :half_even) }
+        assert_match(/nil/, error.message)
+      end
+      assert_raises(ArgumentError) { formatter.format("0.5", percent: true, rounding_mode: :half_even) }
+
+      # Without rounding_mode:, nil raises as it did before.
+      assert_raises(TypeError) { formatter.format(nil, decimal_places: 2) }
+      assert_raises(NoMethodError) { formatter.format(nil, percent: true) }
     end
 
     test "#format raises ArgumentError for unsupported option values and combinations" do
@@ -736,6 +856,46 @@ module Worldwide
       return "#{sign}#{integer}" if decimal_places.zero?
 
       "#{sign}#{integer}.#{fraction.ljust(decimal_places, "0")}"
+    end
+
+    # The exact decimal text of a Rational whose denominator divides a power of 10.
+    def decimal_text(value)
+      places = 0
+      places += 1 until (value * 10**places).denominator == 1
+      digits = (value.abs * 10**places).to_i.to_s.rjust(places + 1, "0")
+      text = places.zero? ? digits : "#{digits[0...-places]}.#{digits[-places..]}"
+      value.negative? ? "-#{text}" : text
+    end
+
+    # Rounds value with Integer arithmetic, and renders it without grouping, with the minus sign of a negative value.
+    def oracle_format(value, decimal_places, rounding_mode)
+      floor, remainder = (value.numerator * 10**decimal_places).divmod(value.denominator)
+      rounded = if remainder.zero?
+        floor
+      else
+        oracle_round(floor, value.negative?, (2 * remainder) <=> value.denominator, rounding_mode)
+      end
+
+      digits = rounded.abs.to_s.rjust(decimal_places + 1, "0")
+      text = decimal_places.zero? ? digits : "#{digits[0...-decimal_places]}.#{digits[-decimal_places..]}"
+      value.negative? ? "-#{text}" : text
+    end
+
+    # Picks floor or floor + 1 for a scaled value strictly between them. half is -1, 0 or 1 as the value is below,
+    # at or above the midpoint.
+    def oracle_round(floor, negative, half, rounding_mode)
+      ceiling = floor + 1
+      toward_zero, away_from_zero = negative ? [ceiling, floor] : [floor, ceiling]
+      case rounding_mode
+      when :floor then floor
+      when :ceiling then ceiling
+      when :down then toward_zero
+      when :up then away_from_zero
+      else
+        return half.negative? ? floor : ceiling if half.nonzero?
+
+        { half_even: floor.even? ? floor : ceiling, half_up: away_from_zero, half_down: toward_zero }.fetch(rounding_mode)
+      end
     end
 
     def difference_reason(decimal, decimal_places)
