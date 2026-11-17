@@ -252,6 +252,35 @@ module Worldwide
         I18n.available_locales = original_locales
       end
 
+      test "lookups inside the block work when the host's current locale is one that bundled data lacks" do
+        eur = Worldwide.currency(code: "EUR")
+        decimal = ->(**options) { Worldwide::Cldr.t("numbers.latn.symbols.decimal", **options) }
+
+        [true, false].each do |enforce|
+          with_host_i18n(available_locales: I18n.available_locales + [:"en-XX"], enforce_available_locales: enforce) do
+            I18n.with_locale(:"en-XX") do
+              assert_equal "1.234,50\u00A0€", eur.format_short(1234.5, locale: :de)
+              assert_equal ".", decimal.call
+
+              Worldwide::Cldr.with_bundled_data do
+                assert_equal "1.234,50\u00A0€", eur.format_short(1234.5, locale: :de)
+                assert_equal ",", decimal.call(locale: :de)
+                assert_equal :"en-XX", I18n.locale
+
+                # A lookup that uses the current locale still checks it.
+                if enforce
+                  assert_raises(I18n::InvalidLocale) { decimal.call }
+                else
+                  assert_equal ".", decimal.call
+                end
+              end
+
+              assert_equal :"en-XX", I18n.locale
+            end
+          end
+        end
+      end
+
       test "a lookup loads only the data for the locales and first key segments it needs" do
         with_fresh_bundled_data do |source|
           Worldwide::Cldr.with_bundled_data { Worldwide.currency(code: "EUR").format_short(1234.5, locale: :"de-AT") }
@@ -472,7 +501,7 @@ module Worldwide
         end
 
         # Ruby 3.2 and later copy fiber storage into a new thread, so the thread starts in bundled mode.
-        # Ruby 3.1 keeps the flag in fiber-local storage, so the thread starts in legacy mode.
+        # Without fiber storage, the scope is fiber-local, so the thread starts in legacy mode.
         assert_equal Fiber.respond_to?(:[]) ? "," : "HOST-DECIMAL", results[:inside]
         assert_equal "HOST-DECIMAL", results[:after]
         assert_equal false, results[:after_bundled_data]
@@ -493,13 +522,95 @@ module Worldwide
         end
       end
 
+      test "a thread started inside a nested block reads bundled data until the outermost block returns" do
+        step = Queue.new
+        results = Queue.new
+        read = -> { results << [Worldwide::Cldr.bundled_data?, Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :de)] }
+
+        with_host_overrides do
+          thread = nil
+          Worldwide::Cldr.with_bundled_data do
+            Worldwide::Cldr.with_bundled_data do
+              thread = Thread.new do
+                read.call
+                2.times do
+                  step.pop
+                  read.call
+                end
+              end
+
+              assert_equal [true, ","], results.pop
+            end
+
+            step << :inner_block_returned
+
+            assert_equal [true, ","], results.pop
+          end
+
+          step << :outer_block_returned
+
+          assert_equal [false, "HOST-DECIMAL"], results.pop
+          thread.join
+        end
+      end
+
+      test "a thread that opens its own block keeps reading bundled data in it after the block it started in returns" do
+        opened = Queue.new
+        parent_returned = Queue.new
+        read = -> { [Worldwide::Cldr.bundled_data?, Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :de)] }
+
+        with_host_overrides do
+          thread = nil
+          Worldwide::Cldr.with_bundled_data do
+            thread = Thread.new do
+              inside = Worldwide::Cldr.with_bundled_data do
+                opened << true
+                parent_returned.pop
+                read.call
+              end
+              [inside, read.call]
+            end
+            opened.pop
+          end
+          parent_returned << true
+
+          assert_equal [[true, ","], [false, "HOST-DECIMAL"]], thread.value
+        end
+      end
+
+      test "every way out of a block, nested or not, restores the enclosing state" do
+        exits = {
+          raise: -> { assert_raises(RuntimeError) { Worldwide::Cldr.with_bundled_data { raise "boom" } } },
+          break: -> { [1].each { Worldwide::Cldr.with_bundled_data { break } } },
+          next: -> { [1].each { Worldwide::Cldr.with_bundled_data { next } } },
+          throw: -> { catch(:done) { Worldwide::Cldr.with_bundled_data { throw(:done) } } },
+          return: -> { Worldwide::Cldr.with_bundled_data { return } },
+          kill: -> { Thread.new { Worldwide::Cldr.with_bundled_data { Thread.current.kill } }.join },
+        }
+
+        exits.each do |name, exit_block|
+          exit_block.call
+
+          assert_equal false, Worldwide::Cldr.bundled_data?, name
+
+          Worldwide::Cldr.with_bundled_data do
+            exit_block.call
+
+            assert_equal true, Worldwide::Cldr.bundled_data?, name
+            assert_equal ",", Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :de), name
+          end
+
+          assert_equal false, Worldwide::Cldr.bundled_data?, name
+        end
+      end
+
       test "the scope is kept in fiber storage when Ruby has it, and in fiber-local variables otherwise" do
         expected = Fiber.respond_to?(:[]) ? BundledDataScope::FiberStorage : BundledDataScope::FiberLocalStorage
 
         assert_equal expected, BundledDataScope::STORAGE
       end
 
-      test "with fiber-local storage, as on Ruby 3.1, threads and fibers created inside the block read legacy data" do
+      test "with fiber-local storage, threads and fibers created inside the block read legacy data" do
         Worldwide::Cldr.stubs(:bundled_data_storage).returns(BundledDataScope::FiberLocalStorage)
         decimal = -> { Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :de) }
 
@@ -673,6 +784,97 @@ module Worldwide
         end
       end
 
+      test "a path registered again keeps its place" do
+        with_fresh_bundled_data do |source|
+          with_yaml_files(
+            "first/ar.yml" => { "ar" => { "currencies" => { "JEP" => { "symbol" => "first" } } } },
+            "second/ar.yml" => { "ar" => { "currencies" => { "JEP" => { "symbol" => "second" } } } },
+          ) do |paths|
+            Worldwide::Config.add_bundled_data_paths([paths[0]])
+            Worldwide::Config.add_bundled_data_paths([paths[1]])
+            Worldwide::Config.add_bundled_data_paths([paths[0]])
+
+            assert_equal paths, source.paths
+            assert_equal "second", Worldwide::Cldr.with_bundled_data { Worldwide::Cldr.t("currencies.JEP.symbol", locale: :ar) }
+          end
+        end
+      end
+
+      test "registered files may use anchors, aliases and Symbol values" do
+        yaml = <<~YAML
+          ja:
+            currencies:
+              JEP: &jersey
+                symbol: :currencies.GBP.symbol
+                name: &name Jersey Pound
+              KID:
+                <<: *jersey
+                name: Kiribati Dollar
+              GGP:
+                name: *name
+        YAML
+
+        with_fresh_bundled_data do
+          with_yaml_files("ja.yml" => yaml) do |paths|
+            Worldwide::Config.add_bundled_data_paths(paths)
+
+            Worldwide::Cldr.with_bundled_data do
+              assert_equal "£", Worldwide::Cldr.t("currencies.JEP.symbol", locale: :ja)
+              assert_equal "£", Worldwide::Cldr.t("currencies.KID.symbol", locale: :ja)
+              assert_equal "Kiribati Dollar", Worldwide::Cldr.t("currencies.KID.name", locale: :ja)
+              assert_equal "Jersey Pound", Worldwide::Cldr.t("currencies.GGP.name", locale: :ja)
+            end
+          end
+        end
+      end
+
+      test "a registered file that is not plain YAML data fails to load with an error that names it" do
+        files = {
+          "ja.yml" => "ja:\n  currencies:\n    JEP: !ruby/object:Object {}\n",
+          "th.yml" => "th:\n  currencies: [\n",
+        }
+
+        with_fresh_bundled_data do |source|
+          with_yaml_files(files) do |paths|
+            Worldwide::Config.add_bundled_data_paths(paths)
+
+            Worldwide::Cldr.with_bundled_data do
+              paths.each do |path|
+                locale = File.basename(path, ".yml").to_sym
+
+                # A failed load keeps nothing, so the next lookup reads the file again and fails the same way.
+                2.times do
+                  error = assert_raises(I18n::InvalidLocaleData) { Worldwide::Cldr.t("currencies.EUR.symbol", locale: locale) }
+
+                  assert_includes error.message, path
+                end
+              end
+
+              error = assert_raises(I18n::InvalidLocaleData) { Worldwide::Cldr.t("currencies", locale: :ja) }
+
+              assert_includes error.message, "Tried to load unspecified class: Object"
+              assert_equal ",", Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :de)
+            end
+
+            assert_equal [:de], source.backend.loaded_segments.keys
+            assert_equal "€", Worldwide::Cldr.t("currencies.EUR.symbol", locale: :ja)
+          end
+        end
+      end
+
+      test "lookups inside the block interpolate values as I18n does by default, whatever the host's settings" do
+        patterns = I18n.config.interpolation_patterns + [/\{(\w+)\}/]
+        with_host_interpolation(patterns: patterns, missing_argument_handler: ->(key, _values, _string) { "<#{key}?>" }) do
+          lookup = -> { Worldwide::Cldr.t("lists.default.2", locale: :en, other: 1) }
+
+          assert_equal "<0?> and <1?>", lookup.call
+          assert_equal "{0} and {1}", Worldwide::Cldr.with_bundled_data { lookup.call }
+          assert_raises(I18n::MissingInterpolationArgument) do
+            Worldwide::Cldr.with_bundled_data { Worldwide::Cldr.t("units.unit_length.long.duration_day.one", locale: :en, other: 1) }
+          end
+        end
+      end
+
       test "bundled data cannot be changed through the backend" do
         with_fresh_bundled_data do |source|
           assert_raises(FrozenError) do
@@ -680,6 +882,60 @@ module Worldwide
           end
           Worldwide::Cldr.with_bundled_data do
             assert_equal ",", Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :de)
+          end
+        end
+      end
+
+      test "data returned inside the block cannot be changed, so later lookups are unaffected" do
+        with_fresh_bundled_data do
+          Worldwide::Cldr.with_bundled_data do
+            currencies = Worldwide::Cldr.t(:currencies, locale: :en)
+
+            assert_raises(FrozenError) { currencies[:EUR] = { symbol: "X" } }
+            assert_raises(FrozenError) { currencies[:EUR][:name] << "X" }
+            # Read from a Ruby file.
+            assert_raises(FrozenError) { Worldwide::Cldr.t("i18n.plural.keys", locale: :en) << :many }
+            assert_raises(FrozenError) { Worldwide::Cldr.t(".", locale: :en)[:currencies] = {} }
+            # A String is returned as a copy.
+            Worldwide::Cldr.t("currencies.EUR.symbol", locale: :en) << "X"
+
+            assert_equal "€", Worldwide::Cldr.t("currencies.EUR.symbol", locale: :en)
+            assert_equal "Euro", Worldwide::Cldr.t("currencies.EUR.name", locale: :en)
+            assert_equal "€", Worldwide.currency(code: "EUR").symbol(locale: :en)
+            assert_equal [:one, :other], Worldwide::Cldr.t("i18n.plural.keys", locale: :en)
+            assert_equal :one, Worldwide::Cldr.t("i18n.plural", locale: :en)[:rule].call(1)
+            assert_equal "1 day", Worldwide::Cldr.t("units.unit_length.long.duration_day", locale: :en, count: 1)
+          end
+        end
+      end
+
+      test "everything that the bundled data holds is frozen, apart from plural rules" do
+        with_fresh_bundled_data do |source|
+          with_yaml_files(
+            "de.yml" => { "de" => { "currencies" => { "EUR" => { "symbol" => "OVERLAY-€" } }, "unlisted_segment" => { "a" => ["b"] } } },
+          ) do |paths|
+            Worldwide::Config.add_bundled_data_paths(paths)
+
+            Worldwide::Cldr.with_bundled_data do
+              Worldwide.currency(code: "EUR").format_short(1234.5, locale: :"de-AT")
+              Worldwide::Cldr.t("unlisted_segment.a", locale: :de)
+              Worldwide::Cldr.t("i18n.plural", locale: :en)
+            end
+
+            unfrozen = []
+            walk = lambda do |value, path|
+              case value
+              when Hash then value.each { |key, child| walk.call(child, [*path, key]) }
+              when Array then value.each_with_index { |child, index| walk.call(child, [*path, index]) }
+              end
+              unfrozen << path if (value.is_a?(Hash) || value.is_a?(Array) || value.is_a?(String)) && !value.frozen?
+            end
+            translations = source.backend.translations
+            translations.each { |locale, data| walk.call(data, [locale]) }
+
+            assert_equal [:de, :"de-AT", :en], translations.keys.sort
+            assert_equal true, source.backend.whole_locale_loaded?(:de)
+            assert_empty unfrozen
           end
         end
       end

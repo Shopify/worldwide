@@ -93,16 +93,24 @@ $ Worldwide::Cldr.bundled_data?
 ```
 
 - The block covers lookups made through `Worldwide::Cldr`, which include numbers, currencies, lists, units, dates, plurals and locale names. Address field labels are read through `I18n` directly, so they are not covered.
-- `I18n.enforce_available_locales` still applies. Inside the block, every locale that Worldwide has data for is available.
-- A missing translation falls back through Worldwide's CLDR fallbacks, then to `:en`.
+- `I18n.enforce_available_locales` still applies. Inside the block, every locale that Worldwide has data for is available. The host's current locale does not have to be one of them, but a lookup that uses it is checked.
+- A missing translation falls back through Worldwide's CLDR fallbacks, then to `:en`. For example, a language name that is missing in the requested locale, and has no native name, is read in `:en`, not in the host's default locale.
+- Values are interpolated with I18n's default `%{name}` patterns, and a missing value raises `I18n::MissingInterpolationArgument`, whatever the host's interpolation settings.
+- Hashes and arrays that lookups return are frozen, so a caller cannot change the data that later lookups read.
 - Lookups outside the block, including lookups in other threads and fibers, are unchanged.
-- On Ruby 3.2 and later, threads and fibers started inside the block also read Worldwide's data until the block returns. On Ruby 3.1, they read the host's data.
+- Threads and fibers started inside the block also read Worldwide's data, until the block returns. When blocks are nested, that is when the outermost block returns.
+- A thread or fiber that was created before the block does not read Worldwide's data, even while the block runs. This includes the threads of a pool, and the fiber of an `Enumerator` that was advanced with `next` before the block.
 
 A library that adds data on top of Worldwide's can register YAML files for the block with `Worldwide::Config.add_bundled_data_paths`.
-Each file is named after its locale, such as `ja.yml`, and holds that locale's data under a top-level key of the same name.
+Each file is named after its locale, such as `ja.yml` or `pt-BR.yml`, and holds that locale's data under a top-level key of the same name.
+A file whose name is not a locale identifier, such as `en.rails.yml`, raises `ArgumentError`, and none of the paths given are registered.
 The files apply after Worldwide's data, in the order they were registered, and don't change `I18n.load_path`.
-Only `.yml` files are accepted.
-They are loaded with the same YAML loader as `ruby-i18n`, which can create arbitrary Ruby objects, so only register files that your own code ships.
+A path that is already registered is ignored.
+
+The files are read the first time a lookup needs them.
+They may hold hashes, arrays, strings, numbers, booleans, `nil` and Symbols, with anchors and aliases.
+A file that holds other Ruby objects, or that is not valid YAML, raises `I18n::InvalidLocaleData` with the file's path on every lookup that needs it.
+Only register files that your own code ships.
 
 ```ruby
 Worldwide::Config.add_bundled_data_paths(Dir[File.join(__dir__, "config/locales/cldr/*.yml")])

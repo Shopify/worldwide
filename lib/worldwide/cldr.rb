@@ -75,15 +75,15 @@ module Worldwide
       # host's I18n backend, load path, available locales, default locale and key separator. Lookups outside
       # the block are unchanged. Returns the block's value.
       #
-      # On Ruby 3.2 and later, threads and fibers created inside the block also read bundled data, until
-      # the block returns. On Ruby 3.1, they read the host's data.
+      # Threads and fibers created inside the block also read bundled data, until the block and every
+      # with_bundled_data block that it runs inside have returned.
       def with_bundled_data
         raise ArgumentError, "with_bundled_data requires a block" unless block_given?
 
         @bundled_data_used = true
         storage = bundled_data_storage
         previous_scope = storage.scope
-        scope = BundledDataScope.new
+        scope = BundledDataScope.new(previous_scope)
         storage.scope = scope
         begin
           yield
@@ -127,12 +127,19 @@ module Worldwide
         # used before i18n 1.15, so they must also see the CLDR fallbacks.
         original_thread_fallbacks = Thread.current[:i18n_fallbacks]
         locale = I18n.locale
+        cldr_config = config
 
-        STORAGE.config = config
+        STORAGE.config = cldr_config
         STORAGE.fallbacks = fallbacks
         Thread.current[:i18n_fallbacks] = fallbacks
 
-        I18n.with_locale(locale, &block)
+        if cldr_config.is_a?(BundledConfig)
+          # Bundled data may lack the host's current locale. A lookup that uses it still checks it.
+          cldr_config.unchecked_locale = locale
+          yield
+        else
+          I18n.with_locale(locale, &block)
+        end
       ensure
         STORAGE.config = original_config
         STORAGE.fallbacks = original_fallbacks
