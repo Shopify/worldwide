@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "bigdecimal"
+# Rails loads bigdecimal/util, which gives String and nil a to_d.
+require "bigdecimal/util"
 require "test_helper"
 
 module Worldwide
@@ -823,6 +825,54 @@ module Worldwide
 
         assert_equal expected_short, currency.format_short(amount, locale: locale, **options), message
         assert_equal "#{expected_short} #{code}", currency.format_explicit(amount, locale: locale, **options), message
+      end
+    end
+
+    test "rounding_mode: :up rounds an amount far below the last decimal place away from zero on every formatting path" do
+      usd = Worldwide.currency(code: "USD")
+      jpy = Worldwide.currency(code: "JPY")
+      signs = [["", []], ["-", [[:minus_sign, "-"]]]]
+
+      ["1e-10", "1e-30", "0.0000000000000000000000000000000000000001"].each do |digits|
+        signs.each do |sign, sign_parts|
+          amount = BigDecimal("#{sign}#{digits}")
+          message = amount.inspect
+
+          assert_equal sign_parts + [[:currency, "$"], [:number, "0.01"]],
+            usd.format_to_parts(amount, locale: :en, rounding_mode: :up).map { |part| [part[:type], part[:value]] },
+            message
+          assert_equal "#{sign}$0.01", usd.format_short(amount, locale: :en, rounding_mode: :up), message
+          assert_equal "#{sign}$0.01 USD", usd.format_explicit(amount, locale: :en, rounding_mode: :up), message
+          assert_equal "#{sign}1¢", usd.format_short(amount, locale: :en, as_minor_units: true, rounding_mode: :up), message
+          assert_equal "#{sign}1¢ USD", usd.format_explicit(amount, locale: :en, as_minor_units: true, rounding_mode: :up), message
+          assert_equal "#{sign}0.01", usd.format_short(amount, locale: :en, use_symbol: false, rounding_mode: :up), message
+          assert_equal "#{sign}1円", jpy.format_short(amount, locale: :ja, humanize: :japan, decimal_places: 0, rounding_mode: :up), message
+          assert_equal "#{sign}$0.00", usd.format_short(amount, locale: :en, rounding_mode: :down), message
+        end
+      end
+    end
+
+    test "a nil or String amount with rounding_mode: raises ArgumentError on every formatting path" do
+      usd = Worldwide.currency(code: "USD")
+      paths = [{}, { humanize: :japan }, { as_minor_units: true }, { use_symbol: false }]
+      methods = [:format_short, :format_explicit]
+
+      assert_respond_to nil, :to_d
+      [[nil, "nil"], ["12.5", "String"]].each do |amount, kind|
+        message = "rounding_mode: is not supported with a #{kind} amount"
+
+        paths.each do |path|
+          methods.each do |method|
+            error = assert_raises(ArgumentError, "#{method} #{amount.inspect} #{path.inspect}") do
+              usd.public_send(method, amount, locale: :en, rounding_mode: :half_even, **path)
+            end
+
+            assert_includes error.message, message
+          end
+        end
+        error = assert_raises(ArgumentError, amount.inspect) { usd.format_to_parts(amount, locale: :en, rounding_mode: :up) }
+
+        assert_includes error.message, message
       end
     end
 
