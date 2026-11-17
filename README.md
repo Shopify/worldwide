@@ -916,11 +916,11 @@ $ Worldwide::Numbers.new(locale: :en).format(-0.004, decimal_places: 2)
 $ Worldwide::Numbers.new(locale: :en).format(-0.004, decimal_places: 2, sign_display: :negative)
 ==> "0.00"
 $ Worldwide::Numbers.new(locale: :pl).format(1234.5, decimal_places: 2)
-==> "1 234,50"
+==> "1\u00A0234,50"
 $ Worldwide::Numbers.new(locale: :pl).format(1234.5, decimal_places: 2, grouping: :auto)
 ==> "1234,50"
 $ Worldwide::Numbers.new(locale: :pl).format(12345.5, decimal_places: 2, grouping: :auto)
-==> "12 345,50"
+==> "12\u00A0345,50"
 ```
 
 Note: If you want to display a discount off a price (e.g. "Now 20% off"), then a percentage may not be
