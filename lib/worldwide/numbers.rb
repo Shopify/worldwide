@@ -52,7 +52,10 @@ module Worldwide
     # rounds to zero. :negative drops the minus sign when every displayed digit is zero.
     # sign_display: :negative is not supported with relative: true, which always shows a sign.
     def format(amount, decimal_places: nil, humanize: nil, percent: false, relative: false, rounding_mode: nil, sign_display: :auto)
-      validate_options(humanize: humanize, relative: relative, rounding_mode: rounding_mode, sign_display: sign_display)
+      # The defaults are valid with every other option.
+      unless rounding_mode.nil? && sign_display == :auto
+        validate_options(humanize: humanize, relative: relative, rounding_mode: rounding_mode, sign_display: sign_display)
+      end
 
       number = if percent
         percentage_amount(amount, rounding_mode)
@@ -112,8 +115,11 @@ module Worldwide
     end
 
     def format_default(number, decimal_places:, humanize:, rounding_mode: nil, sign_display: :auto)
-      exact_places = exact_decimal_places(decimal_places)
-      exact_amount = exact_amount(number, exact_places, rounding_mode)
+      # Without rounding_mode:, a Float or an Integer keeps the "%f" formatting, so the usual amounts skip these checks.
+      unless rounding_mode.nil? && (number.is_a?(Float) || number.is_a?(Integer))
+        exact_places = exact_decimal_places(decimal_places)
+        exact_amount = exact_amount(number, exact_places, rounding_mode)
+      end
 
       # Format the number with no grouping and with a '.' decimal point
       result = if exact_amount.nil?
