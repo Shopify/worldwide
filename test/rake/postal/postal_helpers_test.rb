@@ -126,4 +126,16 @@ class PostalHelpersTest < ActiveSupport::TestCase
   ensure
     FileUtils.rm_f(path) if path
   end
+
+  test "#write_yaml replaces zip_prefixes that are indented by four spaces, as in ES.yml" do
+    path = write_yaml("ES", zones: { C: ["15", "27"] }, only_show_diff: true)
+
+    yaml = YAML.safe_load_file(path)
+
+    assert_equal(["15", "27"], yaml["zones"].find { |zone| zone["code"] == "C" }["zip_prefixes"])
+    assert_includes(File.read(path), "  zip_prefixes:\n    - '15'\n    - '27'\n")
+    assert_equal(YAML.safe_load_file(File.join(Worldwide::Paths::REGIONS_ROOT, "ES.yml")).except("zones"), yaml.except("zones"))
+  ensure
+    FileUtils.rm_f(path) if path
+  end
 end

@@ -12,7 +12,8 @@ module PostalHelpers
 
   ZONES_KEY_LINE = "zones:\n"
   ZIP_PREFIXES_LINE = /\A {2}zip_prefixes:\s*(\[\])?\s*\z/
-  PREFIX_BLOCK_LINE = /\A( {2}- |\s*#)/
+  PREFIX_BLOCK_LINE = /\A( {2,}- |\s*#)/
+  PREFIX_ITEM_INDENT = /\A( {2,})- /
   COMMENT_LINE = /\A\s*#/
   CROSSING_KEY_LINE = /\Azips_crossing_provinces:/
 
@@ -136,21 +137,30 @@ module PostalHelpers
     end
   end
 
+  # The items keep the indentation that the file already uses under the key. Region files indent them
+  # by two spaces, except for ES.yml, which uses four.
   def with_zip_prefixes(zone_lines, prefixes)
-    block = yaml_block("zip_prefixes", prefixes).map { |line| "  #{line}" }
     key_index = zone_lines.index { |line| line.match?(ZIP_PREFIXES_LINE) }
 
     if key_index.nil?
       zone_lines = zone_lines.dup
       zone_lines[-1] = "#{zone_lines.last.chomp}\n"
-      return zone_lines + block
+      return zone_lines + zip_prefixes_block(prefixes, "  ")
     end
 
     stop = key_index + 1
     stop += 1 while stop < zone_lines.size && zone_lines[stop].match?(PREFIX_BLOCK_LINE)
     stop -= 1 while stop > key_index + 1 && zone_lines[stop - 1].match?(COMMENT_LINE)
 
-    zone_lines[0...key_index] + block + zone_lines[stop..]
+    item_indent = zone_lines[key_index...stop].filter_map { |line| line[PREFIX_ITEM_INDENT, 1] }.first || "  "
+
+    zone_lines[0...key_index] + zip_prefixes_block(prefixes, item_indent) + zone_lines[stop..]
+  end
+
+  def zip_prefixes_block(prefixes, item_indent)
+    yaml_block("zip_prefixes", prefixes).each_with_index.map do |line, index|
+      index.zero? ? "  #{line}" : "#{item_indent}#{line}"
+    end
   end
 
   def replace_zips_crossing_provinces(lines, codes_crossing_zones)
