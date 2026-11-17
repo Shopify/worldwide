@@ -57,9 +57,12 @@ module Worldwide
 
     STORAGE = I18n::Config.method_defined?(:owned_by?) ? FiberStorage : ThreadStorage
 
-    # Set by the first with_bundled_data block, so that a process that never enters one
-    # skips the scope lookup in bundled_data?.
-    @bundled_data_used = false
+    # The number of with_bundled_data blocks running in the process. While it is zero, no scope is active,
+    # so bundled_data? skips reading the scope. It only shortens that check: each fiber reads its own scope,
+    # so the count and the scope never need to be read together. A block that never returns, such as one in
+    # a fiber that is never resumed, keeps it above zero, which only makes bundled_data? read the scope.
+    @running_blocks = 0
+    @running_blocks_mutex = Mutex.new
 
     class << self
       def fallbacks
@@ -80,22 +83,24 @@ module Worldwide
       def with_bundled_data
         raise ArgumentError, "with_bundled_data requires a block" unless block_given?
 
-        @bundled_data_used = true
         storage = bundled_data_storage
         previous_scope = storage.scope
         scope = BundledDataScope.new(previous_scope)
-        storage.scope = scope
+        @running_blocks_mutex.synchronize { @running_blocks += 1 }
         begin
+          storage.scope = scope
           yield
         ensure
           scope.close
           storage.scope = previous_scope
+          @running_blocks_mutex.synchronize { @running_blocks -= 1 }
         end
       end
 
       # Whether Worldwide::Cldr lookups in the current fiber read bundled data.
       def bundled_data?
-        return false unless @bundled_data_used
+        # A fiber inside a block has counted that block, so it never reads zero here, whatever other fibers do.
+        return false if @running_blocks == 0
 
         scope = bundled_data_storage.scope
         !scope.nil? && scope.active?

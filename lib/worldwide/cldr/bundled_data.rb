@@ -43,6 +43,13 @@ module Worldwide
         def instance
           @instance || @instance_mutex.synchronize { @instance ||= new }
         end
+
+        # The version of the bundled data that lookups in the current fiber read, or nil when they read the
+        # host's data. It changes when files are registered, so a value memoized from bundled lookups can be
+        # kept with the version it was read under.
+        def current_version
+          instance.backend.version if Worldwide::Cldr.bundled_data?
+        end
       end
 
       # The files registered with Worldwide::Config.add_bundled_data_paths, in the order they apply.

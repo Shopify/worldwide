@@ -602,6 +602,11 @@ module Worldwide
 
           assert_equal false, Worldwide::Cldr.bundled_data?, name
         end
+
+        # No block is running, so the old path does not read the scope.
+        Worldwide::Cldr.expects(:bundled_data_storage).never
+
+        assert_equal false, Worldwide::Cldr.bundled_data?
       end
 
       test "the scope is kept in fiber storage when Ruby has it, and in fiber-local variables otherwise" do

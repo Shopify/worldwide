@@ -60,6 +60,19 @@ module Worldwide
     # rounds to zero. :negative drops the minus sign when every displayed digit is zero.
     # sign_display: :negative is not supported with relative: true, which always shows a sign.
     def format(amount, decimal_places: nil, humanize: nil, percent: false, relative: false, rounding_mode: nil, grouping: :always, sign_display: :auto)
+      if @bundled_data_version.nil? && Worldwide::Cldr.bundled_data?
+        return bundled_data_twin.format(
+          amount,
+          decimal_places: decimal_places,
+          humanize: humanize,
+          percent: percent,
+          relative: relative,
+          rounding_mode: rounding_mode,
+          grouping: grouping,
+          sign_display: sign_display,
+        )
+      end
+
       # The defaults are valid with every other option.
       unless rounding_mode.nil? && grouping == :always && sign_display == :auto
         validate_options(humanize: humanize, relative: relative, rounding_mode: rounding_mode, grouping: grouping, sign_display: sign_display)
@@ -89,15 +102,39 @@ module Worldwide
       result
     end
 
+    protected
+
+    # Set on the instance that serves the calls made inside Worldwide::Cldr.with_bundled_data,
+    # to the version of the bundled data that its memoized values come from.
+    attr_accessor :bundled_data_version
+
     private
 
     attr_reader :locale
 
-    # Memoizes a value read from CLDR data. Lookups inside Worldwide::Cldr.with_bundled_data read
-    # different data from lookups outside it, so each keeps its own values.
-    def memoize(name)
-      memo = Worldwide::Cldr.bundled_data? ? (@bundled_data_memo ||= {}) : (@memo ||= {})
-      memo.fetch(name) { memo[name] = yield }
+    # Lookups inside Worldwide::Cldr.with_bundled_data read different data from lookups outside it, so an
+    # instance hands the calls made inside the block to a second instance, whose memoized values all come
+    # from bundled data. It is replaced when files are registered, as its values may then be out of date.
+    # Shared values are read into locals once, so threads that share the instance cannot mix up their data.
+    # Two threads may each build a second instance at the same time, and either one is correct.
+    # If the caller's block has just returned, the version is nil, and the call reads the host's data instead.
+    def bundled_data_twin
+      version = Worldwide::Cldr::BundledData.current_version
+      return self if version.nil?
+
+      twin = @bundled_data_twin
+      return twin if !twin.nil? && twin.bundled_data_version.equal?(version)
+
+      twin = Numbers.new(locale: @locale)
+      twin.bundled_data_version = version
+      @bundled_data_twin = twin
+    end
+
+    # Reads a value to memoize. The instance that serves calls inside Worldwide::Cldr.with_bundled_data reads
+    # it inside a block of its own, so the value comes from bundled data even if the block that the caller
+    # runs in returns meanwhile, which can happen in a thread created inside the block.
+    def read_cldr(&block)
+      @bundled_data_version.nil? ? yield : Worldwide::Cldr.with_bundled_data(&block)
     end
 
     def validate_options(humanize:, relative:, rounding_mode:, grouping:, sign_display:)
@@ -141,6 +178,17 @@ module Worldwide
     # Formats amount as format does without humanize:, percent: or relative:, but returns the minus sign apart
     # from the localized digits, as [negative, digits]. Currency#format_to_parts uses it to place the sign itself.
     def sign_and_digits(amount, decimal_places:, rounding_mode:, grouping:, sign_display:)
+      if @bundled_data_version.nil? && Worldwide::Cldr.bundled_data?
+        return bundled_data_twin.send(
+          :sign_and_digits,
+          amount,
+          decimal_places: decimal_places,
+          rounding_mode: rounding_mode,
+          grouping: grouping,
+          sign_display: sign_display,
+        )
+      end
+
       validate_options(humanize: nil, relative: false, rounding_mode: rounding_mode, grouping: grouping, sign_display: sign_display)
 
       digits = plain_digits(amount, decimal_places: decimal_places, rounding_mode: rounding_mode, sign_display: sign_display)
@@ -276,17 +324,17 @@ module Worldwide
     end
 
     def decimal_marker
-      memoize(:decimal_marker) { Worldwide::Cldr.t("numbers.latn.symbols.decimal", default: ".", locale: @locale) }
+      @decimal_marker ||= read_cldr { Worldwide::Cldr.t("numbers.latn.symbols.decimal", default: ".", locale: @locale) }
     end
 
     def group_marker
-      memoize(:group_marker) { Worldwide::Cldr.t("numbers.latn.symbols.group", default: ",", locale: @locale) }
+      @group_marker ||= read_cldr { Worldwide::Cldr.t("numbers.latn.symbols.group", default: ",", locale: @locale) }
     end
 
     # The fewest integer digits that grouping: :auto groups, beyond the primary group size.
     # CLDR defines it for some locales; the others inherit it through the CLDR fallbacks.
     def minimum_grouping_digits
-      memoize(:minimum_grouping_digits) { Worldwide::Cldr.t("numbers.minimum_grouping_digits", default: 1, locale: @locale) }
+      @minimum_grouping_digits ||= read_cldr { Worldwide::Cldr.t("numbers.minimum_grouping_digits", default: 1, locale: @locale) }
     end
 
     # Returns an array of digit grouping sizes (for splitting large numbers, e.g., into thousands)
@@ -302,7 +350,7 @@ module Worldwide
     # The returned value will be [3, 2] for those locales.
     #
     def group_positions
-      memoize(:group_positions) do
+      @group_positions ||= read_cldr do
         # default
         pattern = "#,##0.00"
         pattern = Worldwide::Cldr.t("#{COMPACT_DECIMAL_BASE_KEY}.default.standard", default: pattern, locale: locale)
@@ -571,7 +619,7 @@ module Worldwide
 
     def percent_sign
       # Strip U+200E and U+200F (left-to-right mark and right-to-left mark)
-      memoize(:percent_sign) do
+      @percent_sign ||= read_cldr do
         Worldwide::Cldr.t("numbers.latn.symbols.percent_sign", default: "%", locale: locale).delete("\u200e").delete("\u200f")
       end
     end

@@ -307,5 +307,30 @@ module Worldwide
         assert_equal "Low German", Worldwide::Cldr.with_bundled_data { Worldwide::Locale.new("nds").name(locale: :nds, throw: false) }
       end
     end
+
+    test "names cached inside with_bundled_data are read again after files are registered" do
+      files = {
+        "de.yml" => { "de" => { "languages" => { "fr" => "OVERLAY-Französisch" } } },
+        "fr.yml" => { "fr" => { "languages" => { "fr" => "OVERLAY-français" } } },
+      }
+
+      with_fresh_bundled_data do
+        with_yaml_files(files) do |paths|
+          french = Worldwide::Locale.new("fr")
+
+          Worldwide::Cldr.with_bundled_data do
+            assert_equal "Französisch", french.name(locale: :de)
+            assert_equal "français", french.endonym
+
+            Worldwide::Config.add_bundled_data_paths(paths)
+
+            assert_equal "OVERLAY-Französisch", french.name(locale: :de)
+            assert_equal "OVERLAY-français", french.endonym
+          end
+
+          assert_equal "Französisch", french.name(locale: :de)
+        end
+      end
+    end
   end
 end
