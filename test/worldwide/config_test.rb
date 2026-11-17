@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class ConfigTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test ".expanded_locales_from_configuration when passing in nil" do
       locales = Worldwide::Config.send(:expanded_locales_from_configuration, Worldwide::RubyI18nConfig.new)
 
@@ -150,6 +153,42 @@ module Worldwide
       assert_instance_of(Worldwide::I18nExceptionHandler, config.exception_handler)
     ensure
       I18n.exception_handler = original_exception_handler
+    end
+
+    test ".add_bundled_data_paths registers YAML files without changing the host's I18n configuration" do
+      with_fresh_bundled_data do |source|
+        with_yaml_files("ja.yml" => { "ja" => { "currencies" => { "JEP" => { "symbol" => "ポンド" } } } }) do |paths, directory|
+          load_path = I18n.load_path.dup
+          relative_path = File.join(Pathname(directory).relative_path_from(Pathname(Dir.pwd)), "ja.yml")
+
+          Worldwide::Config.add_bundled_data_paths(relative_path)
+
+          assert_equal paths, source.paths
+          assert_equal load_path, I18n.load_path
+          assert_equal false, source.built?
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths rejects files that are not .yml, and registers none of the paths given" do
+      with_fresh_bundled_data do |source|
+        with_yaml_files("ja.yml" => { "ja" => {} }, "ja.rb" => { "ja" => {} }, "ja.yaml" => { "ja" => {} }, "ja.json" => { "ja" => {} }) do |paths|
+          [paths[1], paths[2], paths[3], [paths[0], paths[1]]].each do |invalid|
+            error = assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths(invalid) }
+
+            assert_includes error.message, ".yml"
+          end
+
+          assert_empty source.paths
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths rejects files that do not exist" do
+      with_fresh_bundled_data do |source|
+        assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths(["/nonexistent/ja.yml"]) }
+        assert_empty source.paths
+      end
     end
 
     test "paths have been precomputed with rake cldr:data:generate_paths" do

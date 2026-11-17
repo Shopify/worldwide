@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class LocaleTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test "name returns a translated name in each supported locale for French" do
       Worldwide.locales.each do |locale|
         I18n.with_locale(locale.to_sym) do
@@ -268,6 +271,19 @@ module Worldwide
 
           refute_includes name, "nternational"
         end
+      end
+    end
+
+    test "names cached inside with_bundled_data are not returned outside it, and the other way round" do
+      with_host_overrides do
+        french = Worldwide::Locale.new("fr")
+
+        assert_equal "HOST French", french.name(locale: :en)
+        assert_equal "HOST français", french.endonym
+        assert_equal "French", Worldwide::Cldr.with_bundled_data { french.name(locale: :en) }
+        assert_equal "français", Worldwide::Cldr.with_bundled_data { french.endonym }
+        assert_equal "HOST French", french.name(locale: :en)
+        assert_equal "HOST français", french.endonym
       end
     end
   end

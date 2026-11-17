@@ -93,6 +93,13 @@ module Worldwide
 
     attr_reader :locale
 
+    # Memoizes a value read from CLDR data. Lookups inside Worldwide::Cldr.with_bundled_data read
+    # different data from lookups outside it, so each keeps its own values.
+    def memoize(name)
+      memo = Worldwide::Cldr.bundled_data? ? (@bundled_data_memo ||= {}) : (@memo ||= {})
+      memo.fetch(name) { memo[name] = yield }
+    end
+
     def validate_options(humanize:, relative:, rounding_mode:, grouping:, sign_display:)
       unless rounding_mode.nil? || ROUNDING_MODES.include?(rounding_mode)
         raise ArgumentError, "Unsupported value for rounding_mode: #{rounding_mode.inspect}"
@@ -269,17 +276,17 @@ module Worldwide
     end
 
     def decimal_marker
-      @decimal_marker ||= Worldwide::Cldr.t("numbers.latn.symbols.decimal", default: ".", locale: @locale)
+      memoize(:decimal_marker) { Worldwide::Cldr.t("numbers.latn.symbols.decimal", default: ".", locale: @locale) }
     end
 
     def group_marker
-      @group_marker ||= Worldwide::Cldr.t("numbers.latn.symbols.group", default: ",", locale: @locale)
+      memoize(:group_marker) { Worldwide::Cldr.t("numbers.latn.symbols.group", default: ",", locale: @locale) }
     end
 
     # The fewest integer digits that grouping: :auto groups, beyond the primary group size.
     # CLDR defines it for some locales; the others inherit it through the CLDR fallbacks.
     def minimum_grouping_digits
-      @minimum_grouping_digits ||= Worldwide::Cldr.t("numbers.minimum_grouping_digits", default: 1, locale: @locale)
+      memoize(:minimum_grouping_digits) { Worldwide::Cldr.t("numbers.minimum_grouping_digits", default: 1, locale: @locale) }
     end
 
     # Returns an array of digit grouping sizes (for splitting large numbers, e.g., into thousands)
@@ -295,7 +302,7 @@ module Worldwide
     # The returned value will be [3, 2] for those locales.
     #
     def group_positions
-      @group_positions ||= begin
+      memoize(:group_positions) do
         # default
         pattern = "#,##0.00"
         pattern = Worldwide::Cldr.t("#{COMPACT_DECIMAL_BASE_KEY}.default.standard", default: pattern, locale: locale)
@@ -564,7 +571,9 @@ module Worldwide
 
     def percent_sign
       # Strip U+200E and U+200F (left-to-right mark and right-to-left mark)
-      @percent_sign ||= Worldwide::Cldr.t("numbers.latn.symbols.percent_sign", default: "%", locale: locale).delete("\u200e").delete("\u200f")
+      memoize(:percent_sign) do
+        Worldwide::Cldr.t("numbers.latn.symbols.percent_sign", default: "%", locale: locale).delete("\u200e").delete("\u200f")
+      end
     end
 
     # Returns true if the current locale uses a trailing percent sign (e.g., "50%") in
