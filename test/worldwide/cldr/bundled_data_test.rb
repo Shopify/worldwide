@@ -537,10 +537,11 @@ module Worldwide
           ].inspect
         RUBY
 
-        output, status = Open3.capture2e(RbConfig.ruby, "-I", File.expand_path("../../../lib", __dir__), "-e", script)
+        # Only stdout carries the result, so that a warning on stderr, such as one from the gemspec, can't fail the test.
+        output, errors, status = Open3.capture3(RbConfig.ruby, "-I", File.expand_path("../../../lib", __dir__), "-e", script)
 
-        assert_predicate status, :success?, output
-        assert_equal "[false, 0, 0]", output
+        assert_predicate status, :success?, "stdout: #{output}\nstderr: #{errors}"
+        assert_equal "[false, 0, 0]", output, "stderr: #{errors}"
       end
 
       test "files registered with add_bundled_data_paths apply after Worldwide's data, inside the block only" do
