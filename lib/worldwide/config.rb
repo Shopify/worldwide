@@ -62,7 +62,8 @@ module Worldwide
       # keys are ignored. A file whose name is not a well-formed locale identifier, such as "en.rails.yml",
       # or that spells one of Worldwide's locales in another case, such as "pt-br.yml", raises ArgumentError,
       # and none of the paths given are registered then. A name that matches none of Worldwide's locales is kept
-      # as spelled, so only lookups in exactly that locale read the file.
+      # as spelled, so a lookup reads the file only when its locale, or one of that locale's fallbacks, is spelled
+      # the same way.
       #
       # The files apply after Worldwide's own data, and files registered later apply after files registered
       # earlier. A path that is already registered is ignored. Registering does not change I18n.load_path
@@ -82,8 +83,9 @@ module Worldwide
           raise ArgumentError, "Bundled data files must be named after a locale, such as ja.yml: #{not_locales.join(", ")}"
         end
 
-        # Lookups ask for Worldwide's locales only as Worldwide spells them, so a file named after one in another
-        # case would never be read. The names come from the gem's directory of locales; no data file is read.
+        # Worldwide's own lookups and available locales use Worldwide's spelling, so they would not read a file named
+        # after one of its locales in another case. The names come from the gem's directory of locales; no data file
+        # is read.
         spellings = (Worldwide::Locales.known + [:root]).to_h { |locale| [locale.to_s.downcase, locale.to_s] }
         miscased = paths.filter_map do |path|
           name = File.basename(path, ".yml")
