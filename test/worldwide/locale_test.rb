@@ -287,6 +287,27 @@ module Worldwide
       end
     end
 
+    test "names cached for bundled data are read from bundled data even if the block returns during the call" do
+      with_host_overrides do
+        french = Worldwide::Locale.new("fr")
+        version = Worldwide::Cldr.with_bundled_data { Worldwide::Cldr::BundledData.current_version }
+
+        # A thread created inside the block can read the version while the block runs, and make the lookups that
+        # fill the cache after the block has returned. The stub gives the calls below the version of that block.
+        Worldwide::Cldr::BundledData.stubs(:current_version).returns(version)
+
+        assert_equal "français", french.name(locale: :fr)
+        assert_equal "français", french.endonym
+
+        Worldwide::Cldr::BundledData.unstub(:current_version)
+
+        assert_equal "français", Worldwide::Cldr.with_bundled_data { french.name(locale: :fr) }
+        assert_equal "français", Worldwide::Cldr.with_bundled_data { french.endonym }
+        assert_equal "HOST français", french.name(locale: :fr)
+        assert_equal "HOST français", french.endonym
+      end
+    end
+
     test "names inside with_bundled_data can use a locale that the host does not make available" do
       with_host_i18n(available_locales: [:en, :de, :fr], enforce_available_locales: true) do
         assert_raises(I18n::InvalidLocale) { Worldwide::Locale.new("fr").name(locale: :ja) }

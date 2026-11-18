@@ -281,6 +281,63 @@ module Worldwide
         end
       end
 
+      test "names, punctuation and with_locale inside the block work when the host's current locale is one that bundled data lacks" do
+        french = Worldwide::Locale.new("fr")
+        japanese = Worldwide::Locale.new("ja")
+        decimal = -> { Worldwide::Cldr.t("numbers.latn.symbols.decimal") }
+
+        [true, false].each do |enforce|
+          with_host_i18n(available_locales: I18n.available_locales + [:"en-XX"], enforce_available_locales: enforce) do
+            I18n.with_locale(:"en-XX") do
+              assert_equal ",", Worldwide::Cldr.with_locale(:de) { decimal.call }
+
+              Worldwide::Cldr.with_bundled_data do
+                assert_equal "Französisch", french.name(locale: :de)
+                assert_equal "日本語", japanese.endonym
+                assert_equal "x。", Worldwide::Punctuation.end_sentence("x", locale: :ja)
+                assert_equal "a。b。", Worldwide::Punctuation.to_paragraph(["a", "b"], locale: :ja)
+                assert_equal ",", Worldwide::Cldr.with_locale(:de) { decimal.call }
+                assert_equal(
+                  [:de, ",", [:ja, "."], :de, ","],
+                  Worldwide::Cldr.with_locale(:de) do
+                    [I18n.locale, decimal.call, Worldwide::Cldr.with_locale(:ja) { [I18n.locale, decimal.call] }, I18n.locale, decimal.call]
+                  end,
+                )
+                assert_raises(RuntimeError) { Worldwide::Cldr.with_locale(:de) { raise "boom" } }
+                assert_equal :"en-XX", I18n.locale
+
+                if enforce
+                  # A locale that is asked for, or that a lookup uses because it is given none, is still checked.
+                  assert_raises(I18n::InvalidLocale) { Worldwide::Cldr.with_locale(:"en-XX") { decimal.call } }
+                  assert_raises(I18n::InvalidLocale) { Worldwide::Cldr.with_locale(:zz) { decimal.call } }
+                  assert_equal(
+                    [:de, ","],
+                    Worldwide::Cldr.with_locale(:de) do
+                      assert_raises(I18n::InvalidLocale) { Worldwide::Cldr.with_locale(:zz) {} }
+                      [I18n.locale, decimal.call]
+                    end,
+                  )
+                  assert_raises(I18n::InvalidLocale) { Worldwide::Cldr.with_locale(nil) { decimal.call } }
+                  assert_raises(I18n::InvalidLocale) { french.name(locale: :"en-XX") }
+                  assert_raises(I18n::InvalidLocale) { french.name }
+                  assert_raises(I18n::InvalidLocale) { Worldwide::Punctuation.end_sentence("x", locale: :"en-XX") }
+                  assert_raises(I18n::InvalidLocale) { Worldwide::Punctuation.to_paragraph(["a", "b"]) }
+                else
+                  assert_equal ".", Worldwide::Cldr.with_locale(:"en-XX") { decimal.call }
+                  assert_equal ".", Worldwide::Cldr.with_locale(nil) { decimal.call }
+                  assert_equal "French", french.name
+                  assert_equal "a. b.", Worldwide::Punctuation.to_paragraph(["a", "b"])
+                end
+
+                assert_equal :"en-XX", I18n.locale
+              end
+
+              assert_equal :"en-XX", I18n.locale
+            end
+          end
+        end
+      end
+
       test "a lookup loads only the data for the locales and first key segments it needs" do
         with_fresh_bundled_data do |source|
           Worldwide::Cldr.with_bundled_data { Worldwide.currency(code: "EUR").format_short(1234.5, locale: :"de-AT") }
@@ -496,8 +553,11 @@ module Worldwide
             end
             started.pop
           end
-          block_returned << true
-          thread.join
+          # A block still running elsewhere makes the thread read its own scope, which its block closed.
+          with_block_running_elsewhere do
+            block_returned << true
+            thread.join
+          end
         end
 
         # Ruby 3.2 and later copy fiber storage into a new thread, so the thread starts in bundled mode.
@@ -518,7 +578,7 @@ module Worldwide
             assert_equal Fiber.respond_to?(:[]) ? "," : "HOST-DECIMAL", fiber.resume
           end
 
-          assert_equal "HOST-DECIMAL", fiber.resume
+          with_block_running_elsewhere { assert_equal "HOST-DECIMAL", fiber.resume }
         end
       end
 
@@ -547,9 +607,11 @@ module Worldwide
             assert_equal [true, ","], results.pop
           end
 
-          step << :outer_block_returned
+          with_block_running_elsewhere do
+            step << :outer_block_returned
 
-          assert_equal [false, "HOST-DECIMAL"], results.pop
+            assert_equal [false, "HOST-DECIMAL"], results.pop
+          end
           thread.join
         end
       end
@@ -572,9 +634,11 @@ module Worldwide
             end
             opened.pop
           end
-          parent_returned << true
+          with_block_running_elsewhere do
+            parent_returned << true
 
-          assert_equal [[true, ","], [false, "HOST-DECIMAL"]], thread.value
+            assert_equal [[true, ","], [false, "HOST-DECIMAL"]], thread.value
+          end
         end
       end
 
