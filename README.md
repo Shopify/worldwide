@@ -106,7 +106,7 @@ A library that adds data on top of Worldwide's can register YAML files for the b
 Each file is named after its locale, such as `ja.yml` or `pt-BR.yml`, and holds that locale's data under a top-level key of the same name.
 A file whose name is not a locale identifier, such as `en.rails.yml`, raises `ArgumentError`, and none of the paths given are registered.
 So does a file that spells one of Worldwide's locales in another case, such as `pt-br.yml`: the error names the file to use, `pt-BR.yml`.
-A name that matches none of Worldwide's locales is kept as spelled, so only lookups in exactly that locale read the file.
+A name that matches none of Worldwide's locales is kept as spelled, so a lookup reads the file only when its locale, or one of that locale's fallbacks, is spelled the same way.
 The files apply after Worldwide's data, in the order they were registered, and don't change `I18n.load_path`.
 A path that is already registered is ignored.
 Lookups made after a registration read the new files.

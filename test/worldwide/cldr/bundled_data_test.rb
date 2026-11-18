@@ -282,14 +282,18 @@ module Worldwide
       end
 
       test "names, punctuation and with_locale inside the block work when the host's current locale is one that bundled data lacks" do
-        french = Worldwide::Locale.new("fr")
-        japanese = Worldwide::Locale.new("ja")
         decimal = -> { Worldwide::Cldr.t("numbers.latn.symbols.decimal") }
 
         [true, false].each do |enforce|
+          # New instances for each pass, so that each pass looks the names up.
+          french = Worldwide::Locale.new("fr")
+          japanese = Worldwide::Locale.new("ja")
+
           with_host_i18n(available_locales: I18n.available_locales + [:"en-XX"], enforce_available_locales: enforce) do
             I18n.with_locale(:"en-XX") do
               assert_equal ",", Worldwide::Cldr.with_locale(:de) { decimal.call }
+              # Outside the block, the block given to with_locale runs with Worldwide's configuration and fallbacks.
+              assert_equal [:"de-AT", :de, :root], Worldwide::Cldr.with_locale(:de) { I18n.fallbacks[:"de-AT"] }
 
               Worldwide::Cldr.with_bundled_data do
                 assert_equal "Französisch", french.name(locale: :de)
@@ -335,6 +339,34 @@ module Worldwide
               assert_equal :"en-XX", I18n.locale
             end
           end
+        end
+      end
+
+      test "zone(name:) inside the block compares English names when the host does not make :en available" do
+        italy = Worldwide.region(code: "IT")
+        # This also loads the host's data before its available locales are narrowed, which would leave the others out.
+        assert_equal "IT-FI", italy.zone(name: "Florence").iso_code
+
+        with_host_i18n(available_locales: [:fr, :de], enforce_available_locales: true, default_locale: :fr) do
+          I18n.locale = :fr
+
+          # Outside the block, zone(name:) switches the host's locale to :en, which the host does not make available.
+          assert_raises(I18n::InvalidLocale) { italy.zone(name: "Florence") }
+
+          # "Florence" is only the English name, so the zone is found by comparing English names.
+          assert_equal(
+            ["IT-FI", "IT-RM"],
+            Worldwide::Cldr.with_bundled_data { [italy.zone(name: "Florence").iso_code, italy.zone(name: "Roma").iso_code] },
+          )
+          assert_equal :fr, I18n.locale
+        end
+      end
+
+      test "with_host_i18n restores the host's current locale" do
+        I18n.with_locale(:de) do
+          with_host_i18n(available_locales: [:fr, :ja], enforce_available_locales: true, default_locale: :fr) { I18n.locale = :ja }
+
+          assert_equal :de, I18n.locale
         end
       end
 

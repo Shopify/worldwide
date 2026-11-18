@@ -480,7 +480,7 @@ module Worldwide
           search_name == region.legacy_name&.upcase ||
             region.name_alternates&.any? { |a| search_name == a.upcase } ||
             search_name == region.full_name&.upcase ||
-            search_name == I18n.with_locale(:en) { region.full_name&.upcase }
+            search_name == with_locale(:en) { region.full_name&.upcase }
         end
       else # Worldwide::Util.present?(zip)
         zone_by_normalized_zip(
@@ -570,6 +570,16 @@ module Worldwide
     end
 
     private
+
+    # Runs the block with locale as the current locale. Inside Worldwide::Cldr.with_bundled_data, the locale
+    # is checked against the locales that bundled data has, not against the host's.
+    def with_locale(locale, &block)
+      if Worldwide::Cldr.bundled_data?
+        Worldwide::Cldr.with_locale(locale, &block)
+      else
+        I18n.with_locale(locale, &block)
+      end
+    end
 
     def add_zone_to_hash(zone)
       @zones_by_code[subdivision_code(zone.iso_code)] = zone if Util.present?(subdivision_code(zone.iso_code))
