@@ -170,6 +170,24 @@ module Worldwide
       end
     end
 
+    test ".add_bundled_data_paths returns nil before and after the first lookup, and for a path already registered" do
+      with_fresh_bundled_data do |source|
+        with_yaml_files("ja.yml" => { "ja" => {} }, "de.yml" => { "de" => {} }) do |paths|
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths[0])
+          assert_equal false, source.built?
+
+          Worldwide::Cldr.with_bundled_data { Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :ja) }
+
+          assert_equal true, source.built?
+
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths[1])
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths[1])
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths)
+          assert_equal paths, source.paths
+        end
+      end
+    end
+
     test ".add_bundled_data_paths rejects files that are not .yml, and registers none of the paths given" do
       with_fresh_bundled_data do |source|
         with_yaml_files("ja.yml" => { "ja" => {} }, "ja.rb" => { "ja" => {} }, "ja.yaml" => { "ja" => {} }, "ja.json" => { "ja" => {} }) do |paths|
