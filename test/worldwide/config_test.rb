@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class ConfigTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test ".expanded_locales_from_configuration when passing in nil" do
       locales = Worldwide::Config.send(:expanded_locales_from_configuration, Worldwide::RubyI18nConfig.new)
 
@@ -150,6 +153,125 @@ module Worldwide
       assert_instance_of(Worldwide::I18nExceptionHandler, config.exception_handler)
     ensure
       I18n.exception_handler = original_exception_handler
+    end
+
+    test ".add_bundled_data_paths registers YAML files without changing the host's I18n configuration" do
+      with_fresh_bundled_data do |source|
+        with_yaml_files("ja.yml" => { "ja" => { "currencies" => { "JEP" => { "symbol" => "ポンド" } } } }) do |paths, directory|
+          load_path = I18n.load_path.dup
+          relative_path = File.join(Pathname(directory).relative_path_from(Pathname(Dir.pwd)), "ja.yml")
+
+          Worldwide::Config.add_bundled_data_paths(relative_path)
+
+          assert_equal paths, source.paths
+          assert_equal load_path, I18n.load_path
+          assert_equal false, source.built?
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths returns nil before and after the first lookup, and for a path already registered" do
+      with_fresh_bundled_data do |source|
+        with_yaml_files("ja.yml" => { "ja" => {} }, "de.yml" => { "de" => {} }) do |paths|
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths[0])
+          assert_equal false, source.built?
+
+          Worldwide::Cldr.with_bundled_data { Worldwide::Cldr.t("numbers.latn.symbols.decimal", locale: :ja) }
+
+          assert_equal true, source.built?
+
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths[1])
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths[1])
+          assert_nil Worldwide::Config.add_bundled_data_paths(paths)
+          assert_equal paths, source.paths
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths rejects files that are not .yml, and registers none of the paths given" do
+      with_fresh_bundled_data do |source|
+        with_yaml_files("ja.yml" => { "ja" => {} }, "ja.rb" => { "ja" => {} }, "ja.yaml" => { "ja" => {} }, "ja.json" => { "ja" => {} }) do |paths|
+          [paths[1], paths[2], paths[3], [paths[0], paths[1]]].each do |invalid|
+            error = assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths(invalid) }
+
+            assert_includes error.message, ".yml"
+          end
+
+          assert_empty source.paths
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths rejects files that do not exist" do
+      with_fresh_bundled_data do |source|
+        assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths(["/nonexistent/ja.yml"]) }
+        assert_empty source.paths
+      end
+    end
+
+    test ".add_bundled_data_paths rejects files that are not named after a locale, and registers none of the paths given" do
+      with_fresh_bundled_data do |source|
+        files = { "ja.yml" => { "ja" => {} }, "en.rails.yml" => { "en" => {} }, "en_US.yml" => { "en_US" => {} }, "ja.yml.yml" => { "ja" => {} } }
+        with_yaml_files(files) do |paths|
+          paths.drop(1).each do |invalid|
+            error = assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths([paths[0], invalid]) }
+
+            assert_includes error.message, invalid
+          end
+
+          assert_empty source.paths
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths rejects a file named after one of Worldwide's locales in another case, and registers none of the paths given" do
+      expected_names = {
+        "pt-br.yml" => "pt-BR.yml",
+        "EN.yml" => "en.yml",
+        "zh-hant-hk.yml" => "zh-Hant-HK.yml",
+        "be-tarask.yml" => "be-TARASK.yml",
+        "Root.yml" => "root.yml",
+      }
+      files = { "ja.yml" => { "ja" => {} } }
+      expected_names.each_key { |name| files[name] = { File.basename(name, ".yml") => {} } }
+
+      with_fresh_bundled_data do |source|
+        with_yaml_files(files) do |paths|
+          paths.drop(1).each do |invalid|
+            error = assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths([paths[0], invalid]) }
+
+            assert_includes error.message, "#{invalid}: name it #{expected_names.fetch(File.basename(invalid))}"
+          end
+
+          assert_empty source.paths
+          assert_equal false, source.built?
+        end
+      end
+    end
+
+    test ".add_bundled_data_paths accepts files named after any locale, without reading them" do
+      locales = Worldwide::Cldr::BundledData.new.backend.available_locales
+
+      assert_includes locales, :"be-TARASK"
+      assert_includes locales, :"ca-ES-VALENCIA"
+      assert_includes locales, :"en-US-POSIX"
+      assert_includes locales, :root
+
+      files = (locales + [:"en-XX", :zz]).to_h { |locale| ["#{locale}.yml", { locale.to_s => {} }] }
+      files["en-XX.yml"] = { "en-XX" => { "currencies" => { "JEP" => { "symbol" => "XX-£" } } } }
+      files["zz.yml"] = "not: [valid YAML"
+      # A name that matches none of Worldwide's locales may be spelled in any case.
+      ["EN-xx", "ZZ", "Art-Lojban"].each { |name| files["other-case/#{name}.yml"] = { name => {} } }
+
+      with_fresh_bundled_data do |source|
+        with_yaml_files(files) do |paths|
+          Worldwide::Config.add_bundled_data_paths(paths)
+
+          assert_equal paths, source.paths
+          assert_equal false, source.built?
+          assert_equal "XX-£", Worldwide::Cldr.with_bundled_data { Worldwide::Cldr.t("currencies.JEP.symbol", locale: :"en-XX") }
+        end
+      end
     end
 
     test "paths have been precomputed with rake cldr:data:generate_paths" do

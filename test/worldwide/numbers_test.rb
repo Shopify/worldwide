@@ -4,9 +4,12 @@ require "bigdecimal"
 # Rails loads bigdecimal/util, which gives String and nil a to_d.
 require "bigdecimal/util"
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class NumbersTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test "number format for en-US" do
       data = [
         [12, "12.00"],
@@ -981,6 +984,176 @@ module Worldwide
       end
 
       assert_equal [:beyond_double_precision, :decimal_tie, :natural_decimal_places], differences.keys.sort
+    end
+
+    test "an instance used inside and outside with_bundled_data reads each mode's symbols and grouping" do
+      host_polish = {
+        numbers: {
+          latn: {
+            symbols: { decimal: "D", group: "G", percent_sign: "P" },
+            formats: { decimal: { patterns: { default: { standard: "#,##,##0.###" } } } },
+          },
+          minimum_grouping_digits: 1,
+        },
+      }
+
+      with_host_overrides(pl: host_polish) do
+        polish = Worldwide::Numbers.new(locale: :pl)
+        formats = -> { [polish.format(1234567.5, decimal_places: 2, grouping: :auto), polish.format(0.5, percent: true)] }
+
+        assert_equal ["12G34G567D50", "50P"], formats.call
+        assert_equal ["1\u00A0234\u00A0567,50", "50%"], Worldwide::Cldr.with_bundled_data { formats.call }
+        assert_equal ["12G34G567D50", "50P"], formats.call
+
+        polish = Worldwide::Numbers.new(locale: :pl)
+
+        assert_equal "1234,50", Worldwide::Cldr.with_bundled_data { polish.format(1234.5, decimal_places: 2, grouping: :auto) }
+        assert_equal "1G234D50", polish.format(1234.5, decimal_places: 2, grouping: :auto)
+      end
+    end
+
+    test "a subclass that overrides format and calls super formats the same way inside with_bundled_data" do
+      bracketed = Class.new(Worldwide::Numbers) do
+        def format(amount, **options)
+          "[#{super}]"
+        end
+      end.new(locale: :de)
+
+      assert_equal "[1.234,50]", bracketed.format(1234.5, decimal_places: 2)
+      assert_equal "[1.234,50]", Worldwide::Cldr.with_bundled_data { bracketed.format(1234.5, decimal_places: 2) }
+      assert_equal "[1.234,50]", bracketed.format(1234.5, decimal_places: 2)
+    end
+
+    test "an instance used inside and outside with_bundled_data splits each mode's digits from the sign" do
+      with_host_overrides do
+        german = Worldwide::Numbers.new(locale: :de)
+        parts = -> { german.send(:sign_and_digits, -1234.5, decimal_places: 2, rounding_mode: nil, grouping: :always, sign_display: :auto) }
+
+        assert_equal [true, "1.234HOST-DECIMAL50"], parts.call
+        assert_equal [true, "1.234,50"], Worldwide::Cldr.with_bundled_data { parts.call }
+        assert_equal [true, "1.234HOST-DECIMAL50"], parts.call
+      end
+    end
+
+    test "an instance used inside with_bundled_data reads the symbols again after files are registered" do
+      with_fresh_bundled_data do
+        with_yaml_files("de.yml" => { "de" => { "numbers" => { "latn" => { "symbols" => { "decimal" => "OVERLAY" } } } } }) do |paths|
+          german = Worldwide::Numbers.new(locale: :de)
+          parts = -> { german.send(:sign_and_digits, 1234.5, decimal_places: 2, rounding_mode: nil, grouping: :always, sign_display: :auto) }
+
+          Worldwide::Cldr.with_bundled_data do
+            assert_equal "1.234,50", german.format(1234.5, decimal_places: 2)
+            assert_equal [false, "1.234,50"], parts.call
+
+            Worldwide::Config.add_bundled_data_paths(paths)
+
+            assert_equal "1.234OVERLAY50", german.format(1234.5, decimal_places: 2)
+            assert_equal [false, "1.234OVERLAY50"], parts.call
+          end
+
+          assert_equal "1.234,50", german.format(1234.5, decimal_places: 2)
+        end
+      end
+    end
+
+    test "an instance shared by threads inside and outside with_bundled_data gives each thread its own mode's data" do
+      with_host_overrides do
+        errors = Queue.new
+
+        20.times do
+          german = Worldwide::Numbers.new(locale: :de)
+          start = Queue.new
+          threads = Array.new(6) do |index|
+            Thread.new do
+              start.pop
+              if index.even?
+                Worldwide::Cldr.with_bundled_data do
+                  value = german.format(1234.5, decimal_places: 2)
+                  errors << [:bundled, value] unless value == "1.234,50"
+                end
+              else
+                value = german.format(1234.5, decimal_places: 2)
+                errors << [:host, value] unless value == "1.234HOST-DECIMAL50"
+              end
+            end
+          end
+          threads.size.times { start << true }
+          threads.each(&:join)
+        end
+
+        leaked = []
+        leaked << errors.pop until errors.empty?
+
+        assert_empty leaked
+      end
+    end
+
+    test "an instance shared by threads inside with_bundled_data reads registered files in every call made after they are registered" do
+      with_fresh_bundled_data do
+        with_yaml_files("de.yml" => { "de" => { "numbers" => { "latn" => { "symbols" => { "decimal" => "OVERLAY" } } } } }) do |paths|
+          german = Worldwide::Numbers.new(locale: :de)
+          registered = false
+          started = Queue.new
+          errors = Queue.new
+
+          threads = Array.new(4) do
+            Thread.new do
+              Worldwide::Cldr.with_bundled_data do
+                started << true
+                calls_after = 0
+                while calls_after < 50
+                  after = registered
+                  value = german.format(1234.5, decimal_places: 2)
+                  errors << value unless value == "1.234OVERLAY50" || (!after && value == "1.234,50")
+                  calls_after += 1 if after
+                end
+              end
+            end
+          end
+          threads.size.times { started.pop }
+          Worldwide::Config.add_bundled_data_paths(paths)
+          registered = true
+          threads.each(&:join)
+
+          leaked = []
+          leaked << errors.pop until errors.empty?
+
+          assert_empty leaked
+        end
+      end
+    end
+
+    test "an instance used inside with_bundled_data reads bundled data even if the block returns during the call" do
+      with_host_overrides do
+        german = Worldwide::Numbers.new(locale: :de)
+        twin_taken = Queue.new
+        block_returned = Queue.new
+        thread = nil
+
+        Worldwide::Cldr.with_bundled_data do
+          thread = Thread.new do
+            # The thread inherits the block, so the instance hands the call to the values it keeps for bundled data.
+            twin = begin
+              german.send(:bundled_data_twin)
+            ensure
+              twin_taken << true
+            end
+            block_returned.pop
+            [Worldwide::Cldr.bundled_data?, twin.format(1234.5, decimal_places: 2)]
+          end
+          twin_taken.pop
+        end
+        block_returned << true
+
+        assert_equal [false, "1.234,50"], thread.value
+        assert_equal "1.234,50", Worldwide::Cldr.with_bundled_data { german.format(1234.5, decimal_places: 2) }
+        assert_equal "1.234HOST-DECIMAL50", german.format(1234.5, decimal_places: 2)
+
+        # The blocks that the instance opened to read its values have all returned.
+        Worldwide::Cldr.expects(:bundled_data_storage).never
+
+        assert_equal false, Worldwide::Cldr.bundled_data?
+      end
     end
 
     private

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "cldr/bundled_data"
+require_relative "cldr/bundled_data_scope"
 require_relative "cldr/date_format_pattern"
 require_relative "cldr/fallbacks"
 require_relative "ruby_i18n_config"
@@ -55,16 +57,76 @@ module Worldwide
 
     STORAGE = I18n::Config.method_defined?(:owned_by?) ? FiberStorage : ThreadStorage
 
+    # The number of with_bundled_data blocks running in the process. While it is zero, no scope is active,
+    # so bundled_data? skips reading the scope. It only shortens that check: each fiber reads its own scope,
+    # so the count and the scope never need to be read together. A block that never returns, such as one in
+    # a fiber that is never resumed, keeps it above zero, which only makes bundled_data? read the scope.
+    @running_blocks = 0
+    @running_blocks_mutex = Mutex.new
+
     class << self
       def fallbacks
         FALLBACKS
       end
 
       def config
-        CONFIG
+        bundled_data? ? BundledData.instance.config.dup : CONFIG
+      end
+
+      # Runs the block with every Worldwide::Cldr lookup in the current fiber reading Worldwide's bundled
+      # data and the files registered with Worldwide::Config.add_bundled_data_paths. Those lookups ignore the
+      # host's I18n backend, load path, available locales, default locale and key separator. Lookups outside
+      # the block are unchanged. Returns the block's value.
+      #
+      # Threads and fibers created inside the block also read bundled data, until the block and every
+      # with_bundled_data block that it runs inside have returned.
+      def with_bundled_data
+        raise ArgumentError, "with_bundled_data requires a block" unless block_given?
+
+        storage = bundled_data_storage
+        previous_scope = storage.scope
+        scope = BundledDataScope.new(previous_scope)
+        @running_blocks_mutex.synchronize { @running_blocks += 1 }
+        begin
+          storage.scope = scope
+          yield
+        ensure
+          scope.close
+          storage.scope = previous_scope
+          @running_blocks_mutex.synchronize { @running_blocks -= 1 }
+        end
+      end
+
+      # Runs the block with locale as the current locale of the lookups in it, as I18n.with_locale does.
+      # Inside with_bundled_data, locale is checked against the locales that bundled data has, and the host's
+      # current locale is not checked, as bundled data may lack it.
+      def with_locale(locale = nil, &block)
+        with_cldr do |cldr_config|
+          if cldr_config.is_a?(BundledConfig)
+            # The configuration is a copy for this call alone, so its locale is set once and never set back.
+            # Setting it back, as I18n.with_locale does, would check the host's current locale.
+            cldr_config.locale = locale unless locale.nil?
+            yield
+          else
+            I18n.with_locale(locale, &block)
+          end
+        end
+      end
+
+      # Whether Worldwide::Cldr lookups in the current fiber read bundled data.
+      def bundled_data?
+        # A fiber inside a block has counted that block, so it never reads zero here, whatever other fibers do.
+        return false if @running_blocks == 0
+
+        scope = bundled_data_storage.scope
+        !scope.nil? && scope.active?
       end
 
       private
+
+      def bundled_data_storage
+        BundledDataScope::STORAGE
+      end
 
       def respond_to_missing?(method_name, include_private = false)
         I18n.respond_to?(method_name, include_private)
@@ -76,7 +138,8 @@ module Worldwide
         end
       end
 
-      def with_cldr(&block)
+      # Runs the block with Worldwide::Cldr's configuration in place of the host's, and yields that configuration.
+      def with_cldr
         # Swap the fallbacks slot directly rather than via I18n.fallbacks= so the
         # change stays fiber/thread-local and never clobbers the host
         # application's global fallbacks.
@@ -86,12 +149,19 @@ module Worldwide
         # used before i18n 1.15, so they must also see the CLDR fallbacks.
         original_thread_fallbacks = Thread.current[:i18n_fallbacks]
         locale = I18n.locale
+        cldr_config = config
 
-        STORAGE.config = config
+        STORAGE.config = cldr_config
         STORAGE.fallbacks = fallbacks
         Thread.current[:i18n_fallbacks] = fallbacks
 
-        I18n.with_locale(locale, &block)
+        if cldr_config.is_a?(BundledConfig)
+          # Bundled data may lack the host's current locale. A lookup that uses it still checks it.
+          cldr_config.unchecked_locale = locale
+          yield cldr_config
+        else
+          I18n.with_locale(locale) { yield cldr_config }
+        end
       ensure
         STORAGE.config = original_config
         STORAGE.fallbacks = original_fallbacks

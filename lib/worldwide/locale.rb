@@ -48,26 +48,29 @@ module Worldwide
     end
 
     def name(locale: I18n.locale, context: :middle_of_sentence, throw: true)
-      cache_key = [locale&.to_sym, context]
-      @name_cache[cache_key] ||= I18n.with_locale(locale) do
-        # Try to find a language name as specific as possible in the locale we wanted.
-        exonym(target_locale: locale, context: context) ||
+      data_version = Worldwide::Cldr::BundledData.current_version
+      cache_key = [locale&.to_sym, context, data_version]
+      @name_cache[cache_key] ||= read_data(data_version) do
+        with_locale(locale) do
+          # Try to find a language name as specific as possible in the locale we wanted.
+          exonym(target_locale: locale, context: context) ||
 
-          # We didn't find a language name in the locale we wanted.
-          # In cases like this, try to look up the language's native name ("endonym").
-          endonym(context: context, throw: throw) ||
+            # We didn't find a language name in the locale we wanted.
+            # In cases like this, try to look up the language's native name ("endonym").
+            endonym(context: context, throw: throw) ||
 
-          # CLDR does not define language names (`languages.yml`) in some languages
-          # (example: 'cu' Church Slavic does not have a `languages.yml`, so every
-          # language name lookup in that locale will fail, since `cu` lookups only
-          # fall back to `root`, which also does not have a `languages.yml`).
-          # This means that we cannot provide the endonym for `cu`.
+            # CLDR does not define language names (`languages.yml`) in some languages
+            # (example: 'cu' Church Slavic does not have a `languages.yml`, so every
+            # language name lookup in that locale will fail, since `cu` lookups only
+            # fall back to `root`, which also does not have a `languages.yml`).
+            # This means that we cannot provide the endonym for `cu`.
 
-          # If we have a translation in the default locale, we'll return that.
-          name_in_default_locale(context: context) ||
+            # If we have a translation in the default locale, we'll return that.
+            name_in_default_locale(context: context) ||
 
-          # We still don't know anything about the language, and we're out of options.
-          I18n::MissingTranslation.new(locale, "languages.#{code}")
+            # We still don't know anything about the language, and we're out of options.
+            I18n::MissingTranslation.new(locale, "languages.#{code}")
+        end
       end
 
       if @name_cache[cache_key].is_a?(I18n::MissingTranslation)
@@ -81,7 +84,9 @@ module Worldwide
 
     # The language's name in that language ("endonym").
     def endonym(context: :middle_of_sentence, throw: true)
-      @endonym_cache[context] ||= begin
+      data_version = Worldwide::Cldr::BundledData.current_version
+      cache_key = [context, data_version]
+      @endonym_cache[cache_key] ||= read_data(data_version) do
         result = begin
           lookup(code, locale: code)
         rescue I18n::InvalidLocale => e
@@ -92,13 +97,13 @@ module Worldwide
         result || I18n::MissingTranslation.new(code, "languages.#{code}")
       end
 
-      if @endonym_cache[context].is_a?(I18n::MissingTranslation)
-        raise @endonym_cache[context] if throw
+      if @endonym_cache[cache_key].is_a?(I18n::MissingTranslation)
+        raise @endonym_cache[cache_key] if throw
 
         return
       end
 
-      @endonym_cache[context]
+      @endonym_cache[cache_key]
     end
 
     private
@@ -124,10 +129,27 @@ module Worldwide
     end
 
     def lookup(key, locale:)
-      I18n.with_locale(locale) do
+      with_locale(locale) do
         if Worldwide::Cldr.exists?("languages.#{key}", locale: locale) # Avoid the exception handler
           Worldwide::Cldr.t("languages.#{key}", locale: locale)
         end
+      end
+    end
+
+    # Runs the block for a value to cache under data_version, the version of the bundled data that the caller
+    # reads, or nil for the host's data. A value for bundled data is read inside a with_bundled_data block of its
+    # own, so it comes from bundled data even if the block that the caller runs in returns meanwhile.
+    def read_data(data_version, &block)
+      data_version.nil? ? yield : Worldwide::Cldr.with_bundled_data(&block)
+    end
+
+    # Runs the block with locale as the current locale. Inside Worldwide::Cldr.with_bundled_data, the locale
+    # is checked against the locales that bundled data has, not against the host's.
+    def with_locale(locale, &block)
+      if Worldwide::Cldr.bundled_data?
+        Worldwide::Cldr.with_locale(locale, &block)
+      else
+        I18n.with_locale(locale, &block)
       end
     end
 

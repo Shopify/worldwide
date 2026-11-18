@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "worldwide/cldr/bundled_data_test_helper"
 
 module Worldwide
   class LocaleTest < ActiveSupport::TestCase
+    include Worldwide::BundledDataTestHelper
+
     test "name returns a translated name in each supported locale for French" do
       Worldwide.locales.each do |locale|
         I18n.with_locale(locale.to_sym) do
@@ -267,6 +270,86 @@ module Worldwide
           name = Worldwide.locale(code: code).name
 
           refute_includes name, "nternational"
+        end
+      end
+    end
+
+    test "names cached inside with_bundled_data are not returned outside it, and the other way round" do
+      with_host_overrides do
+        french = Worldwide::Locale.new("fr")
+
+        assert_equal "HOST French", french.name(locale: :en)
+        assert_equal "HOST français", french.endonym
+        assert_equal "French", Worldwide::Cldr.with_bundled_data { french.name(locale: :en) }
+        assert_equal "français", Worldwide::Cldr.with_bundled_data { french.endonym }
+        assert_equal "HOST French", french.name(locale: :en)
+        assert_equal "HOST français", french.endonym
+      end
+    end
+
+    test "names cached for bundled data are read from bundled data even if the block returns during the call" do
+      with_host_overrides do
+        french = Worldwide::Locale.new("fr")
+        version = Worldwide::Cldr.with_bundled_data { Worldwide::Cldr::BundledData.current_version }
+
+        # A thread created inside the block can read the version while the block runs, and make the lookups that
+        # fill the cache after the block has returned. The stub gives the calls below the version of that block.
+        Worldwide::Cldr::BundledData.stubs(:current_version).returns(version)
+
+        assert_equal "français", french.name(locale: :fr)
+        assert_equal "français", french.endonym
+
+        Worldwide::Cldr::BundledData.unstub(:current_version)
+
+        assert_equal "français", Worldwide::Cldr.with_bundled_data { french.name(locale: :fr) }
+        assert_equal "français", Worldwide::Cldr.with_bundled_data { french.endonym }
+        assert_equal "HOST français", french.name(locale: :fr)
+        assert_equal "HOST français", french.endonym
+      end
+    end
+
+    test "names inside with_bundled_data can use a locale that the host does not make available" do
+      with_host_i18n(available_locales: [:en, :de, :fr], enforce_available_locales: true) do
+        assert_raises(I18n::InvalidLocale) { Worldwide::Locale.new("fr").name(locale: :ja) }
+        assert_raises(I18n::InvalidLocale) { Worldwide::Locale.new("ja").endonym }
+
+        Worldwide::Cldr.with_bundled_data do
+          assert_equal "フランス語", Worldwide::Locale.new("fr").name(locale: :ja)
+          assert_equal "フランス語 (カナダ)", Worldwide::Locale.new("fr-CA").name(locale: :ja)
+          assert_equal "日本語", Worldwide::Locale.new("ja").endonym
+          assert_equal :en, I18n.locale
+        end
+      end
+    end
+
+    test "inside with_bundled_data, a name missing in the requested locale is read in English, whatever the host's default locale" do
+      with_host_i18n(default_locale: :fr) do
+        assert_equal "bas-allemand", Worldwide::Locale.new("nds").name(locale: :nds, throw: false)
+        assert_equal "Low German", Worldwide::Cldr.with_bundled_data { Worldwide::Locale.new("nds").name(locale: :nds, throw: false) }
+      end
+    end
+
+    test "names cached inside with_bundled_data are read again after files are registered" do
+      files = {
+        "de.yml" => { "de" => { "languages" => { "fr" => "OVERLAY-Französisch" } } },
+        "fr.yml" => { "fr" => { "languages" => { "fr" => "OVERLAY-français" } } },
+      }
+
+      with_fresh_bundled_data do
+        with_yaml_files(files) do |paths|
+          french = Worldwide::Locale.new("fr")
+
+          Worldwide::Cldr.with_bundled_data do
+            assert_equal "Französisch", french.name(locale: :de)
+            assert_equal "français", french.endonym
+
+            Worldwide::Config.add_bundled_data_paths(paths)
+
+            assert_equal "OVERLAY-Französisch", french.name(locale: :de)
+            assert_equal "OVERLAY-français", french.endonym
+          end
+
+          assert_equal "Französisch", french.name(locale: :de)
         end
       end
     end

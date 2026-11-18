@@ -56,6 +56,53 @@ module Worldwide
         Worldwide::I18nExceptionHandler.new
       end
 
+      # Registers YAML files for lookups inside Worldwide::Cldr.with_bundled_data, for libraries that add
+      # data on top of Worldwide's. Each file is named after its locale (for example "ja.yml" or
+      # "pt-BR.yml") and holds that locale's data under a top-level key of the same name. Other top-level
+      # keys are ignored. A file whose name is not a well-formed locale identifier, such as "en.rails.yml",
+      # or that spells one of Worldwide's locales in another case, such as "pt-br.yml", raises ArgumentError,
+      # and none of the paths given are registered then. A name that matches none of Worldwide's locales is kept
+      # as spelled, so a lookup reads the file only when its locale, or one of that locale's fallbacks, is spelled
+      # the same way.
+      #
+      # The files apply after Worldwide's own data, and files registered later apply after files registered
+      # earlier. A path that is already registered is ignored. Registering does not change I18n.load_path
+      # or any host backend, so lookups outside the block do not see the files.
+      #
+      # The files are read on the first lookup that needs them. They may hold hashes, arrays, strings,
+      # numbers, booleans, nil and symbols, with anchors and aliases. A file that is not valid YAML, or that
+      # holds other Ruby objects, raises I18n::InvalidLocaleData naming the file on each lookup that needs it.
+      # Register only files that your own code ships. Returns nil.
+      def add_bundled_data_paths(paths)
+        paths = Array(paths).map { |path| File.expand_path(path) }
+        not_yaml = paths.reject { |path| File.extname(path) == ".yml" }
+        raise ArgumentError, "Bundled data paths must be .yml files: #{not_yaml.join(", ")}" unless not_yaml.empty?
+
+        not_locales = paths.reject { |path| I18n::Locale::Tag::Rfc4646.tag(File.basename(path, ".yml")) }
+        unless not_locales.empty?
+          raise ArgumentError, "Bundled data files must be named after a locale, such as ja.yml: #{not_locales.join(", ")}"
+        end
+
+        # Worldwide's own lookups and available locales use Worldwide's spelling, so they would not read a file named
+        # after one of its locales in another case. The names come from the gem's directory of locales; no data file
+        # is read.
+        spellings = (Worldwide::Locales.known + [:root]).to_h { |locale| [locale.to_s.downcase, locale.to_s] }
+        miscased = paths.filter_map do |path|
+          name = File.basename(path, ".yml")
+          expected = spellings[name.downcase]
+          "#{path}: name it #{expected}.yml" unless expected.nil? || expected == name
+        end
+        unless miscased.empty?
+          raise ArgumentError, "Bundled data files must spell the locale as Worldwide does: #{miscased.join("; ")}"
+        end
+
+        missing = paths.reject { |path| File.file?(path) }
+        raise ArgumentError, "Bundled data files not found: #{missing.join(", ")}" unless missing.empty?
+
+        Worldwide::Cldr::BundledData.instance.add_paths(paths)
+        nil
+      end
+
       private
 
       def i18n_defined?(i18n_config, key)
