@@ -1,0 +1,51 @@
+valid:
+  accept_prefixes:
+  postal_codes:
+    - "EC1A 1BB"
+    - "EC1A1BB"
+    - "W1A 0AX"
+    - "M1 1AE"
+    - "M11AE"
+    - "B33 8TH"
+    - "CR2 6XH"
+    - "DN55 1PT"
+    - "S5 9GA"
+    - "N3 2QS"
+    - "FY1 4JH"
+    - "PR9 7HA"
+    - "BD9 5LT"
+    - "DE12 6DT"
+    - "N6 4SD"
+    - "pr9 7ha"
+    - "S59GA"
+    - "de126dt"
+    - "FY1  4JH"
+    - "PR97HA"
+    - "Bd95lT"
+    - "EC1A 1AA"
+    - "  DN55 1PT  "
+    - "BF1 3AH"
+    # "BPFO 12" is British Forces Post Office 12, which is located in Belize City, Belize.
+    # Its postcode is "BF1 3AH".
+    # We currently accept this, but we should not.
+    # - "BFPO 12"
+  partial:
+    - "BF1"
+    - "sw1"
+    - "BT30"
+    - "AB99"
+    - "Cf3"
+    - "SY2 "
+    - "SY21"
+    - "SY21 "
+invalid:
+  postal_codes:
+    - "123 1PT"
+    - "12345"
+    - "BFPO352"
+    # "BFPO 352" does not (currently) exist.  Even if it were allocated, it would not be a postcode.
+    # - "BFPO 352"
+  partial:
+    - "s"
+    - ""
+    - "K1A"
