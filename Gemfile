@@ -26,6 +26,12 @@ group :development do
   gem "pry-byebug", "< 3.12", require: false
 end
 
+# Used by the postal code rake tasks in rake/postal. The gemspec does not package rake/, so the gem does not depend on them.
+group :development, :test do
+  gem "csv"
+  gem "rubyzip"
+end
+
 group :test do
   gem "minitest", "~> 5.27"
   gem "minitest-reporters"
