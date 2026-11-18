@@ -97,6 +97,22 @@ module Worldwide
         end
       end
 
+      # Runs the block with locale as the current locale of the lookups in it, as I18n.with_locale does.
+      # Inside with_bundled_data, locale is checked against the locales that bundled data has, and the host's
+      # current locale is not checked, as bundled data may lack it.
+      def with_locale(locale = nil, &block)
+        with_cldr do |cldr_config|
+          if cldr_config.is_a?(BundledConfig)
+            # The configuration is a copy for this call alone, so its locale is set once and never set back.
+            # Setting it back, as I18n.with_locale does, would check the host's current locale.
+            cldr_config.locale = locale unless locale.nil?
+            yield
+          else
+            I18n.with_locale(locale, &block)
+          end
+        end
+      end
+
       # Whether Worldwide::Cldr lookups in the current fiber read bundled data.
       def bundled_data?
         # A fiber inside a block has counted that block, so it never reads zero here, whatever other fibers do.
@@ -122,7 +138,8 @@ module Worldwide
         end
       end
 
-      def with_cldr(&block)
+      # Runs the block with Worldwide::Cldr's configuration in place of the host's, and yields that configuration.
+      def with_cldr
         # Swap the fallbacks slot directly rather than via I18n.fallbacks= so the
         # change stays fiber/thread-local and never clobbers the host
         # application's global fallbacks.
@@ -141,9 +158,9 @@ module Worldwide
         if cldr_config.is_a?(BundledConfig)
           # Bundled data may lack the host's current locale. A lookup that uses it still checks it.
           cldr_config.unchecked_locale = locale
-          yield
+          yield cldr_config
         else
-          I18n.with_locale(locale, &block)
+          I18n.with_locale(locale) { yield cldr_config }
         end
       ensure
         STORAGE.config = original_config

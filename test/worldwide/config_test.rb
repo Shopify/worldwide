@@ -206,11 +206,44 @@ module Worldwide
       end
     end
 
+    test ".add_bundled_data_paths rejects a file named after one of Worldwide's locales in another case, and registers none of the paths given" do
+      expected_names = {
+        "pt-br.yml" => "pt-BR.yml",
+        "EN.yml" => "en.yml",
+        "zh-hant-hk.yml" => "zh-Hant-HK.yml",
+        "be-tarask.yml" => "be-TARASK.yml",
+        "Root.yml" => "root.yml",
+      }
+      files = { "ja.yml" => { "ja" => {} } }
+      expected_names.each_key { |name| files[name] = { File.basename(name, ".yml") => {} } }
+
+      with_fresh_bundled_data do |source|
+        with_yaml_files(files) do |paths|
+          paths.drop(1).each do |invalid|
+            error = assert_raises(ArgumentError) { Worldwide::Config.add_bundled_data_paths([paths[0], invalid]) }
+
+            assert_includes error.message, "#{invalid}: name it #{expected_names.fetch(File.basename(invalid))}"
+          end
+
+          assert_empty source.paths
+          assert_equal false, source.built?
+        end
+      end
+    end
+
     test ".add_bundled_data_paths accepts files named after any locale, without reading them" do
-      locales = Worldwide::Cldr::BundledData.new.backend.available_locales + [:"en-XX", :zz]
-      files = locales.to_h { |locale| ["#{locale}.yml", { locale.to_s => {} }] }
+      locales = Worldwide::Cldr::BundledData.new.backend.available_locales
+
+      assert_includes locales, :"be-TARASK"
+      assert_includes locales, :"ca-ES-VALENCIA"
+      assert_includes locales, :"en-US-POSIX"
+      assert_includes locales, :root
+
+      files = (locales + [:"en-XX", :zz]).to_h { |locale| ["#{locale}.yml", { locale.to_s => {} }] }
       files["en-XX.yml"] = { "en-XX" => { "currencies" => { "JEP" => { "symbol" => "XX-£" } } } }
       files["zz.yml"] = "not: [valid YAML"
+      # A name that matches none of Worldwide's locales may be spelled in any case.
+      ["EN-xx", "ZZ", "Art-Lojban"].each { |name| files["other-case/#{name}.yml"] = { name => {} } }
 
       with_fresh_bundled_data do |source|
         with_yaml_files(files) do |paths|

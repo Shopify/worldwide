@@ -50,15 +50,44 @@ module Worldwide
       I18n.backend = original_backend
     end
 
-    # Changes the host's I18n settings while the block runs.
+    # Changes the host's I18n settings while the block runs, and restores them and the current locale afterwards.
     def with_host_i18n(available_locales: nil, enforce_available_locales: nil, default_locale: nil)
-      original = [I18n.available_locales, I18n.enforce_available_locales, I18n.default_locale]
+      original = [I18n.available_locales, I18n.enforce_available_locales, I18n.default_locale, I18n.locale]
       I18n.available_locales = available_locales if available_locales
       I18n.enforce_available_locales = enforce_available_locales unless enforce_available_locales.nil?
       I18n.default_locale = default_locale if default_locale
       yield
     ensure
-      I18n.available_locales, I18n.enforce_available_locales, I18n.default_locale = original if original
+      if original
+        original_available_locales, original_enforce, original_default_locale, original_locale = original
+        # Restore the locales unchecked, as the original settings need not have checked them.
+        I18n.enforce_available_locales = false
+        I18n.available_locales = original_available_locales
+        I18n.default_locale = original_default_locale
+        I18n.locale = original_locale
+        I18n.enforce_available_locales = original_enforce
+      end
+    end
+
+    # Runs the block while a with_bundled_data block is open in another thread, so that a block is running in the
+    # process and Worldwide::Cldr.bundled_data? has to read the current fiber's scope to answer.
+    def with_block_running_elsewhere
+      opened = Queue.new
+      release = Queue.new
+      thread = Thread.new do
+        Worldwide::Cldr.with_bundled_data do
+          opened << true
+          release.pop
+        end
+      ensure
+        # Wakes this thread if the block above raised before it opened. Joining the thread raises the error.
+        opened.close
+      end
+      thread.join unless opened.pop
+      yield
+    ensure
+      release << true
+      thread&.join
     end
 
     # Runs the block with the host's interpolation settings changed, and restores them afterwards.

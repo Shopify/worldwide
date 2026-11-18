@@ -118,6 +118,9 @@ module Worldwide
     # Shared values are read into locals once, so threads that share the instance cannot mix up their data.
     # Two threads may each build a second instance at the same time, and either one is correct.
     # If the caller's block has just returned, the version is nil, and the call reads the host's data instead.
+    # The second instance is a plain Numbers. A subclass that overrides format and calls super gets its override
+    # applied once, by the caller's instance; an instance of the subclass would apply it a second time. Private
+    # methods that a subclass or an extended module overrides are not used inside the block.
     def bundled_data_twin
       version = Worldwide::Cldr::BundledData.current_version
       return self if version.nil?

@@ -1012,6 +1012,18 @@ module Worldwide
       end
     end
 
+    test "a subclass that overrides format and calls super formats the same way inside with_bundled_data" do
+      bracketed = Class.new(Worldwide::Numbers) do
+        def format(amount, **options)
+          "[#{super}]"
+        end
+      end.new(locale: :de)
+
+      assert_equal "[1.234,50]", bracketed.format(1234.5, decimal_places: 2)
+      assert_equal "[1.234,50]", Worldwide::Cldr.with_bundled_data { bracketed.format(1234.5, decimal_places: 2) }
+      assert_equal "[1.234,50]", bracketed.format(1234.5, decimal_places: 2)
+    end
+
     test "an instance used inside and outside with_bundled_data splits each mode's digits from the sign" do
       with_host_overrides do
         german = Worldwide::Numbers.new(locale: :de)
