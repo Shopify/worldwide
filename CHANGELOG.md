@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add `Region#has_code?`, `Region#has_name?`, `Region#has_handle?`, `Region#neighbor?` and `Region#valid_zone_zip?`, for matching a zone by code, by name and by zip, and `Util.utf8_handle` and `Util.ascii_casecmp_substring?`, which they use. `valid_zone_zip?` checks a province's own `zip_prefixes`. `valid_zip?` is unchanged: it infers one province from the zip, so it can differ for a shared prefix or a zip shorter than a prefix. [#682](https://github.com/Shopify/worldwide/pull/682)
+
 ---
 
 ## [2.3.0] - 2026-11-18
