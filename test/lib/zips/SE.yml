@@ -1,0 +1,13 @@
+valid:
+  postal_codes:
+    # We can't add real strict validation for now, we'll use an in-between rules that required 5 numbers
+    - "123 45"
+    - " 123 45 "
+    - "SE-12345"
+    - "12345 STOCKHOLM"
+    - "12345"
+invalid:
+  postal_codes:
+    - "a123D"
+    - "A"
+    - ""

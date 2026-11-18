@@ -52,7 +52,7 @@ module Worldwide
     def find_country(country_code: nil, zip:, min_confidence: 0)
       return unless Util.present?(zip)
 
-      country = Worldwide.region(code: country_code) unless country_code.nil?
+      country = Worldwide.region(code: country_code) unless Util.blank?(country_code)
       return country if country&.valid_zip?(zip)
 
       adjusted_zip = zip.strip.upcase
@@ -62,7 +62,8 @@ module Worldwide
       return suggestion unless suggestion.nil? || confidence.nil? || confidence < min_confidence
 
       # If our postal code is wholly numeric, we can't make an intelligent suggestion without an alleged country.
-      return unless adjusted_zip.match?(/[A-Z]/)
+      # This checks the zip as given, not `adjusted_zip`, so that lowercase letters alone do not trigger a guess.
+      return unless zip.match?(/[A-Z]/)
 
       # Try a broader-ranging match without considering the alleged country
       # We'll see if we have only a single suggestion and, if so, return it.
@@ -837,7 +838,7 @@ module Worldwide
       # "CH6 ".
 
       # Check for complete postcode (outcode and incode)
-      m = stripped.match(/^([A-Z]{1,2})(\d{1,2})([A-Z])*\s*(\d)([A-Z][A-Z])$/)
+      m = stripped.match(/^([A-Z]{1,2})(\d{1,2})([A-Z]){0,1}(\d)([A-Z][A-Z])$/)
 
       if m&.size == 6
         # outcode

@@ -1,0 +1,33 @@
+valid:
+  accept_prefixes:
+  postal_codes:
+    - "D12 KC99" # St. Agnes Rd, Crumlin, Dublin
+    - "D13 H5P2" # 27 Grangemore Lawn, Grange, Dublin
+    - "D6W KN59" # 314 Kimmage Rd Lower, Terenure, Dublin
+    - "F93 R588" # Apartment, The Fort, Eleven Ballyboes, Greencastle, Co. Donegal
+    - "H14 K765" # Gortawee, Ballyconnell, Co. Cavan
+    - "K32 HC58" # 69 Hamlet Ln, Barnwall Ct, Tankardstown, Balbriggan, Co. Dublin
+    - "V23 FC44" # 10 Cois Trá Upper, Dungeagan, Ballinskelligs, Co. Kerry
+    - "V95 K097" # Shannon Airport, Co. Clare
+  partial:
+    - "D12"
+    - "D13"
+    - "D6W"
+    - "F93"
+    - "H14"
+    - "K32"
+    - "V23"
+    - "V95"
+invalid:
+  postal_codes:
+    - "A1A B23C" # Except for D6W, letters not permitted in the 3rd position
+    - "DDW B23C" # Letter never permitted in the 2nd position
+    - "102 ABCD" # Number never permitted in the 1st position
+    - "K1A 1A1" # Canadian postal code
+    - "LL11 3AB" # Wrexham, United Kingdom
+    - "D12 123" # too short
+    - "D12 12345" # too long
+  partial:
+    - "D1"
+    - "s"
+    - "V95 K"

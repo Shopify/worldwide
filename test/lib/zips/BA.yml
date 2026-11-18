@@ -1,0 +1,25 @@
+valid:
+  prefixes:
+    - "BA-"
+    - "BA"
+    - "BIH-"
+    - "BIH"
+  postal_codes:
+    - "71000" # Sarajevo
+    - "76290" # Novi Grad bb, Odžak
+    - "76300" # Bijeljina
+    - "77230" # 1. maja, Velika Kladuša
+    - "78400" # 16. krajiške brigade, Gradiška
+    - "80240" # Tomislavgrad
+    - "88000" # Mostar
+    - "88370" # Zavala
+    - "89101" # Trebinje
+invalid:
+  postal_codes:
+    - "12345" # codes must start with 7 or 8
+    - "81234" # codes starting with 8 must have 0, 8 or 9 in second digit
+    - "7234" # too short
+    - "723456" # too long
+    - "YU-71000" # Yugoslavia prefix no longer acceptable
+    - "ABC12" # must be numeric
+    - "723AB" # must be numeric
