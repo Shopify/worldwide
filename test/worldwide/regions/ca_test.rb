@@ -3,7 +3,7 @@
 require "test_helper"
 
 module Worldwide
-  class CanadianTimezonesTest < ActiveSupport::TestCase
+  class CaTest < ActiveSupport::TestCase
     test "Nunavut and neighboring postal codes have the correct timezone prefixes" do
       expected_timezones = {
         "X0B 0C0" => "America/Cambridge_Bay",
