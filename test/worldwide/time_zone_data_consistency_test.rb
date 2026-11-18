@@ -57,6 +57,15 @@ module Worldwide
       end
     end
 
+    test "every returned time zone has a label in every timezone file" do
+      zone_names = Worldwide::TimeZone.all.map(&:name)
+      @raw_yml.each do |file|
+        file.each do |locale, data|
+          assert_empty zone_names - data["timezones"].keys, "#{locale} has no label for these time zones"
+        end
+      end
+    end
+
     def iana_timezones
       @iana_timezones ||= YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/iana_to_rails_time_zone.yml")
     end

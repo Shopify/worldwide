@@ -643,12 +643,15 @@ This implementation will provide you a localized timezone that you can use with 
 
 `Worldwide::TimeZone.all` includes the Rails time zones and separate entries for Vancouver, Whitehorse, Edmonton, and Winnipeg.
 The Canadian entries use permanent offsets and province or territory labels.
+Greenland, Kyiv and Yangon use their current IANA names, `America/Nuuk`, `Europe/Kyiv` and `Asia/Yangon`, on every Rails version.
+Rails before 8.1 still reports `America/Godthab`, `Europe/Kiev` and `Asia/Rangoon`. Those are tz backward links, which some hosts don't install (Ubuntu 26.04, for example, ships them in the separate `tzdata-legacy` package).
+The old names still get their labels from `Worldwide::TimeZone.new(name).to_s`.
 
 TZInfo gets the time zone rules from the host application's data source.
 Use IANA time zone data version `2026e` or later for the Canadian changes.
 If the application uses the `tzinfo-data` gem, use version `1.2026.5` or later.
 
-`Worldwide::DeprecatedTimeZoneMapper.to_rails` returns a fallback from Rails' curated list for legacy callers.
+`Worldwide::DeprecatedTimeZoneMapper.to_rails` returns a fallback from the curated list of Rails 8.1 and later for legacy callers.
 The Canadian fallbacks match the permanent offsets, but do not preserve the full time zone history.
 Use the original IANA identifier for time conversion and storage.
 
