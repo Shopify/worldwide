@@ -27,8 +27,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+---
+
+## [2.3.0] - 2026-11-18
+
 - Add an `AGENTS.md` contribution guide and document when contributors need a changelog entry. [#686](https://github.com/Shopify/worldwide/pull/686)
 - Add the `postal:codes:import`, `postal:codes:check` and `postal:codes:zone_check` rake tasks. They build and check the `zip_prefixes` and `zips_crossing_provinces` data in `data/regions/<CC>.yml`. [#680](https://github.com/Shopify/worldwide/pull/680)
+- Correct Gabon's default currency from XOF to XAF, as listed in [ISO 4217](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml). XOF remains supported. [#684](https://github.com/Shopify/worldwide/pull/684)
 
 ---
 

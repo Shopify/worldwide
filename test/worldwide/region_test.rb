@@ -4,6 +4,13 @@ require "test_helper"
 
 module Worldwide
   class RegionTest < ActiveSupport::TestCase
+    test "#currency for Gabon and Cameroon is XAF while Senegal and XOF remain XOF" do
+      assert_equal("XAF", Worldwide.region(code: "GA").currency.currency_code)
+      assert_equal("XAF", Worldwide.region(code: "CM").currency.currency_code)
+      assert_equal("XOF", Worldwide.region(code: "SN").currency.currency_code)
+      assert_equal("XOF", Worldwide.currency(code: "XOF").currency_code)
+    end
+
     test "#initialize with only iso_code" do
       region = Region.new(iso_code: "ZZ")
 
