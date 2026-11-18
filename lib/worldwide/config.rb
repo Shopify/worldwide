@@ -71,7 +71,7 @@ module Worldwide
       # The files are read on the first lookup that needs them. They may hold hashes, arrays, strings,
       # numbers, booleans, nil and symbols, with anchors and aliases. A file that is not valid YAML, or that
       # holds other Ruby objects, raises I18n::InvalidLocaleData naming the file on each lookup that needs it.
-      # Register only files that your own code ships.
+      # Register only files that your own code ships. Returns nil.
       def add_bundled_data_paths(paths)
         paths = Array(paths).map { |path| File.expand_path(path) }
         not_yaml = paths.reject { |path| File.extname(path) == ".yml" }
@@ -98,6 +98,7 @@ module Worldwide
         raise ArgumentError, "Bundled data files not found: #{missing.join(", ")}" unless missing.empty?
 
         Worldwide::Cldr::BundledData.instance.add_paths(paths)
+        nil
       end
 
       private
