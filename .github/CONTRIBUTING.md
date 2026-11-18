@@ -20,11 +20,12 @@ The most important guidelines:
 
 - All changes should be covered by tests.
 - Your code should support all the Ruby versions we have enabled on CI.
-- Do not update the CHANGELOG, or the `Worldwide::VERSION` constant.
+- Add an entry under `Unreleased` in [`CHANGELOG.md`](../CHANGELOG.md) for every change except routine updates such as dependency bumps. Add the public PR link once it exists.
+- Leave `Worldwide::VERSION` unchanged unless this PR also prepares a release.
 
 ### Releasing
 
 1. Check the [semantic versioning page](http://semver.org) for info on how to version the new release.
 2. Update the  `Worldwide::VERSION` constant in **lib/worldwide/version.rb**.
-3. Add a `CHANGELOG.md` entry for the new release with the date.
+3. Move the entries for this release from `Unreleased` to a dated section in `CHANGELOG.md`.
 4. Release the gem to rubygems using ShipIt (this will create tag/push during deploy)
