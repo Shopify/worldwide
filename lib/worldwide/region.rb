@@ -17,6 +17,12 @@ module Worldwide
     ).to_set.freeze
     private_constant :ISO_3166_ASSIGNED_COUNTRY_CODES
 
+    CODE_SEPARATOR = "-"
+    private_constant :CODE_SEPARATOR
+
+    BLANK_CODE = /\A[[:space:]]*\z/
+    private_constant :BLANK_CODE
+
     # Accpetable format types of the postal code.
     FORMAT_TYPES = {
       ALPHANUMERIC: "ALPHANUMERIC",
@@ -164,10 +170,10 @@ module Worldwide
 
     # Other names that may be used to refer to this region.
     # E.g., "Czech Republic" is also known as "Czechia".
-    attr_accessor :name_alternates
+    attr_reader :name_alternates
 
-    # iso_code values of regions (subdivisions) within the same country that border this region.
-    # E.g., for CA-ON, the neighbouring zones are CA-MB, CA-NU and CA-QC.
+    # legacy_code values of regions (subdivisions) within the same country that border this region.
+    # E.g., for CA-ON, the neighbouring zones are "QC" and "MB".
     attr_accessor :neighbours
 
     alias_method :neighbors, :neighbours
@@ -334,6 +340,12 @@ module Worldwide
       @parents = [].to_set
       @zones = []
       @zones_by_code = {}
+    end
+
+    def name_alternates=(names)
+      @name_alternates = names
+      @handle = nil
+      @handle_alternates = nil
     end
 
     def inspect
@@ -557,6 +569,114 @@ module Worldwide
       valid_normalized_zip?(normalized, partial_match: partial_match)
     end
 
+    # Is the given postal code value valid for this region, judging a province by its own zip prefixes?
+    #
+    # For a region that is not a province, this gives the same result as {#valid_zip?}.
+    #
+    # For a province, {#valid_zip?} infers one province from the zip, and accepts the zip only when that is
+    # this province or when `zips_crossing_provinces` lists it. This method instead accepts the zip when
+    # the country accepts it and one of this province's own `zip_prefixes` matches it. The two differ when:
+    #
+    # - the province has no `zip_prefixes`, but other provinces of its country do: this method accepts
+    #   any zip that the country accepts, and {#valid_zip?} accepts only a zip that infers this province;
+    # - the prefixes of two provinces both match the zip, for example a partial zip such as "CH6" or a
+    #   shared prefix such as "K1A": this method accepts the zip for each of them, and {#valid_zip?}
+    #   accepts it for the first one that it finds, and for the others only through `zips_crossing_provinces`.
+    #
+    # @example
+    #   Worldwide.region(code: "CA-ON").valid_zone_zip?("K2A") == false
+    #   Worldwide.region(code: "CA-ON").valid_zone_zip?("K2A", partial_match: true) == true
+    #
+    # @param zip [String]
+    # @param partial_match [Boolean] also accept the first part of a zip, as `valid_zip?` does
+    # @return [Boolean]
+    def valid_zone_zip?(zip, partial_match: false)
+      return valid_zip?(zip, partial_match: partial_match) unless province?
+
+      country = associated_country
+      return false if country.nil? || country.iso_code.nil?
+
+      country_code = country.iso_code
+      normalized = Zip.normalize(country_code: country_code, zip: zip)
+      adjusted = Zip.strip_optional_country_prefix(country_code: country_code, zip: normalized)
+
+      return false unless country.send(:valid_normalized_zip?, adjusted, partial_match: partial_match)
+      return true if Util.blank?(zip) && !country.zip_required?
+      return true if Util.blank?(zip_prefixes)
+      return true if country.send(:cross_border_zip_includes_province?, zip: adjusted, province_code: legacy_code)
+
+      zip_prefixes.any? { |prefix| adjusted.start_with?(prefix) || prefix.start_with?(adjusted) }
+    end
+
+    # Does the given code identify this region?
+    #
+    # The code may be the region's `legacy_code`, one of its `code_alternates`, or its `iso_code`.
+    # For a region within a country, the code may also carry the country's code in place of
+    # the hyphen-less part: "CA-NL" matches the region with legacy code "NL" in Canada.
+    # And, for a region whose legacy code has a hyphen, the part after the hyphen alone is enough:
+    # "13" matches the region with legacy code "JP-13".
+    #
+    # The comparison ignores the case of ASCII letters.
+    # Callers may look a region up by code very often, so this allocates no strings.
+    #
+    # @example
+    #   Worldwide.region(code: "CA-QC").has_code?("PQ") == true
+    #   Worldwide.region(code: "CA-QC").has_code?("ca-qc") == true
+    #   Worldwide.region(code: "JP-13").has_code?("13") == true
+    #
+    # @param code [String, Symbol]
+    # @return [Boolean]
+    def has_code?(code)
+      return false if code.nil?
+
+      code = code.to_s unless code.is_a?(String)
+      return false if code.empty? || BLANK_CODE.match?(code)
+
+      return true if legacy_code&.casecmp(code)&.zero?
+      return true if code_alternates&.any? { |code_alternate| code_alternate.casecmp(code)&.zero? }
+      return true if iso_code&.casecmp(code)&.zero?
+
+      match_unprefixed_code?(code) || match_suffix_only_code?(code)
+    end
+
+    # Does the given name identify this region?
+    #
+    # The name is compared with the region's `legacy_name` and its `name_alternates`, after
+    # {Util.utf8_handle} simplifies each of them, so that "Fayyum" matches "Fayyūm".
+    # It is not compared with the localized {#full_name}.
+    #
+    # @param name [String]
+    # @return [Boolean]
+    def has_name?(name)
+      has_handle?(name.nil? ? nil : Util.utf8_handle(name))
+    end
+
+    # Does the given handle identify this region?
+    #
+    # A handle is the result of {Util.utf8_handle}. It is compared with the handle of the region's
+    # `legacy_name` and with the handles of its `name_alternates`.
+    #
+    # @param handle [String]
+    # @return [Boolean]
+    def has_handle?(handle)
+      return false if handle.nil?
+
+      handle == name_handle || name_alternate_handles.include?(handle)
+    end
+
+    # Is the region with the given legacy code one of the regions that border this region?
+    #
+    # @example
+    #   Worldwide.region(code: "CA-ON").neighbor?("QC") == true
+    #
+    # @param code [String] a legacy code, as found in {#neighbours}
+    # @return [Boolean]
+    def neighbor?(code)
+      return false if neighbours.nil?
+
+      neighbours.include?(code)
+    end
+
     # are zones optional for this region?
     def province_optional?
       province_optional || !@zones&.any?(&:province?)
@@ -570,6 +690,77 @@ module Worldwide
     end
 
     private
+
+    def name_handle
+      return if legacy_name.nil?
+
+      @handle ||= Util.utf8_handle(legacy_name)
+    end
+
+    def name_alternate_handles
+      @handle_alternates ||= (name_alternates || []).map { |name| Util.utf8_handle(name) }.freeze
+    end
+
+    # Matches a code that has this region's country code, a hyphen, and then this region's legacy code
+    # or one of its code alternates. E.g., "CA-NL", to match just the "NL" part.
+    #
+    # This avoids String#split, so that it allocates no strings.
+    def match_unprefixed_code?(code)
+      return false unless province?
+
+      hyphen_index = code.byteindex(CODE_SEPARATOR)
+      return false unless hyphen_index && hyphen_index != 0 && hyphen_index + 1 < code.bytesize
+
+      country_code = parent_country&.iso_code
+      return false if country_code.nil? || country_code.empty?
+
+      return false unless Util.ascii_casecmp_substring?(
+        country_code,
+        code,
+        start1: 0,
+        length1: country_code.bytesize,
+        start2: 0,
+        length2: hyphen_index,
+      )
+
+      suffix_start = hyphen_index + 1
+      suffix_length = code.bytesize - suffix_start
+
+      return true if suffix_matches?(legacy_code, code, suffix_start, suffix_length)
+
+      !!code_alternates&.any? { |code_alternate| suffix_matches?(code_alternate, code, suffix_start, suffix_length) }
+    end
+
+    def suffix_matches?(candidate, code, suffix_start, suffix_length)
+      return false if candidate.nil? || candidate.empty?
+
+      Util.ascii_casecmp_substring?(
+        candidate,
+        code,
+        start1: 0,
+        length1: candidate.bytesize,
+        start2: suffix_start,
+        length2: suffix_length,
+      )
+    end
+
+    # Matches a code that is only the part of this region's legacy code after the hyphen,
+    # e.g., "13" for "JP-13". Code alternates do not take part, to avoid matching by accident.
+    def match_suffix_only_code?(code)
+      return false if legacy_code.nil?
+
+      hyphen_index = legacy_code.byteindex(CODE_SEPARATOR)
+      return false if hyphen_index.nil? || hyphen_index == legacy_code.bytesize - 1
+
+      Util.ascii_casecmp_substring?(
+        legacy_code,
+        code,
+        start1: hyphen_index + 1,
+        length1: legacy_code.bytesize - hyphen_index - 1,
+        start2: 0,
+        length2: code.bytesize,
+      )
+    end
 
     def add_zone_to_hash(zone)
       @zones_by_code[subdivision_code(zone.iso_code)] = zone if Util.present?(subdivision_code(zone.iso_code))

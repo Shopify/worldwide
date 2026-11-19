@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add `Region#has_code?`, `Region#has_name?`, `Region#has_handle?`, `Region#neighbor?` and `Region#valid_zone_zip?`, for matching a zone by code, by name and by zip, and `Util.utf8_handle` and `Util.ascii_casecmp_substring?`, which they use. `valid_zone_zip?` checks a province's own `zip_prefixes`. `valid_zip?` is unchanged: it infers one province from the zip, so it can differ for a shared prefix or a zip shorter than a prefix. [#682](https://github.com/Shopify/worldwide/pull/682)
 - `Zip.normalize` no longer drops letters from a complete GB-style postcode that has extra characters after it, for example `"E1 6AN 1AA"`. `Zip.outcode` no longer raises `NoMethodError` for such input in GG, IM and JE. [#683](https://github.com/Shopify/worldwide/pull/683)
 - `Zip.find_country` gives no suggestion for a postal code that has no uppercase letters when no country matches the alleged country, and treats a blank country code like `nil` instead of raising `ArgumentError`. [#683](https://github.com/Shopify/worldwide/pull/683)
 - Add tests and fixtures that check which postal codes are valid for each country. [#683](https://github.com/Shopify/worldwide/pull/683)
