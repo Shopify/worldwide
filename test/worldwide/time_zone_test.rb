@@ -43,6 +43,7 @@ module Worldwide
         "America/Vancouver" => -8 * 3600,
         "America/Whitehorse" => -7 * 3600,
         "America/Edmonton" => -7 * 3600,
+        "America/Inuvik" => -7 * 3600,
         "America/Winnipeg" => -6 * 3600,
       }.each do |name, offset|
         ActiveSupport::TimeZone[name].stubs(:utc_offset).returns(offset)
@@ -62,6 +63,20 @@ module Worldwide
       rails_zones = ActiveSupport::TimeZone.all
       canadian_zones = canadian_zone_labels.keys.map { |name| ActiveSupport::TimeZone[name] }
       ActiveSupport::TimeZone.stubs(:all).returns(rails_zones + canadian_zones)
+
+      assert_equal expected_names, Class.new(Worldwide::TimeZone).all.map(&:name)
+    end
+
+    test ".all keeps the same names and order when Rails lists its 8.2 Canadian zones" do
+      expected_names = Class.new(Worldwide::TimeZone).all.map(&:name)
+      rails_zones = ActiveSupport::TimeZone.all
+      rails_8_2_zones = {
+        "Pacific Time (Canada)" => "America/Vancouver",
+        "Alberta" => "America/Edmonton",
+        "Northwest Territories" => "America/Inuvik",
+        "Manitoba" => "America/Winnipeg",
+      }.map { |rails_name, iana_name| ActiveSupport::TimeZone.create(rails_name, nil, TZInfo::Timezone.get(iana_name)) }
+      ActiveSupport::TimeZone.stubs(:all).returns(rails_zones + rails_8_2_zones)
 
       assert_equal expected_names, Class.new(Worldwide::TimeZone).all.map(&:name)
     end
@@ -216,6 +231,7 @@ module Worldwide
         "America/Vancouver" => "(GMT-07:00) British Columbia",
         "America/Whitehorse" => "(GMT-07:00) Yukon",
         "America/Edmonton" => "(GMT-06:00) Alberta, Northwest Territories",
+        "America/Inuvik" => "(GMT-06:00) Northwest Territories (Inuvik)",
         "America/Winnipeg" => "(GMT-05:00) Manitoba",
       }
     end
@@ -225,6 +241,7 @@ module Worldwide
         "America/Vancouver" => -7 * 3600,
         "America/Whitehorse" => -7 * 3600,
         "America/Edmonton" => -6 * 3600,
+        "America/Inuvik" => -6 * 3600,
         "America/Winnipeg" => -5 * 3600,
       }
     end
