@@ -27,10 +27,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- Greenland, Kyiv and Yangon now use their current IANA names, `America/Nuuk`, `Europe/Kyiv` and `Asia/Yangon`, in the `GL` region's `timezones`, in `DeprecatedTimeZoneMapper.to_rails`, in the time zone labels and in `Worldwide::TimeZone.all`. This matches Rails 8.1. The old names are tz backward links, which hosts without tzdata's legacy links (Ubuntu 26.04 by default) can't resolve. The old names still work as input: `to_supported` maps `America/Godthab` and `Asia/Rangoon` to the current names as it already did for `Europe/Kiev`, `to_rails` still accepts them, `Worldwide::TimeZone.new(old_name).to_s` keeps its label, and on Rails before 8.1 `Worldwide::TimeZone.all` returns the current names. Callers that compare these results with a stored old name should pass the stored name through `to_supported` first. [#687](https://github.com/Shopify/worldwide/pull/687)
-- Greenland's time zone label now shows the standard offset it has used since 2023, `(GMT-02:00)`, instead of `(GMT-03:00)`. [#687](https://github.com/Shopify/worldwide/pull/687)
-- Add labels for Asunción (`America/Asuncion`), which Rails 8.1 added to its time zone list. `to_rails("America/Asuncion")` now returns `America/Asuncion` instead of `America/Halifax`, which was an hour off during the northern winter because Paraguay has stayed on UTC-03:00 since October 2024. [#687](https://github.com/Shopify/worldwide/pull/687)
-- Require Ruby 3.2 or later. Ruby 3.1 reached end of life in March 2025, and the development bundle now uses Active Support 8.1, which needs Ruby 3.2. The gem still supports Active Support 7.0 and later. [#687](https://github.com/Shopify/worldwide/pull/687)
+- **Breaking:** Greenland, Kyiv and Yangon now use `America/Nuuk`, `Europe/Kyiv` and `Asia/Yangon`, as in Rails 8.1. This applies to the `GL` region's `timezones`, `DeprecatedTimeZoneMapper.to_rails`, the time zone labels and `Worldwide::TimeZone.all`. To match a saved `America/Godthab`, `Europe/Kiev` or `Asia/Rangoon`, pass it through `DeprecatedTimeZoneMapper.to_supported` first. Greenland's label now shows `(GMT-02:00)`. [#687](https://github.com/Shopify/worldwide/pull/687)
+- `to_rails("America/Asuncion")` now returns `America/Asuncion` instead of `America/Halifax`, and Asunción has time zone labels. [#687](https://github.com/Shopify/worldwide/pull/687)
+- **Breaking:** Require Ruby 3.2 or later. [#687](https://github.com/Shopify/worldwide/pull/687)
 
 ---
 
