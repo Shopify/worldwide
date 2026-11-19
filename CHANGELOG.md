@@ -29,6 +29,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.0.0] - 2026-11-19
+
+- **Breaking:** Greenland, Kyiv and Yangon now use `America/Nuuk`, `Europe/Kyiv` and `Asia/Yangon`, as in Rails 8.1. This applies to the `GL` region's `timezones`, `DeprecatedTimeZoneMapper.to_rails`, the time zone labels and `Worldwide::TimeZone.all`. To match a saved `America/Godthab`, `Europe/Kiev` or `Asia/Rangoon`, pass it through `DeprecatedTimeZoneMapper.to_supported` first. Greenland's label now shows `(GMT-02:00)`. [#687](https://github.com/Shopify/worldwide/pull/687)
+- `to_rails("America/Asuncion")` now returns `America/Asuncion` instead of `America/Halifax`, and Asunción has time zone labels. [#687](https://github.com/Shopify/worldwide/pull/687)
+- **Breaking:** Require Ruby 3.2 or later. [#687](https://github.com/Shopify/worldwide/pull/687)
+
+---
+
 ## [2.4.0] - 2026-11-18
 
 - Add `Region#has_code?`, `Region#has_name?`, `Region#has_handle?`, `Region#neighbor?` and `Region#valid_zone_zip?`, for matching a zone by code, by name and by zip, and `Util.utf8_handle` and `Util.ascii_casecmp_substring?`, which they use. `valid_zone_zip?` checks a province's own `zip_prefixes`. `valid_zip?` is unchanged: it infers one province from the zip, so it can differ for a shared prefix or a zip shorter than a prefix. [#682](https://github.com/Shopify/worldwide/pull/682)

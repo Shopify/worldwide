@@ -7,7 +7,9 @@ module Worldwide
     test "#to_supported converts as expected" do
       data = [
         ["Africa/Abidjan", "Africa/Abidjan"],
+        ["America/Godthab", "America/Nuuk"],
         ["America/Toronto", "America/Toronto"],
+        ["Asia/Rangoon", "Asia/Yangon"],
         ["Australia/NSW", "Australia/Sydney"],
         ["Canada/Central", "America/Winnipeg"],
         ["Canada/Eastern", "America/Toronto"],
@@ -15,6 +17,7 @@ module Worldwide
         ["Canada/Pacific", "America/Vancouver"],
         ["Canada/Yukon", "America/Whitehorse"],
         ["Europe/Berlin", "Europe/Berlin"],
+        ["Europe/Kiev", "Europe/Kyiv"],
         ["Iran", "Asia/Tehran"],
         ["PRC", "Asia/Shanghai"],
         ["ROC", "Asia/Taipei"],
@@ -114,6 +117,8 @@ module Worldwide
         ["Africa/Nairobi", "Africa/Nairobi"],
         ["America/Argentina/Buenos_Aires", "America/Argentina/Buenos_Aires"],
         ["America/Argentina/Catamarca", "America/Argentina/Buenos_Aires"],
+        ["America/Godthab", "America/Nuuk"],
+        ["America/Nuuk", "America/Nuuk"],
         ["Asia/Dhaka", "Asia/Dhaka"],
         ["Etc/UTC", "Etc/UTC"],
         ["Etc/Zulu", "Etc/UTC"],

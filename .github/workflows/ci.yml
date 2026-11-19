@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-    # ubuntu-latest moved to 26.04, whose tzdata no longer resolves America/Godthab (data/regions/GL.yml).
-    # Remove this pin once GL.yml uses America/Nuuk.
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     name: Ruby ${{ matrix.ruby }} / ${{ matrix.gemfile }}
     strategy:
       fail-fast: false

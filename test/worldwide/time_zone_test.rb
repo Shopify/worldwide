@@ -66,6 +66,31 @@ module Worldwide
       assert_equal expected_names, Class.new(Worldwide::TimeZone).all.map(&:name)
     end
 
+    test ".all returns current tz names when Rails reports the pre-8.1 names" do
+      expected_names = Class.new(Worldwide::TimeZone).all.map(&:name)
+      legacy_rails_zones = ActiveSupport::TimeZone.all.map do |zone|
+        legacy_name = Worldwide::TimeZone::RAILS_LEGACY_ZONE_NAMES.key(zone.tzinfo.name)
+        next zone unless legacy_name
+
+        ActiveSupport::TimeZone.create(zone.name, zone.utc_offset, stub(name: legacy_name))
+      end
+      ActiveSupport::TimeZone.stubs(:all).returns(legacy_rails_zones)
+
+      assert_equal expected_names, Class.new(Worldwide::TimeZone).all.map(&:name)
+    end
+
+    test "#to_s labels Greenland, Kyiv and Yangon under their current and old tz names" do
+      I18n.with_locale(:en) do
+        {
+          ["America/Nuuk", "America/Godthab"] => "(GMT-02:00) Greenland",
+          ["Europe/Kyiv", "Europe/Kiev"] => "(GMT+02:00) Kyiv",
+          ["Asia/Yangon", "Asia/Rangoon"] => "(GMT+06:30) Rangoon",
+        }.each do |names, label|
+          names.each { |name| assert_equal label, Worldwide::TimeZone.new(name).to_s, name }
+        end
+      end
+    end
+
     test "#to_s displays Canadian time zones with their permanent offsets" do
       I18n.with_locale(:en) do
         canadian_zone_labels.each do |name, label|

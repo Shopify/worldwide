@@ -11,6 +11,14 @@ module Worldwide
       "America/Winnipeg" => -5 * 3600,
     }.freeze
 
+    # Rails 8.1 moved these zones to their current tz names. Older Rails still reports the old names, which
+    # have no labels here, so mapping them keeps names and labels the same on every Rails version.
+    RAILS_LEGACY_ZONE_NAMES = {
+      "America/Godthab" => "America/Nuuk",
+      "Asia/Rangoon" => "Asia/Yangon",
+      "Europe/Kiev" => "Europe/Kyiv",
+    }.freeze
+
     class << self
       def all
         @all ||= uniq_zone_names.map { |zone_name| new(zone_name) }
@@ -23,7 +31,7 @@ module Worldwide
 
         (ActiveSupport::TimeZone.all + additional_zones).sort_by do |time_zone|
           [ADDITIONAL_ZONE_OFFSETS.fetch(time_zone.tzinfo.name) { time_zone.utc_offset }, time_zone.name]
-        end.map { |time_zone| time_zone.tzinfo.name }.uniq
+        end.map { |time_zone| RAILS_LEGACY_ZONE_NAMES.fetch(time_zone.tzinfo.name, time_zone.tzinfo.name) }.uniq
       end
     end
 
@@ -40,7 +48,7 @@ module Worldwide
     private
 
     def translated_name
-      Cldr.t(name, scope: :timezones)
+      Cldr.t(RAILS_LEGACY_ZONE_NAMES.fetch(name, name), scope: :timezones)
     end
   end
 end
