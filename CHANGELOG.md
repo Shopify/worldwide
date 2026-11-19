@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Add `:date_time_current_year_with_seconds` — `:date_time_current_year` (a compact, year-omitted "MMM d + time" timestamp) with the time upgraded to second precision, for cross-system log/event correlation. Each locale keeps its own field order, separators, and 12h/24h clock (e.g. Vietnamese renders time-first, Danish uses "." separators, en stays 12-hour). [#592](https://github.com/Shopify/worldwide/pull/592)
 
 - Add `Region#has_code?`, `Region#has_name?`, `Region#has_handle?`, `Region#neighbor?` and `Region#valid_zone_zip?`, for matching a zone by code, by name and by zip, and `Util.utf8_handle` and `Util.ascii_casecmp_substring?`, which they use. `valid_zone_zip?` checks a province's own `zip_prefixes`. `valid_zip?` is unchanged: it infers one province from the zip, so it can differ for a shared prefix or a zip shorter than a prefix. [#682](https://github.com/Shopify/worldwide/pull/682)
 - `Zip.normalize` no longer drops letters from a complete GB-style postcode that has extra characters after it, for example `"E1 6AN 1AA"`. `Zip.outcode` no longer raises `NoMethodError` for such input in GG, IM and JE. [#683](https://github.com/Shopify/worldwide/pull/683)
