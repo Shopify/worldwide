@@ -327,6 +327,42 @@ module Worldwide
       end
     end
 
+    test "normalize keeps the MD- prefix with its hyphen whenever the MD prefix is present" do
+      ["MD-2025", "MD2025", "MD 2025", "md-2025", "2025MD", "2025-MD"].each do |zip|
+        actual = Zip.normalize(country_code: "MD", zip: zip)
+
+        assert_equal "MD-2025", actual, "#{zip} should have normalized to MD-2025 but got #{actual}"
+      end
+    end
+
+    test "normalize leaves a bare 4-digit MD postal code as entered" do
+      assert_equal "2025", Zip.normalize(country_code: "MD", zip: "2025")
+    end
+
+    test "normalize returns an out-of-range MD postal code unchanged" do
+      ["MD-9999", "MD9999", "9999MD", "9999"].each do |zip|
+        assert_equal zip, Zip.normalize(country_code: "MD", zip: zip)
+      end
+    end
+
+    test "normalize is stable for MD postal codes" do
+      ["MD-2025", "MD2025", "MD 2025", "md-2025", "2025MD", "2025-MD", "2025"].each do |zip|
+        once = Zip.normalize(country_code: "MD", zip: zip)
+
+        assert_equal once, Zip.normalize(country_code: "MD", zip: once)
+      end
+    end
+
+    test "valid_zip? accepts every input form of an MD postal code" do
+      md = Worldwide.region(code: "MD")
+      ["MD-2025", "MD2025", "MD 2025", "md-2025", "2025MD", "2025-MD", "2025"].each do |zip|
+        assert md.valid_zip?(zip), "#{zip} should be accepted"
+        normalized = Zip.normalize(country_code: "MD", zip: zip)
+
+        assert md.valid_zip?(normalized), "#{normalized} should be accepted"
+      end
+    end
+
     test "normalize adjusts valid MG postal codes as expected" do
       [
         ["00101", "101"],
