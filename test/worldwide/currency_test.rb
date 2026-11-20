@@ -598,7 +598,7 @@ module Worldwide
         # The currency code stands in for a missing symbol, and is not repeated
         ["ANG", :en, -1234.5, {}, ["-ANG1,234.50", "-ANG1,234.50"]],
         ["ANG", :fr, 1234.5, {}, ["1\u202F234,50\u00A0ANG", "1\u202F234,50\u00A0ANG"]],
-        ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01’234.50", "-CHF\u00A01’234.50"]],
+        ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01'234.50", "-CHF\u00A01'234.50"]],
         # Symbol after the number with a space in no, which nb inherits
         ["NOK", :nb, 1234.5, {}, ["1\u00A0234,50\u00A0kr", "1\u00A0234,50\u00A0kr NOK"]],
         ["NOK", :nb, -1234.5, {}, ["-1\u00A0234,50\u00A0kr", "-1\u00A0234,50\u00A0kr NOK"]],

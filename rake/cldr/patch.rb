@@ -130,6 +130,13 @@ module Worldwide
             "\u200F#,##0.00\u00A0\u200F¤;\u200F-#,##0.00\u00A0\u200F¤",
           )
 
+          # CLDR 48 changed the grouping separator of these locales from U+2019 RIGHT SINGLE QUOTATION MARK to
+          # U+0027 APOSTROPHE. The values come from the CLDR XML files in common/main.
+          # Remove these patches once data/cldr.yml is at CLDR 48 or later.
+          [:"de-CH", :"de-LI", :"en-CH", :gsw, :"it-CH", :wae].each do |locale|
+            patch_file(locale, "numbers.yml", [:numbers, :latn, :symbols, :group], "’", "'")
+          end
+
           # Re: subdivisions of Argentina
           # country_db used to label:
           #   - `arb` as `Buenos Aires`
