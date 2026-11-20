@@ -600,12 +600,12 @@ module Worldwide
         ["ANG", :fr, 1234.5, {}, ["1\u202F234,50\u00A0ANG", "1\u202F234,50\u00A0ANG"]],
         ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01’234.50", "-CHF\u00A01’234.50"]],
         # Right-to-left locales
-        ["ILS", :he, 1234.5, {}, ["1,234.50\u00A0₪", "1,234.50\u00A0₪ ILS"]],
-        ["ILS", :he, -1234.5, {}, ["-1,234.50\u00A0₪", "-1,234.50\u00A0₪ ILS"]],
+        ["ILS", :he, 1234.5, {}, ["\u200F1,234.50\u00A0₪", "\u200F1,234.50\u00A0₪ ILS"]],
+        ["ILS", :he, -1234.5, {}, ["-\u200F1,234.50\u00A0₪", "-\u200F1,234.50\u00A0₪ ILS"]],
         ["SAR", :ar, 1234.5, {}, ["ر.س.\u200F\u00A01,234.50", "ر.س.\u200F\u00A01,234.50 SAR"]],
         ["SAR", :ar, -1234.5, {}, ["-ر.س.\u200F\u00A01,234.50", "-ر.س.\u200F\u00A01,234.50 SAR"]],
         ["USD", :ar, -1234.5, {}, ["-$\u00A01,234.50", "-$\u00A01,234.50 USD"]],
-        ["IRR", :fa, -1234.5, {}, ["-1,234.50ریال", "-1,234.50ریال IRR"]],
+        ["IRR", :fa, -1234.5, {}, ["-\u200Eریال\u00A01,234.50", "-\u200Eریال\u00A01,234.50 IRR"]],
         # 3/2 grouping
         ["INR", :"en-IN", 1234567.891, {}, ["₹12,34,567.89", "₹12,34,567.89 INR"]],
         ["INR", :"en-IN", -1234567.891, {}, ["-₹12,34,567.89", "-₹12,34,567.89 INR"]],
@@ -692,7 +692,7 @@ module Worldwide
         ["JPY", :ja, -1234.5, {}, [[:minus_sign, "-"], [:currency, "￥"], [:number, "1,234"]]],
         ["KWD", :en, 1234.5, {}, [[:currency, "KWD"], [:number, "1,234.500"]]],
         ["KWD", :ar, -1234.5, {}, [[:minus_sign, "-"], [:currency, "د.ك.\u200F"], [:literal, "\u00A0"], [:number, "1,234.500"]]],
-        ["ILS", :he, -1234.5, {}, [[:minus_sign, "-"], [:number, "1,234.50"], [:literal, "\u00A0"], [:currency, "₪"]]],
+        ["ILS", :he, -1234.5, {}, [[:minus_sign, "-"], [:literal, "\u200F"], [:number, "1,234.50"], [:literal, "\u00A0"], [:currency, "₪"]]],
         ["HKD", :en, 12.5, {}, [[:currency, "HK$"], [:number, "12.50"]]],
         ["ANG", :en, -12.5, {}, [[:minus_sign, "-"], [:currency, "ANG"], [:number, "12.50"]]],
         ["INR", :"en-IN", BigDecimal("123456789.5"), {}, [[:currency, "₹"], [:number, "12,34,56,789.50"]]],
@@ -736,7 +736,7 @@ module Worldwide
 
       assert_operator codes.size, :>, 250
 
-      layout = /\A(minus_sign )?(currency (literal )?number|number (literal )?currency)\z/
+      layout = /\A(minus_sign )?(literal )?(currency (literal )?number|number (literal )?currency)\z/
 
       cases = codes.product(locales, [-12345.675], [{}]) + sampled_codes.product(locales, amounts, option_sets)
       cases.each do |code, locale, amount, options|
@@ -921,6 +921,21 @@ module Worldwide
       end
     end
 
+    test "the direction marks of a currency pattern are written as in the pattern" do
+      # he: "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤", fa: "\u200E¤\u00A0#,##0.00"
+      assert_equal "\u200F1,234.50\u00A0₪", Worldwide.currency(code: "ILS").format_short(1234.5, locale: :"he-IL")
+      assert_equal "-\u200F1,234.50\u00A0₪", Worldwide.currency(code: "ILS").format_short(-1234.5, locale: :"he-IL")
+      assert_equal "\u200F1,234.50\u00A0$ USD", Worldwide.currency(code: "USD").format_explicit(1234.5, locale: :"he-IL")
+      assert_equal "\u200E$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :fa)
+      assert_equal "\u200E$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :"fa-IR")
+      assert_equal(
+        [{ type: :minus_sign, value: "-" }, { type: :literal, value: "\u200E" }, { type: :currency, value: "$" }, { type: :literal, value: "\u00A0" }, { type: :number, value: "1,234.50" }],
+        Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :fa),
+      )
+      # ar: "¤\u00A0#,##0.00", which has no direction marks
+      assert_equal "$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :ar)
+    end
+
     test "#format_to_parts covers the symbol format only" do
       usd = Worldwide.currency(code: "USD")
 
@@ -948,7 +963,7 @@ module Worldwide
     end
 
     test "#format_to_parts returns new objects that the caller can change" do
-      [["USD", :en], ["EUR", :fr], ["HKD", :en], ["ANG", :en], ["KWD", :en]].each do |code, locale|
+      [["USD", :en], ["EUR", :fr], ["HKD", :en], ["ANG", :en], ["KWD", :en], ["ILS", :he], ["USD", :fa]].each do |code, locale|
         currency = Worldwide.currency(code: code)
         symbol = currency.symbol(locale: locale)
         expected = currency.format_to_parts(-1234.5, locale: locale)

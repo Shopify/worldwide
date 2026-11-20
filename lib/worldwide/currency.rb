@@ -10,7 +10,14 @@ module Worldwide
     SUPPORTED_NON_ISO_CODES = ["USDC"].freeze
     SUPPORTED_ALTERNATE_FORMATS = [:japan]
     TEXT_ENCLOSED_BY_PARENTHESES = /\((.)+\)/
-    private_constant :SUPPORTED_NON_ISO_CODES, :TEXT_ENCLOSED_BY_PARENTHESES
+    # The direction marks that CLDR writes in currency patterns: U+200E LEFT-TO-RIGHT MARK, U+200F RIGHT-TO-LEFT MARK
+    # and U+061C ARABIC LETTER MARK. The he pattern starts with U+200F, so that the amount reads right to left, and the
+    # fa pattern starts with U+200E.
+    DIRECTION_MARKS = "\u200E\u200F\u061C"
+    # The positive part of a currency pattern: the text before the first of the symbol and the number, that one, the
+    # text between them, and the other one.
+    POSITIVE_PATTERN = /\A([^¤#0,.]*)(¤|[#0,.]+)([^¤#0,.]*)(¤|[#0,.]+)/
+    private_constant :SUPPORTED_NON_ISO_CODES, :TEXT_ENCLOSED_BY_PARENTHESES, :DIRECTION_MARKS, :POSITIVE_PATTERN
 
     class << self
       def digits_and_rounding
@@ -145,7 +152,8 @@ module Worldwide
     #
     # - :minus_sign, the "-" of a negative amount. It comes first, before the symbol or the number.
     # - :currency, the symbol, or the currency code if the locale has no symbol for the currency.
-    # - :literal, the no-break space between the symbol and the number, in locales that have one.
+    # - :literal, the direction marks that the locale's currency pattern writes before the symbol and the number, such
+    #   as the U+200F RIGHT-TO-LEFT MARK of he, or the no-break space and direction marks that it writes between them.
     # - :number, the localized number, without its sign.
     #
     # A part that would be empty is left out, and joining the values gives the result of format_short.
@@ -165,7 +173,7 @@ module Worldwide
     )
       decimal_places = decimals if decimal_places.nil?
       currency_symbol = symbol(locale: locale) || @currency_code
-      spaced = has_space?(locale)
+      layout = pattern_layout(locale)
       negative, number = Numbers.new(locale: locale).send(
         :sign_and_digits,
         amount,
@@ -175,7 +183,7 @@ module Worldwide
         sign_display: sign_display,
       )
 
-      arrange_parts(negative: negative, number: number, symbol: currency_symbol, spaced: spaced, prefix: prefix?(locale))
+      arrange_parts(negative: negative, number: number, symbol: currency_symbol, layout: layout)
     end
 
     def symbol(locale: I18n.locale)
@@ -222,7 +230,7 @@ module Worldwide
     # pattern, which can hold a minus sign of its own, so the sign is found in the text: it moves in front of a
     # leading symbol, and stays where it is when the symbol follows the number.
     def combine(amount:, decimal_places:, humanize:, locale:, symbol:, **number_options)
-      spaced = has_space?(locale)
+      layout = pattern_layout(locale)
 
       formatted = formatted_amount(
         amount,
@@ -232,25 +240,24 @@ module Worldwide
         **number_options,
       )
 
-      prefix = prefix?(locale)
-      negative = prefix && formatted.include?("-")
+      negative = layout[:prefix] && formatted.include?("-")
       number = negative ? formatted.sub("-", "") : formatted
 
-      arrange_parts(negative: negative, number: number, symbol: symbol, spaced: spaced, prefix: prefix).map { |part| part[:value] }.join
+      arrange_parts(negative: negative, number: number, symbol: symbol, layout: layout).map { |part| part[:value] }.join
     end
 
-    # Returns the parts of a formatted amount in display order: the minus sign if negative, then the symbol
-    # and the number in the locale's order, separated by a no-break space if the locale's currency pattern has one.
-    def arrange_parts(negative:, number:, symbol:, spaced:, prefix:)
+    # Returns the parts of a formatted amount in display order: the minus sign if negative, the direction marks that
+    # the pattern starts with, then the symbol and the number in the pattern's order, with the literal between them.
+    def arrange_parts(negative:, number:, symbol:, layout:)
       currency = { type: :currency, value: symbol.dup }
       digits = { type: :number, value: number }
 
       parts = []
       parts << { type: :minus_sign, value: +"-" } if negative
-      parts << (prefix ? currency : digits)
-      # This is U+00A0, the Unicode non-breaking space character
-      parts << { type: :literal, value: +"\u00A0" } if spaced
-      parts << (prefix ? digits : currency)
+      parts << { type: :literal, value: layout[:leading].dup } unless layout[:leading].empty?
+      parts << (layout[:prefix] ? currency : digits)
+      parts << { type: :literal, value: layout[:between].dup } unless layout[:between].empty?
+      parts << (layout[:prefix] ? digits : currency)
       parts
     end
 
@@ -327,15 +334,26 @@ module Worldwide
       !minor_symbol.nil?
     end
 
-    # Returns true if there should be a space between the amount and the currency symbol
-    def has_space?(locale)
-      pattern = Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale)
+    # Returns the locale's standard currency pattern.
+    def currency_pattern(locale)
+      Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale)
+    end
 
-      # Note that CLDR uses these characters in its currency formats:
-      # 160 (U+00A0) is the Unicode non-breaking space character
-      # 164 (U+00A4) is the Unicode generic currency character ('¤')
+    # Returns how the positive part of the currency pattern lays out an amount: whether the symbol comes before the
+    # number, the direction marks that the pattern starts with, and the text between the symbol and the number, of
+    # which the spaces, written as U+00A0 NO-BREAK SPACE, and the direction marks are kept.
+    # The he pattern "\u200F#,##0.00\u00A0\u200F¤" has the layout { prefix: false, leading: "\u200F", between: "\u00A0\u200F" }.
+    def pattern_layout(locale)
+      pattern = currency_pattern(locale).split(";").first
+      match = POSITIVE_PATTERN.match(pattern)
+      return { prefix: pattern.start_with?("¤"), leading: "", between: "" } if match.nil?
 
-      pattern.start_with?("¤ ", [164, 160].pack("U*")) || pattern.end_with?(" ¤", [160, 164].pack("U*"))
+      leading, first, between = match.captures
+      {
+        prefix: first == "¤",
+        leading: leading.delete("^#{DIRECTION_MARKS}"),
+        between: between.tr(" ", "\u00A0").delete("^\u00A0#{DIRECTION_MARKS}"),
+      }
     end
 
     def minor_symbol
@@ -344,12 +362,6 @@ module Worldwide
       return unless Currency.minor_symbols.key?(key)
 
       Currency.minor_symbols[key]["symbol"]
-    end
-
-    # Returns true if the currency symbol is a prefix, e.g. "$ 12.00".
-    # Returns false if the currency symbol is a suffix. e.g. "12.00 $".
-    def prefix?(locale)
-      Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale).start_with?("¤")
     end
   end
 end
