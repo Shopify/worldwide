@@ -112,6 +112,13 @@ module Worldwide
             patch_file(locale, "numbers.yml", [:numbers, :minimum_grouping_digits], 1, 2)
           end
 
+          # Later CLDR releases moved the currency symbol after the amount in these locales' standard currency
+          # pattern. The values come from the CLDR XML files in common/main: ar since CLDR 42, no (which nb
+          # inherits) since CLDR 44. The ar pattern starts with U+200F RIGHT-TO-LEFT MARK.
+          # Remove these patches once data/cldr.yml is at CLDR 44 or later.
+          patch_file(:ar, "numbers.yml", [:numbers, :latn, :formats, :currency, :patterns, :default, :standard], "¤\u00A0#,##0.00", "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤")
+          patch_file(:no, "numbers.yml", [:numbers, :latn, :formats, :currency, :patterns, :default, :standard], "¤\u00A0#,##0.00;¤\u00A0-#,##0.00", "#,##0.00\u00A0¤;-#,##0.00\u00A0¤")
+
           # CLDR 42 added a U+200F RIGHT-TO-LEFT MARK before the currency symbol in the he standard currency
           # pattern, so that the symbol stays on the left of the amount. The value comes from the CLDR XML file
           # common/main/he.xml. Remove this patch once data/cldr.yml is at CLDR 42 or later.
@@ -122,6 +129,13 @@ module Worldwide
             "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤",
             "\u200F#,##0.00\u00A0\u200F¤;\u200F-#,##0.00\u00A0\u200F¤",
           )
+
+          # CLDR 48 changed the grouping separator of these locales from U+2019 RIGHT SINGLE QUOTATION MARK to
+          # U+0027 APOSTROPHE. The values come from the CLDR XML files in common/main.
+          # Remove these patches once data/cldr.yml is at CLDR 48 or later.
+          [:"de-CH", :"de-LI", :"en-CH", :gsw, :"it-CH", :wae].each do |locale|
+            patch_file(locale, "numbers.yml", [:numbers, :latn, :symbols, :group], "’", "'")
+          end
 
           # Re: subdivisions of Argentina
           # country_db used to label:
