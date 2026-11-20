@@ -2,10 +2,11 @@
 
 module Worldwide
   class TimeZone
-    # Rails' curated list omits these Canadian zones.
+    # Rails' curated list omits these Canadian zones before Rails 8.2.
     # Explicit offsets keep the returned list stable when TZInfo's 2026 base offsets change.
     ADDITIONAL_ZONE_OFFSETS = {
       "America/Edmonton" => -6 * 3600,
+      "America/Inuvik" => -6 * 3600,
       "America/Vancouver" => -7 * 3600,
       "America/Whitehorse" => -7 * 3600,
       "America/Winnipeg" => -5 * 3600,

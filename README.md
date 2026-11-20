@@ -641,7 +641,7 @@ This implementation will provide you a localized timezone that you can use with 
       label: t('shop_identity.views.admin.settings.general.timezone_label') %>
 ```
 
-`Worldwide::TimeZone.all` includes the Rails time zones and separate entries for Vancouver, Whitehorse, Edmonton, and Winnipeg.
+`Worldwide::TimeZone.all` includes the Rails time zones and separate entries for Vancouver, Whitehorse, Edmonton, Inuvik, and Winnipeg.
 The Canadian entries use permanent offsets and province or territory labels.
 Passing the saved name through `to_supported` keeps a zone saved under an old tz name, such as `America/Godthab`, selected.
 

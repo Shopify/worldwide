@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add Inuvik (`America/Inuvik`) to `Worldwide::TimeZone.all` as "(GMT-06:00) Northwest Territories (Inuvik)". Rails 8.2 adds it as "Northwest Territories"; listing it on every Rails version keeps the list the same across versions. `to_rails` still maps it to `America/Regina`. [#697](https://github.com/Shopify/worldwide/pull/697)
+
 ---
 
 ## [3.0.0] - 2026-11-19
