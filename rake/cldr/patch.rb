@@ -112,6 +112,17 @@ module Worldwide
             patch_file(locale, "numbers.yml", [:numbers, :minimum_grouping_digits], 1, 2)
           end
 
+          # CLDR 42 added a U+200F RIGHT-TO-LEFT MARK before the currency symbol in the he standard currency
+          # pattern, so that the symbol stays on the left of the amount. The value comes from the CLDR XML file
+          # common/main/he.xml. Remove this patch once data/cldr.yml is at CLDR 42 or later.
+          patch_file(
+            :he,
+            "numbers.yml",
+            [:numbers, :latn, :formats, :currency, :patterns, :default, :standard],
+            "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤",
+            "\u200F#,##0.00\u00A0\u200F¤;\u200F-#,##0.00\u00A0\u200F¤",
+          )
+
           # Re: subdivisions of Argentina
           # country_db used to label:
           #   - `arb` as `Buenos Aires`

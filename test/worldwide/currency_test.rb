@@ -600,8 +600,8 @@ module Worldwide
         ["ANG", :fr, 1234.5, {}, ["1\u202F234,50\u00A0ANG", "1\u202F234,50\u00A0ANG"]],
         ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01’234.50", "-CHF\u00A01’234.50"]],
         # Right-to-left locales
-        ["ILS", :he, 1234.5, {}, ["\u200F1,234.50\u00A0₪", "\u200F1,234.50\u00A0₪ ILS"]],
-        ["ILS", :he, -1234.5, {}, ["-\u200F1,234.50\u00A0₪", "-\u200F1,234.50\u00A0₪ ILS"]],
+        ["ILS", :he, 1234.5, {}, ["\u200F1,234.50\u00A0\u200F₪", "\u200F1,234.50\u00A0\u200F₪ ILS"]],
+        ["ILS", :he, -1234.5, {}, ["-\u200F1,234.50\u00A0\u200F₪", "-\u200F1,234.50\u00A0\u200F₪ ILS"]],
         ["SAR", :ar, 1234.5, {}, ["ر.س.\u200F\u00A01,234.50", "ر.س.\u200F\u00A01,234.50 SAR"]],
         ["SAR", :ar, -1234.5, {}, ["-ر.س.\u200F\u00A01,234.50", "-ر.س.\u200F\u00A01,234.50 SAR"]],
         ["USD", :ar, -1234.5, {}, ["-$\u00A01,234.50", "-$\u00A01,234.50 USD"]],
@@ -692,7 +692,7 @@ module Worldwide
         ["JPY", :ja, -1234.5, {}, [[:minus_sign, "-"], [:currency, "￥"], [:number, "1,234"]]],
         ["KWD", :en, 1234.5, {}, [[:currency, "KWD"], [:number, "1,234.500"]]],
         ["KWD", :ar, -1234.5, {}, [[:minus_sign, "-"], [:currency, "د.ك.\u200F"], [:literal, "\u00A0"], [:number, "1,234.500"]]],
-        ["ILS", :he, -1234.5, {}, [[:minus_sign, "-"], [:literal, "\u200F"], [:number, "1,234.50"], [:literal, "\u00A0"], [:currency, "₪"]]],
+        ["ILS", :he, -1234.5, {}, [[:minus_sign, "-"], [:literal, "\u200F"], [:number, "1,234.50"], [:literal, "\u00A0\u200F"], [:currency, "₪"]]],
         ["HKD", :en, 12.5, {}, [[:currency, "HK$"], [:number, "12.50"]]],
         ["ANG", :en, -12.5, {}, [[:minus_sign, "-"], [:currency, "ANG"], [:number, "12.50"]]],
         ["INR", :"en-IN", BigDecimal("123456789.5"), {}, [[:currency, "₹"], [:number, "12,34,56,789.50"]]],
@@ -922,10 +922,10 @@ module Worldwide
     end
 
     test "the direction marks of a currency pattern are written as in the pattern" do
-      # he: "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤", fa: "\u200E¤\u00A0#,##0.00"
-      assert_equal "\u200F1,234.50\u00A0₪", Worldwide.currency(code: "ILS").format_short(1234.5, locale: :"he-IL")
-      assert_equal "-\u200F1,234.50\u00A0₪", Worldwide.currency(code: "ILS").format_short(-1234.5, locale: :"he-IL")
-      assert_equal "\u200F1,234.50\u00A0$ USD", Worldwide.currency(code: "USD").format_explicit(1234.5, locale: :"he-IL")
+      # he: "\u200F#,##0.00\u00A0\u200F¤;\u200F-#,##0.00\u00A0\u200F¤", fa: "\u200E¤\u00A0#,##0.00"
+      assert_equal "\u200F1,234.50\u00A0\u200F₪", Worldwide.currency(code: "ILS").format_short(1234.5, locale: :"he-IL")
+      assert_equal "-\u200F1,234.50\u00A0\u200F₪", Worldwide.currency(code: "ILS").format_short(-1234.5, locale: :"he-IL")
+      assert_equal "\u200F1,234.50\u00A0\u200F$ USD", Worldwide.currency(code: "USD").format_explicit(1234.5, locale: :"he-IL")
       assert_equal "\u200E$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :fa)
       assert_equal "\u200E$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :"fa-IR")
       assert_equal(
@@ -934,6 +934,20 @@ module Worldwide
       )
       # ar: "¤\u00A0#,##0.00", which has no direction marks
       assert_equal "$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :ar)
+    end
+
+    test "CLDR 42 gives he a right-to-left mark before the currency symbol" do
+      ils = Worldwide.currency(code: "ILS")
+
+      [:he, :"he-IL"].each do |locale|
+        assert_equal "\u200F1,234.50\u00A0\u200F₪", ils.format_short(1234.5, locale: locale), locale
+        assert_equal "\u200F1,234.50\u00A0\u200F₪ ILS", ils.format_explicit(1234.5, locale: locale), locale
+        assert_equal(
+          [{ type: :literal, value: "\u200F" }, { type: :number, value: "1,234.50" }, { type: :literal, value: "\u00A0\u200F" }, { type: :currency, value: "₪" }],
+          ils.format_to_parts(1234.5, locale: locale),
+          locale,
+        )
+      end
     end
 
     test "#format_to_parts covers the symbol format only" do
