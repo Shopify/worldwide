@@ -116,17 +116,25 @@ module Worldwide
     # separators that CLDR gives currency amounts.
     attr_accessor :currency_separators
 
+    # Set with currency_separators to the code of the currency whose amounts the instance formats, so that it writes
+    # the separators that CLDR gives that currency.
+    attr_accessor :currency_code
+
     private
 
     attr_reader :locale
 
-    # Returns a Numbers for the same locale that writes the separators of currency amounts. CLDR's currencyDecimal
-    # and currencyGroup replace the decimal and group symbols in currency formats, and a locale that defines neither
-    # uses its decimal and group symbols, so the amounts of most locales are written as their other numbers are.
+    # Returns a Numbers for the same locale that writes the separators of amounts in the currency currency_code.
+    # A <currency> element can give its currency a decimal and a group separator, as en_150 does for EUR. Otherwise,
+    # CLDR's currencyDecimal and currencyGroup replace the decimal and group symbols in currency formats, and a locale
+    # that defines neither uses its decimal and group symbols, so the amounts of most locales are written as their
+    # other numbers are.
     # https://www.unicode.org/reports/tr35/tr35-numbers.html#Number_Symbols
-    def for_currency
+    # https://www.unicode.org/reports/tr35/tr35-numbers.html#Currencies
+    def for_currency(currency_code)
       numbers = Numbers.new(locale: @locale)
       numbers.currency_separators = true
+      numbers.currency_code = currency_code
       numbers
     end
 
@@ -149,6 +157,7 @@ module Worldwide
       twin = Numbers.new(locale: @locale)
       twin.bundled_data_version = version
       twin.currency_separators = currency_separators
+      twin.currency_code = currency_code
       @bundled_data_twin = twin
     end
 
@@ -358,25 +367,31 @@ module Worldwide
       currency_symbol || Worldwide::Cldr.t("numbers.latn.symbols.#{key}", default: default, locale: @locale)
     end
 
-    # Returns the locale's currencyDecimal and currencyGroup, each nil if the locale does not define it.
-    # Worldwide::Currency formats every amount with a new instance, and most locales define neither, so they are read
-    # once for each locale and version of the bundled data rather than for every amount, as a lookup that finds no
-    # value takes longer than one that does. A version is nil for the host's data. Registering files makes a new
-    # version, and as with Locale#name, the values read under earlier versions stay in the cache. Lookups accept
-    # other locales when the host does not enforce available locales, and those are not cached, so that the cache
-    # stays bounded, as Worldwide.locale does not cache unknown locales.
+    # Returns the decimal and the group separator that CLDR gives amounts in the currency currency_code, from its
+    # <currency> element or else from the locale's currencyDecimal and currencyGroup, each nil if neither defines it.
+    # Worldwide::Currency formats every amount with a new instance, and most locales define none of them, so they are
+    # read once for each locale, currency and version of the bundled data rather than for every amount, as a lookup
+    # that finds no value takes longer than one that does. A version is nil for the host's data. Registering files
+    # makes a new version, and as with Locale#name, the values read under earlier versions stay in the cache. Lookups
+    # accept other locales when the host does not enforce available locales, and those are not cached, so that the
+    # cache stays bounded, as Worldwide.locale does not cache unknown locales.
     def currency_symbols
       @currency_symbols ||= begin
-        key = [@locale, @bundled_data_version]
+        key = [@locale, currency_code, @bundled_data_version]
         CURRENCY_SYMBOLS.fetch(key) do
           symbols = [
-            Worldwide::Cldr.t("numbers.latn.symbols.currency_decimal", default: nil, locale: @locale),
-            Worldwide::Cldr.t("numbers.latn.symbols.currency_group", default: nil, locale: @locale),
+            currency_separator(:decimal, locale_key: :currency_decimal),
+            currency_separator(:group, locale_key: :currency_group),
           ].freeze
           CURRENCY_SYMBOLS[key] = symbols if Worldwide::Cldr.locale_available?(@locale)
           symbols
         end
       end
+    end
+
+    def currency_separator(key, locale_key:)
+      separator = Worldwide::Cldr.t("numbers.currencies.#{currency_code}.#{key}", default: nil, locale: @locale) unless currency_code.nil?
+      separator || Worldwide::Cldr.t("numbers.latn.symbols.#{locale_key}", default: nil, locale: @locale)
     end
 
     # The fewest integer digits that grouping: :auto groups, beyond the primary group size.

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "concurrent/map"
 require_relative "pluralization_helper"
 module Worldwide
   class Currency
@@ -17,7 +18,8 @@ module Worldwide
     # The positive part of a currency pattern: the text before the first of the symbol and the number, that one, the
     # text between them, and the other one.
     POSITIVE_PATTERN = /\A([^¤#0,.]*)(¤|[#0,.]+)([^¤#0,.]*)(¤|[#0,.]+)/
-    private_constant :SUPPORTED_NON_ISO_CODES, :TEXT_ENCLOSED_BY_PARENTHESES, :DIRECTION_MARKS, :POSITIVE_PATTERN
+    OWN_PATTERNS = Concurrent::Map.new
+    private_constant :SUPPORTED_NON_ISO_CODES, :TEXT_ENCLOSED_BY_PARENTHESES, :DIRECTION_MARKS, :POSITIVE_PATTERN, :OWN_PATTERNS
 
     class << self
       def digits_and_rounding
@@ -174,7 +176,7 @@ module Worldwide
       decimal_places = decimals if decimal_places.nil?
       currency_symbol = symbol(locale: locale) || @currency_code
       layout = pattern_layout(locale)
-      negative, number = Numbers.new(locale: locale).send(:for_currency).send(
+      negative, number = Numbers.new(locale: locale).send(:for_currency, @currency_code).send(
         :sign_and_digits,
         amount,
         decimal_places: decimal_places,
@@ -322,7 +324,7 @@ module Worldwide
     end
 
     def formatted_amount(amount, decimal_places:, humanize:, locale:, **number_options)
-      Numbers.new(locale: locale).send(:for_currency).format(
+      Numbers.new(locale: locale).send(:for_currency, @currency_code).format(
         amount,
         decimal_places: decimal_places,
         humanize: humanize,
@@ -334,9 +336,23 @@ module Worldwide
       !minor_symbol.nil?
     end
 
-    # Returns the locale's standard currency pattern.
+    # Returns the pattern that CLDR gives amounts in this currency: the pattern of its <currency> element, as en_150
+    # gives EUR, or else the locale's standard currency pattern.
+    # https://www.unicode.org/reports/tr35/tr35-numbers.html#Currencies
     def currency_pattern(locale)
-      Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale)
+      own_pattern(locale) || Worldwide::Cldr.t("numbers.latn.formats.currency.patterns.default.standard", locale: locale)
+    end
+
+    # Returns the pattern of this currency's <currency> element, or nil. Most currencies have none, and a lookup that
+    # finds no value takes longer than one that does, so it is read once for each locale and version of the bundled
+    # data rather than for every amount, and kept as Numbers keeps currency separators.
+    def own_pattern(locale)
+      key = [locale&.to_sym, @currency_code, Worldwide::Cldr::BundledData.current_version]
+      OWN_PATTERNS.fetch(key) do
+        pattern = Worldwide::Cldr.t("numbers.currencies.#{@currency_code}.pattern", default: nil, locale: locale)
+        OWN_PATTERNS[key] = pattern if Worldwide::Cldr.locale_available?(locale)
+        pattern
+      end
     end
 
     # Returns how the positive part of the currency pattern lays out an amount: whether the symbol comes before the

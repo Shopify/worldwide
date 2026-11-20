@@ -986,6 +986,34 @@ module Worldwide
       assert_equal "1\u202F234,5", Worldwide::Cldr.with_bundled_data { Worldwide::Numbers.new(locale: :"fr-CH").format(1234.5) }
     end
 
+    test "amounts in a currency that CLDR gives its own pattern and separators use them" do
+      eur = Worldwide.currency(code: "EUR")
+
+      # en-150 gives EUR the pattern "¤#,##0.00" and its own "." and "," separators, which en-DE, en-NL and en-SE inherit
+      ["en-150", "en-DE", "en-NL", "en-SE", "en-BE", "en-FI", "en-DK", "en-CH"].each do |locale|
+        assert_equal "€1,234,567.89", eur.format_short(1234567.89, locale: locale.to_sym), locale
+        assert_equal "-€1,234.50", eur.format_short(-1234.5, locale: locale.to_sym), locale
+        assert_equal "€1,234.50 EUR", eur.format_explicit(1234.5, locale: locale.to_sym), locale
+      end
+      assert_equal "€1.2M", eur.format_short(1234567, locale: :"en-DE", humanize: :short)
+      assert_equal(
+        [{ type: :currency, value: "€" }, { type: :number, value: "1,234.50" }],
+        eur.format_to_parts(1234.5, locale: :"en-DE"),
+      )
+      assert_equal "€1,234.50", Worldwide::Cldr.with_bundled_data { eur.format_short(1234.5, locale: :"en-DE") }
+
+      # en-AT gives EUR its own pattern, with en-AT's separators
+      assert_equal "€\u00A01.234.567,89", eur.format_short(1234567.89, locale: :"en-AT")
+
+      # pt-CV gives CVE its own decimal separator
+      assert_equal "1\u00A0234$50\u00A0\u200B", Worldwide.currency(code: "CVE").format_short(1234.5, locale: :"pt-CV")
+
+      # Other currencies, and other numbers, keep the locale's pattern and separators
+      assert_equal "1.234,50\u00A0$", Worldwide.currency(code: "USD").format_short(1234.5, locale: :"en-DE")
+      assert_equal "1\u00A0234,50\u00A0kr", Worldwide.currency(code: "SEK").format_short(1234.5, locale: :"en-SE")
+      assert_equal "1.234,5", Worldwide::Numbers.new(locale: :"en-DE").format(1234.5)
+    end
+
     test "parts can be recomposed with another symbol, spacing and sign" do
       recompose = lambda do |parts, symbol:|
         parts.filter_map do |part|
