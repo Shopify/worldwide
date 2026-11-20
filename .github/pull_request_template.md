@@ -35,4 +35,4 @@ Are there any test results or screenshots that would be useful to include? How c
 
 ### Checklist
 
-* [ ] I have added a CHANGELOG entry for this change (or determined that it isn't needed)
+* [ ] I have added a CHANGELOG entry for this change that ends with a link to this PR, added once the PR exists (or determined that it isn't needed)
