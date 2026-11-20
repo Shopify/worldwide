@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Correct the time zones for Nunavut postal codes in Kitikmeot, Kivalliq, Resolute and Arctic Bay. [#685](https://github.com/Shopify/worldwide/pull/685)
+
 ---
 
 ## [3.0.0] - 2026-11-19
