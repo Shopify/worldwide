@@ -1,0 +1,120 @@
+{
+  "countryCode": "CA",
+  "locale": "en",
+  "name": "Canada",
+  "format": {
+    "edit": "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}",
+    "show": "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {province} {zip}_{country}_{phone}",
+    "address1": "{building_num} {street}",
+    "address1_with_unit": "{unit}-{building_num} {street}"
+  },
+  "format_extended": {
+    "edit": "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{province}{zip}_{phone}",
+    "show": "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {province} {zip}_{country}_{phone}",
+    "show_compact": "{address1}, {city} {province} {zip}"
+  },
+  "additional_address_fields": {
+    "province": true,
+    "zip": true,
+    "city": true,
+    "building_number_required": true
+  },
+  "zones": [
+    {
+      "code": "AB",
+      "name": "Alberta",
+      "zip_prefixes": ["T"],
+      "neighboring_zones": ["BC", "SK", "NT"]
+    },
+    {
+      "code": "BC",
+      "name": "British Columbia",
+      "zip_prefixes": ["V"],
+      "neighboring_zones": ["AB", "YT", "NT"]
+    },
+    {
+      "code": "MB",
+      "name": "Manitoba",
+      "zip_prefixes": ["R"],
+      "neighboring_zones": ["ON", "NU", "SK"]
+    },
+    {
+      "code": "NB",
+      "name": "New Brunswick",
+      "zip_prefixes": ["E"],
+      "neighboring_zones": ["NS", "QC"]
+    },
+    {
+      "code": "NL",
+      "name": "Newfoundland and Labrador",
+      "name_alternates": ["Newfoundland"],
+      "code_alternates": ["NF"],
+      "zip_prefixes": ["A"],
+      "neighboring_zones": ["QC"]
+    },
+    {
+      "code": "NT",
+      "name": "Northwest Territories",
+      "zip_prefixes": ["X0E", "X0G", "X1A"],
+      "neighboring_zones": ["AB", "BC", "NU", "SK", "YT"]
+    },
+    {
+      "code": "NS",
+      "name": "Nova Scotia",
+      "zip_prefixes": ["B"],
+      "neighboring_zones": ["NB"]
+    },
+    {
+      "code": "NU",
+      "name": "Nunavut",
+      "zip_prefixes": ["X0A", "X0B", "X0C"],
+      "neighboring_zones": ["MB", "NT"]
+    },
+    {
+      "code": "ON",
+      "name": "Ontario",
+      "zip_prefixes": ["K", "L", "M", "N", "P"],
+      "neighboring_zones": ["QC", "MB"]
+    },
+    {
+      "code": "PE",
+      "name": "Prince Edward Island",
+      "zip_prefixes": ["C"]
+    },
+    {
+      "code": "QC",
+      "name": "Quebec",
+      "name_alternates": ["Québec"],
+      "code_alternates": ["PQ"],
+      "zip_prefixes": ["G", "H", "J"],
+      "neighboring_zones": ["ON", "NB", "NL"]
+    },
+    {
+      "code": "SK",
+      "name": "Saskatchewan",
+      "zip_prefixes": ["S"],
+      "neighboring_zones": ["AB", "MB", "NT"]
+    },
+    {
+      "code": "YT",
+      "name": "Yukon",
+      "zip_prefixes": ["Y"],
+      "neighboring_zones": ["BC", "NT"]
+    }
+  ],
+  "labels": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "company": "Company",
+    "address1": "Address",
+    "address2": "Apartment, suite, etc.",
+    "city": "City",
+    "province": "Province",
+    "zip": "Postal code",
+    "country": "Country/region",
+    "phone": "Phone"
+  },
+  "zip_example": "K1P 1J1",
+  "zip_regex": "^[A-Za-z]\\d[A-Za-z]\\s*\\d[A-Za-z]\\d$",
+  "use_zone_code_as_short_name": true
+}
