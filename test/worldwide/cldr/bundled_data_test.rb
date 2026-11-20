@@ -375,7 +375,8 @@ module Worldwide
           Worldwide::Cldr.with_bundled_data { Worldwide.currency(code: "EUR").format_short(1234.5, locale: :"de-AT") }
 
           assert_equal(
-            { "de-AT": [:currencies, :numbers], de: [:currencies, :numbers] },
+            # de-AT and de define no currency separators, so their lookups also read root's numbers.
+            { "de-AT": [:currencies, :numbers], de: [:currencies, :numbers], root: [:numbers] },
             source.backend.loaded_segments,
           )
           assert_equal false, source.backend.whole_locale_loaded?(:de)
@@ -850,6 +851,42 @@ module Worldwide
         end
       end
 
+      test "currency separators follow files registered after a lookup, inside the block only" do
+        chf = Worldwide.currency(code: "CHF")
+        overlay = ->(decimal) { { "fr-CH" => { "numbers" => { "latn" => { "symbols" => { "currency_decimal" => decimal } } } } } }
+
+        with_fresh_bundled_data do
+          with_yaml_files("fr-CH.yml" => overlay.call("!"), "later/fr-CH.yml" => overlay.call("?")) do |paths|
+            assert_equal "1\u202F234.50\u00A0CHF", chf.format_short(1234.5, locale: :"fr-CH")
+
+            Worldwide::Cldr.with_bundled_data do
+              assert_equal "1\u202F234.50\u00A0CHF", chf.format_short(1234.5, locale: :"fr-CH")
+
+              Worldwide::Config.add_bundled_data_paths([paths[0]])
+
+              assert_equal "1\u202F234!50\u00A0CHF", chf.format_short(1234.5, locale: :"fr-CH")
+
+              Worldwide::Config.add_bundled_data_paths([paths[1]])
+
+              assert_equal "1\u202F234?50\u00A0CHF", chf.format_short(1234.5, locale: :"fr-CH")
+            end
+
+            assert_equal "1\u202F234.50\u00A0CHF", chf.format_short(1234.5, locale: :"fr-CH")
+          end
+        end
+      end
+
+      test "currency separators are not cached for a locale that lookups accept only because the host does not enforce available locales" do
+        usd = Worldwide.currency(code: "USD")
+
+        with_host_i18n(enforce_available_locales: false) do
+          assert_equal "$1,234.50", usd.format_short(1234.5, locale: :"en-ZZ")
+          assert_equal "$1,234.50", Worldwide::Cldr.with_bundled_data { usd.format_short(1234.5, locale: :"en-ZZ") }
+        end
+
+        assert_empty Worldwide::Numbers.const_get(:CURRENCY_SYMBOLS).keys.select { |locale, _| locale == :"en-ZZ" }
+      end
+
       test "a file registered later wins over one registered earlier" do
         with_fresh_bundled_data do
           with_yaml_files(
@@ -1034,7 +1071,7 @@ module Worldwide
             translations = source.backend.translations
             translations.each { |locale, data| walk.call(data, [locale]) }
 
-            assert_equal [:de, :"de-AT", :en], translations.keys.sort
+            assert_equal [:de, :"de-AT", :en, :root], translations.keys.sort
             assert_equal true, source.backend.whole_locale_loaded?(:de)
             assert_empty unfrozen
           end

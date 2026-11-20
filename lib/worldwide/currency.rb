@@ -174,7 +174,7 @@ module Worldwide
       decimal_places = decimals if decimal_places.nil?
       currency_symbol = symbol(locale: locale) || @currency_code
       layout = pattern_layout(locale)
-      negative, number = Numbers.new(locale: locale).send(
+      negative, number = Numbers.new(locale: locale).send(:for_currency).send(
         :sign_and_digits,
         amount,
         decimal_places: decimal_places,
@@ -322,7 +322,7 @@ module Worldwide
     end
 
     def formatted_amount(amount, decimal_places:, humanize:, locale:, **number_options)
-      Numbers.new(locale: locale).format(
+      Numbers.new(locale: locale).send(:for_currency).format(
         amount,
         decimal_places: decimal_places,
         humanize: humanize,
