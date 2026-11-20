@@ -928,16 +928,17 @@ module Worldwide
       end
     end
 
-    # Moldova post prefers codes to be written "MD-nnnn", but some folks seem to be writing them
-    # nnnnMD.  Let's rewrite those so that they'll be accepted.
+    # Moldova post prefers codes to be written "MD-nnnn". By this point every hyphen and space is
+    # gone, so put the hyphen back whenever the MD prefix is present, including the nnnnMD form
+    # that some people write. A bare nnnn stays as entered.
     def normalize_for_md(zip:)
       return zip if zip.nil?
 
-      m = zip.match(/^(\d{4})MD$/)
+      m = zip.match(/\A(?:MD(\d{4})|(\d{4})MD)\z/)
       if m.nil?
         zip
       else
-        "MD-#{m[1]}"
+        "MD-#{m[1] || m[2]}"
       end
     end
 
