@@ -12,6 +12,7 @@ require "yaml"
 
 require_relative "puller"
 require_relative "flatten_hash"
+require_relative "minimum_grouping_digits"
 require_relative "unflatten_hash"
 require_relative "sort_yaml"
 
@@ -38,6 +39,9 @@ module Worldwide
 
           # Copy all the files from the exported CLDR data
           FileUtils.cp_r("#{Worldwide::Cldr::Puller::EXPORTED_CLDR_DIR}/.", Worldwide::Paths::CLDR_ROOT)
+
+          # Add the CLDR data that ruby-cldr doesn't export
+          import_minimum_grouping_digits
 
           # Load the existing files
           cldr_locales = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*")].map { |path| File.basename(path) }
@@ -98,6 +102,14 @@ module Worldwide
           number_keys.zip(existing_values, new_values) do |number_key, existing_value, new_value|
             patch_file(:"es-MX", "numbers.yml", [:numbers, :latn, :formats, :currency, :patterns, :short, :standard, number_key.to_sym, :one], existing_value, new_value)
             patch_file(:"es-MX", "numbers.yml", [:numbers, :latn, :formats, :currency, :patterns, :short, :standard, number_key.to_sym, :other], existing_value, new_value)
+          end
+
+          # Later CLDR releases raised minimumGroupingDigits to 2 for these locales, so a four-digit amount is
+          # written without a grouping separator ("1234,56"). The values come from the CLDR XML files in
+          # common/main: hu since CLDR 44, it and sl since CLDR 46, hy since CLDR 48.
+          # Remove these patches once data/cldr.yml is at CLDR 48 or later.
+          [:hu, :hy, :it, :sl].each do |locale|
+            patch_file(locale, "numbers.yml", [:numbers, :minimum_grouping_digits], 1, 2)
           end
 
           # Re: subdivisions of Argentina
@@ -1279,6 +1291,15 @@ module Worldwide
         end
 
         private
+
+        def import_minimum_grouping_digits
+          puts("🔢 Importing minimum grouping digits from the CLDR locale XML")
+          MinimumGroupingDigits.import(
+            main_dir: File.join(Worldwide::Cldr::Puller::VENDORED_CLDR_DIR, "common", "main"),
+            locales_dir: File.join(Worldwide::Paths::CLDR_ROOT, "locales"),
+            minimum_draft_status: Worldwide::Cldr::Puller::MINIMUM_DRAFT_STATUS,
+          )
+        end
 
         # Smartling doesn't support locale names 'zh-Hans', 'zh-Hant', and 'zh-Hant-HK'.
         # To be compatible with Smartling, we use 'zh-CN' where we mean 'zh-Hans',

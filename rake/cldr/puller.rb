@@ -19,6 +19,9 @@ module Worldwide
 
       DEFAULT_COMPONENTS = ::Cldr::Export::Data.components - [:Transforms, :Variables]
 
+      # The least confirmed CLDR data that we import
+      MINIMUM_DRAFT_STATUS = ::Cldr::DraftStatus::CONTRIBUTED
+
       class << self
         def perform(version, components)
           version = version ? Integer(version) : default_branch_sha
@@ -29,7 +32,7 @@ module Worldwide
 
           FileUtils.rm_rf(EXPORTED_CLDR_DIR)
           puts(components ? "⏳  Exporting components: #{components.map { |c| "`#{c}`" }.join(", ")}" : "⏳  Exporting all components")
-          ::Cldr::Export.export(target: EXPORTED_CLDR_DIR, components: components, minimum_draft_status: ::Cldr::DraftStatus::CONTRIBUTED) { putc("⏳ ") }
+          ::Cldr::Export.export(target: EXPORTED_CLDR_DIR, components: components, minimum_draft_status: MINIMUM_DRAFT_STATUS) { putc("⏳ ") }
           puts "\n✅  Files transformed to YAML in: #{EXPORTED_CLDR_DIR}"
 
           create_version_file(version)

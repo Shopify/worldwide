@@ -16,6 +16,7 @@ module Worldwide
     TRAILING_PERCENT_SIGN_LOCALES = ["he", "ur"].freeze
 
     ROUNDING_MODES = [:half_even, :half_up, :half_down, :up, :down, :ceiling, :floor].freeze
+    GROUPINGS = [:always, :auto].freeze
     SIGN_DISPLAYS = [:auto, :negative].freeze
     # The most integer digits of a BigDecimal, or decimal places of any amount, that decimal arithmetic renders.
     # ICU has the same limit on fraction digits.
@@ -48,13 +49,20 @@ module Worldwide
     # a BigDecimal that rounds to more keeps the "%f" formatting. With rounding_mode:, an amount that
     # rounds to more raises ArgumentError.
     #
+    # grouping: :always (the default) groups the integer digits of every amount. :auto groups them only when
+    # there are at least as many as the primary group size plus the locale's CLDR minimum grouping digits
+    # (UTS #35), so with a minimum of 2, as in pl and es, 1234 is not grouped and 12345 is.
+    # The rule applies to the digits shown, after rounding, after the scaling of humanize: :short or :long,
+    # and before percent: and relative: add their signs. grouping: :auto is not supported with
+    # humanize: :japan, which writes myriad units instead of grouping separators.
+    #
     # sign_display: :auto (the default) shows the minus sign of every negative amount, even when it
     # rounds to zero. :negative drops the minus sign when every displayed digit is zero.
     # sign_display: :negative is not supported with relative: true, which always shows a sign.
-    def format(amount, decimal_places: nil, humanize: nil, percent: false, relative: false, rounding_mode: nil, sign_display: :auto)
+    def format(amount, decimal_places: nil, humanize: nil, percent: false, relative: false, rounding_mode: nil, grouping: :always, sign_display: :auto)
       # The defaults are valid with every other option.
-      unless rounding_mode.nil? && sign_display == :auto
-        validate_options(humanize: humanize, relative: relative, rounding_mode: rounding_mode, sign_display: sign_display)
+      unless rounding_mode.nil? && grouping == :always && sign_display == :auto
+        validate_options(humanize: humanize, relative: relative, rounding_mode: rounding_mode, grouping: grouping, sign_display: sign_display)
       end
 
       number = if percent
@@ -64,13 +72,14 @@ module Worldwide
       end
 
       result = if CLDR_COMPACT_STYLE.include?(humanize)
-        format_compact(number, decimal_places: decimal_places, style: humanize, sign_display: sign_display)
+        format_compact(number, decimal_places: decimal_places, style: humanize, grouping: grouping, sign_display: sign_display)
       else
         format_default(
           number,
           decimal_places: decimal_places,
           humanize: humanize,
           rounding_mode: rounding_mode,
+          grouping: grouping,
           sign_display: sign_display,
         )
       end
@@ -84,9 +93,13 @@ module Worldwide
 
     attr_reader :locale
 
-    def validate_options(humanize:, relative:, rounding_mode:, sign_display:)
+    def validate_options(humanize:, relative:, rounding_mode:, grouping:, sign_display:)
       unless rounding_mode.nil? || ROUNDING_MODES.include?(rounding_mode)
         raise ArgumentError, "Unsupported value for rounding_mode: #{rounding_mode.inspect}"
+      end
+
+      unless GROUPINGS.include?(grouping)
+        raise ArgumentError, "Unsupported value for grouping: #{grouping.inspect}"
       end
 
       unless SIGN_DISPLAYS.include?(sign_display)
@@ -99,6 +112,10 @@ module Worldwide
 
       if relative && sign_display != :auto
         raise ArgumentError, "sign_display: #{sign_display.inspect} is not supported with relative: true, which always shows a sign"
+      end
+
+      if grouping == :auto && humanize == :japan
+        raise ArgumentError, "grouping: :auto is not supported with humanize: :japan, which writes myriad units instead of grouping separators"
       end
     end
 
@@ -114,7 +131,7 @@ module Worldwide
       end
     end
 
-    def format_default(number, decimal_places:, humanize:, rounding_mode: nil, sign_display: :auto)
+    def format_default(number, decimal_places:, humanize:, rounding_mode: nil, grouping: :always, sign_display: :auto)
       # Without rounding_mode:, a Float or an Integer keeps the "%f" formatting, so the usual amounts skip these checks.
       unless rounding_mode.nil? && (number.is_a?(Float) || number.is_a?(Integer))
         exact_places = exact_decimal_places(decimal_places)
@@ -149,13 +166,13 @@ module Worldwide
       result = if humanize == :japan
         add_japan_group_markers(result)
       else
-        add_group_markers(result)
+        add_group_markers(result, grouping: grouping)
       end
 
       result
     end
 
-    def add_group_markers(value)
+    def add_group_markers(value, grouping: :always)
       result = value
 
       group_size = group_positions.first
@@ -164,6 +181,15 @@ module Worldwide
       position = value.index(decimal_marker)
       if position.nil?
         position = value.length
+      end
+
+      # https://www.unicode.org/reports/tr35/tr35-numbers.html#Examples_of_minimumGroupingDigits
+      # > The attribute value is used by adding it to the grouping separator value. If the input number has fewer
+      # > integer digits, the grouping separator is suppressed.
+      # Only a sign can precede the integer digits, so they are long enough if this position holds a digit.
+      if grouping == :auto
+        first_grouped_digit = position - group_size - minimum_grouping_digits
+        return result if first_grouped_digit < 0 || !numeric?(result[first_grouped_digit])
       end
 
       # Walk back from the decimal marker to the front of the string,
@@ -230,6 +256,12 @@ module Worldwide
       @group_marker ||= Worldwide::Cldr.t("numbers.latn.symbols.group", default: ",", locale: @locale)
     end
 
+    # The fewest integer digits that grouping: :auto groups, beyond the primary group size.
+    # CLDR defines it for some locales; the others inherit it through the CLDR fallbacks.
+    def minimum_grouping_digits
+      @minimum_grouping_digits ||= Worldwide::Cldr.t("numbers.minimum_grouping_digits", default: 1, locale: @locale)
+    end
+
     # Returns an array of digit grouping sizes (for splitting large numbers, e.g., into thousands)
     # Either [primary_group_size, secondary_group_size], or [primary_group_size], depending on locale.
     #
@@ -273,13 +305,14 @@ module Worldwide
     # This approximately implements compact number formatting as described in CLDR
     # https://unicode.org/reports/tr35/tr35-numbers.html#Compact_Number_Formats
     # It's not quite right, since it relies on format_default, which doesn't quite follow CLDR's spec.
-    def format_compact(number, decimal_places: nil, style:, sign_display: :auto)
+    def format_compact(number, decimal_places: nil, style:, grouping: :always, sign_display: :auto)
       matched_type = compact_format_type(number, style: style)
       if matched_type.nil?
         return format_default(
           number,
           decimal_places: decimal_places,
           humanize: nil,
+          grouping: grouping,
           sign_display: sign_display,
         )
       end
@@ -314,7 +347,7 @@ module Worldwide
       end
 
       decimals = decimal_places.nil? ? natural_decimal_places(scaled_number) : decimal_places
-      formatted_number = format_default(scaled_number, decimal_places: decimals, humanize: nil, sign_display: sign_display)
+      formatted_number = format_default(scaled_number, decimal_places: decimals, humanize: nil, grouping: grouping, sign_display: sign_display)
       value = compact_number_format.sub(/0+/, formatted_number)
 
       # Remove single quotes surrounding string literals in the compact number format.
