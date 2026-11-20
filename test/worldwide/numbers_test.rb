@@ -818,6 +818,25 @@ module Worldwide
       end
     end
 
+    test "#format with grouping: :auto uses the minimum grouping digits of 2 that CLDR 48 gives hu, hy, it and sl" do
+      amounts = [1234, 12345]
+      [
+        [:hu, ["1234", "12\u00A0345"]],
+        [:"hu-HU", ["1234", "12\u00A0345"]],
+        [:hy, ["1234", "12\u00A0345"]],
+        [:it, ["1234", "12.345"]],
+        [:"it-IT", ["1234", "12.345"]],
+        [:"it-CH", ["1234", "12’345"]],
+        [:sl, ["1234", "12.345"]],
+      ].each do |locale, expected|
+        formatter = Worldwide::Numbers.new(locale: locale)
+
+        assert_equal 2, formatter.send(:minimum_grouping_digits), locale
+        assert_equal expected, amounts.map { |amount| formatter.format(amount, grouping: :auto) }, locale
+        assert_equal formatter.format(1234), formatter.format(1234, grouping: :always), locale
+      end
+    end
+
     test "#format with grouping: :auto groups every locale from its primary group size plus minimum grouping digits" do
       Worldwide::Locales.known.each do |locale|
         # en-US-POSIX has no grouping separator in its pattern.

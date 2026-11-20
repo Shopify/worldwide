@@ -104,6 +104,14 @@ module Worldwide
             patch_file(:"es-MX", "numbers.yml", [:numbers, :latn, :formats, :currency, :patterns, :short, :standard, number_key.to_sym, :other], existing_value, new_value)
           end
 
+          # Later CLDR releases raised minimumGroupingDigits to 2 for these locales, so a four-digit amount is
+          # written without a grouping separator ("1234,56"). The values come from the CLDR XML files in
+          # common/main: hu since CLDR 44, it and sl since CLDR 46, hy since CLDR 48.
+          # Remove these patches once data/cldr.yml is at CLDR 48 or later.
+          [:hu, :hy, :it, :sl].each do |locale|
+            patch_file(locale, "numbers.yml", [:numbers, :minimum_grouping_digits], 1, 2)
+          end
+
           # Re: subdivisions of Argentina
           # country_db used to label:
           #   - `arb` as `Buenos Aires`

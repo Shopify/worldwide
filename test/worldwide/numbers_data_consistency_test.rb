@@ -37,6 +37,11 @@ module Worldwide
         "ru" => 1,
         "ru-UA" => 2,
         "ee" => 3,
+        # CLDR 48 values, patched in by rake/cldr/patch.rb over the CLDR 41 value of 1
+        "hu" => 2,
+        "hy" => 2,
+        "it" => 2,
+        "sl" => 2,
       }.each do |locale, expected|
         assert_equal expected, @minimum_grouping_digits[locale], locale
       end
