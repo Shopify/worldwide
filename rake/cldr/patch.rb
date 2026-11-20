@@ -12,6 +12,7 @@ require "yaml"
 
 require_relative "puller"
 require_relative "flatten_hash"
+require_relative "currency_specific_formats"
 require_relative "minimum_grouping_digits"
 require_relative "unflatten_hash"
 require_relative "sort_yaml"
@@ -47,6 +48,9 @@ module Worldwide
           cldr_locales = Dir[File.join(Worldwide::Paths::CLDR_ROOT, "locales", "*")].map { |path| File.basename(path) }
           I18n.available_locales = cldr_locales
           Worldwide::Config.configure_i18n(ignore_precomputed_paths: true)
+
+          # Add the currency-specific formats, which take values from the data loaded above
+          import_currency_specific_formats
 
           # https://unicode-org.atlassian.net/browse/CLDR-13408
           patch_file(:en, "subdivisions.yml", [:subdivisions, :nzmbh], "Marl", "Marlborough")
@@ -122,6 +126,14 @@ module Worldwide
             "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤",
             "\u200F#,##0.00\u00A0\u200F¤;\u200F-#,##0.00\u00A0\u200F¤",
           )
+
+          # CLDR 44 gave EUR its own pattern in en_AT, so that en-AT does not inherit the "¤#,##0.00" pattern and the
+          # "." and "," separators that en_150 gives EUR. The pattern comes from the CLDR XML file common/main/en_AT.xml,
+          # and the separators are the en_AT decimal and group symbols, which is how ICU fills in the values that the
+          # XML leaves out. Remove these patches once data/cldr.yml is at CLDR 44 or later.
+          patch_file(:"en-AT", "numbers.yml", [:numbers, :currencies, :EUR, :decimal], nil, ",")
+          patch_file(:"en-AT", "numbers.yml", [:numbers, :currencies, :EUR, :group], nil, ".")
+          patch_file(:"en-AT", "numbers.yml", [:numbers, :currencies, :EUR, :pattern], nil, "¤\u00A0#,##0.00")
 
           # Re: subdivisions of Argentina
           # country_db used to label:
@@ -1309,6 +1321,16 @@ module Worldwide
             main_dir: File.join(Worldwide::Cldr::Puller::VENDORED_CLDR_DIR, "common", "main"),
             locales_dir: File.join(Worldwide::Paths::CLDR_ROOT, "locales"),
             minimum_draft_status: Worldwide::Cldr::Puller::MINIMUM_DRAFT_STATUS,
+          )
+        end
+
+        def import_currency_specific_formats
+          puts("💱 Importing currency-specific patterns and separators from the CLDR locale XML")
+          CurrencySpecificFormats.import(
+            main_dir: File.join(Worldwide::Cldr::Puller::VENDORED_CLDR_DIR, "common", "main"),
+            locales_dir: File.join(Worldwide::Paths::CLDR_ROOT, "locales"),
+            minimum_draft_status: Worldwide::Cldr::Puller::MINIMUM_DRAFT_STATUS,
+            resolve: ->(locale, key) { I18n.with_locale(locale) { Worldwide::Cldr.t(key) } },
           )
         end
 

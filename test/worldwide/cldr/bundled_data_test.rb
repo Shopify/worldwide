@@ -876,7 +876,33 @@ module Worldwide
         end
       end
 
-      test "currency separators are not cached for a locale that lookups accept only because the host does not enforce available locales" do
+      test "currency patterns and separators follow files registered after a lookup, inside the block only" do
+        usd = Worldwide.currency(code: "USD")
+        overlay = ->(format) { { "en" => { "numbers" => { "currencies" => { "USD" => format } } } } }
+
+        with_fresh_bundled_data do
+          with_yaml_files(
+            "en.yml" => overlay.call("pattern" => "#,##0.00\u00A0¤", "decimal" => "!"),
+            "later/en.yml" => overlay.call("pattern" => "¤\u00A0#,##0.00", "group" => "?"),
+          ) do |paths|
+            Worldwide::Cldr.with_bundled_data do
+              assert_equal "$1,234.50", usd.format_short(1234.5, locale: :en)
+
+              Worldwide::Config.add_bundled_data_paths([paths[0]])
+
+              assert_equal "1,234!50\u00A0$", usd.format_short(1234.5, locale: :en)
+
+              Worldwide::Config.add_bundled_data_paths([paths[1]])
+
+              assert_equal "$\u00A01?234!50", usd.format_short(1234.5, locale: :en)
+            end
+
+            assert_equal "$1,234.50", usd.format_short(1234.5, locale: :en)
+          end
+        end
+      end
+
+      test "currency patterns and separators are not cached for a locale that lookups accept only because the host does not enforce available locales" do
         usd = Worldwide.currency(code: "USD")
 
         with_host_i18n(enforce_available_locales: false) do
@@ -885,6 +911,7 @@ module Worldwide
         end
 
         assert_empty Worldwide::Numbers.const_get(:CURRENCY_SYMBOLS).keys.select { |locale, _| locale == :"en-ZZ" }
+        assert_empty Worldwide::Currency.const_get(:OWN_PATTERNS).keys.select { |locale, _| locale == :"en-ZZ" }
       end
 
       test "a file registered later wins over one registered earlier" do
