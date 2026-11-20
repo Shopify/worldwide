@@ -165,7 +165,7 @@ module Worldwide
         [:da, :DKK, 1.5, "1,50 kr. DKK"],
         [:"da-DK", :DKK, 1.5, "1,50 kr. DKK"],
         [:de, :CHF, 2.55, "2,55 CHF"],
-        [:"de-AT", :EUR, 98765.43, "€ 98 765,43 EUR"],
+        [:"de-AT", :EUR, 98765.43, "€ 98.765,43 EUR"],
         [:en, :OMR, 1.7, "OMR1.700"],
         [:en, :USD, 2.4, "$2.40 USD"],
         [:"en-CA", :CAD, 12.37, "$12.37 CAD"],
@@ -211,7 +211,7 @@ module Worldwide
         [:da, :DKK, 1.50, "1,50 kr."],
         [:"da-DK", :DKK, 1.50, "1,50 kr."],
         [:de, :CHF, 2.55, "2,55 CHF"],
-        [:"de-AT", :EUR, 98765.43, "€ 98 765,43"],
+        [:"de-AT", :EUR, 98765.43, "€ 98.765,43"],
         [:en, :OMR, 1.7, "OMR1.700"],
         [:en, :USD, 2.4, "$2.40"],
         [:"en-CA", :CAD, 12.37, "$12.37"],
@@ -562,12 +562,12 @@ module Worldwide
         ["USD", :en, BigDecimal("-1234.565"), {}, ["-$1,234.56", "-$1,234.56 USD"]],
         ["USD", :en, 1234567, {}, ["$1,234,567.00", "$1,234,567.00 USD"]],
         # Symbol before the number, with a space
-        ["EUR", :"de-AT", 1234.5, {}, ["€\u00A01\u00A0234,50", "€\u00A01\u00A0234,50 EUR"]],
-        ["EUR", :"de-AT", -1234.5, {}, ["-€\u00A01\u00A0234,50", "-€\u00A01\u00A0234,50 EUR"]],
+        ["EUR", :"de-AT", 1234.5, {}, ["€\u00A01.234,50", "€\u00A01.234,50 EUR"]],
+        ["EUR", :"de-AT", -1234.5, {}, ["-€\u00A01.234,50", "-€\u00A01.234,50 EUR"]],
         ["EUR", :"de-AT", 0, {}, ["€\u00A00,00", "€\u00A00,00 EUR"]],
         ["EUR", :"de-AT", -0.004, {}, ["-€\u00A00,00", "-€\u00A00,00 EUR"]],
-        ["EUR", :"de-AT", BigDecimal("-1234.565"), {}, ["-€\u00A01\u00A0234,56", "-€\u00A01\u00A0234,56 EUR"]],
-        ["EUR", :"de-AT", 1234567, {}, ["€\u00A01\u00A0234\u00A0567,00", "€\u00A01\u00A0234\u00A0567,00 EUR"]],
+        ["EUR", :"de-AT", BigDecimal("-1234.565"), {}, ["-€\u00A01.234,56", "-€\u00A01.234,56 EUR"]],
+        ["EUR", :"de-AT", 1234567, {}, ["€\u00A01.234.567,00", "€\u00A01.234.567,00 EUR"]],
         # Symbol after the number, with a space
         ["EUR", :fr, 1234.5, {}, ["1\u202F234,50\u00A0€", "1\u202F234,50\u00A0€ EUR"]],
         ["EUR", :fr, -1234.5, {}, ["-1\u202F234,50\u00A0€", "-1\u202F234,50\u00A0€ EUR"]],
@@ -654,7 +654,7 @@ module Worldwide
         # use_symbol: false
         ["USD", :en, -1234.5, { use_symbol: false }, ["-1,234.50", "-1,234.50 USD"]],
         ["EUR", :fr, 1234.5, { use_symbol: false }, ["1\u202F234,50", "1\u202F234,50 EUR"]],
-        ["EUR", :"de-AT", -1234.5, { use_symbol: false }, ["-1\u00A0234,50", "-1\u00A0234,50 EUR"]],
+        ["EUR", :"de-AT", -1234.5, { use_symbol: false }, ["-1.234,50", "-1.234,50 EUR"]],
         # Amounts that are not finite
         ["USD", :en, Float::NAN, {}, ["$NaN", "$NaN USD"]],
         ["USD", :en, -Float::INFINITY, {}, ["-$Inf", "-$Inf USD"]],
@@ -674,7 +674,7 @@ module Worldwide
           { type: :minus_sign, value: "-" },
           { type: :currency, value: "€" },
           { type: :literal, value: "\u00A0" },
-          { type: :number, value: "1\u00A0234,50" },
+          { type: :number, value: "1.234,50" },
         ],
         Worldwide.currency(code: "EUR").format_to_parts(-1234.5, locale: :"de-AT"),
       )
@@ -958,6 +958,34 @@ module Worldwide
       end
     end
 
+    test "currency amounts use the decimal and group separators that CLDR gives currency formats" do
+      # fr-CH writes amounts with a "." decimal separator (currencyDecimal) and other numbers with ","
+      assert_equal "1\u202F234.50\u00A0CHF", Worldwide.currency(code: "CHF").format_short(1234.5, locale: :"fr-CH")
+      assert_equal "1\u202F234.50\u00A0€ EUR", Worldwide.currency(code: "EUR").format_explicit(1234.5, locale: :"fr-CH")
+      assert_equal "1\u202F234,5", Worldwide::Numbers.new(locale: :"fr-CH").format(1234.5)
+
+      # de-AT groups amounts with "." (currencyGroup) and other numbers with a no-break space
+      assert_equal "€\u00A01.234.567,89", Worldwide.currency(code: "EUR").format_short(1234567.89, locale: :"de-AT")
+      assert_equal "1\u00A0234\u00A0567,89", Worldwide::Numbers.new(locale: :"de-AT").format(1234567.89)
+
+      # Locales without currency separators keep their decimal and group symbols
+      assert_equal "1.234,50\u00A0€", Worldwide.currency(code: "EUR").format_short(1234.5, locale: :de)
+      assert_equal "CHF\u00A01’234.50", Worldwide.currency(code: "CHF").format_short(1234.5, locale: :"de-CH")
+    end
+
+    test "currency separators apply on every path that formats an amount" do
+      chf = Worldwide.currency(code: "CHF")
+
+      assert_equal(
+        [{ type: :number, value: "1\u202F234.50" }, { type: :literal, value: "\u00A0" }, { type: :currency, value: "CHF" }],
+        chf.format_to_parts(1234.5, locale: :"fr-CH"),
+      )
+      assert_equal "1\u202F234.50", chf.format_short(1234.5, locale: :"fr-CH", use_symbol: false)
+      assert_equal "1\u202F234.50\u00A0CHF", chf.format_short(1234.5, locale: :"fr-CH", rounding_mode: :half_up, grouping: :auto)
+      assert_equal "1\u202F234.50\u00A0CHF", Worldwide::Cldr.with_bundled_data { chf.format_short(1234.5, locale: :"fr-CH") }
+      assert_equal "1\u202F234,5", Worldwide::Cldr.with_bundled_data { Worldwide::Numbers.new(locale: :"fr-CH").format(1234.5) }
+    end
+
     test "parts can be recomposed with another symbol, spacing and sign" do
       recompose = lambda do |parts, symbol:|
         parts.filter_map do |part|
@@ -971,9 +999,9 @@ module Worldwide
       end
 
       assert_equal "1\u202F234,50 EUR", recompose.call(Worldwide.currency(code: "EUR").format_to_parts(-1234.5, locale: :fr), symbol: "EUR")
-      assert_equal "US$ 1\u00A0234,50", recompose.call(Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :"de-AT"), symbol: "US$")
+      assert_equal "US$ 1.234,50", recompose.call(Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :"de-AT"), symbol: "US$")
       assert_equal "US$1,234.50", recompose.call(Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :en), symbol: "US$")
-      assert_equal "-$\u00A01\u00A0234,50", Worldwide.currency(code: "USD").format_short(-1234.5, locale: :"de-AT")
+      assert_equal "-$\u00A01.234,50", Worldwide.currency(code: "USD").format_short(-1234.5, locale: :"de-AT")
     end
 
     test "#format_to_parts returns new objects that the caller can change" do

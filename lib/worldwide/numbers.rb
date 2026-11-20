@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "concurrent/map"
+
 module Worldwide
   class Numbers
     JAPAN_MYRIAD_UNITS = ["", "万", "億", "兆", "京", "垓", "秭"].freeze
@@ -22,6 +24,8 @@ module Worldwide
     # ICU has the same limit on fraction digits.
     MAX_EXACT_DIGITS = 999
     private_constant :MAX_EXACT_DIGITS
+    CURRENCY_SYMBOLS = Concurrent::Map.new
+    private_constant :CURRENCY_SYMBOLS
 
     def initialize(locale: I18n.locale)
       @locale = locale.to_sym
@@ -108,9 +112,23 @@ module Worldwide
     # to the version of the bundled data that its memoized values come from.
     attr_accessor :bundled_data_version
 
+    # Set on the instances that Worldwide::Currency formats amounts with, so that they write the decimal and group
+    # separators that CLDR gives currency amounts.
+    attr_accessor :currency_separators
+
     private
 
     attr_reader :locale
+
+    # Returns a Numbers for the same locale that writes the separators of currency amounts. CLDR's currencyDecimal
+    # and currencyGroup replace the decimal and group symbols in currency formats, and a locale that defines neither
+    # uses its decimal and group symbols, so the amounts of most locales are written as their other numbers are.
+    # https://www.unicode.org/reports/tr35/tr35-numbers.html#Number_Symbols
+    def for_currency
+      numbers = Numbers.new(locale: @locale)
+      numbers.currency_separators = true
+      numbers
+    end
 
     # Lookups inside Worldwide::Cldr.with_bundled_data read different data from lookups outside it, so an
     # instance hands the calls made inside the block to a second instance, whose memoized values all come
@@ -130,6 +148,7 @@ module Worldwide
 
       twin = Numbers.new(locale: @locale)
       twin.bundled_data_version = version
+      twin.currency_separators = currency_separators
       @bundled_data_twin = twin
     end
 
@@ -327,11 +346,37 @@ module Worldwide
     end
 
     def decimal_marker
-      @decimal_marker ||= read_cldr { Worldwide::Cldr.t("numbers.latn.symbols.decimal", default: ".", locale: @locale) }
+      @decimal_marker ||= read_cldr { number_symbol(:decimal, currency_index: 0, default: ".") }
     end
 
     def group_marker
-      @group_marker ||= read_cldr { Worldwide::Cldr.t("numbers.latn.symbols.group", default: ",", locale: @locale) }
+      @group_marker ||= read_cldr { number_symbol(:group, currency_index: 1, default: ",") }
+    end
+
+    def number_symbol(key, currency_index:, default:)
+      currency_symbol = currency_symbols[currency_index] if currency_separators
+      currency_symbol || Worldwide::Cldr.t("numbers.latn.symbols.#{key}", default: default, locale: @locale)
+    end
+
+    # Returns the locale's currencyDecimal and currencyGroup, each nil if the locale does not define it.
+    # Worldwide::Currency formats every amount with a new instance, and most locales define neither, so they are read
+    # once for each locale and version of the bundled data rather than for every amount, as a lookup that finds no
+    # value takes longer than one that does. A version is nil for the host's data. Registering files makes a new
+    # version, and as with Locale#name, the values read under earlier versions stay in the cache. Lookups accept
+    # other locales when the host does not enforce available locales, and those are not cached, so that the cache
+    # stays bounded, as Worldwide.locale does not cache unknown locales.
+    def currency_symbols
+      @currency_symbols ||= begin
+        key = [@locale, @bundled_data_version]
+        CURRENCY_SYMBOLS.fetch(key) do
+          symbols = [
+            Worldwide::Cldr.t("numbers.latn.symbols.currency_decimal", default: nil, locale: @locale),
+            Worldwide::Cldr.t("numbers.latn.symbols.currency_group", default: nil, locale: @locale),
+          ].freeze
+          CURRENCY_SYMBOLS[key] = symbols if Worldwide::Cldr.locale_available?(@locale)
+          symbols
+        end
+      end
     end
 
     # The fewest integer digits that grouping: :auto groups, beyond the primary group size.
