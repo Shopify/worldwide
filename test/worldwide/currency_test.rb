@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "bigdecimal"
+# Rails loads bigdecimal/util, which gives String and nil a to_d.
+require "bigdecimal/util"
 require "test_helper"
 
 module Worldwide
@@ -547,6 +549,457 @@ module Worldwide
           assert_equal expected_short, currency.format_short(amount, humanize: :japan, use_symbol: false)
           assert_equal expected_explicit, currency.format_explicit(amount, humanize: :japan, use_symbol: false)
         end
+      end
+    end
+
+    test "#format_short and #format_explicit output across layouts, signs and options" do
+      [
+        # Symbol before the number, no space
+        ["USD", :en, 1234.5, {}, ["$1,234.50", "$1,234.50 USD"]],
+        ["USD", :en, -1234.5, {}, ["-$1,234.50", "-$1,234.50 USD"]],
+        ["USD", :en, 0, {}, ["$0.00", "$0.00 USD"]],
+        ["USD", :en, -0.004, {}, ["-$0.00", "-$0.00 USD"]],
+        ["USD", :en, BigDecimal("-1234.565"), {}, ["-$1,234.56", "-$1,234.56 USD"]],
+        ["USD", :en, 1234567, {}, ["$1,234,567.00", "$1,234,567.00 USD"]],
+        # Symbol before the number, with a space
+        ["EUR", :"de-AT", 1234.5, {}, ["€\u00A01\u00A0234,50", "€\u00A01\u00A0234,50 EUR"]],
+        ["EUR", :"de-AT", -1234.5, {}, ["-€\u00A01\u00A0234,50", "-€\u00A01\u00A0234,50 EUR"]],
+        ["EUR", :"de-AT", 0, {}, ["€\u00A00,00", "€\u00A00,00 EUR"]],
+        ["EUR", :"de-AT", -0.004, {}, ["-€\u00A00,00", "-€\u00A00,00 EUR"]],
+        ["EUR", :"de-AT", BigDecimal("-1234.565"), {}, ["-€\u00A01\u00A0234,56", "-€\u00A01\u00A0234,56 EUR"]],
+        ["EUR", :"de-AT", 1234567, {}, ["€\u00A01\u00A0234\u00A0567,00", "€\u00A01\u00A0234\u00A0567,00 EUR"]],
+        # Symbol after the number, with a space
+        ["EUR", :fr, 1234.5, {}, ["1\u202F234,50\u00A0€", "1\u202F234,50\u00A0€ EUR"]],
+        ["EUR", :fr, -1234.5, {}, ["-1\u202F234,50\u00A0€", "-1\u202F234,50\u00A0€ EUR"]],
+        ["EUR", :fr, 0, {}, ["0,00\u00A0€", "0,00\u00A0€ EUR"]],
+        ["EUR", :fr, -0.004, {}, ["-0,00\u00A0€", "-0,00\u00A0€ EUR"]],
+        ["EUR", :fr, BigDecimal("-1234.565"), {}, ["-1\u202F234,56\u00A0€", "-1\u202F234,56\u00A0€ EUR"]],
+        ["EUR", :fr, 1234567, {}, ["1\u202F234\u202F567,00\u00A0€", "1\u202F234\u202F567,00\u00A0€ EUR"]],
+        # Symbol after the number, no space, with 3/2 grouping
+        ["USD", :bn, 1234.5, {}, ["1,234.50$", "1,234.50$ USD"]],
+        ["USD", :bn, -1234.5, {}, ["-1,234.50$", "-1,234.50$ USD"]],
+        ["USD", :bn, 0, {}, ["0.00$", "0.00$ USD"]],
+        ["USD", :bn, -0.004, {}, ["-0.00$", "-0.00$ USD"]],
+        ["USD", :bn, BigDecimal("-1234.565"), {}, ["-1,234.56$", "-1,234.56$ USD"]],
+        ["USD", :bn, 1234567, {}, ["12,34,567.00$", "12,34,567.00$ USD"]],
+        # Currencies with 0 and 3 decimals
+        ["JPY", :ja, 1234.5, {}, ["￥1,234", "￥1,234 JPY"]],
+        ["JPY", :ja, -1234.5, {}, ["-￥1,234", "-￥1,234 JPY"]],
+        ["JPY", :ja, 0.5, {}, ["￥0", "￥0 JPY"]],
+        ["KWD", :en, 1234.5, {}, ["KWD1,234.500", "KWD1,234.500"]],
+        ["KWD", :en, -1234.5, {}, ["-KWD1,234.500", "-KWD1,234.500"]],
+        ["KWD", :ar, 1234.5, {}, ["د.ك.\u200F\u00A01,234.500", "د.ك.\u200F\u00A01,234.500 KWD"]],
+        ["KWD", :ar, -1234.5, {}, ["-د.ك.\u200F\u00A01,234.500", "-د.ك.\u200F\u00A01,234.500 KWD"]],
+        ["EUR", :en, 0.5, {}, ["€0.50", "€0.50 EUR"]],
+        # HKD keeps its HK$ symbol
+        ["HKD", :en, 1234.5, {}, ["HK$1,234.50", "HK$1,234.50 HKD"]],
+        ["HKD", :"zh-HK", -1234.5, {}, ["-HK$1,234.50", "-HK$1,234.50 HKD"]],
+        ["HKD", :fr, 1234.5, {}, ["1\u202F234,50\u00A0HK$", "1\u202F234,50\u00A0HK$ HKD"]],
+        # The currency code stands in for a missing symbol, and is not repeated
+        ["ANG", :en, -1234.5, {}, ["-ANG1,234.50", "-ANG1,234.50"]],
+        ["ANG", :fr, 1234.5, {}, ["1\u202F234,50\u00A0ANG", "1\u202F234,50\u00A0ANG"]],
+        ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01’234.50", "-CHF\u00A01’234.50"]],
+        # Right-to-left locales
+        ["ILS", :he, 1234.5, {}, ["\u200F1,234.50\u00A0\u200F₪", "\u200F1,234.50\u00A0\u200F₪ ILS"]],
+        ["ILS", :he, -1234.5, {}, ["-\u200F1,234.50\u00A0\u200F₪", "-\u200F1,234.50\u00A0\u200F₪ ILS"]],
+        ["SAR", :ar, 1234.5, {}, ["ر.س.\u200F\u00A01,234.50", "ر.س.\u200F\u00A01,234.50 SAR"]],
+        ["SAR", :ar, -1234.5, {}, ["-ر.س.\u200F\u00A01,234.50", "-ر.س.\u200F\u00A01,234.50 SAR"]],
+        ["USD", :ar, -1234.5, {}, ["-$\u00A01,234.50", "-$\u00A01,234.50 USD"]],
+        ["IRR", :fa, -1234.5, {}, ["-\u200Eریال\u00A01,234.50", "-\u200Eریال\u00A01,234.50 IRR"]],
+        # 3/2 grouping
+        ["INR", :"en-IN", 1234567.891, {}, ["₹12,34,567.89", "₹12,34,567.89 INR"]],
+        ["INR", :"en-IN", -1234567.891, {}, ["-₹12,34,567.89", "-₹12,34,567.89 INR"]],
+        ["INR", :"en-IN", BigDecimal("123456789.5"), {}, ["₹12,34,56,789.50", "₹12,34,56,789.50 INR"]],
+        ["INR", :hi, 1234567.891, {}, ["₹12,34,567.89", "₹12,34,567.89 INR"]],
+        # decimal_places:
+        ["USD", :en, 1234.5678, { decimal_places: 0 }, ["$1,235", "$1,235 USD"]],
+        ["EUR", :fr, -1234.5678, { decimal_places: 3 }, ["-1\u202F234,568\u00A0€", "-1\u202F234,568\u00A0€ EUR"]],
+        # humanize: :short and :long
+        ["USD", :en, 1234567, { humanize: :short }, ["$1.2M", "$1.2M USD"]],
+        ["USD", :en, 1234567, { humanize: :long }, ["$1.2 million", "$1.2 million USD"]],
+        ["USD", :en, -1234567, { humanize: :short }, ["-$1M", "-$1M USD"]],
+        ["USD", :en, -1234567, { humanize: :long }, ["-$1 million", "-$1 million USD"]],
+        ["USD", :en, -999, { humanize: :short }, ["-$999", "-$999 USD"]],
+        ["EUR", :"fr-FR", 1234567, { humanize: :short }, ["1,2\u00A0M\u00A0€", "1,2\u00A0M\u00A0€ EUR"]],
+        ["EUR", :"fr-FR", 1234567, { humanize: :long }, ["1,2 million\u00A0€", "1,2 million\u00A0€ EUR"]],
+        ["EUR", :"fr-FR", -1234567, { humanize: :short }, ["-1\u00A0M\u00A0€", "-1\u00A0M\u00A0€ EUR"]],
+        ["EUR", :"de-AT", -1234567, { humanize: :short }, ["-€\u00A01\u00A0Mio.", "-€\u00A01\u00A0Mio. EUR"]],
+        ["EUR", :"de-AT", -1234567, { humanize: :long }, ["-€\u00A01 Millionen", "-€\u00A01 Millionen EUR"]],
+        ["USD", :sw, 1234567, { humanize: :short }, ["$\u00A01.2M", "$\u00A01.2M USD"]],
+        # The sw compact pattern has a negative subpattern, which is kept, and its minus sign moves before the symbol
+        ["USD", :sw, 1234567, { humanize: :long }, ["-$\u00A0milioni 1.2;milioni 0", "-$\u00A0milioni 1.2;milioni 0 USD"]],
+        # humanize: :japan
+        ["JPY", :ja, 12345, { humanize: :japan }, ["1万2345円", "1万2345円 JPY"]],
+        ["JPY", :ja, -12345, { humanize: :japan }, ["-1万2345円", "-1万2345円 JPY"]],
+        ["JPY", :ja, 0, { humanize: :japan }, ["0円", "0円 JPY"]],
+        ["JPY", :ja, 1234.5, { humanize: :japan }, ["1234.5円", "1234.5円 JPY"]],
+        ["USD", :en, 12345, { humanize: :japan }, ["1万2345$", "1万2345$ USD"]],
+        ["EUR", :fr, 1234.5, { humanize: :japan }, ["1234,5€", "1234,5€ EUR"]],
+        ["JPY", :ja, 12345, { humanize: :japan, use_symbol: false }, ["1万2345", "1万2345 JPY"]],
+        # as_minor_units: true, with and without a minor unit symbol
+        ["USD", :en, 0.75, { as_minor_units: true }, ["75¢", "75¢ USD"]],
+        ["USD", :en, -0.75, { as_minor_units: true }, ["-75¢", "-75¢ USD"]],
+        ["USD", :en, 1.219, { as_minor_units: true }, ["122¢", "122¢ USD"]],
+        ["USD", :en, 0, { as_minor_units: true }, ["0¢", "0¢ USD"]],
+        ["USD", :en, 0.29, { as_minor_units: true }, ["29¢", "29¢ USD"]],
+        ["USD", :en, BigDecimal("0.295"), { as_minor_units: true }, ["30¢", "30¢ USD"]],
+        ["USD", :en, 1.219, { as_minor_units: true, decimal_places: 3 }, ["121.9¢", "121.9¢ USD"]],
+        ["USD", :en, 0.75, { as_minor_units: true, use_symbol: false }, ["75¢", "75¢ USD"]],
+        ["GBP", :en, -0.75, { as_minor_units: true }, ["-75p", "-75p GBP"]],
+        ["CAD", :"fr-CA", 0.75, { as_minor_units: true }, ["75¢", "75¢ CAD"]],
+        ["EUR", :fr, 0.75, { as_minor_units: true }, ["0,75\u00A0€", "0,75\u00A0€ EUR"]],
+        ["EUR", :fr, -0.75, { as_minor_units: true }, ["-0,75\u00A0€", "-0,75\u00A0€ EUR"]],
+        ["EUR", :en, 1.219, { as_minor_units: true }, ["€1.22", "€1.22 EUR"]],
+        ["JPY", :ja, 0.75, { as_minor_units: true }, ["￥1", "￥1 JPY"]],
+        # use_symbol: false
+        ["USD", :en, -1234.5, { use_symbol: false }, ["-1,234.50", "-1,234.50 USD"]],
+        ["EUR", :fr, 1234.5, { use_symbol: false }, ["1\u202F234,50", "1\u202F234,50 EUR"]],
+        ["EUR", :"de-AT", -1234.5, { use_symbol: false }, ["-1\u00A0234,50", "-1\u00A0234,50 EUR"]],
+        # Amounts that are not finite
+        ["USD", :en, Float::NAN, {}, ["$NaN", "$NaN USD"]],
+        ["USD", :en, -Float::INFINITY, {}, ["-$Inf", "-$Inf USD"]],
+        ["EUR", :fr, -Float::INFINITY, {}, ["-Inf\u00A0€", "-Inf\u00A0€ EUR"]],
+      ].each do |code, locale, amount, options, expected|
+        currency = Worldwide.currency(code: code)
+        message = "#{code} #{locale} #{amount.inspect} #{options.inspect}"
+
+        assert_equal expected[0], currency.format_short(amount, locale: locale, **options), message
+        assert_equal expected[1], currency.format_explicit(amount, locale: locale, **options), message
+      end
+    end
+
+    test "#format_to_parts returns the parts of #format_short in display order" do
+      assert_equal(
+        [
+          { type: :minus_sign, value: "-" },
+          { type: :currency, value: "€" },
+          { type: :literal, value: "\u00A0" },
+          { type: :number, value: "1\u00A0234,50" },
+        ],
+        Worldwide.currency(code: "EUR").format_to_parts(-1234.5, locale: :"de-AT"),
+      )
+
+      [
+        ["USD", :en, 1234.5, {}, [[:currency, "$"], [:number, "1,234.50"]]],
+        ["USD", :en, -1234.5, {}, [[:minus_sign, "-"], [:currency, "$"], [:number, "1,234.50"]]],
+        ["USD", :en, -0.004, {}, [[:minus_sign, "-"], [:currency, "$"], [:number, "0.00"]]],
+        ["USD", :en, 1234.5678, { decimal_places: 0 }, [[:currency, "$"], [:number, "1,235"]]],
+        ["EUR", :"de-AT", 0, {}, [[:currency, "€"], [:literal, "\u00A0"], [:number, "0,00"]]],
+        ["EUR", :fr, 1234.5, {}, [[:number, "1\u202F234,50"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["EUR", :fr, -1234.5, {}, [[:minus_sign, "-"], [:number, "1\u202F234,50"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["EUR", :fr, BigDecimal("-0.004"), {}, [[:minus_sign, "-"], [:number, "0,00"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["USD", :bn, -1234.5, {}, [[:minus_sign, "-"], [:number, "1,234.50"], [:currency, "$"]]],
+        ["JPY", :ja, -1234.5, {}, [[:minus_sign, "-"], [:currency, "￥"], [:number, "1,234"]]],
+        ["KWD", :en, 1234.5, {}, [[:currency, "KWD"], [:number, "1,234.500"]]],
+        ["KWD", :ar, -1234.5, {}, [[:minus_sign, "-"], [:currency, "د.ك.\u200F"], [:literal, "\u00A0"], [:number, "1,234.500"]]],
+        ["ILS", :he, -1234.5, {}, [[:minus_sign, "-"], [:literal, "\u200F"], [:number, "1,234.50"], [:literal, "\u00A0\u200F"], [:currency, "₪"]]],
+        ["HKD", :en, 12.5, {}, [[:currency, "HK$"], [:number, "12.50"]]],
+        ["ANG", :en, -12.5, {}, [[:minus_sign, "-"], [:currency, "ANG"], [:number, "12.50"]]],
+        ["INR", :"en-IN", BigDecimal("123456789.5"), {}, [[:currency, "₹"], [:number, "12,34,56,789.50"]]],
+        ["EUR", :"de-DE", BigDecimal("9007199254740992.01"), {}, [[:number, "9.007.199.254.740.992,01"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["USD", :en, Float::NAN, {}, [[:currency, "$"], [:number, "NaN"]]],
+        ["USD", :en, -Float::INFINITY, {}, [[:minus_sign, "-"], [:currency, "$"], [:number, "Inf"]]],
+      ].each do |code, locale, amount, options, expected|
+        currency = Worldwide.currency(code: code)
+        message = "#{code} #{locale} #{amount.inspect} #{options.inspect}"
+        parts = currency.format_to_parts(amount, locale: locale, **options)
+
+        assert_equal expected, parts.map { |part| [part[:type], part[:value]] }, message
+        assert_equal currency.format_short(amount, locale: locale, **options), parts.map { |part| part[:value] }.join, message
+      end
+    end
+
+    test "#format_to_parts uses I18n.locale by default" do
+      I18n.with_locale(:fr) do
+        assert_equal(
+          [[:number, "12,50"], [:literal, "\u00A0"], [:currency, "€"]],
+          Worldwide.currency(code: "EUR").format_to_parts(12.5).map { |part| [part[:type], part[:value]] },
+        )
+      end
+    end
+
+    test "#format_to_parts joins to #format_short for every currency across locales, amounts and options" do
+      # Symbol before or after the number, with or without a space, right-to-left, 3/2 grouping, minimum grouping digits of 2
+      locales = [:en, :"en-IN", :bn, :ja, :"zh-HK", :"de-AT", :"de-CH", :nl, :ar, :"ar-EG", :sw, :ur, :fr, :"fr-CA", :de, :pl, :es, :"pt-PT", :"pt-BR", :bg, :he, :fa]
+      option_sets = [
+        {},
+        { decimal_places: 0 },
+        { rounding_mode: :half_up },
+        { rounding_mode: :floor },
+        { grouping: :auto },
+        { sign_display: :negative },
+        { rounding_mode: :half_even, grouping: :auto, sign_display: :negative },
+      ]
+      amounts = [12345.675, -12345.675, 0, -0.004, BigDecimal("-123456789012345678.905")]
+      codes = Currencies.all.map(&:currency_code)
+      sampled_codes = ["USD", "EUR", "JPY", "KWD", "CLP", "HKD", "ANG", "INR", "ILS", "USDC"]
+
+      assert_operator codes.size, :>, 250
+
+      layout = /\A(minus_sign )?(literal )?(currency (literal )?number|number (literal )?currency)\z/
+
+      cases = codes.product(locales, [-12345.675], [{}]) + sampled_codes.product(locales, amounts, option_sets)
+      cases.each do |code, locale, amount, options|
+        currency = Worldwide.currency(code: code)
+        message = "#{code} #{locale} #{amount.inspect} #{options.inspect}"
+        parts = currency.format_to_parts(amount, locale: locale, **options)
+        short = currency.format_short(amount, locale: locale, **options)
+
+        assert_equal short, parts.map { |part| part[:value] }.join, message
+        assert_match layout, parts.map { |part| part[:type] }.join(" "), message
+        assert(parts.all? { |part| part.keys == [:type, :value] && !part[:value].empty? }, message)
+        assert_equal currency.symbol(locale: locale) || code, parts.find { |part| part[:type] == :currency }[:value], message
+        assert_equal short.start_with?("-"), parts.first[:type] == :minus_sign, message
+      end
+    end
+
+    test "rounding_mode:, grouping: and sign_display: change #format_short, #format_explicit and #format_to_parts" do
+      [
+        # pl and es have CLDR minimum grouping digits of 2
+        ["PLN", :pl, 1234.5, {}, [[:number, "1\u00A0234,50"], [:literal, "\u00A0"], [:currency, "zł"]]],
+        ["PLN", :pl, 1234.5, { grouping: :auto }, [[:number, "1234,50"], [:literal, "\u00A0"], [:currency, "zł"]]],
+        ["PLN", :pl, -12345.5, { grouping: :auto }, [[:minus_sign, "-"], [:number, "12\u00A0345,50"], [:literal, "\u00A0"], [:currency, "zł"]]],
+        ["EUR", :es, 1234.5, { grouping: :auto }, [[:number, "1234,50"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["EUR", :"pt-PT", -1234.5, { grouping: :auto }, [[:minus_sign, "-"], [:number, "1234,50"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["USD", :en, 1234.5, { grouping: :auto }, [[:currency, "$"], [:number, "1,234.50"]]],
+        # it and hu have minimum grouping digits of 2 in CLDR 48, and it-CH inherits it from it
+        ["EUR", :it, 1234.5, {}, [[:number, "1.234,50"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["EUR", :it, 1234.5, { grouping: :auto }, [[:number, "1234,50"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["EUR", :"it-CH", 1234.5, { grouping: :auto }, [[:currency, "€"], [:literal, "\u00A0"], [:number, "1234.50"]]],
+        ["HUF", :hu, -1234.5, { grouping: :auto }, [[:minus_sign, "-"], [:number, "1234,50"], [:literal, "\u00A0"], [:currency, "Ft"]]],
+        # A tie, rounded half-even by default for a BigDecimal
+        ["USD", :en, BigDecimal("0.125"), {}, [[:currency, "$"], [:number, "0.12"]]],
+        ["USD", :en, BigDecimal("0.125"), { rounding_mode: :half_up }, [[:currency, "$"], [:number, "0.13"]]],
+        ["USD", :en, BigDecimal("-0.125"), { rounding_mode: :half_up }, [[:minus_sign, "-"], [:currency, "$"], [:number, "0.13"]]],
+        ["JPY", :ja, 2.5, {}, [[:currency, "￥"], [:number, "2"]]],
+        ["JPY", :ja, 2.5, { rounding_mode: :half_up }, [[:currency, "￥"], [:number, "3"]]],
+        ["USD", :en, -1.234, { rounding_mode: :floor }, [[:minus_sign, "-"], [:currency, "$"], [:number, "1.24"]]],
+        ["KWD", :ar, 1.0005, { rounding_mode: :ceiling }, [[:currency, "د.ك.\u200F"], [:literal, "\u00A0"], [:number, "1.001"]]],
+        # A negative amount that rounds to zero
+        ["USD", :en, -0.004, { sign_display: :negative }, [[:currency, "$"], [:number, "0.00"]]],
+        ["USD", :en, -0.005, { sign_display: :negative }, [[:minus_sign, "-"], [:currency, "$"], [:number, "0.01"]]],
+        ["EUR", :fr, BigDecimal("-0.004"), { sign_display: :negative }, [[:number, "0,00"], [:literal, "\u00A0"], [:currency, "€"]]],
+        ["EUR", :"de-AT", -0.0, { sign_display: :negative }, [[:currency, "€"], [:literal, "\u00A0"], [:number, "0,00"]]],
+        ["JPY", :ja, -0.4, { sign_display: :negative }, [[:currency, "￥"], [:number, "0"]]],
+        ["JPY", :ja, -0.5, { rounding_mode: :half_up, sign_display: :negative }, [[:minus_sign, "-"], [:currency, "￥"], [:number, "1"]]],
+      ].each do |code, locale, amount, options, expected|
+        currency = Worldwide.currency(code: code)
+        message = "#{code} #{locale} #{amount.inspect} #{options.inspect}"
+        expected_short = expected.map(&:last).join
+
+        assert_equal expected, currency.format_to_parts(amount, locale: locale, **options).map { |part| [part[:type], part[:value]] }, message
+        assert_equal expected_short, currency.format_short(amount, locale: locale, **options), message
+        assert_equal "#{expected_short} #{code}", currency.format_explicit(amount, locale: locale, **options), message
+      end
+    end
+
+    test "rounding_mode:, grouping: and sign_display: apply with humanize:, as_minor_units: and use_symbol: false" do
+      [
+        ["EUR", :es, 1_234_567_890, { humanize: :short }, "1.235\u00A0M\u00A0€"],
+        ["EUR", :es, 1_234_567_890, { humanize: :short, grouping: :auto }, "1235\u00A0M\u00A0€"],
+        ["USD", :en, -0.0, { humanize: :short }, "-$0"],
+        ["USD", :en, -0.0, { humanize: :long, sign_display: :negative }, "$0"],
+        ["JPY", :ja, 12344.5, { humanize: :japan, decimal_places: 0 }, "1万2344円"],
+        ["JPY", :ja, 12344.5, { humanize: :japan, decimal_places: 0, rounding_mode: :half_up }, "1万2345円"],
+        ["JPY", :ja, -0.0, { humanize: :japan }, "-0円"],
+        ["JPY", :ja, -0.0, { humanize: :japan, sign_display: :negative }, "0円"],
+        ["USD", :en, 0.285, { as_minor_units: true }, "28¢"],
+        ["USD", :en, 0.285, { as_minor_units: true, rounding_mode: :half_up }, "29¢"],
+        ["USD", :en, 0.29, { as_minor_units: true, rounding_mode: :floor }, "29¢"],
+        ["USD", :en, -0.29, { as_minor_units: true, rounding_mode: :ceiling }, "-29¢"],
+        ["USD", :en, BigDecimal("1.005"), { as_minor_units: true }, "100¢"],
+        ["USD", :en, BigDecimal("1.005"), { as_minor_units: true, rounding_mode: :half_up }, "101¢"],
+        ["USD", :en, 1.2195, { as_minor_units: true, decimal_places: 3, rounding_mode: :half_down }, "121.9¢"],
+        ["USD", :en, -0.004, { as_minor_units: true }, "-0¢"],
+        ["USD", :en, -0.004, { as_minor_units: true, sign_display: :negative }, "0¢"],
+        ["USD", :es, 12.345, { as_minor_units: true }, "1.234¢"],
+        ["USD", :es, 12.345, { as_minor_units: true, grouping: :auto }, "1234¢"],
+        ["EUR", :es, 1234.5, { as_minor_units: true, grouping: :auto }, "1234,50\u00A0€"],
+        ["PLN", :pl, 1234.5, { use_symbol: false }, "1\u00A0234,50"],
+        ["PLN", :pl, 1234.5, { use_symbol: false, grouping: :auto }, "1234,50"],
+        ["USD", :en, BigDecimal("0.125"), { use_symbol: false, rounding_mode: :half_up }, "0.13"],
+        ["USD", :en, -0.004, { use_symbol: false, sign_display: :negative }, "0.00"],
+      ].each do |code, locale, amount, options, expected_short|
+        currency = Worldwide.currency(code: code)
+        message = "#{code} #{locale} #{amount.inspect} #{options.inspect}"
+
+        assert_equal expected_short, currency.format_short(amount, locale: locale, **options), message
+        assert_equal "#{expected_short} #{code}", currency.format_explicit(amount, locale: locale, **options), message
+      end
+    end
+
+    test "rounding_mode: :up rounds an amount far below the last decimal place away from zero on every formatting path" do
+      usd = Worldwide.currency(code: "USD")
+      jpy = Worldwide.currency(code: "JPY")
+      signs = [["", []], ["-", [[:minus_sign, "-"]]]]
+
+      ["1e-10", "1e-30", "0.0000000000000000000000000000000000000001"].each do |digits|
+        signs.each do |sign, sign_parts|
+          amount = BigDecimal("#{sign}#{digits}")
+          message = amount.inspect
+
+          assert_equal sign_parts + [[:currency, "$"], [:number, "0.01"]],
+            usd.format_to_parts(amount, locale: :en, rounding_mode: :up).map { |part| [part[:type], part[:value]] },
+            message
+          assert_equal "#{sign}$0.01", usd.format_short(amount, locale: :en, rounding_mode: :up), message
+          assert_equal "#{sign}$0.01 USD", usd.format_explicit(amount, locale: :en, rounding_mode: :up), message
+          assert_equal "#{sign}1¢", usd.format_short(amount, locale: :en, as_minor_units: true, rounding_mode: :up), message
+          assert_equal "#{sign}1¢ USD", usd.format_explicit(amount, locale: :en, as_minor_units: true, rounding_mode: :up), message
+          assert_equal "#{sign}0.01", usd.format_short(amount, locale: :en, use_symbol: false, rounding_mode: :up), message
+          assert_equal "#{sign}1円", jpy.format_short(amount, locale: :ja, humanize: :japan, decimal_places: 0, rounding_mode: :up), message
+          assert_equal "#{sign}$0.00", usd.format_short(amount, locale: :en, rounding_mode: :down), message
+        end
+      end
+    end
+
+    test "a nil or String amount with rounding_mode: raises ArgumentError on every formatting path" do
+      usd = Worldwide.currency(code: "USD")
+      paths = [{}, { humanize: :japan }, { as_minor_units: true }, { use_symbol: false }]
+      methods = [:format_short, :format_explicit]
+
+      assert_respond_to nil, :to_d
+      [[nil, "nil"], ["12.5", "String"]].each do |amount, kind|
+        message = "rounding_mode: is not supported with a #{kind} amount"
+
+        paths.each do |path|
+          methods.each do |method|
+            error = assert_raises(ArgumentError, "#{method} #{amount.inspect} #{path.inspect}") do
+              usd.public_send(method, amount, locale: :en, rounding_mode: :half_even, **path)
+            end
+
+            assert_includes error.message, message
+          end
+        end
+        error = assert_raises(ArgumentError, amount.inspect) { usd.format_to_parts(amount, locale: :en, rounding_mode: :up) }
+
+        assert_includes error.message, message
+      end
+    end
+
+    test "unsupported keyword combinations raise ArgumentError from Numbers#format" do
+      usd = Worldwide.currency(code: "USD")
+
+      [
+        [{ humanize: :short, rounding_mode: :half_up }, "rounding_mode: is not supported with humanize: :short"],
+        [{ humanize: :long, rounding_mode: :half_even }, "rounding_mode: is not supported with humanize: :long"],
+        [{ humanize: :japan, grouping: :auto }, "grouping: :auto is not supported with humanize: :japan"],
+        [{ humanize: :japan, grouping: :auto, use_symbol: false }, "grouping: :auto is not supported with humanize: :japan"],
+        [{ humanize: :short, rounding_mode: :up, use_symbol: false }, "rounding_mode: is not supported with humanize: :short"],
+      ].each do |options, message|
+        error = assert_raises(ArgumentError, options.inspect) { usd.format_short(1234.5, locale: :en, **options) }
+
+        assert_includes error.message, message
+        error = assert_raises(ArgumentError, options.inspect) { usd.format_explicit(1234.5, locale: :en, **options) }
+
+        assert_includes error.message, message
+      end
+    end
+
+    test "unsupported keyword values raise ArgumentError on every formatting path" do
+      usd = Worldwide.currency(code: "USD")
+      eur = Worldwide.currency(code: "EUR")
+      paths = [{}, { humanize: :short }, { humanize: :japan }, { as_minor_units: true }, { use_symbol: false }]
+
+      [
+        [{ rounding_mode: :nearest }, "Unsupported value for rounding_mode: :nearest"],
+        [{ grouping: :min2 }, "Unsupported value for grouping: :min2"],
+        [{ sign_display: :never }, "Unsupported value for sign_display: :never"],
+      ].each do |options, message|
+        paths.each do |path|
+          [usd, eur].each do |currency|
+            error = assert_raises(ArgumentError) { currency.format_short(1234.5, locale: :en, **path, **options) }
+
+            assert_includes error.message, message
+            error = assert_raises(ArgumentError) { currency.format_explicit(1234.5, locale: :en, **path, **options) }
+
+            assert_includes error.message, message
+          end
+        end
+        error = assert_raises(ArgumentError) { usd.format_to_parts(1234.5, locale: :en, **options) }
+
+        assert_includes error.message, message
+      end
+    end
+
+    test "the direction marks of a currency pattern are written as in the pattern" do
+      # he: "\u200F#,##0.00\u00A0\u200F¤;\u200F-#,##0.00\u00A0\u200F¤", fa: "\u200E¤\u00A0#,##0.00"
+      assert_equal "\u200F1,234.50\u00A0\u200F₪", Worldwide.currency(code: "ILS").format_short(1234.5, locale: :"he-IL")
+      assert_equal "-\u200F1,234.50\u00A0\u200F₪", Worldwide.currency(code: "ILS").format_short(-1234.5, locale: :"he-IL")
+      assert_equal "\u200F1,234.50\u00A0\u200F$ USD", Worldwide.currency(code: "USD").format_explicit(1234.5, locale: :"he-IL")
+      assert_equal "\u200E$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :fa)
+      assert_equal "\u200E$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :"fa-IR")
+      assert_equal(
+        [{ type: :minus_sign, value: "-" }, { type: :literal, value: "\u200E" }, { type: :currency, value: "$" }, { type: :literal, value: "\u00A0" }, { type: :number, value: "1,234.50" }],
+        Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :fa),
+      )
+      # ar: "¤\u00A0#,##0.00", which has no direction marks
+      assert_equal "$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :ar)
+    end
+
+    test "CLDR 42 gives he a right-to-left mark before the currency symbol" do
+      ils = Worldwide.currency(code: "ILS")
+
+      [:he, :"he-IL"].each do |locale|
+        assert_equal "\u200F1,234.50\u00A0\u200F₪", ils.format_short(1234.5, locale: locale), locale
+        assert_equal "\u200F1,234.50\u00A0\u200F₪ ILS", ils.format_explicit(1234.5, locale: locale), locale
+        assert_equal(
+          [{ type: :literal, value: "\u200F" }, { type: :number, value: "1,234.50" }, { type: :literal, value: "\u00A0\u200F" }, { type: :currency, value: "₪" }],
+          ils.format_to_parts(1234.5, locale: locale),
+          locale,
+        )
+      end
+    end
+
+    test "#format_to_parts covers the symbol format only" do
+      usd = Worldwide.currency(code: "USD")
+
+      [{ humanize: :short }, { as_minor_units: true }, { use_symbol: false }].each do |options|
+        assert_raises(ArgumentError, options.inspect) { usd.format_to_parts(12.5, locale: :en, **options) }
+      end
+    end
+
+    test "parts can be recomposed with another symbol, spacing and sign" do
+      recompose = lambda do |parts, symbol:|
+        parts.filter_map do |part|
+          case part[:type]
+          when :minus_sign then nil
+          when :currency then symbol
+          when :literal then part[:value].tr("\u00A0", " ")
+          else part[:value]
+          end
+        end.join
+      end
+
+      assert_equal "1\u202F234,50 EUR", recompose.call(Worldwide.currency(code: "EUR").format_to_parts(-1234.5, locale: :fr), symbol: "EUR")
+      assert_equal "US$ 1\u00A0234,50", recompose.call(Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :"de-AT"), symbol: "US$")
+      assert_equal "US$1,234.50", recompose.call(Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :en), symbol: "US$")
+      assert_equal "-$\u00A01\u00A0234,50", Worldwide.currency(code: "USD").format_short(-1234.5, locale: :"de-AT")
+    end
+
+    test "#format_to_parts returns new objects that the caller can change" do
+      [["USD", :en], ["EUR", :fr], ["HKD", :en], ["ANG", :en], ["KWD", :en], ["ILS", :he], ["USD", :fa]].each do |code, locale|
+        currency = Worldwide.currency(code: code)
+        symbol = currency.symbol(locale: locale)
+        expected = currency.format_to_parts(-1234.5, locale: locale)
+        expected_values = expected.map { |part| part[:value].dup }
+
+        parts = currency.format_to_parts(-1234.5, locale: locale)
+
+        refute_same expected, parts
+        parts.each_with_index do |part, index|
+          refute_same expected[index], part
+          refute_same expected[index][:value], part[:value]
+          refute_predicate part[:value], :frozen?
+          part[:value] << "!"
+          part[:type] = :changed
+        end
+        parts << { type: :literal, value: "?" }
+
+        assert_equal expected_values, expected.map { |part| part[:value] }, code
+        assert_equal expected_values, currency.format_to_parts(-1234.5, locale: locale).map { |part| part[:value] }, code
+        assert_equal expected_values.join, currency.format_short(-1234.5, locale: locale), code
+        assert_equal [symbol], [currency.symbol(locale: locale)], code
+        assert_equal code, currency.currency_code
       end
     end
   end
