@@ -588,8 +588,8 @@ module Worldwide
         ["JPY", :ja, 0.5, {}, ["￥0", "￥0 JPY"]],
         ["KWD", :en, 1234.5, {}, ["KWD1,234.500", "KWD1,234.500"]],
         ["KWD", :en, -1234.5, {}, ["-KWD1,234.500", "-KWD1,234.500"]],
-        ["KWD", :ar, 1234.5, {}, ["د.ك.\u200F\u00A01,234.500", "د.ك.\u200F\u00A01,234.500 KWD"]],
-        ["KWD", :ar, -1234.5, {}, ["-د.ك.\u200F\u00A01,234.500", "-د.ك.\u200F\u00A01,234.500 KWD"]],
+        ["KWD", :ar, 1234.5, {}, ["\u200F1,234.500\u00A0د.ك.\u200F", "\u200F1,234.500\u00A0د.ك.\u200F KWD"]],
+        ["KWD", :ar, -1234.5, {}, ["-\u200F1,234.500\u00A0د.ك.\u200F", "-\u200F1,234.500\u00A0د.ك.\u200F KWD"]],
         ["EUR", :en, 0.5, {}, ["€0.50", "€0.50 EUR"]],
         # HKD keeps its HK$ symbol
         ["HKD", :en, 1234.5, {}, ["HK$1,234.50", "HK$1,234.50 HKD"]],
@@ -598,13 +598,17 @@ module Worldwide
         # The currency code stands in for a missing symbol, and is not repeated
         ["ANG", :en, -1234.5, {}, ["-ANG1,234.50", "-ANG1,234.50"]],
         ["ANG", :fr, 1234.5, {}, ["1\u202F234,50\u00A0ANG", "1\u202F234,50\u00A0ANG"]],
-        ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01’234.50", "-CHF\u00A01’234.50"]],
+        ["CHF", :"de-CH", -1234.5, {}, ["-CHF\u00A01'234.50", "-CHF\u00A01'234.50"]],
+        # Symbol after the number with a space in no, which nb inherits
+        ["NOK", :nb, 1234.5, {}, ["1\u00A0234,50\u00A0kr", "1\u00A0234,50\u00A0kr NOK"]],
+        ["NOK", :nb, -1234.5, {}, ["-1\u00A0234,50\u00A0kr", "-1\u00A0234,50\u00A0kr NOK"]],
         # Right-to-left locales
         ["ILS", :he, 1234.5, {}, ["\u200F1,234.50\u00A0\u200F₪", "\u200F1,234.50\u00A0\u200F₪ ILS"]],
         ["ILS", :he, -1234.5, {}, ["-\u200F1,234.50\u00A0\u200F₪", "-\u200F1,234.50\u00A0\u200F₪ ILS"]],
-        ["SAR", :ar, 1234.5, {}, ["ر.س.\u200F\u00A01,234.50", "ر.س.\u200F\u00A01,234.50 SAR"]],
-        ["SAR", :ar, -1234.5, {}, ["-ر.س.\u200F\u00A01,234.50", "-ر.س.\u200F\u00A01,234.50 SAR"]],
-        ["USD", :ar, -1234.5, {}, ["-$\u00A01,234.50", "-$\u00A01,234.50 USD"]],
+        ["SAR", :ar, 1234.5, {}, ["\u200F1,234.50\u00A0ر.س.\u200F", "\u200F1,234.50\u00A0ر.س.\u200F SAR"]],
+        ["SAR", :ar, -1234.5, {}, ["-\u200F1,234.50\u00A0ر.س.\u200F", "-\u200F1,234.50\u00A0ر.س.\u200F SAR"]],
+        ["USD", :ar, -1234.5, {}, ["-\u200F1,234.50\u00A0$", "-\u200F1,234.50\u00A0$ USD"]],
+        ["AED", :"ar-AE", 1234.5, {}, ["\u200F1,234.50\u00A0د.إ.\u200F", "\u200F1,234.50\u00A0د.إ.\u200F AED"]],
         ["IRR", :fa, -1234.5, {}, ["-\u200Eریال\u00A01,234.50", "-\u200Eریال\u00A01,234.50 IRR"]],
         # 3/2 grouping
         ["INR", :"en-IN", 1234567.891, {}, ["₹12,34,567.89", "₹12,34,567.89 INR"]],
@@ -691,7 +695,7 @@ module Worldwide
         ["USD", :bn, -1234.5, {}, [[:minus_sign, "-"], [:number, "1,234.50"], [:currency, "$"]]],
         ["JPY", :ja, -1234.5, {}, [[:minus_sign, "-"], [:currency, "￥"], [:number, "1,234"]]],
         ["KWD", :en, 1234.5, {}, [[:currency, "KWD"], [:number, "1,234.500"]]],
-        ["KWD", :ar, -1234.5, {}, [[:minus_sign, "-"], [:currency, "د.ك.\u200F"], [:literal, "\u00A0"], [:number, "1,234.500"]]],
+        ["KWD", :ar, -1234.5, {}, [[:minus_sign, "-"], [:literal, "\u200F"], [:number, "1,234.500"], [:literal, "\u00A0"], [:currency, "د.ك.\u200F"]]],
         ["ILS", :he, -1234.5, {}, [[:minus_sign, "-"], [:literal, "\u200F"], [:number, "1,234.50"], [:literal, "\u00A0\u200F"], [:currency, "₪"]]],
         ["HKD", :en, 12.5, {}, [[:currency, "HK$"], [:number, "12.50"]]],
         ["ANG", :en, -12.5, {}, [[:minus_sign, "-"], [:currency, "ANG"], [:number, "12.50"]]],
@@ -774,7 +778,7 @@ module Worldwide
         ["JPY", :ja, 2.5, {}, [[:currency, "￥"], [:number, "2"]]],
         ["JPY", :ja, 2.5, { rounding_mode: :half_up }, [[:currency, "￥"], [:number, "3"]]],
         ["USD", :en, -1.234, { rounding_mode: :floor }, [[:minus_sign, "-"], [:currency, "$"], [:number, "1.24"]]],
-        ["KWD", :ar, 1.0005, { rounding_mode: :ceiling }, [[:currency, "د.ك.\u200F"], [:literal, "\u00A0"], [:number, "1.001"]]],
+        ["KWD", :ar, 1.0005, { rounding_mode: :ceiling }, [[:literal, "\u200F"], [:number, "1.001"], [:literal, "\u00A0"], [:currency, "د.ك.\u200F"]]],
         # A negative amount that rounds to zero
         ["USD", :en, -0.004, { sign_display: :negative }, [[:currency, "$"], [:number, "0.00"]]],
         ["USD", :en, -0.005, { sign_display: :negative }, [[:minus_sign, "-"], [:currency, "$"], [:number, "0.01"]]],
@@ -932,8 +936,10 @@ module Worldwide
         [{ type: :minus_sign, value: "-" }, { type: :literal, value: "\u200E" }, { type: :currency, value: "$" }, { type: :literal, value: "\u00A0" }, { type: :number, value: "1,234.50" }],
         Worldwide.currency(code: "USD").format_to_parts(-1234.5, locale: :fa),
       )
-      # ar: "¤\u00A0#,##0.00", which has no direction marks
-      assert_equal "$\u00A01,234.50", Worldwide.currency(code: "USD").format_short(1234.5, locale: :ar)
+      # ar: "\u200F#,##0.00\u00A0¤;\u200F-#,##0.00\u00A0¤"
+      assert_equal "\u200F1,234.50\u00A0$", Worldwide.currency(code: "USD").format_short(1234.5, locale: :ar)
+      assert_equal "\u200F1,234.50\u00A0E£", Worldwide.currency(code: "EGP").format_short(1234.5, locale: :"ar-EG")
+      assert_equal "\u200F1,234.50\u00A0$", Worldwide::Cldr.with_bundled_data { Worldwide.currency(code: "USD").format_short(1234.5, locale: :"ar-AE") }
     end
 
     test "CLDR 42 gives he a right-to-left mark before the currency symbol" do
@@ -970,7 +976,7 @@ module Worldwide
 
       # Locales without currency separators keep their decimal and group symbols
       assert_equal "1.234,50\u00A0€", Worldwide.currency(code: "EUR").format_short(1234.5, locale: :de)
-      assert_equal "CHF\u00A01’234.50", Worldwide.currency(code: "CHF").format_short(1234.5, locale: :"de-CH")
+      assert_equal "CHF\u00A01'234.50", Worldwide.currency(code: "CHF").format_short(1234.5, locale: :"de-CH")
     end
 
     test "currency separators apply on every path that formats an amount" do

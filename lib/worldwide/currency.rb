@@ -12,8 +12,8 @@ module Worldwide
     SUPPORTED_ALTERNATE_FORMATS = [:japan]
     TEXT_ENCLOSED_BY_PARENTHESES = /\((.)+\)/
     # The direction marks that CLDR writes in currency patterns: U+200E LEFT-TO-RIGHT MARK, U+200F RIGHT-TO-LEFT MARK
-    # and U+061C ARABIC LETTER MARK. The he pattern starts with U+200F, so that the amount reads right to left, and the
-    # fa pattern starts with U+200E.
+    # and U+061C ARABIC LETTER MARK. The ar and he patterns start with U+200F, so that the amount reads right to left,
+    # and the fa pattern starts with U+200E.
     DIRECTION_MARKS = "\u200E\u200F\u061C"
     # The positive part of a currency pattern: the text before the first of the symbol and the number, that one, the
     # text between them, and the other one.
@@ -155,7 +155,8 @@ module Worldwide
     # - :minus_sign, the "-" of a negative amount. It comes first, before the symbol or the number.
     # - :currency, the symbol, or the currency code if the locale has no symbol for the currency.
     # - :literal, the direction marks that the locale's currency pattern writes before the symbol and the number, such
-    #   as the U+200F RIGHT-TO-LEFT MARK of he, or the no-break space and direction marks that it writes between them.
+    #   as the U+200F RIGHT-TO-LEFT MARK of ar and he, or the no-break space and direction marks that it writes
+    #   between them.
     # - :number, the localized number, without its sign.
     #
     # A part that would be empty is left out, and joining the values gives the result of format_short.
