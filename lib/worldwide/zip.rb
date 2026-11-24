@@ -253,7 +253,11 @@ module Worldwide
         end
       end
 
-      if /[0-9]/.match?(second) && !Worldwide::ExtantOutcodes.for_country(code: country_code).include?(candidate)
+      # GG, IM and JE postcodes are part of the UK system, so the GB list covers their outcodes too.
+      extant = Worldwide::ExtantOutcodes.for_country(code: country_code) ||
+        Worldwide::ExtantOutcodes.for_country(code: "GB")
+
+      if /[0-9]/.match?(second) && !extant.include?(candidate)
         # We've guessed a two-digit district that does not actually exist, so we'll assume a single-digit district.
         # For example, "GL71" can't be an outcode, so we'll assume the user meant outcode "GL7".
         "#{area}#{first}"

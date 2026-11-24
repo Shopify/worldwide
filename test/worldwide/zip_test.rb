@@ -999,6 +999,19 @@ module Worldwide
       end
     end
 
+    test "outcode guesses the district of an incomplete GG, IM or JE postcode from the GB list of outcodes" do
+      [
+        [:GG, "GY10", "GY10"],
+        [:GG, "GY101", "GY10"],
+        [:GG, "GY11 1AA", "GY1"],
+        [:IM, "IM86", "IM86"],
+        [:IM, "IM861", "IM86"],
+        [:JE, "JE23", "JE2"],
+      ].each do |country_code, postcode, expected|
+        assert_equal expected, Zip.outcode(country_code: country_code, zip: postcode), "Outcode for #{postcode.inspect} in #{country_code}"
+      end
+    end
+
     test "outcode returns the full zip for countries that don't have a split postcode format" do
       [
         [:FR, "75008"],

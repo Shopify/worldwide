@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- `Zip.outcode` no longer raises `NoMethodError` for an incomplete GG, IM or JE postcode with a two-digit district, such as `GY10` or `IM86`. It checks the district against the GB list of outcodes, which covers these postcodes.
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
 
 ---
