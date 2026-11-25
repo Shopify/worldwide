@@ -27,6 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add the Structured Addresses artifact: `bundle exec rake structured_addresses:export` generates `structured-addresses.json` from this gem's region data, with a manifest and a copy of `schema/structured-addresses.schema.json`. The artifact is a public, language-agnostic description of how an address is shaped per country: fields with labels and requiredness (`required`, `optional`, or `contextual` where the merchant decides), and `edit` and `show` layouts for the flat and, where present, structured shape. Nothing is committed; a test generates the artifact and validates it against the schema. See [Structured Addresses](README.md#-structured-addresses).
+- `Config.configure_i18n` no longer appends duplicate entries to `I18n.load_path` when called more than once.
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
 
 ---

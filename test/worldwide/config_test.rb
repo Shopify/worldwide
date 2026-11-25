@@ -85,12 +85,26 @@ module Worldwide
     test "#configure applies changes to I18n.config by default" do
       I18n.config.expects(:enforce_available_locales=).never
       load_path = I18n.config.load_path
+      I18n.config.load_path = []
 
-      assert_changes(-> { I18n.config.load_path }) do
+      assert_changes(-> { I18n.config.load_path }, from: []) do
         assert_instance_of(I18n::Config, Worldwide::Config.configure_i18n)
       end
     ensure
       I18n.config.load_path = load_path
+    end
+
+    test "#configure does not duplicate load paths when called again" do
+      config = Worldwide::RubyI18nConfig.new
+      config.available_locales = [:en]
+      config.load_path = []
+
+      Worldwide::Config.configure_i18n(i18n_config: config)
+      Worldwide::Config.configure_i18n(i18n_config: config)
+      Worldwide::Config.configure_i18n(i18n_config: config)
+
+      assert_equal config.load_path.uniq, config.load_path
+      assert_equal config.load_path.size, Worldwide::Config.configure_i18n(i18n_config: config).load_path.size
     end
 
     test "#configure sets expected number of available locales on i18n config" do
