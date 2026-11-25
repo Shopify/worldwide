@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
-- Curaçao (CW) and Sint Maarten (SX) use the Caribbean guilder (XCG), which replaced the Netherlands Antillean guilder (ANG) on 2025-03-31. ANG stays defined.
+- Curaçao (CW) and Sint Maarten (SX) use the Caribbean guilder (XCG), which replaced the Netherlands Antillean guilder (ANG) on 2025-03-31. ANG stays defined. [#711](https://github.com/Shopify/worldwide/pull/711)
 
 ---
 
