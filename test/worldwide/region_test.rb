@@ -11,6 +11,12 @@ module Worldwide
       assert_equal("XOF", Worldwide.currency(code: "XOF").currency_code)
     end
 
+    test "#currency for Curaçao and Sint Maarten is XCG, while ANG stays recognized" do
+      assert_equal("XCG", Worldwide.region(code: "CW").currency.currency_code)
+      assert_equal("XCG", Worldwide.region(code: "SX").currency.currency_code)
+      assert_equal("ANG", Worldwide.currency(code: "ANG").currency_code)
+    end
+
     test "#initialize with only iso_code" do
       region = Region.new(iso_code: "ZZ")
 
