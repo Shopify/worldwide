@@ -176,6 +176,16 @@ module Worldwide
       end
     end
 
+    test "Regions share frozen values read from their YAML files" do
+      france = Worldwide.region(code: "FR")
+      germany = Worldwide.region(code: "DE")
+
+      assert_predicate france.format, :frozen?
+      assert_predicate france.tags, :frozen?
+      assert_predicate Worldwide.region(code: "CA-ON").zip_prefixes, :frozen?
+      assert_same france.week_start_day, germany.week_start_day
+    end
+
     test "Can look up associated territory using its parent-child ISO code" do
       pr = Worldwide.region(code: "PR")
       uspr = Worldwide.region(code: "US-PR")
