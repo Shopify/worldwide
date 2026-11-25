@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- **Breaking:** Make phonelib an optional dependency, loaded when a `Worldwide::Phone` is created. Applications using phone parsing or address normalization/validation must add `gem "phonelib", "~> 0.8"` to their Gemfile. Other features, including address formatting, no longer require phonelib. [#675](https://github.com/Shopify/worldwide/pull/675)
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
 
 ---
