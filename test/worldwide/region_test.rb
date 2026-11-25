@@ -11,6 +11,13 @@ module Worldwide
       assert_equal("XOF", Worldwide.currency(code: "XOF").currency_code)
     end
 
+    test "#currency for Jersey is the pound sterling GBP, as for Guernsey and the Isle of Man, while JEP stays recognized" do
+      ["JE", "GG", "IM"].each do |code|
+        assert_equal("GBP", Worldwide.region(code: code).currency.currency_code, code)
+      end
+      assert_equal("JEP", Worldwide.currency(code: "JEP").currency_code)
+    end
+
     test "#initialize with only iso_code" do
       region = Region.new(iso_code: "ZZ")
 
