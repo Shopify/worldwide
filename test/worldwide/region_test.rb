@@ -11,6 +11,15 @@ module Worldwide
       assert_equal("XOF", Worldwide.currency(code: "XOF").currency_code)
     end
 
+    test "#currency for Kiribati is the Australian dollar, as for Nauru and Tuvalu" do
+      %w[KI NR TV].each do |code|
+        currency = Worldwide.region(code: code).currency
+
+        assert_equal("AUD", currency.currency_code)
+        assert_equal(36, Currencies.numeric_code_for(currency.currency_code))
+      end
+    end
+
     test "#initialize with only iso_code" do
       region = Region.new(iso_code: "ZZ")
 
