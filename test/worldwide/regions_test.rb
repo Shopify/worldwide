@@ -176,6 +176,14 @@ module Worldwide
       end
     end
 
+    test "The world.yml hierarchy does not load a region twice" do
+      [:iso_code, :numeric_three].each do |attribute|
+        codes = Worldwide::Regions.all.filter_map(&attribute)
+
+        assert_equal codes.uniq, codes, "duplicate #{attribute}"
+      end
+    end
+
     test "Can look up associated territory using its parent-child ISO code" do
       pr = Worldwide.region(code: "PR")
       uspr = Worldwide.region(code: "US-PR")
