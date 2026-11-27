@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
-- `Address#single_line` no longer repeats a Brazilian address when the excluded fields leave its address or zip line first; before, `excluded_fields: [:first_name, :last_name, :company]` printed an address with both address lines filled twice.
+- `Address#single_line` no longer repeats a Brazilian address when the excluded fields leave its address or zip line first; before, `excluded_fields: [:first_name, :last_name, :company]` printed an address with both address lines filled twice. [#724](https://github.com/Shopify/worldwide/pull/724)
 
 ---
 
