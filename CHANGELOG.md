@@ -28,6 +28,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - Correct the time zones for Nunavut postal codes in Kitikmeot, Kivalliq, Resolute and Arctic Bay. [#685](https://github.com/Shopify/worldwide/pull/685)
+- `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
+
+---
+
+## [3.0.0] - 2026-11-19
+
+- **Breaking:** Greenland, Kyiv and Yangon now use `America/Nuuk`, `Europe/Kyiv` and `Asia/Yangon`, as in Rails 8.1. This applies to the `GL` region's `timezones`, `DeprecatedTimeZoneMapper.to_rails`, the time zone labels and `Worldwide::TimeZone.all`. To match a saved `America/Godthab`, `Europe/Kiev` or `Asia/Rangoon`, pass it through `DeprecatedTimeZoneMapper.to_supported` first. Greenland's label now shows `(GMT-02:00)`. [#687](https://github.com/Shopify/worldwide/pull/687)
+- `to_rails("America/Asuncion")` now returns `America/Asuncion` instead of `America/Halifax`, and Asunción has time zone labels. [#687](https://github.com/Shopify/worldwide/pull/687)
+- **Breaking:** Require Ruby 3.2 or later. [#687](https://github.com/Shopify/worldwide/pull/687)
+
+---
+
+## [2.4.0] - 2026-11-18
+
+- Add `Region#has_code?`, `Region#has_name?`, `Region#has_handle?`, `Region#neighbor?` and `Region#valid_zone_zip?`, for matching a zone by code, by name and by zip, and `Util.utf8_handle` and `Util.ascii_casecmp_substring?`, which they use. `valid_zone_zip?` checks a province's own `zip_prefixes`. `valid_zip?` is unchanged: it infers one province from the zip, so it can differ for a shared prefix or a zip shorter than a prefix. [#682](https://github.com/Shopify/worldwide/pull/682)
+- `Zip.normalize` no longer drops letters from a complete GB-style postcode that has extra characters after it, for example `"E1 6AN 1AA"`. `Zip.outcode` no longer raises `NoMethodError` for such input in GG, IM and JE. [#683](https://github.com/Shopify/worldwide/pull/683)
+- `Zip.find_country` gives no suggestion for a postal code that has no uppercase letters when no country matches the alleged country, and treats a blank country code like `nil` instead of raising `ArgumentError`. [#683](https://github.com/Shopify/worldwide/pull/683)
+- Add tests and fixtures that check which postal codes are valid for each country. [#683](https://github.com/Shopify/worldwide/pull/683)
 
 ---
 

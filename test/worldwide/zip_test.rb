@@ -166,6 +166,37 @@ module Worldwide
       end
     end
 
+    test "find_country does not suggest a country for a postal code that has no uppercase letters" do
+      [
+        [:AD, "im1 1aa"],
+        [:AU, "je2 4sy"],
+        [:AZ, "tdcu 1zz"],
+        [nil, "gy1 1uy"],
+        [nil, "tkca 1zz"],
+        [nil, "ai-2640"],
+      ].each do |country_code, zip|
+        assert_nil(
+          Zip.find_country(country_code: country_code, zip: zip),
+          "#{country_code.inspect} | #{zip.inspect}",
+        )
+        refute_nil(
+          Zip.find_country(country_code: country_code, zip: zip.upcase),
+          "#{country_code.inspect} | #{zip.upcase.inspect}",
+        )
+      end
+    end
+
+    test "find_country treats a blank country code like a missing one" do
+      [nil, "", " ", :""].each do |country_code|
+        assert_nil Zip.find_country(country_code: country_code, zip: "90210"), country_code.inspect
+        assert_equal(
+          :JE,
+          Zip.find_country(country_code: country_code, zip: "JE3 7FW")&.iso_code&.to_sym,
+          country_code.inspect,
+        )
+      end
+    end
+
     test "find_country returns the alleged country if the postal code is valid there" do
       [
         [:AC, "ASCN 1ZZ"],
@@ -293,6 +324,42 @@ module Worldwide
         actual = Zip.normalize(country_code: "MD", zip: zip)
 
         assert_equal expected, actual, "#{zip} should have normalized to #{expected} but got #{actual}"
+      end
+    end
+
+    test "normalize keeps the MD- prefix with its hyphen whenever the MD prefix is present" do
+      ["MD-2025", "MD2025", "MD 2025", "md-2025", "2025MD", "2025-MD"].each do |zip|
+        actual = Zip.normalize(country_code: "MD", zip: zip)
+
+        assert_equal "MD-2025", actual, "#{zip} should have normalized to MD-2025 but got #{actual}"
+      end
+    end
+
+    test "normalize leaves a bare 4-digit MD postal code as entered" do
+      assert_equal "2025", Zip.normalize(country_code: "MD", zip: "2025")
+    end
+
+    test "normalize returns an out-of-range MD postal code unchanged" do
+      ["MD-9999", "MD9999", "9999MD", "9999"].each do |zip|
+        assert_equal zip, Zip.normalize(country_code: "MD", zip: zip)
+      end
+    end
+
+    test "normalize is stable for MD postal codes" do
+      ["MD-2025", "MD2025", "MD 2025", "md-2025", "2025MD", "2025-MD", "2025"].each do |zip|
+        once = Zip.normalize(country_code: "MD", zip: zip)
+
+        assert_equal once, Zip.normalize(country_code: "MD", zip: once)
+      end
+    end
+
+    test "valid_zip? accepts every input form of an MD postal code" do
+      md = Worldwide.region(code: "MD")
+      ["MD-2025", "MD2025", "MD 2025", "md-2025", "2025MD", "2025-MD", "2025"].each do |zip|
+        assert md.valid_zip?(zip), "#{zip} should be accepted"
+        normalized = Zip.normalize(country_code: "MD", zip: zip)
+
+        assert md.valid_zip?(normalized), "#{normalized} should be accepted"
       end
     end
 
@@ -483,6 +550,20 @@ module Worldwide
         normalized = Zip.normalize(country_code: country_code, zip: input)
 
         assert_equal expected, normalized, "Normalization of #{input.inspect} returned #{normalized.inspect}"
+      end
+    end
+
+    test "normalize of UK-style postcodes with extra characters after a complete postcode does not drop letters" do
+      [
+        [:GB, "E1 6AN 1AA", "E1 6AN 1AA"],
+        [:GB, "E16AN 1AA", "E1 6AN 1AA"],
+        [:GB, "NW1 6XE 1AA", "NW1 6XE 1AA"],
+        [:GB, "GL7 1AA 1AA", "GL7 1AA 1AA"],
+        [:GB, "GL71AA 1AA", "GL7 1AA 1AA"],
+      ].each do |country_code, zip, expected|
+        normalized = Zip.normalize(country_code: country_code, zip: zip)
+
+        assert_equal expected, normalized, "Normalization of #{zip.inspect} returned #{normalized.inspect}"
       end
     end
 
@@ -908,6 +989,13 @@ module Worldwide
         actual = Zip.outcode(country_code: country_code, zip: postcode)
 
         assert_equal expected, actual, "Outcode for #{postcode.inspect} should be #{expected} but was #{actual}"
+      end
+    end
+
+    test "outcode returns the first portion for GG, IM and JE when extra characters follow a complete postcode" do
+      [:GB, :GG, :IM, :JE].each do |country_code|
+        assert_equal "E1", Zip.outcode(country_code: country_code, zip: "E1 6AN 1AA")
+        assert_equal "GL7", Zip.outcode(country_code: country_code, zip: "GL7 1AA 1AA")
       end
     end
 

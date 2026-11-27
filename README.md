@@ -633,7 +633,7 @@ This implementation will provide you a localized timezone that you can use with 
 ```ruby
 <%= form.ui_select :timezone,
       time_zone_options_for_select(
-        @shop.timezone.name,
+        Worldwide::DeprecatedTimeZoneMapper.to_supported(@shop.timezone.name),
         nil,
         Worldwide::TimeZone
       ),
@@ -643,12 +643,14 @@ This implementation will provide you a localized timezone that you can use with 
 
 `Worldwide::TimeZone.all` includes the Rails time zones and separate entries for Vancouver, Whitehorse, Edmonton, and Winnipeg.
 The Canadian entries use permanent offsets and province or territory labels.
+Passing the saved name through `to_supported` keeps a zone saved under an old tz name, such as `America/Godthab`, selected.
 
 TZInfo gets the time zone rules from the host application's data source.
 Use IANA time zone data version `2026e` or later for the Canadian changes.
 If the application uses the `tzinfo-data` gem, use version `1.2026.5` or later.
 
 `Worldwide::DeprecatedTimeZoneMapper.to_rails` returns a fallback from Rails' curated list for legacy callers.
+`to_rails` uses the Rails 8.1 list. Older Rails versions may not list the returned ID.
 The Canadian fallbacks match the permanent offsets, but do not preserve the full time zone history.
 Use the original IANA identifier for time conversion and storage.
 

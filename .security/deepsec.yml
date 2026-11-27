@@ -1,0 +1,20 @@
+# deepsec security review of this repository: devx deepsec run (see devx deepsec help).
+# Context for the model: .security/deepsec/<project>.md.
+projects:
+  worldwide:
+    # The gem's own code is `lib/`, the TypeScript package in `lang/typescript/src/` and its build
+    # plugin, the release workflows and the maintainer rake tasks. The region, CLDR and locale
+    # files under `data/` are reference data, and the test suites hold synthetic fixtures, so neither is reviewed.
+    priority:
+      - lib/worldwide/
+      - lang/typescript/src/
+      - lang/typescript/rollup-plugin-regions-yaml/
+      - .github/workflows/
+      - rake/
+    ignore:
+      - data/**
+      - test/**
+      - "**/*.test.ts"
+      - lang/typescript/pnpm-lock.yaml
+      - CHANGELOG.md
+      - lang/typescript/CHANGELOG.md

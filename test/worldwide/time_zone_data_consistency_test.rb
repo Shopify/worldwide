@@ -57,6 +57,13 @@ module Worldwide
       end
     end
 
+    # Other locales are filled in by the translation platform after merge and fall back to English until then.
+    test "every returned time zone has an English label" do
+      english = YAML.safe_load_file("#{Worldwide::Paths::TIME_ZONE_ROOT}/en.yml")
+
+      assert_empty Worldwide::TimeZone.all.map(&:name) - english["en"]["timezones"].keys
+    end
+
     def iana_timezones
       @iana_timezones ||= YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/iana_to_rails_time_zone.yml")
     end
