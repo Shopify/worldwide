@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
-- `Address#format` and `Address#single_line` keep `〒` and `様` in field values and additional lines. They still drop the marks of the Japanese format when the zip or last name is blank or excluded, but before they also deleted them from every value, so a company named `様式会社` became `式会社`.
+- `Address#format` and `Address#single_line` keep `〒` and `様` in field values and additional lines. They still drop the marks of the Japanese format when the zip or last name is blank or excluded, but before they also deleted them from every value, so a company named `様式会社` became `式会社`. [#726](https://github.com/Shopify/worldwide/pull/726)
 
 ---
 
