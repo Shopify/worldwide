@@ -713,6 +713,44 @@ module Worldwide
       assert_equal expected, actual
     end
 
+    test "single_line 'BR' with the address line first shows it once" do
+      address = {
+        first_name: "Alice",
+        last_name: "Silva",
+        company: "Example",
+        address1: "address1",
+        address2: "address2",
+        city: "Feira de Santana",
+        province_code: "BA",
+        zip: "44009796",
+        country_code: "BR",
+      }
+
+      expected = "address1 - address2, 44009796 Feira de Santana - Bahia, Brazil"
+      actual = Worldwide.address(**address).single_line(excluded_fields: [:first_name, :last_name, :company])
+
+      assert_equal expected, actual
+    end
+
+    test "single_line 'BR' with the zip line first shows it once" do
+      address = {
+        first_name: "Alice",
+        last_name: "Silva",
+        address1: "address1",
+        city: "Feira de Santana",
+        province_code: "BA",
+        zip: "44009796",
+        country_code: "BR",
+      }
+
+      expected = "44009796 Feira de Santana - Bahia, Brazil"
+      actual = Worldwide.address(**address).single_line(
+        excluded_fields: [:first_name, :last_name, :company, :address1, :address2],
+      )
+
+      assert_equal expected, actual
+    end
+
     test "single_line 'BR' city & province_code provided but city is excluded." do
       address = {
         address1: "address1",
