@@ -836,27 +836,6 @@ module Worldwide
       (ZIP_REGEXPS[regex_prefix] ||= Regexp.new(regex_prefix)).match?(adjusted_value)
     end
 
-    # Search a list of zip prefixes (by province or timezone) to find the element that corresponds to the zip
-    #
-    # prefixes is a hash mapping from Region objects (representing "provinces") to arrays of strings
-    # (representing a prefix with which a zip may start for that province), e.g.:
-    # {region1 => [prefix1a, prefix1b], region2 => [prefix2a], region3 => [prefix3a, prefix3b, prefix3c]}
-    #
-    # Returns the Region in which the zip belongs based on the prefix, or `nil` if no match is found.
-    def search_prefixes_by_normalized_zip(prefixes:, zip:, allow_partial_zip: false)
-      return if Worldwide::Util.blank?(prefixes)
-      return if Worldwide::Util.blank?(zip)
-      return unless allow_partial_zip || passes_country_zip_regexp?(value: zip)
-
-      stripped = Zip.strip_optional_country_prefix(country_code: iso_code, zip: zip)
-
-      prefixes.find do |_zone, zone_prefixes|
-        zone_prefixes&.any? do |prefix|
-          prefix.start_with?(stripped) || stripped.start_with?(prefix)
-        end
-      end&.first
-    end
-
     def subdivision_code(iso_code)
       return iso_code if iso_code.nil? || iso_code.length < 3
 
@@ -897,16 +876,21 @@ module Worldwide
       country.send(:cross_border_zip_includes_province?, zip: normalized, province_code: province_code)
     end
 
+    # Returns the first zone with a `zip_prefixes` entry that starts with the zip, or with which the zip starts
+    # (so that a partial zip such as "K1A" matches the prefix "K1A 0A"), or `nil` if none does. Without
+    # `allow_partial_zip`, the zip must also match the country's zip regex.
     def zone_by_normalized_zip(normalized, allow_partial_zip: false)
-      prefixes = zones&.map do |zone|
-        [zone, zone.zip_prefixes]
-      end&.to_h
+      return if Worldwide::Util.blank?(zones)
+      return if Worldwide::Util.blank?(normalized)
+      return unless allow_partial_zip || passes_country_zip_regexp?(value: normalized)
 
-      search_prefixes_by_normalized_zip(
-        prefixes: prefixes,
-        zip: normalized,
-        allow_partial_zip: allow_partial_zip,
-      )
+      stripped = Zip.strip_optional_country_prefix(country_code: iso_code, zip: normalized)
+
+      zones.find do |zone|
+        zone.zip_prefixes&.any? do |prefix|
+          prefix.start_with?(stripped) || stripped.start_with?(prefix)
+        end
+      end
     end
   end
 end
