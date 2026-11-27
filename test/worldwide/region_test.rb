@@ -713,6 +713,11 @@ module Worldwide
       assert_equal "HST", Worldwide.region(code: "CA").zone(code: "ON").tax_name
     end
 
+    test "#tax_rate of Switzerland and Liechtenstein is their standard VAT rate since 2024" do
+      assert_in_delta(0.081, Worldwide.region(code: "CH").tax_rate)
+      assert_in_delta(0.081, Worldwide.region(code: "LI").tax_rate)
+    end
+
     test "#tax_rate returns values as expected" do
       assert_in_delta(0.13, Worldwide.region(code: "CA").zone(code: "ON").tax_rate)
       assert_in_delta(0.14, Worldwide.region(code: "CA").zone(code: "NS").tax_rate)
