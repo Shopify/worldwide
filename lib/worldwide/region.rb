@@ -17,6 +17,10 @@ module Worldwide
     ).to_set.freeze
     private_constant :ISO_3166_ASSIGNED_COUNTRY_CODES
 
+    # Compiled zip regexes, keyed by their source, so that validating a zip doesn't compile one on every call.
+    ZIP_REGEXPS = {}
+    private_constant :ZIP_REGEXPS
+
     CODE_SEPARATOR = "-"
     private_constant :CODE_SEPARATOR
 
@@ -829,7 +833,7 @@ module Worldwide
 
       adjusted_value = partial_match ? value.strip : value
 
-      Util.present?(Regexp.new(regex_prefix).match(adjusted_value))
+      (ZIP_REGEXPS[regex_prefix] ||= Regexp.new(regex_prefix)).match?(adjusted_value)
     end
 
     # Search a list of zip prefixes (by province or timezone) to find the element that corresponds to the zip
