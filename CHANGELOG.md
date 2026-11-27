@@ -27,8 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Correct the time zones for Nunavut postal codes in Kitikmeot, Kivalliq, Resolute and Arctic Bay. [#685](https://github.com/Shopify/worldwide/pull/685)
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
 - São Tomé and Príncipe (ST) uses the dobra redenominated on 2018-01-01 (STN) instead of the old dobra (STD). STD stays defined. [#712](https://github.com/Shopify/worldwide/pull/712)
+- Loading the regions takes about 35% less time and allocates about 330,000 fewer objects. [#715](https://github.com/Shopify/worldwide/pull/715)
 
 ---
 
