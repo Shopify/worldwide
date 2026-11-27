@@ -12,7 +12,7 @@ module Worldwide
     end
 
     test "#currency for Kiribati is the Australian dollar, as for Nauru and Tuvalu" do
-      %w[KI NR TV].each do |code|
+      ["KI", "NR", "TV"].each do |code|
         currency = Worldwide.region(code: code).currency
 
         assert_equal("AUD", currency.currency_code)
