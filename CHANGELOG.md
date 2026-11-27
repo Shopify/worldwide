@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Security in case of vulnerabilities.
 
 ## [Unreleased]
+- Add `:date_time_current_year_with_seconds` — `:date_time_current_year` (a compact, year-omitted "MMM d + time" timestamp) with the time upgraded to second precision, for cross-system log/event correlation. Each locale keeps its own field order, separators, and 12h/24h clock (e.g. Vietnamese renders time-first, Danish uses "." separators, en stays 12-hour). [#592](https://github.com/Shopify/worldwide/pull/592)
 
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
 
