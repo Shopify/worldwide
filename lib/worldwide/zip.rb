@@ -89,7 +89,7 @@ module Worldwide
       return input if Util.blank?(country_code)
 
       country = Worldwide.region(code: country_code)
-      return zip if country.nil? || NORMALIZATION_DISABLED_COUNTRIES.include?(country.iso_code)
+      return zip if country.nil? || country.iso_code.nil? || NORMALIZATION_DISABLED_COUNTRIES.include?(country.iso_code)
 
       if allow_autofill
         autofill = country.autofill_zip

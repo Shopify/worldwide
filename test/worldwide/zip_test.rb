@@ -942,6 +942,12 @@ module Worldwide
       end
     end
 
+    test "normalize returns the input for a region that has no ISO code, such as a continent" do
+      ["001", "419"].each do |region_code|
+        assert_equal " 12345 ", Zip.normalize(country_code: region_code, zip: " 12345 ")
+      end
+    end
+
     test "outcode returns the first portion of a postcode for Canada, Ireland, and UK-style postcode countries" do
       [
         [:CA, "K1A 0A9", "K1A"],
