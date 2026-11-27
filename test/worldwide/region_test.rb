@@ -723,6 +723,11 @@ module Worldwide
       assert_in_delta(0.14, Worldwide.region(code: "CA").zone(code: "NS").tax_rate)
     end
 
+    test "#tax_rate of Estonia and Slovakia is their standard VAT rate since 2025" do
+      assert_in_delta(0.24, Worldwide.region(code: "EE").tax_rate)
+      assert_in_delta(0.23, Worldwide.region(code: "SK").tax_rate)
+    end
+
     test "#ignore_provinces returns values as expected" do
       assert Worldwide.region(code: "GB").ignore_provinces
       refute Worldwide.region(code: "CA").ignore_provinces
