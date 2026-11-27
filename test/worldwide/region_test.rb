@@ -14,6 +14,7 @@ module Worldwide
     test "#currency for Curaçao and Sint Maarten is XCG, while ANG stays recognized" do
       assert_equal("XCG", Worldwide.region(code: "CW").currency.currency_code)
       assert_equal("XCG", Worldwide.region(code: "SX").currency.currency_code)
+      assert_equal(532, Worldwide.region(code: "CW").currency.numeric_code)
       assert_equal("ANG", Worldwide.currency(code: "ANG").currency_code)
     end
 

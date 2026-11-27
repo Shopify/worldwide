@@ -50,14 +50,14 @@ module Worldwide
       end
     end
 
-    test "XCG and ANG are both listed, and numeric code 532 still resolves to ANG" do
+    test "XCG and ANG are both listed, and numeric code 532 resolves to XCG" do
       codes = Currencies.all.map(&:currency_code)
 
       assert_includes codes, "XCG"
       assert_includes codes, "ANG"
-      assert_equal "ANG", Currencies.alpha_code_for(532)
-      assert_equal 532, Currencies.numeric_code_for("ANG")
-      assert_nil Currencies.numeric_code_for("XCG")
+      assert_equal "XCG", Currencies.alpha_code_for(532)
+      assert_equal 532, Currencies.numeric_code_for("XCG")
+      assert_nil Currencies.numeric_code_for("ANG")
     end
 
     test "no two currencies use the same (non-nil) numeric-three code" do
