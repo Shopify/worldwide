@@ -176,6 +176,16 @@ module Worldwide
       end
     end
 
+    test "Regions share frozen values read from their YAML files" do
+      france = Worldwide.region(code: "FR")
+      germany = Worldwide.region(code: "DE")
+
+      assert_predicate france.format, :frozen?
+      assert_predicate france.tags, :frozen?
+      assert_predicate Worldwide.region(code: "CA-ON").zip_prefixes, :frozen?
+      assert_same france.week_start_day, germany.week_start_day
+    end
+
     test "The world.yml hierarchy does not load a region twice" do
       [:iso_code, :numeric_three].each do |attribute|
         codes = Worldwide::Regions.all.filter_map(&attribute)

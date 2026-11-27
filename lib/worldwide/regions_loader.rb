@@ -214,7 +214,7 @@ module Worldwide
 
     def country_codes
       @country_codes ||=
-        YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/country_codes.yml")["country_codes"]
+        YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/country_codes.yml", freeze: true)["country_codes"]
     end
 
     def find_region(code:)
@@ -232,7 +232,7 @@ module Worldwide
     end
 
     def load_territory(filename)
-      spec = YAML.safe_load_file(filename)
+      spec = YAML.safe_load_file(filename, freeze: true)
       code = spec["code"]
 
       region = Region.new(
