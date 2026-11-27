@@ -563,6 +563,28 @@ $ atlanta_address.valid?
 => true
 ```
 
+### 🧩  Structured Addresses
+
+Structured Addresses is a public, machine-readable, country-level description of how an address is shaped, generated from this gem's region data for consumers who do not use Ruby: wallets, browsers, autofill providers, integrators, and documentation.
+
+```sh
+$ bundle exec rake structured_addresses:export
+Wrote 243 countries (5 structured) to dist/structured-addresses/ (schema 1.0.0, release 2026-11-24)
+```
+
+The output directory holds `structured-addresses.json`, `manifest.json` and a copy of [`schema/structured-addresses.schema.json`](schema/structured-addresses.schema.json). Nothing is committed; a test generates the artifact and validates it against the schema on every run.
+
+For each country the artifact carries:
+
+- `code`, `name`, and `coverage`: `structured` where the country has a split street / number / district layout, `flat` otherwise. Every country is in the artifact; `coverage` says which layout it has.
+- `fields`: every field in any layout, with its `label`, `kind` (`standard` or `component`), and `requirement`. `required` and `optional` are country-level facts. `contextual` means no single value is true for a majority of shops and the merchant's configuration decides (`company`, `phone`); a consumer should ask before rendering the field.
+- `layouts.edit` and `layouts.show`, each with `flat` and `structured`: rows of field keys for a form (`edit`) and for display (`show`). `show` rows may contain literal text, as `{ "text": "〒" }`; render a row by concatenating its elements in order, inserting one space only between two adjacent field keys.
+- `postalCode.used`: whether the country uses postal codes. Some territories with a single fixed code show it without collecting it.
+
+Two versions travel with the artifact. `schemaVersion` is semver and versions the shape of the JSON: a consumer checks it to know whether their parser still works. `release` is a date and versions the content: a newer date means newer country facts, with the shape possibly unchanged. Neither is this gem's version, which the manifest records as provenance.
+
+Field identifiers are the artifact's vocabulary (`postalCode`, `provinceCode`, `countryCode`, `additionalInformation`), not the parameter names of any particular API. The artifact is not a validation contract, not shop configuration, and not a statement of which countries Shopify supports.
+
 ### 🗓  / ⌚  Date and Time formats
 ```ruby
 $ I18n.l(Date.current, format: :long)

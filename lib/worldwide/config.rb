@@ -103,7 +103,7 @@ module Worldwide
         locale_set = i18n_config.available_locales.map(&:to_s).to_set
         components = REQUIRED_CLDR_DATA + additional_components
 
-        i18n_config.load_path += if ignore_precomputed_paths
+        i18n_config.load_path |= if ignore_precomputed_paths
           Dir[File.join(Paths::CLDR_ROOT, "locales", "{#{locale_set.to_a.join(",")}}/{#{components.join(",")}}.{yml,rb}")]
         else
           cldr_precomputed_locale_paths(locale_set, components)
@@ -125,11 +125,11 @@ module Worldwide
 
         if ignore_precomputed_paths
           locales = locale_set.to_a
-          i18n_config.load_path += Dir[File.join(Paths::OTHER_DATA_ROOT, "*", "{#{locales.join(",")}}.{yml,rb}")]
-          i18n_config.load_path += Dir[File.join(Paths::REGIONS_ROOT, "{#{locales.join(",")}}.yml")]
+          i18n_config.load_path |= Dir[File.join(Paths::OTHER_DATA_ROOT, "*", "{#{locales.join(",")}}.{yml,rb}")]
+          i18n_config.load_path |= Dir[File.join(Paths::REGIONS_ROOT, "{#{locales.join(",")}}.yml")]
         else
-          i18n_config.load_path += other_data_path(locale_set)
-          i18n_config.load_path += regions_data_path(locale_set)
+          i18n_config.load_path |= other_data_path(locale_set)
+          i18n_config.load_path |= regions_data_path(locale_set)
         end
       end
 

@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Structured Addresses — 1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "release", "locale", "countries"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "release": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(\\.[0-9]+)?$",
+      "description": "Data snapshot id (date, optional .N for same-day releases). Independent of schemaVersion and of the worldwide gem version."
+    },
+    "locale": { "const": "en" },
+    "countries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/country" }
+    }
+  },
+  "definitions": {
+    "fieldKey": {
+      "type": "string",
+      "enum": [
+        "firstName",
+        "lastName",
+        "company",
+        "address1",
+        "address2",
+        "streetName",
+        "streetNumber",
+        "additionalInformation",
+        "district",
+        "subdistrict",
+        "city",
+        "provinceCode",
+        "postalCode",
+        "countryCode",
+        "phone"
+      ]
+    },
+    "editLayout": {
+      "description": "Rows of fields for an input form. Each row is a list of field keys.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "$ref": "#/definitions/fieldKey" }
+      }
+    },
+    "showLayout": {
+      "description": "Rows for displaying an address. Each row is a list of field keys and literal text elements. Render a row by concatenating elements in order, inserting a single space only between two adjacent field keys; text elements carry their own surrounding whitespace verbatim. Literal text occurs in two countries (JP: 〒 and 様; UY: a comma).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "oneOf": [
+            { "$ref": "#/definitions/fieldKey" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["text"],
+              "properties": { "text": { "type": "string", "minLength": 1 } }
+            }
+          ]
+        },
+        "contains": { "$ref": "#/definitions/fieldKey" }
+      }
+    },
+    "field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "label", "kind", "requirement"],
+      "properties": {
+        "key": { "$ref": "#/definitions/fieldKey" },
+        "label": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["standard", "component"] },
+        "requirement": {
+          "enum": ["required", "optional", "contextual"],
+          "description": "Country-level requiredness. `required` and `optional` come from country data. `contextual` means it is not a country property: the merchant's configuration decides (company, phone). Consumers must not read `contextual` as either of the other two."
+        }
+      }
+    },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "name",
+        "coverage",
+        "postalCode",
+        "fields",
+        "layouts"
+      ],
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "name": { "type": "string", "minLength": 1 },
+        "coverage": { "enum": ["structured", "flat"] },
+        "postalCode": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["used"],
+          "properties": { "used": { "type": "boolean" } }
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/field" }
+        },
+        "layouts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["edit", "show"],
+          "properties": {
+            "edit": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["flat", "structured"],
+              "properties": {
+                "flat": { "$ref": "#/definitions/editLayout" },
+                "structured": { "anyOf": [{ "type": "null" }, { "$ref": "#/definitions/editLayout" }] }
+              }
+            },
+            "show": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["flat", "structured"],
+              "properties": {
+                "flat": { "$ref": "#/definitions/showLayout" },
+                "structured": { "anyOf": [{ "type": "null" }, { "$ref": "#/definitions/showLayout" }] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

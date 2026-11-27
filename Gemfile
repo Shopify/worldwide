@@ -30,6 +30,7 @@ group :development, :test do
 end
 
 group :test do
+  gem "json_schemer" # validates the Structured Addresses artifact against schema/ in test/rake/structured_addresses
   gem "minitest", "~> 5.27"
   gem "minitest-reporters"
   gem "mocha"
