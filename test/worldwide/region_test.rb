@@ -11,6 +11,11 @@ module Worldwide
       assert_equal("XOF", Worldwide.currency(code: "XOF").currency_code)
     end
 
+    test "#currency for São Tomé and Príncipe is the redenominated dobra STN, while STD stays recognized" do
+      assert_equal("STN", Worldwide.region(code: "ST").currency.currency_code)
+      assert_equal("STD", Worldwide.currency(code: "STD").currency_code)
+    end
+
     test "#initialize with only iso_code" do
       region = Region.new(iso_code: "ZZ")
 
