@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Add the four Indonesian provinces created in 2022: Papua Barat Daya (`ID-PD`), Papua Pegunungan (`ID-PE`), Papua Selatan (`ID-PS`) and Papua Tengah (`ID-PT`).
 - Correct the time zones for Nunavut postal codes in Kitikmeot, Kivalliq, Resolute and Arctic Bay. [#685](https://github.com/Shopify/worldwide/pull/685)
 - `Zip.normalize` keeps the hyphen of Moldova (MD) postal codes. `MD-2025`, `MD2025`, `MD 2025`, `md-2025`, `2025MD` and `2025-MD` all become `MD-2025`; before, every form except `2025MD` became `MD2025`. A bare `2025` stays `2025`. [#694](https://github.com/Shopify/worldwide/pull/694)
 - Switzerland's and Liechtenstein's `tax_rate` is 0.081, their standard VAT rate since 2024-01-01; both were 0.077. [#723](https://github.com/Shopify/worldwide/pull/723)
