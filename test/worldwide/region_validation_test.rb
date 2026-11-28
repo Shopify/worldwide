@@ -184,5 +184,37 @@ module Worldwide
         refute Worldwide.region(code: country).valid_zip?(zip, partial_match: true), "Partial zip #{zip} should be invalid for #{country}"
       end
     end
+
+    test "#valid_zip? follows a reassigned zip_regex and partial_zip_regex" do
+      region = Region.new(iso_code: "ZZ", country: true)
+      region.zip_regex = "^\\d{4}$"
+      region.partial_zip_regex = "^\\d{2}"
+
+      assert region.valid_zip?("1234")
+      assert region.valid_zip?("12", partial_match: true)
+
+      region.zip_regex = "^[A-Z]{4}$"
+      region.partial_zip_regex = "^[A-Z]{2}"
+
+      refute region.valid_zip?("1234")
+      assert region.valid_zip?("ABCD")
+      refute region.valid_zip?("12", partial_match: true)
+      assert region.valid_zip?("AB", partial_match: true)
+
+      region.zip_regex = nil
+      region.partial_zip_regex = nil
+
+      assert region.valid_zip?("anything")
+      refute region.valid_zip?("AB", partial_match: true)
+    end
+
+    test "#valid_zip? works on a frozen region" do
+      region = Region.new(iso_code: "ZZ", country: true)
+      region.zip_regex = "^\\d{4}$"
+      region.freeze
+
+      assert region.valid_zip?("1234")
+      refute region.valid_zip?("123")
+    end
   end
 end
