@@ -11,11 +11,13 @@ module Worldwide
     def load_regions
       @regions_by_cldr_code = {}
       @regions_by_iso_code = {}
+      @regions_by_hierarchy_code = {}
 
       # Load country/region definitions out of the data/regions/??.yml files
       @regions = Dir["#{Worldwide::Paths::REGIONS_ROOT}/*.yml"].map do |filename|
         load_territory(filename)
       end.flatten
+      @regions.each { |region| index_for_hierarchy(region) }
 
       # Load hierarchies out of world.yml, and construct regions to match the specified hierarchies
       apply_hierarchy(parent: nil, code: WORLD_CODE, children: world_yml[WORLD_CODE])
@@ -81,6 +83,7 @@ module Worldwide
           )
         end
         @regions << current_region
+        index_for_hierarchy(current_region)
       end
 
       current_region.parents << parent if Util.present?(parent)
@@ -211,12 +214,17 @@ module Worldwide
 
     def country_codes
       @country_codes ||=
-        YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/country_codes.yml")["country_codes"]
+        YAML.safe_load_file("#{Worldwide::Paths::DATA_ROOT}/country_codes.yml", freeze: true)["country_codes"]
     end
 
     def find_region(code:)
-      adjusted_code = code.to_s.upcase
-      @regions.find { |r| r.cldr_code.upcase == adjusted_code || r.iso_code == adjusted_code || r.numeric_three == adjusted_code || r.alpha_three == adjusted_code }
+      @regions_by_hierarchy_code[code.to_s.upcase]
+    end
+
+    def index_for_hierarchy(region)
+      [region.cldr_code.upcase, region.iso_code, region.numeric_three, region.alpha_three].compact.each do |code|
+        @regions_by_hierarchy_code[code] ||= region
+      end
     end
 
     def continent?(code)
@@ -224,7 +232,7 @@ module Worldwide
     end
 
     def load_territory(filename)
-      spec = YAML.safe_load_file(filename)
+      spec = YAML.safe_load_file(filename, freeze: true)
       code = spec["code"]
 
       region = Region.new(
