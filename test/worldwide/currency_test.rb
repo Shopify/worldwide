@@ -70,7 +70,7 @@ module Worldwide
       xcg = Worldwide.currency(code: "xcg")
 
       assert_equal "XCG", xcg.currency_code
-      assert_nil xcg.numeric_code
+      assert_equal 532, xcg.numeric_code
       assert_equal 2, xcg.decimals
       assert_equal "Cg", xcg.symbol(locale: :en)
       assert_equal "Cg12.50", xcg.format_short(12.5, locale: :en)
@@ -104,7 +104,7 @@ module Worldwide
       ang = Worldwide.currency(code: "ang")
 
       assert_equal "ANG", ang.currency_code
-      assert_equal 532, ang.numeric_code
+      assert_nil ang.numeric_code
       assert_equal 2, ang.decimals
       assert_nil ang.symbol(locale: :en)
       assert_equal "ANG12.50", ang.format_short(12.5, locale: :en)
