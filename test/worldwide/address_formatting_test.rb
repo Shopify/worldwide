@@ -27,6 +27,50 @@ module Worldwide
       assert_equal expected, Worldwide.address(**bobs_home).format
     end
 
+    test "format and single_line keep a field value that looks like a placeholder" do
+      address = Worldwide.address(
+        first_name: "{lastName}",
+        last_name: "Smith",
+        address1: "Unit {zip}",
+        zip: "K2P0V6",
+        city: "Ottawa",
+        province_code: "ON",
+        country_code: "CA",
+      )
+
+      assert_equal ["{lastName} Smith", "Unit {zip}", "Ottawa ON K2P0V6", "Canada"], address.format
+      assert_equal "{lastName}, Smith, Unit {zip}, Ottawa, ON, K2P0V6, Canada", address.single_line
+    end
+
+    test "format and single_line fill every placeholder and keep each value as written, for every country" do
+      random = Random.new(20261127)
+      placeholders = ["{zip}", "{city}", "{address1}", "{firstName}", "{country}"]
+      placeholder_by_field = {
+        first_name: "{firstName}",
+        last_name: "{lastName}",
+        company: "{company}",
+        address1: "{address1}",
+        address2: "{address2}",
+        city: "{city}",
+      }
+
+      Worldwide::Regions.all.select(&:country?).each do |country|
+        values = placeholder_by_field.keys.to_h do |field|
+          [field, "Value-#{field} #{placeholders.sample(random: random)}"]
+        end
+        address = Worldwide.address(**values, zip: "12345", country_code: country.iso_code)
+        output = address.format.join("\n") + "\n" + address.single_line
+
+        assert_empty output.gsub(Regexp.union(values.values), "").scan(/\{\w+\}/), "#{country.iso_code}: #{output}"
+        values.each do |field, value|
+          next unless country.format["show"].to_s.include?(placeholder_by_field.fetch(field))
+
+          assert_includes address.format.join("\n"), value, "#{country.iso_code}: #{output}"
+          assert_includes address.single_line, value, "#{country.iso_code}: #{output}"
+        end
+      end
+    end
+
     test "format_address supports formats besides the default Canada format" do
       china_address = {
         first_name: "Zhimin",

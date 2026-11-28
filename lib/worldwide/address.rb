@@ -328,24 +328,36 @@ module Worldwide
       )
     end
 
+    FIELD_PLACEHOLDER = /\{\w+\}/
+    private_constant :FIELD_PLACEHOLDER
+
+    # The placeholder of each key of build_formatted_address_data
+    PLACEHOLDER_BY_KEY = {
+      address1: "{address1}",
+      address2: "{address2}",
+      city: "{city}",
+      company: "{company}",
+      country: "{country}",
+      first_name: "{firstName}",
+      last_name: "{lastName}",
+      phone: "{phone}",
+      province: "{province}",
+      zip: "{zip}",
+    }.freeze
+    private_constant :PLACEHOLDER_BY_KEY
+
     def fill_in_lines(lines:, address_data:)
-      lines.map do |line|
-        fill_in_fields(fields: line, address_data: address_data)
+      replacements = address_data.to_h do |key, value|
+        # Forcibly prefix the Unicode left-to-right mark to the phone number
+        value = "\u200e#{value}" if key == :phone
+
+        [PLACEHOLDER_BY_KEY.fetch(key) { "{#{snake_to_camel_case(key)}}" }, value || ""]
       end
-    end
 
-    def fill_in_fields(fields:, address_data:)
-      fields.map do |field|
-        mapped = field
-        address_data.each do |key, value|
-          # Forcibly prefix the Unicode left-to-right mark to the phone number
-          replacement = key == :phone ? "\u200e#{value}" : value
-
-          replacement ||= ""
-
-          mapped = mapped.gsub("{#{snake_to_camel_case(key)}}") { replacement }
+      lines.map do |line|
+        line.map do |field|
+          field.gsub(FIELD_PLACEHOLDER) { |placeholder| replacements.fetch(placeholder, placeholder) }
         end
-        mapped
       end
     end
 
