@@ -371,6 +371,14 @@ module Worldwide
       assert_same Worldwide.unknown_region, region("CA").zone(zip: "A1A A1A")
     end
 
+    test "#zone and zip validation reject multiline postcodes" do
+      zip = "90210\nfoo"
+
+      assert_same Worldwide.unknown_region, region("US").zone(zip: zip)
+      refute region("US").valid_zip?(zip)
+      refute region("US-CA").valid_zone_zip?(zip)
+    end
+
     test "#zone finds a province by a partial zip if the country hides provinces" do
       assert_equal "England", region("GB").zone(zip: "SW1").legacy_name
       assert_equal "England", region("GB").zone(zip: "CH4").legacy_name

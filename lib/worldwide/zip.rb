@@ -51,6 +51,7 @@ module Worldwide
     # @return [Region] which is a "country" if we have a suggestion, or `nil` if we do not.
     def find_country(country_code: nil, zip:, min_confidence: 0)
       return unless Util.present?(zip)
+      return if zip.match?(/[\r\n]/)
 
       country = Worldwide.region(code: country_code) unless Util.blank?(country_code)
       return country if country&.valid_zip?(zip)
@@ -85,6 +86,7 @@ module Worldwide
     # @return [String] The postal code with spaces inserted/removed and other formatting fixes applied.
     def normalize(country_code:, zip:, allow_autofill: true, strip_extraneous_characters: false)
       input = zip # preserve the original zip, in case we need to fall back to it
+      return input if input.is_a?(String) && input.match?(/[\r\n]/)
 
       return input if Util.blank?(country_code)
 
@@ -156,6 +158,8 @@ module Worldwide
     # Returns the "routing key" (first portion) of a postal code for Ireland.
     # Otherwise, returns the full zip.
     def outcode(country_code:, zip:)
+      return zip if zip.match?(/[\r\n]/)
+
       @split_code_countries ||= Set.new(GB_STYLE_ZIP_COUNTRIES).add("CA").add("IE")
 
       return zip unless @split_code_countries.include?(country_code.to_s.upcase)

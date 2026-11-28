@@ -233,6 +233,10 @@ module Worldwide
       end
     end
 
+    test "find_country does not suggest a country for a multiline postal code" do
+      assert_nil Zip.find_country(country_code: "GB", zip: "GY1 1AA\nfoo")
+    end
+
     test "find_country only returns suggestions that are above or equal to the confidence thershold" do
       [
         [:GE, "31313", 70, :US],
@@ -258,6 +262,20 @@ module Worldwide
           Zip.find_country(country_code: alleged_country_code, zip: zip, min_confidence: min_confidence)&.code&.to_sym,
         )
       end
+    end
+
+    test "normalize leaves multiline postal codes unchanged" do
+      ["\n", "\r", "\r\n"].each do |line_break|
+        zip = "SE22 8DL#{line_break}foo"
+
+        assert_equal zip, Zip.normalize(country_code: "GB", zip: zip)
+      end
+    end
+
+    test "outcode leaves multiline postal codes unchanged" do
+      zip = "SE22 8DL\nfoo"
+
+      assert_equal zip, Zip.outcode(country_code: "GB", zip: zip)
     end
 
     test "normalize adjusts BD postal codes as expected" do
