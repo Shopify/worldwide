@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "set"
+
 require_relative "cldr/date_format_pattern"
 require_relative "cldr/fallbacks"
 require_relative "ruby_i18n_config"
@@ -64,7 +66,52 @@ module Worldwide
         CONFIG
       end
 
+      # Resolve a structural CLDR node by merging each locale's contribution.
+      # Leaf lookups should continue to use `t`, where the first fallback match is correct.
+      def resolved_hash(key, locale: I18n.locale)
+        with_cldr do
+          merge_ancestors(key.to_s, locale.to_sym, Set.new)
+        end
+      end
+
       private
+
+      def merge_ancestors(key, locale, resolving)
+        path = [key, locale]
+        added = resolving.add?(path)
+        return {} unless added
+
+        fallbacks[locale].reverse_each.with_object({}) do |ancestor, merged|
+          node = unresolved_node(key, ancestor)
+
+          case node
+          when ::Symbol
+            deep_merge!(merged, merge_ancestors(node.to_s, locale, resolving))
+          when ::Hash
+            deep_merge!(merged, node)
+          end
+        end
+      ensure
+        resolving.delete(path) if added
+      end
+
+      def unresolved_node(key, locale)
+        I18n.t(key, locale: locale, default: nil, fallback: false, resolve: false)
+      rescue ::I18n::InvalidLocale
+        nil
+      end
+
+      def deep_merge!(target, source)
+        source.each do |key, value|
+          target[key] = if value.is_a?(::Hash)
+            deep_merge!(target[key].is_a?(::Hash) ? target[key] : {}, value)
+          else
+            value
+          end
+        end
+
+        target
+      end
 
       def respond_to_missing?(method_name, include_private = false)
         I18n.respond_to?(method_name, include_private)

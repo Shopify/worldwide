@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "active_support/core_ext/object/deep_dup"
 require "minitest/mock"
 
 module Worldwide
@@ -87,6 +88,38 @@ module Worldwide
       assert_same(host_fallbacks, Thread.current[:i18n_fallbacks])
     ensure
       Thread.current[:i18n_fallbacks] = original_thread_fallbacks
+    end
+
+    test "#resolved_hash follows a CLDR alias against the requested locale" do
+      assert_equal "Sunday", Worldwide::Cldr.resolved_hash(
+        "calendars.gregorian.days.stand_alone.wide",
+        locale: :en,
+      ).fetch(:sun)
+    end
+
+    test "#resolved_hash merges locale contributions from the fallback chain" do
+      key = "calendars.gregorian.months.stand_alone.abbreviated"
+
+      assert_equal({ 9 => "Sept" }, Worldwide::Cldr.t(key, locale: :"en-CA"))
+
+      resolved = Worldwide::Cldr.resolved_hash(key, locale: :"en-CA")
+
+      assert_equal (1..12).to_a, resolved.keys.sort
+      assert_equal "Jan", resolved.fetch(1)
+      assert_equal "Sept", resolved.fetch(9)
+    end
+
+    test "#resolved_hash returns an empty hash for a missing node" do
+      assert_empty Worldwide::Cldr.resolved_hash("calendars.gregorian.__missing__.wide", locale: :en)
+    end
+
+    test "#resolved_hash does not mutate the source translations" do
+      key = "calendars.gregorian.months"
+      parent_data = Worldwide::Cldr.t(key, locale: :en, fallback: false, resolve: false).deep_dup
+
+      Worldwide::Cldr.resolved_hash(key, locale: :"en-CA")
+
+      assert_equal parent_data, Worldwide::Cldr.t(key, locale: :en, fallback: false, resolve: false)
     end
   end
 end
