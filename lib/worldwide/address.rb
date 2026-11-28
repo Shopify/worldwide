@@ -69,7 +69,7 @@ module Worldwide
         excluded_fields: normalized_excluded_fields,
       )
 
-      strip_extra_chars(lines: lines, excluded_fields: normalized_excluded_fields).map do |line|
+      strip_extra_chars(lines: lines).map do |line|
         line.join(" ")
       end
     end
@@ -103,7 +103,7 @@ module Worldwide
 
       filled = fill_in_lines(lines: lines, address_data: build_formatted_address_data)
 
-      stripped = strip_extra_chars(lines: filled, excluded_fields: normalized_excluded_fields)
+      stripped = strip_extra_chars(lines: filled)
 
       # Fallback to showing the country name by itself, in case no other information ended up being displayed
       if stripped.empty?
@@ -296,7 +296,7 @@ module Worldwide
         result << line unless blank?(line.join)
       end
 
-      result + additional_lines.zip
+      strip_extra_japanese_chars(lines: result, excluded_fields: excluded_fields) + additional_lines.zip
     end
 
     # Returns a hash containing the values for each address field
@@ -442,12 +442,11 @@ module Worldwide
       parts.join
     end
 
-    # Post-process to strip extraneous characters and whitespace
-    def strip_extra_chars(lines:, excluded_fields:)
+    # Post-process to strip extraneous whitespace and empty lines
+    def strip_extra_chars(lines:)
       result = []
       lines.each do |components|
-        line = strip_extra_japanese_chars(line: components, excluded_fields: excluded_fields)
-        line.map!(&:strip)
+        line = components.map(&:strip)
         line.reject!(&:empty?)
 
         result << line unless blank?(line.join(""))
@@ -460,15 +459,15 @@ module Worldwide
     #   - `様` ("-sama") is a gender-neutral, polite-form suffix that's appended to a name
     #   - `〒` ("yuubin" mark) is a prefix that's prepended to the postal code (zip)
     # If the associated field is excluded/empty, we need to suppress the associated special character.
-    def strip_extra_japanese_chars(line:, excluded_fields:)
-      return if line.nil?
+    # This runs on the country's format template, before the fields are filled in, so that values and
+    # additional lines, such as a company named "様式会社", keep their characters.
+    def strip_extra_japanese_chars(lines:, excluded_fields:)
+      marks = +""
+      marks << "〒" if blank?(zip) || excluded_fields.include?("zip")
+      marks << "様" if blank?(last_name) || excluded_fields.include?("lastName")
+      return lines if marks.empty?
 
-      line.map do |field|
-        stripped = field
-        stripped.delete!("〒") if blank?(zip) || excluded_fields.include?("zip")
-        stripped.delete!("様") if blank?(last_name) || excluded_fields.include?("lastName")
-        stripped
-      end
+      lines.map { |line| line.map { |component| component.delete(marks) } }
     end
 
     def script_from_string(str)

@@ -174,6 +174,37 @@ module Worldwide
       assert_equal expected, Worldwide.address(**japan_address).format
     end
 
+    test "format and single_line keep 〒 and 様 in values when the zip and last name are blank" do
+      address = Worldwide.address(
+        first_name: "Taro",
+        company: "様式会社",
+        address1: "〒ビル 1",
+        province_code: "JP-01",
+        country_code: "JP",
+      )
+
+      assert_equal ["Japan", "Hokkaido", "〒ビル 1", "様式会社", "Taro"], address.format
+      assert_equal "Japan, Hokkaido, 〒ビル 1, 様式会社, Taro", address.single_line
+      assert_equal ["Japan", "Hokkaido", "〒ビル 1", "様式会社", "Taro", "様式会社 御中"],
+        address.format(additional_lines: ["様式会社 御中"])
+    end
+
+    test "format and single_line keep 〒 and 様 in values when the zip and last name are excluded" do
+      address = Worldwide.address(
+        first_name: "Taro",
+        last_name: "Yamada",
+        company: "様式会社",
+        address1: "〒ビル 1",
+        zip: "060-0001",
+        province_code: "JP-01",
+        country_code: "JP",
+      )
+
+      assert_equal ["Japan", "Hokkaido", "〒ビル 1", "様式会社", "Taro"],
+        address.format(excluded_fields: [:zip, :last_name])
+      assert_equal "Japan, Hokkaido, 〒ビル 1, 様式会社, Taro", address.single_line(excluded_fields: [:zip, :last_name])
+    end
+
     test "format_address removes Japanese postal mark spacing when zip is excluded" do
       japan_address = {
         first_name: "Chocolate",
