@@ -49,6 +49,23 @@ module Worldwide
       assert_nil normalized.phone
     end
 
+    test "normalize does not change the country for a multiline postal code" do
+      zip = "90210\nJE2 3AB"
+      address = Worldwide.address(
+        address1: "1 Example Street",
+        city: "Example City",
+        zip: zip,
+        country_code: "US",
+      )
+
+      normalized = address.normalize
+
+      assert_equal zip, normalized.zip
+      assert_equal "US", normalized.country_code
+      assert_nil normalized.province_code
+      assert_includes address.errors, [:zip, :invalid_for_country]
+    end
+
     test "normalize fixes the country for a mid-confidence case, but only when autocorrect level is increased" do
       address = Worldwide.address(
         first_name: "Scarlett",

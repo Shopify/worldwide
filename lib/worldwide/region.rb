@@ -818,6 +818,8 @@ module Worldwide
     # @param value [String] for the postal code
     # @return [Boolean]
     def passes_country_zip_regexp?(value:, partial_match: false)
+      return false if value.match?(/[\r\n]/)
+
       if province?
         return associated_country.send(:passes_country_zip_regexp?, value: value, partial_match: partial_match)
       end
@@ -842,6 +844,7 @@ module Worldwide
     def search_prefixes_by_normalized_zip(prefixes:, zip:, allow_partial_zip: false)
       return if Worldwide::Util.blank?(prefixes)
       return if Worldwide::Util.blank?(zip)
+      return if zip.match?(/[\r\n]/)
       return unless allow_partial_zip || passes_country_zip_regexp?(value: zip)
 
       stripped = Zip.strip_optional_country_prefix(country_code: iso_code, zip: zip)
