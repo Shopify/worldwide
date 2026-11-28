@@ -11,6 +11,13 @@ module Worldwide
       assert_equal("XOF", Worldwide.currency(code: "XOF").currency_code)
     end
 
+    test "#currency for Sierra Leone is the redenominated leone SLE, while SLL stays recognized" do
+      assert_equal("SLE", Worldwide.region(code: "SL").currency.currency_code)
+      assert_equal(925, Worldwide.currency(code: "SLE").numeric_code)
+      assert_equal(694, Worldwide.currency(code: "SLL").numeric_code)
+      assert_equal("SLE", Currencies.alpha_code_for(925))
+    end
+
     test "#initialize with only iso_code" do
       region = Region.new(iso_code: "ZZ")
 
