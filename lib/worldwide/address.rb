@@ -231,7 +231,7 @@ module Worldwide
       a = adjusted.find_index(["{address1}"])
       b = adjusted.find_index(["{address2}"])
       if a && b && a < b && !blank?(address1) && !blank?(address2)
-        adjusted = adjusted[0..a - 1] + adjusted[a + 1..b - 1] + [["{address1} - {address2}"]] + adjusted[b + 1..-1]
+        adjusted = adjusted[0...a] + adjusted[a + 1..b - 1] + [["{address1} - {address2}"]] + adjusted[b + 1..-1]
       end
 
       # Merge zip, city and province if necessary...
@@ -270,7 +270,7 @@ module Worldwide
           ["{zip} {city} - {province}"]
         end
 
-        adjusted = adjusted[0..a - 1] + [reformatted] + adjusted[a + 1..-1]
+        adjusted = adjusted[0...a] + [reformatted] + adjusted[a + 1..-1]
       end
 
       adjusted
